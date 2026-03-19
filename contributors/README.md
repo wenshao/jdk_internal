@@ -64,6 +64,8 @@ OpenJDK 贡献者生态 (2007-2026)
 
 ## 按组织
 
+### 国际企业
+
 | 组织 | Commits | 占比 | 主要领域 | 详情 |
 |------|---------|------|----------|------|
 | [Oracle](orgs/oracle.md) | 60,000+ | 70%+ | 全领域 | [查看详情](orgs/oracle.md) |
@@ -72,7 +74,16 @@ OpenJDK 贡献者生态 (2007-2026)
 | [IBM](orgs/ibm.md) | 1,500+ | ~2% | JVM, 测试 | [查看详情](orgs/ibm.md) |
 | [Amazon](orgs/amazon.md) | 1,000+ | ~1% | AArch64, 编译器 | [查看详情](orgs/amazon.md) |
 | [Google](orgs/google.md) | 800+ | ~1% | 核心库, 编译器 | [查看详情](orgs/google.md) |
-| [中国企业](orgs/chinese-enterprises.md) | 500+ | <1% | 核心库, RISC-V | [查看详情](orgs/chinese-enterprises.md) |
+
+### 中国企业
+
+| 组织 | Commits | 主要领域 | 详情 |
+|------|---------|----------|------|
+| [阿里巴巴](orgs/alibaba.md) | 72 | 核心库优化 | [查看详情](orgs/alibaba.md) |
+| [腾讯](orgs/tencent.md) | 44 | G1 GC, 容器 | [查看详情](orgs/tencent.md) |
+| [字节跳动](orgs/bytedance.md) | 12 | RISC-V | [查看详情](orgs/bytedance.md) |
+| [龙芯](orgs/chinese-enterprises.md#龙芯-loongson) | 40+ | LoongArch | [查看详情](orgs/chinese-enterprises.md) |
+| [海光](orgs/chinese-enterprises.md#海光-hygon) | 60+ | 测试稳定性 | [查看详情](orgs/chinese-enterprises.md) |
 
 ---
 
@@ -92,10 +103,10 @@ OpenJDK 贡献者生态 (2007-2026)
 
 | 组织 | Commits | 主要贡献者 |
 |------|---------|-----------|
-| 阿里巴巴 | 50+ | Shaojin Wen, Kuai Wei |
+| [阿里巴巴](orgs/alibaba.md) | 72 | Shaojin Wen, Kuai Wei |
+| [腾讯](orgs/tencent.md) | 44 | Bob Peng Xie, Tongbao Zhang |
+| [字节跳动](orgs/bytedance.md) | 12 | Anjian Wen |
 | 龙芯 | 40+ | sunguoyun, Ao Qi |
-| 腾讯 | 30+ | bobpengxie, Tongbao Zhang |
-| 字节跳动 | 12 | Anjian-Wen |
 
 👉 [查看完整列表](chinese-contributors.md)
 
