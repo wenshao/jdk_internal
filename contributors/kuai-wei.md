@@ -8,7 +8,7 @@
 
 | 属性 | 值 |
 |------|-----|
-| **姓名** | Kuai Wei (蒯伟) |
+| **姓名** | Kuai Wei |
 | **当前组织** | 阿里巴巴 (Alibaba) |
 | **GitHub** | [@kuaiwei](https://github.com/kuaiwei) |
 | **OpenJDK** | Author |

@@ -8,7 +8,7 @@
 
 | 属性 | 值 |
 |------|-----|
-| **姓名** | Shaojin Wen (温绍锦) |
+| **姓名** | Shaojin Wen |
 | **当前组织** | 阿里巴巴 (Alibaba) |
 | **位置** | 杭州, 中国 |
 | **GitHub** | [@wenshao](https://github.com/wenshao) |
