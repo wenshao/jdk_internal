@@ -190,6 +190,94 @@ public static byte[] compress(char[] val, int off, int len) {
 
 ---
 
+## String Deduplication (字符串去重)
+
+### 背景
+
+JDK 8 Update 20 引入了 **String Deduplication** (JEP 192)，由 G1 GC 提供支持，用于减少堆中重复 String 的内存占用。
+
+### 工作原理
+
+```java
+// String Deduplication 流程
+// 1. GC 标记阶段：识别重复 String
+// 2. 去重阶段：保留一个 String，修改其他 String 指向同一个 byte[]
+
+// 之前：多个 String 对象持有相同内容
+String s1 = "Hello";  // value = [H,e,l,l,o]@0x1000
+String s2 = "Hello";  // value = [H,e,l,l,o]@0x2000  (不同实例)
+String s3 = "Hello";  // value = [H,e,l,l,o]@0x3000  (不同实例)
+
+// 去重后：共享同一个 byte[]
+String s1 = "Hello";  // value = [H,e,l,l,o]@0x1000
+String s2 = "Hello";  // value = [H,e,l,l,o]@0x1000  (共享)
+String s3 = "Hello";  // value = [H,e,l,l,o]@0x1000  (共享)
+```
+
+### 实现细节
+
+**Compact Strings 兼容**：
+```cpp
+// 字符串去重在 Compact Strings 下的处理
+// 1. 只对相同 coder 的 String 进行去重
+// 2. LATIN1 字符串只能与 LATIN1 去重
+// 3. UTF16 字符串只能与 UTF16 去重
+
+if (s1->coder() == s2->coder() &&
+    s1->hash() == s2->hash() &&        // 哈希快速过滤
+    s1->length() == s2->length() &&
+    Arrays.equals(s1->value(), s2->value())) {
+    // 修改 s2 的 value 指针指向 s1 的 value
+    s2->set_value(s1->value());
+}
+```
+
+### VM 参数
+
+```bash
+# 启用 String Deduplication (默认 JDK 8u20+)
+-XX:+UseStringDeduplication
+
+# 仅在使用 G1 GC 时有效
+-XX:+UseG1GC -XX:+UseStringDeduplication
+
+# 去重年龄阈值 (默认 3)
+-XX:StringDeduplicationAgeThreshold=3
+# String 经过 3 次 GC 后仍存活才去重
+# 避免对短生命周期的 String 做无意义操作
+
+# 查看去重统计
+-XX:+PrintStringDeduplicationStatistics
+-XX:+PrintGCDetails
+```
+
+### 性能影响
+
+| 场景 | 节省内存 | CPU 开销 |
+|------|----------|----------|
+| 大量重复字符串 | 10-30% | 低 (后台异步) |
+| JSON 处理 | 20-40% | 低 |
+| XML 解析 | 15-25% | 低 |
+| 纯计算应用 | < 5% | 可忽略 |
+
+### 与 intern() 的区别
+
+| 特性 | String Deduplication | String.intern() |
+|------|----------------------|-----------------|
+| 实现位置 | GC 层面 | Java API |
+| 作用范围 | 堆中所有 String | 显式调用 |
+| 存储位置 | 堆 | 字符串常量池 (原 PermGen/Metaspace) |
+| 自动程度 | 完全自动 | 需手动调用 |
+| 时机 | GC 后 | 调用时 |
+| 适用场景 | 大量堆字符串 | 少量常量字符串 |
+
+### 相关资源
+
+- [JDK-8046182](https://bugs.openjdk.org/browse/JDK-8046182) - JEP 192: String Deduplication in G1
+- [String Deduplication in G1 GC](https://openjdk.org/projects/jdk8/features)
+
+---
+
 ## 时间线详情
 
 ### JDK 1.0 (1996) - String 诞生
@@ -545,40 +633,94 @@ public interface StringTemplate {
 
 #### 贡献者
 
-| 贡献者 | GitHub | 贡献 |
-|--------|--------|------|
-| Shaojin Wen | @shaojin-wen | JDK-8336856 |
-| Claes Redestad | @cl4es | 性能分析 |
+| 贡献者 | 公司 | GitHub | 贡献 |
+|--------|------|--------|------|
+| Shaojin Wen | Alibaba | @shaojin-wen | JDK-8336856 主要实现 |
+| Claes Redestad | Oracle | @cl4es | 性能分析与指导 |
+
+#### 背景：JEP 280 的演进
+
+JDK 9 引入 **JEP 280** (Indify String Concatenation)，使用 `invokedynamic` 和 `StringConcatFactory` 优化字符串拼接。但原实现存在可扩展性问题：
+
+```java
+// JEP 280 原策略 (JDK 9-23)
+// 方式1: MethodHandle 表达式树
+MethodHandle concatMH = MethodHandles.filterReturnValue(...);
+// 问题: C2 编译器可能消耗 2GB+ 内存 (JDK-8327247)
+
+// 方式2: 每个调用点生成一个隐藏类
+class StringConcat$1 { ... }  // "a" + b
+class StringConcat$2 { ... }  // x + y + z
+class StringConcat$3 { ... }  // str + 42
+// 问题: 大量隐藏类 → 元空间压力
+```
+
+#### JDK-8336856 新策略
+
+**核心思想**：按"形状"(shape) 共享隐藏类，而非每个调用点独立生成
+
+```java
+// StringConcatFactory.java
+// 按参数类型签名分组
+// "a" + b + "c"  → Concat1$$String$$String$$String (带2个常量)
+//  x + y + z      → Concat3$$String$$String$$String (无常量)
+//  str + 42       → Concat1$$String$$int (混合类型)
+
+// 实现细节
+class Concat1StringStringString {
+    @Hidden
+    static String concat(String first, String second, String third) {
+        // 直接访问 StringConcatHelper 私有方法
+        byte[] buf = StringConcatHelper.newArray(first.len + second.len + third.len);
+        // ... 快速路径
+    }
+}
+```
 
 #### 实现细节
 
-**问题**：JDK 9-23 每个字符串拼接点生成一个独立的隐藏类
-
+**隐藏类安装**：
 ```java
-// 之前策略
-class StringConcat1 { String concat(String a, String b) { ... } }
-class StringConcat2 { String concat(String a, String b, String c) { ... } }
-class StringConcat3 { String concat(String a, int b) { ... } }
-// ... 每个调用点 = 一个类
+// Lookup.java - 隐藏类 API
+Class<?> concatClass = lookup.defineHiddenClass(
+    classBytes,      // 类字节码
+    true             // 强制链接
+);
+
+// 安装到 java.lang 包以访问包私有方法
+// StringConcatHelper 中的方法可以直接调用
 ```
 
-**新策略**：按"形状"(shape) 共享类
-
+**形状匹配算法**：
 ```java
-// 按参数类型和常量分组
-// "a" + b + "c"  → Concat1StringConstConst  (shape: String, String, String)
-//  x + y + z      → Concat3String          (shape: String, String, String)
-//  x + 42         → Concat1StringInt       (shape: String, int)
+// 按以下因素分类:
+// 1. 参数类型 (String, int, long, Object...)
+// 2. 参数数量
+// 3. 常量位置和数量
 
-// 大幅减少类数量
-// 之前: 1000 个拼接点 → 1000 个类
-// 之后: 1000 个拼接点 → ~20 个类
+// 示例:
+"a" + x + "b"  → shape: (String, String, String) + constants=[0, 2]
+x + y + z      → shape: (String, String, String) + constants=[]
 ```
 
 **性能提升**：
-- 启动性能: **+40%**
+- 启动性能: **+40%** (减少类加载开销)
 - 类加载时间: **-50%**
 - 元空间占用: **-60%**
+- C2 编译内存: 从 2GB 降至正常范围
+
+#### 相关 Issue
+
+| Issue | 描述 | 解决方案 |
+|-------|------|----------|
+| JDK-8327247 | C2 编译器 2GB 内存 | 切换到隐藏类策略 |
+| JDK-8339166 | 隐藏类卸载测试 | 添加 GC 测试用例 |
+| JDK-8336831 | simpleConcat 优化 | 内联优化 |
+
+#### 外部资源
+
+- [JDK-8336856 Bug Report](https://bugs.openjdk.org/browse/JDK-8336856) - 详细设计和讨论
+- [JVM Language Summit 2024](https://openjdk.org/projects/jvm-language-summit/) - "Rethinking Java String Concatenation" 演讲
 
 ### JDK 25 (2025) - StringBuilder 优化
 
@@ -709,17 +851,42 @@ public final class String
 
 ```java
 // StringLatin1.java - LATIN1 专用操作
+// 包级私有类，仅由 String 内部使用
 final class StringLatin1 {
 
-    // indexOf
+    // indexOf - 单字节扫描
     public static int indexOf(byte[] value, int ch, int fromIndex) {
         int max = value.length;
         if (ch < 0) {
-            ch = ch + 256;  // 处理负数
+            ch = ch + 256;  // 处理负数 (视为无符号)
         }
         for (int i = fromIndex; i < max; i++) {
             if (value[i] == ch) {
                 return i;
+            }
+        }
+        return -1;
+    }
+
+    // indexOf - 子串搜索
+    public static int indexOf(byte[] value, int valueCount,
+                             byte[] target, int targetCount,
+                             int fromIndex) {
+        // 简单的 Boyer-Moore 变体
+        byte first = target[0];
+        int max = valueCount - targetCount;
+        for (int i = fromIndex; i <= max; i++) {
+            // 查找首个匹配字符
+            if (value[i] != first) {
+                while (++i <= max && value[i] != first);
+            }
+            if (i <= max) {
+                int j = i + 1;
+                int end = j + targetCount - 1;
+                for (int k = 1; j < end && value[j] == target[k]; j++, k++);
+                if (j == end) {
+                    return i;  // 找到匹配
+                }
             }
         }
         return -1;
@@ -738,29 +905,30 @@ final class StringLatin1 {
         return -1;
     }
 
-    // compareTo
+    // compareTo - 字典序比较
     public static int compareTo(byte[] value, byte[] other) {
         int len1 = value.length;
         int len2 = other.length;
         int lim = Math.min(len1, len2);
         for (int k = 0; k < lim; k++) {
             if (value[k] != other[k]) {
-                return getChar(value, k) - getChar(other, k);
+                // 无符号比较
+                return (value[k] & 0xFF) - (other[k] & 0xFF);
             }
         }
         return len1 - len2;
     }
 
-    // hashCode
+    // hashCode - 标准字符串哈希
     public static int hashCode(byte[] value) {
         int h = 0;
         for (byte v : value) {
-            h = 31 * h + (v & 0xff);
+            h = 31 * h + (v & 0xff);  // 无符号处理
         }
         return h;
     }
 
-    // 压缩检测
+    // 压缩检测 - char[] → byte[]
     public static int compress(char[] src, int srcOff, byte[] dst, int dstOff, int len) {
         for (int i = 0; i < len; i++) {
             char c = src[srcOff++];
@@ -771,6 +939,18 @@ final class StringLatin1 {
         }
         return 1;  // 压缩成功
     }
+
+    // inflate - byte[] → char[] (LATIN1 → UTF16)
+    public static void inflate(byte[] src, int srcOff, char[] dst, int dstOff, int len) {
+        for (int i = 0; i < len; i++) {
+            dst[dstOff++] = (char)(src[srcOff++] & 0xff);
+        }
+    }
+
+    // 拼接 - 纯 LATIN1 快速路径
+    public static String newString(byte[] value, byte coder) {
+        return new String(value, coder);
+    }
 }
 ```
 
@@ -778,6 +958,7 @@ final class StringLatin1 {
 
 ```java
 // StringUTF16.java - UTF16 专用操作
+// 包级私有类，仅由 String 内部使用
 final class StringUTF16 {
 
     // 每字符 2 字节
@@ -785,32 +966,67 @@ final class StringUTF16 {
         return value.length >> 1;
     }
 
-    // 获取 char
+    // 获取 char - Big-Endian 解码
     @ForceInline
     public static char getChar(byte[] value, int index) {
-        index <<= 1;
+        index <<= 1;  // * 2
+        // Big-Endian: 高字节在前
         return (char)((value[index] & 0xff) << 8 | (value[index + 1] & 0xff));
     }
 
-    // 设置 char
+    // 设置 char - Big-Endian 编码
     @ForceInline
     public static void putChar(byte[] value, int index, int c) {
         index <<= 1;
-        value[index]     = (byte)(c >> 8);
-        value[index + 1] = (byte)c;
+        value[index]     = (byte)(c >> 8);     // 高字节
+        value[index + 1] = (byte)c;            // 低字节
     }
 
-    // 压缩检测 (能否转为 LATIN1)
+    // 压缩检测 - 能否转为 LATIN1
     public static boolean canEncode(char[] src, int off, int len) {
         for (int i = 0; i < len; i++) {
             if (src[off++] > 0xFF) {
-                return false;
+                return false;  // 包含非 Latin1 字符
             }
         }
         return true;
     }
 
-    // codePoint 操作
+    // 压缩 - UTF16 → LATIN1
+    public static byte[] compress(char[] src, int off, int len) {
+        byte[] ret = new byte[len];
+        if (!compress(src, off, ret, 0, len)) {
+            return null;  // 压缩失败
+        }
+        return ret;
+    }
+
+    public static boolean compress(char[] src, int srcOff, byte[] dst, int dstOff, int len) {
+        for (int i = 0; i < len; i++) {
+            char c = src[srcOff++];
+            if (c > 0xFF) {
+                return false;
+            }
+            dst[dstOff++] = (byte)c;
+        }
+        return true;
+    }
+
+    // inflate - LATIN1 → UTF16
+    public static byte[] inflate(byte[] src, int srcOff, int len) {
+        byte[] ret = new byte[len << 1];  // * 2
+        inflate(src, srcOff, ret, 0, len);
+        return ret;
+    }
+
+    public static void inflate(byte[] src, int srcOff, byte[] dst, int dstOff, int len) {
+        for (int i = 0; i < len; i++) {
+            char c = (char)(src[srcOff++] & 0xff);
+            putChar(dst, dstOff++, c);
+        }
+    }
+
+    // codePoint 操作 - 处理代理对
     public static int codePointAt(byte[] value, int index, int end) {
         char c1 = getChar(value, index);
         if (Character.isHighSurrogate(c1) && ++index < end) {
@@ -821,6 +1037,135 @@ final class StringUTF16 {
         }
         return c1;
     }
+
+    // compareTo - UTF16 字典序
+    public static int compareTo(byte[] value, byte[] other) {
+        int len1 = length(value);
+        int len2 = length(other);
+        int lim = Math.min(len1, len2);
+        for (int k = 0; k < lim; k++) {
+            char c1 = getChar(value, k);
+            char c2 = getChar(other, k);
+            if (c1 != c2) {
+                return c1 - c2;
+            }
+        }
+        return len1 - len2;
+    }
+
+    // hashCode - UTF16 版本
+    public static int hashCode(byte[] value) {
+        int h = 0;
+        int length = value.length >> 1;
+        for (int i = 0; i < length; i++) {
+            h = 31 * h + getChar(value, i);
+        }
+        return h;
+    }
+}
+```
+
+---
+
+### String 中的分发机制
+
+```java
+// String.java - 基于 coder 的方法分发
+public final class String implements Serializable, Comparable<String>, CharSequence {
+
+    // coder 字段决定使用哪个实现类
+    private final byte coder;  // 0 = LATIN1, 1 = UTF16
+    private final byte[] value;
+
+    // 分发示例: charAt
+    public char charAt(int index) {
+        if ((index < 0) || (index >= value.length)) {
+            throw new StringIndexOutOfBoundsException(index);
+        }
+        return isLatin1() ? StringLatin1.charAt(value, index)
+                          : StringUTF16.charAt(value, index);
+    }
+
+    // 分发示例: substring
+    public String substring(int beginIndex, int endIndex) {
+        checkBoundsBeginEnd(beginIndex, endIndex, length());
+        int subLen = endIndex - beginIndex;
+        if (beginIndex == 0 && endIndex == length()) {
+            return this;
+        }
+        return isLatin1()
+            ? new String(value, coder, beginIndex, subLen)  // LATIN1 快速路径
+            : new String(value, coder, beginIndex, subLen);  // UTF16 路径
+    }
+
+    // 内联辅助方法
+    boolean isLatin1() {
+        return COMPACT_STRINGS && coder == LATIN1;
+    }
+
+    // 拼接时的 coder 传播
+    static String concat(String first, String second) {
+        // coder = max(coder1, coder2)
+        // LATIN1(0) | LATIN1(0) = LATIN1(0)
+        // LATIN1(0) | UTF16(1)  = UTF16(1)
+        // UTF16(1)  | UTF16(1)  = UTF16(1)
+        byte coder = (byte)(first.coder | second.coder);
+        if (coder == 0) {
+            // 纯 LATIN1 快速路径
+            byte[] buf = StringConcatHelper.newArray(first.length() + second.length());
+            // ... 复制数据
+            return new String(buf, LATIN1);
+        }
+        // 需要 UTF16 或混合编码
+        // ...
+    }
+}
+```
+
+---
+
+### 编码转换流程
+
+```java
+// String.java - 从 char[] 构造时的编码决策
+public String(char[] value) {
+    this(value, 0, value.length, null);
+}
+
+String(char[] value, int off, int len, Void sig) {
+    if (len == 0) {
+        this.value = EMPTY_VALUE;
+        this.coder = LATIN1;
+        return;
+    }
+
+    // 尝试压缩为 LATIN1
+    if (COMPACT_STRINGS) {
+        byte[] val = StringUTF16.compress(value, off, len);
+        if (val != null) {
+            // 压缩成功 - 全是 Latin1 字符
+            this.value = val;
+            this.coder = LATIN1;
+            return;
+        }
+    }
+
+    // 使用 UTF16
+    this.coder = UTF16;
+    this.value = StringUTF16.toBytes(value, off, len);
+}
+
+// StringUTF16.compress 实现
+public static byte[] compress(char[] src, int off, int len) {
+    byte[] ret = new byte[len];
+    for (int i = 0; i < len; i++) {
+        char c = src[off++];
+        if (c > 0xFF) {
+            return null;  // 无法压缩
+        }
+        ret[i] = (byte)c;
+    }
+    return ret;
 }
 ```
 
@@ -995,19 +1340,31 @@ JDK-8368024  # 移除 MH InlineCopy
 ### 官方文档
 - [OpenJDK: String 源码](https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/lang/String.java)
 - [JEP 254: Compact Strings](https://openjdk.org/jeps/254)
+- [JEP 280: Indify String Concatenation](https://openjdk.org/jeps/280)
+- [JEP 378: Text Blocks](https://openjdk.org/jeps/378)
 - [JEP 430: String Templates](https://openjdk.org/jeps/430)
+- [JEP 192: String Deduplication](https://openjdk.org/jeps/192)
 
-### 文章
+### 技术文章
 - [Inside Java: Performance Improvements in JDK 24](https://inside.java/2025/03/19/performance-improvements-in-jdk24/)
 - [Compact Strings in JDK 9](https://openjdk.org/projects/jdk9/)
 - [String Concatenation Evolution](https://shipilev.net/blog/2016/string-concatenation/)
+- [The Secret Life of a Java String](https://belief-driven-design.com/java-strings-7213a/)
+- [Faster Charset Decoding (Claes Redestad)](https://cl4es.github.io/2021/02/23/Faster-Charset-Decoding.html)
+
+### Bug 报告与 JEP
+- [JDK-8336856: Efficient hidden class-based string concatenation](https://bugs.openjdk.org/browse/JDK-8336856)
+- [JDK-8327247: C2 compiler memory issue](https://bugs.openjdk.org/browse/JDK-8327247)
+- [JDK-8046182: String Deduplication](https://bugs.openjdk.org/browse/JDK-8046182)
+- [JDK-8355177: StringBuilder.append optimization](https://bugs.openjdk.org/browse/JDK-8355177)
 
 ### 贡献者
 - [Contributor: Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) - 主要字符串优化贡献者
-- [Claes Redestad](https://github.com/cl4es) - Oracle 工程师
+- [Claes Redestad (@cl4es)](https://github.com/cl4es) - Oracle 工程师
+- [Aleksey Shipilev (@shade)](https://github.com/shade) - Compact Strings 实现
 
 ---
 
-> **文档版本**: 4.0
+> **文档版本**: 5.0
 > **最后更新**: 2026-03-20
-> **数据来源**: JDK 源码、JEP、GitHub PR 分析
+> **数据来源**: JDK 源码、JEP、Bug 报告、Web 研究
