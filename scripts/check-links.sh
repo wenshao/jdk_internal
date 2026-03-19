@@ -43,7 +43,7 @@ find "$ROOT_DIR" -name "*.md" -type f | while read -r file; do
             else
                 # Relative path from current file's directory
                 file_dir=$(dirname "$file")
-                resolved_path="$file_dir/$link_path"
+                resolved_path=$(cd "$file_dir" && pwd)/$link_path
             fi
             
             # Normalize path (resolve .. and .)
@@ -51,7 +51,7 @@ find "$ROOT_DIR" -name "*.md" -type f | while read -r file; do
             
             # Check if file exists
             if [ ! -f "$resolved_path" ]; then
-                echo "❌ $file -> $link_path (resolved: $resolved_path)"
+                echo "❌ $file -> $link_path"
                 ((ERROR_COUNT++))
             fi
             

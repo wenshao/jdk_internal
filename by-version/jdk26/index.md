@@ -121,7 +121,6 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 | [JEP 519](/jeps/jep-519.md) | Compact Object Headers | 🚀 -16% heap | 压缩对象头 |
 | [JEP 514](/jeps/jep-514.md) | AOT Ergonomics | ⚡ 更快启动 | 自动 AOT 优化 |
 | [JEP 515](/jeps/jep-515.md) | AOT Method Profiling | ⚡ 更好性能 | 方法级 AOT |
-| [JEP 516](/jeps/jep-516.md) | AOT Object Caching | ⚡ 缓存优化 | 对象缓存 |
 
 ### 网络
 
