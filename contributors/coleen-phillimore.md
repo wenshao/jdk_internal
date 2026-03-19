@@ -5,13 +5,14 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Coleen Phillimore |
-| **Organization** | Oracle |
+| **Current Organization** | Oracle |
 | **GitHub** | [@coleenp](https://github.com/coleenp) |
 | **OpenJDK** | [@coleenp](https://openjdk.org/census#coleenp) |
 | **Role** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [400 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Acoleenp+is%3Aclosed+label%3Aintegrated) |
-| **Email** | coleenp@openjdk.org |
 | **Primary Areas** | JVM Core, HotSpot, Metaspace, Class Loading |
+
+> **Data as of**: 2026-03-19
 
 ## Contribution Overview
 

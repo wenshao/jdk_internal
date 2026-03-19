@@ -9,13 +9,23 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Albert Mingkun Yang |
-| **组织** | Oracle |
+| **当前组织** | Oracle |
 | **GitHub** | [@albertnetymk](https://github.com/albertnetymk) |
 | **OpenJDK** | [@ayang](https://openjdk.org/census#ayang) |
 | **角色** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [744 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aalbertnetymk+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | G1 GC, Parallel GC |
 | **活跃时间** | 2023 - 至今 |
+
+### 组织历史
+
+| 时间段 | 组织 | 邮箱 |
+|--------|------|------|
+| 2013 | Oracle (Albert Noll) | albert.noll@oracle.com |
+| 2019, 2021 | 阿里巴巴 (Alibaba) | albert.th@alibaba-inc.com |
+| 2020 - 至今 | Oracle | albert.m.yang@oracle.com |
+
+> **数据调查时间**: 2026-03-19
 
 ---
 

@@ -5,13 +5,14 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Kim Barrett |
-| **Organization** | Oracle |
+| **Current Organization** | Oracle |
 | **GitHub** | [@kimbarrett](https://github.com/kimbarrett) |
 | **OpenJDK** | [@kbarrett](https://openjdk.org/census#kbarrett) |
 | **Role** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [352 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akimbarrett+is%3Aclosed+label%3Aintegrated) |
-| **Email** | kbarrett@openjdk.org |
 | **Primary Areas** | Concurrency, Atomic Operations, C++ Modernization, HotSpot Runtime |
+
+> **Data as of**: 2026-03-19
 
 ## Contribution Overview
 

@@ -5,13 +5,14 @@
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Leonid Mesnik |
-| **Organization** | Oracle |
+| **Current Organization** | Oracle |
 | **GitHub** | [@lmesnik](https://github.com/lmesnik) |
 | **OpenJDK** | [@lmesnik](https://openjdk.org/census#lmesnik) |
 | **Role** | JDK Reviewer |
 | **PRs** | [243 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Almesnik+is%3Aclosed+label%3Aintegrated) |
-| **Email** | lmesnik@openjdk.org |
 | **Primary Areas** | JVMTI, Testing Infrastructure, HotSpot |
+
+> **Data as of**: 2026-03-19
 
 ## Contribution Overview
 

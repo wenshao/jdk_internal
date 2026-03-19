@@ -9,13 +9,15 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Shaojin Wen (温绍锦) |
-| **组织** | 阿里巴巴 (Alibaba) |
+| **当前组织** | 阿里巴巴 (Alibaba) |
 | **GitHub** | [@wenshao](https://github.com/wenshao) |
 | **OpenJDK** | [@swen](https://openjdk.org/census#swen) |
 | **角色** | JDK Committer |
 | **PRs** | [97 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Awenshao+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | 核心库性能优化、字符串处理、数字格式化 |
 | **活跃时间** | 2023 - 至今 |
+
+> **数据调查时间**: 2026-03-19
 
 ---
 

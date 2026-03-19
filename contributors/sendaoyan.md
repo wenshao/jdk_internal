@@ -1,6 +1,6 @@
 # SendaoYan
 
-> JDK 26 测试稳定性专家，阿里巴巴，88 个 commits
+> JDK 测试稳定性专家
 
 ---
 
@@ -9,13 +9,22 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | SendaoYan |
-| **组织** | 阿里巴巴 (Alibaba) |
+| **当前组织** | 海光信息 (Hygon) |
 | **GitHub** | [@SendaoYan](https://github.com/SendaoYan) |
 | **OpenJDK** | [@syan](https://openjdk.org/census#syan) |
 | **角色** | JDK Committer |
 | **PRs** | [202 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3ASendaoYan+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | 测试稳定性、测试修复 |
 | **活跃时间** | 2022 - 至今 |
+
+### 组织历史
+
+| 时间段 | 组织 | 邮箱 |
+|--------|------|------|
+| 2022 - 2024 | 阿里巴巴 (Alibaba) | yansendao.ysd@alibaba-inc.com |
+| 2025 - 至今 | 海光信息 (Hygon) | yansendao@hygon.cn |
+
+> **数据调查时间**: 2026-03-19
 
 ---
 

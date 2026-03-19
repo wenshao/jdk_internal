@@ -5,13 +5,14 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Emanuel Peter |
-| **Organization** | Oracle |
+| **Current Organization** | Oracle |
 | **GitHub** | [@eme64](https://github.com/eme64) |
 | **OpenJDK** | [@epeter](https://openjdk.org/census#epeter) |
 | **Role** | JDK Reviewer |
 | **PRs** | [226 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aeme64+is%3Aclosed+label%3Aintegrated) |
-| **Email** | epeter@openjdk.org |
 | **Primary Areas** | C2 Compiler, SuperWord Auto-Vectorization, Template Testing Framework |
+
+> **Data as of**: 2026-03-19
 
 ## Contribution Overview
 

@@ -5,13 +5,14 @@
 | Field | Value |
 |-------|-------|
 | **Name** | David Holmes |
-| **Organization** | Oracle |
+| **Current Organization** | Oracle |
 | **GitHub** | [@dholmes-ora](https://github.com/dholmes-ora) |
 | **OpenJDK** | [@dholmes](https://openjdk.org/census#dholmes) |
 | **Role** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [303 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Adholmes-ora+is%3Aclosed+label%3Aintegrated) |
-| **Email** | dholmes@openjdk.org |
 | **Primary Areas** | Threading, Concurrency, JVM Runtime, Signal Handling |
+
+> **Data as of**: 2026-03-19
 
 ## Contribution Overview
 

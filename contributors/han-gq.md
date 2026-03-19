@@ -9,12 +9,13 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | han gq |
-| **组织** | 麒麟软件 (KylinSoft) |
+| **当前组织** | 麒麟软件 (KylinSoft) |
 | **GitHub** | [@hanguanqiang](https://github.com/hanguanqiang) |
 | **OpenJDK** | Author |
-| **Email** | hanguanqiang@kylinos.cn |
 | **主要领域** | 编译器优化 |
 | **活跃时间** | 2024 - 至今 |
+
+> **数据调查时间**: 2026-03-19
 
 ---
 

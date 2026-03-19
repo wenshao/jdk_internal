@@ -5,13 +5,14 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Matthias Baesken |
-| **Organization** | SAP |
+| **Current Organization** | SAP |
 | **GitHub** | [@MBaesken](https://github.com/MBaesken) |
 | **OpenJDK** | [@mbaesken](https://openjdk.org/census#mbaesken) |
 | **Role** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [514 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AMBaesken+is%3Aclosed+label%3Aintegrated) |
-| **Email** | mbaesken@openjdk.org |
 | **Primary Areas** | Build System, Cross-Platform, AIX, Windows, Linux |
+
+> **Data as of**: 2026-03-19
 
 ## Contribution Overview
 
