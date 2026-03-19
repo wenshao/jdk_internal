@@ -44,6 +44,37 @@ jdk_internal/
 - Code examples
 - Development style
 
+### Contribution Statistics Principles
+
+**IMPORTANT: Use GitHub Integrated PRs as the ONLY metric for contribution statistics.**
+
+**Why NOT use git commits?**
+- OpenJDK Committers use `@openjdk.org` email for commits
+- Git commits by company email domain is inaccurate
+- Many contributions are missed when filtering by company email
+- GitHub PRs accurately reflect actual contributions
+
+**Query Method:**
+```
+https://api.github.com/search/issues?q=repo:openjdk/jdk+author:{username}+type:pr+label:integrated
+```
+
+**Timeline Statistics:**
+- Use PR merge date (`closed_at` field), NOT commit date
+- Group by year for timeline visualization
+
+**Example:**
+```markdown
+| 贡献者 | GitHub | PRs | 主要领域 |
+|--------|--------|-----|----------|
+| Shaojin Wen | @wenshao | 97 | 核心库优化 |
+```
+
+**Do NOT include:**
+- Git commit counts
+- Contributors without GitHub PRs
+- Commit-based timelines
+
 ### Module Documents
 - Module overview
 - Package structure
