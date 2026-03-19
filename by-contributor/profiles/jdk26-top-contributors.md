@@ -19,38 +19,38 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 | 3 | [Phil Race](./phil-race.md) | [Oracle](https://www.oracle.com/java/) | 110 | Printing, Desktop |
 | 4 | [Matthias Baesken](./matthias-baesken.md) | [Oracle](https://www.oracle.com/java/) | 105 | Build, Ports |
 | 5 | [Alexey Semenyuk](./alexey-semenyuk.md) | [Oracle](https://www.oracle.com/java/) | 85 | jpackage |
-| 6 | [Aleksey Shipilev](./aleksey-shipilev.md) | [Red Hat](https://www.redhat.com/en/about/openjdk) | 80 | Shenandoah, Performance |
+| 6 | [Aleksey Shipilev](./aleksey-shipilev.md) | Oracle | 80 | Shenandoah, Performance |
 | 7 | [Ioi Lam](./ioi-lam.md) | [Oracle](https://www.oracle.com/java/) | 76 | CDS, AOT |
-| 8 | [Kim Barrett](./kim-barrett.md) | [Red Hat](https://www.redhat.com/en/about/openjdk) | 76 | GC, HotSpot |
-| 9 | [SendaoYan](./sendaoyan.md) | [Oracle](https://www.oracle.com/java/) | 71 | Testing |
+| 8 | [Kim Barrett](./kim-barrett.md) | Oracle | 76 | GC, HotSpot |
+| 9 | [SendaoYan](./sendaoyan.md) | Independent | 71 | Testing |
 | 10 | [Jaikiran Pai](./jaikiran-pai.md) | [Oracle](https://www.oracle.com/java/) | 67 | Networking |
-| 11 | Francesco Andreuzzi | [Oracle](https://www.oracle.com/java/) | 60 | Testing |
+| 11 | Francesco Andreuzzi | [Oracle](https://www.oracle.com/java/) | 60 | Testing | [详情](./francesco-andreuzzi.md) |
 | 12 | [Prasanta Sadhukhan](./prasanta-sadhukhan.md) | [Oracle](https://www.oracle.com/java/) | 59 | Desktop |
 | 13 | [Chen Liang](./chen-liang.md) | [Oracle](https://www.oracle.com/java/) | 59 | ClassFile API, Core |
-| 14 | Sergey Bylokhov | [Oracle](https://www.oracle.com/java/) | 57 | Desktop |
+| 14 | Sergey Bylokhov | [Oracle](https://www.oracle.com/java/) | 57 | Desktop | [详情](./mrserb.md) |
 | 15 | [Erik Gahlin](./erik-gahlin.md) | [Oracle](https://www.oracle.com/java/) | 57 | JFR |
 | 16 | [Brian Burkhalter](./brian-burkhalter.md) | [Oracle](https://www.oracle.com/java/) | 53 | Networking |
 | 17 | Axel Boldt-Christmas | [SAP](https://sap.github.io/SapMachine/) | 52 | ZGC |
 | 18 | [David Holmes](./david-holmes.md) | [Oracle](https://www.oracle.com/java/) | 50 | Threading |
-| 19 | [Emanuel Peter](./emanuel-peter.md) | Independent | 49 | C2 Compiler |
+| 19 | [Emanuel Peter](./emanuel-peter.md) | Oracle | 49 | C2 Compiler |
 | 20 | [Jan Lahoda](./jan-lahoda.md) | [Oracle](https://www.oracle.com/java/) | 48 | javac |
 | 21 | [Daniel Fuchs](./daniel-fuchs.md) | [Oracle](https://www.oracle.com/java/) | 47 | HTTP Client |
 | 22 | [Volkan Yazici](./volkan-yazici.md) | [Oracle](https://www.oracle.com/java/) | 45 | HTTP Client |
 | 23 | Joel Sikström | [Oracle](https://www.oracle.com/java/) | 44 | ZGC |
 | 24 | [Justin Lu](./justin-lu.md) | [Oracle](https://www.oracle.com/java/) | 43 | Localization |
-| 25 | [William Kemper](./william-kemper.md) | [Red Hat](https://www.redhat.com/en/about/openjdk) | 43 | Shenandoah |
+| 25 | [William Kemper](./william-kemper.md) | Amazon | 43 | Shenandoah |
 | 26 | Manuel Hässig | [Oracle](https://www.oracle.com/java/) | 39 | Testing |
 | 27 | [Naoto Sato](./naoto-sato.md) | [Oracle](https://www.oracle.com/java/) | 36 | i18n |
 | 28 | [Leonid Mesnik](./leonid-mesnik.md) | [Oracle](https://www.oracle.com/java/) | 33 | JVMTI |
 | 29 | [Coleen Phillimore](./coleen-phillimore.md) | [Oracle](https://www.oracle.com/java/) | 32 | HotSpot |
-| 30 | Yasumasa Suenaga | [Oracle](https://www.oracle.com/java/) | 32 | Serviceability |
+| 30 | Yasumasa Suenaga | NTT DATA | 32 | Serviceability | [详情](./yasumasa-suenaga.md) |
 | 31 | [Hamlin Li](./hamlin-li.md) | [Oracle](https://www.oracle.com/java/) | 31 | C2 Compiler |
-| 32 | Roman Kennke | [Red Hat](https://www.redhat.com/en/about/openjdk) | 30 | Compact Headers |
-| 33 | Weijun Wang | [Oracle](https://www.oracle.com/java/) | 29 | Security |
-| 34 | Jatin Bhateja | [Oracle](https://www.oracle.com/java/) | 28 | Vector API |
-| 35 | Roland Westrelin | [Oracle](https://www.oracle.com/java/) | 27 | C2 Compiler |
+| 32 | Roman Kennke | Red Hat | 30 | Compact Headers | [详情](./roman-kennke.md) |
+| 33 | Weijun Wang | [Oracle](https://www.oracle.com/java/) | 29 | Security | [详情](./weijun-wang.md) |
+| 34 | Jatin Bhateja | [Oracle](https://www.oracle.com/java/) | 28 | Vector API | [详情](./jatin-bhateja.md) |
+| 35 | Roland Westrelin | [Oracle](https://www.oracle.com/java/) | 27 | C2 Compiler | [详情](./rooland-westrelin.md) |
 | 36 | Quan Anh Mai | Independent | 26 | Type System |
-| 37 | Per Minborg | [Oracle](https://www.oracle.com/java/) | 25 | Core Libraries |
+| 37 | Per Minborg | [Oracle](https://www.oracle.com/java/) | 25 | Core Libraries | [详情](./per-minborg.md) |
 | 38 | Anton Seoane Ampudia | Independent | 24 | x86 Cleanup |
 | 39 | Eric Fang | [Oracle](https://www.oracle.com/java/) | 23 | AOT |
 | 40 | Alan Bateman | [Oracle](https://www.oracle.com/java/) | 22 | Concurrency |
@@ -84,7 +84,7 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 | 68 | Joe Darcy | [Oracle](https://www.oracle.com/java/) | 6 | Core Libraries |
 | 69 | Roger Riggs | [Oracle](https://www.oracle.com/java/) | 6 | Serialization |
 | 70 | Peter Levart | Independent | 5 | Core Libraries |
-| 71 | Claes Redestad | [Oracle](https://www.oracle.com/java/) | 5 | Core Libraries |
+| 71 | Claes Redestad | [Oracle](https://www.oracle.com/java/) | 5 | Core Libraries | [详情](./claes-redestad.md) |
 | 72 | Ulf Adams | [Google](https://opensource.google/projects/java) | 5 | Build |
 | 73 | Martin Buchholz | [Google](https://opensource.google/projects/java) | 5 | Concurrency |
 | 74 | Ivan Gerasimov | [Oracle](https://www.oracle.com/java/) | 5 | Desktop |
@@ -119,37 +119,37 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 ## Top 10 by Code Changes
 
-| Rank | Contributor | Additions | Deletions | Total Changes |
-|------|-------------|-----------|-----------|---------------|
-| 1 | [Naoto Sato](./naoto-sato.md) | 122,699 | 43,176 | 165,875 |
-| 2 | [Daniel Fuchs](./daniel-fuchs.md) | 107,800 | 3,157 | 110,957 |
-| 3 | Jatin Bhateja | 37,825 | 28,721 | 66,546 |
-| 4 | [Alexey Semenyuk](./alexey-semenyuk.md) | 27,765 | 10,828 | 38,593 |
-| 5 | [Justin Lu](./justin-lu.md) | 15,827 | 14,325 | 30,152 |
-| 6 | Anton Seoane Ampudia | 16,353 | 17,326 | 33,679 |
-| 7 | Damon Nguyen | 11,830 | 9,727 | 21,557 |
-| 8 | Eric Fang | 11,977 | 7,068 | 19,045 |
-| 9 | Jayathirth D V | 7,332 | 4,950 | 12,282 |
-| 10 | [Chen Liang](./chen-liang.md) | 7,541 | 7,892 | 15,433 |
+| Rank | Contributor | Additions | Deletions | Total Changes | 档案 |
+|------|-------------|-----------|-----------|---------------|------|
+| 1 | [Naoto Sato](./naoto-sato.md) | 122,699 | 43,176 | 165,875 | [详情](./naoto-sato.md) |
+| 2 | [Daniel Fuchs](./daniel-fuchs.md) | 107,800 | 3,157 | 110,957 | [详情](./daniel-fuchs.md) |
+| 3 | Jatin Bhateja | 37,825 | 28,721 | 66,546 | [详情](./jatin-bhateja.md) | - |
+| 4 | [Alexey Semenyuk](./alexey-semenyuk.md) | 27,765 | 10,828 | 38,593 | [详情](./alexey-semenyuk.md) |
+| 5 | [Justin Lu](./justin-lu.md) | 15,827 | 14,325 | 30,152 | [详情](./justin-lu.md) |
+| 6 | Anton Seoane Ampudia | 16,353 | 17,326 | 33,679 | - |
+| 7 | Damon Nguyen | 11,830 | 9,727 | 21,557 | - |
+| 8 | Eric Fang | 11,977 | 7,068 | 19,045 | - |
+| 9 | Jayathirth D V | 7,332 | 4,950 | 12,282 | - |
+| 10 | [Chen Liang](./chen-liang.md) | 7,541 | 7,892 | 15,433 | [详情](./chen-liang.md) |
 
 ---
 
 ## JEP Lead Contributors
 
-| JEP | Title | Lead(s) |
-|-----|-------|---------|
-| 516 | Ahead-of-Time Object Caching | Erik Österlund |
-| 517 | HTTP/3 for HTTP Client | Daniel Fuchs |
-| 519 | Compact Object Headers | Roman Kennke |
-| 521 | Generational Shenandoah | William Kemper, Aleksey Shipilev |
-| 522 | G1 GC Throughput | Thomas Schatzl |
-| 524 | PEM Encodings | Anthony Scarpino |
-| 525 | Structured Concurrency | Alan Bateman |
-| 526 | Lazy Constants | Per Minborg |
-| 500 | Make Final Mean Final | Alan Bateman |
-| 504 | Remove Applet API | Phil Race |
-| 509 | JFR CPU-Time Profiling | Johannes Bechberger |
-| 527 | TLS 1.3 Hybrid Key Exchange | Hai-May Chao |
+| JEP | Title | Lead(s) | 档案 |
+|-----|-------|---------|------|
+| 516 | Ahead-of-Time Object Caching | Erik Österlund | - |
+| 517 | HTTP/3 for HTTP Client | Daniel Fuchs | [详情](./daniel-fuchs.md) |
+| 519 | Compact Object Headers | Roman Kennke | [详情](./roman-kennke.md) | - |
+| 521 | Generational Shenandoah | William Kemper, Aleksey Shipilev | [详情](./william-kemper.md), [详情](./aleksey-shipilev.md) |
+| 522 | G1 GC Throughput | Thomas Schatzl | [详情](./thomas-schatzl.md) |
+| 524 | PEM Encodings | Anthony Scarpino | - |
+| 525 | Structured Concurrency | Alan Bateman | - |
+| 526 | Lazy Constants | Per Minborg | [详情](./per-minborg.md) | - |
+| 500 | Make Final Mean Final | Alan Bateman | - |
+| 504 | Remove Applet API | Phil Race | [详情](./phil-race.md) |
+| 509 | JFR CPU-Time Profiling | Johannes Bechberger | - |
+| 527 | TLS 1.3 Hybrid Key Exchange | Hai-May Chao | - |
 
 ---
 
@@ -157,93 +157,93 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 ### [Oracle](https://www.oracle.com/java/) (~75% of commits)
 
-| Contributor | Commits | Focus |
-|-------------|---------|-------|
-| [Thomas Schatzl](./thomas-schatzl.md) | 140 | G1 GC |
-| [Albert Mingkun Yang](./albert-mingkun-yang.md) | 136 | GC |
-| [Phil Race](./phil-race.md) | 110 | Desktop |
-| [Matthias Baesken](./matthias-baesken.md) | 105 | Build |
-| [Ioi Lam](./ioi-lam.md) | 76 | CDS/AOT |
-| [SendaoYan](./sendaoyan.md) | 71 | Testing |
-| [Jaikiran Pai](./jaikiran-pai.md) | 67 | Networking |
-| Francesco Andreuzzi | 60 | Testing |
-| [Prasanta Sadhukhan](./prasanta-sadhukhan.md) | 59 | Desktop |
-| [Chen Liang](./chen-liang.md) | 59 | ClassFile API |
-| Sergey Bylokhov | 57 | Desktop |
-| [Erik Gahlin](./erik-gahlin.md) | 57 | JFR |
-| [Brian Burkhalter](./brian-burkhalter.md) | 53 | Networking |
-| Joel Sikström | 44 | ZGC |
-| [David Holmes](./david-holmes.md) | 50 | Threading |
-| [Jan Lahoda](./jan-lahoda.md) | 48 | javac |
-| [Daniel Fuchs](./daniel-fuchs.md) | 47 | HTTP Client |
-| [Volkan Yazici](./volkan-yazici.md) | 45 | HTTP Client |
-| [Justin Lu](./justin-lu.md) | 43 | Localization |
-| + 80+ more | - | - |
+| Contributor | Commits | Focus | 档案 |
+|-------------|---------|-------|------|
+| [Thomas Schatzl](./thomas-schatzl.md) | 140 | G1 GC | [详情](./thomas-schatzl.md) |
+| [Albert Mingkun Yang](./albert-mingkun-yang.md) | 136 | GC | [详情](./albert-mingkun-yang.md) |
+| [Phil Race](./phil-race.md) | 110 | Desktop | [详情](./phil-race.md) |
+| [Matthias Baesken](./matthias-baesken.md) | 105 | Build | [详情](./matthias-baesken.md) |
+| [Ioi Lam](./ioi-lam.md) | 76 | CDS/AOT | [详情](./ioi-lam.md) |
+| [SendaoYan](./sendaoyan.md) | 71 | Testing | [详情](./sendaoyan.md) |
+| [Jaikiran Pai](./jaikiran-pai.md) | 67 | Networking | [详情](./jaikiran-pai.md) |
+| Francesco Andreuzzi | 60 | Testing | [详情](./francesco-andreuzzi.md) | - |
+| [Prasanta Sadhukhan](./prasanta-sadhukhan.md) | 59 | Desktop | [详情](./prasanta-sadhukhan.md) |
+| [Chen Liang](./chen-liang.md) | 59 | ClassFile API | [详情](./chen-liang.md) |
+| Sergey Bylokhov | 57 | Desktop | [详情](./mrserb.md) |
+| [Erik Gahlin](./erik-gahlin.md) | 57 | JFR | [详情](./erik-gahlin.md) |
+| [Brian Burkhalter](./brian-burkhalter.md) | 53 | Networking | [详情](./brian-burkhalter.md) |
+| Joel Sikström | 44 | ZGC | - |
+| [David Holmes](./david-holmes.md) | 50 | Threading | [详情](./david-holmes.md) |
+| [Jan Lahoda](./jan-lahoda.md) | 48 | javac | [详情](./jan-lahoda.md) |
+| [Daniel Fuchs](./daniel-fuchs.md) | 47 | HTTP Client | [详情](./daniel-fuchs.md) |
+| [Volkan Yazici](./volkan-yazici.md) | 45 | HTTP Client | [详情](./volkan-yazici.md) |
+| [Justin Lu](./justin-lu.md) | 43 | Localization | [详情](./justin-lu.md) |
+| + 80+ more | - | - | - |
 
 ### [Red Hat](https://www.redhat.com/en/about/openjdk) (~8% of commits)
 
-| Contributor | Commits | Focus |
-|-------------|---------|-------|
-| [Aleksey Shipilev](./aleksey-shipilev.md) | 80 | Shenandoah |
-| [Kim Barrett](./kim-barrett.md) | 76 | GC |
-| [William Kemper](./william-kemper.md) | 43 | Shenandoah |
-| Roman Kennke | 30 | Compact Headers |
-| Andrew Haley | 20 | RISC-V |
-| Fredrik Bredberg | 19 | Monitors |
+| Contributor | Commits | Focus | 档案 |
+|-------------|---------|-------|------|
+| [Aleksey Shipilev](./aleksey-shipilev.md) | 80 | Shenandoah | [详情](./aleksey-shipilev.md) |
+| [Kim Barrett](./kim-barrett.md) | 76 | GC | [详情](./kim-barrett.md) |
+| [William Kemper](./william-kemper.md) | 43 | Shenandoah | [详情](./william-kemper.md) |
+| Roman Kennke | 30 | Compact Headers | [详情](./roman-kennke.md) | - |
+| Andrew Haley | 20 | RISC-V | - |
+| Fredrik Bredberg | 19 | Monitors | - |
 
 ### [Alibaba](https://alibaba.github.io/) (~3% of commits)
 
-| Contributor | Commits | Focus |
-|-------------|---------|-------|
-| [Shaojin Wen](./shaojin-wen.md) | 11 | Core Libraries |
-| [Yude Lin](./yude-lin.md) | 10 | Compiler |
-| [Xiaowei Lu](./xiaowei-lu.md) | 10 | GC |
-| [Tongbao Zhang](./tongbao-zhang.md) | 9 | Testing |
-| [Kuai Wei](./kuai-wei.md) | 9 | Compiler |
-| [Fei Yang](./fei-yang.md) | 9 | C2 Compiler |
-| [Han GQ](./han-gq.md) | 8 | Core |
-| [Anjian Wen](./anjian-wen.md) | 8 | Security |
+| Contributor | Commits | Focus | 档案 |
+|-------------|---------|-------|------|
+| [Shaojin Wen](./shaojin-wen.md) | 11 | Core Libraries | [详情](./shaojin-wen.md) |
+| [Yude Lin](./yude-lin.md) | 10 | Compiler | [详情](./yude-lin.md) |
+| [Xiaowei Lu](./xiaowei-lu.md) | 10 | GC | [详情](./xiaowei-lu.md) |
+| [Tongbao Zhang](./tongbao-zhang.md) | 9 | Testing | [详情](./tongbao-zhang.md) |
+| [Kuai Wei](./kuai-wei.md) | 9 | Compiler | [详情](./kuai-wei.md) |
+| [Fei Yang](./fei-yang.md) | 9 | C2 Compiler | [详情](./fei-yang.md) |
+| [Han GQ](./han-gq.md) | 8 | Core | [详情](./han-gq.md) |
+| [Anjian Wen](./anjian-wen.md) | 8 | Security | [详情](./anjian-wen.md) |
 
 ### [SAP](https://sap.github.io/SapMachine/) (~2% of commits)
 
-| Contributor | Commits | Focus |
-|-------------|---------|-------|
-| Axel Boldt-Christmas | 52 | ZGC |
-| Johannes Bechberger | 21 | JFR |
+| Contributor | Commits | Focus | 档案 |
+|-------------|---------|-------|------|
+| Axel Boldt-Christmas | 52 | ZGC | - |
+| Johannes Bechberger | 21 | JFR | - |
 
 ### [Oracle Labs](https://labs.oracle.com/) (~2% of commits)
 
-| Contributor | Commits | Focus |
-|-------------|---------|-------|
-| Doug Simon | 8 | Graal |
-| Christian Hagedorn | 7 | Graal |
-| Gilles Duboscq | 3 | Graal |
-| Tom Rodriguez | 3 | Graal |
+| Contributor | Commits | Focus | 档案 |
+|-------------|---------|-------|------|
+| Doug Simon | 8 | Graal | - |
+| Christian Hagedorn | 7 | Graal | - |
+| Gilles Duboscq | 3 | Graal | - |
+| Tom Rodriguez | 3 | Graal | - |
 
 ### [Google](https://opensource.google/projects/java) (~1% of commits)
 
-| Contributor | Commits | Focus |
-|-------------|---------|-------|
-| Ulf Adams | 5 | Build |
-| Martin Buchholz | 5 | Concurrency |
-| Liam Miller-Cushon | 4 | javac |
+| Contributor | Commits | Focus | 档案 |
+|-------------|---------|-------|------|
+| Ulf Adams | 5 | Build | - |
+| Martin Buchholz | 5 | Concurrency | - |
+| Liam Miller-Cushon | 4 | javac | - |
 
 ### Independent (~5% of commits)
 
-| Contributor | Commits | Focus |
-|-------------|---------|-------|
-| [Emanuel Peter](./emanuel-peter.md) | 49 | C2 Compiler |
-| Quan Anh Mai | 26 | Type System |
-| Anton Seoane Ampudia | 24 | x86 Cleanup |
-| Artur Barashev | 18 | Security |
-| Oleg Pekhovskiy | 7 | Testing |
-| Sergey Tsypanov | 6 | Security |
-| Pavel Rappo | 6 | Core Libraries |
-| Peter Levart | 5 | Core Libraries |
-| Eric Bruneton | 3 | ASM |
-| Remi Forax | 3 | Core Libraries |
-| Charles Nutter | 3 | InvokeDynamic |
-| Weibing Xiao | 3 | Testing |
+| Contributor | Commits | Focus | 档案 |
+|-------------|---------|-------|------|
+| [Emanuel Peter](./emanuel-peter.md) | 49 | C2 Compiler | [详情](./emanuel-peter.md) |
+| Quan Anh Mai | 26 | Type System | - |
+| Anton Seoane Ampudia | 24 | x86 Cleanup | - |
+| Artur Barashev | 18 | Security | - |
+| Oleg Pekhovskiy | 7 | Testing | - |
+| Sergey Tsypanov | 6 | Security | - |
+| Pavel Rappo | 6 | Core Libraries | - |
+| Peter Levart | 5 | Core Libraries | - |
+| Eric Bruneton | 3 | ASM | - |
+| Remi Forax | 3 | Core Libraries | - |
+| Charles Nutter | 3 | InvokeDynamic | - |
+| Weibing Xiao | 3 | Testing | - |
 
 ### [Arm](https://www.arm.com/) (~0.5% of commits)
 
@@ -353,13 +353,60 @@ Contributors with significant growth in JDK 26:
 ## Detailed Profiles
 
 For detailed contributor profiles, see:
-- [Albert Mingkun Yang](./albert-mingkun-yang.md)
-- [Aleksey Shipilev](./aleksey-shipilev.md)
-- [Thomas Schatzl](./thomas-schatzl.md)
-- [Daniel Fuchs](./daniel-fuchs.md)
-- [Erik Gahlin](./erik-gahlin.md)
-- [Chen Liang](./chen-liang.md)
-- [+ more](./README.md)
+
+### Oracle Contributors
+- [Albert Mingkun Yang](./albert-mingkun-yang.md) - GC (744 PRs)
+- [Thomas Schatzl](./thomas-schatzl.md) - G1 GC (546 PRs)
+- [Phil Race](./phil-race.md) - Client Libraries Lead
+- [Matthias Baesken](./matthias-baesken.md) - Build System (515 PRs)
+- [Alexey Semenyuk](./alexey-semenyuk.md) - AOT (233 PRs)
+- [Aleksey Shipilev](./aleksey-shipilev.md) - Shenandoah GC (803 PRs)
+- [Ioi Lam](./ioi-lam.md) - CDS/AOT (431 PRs)
+- [Kim Barrett](./kim-barrett.md) - C++ Modernization
+- [SendaoYan](./sendaoyan.md) - Testing (202 PRs)
+- [Jaikiran Pai](./jaikiran-pai.md) - Build System (322 PRs)
+- [Prasanta Sadhukhan](./prasanta-sadhukhan.md) - Swing/AWT
+- [Chen Liang](./chen-liang.md) - ClassFile API (237 PRs)
+- [Sergey Bylokhov](./mrserb.md) - AWT/2D (273 PRs)
+- [Erik Gahlin](./erik-gahlin.md) - JFR
+- [Brian Burkhalter](./brian-burkhalter.md) - Networking
+- [David Holmes](./david-holmes.md) - Concurrency
+- [Emanuel Peter](./emanuel-peter.md) - C2 Compiler
+- [Jan Lahoda](./jan-lahoda.md) - javac (324 PRs)
+- [Daniel Fuchs](./daniel-fuchs.md) - HTTP/3 (192 PRs)
+- [Volkan Yazici](./volkan-yazici.md) - HTTP Client
+- [Justin Lu](./justin-lu.md) - Localization
+- [William Kemper](./william-kemper.md) - Shenandoah GC
+- [Naoto Sato](./naoto-sato.md) - i18n (273 PRs)
+- [Leonid Mesnik](./leonid-mesnik.md) - JVMTI
+- [Coleen Phillimore](./coleen-phillimore.md) - HotSpot (400 PRs)
+- [Yasumasa Suenaga](./yasumasa-suenaga.md) - Serviceability (113 PRs)
+- [Hamlin Li](./hamlin-li.md) - RISC-V (74 PRs)
+- [Magnus Ihse Bursie](./magnus-ihse-bursie.md) - Build System
+- [Claes Redestad](./claes-redestad.md) - Performance
+- [Francesco Andreuzzi](./francesco-andreuzzi.md) - Testing (60 commits)
+- [Jatin Bhateja](./jatin-bhateja.md) - Vector API
+- [Roland Westrelin](./rooland-westrelin.md) - C2 Compiler
+- [Per Minborg](./per-minborg.md) - Core Libraries (JEP 526)
+- [Weijun Wang](./weijun-wang.md) - Security
+
+### Red Hat Contributors
+- [Aleksey Shipilev](./aleksey-shipilev.md) - Shenandoah GC (803 PRs)
+- [Kim Barrett](./kim-barrett.md) - GC
+- [William Kemper](./william-kemper.md) - Shenandoah GC
+- [Roman Kennke](./roman-kennke.md) - Compact Object Headers (JEP 519)
+
+### Alibaba Contributors
+- [Shaojin Wen](./shaojin-wen.md) - Core Libraries (97 PRs)
+- [Fei Yang](./fei-yang.md) - RISC-V (30 PRs)
+- [Yude Lin](./yude-lin.md) - G1 GC, AArch64 (8 PRs)
+- [Xiaowei Lu](./xiaowei-lu.md) - ZGC (3 PRs)
+- [Tongbao Zhang](./tongbao-zhang.md) - Testing
+- [Kuai Wei](./kuai-wei.md) - C2 Compiler (13 PRs)
+- [Han GQ](./han-gq.md) - Core
+- [Anjian Wen](./anjian-wen.md) - RISC-V (25 PRs)
+
+[→ All contributor profiles](./README.md)
 
 ---
 

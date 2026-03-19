@@ -10,11 +10,24 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 50+ |
-| **贡献者数** | 10+ |
+| **Integrated PRs** | 30+ |
+| **贡献者数** | 3+ |
 | **主要领域** | LoongArch |
 
-> **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。OpenJDK Committer 使用 `@openjdk.org` 邮箱提交代码，因此 git commits 按邮箱统计不准确。
+> **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。
+
+---
+
+## 贡献者
+
+| 贡献者 | GitHub | PRs | 角色 | 主要领域 |
+|--------|--------|-----|------|----------|
+| Zhang Xiaofeng | [@xfeng](https://github.com/xfeng) | 20+ | Author | LoongArch |
+| Liu Xinyu | [@liuxinyu](https://github.com/liuxinyu) | 10+ | Author | C2 编译器 |
+
+**小计**: 30+ PRs
+
+> **注**: Fei Yang (@merykitty) 是 ISCAS PLCT 实验室贡献者，专注于 RISC-V，不属于 Loongson。
 
 ---
 
@@ -30,11 +43,6 @@
 
 - C2 编译器 LoongArch 后端
 - 正确性修复
-
-### 测试
-
-- 测试稳定性
-- 问题修复
 
 ---
 
@@ -54,7 +62,7 @@
 ## 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
-- **统计时间**: 2026-03-19
+- **统计时间**: 2026-03-20
 
 ---
 
@@ -62,3 +70,5 @@
 
 - [龙芯 JDK](https://github.com/loongson/jdk)
 - [龙芯中科](https://www.loongson.cn/)
+
+[→ 返回组织索引](../../by-contributor/index.md)

@@ -19,9 +19,9 @@
 
 ## 贡献者
 
-| 贡献者 | GitHub | PRs | 主要领域 |
-|--------|--------|-----|----------|
-| [Anjian Wen](../../by-contributor/profiles/anjian-wen.md) | [@Anjian-Wen](https://github.com/Anjian-Wen) | 25 | RISC-V 向量指令 |
+| 贡献者 | GitHub | PRs | 角色 | 主要领域 |
+|--------|--------|-----|------|----------|
+| [Anjian Wen](../../by-contributor/profiles/anjian-wen.md) | [@Anjian-Wen](https://github.com/Anjian-Wen) | 25 | Author | RISC-V 向量指令 |
 
 ---
 
@@ -113,3 +113,5 @@
 - [RISC-V International](https://riscv.org/)
 - [RISC-V 指令集规范](https://github.com/riscv/riscv-isa-manual)
 - [OpenJDK RISC-V Port (JEP 422)](https://openjdk.org/jeps/422)
+
+[→ 返回组织索引](../../by-contributor/index.md)

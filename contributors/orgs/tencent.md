@@ -10,11 +10,24 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 40+ |
-| **贡献者数** | 10+ |
+| **Integrated PRs** | 30+ |
+| **贡献者数** | 5+ |
 | **主要领域** | G1 GC, 容器 |
 
 > **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。OpenJDK Committer 使用 `@openjdk.org` 邮箱提交代码，因此 git commits 按邮箱统计不准确。
+
+---
+
+## 贡献者
+
+| 贡献者 | GitHub | PRs | 角色 | 主要领域 |
+|--------|--------|-----|------|----------|
+| Luo Chunyi | [@luochunyi](https://github.com/luochunyi) | 20+ | Author | G1 GC |
+| Wang Dingwei | [@dw-virtual](https://github.com/dw-virtual) | 10+ | Author | 容器化 |
+
+**小计**: 30+ PRs
+
+> **注**: Sendao Yan (202 PRs) 是 Independent 贡献者，不属于 Tencent。
 
 ---
 
@@ -29,11 +42,6 @@
 
 - 容器资源检测
 - Cgroup 支持
-
-### 测试
-
-- 测试稳定性改进
-- 问题修复
 
 ---
 
@@ -53,7 +61,7 @@
 ## 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
-- **统计时间**: 2026-03-19
+- **统计时间**: 2026-03-20
 
 ---
 
@@ -61,3 +69,5 @@
 
 - [Tencent Kona](https://github.com/Tencent/TencentKona-8)
 - [腾讯云 Java](https://cloud.tencent.com/product/tke)
+
+[→ 返回组织索引](../../by-contributor/index.md)

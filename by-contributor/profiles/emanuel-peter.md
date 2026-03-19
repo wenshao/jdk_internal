@@ -5,14 +5,19 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Emanuel Peter |
-| **Current Organization** | Oracle |
+| **Current Organization** | Oracle (Java Platform Group) |
+| **Position** | Compiler Engineer |
+| **Location** | Zürich, Switzerland |
+| **Education** | ETH Zürich |
 | **GitHub** | [@eme64](https://github.com/eme64) |
+| **LinkedIn** | [Emanuel Peter](https://ch.linkedin.com/in/emanuel-peter-4286a2207) |
+| **Blog** | [Emanuel's Hotspot JVM C2 Blog](https://eme64.github.io/blog/) |
 | **OpenJDK** | [@epeter](https://openjdk.org/census#epeter) |
 | **Role** | JDK Reviewer |
 | **PRs** | [226 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aeme64+is%3Aclosed+label%3Aintegrated) |
 | **Primary Areas** | C2 Compiler, SuperWord Auto-Vectorization, Template Testing Framework |
 
-> **Data as of**: 2026-03-19
+> **数据来源**: [LinkedIn](https://ch.linkedin.com/in/emanuel-peter-4286a2207), [GitHub](https://github.com/eme64), [个人博客](https://eme64.github.io/blog/)
 
 ## Contribution Overview
 

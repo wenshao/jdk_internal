@@ -1,58 +1,48 @@
 # Google
 
-> 核心库和编译器优化
+> OpenJDK 贡献者（需更新）
 
 ---
 
 ## 概览
 
-Google 参与 OpenJDK 开发，专注于核心库优化和编译器改进。
+> **⚠️ 注意**: 经过核实，以下列出的贡献者实际上不在 Google 工作。此页面需要更新。
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 170+ |
-| **贡献者数** | 3+ |
-| **主要领域** | 核心库, 编译器 |
-
-> **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。OpenJDK Committer 使用 `@openjdk.org` 邮箱提交代码，因此 git commits 按邮箱统计不准确。
+| **Integrated PRs** | 需核实 |
+| **贡献者数** | 0 |
+| **主要领域** | - |
 
 ---
 
-## Top 贡献者
+## 核实结果
 
-| 排名 | 贡献者 | GitHub | PRs | 领域 |
-|------|--------|--------|-----|------|
-| 1 | Amit Kumar | [@offamitkumar](https://github.com/offamitkumar) | 93 | 编译器 |
-| 2 | Christian Stein | [@sormuras](https://github.com/sormuras) | 77 | 测试 |
-| 3 | Tirtha Sankar Das | [@jayathirthrao](https://github.com/jayathirthrao) | 52 | 编译器 |
+以下贡献者之前被错误分类为 Google 员工：
 
-**小计**: 222 PRs (以上 3 人)
+| 贡献者 | 原分类 | 正确组织 | 说明 |
+|--------|--------|----------|------|
+| Amit Kumar | Google | **IBM** | IBM Research Labs, s390x Port Lead |
+| Christian Stein | Google | **Oracle** | Java Platform Group, Language Tools |
+| Tirtha Sankar Das | Google | **Oracle** | Java Platform Group, ImageIO |
+
+**来源**:
+- [Inside.java - Christian Stein @ Oracle](https://inside.java/u/ChristianStein/)
+- [LinkedIn - Amit Kumar @ IBM](https://www.linkedin.com/in/amit-kumar-/)
+- [OpenJDK - Jayathirthrao @ Oracle](https://bugs.openjdk.org/component/Java2D)
 
 ---
 
-## 主要领域
+## 待补充
 
-### 编译器
-
-- C2 编译器优化
-- JIT 改进
-
-### 核心库
-
-- java.lang 优化
-- java.util 改进
-
-### 测试
-
-- 测试框架改进
-- jtreg 优化
+如果您知道 Google 的实际 OpenJDK 贡献者，请补充此页面。
 
 ---
 
 ## 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
-- **统计时间**: 2026-03-19
+- **统计时间**: 2026-03-20
 
 ---
 
@@ -60,3 +50,5 @@ Google 参与 OpenJDK 开发，专注于核心库优化和编译器改进。
 
 - [Google OpenJDK](https://openjdk.org/groups/hotspot/)
 - [Google GitHub](https://github.com/google)
+
+[→ 返回组织索引](../../by-contributor/index.md)
