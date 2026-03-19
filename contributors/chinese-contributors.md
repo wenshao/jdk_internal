@@ -10,8 +10,8 @@
 
 ```
 中国贡献者统计 (2007-2026)
-├── Oracle: 4,500+ commits (中国团队成员)
-├── 阿里巴巴: 72 commits
+├── Oracle 中国团队成员: 4,500+ commits (统计在 Oracle)
+├── 阿里巴巴: 73 commits
 ├── 龙芯: 52 commits
 ├── 腾讯: 44 commits
 ├── 海光: 60+ commits
@@ -28,7 +28,7 @@
 
 | 页面 | 说明 |
 |------|------|
-| [阿里巴巴](orgs/alibaba.md) | 核心库优化 (72 commits) |
+| [阿里巴巴](orgs/alibaba.md) | 核心库优化 (73 commits) |
 | [龙芯](orgs/loongson.md) | LoongArch (52 commits) |
 | [腾讯](orgs/tencent.md) | G1 GC、容器 (44 commits) |
 | [字节跳动](orgs/bytedance.md) | RISC-V (12 commits) |
@@ -219,18 +219,19 @@
 
 ## 统计汇总
 
-### 按组织
+### 中国企业
 
 | 组织 | 贡献者数 | Commits | 详情 |
 |------|----------|---------|------|
-| Oracle (中国团队) | 14+ | 4,500+ | [详情](orgs/oracle.md) |
-| 阿里巴巴 | 16 | 72 | [详情](orgs/alibaba.md) |
+| 阿里巴巴 | 16 | 73 | [详情](orgs/alibaba.md) |
 | 龙芯 | 9 | 52 | [详情](orgs/loongson.md) |
 | 腾讯 | 13 | 44 | [详情](orgs/tencent.md) |
 | 海光 | 2 | 60+ | - |
 | 字节跳动 | 1 | 12 | [详情](orgs/bytedance.md) |
 | 华为 | 4 | 11 | - |
 | ISCAS | 2 | 17 | - |
+
+> 注：Oracle 中国团队成员 (4,500+ commits) 统计在 [Oracle](orgs/oracle.md) 组织中
 
 ### 按领域
 

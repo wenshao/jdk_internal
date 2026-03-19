@@ -72,7 +72,7 @@ OpenJDK 贡献者生态 (2007-2026)
 | [IBM](orgs/ibm.md) | 1,500+ | ~2% | JVM, 测试 | [查看详情](orgs/ibm.md) |
 | [Amazon](orgs/amazon.md) | 1,000+ | ~1% | AArch64, 编译器 | [查看详情](orgs/amazon.md) |
 | [Google](orgs/google.md) | 800+ | ~1% | 核心库, 编译器 | [查看详情](orgs/google.md) |
-| [阿里巴巴](orgs/alibaba.md) | 72 | <1% | 核心库优化 | [查看详情](orgs/alibaba.md) |
+| [阿里巴巴](orgs/alibaba.md) | 73 | <1% | 核心库优化 | [查看详情](orgs/alibaba.md) |
 | [龙芯](orgs/loongson.md) | 52 | <1% | LoongArch | [查看详情](orgs/loongson.md) |
 | [腾讯](orgs/tencent.md) | 44 | <1% | G1 GC, 容器 | [查看详情](orgs/tencent.md) |
 | [字节跳动](orgs/bytedance.md) | 12 | <1% | RISC-V | [查看详情](orgs/bytedance.md) |
