@@ -10,65 +10,38 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 110 |
-| **Git Commits** | 73 |
-| **贡献者数** | 16 |
-| **活跃时间** | 2018 - 至今 |
-| **主要领域** | 核心库、C2 编译器、AArch64 |
+| **Integrated PRs** | 121 |
+| **贡献者数** | 4 |
+| **活跃时间** | 2021 - 至今 |
+| **主要领域** | 核心库、C2 编译器、AArch64、ZGC |
 
-> **统计说明**: 使用 GitHub Integrated PRs 作为主要贡献指标。部分贡献者通过其他方式提交代码，统计在 Git Commits 中。
+> **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。查询方式：`repo:openjdk/jdk author:xxx type:pr label:integrated`
 
 ---
 
 ## 贡献者
 
-### GitHub PR 贡献者
-
 | 贡献者 | GitHub | PRs | 主要领域 |
 |--------|--------|-----|----------|
 | [Shaojin Wen](../shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | 核心库优化 |
 | [Kuai Wei](../kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | C2 编译器 |
-
-**小计**: 110 PRs
-
-### 其他贡献者 (Git Commits)
-
-| 贡献者 | Commits | 主要贡献 |
-|--------|---------|----------|
-| [Yude Lin](../yude-lin.md) | 8 | G1 GC, Shenandoah, AArch64 |
-| [Zhuo Wang](../zhuo-wang.md) | 3 | Unsafe 修复 |
-| [Xiaowei Lu](../xiaowei-lu.md) | 3 | ZGC, GC 日志 |
-| [Hao Tang](../hao-tang.md) | 2 | 容器 CPU, ZGC |
-| [Yibo Yang](../yibo-yang.md) | 2 | 内存优化, Apple M1 |
-| Sendao Yan | 2 | 测试修复 |
-| [Xingqi Zheng](../xingqi-zheng.md) | 2 | RISC-V 修复 |
-| [Yang Yi](../yang-yi.md) | 2 | Metaspace, 文件流 |
-| lingjun.cg | 2 | 测试 |
-| MaxXSoft | 2 | 测试 |
-| yibo.yl | 2 | 测试 |
-| Quan Zhang | 1 | 测试 |
-| gaogao-mem | 1 | 测试 |
-| yifeng.jyf | 1 | 测试 |
-| 释天 | 1 | 测试 |
-
-**小计**: 35 commits
+| [Yude Lin](../yude-lin.md) | [@linade](https://github.com/linade) | 8 | G1 GC, AArch64 |
+| [Xiaowei Lu](../xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | ZGC |
 
 ---
 
 ## 贡献时间线
 
 ```
-2018: █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1 commit
-2019: ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2 commits
-2020: █████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 5 commits
-2021: ██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10 commits
-2022: ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 3 commits
-2023: ██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10 commits
-2024: ████████████████████████████████████████████████████████████████████ 38 commits (高峰期)
-2025: ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 4 commits
+2021: █████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7 PRs
+2022: ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2 PRs
+2023: ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 8 PRs
+2024: ███████████████████████████████████████████████████████████████░░ 68 PRs (高峰期)
+2025: █████████████████████████████████████████████████████████░░░░░░░░ 35 PRs
+2026: █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1 PR
 ```
 
-> **总计**: 73 commits (2018-2025)
+> **总计**: 121 PRs (2021-2026)
 
 ---
 
@@ -89,7 +62,7 @@
 
 ## 关键贡献
 
-### 核心库性能优化
+### 核心库性能优化 (Shaojin Wen)
 
 | Issue | 标题 | 性能影响 |
 |-------|------|----------|
@@ -101,27 +74,7 @@
 | 8310929 | Integer.toString 优化 | +10% |
 | 8310502 | Long.fastUUID 优化 | +8% |
 
-### 字符串处理优化
-
-| Issue | 标题 | 说明 |
-|-------|------|------|
-| 8337168 | LocalDateTime.toString 优化 | 使用 StringBuilder.repeat |
-| 8336741 | LocalTime.toString 优化 | 使用 StringBuilder.repeat |
-| 8336706 | LocalDate.toString 优化 | 使用 StringBuilder.repeat |
-| 8333833 | UUID.toString 移除 ByteArrayLittleEndian | 简化代码 |
-| 8333396 | Format 使用 StringBuilder 内部实现 | 减少分配 |
-
-### 格式化优化
-
-| Issue | 标题 | 说明 |
-|-------|------|------|
-| 8335645 | Formatter trailingZeros 使用 String repeat | 性能提升 |
-| 8335802 | HexFormat 使用 boolean 替代 enum | 启动优化 |
-| 8335252 | Formatter.Conversion#isValid 简化 | 代码清理 |
-| 8316426 | HexFormat.formatHex 优化 | 性能提升 |
-| 8316704 | Formatter 和 FormatProcessor 解析优化 | 无正则表达式 |
-
-### C2 编译器
+### C2 编译器 (Kuai Wei)
 
 | Issue | 标题 | 说明 |
 |-------|------|------|
@@ -130,48 +83,21 @@
 | 8339299 | C1 内联 final 方法丢失类型 profile | 性能修复 |
 | 8326135 | ADLC 报告未使用的操作数 | 工具改进 |
 
-### AArch64 优化
+### G1 GC 和 AArch64 (Yude Lin)
 
 | Issue | 标题 | 说明 |
 |-------|------|------|
-| 8325821 | AArch64 release barrier 优化 | 性能提升 |
-| 8331558 | AArch64 整数取余优化 | 性能提升 |
-| 8333410 | AArch64 清理未使用的类 | 代码清理 |
+| 8297247 | G1 添加 Remark 和 Cleanup 暂停时间 MXBean | **监控增强** |
+| 8298521 | G1MonitoringSupport 成员重命名 | 代码清理 |
 | 8323122 | AArch64 itable stub 大小估算 | 正确性修复 |
-| 8242449 | AArch64 r27 在 CompressedOops 模式下可分配 | Bug 修复 |
 
-### GC 优化
+### ZGC 优化 (Xiaowei Lu)
 
-| Issue | 标题 | 说明 | 贡献者 |
-|-------|------|------|--------|
-| 8297247 | G1 添加 Remark 和 Cleanup 暂停时间 MXBean | 监控增强 | Yude Lin |
-| 8298521 | G1MonitoringSupport 成员重命名 | 代码清理 | Yude Lin |
-| 8270347 | ZGC 采用 release-acquire 顺序 | 正确性 | Xiaowei Lu |
-| 8272138 | ZGC 采用宽松顺序进行自愈 | 性能优化 | Xiaowei Lu |
-| 8229406 | ZGC 修复统计错误 | 正确性 | Hao Tang |
-
-### RISC-V 修复
-
-| Issue | 标题 | 说明 | 贡献者 |
-|-------|------|------|--------|
-| 8326936 | RISC-V Shenandoah GC 原子操作崩溃修复 | **崩溃修复** | Xingqi Zheng |
-| 8324280 | RISC-V VM_Version::parse_satp_mode 实现错误 | 正确性修复 | Xingqi Zheng |
-
-### 容器与平台
-
-| Issue | 标题 | 说明 | 贡献者 |
-|-------|------|------|--------|
-| 8265836 | 容器内 CPU 负载不正确 | Bug 修复 | Hao Tang |
-| 8326446 | Apple M1 CPU 负载不准确 | Bug 修复 | Yibo Yang |
-| 8319876 | VM_ThreadDump 内存消耗优化 | 性能优化 | Yibo Yang |
-
-### 其他修复
-
-| Issue | 标题 | 说明 | 贡献者 |
-|-------|------|------|--------|
-| 8246051 | Unsafe 非对齐 compare_and_swap 导致 SIGBUS | **崩溃修复** | Zhuo Wang |
-| 8273112 | -Xloggc 应覆盖 -verbose:gc | 功能修复 | Xiaowei Lu |
-| 8262099 | VM.metaspace 应报告无限制大小 | 功能修复 | Yang Yi |
+| Issue | 标题 | 说明 |
+|-------|------|------|
+| 8272138 | ZGC 采用宽松顺序进行自愈 | **性能优化** |
+| 8270347 | ZGC 转发表采用 release-acquire 顺序 | 正确性修复 |
+| 8273112 | -Xloggc 应覆盖 -verbose:gc | 功能修复 |
 
 ---
 
@@ -193,8 +119,8 @@
 
 - **核心库**: java.lang, java.util, java.time
 - **编译器**: C2 IR 优化
-- **架构**: AArch64, RISC-V
-- **GC**: G1, Shenandoah, ZGC
+- **架构**: AArch64
+- **GC**: G1, ZGC
 
 ---
 
@@ -227,8 +153,7 @@
 
 ## 数据来源
 
-- **PR 统计**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
-- **Commit 统计**: `git log upstream_master --author="alibaba-inc.com"`
+- **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
 - **统计时间**: 2026-03-19
 
 ---

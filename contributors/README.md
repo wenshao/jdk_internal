@@ -71,8 +71,8 @@
 | [SAP](orgs/sap.md) | 700+ | PPC, AIX | [查看详情](orgs/sap.md) |
 | [Google](orgs/google.md) | 170+ | 核心库, 编译器 | [查看详情](orgs/google.md) |
 | [Amazon](orgs/amazon.md) | 165+ | AArch64, 编译器 | [查看详情](orgs/amazon.md) |
+| [阿里巴巴](orgs/alibaba.md) | 121 | 核心库优化 | [查看详情](orgs/alibaba.md) |
 | [Red Hat](orgs/redhat.md) | 75+ | GC, 编译器 | [查看详情](orgs/redhat.md) |
-| [阿里巴巴](orgs/alibaba.md) | 110 | 核心库优化 | [查看详情](orgs/alibaba.md) |
 | [字节跳动](orgs/bytedance.md) | 25 | RISC-V | [查看详情](orgs/bytedance.md) |
 | [龙芯](orgs/loongson.md) | 50+ | LoongArch | [查看详情](orgs/loongson.md) |
 | [腾讯](orgs/tencent.md) | 40+ | G1 GC, 容器 | [查看详情](orgs/tencent.md) |

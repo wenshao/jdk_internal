@@ -1,6 +1,6 @@
 # Yude Lin
 
-> G1 GC 和 Shenandoah 贡献者，阿里巴巴
+> G1 GC 和 AArch64 贡献者，阿里巴巴
 
 ---
 
@@ -10,25 +10,25 @@
 |------|-----|
 | **姓名** | Yude Lin |
 | **当前组织** | 阿里巴巴 (Alibaba) |
-| **邮箱** | yude.lyd@alibaba-inc.com |
-| **Commits** | 8 |
-| **主要领域** | G1 GC, Shenandoah, AArch64 |
-| **活跃时间** | 2020 - 2024 |
+| **GitHub** | [@linade](https://github.com/linade) |
+| **Integrated PRs** | [8](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Alinade+is%3Aclosed+label%3Aintegrated) |
+| **主要领域** | G1 GC, AArch64 |
+| **活跃时间** | 2021 - 2024 |
 
 ---
 
-## 贡献列表
+## PR 列表
 
-| Issue | 标题 | 说明 |
-|-------|------|------|
-| 8334810 | Redo: Un-ProblemList LocaleProvidersRun | 测试修复 |
-| 8328064 | Remove obsolete comments in constantPool | 代码清理 |
-| 8323122 | AArch64: Increase itable stub size estimate | AArch64 修复 |
-| 8298521 | Rename members in G1MonitoringSupport | G1 重构 |
-| 8297247 | Add GarbageCollectorMXBean for Remark and Cleanup | **G1 监控增强** |
-| 8274546 | Shenandoah: Remove unused ShenandoahUpdateRootsTask | 代码清理 |
-| 8266963 | Remove safepoint poll due to reentrance issue | 正确性修复 |
-| 8266185 | Shenandoah: Fix incorrect comment/assertion | 文档修复 |
+| Issue | 标题 | 合入时间 |
+|-------|------|----------|
+| 8334810 | Redo: Un-ProblemList LocaleProvidersRun | 2024-09 |
+| 8328064 | Remove obsolete comments in constantPool | 2024-06 |
+| 8323122 | AArch64: Increase itable stub size estimate | 2024-03 |
+| 8298521 | Rename members in G1MonitoringSupport | 2022-09 |
+| 8297247 | Add GarbageCollectorMXBean for Remark and Cleanup | 2022-08 |
+| 8274546 | Shenandoah: Remove unused ShenandoahUpdateRootsTask | 2021-09 |
+| 8266963 | Remove safepoint poll due to reentrance issue | 2021-05 |
+| 8266185 | Shenandoah: Fix incorrect comment/assertion | 2021-04 |
 
 ---
 
@@ -64,6 +64,14 @@ static int itable_stub_size = 0x60;  // 增加估算大小
 
 ---
 
+## 数据来源
+
+- **统计方法**: GitHub PR search `repo:openjdk/jdk author:linade type:pr label:integrated`
+- **统计时间**: 2026-03-19
+
+---
+
 ## 相关链接
 
-- [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20yude.lyd)
+- [GitHub Profile](https://github.com/linade)
+- [OpenJDK PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Alinade)

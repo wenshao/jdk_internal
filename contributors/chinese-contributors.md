@@ -8,7 +8,7 @@
 
 中国开发者在 OpenJDK 社区中做出了重要贡献，涵盖 GC、编译器、RISC-V、LoongArch、核心库、国际化等多个领域。
 
-> **统计说明**: 使用 GitHub Integrated PRs 作为主要贡献指标。OpenJDK Committer 使用 `@openjdk.org` 邮箱提交代码，因此 git commits 按邮箱统计不准确。
+> **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。查询方式：`repo:openjdk/jdk author:xxx type:pr label:integrated`
 
 ---
 
@@ -39,13 +39,16 @@
 |--------|--------|-----|----------|
 | [Shaojin Wen](shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | 核心库优化 |
 | [Kuai Wei](kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | C2 编译器 |
+| [Yude Lin](yude-lin.md) | [@linade](https://github.com/linade) | 8 | G1 GC, AArch64 |
+| [Xiaowei Lu](xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | ZGC |
 
-**小计**: 110 PRs
+**小计**: 121 PRs
 
 **关键贡献**:
 - 字符串拼接优化 (+10%)
 - DateTime toString 优化 (+10%)
-- C2 编译器 IR 修复
+- G1 GC 监控增强
+- ZGC 性能优化
 
 ---
 
@@ -101,7 +104,8 @@
 | 贡献者 | PRs | 组织 | 领域 |
 |--------|-----|------|------|
 | Albert Mingkun Yang | 744 | Oracle | G1/Parallel GC |
-| Zhengyu Gu | - | Oracle | G1 GC |
+| Yude Lin | 8 | 阿里巴巴 | G1 GC |
+| Xiaowei Lu | 3 | 阿里巴巴 | ZGC |
 
 ### 编译器
 
@@ -132,7 +136,7 @@
 | 组织 | PRs | 详情 |
 |------|-----|------|
 | Oracle 中国团队 | 1,643 | [详情](orgs/oracle.md) |
-| 阿里巴巴 | 110 | [详情](orgs/alibaba.md) |
+| 阿里巴巴 | 121 | [详情](orgs/alibaba.md) |
 | ISCAS | 53 | - |
 | 字节跳动 | 25 | [详情](orgs/bytedance.md) |
 | 龙芯 | 50+ | [详情](orgs/loongson.md) |

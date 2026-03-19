@@ -10,20 +10,20 @@
 |------|-----|
 | **姓名** | Xiaowei Lu |
 | **当前组织** | 阿里巴巴 (Alibaba) |
-| **邮箱** | lxw263044@alibaba-inc.com |
-| **Commits** | 3 |
-| **主要领域** | ZGC, GC 日志 |
-| **活跃时间** | 2020 |
+| **GitHub** | [@weixlu](https://github.com/weixlu) |
+| **Integrated PRs** | [3](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aweixlu+is%3Aclosed+label%3Aintegrated) |
+| **主要领域** | ZGC |
+| **活跃时间** | 2021 |
 
 ---
 
-## 贡献列表
+## PR 列表
 
-| Issue | 标题 | 说明 |
-|-------|------|------|
-| 8273112 | -Xloggc:<filename> should override -verbose:gc | 功能修复 |
-| 8272138 | ZGC: Adopt relaxed ordering for self-healing | **性能优化** |
-| 8270347 | ZGC: Adopt release-acquire ordering for forwarding table | 正确性修复 |
+| Issue | 标题 | 合入时间 |
+|-------|------|----------|
+| 8273112 | -Xloggc:<filename> should override -verbose:gc | 2021-04 |
+| 8272138 | ZGC: Adopt relaxed ordering for self-healing | 2021-03 |
+| 8270347 | ZGC: Adopt release-acquire ordering for forwarding table | 2021-02 |
 
 ---
 
@@ -79,6 +79,14 @@ if (Arguments::has_xloggc()) {
 
 ---
 
+## 数据来源
+
+- **统计方法**: GitHub PR search `repo:openjdk/jdk author:weixlu type:pr label:integrated`
+- **统计时间**: 2026-03-19
+
+---
+
 ## 相关链接
 
-- [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20lxw263044)
+- [GitHub Profile](https://github.com/weixlu)
+- [OpenJDK PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aweixlu)
