@@ -478,5 +478,5 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 ## 7. 相关链接
 
 - [java.net.http API 文档](https://download.java.net/java/early_access/jdk26/docs/api/java.net.http/module-summary.html)
-- [JEP 517: HTTP/3](/jeps/jep-517.md)
+- [JEP 517: HTTP/3](/jeps/network/jep-517.md)
 - [源码浏览](https://github.com/openjdk/jdk/tree/master/src/java.net.http)

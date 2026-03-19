@@ -106,43 +106,43 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 | JEP | 标题 | 状态 | 描述 |
 |-----|------|------|------|
-| [JEP 530](/jeps/jep-530.md) | Primitive Types in Patterns | 🔍 预览 | 模式匹配支持原始类型 |
-| [JEP 526](/jeps/jep-526.md) | Lazy Constants | 🔍 预览 | 延迟常量初始化 |
-| [JEP 512](/jeps/jep-512.md) | Compact Source Files | ✅ 正式 | 简化单文件源码 |
-| [JEP 511](/jeps/jep-511.md) | Module Import Declarations | ✅ 正式 | 模块导入声明 |
-| [JEP 500](/jeps/jep-500.md) | Make Final Mean Final | ✅ 正式 | 严格 final 语义 |
+| [JEP 530](/jeps/concurrency/jep-530.md) | Primitive Types in Patterns | 🔍 预览 | 模式匹配支持原始类型 |
+| [JEP 526](/jeps/concurrency/jep-526.md) | Lazy Constants | 🔍 预览 | 延迟常量初始化 |
+| [JEP 512](/jeps/language/jep-512.md) | Compact Source Files | ✅ 正式 | 简化单文件源码 |
+| [JEP 511](/jeps/language/jep-511.md) | Module Import Declarations | ✅ 正式 | 模块导入声明 |
+| [JEP 500](/jeps/removed/jep-500.md) | Make Final Mean Final | ✅ 正式 | 严格 final 语义 |
 
 ### 性能
 
 | JEP | 标题 | 影响 | 描述 |
 |-----|------|------|------|
-| [JEP 522](/jeps/jep-522.md) | G1 GC Throughput | 🚀 +10-20% | Claim Table 机制 |
-| [JEP 521](/jeps/jep-521.md) | Generational Shenandoah | 🚀 -30% pause | 分代收集 |
-| [JEP 519](/jeps/jep-519.md) | Compact Object Headers | 🚀 -16% heap | 压缩对象头 |
-| [JEP 514](/jeps/jep-514.md) | AOT Ergonomics | ⚡ 更快启动 | 自动 AOT 优化 |
-| [JEP 515](/jeps/jep-515.md) | AOT Method Profiling | ⚡ 更好性能 | 方法级 AOT |
+| [JEP 522](/jeps/gc/jep-522.md) | G1 GC Throughput | 🚀 +10-20% | Claim Table 机制 |
+| [JEP 521](/jeps/gc/jep-521.md) | Generational Shenandoah | 🚀 -30% pause | 分代收集 |
+| [JEP 519](/jeps/gc/jep-519.md) | Compact Object Headers | 🚀 -16% heap | 压缩对象头 |
+| [JEP 514](/jeps/performance/jep-514.md) | AOT Ergonomics | ⚡ 更快启动 | 自动 AOT 优化 |
+| [JEP 515](/jeps/performance/jep-515.md) | AOT Method Profiling | ⚡ 更好性能 | 方法级 AOT |
 
 ### 网络
 
 | JEP | 标题 | 状态 | 描述 |
 |-----|------|------|------|
-| [JEP 517](/jeps/jep-517.md) | HTTP/3 | ✅ 正式 | QUIC 协议支持 |
+| [JEP 517](/jeps/network/jep-517.md) | HTTP/3 | ✅ 正式 | QUIC 协议支持 |
 
 ### 并发
 
 | JEP | 标题 | 状态 | 描述 |
 |-----|------|------|------|
-| [JEP 525](/jeps/jep-525.md) | Structured Concurrency | 🔍 预览 | 结构化并发 (第6次) |
-| [JEP 506](/jeps/jep-506.md) | Scoped Values | 🔍 预览 | 作用域值 |
-| [JEP 502](/jeps/jep-502.md) | Stable Values | ✅ 正式 | 稳定值 |
-| [JEP 504](/jeps/jep-504.md) | Remove Applet API | ✅ 正式 | 移除 Applet API |
+| [JEP 525](/jeps/concurrency/jep-525.md) | Structured Concurrency | 🔍 预览 | 结构化并发 (第6次) |
+| [JEP 506](/jeps/concurrency/jep-506.md) | Scoped Values | 🔍 预览 | 作用域值 |
+| [JEP 502](/jeps/performance/jep-502.md) | Stable Values | ✅ 正式 | 稳定值 |
+| [JEP 504](/jeps/performance/jep-504.md) | Remove Applet API | ✅ 正式 | 移除 Applet API |
 
 ### 安全
 
 | JEP | 标题 | 状态 | 描述 |
 |-----|------|------|------|
-| [JEP 510](/jeps/jep-510.md) | KDF API | ✅ 正式 | 密钥派生 API |
-| [JEP 470](/jeps/jep-470.md) | PEM Encodings | ✅ 正式 | PEM 格式支持 |
+| [JEP 510](/jeps/security/jep-510.md) | KDF API | ✅ 正式 | 密钥派生 API |
+| [JEP 470](/jeps/security/jep-470.md) | PEM Encodings | ✅ 正式 | PEM 格式支持 |
 
 > 图例: ✅ 正式发布 | 🔍 预览特性 (需要 `--enable-preview`) | 🚀 性能提升 | ⚡ 启动优化
 

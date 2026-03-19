@@ -92,9 +92,9 @@ Maintains Amazon Corretto 8 distribution.
 
 | Contributor | Focus | 档案 |
 |-------------|-------|------|
-| Andrew Dinn | AArch64 | [详情](./andrew-dinn.md) |
-| Nick Gasson | AArch64 | [详情](./nick-gasson.md) |
-| David Beaumont | Compiler | [详情](./david-beaumont.md) |
+| Andrew Dinn | AArch64 | 详情  |
+| Nick Gasson | AArch64 | 详情  |
+| David Beaumont | Compiler | 详情  |
 
 ### Alibaba (Dragonwell)
 
@@ -227,7 +227,7 @@ For detailed contributor profiles, see:
 - [Thomas Schatzl](./thomas-schatzl.md) - G1 GC
 
 ### Current Maintainers
-- [Andrew Haley](./andrew-dinn.md) - AArch64
+- Andrew Haley - AArch64
 - [Matthias Baesken](./matthias-baesken.md) - Build System
 - [Magnus Ihse Bursie](./magnus-ihse-bursie.md) - Build System
 

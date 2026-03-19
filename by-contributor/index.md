@@ -45,9 +45,9 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 | 贡献者 | 主要领域 | 查看 |
 |--------|----------|------|
-| Andrew Dinn | AArch64 | [详情](/by-contributor/profiles/andrew-dinn.md) |
-| Nick Gasson | AArch64 | [详情](/by-contributor/profiles/nick-gasson.md) |
-| David Beaumont | 编译器 | [详情](/by-contributor/profiles/david-beaumont.md) |
+| Andrew Dinn | AArch64 | 详情  |
+| Nick Gasson | AArch64 | 详情  |
+| David Beaumont | 编译器 | 详情  |
 
 [→ Amazon 全部贡献者](/contributors/orgs/amazon.md)
 
@@ -55,9 +55,9 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 | 贡献者 | 主要领域 | 查看 |
 |--------|----------|------|
-| Raffaello Giulietti | 核心库 | [详情](/by-contributor/profiles/raffaello-giulietti.md) |
+| Raffaello Giulietti | 核心库 | 详情  |
 | Roman Kennke | Shenandoah GC | [详情](/by-contributor/profiles/roman-kennke.md) |
-| Andrew Dinn | AArch64 | [详情](/by-contributor/profiles/andrew-dinn.md) |
+| Andrew Dinn | AArch64 | 详情  |
 
 [→ Red Hat 全部贡献者](/contributors/orgs/redhat.md)
 
@@ -65,9 +65,9 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 | 贡献者 | 主要领域 | 查看 |
 |--------|----------|------|
-| Goetz Lindenmaier | HotSpot Runtime | [详情](/by-contributor/profiles/goetz-lindenmaier.md) |
-| Thomas Stuefe | HotSpot | [详情](/by-contributor/profiles/thomas-stuefe.md) |
-| Amit Kumar | s390x, Compiler | [详情](/by-contributor/profiles/amit-kumar.md) |
+| Goetz Lindenmaier | HotSpot Runtime | 详情  |
+| Thomas Stuefe | HotSpot | 详情  |
+| Amit Kumar | s390x, Compiler | 详情  |
 
 [→ IBM 全部贡献者](/contributors/orgs/ibm.md)
 
@@ -76,7 +76,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 贡献者 | 主要领域 | 查看 |
 |--------|----------|------|
 | Matthias Baesken | 跨平台构建 | [详情](/by-contributor/profiles/matthias-baesken.md) |
-| Erik Joelsson | 构建系统 | [详情](/by-contributor/profiles/erik-joelsson.md) |
+| Erik Joelsson | 构建系统 | 详情  |
 
 [→ SAP 全部贡献者](/contributors/orgs/sap.md)
 
@@ -86,8 +86,8 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 | 贡献者 | 实际组织 | 查看 |
 |--------|----------|------|
-| Amit Kumar | IBM | [详情](/by-contributor/profiles/amit-kumar.md) |
-| Christian Stein | Oracle | [详情](/by-contributor/profiles/christian-stein.md) |
+| Amit Kumar | IBM | 详情  |
+| Christian Stein | Oracle | 详情  |
 
 [→ Google 全部贡献者](/contributors/orgs/google.md)
 
@@ -125,7 +125,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 |------|------------|------|
 | G1 GC | Thomas Schatzl | [详情](/by-contributor/profiles/thomas-schatzl.md) |
 | Shenandoah GC | William Kemper | [详情](/by-contributor/profiles/william-kemper.md) |
-| ZGC | Stefan Karlsson | [详情](/by-contributor/profiles/stefan-karlsson.md) |
+| ZGC | Stefan Karlsson | 详情  |
 
 #### 网络与通信
 
@@ -287,24 +287,24 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 | 贡献者 | PR 分析文档 |
 |--------|-----------|
-| Chen Liang | [移除 com.sun.tools.classfile](/by-pr/8352/8352748.md) |
-| Chen Liang | [UTF-8 条目验证](/by-pr/8367/8367585.md) |
+| Chen Liang | 移除 com.sun.tools.classfile |
+| Chen Liang | UTF-8 条目验证  |
 
 ### 编译器优化
 
 | 贡献者 | PR 分析文档 |
 |--------|-----------|
-| Emanuel Peter | [SuperWord Cost Model](/by-pr/8340/8340093.md) |
-| Emanuel Peter | [模板测试框架](/by-pr/8344/8344942.md) |
+| Emanuel Peter | SuperWord Cost Model |
+| Emanuel Peter | 模板测试框架  |
 
 ### JVM 运行时
 
 | 贡献者 | PR 分析文档 |
 |--------|-----------|
-| Kim Barrett | [Atomic<T> 模板](/by-pr/8367/8367013.md) |
-| David Holmes | [信号处理安全](/by-pr/8369/8369631.md) |
-| Leonid Mesnik | [JVMTI 压力测试](/by-pr/8364/8364973.md) |
-| William Kemper | [分代 Shenandoah](/by-pr/8354/8354078.md) |
+| Kim Barrett | Atomic<T> 模板  |
+| David Holmes | 信号处理安全  |
+| Leonid Mesnik | JVMTI 压力测试  |
+| William Kemper | 分代 Shenandoah |
 
 [→ 全部 PR 分析文档](/by-pr/)
 

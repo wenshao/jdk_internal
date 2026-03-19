@@ -15,7 +15,7 @@
 | 深度技术分析 | [深度分析文档](./deep-dive/) |
 | 如何试用 | [快速开始](#快速开始) |
 | 从 JDK 21 升级 | [迁移指南](./migration/from-21.md) |
-| 按主题浏览 | [GC](/by-topic/gc/timeline.md) · [并发](/by-topic/concurrency/timeline.md) |
+| 按主题浏览 | [GC](/by-topic/core/gc/timeline.md) · [并发](/by-topic/concurrency/concurrency/timeline.md) |
 | 按模块学习 | [模块分析](/modules/) |
 
 ---
@@ -157,35 +157,35 @@ ScopedValue.where(USER, "alice")
 
 | JEP | 标题 | 状态 | 描述 | 深度分析 |
 |-----|------|------|------|----------|
-| [JEP 430](/jeps/jep-430.md) | String Templates | ✅ 正式 | 字符串模板 | [→](./deep-dive/string-templates.md) |
-| [JEP 455](/jeps/jep-455.md) | Primitive Types in Patterns | 🔍 预览 | 原始类型模式匹配 | → |
+| [JEP 430](/jeps/language/jep-430.md) | String Templates | ✅ 正式 | 字符串模板 | [→](./deep-dive/string-templates.md) |
+| [JEP 455](/jeps/tools/jep-455.md) | Primitive Types in Patterns | 🔍 预览 | 原始类型模式匹配 | → |
 | JEP 469 | Implicit Classes | 🔍 预览 | 隐式类 (第4次) | → |
-| [JEP 466](/jeps/jep-466.md) | Class-File API | 🔍 预览 | 类文件 API | → |
-| [JEP 454](/jeps/jep-454.md) | Foreign Function & Memory API | ✅ 正式 | FFM API | → |
-| [JEP 444](/jeps/jep-444.md) | Virtual Threads | ✅ 正式 | 虚拟线程 | → |
+| [JEP 466](/jeps/tools/jep-466.md) | Class-File API | 🔍 预览 | 类文件 API | → |
+| [JEP 454](/jeps/ffi/jep-454.md) | Foreign Function & Memory API | ✅ 正式 | FFM API | → |
+| [JEP 444](/jeps/concurrency/jep-444.md) | Virtual Threads | ✅ 正式 | 虚拟线程 | → |
 
 ### 性能
 
 | JEP | 标题 | 影响 | 描述 | 深度分析 |
 |-----|------|------|------|----------|
-| [JEP 468](/jeps/jep-468.md) | Generational ZGC | 🚀 大幅提升 | 分代 ZGC | [→](./deep-dive/generational-zgc.md) |
-| [JEP 462](/jeps/jep-462.md) | Structured Concurrency | 🔍 预览 | 结构化并发 (第5次) | → |
-| [JEP 448](/jeps/jep-448.md) | JVM Code Heap | 🚀 启动优化 | 代码堆分段 | → |
-| [JEP 449](/jeps/jep-449.md) | Barrier-Based C2 | 🚀 吞吐量 | C2 编译器优化 | → |
+| [JEP 468](/jeps/tools/jep-468.md) | Generational ZGC | 🚀 大幅提升 | 分代 ZGC | [→](./deep-dive/generational-zgc.md) |
+| [JEP 462](/jeps/concurrency/jep-462.md) | Structured Concurrency | 🔍 预览 | 结构化并发 (第5次) | → |
+| [JEP 448](/jeps/tools/jep-448.md) | JVM Code Heap | 🚀 启动优化 | 代码堆分段 | → |
+| [JEP 449](/jeps/tools/jep-449.md) | Barrier-Based C2 | 🚀 吞吐量 | C2 编译器优化 | → |
 
 ### 并发
 
 | JEP | 标题 | 状态 | 描述 | 深度分析 |
 |-----|------|------|------|----------|
-| [JEP 462](/jeps/jep-462.md) | Structured Concurrency | 🔍 预览 | 结构化并发 (第5次) | → |
-| [JEP 467](/jeps/jep-467.md) | Scoped Values | 🔍 预览 | 作用域值 (第3次) | → |
+| [JEP 462](/jeps/concurrency/jep-462.md) | Structured Concurrency | 🔍 预览 | 结构化并发 (第5次) | → |
+| [JEP 467](/jeps/tools/jep-467.md) | Scoped Values | 🔍 预览 | 作用域值 (第3次) | → |
 
 ### 安全
 
 | JEP | 标题 | 状态 | 描述 | 深度分析 |
 |-----|------|------|------|----------|
-| [JEP 451](/jeps/jep-451.md) | Prepare to Restrict Dynamic Loading | ⚠️ 废弃 | 动态加载限制 | → |
-| [JEP 452](/jeps/jep-452.md) | Key Encapsulation Mechanism API | ✅ 正式 | KEM API | → |
+| [JEP 451](/jeps/security/jep-451.md) | Prepare to Restrict Dynamic Loading | ⚠️ 废弃 | 动态加载限制 | → |
+| [JEP 452](/jeps/security/jep-452.md) | Key Encapsulation Mechanism API | ✅ 正式 | KEM API | → |
 
 > 图例: ✅ 正式发布 | 🔍 预览特性 (需要 `--enable-preview`) | 🚀 性能提升 | ⚠️ 废弃/移除
 
@@ -360,9 +360,9 @@ java --enable-preview MyApp
 
 | 资源 | 链接 |
 |------|------|
-| **按主题浏览** | [GC](/by-topic/gc/timeline.md) · [并发](/by-topic/concurrency/timeline.md) · [HTTP](/by-topic/http/timeline.md) |
+| **按主题浏览** | [GC](/by-topic/core/gc/timeline.md) · [并发](/by-topic/concurrency/concurrency/timeline.md) · [HTTP](/by-topic/concurrency/http/timeline.md) |
 | **模块分析** | [java.base](/modules/java.base.md) · [concurrent](/modules/concurrent.md) · [hotspot](/modules/hotspot.md) |
-| **JEP 分析** | [JEP 468](/jeps/jep-468.md) · [JEP 462](/jeps/jep-462.md) · [JEP 444](/jeps/jep-444.md) |
+| **JEP 分析** | [JEP 468](/jeps/tools/jep-468.md) · [JEP 462](/jeps/concurrency/jep-462.md) · [JEP 444](/jeps/concurrency/jep-444.md) |
 | **深度分析** | [JEP 506](/deep-dive/jep-506-implementation.md) · [JEP 517](/deep-dive/jep-517-implementation.md) |
 | **指南** | [速查表](/guides/cheat-sheet.md) · [FAQ](/guides/faq.md) · [学习路径](/guides/learning-path.md) |
 
@@ -387,10 +387,10 @@ java --enable-preview MyApp
 
 ### 按主题浏览
 
-- [GC 演进](/by-topic/gc/timeline.md) - G1/ZGC/Shenandoah 时间线
-- [并发编程](/by-topic/concurrency/timeline.md) - Virtual Threads, Structured Concurrency
-- [字符串处理](/by-topic/string/timeline.md) - 字符串 API 演进
-- [HTTP 客户端](/by-topic/http/timeline.md) - HTTP Client, HTTP/3
+- [GC 演进](/by-topic/core/gc/timeline.md) - G1/ZGC/Shenandoah 时间线
+- [并发编程](/by-topic/concurrency/concurrency/timeline.md) - Virtual Threads, Structured Concurrency
+- [字符串处理](/by-topic/language/string/timeline.md) - 字符串 API 演进
+- [HTTP 客户端](/by-topic/concurrency/http/timeline.md) - HTTP Client, HTTP/3
 
 ### 按贡献者浏览
 

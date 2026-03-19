@@ -181,4 +181,4 @@ String value = MESSAGE.get();  // 只计算一次
 ## 相关链接
 
 - [并发主题时间线](/by-topic/concurrency/)
-- [Virtual Threads 最佳实践](/guides/virtual-threads-best-practices.md)
+- Virtual Threads 最佳实践 

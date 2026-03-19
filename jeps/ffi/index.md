@@ -137,4 +137,4 @@ public class NativeLib {
 
 - [JEP 454: Foreign Function & Memory API](https://openjdk.org/jeps/454)
 - [JEP 472: Prepare to Restrict JNI](https://openjdk.org/jeps/472)
-- [FFM API 指南](/guides/ffm-api-guide.md)
+- FFM API 指南 

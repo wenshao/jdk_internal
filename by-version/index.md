@@ -210,11 +210,11 @@ JDK 8 ───────► JDK 11 ───────► JDK 17 ───�
 
 | 主题 | 说明 | 链接 |
 |------|------|------|
-| GC 演进 | G1/ZGC/Shenandoah 时间线 | [→](/by-topic/gc/timeline.md) |
-| 并发编程 | Virtual Threads, Structured Concurrency | [→](/by-topic/concurrency/timeline.md) |
-| 字符串处理 | 字符串 API 演进 | [→](/by-topic/string/timeline.md) |
-| HTTP 客户端 | HTTP Client, HTTP/3 | [→](/by-topic/http/timeline.md) |
-| 安全特性 | 加密、认证、TLS | [→](/by-topic/security/timeline.md) |
+| GC 演进 | G1/ZGC/Shenandoah 时间线 | [→](/by-topic/core/gc/timeline.md) |
+| 并发编程 | Virtual Threads, Structured Concurrency | [→](/by-topic/concurrency/concurrency/timeline.md) |
+| 字符串处理 | 字符串 API 演进 | [→](/by-topic/language/string/timeline.md) |
+| HTTP 客户端 | HTTP Client, HTTP/3 | [→](/by-topic/concurrency/http/timeline.md) |
+| 安全特性 | 加密、认证、TLS | [→](/by-topic/security/security/timeline.md) |
 
 ### 按贡献者浏览
 
@@ -236,33 +236,33 @@ JDK 8 ───────► JDK 11 ───────► JDK 17 ───�
 
 | JEP | 标题 | 链接 |
 |-----|------|------|
-| JEP 444 | Virtual Threads | [分析](/jeps/jep-444.md) |
-| JEP 454 | Foreign Function & Memory API | [分析](/jeps/jep-454.md) |
-| JEP 462 | Structured Concurrency | [分析](/jeps/jep-462.md) |
-| JEP 467 | Scoped Values | [分析](/jeps/jep-467.md) |
-| JEP 468 | Generational ZGC | [分析](/jeps/jep-468.md) |
+| JEP 444 | Virtual Threads | [分析](/jeps/concurrency/jep-444.md) |
+| JEP 454 | Foreign Function & Memory API | [分析](/jeps/ffi/jep-454.md) |
+| JEP 462 | Structured Concurrency | [分析](/jeps/concurrency/jep-462.md) |
+| JEP 467 | Scoped Values | [分析](/jeps/tools/jep-467.md) |
+| JEP 468 | Generational ZGC | [分析](/jeps/tools/jep-468.md) |
 | JEP 469 | Implicit Classes | 分析 |
-| JEP 470 | PEM Encodings | [分析](/jeps/jep-470.md) |
-| JEP 500 | Make Final Mean Final | [分析](/jeps/jep-500.md) |
-| JEP 502 | Stable Values | [分析](/jeps/jep-502.md) |
-| JEP 503 | Implicit Classes (Preview) | [分析](/jeps/jep-503.md) |
-| JEP 504 | Remove Applet API | [分析](/jeps/jep-504.md) |
-| JEP 506 | Scoped Values (Preview) | [分析](/jeps/jep-506.md) |
-| JEP 509 | Vector API | [分析](/jeps/jep-509.md) |
-| JEP 510 | KDF API | [分析](/jeps/jep-510.md) |
-| JEP 511 | Module Import Declarations | [分析](/jeps/jep-511.md) |
-| JEP 512 | Compact Source Files | [分析](/jeps/jep-512.md) |
-| JEP 514 | AOT Command Line Ergonomics | [分析](/jeps/jep-514.md) |
-| JEP 515 | AOT Method Profiling | [分析](/jeps/jep-515.md) |
-| JEP 517 | HTTP/3 for HTTP Client | [分析](/jeps/jep-517.md) |
-| JEP 518 | JFR Cooperative Sampling | [分析](/jeps/jep-518.md) |
-| JEP 519 | Compact Object Headers | [分析](/jeps/jep-519.md) |
-| JEP 520 | JFR Method Timing | [分析](/jeps/jep-520.md) |
-| JEP 521 | Generational Shenandoah | [分析](/jeps/jep-521.md) |
-| JEP 522 | G1 GC Throughput | [分析](/jeps/jep-522.md) |
-| JEP 525 | Structured Concurrency (Preview) | [分析](/jeps/jep-525.md) |
-| JEP 526 | Lazy Constants | [分析](/jeps/jep-526.md) |
-| JEP 530 | Primitive Types in Patterns | [分析](/jeps/jep-530.md) |
+| JEP 470 | PEM Encodings | [分析](/jeps/security/jep-470.md) |
+| JEP 500 | Make Final Mean Final | [分析](/jeps/removed/jep-500.md) |
+| JEP 502 | Stable Values | [分析](/jeps/performance/jep-502.md) |
+| JEP 503 | Implicit Classes (Preview) | [分析](/jeps/performance/jep-503.md) |
+| JEP 504 | Remove Applet API | [分析](/jeps/performance/jep-504.md) |
+| JEP 506 | Scoped Values (Preview) | [分析](/jeps/concurrency/jep-506.md) |
+| JEP 509 | Vector API | [分析](/jeps/jfr/jep-509.md) |
+| JEP 510 | KDF API | [分析](/jeps/security/jep-510.md) |
+| JEP 511 | Module Import Declarations | [分析](/jeps/language/jep-511.md) |
+| JEP 512 | Compact Source Files | [分析](/jeps/language/jep-512.md) |
+| JEP 514 | AOT Command Line Ergonomics | [分析](/jeps/performance/jep-514.md) |
+| JEP 515 | AOT Method Profiling | [分析](/jeps/performance/jep-515.md) |
+| JEP 517 | HTTP/3 for HTTP Client | [分析](/jeps/network/jep-517.md) |
+| JEP 518 | JFR Cooperative Sampling | [分析](/jeps/jfr/jep-518.md) |
+| JEP 519 | Compact Object Headers | [分析](/jeps/gc/jep-519.md) |
+| JEP 520 | JFR Method Timing | [分析](/jeps/jfr/jep-520.md) |
+| JEP 521 | Generational Shenandoah | [分析](/jeps/gc/jep-521.md) |
+| JEP 522 | G1 GC Throughput | [分析](/jeps/gc/jep-522.md) |
+| JEP 525 | Structured Concurrency (Preview) | [分析](/jeps/concurrency/jep-525.md) |
+| JEP 526 | Lazy Constants | [分析](/jeps/concurrency/jep-526.md) |
+| JEP 530 | Primitive Types in Patterns | [分析](/jeps/concurrency/jep-530.md) |
 | [更多 JEP](/jeps/) | 完整列表 | → |
 
 ### PR/Issue 深度分析

@@ -10,7 +10,7 @@ JDK 26 包含 **23 个 JEP**（JDK Enhancement Proposals），涵盖语言特性
 
 ## 语言特性
 
-### [JEP 511: Module Import Declarations](/jeps/jep-511.md) ⭐
+### [JEP 511: Module Import Declarations](/jeps/language/jep-511.md) ⭐
 
 **状态**: 正式发布  
 **概述**: 允许使用 `import module <name>` 导入整个模块的所有导出包。
@@ -25,7 +25,7 @@ void main() {
 
 ---
 
-### [JEP 512: Compact Source Files and Instance Main Methods](/jeps/jep-512.md) ⭐
+### [JEP 512: Compact Source Files and Instance Main Methods](/jeps/language/jep-512.md) ⭐
 
 **状态**: 正式发布  
 **概述**: 进一步简化 Java 入门体验，无需显式类声明。
@@ -39,7 +39,7 @@ void main() {
 
 ---
 
-### [JEP 530: Primitive Types in Patterns](/jeps/jep-530.md)
+### [JEP 530: Primitive Types in Patterns](/jeps/concurrency/jep-530.md)
 
 **状态**: 第四次预览  
 **概述**: 允许在模式匹配中使用原始类型。
@@ -54,7 +54,7 @@ switch (value) {
 
 ---
 
-### [JEP 526: Lazy Constants](/jeps/jep-526.md)
+### [JEP 526: Lazy Constants](/jeps/concurrency/jep-526.md)
 
 **状态**: 第二次预览  
 **概述**: 引入延迟初始化的常量声明。
@@ -67,7 +67,7 @@ private static lazy ExpensiveObject CACHE = new ExpensiveObject();
 
 ## 核心库
 
-### [JEP 502: Stable Values (Preview)](/jeps/jep-502.md) ⭐
+### [JEP 502: Stable Values (Preview)](/jeps/performance/jep-502.md) ⭐
 
 **状态**: 预览  
 **概述**: 引入 `StableValue<T>` 类型，提供线程安全的一次写入语义。
@@ -82,7 +82,7 @@ public Logger getLogger() {
 
 ---
 
-### [JEP 506: Scoped Values](/jeps/jep-506.md)
+### [JEP 506: Scoped Values](/jeps/concurrency/jep-506.md)
 
 **状态**: 正式发布  
 **概述**: Scoped Values 正式发布，提供线程局部变量的替代方案。
@@ -97,7 +97,7 @@ ScopedValue.where(CURRENT_USER, user).run(() -> {
 
 ---
 
-### [JEP 510: Key Derivation Function API](/jeps/jep-510.md)
+### [JEP 510: Key Derivation Function API](/jeps/security/jep-510.md)
 
 **状态**: 正式发布  
 **概述**: 提供标准化的密钥派生函数 (KDF) API。
@@ -111,7 +111,7 @@ SecretKey key = kdf.deriveKey("HKDF-SHA256", params);
 
 ## 并发与多线程
 
-### [JEP 525: Structured Concurrency](/jeps/jep-525.md)
+### [JEP 525: Structured Concurrency](/jeps/concurrency/jep-525.md)
 
 **状态**: 第六次预览  
 **概述**: 结构化并发继续预览，简化多线程编程模型。
@@ -130,42 +130,42 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ## 性能与监控
 
-### [JEP 509: JFR CPU-Time Profiling](/jeps/jep-509.md)
+### [JEP 509: JFR CPU-Time Profiling](/jeps/jfr/jep-509.md)
 
 **状态**: 正式发布  
 **概述**: JFR 支持 CPU 时间采样，提供更准确的性能分析数据。
 
 ---
 
-### [JEP 514: AOT Command Line Ergonomics](/jeps/jep-514.md)
+### [JEP 514: AOT Command Line Ergonomics](/jeps/performance/jep-514.md)
 
 **状态**: 正式发布  
 **概述**: 改进 AOT 缓存的命令行参数处理，优化启动性能。
 
 ---
 
-### [JEP 515: AOT Method Profiling](/jeps/jep-515.md)
+### [JEP 515: AOT Method Profiling](/jeps/performance/jep-515.md)
 
 **状态**: 正式发布  
 **概述**: 支持在 AOT 阶段收集方法分析数据，优化 JIT 编译决策。
 
 ---
 
-### [JEP 518: JFR Cooperative Sampling](/jeps/jep-518.md)
+### [JEP 518: JFR Cooperative Sampling](/jeps/jfr/jep-518.md)
 
 **状态**: 正式发布  
 **概述**: JFR 协作式采样，减少采样开销，提高准确性。
 
 ---
 
-### [JEP 519: Compact Object Headers](/jeps/jep-519.md)
+### [JEP 519: Compact Object Headers](/jeps/gc/jep-519.md)
 
 **状态**: 正式发布  
 **概述**: 压缩对象头，减少内存占用，提高缓存效率。
 
 ---
 
-### [JEP 520: JFR Method Timing and Tracing](/jeps/jep-520.md)
+### [JEP 520: JFR Method Timing and Tracing](/jeps/jfr/jep-520.md)
 
 **状态**: 正式发布  
 **概述**: JFR 方法级计时和追踪，提供细粒度的性能分析能力。
@@ -174,14 +174,14 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ## 垃圾回收
 
-### [JEP 521: Generational Shenandoah](/jeps/jep-521.md)
+### [JEP 521: Generational Shenandoah](/jeps/gc/jep-521.md)
 
 **状态**: 正式发布  
 **概述**: Shenandoah GC 支持分代模式，提升年轻代对象的处理效率。
 
 ---
 
-### [JEP 522: G1 GC Throughput Improvement](/jeps/jep-522.md) ⭐
+### [JEP 522: G1 GC Throughput Improvement](/jeps/gc/jep-522.md) ⭐
 
 **状态**: 正式发布  
 **概述**: 优化 G1 GC 的同步机制，提升吞吐量 10-15%。
@@ -190,7 +190,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ## 网络
 
-### [JEP 517: HTTP/3 for the HTTP Client API](/jeps/jep-517.md) ⭐
+### [JEP 517: HTTP/3 for the HTTP Client API](/jeps/network/jep-517.md) ⭐
 
 **状态**: 正式发布  
 **概述**: HTTP Client API 正式支持 HTTP/3 (QUIC) 协议。
@@ -205,7 +205,7 @@ HttpClient client = HttpClient.newBuilder()
 
 ## 安全
 
-### [JEP 470: PEM Encodings](/jeps/jep-470.md)
+### [JEP 470: PEM Encodings](/jeps/security/jep-470.md)
 
 **状态**: 预览  
 **概述**: 支持 PEM 格式的加密对象编码/解码。
@@ -226,21 +226,21 @@ String pem = encoder.encode(privateKey);
 
 ## 移除与清理
 
-### [JEP 503: Remove the 32-bit x86 Port](/jeps/jep-503.md)
+### [JEP 503: Remove the 32-bit x86 Port](/jeps/performance/jep-503.md)
 
 **状态**: 正式移除  
 **概述**: 正式移除 32位 x86 平台支持，删除 29,729 行代码。
 
 ---
 
-### [JEP 504: Remove the Applet API](/jeps/jep-504.md)
+### [JEP 504: Remove the Applet API](/jeps/performance/jep-504.md)
 
 **状态**: 正式移除  
 **概述**: 正式移除已废弃的 Applet API，包括 `java.applet` 包。
 
 ---
 
-### [JEP 500: Prepare to Make Final Mean Final](/jeps/jep-500.md)
+### [JEP 500: Prepare to Make Final Mean Final](/jeps/removed/jep-500.md)
 
 **状态**: 正式发布  
 **概述**: 为最终字段提供更强的不可变性保证，限制通过反射和 JNI 修改 final 字段。

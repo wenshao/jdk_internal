@@ -73,5 +73,5 @@ PEM 编码支持，简化证书处理。
 
 ## 相关链接
 
-- [Java 安全指南](/guides/security-guide.md)
+- Java 安全指南 
 - [加密 API 文档](/modules/java.base/security/)

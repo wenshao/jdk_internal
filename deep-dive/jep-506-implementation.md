@@ -485,6 +485,6 @@ public User getCurrentUser() {
 
 ## 8. 相关链接
 
-- [JEP 506: Scoped Values](/jeps/jep-506.md)
-- [JEP 525: Structured Concurrency](/jeps/jep-525.md)
+- [JEP 506: Scoped Values](/jeps/concurrency/jep-506.md)
+- [JEP 525: Structured Concurrency](/jeps/concurrency/jep-525.md)
 - [源码浏览](https://github.com/openjdk/jdk/tree/master/src/java.base/share/classes/java/lang)

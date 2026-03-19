@@ -59,5 +59,5 @@ jcmd <pid> JFR.start \
 
 ## 相关链接
 
-- [JFR 指南](/guides/jfr-guide.md)
+- JFR 指南 
 - [JDK Mission Control](https://www.oracle.com/java/technologies/jdk-mission-control.html)

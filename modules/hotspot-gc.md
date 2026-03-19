@@ -321,6 +321,6 @@ class ZRelocate {
 
 ## 6. 相关链接
 
-- [JEP 522: G1 GC Throughput](/jeps/jep-522.md)
-- [JEP 521: Generational Shenandoah](/jeps/jep-521.md)
+- [JEP 522: G1 GC Throughput](/jeps/gc/jep-522.md)
+- [JEP 521: Generational Shenandoah](/jeps/gc/jep-521.md)
 - [源码浏览](https://github.com/openjdk/jdk/tree/master/src/hotspot/share/gc)
