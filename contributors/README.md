@@ -1,52 +1,108 @@
 # 贡献者索引
 
-> 从贡献者维度了解 JDK 26 的开发贡献
+> OpenJDK 历史贡献者全景 (JDK 8 - JDK 26)
 
 ---
 
 ## 概览
 
-JDK 26 有 **313 位贡献者**，其中 **8 位贡献者有 50+ commits**。以下是贡献最突出的开发者分析。
+OpenJDK 自 2007 年开源以来，共有 **2,155 位贡献者** 参与，累计提交超过 **85,000 个 commits**。
 
-> **数据来源**: JDK git 仓库 `upstream_master` 分支 (2025-09-01 至 2026-03-20)  
+| 统计项 | 数量 |
+|--------|------|
+| 总贡献者 | 2,155 |
+| 500+ commits | 40 |
+| 100+ commits | 172 |
+| 时间跨度 | 2007 - 2026 |
+
+> **数据来源**: OpenJDK git 仓库 `upstream_master` 分支  
 > **统计时间**: 2026-03-19
 
 ---
 
-## Top 30 贡献者
+## 历史贡献时间线
 
-| 排名 | 贡献者 | Commits | 主要领域 | 详情 |
+```
+2007: ██░░░░░░░░░░░░░░░░░░      21 commits (OpenJDK 开源)
+2008: ███░░░░░░░░░░░░░░░░░░   1,643 commits
+2009: ███░░░░░░░░░░░░░░░░░░   2,489 commits
+2010: ███░░░░░░░░░░░░░░░░░░   2,837 commits
+2011: ████░░░░░░░░░░░░░░░░░   3,274 commits (JDK 7)
+2012: ████░░░░░░░░░░░░░░░░░   3,228 commits
+2013: ███████░░░░░░░░░░░░░░   6,897 commits (JDK 8)
+2014: ██████░░░░░░░░░░░░░░░   5,593 commits
+2015: ███████░░░░░░░░░░░░░░   6,268 commits
+2016: ████████░░░░░░░░░░░░░   7,463 commits (JDK 9)
+2017: █████████░░░░░░░░░░░░   8,798 commits (JDK 10, 11)
+2018: █████░░░░░░░░░░░░░░░░   4,655 commits
+2019: █████░░░░░░░░░░░░░░░░   4,436 commits (JDK 12, 13)
+2020: █████░░░░░░░░░░░░░░░░   4,874 commits (JDK 14, 15)
+2021: █████░░░░░░░░░░░░░░░░   4,900 commits (JDK 16, 17)
+2022: █████░░░░░░░░░░░░░░░░   4,557 commits (JDK 18, 19)
+2023: █████░░░░░░░░░░░░░░░░   4,729 commits (JDK 20, 21)
+2024: █████░░░░░░░░░░░░░░░░   4,800 commits (JDK 22, 23)
+2025: ██████░░░░░░░░░░░░░░░   5,117 commits (JDK 24, 25)
+2026: ██░░░░░░░░░░░░░░░░░░░   1,032 commits (JDK 26 进行中)
+```
+
+---
+
+## Top 50 贡献者 (历史)
+
+> 排除自动化提交账号 (J. Duke, Lana Steuck)
+
+| 排名 | 贡献者 | Commits | 主要领域 | 组织 |
 |------|--------|---------|----------|------|
-| 1 | [Thomas Schatzl](thomas-schatzl.md) | 97 | G1 GC | [查看详情](thomas-schatzl.md) |
-| 2 | [Albert Mingkun Yang](albert-mingkun-yang.md) | 96 | GC (G1/Parallel) | [查看详情](albert-mingkun-yang.md) |
-| 3 | [Phil Race](phil-race.md) | 84 | 图形、打印 | [查看详情](phil-race.md) |
-| 4 | [Alexey Semenyuk](alexey-semenyuk.md) | 76 | jpackage、安装程序 | [查看详情](alexey-semenyuk.md) |
-| 5 | [Matthias Baesken](matthias-baesken.md) | 73 | 构建系统、跨平台 | [查看详情](matthias-baesken.md) |
-| 6 | [Kim Barrett](kim-barrett.md) | 58 | 并发、GC | [查看详情](kim-barrett.md) |
-| 7 | [SendaoYan](sendaoyan.md) | 56 | 测试稳定性 | [查看详情](sendaoyan.md) |
-| 8 | [Ioi Lam](ioi-lam.md) | 55 | AOT/CDS | [查看详情](ioi-lam.md) |
-| 9 | Sergey Bylokhov | 48 | AWT、2D | - |
-| 10 | Axel Boldt-Christmas | 46 | C2 编译器 | - |
-| 11 | [Jaikiran Pai](jaikiran-pai.md) | 46 | HttpClient | [查看详情](jaikiran-pai.md) |
-| 12 | [Prasanta Sadhukhan](prasanta-sadhukhan.md) | 45 | Swing、AWT | [查看详情](prasanta-sadhukhan.md) |
-| 13 | [Daniel Fuchs](daniel-fuchs.md) | 44 | HTTP/3 | [查看详情](daniel-fuchs.md) |
-| 14 | [Aleksey Shipilev](aleksey-shipilev.md) | 42 | Shenandoah GC | [查看详情](aleksey-shipilev.md) |
-| 15 | [Emanuel Peter](emanuel-peter.md) | 42 | C2 SuperWord | [查看详情](emanuel-peter.md) |
-| 16 | Francesco Andreuzzi | 41 | 测试、性能 | - |
-| 17 | [Jan Lahoda](jan-lahoda.md) | 38 | javac、语言特性 | [查看详情](jan-lahoda.md) |
-| 18 | [Brian Burkhalter](brian-burkhalter.md) | 36 | NIO、文件系统 | [查看详情](brian-burkhalter.md) |
-| 19 | [Chen Liang](chen-liang.md) | 36 | ClassFile API、反射 | [查看详情](chen-liang.md) |
-| 20 | [William Kemper](william-kemper.md) | 34 | Shenandoah GC | [查看详情](william-kemper.md) |
-| 21 | Justin Lu | 33 | Locale、国际化 | - |
-| 22 | Joel Sikström | 31 | C2 编译器 | - |
-| 23 | Leonid Mesnik | 30 | JVMTI、测试 | - |
-| 24 | Yasumasa Suenaga | 29 | HotSpot、JFR | - |
-| 25 | [David Holmes](david-holmes.md) | 28 | 线程、信号 | [查看详情](david-holmes.md) |
-| 26 | Volkan Yazici | 28 | HttpClient | - |
-| 27 | Mikhail Yankelevich | 27 | 核心库 | - |
-| 28 | Daniel Jeliński | 25 | HTTP/3 | - |
-| 29 | Joe Darcy | 24 | 核心库 | - |
-| 30 | Naoto Sato | 23 | Unicode、国际化 | - |
+| 1 | David Katleman | 1,487 | 构建系统、发布 | Oracle |
+| 2 | Jonathan Gibbons | 1,320 | javac、工具 | Oracle |
+| 3 | [Aleksey Shipilev](aleksey-shipilev.md) | 1,320 | Shenandoah GC、性能 | Red Hat |
+| 4 | [Phil Race](phil-race.md) | 1,313 | 图形、打印 | Oracle |
+| 5 | [Coleen Phillimore](coleen-phillimore.md) | 1,209 | HotSpot VM | Oracle |
+| 6 | Joe Darcy | 1,194 | 核心库、语言特性 | Oracle |
+| 7 | [Thomas Schatzl](thomas-schatzl.md) | 1,113 | G1 GC | Oracle |
+| 8 | Alejandro Murillo | 998 | HotSpot | Oracle |
+| 9 | Erik Joelsson | 956 | 构建系统 | Oracle |
+| 10 | Weijun Wang | 954 | 安全、工具 | Oracle |
+| 11 | Sergey Bylokhov | 953 | AWT、2D | Oracle |
+| 12 | Vladimir Kozlov | 942 | C2 编译器 | Oracle |
+| 13 | [Magnus Ihse Bursie](magnus-ihse-bursie.md) | 925 | 构建系统 | Oracle |
+| 14 | Jesper Wilhelmsson | 912 | GC | Oracle |
+| 15 | Daniel D. Daugherty | 867 | HotSpot、测试 | Oracle |
+| 16 | Alan Bateman | 867 | 核心库、模块 | Oracle |
+| 17 | Chris Hegarty | 812 | 核心库、网络 | Oracle |
+| 18 | [Jan Lahoda](jan-lahoda.md) | 785 | javac、语言特性 | Oracle |
+| 19 | [Brian Burkhalter](brian-burkhalter.md) | 779 | NIO、网络 | Oracle |
+| 20 | Prasanta Sadhukhan | 772 | Swing、AWT | Oracle |
+| 21 | [Albert Mingkun Yang](albert-mingkun-yang.md) | 747 | GC | Oracle |
+| 22 | [Matthias Baesken](matthias-baesken.md) | 742 | 构建系统 | SAP |
+| 23 | [David Holmes](david-holmes.md) | 720 | 线程、并发 | Oracle |
+| 24 | Stefan Karlsson | 692 | GC | Oracle |
+| 25 | Sundararajan Athijegannathan | 689 | Nashorn | Oracle |
+| 26 | Claes Redestad | 688 | 核心库、性能 | Oracle |
+| 27 | Mandy Chung | 687 | 模块系统 | Oracle |
+| 28 | [Kim Barrett](kim-barrett.md) | 680 | GC、并发 | Oracle |
+| 29 | Roland Westrelin | 676 | C2 编译器 | Red Hat |
+| 30 | Igor Ignatyev | 673 | 测试 | Oracle |
+| 31 | Maurizio Cimadamore | 670 | 语言特性 | Oracle |
+| 32 | [Ioi Lam](ioi-lam.md) | 661 | CDS、AOT | Oracle |
+| 33 | Zhengyu Gu | 582 | GC | Oracle |
+| 34 | Naoto Sato | 569 | 国际化 | Oracle |
+| 35 | Tobias Hartmann | 563 | Graal | Oracle |
+| 36 | Hannes Wallnöfer | 550 | Nashorn | Oracle |
+| 37 | Thomas Stuefe | 548 | HotSpot | IBM/SAP |
+| 38 | Kelly O'Hair | 523 | 构建系统 | Oracle |
+| 39 | [Daniel Fuchs](daniel-fuchs.md) | 492 | HTTP、JMX | Oracle |
+| 40 | [Erik Gahlin](erik-gahlin.md) | 481 | JFR | Oracle |
+| 41 | Vicente Romero | 480 | javac | Oracle |
+| 42 | Roger Riggs | 461 | 核心库 | Oracle |
+| 43 | Tom Rodriguez | 460 | Graal | Oracle |
+| 44 | Xiomara Jayasena | 456 | 测试 | Oracle |
+| 45 | Christine Lu | 452 | 测试 | Oracle |
+| 46 | Harold Seigel | 451 | 模块系统 | Oracle |
+| 47 | Vladimir Ivanov | 448 | Graal | Oracle |
+| 48 | Chris Plummer | 437 | 调试 | Oracle |
+| 49 | Sean Mullan | 421 | 安全 | Oracle |
+| 50 | Xue-Lei Andrew Fan | 412 | 安全 | Oracle |
 
 ---
 
@@ -56,64 +112,86 @@ JDK 26 有 **313 位贡献者**，其中 **8 位贡献者有 50+ commits**。以
 
 | 贡献者 | Commits | 专长 |
 |--------|---------|------|
-| [Thomas Schatzl](thomas-schatzl.md) | 97 | G1 GC |
-| [Albert Mingkun Yang](albert-mingkun-yang.md) | 96 | G1, Parallel GC |
-| [Kim Barrett](kim-barrett.md) | 58 | 并发 GC |
-| [Aleksey Shipilev](aleksey-shipilev.md) | 42 | Shenandoah GC |
-| [William Kemper](william-kemper.md) | 34 | Shenandoah GC |
+| [Aleksey Shipilev](aleksey-shipilev.md) | 1,320 | Shenandoah GC |
+| [Thomas Schatzl](thomas-schatzl.md) | 1,113 | G1 GC |
+| [Albert Mingkun Yang](albert-mingkun-yang.md) | 747 | G1, Parallel GC |
+| Stefan Karlsson | 692 | ZGC |
+| [Kim Barrett](kim-barrett.md) | 680 | 并发 GC |
+| Zhengyu Gu | 582 | G1 GC |
+| Jesper Wilhelmsson | 912 | GC |
 
-### 编译器专家 (C2)
+### 编译器专家
 
 | 贡献者 | Commits | 专长 |
 |--------|---------|------|
-| [Emanuel Peter](emanuel-peter.md) | 42 | SuperWord, 向量化 |
-| Axel Boldt-Christmas | 46 | C2 编译器 |
-| Joel Sikström | 31 | C2 编译器 |
+| Vladimir Kozlov | 942 | C2 编译器 |
+| Roland Westrelin | 676 | C2 编译器 |
+| Tobias Hartmann | 563 | Graal |
+| Vladimir Ivanov | 448 | Graal |
+| Tom Rodriguez | 460 | Graal |
+| Christian Thalinger | 335 | Graal |
 
 ### 核心库专家
 
 | 贡献者 | Commits | 专长 |
 |--------|---------|------|
-| [Chen Liang](chen-liang.md) | 36 | ClassFile API |
-| [Jan Lahoda](jan-lahoda.md) | 38 | javac |
-| Joe Darcy | 24 | 核心库 |
+| Joe Darcy | 1,194 | 核心库、语言特性 |
+| Alan Bateman | 867 | 模块系统 |
+| Claes Redestad | 688 | 性能优化 |
+| Mandy Chung | 687 | 模块系统 |
+| Roger Riggs | 461 | 反射 |
+
+### 语言/工具专家
+
+| 贡献者 | Commits | 专长 |
+|--------|---------|------|
+| Jonathan Gibbons | 1,320 | javac、工具 |
+| [Jan Lahoda](jan-lahoda.md) | 785 | javac、语言特性 |
+| Maurizio Cimadamore | 670 | 语言特性 |
+| Vicente Romero | 480 | javac |
 
 ### 构建系统专家
 
 | 贡献者 | Commits | 专长 |
 |--------|---------|------|
-| [Matthias Baesken](matthias-baesken.md) | 73 | 跨平台构建 |
-| [Alexey Semenyuk](alexey-semenyuk.md) | 76 | jpackage |
+| David Katleman | 1,487 | 发布、构建 |
+| Erik Joelsson | 956 | 构建系统 |
+| [Magnus Ihse Bursie](magnus-ihse-bursie.md) | 925 | 构建系统 |
+| Kelly O'Hair | 523 | 构建系统 |
 
 ### 桌面应用专家
 
 | 贡献者 | Commits | 专长 |
 |--------|---------|------|
-| [Phil Race](phil-race.md) | 84 | 图形, 打印 |
-| [Prasanta Sadhukhan](prasanta-sadhukhan.md) | 45 | Swing, AWT |
-| Sergey Bylokhov | 48 | AWT, 2D |
+| [Phil Race](phil-race.md) | 1,313 | 图形、打印 |
+| Sergey Bylokhov | 953 | AWT、2D |
+| Prasanta Sadhukhan | 772 | Swing、AWT |
+
+### 国际化专家
+
+| 贡献者 | Commits | 专长 |
+|--------|---------|------|
+| Naoto Sato | 569 | Unicode、Locale |
 
 ### 网络专家
 
 | 贡献者 | Commits | 专长 |
 |--------|---------|------|
-| [Daniel Fuchs](daniel-fuchs.md) | 44 | HTTP/3 |
-| [Jaikiran Pai](jaikiran-pai.md) | 46 | HttpClient |
-| Volkan Yazici | 28 | HttpClient |
-| Daniel Jeliński | 25 | HTTP/3 |
+| Chris Hegarty | 812 | 网络库 |
+| [Brian Burkhalter](brian-burkhalter.md) | 779 | NIO |
+| [Daniel Fuchs](daniel-fuchs.md) | 492 | HTTP、JMX |
 
-### AOT/CDS 专家
-
-| 贡献者 | Commits | 专长 |
-|--------|---------|------|
-| [Ioi Lam](ioi-lam.md) | 55 | AOT, CDS |
-
-### 测试稳定性
+### JFR 专家
 
 | 贡献者 | Commits | 专长 |
 |--------|---------|------|
-| [SendaoYan](sendaoyan.md) | 56 | 测试稳定性 |
-| Leonid Mesnik | 30 | JVMTI, 测试 |
+| [Erik Gahlin](erik-gahlin.md) | 481 | JFR |
+
+### CDS/AOT 专家
+
+| 贡献者 | Commits | 专长 |
+|--------|---------|------|
+| [Ioi Lam](ioi-lam.md) | 661 | CDS、AOT |
 
 ---
 
@@ -121,24 +199,80 @@ JDK 26 有 **313 位贡献者**，其中 **8 位贡献者有 50+ commits**。以
 
 > 详见 [中国贡献者专题](chinese-contributors.md)
 
+### Oracle 中国团队
+
+| 贡献者 | Commits | 主要领域 |
+|--------|---------|----------|
+| Weijun Wang | 954 | 安全、工具 |
+| [Albert Mingkun Yang](albert-mingkun-yang.md) | 747 | GC |
+| Sundararajan Athijegannathan | 689 | Nashorn |
+| Zhengyu Gu | 582 | GC |
+| Naoto Sato | 569 | 国际化 |
+| Xue-Lei Andrew Fan | 412 | 安全 |
+| Hamlin Li | 301 | RISC-V |
+| Jiangli Zhou | 251 | CDS |
+| Yasumasa Suenaga | 243 | HotSpot |
+
+### 企业贡献者
+
 | 贡献者 | 组织 | Commits | 主要领域 |
 |--------|------|---------|----------|
-| [SendaoYan](sendaoyan.md) | 海光 | 56 | 测试稳定性 |
-| [Chen Liang](chen-liang.md) | Oracle | 36 | ClassFile API |
-
-> 注：部分中国贡献者的 PR 尚在 review 中，未合并到 master 分支
+| Shaojin Wen | 阿里巴巴 | 27 | 核心库优化 |
+| bobpengxie | 腾讯 | 15 | 测试 |
+| Kuai Wei | 阿里巴巴 | 13 | C2 编译器 |
+| Anjian-Wen | 字节跳动 | 12 | RISC-V |
+| sunguoyun | 龙芯 | 14 | LoongArch |
+| Ao Qi | 龙芯 | 11 | LoongArch |
 
 ---
 
 ## 组织贡献
 
-### Oracle (85%+)
+### Oracle (70%+)
 
-主要贡献者: Thomas Schatzl, Albert Mingkun Yang, Phil Race, Alexey Semenyuk, Matthias Baesken, Kim Barrett...
+Oracle 是 OpenJDK 的主要贡献者，贡献了超过 60,000 个 commits。
+
+主要贡献者: David Katleman, Jonathan Gibbons, Phil Race, Coleen Phillimore, Joe Darcy, Thomas Schatzl...
 
 ### Red Hat (~5%)
 
-主要贡献者: [Aleksey Shipilev](aleksey-shipilev.md), [William Kemper](william-kemper.md)...
+主要贡献者: [Aleksey Shipilev](aleksey-shipilev.md), Roland Westrelin, Roman Kennke, Andrew Dinn...
+
+### SAP (~2%)
+
+主要贡献者: [Matthias Baesken](matthias-baesken.md), Thomas Stuefe, Goetz Lindenmaier...
+
+### IBM (~2%)
+
+主要贡献者: Thomas Stuefe (早期), Mark Stoodley...
+
+### Google (~1%)
+
+主要贡献者: Liam Miller-Cushon...
+
+### 中国企业
+
+| 组织 | 贡献者 | Commits |
+|------|--------|---------|
+| 阿里巴巴 | Shaojin Wen, Kuai Wei 等 | 50+ |
+| 龙芯 | sunguoyun, Ao Qi 等 | 40+ |
+| 腾讯 | bobpengxie, Tongbao Zhang 等 | 30+ |
+| 字节跳动 | Anjian-Wen | 12 |
+| 华为 | Dong Bo, Huang Wang 等 | 10+ |
+
+---
+
+## JDK 版本贡献
+
+| JDK 版本 | 发布年份 | 主要特性 | 主要贡献者 |
+|----------|----------|----------|-----------|
+| JDK 8 | 2014 | Lambda, Stream | 多位 |
+| JDK 9 | 2017 | 模块系统 | Mandy Chung, Alan Bateman |
+| JDK 11 | 2018 | LTS | 多位 |
+| JDK 17 | 2021 | LTS | 多位 |
+| JDK 21 | 2023 | LTS, 虚拟线程 | 多位 |
+| JDK 25 | 2025 | LTS | 进行中 |
+| JDK 26 | 2026 | - | 进行中 |
 
 ---
 
@@ -156,7 +290,7 @@ JDK 26 有 **313 位贡献者**，其中 **8 位贡献者有 50+ commits**。以
 
 ## 数据说明
 
-- **Commits 统计**: 基于 JDK git 仓库 `upstream_master` 分支
-- **时间范围**: JDK 26 开发周期 (2025-09-01 至今)
+- **Commits 统计**: 基于 OpenJDK git 仓库 `upstream_master` 分支
+- **时间范围**: 2007 年开源至今
 - **同一人合并**: 合并了同一贡献者的多个邮箱地址
-- **注意**: 仅统计已合并到 master 分支的 commits，不包含 PR 分支
+- **Bot 排除**: J. Duke 和 Lana Steuck 为自动化提交账号，不计入排名
