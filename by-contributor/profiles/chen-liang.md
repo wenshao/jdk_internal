@@ -9,18 +9,33 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Chen Liang |
-| **当前组织** | Oracle |
+| **当前组织** | Oracle (Java LangTools 团队) |
 | **位置** | 奥斯汀, 德克萨斯州, 美国 |
 | **GitHub** | [@liach](https://github.com/liach) |
 | **Blog** | [liachmodded.github.io](https://liachmodded.github.io/) |
 | **OpenJDK** | [@liach](https://openjdk.org/census#liach) |
-| **角色** | JDK Reviewer, Valhalla Committer |
+| **角色** | JDK Reviewer (2024年6月任命), Valhalla Committer |
+| **教育背景** | 威斯康星大学麦迪逊分校 (University of Wisconsin-Madison) |
 | **Integrated PRs** | [237](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aliach+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | ClassFile API、核心反射、Method Handles、常量池 |
 | **活跃时间** | 2021 - 至今 |
 
 > **统计方法**: GitHub PR search `repo:openjdk/jdk author:liach type:pr label:integrated`
 > **统计时间**: 2026-03-20
+> **来源**: [LinkedIn](https://www.linkedin.com/in/chen-liang-51122427b), [CFV: New JDK Reviewer](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html)
+
+---
+
+## 职业里程碑
+
+| 日期 | 事件 | 详情 |
+|------|------|------|
+| **2021** | 加入 Oracle Java LangTools 团队 | 开始全职参与 JDK 开发 |
+| **2021-2024** | 贡献 237+ 个 PR | ClassFile API、核心反射、Method Handles |
+| **2024-06** | 被任命为 JDK Reviewer | 由 Jonathan Gibbons 提名 |
+| **2024-08** | 参与 JDK-8336856 String "+" 优化 | 作为 Reviewer 与 Shaojin Wen、Claes Redestad 合作 |
+
+> **来源**: [CFV: New JDK Reviewer: Chen Liang](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html)
 
 ---
 
@@ -772,6 +787,14 @@ void testMethod() {
 
 `ClassFile API` `核心反射` `Method Handles` `常量池` `Valhalla` `API 设计`
 
+## 兴趣领域
+
+根据 GitHub 组织关联，Chen Liang 可能对以下领域感兴趣：
+- **Minecraft** 开发 - 可能参与 Minecraft 相关项目或模组开发
+- **开源项目** - 在 GitHub 上维护多个开源项目
+
+> **来源**: [GitHub Profile](https://github.com/liach)
+
 ---
 
 ## 开发风格
@@ -829,11 +852,16 @@ Chen Liang 的贡献特点:
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:liach type:pr label:integrated`
 - **统计时间**: 2026-03-20
+- **LinkedIn**: [Chen Liang - Oracle | LinkedIn](https://www.linkedin.com/in/chen-liang-51122427b)
+- **JDK Reviewer 任命**: [CFV: New JDK Reviewer: Chen Liang](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html)
+- **GitHub**: [@liach](https://github.com/liach)
+- **Blog**: [liachmodded.github.io](https://liachmodded.github.io/)
 
 ---
 
-> **文档版本**: 2.1
-> **更新内容**: 添加 JDK-8371953 本地分析链接，补充相关分析文档章节
+> **文档版本**: 3.0
+> **最后更新**: 2026-03-20
+> **更新内容**: 补充教育背景、职业里程碑、JDK Reviewer 任命信息，添加网络搜索来源
 
 ## 相关链接
 
