@@ -19,6 +19,8 @@ JDK 5 ──── JDK 6 ──── JDK 7 ──── JDK 8 ──── JDK 
 
 ### JDK 5 (2004) - 注解引入 (JSR 175)
 
+**JSR 175** - **Joshua Bloch** (Specification Lead, Sun Microsystems)
+
 #### 基础注解
 
 ```java
@@ -90,6 +92,8 @@ List<String> list = (List<String>) object;
 ```
 
 ### JDK 6 (2006) - 注解处理器 (JSR 269)
+
+**JSR 269** - **Joseph D. Darcy** (Specification Lead, Sun Microsystems)
 
 #### Pluggable Annotation Processing API
 
@@ -176,6 +180,8 @@ class MyClass {
 ```
 
 ### JDK 8 (2014) - 重复注解与类型注解
+
+**JSR 308** - **Michael Ernst**, **Alex Buckley** (Specification Leads), **Werner Dietl** (Implementation Lead)
 
 #### 重复注解
 
@@ -618,6 +624,65 @@ processingEnv.getMessager().printMessage(
     "Invalid annotation on " + element.getSimpleName()
 );
 ```
+
+---
+
+## 贡献者
+
+### JSR 规范负责人
+
+| JSR | 特性 | 规范负责人 | 公司 |
+|-----|------|-----------|------|
+| JSR 175 | 注解引入 | **Joshua Bloch** | Sun Microsystems |
+| JSR 269 | 注解处理器 API | **Joseph D. Darcy** | Sun Microsystems |
+| JSR 308 | 类型注解 | **Michael Ernst**, Alex Buckley | UW, Oracle |
+
+### Joshua Bloch
+
+- **职位**: Former Chief Java Architect, Sun Microsystems (2001-2008), later Google
+- **代表作**: 《Effective Java》作者
+- **主要贡献**:
+  - JSR 175 Specification Lead (注解引入)
+  - Java Collections Framework 设计
+  - 作者多项 JSR 规范
+
+> "Annotations are a metadata facility that allows classes, interfaces, fields, and methods to be marked as having particular attributes."
+> — Joshua Bloch, JSR 175 Specification Lead
+
+### Joseph D. Darcy
+
+- **职位**: JDK Developer, Oracle (formerly Sun Microsystems)
+- **背景**: Stanford University, Applied Mathematics (M.S., 2009)
+- **主要贡献**:
+  - JSR 269 Specification Lead (注解处理器 API)
+  - Project Coin Lead (JDK 7 小型语言改进)
+  - Java 浮点运算专家 ("Java Floating-Point Czar")
+  - 20+ 年 JDK 核心库和编译器开发经验
+
+### Michael Ernst
+
+- **职位**: Professor, University of Washington (formerly MIT)
+- **主要贡献**:
+  - JSR 308 Specification Lead (类型注解)
+  - Checker Framework 创始人
+  - JavaOne 2009 "Java Rock Star" 获奖者
+  - 20,000+ 引用的计算机科学研究员
+
+### Alex Buckley
+
+- **职位**: Java Language Specification Lead, Oracle
+- **主要贡献**:
+  - JSR 308 Co-Specification Lead
+  - JLS (Java Language Specification) 维护者
+  - 多个 JEP 规范审查者
+
+### Werner Dietl
+
+- **职位**: Implementation Lead, JSR 308
+- **背景**: University of Washington
+- **主要贡献**:
+  - JSR 308 类型注解实现负责人
+  - Checker Framework 核心开发者
 
 ---
 
