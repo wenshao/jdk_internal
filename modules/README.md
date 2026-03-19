@@ -17,34 +17,42 @@ JDK 26 包含约 70 个模块，本目录分析最重要的核心模块。
 | 模块 | 描述 | 分析文档 |
 |------|------|----------|
 | java.base | Java 核心 API | [详细分析](java.base.md) |
-| java.logging | 日志 API | [详细分析](java.logging.md) |
+| java.logging | 日志 API (JUL) | [详细分析](java.logging.md) |
 | java.management | JMX 管理 | [详细分析](java.management.md) |
+| java.sql | JDBC 数据库连接 | [详细分析](java.sql.md) |
+| java.xml | XML 处理 (JAXP) | [详细分析](java.xml.md) |
 
 ### 并发模块
 
 | 模块 | 描述 | 分析文档 |
 |------|------|----------|
-| java.base.concurrent | 并发工具 | [详细分析](concurrent.md) |
+| java.util.concurrent | 并发工具 (JUC) | [详细分析](concurrent.md) |
 
 ### 网络模块
 
 | 模块 | 描述 | 分析文档 |
 |------|------|----------|
-| java.net.http | HTTP Client | [详细分析](java.net.http.md) |
+| java.net.http | HTTP Client (HTTP/3) | [详细分析](java.net.http.md) |
 
 ### 安全模块
 
 | 模块 | 描述 | 分析文档 |
 |------|------|----------|
-| java.crypto | 加密 API | [详细分析](java.crypto.md) |
+| java.crypto / java.security | 加密与安全 | [详细分析](java.crypto.md) |
 
 ### JVM 组件
 
 | 组件 | 描述 | 分析文档 |
 |------|------|----------|
-| hotspot | HotSpot VM | [详细分析](hotspot.md) |
+| hotspot | HotSpot VM 架构 | [详细分析](hotspot.md) |
 | hotspot-gc | 垃圾回收器 | [详细分析](hotspot-gc.md) |
-| hotspot-c2 | C2 编译器 | [详细分析](hotspot-c2.md) |
+| hotspot-c2 | C2 JIT 编译器 | [详细分析](hotspot-c2.md) |
+
+### 编译工具
+
+| 模块 | 描述 | 分析文档 |
+|------|------|----------|
+| jdk.compiler | javac 编译器 API | [详细分析](jdk.compiler.md) |
 
 ---
 
