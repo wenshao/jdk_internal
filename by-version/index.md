@@ -208,13 +208,13 @@ JDK 8 ───────► JDK 11 ───────► JDK 17 ───�
 
 ### 按主题浏览
 
-| 主题 | 链接 | 说明 |
+| 主题 | 说明 | 链接 |
 |------|------|------|
-| GC 演进 | [by-topic/gc/](/by-topic/gc/) | G1/ZGC/Shenandoah 时间线 |
-| 并发编程 | [by-topic/concurrency/](/by-topic/concurrency/) | Virtual Threads, Structured Concurrency |
-| 字符串处理 | [by-topic/string/](/by-topic/string/) | 字符串 API 演进 |
-| HTTP 客户端 | [by-topic/http/](/by-topic/http/) | HTTP Client, HTTP/3 |
-| 安全特性 | [by-topic/security/](/by-topic/security/) | 加密、认证、TLS |
+| GC 演进 | G1/ZGC/Shenandoah 时间线 | [→](/by-topic/gc/timeline.md) |
+| 并发编程 | Virtual Threads, Structured Concurrency | [→](/by-topic/concurrency/timeline.md) |
+| 字符串处理 | 字符串 API 演进 | [→](/by-topic/string/timeline.md) |
+| HTTP 客户端 | HTTP Client, HTTP/3 | [→](/by-topic/http/timeline.md) |
+| 安全特性 | 加密、认证、TLS | [→](/by-topic/security/timeline.md) |
 
 ### 按贡献者浏览
 
@@ -223,41 +223,77 @@ JDK 8 ───────► JDK 11 ───────► JDK 17 ───�
 | [by-contributor/](/by-contributor/) | 贡献者索引 |
 | [JDK 26 Top 100](/by-contributor/profiles/jdk26-top-contributors.md) | JDK 26 贡献者排名 |
 | [中国贡献者](/by-contributor/profiles/chinese-contributors.md) | 中国开发者贡献 |
+| [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | HotSpot 核心开发者 |
+| [David Holmes](/by-contributor/profiles/david-holmes.md) | 并发和 HotSpot 专家 |
+| [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | JIT 编译器专家 |
+| [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 核心库开发者 |
+| [更多贡献者](/by-contributor/profiles/) | 完整列表 |
 
 ### JEP 详细分析
 
 | JEP | 标题 | 链接 |
 |-----|------|------|
+| JEP 444 | Virtual Threads | [分析](/jeps/jep-444.md) |
+| JEP 454 | Foreign Function & Memory API | [分析](/jeps/jep-454.md) |
+| JEP 462 | Structured Concurrency | [分析](/jeps/jep-462.md) |
+| JEP 467 | Scoped Values | [分析](/jeps/jep-467.md) |
+| JEP 468 | Generational ZGC | [分析](/jeps/jep-468.md) |
+| JEP 469 | Implicit Classes | [分析](/jeps/jep-469.md) |
 | JEP 470 | PEM Encodings | [分析](/jeps/jep-470.md) |
-| JEP 514 | JEP 514: Ahead-of-Time Command Line Ergonomics | [分析](/jeps/jep-514.md) |
-| JEP 515 | JEP 515: Ahead-of-Time Method Profiling | [分析](/jeps/jep-515.md) |
+| JEP 500 | Make Final Mean Final | [分析](/jeps/jep-500.md) |
+| JEP 502 | Stable Values | [分析](/jeps/jep-502.md) |
+| JEP 503 | Implicit Classes (Preview) | [分析](/jeps/jep-503.md) |
+| JEP 504 | Remove Applet API | [分析](/jeps/jep-504.md) |
+| JEP 506 | Scoped Values (Preview) | [分析](/jeps/jep-506.md) |
+| JEP 509 | Vector API | [分析](/jeps/jep-509.md) |
+| JEP 510 | KDF API | [分析](/jeps/jep-510.md) |
+| JEP 511 | Module Import Declarations | [分析](/jeps/jep-511.md) |
+| JEP 512 | Compact Source Files | [分析](/jeps/jep-512.md) |
+| JEP 514 | AOT Command Line Ergonomics | [分析](/jeps/jep-514.md) |
+| JEP 515 | AOT Method Profiling | [分析](/jeps/jep-515.md) |
 | JEP 517 | HTTP/3 for HTTP Client | [分析](/jeps/jep-517.md) |
 | JEP 518 | JFR Cooperative Sampling | [分析](/jeps/jep-518.md) |
 | JEP 519 | Compact Object Headers | [分析](/jeps/jep-519.md) |
-| JEP 520 | JFR Method Timing and Tracing | [分析](/jeps/jep-520.md) |
+| JEP 520 | JFR Method Timing | [分析](/jeps/jep-520.md) |
 | JEP 521 | Generational Shenandoah | [分析](/jeps/jep-521.md) |
-| JEP 525 | Structured Concurrency | [分析](/jeps/jep-525.md) |
+| JEP 525 | Structured Concurrency (Preview) | [分析](/jeps/jep-525.md) |
 | JEP 526 | Lazy Constants | [分析](/jeps/jep-526.md) |
 | JEP 530 | Primitive Types in Patterns | [分析](/jeps/jep-530.md) |
+| [更多 JEP](/jeps/) | 完整列表 | → |
 
 ### PR/Issue 深度分析
 
-| 链接 | 说明 |
-|------|------|
-| [by-pr/](/by-pr/) | PR 索引 |
-| [by-pr/8355/](/by-pr/8355/) | JDK-8355xxx 系列 (核心库优化) |
-| [by-pr/8366/](/by-pr/8366/) | JDK-8366xxx 系列 (ClassFile API) |
-| [by-pr/8370/](/by-pr/8370/) | JDK-8370xxx 系列 (字符串优化) |
+| 目录 | 说明 | 链接 |
+|------|------|------|
+| [by-pr/](/by-pr/) | PR 索引 | [→](/by-pr/index.md) |
+| JDK 26 Top PRs | 重要 PR 列表 | [→](/by-pr/jdk26-top-prs.md) |
+| JDK-8298xxx | 类加载器相关 | [→](/by-pr/8298/) |
+| JDK-8310xxx | 核心库优化 | [→](/by-pr/8310/) |
+| JDK-8311xxx | 核心库优化 | [→](/by-pr/8311/) |
+| JDK-8315xxx | 工具链 | [→](/by-pr/8315/) |
+| JDK-8316xxx | 热点修复 | [→](/by-pr/8316/) |
+| JDK-8335xxx | 核心库优化 | [→](/by-pr/8335/) |
+| JDK-8336xxx | ClassFile API | [→](/by-pr/8336/) |
+| JDK-8337xxx | 字符串优化 | [→](/by-pr/8337/) |
+| JDK-8338xxx | 集合框架 | [→](/by-pr/8338/) |
+| JDK-8355xxx | 核心库优化 | [→](/by-pr/8355/) |
+| JDK-8366xxx | ClassFile API | [→](/by-pr/8366/) |
+| JDK-8370xxx | 字符串优化 | [→](/by-pr/8370/) |
 
 ### 模块分析
 
-| 链接 | 说明 |
-|------|------|
-| [modules/](/modules/) | JDK 核心模块源码分析 |
-| concurrent | JUC 并发工具分析 |
-| hotspot | HotSpot VM 架构 |
-| hotspot-c2 | C2 JIT 编译器 |
-| java.crypto | 加密与安全 |
-| java.sql | JDBC 数据库连接 |
-| java.xml | XML 处理 |
-| jdk.compiler | javac 编译器 API |
+| 模块 | 说明 | 链接 |
+|------|------|------|
+| java.base | 核心 API | [分析](/modules/java.base.md) |
+| java.util.concurrent | JUC 并发工具 | [分析](/modules/concurrent.md) |
+| java.net.http | HTTP Client | [分析](/modules/java.net.http.md) |
+| java.crypto | 加密与安全 | [分析](/modules/java.crypto.md) |
+| java.logging | 日志框架 | [分析](/modules/java.logging.md) |
+| java.management | JMX 监控 | [分析](/modules/java.management.md) |
+| java.sql | JDBC 数据库 | [分析](/modules/java.sql.md) |
+| java.xml | XML 处理 | [分析](/modules/java.xml.md) |
+| jdk.compiler | javac API | [分析](/modules/jdk.compiler.md) |
+| hotspot | HotSpot VM | [分析](/modules/hotspot.md) |
+| hotspot-gc | 垃圾回收器 | [分析](/modules/hotspot-gc.md) |
+| hotspot-c2 | C2 编译器 | [分析](/modules/hotspot-c2.md) |
+| [完整列表](/modules/README.md) | 模块索引 | → |
