@@ -12,26 +12,24 @@
 |------|-----|
 | **Integrated PRs** | 25 |
 | **贡献者数** | 1 |
+| **活跃时间** | 2024 - 至今 |
 | **主要领域** | RISC-V 向量指令 |
 
 ---
 
 ## 贡献者
 
-| 贡献者 | GitHub | PRs | 领域 |
-|--------|--------|-----|------|
+| 贡献者 | GitHub | PRs | 主要领域 |
+|--------|--------|-----|----------|
 | [Anjian Wen](../anjian-wen.md) | [@Anjian-Wen](https://github.com/Anjian-Wen) | 25 | RISC-V 向量指令 |
 
 ---
 
-## 影响的模块分布
+## 影响的模块
 
-基于 git 修改文件统计：
-
-| 模块 | 文件数 | 说明 |
-|------|--------|------|
+| 目录 | 修改次数 | 说明 |
+|------|----------|------|
 | RISC-V 移植 | 23 | RISC-V 架构代码 |
-| RISC-V GC 共享 | 1 | GC 共享代码 |
 | 向量 API 测试 | 2 | Vector API 测试 |
 | IR 框架测试 | 2 | 编译器 IR 测试 |
 
@@ -46,10 +44,7 @@
 | 8329887 | RISC-V: C2 支持 Zvbb Vector And-Not 指令 | 向量 And-Not 指令 |
 | 8355074 | RISC-V: C2 支持向量标量版 Zvbb Vector And-Not | 向量标量版本 |
 
-**Zvbb 指令集**:
-- Vector Bit-manipulation used in Cryptography
-- 包含向量 And-Not (vandn) 指令
-- 用于密码学和位操作优化
+**Zvbb 指令集**: Vector Bit-manipulation used in Cryptography
 
 ### RISC-V 浮点指令 (Zfa)
 
@@ -58,10 +53,7 @@
 | 8349632 | RISC-V: 添加 Zfa fminm/fmaxm | 浮点最小/最大指令 |
 | 8352022 | RISC-V: 支持 Zfa fminm_h/fmaxm_h | float16 支持 |
 
-**Zfa 指令集**:
-- Additional Floating-Point instructions
-- 包含 fminm/fmaxm 指令
-- 不设置异常标志的最小/最大操作
+**Zfa 指令集**: Additional Floating-Point instructions
 
 ### RISC-V 内存操作
 
@@ -88,12 +80,13 @@
 - 浮点指令支持
 - 内存操作优化
 
-### 指令集扩展
+### 支持的 RISC-V 扩展
 
-支持的 RISC-V 扩展：
-- **Zvbb**: 向量位操作 (密码学相关)
-- **Zfa**: 附加浮点指令
-- **V**: 向量扩展
+| 扩展 | 说明 |
+|------|------|
+| **Zvbb** | 向量位操作 (密码学相关) |
+| **Zfa** | 附加浮点指令 |
+| **V** | 向量扩展 |
 
 ---
 
