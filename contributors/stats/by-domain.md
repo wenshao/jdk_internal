@@ -1,0 +1,227 @@
+# 按领域分类
+
+> OpenJDK 贡献者按技术领域分类
+
+---
+
+## GC (垃圾收集)
+
+### Shenandoah GC
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| [Aleksey Shipilev](../aleksey-shipilev.md) | 1,320 | Red Hat |
+| [William Kemper](../william-kemper.md) | 34 | Red Hat |
+
+### G1 GC
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| [Thomas Schatzl](../thomas-schatzl.md) | 1,113 | Oracle |
+| [Albert Mingkun Yang](../albert-mingkun-yang.md) | 747 | Oracle |
+| Zhengyu Gu | 582 | Oracle |
+
+### ZGC
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| Stefan Karlsson | 692 | Oracle |
+
+### 并发 GC
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| [Kim Barrett](../kim-barrett.md) | 680 | Oracle |
+
+---
+
+## 编译器
+
+### C2 编译器
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| Vladimir Kozlov | 942 | Oracle |
+| Roland Westrelin | 676 | Red Hat |
+| [Emanuel Peter](../emanuel-peter.md) | 42 | Oracle |
+
+### Graal
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| Tobias Hartmann | 563 | Oracle |
+| Tom Rodriguez | 460 | Oracle |
+| Vladimir Ivanov | 448 | Oracle |
+| Christian Thalinger | 335 | Oracle |
+
+### C1 编译器
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| John Rose | 200+ | Oracle |
+
+---
+
+## 核心库
+
+### java.lang / java.util
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| Joe Darcy | 1,194 | Oracle |
+| Claes Redestad | 688 | Oracle |
+| [Shaojin Wen](../shaojin-wen.md) | 27 | 阿里巴巴 |
+
+### 模块系统
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| Alan Bateman | 867 | Oracle |
+| Mandy Chung | 687 | Oracle |
+| Harold Seigel | 451 | Oracle |
+
+### 反射
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| Roger Riggs | 461 | Oracle |
+| [Chen Liang](../chen-liang.md) | 36 | Oracle |
+
+### ClassFile API
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| [Chen Liang](../chen-liang.md) | 36 | Oracle |
+| Adam Sotona | 100+ | Oracle |
+
+---
+
+## 语言特性 / javac
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| Jonathan Gibbons | 1,320 | Oracle |
+| [Jan Lahoda](../jan-lahoda.md) | 785 | Oracle |
+| Maurizio Cimadamore | 670 | Oracle |
+| Vicente Romero | 480 | Oracle |
+
+---
+
+## 构建系统
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| David Katleman | 1,487 | Oracle |
+| Erik Joelsson | 956 | Oracle |
+| [Magnus Ihse Bursie](../magnus-ihse-bursie.md) | 925 | Oracle |
+| [Matthias Baesken](../matthias-baesken.md) | 742 | SAP |
+| Kelly O'Hair | 523 | Oracle |
+
+---
+
+## 桌面应用
+
+### AWT / 2D
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| Sergey Bylokhov | 953 | Oracle |
+| Prasanta Sadhukhan | 772 | Oracle |
+
+### 图形 / 打印
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| [Phil Race](phil-race.md) | 1,313 | Oracle |
+
+### Swing
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| Prasanta Sadhukhan | 772 | Oracle |
+
+---
+
+## 网络
+
+### NIO
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| [Brian Burkhalter](../brian-burkhalter.md) | 779 | Oracle |
+| Chris Hegarty | 812 | Oracle |
+
+### HTTP Client
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| [Daniel Fuchs](../daniel-fuchs.md) | 492 | Oracle |
+| [Jaikiran Pai](../jaikiran-pai.md) | 111 | Oracle |
+
+---
+
+## HotSpot VM
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| [Coleen Phillimore](../coleen-phillimore.md) | 1,209 | Oracle |
+| [David Holmes](../david-holmes.md) | 720 | Oracle |
+| Thomas Stuefe | 548 | SAP |
+| Chris Plummer | 437 | Oracle |
+
+---
+
+## JFR (Java Flight Recorder)
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| [Erik Gahlin](../erik-gahlin.md) | 481 | Oracle |
+
+---
+
+## CDS / AOT
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| [Ioi Lam](../ioi-lam.md) | 661 | Oracle |
+| Jiangli Zhou | 251 | Oracle |
+
+---
+
+## 国际化
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| Naoto Sato | 569 | Oracle |
+| Justin Lu | 100+ | Oracle |
+
+---
+
+## 安全
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| Weijun Wang | 954 | Oracle |
+| Xue-Lei Andrew Fan | 412 | Oracle |
+| Sean Mullan | 421 | Oracle |
+
+---
+
+## RISC-V
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| Hamlin Li | 301 | Oracle |
+| Anjian-Wen | 12 | 字节跳动 |
+| Dingli Zhang | 11 | ISCAS |
+| Fei Yang | 6 | ISCAS |
+
+---
+
+## LoongArch
+
+| 贡献者 | Commits | 组织 |
+|--------|---------|------|
+| sunguoyun | 14 | 龙芯 |
+| Ao Qi | 11 | 龙芯 |
+| Jie Fu | 6 | 龙芯 |
