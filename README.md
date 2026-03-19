@@ -55,7 +55,8 @@ jdk_docs/
 │   └── faq.md             # 常见问题
 ├── issues/                # Issue 分析文档
 ├── prs/                   # Pull Request 分析文档
-│   └── jdk26-important-changes.md  # 重要非 JEP 改动
+│   ├── jdk26-important-changes.md  # 重要非 JEP 改动
+│   └── jdk26-contributors.md       # 开发者贡献分析
 └── modules/               # 模块/组件源码分析文档
 ```
 
