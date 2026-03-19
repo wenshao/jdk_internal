@@ -104,17 +104,18 @@
 
 | JEP | 标题 | 链接 |
 |-----|------|------|
+| JEP 514 | JEP 514: Compact Source Files | [分析](../jeps/jep-514.md) |
+| JEP 515 | JEP 515: Implicit Class File Transformers | [分析](../jeps/jep-515.md) |
 | JEP 516 | Ahead-of-Time Object Caching | [分析](../jeps/jep-516.md) |
 | JEP 517 | HTTP/3 for HTTP Client | [分析](../jeps/jep-517.md) |
+| JEP 518 | JEP 518: | [分析](../jeps/jep-518.md) |
 | JEP 519 | Compact Object Headers | [分析](../jeps/jep-519.md) |
+| JEP 520 | JEP 520: Flexible Object Layout | [分析](../jeps/jep-520.md) |
 | JEP 521 | Generational Shenandoah | [分析](../jeps/jep-521.md) |
-| JEP 522 | G1 GC Throughput | [分析](../jeps/jep-522.md) |
 | JEP 525 | Structured Concurrency | [分析](../jeps/jep-525.md) |
 | JEP 526 | Lazy Constants | [分析](../jeps/jep-526.md) |
-| JEP 500 | Make Final Mean Final | [分析](../jeps/jep-500.md) |
-| JEP 504 | Remove Applet API | [分析](../jeps/jep-504.md) |
-| JEP 509 | JFR CPU-Time Profiling | [分析](../jeps/jep-509.md) |
-| JEP 527 | TLS 1.3 Hybrid Key Exchange | [分析](../jeps/jep-527.md) |
+| JEP 530 | JEP 530: | [分析](../jeps/jep-530.md) |
+| JEP 470 | PEM Key Exchange | [分析](../jeps/jep-470.md) |
 
 ### PR/Issue 深度分析
 
