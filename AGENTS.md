@@ -203,3 +203,12 @@ Keep technical artifacts unchanged:
 - Code blocks, CLI commands, file paths
 - Stack traces, logs, JSON keys
 - Identifiers and exact quoted text
+
+## Link Verification Rule
+
+**When adding or fixing links in markdown files, the push must be verified by direct access check before it can be considered passed.**
+
+This means:
+1. After pushing changes with links, use `web_fetch` to access the GitHub raw URL and verify the linked file exists
+2. Example verification: `https://raw.githubusercontent.com/wenshao/jdk_internal/main/by-contributor/profiles/thomas-schatzl.md`
+3. Only after successful verification can the task be marked as complete

@@ -10,7 +10,7 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 ---
 
-## Top 30 by Commit Count
+## Top 50 by Commit Count
 
 | Rank | Contributor | Commits | Primary Focus |
 |------|-------------|---------|---------------|
@@ -44,6 +44,26 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 | 28 | [Leonid Mesnik](./leonid-mesnik.md) | 33 | JVMTI |
 | 29 | [Coleen Phillimore](./coleen-phillimore.md) | 32 | HotSpot |
 | 30 | Yasumasa Suenaga | 32 | Serviceability |
+| 31 | [Hamlin Li](./hamlin-li.md) | 31 | C2 Compiler |
+| 32 | Roman Kennke | 30 | Compact Headers |
+| 33 | Weijun Wang | 29 | Security |
+| 34 | Jatin Bhateja | 28 | Vector API |
+| 35 | Roland Westrelin | 27 | C2 Compiler |
+| 36 | Quan Anh Mai | 26 | Type System |
+| 37 | Per Minborg | 25 | Core Libraries |
+| 38 | Anton Seoane Ampudia | 24 | x86 Cleanup |
+| 39 | Eric Fang | 23 | AOT |
+| 40 | Alan Bateman | 22 | Concurrency |
+| 41 | Johannes Bechberger | 21 | JFR |
+| 42 | Andrew Haley | 20 | RISC-V |
+| 43 | Fredrik Bredberg | 19 | Monitors |
+| 44 | Artur Barashev | 18 | Security |
+| 45 | Markus Grönlund | 17 | JFR |
+| 46 | Damon Nguyen | 16 | Desktop |
+| 47 | Jayathirth D V | 15 | ImageIO |
+| 48 | Anthony Scarpino | 14 | Security |
+| 49 | Erik Österlund | 13 | AOT |
+| 50 | Hai-May Chao | 12 | Security |
 
 ---
 
