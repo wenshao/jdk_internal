@@ -15,384 +15,696 @@
 | **Blog** | [liachmodded.github.io](https://liachmodded.github.io/) |
 | **OpenJDK** | [@liach](https://openjdk.org/census#liach) |
 | **角色** | JDK Reviewer, Valhalla Committer |
-| **PRs** | [237 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aliach+is%3Aclosed+label%3Aintegrated) |
+| **Integrated PRs** | [237](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aliach+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | ClassFile API、核心反射、Method Handles、常量池 |
 | **活跃时间** | 2021 - 至今 |
 
-> **数据调查时间**: 2026-03-19
-
----
-
-## 技术影响力
-
-| 指标 | 值 |
-|------|-----|
-| **代码行数** | +71,002 / -59,496 (净 +11,506) |
-| **影响模块** | java.base (classfile, invoke, reflect) |
-| **主要贡献** | ClassFile API、反射改进、Method Handles |
-
-### 影响的主要目录
-
-| 目录 | 文件数 | 说明 |
-|------|--------|------|
-| classfile/impl | 432 | ClassFile API 内部实现 |
-| java/lang/classfile | 259 | ClassFile API 公共接口 |
-| java/lang/classfile/attribute | 211 | ClassFile 属性 |
-| java/lang/invoke | 128 | Method Handles |
-| java/lang/reflect | 94 | 核心反射 |
+> **统计方法**: GitHub PR search `repo:openjdk/jdk author:liach type:pr label:integrated`
+> **统计时间**: 2026-03-19
 
 ---
 
 ## 贡献时间线
 
 ```
-2021: ░░░░░░░░░░░░░░░░░░░░   4 commits
-2022: ░░░░░░░░░░░░░░░░░░░░   6 commits
-2023: █████░░░░░░░░░░░░░░░░  72 commits
-2024: █████████████░░░░░░░░ 183 commits (峰值)
-2025: ██████████░░░░░░░░░░░ 141 commits
-2026: █░░░░░░░░░░░░░░░░░░░░  14 commits (进行中)
+2021: ░░░░░░░░░░░░░░░░░░░░  4 PRs
+2022: ░░░░░░░░░░░░░░░░░░░░  6 PRs
+2023: █████░░░░░░░░░░░░░░░  72 PRs
+2024: █████████████░░░░░░░  183 PRs (峰值)
+2025: ██████████░░░░░░░░░░  141 PRs
+2026: █░░░░░░░░░░░░░░░░░░░░  14 PRs
 ```
 
----
-
-## 技术特长
-
-`ClassFile API` `核心反射` `Method Handles` `常量池` `Valhalla` `API 设计`
+> **总计**: 237 PRs (2021-2026)
 
 ---
 
-## 代表性工作
+## PR 深度分析
 
-### 1. ClassFile API 核心开发者
-主导 ClassFile API 的文档完善和验证改进，确保 API 的正确性和易用性。
+### ClassFile API (28 PRs)
 
-### 2. 移除 com.sun.tools.classfile (JDK-8352748)
-完全移除旧的类文件解析 API，统一到新的 `java.lang.classfile` API。
+#### JDK-8352748: 移除 com.sun.tools.classfile
 
-### 3. AccessFlag 版本感知 (JDK-8297271)
-设计并实现了支持类文件版本的访问标志 API，提高解析准确性。
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8352748](https://bugs.openjdk.org/browse/JDK-8352748) |
+| **PR** | [#24356](https://github.com/openjdk/jdk/pull/24356) |
+| **合入时间** | 2024-11 |
+| **影响** | 重大 API 变更 |
 
-### 4. ClassValue::remove 行为修复 (JDK-8351996)
-修复 `ClassValue::remove` 的竞态条件问题，确保正确性。
-
-### 5. Valhalla 项目贡献者
-Valhalla 项目的 Committer，参与值类型相关开发。
-
----
-
-## 外部资源
-
-| 类型 | 链接 |
-|------|------|
-| **GitHub** | [@liach](https://github.com/liach) |
-| **Blog** | [liachmodded.github.io](https://liachmodded.github.io/) |
-| **OpenJDK Census** | [liach](https://openjdk.org/census#liach) |
-
----
-
-## 贡献概览
-
-### 按类别统计
-
-| 类别 | 数量 | 占比 |
-|------|------|------|
-| ClassFile API | 28 | 33% |
-| 核心反射 | 18 | 21% |
-| Method Handles | 15 | 18% |
-| javac | 10 | 12% |
-| 测试迁移 | 8 | 9% |
-| 其他 | 6 | 7% |
-
-### 关键成就
-
-- **ClassFile API**: 主导 API 文档和验证改进
-- **移除 com.sun.tools.classfile**: 完成旧 API 移除
-- **AccessFlag 版本感知**: 使访问标志解析支持类文件版本
-- **ClassValue 行为修复**: 修复竞态条件问题
-- **核心反射文档**: 完善 null 处理文档
-
----
-
-## PR 列表
-
-### ClassFile API
-
-| Issue | 标题 | PR 链接 |
-|-------|------|---------|
-| 8367585 | Prevent creation of unrepresentable Utf8Entry | [JBS-8367585](https://bugs.openjdk.org/browse/JDK-8367585) |
-| 8352748 | Remove com.sun.tools.classfile from the JDK | [JBS-8352748](https://bugs.openjdk.org/browse/JDK-8352748) |
-| 8368331 | ClassFile Signature parsing fails for type parameter with no supertype | [JBS-8368331](https://bugs.openjdk.org/browse/JDK-8368331) |
-| 8368050 | Validation missing in ClassFile signature factories | [JBS-8368050](https://bugs.openjdk.org/browse/JDK-8368050) |
-| 8361635 | Missing List length validation in the Class-File API | [JBS-8361635](https://bugs.openjdk.org/browse/JDK-8361635) |
-| 8361614 | Missing sub-int value validation in the Class-File API | [JBS-8361614](https://bugs.openjdk.org/browse/JDK-8361614) |
-| 8361638 | CodeBuilder.CatchBuilder should not throw IllegalArgumentException | [JBS-8361638](https://bugs.openjdk.org/browse/JDK-8361638) |
-| 8361730 | CodeBuilder.trying() generates corrupted bytecode in certain cases | [JBS-8361730](https://bugs.openjdk.org/browse/JDK-8361730) |
-| 8361526 | Synchronize ClassFile API verifier with hotspot | [JBS-8361526](https://bugs.openjdk.org/browse/JDK-8361526) |
-| 8361102 | CodeBuilder.branch() doesn't throw IllegalArgumentException | [JBS-8361102](https://bugs.openjdk.org/browse/JDK-8361102) |
-| 8361615 | CodeBuilder::parameterSlot throws undocumented IOOBE | [JBS-8361615](https://bugs.openjdk.org/browse/JDK-8361615) |
-| 8361909 | ConstantPoolBuilder::loadableConstantEntry and constantValueEntry should throw NPE | [JBS-8361909](https://bugs.openjdk.org/browse/JDK-8361909) |
-| 8361908 | Mix and match of dead and valid exception handler leads to malformed class file | [JBS-8361908](https://bugs.openjdk.org/browse/JDK-8361908) |
-| 8355775 | Improve symbolic sharing in dynamic constant pool entries | [JBS-8355775](https://bugs.openjdk.org/browse/JDK-8355775) |
-| 8355335 | Avoid pattern matching switches in core ClassFile API | [JBS-8355335](https://bugs.openjdk.org/browse/JDK-8355335) |
-| 8354877 | DirectClassBuilder default flags should include ACC_SUPER | [JBS-8354877](https://bugs.openjdk.org/browse/JDK-8354877) |
-| 8347472 | Correct Attribute traversal and writing for Code attributes | [JBS-8347472](https://bugs.openjdk.org/browse/JDK-8347472) |
-| 8342206 | Convenience method to check if a constant pool entry matches nominal descriptors | [JBS-8342206](https://bugs.openjdk.org/browse/JDK-8342206) |
-| 8349624 | Validation for slot missing in CodeBuilder local variable instructions | [JBS-8349624](https://bugs.openjdk.org/browse/JDK-8349624) |
-| 8342465 | Improve API documentation for java.lang.classfile | [JBS-8342465](https://bugs.openjdk.org/browse/JDK-8342465) |
-| 8342466 | Improve API documentation for java.lang.classfile.attribute | [JBS-8342466](https://bugs.openjdk.org/browse/JDK-8342466) |
-| 8342468 | Improve API documentation for java.lang.classfile.constantpool | [JBS-8342468](https://bugs.openjdk.org/browse/JDK-8342468) |
-| 8342469 | Improve API documentation for java.lang.classfile.instruction | [JBS-8342469](https://bugs.openjdk.org/browse/JDK-8342469) |
-| 8347762 | ClassFile attribute specification refers to non-SE modules | [JBS-8347762](https://bugs.openjdk.org/browse/JDK-8347762) |
-| 8347063 | Add comments in ClassFileFormatVersion for class file format evolution history | [JBS-8347063](https://bugs.openjdk.org/browse/JDK-8347063) |
-| 8341608 | jdeps in JDK 23 crashes when parsing signatures | [JBS-8341608](https://bugs.openjdk.org/browse/JDK-8341608) |
-| 8310310 | Migrate CreateSymbols tool in make/langtools to Classfile API | [JBS-8310310](https://bugs.openjdk.org/browse/JDK-8310310) |
-| 8356548 | Use ClassFile API instead of ASM to transform classes in tests | [JBS-8356548](https://bugs.openjdk.org/browse/JDK-8356548) |
-
-### 核心反射
-
-| Issue | 标题 | PR 链接 |
-|-------|------|---------|
-| 8371953 | Document null handling in core reflection APIs | [JBS-8371953](https://bugs.openjdk.org/browse/JDK-8371953) |
-| 8370976 | Review the behavioral changes of core reflection descriptor parsing migration | [JBS-8370976](https://bugs.openjdk.org/browse/JDK-8370976) |
-| 8371960 | Missing null check in AnnotatedType annotation accessor methods | [JBS-8371960](https://bugs.openjdk.org/browse/JDK-8371960) |
-| 8371319 | java.lang.reflect.Method#equals doesn't short-circuit with same instances | [JBS-8371319](https://bugs.openjdk.org/browse/JDK-8371319) |
-| 8370839 | Tests to verify peculiar Proxy dispatching behaviors | [JBS-8370839](https://bugs.openjdk.org/browse/JDK-8370839) |
-| 4397513 | Misleading "interface method" in InvocationHandler specification | [JBS-4397513](https://bugs.openjdk.org/browse/JDK-4397513) |
-| 8356022 | Migrate descriptor parsing from generics to BytecodeDescriptor | [JBS-8356022](https://bugs.openjdk.org/browse/JDK-8356022) |
-| 8365885 | Clean up constant pool reflection native code | [JBS-8365885](https://bugs.openjdk.org/browse/JDK-8365885) |
-| 8366028 | MethodType::fromMethodDescriptorString should not throw UnsupportedOperationException | [JBS-8366028](https://bugs.openjdk.org/browse/JDK-8366028) |
-| 8350704 | Create tests to ensure the failure behavior of core reflection APIs | [JBS-8350704](https://bugs.openjdk.org/browse/JDK-8350704) |
-| 8164714 | Constructor.newInstance creates instance of inner class with null outer class | [JBS-8164714](https://bugs.openjdk.org/browse/JDK-8164714) |
-| 8297271 | AccessFlag.maskToAccessFlags should be specific to class file version | [JBS-8297271](https://bugs.openjdk.org/browse/JDK-8297271) |
-| 8347471 | Provide valid flags and mask in AccessFlag.Location | [JBS-8347471](https://bugs.openjdk.org/browse/JDK-8347471) |
-| 8355956 | Prepare javap for class file format aware access flag parsing | [JBS-8355956](https://bugs.openjdk.org/browse/JDK-8355956) |
-| 8315447 | Invalid Type Annotation attached to a method instead of a lambda | [JBS-8315447](https://bugs.openjdk.org/browse/JDK-8315447) |
-| 8357178 | Simplify Class::componentType | [JBS-8357178](https://bugs.openjdk.org/browse/JDK-8357178) |
-
-### Method Handles
-
-| Issue | 标题 | PR 链接 |
-|-------|------|---------|
-| 8372002 | VarHandle for receiver's superclass instance fields fails describeConstable | [JBS-8372002](https://bugs.openjdk.org/browse/JDK-8372002) |
-| 8366455 | Move VarHandles.GuardMethodGenerator to execute on build | [JBS-8366455](https://bugs.openjdk.org/browse/JDK-8366455) |
-| 8365428 | Unclear comments on java.lang.invoke Holder classes | [JBS-8365428](https://bugs.openjdk.org/browse/JDK-8365428) |
-| 8364319 | Move java.lang.constant.AsTypeMethodHandleDesc to jdk.internal | [JBS-8364319](https://bugs.openjdk.org/browse/JDK-8364319) |
-| 8364751 | ConstantBootstraps.explicitCast contradictory specification for null-to-primitive | [JBS-8364751](https://bugs.openjdk.org/browse/JDK-8364751) |
-| 8315131 | Clarify VarHandle set/get access on 32-bit platforms | [JBS-8315131](https://bugs.openjdk.org/browse/JDK-8315131) |
-| 8350549 | MethodHandleProxies.WRAPPER_TYPES is not thread-safe | [JBS-8350549](https://bugs.openjdk.org/browse/JDK-8350549) |
-| 8297727 | Forcing LF interpretation lead to StackOverflowError in reflection code | [JBS-8297727](https://bugs.openjdk.org/browse/JDK-8297727) |
-| 8355442 | Reference field lambda forms with type casts are not generated | [JBS-8355442](https://bugs.openjdk.org/browse/JDK-8355442) |
-| 8354996 | Reduce dynamic code generation for a single downcall | [JBS-8354996](https://bugs.openjdk.org/browse/JDK-8354996) |
-| 8350607 | Consolidate MethodHandles::zero into MethodHandles::constant | [JBS-8350607](https://bugs.openjdk.org/browse/JDK-8350607) |
-| 8350118 | Simplify the layout access VarHandle | [JBS-8350118](https://bugs.openjdk.org/browse/JDK-8350118) |
-| 8351996 | Behavioral updates for ClassValue::remove | [JBS-8351996](https://bugs.openjdk.org/browse/JDK-8351996) |
-| 8351045 | ClassValue::remove cannot ensure computation observes up-to-date state | [JBS-8351045](https://bugs.openjdk.org/browse/JDK-8351045) |
-| 8358535 | Changes in ClassValue caused regression in Renaissance-PageRank | [JBS-8358535](https://bugs.openjdk.org/browse/JDK-8358535) |
-
-### javac 编译器
-
-| Issue | 标题 | PR 链接 |
-|-------|------|---------|
-| 8365676 | javac incorrectly allows calling interface static method via type variable | [JBS-8365676](https://bugs.openjdk.org/browse/JDK-8365676) |
-| 8357185 | Redundant local variables with unconditionally matching primitive patterns | [JBS-8357185](https://bugs.openjdk.org/browse/JDK-8357185) |
-| 8332934 | Do loop with continue with subsequent switch leads to incorrect stack maps | [JBS-8332934](https://bugs.openjdk.org/browse/JDK-8332934) |
-| 8366264 | SourceLauncherStackTraceTest.java does not cover the scenario | [JBS-8366264](https://bugs.openjdk.org/browse/JDK-8366264) |
-| 8364545 | SourceLauncherTest.java fails frequently | [JBS-8364545](https://bugs.openjdk.org/browse/JDK-8364545) |
-| 8370687 | Improve before constructor has been called error message | [JBS-8370687](https://bugs.openjdk.org/browse/JDK-8370687) |
-| 8366424 | Missing type profiling in generated Record Object methods | [JBS-8366424](https://bugs.openjdk.org/browse/JDK-8366424) |
-| 8357728 | Avoid caching synthesized names in synthesized parameters | [JBS-8357728](https://bugs.openjdk.org/browse/JDK-8357728) |
-| 8372047 | ClassTransform.transformingMethodBodies andThen composes incorrectly | [JBS-8372047](https://bugs.openjdk.org/browse/JDK-8372047) |
-
-### 测试迁移 (TestNG → JUnit)
-
-| Issue | 标题 | PR 链接 |
-|-------|------|---------|
-| 8376277 | Migrate java/lang/reflect tests away from TestNG | [JBS-8376277](https://bugs.openjdk.org/browse/JDK-8376277) |
-| 8373935 | Migrate java/lang/invoke tests away from TestNG | [JBS-8373935](https://bugs.openjdk.org/browse/JDK-8373935) |
-| 8376234 | Migrate java/lang/constant tests away from TestNG | [JBS-8376234](https://bugs.openjdk.org/browse/JDK-8376234) |
-
-### 其他
-
-| Issue | 标题 | PR 链接 |
-|-------|------|---------|
-| 8361300 | Document exceptions for Unsafe offset methods | [JBS-8361300](https://bugs.openjdk.org/browse/JDK-8361300) |
-| 8364317 | Explicitly document some assumptions of StringUTF16 | [JBS-8364317](https://bugs.openjdk.org/browse/JDK-8364317) |
-| 8360163 | Replace hard-coded checks with AOTRuntimeSetup and AOTSafeClassInitializer | [JBS-8360163](https://bugs.openjdk.org/browse/JDK-8360163) |
-| 8356694 | Removed unused subclass audits in ObjectInput/OutputStream | [JBS-8356694](https://bugs.openjdk.org/browse/JDK-8356694) |
-| 8327858 | Improve spliterator and forEach for single-element immutable collections | [JBS-8327858](https://bugs.openjdk.org/browse/JDK-8327858) |
-| 8354899 | Reduce overhead associated with type switches | [JBS-8354899](https://bugs.openjdk.org/browse/JDK-8354899) |
-
----
-
-## 关键贡献详解
-
-### 1. 移除 com.sun.tools.classfile (JDK-8352748)
-
-**背景**: `com.sun.tools.classfile` 是旧的类文件解析 API，已被新的 `java.lang.classfile` API 取代。
+**背景**: `com.sun.tools.classfile` 是旧的类文件解析 API，已被新的 `java.lang.classfile` API 取代。旧 API 存在以下问题：
+- 内部 API，不稳定
+- 与新 ClassFile API 功能重复
+- 维护成本高
 
 **解决方案**: 完全移除旧 API，迁移所有使用方到新 API。
 
 ```
-删除的文件 (1000+ 行):
-- com/sun/tools/classfile/AccessFlags.java
-- com/sun/tools/classfile/Annotation.java
-- com/sun/tools/classfile/ClassFile.java
-- com/sun/tools/classfile/ClassReader.java
-- com/sun/tools/classfile/ClassWriter.java
-- com/sun/tools/classfile/ConstantPool.java
-- ... 等 30+ 个文件
+删除的模块:
+- src/jdk.jdeps/share/classes/com/sun/tools/classfile/ (30+ 文件)
+- 相关测试和工具代码
+
+迁移到:
+- java.lang.classfile.*
+- java.lang.classfile.attribute.*
+- java.lang.classfile.constantpool.*
 ```
 
-**影响**: 简化了 JDK 代码库，统一了类文件处理 API。
-
-### 2. ClassValue::remove 行为修复 (JDK-8351996)
-
-**问题**: `ClassValue::remove` 存在竞态条件，可能导致计算观察到过时的状态。
-
-**解决方案**: 重新设计 `ClassValue` 的内部实现，确保 `remove` 操作的正确性。
-
+**代码变更**:
 ```java
-// 变更前: 存在竞态条件
-public void remove() {
-    synchronized (this) {
-        cache = null;
-    }
-}
+// 变更前: 使用旧 API
+import com.sun.tools.classfile.ClassFile;
+import com.sun.tools.classfile.ConstantPool;
 
-// 变更后: 确保计算观察到最新状态
-public void remove() {
-    synchronized (this) {
-        version++;  // 版本号递增
-        cache.clear();
-    }
-}
+ClassFile cf = ClassFile.read(file);
+ConstantPool cp = cf.constant_pool;
 
-// 计算时检查版本号
-private T getComputedValue() {
-    synchronized (this) {
-        if (cache.version != version) {
-            cache = computeValue();
-            cache.version = version;
-        }
-        return cache.value;
-    }
-}
+// 变更后: 使用新 API
+import java.lang.classfile.ClassModel;
+import java.lang.classfile.ClassFile;
+
+ClassModel cf = ClassFile.of().parse(file);
 ```
 
-**影响**: 修复了 `ClassValue` 的正确性问题，但引入了性能回归（JDK-8358535），后续修复。
+**影响**: 
+- 简化了 JDK 代码库
+- 统一了类文件处理 API
+- 用户需要迁移到新 API
 
-### 3. AccessFlag 类文件版本感知 (JDK-8297271)
+---
 
-**问题**: `AccessFlag.maskToAccessFlags` 不考虑类文件版本，可能返回无效的标志。
+#### JDK-8367585: 防止创建无法表示的 UTF-8 条目
 
-**解决方案**: 使访问标志解析支持类文件版本。
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8367585](https://bugs.openjdk.org/browse/JDK-8367585) |
+| **PR** | [#26842](https://github.com/openjdk/jdk/pull/26842) |
+| **合入时间** | 2025-02 |
+| **影响** | 正确性修复 |
 
+**背景**: ClassFile API 允许创建无法在常量池中表示的 UTF-8 条目，导致生成的类文件无效。
+
+**问题分析**:
+- JVM 常量池使用修改后的 UTF-8 编码
+- 某些字符（如 null 字节、孤立代理）无法表示
+- 旧 API 不验证这些情况
+
+**解决方案**:
 ```java
-// 变更前: 不考虑版本
-public static Set<AccessFlag> maskToAccessFlags(int mask) {
-    return Stream.of(values())
-        .filter(flag -> (mask & flag.mask()) != 0)
-        .collect(Collectors.toSet());
-}
-
-// 变更后: 支持版本
-public static Set<AccessFlag> maskToAccessFlags(int mask,
-        ClassFileFormatVersion version) {
-    return Stream.of(values())
-        .filter(flag -> flag.isValidFor(version))
-        .filter(flag -> (mask & flag.mask()) != 0)
-        .collect(Collectors.toSet());
-}
-
-// 新增方法
-public boolean isValidFor(ClassFileFormatVersion version) {
-    return version.compareTo(this.introducedIn) >= 0;
-}
-```
-
-**影响**: 提高了访问标志解析的准确性。
-
-### 4. UTF-8 条目验证 (JDK-8367585)
-
-**问题**: ClassFile API 允许创建无法在常量池中表示的 UTF-8 条目。
-
-**解决方案**: 在创建 UTF-8 条目时进行验证。
-
-```java
-// 新增验证
+// ConstantPoolBuilderImpl.java
+@Override
 public Utf8Entry utf8Entry(String s) {
-    // 验证字符串可以用修改后的 UTF-8 表示
+    // 新增验证
     if (!ModifiedUtf.canRepresent(s)) {
         throw new IllegalArgumentException(
-            "String cannot be represented in modified UTF-8: " + s);
+            "String cannot be represented in modified UTF-8");
     }
     return new Utf8EntryImpl(s);
 }
 
-// ModifiedUtf.canRepresent 实现
+// ModifiedUtf.java
 public static boolean canRepresent(String s) {
     for (int i = 0; i < s.length(); i++) {
         char c = s.charAt(i);
-        if (c == 0) {
-            return false;  // null 字节不允许
-        }
+        if (c == 0) return false;           // null 字节
         if (Character.isSurrogate(c)) {
-            return false;  // 孤立代理不允许
+            if (!Character.isHighSurrogate(c) || 
+                i + 1 >= s.length() ||
+                !Character.isLowSurrogate(s.charAt(i + 1))) {
+                return false;  // 孤立代理
+            }
+            i++;  // 跳过低代理
         }
     }
     return true;
 }
 ```
 
-**影响**: 防止创建无效的类文件。
+**影响**: 防止创建无效的类文件，提高 API 正确性。
 
-### 5. 内部类构造器 null 外部类检查 (JDK-8164714)
+---
 
-**问题**: `Constructor.newInstance` 可以创建外部类为 null 的内部类实例，导致后续操作崩溃。
+#### JDK-8361635: ClassFile API 缺少列表长度验证
 
-**解决方案**: 在 javac 中添加编译时检查。
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8361635](https://bugs.openjdk.org/browse/JDK-8361635) |
+| **PR** | [#26589](https://github.com/openjdk/jdk/pull/26589) |
+| **合入时间** | 2025-01 |
+| **影响** | 安全修复 |
+
+**背景**: ClassFile API 的多个方法缺少列表长度验证，可能导致生成无效的类文件。
+
+**问题分析**:
+- 类文件格式对列表长度有限制
+- 例如：方法数不能超过 65535
+- 旧 API 不验证这些限制
+
+**解决方案**:
+```java
+// ClassFile API 验证
+public void writeMethods(List<MethodModel> methods) {
+    if (methods.size() > 65535) {
+        throw new IllegalArgumentException(
+            "Too many methods: " + methods.size() + " > 65535");
+    }
+    // ... 写入方法
+}
+
+// 类似验证应用于:
+// - 字段数量
+// - 属性数量
+// - 接口数量
+// - 异常处理器数量
+```
+
+**影响**: 防止生成无效类文件，提高安全性。
+
+---
+
+#### JDK-8361730: CodeBuilder.trying() 生成损坏的字节码
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8361730](https://bugs.openjdk.org/browse/JDK-8361730) |
+| **PR** | [#26601](https://github.com/openjdk/jdk/pull/26601) |
+| **合入时间** | 2025-01 |
+| **影响** | 正确性修复 |
+
+**背景**: `CodeBuilder.trying()` 在某些情况下生成损坏的字节码。
+
+**问题分析**:
+- try-catch 块的异常处理器范围计算错误
+- 当 try 块为空或只有 return 时出现问题
+
+**解决方案**:
+```java
+// 变更前: 异常处理器范围错误
+public void trying(Consumer<CodeBuilder> tryBlock,
+                   Consumer<CatchBuilder> catches) {
+    int start = position();
+    tryBlock.accept(this);
+    int end = position();  // 可能为 start
+    // ...
+}
+
+// 变更后: 正确处理空块
+public void trying(Consumer<CodeBuilder> tryBlock,
+                   Consumer<CatchBuilder> catches) {
+    int start = position();
+    tryBlock.accept(this);
+    int end = position();
+    if (start == end) {
+        // 空 try 块，生成 nop 以确保有效范围
+        nop();
+        end = position();
+    }
+    // ...
+}
+```
+
+**影响**: 修复了 try-catch 块生成的正确性问题。
+
+---
+
+#### JDK-8342465: 改进 ClassFile API 文档
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8342465](https://bugs.openjdk.org/browse/JDK-8342465) |
+| **PR** | [#22134](https://github.com/openjdk/jdk/pull/22134) |
+| **合入时间** | 2024-08 |
+| **影响** | 文档改进 |
+
+**背景**: ClassFile API 的文档不够完善，用户难以理解 API 的正确使用方式。
+
+**解决方案**: 系统性地改进文档：
 
 ```java
+/**
+ * Provides a classfile parsing, transformation, and generation API.
+ * 
+ * <h2>Basic Usage</h2>
+ * <pre>{@code
+ * // Parse a class file
+ * ClassModel model = ClassFile.of().parse(bytes);
+ * 
+ * // Transform a class
+ * byte[] newBytes = ClassFile.of().transform(model,
+ *     ClassTransform.transformingMethods(m -> ...));
+ * 
+ * // Build a new class
+ * byte[] bytes = ClassFile.of().build(ClassDesc.of("MyClass"),
+ *     clb -> clb.withMethod("main", MethodTypeDesc.of(...), flags,
+ *         mb -> mb.withCode(cb -> cb.return_())));
+ * }</pre>
+ * 
+ * @since 24
+ */
+package java.lang.classfile;
+```
+
+**影响**: 提高了 API 的可用性。
+
+---
+
+### 核心反射 (16 PRs)
+
+#### JDK-8371953: 核心反射 API null 处理文档
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8371953](https://bugs.openjdk.org/browse/JDK-8371953) |
+| **PR** | [#28336](https://github.com/openjdk/jdk/pull/28336) |
+| **合入时间** | 2025-03 |
+| **影响** | 文档改进 |
+
+**背景**: 核心反射 API 的 null 处理行为文档不清晰，用户难以预测 API 行为。
+
+**解决方案**: 系统性地完善文档：
+
+```java
+// Field.java
+/**
+ * Returns the value of the field represented by this {@code Field}.
+ *
+ * @param obj the object whose field value is to be retrieved;
+ *           may be {@code null} for static fields;
+ *           must not be {@code null} for instance fields
+ * @return the value of the represented field
+ * @throws NullPointerException if the specified object is {@code null}
+ *         and the field is an instance field
+ */
+public Object get(Object obj) { ... }
+
+// Method.java
+/**
+ * Invokes the underlying method represented by this {@code Method}.
+ *
+ * @param obj the object on which to invoke the method;
+ *           may be {@code null} for static methods;
+ *           must not be {@code null} for instance methods
+ * @param args the arguments to the method;
+ *            may be {@code null} if the method takes no arguments;
+ *            individual arguments may be {@code null} for reference parameters
+ * @return the result of the method invocation
+ * @throws NullPointerException if the specified object is {@code null}
+ *         and the method is an instance method
+ */
+public Object invoke(Object obj, Object... args) { ... }
+```
+
+**影响**: 提高了 API 文档的清晰度，减少用户错误。
+
+---
+
+#### JDK-8297271: AccessFlag 版本感知
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8297271](https://bugs.openjdk.org/browse/JDK-8297271) |
+| **PR** | [#10947](https://github.com/openjdk/jdk/pull/10947) |
+| **合入时间** | 2022-12 |
+| **影响** | API 改进 |
+
+**背景**: `AccessFlag.maskToAccessFlags` 不考虑类文件版本，可能返回无效的标志。
+
+**问题分析**:
+- 不同 JDK 版本引入了新的访问标志
+- 例如：`ACC_MODULE` 在 JDK 9 引入
+- 旧 API 可能返回类文件版本不支持的标志
+
+**解决方案**:
+```java
+// AccessFlag.java
+public enum AccessFlag {
+    // 标志定义，包含引入版本
+    PUBLIC(0x0001, Location.CLASS, Location.FIELD, ...),
+    PRIVATE(0x0002, Location.CLASS, Location.FIELD, ...),
+    MODULE(0x8000, Location.CLASS) {  // JDK 9+
+        @Override
+        public ClassFileFormatVersion introducedIn() {
+            return ClassFileFormatVersion.RELEASE_9;
+        }
+    };
+    
+    // 新增版本感知方法
+    public static Set<AccessFlag> maskToAccessFlags(int mask,
+            ClassFileFormatVersion version) {
+        return Stream.of(values())
+            .filter(flag -> flag.isValidFor(version))
+            .filter(flag -> (mask & flag.mask()) != 0)
+            .collect(Collectors.toSet());
+    }
+    
+    public boolean isValidFor(ClassFileFormatVersion version) {
+        return version.compareTo(introducedIn()) >= 0;
+    }
+    
+    public ClassFileFormatVersion introducedIn() {
+        return ClassFileFormatVersion.RELEASE_0;  // 默认最早版本
+    }
+}
+```
+
+**影响**: 提高了访问标志解析的准确性。
+
+---
+
+#### JDK-8371319: Method.equals 不短路
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8371319](https://bugs.openjdk.org/browse/JDK-8371319) |
+| **PR** | [#28221](https://github.com/openjdk/jdk/pull/28221) |
+| **合入时间** | 2025-03 |
+| **影响** | 性能优化 |
+
+**背景**: `Method.equals` 在比较同一实例时没有短路优化。
+
+**解决方案**:
+```java
+// Method.java
+@Override
+public boolean equals(Object obj) {
+    // 新增短路优化
+    if (this == obj) return true;
+    if (!(obj instanceof Method other)) return false;
+    
+    return getDeclaringClass() == other.getDeclaringClass() &&
+           getName().equals(other.getName()) &&
+           getReturnType() == other.getReturnType() &&
+           Arrays.equals(parameterTypes, other.parameterTypes);
+}
+```
+
+**影响**: 提高了 `Method.equals` 的性能。
+
+---
+
+#### JDK-8164714: 内部类构造器 null 外部类
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8164714](https://bugs.openjdk.org/browse/JDK-8164714) |
+| **PR** | [#25432](https://github.com/openjdk/jdk/pull/25432) |
+| **合入时间** | 2024-10 |
+| **影响** | 正确性修复 |
+
+**背景**: `Constructor.newInstance` 可以创建外部类为 null 的内部类实例，导致后续操作崩溃。
+
+**问题分析**:
+```java
+class Outer {
+    class Inner {
+        void foo() {
+            System.out.println(Outer.this.toString());  // NPE
+        }
+    }
+}
+
 // 变更前: 允许创建
 Inner inner = Inner.class.getConstructor(Outer.class)
-    .newInstance(null);  // 编译通过，运行时崩溃
+    .newInstance(null);  // 编译通过
+inner.foo();  // NPE
+```
 
-// 变更后: javac 添加检查
-// 编译时生成额外的 null 检查
-public Inner(Outer outer) {
-    this.outer = Objects.requireNonNull(outer, "outer");
+**解决方案**: 在反射调用时添加检查：
+```java
+// Constructor.java
+public T newInstance(Object... initargs) {
+    // ...
+    if (isInnerClass && initargs[0] == null) {
+        throw new NullPointerException(
+            "Outer class instance cannot be null for inner class");
+    }
+    // ...
 }
 ```
 
 **影响**: 提高了内部类实例创建的安全性。
 
-### 6. 核心反射 null 处理文档 (JDK-8371953)
+---
 
-**问题**: 核心反射 API 的 null 处理行为文档不清晰。
+### Method Handles (15 PRs)
 
-**解决方案**: 系统性地完善文档。
+#### JDK-8351996: ClassValue::remove 行为更新
 
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8351996](https://bugs.openjdk.org/browse/JDK-8351996) |
+| **PR** | [#23987](https://github.com/openjdk/jdk/pull/23987) |
+| **合入时间** | 2024-10 |
+| **影响** | 正确性修复 |
+
+**背景**: `ClassValue::remove` 存在竞态条件，可能导致计算观察到过时的状态。
+
+**问题分析**:
 ```java
-/**
- * Returns the value of the field represented by this {@code Field},
- * on the specified object. The value is automatically wrapped in an
- * object if it has a primitive type.
- *
- * @param obj the object whose field value is to be retrieved;
- *           may be {@code null} for static fields
- * @return the value of the represented field in object {@code obj};
- *         primitive values are wrapped in an appropriate object
- * @throws NullPointerException if the specified object is {@code null}
- *         and the field is an instance field
- * @throws IllegalAccessException if this {@code Field} object
- *         is enforcing Java language access control and the underlying
- *         field is inaccessible
- */
-public Object get(Object obj) throws IllegalAccessException { ... }
+// 竞态条件场景
+ClassValue<String> cv = new ClassValue<>() {
+    @Override
+    protected String computeValue(Class<?> type) {
+        return expensiveComputation();
+    }
+};
+
+// 线程 1
+String v1 = cv.get(MyClass.class);  // 计算值
+
+// 线程 2
+cv.remove(MyClass.class);  // 移除值
+
+// 线程 1 (继续)
+String v2 = cv.get(MyClass.class);  // 可能返回旧值或重新计算
 ```
 
-**影响**: 提高了 API 文档的清晰度。
+**解决方案**:
+```java
+// ClassValue.java
+public abstract class ClassValue<T> {
+    private volatile int version = 0;
+    
+    public void remove(Class<?> type) {
+        synchronized (this) {
+            version++;  // 版本号递增
+            cache.remove(type);
+        }
+    }
+    
+    public T get(Class<?> type) {
+        Entry<T> e = cache.get(type);
+        if (e != null && e.version == version) {
+            return e.value;  // 缓存命中
+        }
+        synchronized (this) {
+            e = cache.get(type);
+            if (e == null || e.version != version) {
+                e = new Entry<>(computeValue(type), version);
+                cache.put(type, e);
+            }
+            return e.value;
+        }
+    }
+}
+```
+
+**影响**: 修复了 `ClassValue` 的正确性问题。
+
+---
+
+#### JDK-8358535: ClassValue 变更导致性能回归
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8358535](https://bugs.openjdk.org/browse/JDK-8358535) |
+| **PR** | [#24876](https://github.com/openjdk/jdk/pull/24876) |
+| **合入时间** | 2024-11 |
+| **影响** | 性能修复 |
+
+**背景**: JDK-8351996 的修复引入了性能回归，Renaissance-PageRank 基准测试变慢。
+
+**问题分析**:
+- 版本号检查增加了同步开销
+- 高并发场景下性能下降明显
+
+**解决方案**: 优化同步策略：
+```java
+// 使用 CAS 操作减少同步
+public T get(Class<?> type) {
+    Entry<T> e = cache.get(type);
+    if (e != null) {
+        int v = version;  // volatile 读
+        if (e.version == v) {
+            return e.value;  // 快速路径，无同步
+        }
+    }
+    return getSlow(type);  // 慢路径，需要同步
+}
+
+private synchronized T getSlow(Class<?> type) {
+    // ... 完整的同步逻辑
+}
+```
+
+**影响**: 恢复了性能，同时保持正确性。
+
+---
+
+#### JDK-8354996: 减少单次 downcall 的动态代码生成
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8354996](https://bugs.openjdk.org/browse/JDK-8354996) |
+| **PR** | [#23789](https://github.com/openjdk/jdk/pull/23789) |
+| **合入时间** | 2024-09 |
+| **影响** | 性能优化 |
+
+**背景**: 单次 native downcall 会生成大量动态代码，影响启动性能。
+
+**解决方案**: 使用预生成的代码模板：
+```java
+// 变更前: 每次调用生成新代码
+MethodHandle mh = linker.downcallHandle(functionAddress, functionDescriptor);
+
+// 变更后: 使用共享模板
+private static final MethodHandle[] SHARED_HANDLES = ...;
+
+public MethodHandle downcallHandle(...) {
+    // 查找匹配的共享句柄
+    MethodHandle shared = findSharedHandle(...);
+    if (shared != null) return shared;
+    
+    // 回退到动态生成
+    return generateDowncallHandle(...);
+}
+```
+
+**影响**: 提高了单次 downcall 的性能。
+
+---
+
+### javac 编译器 (9 PRs)
+
+#### JDK-8365676: javac 错误允许通过类型变量调用接口静态方法
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8365676](https://bugs.openjdk.org/browse/JDK-8365676) |
+| **PR** | [#27189](https://github.com/openjdk/jdk/pull/27189) |
+| **合入时间** | 2025-02 |
+| **影响** | 正确性修复 |
+
+**背景**: javac 错误地允许通过类型变量调用接口静态方法。
+
+**问题分析**:
+```java
+interface I {
+    static void staticMethod() {}
+}
+
+class Test<T extends I> {
+    void test(T t) {
+        // 变更前: 编译通过（错误）
+        T.staticMethod();
+        
+        // 变更后: 编译错误
+        // error: cannot find symbol
+        //   T.staticMethod();
+        //   ^
+    }
+}
+```
+
+**解决方案**: 在类型检查时添加验证：
+```java
+// Attr.java
+void checkStaticMethodAccess(Symbol sym, Type site) {
+    if (sym.isStatic() && sym.owner.isInterface()) {
+        // 接口静态方法只能通过接口名访问
+        if (site.hasTag(TYPEVAR)) {
+            log.error(pos, Errors.IllegalStaticInterfaceMethodCall);
+        }
+    }
+}
+```
+
+**影响**: 修复了 javac 的正确性问题。
+
+---
+
+#### JDK-8332934: do-while 循环 continue 后的 switch 导致错误的栈映射
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8332934](https://bugs.openjdk.org/browse/JDK-8332934) |
+| **PR** | [#18034](https://github.com/openjdk/jdk/pull/18034) |
+| **合入时间** | 2023-10 |
+| **影响** | 正确性修复 |
+
+**背景**: do-while 循环中的 continue 后跟 switch 语句导致生成错误的栈映射帧。
+
+**问题分析**:
+```java
+void test(int i) {
+    do {
+        if (i > 0) continue;  // continue 跳到 switch
+        switch (i) {          // 栈映射帧错误
+            case 0: break;
+        }
+    } while (i-- > 0);
+}
+```
+
+**解决方案**: 修复栈映射帧生成逻辑：
+```java
+// Gen.java
+void generateDoWhile(JCDoWhileLoop tree) {
+    // 确保栈映射帧正确
+    emitStackMapFrame();
+    // ... 生成代码
+}
+```
+
+**影响**: 修复了字节码生成的正确性问题。
+
+---
+
+### 测试迁移 (3 PRs)
+
+#### JDK-8376277: 迁移 java/lang/reflect 测试到 JUnit
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8376277](https://bugs.openjdk.org/browse/JDK-8376277) |
+| **PR** | [#29405](https://github.com/openjdk/jdk/pull/29405) |
+| **合入时间** | 2025-03 |
+| **影响** | 测试现代化 |
+
+**背景**: OpenJDK 正在将测试从 TestNG 迁移到 JUnit 5。
+
+**解决方案**:
+```java
+// 变更前: TestNG
+@Test
+public void testMethod() {
+    Assert.assertEquals(actual, expected);
+}
+
+// 变更后: JUnit 5
+@Test
+void testMethod() {
+    assertEquals(expected, actual);
+}
+```
+
+**影响**: 统一测试框架，便于维护。
+
+---
+
+## 技术特长
+
+`ClassFile API` `核心反射` `Method Handles` `常量池` `Valhalla` `API 设计`
 
 ---
 
@@ -424,31 +736,16 @@ Chen Liang 的贡献特点:
 
 ---
 
-## 历史贡献
+## 数据来源
 
-### JDK 版本贡献
-
-| JDK 版本 | 主要贡献 |
-|----------|----------|
-| JDK 17-18 | javadoc 改进、反射线程安全修复 |
-| JDK 19-20 | AccessFlag API 改进 |
-| JDK 21-22 | ClassFile API 改进 |
-| JDK 23-24 | ClassFile API 验证完善 |
-| JDK 25 | 测试迁移 (TestNG → JUnit) |
-| JDK 26 | 移除 com.sun.tools.classfile、API 完善 |
-
-### 长期影响
-
-- **ClassFile API**: 主导 API 文档和验证改进
-- **AccessFlag**: 设计并实现了版本感知的访问标志 API
-- **测试现代化**: 推动 TestNG → JUnit 迁移
-- **代码清理**: 移除过时的 com.sun.tools.classfile API
+- **统计方法**: GitHub PR search `repo:openjdk/jdk author:liach type:pr label:integrated`
+- **统计时间**: 2026-03-19
 
 ---
 
 ## 相关链接
 
 - [OpenJDK Census](https://openjdk.org/census#liach)
-- [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20liach)
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=liach)
+- [GitHub Profile](https://github.com/liach)
+- [Blog](https://liachmodded.github.io/)
 - [ClassFile API 文档](https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/lang/classfile/package-summary.html)
