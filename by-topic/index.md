@@ -89,6 +89,116 @@
 
 → [安全特性时间线](security/timeline.md)
 
+### [集合框架](collections/)
+
+Java 集合框架从 JDK 1.0 到现在的完整演进。
+
+| 版本 | 主要变化 | JEP |
+|------|----------|-----|
+| JDK 1.0 | Vector, Hashtable | - |
+| JDK 1.2 | Collections Framework | - |
+| JDK 5 | Generics, EnumSet/EnumMap, Queue | JSR 14 |
+| JDK 6 | NavigableSet/Map, BlockingQueue | - |
+| JDK 8 | Stream API | JEP 107 |
+| JDK 9 | List.of/Set.of/Map.of | - |
+| JDK 16 | Stream.toList() | - |
+| JDK 21 | Stream Gatherers (预览) | JEP 461 |
+
+→ [集合框架时间线](collections/timeline.md)
+
+### [I/O 处理](io/)
+
+Java I/O 从传统 BIO 到 Foreign Memory Access 的演进。
+
+| 版本 | 主要变化 | JEP |
+|------|----------|-----|
+| JDK 1.0 | InputStream/OutputStream, Reader/Writer | - |
+| JDK 1.4 | NIO (Buffer, Channel, Selector) | JSR 51 |
+| JDK 5 | Scanner, Formatter | - |
+| JDK 7 | NIO.2 (Path, Files, WatchService) | JSR 203 |
+| JDK 11 | Files.readString/writeString | - |
+| JDK 22 | Foreign Memory Access | JEP 454 |
+
+→ [I/O 演进时间线](io/timeline.md)
+
+### [日期时间](datetime/)
+
+java.time API 从旧 API 到现代日期时间处理的演进。
+
+| 版本 | 主要变化 | JEP |
+|------|----------|-----|
+| JDK 1.0 | Date | - |
+| JDK 1.1 | Calendar | - |
+| JDK 8 | **java.time** (JSR 310) | JSR 310 |
+| JDK 16 | Timeline Format | - |
+| JDK 21 | Date/Calendar 废弃 | - |
+
+→ [日期时间时间线](datetime/timeline.md)
+
+### [反射与元数据](reflection/)
+
+反射、注解和字节码操作的演进。
+
+| 版本 | 主要变化 | JEP |
+|------|----------|-----|
+| JDK 1.0 | 反射 API | - |
+| JDK 5 | Annotations (JSR 175) | JSR 175 |
+| JDK 6 | Pluggable Annotation Processing | JSR 269 |
+| JDK 7 | MethodHandle (JSR 292) | JSR 292 |
+| JDK 8 | Lambda invokedynamic, Parameter 反射 | - |
+| JDK 11 | Constable/ConstantDesc | - |
+| JDK 16 | ClassFile API | JEP 395 |
+| JDK 26 | Mirror API | - |
+
+→ [反射时间线](reflection/timeline.md)
+
+### [JDBC 数据库](jdbc/)
+
+数据库连接从 JDBC 1.x 到 JDBC 4.4 的演进。
+
+| 版本 | 主要变化 | JSR |
+|------|----------|-----|
+| JDK 1.1 | JDBC 1.x | - |
+| JDK 4 | JDBC 3.0 | JSR 114 |
+| JDK 5 | JDBC 4.0 | JSR 221 |
+| JDK 7 | JDBC 4.1 | JSR 221 |
+| JDK 11 | JDBC 4.3 | JSR 221 |
+| JDK 26 | JDBC 4.4 | JSR 221 |
+
+→ [JDBC 时间线](jdbc/timeline.md)
+
+### [日志框架](logging/)
+
+从 System.out 到 Logback 的日志演进。
+
+| 版本 | 主要变化 | 说明 |
+|------|----------|------|
+| JDK 1.0 | System.out | 控制台输出 |
+| JDK 1.4 | JUL (java.util.logging) | 内置日志 |
+| 2002 | Log4j 1.x | Apache 日志框架 |
+| 2005 | SLF4J | 日志门面 |
+| 2006 | Logback | SLF4J 原生实现 |
+| 2014 | Log4j 2.x | 重写版本 |
+| JDK 9 | System.Logger | 统一日志接口 |
+
+→ [日志框架时间线](logging/timeline.md)
+
+### [XML/JSON 处理](xml-json/)
+
+XML 和 JSON 处理从 DOM 到现代 API 的演进。
+
+| 版本 | 主要变化 | JSR |
+|------|----------|-----|
+| JDK 4 | DOM/SAX | - |
+| JDK 5 | JAXB 1.0 | JSR 31 |
+| JDK 6 | StAX | JSR 173 |
+| JDK 7 | JSON-P 1.0 | JSR 353 |
+| JDK 9 | JAXB 标记废弃 | - |
+| JDK 11 | JSON-P 1.1 | - |
+| JDK 21 | JSON-P 2.1 | - |
+
+→ [XML/JSON 时间线](xml-json/timeline.md)
+
 ---
 
 ## 特性首发版本速查
@@ -153,7 +263,9 @@
 | HTTP/3 | JDK 26 | 预览 | JEP 517 |
 | Foreign Function & Memory API | JDK 22 | 生产 | JEP 454 |
 | Vector API | JDK 16 | 预览→正式JDK23 | JEP 338, 417, 426, 448 |
-| Structured Concurrency | JDK 21 | 预览 | JEP 453 |
+| Stream API | JDK 8 | 生产 | JEP 107 |
+| NIO.2 | JDK 7 | 生产 | JSR 203 |
+| java.time | JDK 8 | 生产 | JSR 310 |
 
 ---
 
@@ -167,7 +279,7 @@
 | JDK 11 | 2018-09 | LTS (至 2032) | 稳定生产环境 |
 | JDK 17 | 2021-09 | LTS (至 2029) | 现代应用首选 |
 | JDK 21 | 2023-09 | LTS (至 2031) | 虚拟线程生产 |
-| JDK 25 | 2025-09 | LTS | 下一个 LTS |
+| JDK 25 | 2025-09 | LTS | 当前 LTS |
 
 ### 选择决策树
 
@@ -254,57 +366,6 @@
 |------|------|------|
 | JDK 9 | Compact Strings | -50% (ASCII) |
 | JDK 21 | 分代 ZGC | -30% (大堆) |
-
----
-
-## 迁移建议
-
-### JDK 8 → JDK 11
-
-```bash
-# 主要变化
-- 移除 Java EE 模块 (javax.*)
-- 移除 CORBA
-- 移除 JavaFX
-- HttpClient API 新增
-- VAR 语法简化
-
-# 兼容问题
-- ClassLoader 变化
-- Nashorn 移除 (JDK 15)
-- Pack200 工具移除
-```
-
-### JDK 11 → JDK 17
-
-```bash
-# 主要变化
-- Sealed Classes
-- Pattern Matching for instanceof
-- Records 正式
-- Text Blocks 正式
-- 移除 RMI Activation
-- 移除 AOT 和 JIT 编译器 (实验性)
-
-# 兼容问题
-- 内部 API 封装加强
-- Security Manager 变化
-```
-
-### JDK 17 → JDK 21
-
-```bash
-# 主要变化
-- Virtual Threads 正式
-- Pattern Matching for switch
-- Record Patterns
-- String Templates (预览)
-- 分代 ZGC/Shenandoah
-
-# 兼容问题
-- 较少破坏性变更
-- 可平滑升级
-```
 
 ---
 
