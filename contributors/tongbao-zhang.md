@@ -9,12 +9,13 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Tongbao Zhang (张同宝) |
-| **组织** | 腾讯 (Tencent) |
+| **当前组织** | 腾讯 (Tencent) |
 | **GitHub** | [@tongbao-zhang](https://github.com/tongbao-zhang) |
 | **OpenJDK** | Author |
-| **Email** | tobytbzhang@tencent.com |
 | **主要领域** | G1 GC |
 | **活跃时间** | 2024 - 至今 |
+
+> **数据调查时间**: 2026-03-19
 
 ---
 

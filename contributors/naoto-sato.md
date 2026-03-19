@@ -5,13 +5,14 @@
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Naoto Sato |
-| **Organization** | Oracle |
+| **Current Organization** | Oracle |
 | **GitHub** | [@naotoj](https://github.com/naotoj) |
 | **OpenJDK** | [@naoto](https://openjdk.org/census#naoto) |
 | **Role** | OpenJDK Member, JDK Reviewer, i18n Lead |
 | **PRs** | [273 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Anaotoj+is%3Aclosed+label%3Aintegrated) |
-| **Email** | naoto@openjdk.org |
 | **Primary Areas** | Unicode, Internationalization, Console, TimeZone |
+
+> **Data as of**: 2026-03-19
 
 ## Contribution Overview
 

@@ -9,7 +9,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Ioi Lam |
-| **组织** | Oracle |
+| **当前组织** | Oracle |
 | **GitHub** | [@iklam](https://github.com/iklam) |
 | **OpenJDK** | [@iklam](https://openjdk.org/census#iklam) |
 | **角色** | OpenJDK Member, JDK Reviewer |
@@ -17,6 +17,8 @@
 | **主要领域** | AOT, CDS, 启动优化 |
 | **主导 JEP** | JEP 514: Ahead-of-Time Command Line Ergonomics |
 | **活跃时间** | 2018 - 至今 |
+
+> **数据调查时间**: 2026-03-19
 
 ---
 

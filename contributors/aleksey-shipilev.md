@@ -9,15 +9,24 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Aleksey Shipilev |
-| **组织** | Amazon Web Services |
+| **当前组织** | Amazon Web Services |
 | **GitHub** | [@shipilev](https://github.com/shipilev) |
 | **OpenJDK** | [@shade](https://openjdk.org/census#shade) |
 | **角色** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [803 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ashipilev+is%3Aclosed+label%3Aintegrated) |
-| **Email** | shade@openjdk.org |
 | **主要领域** | C2 编译器、性能优化、基准测试 |
 | **主导 JEP** | JEP 503: Remove the 32-bit x86 Port |
 | **活跃时间** | 2012 - 至今 |
+
+### 组织历史
+
+| 时间段 | 组织 | 邮箱 |
+|--------|------|------|
+| 2012 - 2016 | Oracle | aleksey.shipilev@oracle.com |
+| 2019 | Red Hat | shade@redhat.com |
+| 2023 - 至今 | Amazon Web Services | shipilev@amazon.de |
+
+> **数据调查时间**: 2026-03-19
 
 ---
 

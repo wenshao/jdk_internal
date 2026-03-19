@@ -9,14 +9,15 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Chen Liang (陈亮) |
-| **组织** | Oracle |
+| **当前组织** | Oracle |
 | **GitHub** | [@liach](https://github.com/liach) |
 | **OpenJDK** | [@liach](https://openjdk.org/census#liach) |
 | **角色** | JDK Reviewer |
 | **PRs** | [237 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aliach+is%3Aclosed+label%3Aintegrated) |
-| **Email** | liach@openjdk.org |
 | **主要领域** | ClassFile API、核心反射、Method Handles、常量池 |
 | **活跃时间** | 2019 - 至今 |
+
+> **数据调查时间**: 2026-03-19
 
 ---
 

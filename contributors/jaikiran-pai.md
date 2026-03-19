@@ -5,12 +5,13 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Jaikiran Pai |
-| **Organization** | Oracle |
+| **Current Organization** | Oracle |
 | **GitHub** | [@jpai](https://github.com/jpai) |
 | **OpenJDK** | [@jpai](https://openjdk.org/census#jpai) |
 | **Role** | OpenJDK Member, JDK Reviewer |
-| **Email** | jpai@openjdk.org |
 | **Primary Areas** | HttpClient, Networking, ZIP/JAR, Test Infrastructure |
+
+> **Data as of**: 2026-03-19
 
 ## Contribution Overview
 

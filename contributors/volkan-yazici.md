@@ -5,12 +5,13 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Volkan Yazici |
-| **Organization** | Oracle |
+| **Current Organization** | Oracle |
 | **GitHub** | [@vyazici](https://github.com/vyazici) |
 | **OpenJDK** | [@vyazici](https://openjdk.org/census#vyazici) |
 | **Role** | JDK Reviewer |
-| **Email** | vyazici@openjdk.org |
 | **Primary Areas** | HttpClient API, Networking, Core Libraries |
+
+> **Data as of**: 2026-03-19
 
 ## Contribution Overview
 

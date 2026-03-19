@@ -5,12 +5,13 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Alexey Semenyuk |
-| **Organization** | Oracle |
+| **Current Organization** | Oracle |
 | **GitHub** | [@asemenyuk](https://github.com/asemenyuk) |
 | **OpenJDK** | [@asemenyuk](https://openjdk.org/census#asemenyuk) |
 | **Role** | JDK Reviewer |
-| **Email** | asemenyuk@openjdk.org |
 | **Primary Areas** | jpackage, Installers, Packaging, Cross-Platform Deployment |
+
+> **Data as of**: 2026-03-19
 
 ## Contribution Overview
 

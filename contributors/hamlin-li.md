@@ -5,13 +5,21 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Hamlin Li |
-| **Organization** | Rivos |
+| **Current Organization** | Rivos |
 | **GitHub** | [@luhenry](https://github.com/luhenry) |
 | **OpenJDK** | [@mli](https://openjdk.org/census#mli) |
 | **Role** | JDK Reviewer |
 | **PRs** | [13 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aluhenry+is%3Aclosed+label%3Aintegrated) |
-| **Email** | mli@openjdk.org |
 | **Primary Areas** | C2 SuperWord, RISC-V Backend, Vectorization |
+
+### Organization History
+
+| Period | Organization | Email |
+|--------|--------------|-------|
+| 2016 | Oracle | huaming.li@oracle.com |
+| 2024 - Present | Rivos | hamlin@rivosinc.com |
+
+> **Data as of**: 2026-03-19
 
 ## Contribution Overview
 

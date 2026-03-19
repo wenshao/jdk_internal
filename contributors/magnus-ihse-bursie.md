@@ -5,13 +5,14 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Magnus Ihse Bursie |
-| **Organization** | Oracle |
+| **Current Organization** | Oracle |
 | **GitHub** | [@magicus](https://github.com/magicus) |
 | **OpenJDK** | [@ihse](https://openjdk.org/census#ihse) |
 | **Role** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [351 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Amagicus+is%3Aclosed+label%3Aintegrated) |
-| **Email** | ihse@openjdk.org |
 | **Primary Areas** | Build System, Makefiles, Configure Scripts |
+
+> **Data as of**: 2026-03-19
 
 ## Contribution Overview
 

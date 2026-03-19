@@ -5,12 +5,13 @@
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Prasanta Sadhukhan |
-| **Organization** | Oracle |
+| **Current Organization** | Oracle |
 | **GitHub** | [@psadhukhan](https://github.com/psadhukhan) |
 | **OpenJDK** | [@psadhukhan](https://openjdk.org/census#psadhukhan) |
 | **Role** | OpenJDK Member, JDK Reviewer |
-| **Email** | psadhukhan@openjdk.org |
 | **Primary Areas** | Swing, AWT, UI Components |
+
+> **Data as of**: 2026-03-19
 
 ## Contribution Overview
 

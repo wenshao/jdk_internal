@@ -9,13 +9,15 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Jan Lahoda |
-| **组织** | Oracle |
+| **当前组织** | Oracle |
 | **GitHub** | [@jlahoda](https://github.com/jlahoda) |
 | **OpenJDK** | [@jlahoda](https://openjdk.org/census#jlahoda) |
 | **角色** | JDK Reviewer |
 | **主要领域** | javac, JShell, 语言特性 |
 | **主导 JEP** | JEP 511, JEP 512 |
 | **活跃时间** | 2006 - 至今 |
+
+> **数据调查时间**: 2026-03-19
 
 ---
 

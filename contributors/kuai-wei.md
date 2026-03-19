@@ -9,13 +9,14 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Kuai Wei (蒯伟) |
-| **组织** | 阿里巴巴 (Alibaba) |
+| **当前组织** | 阿里巴巴 (Alibaba) |
 | **GitHub** | [@kuaiwei](https://github.com/kuaiwei) |
 | **OpenJDK** | Author |
 | **PRs** | [13 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akuaiwei+is%3Aclosed+label%3Aintegrated) |
-| **Email** | kuaiwei.kw@alibaba-inc.com |
 | **主要领域** | C2 编译器、IR 优化 |
 | **活跃时间** | 2024 - 至今 |
+
+> **数据调查时间**: 2026-03-19
 
 ---
 

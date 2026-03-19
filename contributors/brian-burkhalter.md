@@ -5,13 +5,14 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Brian Burkhalter |
-| **Organization** | Oracle |
+| **Current Organization** | Oracle |
 | **GitHub** | [@bplb](https://github.com/bplb) |
 | **OpenJDK** | [@bpb](https://openjdk.org/census#bpb) |
 | **Role** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [361 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Abplb+is%3Aclosed+label%3Aintegrated) |
-| **Email** | bpb@openjdk.org |
 | **Primary Areas** | NIO, File Systems, Networking, I/O |
+
+> **Data as of**: 2026-03-19
 
 ## Contribution Overview
 
