@@ -39,6 +39,28 @@
 
 ---
 
+## 重要贡献
+
+### JDK-8336856: String "+" 运算符优化（Reviewer）
+
+作为 Reviewer 参与了这一重大的 Java 核心优化项目：
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8336856](https://bugs.openjdk.org/browse/JDK-8336856) |
+| **PR** | [#20273](https://github.com/openjdk/jdk/pull/20273) |
+| **角色** | Reviewer |
+| **合入时间** | 2024-08-16 |
+| **影响** | 启动性能 +40%，类生成 -50% |
+
+**协作者**：
+- [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) (@wenshao) - Author
+- [Claes Redestad](../../by-contributor/profiles/claes-redestad.md) (@redestad) - Co-author
+
+**详细分析**: [JDK-8336856](../../by-pr/8336/8336856.md)
+
+---
+
 ## PR 深度分析
 
 ### ClassFile API (28 PRs)
@@ -728,20 +750,46 @@ Chen Liang 的贡献特点:
 
 ### 协作者
 
+- **Shaojin Wen (@wenshao)**: 字符串/数字格式化优化协作者
+  - 共同合作 ClassFile API 优化
+  - Review 了 JDK-8336856 (String "+" 优化)
+- **Claes Redestad (@redestad)**: 性能优化协作者
+  - 共同参与 JDK-8336856 审查
 - **Magnus Ihse Bursie (ihse)**: 构建系统审查者
 - **Jan Lahoda (jlahoda)**: javac 相关审查
 - **Vicente Romero (vromero)**: javac 相关审查
 - **Adam Sotona (asotona)**: ClassFile API 审查者
 - **John Rose (jrose)**: Method Handles / ClassValue 协作者
 
+### 重要协作：String "+" 优化 (JDK-8336856)
+
+作为 JDK-8336856 的 **Reviewer**，与 Shaojin Wen（Author）和 Claes Redestad（Co-author）合作完成了这一重大优化：
+
+| 角色 | 姓名 | 贡献 |
+|------|------|------|
+| **Author** | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) (@wenshao) | 主要实现 |
+| **Co-author** | [Claes Redestad](../../by-contributor/profiles/claes-redestad.md) (@redestad) | 架构设计 |
+| **Reviewer** | Chen Liang (@liach) | 代码审查 |
+
+**项目成果**：
+- 启动性能提升 **+40%**
+- 类生成数量减少 **-50%**
+- 审查周期 26 天，Tier 1-5 测试全部通过
+- [详细分析](../../by-pr/8336/8336856.md)
+
+这是 Chen Liang 与 Shaojin Wen 深度合作的典型案例，展示了 OpenJDK 社区协作者之间的高效协作模式。
+
 ---
 
 ## 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:liach type:pr label:integrated`
-- **统计时间**: 2026-03-19
+- **统计时间**: 2026-03-20
 
 ---
+
+> **文档版本**: 2.0
+> **更新内容**: 补充 JDK-8336856 String "+" 优化协作信息
 
 ## 相关链接
 
