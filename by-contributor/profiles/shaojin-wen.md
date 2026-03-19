@@ -79,11 +79,11 @@ Java 9 引入了 JEP 280，使用 `invokedynamic` 实现字符串拼接。原有
 
 | 手法 | 说明 | 应用案例 |
 |------|------|----------|
-| **Unsafe 直接内存操作** | 绕过 JNI 边界，直接内存拷贝 | StringBuilder 优化 (+15%) |
-| **查找表替代计算** | 预计算结果，运行时查表 | HexFormat 优化 (+50-100%) |
-| **位运算替代分支** | 消除条件分支，减少预测失败 | DecimalDigits 优化 (+3%) |
-| **类型转换优化** | char[] → byte[]，减少内存占用 | Integer::digits 优化 (+5%) |
-| **类加载策略** | 按形状共享类，减少类数量 | String "+" 优化 (启动提升) |
+| **Unsafe 直接内存操作** | 绕过 JNI 边界，直接内存拷贝 | [StringBuilder 优化](../../by-pr/8355/8355177.md) (+15%) |
+| **查找表替代计算** | 预计算结果，运行时查表 | [HexFormat 优化](../../by-pr/8316/8316426.md) (+50-100%) |
+| **位运算替代分支** | 消除条件分支，减少预测失败 | [DecimalDigits 优化](../../by-pr/8348/8348870.md) (+3%) |
+| **类型转换优化** | char[] → byte[]，减少内存占用 | [Integer::digits 优化](../../by-pr/8355/8357685.md) (+5%) |
+| **类加载策略** | 按形状共享类，减少类数量 | [String "+" 优化](../../by-pr/8336/8336856.md) (启动提升) |
 
 ### 优化原则
 
@@ -96,11 +96,11 @@ Java 9 引入了 JEP 280，使用 `invokedynamic` 实现字符串拼接。原有
 
 | 领域 | 累计提升 | 主要优化项 |
 |------|----------|------------|
-| 字符串处理 | +30-50% | StringBuilder +15%, Integer +10%, UUID +8% |
-| 数字格式化 | +20-30% | Double.toHexString +20% |
-| 十六进制编码 | +50-100% | HexFormat 查找表 |
-| 字节码生成 | +10-20% | ClassFile API 全面优化 |
-| 应用启动 | +5-10% | String "+" 类加载优化 |
+| 字符串处理 | +30-50% | [StringBuilder](../../by-pr/8355/8355177.md) +15%, [Integer](../../by-pr/8370/8370503.md) +10%, [UUID](../../by-pr/8355/8353741.md) +8% |
+| 数字格式化 | +20-30% | [Double.toHexString](../../by-pr/8370/8370013.md) +20% |
+| 十六进制编码 | +50-100% | [HexFormat 查找表](../../by-pr/8316/8316426.md) |
+| 字节码生成 | +10-20% | [ClassFile API 优化](../../by-pr/8341/8341900.md) |
+| 应用启动 | +5-10% | [String "+" 优化](../../by-pr/8336/8336856.md) |
 
 ---
 
@@ -279,12 +279,12 @@ String json = "{\"name\":\"" + name + "\",\"age\":" + age + "}";
 
 | 场景 | 受益优化 | 预期提升 |
 |------|----------|----------|
-| JSON 序列化 | StringBuilder 优化 | +15% |
-| 科学计算 | Double.toHexString | +20% |
-| 日志格式化 | Integer/Long.toString | +10% |
-| UUID 处理 | UUID.toString | +8% |
-| 应用启动 | 启动优化 | +5% |
-| 字节码生成 | ClassFile API 优化 | +10-20% |
+| JSON 序列化 | [StringBuilder 优化](../../by-pr/8355/8355177.md) | +15% |
+| 科学计算 | [Double.toHexString](../../by-pr/8370/8370013.md) | +20% |
+| 日志格式化 | [Integer/Long.toString](../../by-pr/8370/8370503.md) | +10% |
+| UUID 处理 | [UUID.toString](../../by-pr/8355/8353741.md) | +8% |
+| 应用启动 | [String "+" 优化](../../by-pr/8336/8336856.md) | +5% |
+| 字节码生成 | [ClassFile API 优化](../../by-pr/8341/8341900.md) | +10-20% |
 
 ---
 
@@ -314,18 +314,18 @@ String json = "{\"name\":\"" + name + "\",\"age\":" + age + "}";
 
 ### 最近 10 个 Integrated PRs
 
-| PR | Issue | 标题 | 合入日期 |
-|----|-------|------|----------|
-| #27929 | 8370503 | Use String.newStringWithLatin1Bytes to simplify Integer/Long toString | 2025-10-24 |
-| #27811 | 8370013 | Refactor Double.toHexString to eliminate regex and StringBuilder | 2025-10-24 |
-| #27374 | 8368024 | Remove StringConcatFactory#generateMHInlineCopy | 2025-09-23 |
-| #26913 | 8368172 | Make java.time.format.DateTimePrintContext immutable | 2025-10-29 |
-| #26911 | 8366224 | Introduce DecimalDigits.appendPair for efficient two-digit formatting | 2025-11-26 |
-| #26769 | 8365620 | Using enhanced switch in MethodHandleDesc | 2025-09-01 |
-| #26634 | 8368825 | Use switch expression for DateTimeFormatterBuilder pattern character lookup | 2025-10-02 |
-| #26633 | 8365186 | Reduce size of j.t.f.DateTimePrintContext::adjust | 2025-08-22 |
-| #25437 | 8357913 | Add @Stable to BigInteger and BigDecimal | 2025-07-21 |
-| #25430 | 8357690 | Add @Stable and final to CharacterData classes | 2025-05-29 |
+| PR | Issue | 标题 | 合入日期 | 链接 |
+|----|-------|------|----------|------|
+| #27929 | 8370503 | Use String.newStringWithLatin1Bytes to simplify Integer/Long toString | 2025-10-24 | [详情](../../by-pr/8370/8370503.md) |
+| #27811 | 8370013 | Refactor Double.toHexString to eliminate regex and StringBuilder | 2025-10-24 | [详情](../../by-pr/8370/8370013.md) |
+| #27374 | 8368024 | Remove StringConcatFactory#generateMHInlineCopy | 2025-09-23 | [详情](../../by-pr/8368/8368024.md) |
+| #26913 | 8368172 | Make java.time.format.DateTimePrintContext immutable | 2025-10-29 | [详情](../../by-pr/8368/8368172.md) |
+| #26911 | 8366224 | Introduce DecimalDigits.appendPair for efficient two-digit formatting | 2025-11-26 | [详情](../../by-pr/8366/8366224.md) |
+| #26769 | 8365620 | Using enhanced switch in MethodHandleDesc | 2025-09-01 | [详情](../../by-pr/8365/8365620.md) |
+| #26634 | 8368825 | Use switch expression for DateTimeFormatterBuilder pattern character lookup | 2025-10-02 | [详情](../../by-pr/8368/8368825.md) |
+| #26633 | 8365186 | Reduce size of j.t.f.DateTimePrintContext::adjust | 2025-08-22 | [详情](../../by-pr/8365/8365186.md) |
+| #25437 | 8357913 | Add @Stable to BigInteger and BigDecimal | 2025-07-21 | [详情](../../by-pr/8355/8357913.md) |
+| #25430 | 8357690 | Add @Stable and final to CharacterData classes | 2025-05-29 | [详情](../../by-pr/8355/8357690.md) |
 
 ---
 
@@ -340,4 +340,5 @@ String json = "{\"name\":\"" + name + "\",\"age\":" + age + "}";
 ---
 
 > **数据调查时间**: 2026-03-19
-> **文档版本**: 6.0
+> **文档版本**: 6.1
+> **更新内容**: 为所有表格添加详细分析链接
