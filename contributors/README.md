@@ -126,6 +126,22 @@
 
 ---
 
+## 中国贡献者
+
+> 详见 [中国贡献者专题](chinese-contributors.md)
+
+| 贡献者 | 组织 | Commits | 主要领域 |
+|--------|------|---------|----------|
+| [SendaoYan](chinese-contributors.md#sendaoyan) | Oracle | 88 | 测试稳定性 |
+| [Shaojin Wen](chinese-contributors.md#shaojin-wen) | Oracle | 31 | 核心库优化 |
+| [Fei Yang](chinese-contributors.md#fei-yang) | Oracle | 30 | RISC-V |
+| [Anjian-Wen](chinese-contributors.md#anjian-wen-字节跳动) | 字节跳动 | 12 | RISC-V |
+| [Kuai Wei](chinese-contributors.md#kuai-wei-阿里巴巴) | 阿里巴巴 | 4 | C2 编译器 |
+| [han gq](chinese-contributors.md#han-gq-麒麟) | 麒麟 | 2 | 编译器 |
+| [Tongbao Zhang](chinese-contributors.md#tongbao-zhang-腾讯) | 腾讯 | 1 | G1 GC |
+
+---
+
 ## 如何阅读贡献者页面
 
 每个贡献者页面包含:

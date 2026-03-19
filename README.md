@@ -59,6 +59,7 @@ jdk_docs/
 │   └── jdk26-contributors.md       # 开发者贡献分析
 ├── contributors/          # 贡献者详细分析
 │   ├── README.md                  # 贡献者索引
+│   ├── chinese-contributors.md    # 中国贡献者专题
 │   ├── albert-mingkun-yang.md     # GC 专家 (124 commits)
 │   ├── thomas-schatzl.md          # G1 GC / JEP 522
 │   ├── daniel-fuchs.md            # HTTP/3 / JEP 517
