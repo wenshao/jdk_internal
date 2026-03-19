@@ -10,12 +10,10 @@
 
 | 组织 | 贡献者 | 领域 |
 |------|--------|------|
-| Alibaba | 15+ | 核心库、RISC-V、编译器 |
-| Oracle | 50+ | 全领域 |
-| IBM | 10+ | GC、编译器 |
-| Red Hat | 10+ | Shenandoah GC |
-
-> 按组织分类页面待补充
+| [Alibaba](../../contributors/orgs/alibaba.md) | 15+ | 核心库、RISC-V、编译器 |
+| [Oracle](../../contributors/orgs/oracle.md) | 50+ | 全领域 |
+| [IBM](../../contributors/orgs/ibm.md) | 10+ | GC、编译器 |
+| [Red Hat](../../contributors/orgs/redhat.md) | 10+ | Shenandoah GC |
 
 ### 按地区
 
