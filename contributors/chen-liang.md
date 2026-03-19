@@ -1,6 +1,6 @@
-# Chen Liang
+# Chen Liang (陈亮)
 
-> JDK 26 核心库与 ClassFile API 专家，85 个 commits
+> ClassFile API 核心开发者，JDK Reviewer
 
 ---
 
@@ -10,14 +10,84 @@
 |------|-----|
 | **姓名** | Chen Liang (陈亮) |
 | **当前组织** | Oracle |
+| **位置** | 奥斯汀, 德克萨斯州, 美国 |
 | **GitHub** | [@liach](https://github.com/liach) |
+| **Blog** | [liachmodded.github.io](https://liachmodded.github.io/) |
 | **OpenJDK** | [@liach](https://openjdk.org/census#liach) |
-| **角色** | JDK Reviewer |
+| **角色** | JDK Reviewer, Valhalla Committer |
 | **PRs** | [237 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aliach+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | ClassFile API、核心反射、Method Handles、常量池 |
-| **活跃时间** | 2019 - 至今 |
+| **活跃时间** | 2021 - 至今 |
 
 > **数据调查时间**: 2026-03-19
+
+---
+
+## 技术影响力
+
+| 指标 | 值 |
+|------|-----|
+| **代码行数** | +71,002 / -59,496 (净 +11,506) |
+| **影响模块** | java.base (classfile, invoke, reflect) |
+| **主要贡献** | ClassFile API、反射改进、Method Handles |
+
+### 影响的主要目录
+
+| 目录 | 文件数 | 说明 |
+|------|--------|------|
+| classfile/impl | 432 | ClassFile API 内部实现 |
+| java/lang/classfile | 259 | ClassFile API 公共接口 |
+| java/lang/classfile/attribute | 211 | ClassFile 属性 |
+| java/lang/invoke | 128 | Method Handles |
+| java/lang/reflect | 94 | 核心反射 |
+
+---
+
+## 贡献时间线
+
+```
+2021: ░░░░░░░░░░░░░░░░░░░░   4 commits
+2022: ░░░░░░░░░░░░░░░░░░░░   6 commits
+2023: █████░░░░░░░░░░░░░░░░  72 commits
+2024: █████████████░░░░░░░░ 183 commits (峰值)
+2025: ██████████░░░░░░░░░░░ 141 commits
+2026: █░░░░░░░░░░░░░░░░░░░░  14 commits (进行中)
+```
+
+---
+
+## 技术特长
+
+`ClassFile API` `核心反射` `Method Handles` `常量池` `Valhalla` `API 设计`
+
+---
+
+## 代表性工作
+
+### 1. ClassFile API 核心开发者
+主导 ClassFile API 的文档完善和验证改进，确保 API 的正确性和易用性。
+
+### 2. 移除 com.sun.tools.classfile (JDK-8352748)
+完全移除旧的类文件解析 API，统一到新的 `java.lang.classfile` API。
+
+### 3. AccessFlag 版本感知 (JDK-8297271)
+设计并实现了支持类文件版本的访问标志 API，提高解析准确性。
+
+### 4. ClassValue::remove 行为修复 (JDK-8351996)
+修复 `ClassValue::remove` 的竞态条件问题，确保正确性。
+
+### 5. Valhalla 项目贡献者
+Valhalla 项目的 Committer，参与值类型相关开发。
+
+---
+
+## 外部资源
+
+| 类型 | 链接 |
+|------|------|
+| **GitHub** | [@liach](https://github.com/liach) |
+| **Blog** | [liachmodded.github.io](https://liachmodded.github.io/) |
+| **OpenJDK Census** | [liach](https://openjdk.org/census#liach) |
 
 ---
 
@@ -346,10 +416,11 @@ Chen Liang 的贡献特点:
 
 ### 协作者
 
-- **Adam Sotona (asotona)**: ClassFile API 主要审查者
-- **John Rose (jrose)**: ClassValue 协作者
+- **Magnus Ihse Bursie (ihse)**: 构建系统审查者
+- **Jan Lahoda (jlahoda)**: javac 相关审查
 - **Vicente Romero (vromero)**: javac 相关审查
-- **Roger Riggs (rriggs)**: 反射相关审查
+- **Adam Sotona (asotona)**: ClassFile API 审查者
+- **John Rose (jrose)**: Method Handles / ClassValue 协作者
 
 ---
 
@@ -359,16 +430,19 @@ Chen Liang 的贡献特点:
 
 | JDK 版本 | 主要贡献 |
 |----------|----------|
-| JDK 17 | AccessFlag API 初始版本 |
-| JDK 21 | ClassFile API 改进 |
+| JDK 17-18 | javadoc 改进、反射线程安全修复 |
+| JDK 19-20 | AccessFlag API 改进 |
+| JDK 21-22 | ClassFile API 改进 |
+| JDK 23-24 | ClassFile API 验证完善 |
 | JDK 25 | 测试迁移 (TestNG → JUnit) |
-| JDK 26 | ClassFile API 完善、移除旧 API |
+| JDK 26 | 移除 com.sun.tools.classfile、API 完善 |
 
 ### 长期影响
 
 - **ClassFile API**: 主导 API 文档和验证改进
 - **AccessFlag**: 设计并实现了版本感知的访问标志 API
 - **测试现代化**: 推动 TestNG → JUnit 迁移
+- **代码清理**: 移除过时的 com.sun.tools.classfile API
 
 ---
 
