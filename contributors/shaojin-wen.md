@@ -115,6 +115,7 @@ PRs/季度
 
 | Issue | 标题 | 影响 |
 |-------|------|------|
+| [8336856](https://bugs.openjdk.org/browse/JDK-8336856) | Efficient hidden class-based string concatenation strategy | 启动+ warmup |
 | [8349400](https://bugs.openjdk.org/browse/JDK-8349400) | Improve startup speed via eliminating nested classes | +5% [🔗](../prs/8349/8349400.md) |
 | [8357913](https://bugs.openjdk.org/browse/JDK-8357913) | Add `@Stable` to BigInteger and BigDecimal | +3% |
 | [8357690](https://bugs.openjdk.org/browse/JDK-8357690) | Add @Stable and final to CharacterData classes | +2% |
