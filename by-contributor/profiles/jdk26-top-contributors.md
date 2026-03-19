@@ -155,7 +155,7 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 ## By Organization
 
-### Oracle (~75% of commits)
+### [Oracle](https://www.oracle.com/java/) (~75% of commits)
 
 | Contributor | Commits | Focus |
 |-------------|---------|-------|
@@ -180,7 +180,7 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 | [Justin Lu](./justin-lu.md) | 43 | Localization |
 | + 80+ more | - | - |
 
-### Red Hat (~8% of commits)
+### [Red Hat](https://www.redhat.com/en/about/openjdk) (~8% of commits)
 
 | Contributor | Commits | Focus |
 |-------------|---------|-------|
@@ -191,7 +191,7 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 | Andrew Haley | 20 | RISC-V |
 | Fredrik Bredberg | 19 | Monitors |
 
-### Alibaba (~3% of commits)
+### [Alibaba](https://alibaba.github.io/) (~3% of commits)
 
 | Contributor | Commits | Focus |
 |-------------|---------|-------|
@@ -204,14 +204,14 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 | [Han GQ](./han-gq.md) | 8 | Core |
 | [Anjian Wen](./anjian-wen.md) | 8 | Security |
 
-### SAP (~2% of commits)
+### [SAP](https://sap.github.io/SapMachine/) (~2% of commits)
 
 | Contributor | Commits | Focus |
 |-------------|---------|-------|
 | Axel Boldt-Christmas | 52 | ZGC |
 | Johannes Bechberger | 21 | JFR |
 
-### Oracle Labs (~2% of commits)
+### [Oracle Labs](https://labs.oracle.com/) (~2% of commits)
 
 | Contributor | Commits | Focus |
 |-------------|---------|-------|
@@ -220,7 +220,7 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 | Gilles Duboscq | 3 | Graal |
 | Tom Rodriguez | 3 | Graal |
 
-### Google (~1% of commits)
+### [Google](https://opensource.google/projects/java) (~1% of commits)
 
 | Contributor | Commits | Focus |
 |-------------|---------|-------|
@@ -245,13 +245,13 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 | Charles Nutter | 3 | InvokeDynamic |
 | Weibing Xiao | 3 | Testing |
 
-### Arm (~0.5% of commits)
+### [Arm](https://www.arm.com/) (~0.5% of commits)
 
 | Contributor | Commits | Focus |
 |-------------|---------|-------|
 | Pankaj Bansal | 4 | Build |
 
-### University of Washington (~0.3% of commits)
+### [University of Washington](https://www.washington.edu/) (~0.3% of commits)
 
 | Contributor | Commits | Focus |
 |-------------|---------|-------|
@@ -261,15 +261,15 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 | Organization | Contributors | Commits | % |
 |--------------|--------------|---------|---|
-| Oracle | 75+ | ~2,950 | ~75% |
-| Red Hat | 6 | ~320 | ~8% |
-| Alibaba | 8 | ~74 | ~2% |
-| SAP | 2 | ~73 | ~2% |
-| Oracle Labs | 4 | ~21 | ~0.5% |
-| Google | 3 | ~14 | ~0.4% |
-| Independent | 12+ | ~150 | ~4% |
-| Arm | 1 | ~4 | ~0.1% |
-| University of Washington | 1 | ~4 | ~0.1% |
+| [Oracle](https://www.oracle.com/java/) | 75+ | ~2,950 | ~75% |
+| [Red Hat](https://www.redhat.com/en/about/openjdk) | 6 | ~320 | ~8% |
+| [Independent](#) | 12+ | ~150 | ~4% |
+| [Alibaba](https://alibaba.github.io/) | 8 | ~74 | ~2% |
+| [SAP](https://sap.github.io/SapMachine/) | 2 | ~73 | ~2% |
+| [Oracle Labs](https://labs.oracle.com/) | 4 | ~21 | ~0.5% |
+| [Google](https://opensource.google/projects/java) | 3 | ~14 | ~0.4% |
+| [Arm](https://www.arm.com/) | 1 | ~4 | ~0.1% |
+| [University of Washington](https://www.washington.edu/) | 1 | ~4 | ~0.1% |
 | Other | 10+ | ~100 | ~2.5% |
 
 ---
