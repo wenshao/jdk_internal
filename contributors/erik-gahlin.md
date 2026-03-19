@@ -22,6 +22,62 @@
 
 ---
 
+## 技术影响力
+
+| 指标 | 值 |
+|------|-----|
+| **代码行数** | +190,055 / -33,295 (净 +156,760) |
+| **影响模块** | jdk.jfr |
+| **主要贡献** | JFR 核心开发、事件流、查询工具 |
+
+> 💡 **JFR 核心开发者**: 净添加 156,760 行代码，是 JFR 模块的主要贡献者
+
+### 影响的主要目录
+
+| 目录 | 文件数 | 说明 |
+|------|--------|------|
+| jdk/jfr/internal | 490 | JFR 内部实现 |
+| jdk/jfr/internal/consumer | 161 | JFR 消费者 API |
+| jdk/jfr | 160 | JFR 公共 API |
+
+---
+
+## 技术特长
+
+`JFR` `Java Flight Recorder` `性能监控` `事件流` `诊断工具` `JEP 520`
+
+---
+
+## 代表性工作
+
+### 1. JEP 520: JFR Method Timing and Tracing
+**Issue**: [JDK-8370037](https://bugs.openjdk.org/browse/JDK-8370037)
+
+JFR 方法计时和追踪，提供详细的方法执行性能数据。
+
+### 2. JFR 核心开发者
+Java Flight Recorder 的主要开发者，JFR 是 JDK 内置的低开销性能监控工具。
+
+### 3. JFR 流式 API
+改进 JFR 事件流处理，支持实时事件消费。
+
+### 4. JFR 查询工具
+改进 jfr query 命令行工具，提供更强大的查询能力。
+
+### 5. JFR 事件扩展
+添加新的 JFR 事件类型，扩展监控能力。
+
+---
+
+## 外部资源
+
+| 类型 | 链接 |
+|------|------|
+| **GitHub** | [@egahlin](https://github.com/egahlin) |
+| **OpenJDK Census** | [@egahlin](https://openjdk.org/census#egahlin) |
+
+---
+
 ## 贡献概览
 
 ### 按类别统计

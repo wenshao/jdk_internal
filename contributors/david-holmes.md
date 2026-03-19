@@ -1,5 +1,9 @@
 # David Holmes
 
+> JVM 运行时专家，线程与信号处理专家
+
+---
+
 ## Basic Information
 
 | Field | Value |
@@ -13,6 +17,60 @@
 | **Primary Areas** | Threading, Concurrency, JVM Runtime, Signal Handling |
 
 > **Data as of**: 2026-03-19
+
+---
+
+## Technical Impact
+
+| Metric | Value |
+|--------|-------|
+| **Lines of Code** | +63,120 / -31,450 (net +31,670) |
+| **Affected Modules** | hotspot (runtime, prims) |
+| **Main Contributions** | Threading, signal handling, JNI |
+
+### Most Affected Directories
+
+| Directory | Files | Description |
+|-----------|-------|-------------|
+| runtime | 390 | JVM runtime |
+| prims | 138 | JVM primitives (JNI, JVM_* functions) |
+| classfile | 114 | Class file handling |
+
+---
+
+## Technical Expertise
+
+`Threading` `Concurrency` `Signal Handling` `JNI` `JVM Runtime` `Error Reporting`
+
+---
+
+## Representative Work
+
+### 1. Thread Management Expert
+Expert in Java threads, virtual threads, and carrier threads implementation.
+
+### 2. Signal Handling Improvements
+POSIX signal handling improvements, semaphores, and interrupt handling.
+
+### 3. JNI Checked Mode
+JNI checked mode improvements, array element validation, and error detection.
+
+### 4. Error Reporting
+hs_err file generation and crash diagnostics improvements.
+
+### 5. JVM Initialization
+VM startup and thread creation improvements.
+
+---
+
+## External Resources
+
+| Type | Link |
+|------|------|
+| **GitHub** | [@dholmes-ora](https://github.com/dholmes-ora) |
+| **OpenJDK Census** | [@dholmes](https://openjdk.org/census#dholmes) |
+
+---
 
 ## Contribution Overview
 
