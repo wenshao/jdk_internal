@@ -6,12 +6,18 @@
 |-----------|-------|
 | **Name** | Prasanta Sadhukhan |
 | **Current Organization** | Oracle |
-| **GitHub** | [@psadhukhan](https://github.com/psadhukhan) |
+| **Location** | India |
+| **GitHub** | [@prsadhuk](https://github.com/prsadhuk) |
+| **Organizations** | @oracle |
+| **LinkedIn** | [Prasanta Sadhukhan](https://in.linkedin.com/in/prasantasadhukhan) |
+| **Connections** | 84+ |
+| **Email** | psadhukhan@openjdk.org |
 | **OpenJDK** | [@psadhukhan](https://openjdk.org/census#psadhukhan) |
 | **Role** | OpenJDK Member, JDK Reviewer |
-| **Primary Areas** | Swing, AWT, UI Components |
+| **Primary Areas** | Swing, AWT, JavaFX, Client Libraries, Focus Management |
+| **Active Since** | 2015+ |
 
-> **Data as of**: 2026-03-19
+> **数据来源**: [GitHub](https://github.com/prsadhuk), [LinkedIn](https://in.linkedin.com/in/prasantasadhukhan), [OpenJDK](https://openjdk.org/census#psadhukhan)
 
 ## Contribution Overview
 

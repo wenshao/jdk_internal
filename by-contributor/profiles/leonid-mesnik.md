@@ -1,18 +1,38 @@
 # Leonid Mesnik
 
+> **GitHub**: [@lmesnik](https://github.com/lmesnik)
+> **LinkedIn**: [Leonid Mesnik](https://www.linkedin.com/in/lmesnik)
+> **Organization**: Oracle
+> **Location**: San Francisco Bay Area
+> **Education**: Saint Petersburg State University
+
+---
+
+## 概述
+
+Leonid Mesnik 是 Oracle 的 Principal Member of Technical Staff，专注于 HotSpot JVM 质量保证、故障排查和 JVMTI (JVM Tool Interface) 开发。他拥有 12+ 年的经验，毕业于圣彼得堡国立大学，是 JDK Reviewer（2021 年 9 月通过投票），在 JVMTI 事件处理、线程生命周期管理和 JFR 测试改进方面做出重要贡献。
+
+---
+
 ## Basic Information
 
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Leonid Mesnik |
 | **Current Organization** | Oracle |
-| **GitHub** | [@lmesnik](https://github.com/lmesnik) |
+| **Position** | Principal Member of Technical Staff |
+| **Location** | San Francisco Bay Area |
+| **Experience** | 12+ years |
+| **Education** | Saint Petersburg State University |
+| **GitHub** | [@lmesnik](https://github.com/lmesnik) (21 repositories) |
+| **LinkedIn** | [lmesnik](https://www.linkedin.com/in/lmesnik) |
+| **Email** | lmesnik@openjdk.org, leonid.mesnik@oracle.com |
 | **OpenJDK** | [@lmesnik](https://openjdk.org/census#lmesnik) |
-| **Role** | JDK Reviewer |
+| **Role** | JDK Reviewer (since September 2021) |
 | **PRs** | [243 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Almesnik+is%3Aclosed+label%3Aintegrated) |
-| **Primary Areas** | JVMTI, Testing Infrastructure, HotSpot |
+| **Primary Areas** | JVMTI, Testing Infrastructure, HotSpot, JFR |
 
-> **Data as of**: 2026-03-19
+> **数据来源**: [LinkedIn](https://www.linkedin.com/in/lmesnik), [GitHub](https://github.com/lmesnik), [OpenJDK 邮件列表](https://mail.openjdk.org/)
 
 ## Contribution Overview
 

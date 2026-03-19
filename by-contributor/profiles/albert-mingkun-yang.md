@@ -1,6 +1,15 @@
 # Albert Mingkun Yang
 
-> GC 专家，代码清理大师，JDK 26 最多贡献者
+> **GitHub**: [@albertnetymk](https://github.com/albertnetymk)
+> **Organization**: Oracle
+> **Location**: Stockholm, Sweden
+> **PhD**: Uppsala University (2024)
+
+---
+
+## 概述
+
+Albert Mingkun Yang 是 Oracle 斯德哥尔摩团队的 GC 专家，2024 年获得乌普萨拉大学 (Uppsala University) 博士学位，博士论文题目为"温度感知垃圾回收器的设计与实现"。他是 JDK 26 周期最活跃的贡献者之一 (744 个 integrated PRs)，在 ZGC、G1 GC 和 Parallel GC 方面有深入研究。
 
 ---
 
@@ -15,18 +24,11 @@
 | **OpenJDK** | [@ayang](https://openjdk.org/census#ayang) |
 | **角色** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [744 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aalbertnetymk+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | G1 GC, Parallel GC, Serial GC, 代码清理 |
+| **主要领域** | G1 GC, Parallel GC, Serial GC, ZGC, 代码清理 |
 | **活跃时间** | 2020 - 至今 |
+| **教育** | 乌普萨拉大学 博士 (2024) |
 
-### 组织历史
-
-| 时间段 | 组织 | 邮箱 |
-|--------|------|------|
-| 2013 | Oracle (Albert Noll) | albert.noll@oracle.com |
-| 2019, 2021 | 阿里巴巴 (Alibaba) | albert.th@alibaba-inc.com |
-| 2020 - 至今 | Oracle | albert.m.yang@oracle.com |
-
-> **数据调查时间**: 2026-03-19
+> **数据来源**: [OpenJDK Census](https://openjdk.org/census#ayang), [Uppsala University](https://uu.se/), [ACM Publications](https://dl.acm.org/)
 
 ---
 
@@ -93,10 +95,30 @@ G1 GC 相关的优化和 bug 修复。
 
 ## 外部资源
 
+### 学术论文
+
+| 标题 | 年份 | 期刊/会议 | 主题 |
+|------|------|-----------|------|
+| "Deep Dive into ZGC: A Modern Garbage Collector in OpenJDK" | 2022 | ACM TOPLAS | ZGC 深度解析 |
+| "Improving Program Locality in the GC using Hotness" | 2020 | PLDI | GC 热度优化 |
+| "Design and Implementation of Temperature-Aware Garbage Collectors" | 2024 | 博士论文 | 温度感知 GC |
+
+### 博士论文
+
+**学位**: PhD in Computing Science
+**学校**: Uppsala University, Sweden
+**年份**: 2024
+**论文**: "Design and Implementation of Temperature-Aware Garbage Collectors"
+**导师**: Tobias Wrigstad
+
+### 链接
+
 | 类型 | 链接 |
 |------|------|
 | **GitHub** | [@albertnetymk](https://github.com/albertnetymk) |
 | **OpenJDK Census** | [ayang](https://openjdk.org/census#ayang) |
+| **ACM Publications** | [Albert Mingkun Yang](https://dl.acm.org/author/albert-mingkun-yang) |
+| **SPLASH 2018 Profile** | [Profile](https://2018.splashcon.org/profile/albertmingkunyang) |
 
 ---
 

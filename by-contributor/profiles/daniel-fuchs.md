@@ -1,6 +1,15 @@
 # Daniel Fuchs
 
-> HTTP/3 核心开发者，JEP 517 主导者
+> **GitHub**: [@dfuchs](https://github.com/dfuchs)
+> **LinkedIn**: [Daniel Fuchs](https://www.linkedin.com/in/danielfuchs/)
+> **Location**: Dublin, Ireland
+> **Organization**: Oracle
+
+---
+
+## 概述
+
+Daniel Fuchs 是 Oracle Dublin 团队的 Consulting Member of Technical Staff，Java Core Libraries Networking 团队负责人。自 2012 年起在 Oracle 工作，专注于 Java 网络栈开发，包括 JMX、HttpClient 和 HTTP/3 实现。他是 JEP 517 (HTTP/3) 的主导者，在 OpenJDK 社区有近 400 项贡献。
 
 ---
 
@@ -10,14 +19,45 @@
 |------|-----|
 | **姓名** | Daniel Fuchs |
 | **当前组织** | Oracle |
+| **职位** | Consulting Member of Technical Staff |
 | **GitHub** | [@dfuchs](https://github.com/dfuchs) |
 | **OpenJDK** | [@dfuchs](https://openjdk.org/census#dfuchs) |
 | **角色** | OpenJDK Member, JDK Reviewer |
-| **主要领域** | HttpClient, HTTP/3, QUIC |
+| **主要领域** | HttpClient, HTTP/3, QUIC, JMX |
 | **主导 JEP** | JEP 517: HTTP/3 for the HTTP Client API |
-| **活跃时间** | 2017 - 至今 |
+| **教育背景** | ISAE-SUPAERO (法国航空航天高等工程学院) |
+| **活跃时间** | 2012 - 至今 |
 
-> **数据调查时间**: 2026-03-19
+> **数据来源**: [LinkedIn](https://www.linkedin.com/in/danielfuchs/), [OpenJDK Census](https://openjdk.org/census#dfuchs), [Inside.java Podcast](https://inside.java/2026/02/26/podcast-048/)
+
+---
+
+## 职业历程
+
+| 时间 | 事件 | 详情 |
+|------|------|------|
+| **2012 年** | 加入 Oracle Java Core Libraries 团队 | 在 Dublin 工作，专注于网络栈开发 |
+| **2016 年** | 参与 JDK 9 Committer 提名 | 提名 Vyom Tewari 为 JDK9 Committer |
+| **2021 年** | 参与 Guoxiong Li 的 Committer 投票 | 参与社区治理 |
+| **2022 年 3 月** | 参与 Jaikiran Pai 的 Reviewer CFV | 参与 OpenJDK 审查者提名 |
+| **2022 年 3 月** | 参与 Claes Redestad 的 Member Group 提名 | 支持 Claes 成为 OpenJDK Member |
+| **2023 年 8 月** | 提名为 Core Libraries Group Member | CFV 投票通过 |
+| **2025-2026 年** | JEP 517 HTTP/3 实现 | 主导 HTTP/3 在 JDK 26 中的实现 |
+| **2026 年 2 月** | Inside.java Podcast 嘉宾 | Episode 48: HTTP/3 in Java 26 |
+
+> **来源**: [OpenJDK 邮件列表](https://mail.openjdk.org/archives/list/members@openjdk.org/), [Inside.java Podcast](https://inside.java/2026/02/26/podcast-048/)
+
+---
+
+## 研究领域
+
+| 领域 | 说明 |
+|------|------|
+| **HTTP/3 和 QUIC** | JEP 517 主导者，实现完整的 HTTP/3 协议栈 |
+| **HttpClient API** | JDK 11+ 的现代 HTTP 客户端核心开发者 |
+| **JMX (Java Management Extensions)** | 早期专注于 JMX 和监控技术 |
+| **网络协议** | HTTP/2、HTTP/3、TLS、WebSocket |
+| **虚拟线程集成** | HttpClient 与 Project Loom 的集成 |
 
 ---
 
@@ -212,6 +252,50 @@ JEP 517 的主要协作者:
 
 ## 相关链接
 
-- [OpenJDK Changesets](https://hg.openjdk.org/jdk/jdk/user?user=dfuchs)
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=Daniel%20Fuchs)
-- [JBS Issues](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20dfuchs)
+- **GitHub**: [https://github.com/dfuchs](https://github.com/dfuchs)
+- **LinkedIn**: [https://www.linkedin.com/in/danielfuchs/](https://www.linkedin.com/in/danielfuchs/)
+- **OpenJDK Census**: [dfuchs](https://openjdk.org/census#dfuchs)
+- **OpenJDK Changesets**: [hg.openjdk.org](https://hg.openjdk.org/jdk/jdk/user?user=dfuchs)
+- **JBS Issues**: [bugs.openjdk.org](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20dfuchs)
+
+---
+
+## 外部资源
+
+### 媒体与访谈
+
+| 标题 | 日期 | 主题 | 链接 |
+|------|------|------|------|
+| "Episode 48: HTTP/3 in Java 26" | 2026-02-26 | 与 Daniel Jeliński 一起讨论 HTTP/3 实现 | [Podcast](https://inside.java/2026/02/26/podcast-048/) |
+| "HTTP/3 Support in JDK 26" | 2025-10-22 | Inside.java 文章 | [文章](https://inside.java/2025/10/22/http3-support/) |
+
+### OpenJDK 邮件列表贡献
+
+- **2022 年 3 月**: 参与 Claes Redestad 的 OpenJDK Member Group 提名投票
+- **2023 年 8 月**: Core Libraries Group Member CFV 投票通过
+- 多次参与 JDK Committer 和 Reviewer 提名投票
+
+### 相关 JEP
+
+| JEP | 标题 | 状态 |
+|-----|------|------|
+| [JEP 517](https://openjdk.org/jeps/517) | HTTP/3 for the HTTP Client API | ✅ JDK 26 |
+
+---
+
+## 协作网络
+
+Daniel Fuchs 与其他核心开发者紧密合作：
+
+| 协作者 | 合作领域 |
+|--------|----------|
+| [Daniel Jeliński](https://github.com/djelinski) | JEP 517 HTTP/3、CUBIC 拥塞控制 |
+| [Volkan Yazici](/by-contributor/profiles/volkan-yazici.md) | HttpClient API 改进 |
+| [Jaikiran Pai](/by-contributor/profiles/jaikiran-pai.md) | 网络栈 Bug 修复 |
+| [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 提名其成为 OpenJDK Member |
+
+---
+
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-20
+> **更新内容**: 补充职业历程（2012年加入Oracle）、教育背景（ISAE-SUPAERO）、LinkedIn信息、Podcast访谈、协作网络、数据来源章节

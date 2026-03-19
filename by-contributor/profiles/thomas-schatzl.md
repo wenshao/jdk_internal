@@ -1,6 +1,16 @@
 # Thomas Schatzl
 
-> G1 GC 核心开发者，JEP 522 主导者
+> **GitHub**: [@tschatzl](https://github.com/tschatzl)
+> **Blog**: [tschatzl.github.io](https://tschatzl.github.io/)
+> **Email**: thomas.schatzl@oracle.com
+> **Organization**: Oracle
+> **Location**: Germany (推测)
+
+---
+
+## 概述
+
+Thomas Schatzl 是 Oracle HotSpot GC 团队核心成员，G1 (Garbage First) GC 的主要维护者和优化者。自 2012 年起参与 OpenJDK 开发，专注于垃圾回收器领域超过 12 年。他主导了 JEP 522 (G1 GC 吞吐量改进)，并在个人博客上撰写了大量关于 G1 GC 和 Parallel GC 的技术文章。
 
 ---
 
@@ -10,15 +20,18 @@
 |------|-----|
 | **姓名** | Thomas Schatzl |
 | **当前组织** | Oracle |
+| **团队** | HotSpot GC Team |
 | **GitHub** | [@tschatzl](https://github.com/tschatzl) |
+| **Blog** | [tschatzl.github.io](https://tschatzl.github.io/) |
+| **Email** | thomas.schatzl@oracle.com |
 | **OpenJDK** | [@tschatzl](https://openjdk.org/census#tschatzl) |
 | **角色** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [545 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Atschatzl+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | G1 GC |
+| **主要领域** | G1 GC, Parallel GC |
 | **主导 JEP** | JEP 522: G1 GC Throughput Improvement |
-| **活跃时间** | 2013 - 至今 |
+| **活跃时间** | 2012 - 至今 |
 
-> **数据调查时间**: 2026-03-19
+> **数据来源**: [个人博客](https://tschatzl.github.io/), [Inside.java](https://inside.java/u/ThomasSchatzl/)
 
 ---
 
@@ -68,10 +81,24 @@ GC 接口的现代化和代码清理。
 
 ## 外部资源
 
+### 个人博客
+
+Thomas 在 [tschatzl.github.io](https://tschatzl.github.io/) 撰写关于 OpenJDK HotSpot 垃圾回收器的技术文章：
+
+| 标题 | 日期 | 主题 | 链接 |
+|------|------|------|------|
+| "JDK 26 G1/Parallel/Serial GC changes" | 2026-02-26 | JDK 26 GC 变更总结 | [文章](https://tschatzl.github.io/2026/02/26/jdk26-g1-serial-parallel-gc-changes.html) |
+| "JDK 24 GC changes" | 2025 | JDK 24 GC 更新 | [博客](https://tschatzl.github.io/) |
+| "G1 and Parallel GC" | 长期系列 | G1 和 Parallel GC 专题 | [博客](https://tschatzl.github.io/) |
+
+### 链接
+
 | 类型 | 链接 |
 |------|------|
 | **GitHub** | [@tschatzl](https://github.com/tschatzl) |
+| **Blog** | [tschatzl.github.io](https://tschatzl.github.io/) |
 | **OpenJDK Census** | [tschatzl](https://openjdk.org/census#tschatzl) |
+| **Inside.java** | [ThomasSchatzl](https://inside.java/u/ThomasSchatzl/) |
 
 ---
 

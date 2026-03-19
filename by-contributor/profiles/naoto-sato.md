@@ -1,18 +1,33 @@
 # Naoto Sato
 
+> **GitHub**: [@naotoj](https://github.com/naotoj)
+> **Inside.java**: [NaotoSato](https://inside.java/u/NaotoSato/)
+> **Organization**: Oracle
+
+---
+
+## 概述
+
+Naoto Sato 是 Oracle Java Platform Group 的工程师，专注于 JDK 核心库，特别是国际化 (i18n) 方面。他是 Unicode 和 CLDR (Common Locale Data Repository) 更新的主要负责人，在 System.console() 改进、时区处理和字符编码方面做出重要贡献。
+
+---
+
 ## Basic Information
 
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Naoto Sato |
-| **Current Organization** | Oracle |
-| **GitHub** | [@naotoj](https://github.com/naotoj) |
+| **Current Organization** | Oracle America |
+| **Team** | Java Platform Group |
+| **GitHub** | [@naotoj](https://github.com/naotoj) (24 followers, 22 repositories) |
+| **Twitter** | [@naotoj](https://twitter.com/naotoj) |
 | **OpenJDK** | [@naoto](https://openjdk.org/census#naoto) |
 | **Role** | OpenJDK Member, JDK Reviewer, i18n Lead |
 | **PRs** | [273 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Anaotoj+is%3Aclosed+label%3Aintegrated) |
 | **Primary Areas** | Unicode, Internationalization, Console, TimeZone |
+| **Email** | naoto@openjdk.org |
 
-> **Data as of**: 2026-03-19
+> **数据来源**: [Inside.java](https://inside.java/u/NaotoSato/), [GitHub](https://github.com/naotoj), [OpenJDK 邮件列表](https://mail.openjdk.org/archives/list/build-dev@openjdk.org/)
 
 ## Contribution Overview
 

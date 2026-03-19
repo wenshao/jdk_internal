@@ -1,18 +1,37 @@
 # Brian Burkhalter
 
+> **GitHub**: [@bplb](https://github.com/bplb)
+> **LinkedIn**: [Brian Burkhalter](https://www.linkedin.com/in/brian-burkhalter-56b735)
+> **Organization**: Oracle
+> **Education**: Stanford University
+
+---
+
+## 概述
+
+Brian Burkhalter 是 Oracle 的 Principal Member of Technical Staff，专注于图像处理和多媒体技术。他曾在 Sun Microsystems 担任 Imaging Software Technologies 的 Staff Engineer，是 Java Advanced Imaging (JAI) API 的技术负责人。他毕业于斯坦福大学，学习信息系统、控制、光学和图像/信号处理。他是 JEP 262 (TIFF Image I/O) 的主导者和 JSR 148 (Java Advanced Imaging) 规范的贡献者。
+
+---
+
 ## Basic Information
 
 | Field | Value |
 |-------|-------|
 | **Name** | Brian Burkhalter |
 | **Current Organization** | Oracle |
+| **Position** | Principal Member of Technical Staff |
+| **Previous Organization** | Sun Microsystems (1996-2010) |
+| **Education** | Stanford University (Information Systems, Controls, Optics, Image/Signal Processing) |
 | **GitHub** | [@bplb](https://github.com/bplb) |
+| **LinkedIn** | [brian-burkhalter-56b735](https://www.linkedin.com/in/brian-burkhalter-56b735) |
 | **OpenJDK** | [@bpb](https://openjdk.org/census#bpb) |
 | **Role** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [361 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Abplb+is%3Aclosed+label%3Aintegrated) |
-| **Primary Areas** | NIO, File Systems, Networking, I/O |
+| **Primary Areas** | Image Processing, Multimedia, NIO, File Systems, I/O |
+| **JEP Leadership** | JEP 262: TIFF Image I/O |
+| **JSR** | JSR 148: Java Advanced Imaging |
 
-> **Data as of**: 2026-03-19
+> **数据来源**: [LinkedIn](https://www.linkedin.com/in/brian-burkhalter-56b735), [GitHub](https://github.com/bplb)
 
 ## Contribution Overview
 

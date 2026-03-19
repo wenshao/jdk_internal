@@ -1,17 +1,34 @@
 # Justin Lu
 
+> **GitHub**: [@justin-lu](https://github.com/justin-lu)
+> **LinkedIn**: [Justin Lu](https://www.linkedin.com/in/justin-c-lu)
+> **Email**: justin.curtis.lu@gmail.com
+> **Organization**: Oracle
+
+---
+
+## 概述
+
+Justin Lu 是 Oracle 的 Software Engineer，专注于 Java 核心库开发，特别是国际化 (i18n) 和本地化 (L10n) 功能。他在数字格式化、紧凑数字格式、Unicode 支持和区域设置处理方面做出重要贡献。
+
+---
+
 ## Basic Information
 
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Justin Lu |
 | **Current Organization** | Oracle |
+| **Position** | Software Engineer |
+| **Focus** | Java Core Libraries |
 | **GitHub** | [@justin-lu](https://github.com/justin-lu) |
+| **LinkedIn** | [justin-c-lu](https://www.linkedin.com/in/justin-c-lu) |
+| **Email** | justin.curtis.lu@gmail.com |
 | **OpenJDK** | [@jlu](https://openjdk.org/census#jlu) |
 | **Role** | OpenJDK Member, JDK Reviewer |
 | **Primary Areas** | Locale, Internationalization (i18n), NumberFormat, Currency |
 
-> **Data as of**: 2026-03-19
+> **数据来源**: [LinkedIn](https://www.linkedin.com/in/justin-c-lu), [GitHub](https://github.com/justin-lu)
 
 ## Contribution Overview
 

@@ -1,17 +1,58 @@
 # Jaikiran Pai
 
+> **GitHub**: [@jpai](https://github.com/jpai)
+> **Organization**: Oracle
+> **Apache**: Ant Committer
+
+---
+
+## 概述
+
+Jaikiran Pai 是 Oracle Java Core Libraries 团队成员，专注于 HttpClient、网络栈和 ZIP/JAR 相关功能。他是 Apache Ant 项目的 Committer，从 2020 年起成为 JDK Committer，2022 年晋升为 JDK Reviewer。
+
+---
+
 ## Basic Information
 
 | Field | Value |
 |-------|-------|
 | **Name** | Jaikiran Pai |
 | **Current Organization** | Oracle |
+| **Team** | Java Core Libraries |
 | **GitHub** | [@jpai](https://github.com/jpai) |
 | **OpenJDK** | [@jpai](https://openjdk.org/census#jpai) |
-| **Role** | OpenJDK Member, JDK Reviewer |
+| **Role** | OpenJDK Member, JDK Reviewer, JDK Committer |
 | **Primary Areas** | HttpClient, Networking, ZIP/JAR, Test Infrastructure |
+| **Apache Projects** | Ant Committer |
 
-> **Data as of**: 2026-03-19
+> **数据来源**: [OpenJDK 邮件列表](https://mail.openjdk.org/pipermail/jdk-dev/2020-September/004704.html), [Apache Ant](https://github.com/apache/ant)
+
+---
+
+## 职业历程
+
+| 时间 | 事件 | 详情 |
+|------|------|------|
+| **Apache Ant 时期** | Apache Ant Committer | 贡献 19 个 JDK 修复 |
+| **2020 年 9 月** | 提名为 JDK Committer | 由 Daniel Fuchs 提名 |
+| **2022 年 5 月** | 晋升为 JDK Reviewer | CFV 投票通过 |
+| **至今** | Oracle Java Core Libraries 团队 | 专注于网络和 I/O |
+
+> **来源**: [New JDK Committer: Jaikiran Pai](https://mail.openjdk.org/pipermail/jdk-dev/2020-September/004704.html), [CFV: New JDK Reviewer](https://mail.openjdk.org/pipermail/jdk-dev/2022-May/006564.html)
+
+---
+
+## Apache 软件基金会贡献
+
+Jaikiran 是 Apache Ant 项目的活跃 Committer：
+
+| 项目 | 角色 |
+|------|------|
+| **Apache Ant** | Committer |
+
+在成为 JDK Committer 之前，他已经通过 Apache Ant 项目向 JDK 贡献了 19 个修复。
+
+---
 
 ## Contribution Overview
 
@@ -244,6 +285,33 @@ ServerSocket server = new ServerSocket(port, backlog);
 
 ## Related Links
 
-- [OpenJDK Profile](https://openjdk.org/census#jpai)
-- [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20jpai)
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=jpai)
+- **GitHub**: [https://github.com/jpai](https://github.com/jpai)
+- **OpenJDK Census**: [jpai](https://openjdk.org/census#jpai)
+- **JBS Issues**: [bugs.openjdk.org](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20jpai)
+- **Apache Ant**: [github.com/apache/ant](https://github.com/apache/ant)
+
+---
+
+## 外部资源
+
+### OpenJDK 邮件列表
+
+- **2020 年 9 月**: [New JDK Committer: Jaikiran Pai](https://mail.openjdk.org/pipermail/jdk-dev/2020-September/004704.html) - 由 Daniel Fuchs 提名
+- **2022 年 5 月**: [CFV: New JDK Reviewer: Jaikiran Pai](https://mail.openjdk.org/pipermail/jdk-dev/2022-May/006564.html) - 晋升为 Reviewer
+
+---
+
+## 协作网络
+
+Jaikiran Pai 与其他核心开发者紧密合作：
+
+| 协作者 | 合作领域 |
+|--------|----------|
+| [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | HttpClient、网络栈、Committer 提名 |
+| [Volkan Yazıcı](/by-contributor/profiles/volkan-yazici.md) | HttpClient API 改进 |
+
+---
+
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-20
+> **更新内容**: 补充职业历程（Apache Ant Committer、2020年 JDK Committer、2022年 JDK Reviewer）、OpenJDK 邮件列表链接、协作网络

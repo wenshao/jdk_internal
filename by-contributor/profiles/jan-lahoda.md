@@ -1,6 +1,14 @@
 # Jan Lahoda
 
-> javac 核心开发者，JEP 511/512 主导者
+> **GitHub**: [@jlahoda](https://github.com/jlahoda)
+> **Organization**: Oracle
+> **Location**: Czechia (捷克)
+
+---
+
+## 概述
+
+Jan Lahoda 是 Oracle 的 Java 编译器 (javac) 核心开发者，自 2006 年起参与 OpenJDK 开发。他主导了 JEP 511 (Module Import Declarations) 和 JEP 512 (Compact Source Files and Instance Main Methods)，并在 JShell 交互式编程环境方面做出大量改进。他是捷克人，在 Oracle 公司担任软件工程师。
 
 ---
 
@@ -10,14 +18,15 @@
 |------|-----|
 | **姓名** | Jan Lahoda |
 | **当前组织** | Oracle |
-| **GitHub** | [@jlahoda](https://github.com/jlahoda) |
+| **位置** | Czechia (捷克) |
+| **GitHub** | [@jlahoda](https://github.com/jlahoda), [@lahodaj](https://github.com/lahodaj) |
 | **OpenJDK** | [@jlahoda](https://openjdk.org/census#jlahoda) |
 | **角色** | JDK Reviewer |
 | **主要领域** | javac, JShell, 语言特性 |
 | **主导 JEP** | JEP 511, JEP 512 |
 | **活跃时间** | 2006 - 至今 |
 
-> **数据调查时间**: 2026-03-19
+> **数据来源**: [LinkedIn](https://www.linkedin.com/pub/dir/Jan/Lahoda), [GitHub](https://github.com/lahodaj)
 
 ---
 

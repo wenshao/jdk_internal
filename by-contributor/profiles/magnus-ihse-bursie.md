@@ -5,14 +5,15 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Magnus Ihse Bursie |
-| **Current Organization** | Oracle |
+| **Current Organization** | Oracle (OpenJDK Build Team) |
 | **GitHub** | [@magicus](https://github.com/magicus) |
+| **GitHub Bio** | "I work at Oracle with the OpenJDK Build Team, but most of the repos here are hobby projects" |
 | **OpenJDK** | [@ihse](https://openjdk.org/census#ihse) |
 | **Role** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [351 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Amagicus+is%3Aclosed+label%3Aintegrated) |
-| **Primary Areas** | Build System, Makefiles, Configure Scripts |
+| **Primary Areas** | Build System, Makefiles, Configure Scripts, Cross-Platform Builds |
 
-> **Data as of**: 2026-03-19
+> **数据来源**: [GitHub](https://github.com/magicus), [OpenJDK 邮件列表](https://mail.openjdk.org/pipermail/build-infra-dev/)
 
 ## Contribution Overview
 

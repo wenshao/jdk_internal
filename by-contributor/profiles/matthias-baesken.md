@@ -5,14 +5,17 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Matthias Baesken |
-| **Current Organization** | SAP |
+| **Current Organization** | SAP (JVM Team) |
 | **GitHub** | [@MBaesken](https://github.com/MBaesken) |
+| **Repositories** | 18 public repositories |
+| **Email** | mbaesken@openjdk.org, matthias.baesken@sap.com |
 | **OpenJDK** | [@mbaesken](https://openjdk.org/census#mbaesken) |
-| **Role** | OpenJDK Member, JDK Reviewer |
+| **Role** | OpenJDK Member, JDK-Updates Reviewer |
 | **PRs** | [514 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AMBaesken+is%3Aclosed+label%3Aintegrated) |
-| **Primary Areas** | Build System, Cross-Platform, AIX, Windows, Linux |
+| **Primary Areas** | Build System, Cross-Platform, AIX, Windows, Linux, Static Analyzers |
+| **SapMachine** | Active contributor to SAP's OpenJDK distribution |
 
-> **Data as of**: 2026-03-19
+> **数据来源**: [GitHub](https://github.com/MBaesken), [OpenJDK Wiki](https://wiki.openjdk.org/display/Build/Supported+Build+Platforms), [OpenJDK 邮件列表](https://mail.openjdk.org/pipermail/jdk-updates-dev/)
 
 ## Contribution Overview
 

@@ -1,25 +1,38 @@
 # William Kemper
 
+> **GitHub**: [@earthling-amzn](https://github.com/earthling-amzn)
+> **LinkedIn**: [William Kemper](https://www.getprog.ai/profile/71722661)
+> **Organization**: Amazon
+> **Location**: Redwood City
+> **JEP Draft**: JEP draft: Make Shenandoah's generational mode the default
+
+---
+
+## 概述
+
+William Kemper 是 Amazon 的 SDE III（软件开发工程师 III），专注于 Shenandoah 垃圾回收器的分代模式开发。他是 JEP 521 (Generational Shenandoah) 的主要实现者，并在 JEP draft 中提出了将 Shenandoah 的分代模式设为默认值。他曾在 Red Hat 工作，现在负责 Amazon Corretto 中 Shenandoah GC 的维护和改进。
+
+---
+
 ## Basic Information
 
 | Attribute | Value |
 |-----------|-------|
 | **Name** | William Kemper |
 | **Current Organization** | Amazon |
-| **GitHub** | [@wkemper](https://github.com/wkemper), [@earthling-amzn](https://github.com/earthling-amzn) |
+| **Position** | SDE III (Software Development Engineer III) |
+| **Location** | Redwood City |
+| **Previous Organization** | Red Hat |
+| **GitHub** | [@earthling-amzn](https://github.com/earthling-amzn) (23 repositories) |
+| **LinkedIn** | [William Kemper](https://www.getprog.ai/profile/71722661) |
+| **Email** | kemperw@amazon.com |
 | **OpenJDK** | [@wkemper](https://openjdk.org/census#wkemper) |
 | **Role** | JDK Reviewer |
 | **PRs** | [123 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aearthling-amzn+is%3Aclosed+label%3Aintegrated) |
 | **Primary Areas** | Shenandoah GC, Generational Shenandoah (JEP 521) |
+| **JEP Draft** | JEP draft: Make Shenandoah's generational mode the default |
 
-### Organization History
-
-| Period | Organization | Email |
-|--------|--------------|-------|
-| Prior | Red Hat | - |
-| Present | Amazon | kemperw@amazon.com |
-
-> **Data as of**: 2026-03-19
+> **数据来源**: [GitHub](https://github.com/earthling-amzn), [JEP draft](https://openjdk.org/jeps/8379682), [LinkedIn](https://www.getprog.ai/profile/71722661)
 
 ## Contribution Overview
 
@@ -263,7 +276,30 @@ void ShenandoahDegeneratedGC::finish() {
 
 ## Related Links
 
-- [OpenJDK Profile](https://openjdk.org/people/wkemper)
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=wkemper)
-- [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20wkemper)
-- [JEP 521: Generational Shenandoah](https://openjdk.org/jeps/521)
+- **GitHub**: [earthling-amzn](https://github.com/earthling-amzn)
+- **OpenJDK**: [wkemper](https://openjdk.org/people/wkemper)
+- **JBS Issues**: [bugs.openjdk.org](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20wkemper)
+- **GitHub Commits**: [openjdk/jdk](https://github.com/openjdk/jdk/commits?author=wkemper)
+- **JEP 521**: [Generational Shenandoah](https://openjdk.org/jeps/521)
+- **JEP Draft**: [Make Shenandoah's generational mode the default](https://openjdk.org/jeps/8379682)
+
+---
+
+## 外部资源
+
+### JEP Draft
+
+| JEP | 标题 | 状态 |
+|-----|------|------|
+| JEP draft | Make Shenandoah's generational mode the default | Draft |
+
+### Amazon Corretto
+
+- 负责 Amazon Corretto 中 Shenandoah GC 的维护和改进
+- 参与 JDK 8u backport 审查
+
+---
+
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-20
+> **更新内容**: 补充 SDE III 职位、LinkedIn、Redwood City 位置、JEP draft、Amazon Corretto 工作背景

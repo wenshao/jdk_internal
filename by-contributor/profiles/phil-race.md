@@ -1,18 +1,31 @@
 # Phil Race
 
+> **GitHub**: [@prrace](https://github.com/prrace)
+> **Organization**: Oracle
+> **Position**: Consulting Member of Technical Staff, Client Libraries Lead
+
+---
+
+## 概述
+
+Phil Race 是 Oracle 的 Consulting Member of Technical Staff，OpenJDK Client Libraries 团队负责人，负责核心 Swing、Java 2D 和 AWT API。他是 OpenJDK Governing Board 成员（Oracle 代表），在 Java 2D 图形、打印、Swing GUI 组件和桌面应用开发方面做出重要贡献。他在 2D 计算机图形行业有丰富经验，并在 FOSDEM 2024 和 JavaOne 2026 等会议上担任演讲者和程序委员会成员。
+
+---
+
 ## Basic Information
 
 | Field | Value |
 |-------|-------|
 | **Name** | Phil Race |
 | **Current Organization** | Oracle |
-| **GitHub** | [@prrace](https://github.com/prrace) |
+| **Position** | Consulting Member of Technical Staff, Client Libraries Lead |
+| **GitHub** | [@prrace](https://github.com/prrace) (19 repositories) |
 | **OpenJDK** | [@prr](https://openjdk.org/census#prr) |
-| **Role** | OpenJDK Member, JDK Reviewer, Client Libs Lead |
+| **Role** | OpenJDK Member, JDK Reviewer, Client Libs Lead, OpenJDK Governing Board Member |
 | **PRs** | [303 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aprrace+is%3Aclosed+label%3Aintegrated) |
-| **Primary Areas** | Graphics, Printing, AWT, Swing, Security |
+| **Primary Areas** | Graphics, Printing, AWT, Swing, Security, Java 2D |
 
-> **Data as of**: 2026-03-19
+> **数据来源**: [FOSDEM 2024](https://archive.fosdem.org/2024/schedule/speaker/BD3NMJ/), [OpenJDK Governing Board](https://openjdk.org/poll/gb/2024/), [GitHub](https://github.com/prrace)
 
 ## Contribution Overview
 
@@ -252,7 +265,31 @@ public BufferedImage filter(BufferedImage src, BufferedImage dest) {
 
 ## Related Links
 
-- [OpenJDK Profile](https://openjdk.org/census#prr)
-- [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20prr)
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=prr)
-- [JEP 504](https://openjdk.org/jeps/504)
+- **GitHub**: [prrace](https://github.com/prrace)
+- **OpenJDK Census**: [prr](https://openjdk.org/census#prr)
+- **JBS Issues**: [bugs.openjdk.org](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20prr)
+- **GitHub Commits**: [github.com/openjdk/jdk](https://github.com/openjdk/jdk/commits?author=prr)
+- **JEP 504**: [Remove the Applet API](https://openjdk.org/jeps/504)
+
+---
+
+## 外部资源
+
+### 演讲与会议
+
+| 会议 | 年份 | 主题 | 链接 |
+|------|------|------|------|
+| FOSDEM | 2024 | Client Libraries Lead 演讲 | [FOSDEM](https://archive.fosdem.org/2024/schedule/speaker/BD3NMJ/) |
+| JavaOne | 2026 | Program Committee Member | [Inside.java](https://inside.java/) |
+
+### OpenJDK 治理
+
+- **OpenJDK Governing Board Member** (At-Large for Oracle)
+- **多次当选**: 2023, 2024, 2025
+- **Area Lead**: Client Libraries (Swing, Java 2D, AWT, Sound)
+
+---
+
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-20
+> **更新内容**: 补充职位（Client Libraries Lead、CMTS）、OpenJDK Governing Board 成员、FOSDEM 演讲、2D 图形行业背景

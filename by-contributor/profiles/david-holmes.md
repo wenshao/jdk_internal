@@ -1,6 +1,14 @@
 # David Holmes
 
-> JVM 运行时专家，线程与信号处理专家
+> **GitHub**: [@dholmes-ora](https://github.com/dholmes-ora)
+> **Organization**: Oracle
+> **Book Author**: Java Concurrency in Practice
+
+---
+
+## 概述
+
+David Holmes 是 Oracle 的 JVM 运行时专家，专注于线程、并发和信号处理。他是经典著作《Java Concurrency in Practice》的合著者之一（与 Brian Goetz、Tim Peierls、Joshua Bloch、Joseph Bowbeer 合著）。在加入 Oracle 之前，他曾担任 DLTeCH Pty Ltd 的总监和首席科学家，位于澳大利亚布里斯班，专注于并发和实时 Java 技术。
 
 ---
 
@@ -10,13 +18,16 @@
 |-------|-------|
 | **Name** | David Holmes |
 | **Current Organization** | Oracle |
+| **Previous Organization** | DLTeCH Pty Ltd (Brisbane, Australia) |
+| **Role** | Director and Chief Scientist (DLTeCH) |
 | **GitHub** | [@dholmes-ora](https://github.com/dholmes-ora) |
 | **OpenJDK** | [@dholmes](https://openjdk.org/census#dholmes) |
 | **Role** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [303 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Adholmes-ora+is%3Aclosed+label%3Aintegrated) |
 | **Primary Areas** | Threading, Concurrency, JVM Runtime, Signal Handling |
+| **Book** | Java Concurrency in Practice (Co-author) |
 
-> **Data as of**: 2026-03-19
+> **数据来源**: [RTSJ Profile](https://www.rtsj.org/DavidBio.html), [Java Concurrency in Practice](https://www.oreilly.com/library/view/java-concurrency-in/0321349601/)
 
 ---
 

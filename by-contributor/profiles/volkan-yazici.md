@@ -1,21 +1,79 @@
-# Volkan Yazici
+# Volkan Yazıcı
+
+> **GitHub**: [@vy](https://github.com/vy)
+> **Twitter**: [@yazicivo](https://x.com/yazicivo)
+> **LinkedIn**: [Volkan Yazıcı](https://nl.linkedin.com/in/yazicivo)
+> **Website**: [volkan.yazi.ci](https://volkan.yazi.ci)
+> **Location**: Netherlands (originally from Turkey)
+> **Organization**: Oracle
+
+---
+
+## 概述
+
+Volkan Yazıcı 是 Oracle 的 Java 核心库开发者，专注于 HttpClient API 和网络基础设施。他是 Apache 软件基金会的 Logging Services PMC 成员，负责 Log4j、Log4cxx 和 Log4net 项目。在加入 Oracle 之前，曾在荷兰电商公司 bol.com 工作。
+
+---
 
 ## Basic Information
 
 | Field | Value |
 |-------|-------|
-| **Name** | Volkan Yazici |
+| **Name** | Volkan Yazıcı |
 | **Current Organization** | Oracle |
-| **GitHub** | [@vyazici](https://github.com/vyazici) |
+| **Previous Organizations** | bol.com |
+| **GitHub** | [@vy](https://github.com/vy) |
+| **Twitter/X** | [@yazicivo](https://x.com/yazicivo) |
+| **LinkedIn** | [yazicivo](https://nl.linkedin.com/in/yazicivo) |
+| **Website** | [volkan.yazi.ci](https://volkan.yazi.ci) |
 | **OpenJDK** | [@vyazici](https://openjdk.org/census#vyazici) |
 | **Role** | JDK Reviewer |
 | **Primary Areas** | HttpClient API, Networking, Core Libraries |
+| **Education** | Özyeğin University |
+| **Location** | Netherlands |
 
-> **Data as of**: 2026-03-19
+> **数据来源**: [GitHub](https://github.com/vy), [LinkedIn](https://nl.linkedin.com/in/yazicivo), [Twitter](https://x.com/yazicivo)
+
+---
+
+## 职业历程
+
+| 时间 | 事件 | 详情 |
+|------|------|------|
+| **早期** | Özyeğin University 学习 | 在土耳其接受教育 |
+| **bol.com 时期** | 软件工程师 | 在荷兰电商公司工作 |
+| **Oracle 时期** | Java Core Libraries 开发者 | 专注于 HttpClient 和网络栈 |
+| **至今** | Apache Logging Services PMC 成员 | 负责 Log4j、Log4cxx、Log4net |
+
+---
+
+## Apache 软件基金会贡献
+
+Volkan 是 Apache 软件基金会 Logging Services 项目的 PMC 成员：
+
+| 项目 | 角色 |
+|------|------|
+| **Log4j** | PMC Member |
+| **Log4cxx** | PMC Member |
+| **Log4net** | PMC Member |
+
+---
+
+## 研究领域
+
+| 领域 | 说明 |
+|------|------|
+| **HttpClient API** | JDK 11+ 现代化 HTTP 客户端 |
+| **Reactive Streams** | BodyPublisher/BodySubscriber 模式 |
+| **网络协议** | HTTP/2、WebSocket、代理处理 |
+| **日志框架** | Apache Log4j 生态系统 |
+| **异步编程** | CompletableFuture 和响应式 API |
+
+---
 
 ## Contribution Overview
 
-Volkan Yazici is a key contributor to the Java HttpClient API and networking infrastructure. His work in JDK 26 focuses on enhancing HttpClient functionality, improving API usability, and cleaning up legacy code.
+Volkan Yazıcı is a key contributor to the Java HttpClient API and networking infrastructure. His work in JDK 26 focuses on enhancing HttpClient functionality, improving API usability, and cleaning up legacy code.
 
 ### Contribution Categories
 
@@ -182,9 +240,30 @@ Typical commit structure:
 
 ## Related Links
 
-- [OpenJDK Profile](https://openjdk.org/census#vyazici)
-- [JBS Issues by Volkan Yazici](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20vyazici)
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=vyazici@openjdk.org)
+- **GitHub**: [https://github.com/vy](https://github.com/vy)
+- **Twitter/X**: [https://x.com/yazicivo](https://x.com/yazicivo)
+- **LinkedIn**: [https://nl.linkedin.com/in/yazicivo](https://nl.linkedin.com/in/yazicivo)
+- **Personal Website**: [https://volkan.yazi.ci](https://volkan.yazi.ci)
+- **OpenJDK Census**: [vyazici](https://openjdk.org/census#vyazici)
+- **JBS Issues**: [bugs.openjdk.org](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20vyazici)
+
+---
+
+## 协作网络
+
+Volkan Yazıcı 与其他核心开发者紧密合作：
+
+| 协作者 | 合作领域 |
+|--------|----------|
+| [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | HttpClient API 改进 |
+| [Jaikiran Pai](/by-contributor/profiles/jaikiran-pai.md) | 网络栈 Bug 修复 |
+| Michael McMahon | HttpClient 设计审查 |
+
+---
+
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-20
+> **更新内容**: 补充 GitHub (@vy)、Twitter (@yazicivo)、LinkedIn、个人网站、Apache PMC 成员身份、教育背景、bol.com 工作经历
 
 ## Technical Notes
 

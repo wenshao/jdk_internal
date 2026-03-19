@@ -1,18 +1,33 @@
 # Kim Barrett
 
+> **GitHub**: [@kimbarrett](https://github.com/kimbarrett)
+> **LinkedIn**: [Kim Barrett](https://www.linkedin.com/in/kim-barrett-7b19a97)
+> **Organization**: Oracle
+> **Location**: Malden, MA (推测)
+
+---
+
+## 概述
+
+Kim Barrett 是 Oracle 的资深 Java 开发者，专注于 HotSpot 运行时、原子操作和 C++ 现代化。他拥有超过 25 年的软件设计和实现经验，主导了 HotSpot 的 C++17 迁移、Atomic<T> 模板实现，以及 HotSpot Style Guide 的现代化工作。
+
+---
+
 ## Basic Information
 
 | Field | Value |
 |-------|-------|
 | **Name** | Kim Barrett |
 | **Current Organization** | Oracle |
+| **LinkedIn** | [kim-barrett-7b19a97](https://www.linkedin.com/in/kim-barrett-7b19a97) |
 | **GitHub** | [@kimbarrett](https://github.com/kimbarrett) |
 | **OpenJDK** | [@kbarrett](https://openjdk.org/census#kbarrett) |
 | **Role** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [352 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akimbarrett+is%3Aclosed+label%3Aintegrated) |
 | **Primary Areas** | Concurrency, Atomic Operations, C++ Modernization, HotSpot Runtime |
+| **Experience** | 25+ years in software design and implementation |
 
-> **Data as of**: 2026-03-19
+> **数据来源**: [LinkedIn](https://www.linkedin.com/in/kim-barrett-7b19a97), [OpenJDK Census](https://openjdk.org/census#kbarrett)
 
 ## Contribution Overview
 

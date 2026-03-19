@@ -73,6 +73,9 @@ AOT 编译类的预加载优化，减少启动时间。
 |------|------|
 | **GitHub** | [@iklam](https://github.com/iklam) |
 | **OpenJDK Census** | [iklam](https://openjdk.org/census#iklam) |
+| **YouTube** | [AppCDS Presentation](https://www.youtube.com/watch?v=nniYSR4GAH4) |
+| **Patents** | [Justia Patents](https://patents.justia.com/inventor/ioi-lam) |
+| **Blog** | [Medium @ioilam](https://medium.com/@ioilam) |
 
 ---
 
