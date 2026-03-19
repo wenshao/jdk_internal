@@ -264,6 +264,8 @@ switch (day) {
 
 ### JDK 8 (2014) - Lambda 表达式
 
+**JEP 126** - **Brian Goetz** (Specification Lead, JSR-335)
+
 #### Lambda 表达式
 
 ```java
@@ -360,6 +362,8 @@ for (var item : list) {
 
 ### JDK 14 - Records 预览
 
+**JEP 395** - **Gavin Bierman**, Brian Goetz
+
 ```java
 // Record - 不可变数据载体
 public record Person(String name, int age) { }
@@ -380,6 +384,8 @@ public record Range(int min, int max) {
 ```
 
 ### JDK 14 - instanceof 模式匹配 (预览)
+
+**JEP 305** - **Gavin Bierman**
 
 ```java
 // JDK 14 之前
@@ -438,6 +444,8 @@ if (obj instanceof String s && s.length() > 5) {
 
 ### JDK 17 - Sealed Classes (预览)
 
+**JEP 409** - **Gavin Bierman** (Owner)
+
 ```java
 // 密封类 - 限制继承
 public sealed class Shape
@@ -464,6 +472,8 @@ public final class Square extends Shape {
 
 ### JDK 17 - 模式匹配 switch (预览)
 
+**JEP 406** - **Gavin Bierman**, Brian Goetz
+
 ```java
 // switch 类型模式
 String formatted = switch (obj) {
@@ -483,6 +493,8 @@ String formatted = switch (obj) {
 ```
 
 ### JDK 19 - Record Patterns (预览)
+
+**JEP 440** - **Gavin Bierman**
 
 ```java
 // Record 模式匹配
@@ -534,6 +546,8 @@ void printSum(Object obj) {
 ```
 
 ### JDK 21 - String Templates (预览)
+
+**JEP 430** - **Jim Laskey**, Brian Goetz
 
 ```java
 // STR 模板处理器
@@ -599,6 +613,8 @@ BiFunction<Integer, Integer, Integer> add = (a, _) -> a;  // 忽略第二个参�
 ```
 
 ### JDK 21 - 隐式类
+
+**JEP 469** - **Gavin Bierman**, Jim Laskey
 
 ```java
 // 隐式类 - 用于脚本风格
@@ -827,32 +843,60 @@ String result = switch (value) {
 
 ---
 
-## 相关 JEP
+## 贡献者
 
-| JEP | 标题 | 版本 | 说明 |
-|-----|------|------|------|
-| [JEP 126](https://openjdk.org/jeps/126) | Lambda Expressions | JDK 8 | 函数式编程 |
-| [JEP 305](https://openjdk.org/jeps/305) | Pattern Matching for instanceof | JDK 14 | 类型模式匹配 |
-| [JEP 375](https://openjdk.org/jeps/375) | Pattern Matching for instanceof (Second Preview) | JDK 15 | |
-| [JEP 394](https://openjdk.org/jeps/394) | Pattern Matching for instanceof | JDK 16 | 正式版 |
-| [JEP 395](https://openjdk.org/jeps/395) | Records | JDK 14 | 不可变数据类 |
-| [JEP 384](https://openjdk.org/jeps/384) | Records (Second Preview) | JDK 15 | |
-| [JEP 409](https://openjdk.org/jeps/409) | Sealed Classes | JDK 15 | 限制继承 |
-| [JEP 406](https://openjdk.org/jeps/406) | Pattern Matching for switch | JDK 17 | Switch 模式 |
-| [JEP 420](https://openjdk.org/jeps/420) | Pattern Matching for switch (Second Preview) | JDK 18 | |
-| [JEP 421](https://openjdk.org/jeps/421) | Pattern Matching for switch (Third Preview) | JDK 19 | |
-| [JEP 440](https://openjdk.org/jeps/440) | Record Patterns | JDK 19 | Record 解构 |
-| [JEP 432](https://openjdk.org/jeps/432) | Record Patterns (Second Preview) | JDK 20 | |
-| [JEP 441](https://openjdk.org/jeps/441) | Pattern Matching for switch | JDK 21 | 正式版 |
-| [JEP 440](https://openjdk.org/jeps/440) | Record Patterns | JDK 21 | 正式版 |
-| [JEP 430](https://openjdk.org/jeps/430) | String Templates (Preview) | JDK 21 | 字符串模板 |
-| [JEP 443](https://openjdk.org/jeps/443) | Unnamed Patterns and Variables | JDK 21 | 未命名模式 |
-| [JEP 455](https://openjdk.org/jeps/455) | Primitive Types in Patterns | JDK 23 | 原始类型模式 |
-| [JEP 469](https://openjdk.org/jeps/469) | Unnamed Classes and Instance Main Methods | JDK 21 | 隐式类 |
+### 核心 JEP 作者
+
+| JEP | 特性 | 主要贡献者 | 公司 |
+|-----|------|-----------|------|
+| JEP 126 | Lambda Expressions | **Brian Goetz** | Oracle |
+| JEP 395 | Records | **Gavin Bierman**, Brian Goetz | Oracle |
+| JEP 409 | Sealed Classes | **Gavin Bierman** | Oracle |
+| JEP 441 | Pattern Matching for switch | **Gavin Bierman**, Brian Goetz | Oracle |
+| JEP 440 | Record Patterns | **Gavin Bierman** | Oracle |
+| JEP 430 | String Templates | **Jim Laskey**, Brian Goetz | Oracle |
+| JEP 443 | Unnamed Patterns | **Gavin Bierman** | Oracle |
+| JEP 477 | Implicitly Declared Classes | **Gavin Bierman**, Jim Laskey | Oracle |
+
+### Brian Goetz
+
+- **职位**: Java Language Architect, Oracle
+- **代表作**: 《Java Concurrency in Practice》作者
+- **主要贡献**:
+  - JSR-335 Specification Lead (Lambda Expressions)
+  - 主导 Java 8 函数式编程特性
+  - 参与 Records、Pattern Matching、String Templates 等多个 JEP
+
+> "Lambda expressions enable you to treat functionality as a method argument, or code as data."
+> — Brian Goetz, JSR-335 Specification Lead
+
+### Gavin Bierman
+
+- **职位**: Consulting Member of Technical Staff, Oracle Labs
+- **背景**:
+  - PhD, University of Cambridge
+  - BSc, Imperial College
+  - 前微软剑桥研究院高级研究员 (2004-2014)
+  - 加入 Oracle (2014-)
+- **主要贡献**:
+  - Records (JEP 395)
+  - Sealed Classes (JEP 409)
+  - Pattern Matching for instanceof (JEP 305/394)
+  - Pattern Matching for switch (JEP 441)
+  - Record Patterns (JEP 440)
+  - Unnamed Patterns and Variables (JEP 443)
+
+### Jim Laskey
+
+- **职位**: Consulting Member of Technical Staff, Oracle
+- **主要贡献**:
+  - String Templates (JEP 430)
+  - Text Blocks (JEP 378)
+  - Implicitly Declared Classes (JEP 477)
 
 ---
 
-## 相关链接
+## 相关 JEP
 
 - [Language Changes in Java SE](https://docs.oracle.com/en/java/javase/21/whatsnew/index.html)
 - [Java Language Specification](https://docs.oracle.com/javase/specs/jls/se21/html/index.html)
