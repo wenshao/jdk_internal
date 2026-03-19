@@ -183,6 +183,114 @@ java.time API 从旧 API 到现代日期时间处理的演进。
 
 → [日志框架时间线](logging/timeline.md)
 
+### [模块系统](modules/)
+
+Java 模块系统 (JPMS) 从 JDK 9 到现在的完整演进。
+
+| 版本 | 主要变化 | JEP |
+|------|----------|-----|
+| JDK 9 | **JPMS** (JEP 261) | 模块化系统 |
+| JDK 11 | jlink 定制运行时 | - |
+| JDK 16 | 强封装 | - |
+| JDK 17 | 遗留封装 | - |
+| JDK 21 | 动态模块加载 | - |
+
+→ [模块系统时间线](modules/timeline.md)
+
+### [性能优化](performance/)
+
+Java 性能优化从 JDK 1.0 到 JDK 26 的完整演进。
+
+| 版本 | 主要变化 | 说明 |
+|------|----------|------|
+| JDK 1.0 | 解释器执行 | 纯解释 |
+| JDK 5 | JIT 编译器 (HotSpot) | 分层编译 |
+| JDK 6 | 性能统计工具 | jstat/jmap |
+| JDK 7 | G1 GC、Compressed Oops | 内存优化 |
+| JDK 8 | Lambda/String Dedup | 编译优化 |
+| JDK 17 | Record/Pattern Matching | 编译器优化 |
+| JDK 21 | 虚拟线程 | I/O 性能提升 |
+
+→ [性能优化时间线](performance/timeline.md)
+
+### [内存管理](memory/)
+
+Java 内存管理从 JDK 1.0 到 JDK 26 的完整演进。
+
+| 版本 | 主要变化 | 说明 |
+|------|----------|------|
+| JDK 5 | WeakReference 等 | 引用类型 |
+| JDK 6 | Compressed Oops | 压缩指针 |
+| JDK 8 | 元空间、String Dedup | 永久代移除 |
+| JDK 11 | ZGC | 低延迟 GC |
+| JDK 15 | ZGC 生产可用 | 正式版 |
+| JDK 21 | 分代 ZGC | 降低 GC 频率 |
+| JDK 22 | Foreign Memory Access | 堆外内存 |
+
+→ [内存管理时间线](memory/timeline.md)
+
+### [网络编程](network/)
+
+Java 网络编程从 JDK 1.0 到 JDK 26 的完整演进。
+
+| 版本 | 主要变化 | 说明 |
+|------|----------|------|
+| JDK 1.0 | Socket/ServerSocket | TCP/UDP 基础 |
+| JDK 1.1 | URL/HttpURLConnection | HTTP 支持 |
+| JDK 5 | URLHandler | 自定义协议 |
+| JDK 7 | Asynchronous I/O | 异步网络 |
+| JDK 9 | HTTP/2 | 多路复用 |
+| JDK 11 | HTTP Client 标准化 | 新 API |
+| JDK 18 | Unix Domain Socket | 本地 IPC |
+
+→ [网络编程时间线](network/timeline.md)
+
+### [类加载器](classloading/)
+
+Java 类加载器从 JDK 1.0 到 JDK 26 的完整演进。
+
+| 版本 | 主要变化 | 说明 |
+|------|----------|------|
+| JDK 1.0 | Bootstrap/Extension/Application | 三层类加载 |
+| JDK 1.2 | 自定义 ClassLoader | 用户类加载 |
+| JDK 5 | ContextClassLoader | SPI 支持 |
+| JDK 6 | Instrumentation | Java Agent |
+| JDK 6 | ServiceLoader | SPI 标准化 |
+| JDK 9 | Platform ClassLoader | 模块化 |
+| JDK 17 | 强封装 | 内部 API 限制 |
+
+→ [类加载器时间线](classloading/timeline.md)
+
+### [序列化](serialization/)
+
+Java 序列化从 JDK 1.0 到 JDK 26 的完整演进。
+
+| 版本 | 主要变化 | 说明 |
+|------|----------|------|
+| JDK 1.0 | Serializable | 基础序列化 |
+| JDK 5 | 枚举序列化 | Enum 支持 |
+| JDK 7 | Externalizable 增强 | 自定义序列化 |
+| JDK 17 | 密封序列化 | 序列化检查 |
+| JDK 21 | Record 序列化 | 简化序列化 |
+
+→ [序列化时间线](serialization/timeline.md)
+
+### [国际化](i18n/)
+
+Java 国际化 (i18n) 从 JDK 1.0 到 JDK 26 的完整演进。
+
+| 版本 | 主要变化 | 说明 |
+|------|----------|------|
+| JDK 1.0 | Locale, ResourceBundle | 基础 i18n |
+| JDK 1.1 | DecimalFormat, SimpleDateFormat | 格式化 |
+| JDK 5 | Formatter, MessageFormat | 增强格式化 |
+| JDK 6 | Unicode 4.0 | 规范化 |
+| JDK 8 | CLDR 数据 | 更准确本地化 |
+| JDK 13 | Unicode 13 | 新字符支持 |
+| JDK 18 | Unicode 扩展 | EAI 支持 |
+
+→ [国际化时间线](i18n/timeline.md)
+
 ### [XML/JSON 处理](xml-json/)
 
 XML 和 JSON 处理从 DOM 到现代 API 的演进。
