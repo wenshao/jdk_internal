@@ -1,151 +1,75 @@
-# JDK Docs
+# JDK Internal Docs
 
-> 参考 [openjdk/jdk](https://github.com/openjdk/jdk) 仓库，分析 JDK issue、pull request 和源码，沉淀便于人类和 AI 阅读的文档。
+> 分析 OpenJDK 源码、Issue、PR，沉淀便于人类和 AI 阅读的文档
 
 ---
 
-## 快速开始
+## 你在用哪个版本？
 
-| 角色 | 推荐入口 |
+| 版本 | 类型 | 发布时间 | 支持截止 | 文档 |
+|------|------|----------|----------|------|
+| **JDK 8** | LTS | 2014-03 | 2030-12 (付费) | [进入](by-version/jdk8/) |
+| **JDK 11** | LTS | 2018-09 | 2032-01 | [进入](by-version/jdk11/) |
+| **JDK 17** | LTS | 2021-09 | 2029-10 | [进入](by-version/jdk17/) |
+| **JDK 21** | LTS | 2023-09 | 2031-10 | [进入](by-version/jdk21/) |
+| **JDK 26** | Feature | 2025-09 | - | [进入](by-version/jdk26/) |
+
+---
+
+## 我想了解...
+
+| 主题 | 版本范围 | 查看 |
+|------|----------|------|
+| **GC 演进** | 8 → 26 | [G1/ZGC/Shenandoah 时间线](by-topic/gc/) |
+| **并发编程** | 8 → 26 | [Thread → VirtualThread](by-topic/concurrency/) |
+| **HTTP 客户端** | 11+ | [HttpURLConnection → HTTP/3](by-topic/http/) |
+| **字符串处理** | 8 → 26 | [String 优化历程](by-topic/string/) |
+| **安全特性** | 8 → 26 | [TLS/加密/后量子密码](by-topic/security/) |
+
+---
+
+## 快速导航
+
+### 按浏览方式
+
+| 方式 | 说明 | 链接 |
+|------|------|------|
+| **按版本** | 从你使用的 JDK 版本切入 | [浏览版本](by-version/) |
+| **按主题** | 跨版本追踪某个技术演进 | [浏览主题](by-topic/) |
+| **按贡献者** | 了解贡献者和他们的工作 | [浏览贡献者](by-contributor/) |
+| **按 PR** | 深入具体 Issue/PR | [浏览 PR](by-pr/) |
+
+### 按角色
+
+| 角色 | 推荐阅读 |
 |------|----------|
-| 初学者 | [学习路径](guides/learning-path.md) |
-| 开发者 | [速查表](guides/cheat-sheet.md) |
-| 架构师 | [迁移指南](guides/migration-guide.md) |
-| 所有人 | [FAQ](guides/faq.md) |
+| **开发者** | [学习路径](guides/learning-path.md) |
+| **架构师** | [主题演进](by-topic/) |
+| **运维** | [版本迁移](by-version/jdk11/migration/) |
+| **初学者** | [JDK 8 入门](by-version/jdk8/) |
 
 ---
 
 ## 目录结构
 
 ```
-jdk_docs/
-├── README.md              # 项目说明 (本文件)
-├── releases/              # 版本发布分析
-│   └── jdk26.md           # JDK 26 发布说明
-├── jeps/                  # JEP 详细分析 (21个)
-│   ├── jep-470.md         # PEM Encodings
-│   ├── jep-500.md         # Make Final Mean Final
-│   ├── jep-502.md         # Stable Values
-│   ├── jep-503.md         # Remove 32-bit x86
-│   ├── jep-504.md         # Remove Applet API
-│   ├── jep-506.md         # Scoped Values
-│   ├── jep-509.md         # JFR CPU-Time Profiling
-│   ├── jep-510.md         # KDF API
-│   ├── jep-511.md         # Module Import Declarations
-│   ├── jep-512.md         # Compact Source Files
-│   ├── jep-514.md         # AOT Command Line Ergonomics
-│   ├── jep-515.md         # AOT Method Profiling
-│   ├── jep-517.md         # HTTP/3
-│   ├── jep-518.md         # JFR Cooperative Sampling
-│   ├── jep-519.md         # Compact Object Headers
-│   ├── jep-520.md         # JFR Method Timing
-│   ├── jep-521.md         # Generational Shenandoah
-│   ├── jep-522.md         # G1 GC Throughput
-│   ├── jep-525.md         # Structured Concurrency
-│   ├── jep-526.md         # Lazy Constants
-│   └── jep-530.md         # Primitive Types in Patterns
-├── deep-dive/             # 深入源码分析 (5个)
-│   ├── jep-506-implementation.md  # Scoped Values 实现
-│   ├── jep-511-implementation.md  # 模块导入实现
-│   ├── jep-517-implementation.md  # HTTP/3 实现
-│   ├── jep-519-implementation.md  # 紧凑对象头实现
-│   └── jep-522-implementation.md  # G1 GC 优化实现
-├── guides/                # 指南文档
-│   ├── learning-path.md   # 学习路径
-│   ├── cheat-sheet.md     # 速查表
-│   ├── migration-guide.md # 迁移指南
-│   └── faq.md             # 常见问题
-├── issues/                # Issue 分析文档
-│   ├── README.md          # Issue 索引
-│   ├── jdk-8326498.md     # HttpClient 连接泄漏
-│   ├── jdk-8355177.md     # StringBuilder 优化
-│   └── jdk-8371259.md     # ML-DSA Intrinsics
-├── prs/                   # Pull Request 分析文档
-│   ├── jdk-history.md              # JDK 8-26 历史概览
-│   ├── jdk26-important-changes.md  # 重要非 JEP 改动
-│   └── jdk26-contributors.md       # 开发者贡献分析
-├── contributors/          # 贡献者详细分析 (34个)
-│   ├── README.md                  # 贡献者索引
-│   ├── chinese-contributors.md    # 中国贡献者专题
-│   ├── sendaoyan.md               # 测试稳定性 (88 commits)
-│   ├── shaojin-wen.md             # 核心库优化 (31 commits)
-│   ├── fei-yang.md                # RISC-V (30 commits)
-│   ├── anjian-wen.md              # RISC-V 字节跳动 (12 commits)
-│   ├── kuai-wei.md                # C2 阿里巴巴 (4 commits)
-│   ├── han-gq.md                  # 编译器 麒麟 (2 commits)
-│   ├── tongbao-zhang.md           # G1 GC 腾讯 (1 commit)
-│   ├── albert-mingkun-yang.md     # GC 专家 (124 commits)
-│   ├── thomas-schatzl.md          # G1 GC / JEP 522
-│   ├── daniel-fuchs.md            # HTTP/3 / JEP 517
-│   ├── jan-lahoda.md              # javac / JEP 511/512
-│   ├── ioi-lam.md                 # AOT/CDS / JEP 514
-│   └── erik-gahlin.md             # JFR / JEP 520
-└── modules/               # 模块/组件源码分析文档
-    ├── README.md          # 模块索引
-    ├── java.base.md       # java.base 核心模块
-    ├── java.net.http.md   # HTTP Client 模块
-    └── hotspot-gc.md      # HotSpot GC 组件
+jdk_internal/
+├── by-version/          # 按版本浏览
+│   ├── jdk8/           # JDK 8 (LTS 2014)
+│   ├── jdk11/          # JDK 11 (LTS 2018)
+│   ├── jdk17/          # JDK 17 (LTS 2021)
+│   ├── jdk21/          # JDK 21 (LTS 2023)
+│   └── jdk26/          # JDK 26 (开发中)
+├── by-topic/           # 按主题跨版本
+│   ├── gc/             # GC 演进
+│   ├── concurrency/    # 并发编程
+│   ├── string/         # 字符串处理
+│   ├── http/           # HTTP 客户端
+│   └── security/       # 安全特性
+├── by-contributor/     # 按贡献者
+├── by-pr/              # 按 PR/Issue
+└── guides/             # 通用指南
 ```
-
----
-
-## 文档规范
-
-- **JEP 文档**: 背景、使用示例、实现分析、开发者影响、性能数据
-- **深入分析**: 源码解读、设计决策、关键变更
-- **指南文档**: 按角色分类、实用代码、配置建议
-
----
-
-## 按主题浏览
-
-### 🚀 性能优化
-- [JEP 522: G1 GC Throughput](jeps/jep-522.md) | [深入分析](deep-dive/jep-522-implementation.md)
-- [JEP 521: Generational Shenandoah](jeps/jep-521.md)
-- [JEP 519: Compact Object Headers](jeps/jep-519.md)
-- [JEP 514: AOT Ergonomics](jeps/jep-514.md)
-- [JEP 515: AOT Profiling](jeps/jep-515.md)
-
-### 📝 语言特性
-- [JEP 511: Module Import](jeps/jep-511.md) | [深入分析](deep-dive/jep-511-implementation.md)
-- [JEP 512: Compact Source Files](jeps/jep-512.md)
-- [JEP 530: Primitive Patterns](jeps/jep-530.md)
-- [JEP 526: Lazy Constants](jeps/jep-526.md)
-
-### 🔄 并发编程
-- [JEP 525: Structured Concurrency](jeps/jep-525.md)
-- [JEP 506: Scoped Values](jeps/jep-506.md)
-- [JEP 502: Stable Values](jeps/jep-502.md)
-
-### 🌐 网络编程
-- [JEP 517: HTTP/3](jeps/jep-517.md) | [深入分析](deep-dive/jep-517-implementation.md)
-
-### 🔐 安全
-- [JEP 500: Make Final Mean Final](jeps/jep-500.md)
-- [JEP 510: KDF API](jeps/jep-510.md)
-- [JEP 470: PEM Encodings](jeps/jep-470.md)
-
-### 📊 监控诊断
-- [JEP 509: JFR CPU-Time](jeps/jep-509.md)
-- [JEP 518: JFR Cooperative Sampling](jeps/jep-518.md)
-- [JEP 520: JFR Method Timing](jeps/jep-520.md)
-
----
-
-## 重要非 JEP 改动
-
-> JDK 26 包含 4,913 个 commit，其中仅 33 个是 JEP 相关的。以下是最重要的非 JEP 改动：
-
-| 改动 | Issue | 影响 |
-|------|-------|------|
-| [ML-DSA Intrinsics](prs/jdk26-important-changes.md#1-ml-dsa-intrinsics-后量子密码优化) | 8371259 | 后量子密码性能 2-5x |
-| [HttpClient 连接泄漏修复](prs/jdk26-important-changes.md#2-httpclient-http2-连接泄漏修复) | 8326498 | 严重 bug 修复 |
-| [CUBIC 拥塞控制](prs/jdk26-important-changes.md#3-httpclient-cubic-拥塞控制) | 8371475 | HTTP/3 性能优化 |
-| [NUMA 线程亲和性](prs/jdk26-important-changes.md#4-numa-线程亲和性) | 8371701 | 多插槽服务器优化 |
-| [ZGC NUMA-Aware Relocation](prs/jdk26-important-changes.md#5-zgc-numa-aware-relocation) | 8359683 | 大内存应用优化 |
-| [HttpClient VirtualThread](prs/jdk26-important-changes.md#6-httpclient-virtualthread-优化) | 8372159 | 内存占用优化 |
-
-详见 [JDK 26 重要非 JEP 改动分析](prs/jdk26-important-changes.md)
 
 ---
 
@@ -154,3 +78,10 @@ jdk_docs/
 - [OpenJDK 官网](https://openjdk.org/)
 - [GitHub: openjdk/jdk](https://github.com/openjdk/jdk)
 - [JDK Bug System (JBS)](https://bugs.openjdk.org/)
+- [JDK 版本历史](https://openjdk.org/projects/jdk/)
+
+---
+
+> **数据来源**: GitHub PR、OpenJDK Commit、JBS Issue
+>
+> **更新时间**: 2026-03-19
