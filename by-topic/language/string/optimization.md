@@ -202,7 +202,7 @@ str.trim();     // 仅 ASCII
 | JDK 25 | StringBuilder 优化 | **Shaojin Wen** | JDK-8355177 |
 | JDK 26 | toString 优化 | **Shaojin Wen** | JDK-8370503 |
 
-### Shaojin Wen (温少)
+### Shaojin Wen (温绍锦)
 
 - **公司**: Alibaba
 - **身份**: OpenJDK Committer (2024-)
