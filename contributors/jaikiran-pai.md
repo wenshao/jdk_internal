@@ -5,8 +5,11 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Jaikiran Pai |
+| **Organization** | Oracle |
+| **GitHub** | [@jpai](https://github.com/jpai) |
+| **OpenJDK** | [@jpai](https://openjdk.org/census#jpai) |
+| **Role** | OpenJDK Member, JDK Reviewer |
 | **Email** | jpai@openjdk.org |
-| **Organization** | Oracle / OpenJDK |
 | **JDK 26 Commits** | 64 |
 | **Primary Areas** | HttpClient, Networking, ZIP/JAR, Test Infrastructure |
 

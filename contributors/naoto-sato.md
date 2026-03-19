@@ -5,8 +5,11 @@
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Naoto Sato |
-| **Email** | naoto@openjdk.org |
 | **Organization** | Oracle |
+| **GitHub** | [@naotoj](https://github.com/naotoj) |
+| **OpenJDK** | [@naoto](https://openjdk.org/census#naoto) |
+| **Role** | OpenJDK Member, JDK Reviewer, i18n Lead |
+| **Email** | naoto@openjdk.org |
 | **JDK 26 Commits** | 53 |
 | **Primary Areas** | Unicode, Internationalization, Console, TimeZone |
 

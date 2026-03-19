@@ -5,8 +5,11 @@
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Justin Lu |
-| **Email** | jlu@openjdk.org |
 | **Organization** | Oracle |
+| **GitHub** | [@justin-lu](https://github.com/justin-lu) |
+| **OpenJDK** | [@jlu](https://openjdk.org/census#jlu) |
+| **Role** | OpenJDK Member, JDK Reviewer |
+| **Email** | jlu@openjdk.org |
 | **JDK 26 Commits** | 56 |
 | **Primary Areas** | Locale, Internationalization (i18n), NumberFormat, Currency |
 

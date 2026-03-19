@@ -10,6 +10,8 @@
 |------|-----|
 | **姓名** | han gq |
 | **组织** | 麒麟软件 (KylinSoft) |
+| **GitHub** | [@hanguanqiang](https://github.com/hanguanqiang) |
+| **OpenJDK** | Author |
 | **Email** | hanguanqiang@kylinos.cn |
 | **Commits** | 2 |
 | **主要领域** | 编译器优化 |

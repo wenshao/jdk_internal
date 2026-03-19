@@ -5,8 +5,11 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Kim Barrett |
+| **Organization** | Oracle |
+| **GitHub** | [@kimbarrett](https://github.com/kimbarrett) |
+| **OpenJDK** | [@kbarrett](https://openjdk.org/census#kbarrett) |
+| **Role** | OpenJDK Member, JDK Reviewer |
 | **Email** | kbarrett@openjdk.org |
-| **Organization** | Oracle / OpenJDK |
 | **JDK 26 Commits** | 65 |
 | **Primary Areas** | Concurrency, Atomic Operations, C++ Modernization, HotSpot Runtime |
 

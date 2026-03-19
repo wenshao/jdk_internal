@@ -5,8 +5,11 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Volkan Yazici |
-| **Email** | vyazici@openjdk.org |
 | **Organization** | Oracle |
+| **GitHub** | [@vyazici](https://github.com/vyazici) |
+| **OpenJDK** | [@vyazici](https://openjdk.org/census#vyazici) |
+| **Role** | JDK Reviewer |
+| **Email** | vyazici@openjdk.org |
 | **JDK 26 Commits** | 49 |
 | **Primary Areas** | HttpClient API, Networking, Core Libraries |
 

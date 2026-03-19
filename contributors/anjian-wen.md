@@ -10,6 +10,8 @@
 |------|-----|
 | **姓名** | Anjian-Wen |
 | **组织** | 字节跳动 (ByteDance) |
+| **GitHub** | [@Anjian-Wen](https://github.com/Anjian-Wen) |
+| **OpenJDK** | Author |
 | **Commits** | 12 |
 | **主要领域** | RISC-V 向量指令、Zvbb、Zfa |
 | **活跃时间** | 2024 - 至今 |

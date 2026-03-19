@@ -5,8 +5,11 @@
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Leonid Mesnik |
-| **Email** | lmesnik@openjdk.org |
 | **Organization** | Oracle |
+| **GitHub** | [@lmesnik](https://github.com/lmesnik) |
+| **OpenJDK** | [@lmesnik](https://openjdk.org/census#lmesnik) |
+| **Role** | JDK Reviewer |
+| **Email** | lmesnik@openjdk.org |
 | **JDK 26 Commits** | 53 |
 | **Primary Areas** | JVMTI, Testing Infrastructure, HotSpot |
 

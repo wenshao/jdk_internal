@@ -5,8 +5,11 @@
 | Field | Value |
 |-------|-------|
 | **Name** | David Holmes |
+| **Organization** | Oracle |
+| **GitHub** | [@dholmes-ora](https://github.com/dholmes-ora) |
+| **OpenJDK** | [@dholmes](https://openjdk.org/census#dholmes) |
+| **Role** | OpenJDK Member, JDK Reviewer |
 | **Email** | dholmes@openjdk.org |
-| **Organization** | Oracle / OpenJDK |
 | **JDK 26 Commits** | 65 |
 | **Primary Areas** | Threading, Concurrency, JVM Runtime, Signal Handling |
 

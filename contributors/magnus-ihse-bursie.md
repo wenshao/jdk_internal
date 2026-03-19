@@ -5,8 +5,11 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Magnus Ihse Bursie |
-| **Email** | ihse@openjdk.org |
 | **Organization** | Oracle |
+| **GitHub** | [@magicus](https://github.com/magicus) |
+| **OpenJDK** | [@ihse](https://openjdk.org/census#ihse) |
+| **Role** | OpenJDK Member, JDK Reviewer |
+| **Email** | ihse@openjdk.org |
 | **JDK 26 Commits** | 106 |
 | **Primary Areas** | Build System, Makefiles, Configure Scripts |
 

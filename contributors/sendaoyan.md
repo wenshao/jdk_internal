@@ -1,6 +1,6 @@
 # SendaoYan
 
-> JDK 26 测试稳定性专家，88 个 commits
+> JDK 26 测试稳定性专家，阿里巴巴，88 个 commits
 
 ---
 
@@ -9,7 +9,10 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | SendaoYan |
-| **组织** | Oracle 中国 |
+| **组织** | 阿里巴巴 (Alibaba) |
+| **GitHub** | [@SendaoYan](https://github.com/SendaoYan) |
+| **OpenJDK** | [@syan](https://openjdk.org/census#syan) |
+| **角色** | JDK Committer |
 | **Commits** | 88 |
 | **主要领域** | 测试稳定性、测试修复 |
 | **活跃时间** | 2022 - 至今 |

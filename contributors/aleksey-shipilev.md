@@ -1,6 +1,6 @@
 # Aleksey Shipilev
 
-> JDK 26 性能优化专家，JEP 503 主导者，120 个 commits
+> JDK 26 性能优化专家，JEP 503 主导者，Amazon Web Services，120 个 commits
 
 ---
 
@@ -9,7 +9,10 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Aleksey Shipilev |
-| **组织** | Oracle |
+| **组织** | Amazon Web Services |
+| **GitHub** | [@shipilev](https://github.com/shipilev) |
+| **OpenJDK** | [@shade](https://openjdk.org/census#shade) |
+| **角色** | OpenJDK Member, JDK Reviewer |
 | **Email** | shade@openjdk.org |
 | **Commits** | 120 |
 | **主要领域** | C2 编译器、性能优化、基准测试 |

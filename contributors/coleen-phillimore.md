@@ -5,8 +5,11 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Coleen Phillimore |
-| **Email** | coleenp@openjdk.org |
 | **Organization** | Oracle |
+| **GitHub** | [@coleenp](https://github.com/coleenp) |
+| **OpenJDK** | [@coleenp](https://openjdk.org/census#coleenp) |
+| **Role** | OpenJDK Member, JDK Reviewer |
+| **Email** | coleenp@openjdk.org |
 | **JDK 26 Commits** | 68 |
 | **Primary Areas** | JVM Core, HotSpot, Metaspace, Class Loading |
 

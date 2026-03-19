@@ -10,6 +10,9 @@
 |------|-----|
 | **姓名** | Thomas Schatzl |
 | **组织** | Oracle |
+| **GitHub** | [@tschatzl](https://github.com/tschatzl) |
+| **OpenJDK** | [@tschatzl](https://openjdk.org/census#tschatzl) |
+| **角色** | OpenJDK Member, JDK Reviewer |
 | **Commits** | 95 |
 | **主要领域** | G1 GC |
 | **主导 JEP** | JEP 522: G1 GC Throughput Improvement |

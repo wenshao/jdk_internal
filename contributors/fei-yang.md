@@ -1,6 +1,6 @@
 # Fei Yang
 
-> JDK 26 RISC-V 后端专家，30 个 commits
+> JDK 26 RISC-V 后端专家，中科院软件所，30 个 commits
 
 ---
 
@@ -9,7 +9,10 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Fei Yang |
-| **组织** | Oracle 中国 |
+| **组织** | 中科院软件所 (ISCAS) |
+| **GitHub** | [@RealFYang](https://github.com/RealFYang) |
+| **OpenJDK** | [@fyang](https://openjdk.org/census#fyang) |
+| **角色** | HotSpot Group, RISC-V Port Lead |
 | **Commits** | 30 |
 | **主要领域** | RISC-V 后端、向量指令 |
 | **活跃时间** | 2024 - 至今 |

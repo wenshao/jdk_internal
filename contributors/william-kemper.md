@@ -5,8 +5,11 @@
 | Attribute | Value |
 |-----------|-------|
 | **Name** | William Kemper |
+| **Organization** | Amazon |
+| **GitHub** | [@wkemper](https://github.com/wkemper) |
+| **OpenJDK** | [@wkemper](https://openjdk.org/census#wkemper) |
+| **Role** | JDK Reviewer |
 | **Email** | wkemper@openjdk.org |
-| **Organization** | Red Hat |
 | **JDK 26 Commits** | 60 |
 | **Primary Areas** | Shenandoah GC, Generational Shenandoah (JEP 521) |
 

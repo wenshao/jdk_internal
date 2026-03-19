@@ -5,8 +5,11 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Matthias Baesken |
+| **Organization** | SAP |
+| **GitHub** | [@MBaesken](https://github.com/MBaesken) |
+| **OpenJDK** | [@mbaesken](https://openjdk.org/census#mbaesken) |
+| **Role** | OpenJDK Member, JDK Reviewer |
 | **Email** | mbaesken@openjdk.org |
-| **Organization** | OpenJDK |
 | **JDK 26 Commits** | 117 |
 | **Primary Areas** | Build System, Cross-Platform, AIX, Windows, Linux |
 

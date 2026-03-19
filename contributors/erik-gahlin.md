@@ -10,6 +10,9 @@
 |------|-----|
 | **姓名** | Erik Gahlin |
 | **组织** | Oracle |
+| **GitHub** | [@egahlin](https://github.com/egahlin) |
+| **OpenJDK** | [@egahlin](https://openjdk.org/census#egahlin) |
+| **角色** | JDK Reviewer |
 | **Commits** | 74 |
 | **主要领域** | JFR (Java Flight Recorder) |
 | **主导 JEP** | JEP 520: JFR Method Timing and Tracing |

@@ -5,8 +5,11 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Brian Burkhalter |
+| **Organization** | Oracle |
+| **GitHub** | [@bplb](https://github.com/bplb) |
+| **OpenJDK** | [@bpb](https://openjdk.org/census#bpb) |
+| **Role** | OpenJDK Member, JDK Reviewer |
 | **Email** | bpb@openjdk.org |
-| **Organization** | Oracle / OpenJDK |
 | **JDK 26 Commits** | 65 |
 | **Primary Areas** | NIO, File Systems, Networking, I/O |
 

@@ -5,8 +5,11 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Emanuel Peter |
-| **Email** | epeter@openjdk.org |
 | **Organization** | Oracle |
+| **GitHub** | [@eme64](https://github.com/eme64) |
+| **OpenJDK** | [@epeter](https://openjdk.org/census#epeter) |
+| **Role** | JDK Reviewer |
+| **Email** | epeter@openjdk.org |
 | **JDK 26 Commits** | 52 |
 | **Primary Areas** | C2 Compiler, SuperWord Auto-Vectorization, Template Testing Framework |
 

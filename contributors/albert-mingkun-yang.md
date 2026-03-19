@@ -10,6 +10,9 @@
 |------|-----|
 | **姓名** | Albert Mingkun Yang |
 | **组织** | Oracle |
+| **GitHub** | [@albertnetymk](https://github.com/albertnetymk) |
+| **OpenJDK** | [@ayang](https://openjdk.org/census#ayang) |
+| **角色** | OpenJDK Member, JDK Reviewer |
 | **Commits** | 124 (JDK 26 最多) |
 | **主要领域** | G1 GC, Parallel GC |
 | **活跃时间** | 2023 - 至今 |

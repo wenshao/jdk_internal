@@ -10,6 +10,8 @@
 |------|-----|
 | **姓名** | Kuai Wei (蒯伟) |
 | **组织** | 阿里巴巴 (Alibaba) |
+| **GitHub** | [@kuaiwei](https://github.com/kuaiwei) |
+| **OpenJDK** | Author |
 | **Email** | kuaiwei.kw@alibaba-inc.com |
 | **Commits** | 4 |
 | **主要领域** | C2 编译器、IR 优化 |

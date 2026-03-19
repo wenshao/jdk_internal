@@ -10,6 +10,8 @@
 |------|-----|
 | **姓名** | Tongbao Zhang (张同宝) |
 | **组织** | 腾讯 (Tencent) |
+| **GitHub** | [@tongbao-zhang](https://github.com/tongbao-zhang) |
+| **OpenJDK** | Author |
 | **Email** | tobytbzhang@tencent.com |
 | **Commits** | 1 |
 | **主要领域** | G1 GC |

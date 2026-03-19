@@ -5,8 +5,11 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Hamlin Li |
+| **Organization** | Rivos |
+| **GitHub** | [@luhenry](https://github.com/luhenry) |
+| **OpenJDK** | [@mli](https://openjdk.org/census#mli) |
+| **Role** | JDK Reviewer |
 | **Email** | mli@openjdk.org |
-| **Organization** | Oracle / OpenJDK |
 | **JDK 26 Commits** | 65 |
 | **Primary Areas** | C2 SuperWord, RISC-V Backend, Vectorization |
 

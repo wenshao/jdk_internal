@@ -10,6 +10,9 @@
 |------|-----|
 | **姓名** | Daniel Fuchs |
 | **组织** | Oracle |
+| **GitHub** | [@dfuchs](https://github.com/dfuchs) |
+| **OpenJDK** | [@dfuchs](https://openjdk.org/census#dfuchs) |
+| **角色** | OpenJDK Member, JDK Reviewer |
 | **Commits** | 49 |
 | **主要领域** | HttpClient, HTTP/3, QUIC |
 | **主导 JEP** | JEP 517: HTTP/3 for the HTTP Client API |

@@ -5,8 +5,11 @@
 | Field | Value |
 |-------|-------|
 | **Name** | Phil Race |
-| **Email** | prr@openjdk.org |
 | **Organization** | Oracle |
+| **GitHub** | [@prrace](https://github.com/prrace) |
+| **OpenJDK** | [@prr](https://openjdk.org/census#prr) |
+| **Role** | OpenJDK Member, JDK Reviewer, Client Libs Lead |
+| **Email** | prr@openjdk.org |
 | **JDK 26 Commits** | 69 |
 | **Primary Areas** | Graphics, Printing, AWT, Swing, Security |
 
