@@ -20,7 +20,7 @@
 | **活跃时间** | 2021 - 至今 |
 
 > **统计方法**: GitHub PR search `repo:openjdk/jdk author:liach type:pr label:integrated`
-> **统计时间**: 2026-03-19
+> **统计时间**: 2026-03-20
 
 ---
 
@@ -300,6 +300,7 @@ package java.lang.classfile;
 | **PR** | [#28336](https://github.com/openjdk/jdk/pull/28336) |
 | **合入时间** | 2025-03 |
 | **影响** | 文档改进 |
+| **详细分析** | [反射 API 性能优化](../../by-pr/8371/8371953.md) |
 
 **背景**: 核心反射 API 的 null 处理行为文档不清晰，用户难以预测 API 行为。
 
@@ -788,8 +789,8 @@ Chen Liang 的贡献特点:
 
 ---
 
-> **文档版本**: 2.0
-> **更新内容**: 补充 JDK-8336856 String "+" 优化协作信息
+> **文档版本**: 2.1
+> **更新内容**: 添加 JDK-8371953 本地分析链接，补充相关分析文档章节
 
 ## 相关链接
 
@@ -797,3 +798,11 @@ Chen Liang 的贡献特点:
 - [GitHub Profile](https://github.com/liach)
 - [Blog](https://liachmodded.github.io/)
 - [ClassFile API 文档](https://docs.oracle.com/en/java/javase/26/docs/api/java.base/java/lang/classfile/package-summary.html)
+
+### 相关分析文档
+
+**核心反射**：
+- [JDK-8371953: 反射 API 性能优化](../../by-pr/8371/8371953.md) - 核心 Reflection API 优化
+
+**协作项目**：
+- [JDK-8336856: String "+" 优化](../../by-pr/8336/8336856.md) - 与 Shaojin Wen、Claes Redestad 合作
