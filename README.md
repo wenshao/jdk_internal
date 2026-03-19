@@ -55,6 +55,7 @@ jdk_docs/
 │   └── faq.md             # 常见问题
 ├── issues/                # Issue 分析文档
 ├── prs/                   # Pull Request 分析文档
+│   └── jdk26-important-changes.md  # 重要非 JEP 改动
 └── modules/               # 模块/组件源码分析文档
 ```
 
@@ -100,6 +101,23 @@ jdk_docs/
 - [JEP 509: JFR CPU-Time](jeps/jep-509.md)
 - [JEP 518: JFR Cooperative Sampling](jeps/jep-518.md)
 - [JEP 520: JFR Method Timing](jeps/jep-520.md)
+
+---
+
+## 重要非 JEP 改动
+
+> JDK 26 包含 4,913 个 commit，其中仅 33 个是 JEP 相关的。以下是最重要的非 JEP 改动：
+
+| 改动 | Issue | 影响 |
+|------|-------|------|
+| [ML-DSA Intrinsics](prs/jdk26-important-changes.md#1-ml-dsa-intrinsics-后量子密码优化) | 8371259 | 后量子密码性能 2-5x |
+| [HttpClient 连接泄漏修复](prs/jdk26-important-changes.md#2-httpclient-http2-连接泄漏修复) | 8326498 | 严重 bug 修复 |
+| [CUBIC 拥塞控制](prs/jdk26-important-changes.md#3-httpclient-cubic-拥塞控制) | 8371475 | HTTP/3 性能优化 |
+| [NUMA 线程亲和性](prs/jdk26-important-changes.md#4-numa-线程亲和性) | 8371701 | 多插槽服务器优化 |
+| [ZGC NUMA-Aware Relocation](prs/jdk26-important-changes.md#5-zgc-numa-aware-relocation) | 8359683 | 大内存应用优化 |
+| [HttpClient VirtualThread](prs/jdk26-important-changes.md#6-httpclient-virtualthread-优化) | 8372159 | 内存占用优化 |
+
+详见 [JDK 26 重要非 JEP 改动分析](prs/jdk26-important-changes.md)
 
 ---
 
