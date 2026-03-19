@@ -60,6 +60,13 @@ jdk_docs/
 ├── contributors/          # 贡献者详细分析
 │   ├── README.md                  # 贡献者索引
 │   ├── chinese-contributors.md    # 中国贡献者专题
+│   ├── sendaoyan.md               # 测试稳定性 (88 commits)
+│   ├── shaojin-wen.md             # 核心库优化 (31 commits)
+│   ├── fei-yang.md                # RISC-V (30 commits)
+│   ├── anjian-wen.md              # RISC-V 字节跳动 (12 commits)
+│   ├── kuai-wei.md                # C2 阿里巴巴 (4 commits)
+│   ├── han-gq.md                  # 编译器 麒麟 (2 commits)
+│   ├── tongbao-zhang.md           # G1 GC 腾讯 (1 commit)
 │   ├── albert-mingkun-yang.md     # GC 专家 (124 commits)
 │   ├── thomas-schatzl.md          # G1 GC / JEP 522
 │   ├── daniel-fuchs.md            # HTTP/3 / JEP 517
