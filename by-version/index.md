@@ -104,18 +104,17 @@
 
 | JEP | 标题 | 链接 |
 |-----|------|------|
-| JEP 514 | JEP 514: Compact Source Files | [分析](../jeps/jep-514.md) |
-| JEP 515 | JEP 515: Implicit Class File Transformers | [分析](../jeps/jep-515.md) |
-| JEP 516 | Ahead-of-Time Object Caching | [分析](../jeps/jep-516.md) |
+| JEP 470 | PEM Encodings | [分析](../jeps/jep-470.md) |
+| JEP 514 | JEP 514: Ahead-of-Time Command Line Ergonomics | [分析](../jeps/jep-514.md) |
+| JEP 515 | JEP 515: Ahead-of-Time Method Profiling | [分析](../jeps/jep-515.md) |
 | JEP 517 | HTTP/3 for HTTP Client | [分析](../jeps/jep-517.md) |
-| JEP 518 | JEP 518: | [分析](../jeps/jep-518.md) |
+| JEP 518 | JFR Cooperative Sampling | [分析](../jeps/jep-518.md) |
 | JEP 519 | Compact Object Headers | [分析](../jeps/jep-519.md) |
-| JEP 520 | JEP 520: Flexible Object Layout | [分析](../jeps/jep-520.md) |
+| JEP 520 | JFR Method Timing and Tracing | [分析](../jeps/jep-520.md) |
 | JEP 521 | Generational Shenandoah | [分析](../jeps/jep-521.md) |
 | JEP 525 | Structured Concurrency | [分析](../jeps/jep-525.md) |
 | JEP 526 | Lazy Constants | [分析](../jeps/jep-526.md) |
-| JEP 530 | JEP 530: | [分析](../jeps/jep-530.md) |
-| JEP 470 | PEM Key Exchange | [分析](../jeps/jep-470.md) |
+| JEP 530 | Primitive Types in Patterns | [分析](../jeps/jep-530.md) |
 
 ### PR/Issue 深度分析
 
