@@ -15,7 +15,7 @@
 | JDK 8 | G1 成为主流，CMS 标记废弃 | - |
 | JDK 11 | ZGC 引入 (实验性) | JEP 333 |
 | JDK 15 | ZGC 生产可用 | JEP 378 |
-| JDK 17 | 并发线程栈扫描 | - |
+| JDK 17 | 并发线程栈扫描 | JEP 379 |
 | JDK 21 | **分代 ZGC** (JEP 439)、分代 Shenandoah (JEP 429) | JEP 439, JEP 429 |
 | JDK 23 | ZGC 分代改进 | JEP 474 |
 | JDK 26 | G1 吞吐量提升 (JEP 522)、ZGC NUMA | JEP 522 |
@@ -36,11 +36,7 @@
 | JDK 19 | **Virtual Threads** (预览) | JEP 425 |
 | JDK 20 | Virtual Threads (第二次预览) | JEP 436 |
 | JDK 21 | **Virtual Threads** (正式)、**Structured Concurrency** (预览)、**Scoped Values** (预览) | JEP 444, JEP 453, JEP 446 |
-| JDK 22 | Structured Concurrency (第二次预览) | JEP 462 |
-| JDK 23 | Structured Concurrency (第三次预览) | JEP 477 |
-| JDK 24 | Structured Concurrency (第四次预览) | JEP 483 |
-| JDK 25 | Structured Concurrency (第五次预览) | JEP 491 |
-| JDK 26 | Structured Concurrency (第六次预览) | JEP 493 |
+| JDK 22-26 | Structured Concurrency (持续预览) | JEP 462, 477, 483, 491, 493 |
 
 → [并发时间线](concurrency/timeline.md)
 
@@ -52,7 +48,7 @@
 |------|----------|-----|
 | JDK 8 | StringJoiner | - |
 | JDK 9 | **Compact Strings** (JEP 254)、invokedynamic 拼接 (JEP 280) | JEP 254, JEP 280 |
-| JDK 11 | repeat()、strip()、isBlank()、lines() | JEP 378 (Text Blocks) |
+| JDK 11 | repeat()、strip()、isBlank()、lines() | - |
 | JDK 15 | **Text Blocks** (正式) | JEP 378 |
 | JDK 21 | String Templates (预览) | JEP 430 |
 | JDK 24 | 隐藏类拼接策略 (+40% 启动性能) | JDK-8336856 |
@@ -72,8 +68,7 @@
 | JDK 10 | HTTP Client (孵化器) | - |
 | JDK 11 | **HTTP Client** (标准) | JEP 321 |
 | JDK 16 | HTTP/2 支持 | - |
-| JDK 22 | HTTP Client 多项改进 | - |
-| JDK 23 | HTTP/2 连接复用优化 | - |
+| JDK 22-23 | 连接复用优化 | - |
 | JDK 26 | **HTTP/3** (预览) | JEP 517 |
 
 → [HTTP 演进时间线](http/timeline.md)
@@ -89,9 +84,7 @@
 | JDK 15 | 禁用弱签名算法 | - |
 | JDK 17 | KMAC、SHA-3 家族 | JEP 370 |
 | JDK 21 | 增强密码套件、HSS/LMS 签名 | - |
-| JDK 22 | KDF API (预览) | JEP 495 |
-| JDK 23 | KDF API (第二次预览) | JEP 508 |
-| JDK 24 | 12 KDF 算法支持 | - |
+| JDK 22-23 | KDF API (预览) | JEP 495, JEP 508 |
 | JDK 26 | **ML-DSA** 后量子签名、**KDF API** (正式)、**PEM 格式** | JEP 518, JEP 510, JEP 470 |
 
 → [安全特性时间线](security/timeline.md)
@@ -113,20 +106,21 @@
 | Records | JDK 14 | 2 | JDK 16 | JEP 395, JEP 384 |
 | Pattern Matching for instanceof | JDK 14 | 2 | JDK 16 | JEP 375, JEP 305 |
 | Sealed Classes | JDK 15 | 2 | JDK 17 | JEP 409, JEP 360 |
-| Pattern Matching for switch | JDK 17 | 2 | JDK 21 | JEP 406, JEP 420, JEP 441 |
+| Pattern Matching for switch | JDK 17 | 3 | JDK 21 | JEP 406, JEP 420, JEP 441 |
 | Record Patterns | JDK 19 | 2 | JDK 21 | JEP 405, JEP 432, JEP 440 |
-| String Templates (Preview) | JDK 21 | 2+ | JDK 26+ | JEP 430, JEP 459 |
+| String Templates | JDK 21 | 2+ | JDK 26+ | JEP 430, JEP 459 |
 | Flexible Constructor Bodies | JDK 21 | 3 | JDK 25 | JEP 447, JEP 482, JEP 513 |
 | Primitive Types in Patterns | JDK 23 | - | JDK 26 | JEP 455 |
 | Implicit Classes | JDK 21 | 3 | JDK 23 | JEP 443, JEP 463, JEP 469 |
+| Class File API | JDK 22 | - | JDK 23 | JEP 484 |
 
 ### 并发特性
 
 | 特性 | 首发版本 | 预览次数 | 正式版本 | JEP |
 |------|----------|----------|----------|-----|
 | Virtual Threads | JDK 19 | 2 | JDK 21 | JEP 425, JEP 436, JEP 444 |
-| Scoped Values | JDK 20 | 3+ | JDK 23+ | JEP 429, JEP 446, JEP 467 |
-| Structured Concurrency | JDK 21 | 6+ | JDK 27+ | JEP 453, JEP 462, JEP 477, JEP 483, JEP 491, JEP 493 |
+| Scoped Values | JDK 20 | 4+ | JDK 23+ | JEP 429, JEP 446, JEP 464, JEP 467 |
+| Structured Concurrency | JDK 21 | 6+ | JDK 27+ | JEP 453, 462, 477, 483, 491, 493 |
 
 ### GC 特性
 
@@ -147,14 +141,25 @@
 | ChaCha20-Poly1305 | JDK 11 | 生产 | JEP 329 |
 | KMAC | JDK 17 | 生产 | JEP 370 |
 | ML-DSA (后量子) | JDK 26 | 生产 | JEP 518 |
-| KDF API | JDK 22 | 预览→正式JDK26 | JEP 495, JEP 508, JEP 510 |
+| ML-KEM (后量子) | JDK 26 | 生产 | - |
+| KDF API | JDK 22 | 预览→正式JDK26 | JEP 495, 508, 510 |
 | PEM Encodings | JDK 26 | 生产 | JEP 470 |
+
+### API 特性
+
+| 特性 | 首发版本 | 状态 | JEP |
+|------|----------|------|-----|
+| HTTP Client | JDK 11 | 生产 | JEP 321 |
+| HTTP/3 | JDK 26 | 预览 | JEP 517 |
+| Foreign Function & Memory API | JDK 22 | 生产 | JEP 454 |
+| Vector API | JDK 16 | 预览→正式JDK23 | JEP 338, 417, 426, 448 |
+| Structured Concurrency | JDK 21 | 预览 | JEP 453 |
 
 ---
 
 ## 版本选择指南
 
-### LTS 版本推荐
+### LTS 版本
 
 | 版本 | 发布时间 | 支持状态 | 推荐场景 |
 |------|----------|----------|----------|
@@ -167,21 +172,138 @@
 ### 选择决策树
 
 ```
-需要虚拟线程?
-├── 是 → JDK 21+ (推荐 JDK 25 LTS)
-└── 否 → 继续
+┌─────────────────────────────────────────────────────────┐
+│                    需求分析                              │
+└─────────────────────────────────────────────────────────┘
+                              │
+              ┌───────────────┴───────────────┐
+              │                               │
+        需要虚拟线程?                     其他需求
+              │                               │
+      ┌───────┴────────┐             ┌────────┴────────┐
+      │                │             │                 │
+     是                否          需要低延迟        需要HTTP/3
+      │                │             │                 │
+      ▼                ▼             ▼                 ▼
+  JDK 21+          JDK 17+       JDK 21+           JDK 26+
+  (推荐 25 LTS)    (稳定)        (分代ZGC)         (预览)
+```
 
-    需要低延迟 GC?
-    ├── 是 → JDK 21+ (分代 ZGC/Shenandoah)
-    └── 否 → 继续
+---
 
-        需要 HTTP/3?
-        ├── 是 → JDK 26+
-        └── 否 → 继续
+## 按领域选择 JDK 版本
 
-            需要 String Templates?
-            ├── 是 → JDK 26+
-            └── 否 → JDK 17/21 LTS
+### Web 应用
+
+| 需求 | 推荐版本 | 理由 |
+|------|----------|------|
+| 传统应用 | JDK 11/17 | 稳定 LTS |
+| 高并发 I/O | JDK 21+ | 虚拟线程 |
+| 低延迟 GC | JDK 21+ | 分代 ZGC |
+| 最新 HTTP | JDK 26 | HTTP/3 |
+
+### 大数据处理
+
+| 需求 | 推荐版本 | 理由 |
+|------|----------|------|
+| 传统批处理 | JDK 8/11 | 兼容性好 |
+| 现代流处理 | JDK 17+ | Stream API 增强 |
+| GPU 加速 | JDK 23+ | Vector API 正式 |
+
+### 微服务
+
+| 需求 | 推荐版本 | 理由 |
+|------|----------|------|
+| Spring Boot 3.x | JDK 17+ | 基线要求 |
+| 虚拟线程支持 | JDK 21+ | Virtual Threads |
+| 快速启动 | JDK 21+ | AOT 优化 |
+| 低内存占用 | JDK 21+ | 分代 ZGC |
+
+### 云原生
+
+| 需求 | 推荐版本 | 理由 |
+|------|----------|------|
+| 容器优化 | JDK 17+ | 内存感知 |
+| 快速启动 | JDK 21+ | AppCDS |
+| 小镜像 | JDK 21+ | jlink 增强 |
+
+---
+
+## 性能提升汇总
+
+### 启动性能
+
+| 版本 | 特性 | 提升 |
+|------|------|------|
+| JDK 9 | AppCDS | +20% |
+| JDK 12 | CDS 归档改进 | +10% |
+| JDK 24 | 字符串拼接优化 | +40% |
+| JDK 25 | 启动时间优化 | +15% |
+
+### 吞吐量
+
+| 版本 | 特性 | 提升 |
+|------|------|------|
+| JDK 24 | 隐藏类拼接 | +15% |
+| JDK 25 | StringBuilder 优化 | +15% |
+| JDK 26 | G1 Claim Table | +10-20% |
+
+### 内存
+
+| 版本 | 特性 | 节省 |
+|------|------|------|
+| JDK 9 | Compact Strings | -50% (ASCII) |
+| JDK 21 | 分代 ZGC | -30% (大堆) |
+
+---
+
+## 迁移建议
+
+### JDK 8 → JDK 11
+
+```bash
+# 主要变化
+- 移除 Java EE 模块 (javax.*)
+- 移除 CORBA
+- 移除 JavaFX
+- HttpClient API 新增
+- VAR 语法简化
+
+# 兼容问题
+- ClassLoader 变化
+- Nashorn 移除 (JDK 15)
+- Pack200 工具移除
+```
+
+### JDK 11 → JDK 17
+
+```bash
+# 主要变化
+- Sealed Classes
+- Pattern Matching for instanceof
+- Records 正式
+- Text Blocks 正式
+- 移除 RMI Activation
+- 移除 AOT 和 JIT 编译器 (实验性)
+
+# 兼容问题
+- 内部 API 封装加强
+- Security Manager 变化
+```
+
+### JDK 17 → JDK 21
+
+```bash
+# 主要变化
+- Virtual Threads 正式
+- Pattern Matching for switch
+- Record Patterns
+- String Templates (预览)
+- 分代 ZGC/Shenandoah
+
+# 兼容问题
+- 较少破坏性变更
+- 可平滑升级
 ```
 
 ---

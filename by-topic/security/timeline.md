@@ -18,57 +18,153 @@ TLS 1.2        TLS 1.3       禁用弱算法     KMAC          ML-DSA        KDF
 
 ---
 
+## 密码学基础
+
+### 对称加密 vs 非对称加密
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                 加密算法分类                             │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  对称加密                    非对称加密                   │
+│  ┌─────────────┐             ┌─────────────┐            │
+│  │ AES, ChaCha │             │ RSA, ECDSA  │            │
+│  │ DES, 3DES   │             │ ML-DSA      │            │
+│  └─────────────┘             └─────────────┘            │
+│         │                           │                   │
+│         ▼                           ▼                   │
+│  ┌─────────────────┐       ┌─────────────────┐          │
+│  │  加解密同密钥    │       │  公钥加密       │          │
+│  │  速度快         │       │  私钥解密       │          │
+│  │  适合大量数据   │       │  速度慢         │          │
+│  │  密钥分发困难   │       │  密钥分发方便   │          │
+│  └─────────────────┘       └─────────────────┘          │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+### 哈希算法
+
+| 算法 | 输出长度 | 状态 | 说明 |
+|------|----------|------|------|
+| MD5 | 128 位 | 已破解 | 禁用 |
+| SHA-1 | 160 位 | 已破解 | 禁用 |
+| SHA-256 | 256 位 | 安全 | 推荐 |
+| SHA-3 | 可变 | 安全 | JDK 17+ |
+| SHAKE | 可变 | 安全 | JDK 17+ |
+
+---
+
 ## TLS/SSL 演进
 
-### JDK 8 - TLS 1.2 (默认)
+### TLS 协议版本
 
-```java
-// 默认使用 TLS 1.2
-SSLContext ctx = SSLContext.getInstance("TLSv1.2");
-ctx.init(null, null, null);
-
-SSLSocketFactory factory = ctx.getSocketFactory();
-SSLSocket socket = (SSLSocket) factory.createSocket(host, 443);
+```
+┌─────────────────────────────────────────────────────────┐
+│                   TLS 协议演进                           │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  SSL 1.0 (1994)  - 未公开发布                            │
+│       ↓                                                 │
+│  SSL 2.0 (1995)  - 已废弃，存在严重安全漏洞              │
+│       ↓                                                 │
+│  SSL 3.0 (1996)  - 已废弃 (POODLE 攻击)                 │
+│       ↓                                                 │
+│  TLS 1.0 (1999)  - 已废弃 (BEAST 攻击)                  │
+│       ↓                                                 │
+│  TLS 1.1 (2006)  - 已废弃                               │
+│       ↓                                                 │
+│  TLS 1.2 (2008)  - JDK 8 默认                           │
+│       ↓                                                 │
+│  TLS 1.3 (2018)  - JDK 11 默认                          │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
-### JDK 11 - TLS 1.3 (JEP 332)
+### TLS 1.3 改进 (JEP 332)
 
-**优势**：
-- 更快的握手 (1-RTT vs 2-RTT)
-- 更强的密码套件
-- 0-RTT 连接恢复
-- 移除不安全的算法
+#### 握手对比
 
-```java
-// TLS 1.3 成为默认
-SSLContext ctx = SSLContext.getInstance("TLS");
-// 自动使用 TLS 1.3
-
-// 启用 0-RTT
-SSLParameters params = new SSLParameters();
-params.setApplicationProtocols(new String[]{"h2", "http/1.1"});
+```
+┌─────────────────────────────────────────────────────────┐
+│              TLS 1.2 vs TLS 1.3 握手                     │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  TLS 1.2                    TLS 1.3                     │
+│  ─────────                 ─────────                    │
+│  Client ──ClientHello──> Server                          │
+│          <──ServerHello──                               │
+│          <──Certificate──                               │
+│          <──ServerHelloDone──                           │
+│  Client ──ClientKeyExchange──> Server                    │
+│          <──ServerHelloDone──                           │
+│  Client ──ChangeCipherSpec──> Server                    │
+│          <──ChangeCipherSpec──                          │
+│  Client ──Finished────> Server                           │
+│          <──Finished────                                │
+│                                                         │
+│  2-RTT (最少)                1-RTT                       │
+│  不支持 0-RTT                支持 0-RTT 恢复             │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
-### TLS 1.2 vs TLS 1.3
+#### 密码套件简化
 
-| 特性 | TLS 1.2 | TLS 1.3 |
-|------|---------|---------|
-| 握手 RTT | 2-RTT | 1-RTT |
-| 恢复 RTT | 1-RTT | 0-RTT |
-| 密码套件 | 37+ | 5 |
-| 前向安全 | 可选 | 强制 |
-| RSA 密钥交换 | 支持 | 不支持 |
+| TLS 1.2 | TLS 1.3 |
+|---------|---------|
+| 37+ 套件 | 5 套件 |
+| RSA 密钥交换 | 仅 (EC)DHE |
+| 可选前向安全 | 强制前向安全 |
+| CBC/GCM 模式 | 仅 AEAD |
 
-### 配置建议
+### TLS 配置
+
+```java
+// 创建 TLS 1.3 SSLContext
+SSLContext sslContext = SSLContext.getInstance("TLSv1.3");
+sslContext.init(null, null, null);
+
+// 或者使用默认 (JDK 11+ 自动使用 TLS 1.3)
+SSLContext sslContext = SSLContext.getDefault();
+
+// 创建 SSLSocketFactory
+SSLSocketFactory factory = sslContext.getSocketFactory();
+
+// 创建 HttpsURLConnection
+HttpsURLConnection.setDefaultSSLSocketFactory(factory);
+
+// 配置 HTTPS Client
+HttpClient client = HttpClient.newBuilder()
+    .sslContext(sslContext)
+    .sslParameters(sslContext.getDefaultSSLParameters())
+    .build();
+```
+
+### TLS 配置文件
 
 ```bash
-# java.security 配置
+# $JAVA_HOME/conf/security/java.security
+
 # 启用 TLS 1.3
-jdk.tls.client.protocols=TLSv1.3
-jdk.tls.server.protocols=TLSv1.3
+jdk.tls.client.protocols=TLSv1.3,TLSv1.2
+jdk.tls.server.protocols=TLSv1.3,TLSv1.2
 
 # 禁用弱密码套件
-jdk.tls.disabledAlgorithms=RC4, DES, MD5, SSLv3
+jdk.tls.disabledAlgorithms=\
+    SSLv3, TLSv1, TLSv1.1, \
+    RC4, DES, MD5, \
+    CBC, \
+    TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, \
+    TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+
+# 密钥大小限制
+jdk.tls.keySize=2048
+
+# 签名算法限制
+jdk.tls.disabledAlgorithms=\
+    SHA1, RSA keySize < 2048, DSA keySize < 2048
 ```
 
 ---
@@ -78,75 +174,208 @@ jdk.tls.disabledAlgorithms=RC4, DES, MD5, SSLv3
 ### JDK 8 - 基础加密
 
 ```java
-// AES 加密
-Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-SecretKey key = new SecretKeySpec(bytes, "AES");
-cipher.init(Cipher.ENCRYPT_MODE, key, iv);
-byte[] encrypted = cipher.doFinal(plaintext);
+import javax.crypto.*;
+import javax.crypto.spec.*;
+import java.security.*;
 
-// RSA
-Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
-cipher.init(Cipher.ENCRYPT_MODE, publicKey);
-byte[] encrypted = cipher.doFinal(data);
+// AES 加密
+public class AESExample {
+    private static final String ALGO = "AES/CBC/PKCS5Padding";
+
+    public static byte[] encrypt(byte[] plaintext, SecretKey key, IvParameterSpec iv)
+        throws Exception {
+
+        Cipher cipher = Cipher.getInstance(ALGO);
+        cipher.init(Cipher.ENCRYPT_MODE, key, iv);
+        return cipher.doFinal(plaintext);
+    }
+
+    public static byte[] decrypt(byte[] ciphertext, SecretKey key, IvParameterSpec iv)
+        throws Exception {
+
+        Cipher cipher = Cipher.getInstance(ALGO);
+        cipher.init(Cipher.DECRYPT_MODE, key, iv);
+        return cipher.doFinal(ciphertext);
+    }
+
+    // 生成密钥和 IV
+    public static void main(String[] args) throws Exception {
+        KeyGenerator keyGen = KeyGenerator.getInstance("AES");
+        keyGen.init(256);
+        SecretKey key = keyGen.generateKey();
+
+        byte[] iv = new byte[16];
+        SecureRandom random = new SecureRandom();
+        random.nextBytes(iv);
+        IvParameterSpec ivSpec = new IvParameterSpec(iv);
+
+        byte[] encrypted = encrypt("Hello".getBytes(), key, ivSpec);
+        byte[] decrypted = decrypt(encrypted, key, ivSpec);
+    }
+}
 ```
 
 ### JDK 11 - ChaCha20-Poly1305 (JEP 329)
 
-**优势**：
-- 软件实现高效
-- 适合无 AES 硬件加速的场景
-- 认证加密 (AEAD)
+#### 算法原理
 
-```java
-// ChaCha20-Poly1305
-KeyGenerator keyGen = KeyGenerator.getInstance("ChaCha20");
-SecretKey key = keyGen.generateKey();
-
-Cipher cipher = Cipher.getInstance("ChaCha20-Poly1305/None/NoPadding");
-cipher.init(Cipher.ENCRYPT_MODE, key);
-
-byte[] nonce = new byte[12];  // 96-bit nonce
-SecureRandom random = new SecureRandom();
-random.nextBytes(nonce);
-
-cipher.init(Cipher.ENCRYPT_MODE, key, new IvParameterSpec(nonce));
-byte[] encrypted = cipher.doFinal(plaintext);
+```
+┌─────────────────────────────────────────────────────────┐
+│            ChaCha20-Poly1305 架构                        │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  Plaintext                                              │
+│      │                                                  │
+│      ▼                                                  │
+│  ┌─────────────────┐                                   │
+│  │   ChaCha20      │  流密码 (加密)                     │
+│  │  (256-bit key)  │                                   │
+│  │  (96-bit nonce) │                                   │
+│  └────────┬────────┘                                   │
+│           │                                             │
+│           ▼                                             │
+│  ┌─────────────────┐                                   │
+│  │   Poly1305      │  MAC (认证)                        │
+│  │   (AEAD)        │                                   │
+│  └────────┬────────┘                                   │
+│           │                                             │
+│           ▼                                             │
+│     Ciphertext + Tag                                    │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
-### ChaCha20-Poly1305 vs AES-GCM
+#### 使用示例
+
+```java
+import javax.crypto.*;
+import javax.crypto.spec.*;
+import java.security.*;
+
+// ChaCha20-Poly1305
+public class ChaCha20Example {
+
+    // 生成密钥和 nonce
+    public static KeyPair generateChaCha20Key() throws Exception {
+        KeyGenerator keyGen = KeyGenerator.getInstance("ChaCha20");
+        return keyGen.generateKeyPair();
+    }
+
+    // 加密
+    public static byte[] encrypt(byte[] plaintext, SecretKey key, byte[] nonce)
+        throws Exception {
+
+        Cipher cipher = Cipher.getInstance("ChaCha20-Poly1305/None/NoPadding");
+        cipher.init(Cipher.ENCRYPT_MODE, key, new IvParameterSpec(nonce));
+        return cipher.doFinal(plaintext);
+    }
+
+    // 解密
+    public static byte[] decrypt(byte[] ciphertext, SecretKey key, byte[] nonce)
+        throws Exception {
+
+        Cipher cipher = Cipher.getInstance("ChaCha20-Poly1305/None/NoPadding");
+        cipher.init(Cipher.DECRYPT_MODE, key, new IvParameterSpec(nonce));
+        return cipher.doFinal(ciphertext);
+    }
+
+    public static void main(String[] args) throws Exception {
+        // 生成密钥
+        KeyGenerator keyGen = KeyGenerator.getInstance("ChaCha20");
+        keyGen.init(256);
+        SecretKey key = keyGen.generateKey();
+
+        // 生成 nonce (96-bit = 12 bytes)
+        byte[] nonce = new byte[12];
+        SecureRandom random = new SecureRandom();
+        random.nextBytes(nonce);
+
+        // 加密
+        byte[] plaintext = "Hello, ChaCha20!".getBytes();
+        byte[] encrypted = encrypt(plaintext, key, nonce);
+
+        // 解密
+        byte[] decrypted = decrypt(encrypted, key, nonce);
+        System.out.println(new String(decrypted));
+    }
+}
+```
+
+#### ChaCha20 vs AES-GCM
 
 | 特性 | AES-GCM | ChaCha20-Poly1305 |
 |------|---------|-------------------|
 | 硬件加速 | x86 AES-NI | 软件实现 |
-| 性能 (x86) | 高 | 中等 |
+| 性能 (x86) | 高 (~10GB/s) | 中等 (~2GB/s) |
 | 性能 (ARM/移动) | 中等 | 高 |
 | 密钥大小 | 128/256 位 | 256 位 |
 | Nonce 大小 | 96 位 | 96 位 |
+| 认证加密 | 是 (AEAD) | 是 (AEAD) |
 
-### JDK 17 - KMAC (JEP 370)
+### JDK 17 - KMAC & SHA-3 (JEP 370)
 
-**Keccak Message Authentication Code**
+#### SHA-3 家族
 
 ```java
-// KMAC256
-KMACParameterSpec params = new KMACParameterSpec(256, "my-key".getBytes(), "custom".getBytes());
+import java.security.*;
 
-Mac mac = Mac.getInstance("KMAC256");
-mac.init(key, params);
-byte[] macResult = mac.doFinal(data);
+// SHA3-256
+MessageDigest md3 = MessageDigest.getInstance("SHA3-256");
+byte[] hash3 = md3.digest("Hello".getBytes());
+
+// SHAKE128 (可变输出)
+MessageDigest shake = MessageDigest.getInstance("SHAKE128");
+shake.update("Hello".getBytes());
+byte[] hash128 = shake.digest(32);  // 32 字节输出
+
+// SHAKE256
+MessageDigest shake256 = MessageDigest.getInstance("SHAKE256");
+shake256.update("Hello".getBytes());
+byte[] hash256 = shake256.digest(64);  // 64 字节输出
 ```
 
-### JDK 17 - SHA-3 家族
+#### KMAC (Keccak Message Authentication Code)
 
 ```java
-// SHA3-256
-MessageDigest md = MessageDigest.getInstance("SHA3-256");
-byte[] hash = md.digest(data);
+import javax.crypto.*;
+import javax.crypto.spec.*;
+import java.security.*;
 
-// SHAKE128
-MessageDigest shake = MessageDigest.getInstance("SHAKE128");
-shake.update(data);
-byte[] hash128 = shake.digest(32);  // 32 字节输出
+// KMAC256
+public class KMACExample {
+
+    public static byte[] computeMac(byte[] data, byte[] key, byte[] custom)
+        throws Exception {
+
+        KMACParameterSpec params = new KMACParameterSpec(
+            256,                    // 输出长度 (bit)
+            custom                  // 自定义字符串
+        );
+
+        Mac mac = Mac.getInstance("KMAC256");
+        SecretKeySpec keySpec = new SecretKeySpec(key, "KMAC256");
+        mac.init(keySpec, params);
+
+        return mac.doFinal(data);
+    }
+
+    public static void main(String[] args) throws Exception {
+        byte[] key = "my-secret-key".getBytes();
+        byte[] custom = "my-application".getBytes();
+        byte[] data = "Hello, KMAC!".getBytes();
+
+        byte[] mac = computeMac(data, key, custom);
+        System.out.println("KMAC: " + bytesToHex(mac));
+    }
+
+    private static String bytesToHex(byte[] bytes) {
+        StringBuilder sb = new StringBuilder();
+        for (byte b : bytes) {
+            sb.append(String.format("%02x", b));
+        }
+        return sb.toString();
+    }
+}
 ```
 
 ---
@@ -156,11 +385,18 @@ byte[] hash128 = shake.digest(32);  // 32 字节输出
 ### 背景
 
 ```
-传统算法 (RSA, ECDSA)
-    ↓
-量子计算机 (Shor 算法)
-    ↓
-可在数小时内破解 2048 位 RSA
+传统公钥密码算法的脆弱性:
+┌─────────────────────────────────────────────────────────┐
+│  算法        │  密钥大小    │  量子计算机破解时间        │
+├─────────────────────────────────────────────────────────┤
+│  RSA-2048   │  256 字节   │  数小时 (Shor 算法)        │
+│  RSA-4096   │  512 字节   │  数小时                     │
+│  ECDSA-P256 │  64 字节    │  数小时                     │
+│  Ed25519    │  32 字节    │  数小时                     │
+├─────────────────────────────────────────────────────────┤
+│  ML-DSA-87  │  ~2.5 KB     │  仍然安全 (无已知量子算法)  │
+│  ML-KEM-1024│  ~1.5 KB     │  仍然安全                  │
+└─────────────────────────────────────────────────────────┘
 ```
 
 ### JDK 26 - ML-DSA (JEP 518)
@@ -170,59 +406,105 @@ byte[] hash128 = shake.digest(32);  // 32 字节输出
 ```java
 import java.security.*;
 
-// 生成密钥对
-KeyPairGenerator kpg = KeyPairGenerator.getInstance("ML-DSA");
-KeyPair kp = kpg.generateKeyPair();
+// ML-DSA 签名
+public class MLDSAExample {
 
-// 签名
-Signature sig = Signature.getInstance("ML-DSA");
-sig.initSign(kp.getPrivate());
-sig.update(data);
-byte[] signature = sig.sign();
+    // 生成密钥对
+    public static KeyPair generateKeyPair(String algorithm) throws Exception {
+        KeyPairGenerator kpg = KeyPairGenerator.getInstance(algorithm);
+        return kpg.generateKeyPair();
+    }
 
-// 验证
-sig.initVerify(kp.getPublic());
-sig.update(data);
-boolean valid = sig.verify(signature);
+    // 签名
+    public static byte[] sign(byte[] data, PrivateKey privateKey) throws Exception {
+        String algorithm = privateKey.getAlgorithm();
+        Signature sig = Signature.getInstance(algorithm);
+        sig.initSign(privateKey);
+        sig.update(data);
+        return sig.sign();
+    }
+
+    // 验证
+    public static boolean verify(byte[] data, byte[] signature, PublicKey publicKey)
+        throws Exception {
+
+        String algorithm = publicKey.getAlgorithm();
+        Signature sig = Signature.getInstance(algorithm);
+        sig.initVerify(publicKey);
+        sig.update(data);
+        return sig.verify(signature);
+    }
+
+    public static void main(String[] args) throws Exception {
+        // ML-DSA 有三个安全级别
+        String[] algorithms = {"ML-DSA-44", "ML-DSA-65", "ML-DSA-87"};
+
+        for (String algo : algorithms) {
+            System.out.println("Testing " + algo);
+
+            // 生成密钥
+            KeyPair kp = generateKeyPair(algo);
+
+            // 签名
+            byte[] data = "Hello, Post-Quantum!".getBytes();
+            byte[] signature = sign(data, kp.getPrivate());
+            System.out.println("  Signature size: " + signature.length + " bytes");
+
+            // 验证
+            boolean valid = verify(data, signature, kp.getPublic());
+            System.out.println("  Valid: " + valid);
+        }
+    }
+}
 ```
 
-### ML-DSA 特性
+#### ML-DSA 安全级别
 
-| 特性 | ML-DSA | RSA-2048 | ECDSA-P256 |
-|------|--------|----------|------------|
-| 密钥大小 | ~2KB | 256B | 64B |
-| 签名大小 | ~2.5KB | 256B | 64B |
-| 安全强度 | AES-256 | 112-bit | 128-bit |
-| 量子安全 | ✅ | ❌ | ❌ |
+| 算法 | NIST 类别 | 密钥大小 | 签名大小 | 安全强度 |
+|------|-----------|----------|----------|----------|
+| ML-DSA-44 | 2 | ~1.3 KB | ~2.4 KB | ~128-bit |
+| ML-DSA-65 | 3 | ~1.6 KB | ~3.3 KB | ~192-bit |
+| ML-DSA-87 | 5 | ~2.0 KB | ~4.6 KB | ~256-bit |
 
-### ML-DSA 安全级别
-
-```java
-// ML-DSA-44 (安全级别 1)
-KeyPairGenerator kpg44 = KeyPairGenerator.getInstance("ML-DSA44");
-
-// ML-DSA-65 (安全级别 3)
-KeyPairGenerator kpg65 = KeyPairGenerator.getInstance("ML-DSA65");
-
-// ML-DSA-87 (安全级别 5)
-KeyPairGenerator kpg87 = KeyPairGenerator.getInstance("ML-DSA87");
-```
-
-### JDK 26 - ML-KEM (密钥封装机制)
+### JDK 26 - ML-KEM (密钥封装)
 
 ```java
-// 密钥封装
-KeyPairGenerator kpg = KeyPairGenerator.getInstance("ML-KEM");
-KeyPair kp = kpg.generateKeyPair();
+import javax.crypto.*;
+import java.security.*;
 
-// 封装
-Cipher cipher = Cipher.getInstance("ML-KEM");
-cipher.init(Cipher.WRAP_MODE, kp.getPublic());
-byte[] encapsulatedKey = cipher.wrap(secretKey);
+// ML-KEM 密钥封装
+public class MLKEMExample {
 
-// 解封装
-cipher.init(Cipher.UNWRAP_MODE, kp.getPrivate());
-SecretKey secretKey = (SecretKey) cipher.unwrap(encapsulatedKey, "AES", Cipher.SECRET_KEY);
+    // 生成密钥对
+    public static KeyPair generateKeyPair() throws Exception {
+        KeyPairGenerator kpg = KeyPairGenerator.getInstance("ML-KEM");
+        return kpg.generateKeyPair();
+    }
+
+    // 封装 (发送方)
+    public static Encapsulated encapsulate(PublicKey publicKey, SecretKey sharedSecret)
+        throws Exception {
+
+        Cipher cipher = Cipher.getInstance("ML-KEM");
+        cipher.init(Cipher.WRAP_MODE, publicKey);
+
+        // 封装共享密钥
+        byte[] encapsulated = cipher.wrap(sharedSecret);
+        return new Encapsulated(encapsulated, sharedSecret);
+    }
+
+    // 解封装 (接收方)
+    public static SecretKey decapsulate(byte[] encapsulated, KeyPair keyPair)
+        throws Exception {
+
+        Cipher cipher = Cipher.getInstance("ML-KEM");
+        cipher.init(Cipher.UNWRAP_MODE, keyPair.getPrivate());
+
+        return (SecretKey) cipher.unwrap(encapsulated, "AES", Cipher.SECRET_KEY);
+    }
+
+    record Encapsulated(byte[] data, SecretKey sharedSecret) {}
+}
 ```
 
 ---
@@ -237,185 +519,362 @@ SecretKey secretKey = (SecretKey) cipher.unwrap(encapsulatedKey, "AES", Cipher.S
 | JDK 23 | 第二次预览 | JEP 508 |
 | JDK 26 | **正式** | JEP 510 |
 
-### 密钥派生函数 API
+### KDF 基础
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                 KDF 工作原理                             │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  主密钥 (Master Key)                                    │
+│      │                                                  │
+│      ▼                                                  │
+│  ┌─────────────────┐                                   │
+│  │      KDF        │                                   │
+│  │  ┌───────────┐  │                                   │
+│  │  │ Salt      │  │                                   │
+│  │  │ Info      │  │                                   │
+│  │  │ Length    │  │                                   │
+│  │  └───────────┘  │                                   │
+│  └────────┬────────┘                                   │
+│           │                                             │
+│           ▼                                             │
+│  ┌─────────────────────────────────┐                    │
+│  │  子密钥 1 │ 子密钥 2 │ 子密钥 3 │                    │
+│  └─────────────────────────────────┘                    │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+### HKDF 使用
 
 ```java
 import javax.crypto.KDF;
 import javax.crypto.spec.*;
+import java.security.*;
 
-// HKDF-SHA256
-KDF kdf = KDF.getInstance("HKDF-SHA256");
+// HKDF (HMAC-based KDF)
+public class KDFExample {
 
-SecretKey salt = new SecretKeySpec(
-    new byte[32], "HKDF-SHA256");
+    public static void hkdfExample() throws Exception {
+        // 输入密钥材料 (IKM)
+        byte[] ikm = "my-input-key-material".getBytes();
 
-SecretKey derivedKey = kdf.deriveKey(
-    "my-key",
-    new KDFParameters(
-        salt,
-        "info-context".getBytes(),
-        256  // 密钥长度
-    )
-);
+        // Salt
+        byte[] salt = new byte[32];
+        SecureRandom random = new SecureRandom();
+        random.nextBytes(salt);
+
+        // Info (可选上下文信息)
+        byte[] info = "my-application-context".getBytes();
+
+        // 创建 KDF
+        KDF kdf = KDF.getInstance("HKDF-SHA256");
+
+        // 派生密钥参数
+        SecretKeySpec saltKey = new SecretKeySpec(salt, "HKDF-SHA256");
+        KDFParameters params = new KDFParameters(
+            saltKey,    // 盐值
+            info,       // 上下文信息
+            256        // 输出密钥长度 (bit)
+        );
+
+        // 派生密钥
+        SecretKey derivedKey = kdf.deriveKey("derived-key", ikm, params);
+
+        System.out.println("Derived key: " +
+            bytesToHex(derivedKey.getEncoded()));
+    }
+
+    // 从主密钥派生多个子密钥
+    public static void deriveMultipleKeys() throws Exception {
+        byte[] masterKey = new byte[32];
+        new SecureRandom().nextBytes(masterKey);
+
+        KDF kdf = KDF.getInstance("HKDF-SHA256");
+        SecretKeySpec saltKey = new SecretKeySpec(new byte[32], "HKDF-SHA256");
+
+        // 加密密钥
+        KDFParameters encParams = new KDFParameters(
+            saltKey,
+            "encryption".getBytes(),
+            256
+        );
+        SecretKey encKey = kdf.deriveKey("enc", masterKey, encParams);
+
+        // 认证密钥
+        KDFParameters authParams = new KDFParameters(
+            saltKey,
+            "authentication".getBytes(),
+            256
+        );
+        SecretKey authKey = kdf.deriveKey("auth", masterKey, authParams);
+
+        System.out.println("Encryption key: " + bytesToHex(encKey.getEncoded()));
+        System.out.println("Auth key: " + bytesToHex(authKey.getEncoded()));
+    }
+
+    private static String bytesToHex(byte[] bytes) {
+        StringBuilder sb = new StringBuilder();
+        for (byte b : bytes) {
+            sb.append(String.format("%02x", b));
+        }
+        return sb.toString();
+    }
+}
 ```
 
 ### 支持的 KDF 算法
 
-| 算法 | 说明 |
-|------|------|
-| HKDF-SHA256 | HMAC-based KDF (SHA-256) |
-| HKDF-SHA384 | HMAC-based KDF (SHA-384) |
-| HKDF-SHA512 | HMAC-based KDF (SHA-512) |
-| PBKDF2-HMAC-SHA256 | Password-based KDF |
-| PBKDF2-HMAC-SHA512 | Password-based KDF |
-
-### 应用场景
-
-```java
-// 1. 从密码派生加密密钥
-KDF kdf = KDF.getInstance("PBKDF2-HMAC-SHA256");
-KDFParameters params = new KDFParameters(
-    salt,
-    iterations,
-    keyLength
-);
-SecretKey key = kdf.deriveKey("derived", password, params);
-
-// 2. 从主密钥派生多个子密钥
-SecretKey masterKey = ...;
-
-// 加密密钥
-SecretKey encKey = kdf.deriveKey(
-    "encryption",
-    masterKey,
-    new KDFParameters(salt, "enc".getBytes(), 256)
-);
-
-// 认证密钥
-SecretKey authKey = kdf.deriveKey(
-    "auth",
-    masterKey,
-    new KDFParameters(salt, "auth".getBytes(), 256)
-);
-```
+| 算法 | 说明 | 用途 |
+|------|------|------|
+| HKDF-SHA256 | HMAC-based KDF (SHA-256) | 通用密钥派生 |
+| HKDF-SHA384 | HMAC-based KDF (SHA-384) | 更高安全需求 |
+| HKDF-SHA512 | HMAC-based KDF (SHA-512) | 最高安全需求 |
+| PBKDF2-HMAC-SHA256 | Password-based KDF | 从密码派生密钥 |
+| PBKDF2-HMAC-SHA512 | Password-based KDF | 从密码派生密钥 |
 
 ---
 
 ## PEM 格式支持 (JEP 470)
 
-### JDK 26 - PEM Encodings
+### PEM 格式示例
 
-**Privacy-Enhanced Mail (PEM)** 格式是密钥和证书的标准文本格式。
+```
+-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC...
+-----END PRIVATE KEY-----
 
-```java
-// 读取 PEM 格式的私钥
-String pem = """
-    -----BEGIN PRIVATE KEY-----
-    MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC...
-    -----END PRIVATE KEY-----
-    """;
+-----BEGIN CERTIFICATE-----
+MIIDXTCCAkWgAwIBAgIJAKL0UG+mRKqzMA0GCSqGSIb3DQEBCwUAMEU...
+-----END CERTIFICATE-----
 
-PrivateKey privateKey = KeyFactory.getInstance("RSA")
-    .generatePrivate(new PKCS8EncodedKeySpec(
-        PemParser.parse(pem)
-    ));
-
-// 读取 PEM 格式的证书
-Certificate cert = CertificateFactory.getInstance("X.509")
-    .generateCertificate(
-        new ByteArrayInputStream(pem.getBytes())
-    );
+-----BEGIN PUBLIC KEY-----
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAE9s5vBT8zGQ2Y2g3c2Y2g...
+-----END PUBLIC KEY-----
 ```
 
-### PEM 工具类
+### PEM 读写
 
 ```java
-// JDK 26 新增
+import java.security.*;
+import java.security.spec.*;
 import java.security.pem.*;
+import java.nio.file.*;
 
-// 解析 PEM
-PemObject pem = PemParser.parse(pemString);
+// PEM 格式支持 (JDK 26)
+public class PEMExample {
 
-// 生成 PEM
-String pem = PemWriter.encode(privateKey);
-```
+    // 读取 PEM 格式的私钥
+    public static PrivateKey readPrivateKey(String pemFile) throws Exception {
+        String pem = Files.readString(Paths.get(pemFile));
 
----
+        // 解析 PEM
+        byte[] der = PemParser.parse(pem);
 
-## 密钥库演进
+        // 生成私钥
+        KeyFactory kf = KeyFactory.getInstance("RSA");
+        return kf.generatePrivate(new PKCS8EncodedKeySpec(der));
+    }
 
-### JKS → PKCS12
+    // 读取 PEM 格式的证书
+    public static Certificate readCertificate(String pemFile) throws Exception {
+        String pem = Files.readString(Paths.get(pemFile));
 
-```bash
-# JDK 8 之前: JKS (默认)
-keytool -importcert -keystore keystore.jks
+        CertificateFactory cf = CertificateFactory.getInstance("X.509");
+        return cf.generateCertificate(
+            new ByteArrayInputStream(pem.getBytes())
+        );
+    }
 
-# JDK 9+: PKCS12 (默认)
-keytool -importcert -keystore keystore.p12
+    // 写入 PEM 格式
+    public static void writePrivateKey(PrivateKey key, String pemFile) throws Exception {
+        String pem = PemWriter.encode(key);
+        Files.writeString(Paths.get(pemFile), pem);
+    }
 
-# 迁移
-keytool -importkeystore \
-  -srckeystore keystore.jks -destkeystore keystore.p12 \
-  -srcstoretype JKS -deststoretype PKCS12
-```
+    public static void main(String[] args) throws Exception {
+        // 生成密钥对
+        KeyPairGenerator kpg = KeyPairGenerator.getInstance("RSA");
+        kpg.initialize(2048);
+        KeyPair kp = kpg.generateKeyPair();
 
-### 配置
+        // 保存为 PEM
+        writePrivateKey(kp.getPrivate(), "private.pem");
 
-```bash
-# java.security
-# 默认密钥库类型
-keystore.type=pkcs12
-
-# 禁用 JKS (可选)
-jdk.tls.disabledAlgorithms=JKS
+        // 读取 PEM
+        PrivateKey readKey = readPrivateKey("private.pem");
+        System.out.println("Key restored: " + readKey.getAlgorithm());
+    }
+}
 ```
 
 ---
 
 ## 安全配置建议
 
-### TLS 配置
+### java.security 配置
 
 ```bash
-# java.security
+# $JAVA_HOME/conf/security/java.security
+
+# ===== TLS 配置 =====
 # 启用 TLS 1.3
-jdk.tls.client.protocols=TLSv1.3
-jdk.tls.server.protocols=TLSv1.3
+jdk.tls.client.protocols=TLSv1.3,TLSv1.2
+jdk.tls.server.protocols=TLSv1.3,TLSv1.2
 
 # 禁用弱密码套件
 jdk.tls.disabledAlgorithms=\
-    RC4, DES, MD5, SSLv3, \
-    TLSv1, TLSv1.1, \
-    TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, \
-    TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+    SSLv3, TLSv1, TLSv1.1, \
+    RC4, DES, MD5, \
+    CBC, \
+    TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
 
-# 密钥大小限制
-jdk.tls.keySize=2048
-```
-
-### 证书验证
-
-```java
-// 启用证书吊销检查
-System.setProperty("com.sun.security.enableCRLDP", "true");
-System.setProperty("com.sun.security.ocsp.enable", "true");
-
-// 自定义信任存储
-System.setProperty("javax.net.ssl.trustStore", "/path/to/truststore.jks");
-System.setProperty("javax.net.ssl.trustStorePassword", "changeit");
-```
-
-### 禁用弱算法
-
-```bash
-# java.security
+# ===== 签名算法限制 =====
 jdk.jar.disabledAlgorithms=\
     MD2, MD5, RSA keySize < 1024, \
-    DSA keySize < 1024
+    DSA keySize < 1024, \
+    include jdk.disabled.namedCurves
 
-# 签名算法
-jdk.security.legacyAlgorithms=\
-    SHA1, RSA keySize < 2048
+# ===== 密钥大小限制 =====
+jdk.tls.keySize=2048
+
+# ===== 证书验证 =====
+# 启用 OCSP
+jdk.security.caDnSuffix=cn=CA
+ocsp.enable=true
+```
+
+### 代码安全实践
+
+```java
+// ✅ 推荐: 使用强加密算法
+Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+MessageDigest md = MessageDigest.getInstance("SHA-256");
+Mac mac = Mac.getInstance("HmacSHA256");
+
+// ❌ 避免: 使用弱算法
+Cipher cipher = Cipher.getInstance("DES/ECB/PKCS5Padding");
+MessageDigest md = MessageDigest.getInstance("MD5");
+Mac mac = Mac.getInstance("HmacMD5");
+
+// ✅ 推荐: 使用安全随机数
+SecureRandom random = SecureRandom.getInstanceStrong();
+byte[] salt = new byte[16];
+random.nextBytes(salt);
+
+// ❌ 避免: 使用伪随机数
+Random random = new Random();  // 不适合安全用途
+```
+
+---
+
+## 完整示例
+
+### 安全 HTTP 客户端
+
+```java
+import javax.net.ssl.*;
+import java.net.http.*;
+import java.security.cert.*;
+import java.security.*;
+
+public class SecureHttpClient {
+    private final HttpClient client;
+
+    public SecureHttpClient() throws Exception {
+        // 创建 TLS 1.3 SSLContext
+        SSLContext sslContext = SSLContext.getInstance("TLSv1.3");
+        sslContext.init(null, null, new SecureRandom());
+
+        // 配置 SSLParameters
+        SSLParameters sslParams = sslContext.getDefaultSSLParameters();
+        sslParams.setEndpointIdentificationAlgorithm("HTTPS");
+
+        this.client = HttpClient.newBuilder()
+            .version(HttpClient.Version.HTTP_3)
+            .sslContext(sslContext)
+            .sslParameters(sslParams)
+            .connectTimeout(Duration.ofSeconds(10))
+            .build();
+    }
+
+    public String get(String url) throws Exception {
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create(url))
+            .GET()
+            .build();
+
+        HttpResponse<String> response = client.send(request,
+            HttpResponse.BodyHandlers.ofString());
+
+        if (response.statusCode() >= 400) {
+            throw new RuntimeException("HTTP error: " + response.statusCode());
+        }
+
+        return response.body();
+    }
+}
+```
+
+### 后量子加密示例
+
+```java
+import java.security.*;
+
+public class PostQuantumCrypto {
+
+    // 混合加密 (传统 + 后量子)
+    public static byte[] hybridSign(byte[] data,
+                                      KeyPair traditionalKey,
+                                      KeyPair pqKey) throws Exception {
+
+        // 传统签名
+        Signature tradSig = Signature.getInstance("Ed25519");
+        tradSig.initSign(traditionalKey.getPrivate());
+        tradSig.update(data);
+        byte[] tradSignature = tradSig.sign();
+
+        // 后量子签名
+        Signature pqSig = Signature.getInstance("ML-DSA");
+        pqSig.initSign(pqKey.getPrivate());
+        pqSig.update(data);
+        byte[] pqSignature = pqSig.sign();
+
+        // 组合签名
+        byte[] combined = new byte[tradSignature.length + pqSignature.length];
+        System.arraycopy(tradSignature, 0, combined, 0, tradSignature.length);
+        System.arraycopy(pqSignature, 0, combined, tradSignature.length, pqSignature.length);
+
+        return combined;
+    }
+
+    // 混合验证
+    public static boolean hybridVerify(byte[] data, byte[] combined,
+                                        PublicKey traditionalKey,
+                                        PublicKey pqKey) throws Exception {
+
+        int tradLen = combined.length / 2;
+
+        // 传统验证
+        byte[] tradSignature = new byte[tradLen];
+        System.arraycopy(combined, 0, tradSignature, 0, tradLen);
+        Signature tradSig = Signature.getInstance("Ed25519");
+        tradSig.initVerify(traditionalKey);
+        tradSig.update(data);
+        boolean tradValid = tradSig.verify(tradSignature);
+
+        // 后量子验证
+        byte[] pqSignature = new byte[combined.length - tradLen];
+        System.arraycopy(combined, tradLen, pqSignature, 0, pqSignature.length);
+        Signature pqSig = Signature.getInstance("ML-DSA");
+        pqSig.initVerify(pqKey);
+        pqSig.update(data);
+        boolean pqValid = pqSig.verify(pqSignature);
+
+        return tradValid && pqValid;
+    }
+}
 ```
 
 ---
@@ -443,89 +902,6 @@ jdk.security.legacyAlgorithms=\
 
 ---
 
-## 完整示例
-
-### 安全 HTTP 客户端
-
-```java
-import javax.net.ssl.*;
-import java.net.http.*;
-import java.security.cert.*;
-
-public class SecureHttpClient {
-    private final HttpClient client;
-
-    public SecureHttpClient() throws Exception {
-        // 创建 TLS 1.3 SSLContext
-        SSLContext sslContext = SSLContext.getInstance("TLSv1.3");
-
-        // 自定义信任管理器 (生产环境应使用标准信任)
-        TrustManager[] trustManagers = {
-            new X509TrustManager() {
-                public X509Certificate[] getAcceptedIssuers() { return null; }
-                public void checkClientTrusted(X509Certificate[] certs, String type) { }
-                public void checkServerTrusted(X509Certificate[] certs, String type) { }
-            }
-        };
-
-        sslContext.init(null, trustManagers, new SecureRandom());
-
-        this.client = HttpClient.newBuilder()
-            .version(HttpClient.Version.HTTP_3)
-            .sslContext(sslContext)
-            .sslParameters(sslContext.getDefaultSSLParameters())
-            .connectTimeout(Duration.ofSeconds(10))
-            .build();
-    }
-
-    public String get(String url) throws Exception {
-        HttpRequest request = HttpRequest.newBuilder()
-            .uri(URI.create(url))
-            .GET()
-            .build();
-
-        HttpResponse<String> response = client.send(request,
-            HttpResponse.BodyHandlers.ofString());
-
-        return response.body();
-    }
-}
-```
-
-### 后量子签名示例
-
-```java
-import java.security.*;
-
-public class PostQuantumSignature {
-    public static void main(String[] args) throws Exception {
-        // 生成 ML-DSA 密钥对
-        KeyPairGenerator kpg = KeyPairGenerator.getInstance("ML-DSA");
-        KeyPair kp = kpg.generateKeyPair();
-
-        // 要签名的数据
-        byte[] data = "Hello, Post-Quantum!".getBytes();
-
-        // 签名
-        Signature sig = Signature.getInstance("ML-DSA");
-        sig.initSign(kp.getPrivate());
-        sig.update(data);
-        byte[] signature = sig.sign();
-
-        System.out.println("Signature size: " + signature.length + " bytes");
-
-        // 验证
-        sig.initVerify(kp.getPublic());
-        sig.update(data);
-        boolean valid = sig.verify(signature);
-
-        System.out.println("Signature valid: " + valid);
-    }
-}
-```
-
----
-
 ## 相关链接
 
 - [JEP 332: TLS 1.3](https://openjdk.org/jeps/332)
@@ -534,3 +910,4 @@ public class PostQuantumSignature {
 - [JEP 518: ML-DSA](https://openjdk.org/jeps/518)
 - [JEP 510: KDF API](https://openjdk.org/jeps/510)
 - [JEP 470: PEM Encodings](https://openjdk.org/jeps/470)
+- [NIST Post-Quantum Cryptography](https://csrc.nist.gov/projects/post-quantum-cryptography)

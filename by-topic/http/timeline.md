@@ -16,303 +16,87 @@ Connection    (孵化器)      (标准)        支持          连接复用     
 
 ---
 
+## HTTP 协议演进
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                   HTTP 协议演进                          │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  HTTP/0.9 (1991)  - 极简协议，仅 GET                    │
+│       ↓                                                 │
+│  HTTP/1.0 (1996)  - 增加 POST、Header、状态码           │
+│       ↓                                                 │
+│  HTTP/1.1 (1997)  - 持久连接、分块传输、缓存            │
+│       ↓                                                 │
+│  HTTP/2 (2015)   - 二进制分帧、多路复用、头部压缩        │
+│       ↓                                                 │
+│  HTTP/3 (2022)   - 基于 QUIC、无队头阻塞、UDP 传输      │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+### HTTP 版本对比
+
+| 特性 | HTTP/1.1 | HTTP/2 | HTTP/3 |
+|------|----------|--------|--------|
+| 传输层 | TCP | TCP | QUIC (UDP) |
+| 协议格式 | 文本 | 二进制 | 二进制 |
+| 多路复用 | 否 | 是 | 是 |
+| 队头阻塞 | 有 | 应用层无，TCP 层有 | 无 |
+| 头部压缩 | 无 | HPACK | QPACK |
+| 服务器推送 | 不支持 | 支持 | 支持 |
+| 连接迁移 | 困难 | 困难 | 原生支持 |
+| 握手 RTT | 3-RTT | 3-RTT | 1-RTT |
+| 0-RTT 恢复 | 否 | 否 | 是 |
+
+---
+
 ## JDK 1.0 - HttpURLConnection
 
-### 特点
+### 架构
 
-- 同步阻塞 API
-- 支持 HTTP/1.0 和 HTTP/1.1
-- 连接池管理复杂
-- 位于 `java.net` 包
+```
+┌─────────────────────────────────────────────────────────┐
+│            HttpURLConnection 架构                        │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  Application                                            │
+│       │                                                 │
+│       ▼                                                 │
+│  ┌─────────────────┐                                   │
+│  │ URL             │                                   │
+│  │ openConnection()│                                   │
+│  └────────┬────────┘                                   │
+│           │                                             │
+│           ▼                                             │
+│  ┌─────────────────┐                                   │
+│  │HttpURLConnection│                                   │
+│  │  - connect()    │                                   │
+│  │  - getInputStream()                                 │
+│  └────────┬────────┘                                   │
+│           │                                             │
+│           ▼                                             │
+│  ┌─────────────────┐                                   │
+│  │  Socket (TCP)   │                                   │
+│  └─────────────────┘                                   │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+### 基础用法
 
 ```java
+// GET 请求
 URL url = new URL("https://example.com");
 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 conn.setRequestMethod("GET");
 conn.setConnectTimeout(5000);
 conn.setReadTimeout(5000);
+conn.setRequestProperty("User-Agent", "MyApp/1.0");
 
 try (BufferedReader br = new BufferedReader(
-        new InputStreamReader(conn.getInputStream()))) {
-    String line;
-    while ((line = br.readLine()) != null) {
-        System.out.println(line);
-    }
-} finally {
-    conn.disconnect();
-}
-```
-
-### POST 请求
-
-```java
-HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-conn.setRequestMethod("POST");
-conn.setDoOutput(true);
-conn.setRequestProperty("Content-Type", "application/json");
-
-try (OutputStream os = conn.getOutputStream()) {
-    byte[] input = json.getBytes(StandardCharsets.UTF_8);
-    os.write(input, 0, input.length);
-}
-```
-
-### 问题
-
-- API 设计陈旧，不符合现代编程风格
-- 不支持 HTTP/2
-- 超时配置复杂
-- 异步请求困难
-- 连接池需要手动管理
-
----
-
-## JDK 9 - HTTP Client (孵化器) - JEP 110
-
-### 特点
-
-- 位于 `jdk.incubator.httpclient` 包
-- 同步 + 异步 API
-- HTTP/2 支持
-- WebSocket 支持
-- 响应式流
-
-```java
-// JDK 9 使用模块
-module com.example {
-    requires jdk.incubator.httpclient;
-}
-
-// 使用孵化器 API
-HttpClient client = HttpClient.newHttpClient();
-HttpRequest request = HttpRequest.newBuilder()
-    .uri(URI.create("https://example.com"))
-    .build();
-HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-```
-
----
-
-## JDK 11 - HTTP Client (标准) - JEP 321
-
-### 变化
-
-- 从 `jdk.incubator.httpclient` 移至 `java.net.http`
-- 标准化完成
-- 成为推荐使用的 HTTP 客户端
-
-### 模块声明
-
-```java
-module com.example {
-    requires java.net.http;
-}
-```
-
-### 同步请求
-
-```java
-HttpClient client = HttpClient.newBuilder()
-    .version(HttpClient.Version.HTTP_2)
-    .connectTimeout(Duration.ofSeconds(10))
-    .build();
-
-HttpRequest request = HttpRequest.newBuilder()
-    .uri(URI.create("https://api.example.com/data"))
-    .header("Authorization", "Bearer token")
-    .GET()
-    .build();
-
-HttpResponse<String> response = client.send(request,
-    HttpResponse.BodyHandlers.ofString());
-
-System.out.println("Status: " + response.statusCode());
-System.out.println("Body: " + response.body());
-```
-
-### 异步请求
-
-```java
-CompletableFuture<HttpResponse<String>> future =
-    client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
-
-future.thenApply(HttpResponse::body)
-    .thenAccept(this::process)
-    .exceptionally(e -> {
-        log.error("Request failed", e);
-        return null;
-    });
-```
-
-### POST JSON
-
-```java
-String json = """
-    {
-        "name": "John",
-        "age": 30
-    }
-    """;
-
-HttpRequest request = HttpRequest.newBuilder()
-    .uri(URI.create("https://api.example.com/users"))
-    .header("Content-Type", "application/json")
-    .POST(HttpRequest.BodyPublishers.ofString(json))
-    .build();
-```
-
-### 流式处理
-
-```java`
-HttpResponse<Stream<String>> response = client.send(request,
-    HttpResponse.BodyHandlers.ofLines());
-
-response.body().forEach(line -> processLine(line));
-```
-
----
-
-## JDK 16 - HTTP/2 支持
-
-### 特性
-
-- 自动协议协商
-- 多路复用
-- 服务器推送
-
-```java
-HttpClient client = HttpClient.newBuilder()
-    .version(HttpClient.Version.HTTP_2)
-    .build();
-
-// 自动使用 HTTP/2
-// 如果服务器不支持 HTTP/2，自动降级到 HTTP/1.1
-HttpResponse<String> response = client.send(request, ...);
-System.out.println("Version: " + response.version());  // HTTP_2
-```
-
-### HTTP/2 优势
-
-| 特性 | HTTP/1.1 | HTTP/2 |
-|------|----------|--------|
-| 连接数 | 每个请求一个 | 多路复用 |
-| 头部压缩 | 无 | HPACK |
-| 服务器推送 | 不支持 | 支持 |
-| 二进制协议 | 文本 | 二进制 |
-
----
-
-## JDK 21 - HTTP Client 正式版
-
-### 变化
-
-- 完全稳定，无预览特性
-- 性能优化
-- 更好的错误处理
-
----
-
-## JDK 22-23 - 连接复用优化
-
-### 改进
-
-- HTTP/2 连接复用改进
-- 连接池优化
-- 更好的并发性能
-
----
-
-## JDK 26 - HTTP/3 支持 (预览) - JEP 517
-
-### 特性
-
-- 基于 QUIC 协议
-- 0-RTT 连接恢复
-- 内置拥塞控制
-- 无队头阻塞
-
-```java
-// 启用 HTTP/3
-HttpClient client = HttpClient.newBuilder()
-    .version(HttpClient.Version.HTTP_3)
-    .connectTimeout(Duration.ofSeconds(10))
-    .build();
-
-// 自动协商
-HttpClient autoClient = HttpClient.newBuilder()
-    .version(HttpClient.Version.HTTP_3_AUTO)  // HTTP/3 > HTTP/2 > HTTP/1.1
-    .build();
-
-HttpRequest request = HttpRequest.newBuilder()
-    .uri(URI.create("https://cloudflare.com/"))
-    .build();
-
-HttpResponse<String> response = client.send(request,
-    HttpResponse.BodyHandlers.ofString());
-
-System.out.println("Version: " + response.version());  // HTTP_3
-```
-
-### HTTP/3 vs HTTP/2
-
-| 特性 | HTTP/2 | HTTP/3 |
-|------|--------|--------|
-| 传输层 | TCP | QUIC (UDP) |
-| 队头阻塞 | 有 | 无 |
-| 连接建立 | 3-RTT | 1-RTT |
-| 连接迁移 | 困难 | 原生支持 |
-| 0-RTT 恢复 | 不支持 | 支持 |
-
-### QUIC 架构
-
-```
-Application: HTTP/3
-    ↓
-Transport:   QUIC (UDP)
-    ↓
-Security:   TLS 1.3 (内置)
-```
-
-### Alt-Svc 支持
-
-HTTP/3 通过 Alt-Svc 头发现：
-
-```java
-// 服务器返回
-HTTP/1.1 200 OK
-Alt-Svc: h3=":443"; ma=2592000
-
-// 后续请求自动升级到 HTTP/3
-```
-
----
-
-## API 对比
-
-### HttpURLConnection → HttpClient
-
-| 操作 | HttpURLConnection | HttpClient |
-|------|-------------------|--------------|
-| GET 请求 | 10+ 行代码 | 3 行代码 |
-| POST 请求 | 复杂 | 简洁 |
-| 异步请求 | 需要自己实现 | 内置支持 |
-| 超时设置 | 复杂 | 简单 |
-| 连接池 | 手动管理 | 自动管理 |
-| HTTP/2 | 不支持 | 支持 |
-| HTTP/3 | 不支持 | 支持 (JDK 26+) |
-
-### 代码对比
-
-```java
-// HttpURLConnection (旧)
-URL url = new URL("https://api.example.com/data");
-HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-conn.setRequestMethod("GET");
-conn.setConnectTimeout(5000);
-conn.setRequestProperty("Authorization", "Bearer token");
-
-try (BufferedReader br = new BufferedReader(
-        new InputStreamReader(conn.getInputStream()))) {
+        new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8))) {
     StringBuilder response = new StringBuilder();
     String line;
     while ((line = br.readLine()) != null) {
@@ -322,68 +106,147 @@ try (BufferedReader br = new BufferedReader(
 } finally {
     conn.disconnect();
 }
+```
 
-// HttpClient (新)
+### POST 请求
+
+```java
+URL url = new URL("https://api.example.com/users");
+HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+conn.setRequestMethod("POST");
+conn.setDoOutput(true);
+conn.setRequestProperty("Content-Type", "application/json");
+
+// 写入请求体
+String json = """
+    {"name": "John", "age": 30}
+    """;
+
+try (OutputStream os = conn.getOutputStream()) {
+    byte[] input = json.getBytes(StandardCharsets.UTF_8);
+    os.write(input, 0, input.length);
+}
+
+// 读取响应
+int responseCode = conn.getResponseCode();
+if (responseCode == HttpURLConnection.HTTP_OK) {
+    try (BufferedReader br = new BufferedReader(
+            new InputStreamReader(conn.getInputStream()))) {
+        // 处理响应
+    }
+}
+```
+
+### 处理重定向
+
+```java
+conn.setInstanceFollowRedirects(false);  // 手动处理
+int status = conn.getResponseCode();
+if (status == HttpURLConnection.HTTP_MOVED_TEMP
+    || status == HttpURLConnection.HTTP_MOVED_PERM
+    || status == HttpURLConnection.HTTP_SEE_OTHER) {
+
+    String newUrl = conn.getHeaderField("Location");
+    URL nextUrl = new URL(newUrl);
+    // 递归处理
+}
+```
+
+### HttpURLConnection 问题
+
+| 问题 | 说明 | 影响 |
+|------|------|------|
+| API 设计陈旧 | 不符合现代编程风格 | 代码冗长 |
+| 不支持 HTTP/2 | 无法利用 HTTP/2 优势 | 性能受限 |
+| 超时配置复杂 | connectTimeout/readTimeout 分离 | 易出错 |
+| 异步请求困难 | 需要自己实现线程池 | 开发成本高 |
+| 连接池管理 | 手动管理或使用系统默认 | 难以优化 |
+
+---
+
+## JDK 9 - HTTP Client (孵化器) - JEP 110
+
+### 模块声明
+
+```java
+module com.example {
+    requires jdk.incubator.httpclient;
+}
+```
+
+### 基础使用
+
+```java
+import jdk.incubator.http.*;
+import java.net.URI;
+
 HttpClient client = HttpClient.newHttpClient();
 HttpRequest request = HttpRequest.newBuilder()
-    .uri(URI.create("https://api.example.com/data"))
-    .header("Authorization", "Bearer token")
-    .timeout(Duration.ofSeconds(5))
+    .uri(URI.create("https://example.com"))
     .GET()
     .build();
 
-return client.send(request,
-    HttpResponse.BodyHandlers.ofString()).body();
+HttpResponse<String> response = client.send(request,
+    HttpResponse.BodyHandlers.ofString());
 ```
 
 ---
 
-## 性能对比
+## JDK 11 - HTTP Client (标准) - JEP 321
 
-### 连接建立时间
-
-| 协议 | RTT 次数 | 时间 (假设 RTT=50ms) |
-|------|---------|---------------------|
-| HTTP/1.1 | 3-RTT | ~150ms |
-| HTTP/2 | 3-RTT | ~150ms |
-| HTTP/3 | 1-RTT | ~50ms |
-| HTTP/3 (0-RTT 恢复) | 0-RTT | ~0ms |
-
-### 丢包恢复
+### 架构
 
 ```
-场景: 1% 丢包率，10 个并发请求
-
-HTTP/2 (TCP): 所有请求受影响（TCP 队头阻塞）
-HTTP/3 (QUIC): 仅丢包的流受影响（独立流）
+┌─────────────────────────────────────────────────────────┐
+│              HttpClient 架构                             │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  ┌─────────────────────────────────────────────┐        │
+│  │              HttpClient                      │        │
+│  │  - 连接池                                   │        │
+│  │  - 异步调度器                                │        │
+│  │  - 协议协商                                  │        │
+│  └─────────────────┬───────────────────────────┘        │
+│                    │                                    │
+│         ┌──────────┴──────────┐                         │
+│         │                     │                         │
+│    ┌────▼────┐           ┌────▼────┐                   │
+│    │ HttpRequest│        │ HttpResponse│                │
+│    │  - URI   │           │  - BodyHandler             │
+│    │  - Headers│          │  - StatusCode              │
+│    │  - Timeout│          │  - Version                 │
+│    └────┬────┘           └────┬────┘                   │
+│         │                     │                         │
+│         ▼                     ▼                         │
+│  ┌─────────────────────────────────────┐               │
+│  │        HTTP/1.1   HTTP/2   HTTP/3  │               │
+│  │           ┆          ┆         ┆    │               │
+│  └─────────────────────────────────────┘               │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
-### 吞吐量对比
-
-| 场景 | HTTP/1.1 | HTTP/2 | HTTP/3 |
-|------|----------|--------|--------|
-| 单连接 | 100 req/s | 500 req/s | 800 req/s |
-| 高并发 | 需要多连接 | 多路复用 | 无队头阻塞 |
-
----
-
-## 完整使用示例
-
-### 基础配置
+### 完整 API 示例
 
 ```java
+import java.net.http.*;
+import java.net.URI;
+import java.time.Duration;
+import java.util.concurrent.CompletableFuture;
+
 public class HttpClientExample {
     private final HttpClient client;
 
     public HttpClientExample() {
         this.client = HttpClient.newBuilder()
-            .version(HttpClient.Version.HTTP_3_AUTO)
+            .version(HttpClient.Version.HTTP_2)
             .connectTimeout(Duration.ofSeconds(10))
             .followRedirects(HttpClient.Redirect.NORMAL)
-            .executor(Executors.newVirtualThreadPerTaskExecutor())
+            .executor(Executors.newFixedThreadPool(10))
             .build();
     }
 
+    // 同步 GET
     public String get(String url) throws Exception {
         HttpRequest request = HttpRequest.newBuilder()
             .uri(URI.create(url))
@@ -400,14 +263,14 @@ public class HttpClientExample {
         return response.body();
     }
 
+    // 异步 GET
     public CompletableFuture<String> getAsync(String url) {
         HttpRequest request = HttpRequest.newBuilder()
             .uri(URI.create(url))
             .GET()
             .build();
 
-        return client.sendAsync(request,
-            HttpResponse.BodyHandlers.ofString())
+        return client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
             .thenApply(response -> {
                 if (response.statusCode() >= 400) {
                     throw new RuntimeException("HTTP error: " + response.statusCode());
@@ -416,6 +279,7 @@ public class HttpClientExample {
             });
     }
 
+    // POST JSON
     public String postJson(String url, String json) throws Exception {
         HttpRequest request = HttpRequest.newBuilder()
             .uri(URI.create(url))
@@ -428,7 +292,43 @@ public class HttpClientExample {
 
         return response.body();
     }
+
+    // POST 表单
+    public String postForm(String url, Map<String, String> form) throws Exception {
+        String formData = form.entrySet().stream()
+            .map(e -> URLEncoder.encode(e.getKey(), UTF_8) + "=" +
+                       URLEncoder.encode(e.getValue(), UTF_8))
+            .collect(Collectors.joining("&"));
+
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create(url))
+            .header("Content-Type", "application/x-www-form-urlencoded")
+            .POST(HttpRequest.BodyPublishers.ofString(formData))
+            .build();
+
+        HttpResponse<String> response = client.send(request,
+            HttpResponse.BodyHandlers.ofString());
+
+        return response.body();
+    }
 }
+```
+
+### BodyHandler 和 BodyPublisher
+
+```java
+// BodyHandler - 处理响应
+HttpResponse<String>      response1 = client.send(request, HttpResponse.BodyHandlers.ofString());
+HttpResponse<byte[]>      response2 = client.send(request, HttpResponse.BodyHandlers.ofByteArray());
+HttpResponse<Path>        response3 = client.send(request, HttpResponse.BodyHandlers.ofFile(Paths.get("output.txt")));
+HttpResponse<Stream<String>> response4 = client.send(request, HttpResponse.BodyHandlers.ofLines());
+HttpResponse<InputSteam>   response5 = client.send(request, HttpResponse.BodyHandlers.ofInputStream());
+
+// BodyPublisher - 发送请求体
+HttpRequest.BodyPublishers.ofString("Hello")           // 字符串
+HttpRequest.BodyPublishers.ofByteArray(bytes)           // 字节数组
+HttpRequest.BodyPublishers.ofFile(Paths.get("file.txt")) // 文件
+HttpRequest.BodyPublishers.ofInputStream(stream)        // 流
 ```
 
 ### 批量请求
@@ -441,20 +341,218 @@ List<String> urls = List.of(
 );
 
 // 并发请求
-List<CompletableFuture<String>> futures = urls.stream()
-    .map(url -> client.sendAsync(
-        HttpRequest.newBuilder(URI.create(url)).GET().build(),
-        HttpResponse.BodyHandlers.ofString()))
-    .map(f -> f.thenApply(HttpResponse::body))
+List<CompletableFuture<HttpResponse<String>>> futures = urls.stream()
+    .map(url -> {
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create(url))
+            .GET()
+            .build();
+        return client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
+    })
     .toList();
 
 // 等待全部完成
 CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
 
+// 收集结果
 List<String> results = futures.stream()
     .map(CompletableFuture::join)
+    .map(HttpResponse::body)
     .toList();
 ```
+
+---
+
+## HTTP/2 支持
+
+### HTTP/2 特性
+
+```java
+HttpClient client = HttpClient.newBuilder()
+    .version(HttpClient.Version.HTTP_2)
+    .build();
+
+// 检查实际使用的协议
+HttpResponse<String> response = client.send(request, ...);
+System.out.println("Protocol: " + response.version());  // HTTP_2
+```
+
+### HTTP/2 多路复用
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                HTTP/2 多路复用                           │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  HTTP/1.1                         HTTP/2                │
+│  ┌─────┐ ┌─────┐ ┌─────┐         ┌─────────────────┐   │
+│  │Conn1│ │Conn2│ │Conn3│         │     Conn        │   │
+│  └──┬──┘ └──┬──┘ └──┬──┘         └────────┬────────┘   │
+│     │       │       │                    │             │
+│     ▼       ▼       ▼        ┌───────┬───┴───┬───────┐  │
+│  Stream1 Stream2 Stream3      │Stream1│Stream2│Stream3│ │
+│                                └───────┴───────┴───────┘  │
+│                                                         │
+│  一个连接一个请求              一个连接多个请求           │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+### HTTP/2 Push Promise
+
+```java
+// 服务器推送会在响应中体现
+HttpResponse<String> response = client.send(request,
+    HttpResponse.BodyHandlers.ofString());
+
+// 检查推送的资源
+response.pushPromises().forEach(promise -> {
+    System.out.println("Pushed: " + promise.request().uri());
+});
+```
+
+---
+
+## HTTP/3 (JDK 26, JEP 517)
+
+### QUIC 协议栈
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                 HTTP/3 协议栈                            │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  ┌─────────────────────────────────────────────┐        │
+│  │              HTTP/3                          │        │
+│  │  - QPACK (头部压缩)                          │        │
+│  │  - Stream 帧 (DATA, HEADERS, SETTINGS)       │        │
+│  └─────────────────┬───────────────────────────┘        │
+│                    │                                    │
+│  ┌─────────────────┴───────────────────────────┐        │
+│  │              QUIC                            │        │
+│  │  - 传输层 (UDP)                              │        │
+│  │  - TLS 1.3 (内置)                            │        │
+│  │  - 连接迁移                                  │        │
+│  │  - 0-RTT 恢复                                │        │
+│  └─────────────────┬───────────────────────────┘        │
+│                    │                                    │
+│  ┌─────────────────┴───────────────────────────┐        │
+│  │              UDP                            │        │
+│  └─────────────────────────────────────────────┘        │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+### HTTP/3 使用
+
+```java
+import java.net.http.*;
+
+// 启用 HTTP/3
+HttpClient client = HttpClient.newBuilder()
+    .version(HttpClient.Version.HTTP_3)
+    .connectTimeout(Duration.ofSeconds(10))
+    .build();
+
+HttpRequest request = HttpRequest.newBuilder()
+    .uri(URI.create("https://cloudflare.com/"))
+    .build();
+
+HttpResponse<String> response = client.send(request,
+    HttpResponse.BodyHandlers.ofString());
+
+System.out.println("Version: " + response.version());  // HTTP_3
+System.out.println("Status: " + response.statusCode());
+```
+
+### 自动协议协商
+
+```java
+// HTTP_3_AUTO - 自动选择最佳协议
+HttpClient client = HttpClient.newBuilder()
+    .version(HttpClient.Version.HTTP_3_AUTO)  // HTTP/3 > HTTP/2 > HTTP/1.1
+    .build();
+
+// 协议协商过程:
+// 1. 尝试 HTTP/3
+// 2. 如果失败 (UDP 被阻止/服务器不支持)，降级到 HTTP/2
+// 3. 如果失败，降级到 HTTP/1.1
+```
+
+### HTTP/3 帧类型
+
+```java
+// HTTP/3 帧类型 (内部实现)
+enum Http3FrameType {
+    DATA(0x00),           // 数据帧
+    HEADERS(0x01),        // 头部帧
+    CANCEL_PUSH(0x03),    // 取消推送
+    SETTINGS(0x04),       // 设置帧
+    PUSH_PROMISE(0x05),   // 推送承诺
+    GOAWAY(0x07),         // 关闭连接
+    MAX_PUSH_ID(0x0D);    // 最大推送 ID
+}
+```
+
+### Alt-Svc 发现
+
+```java
+// 服务器通过 Alt-Svc 头宣告 HTTP/3 支持
+// HTTP/1.1 响应:
+// Alt-Svc: h3=":443"; ma=2592000
+
+// 后续请求自动升级到 HTTP/3
+// HttpClient 会缓存 Alt-Svc 信息
+```
+
+---
+
+## 性能对比
+
+### 连接建立时间
+
+| 协议 | RTT 次数 | 说明 |
+|------|---------|------|
+| HTTP/1.1 | TCP(1) + TLS(2) = 3-RTT | ~150ms |
+| HTTP/2 | TCP(1) + TLS(2) = 3-RTT | ~150ms |
+| HTTP/3 | QUIC(1+TLS) = 1-RTT | ~50ms |
+| HTTP/3 (0-RTT) | 恢复连接 = 0-RTT | ~0ms |
+
+### 丢包恢复
+
+```
+场景: 1% 丢包率，10 个并发请求
+
+HTTP/2 (TCP):
+┌─────────────────────────────────────────┐
+│ Stream1 │ Stream2 │ Stream3 │ Stream4 │
+└────┬────┴────┬────┴────┬────┴────┬────┘
+     │         │         │         │
+     └─────────┴─────────┴─────────┘
+                  │
+              丢包阻塞
+                  │
+             ▼     ▼     ▼     ▼
+          全部等待重传
+
+HTTP/3 (QUIC):
+┌─────────────────────────────────────────┐
+│ Stream1 │ Stream2 │ Stream3 │ Stream4 │
+└────┬────┴────┬────┴────┬────┴────┬────┘
+     │         │         │         │
+     └─────────┴─────────┴─────────┘
+              独立流，互不影响
+     │         │         │         │
+  仅丢包流重传，其他流继续
+```
+
+### 吞吐量对比
+
+| 场景 | HTTP/1.1 | HTTP/2 | HTTP/3 |
+|------|----------|--------|--------|
+| 单连接 | 100 req/s | 500 req/s | 800 req/s |
+| 高并发 (100连接) | 需100个连接 | 需10个连接 | 需1个连接 |
+| 1% 丢包 | 吞吐量下降 50% | 吞吐量下降 30% | 吞吐量下降 5% |
 
 ---
 
@@ -484,7 +582,7 @@ HttpClient client = HttpClient.newBuilder()
 
 ```java
 HttpClient client = HttpClient.newBuilder()
-    .connectTimeout(Duration.ofSeconds(10))
+    .connectTimeout(Duration.ofSeconds(10))  // 连接超时
     .build();
 
 HttpRequest request = HttpRequest.newBuilder()
@@ -497,9 +595,57 @@ HttpRequest request = HttpRequest.newBuilder()
 
 ```java
 HttpResponse<String> response = client.send(request, ...);
+
 if (response.version() != HttpClient.Version.HTTP_3) {
     log.info("HTTP/3 不可用，使用 " + response.version());
+    // 可能原因: UDP 被阻止、服务器不支持
 }
+```
+
+### 5. 使用响应式流处理大数据
+
+```java
+HttpResponse<Stream<String>> response = client.send(request,
+    HttpResponse.BodyHandlers.ofLines());
+
+response.body()
+    .filter(line -> line.contains("keyword"))
+    .limit(100)
+    .forEach(this::processLine);
+```
+
+---
+
+## 故障排查
+
+### HTTP/3 不可用
+
+```bash
+# 检查 UDP 是否被阻止
+telnet example.com 443
+
+# 检查防火墙
+sudo iptables -L -n | grep 443
+
+# 启用详细日志
+-Djava.util.logging.config.file=logging.properties
+
+# logging.properties
+java.net.http.level=FINE
+jdk.internal.net.http.level=FINE
+```
+
+### 连接泄漏
+
+```java
+// 使用 try-with-resources 自动释放
+try (var client = HttpClient.newBuilder().build()) {
+    // 使用 client
+}
+
+// 或者确保 HttpClient 正确关闭
+client.shutdown();        // 优雅关闭
+client.shutdownNow();     // 立即关闭
 ```
 
 ---
@@ -524,3 +670,5 @@ if (response.version() != HttpClient.Version.HTTP_3) {
 - [HTTP Client 文档](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html)
 - [JEP 321: HTTP Client](https://openjdk.org/jeps/321)
 - [JEP 517: HTTP/3](https://openjdk.org/jeps/517)
+- [RFC 9114: HTTP/3](https://www.rfc-editor.org/rfc/rfc9114)
+- [RFC 9000: QUIC](https://www.rfc-editor.org/rfc/rfc9000)
