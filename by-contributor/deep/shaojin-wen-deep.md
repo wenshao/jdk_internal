@@ -503,4 +503,4 @@ Shaojin Wen 的贡献特点:
 - [GitHub Profile](https://github.com/wenshao)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=Shaojin%20Wen)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20swen)
-- [返回主文档](../shaojin-wen.md)
+- [返回主文档](/by-contributor/profiles/shaojin-wen.md)

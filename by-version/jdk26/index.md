@@ -12,7 +12,7 @@
 | 我想了解 | 链接 |
 |---------|------|
 | 所有 JEP 详细列表 | [JEP 汇总](./jeps.md) |
-| 重要 PR 分析 | [Top 50 Commits](../../prs/jdk26-top-prs.md) |
+| 重要 PR 分析 | [Top 50 Commits](/prs/jdk26-top-prs.md) |
 | 深度技术分析 | [深度分析文档](./deep-dive/) |
 | 如何试用 | [快速开始](#快速开始) |
 | 从 JDK 21 升级 | [迁移指南](./migration/from-21.md) |
@@ -299,7 +299,7 @@ java -XX:AOTLibrary+ -XX:ArchiveClassesAtExit=app.jsa MyApp
 
 ## 重要非 JEP 改动
 
-详见 [JDK 26 Top 50 Commits](../../prs/jdk26-top-prs.md)
+详见 [JDK 26 Top 50 Commits](/prs/jdk26-top-prs.md)
 
 | Issue | 改动 | 影响 |
 |-------|------|------|
@@ -326,6 +326,6 @@ java -XX:AOTLibrary+ -XX:ArchiveClassesAtExit=app.jsa MyApp
 ## 更多阅读
 
 - [JDK 26 JEP 汇总](./jeps.md) - 所有 JEP 详细列表
-- [Top 50 Commits](../../prs/jdk26-top-prs.md) - 重要的代码变更
+- [Top 50 Commits](/prs/jdk26-top-prs.md) - 重要的代码变更
 - [按主题浏览](../../by-topic/) - 跨版本追踪技术演进
 - [按贡献者浏览](../../by-contributor/) - 了解贡献者和他们的工作

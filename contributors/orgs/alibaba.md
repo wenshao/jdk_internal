@@ -23,10 +23,10 @@
 
 | 贡献者 | GitHub | PRs | 主要领域 |
 |--------|--------|-----|----------|
-| [Shaojin Wen](../shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | 核心库优化 |
-| [Kuai Wei](../kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | C2 编译器 |
-| [Yude Lin](../yude-lin.md) | [@linade](https://github.com/linade) | 8 | G1 GC, AArch64 |
-| [Xiaowei Lu](../xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | ZGC |
+| [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | 核心库优化 |
+| [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | C2 编译器 |
+| [Yude Lin](../../by-contributor/profiles/yude-lin.md) | [@linade](https://github.com/linade) | 8 | G1 GC, AArch64 |
+| [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | ZGC |
 
 ---
 

@@ -21,7 +21,7 @@
 
 | 贡献者 | GitHub | PRs | 主要领域 |
 |--------|--------|-----|----------|
-| [Anjian Wen](../anjian-wen.md) | [@Anjian-Wen](https://github.com/Anjian-Wen) | 25 | RISC-V 向量指令 |
+| [Anjian Wen](../../by-contributor/profiles/anjian-wen.md) | [@Anjian-Wen](https://github.com/Anjian-Wen) | 25 | RISC-V 向量指令 |
 
 ---
 
