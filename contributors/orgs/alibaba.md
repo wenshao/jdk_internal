@@ -35,14 +35,14 @@
 
 | 贡献者 | Commits | 主要贡献 |
 |--------|---------|----------|
-| Yude Lin | 8 | G1 GC, Shenandoah, AArch64 |
-| Zhuo Wang | 3 | Unsafe 修复 |
-| Xiaowei Lu | 3 | ZGC, GC 日志 |
-| Hao Tang | 2 | 容器 CPU, ZGC |
-| Yibo Yang | 2 | 内存优化, Apple M1 |
+| [Yude Lin](../yude-lin.md) | 8 | G1 GC, Shenandoah, AArch64 |
+| [Zhuo Wang](../zhuo-wang.md) | 3 | Unsafe 修复 |
+| [Xiaowei Lu](../xiaowei-lu.md) | 3 | ZGC, GC 日志 |
+| [Hao Tang](../hao-tang.md) | 2 | 容器 CPU, ZGC |
+| [Yibo Yang](../yibo-yang.md) | 2 | 内存优化, Apple M1 |
 | Sendao Yan | 2 | 测试修复 |
-| Xingqi Zheng | 2 | RISC-V 修复 |
-| Yang Yi | 2 | Metaspace, 文件流 |
+| [Xingqi Zheng](../xingqi-zheng.md) | 2 | RISC-V 修复 |
+| [Yang Yi](../yang-yi.md) | 2 | Metaspace, 文件流 |
 | lingjun.cg | 2 | 测试 |
 | MaxXSoft | 2 | 测试 |
 | yibo.yl | 2 | 测试 |
