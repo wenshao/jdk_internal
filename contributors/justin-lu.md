@@ -10,7 +10,6 @@
 | **OpenJDK** | [@jlu](https://openjdk.org/census#jlu) |
 | **Role** | OpenJDK Member, JDK Reviewer |
 | **Email** | jlu@openjdk.org |
-| **JDK 26 Commits** | 56 |
 | **Primary Areas** | Locale, Internationalization (i18n), NumberFormat, Currency |
 
 ## Contribution Overview

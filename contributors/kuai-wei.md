@@ -12,8 +12,8 @@
 | **组织** | 阿里巴巴 (Alibaba) |
 | **GitHub** | [@kuaiwei](https://github.com/kuaiwei) |
 | **OpenJDK** | Author |
+| **PRs** | [13 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akuaiwei+is%3Aclosed+label%3Aintegrated) |
 | **Email** | kuaiwei.kw@alibaba-inc.com |
-| **Commits** | 4 |
 | **主要领域** | C2 编译器、IR 优化 |
 | **活跃时间** | 2024 - 至今 |
 

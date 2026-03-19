@@ -13,7 +13,7 @@
 | **GitHub** | [@albertnetymk](https://github.com/albertnetymk) |
 | **OpenJDK** | [@ayang](https://openjdk.org/census#ayang) |
 | **角色** | OpenJDK Member, JDK Reviewer |
-| **Commits** | 124 (JDK 26 最多) |
+| **PRs** | [744 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aalbertnetymk+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | G1 GC, Parallel GC |
 | **活跃时间** | 2023 - 至今 |
 

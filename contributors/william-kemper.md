@@ -6,11 +6,11 @@
 |-----------|-------|
 | **Name** | William Kemper |
 | **Organization** | Amazon |
-| **GitHub** | [@wkemper](https://github.com/wkemper) |
+| **GitHub** | [@wkemper](https://github.com/wkemper), [@earthling-amzn](https://github.com/earthling-amzn) |
 | **OpenJDK** | [@wkemper](https://openjdk.org/census#wkemper) |
 | **Role** | JDK Reviewer |
+| **PRs** | [123 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aearthling-amzn+is%3Aclosed+label%3Aintegrated) |
 | **Email** | wkemper@openjdk.org |
-| **JDK 26 Commits** | 60 |
 | **Primary Areas** | Shenandoah GC, Generational Shenandoah (JEP 521) |
 
 ## Contribution Overview

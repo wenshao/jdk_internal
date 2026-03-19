@@ -10,7 +10,6 @@
 | **OpenJDK** | [@psadhukhan](https://openjdk.org/census#psadhukhan) |
 | **Role** | OpenJDK Member, JDK Reviewer |
 | **Email** | psadhukhan@openjdk.org |
-| **JDK 26 Commits** | 62 |
 | **Primary Areas** | Swing, AWT, UI Components |
 
 ## Contribution Overview

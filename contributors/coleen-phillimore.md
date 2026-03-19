@@ -9,8 +9,8 @@
 | **GitHub** | [@coleenp](https://github.com/coleenp) |
 | **OpenJDK** | [@coleenp](https://openjdk.org/census#coleenp) |
 | **Role** | OpenJDK Member, JDK Reviewer |
+| **PRs** | [400 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Acoleenp+is%3Aclosed+label%3Aintegrated) |
 | **Email** | coleenp@openjdk.org |
-| **JDK 26 Commits** | 68 |
 | **Primary Areas** | JVM Core, HotSpot, Metaspace, Class Loading |
 
 ## Contribution Overview

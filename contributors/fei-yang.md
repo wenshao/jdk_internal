@@ -13,7 +13,7 @@
 | **GitHub** | [@RealFYang](https://github.com/RealFYang) |
 | **OpenJDK** | [@fyang](https://openjdk.org/census#fyang) |
 | **角色** | HotSpot Group, RISC-V Port Lead |
-| **Commits** | 30 |
+| **PRs** | [100 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3ARealFYang+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | RISC-V 后端、向量指令 |
 | **活跃时间** | 2024 - 至今 |
 

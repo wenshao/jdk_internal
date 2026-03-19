@@ -13,8 +13,8 @@
 | **GitHub** | [@shipilev](https://github.com/shipilev) |
 | **OpenJDK** | [@shade](https://openjdk.org/census#shade) |
 | **角色** | OpenJDK Member, JDK Reviewer |
+| **PRs** | [803 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ashipilev+is%3Aclosed+label%3Aintegrated) |
 | **Email** | shade@openjdk.org |
-| **Commits** | 120 |
 | **主要领域** | C2 编译器、性能优化、基准测试 |
 | **主导 JEP** | JEP 503: Remove the 32-bit x86 Port |
 | **活跃时间** | 2012 - 至今 |

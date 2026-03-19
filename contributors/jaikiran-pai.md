@@ -10,7 +10,6 @@
 | **OpenJDK** | [@jpai](https://openjdk.org/census#jpai) |
 | **Role** | OpenJDK Member, JDK Reviewer |
 | **Email** | jpai@openjdk.org |
-| **JDK 26 Commits** | 64 |
 | **Primary Areas** | HttpClient, Networking, ZIP/JAR, Test Infrastructure |
 
 ## Contribution Overview

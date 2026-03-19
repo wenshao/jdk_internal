@@ -13,7 +13,7 @@
 | **GitHub** | [@tschatzl](https://github.com/tschatzl) |
 | **OpenJDK** | [@tschatzl](https://openjdk.org/census#tschatzl) |
 | **角色** | OpenJDK Member, JDK Reviewer |
-| **Commits** | 95 |
+| **PRs** | [545 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Atschatzl+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | G1 GC |
 | **主导 JEP** | JEP 522: G1 GC Throughput Improvement |
 | **活跃时间** | 2013 - 至今 |

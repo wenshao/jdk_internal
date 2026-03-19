@@ -9,8 +9,8 @@
 | **GitHub** | [@prrace](https://github.com/prrace) |
 | **OpenJDK** | [@prr](https://openjdk.org/census#prr) |
 | **Role** | OpenJDK Member, JDK Reviewer, Client Libs Lead |
+| **PRs** | [303 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aprrace+is%3Aclosed+label%3Aintegrated) |
 | **Email** | prr@openjdk.org |
-| **JDK 26 Commits** | 69 |
 | **Primary Areas** | Graphics, Printing, AWT, Swing, Security |
 
 ## Contribution Overview

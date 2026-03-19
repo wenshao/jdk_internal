@@ -9,8 +9,8 @@
 | **GitHub** | [@luhenry](https://github.com/luhenry) |
 | **OpenJDK** | [@mli](https://openjdk.org/census#mli) |
 | **Role** | JDK Reviewer |
+| **PRs** | [13 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aluhenry+is%3Aclosed+label%3Aintegrated) |
 | **Email** | mli@openjdk.org |
-| **JDK 26 Commits** | 65 |
 | **Primary Areas** | C2 SuperWord, RISC-V Backend, Vectorization |
 
 ## Contribution Overview

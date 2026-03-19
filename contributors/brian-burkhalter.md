@@ -9,8 +9,8 @@
 | **GitHub** | [@bplb](https://github.com/bplb) |
 | **OpenJDK** | [@bpb](https://openjdk.org/census#bpb) |
 | **Role** | OpenJDK Member, JDK Reviewer |
+| **PRs** | [361 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Abplb+is%3Aclosed+label%3Aintegrated) |
 | **Email** | bpb@openjdk.org |
-| **JDK 26 Commits** | 65 |
 | **Primary Areas** | NIO, File Systems, Networking, I/O |
 
 ## Contribution Overview

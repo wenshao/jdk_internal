@@ -13,7 +13,7 @@
 | **GitHub** | [@iklam](https://github.com/iklam) |
 | **OpenJDK** | [@iklam](https://openjdk.org/census#iklam) |
 | **角色** | OpenJDK Member, JDK Reviewer |
-| **Commits** | 109 |
+| **PRs** | [431 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aiklam+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | AOT, CDS, 启动优化 |
 | **主导 JEP** | JEP 514: Ahead-of-Time Command Line Ergonomics |
 | **活跃时间** | 2018 - 至今 |

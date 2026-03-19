@@ -13,7 +13,6 @@
 | **GitHub** | [@tongbao-zhang](https://github.com/tongbao-zhang) |
 | **OpenJDK** | Author |
 | **Email** | tobytbzhang@tencent.com |
-| **Commits** | 1 |
 | **主要领域** | G1 GC |
 | **活跃时间** | 2024 - 至今 |
 

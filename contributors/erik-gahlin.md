@@ -13,7 +13,7 @@
 | **GitHub** | [@egahlin](https://github.com/egahlin) |
 | **OpenJDK** | [@egahlin](https://openjdk.org/census#egahlin) |
 | **角色** | JDK Reviewer |
-| **Commits** | 74 |
+| **PRs** | [322 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aegahlin+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | JFR (Java Flight Recorder) |
 | **主导 JEP** | JEP 520: JFR Method Timing and Tracing |
 | **活跃时间** | 2013 - 至今 |

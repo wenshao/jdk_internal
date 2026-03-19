@@ -13,7 +13,7 @@
 | **GitHub** | [@SendaoYan](https://github.com/SendaoYan) |
 | **OpenJDK** | [@syan](https://openjdk.org/census#syan) |
 | **角色** | JDK Committer |
-| **Commits** | 88 |
+| **PRs** | [202 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3ASendaoYan+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | 测试稳定性、测试修复 |
 | **活跃时间** | 2022 - 至今 |
 

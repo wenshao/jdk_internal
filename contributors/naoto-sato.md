@@ -9,8 +9,8 @@
 | **GitHub** | [@naotoj](https://github.com/naotoj) |
 | **OpenJDK** | [@naoto](https://openjdk.org/census#naoto) |
 | **Role** | OpenJDK Member, JDK Reviewer, i18n Lead |
+| **PRs** | [273 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Anaotoj+is%3Aclosed+label%3Aintegrated) |
 | **Email** | naoto@openjdk.org |
-| **JDK 26 Commits** | 53 |
 | **Primary Areas** | Unicode, Internationalization, Console, TimeZone |
 
 ## Contribution Overview

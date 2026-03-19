@@ -13,7 +13,6 @@
 | **GitHub** | [@hanguanqiang](https://github.com/hanguanqiang) |
 | **OpenJDK** | Author |
 | **Email** | hanguanqiang@kylinos.cn |
-| **Commits** | 2 |
 | **主要领域** | 编译器优化 |
 | **活跃时间** | 2024 - 至今 |
 

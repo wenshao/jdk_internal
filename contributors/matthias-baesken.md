@@ -9,8 +9,8 @@
 | **GitHub** | [@MBaesken](https://github.com/MBaesken) |
 | **OpenJDK** | [@mbaesken](https://openjdk.org/census#mbaesken) |
 | **Role** | OpenJDK Member, JDK Reviewer |
+| **PRs** | [514 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AMBaesken+is%3Aclosed+label%3Aintegrated) |
 | **Email** | mbaesken@openjdk.org |
-| **JDK 26 Commits** | 117 |
 | **Primary Areas** | Build System, Cross-Platform, AIX, Windows, Linux |
 
 ## Contribution Overview

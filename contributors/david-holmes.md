@@ -9,8 +9,8 @@
 | **GitHub** | [@dholmes-ora](https://github.com/dholmes-ora) |
 | **OpenJDK** | [@dholmes](https://openjdk.org/census#dholmes) |
 | **Role** | OpenJDK Member, JDK Reviewer |
+| **PRs** | [303 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Adholmes-ora+is%3Aclosed+label%3Aintegrated) |
 | **Email** | dholmes@openjdk.org |
-| **JDK 26 Commits** | 65 |
 | **Primary Areas** | Threading, Concurrency, JVM Runtime, Signal Handling |
 
 ## Contribution Overview

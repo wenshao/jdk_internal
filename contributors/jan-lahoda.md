@@ -13,7 +13,6 @@
 | **GitHub** | [@jlahoda](https://github.com/jlahoda) |
 | **OpenJDK** | [@jlahoda](https://openjdk.org/census#jlahoda) |
 | **角色** | JDK Reviewer |
-| **Commits** | 62 |
 | **主要领域** | javac, JShell, 语言特性 |
 | **主导 JEP** | JEP 511, JEP 512 |
 | **活跃时间** | 2006 - 至今 |

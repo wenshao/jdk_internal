@@ -10,7 +10,6 @@
 | **OpenJDK** | [@asemenyuk](https://openjdk.org/census#asemenyuk) |
 | **Role** | JDK Reviewer |
 | **Email** | asemenyuk@openjdk.org |
-| **JDK 26 Commits** | 93 |
 | **Primary Areas** | jpackage, Installers, Packaging, Cross-Platform Deployment |
 
 ## Contribution Overview

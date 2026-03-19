@@ -9,8 +9,8 @@
 | **GitHub** | [@magicus](https://github.com/magicus) |
 | **OpenJDK** | [@ihse](https://openjdk.org/census#ihse) |
 | **Role** | OpenJDK Member, JDK Reviewer |
+| **PRs** | [351 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Amagicus+is%3Aclosed+label%3Aintegrated) |
 | **Email** | ihse@openjdk.org |
-| **JDK 26 Commits** | 106 |
 | **Primary Areas** | Build System, Makefiles, Configure Scripts |
 
 ## Contribution Overview
