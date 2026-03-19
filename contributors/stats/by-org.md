@@ -117,8 +117,8 @@
 |--------|---------|------|
 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | - | Corretto |
 | [William Kemper](/by-contributor/profiles/william-kemper.md) | 34 | Shenandoah |
-| [Felix Nensemba](/by-contributor/profiles/felix-nensemba.md) | 25 | GC |
-| [Y. S. K. Nilsen](/by-contributor/profiles/y-s-k-nilsen.md) | 20 | 性能 |
+| Felix Nensemba | 25 | GC |
+| Y. S. K. Nilsen | 20 | 性能 |
 
 **主要贡献领域**：
 - Shenandoah GC (Corretto)
@@ -150,7 +150,7 @@
 | 贡献者 | Commits | 领域 |
 |--------|---------|------|
 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 27 | 核心库/性能 |
-| [Denghui Dong](/by-contributor/profiles/denghui-dong.md) | 15 | GC |
+| Denghui Dong | 15 | GC |
 
 **主要贡献**：
 - 字符串拼接优化 (JDK-8336856)
@@ -161,13 +161,13 @@
 
 | 贡献者 | Commits | 领域 |
 |--------|---------|------|
-| [Jie Fu](/by-contributor/profiles/jie-fu.md) | 20+ | GC |
+| Jie Fu | 20+ | GC |
 
 ### 华为
 
 | 贡献者 | Commits | 领域 |
 |--------|---------|------|
-| [Feilong Jiang](/by-contributor/profiles/feilong-jiang.md) | 30+ | JIT/AOT |
+| Feilong Jiang | 30+ | JIT/AOT |
 
 ### 字节跳动
 

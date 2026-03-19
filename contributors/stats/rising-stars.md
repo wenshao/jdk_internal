@@ -25,7 +25,7 @@
 | 贡献者 | 首次贡献 | Commits | 领域 | 组织 | 亮点 |
 |--------|----------|---------|------|------|------|
 | [William Kemper](/by-contributor/profiles/william-kemper.md) | 2022 | 34 | Shenandoah GC | Amazon | GC 优化 |
-| [Felix Nensemba](/by-contributor/profiles/felix-nensemba.md) | 2023 | 25 | GC | Amazon | 性能优化 |
+| Felix Nensemba | 2023 | 25 | GC | Amazon | 性能优化 |
 | Dingli Zhang | 2023 | 11 | RISC-V | ISCAS | 架构移植 |
 
 ---
@@ -37,8 +37,8 @@
 | 贡献者 | 首次贡献 | Commits | GC 类型 | 组织 |
 |--------|----------|---------|---------|------|
 | [William Kemper](/by-contributor/profiles/william-kemper.md) | 2022 | 34 | Shenandoah | Amazon |
-| [Felix Nensemba](/by-contributor/profiles/felix-nensemba.md) | 2023 | 25 | Shenandoah | Amazon |
-| [Y. S. K. Nilsen](/by-contributor/profiles/y-s-k-nilsen.md) | 2023 | 20 | 各类 GC | Amazon |
+| Felix Nensemba | 2023 | 25 | Shenandoah | Amazon |
+| Y. S. K. Nilsen | 2023 | 20 | 各类 GC | Amazon |
 
 ### 编译器领域
 
@@ -69,7 +69,7 @@
 | 贡献者 | 首次贡献 | PRs | 主要贡献 |
 |--------|----------|-----|----------|
 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 2024-05 | 27 | 字符串拼接优化 (JDK-8336856) |
-| [Denghui Dong](/by-contributor/profiles/denghui-dong.md) | 2024 | 15 | GC 优化 |
+| Denghui Dong | 2024 | 15 | GC 优化 |
 
 ### 字节跳动
 
