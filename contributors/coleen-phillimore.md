@@ -1,5 +1,9 @@
 # Coleen Phillimore
 
+> HotSpot VM 核心架构师，JVM 运行时专家
+
+---
+
 ## Basic Information
 
 | Field | Value |
@@ -13,6 +17,60 @@
 | **Primary Areas** | JVM Core, HotSpot, Metaspace, Class Loading |
 
 > **Data as of**: 2026-03-19
+
+---
+
+## Technical Impact
+
+| Metric | Value |
+|--------|-------|
+| **Lines of Code** | +158,019 / -148,467 (net +9,552) |
+| **Affected Modules** | hotspot (runtime, classfile) |
+| **Main Contributions** | JVM core, metaspace, class loading |
+
+### Most Affected Directories
+
+| Directory | Files | Description |
+|-----------|-------|-------------|
+| runtime | 951 | JVM runtime |
+| classfile | 764 | Class file loading |
+| oops | 672 | Object model |
+
+---
+
+## Technical Expertise
+
+`HotSpot VM` `Metaspace` `Class Loading` `Object Monitor` `JVM TI` `Runtime`
+
+---
+
+## Representative Work
+
+### 1. HotSpot VM Core Architect
+Long-time HotSpot VM contributor and architect, shaping JVM internals.
+
+### 2. Metaspace Improvements
+Major contributions to metaspace memory management for class metadata.
+
+### 3. Class Loading Modernization
+Class file loading and verification improvements.
+
+### 4. Object Monitor Optimization
+Synchronization primitives and object monitor optimizations.
+
+### 5. Code Cleanup and Modernization
+Extensive code cleanup, removing deprecated code and modernizing codebase.
+
+---
+
+## External Resources
+
+| Type | Link |
+|------|------|
+| **GitHub** | [@coleenp](https://github.com/coleenp) |
+| **OpenJDK Census** | [coleenp](https://openjdk.org/census#coleenp) |
+
+---
 
 ## Contribution Overview
 

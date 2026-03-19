@@ -22,6 +22,60 @@
 
 ---
 
+## 技术影响力
+
+| 指标 | 值 |
+|------|-----|
+| **代码行数** | +109,076 / -76,495 (净 +32,581) |
+| **影响模块** | hotspot (CDS, classfile) |
+| **主要贡献** | AOT 优化、CDS 改进、启动优化 |
+
+### 影响的主要目录
+
+| 目录 | 文件数 | 说明 |
+|------|--------|------|
+| cds | 1,139 | CDS (Class Data Sharing) |
+| classfile | 783 | 类文件加载 |
+| oops | 444 | 对象模型 |
+
+---
+
+## 技术特长
+
+`AOT` `CDS` `启动优化` `类加载` `内存映射` `确定性归档`
+
+---
+
+## 代表性工作
+
+### 1. JEP 514: Ahead-of-Time Command Line Ergonomics
+**Issue**: [JDK-8345169](https://bugs.openjdk.org/browse/JDK-8345169)
+
+简化 AOT 配置，提供更好的命令行人体工程学。
+
+### 2. CDS (Class Data Sharing) 核心贡献者
+CDS 功能的主要开发者，显著提升应用启动速度。
+
+### 3. 确定性归档地址
+实现 CDS 归档的确定性地址分配，提升可重现性。
+
+### 4. AOT 类预加载
+AOT 编译类的预加载优化，减少启动时间。
+
+### 5. Leyden 项目贡献
+为 Leyden 项目 (提前编译) 做出重要贡献。
+
+---
+
+## 外部资源
+
+| 类型 | 链接 |
+|------|------|
+| **GitHub** | [@iklam](https://github.com/iklam) |
+| **OpenJDK Census** | [iklam](https://openjdk.org/census#iklam) |
+
+---
+
 ## 贡献概览
 
 ### 按类别统计
