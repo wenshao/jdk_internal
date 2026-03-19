@@ -4,308 +4,142 @@
 
 ---
 
-## 主题列表
-
-### [GC 演进](gc/)
-
-垃圾收集器的发展历程，从 Serial 到分代 ZGC。
-
-| 版本 | 主要变化 | JEP |
-|------|----------|-----|
-| JDK 8 | G1 成为主流，CMS 标记废弃 | - |
-| JDK 11 | ZGC 引入 (实验性) | JEP 333 |
-| JDK 15 | ZGC 生产可用 | JEP 378 |
-| JDK 17 | 并发线程栈扫描 | JEP 379 |
-| JDK 21 | **分代 ZGC** (JEP 439)、分代 Shenandoah (JEP 429) | JEP 439, JEP 429 |
-| JDK 23 | ZGC 分代改进 | JEP 474 |
-| JDK 26 | G1 吞吐量提升 (JEP 522)、ZGC NUMA | JEP 522 |
-
-→ [GC 时间线](gc/timeline.md)
-
-### [并发编程](concurrency/)
+## 分类导航
 
-从 Thread 到 Virtual Thread 的演进。
+### [核心平台](core/)
 
-| 版本 | 主要变化 | JEP |
-|------|----------|-----|
-| JDK 5 | Executor 框架 | JSR-166 |
-| JDK 7 | Fork/Join 框架 | JSR-166y |
-| JDK 8 | Lambda、Parallel Stream | JEP 126 |
-| JDK 8 | CompletableFuture | JEP 107 |
-| JDK 9 | CompletableFuture 改进、Reactive Streams | JEP 266 |
-| JDK 19 | **Virtual Threads** (预览) | JEP 425 |
-| JDK 20 | Virtual Threads (第二次预览) | JEP 436 |
-| JDK 21 | **Virtual Threads** (正式)、**Structured Concurrency** (预览)、**Scoped Values** (预览) | JEP 444, JEP 453, JEP 446 |
-| JDK 22-26 | Structured Concurrency (持续预览) | JEP 462, 477, 483, 491, 493 |
+JVM、内存、性能、模块系统等底层技术。
 
-→ [并发时间线](concurrency/timeline.md)
+| 主题 | 说明 | 首发版本 |
+|------|------|----------|
+| [GC 演进](core/gc/) | 垃圾收集器发展历程 | JDK 1.0 |
+| [内存管理](core/memory/) | 堆、栈、Metaspace、Compressed Oops | JDK 1.0 |
+| [性能优化](core/performance/) | JIT、分层编译、逃逸分析、JFR | JDK 1.0 |
+| [类加载器](core/classloading/) | 双亲委派、模块化加载、Instrumentation | JDK 1.0 |
+| [模块系统](core/modules/) | JPMS、module-info、jlink | JDK 9 |
 
-### [字符串处理](string/)
+### [语言特性](language/)
 
-字符串相关优化和新特性。
+语法、类型、反射等语言层面演进。
 
-| 版本 | 主要变化 | JEP |
-|------|----------|-----|
-| JDK 8 | StringJoiner | - |
-| JDK 9 | **Compact Strings** (JEP 254)、invokedynamic 拼接 (JEP 280) | JEP 254, JEP 280 |
-| JDK 11 | repeat()、strip()、isBlank()、lines() | - |
-| JDK 15 | **Text Blocks** (正式) | JEP 378 |
-| JDK 21 | String Templates (预览) | JEP 430 |
-| JDK 24 | 隐藏类拼接策略 (+40% 启动性能) | JDK-8336856 |
-| JDK 25 | String Templates (第二次预览) | JEP 459 |
-| JDK 26 | Integer/Long.toString 优化 | JDK-8370503 |
+| 主题 | 说明 | 首发版本 |
+|------|------|----------|
+| [字符串处理](language/string/) | String、StringBuilder、Text Blocks | JDK 1.0 |
+| [反射与元数据](language/reflection/) | 反射、注解、MethodHandle | JDK 1.0 |
+| [语法演进](language/syntax/) | 泛型、枚举、Lambda、Record、Pattern Matching | - |
 
-→ [字符串优化时间线](string/timeline.md)
+### [API 框架](api/)
 
-### [HTTP 客户端](http/)
+标准库框架和工具类。
 
-从 HttpURLConnection 到 HTTP/3。
+| 主题 | 说明 | 首发版本 |
+|------|------|----------|
+| [集合框架](api/collections/) | List、Set、Map、Stream API | JDK 1.0 |
+| [I/O 处理](api/io/) | BIO、NIO、NIO.2、Foreign Memory | JDK 1.0 |
+| [日期时间](api/datetime/) | Date、Calendar → java.time | JDK 1.0 |
+| [JDBC 数据库](api/jdbc/) | JDBC 1.x → JDBC 4.4 | JDK 1.1 |
+| [日志框架](api/logging/) | System.out → JUL → SLF4J/Logback | JDK 1.0 |
+| [XML/JSON](api/xml-json/) | DOM/SAX/StAX、Jackson、Gson | JDK 1.4 |
 
-| 版本 | 主要变化 | JEP |
-|------|----------|-----|
-| JDK 1.0 | HttpURLConnection | - |
-| JDK 9 | HTTP Client (孵化器) | JEP 110 |
-| JDK 10 | HTTP Client (孵化器) | - |
-| JDK 11 | **HTTP Client** (标准) | JEP 321 |
-| JDK 16 | HTTP/2 支持 | - |
-| JDK 22-23 | 连接复用优化 | - |
-| JDK 26 | **HTTP/3** (预览) | JEP 517 |
+### [并发网络](concurrency/)
 
-→ [HTTP 演进时间线](http/timeline.md)
+多线程、网络通信、异步编程。
 
-### [安全特性](security/)
+| 主题 | 说明 | 首发版本 |
+|------|------|----------|
+| [并发编程](concurrency/concurrency/) | Thread、Executor、Virtual Threads | JDK 1.0 |
+| [HTTP 客户端](concurrency/http/) | HttpURLConnection → HTTP/3 | JDK 1.0 |
+| [网络编程](concurrency/network/) | Socket、NIO、Unix Domain Socket | JDK 1.0 |
+| [序列化](concurrency/serialization/) | Serializable、Externalizable | JDK 1.0 |
 
-加密、TLS、后量子密码。
+### [安全国际化](security/)
 
-| 版本 | 主要变化 | JEP |
-|------|----------|-----|
-| JDK 8 | TLS 1.2 (默认) | - |
-| JDK 11 | **TLS 1.3** (默认)、ChaCha20-Poly1305 | JEP 332, JEP 329 |
-| JDK 15 | 禁用弱签名算法 | - |
-| JDK 17 | KMAC、SHA-3 家族 | JEP 370 |
-| JDK 21 | 增强密码套件、HSS/LMS 签名 | - |
-| JDK 22-23 | KDF API (预览) | JEP 495, JEP 508 |
-| JDK 26 | **ML-DSA** 后量子签名、**KDF API** (正式)、**PEM 格式** | JEP 518, JEP 510, JEP 470 |
+加密、TLS、本地化等。
 
-→ [安全特性时间线](security/timeline.md)
+| 主题 | 说明 | 首发版本 |
+|------|------|----------|
+| [安全特性](security/security/) | 加密、TLS、后量子密码 | JDK 1.0 |
+| [国际化](security/i18n/) | Locale、ResourceBundle、Unicode | JDK 1.0 |
 
-### [集合框架](collections/)
+---
 
-Java 集合框架从 JDK 1.0 到现在的完整演进。
+## 学习路径
 
-| 版本 | 主要变化 | JEP |
-|------|----------|-----|
-| JDK 1.0 | Vector, Hashtable | - |
-| JDK 1.2 | Collections Framework | - |
-| JDK 5 | Generics, EnumSet/EnumMap, Queue | JSR 14 |
-| JDK 6 | NavigableSet/Map, BlockingQueue | - |
-| JDK 8 | Stream API | JEP 107 |
-| JDK 9 | List.of/Set.of/Map.of | - |
-| JDK 16 | Stream.toList() | - |
-| JDK 21 | Stream Gatherers (预览) | JEP 461 |
+### 初级路径
 
-→ [集合框架时间线](collections/timeline.md)
+```
+1. language/syntax/     → 基础语法
+2. language/string/     → 字符串使用
+3. api/collections/     → 集合操作
+4. api/datetime/        → 日期处理
+```
 
-### [I/O 处理](io/)
+### 中级路径
 
-Java I/O 从传统 BIO 到 Foreign Memory Access 的演进。
+```
+1. api/io/              → I/O 编程
+2. concurrency/concurrency/ → 多线程基础
+3. concurrency/http/    → HTTP 客户端
+4. api/xml-json/        → 数据格式
+```
 
-| 版本 | 主要变化 | JEP |
-|------|----------|-----|
-| JDK 1.0 | InputStream/OutputStream, Reader/Writer | - |
-| JDK 1.4 | NIO (Buffer, Channel, Selector) | JSR 51 |
-| JDK 5 | Scanner, Formatter | - |
-| JDK 7 | NIO.2 (Path, Files, WatchService) | JSR 203 |
-| JDK 11 | Files.readString/writeString | - |
-| JDK 22 | Foreign Memory Access | JEP 454 |
+### 高级路径
 
-→ [I/O 演进时间线](io/timeline.md)
+```
+1. core/gc/             → GC 调优
+2. core/memory/         → 内存管理
+3. core/performance/    → 性能优化
+4. core/modules/        → 模块化
+```
 
-### [日期时间](datetime/)
+### 专家路径
 
-java.time API 从旧 API 到现代日期时间处理的演进。
+```
+1. core/classloading/   → 类加载机制
+2. security/security/   → 安全加密
+3. concurrency/concurrency/ → Virtual Threads
+4. language/reflection/ → 元编程
+```
 
-| 版本 | 主要变化 | JEP |
-|------|----------|-----|
-| JDK 1.0 | Date | - |
-| JDK 1.1 | Calendar | - |
-| JDK 8 | **java.time** (JSR 310) | JSR 310 |
-| JDK 16 | Timeline Format | - |
-| JDK 21 | Date/Calendar 废弃 | - |
+---
 
-→ [日期时间时间线](datetime/timeline.md)
+## 场景索引
 
-### [反射与元数据](reflection/)
-
-反射、注解和字节码操作的演进。
-
-| 版本 | 主要变化 | JEP |
-|------|----------|-----|
-| JDK 1.0 | 反射 API | - |
-| JDK 5 | Annotations (JSR 175) | JSR 175 |
-| JDK 6 | Pluggable Annotation Processing | JSR 269 |
-| JDK 7 | MethodHandle (JSR 292) | JSR 292 |
-| JDK 8 | Lambda invokedynamic, Parameter 反射 | - |
-| JDK 11 | Constable/ConstantDesc | - |
-| JDK 16 | ClassFile API | JEP 395 |
-| JDK 26 | Mirror API | - |
-
-→ [反射时间线](reflection/timeline.md)
-
-### [JDBC 数据库](jdbc/)
-
-数据库连接从 JDBC 1.x 到 JDBC 4.4 的演进。
-
-| 版本 | 主要变化 | JSR |
-|------|----------|-----|
-| JDK 1.1 | JDBC 1.x | - |
-| JDK 4 | JDBC 3.0 | JSR 114 |
-| JDK 5 | JDBC 4.0 | JSR 221 |
-| JDK 7 | JDBC 4.1 | JSR 221 |
-| JDK 11 | JDBC 4.3 | JSR 221 |
-| JDK 26 | JDBC 4.4 | JSR 221 |
-
-→ [JDBC 时间线](jdbc/timeline.md)
-
-### [日志框架](logging/)
-
-从 System.out 到 Logback 的日志演进。
-
-| 版本 | 主要变化 | 说明 |
-|------|----------|------|
-| JDK 1.0 | System.out | 控制台输出 |
-| JDK 1.4 | JUL (java.util.logging) | 内置日志 |
-| 2002 | Log4j 1.x | Apache 日志框架 |
-| 2005 | SLF4J | 日志门面 |
-| 2006 | Logback | SLF4J 原生实现 |
-| 2014 | Log4j 2.x | 重写版本 |
-| JDK 9 | System.Logger | 统一日志接口 |
-
-→ [日志框架时间线](logging/timeline.md)
-
-### [模块系统](modules/)
-
-Java 模块系统 (JPMS) 从 JDK 9 到现在的完整演进。
-
-| 版本 | 主要变化 | JEP |
-|------|----------|-----|
-| JDK 9 | **JPMS** (JEP 261) | 模块化系统 |
-| JDK 11 | jlink 定制运行时 | - |
-| JDK 16 | 强封装 | - |
-| JDK 17 | 遗留封装 | - |
-| JDK 21 | 动态模块加载 | - |
-
-→ [模块系统时间线](modules/timeline.md)
-
-### [性能优化](performance/)
-
-Java 性能优化从 JDK 1.0 到 JDK 26 的完整演进。
-
-| 版本 | 主要变化 | 说明 |
-|------|----------|------|
-| JDK 1.0 | 解释器执行 | 纯解释 |
-| JDK 5 | JIT 编译器 (HotSpot) | 分层编译 |
-| JDK 6 | 性能统计工具 | jstat/jmap |
-| JDK 7 | G1 GC、Compressed Oops | 内存优化 |
-| JDK 8 | Lambda/String Dedup | 编译优化 |
-| JDK 17 | Record/Pattern Matching | 编译器优化 |
-| JDK 21 | 虚拟线程 | I/O 性能提升 |
-
-→ [性能优化时间线](performance/timeline.md)
-
-### [内存管理](memory/)
-
-Java 内存管理从 JDK 1.0 到 JDK 26 的完整演进。
-
-| 版本 | 主要变化 | 说明 |
-|------|----------|------|
-| JDK 5 | WeakReference 等 | 引用类型 |
-| JDK 6 | Compressed Oops | 压缩指针 |
-| JDK 8 | 元空间、String Dedup | 永久代移除 |
-| JDK 11 | ZGC | 低延迟 GC |
-| JDK 15 | ZGC 生产可用 | 正式版 |
-| JDK 21 | 分代 ZGC | 降低 GC 频率 |
-| JDK 22 | Foreign Memory Access | 堆外内存 |
-
-→ [内存管理时间线](memory/timeline.md)
-
-### [网络编程](network/)
-
-Java 网络编程从 JDK 1.0 到 JDK 26 的完整演进。
-
-| 版本 | 主要变化 | 说明 |
-|------|----------|------|
-| JDK 1.0 | Socket/ServerSocket | TCP/UDP 基础 |
-| JDK 1.1 | URL/HttpURLConnection | HTTP 支持 |
-| JDK 5 | URLHandler | 自定义协议 |
-| JDK 7 | Asynchronous I/O | 异步网络 |
-| JDK 9 | HTTP/2 | 多路复用 |
-| JDK 11 | HTTP Client 标准化 | 新 API |
-| JDK 18 | Unix Domain Socket | 本地 IPC |
-
-→ [网络编程时间线](network/timeline.md)
-
-### [类加载器](classloading/)
-
-Java 类加载器从 JDK 1.0 到 JDK 26 的完整演进。
-
-| 版本 | 主要变化 | 说明 |
-|------|----------|------|
-| JDK 1.0 | Bootstrap/Extension/Application | 三层类加载 |
-| JDK 1.2 | 自定义 ClassLoader | 用户类加载 |
-| JDK 5 | ContextClassLoader | SPI 支持 |
-| JDK 6 | Instrumentation | Java Agent |
-| JDK 6 | ServiceLoader | SPI 标准化 |
-| JDK 9 | Platform ClassLoader | 模块化 |
-| JDK 17 | 强封装 | 内部 API 限制 |
-
-→ [类加载器时间线](classloading/timeline.md)
-
-### [序列化](serialization/)
-
-Java 序列化从 JDK 1.0 到 JDK 26 的完整演进。
-
-| 版本 | 主要变化 | 说明 |
-|------|----------|------|
-| JDK 1.0 | Serializable | 基础序列化 |
-| JDK 5 | 枚举序列化 | Enum 支持 |
-| JDK 7 | Externalizable 增强 | 自定义序列化 |
-| JDK 17 | 密封序列化 | 序列化检查 |
-| JDK 21 | Record 序列化 | 简化序列化 |
-
-→ [序列化时间线](serialization/timeline.md)
-
-### [国际化](i18n/)
-
-Java 国际化 (i18n) 从 JDK 1.0 到 JDK 26 的完整演进。
-
-| 版本 | 主要变化 | 说明 |
-|------|----------|------|
-| JDK 1.0 | Locale, ResourceBundle | 基础 i18n |
-| JDK 1.1 | DecimalFormat, SimpleDateFormat | 格式化 |
-| JDK 5 | Formatter, MessageFormat | 增强格式化 |
-| JDK 6 | Unicode 4.0 | 规范化 |
-| JDK 8 | CLDR 数据 | 更准确本地化 |
-| JDK 13 | Unicode 13 | 新字符支持 |
-| JDK 18 | Unicode 扩展 | EAI 支持 |
-
-→ [国际化时间线](i18n/timeline.md)
-
-### [XML/JSON 处理](xml-json/)
-
-XML 和 JSON 处理从 DOM 到现代 API 的演进。
-
-| 版本 | 主要变化 | JSR |
-|------|----------|-----|
-| JDK 4 | DOM/SAX | - |
-| JDK 5 | JAXB 1.0 | JSR 31 |
-| JDK 6 | StAX | JSR 173 |
-| JDK 7 | JSON-P 1.0 | JSR 353 |
-| JDK 9 | JAXB 标记废弃 | - |
-| JDK 11 | JSON-P 1.1 | - |
-| JDK 21 | JSON-P 2.1 | - |
-
-→ [XML/JSON 时间线](xml-json/timeline.md)
+### "我要优化性能..."
+
+| 场景 | 查看 |
+|------|------|
+| 应用启动慢 | core/performance/ → JIT 编译 |
+| 内存占用高 | core/memory/ → Compressed Oops |
+| GC 频繁停顿 | core/gc/ → G1/ZGC/Shenandoah |
+| 字符串内存大 | language/string/ → Compact Strings |
+
+### "我要做并发编程..."
+
+| 场景 | 查看 |
+|------|------|
+| 普通多线程 | concurrency/concurrency/ → Executor |
+| 高并发 I/O | concurrency/concurrency/ → Virtual Threads |
+| 异步网络 | concurrency/network/ → Asynchronous I/O |
+| HTTP 调用 | concurrency/http/ → HTTP Client |
+
+### "我要做数据持久化..."
+
+| 场景 | 查看 |
+|------|------|
+| 数据库访问 | api/jdbc/ |
+| 对象序列化 | concurrency/serialization/ |
+| JSON 处理 | api/xml-json/ |
+| 文件 I/O | api/io/ |
+
+### "我要升级 JDK..."
+
+| 场景 | 查看 |
+|------|------|
+| 8 → 11 | core/modules/ → JPMS 基础 |
+| 8 → 17 | api/datetime/ → Date 废弃 |
+| 11 → 21 | concurrency/concurrency/ → Virtual Threads |
+| 17 → 26 | concurrency/http/ → HTTP/3 |
 
 ---
 
