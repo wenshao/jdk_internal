@@ -10,7 +10,7 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 ---
 
-## Top 50 by Commit Count
+## Top 100 by Commit Count
 
 | Rank | Contributor | Commits | Primary Focus |
 |------|-------------|---------|---------------|
@@ -64,6 +64,56 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 | 48 | Anthony Scarpino | 14 | Security |
 | 49 | Erik Österlund | 13 | AOT |
 | 50 | Hai-May Chao | 12 | Security |
+| 51 | [Magnus Ihse Bursie](./magnus-ihse-bursie.md) | 12 | Build |
+| 52 | [Shaojin Wen](./shaojin-wen.md) | 11 | Core Libraries |
+| 53 | Stuart Marks | 11 | Core Libraries |
+| 54 | [Yude Lin](./yude-lin.md) | 10 | Compiler |
+| 55 | [Xiaowei Lu](./xiaowei-lu.md) | 10 | GC |
+| 56 | [Tongbao Zhang](./tongbao-zhang.md) | 9 | Testing |
+| 57 | [Kuai Wei](./kuai-wei.md) | 9 | Compiler |
+| 58 | [Fei Yang](./fei-yang.md) | 9 | C2 Compiler |
+| 59 | [Han GQ](./han-gq.md) | 8 | Core |
+| 60 | [Anjian Wen](./anjian-wen.md) | 8 | Security |
+| 61 | Doug Simon | 8 | Graal |
+| 62 | Christian Hagedorn | 7 | Graal |
+| 63 | Oleg Pekhovskiy | 7 | Testing |
+| 64 | Rahul Bhosale | 7 | Networking |
+| 65 | Sergey Tsypanov | 6 | Security |
+| 66 | Pavel Rappo | 6 | Core Libraries |
+| 67 | Lance Andersen | 6 | JDBC |
+| 68 | Joe Darcy | 6 | Core Libraries |
+| 69 | Roger Riggs | 6 | Serialization |
+| 70 | Peter Levart | 5 | Core Libraries |
+| 71 | Claes Redestad | 5 | Core Libraries |
+| 72 | Ulf Adams | 5 | Build |
+| 73 | Martin Buchholz | 5 | Concurrency |
+| 74 | Ivan Gerasimov | 5 | Desktop |
+| 75 | Alexandr Scherbatiy | 5 | Desktop |
+| 76 | Semyon Sadetsky | 5 | Desktop |
+| 77 | Pankaj Bansal | 4 | Build |
+| 78 | Bhavesh Patel | 4 | GC |
+| 79 | Poonam Bajaj | 4 | Testing |
+| 80 | Amit Kumar | 4 | Testing |
+| 81 | Ravi Reddy | 4 | GC |
+| 82 | Jonathan Gibbons | 4 | javac |
+| 83 | Liam Miller-Cushon | 4 | javac |
+| 84 | Michael Ernst | 4 | javac |
+| 85 | Srikanth Adayapalam | 4 | javac |
+| 86 | Vicente Romero | 4 | javac |
+| 87 | Eric Bruneton | 3 | ASM |
+| 88 | Remi Forax | 3 | Core Libraries |
+| 89 | John Rose | 3 | HotSpot |
+| 90 | Charles Nutter | 3 | InvokeDynamic |
+| 91 | Chris Thalinger | 3 | Graal |
+| 92 | Gilles Duboscq | 3 | Graal |
+| 93 | Tom Rodriguez | 3 | Graal |
+| 94 | Dean Long | 3 | HotSpot |
+| 95 | Mikael Vidstedt | 3 | HotSpot |
+| 96 | Harold Seigel | 3 | Security |
+| 97 | Valerie Peng | 3 | Security |
+| 98 | Sean Mullan | 3 | Security |
+| 99 | Xuelei Fan | 3 | Security |
+| 100 | Weibing Xiao | 3 | Testing |
 
 ---
 
