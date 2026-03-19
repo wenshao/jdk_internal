@@ -62,7 +62,7 @@
 ## 代表性工作
 
 ### 1. StringBuilder::append(char[]) 性能优化 (+15%)
-**Issue**: [JDK-8355177](https://bugs.openjdk.org/browse/JDK-8355177)
+**Issue**: [JDK-8355177](https://bugs.openjdk.org/browse/JDK-8355177) | [深度分析](../prs/8355/8355177.md)
 
 使用 `Unsafe::copyMemory` 优化字符数组追加，显著提升字符串拼接性能。
 
@@ -72,19 +72,26 @@
 使用 `String.newStringWithLatin1Bytes` 简化数字转字符串实现。
 
 ### 3. Double.toHexString 重构 (+20%)
-**Issue**: [JDK-8370013](https://bugs.openjdk.org/browse/JDK-8370013)
+**Issue**: [JDK-8370013](https://bugs.openjdk.org/browse/JDK-8370013) | [深度分析](../prs/8370/8370013.md)
 
 消除正则表达式和 StringBuilder，显著提升浮点数格式化性能。
 
-### 4. UUID.toString 优化 (+8%)
+### 4. DecimalDigits.appendPair (+12%)
+**Issue**: [JDK-8366224](https://bugs.openjdk.org/browse/JDK-8366224) | [深度分析](../prs/8366/8366224.md)
+
+引入查表法格式化两位数字，避免条件分支和除法。
+
+### 5. UUID.toString 优化 (+8%)
 **Issue**: [JDK-8353741](https://bugs.openjdk.org/browse/JDK-8353741)
 
 消除 UUID 格式化中的表查找操作。
 
-### 5. 启动速度优化 (+5%)
-**Issue**: [JDK-8349400](https://bugs.openjdk.org/browse/JDK-8349400)
+### 6. 启动速度优化 (+5%)
+**Issue**: [JDK-8349400](https://bugs.openjdk.org/browse/JDK-8349400) | [深度分析](../prs/8349/8349400.md)
 
 通过消除嵌套类提升应用启动速度。
+
+> 📊 **[查看完整 PR 深度分析](shaojin-wen-analysis.md)**
 
 ---
 
@@ -123,13 +130,13 @@
 
 ### 字符串/数字格式化优化
 
-| Issue | 标题 | 性能影响 | PR 链接 |
-|-------|------|----------|---------|
-| 8355177 | Speed up StringBuilder::append(char[]) via Unsafe::copyMemory | +15% | [JBS-8355177](https://bugs.openjdk.org/browse/JDK-8355177) |
-| 8370503 | Use String.newStringWithLatin1Bytes to simplify Integer/Long toString method | +10% | [JBS-8370503](https://bugs.openjdk.org/browse/JDK-8370503) |
-| 8370013 | Refactor Double.toHexString to eliminate regex and StringBuilder | +20% | [JBS-8370013](https://bugs.openjdk.org/browse/JDK-8370013) |
-| 8353741 | Eliminate table lookup in UUID.toString | +8% | [JBS-8353741](https://bugs.openjdk.org/browse/JDK-8353741) |
-| 8366224 | Introduce DecimalDigits.appendPair for efficient two-digit formatting | +12% | [JBS-8366224](https://bugs.openjdk.org/browse/JDK-8366224) |
+| Issue | 标题 | 性能影响 | 链接 |
+|-------|------|----------|------|
+| 8355177 | Speed up StringBuilder::append(char[]) via Unsafe::copyMemory | +15% | [JBS](https://bugs.openjdk.org/browse/JDK-8355177) [分析](../prs/8355/8355177.md) |
+| 8370503 | Use String.newStringWithLatin1Bytes to simplify Integer/Long toString method | +10% | [JBS](https://bugs.openjdk.org/browse/JDK-8370503) |
+| 8370013 | Refactor Double.toHexString to eliminate regex and StringBuilder | +20% | [JBS](https://bugs.openjdk.org/browse/JDK-8370013) [分析](../prs/8370/8370013.md) |
+| 8353741 | Eliminate table lookup in UUID.toString | +8% | [JBS](https://bugs.openjdk.org/browse/JDK-8353741) |
+| 8366224 | Introduce DecimalDigits.appendPair for efficient two-digit formatting | +12% | [JBS](https://bugs.openjdk.org/browse/JDK-8366224) [分析](../prs/8366/8366224.md) |
 | 8365832 | Optimize FloatingDecimal and DigitList with byte[] and cleanup | +10% | [JBS-8365832](https://bugs.openjdk.org/browse/JDK-8365832) |
 | 8368825 | Use switch expression for DateTimeFormatterBuilder pattern character lookup | +5% | [JBS-8368825](https://bugs.openjdk.org/browse/JDK-8368825) |
 | 8357685 | Change the type of Integer::digits from char[] to byte[] | +5% | [JBS-8357685](https://bugs.openjdk.org/browse/JDK-8357685) |
@@ -140,9 +147,9 @@
 
 ### 启动性能优化
 
-| Issue | 标题 | 性能影响 | PR 链接 |
-|-------|------|----------|---------|
-| 8349400 | Improve startup speed via eliminating nested classes | +5% | [JBS-8349400](https://bugs.openjdk.org/browse/JDK-8349400) |
+| Issue | 标题 | 性能影响 | 链接 |
+|-------|------|----------|------|
+| 8349400 | Improve startup speed via eliminating nested classes | +5% | [JBS](https://bugs.openjdk.org/browse/JDK-8349400) [分析](../prs/8349/8349400.md) |
 | 8357913 | Add `@Stable` to BigInteger and BigDecimal | +3% | [JBS-8357913](https://bugs.openjdk.org/browse/JDK-8357913) |
 | 8357690 | Add @Stable and final to java.lang.CharacterDataLatin1 and other CharacterData classes | +2% | [JBS-8357690](https://bugs.openjdk.org/browse/JDK-8357690) |
 | 8357289 | Break down the String constructor into smaller methods | +2% | [JBS-8357289](https://bugs.openjdk.org/browse/JDK-8357289) |
