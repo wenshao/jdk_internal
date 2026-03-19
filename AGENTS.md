@@ -155,9 +155,75 @@ jdk_internal/
 - Many contributions are missed when filtering by company email
 - GitHub PRs accurately reflect actual contributions
 
-**Query Method:**
+### PRs 统计方法
+
+**1. Web 界面查询 (推荐)**
+
+访问 GitHub PR 搜索页面：
 ```
-https://api.github.com/search/issues?q=repo:openjdk/jdk+author:{username}+type:pr+label:integrated
+https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Aintegrated+is%3Aclosed
+```
+
+示例：
+- wenshao 的 Integrated PRs: https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Awenshao+label%3Aintegrated+is%3Aclosed
+- shipilev 的 Integrated PRs: https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ashipilev+label%3Aintegrated+is%3Aclosed
+
+**2. GitHub CLI 查询**
+
+```bash
+# 获取所有 Integrated PRs 列表
+gh pr list --repo openjdk/jdk --limit 300 \
+  --search "author:{username} state:closed label:integrated" \
+  --json number,title,closedAt,labels \
+  --jq '.[] | "\(.number)|\(.title)|\(.closedAt)"'
+
+# 统计总数
+gh pr list --repo openjdk/jdk --limit 1000 \
+  --search "author:{username} state:closed label:integrated" \
+  --json number --jq 'length'
+```
+
+**3. GitHub API 查询**
+
+```bash
+# REST API
+curl "https://api.github.com/search/issues?q=repo:openjdk/jdk+author:{username}+type:pr+label:integrated&per_page=100"
+
+# 返回字段说明
+# - number: PR 编号
+# - title: PR 标题
+# - closed_at: 合入时间 (用于时间线统计)
+# - labels: 包含 "integrated" 标签
+```
+
+**4. 统计维度**
+
+| 维度 | 说明 | 示例 |
+|------|------|------|
+| 总数 | Integrated PRs 总数 | 97 |
+| 年度趋势 | 按年份/季度分组 | 2023: 20, 2024: 63 |
+| 组件分布 | 按 label 分类 | core-libs, security |
+| 影响类型 | 性能优化/重构/Bug修复 | 从标题推断 |
+
+**5. 贡献者页面应包含**
+
+```markdown
+### 关键指标
+
+| 指标 | 值 |
+|------|-----|
+| **Integrated PRs** | {count} |
+| **代码变更** | +xxx / -xxx |
+| **主要领域** | xxx |
+| **平均合入时间** | x.x 天 |
+
+> **统计来源**: [GitHub Integrated PRs](链接)
+
+### Integrated PRs 统计
+
+**年度趋势**
+**按组件分布**
+**最近 10 个 Integrated PRs**
 ```
 
 **Timeline Statistics:**

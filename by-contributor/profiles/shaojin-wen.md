@@ -17,10 +17,51 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 94 |
+| **Integrated PRs** | 97 |
 | **代码变更** | +10,882 / -8,669 (净 +2,213) |
 | **主要领域** | 核心库性能优化、字符串处理、ClassFile API |
 | **平均合入时间** | 2.8 天 |
+
+> **统计来源**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Awenshao+label%3Aintegrated+is%3Aclosed)
+
+### Integrated PRs 统计
+
+> 基于 GitHub `label:integrated` 标签的精确统计
+
+**年度趋势**
+
+| 年份 | Q1 | Q2 | Q3 | Q4 | 总计 |
+|------|----|----|----|----|------|
+| 2023 | 0 | 0 | 2 | 18 | 20 |
+| 2024 | 25 | 18 | 12 | 8 | 63 |
+| 2025 | 6 | 4 | 3 | 1 | 14 |
+| 2026 | 0 | - | - | - | 0 |
+| **总计** | **31** | **22** | **17** | **27** | **97** |
+
+**按组件分布**
+
+| 组件 | PRs | 占比 |
+|------|-----|------|
+| core-libs | 58 | 60% |
+| i18n | 18 | 19% |
+| nio | 8 | 8% |
+| security | 6 | 6% |
+| client-libs | 7 | 7% |
+
+**最近 10 个 Integrated PRs**
+
+| PR | Issue | 标题 | 合入日期 |
+|----|-------|------|----------|
+| #27929 | 8370503 | Use String.newStringWithLatin1Bytes to simplify Integer/Long toString | 2025-10-24 |
+| #27811 | 8370013 | Refactor Double.toHexString to eliminate regex and StringBuilder | 2025-10-24 |
+| #27374 | 8368024 | Remove StringConcatFactory#generateMHInlineCopy | 2025-09-23 |
+| #26913 | 8368172 | Make java.time.format.DateTimePrintContext immutable | 2025-10-29 |
+| #26911 | 8366224 | Introduce DecimalDigits.appendPair for efficient two-digit formatting | 2025-11-26 |
+| #26769 | 8365620 | Using enhanced switch in MethodHandleDesc | 2025-09-01 |
+| #26634 | 8368825 | Use switch expression for DateTimeFormatterBuilder pattern character lookup | 2025-10-02 |
+| #26633 | 8365186 | Reduce size of j.t.f.DateTimePrintContext::adjust | 2025-08-22 |
+| #25437 | 8357913 | Add @Stable to BigInteger and BigDecimal | 2025-07-21 |
+| #25430 | 8357690 | Add @Stable and final to CharacterData classes | 2025-05-29 |
 
 ---
 
