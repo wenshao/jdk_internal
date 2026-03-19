@@ -10,16 +10,16 @@
 
 | 组织 | 贡献者 | 领域 |
 |------|--------|------|
-| [Alibaba](../../contributors/orgs/alibaba.md) | 15+ | 核心库、RISC-V、编译器 |
-| [Oracle](../../contributors/orgs/oracle.md) | 50+ | 全领域 |
-| [IBM](../../contributors/orgs/ibm.md) | 10+ | GC、编译器 |
-| [Red Hat](../../contributors/orgs/redhat.md) | 10+ | Shenandoah GC |
+| [Alibaba](/contributors/orgs/alibaba.md) | 15+ | 核心库、RISC-V、编译器 |
+| [Oracle](/contributors/orgs/oracle.md) | 50+ | 全领域 |
+| [IBM](/contributors/orgs/ibm.md) | 10+ | GC、编译器 |
+| [Red Hat](/contributors/orgs/redhat.md) | 10+ | Shenandoah GC |
 
 ### 按地区
 
 | 地区 | 贡献者 | 查看 |
 |------|--------|------|
-| 中国 | 20+ | [中国贡献者](profiles/chinese-contributors.md) |
+| 中国 | 20+ | [中国贡献者](/by-contributor/profiles/chinese-contributors.md) |
 | 美国 | 50+ | 待补充 |
 | 欧洲 | 30+ | 待补充 |
 
@@ -27,10 +27,10 @@
 
 | 领域 | 代表贡献者 | 查看 |
 |------|------------|------|
-| 核心库优化 | Shaojin Wen | [详情](profiles/shaojin-wen.md) |
-| G1 GC | Thomas Schatzl | [详情](profiles/thomas-schatzl.md) |
+| 核心库优化 | Shaojin Wen | [详情](/by-contributor/profiles/shaojin-wen.md) |
+| G1 GC | Thomas Schatzl | [详情](/by-contributor/profiles/thomas-schatzl.md) |
 | ZGC | Per Liden | 待补充 |
-| HTTP/3 | Daniel Fuchs | [详情](profiles/daniel-fuchs.md) |
+| HTTP/3 | Daniel Fuchs | [详情](/by-contributor/profiles/daniel-fuchs.md) |
 
 ---
 
@@ -41,7 +41,7 @@
 | 1 | Shaojin Wen | Alibaba | 97 | 核心库 |
 | 2 | ... | ... | ... | ... |
 
-→ [完整榜单](profiles/jdk26-top-contributors.md)
+→ [完整榜单](/by-contributor/profiles/jdk26-top-contributors.md)
 
 ---
 
@@ -54,7 +54,7 @@
 | Anjian Wen | ByteDance | 12 | RISC-V |
 | Sendaoyan | Tencent | 88 | 测试 |
 
-→ [中国贡献者专题](profiles/chinese-contributors.md)
+→ [中国贡献者专题](/by-contributor/profiles/chinese-contributors.md)
 
 ---
 
@@ -62,4 +62,4 @@
 
 **统计原则**: 使用 GitHub Integrated PRs 作为唯一指标
 
-详见 [贡献者统计原则](../../../AGENTS.md#contribution-statistics-principles)
+详见 [贡献者统计原则](/AGENTS.md#contribution-statistics-principles)
