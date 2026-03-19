@@ -44,9 +44,11 @@ jdk_docs/
 │   ├── jep-525.md         # Structured Concurrency
 │   ├── jep-526.md         # Lazy Constants
 │   └── jep-530.md         # Primitive Types in Patterns
-├── deep-dive/             # 深入源码分析
+├── deep-dive/             # 深入源码分析 (5个)
+│   ├── jep-506-implementation.md  # Scoped Values 实现
 │   ├── jep-511-implementation.md  # 模块导入实现
 │   ├── jep-517-implementation.md  # HTTP/3 实现
+│   ├── jep-519-implementation.md  # 紧凑对象头实现
 │   └── jep-522-implementation.md  # G1 GC 优化实现
 ├── guides/                # 指南文档
 │   ├── learning-path.md   # 学习路径
@@ -54,10 +56,15 @@ jdk_docs/
 │   ├── migration-guide.md # 迁移指南
 │   └── faq.md             # 常见问题
 ├── issues/                # Issue 分析文档
+│   ├── README.md          # Issue 索引
+│   ├── jdk-8326498.md     # HttpClient 连接泄漏
+│   ├── jdk-8355177.md     # StringBuilder 优化
+│   └── jdk-8371259.md     # ML-DSA Intrinsics
 ├── prs/                   # Pull Request 分析文档
+│   ├── jdk-history.md              # JDK 8-26 历史概览
 │   ├── jdk26-important-changes.md  # 重要非 JEP 改动
 │   └── jdk26-contributors.md       # 开发者贡献分析
-├── contributors/          # 贡献者详细分析
+├── contributors/          # 贡献者详细分析 (34个)
 │   ├── README.md                  # 贡献者索引
 │   ├── chinese-contributors.md    # 中国贡献者专题
 │   ├── sendaoyan.md               # 测试稳定性 (88 commits)
@@ -74,6 +81,10 @@ jdk_docs/
 │   ├── ioi-lam.md                 # AOT/CDS / JEP 514
 │   └── erik-gahlin.md             # JFR / JEP 520
 └── modules/               # 模块/组件源码分析文档
+    ├── README.md          # 模块索引
+    ├── java.base.md       # java.base 核心模块
+    ├── java.net.http.md   # HTTP Client 模块
+    └── hotspot-gc.md      # HotSpot GC 组件
 ```
 
 ---
