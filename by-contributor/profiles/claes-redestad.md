@@ -75,7 +75,7 @@ Claes 在个人博客 [cl4es.github.io](https://cl4es.github.io) 分享了大量
 Claes 的工作特点是：
 - **数据驱动**: 所有优化都有详细的性能数据支持
 - **系统性**: 优化从底层机制到上层 API
-- **协作导向**: 常与其他开发者（如 Shaojin Wen、Chen Liang）合作
+- **协作导向**: 常与其他开发者（如 [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)、[Chen Liang](/by-contributor/profiles/chen-liang.md)）合作
 
 ---
 
