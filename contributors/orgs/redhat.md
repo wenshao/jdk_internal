@@ -10,16 +10,27 @@ Red Hat 是 OpenJDK 的重要贡献者，尤其在 Shenandoah GC、Zero VM 和 A
 
 | 指标 | 值 |
 |------|-----|
-| **总 Commits** | 400+ |
+| **Integrated PRs** | 75+ |
 | **贡献者数** | 50+ |
-| **占比** | ~5% |
 | **主要领域** | GC, 编译器, 架构移植 |
+
+> **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。OpenJDK Committer 使用 `@openjdk.org` 邮箱提交代码，因此 git commits 按邮箱统计不准确。Aleksey Shipilev (803 PRs) 统计在 Oracle 中。
 
 ---
 
-## 影响的模块分布
+## Top 贡献者
 
-基于 git 修改文件统计：
+| 排名 | 贡献者 | GitHub | PRs | 领域 |
+|------|--------|--------|-----|------|
+| 1 | Raffaello Giulietti | [@rgiulietti](https://github.com/rgiulietti) | 75 | 核心库 |
+
+**小计**: 75 PRs
+
+> 注：Aleksey Shipilev (Shenandoah GC 创始人) 使用 @openjdk.org 邮箱，统计在 Oracle 中
+
+---
+
+## 影响的模块
 
 | 模块 | 文件数 | 说明 |
 |------|--------|------|
@@ -33,38 +44,6 @@ Red Hat 是 OpenJDK 的重要贡献者，尤其在 Shenandoah GC、Zero VM 和 A
 
 ---
 
-## Commit 类型分析
-
-| 类型 | 数量 | 说明 |
-|------|------|------|
-| Fix | 35 | 修复问题 |
-| Add | 8 | 新增功能 |
-| Shenandoah | 6 | Shenandoah 相关 |
-| Remove | 4 | 删除代码 |
-| Implement | 3 | 实现功能 |
-| AArch64 | 1 | AArch64 相关 |
-
----
-
-## Top 贡献者
-
-| 排名 | 贡献者 | Commits | 领域 |
-|------|--------|---------|------|
-| 1 | Gary Benson | 35 | Zero VM, 构建 |
-| 2 | Andrew Haley | 22 | AArch64 |
-| 3 | Ashutosh Mehra | 19 | AArch64 |
-| 4 | Robert Toyonaga | 14 | - |
-| 5 | David M. Lloyd | 14 | - |
-| 6 | Zdenek Zambersky | 9 | - |
-| 7 | Severin Gehwolf | 8 | - |
-| 8 | Florian Weimer | 8 | - |
-| 9 | Michal Vala | 8 | - |
-| 10 | Roman Kennke | 6 | Shenandoah |
-
-> 注：[Aleksey Shipilev](../aleksey-shipilev.md) (1,320 commits) 使用 @openjdk.org 邮箱，统计在 Oracle 中
-
----
-
 ## 主要领域
 
 ### Shenandoah GC
@@ -73,7 +52,6 @@ Red Hat 主导 Shenandoah GC 的开发：
 
 - **Aleksey Shipilev**: Shenandoah GC 创始人，JEP 189
 - **Roman Kennke**: Shenandoah 核心开发者
-- **William Kemper**: Shenandoah 维护者 (现 Amazon)
 
 **关键贡献**:
 - 低延迟垃圾收集器
@@ -82,19 +60,13 @@ Red Hat 主导 Shenandoah GC 的开发：
 
 ### Zero VM
 
-- **Gary Benson**: Zero VM 维护者
 - 零汇编解释器，支持无 JIT 的平台
 - 基于 C++ 实现
 
-### Shark VM
-
-- 基于 LLVM 的 JIT 编译器
-- 用于不支持 HotSpot JIT 的平台
-
 ### AArch64
 
-- **Andrew Haley**: AArch64 移植负责人
-- **Ashutosh Mehra**: AArch64 优化
+- AArch64 移植
+- AArch64 优化
 
 ---
 
@@ -108,27 +80,10 @@ Red Hat 主导 Shenandoah GC 的开发：
 
 ---
 
-## 技术特点
-
-### 低延迟 GC
-
-Shenandoah GC 是 Red Hat 的核心贡献：
-- 目标暂停时间 < 10ms
-- 并发整理，不依赖 STW
-- 适用于大堆内存场景
-
-### 多架构支持
-
-- Zero VM: 支持任何 POSIX 平台
-- AArch64: 64 位 ARM 架构优化
-
----
-
 ## 数据来源
 
-- **统计方法**: `git log upstream_master --author="redhat"`
-- **模块分析**: 基于修改文件路径统计
-- **关键词分析**: 基于 commit message 提取
+- **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
+- **统计时间**: 2026-03-19
 
 ---
 

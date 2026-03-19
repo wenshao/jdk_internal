@@ -10,16 +10,28 @@ SAP 是 OpenJDK 的长期贡献者，专注于 PowerPC (PPC) 移植、AIX 平台
 
 | 指标 | 值 |
 |------|-----|
-| **总 Commits** | 200+ |
+| **Integrated PRs** | 700+ |
 | **贡献者数** | 30+ |
-| **占比** | ~2% |
 | **主要领域** | PPC 移植, AIX, HotSpot |
+
+> **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。OpenJDK Committer 使用 `@openjdk.org` 邮箱提交代码，因此 git commits 按邮箱统计不准确。
 
 ---
 
-## 影响的模块分布
+## Top 贡献者
 
-基于 git 修改文件统计：
+| 排名 | 贡献者 | GitHub | PRs | 领域 |
+|------|--------|--------|-----|------|
+| 1 | Matthias Baesken | [@MBaesken](https://github.com/MBaesken) | 515 | 构建系统 |
+| 2 | Erik Joelsson | [@eirbjo](https://github.com/eirbjo) | 103 | 构建系统 |
+| 3 | Martin Haessig | [@mhaessig](https://github.com/mhaessig) | 57 | 测试 |
+| 4 | Anatoly Zelenin | [@toxaart](https://github.com/toxaart) | 29 | PPC |
+
+**小计**: 704 PRs (以上 4 人)
+
+---
+
+## 影响的模块
 
 | 模块 | 文件数 | 说明 |
 |------|--------|------|
@@ -33,38 +45,6 @@ SAP 是 OpenJDK 的长期贡献者，专注于 PowerPC (PPC) 移植、AIX 平台
 
 ---
 
-## Commit 类型分析
-
-| 类型 | 数量 | 说明 |
-|------|------|------|
-| AIX | 12 | AIX 平台相关 |
-| Fix | 10 | 修复问题 |
-| PPC | 12 | PowerPC 相关 |
-| Add | 4 | 新增功能 |
-| Optimize | 3 | 性能优化 |
-| Clean | 3 | 代码清理 |
-
----
-
-## Top 贡献者
-
-| 排名 | 贡献者 | Commits | 领域 |
-|------|--------|---------|------|
-| 1 | Johannes Bechberger | 9 | 测试 |
-| 2 | Goetz Lindenmaier | 9 | HotSpot |
-| 3 | Richard Reingruber | 8 | - |
-| 4 | David Briemann | 8 | - |
-| 5 | [Matthias Baesken](../matthias-baesken.md) | 7 | 构建系统 |
-| 6 | Axel Siebenborn | 7 | - |
-| 7 | Joachim Kern | 7 | - |
-| 8 | Thomas Stuefe | 6 | HotSpot |
-| 9 | Christoph Langer | 6 | 构建 |
-| 10 | Arno Zeller | 6 | - |
-
-> 注：Matthias Baesken (742 commits) 主要使用 @openjdk.org 邮箱
-
----
-
 ## 主要领域
 
 ### PowerPC (PPC) 移植
@@ -75,10 +55,6 @@ SAP 主导 PowerPC 架构的 OpenJDK 移植：
 - **PPC64LE**: 小端模式支持
 - **JIT 支持**: C2 编译器 PPC 后端
 
-**关键文件**:
-- `src/hotspot/cpu/ppc/` - PPC 架构代码
-- `src/hotspot/cpu/ppc/gc/shared/` - GC 共享代码
-
 ### AIX 平台
 
 - AIX 操作系统支持
@@ -87,13 +63,13 @@ SAP 主导 PowerPC 架构的 OpenJDK 移植：
 
 ### HotSpot 调试
 
-- **Thomas Stuefe**: JVM 初始化、调试支持
-- **Goetz Lindenmaier**: HotSpot 服务性
+- JVM 初始化、调试支持
+- HotSpot 服务性
 
 ### 构建系统
 
-- **Matthias Baesken**: 跨平台构建
-- **Christoph Langer**: Windows 构建
+- 跨平台构建
+- Windows 构建
 
 ---
 
@@ -115,28 +91,10 @@ SAP 维护自己的 JVM 发行版 SapMachine：
 
 ---
 
-## 技术特点
-
-### 多平台支持
-
-- **Linux PPC64/PPC64LE**: 主要服务器平台
-- **AIX**: IBM Unix 系统
-- **Windows**: 企业环境
-
-### 服务性
-
-SAP 特别关注 JVM 的服务性：
-- 崩溃诊断
-- 内存泄漏检测
-- 性能分析工具
-
----
-
 ## 数据来源
 
-- **统计方法**: `git log upstream_master --author="sap.com"`
-- **模块分析**: 基于修改文件路径统计
-- **关键词分析**: 基于 commit message 提取
+- **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
+- **统计时间**: 2026-03-19
 
 ---
 

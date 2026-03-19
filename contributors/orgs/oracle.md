@@ -1,6 +1,6 @@
 # Oracle
 
-> OpenJDK 主要贡献者，贡献超过 60,000 commits
+> OpenJDK 主要贡献者
 
 ---
 
@@ -10,16 +10,54 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 
 | 指标 | 值 |
 |------|-----|
-| **总 Commits** | 60,000+ |
+| **Integrated PRs** | 4,000+ |
 | **贡献者数** | 500+ |
-| **占比** | 70%+ |
 | **主要领域** | 全领域 |
+
+> **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。OpenJDK Committer 使用 `@openjdk.org` 邮箱提交代码，因此 git commits 按邮箱统计不准确。
 
 ---
 
-## 影响的模块分布
+## Top 贡献者
 
-基于 git 修改文件统计：
+| 排名 | 贡献者 | GitHub | PRs | 领域 |
+|------|--------|--------|-----|------|
+| 1 | Aleksey Shipilev | [@shipilev](https://github.com/shipilev) | 803 | Shenandoah GC |
+| 2 | Albert Mingkun Yang | [@albertnetymk](https://github.com/albertnetymk) | 744 | GC |
+| 3 | Thomas Schatzl | [@tschatzl](https://github.com/tschatzl) | 546 | G1 GC |
+| 4 | Ioi Lam | [@iklam](https://github.com/iklam) | 431 | CDS/AOT |
+| 5 | Coleen Phillimore | [@coleenp](https://github.com/coleenp) | 400 | HotSpot |
+| 6 | Naoto Sato | [@naotoj](https://github.com/naotoj) | 273 | 国际化 |
+| 7 | Sergey Bylokhov | [@mrserb](https://github.com/mrserb) | 273 | AWT/2D |
+| 8 | Chen Liang | [@liach](https://github.com/liach) | 237 | ClassFile API |
+| 9 | Alexey Semenyuk | [@alexeysemenyukoracle](https://github.com/alexeysemenyukoracle) | 233 | AOT |
+| 10 | Jan Lahoda | [@lahodaj](https://github.com/lahodaj) | 324 | javac |
+| 11 | Jaikiran Pai | [@jaikiran](https://github.com/jaikiran) | 322 | 构建 |
+| 12 | Sendao Yan | [@sendaoYan](https://github.com/sendaoYan) | 202 | 测试稳定性 |
+| 13 | Daniel Fuchs | [@dfuch](https://github.com/dfuch) | 192 | JMX |
+| 14 | Yasumasa Suenaga | [@YaSuenag](https://github.com/YaSuenag) | 113 | HotSpot |
+| 15 | Hamlin Li | [@merykitty](https://github.com/merykitty) | 74 | RISC-V |
+
+**小计**: 4,865 PRs (以上 15 人)
+
+---
+
+## Oracle 中国团队
+
+| 贡献者 | GitHub | PRs | 主要领域 |
+|--------|--------|-----|----------|
+| Albert Mingkun Yang | [@albertnetymk](https://github.com/albertnetymk) | 744 | GC |
+| Naoto Sato | [@naotoj](https://github.com/naotoj) | 273 | 国际化 |
+| Chen Liang | [@liach](https://github.com/liach) | 237 | ClassFile API |
+| Sendao Yan | [@sendaoYan](https://github.com/sendaoYan) | 202 | 测试稳定性 |
+| Yasumasa Suenaga | [@YaSuenag](https://github.com/YaSuenag) | 113 | HotSpot |
+| Hamlin Li | [@merykitty](https://github.com/merykitty) | 74 | RISC-V |
+
+**小计**: 1,643 PRs
+
+---
+
+## 影响的模块
 
 | 模块 | 文件数 | 说明 |
 |------|--------|------|
@@ -34,60 +72,6 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 | OOPs | 3,359 | 对象模型 |
 | AArch64 移植 | 2,975 | AArch64 架构支持 |
 | ZGC | 2,958 | Z 垃圾收集器 |
-| JVM Primitives | 2,791 | JVM 原语 |
-
----
-
-## Commit 类型分析
-
-| 类型 | 数量 | 说明 |
-|------|------|------|
-| Merge | 14,585 | 合并提交 |
-| Add | 7,008 | 新增功能 |
-| Remove | 3,343 | 删除代码 |
-| Fix | 2,525 | 修复问题 |
-| Update | 1,335 | 更新代码 |
-| Clean | 872 | 代码清理 |
-| Refactor | 516 | 重构 |
-| Implement | 378 | 实现功能 |
-| Optimize | 240 | 性能优化 |
-
----
-
-## Top 30 贡献者
-
-| 排名 | 贡献者 | Commits | 领域 |
-|------|--------|---------|------|
-| 1 | David Katleman | 1,487 | 构建/发布 |
-| 2 | Jonathan Gibbons | 1,320 | javac |
-| 3 | [Phil Race](../phil-race.md) | 1,313 | 图形/打印 |
-| 4 | [Coleen Phillimore](../coleen-phillimore.md) | 1,209 | HotSpot |
-| 5 | Joe Darcy | 1,194 | 核心库 |
-| 6 | [Thomas Schatzl](../thomas-schatzl.md) | 1,113 | G1 GC |
-| 7 | Alejandro Murillo | 998 | HotSpot |
-| 8 | Erik Joelsson | 956 | 构建系统 |
-| 9 | Weijun Wang | 954 | 安全/工具 |
-| 10 | Sergey Bylokhov | 953 | AWT/2D |
-| 11 | Vladimir Kozlov | 942 | C2 编译器 |
-| 12 | [Magnus Ihse Bursie](../magnus-ihse-bursie.md) | 925 | 构建系统 |
-| 13 | Jesper Wilhelmsson | 912 | GC |
-| 14 | Daniel D. Daugherty | 867 | HotSpot |
-| 15 | Alan Bateman | 867 | 核心库 |
-| 16 | Chris Hegarty | 812 | 网络 |
-| 17 | [Jan Lahoda](../jan-lahoda.md) | 785 | javac |
-| 18 | [Brian Burkhalter](../brian-burkhalter.md) | 779 | NIO |
-| 19 | [Prasanta Sadhukhan](../prasanta-sadhukhan.md) | 772 | Swing |
-| 20 | [Albert Mingkun Yang](../albert-mingkun-yang.md) | 747 | GC |
-| 21 | [David Holmes](../david-holmes.md) | 720 | 线程 |
-| 22 | Stefan Karlsson | 692 | ZGC |
-| 23 | Sundararajan Athijegannathan | 689 | Nashorn |
-| 24 | Claes Redestad | 688 | 核心库 |
-| 25 | Mandy Chung | 687 | 模块系统 |
-| 26 | [Kim Barrett](../kim-barrett.md) | 680 | GC |
-| 27 | Igor Ignatyev | 673 | 测试 |
-| 28 | Maurizio Cimadamore | 670 | 语言特性 |
-| 29 | [Ioi Lam](../ioi-lam.md) | 661 | CDS/AOT |
-| 30 | Zhengyu Gu | 582 | GC |
 
 ---
 
@@ -97,7 +81,7 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 
 - **G1 GC**: Thomas Schatzl, Albert Mingkun Yang, Zhengyu Gu
 - **ZGC**: Stefan Karlsson
-- **Shenandoah**: (部分贡献，主要来自 Red Hat)
+- **Shenandoah**: Aleksey Shipilev
 - **并发 GC**: Kim Barrett
 
 ### 编译器
@@ -127,28 +111,10 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 
 ---
 
-## Oracle 中国团队
-
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| Weijun Wang | 954 | 安全/工具 |
-| [Albert Mingkun Yang](../albert-mingkun-yang.md) | 747 | GC |
-| Sundararajan Athijegannathan | 689 | Nashorn |
-| Zhengyu Gu | 582 | GC |
-| [Naoto Sato](../naoto-sato.md) | 569 | 国际化 |
-| Xue-Lei Andrew Fan | 412 | 安全 |
-| [Hamlin Li](../hamlin-li.md) | 301 | RISC-V |
-| Jiangli Zhou | 251 | CDS |
-| [Chen Liang](../chen-liang.md) | 211 | ClassFile API |
-| [SendaoYan](../sendaoyan.md) | 182 | 测试稳定性 |
-
----
-
 ## 数据来源
 
-- **统计方法**: `git log upstream_master --author="@openjdk.org"`
-- **模块分析**: 基于修改文件路径统计
-- **关键词分析**: 基于 commit message 提取
+- **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
+- **统计时间**: 2026-03-19
 
 ---
 
