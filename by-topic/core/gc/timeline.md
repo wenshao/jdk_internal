@@ -106,7 +106,7 @@ CMS 废弃        Shenandoah     Windows       JEP 379       JEP 439       JEP 5
 | JDK 6 | G1 引入 | - | 替代 CMS 的低延迟 GC |
 | JDK 7 | G1 完善 | - | 成为可选 GC |
 | JDK 8 | G1 主流 | - | 大堆内存首选 |
-| JDK 9 | **G1 默认** | JEP 248 | 替代 ParallelGC |
+| JDK 9 | **G1 默认** | JEP 248 | 替代 ParallelGC, Thomas Schatzl |
 | JDK 11 | 并发标记改进 | JEP 307 | 降低 pause 时间 |
 | JDK 12 | 可中断 Mixed GC | JEP 346 | 满足 pause 目标优先 |
 | JDK 17 | G1 Full GC 改进 | JEP 344 | 降低 worst-case pause |
@@ -293,12 +293,12 @@ Object load_barrier(Object obj) {
 
 | 版本 | 变更 | JEP | 说明 |
 |------|------|-----|------|
-| JDK 11 | ZGC 引入 | JEP 333 | 实验性，支持 Linux/macOS |
+| JDK 11 | ZGC 引入 | JEP 333 | 实验性, Per Liden, Erik Österlund |
 | JDK 14 | ZGC 生产可用 | JEP 368 | 脱离实验标签 |
 | JDK 15 | Windows 支持 | JEP 377 | 跨平台完整支持 |
 | JDK 17 | 并发线程栈扫描 | JEP 379 | 降低 pause 时间 |
-| JDK 21 | **分代 ZGC** | JEP 439 | 显著降低 GC 频率 |
-| JDK 23 | 分代改进 | JEP 474 | 进一步优化 |
+| JDK 21 | **分代 ZGC** | JEP 439 | Stefan Karlsson (Owner), 显著降低 GC 频率 |
+| JDK 23 | 分代改进 | JEP 474 | 进一步优化, 默认启用 |
 | JDK 26 | NUMA-aware Relocation | - | 多插槽服务器优化 |
 
 ### 分代 ZGC 架构
@@ -427,10 +427,10 @@ Object load_barrier(Object obj) {
 
 | 版本 | 变更 | JEP | 说明 |
 |------|------|-----|------|
-| JDK 12 | Shenandoah 引入 | JEP 189 | 实验性 |
+| JDK 12 | Shenandoah 引入 | JEP 189 | 实验性, Red Hat |
 | JDK 15 | Shenandoah 生产可用 | JEP 379 | 脱离实验标签 |
 | JDK 17 | 并发线程栈扫描 | JEP 379 | 降低 pause 时间 |
-| JDK 21 | **分代 Shenandoah** | JEP 429 | 降低 GC 频率 |
+| JDK 21 | **分代 Shenandoah** | JEP 429 | William Kemper (Owner), Red Hat 团队 |
 | JDK 26 | 进一步优化 | - | 持续改进 |
 
 ### Shenandoah 配置详解
@@ -621,6 +621,64 @@ jcmd <pid> GC.run_finalization
 # VisualVM / JConsole
 # 图形化监控工具
 ```
+
+---
+
+## 贡献者
+
+### GC 团队核心成员
+
+| GC | JEP | 主要贡献者 | 公司 |
+|----|-----|-----------|------|
+| ZGC | JEP 333/377/439 | **Per Liden**, Erik Österlund, Stefan Karlsson | Oracle |
+| G1 | JEP 248/307/346/522 | Thomas Schatzl, Per Liden | Oracle |
+| Shenandoah | JEP 379/429 | **William Kemper**, Bernd Mathiske, Kelvin Nilsen, Ramki Ramakrishna | Red Hat |
+
+### Per Liden
+
+- **职位**: ZGC Lead, Oracle HotSpot GC Team
+- **背景**: 前 JRockit 团队 (被 Oracle 收购)
+- **主要贡献**:
+  - ZGC 创始人兼技术负责人
+  - JRockit GC 代码移植到 HotSpot
+  - G1 GC 性能优化 (JEP 522)
+- **现职**: SambaNova Systems (AI 性能工程师)
+
+> "ZGC is a scalable low-latency garbage collector designed for pause times not exceeding 10ms."
+> — Per Liden, JEP 333
+
+### Erik Österlund
+
+- **职位**: HotSpot GC Team Member, Oracle
+- **主要贡献**:
+  - ZGC 核心开发者
+  - 《The Z Garbage Collector in JDK 25》作者
+  - JEP 377/439 Reviewer
+- **专长**: 低延迟 GC、染色指针技术
+
+### Stefan Karlsson
+
+- **职位**: HotSpot Developer, Oracle
+- **主要贡献**:
+  - JEP 439 Owner (分代 ZGC)
+  - JEP 474 (ZGC 分代模式默认)
+  - G1 GC 并发标记改进
+
+### William Kemper
+
+- **职位**: Principal Software Engineer, Red Hat
+- **主要贡献**:
+  - JEP 404/429 Owner (分代 Shenandoah)
+  - Shenandoah GC 核心开发者
+  - Brooks Pointers 技术实现
+
+### Red Hat Shenandoah 团队
+
+| 成员 | 角色 |
+|------|------|
+| **Bernd Mathiske** | JEP 404 作者 |
+| **Kelvin Nilsen** | JEP 404 作者 |
+| **Ramki Ramakrishna** | JEP 404 作者 |
 
 ---
 
