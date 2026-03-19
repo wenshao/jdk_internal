@@ -7,6 +7,7 @@
 ```
 jdk_docs/
 ├── README.md          # 项目说明
+├── releases/          # 版本发布分析
 ├── issues/            # Issue 分析文档
 ├── prs/               # Pull Request 分析文档
 └── modules/           # 模块/组件源码分析文档
