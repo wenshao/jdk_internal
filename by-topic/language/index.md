@@ -59,9 +59,23 @@ JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 14-17 ─── JDK 21-26
 | JDK 8 | Lambda invokedynamic, Parameter 反射 | - |
 | JDK 11 | Constable/ConstantDesc | - |
 | JDK 16 | ClassFile API | JEP 395 |
+| JDK 22 | Class-File API (预览) | JEP 459 |
+| JDK 24 | Class-File API (正式) | JEP 484 |
 | JDK 26 | Mirror API | - |
 
 → [反射时间线](reflection/timeline.md)
+
+### [Class File API](classfile/)
+
+标准 class 文件读写 API，替代 ASM。
+
+| 版本 | 主要变化 | JEP |
+|------|----------|-----|
+| JDK 22 | Class-File API (预览) | JEP 459 |
+| JDK 23 | Class-File API (第二次预览) | JEP 466 |
+| JDK 24 | Class-File API (正式) | JEP 484 |
+
+→ [Class File API 时间线](classfile/timeline.md)
 
 ### [语法演进](syntax/)
 
@@ -91,6 +105,28 @@ JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 14-17 ─── JDK 21-26
 ### [注解与元编程](annotations/)
 
 注解处理器、编译期元编程。
+
+| 版本 | 主要变化 | JSR |
+|------|----------|-----|
+| JDK 5 | 注解引入 | JSR 175 |
+| JDK 6 | Pluggable Annotation Processing API | JSR 269 |
+| JDK 7 | 类型注解 | JSR 308 |
+| JDK 8 | 重复注解 @Repeatable | - |
+| JDK 17 | Sealed Classes 支持 | - |
+
+→ [注解时间线](annotations/timeline.md)
+
+### [Class File API](classfile/)
+
+标准 class 文件读写 API。
+
+| 版本 | 主要变化 | JEP |
+|------|----------|-----|
+| JDK 22 | Class-File API (预览) | JEP 459 |
+| JDK 23 | Class-File API (第二次预览) | JEP 466 |
+| JDK 24 | Class-File API (正式) | JEP 484 |
+
+→ [Class File API 时间线](classfile/timeline.md)
 
 | 版本 | 主要变化 | JSR |
 |------|----------|-----|
