@@ -1,6 +1,6 @@
 # Albert Mingkun Yang
 
-> JDK 26 贡献最多的开发者，专注于 GC 优化
+> GC 专家，代码清理大师，JDK 26 最多贡献者
 
 ---
 
@@ -10,12 +10,13 @@
 |------|-----|
 | **姓名** | Albert Mingkun Yang |
 | **当前组织** | Oracle |
+| **位置** | 斯德哥尔摩, 瑞典 |
 | **GitHub** | [@albertnetymk](https://github.com/albertnetymk) |
 | **OpenJDK** | [@ayang](https://openjdk.org/census#ayang) |
 | **角色** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [744 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aalbertnetymk+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | G1 GC, Parallel GC |
-| **活跃时间** | 2023 - 至今 |
+| **主要领域** | G1 GC, Parallel GC, Serial GC, 代码清理 |
+| **活跃时间** | 2020 - 至今 |
 
 ### 组织历史
 
@@ -26,6 +27,76 @@
 | 2020 - 至今 | Oracle | albert.m.yang@oracle.com |
 
 > **数据调查时间**: 2026-03-19
+
+---
+
+## 技术影响力
+
+| 指标 | 值 |
+|------|-----|
+| **代码行数** | +15,348 / -32,143 (净 -16,795) |
+| **影响模块** | hotspot (GC) |
+| **主要贡献** | GC 优化、代码清理、重构 |
+
+> 💡 **代码清理大师**: 净删除 16,795 行代码，通过重构和清理提升代码质量
+
+### 影响的主要目录
+
+| 目录 | 文件数 | 说明 |
+|------|--------|------|
+| gc/parallel | 514 | Parallel GC |
+| gc/shared | 490 | GC 共享代码 |
+| gc/g1 | 459 | G1 GC |
+| gc/serial | 416 | Serial GC |
+| runtime | 84 | 运行时 |
+
+---
+
+## 贡献时间线
+
+```
+2020: ░░░░░░░░░░░░░░░░░░░░   5 commits
+2021: ████████░░░░░░░░░░░░ 111 commits
+2022: █████████░░░░░░░░░░░ 123 commits
+2023: ████████████░░░░░░░░ 163 commits
+2024: ███████████████░░░░░ 194 commits (峰值)
+2025: ██████████░░░░░░░░░░ 133 commits
+2026: █░░░░░░░░░░░░░░░░░░░░  20 commits (进行中)
+```
+
+---
+
+## 技术特长
+
+`G1 GC` `Parallel GC` `Serial GC` `代码清理` `重构` `GC 优化`
+
+---
+
+## 代表性工作
+
+### 1. JDK 26 最多贡献者
+744 个 integrated PRs，是 JDK 26 周期最活跃的贡献者之一。
+
+### 2. GC 代码现代化
+大量 GC 代码重构和现代化，提升代码可维护性。
+
+### 3. Parallel GC 优化
+多项 Parallel GC 性能优化和代码清理。
+
+### 4. G1 GC 改进
+G1 GC 相关的优化和 bug 修复。
+
+### 5. 跨 GC 代码共享
+改进不同 GC 实现之间的代码共享，减少重复。
+
+---
+
+## 外部资源
+
+| 类型 | 链接 |
+|------|------|
+| **GitHub** | [@albertnetymk](https://github.com/albertnetymk) |
+| **OpenJDK Census** | [ayang](https://openjdk.org/census#ayang) |
 
 ---
 

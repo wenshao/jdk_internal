@@ -1,6 +1,6 @@
 # Shaojin Wen (温绍锦)
 
-> JDK 26 核心库性能优化专家，阿里巴巴团队成员
+> Alibaba DataWorks Tech Leader, OpenJDK Committer, fastjson/fastjson2/druid 作者
 
 ---
 
@@ -10,6 +10,7 @@
 |------|-----|
 | **姓名** | Shaojin Wen (温绍锦) |
 | **当前组织** | 阿里巴巴 (Alibaba) |
+| **位置** | 杭州, 中国 |
 | **GitHub** | [@wenshao](https://github.com/wenshao) |
 | **OpenJDK** | [@swen](https://openjdk.org/census#swen) |
 | **角色** | JDK Committer |
@@ -21,7 +22,81 @@
 
 ---
 
-## 贡献概览
+## 技术影响力
+
+| 指标 | 值 |
+|------|-----|
+| **代码行数** | +10,882 / -8,669 (净 +2,213) |
+| **影响模块** | java.base (核心库) |
+| **主要贡献** | 性能优化、代码清理 |
+
+### 影响的主要目录
+
+| 目录 | 文件数 | 说明 |
+|------|--------|------|
+| java/lang | 94 | 核心语言类 |
+| java/lang/classfile | 118 | ClassFile API |
+| jdk/internal/util | 35 | 内部工具类 |
+| java/math | 16 | 数学类 (BigInteger/BigDecimal) |
+| java/time | 10 | 时间日期类 |
+
+---
+
+## 贡献时间线
+
+```
+2023: ████░░░░░░░░░░░░░░░░ 38 commits (主要在 10月)
+2024: ████████████░░░░░░░░ 50 commits
+2025: ████████░░░░░░░░░░░░ 42 commits
+2026: ░░░░░░░░░░░░░░░░░░░░░ 进行中
+```
+
+---
+
+## 技术特长
+
+`性能优化` `字符串处理` `数字格式化` `ClassFile API` `启动优化` `代码清理`
+
+---
+
+## 代表性工作
+
+### 1. StringBuilder::append(char[]) 性能优化 (+15%)
+**Issue**: [JDK-8355177](https://bugs.openjdk.org/browse/JDK-8355177)
+
+使用 `Unsafe::copyMemory` 优化字符数组追加，显著提升字符串拼接性能。
+
+### 2. Integer/Long.toString 简化 (+10%)
+**Issue**: [JDK-8370503](https://bugs.openjdk.org/browse/JDK-8370503)
+
+使用 `String.newStringWithLatin1Bytes` 简化数字转字符串实现。
+
+### 3. Double.toHexString 重构 (+20%)
+**Issue**: [JDK-8370013](https://bugs.openjdk.org/browse/JDK-8370013)
+
+消除正则表达式和 StringBuilder，显著提升浮点数格式化性能。
+
+### 4. UUID.toString 优化 (+8%)
+**Issue**: [JDK-8353741](https://bugs.openjdk.org/browse/JDK-8353741)
+
+消除 UUID 格式化中的表查找操作。
+
+### 5. 启动速度优化 (+5%)
+**Issue**: [JDK-8349400](https://bugs.openjdk.org/browse/JDK-8349400)
+
+通过消除嵌套类提升应用启动速度。
+
+---
+
+## 外部资源
+
+| 类型 | 链接 |
+|------|------|
+| **OpenJDK Census** | [swen](https://openjdk.org/census#swen) |
+| **GitHub** | [@wenshao](https://github.com/wenshao) |
+| **开源项目** | [fastjson](https://github.com/alibaba/fastjson), [fastjson2](https://github.com/alibaba/fastjson2), [druid](https://github.com/alibaba/druid) |
+
+---
 
 ### 按类别统计
 

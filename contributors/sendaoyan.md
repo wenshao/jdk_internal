@@ -1,6 +1,6 @@
 # SendaoYan
 
-> JDK 测试稳定性专家
+> JDK 测试稳定性专家，202 integrated PRs
 
 ---
 
@@ -14,7 +14,7 @@
 | **OpenJDK** | [@syan](https://openjdk.org/census#syan) |
 | **角色** | JDK Committer |
 | **PRs** | [202 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3ASendaoYan+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | 测试稳定性、测试修复 |
+| **主要领域** | 测试稳定性、测试修复、Docker 容器测试 |
 | **活跃时间** | 2022 - 至今 |
 
 ### 组织历史
@@ -28,7 +28,71 @@
 
 ---
 
-## 贡献概览
+## 技术影响力
+
+| 指标 | 值 |
+|------|-----|
+| **代码行数** | +3,982 / -3,541 (净 +441) |
+| **影响模块** | test (测试) |
+| **主要贡献** | 测试稳定性修复、测试跳过改进 |
+
+### 影响的主要目录
+
+| 目录 | 文件数 | 说明 |
+|------|--------|------|
+| test/.../BasicFileAttributeView | 39 | 文件属性测试 |
+| test/.../docker | 32 | Docker 容器测试 |
+| test/.../SctpChannel | 30 | SCTP 测试 |
+| test/.../foreign | 18 | Foreign API 测试 |
+| test/.../jfr | 14 | JFR 测试 |
+
+---
+
+## 贡献时间线
+
+```
+2022: ░░░░░░░░░░░░░░░░░░░░   1 commit
+2023: ░░░░░░░░░░░░░░░░░░░░   0 commits
+2024: ████████████████░░░░ 106 commits
+2025: ████████████████████ 131 commits (峰值)
+2026: █████████░░░░░░░░░░░  61 commits (进行中)
+```
+
+---
+
+## 技术特长
+
+`测试稳定性` `Docker 测试` `SCTP` `JFR 测试` `测试跳过` `间歇性失败修复`
+
+---
+
+## 代表性工作
+
+### 1. 测试稳定性专家
+202 个 integrated PRs，专注于修复间歇性测试失败，提升 CI/CD 稳定性。
+
+### 2. Docker 容器测试
+大量 Docker 相关测试的修复和改进，确保容器环境下的测试稳定性。
+
+### 3. SCTP 测试
+SCTP (Stream Control Transmission Protocol) 相关测试的修复。
+
+### 4. JFR 测试
+Java Flight Recorder 测试的稳定性改进。
+
+### 5. 测试跳过逻辑
+改进测试跳过逻辑，确保测试在特定条件下正确跳过。
+
+---
+
+## 外部资源
+
+| 类型 | 链接 |
+|------|------|
+| **GitHub** | [@SendaoYan](https://github.com/SendaoYan) |
+| **OpenJDK Census** | [syan](https://openjdk.org/census#syan) |
+
+---
 
 ### 按类别统计
 

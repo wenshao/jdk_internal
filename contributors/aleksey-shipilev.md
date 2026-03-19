@@ -1,6 +1,6 @@
 # Aleksey Shipilev
 
-> JDK 26 性能优化专家，JEP 503 主导者，Amazon Web Services，120 个 commits
+> 性能优化专家，JMH 主要贡献者，JEP 503 主导者
 
 ---
 
@@ -10,11 +10,14 @@
 |------|-----|
 | **姓名** | Aleksey Shipilev |
 | **当前组织** | Amazon Web Services |
+| **位置** | 波茨坦, 德国 |
 | **GitHub** | [@shipilev](https://github.com/shipilev) |
+| **Twitter** | [@shipilev](https://twitter.com/shipilev) |
+| **Blog** | [shipilev.net](https://shipilev.net/) |
 | **OpenJDK** | [@shade](https://openjdk.org/census#shade) |
 | **角色** | OpenJDK Member, JDK Reviewer |
 | **PRs** | [803 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ashipilev+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | C2 编译器、性能优化、基准测试 |
+| **主要领域** | C2 编译器、Shenandoah GC、性能优化、基准测试 |
 | **主导 JEP** | JEP 503: Remove the 32-bit x86 Port |
 | **活跃时间** | 2012 - 至今 |
 
@@ -30,7 +33,85 @@
 
 ---
 
-## 贡献概览
+## 技术影响力
+
+| 指标 | 值 |
+|------|-----|
+| **代码行数** | +90,897 / -82,925 (净 +7,972) |
+| **影响模块** | hotspot (GC, 编译器) |
+| **主要贡献** | Shenandoah GC, C2 优化, JMH |
+
+### 影响的主要目录
+
+| 目录 | 文件数 | 说明 |
+|------|--------|------|
+| gc/shenandoah | 933 | Shenandoah GC |
+| cpu/x86 | 291 | x86 后端 |
+| opto | 196 | C2 编译器 |
+| runtime | 194 | 运行时 |
+| compiler | 120 | 编译器接口 |
+
+---
+
+## 贡献时间线
+
+```
+2012: ░░░░░░░░░░░░░░░░░░░░   4 commits
+2013: ░░░░░░░░░░░░░░░░░░░░  20 commits
+2014: ░░░░░░░░░░░░░░░░░░░░  17 commits
+2015: ░░░░░░░░░░░░░░░░░░░░  22 commits
+2016: ████░░░░░░░░░░░░░░░░  53 commits
+2017: ░░░░░░░░░░░░░░░░░░░░   5 commits
+2018: █████░░░░░░░░░░░░░░░  66 commits
+2019: ███████████░░░░░░░░░ 150 commits
+2020: ████████████████████ 285 commits (峰值)
+2021: ████████████████░░░░ 204 commits
+2022: ████████████░░░░░░░░ 160 commits
+2023: █████████░░░░░░░░░░░ 124 commits
+2024: ████████████░░░░░░░░ 163 commits
+2025: █████████████████░░░ 227 commits
+2026: ███░░░░░░░░░░░░░░░░░  38 commits (进行中)
+```
+
+---
+
+## 技术特长
+
+`Shenandoah GC` `C2 编译器` `性能优化` `JMH` `x86 后端` `基准测试`
+
+---
+
+## 代表性工作
+
+### 1. JEP 503: Remove the 32-bit x86 Port
+**Issue**: [JDK-8345169](https://bugs.openjdk.org/browse/JDK-8345169)
+
+移除 32位 x86 平台支持，减少维护负担，让团队专注于 64位优化。
+
+### 2. Shenandoah GC 核心贡献者
+主导 Shenandoah GC 的开发和优化，使其成为低延迟 GC 的首选。
+
+### 3. JMH (Java Microbenchmark Harness)
+JMH 微基准测试框架的主要贡献者，为 Java 性能测试提供标准工具。
+
+### 4. C2 编译器优化
+多项 C2 编译器优化，包括逃逸分析、内联优化等。
+
+### 5. 性能分析和调优
+大量性能问题分析和修复，涵盖 GC、编译器、运行时等多个领域。
+
+---
+
+## 外部资源
+
+| 类型 | 链接 |
+|------|------|
+| **个人博客** | [shipilev.net](https://shipilev.net/) |
+| **Twitter** | [@shipilev](https://twitter.com/shipilev) |
+| **GitHub** | [@shipilev](https://github.com/shipilev) |
+| **OpenJDK Census** | [shade](https://openjdk.org/census#shade) |
+
+---
 
 ### 按类别统计
 
