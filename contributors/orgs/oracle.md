@@ -60,33 +60,33 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 |------|--------|---------|------|
 | 1 | David Katleman | 1,487 | 构建/发布 |
 | 2 | Jonathan Gibbons | 1,320 | javac |
-| 3 | Phil Race | 1,313 | 图形/打印 |
-| 4 | Coleen Phillimore | 1,209 | HotSpot |
+| 3 | [Phil Race](../phil-race.md) | 1,313 | 图形/打印 |
+| 4 | [Coleen Phillimore](../coleen-phillimore.md) | 1,209 | HotSpot |
 | 5 | Joe Darcy | 1,194 | 核心库 |
-| 6 | Thomas Schatzl | 1,113 | G1 GC |
+| 6 | [Thomas Schatzl](../thomas-schatzl.md) | 1,113 | G1 GC |
 | 7 | Alejandro Murillo | 998 | HotSpot |
 | 8 | Erik Joelsson | 956 | 构建系统 |
 | 9 | Weijun Wang | 954 | 安全/工具 |
 | 10 | Sergey Bylokhov | 953 | AWT/2D |
 | 11 | Vladimir Kozlov | 942 | C2 编译器 |
-| 12 | Magnus Ihse Bursie | 925 | 构建系统 |
+| 12 | [Magnus Ihse Bursie](../magnus-ihse-bursie.md) | 925 | 构建系统 |
 | 13 | Jesper Wilhelmsson | 912 | GC |
 | 14 | Daniel D. Daugherty | 867 | HotSpot |
 | 15 | Alan Bateman | 867 | 核心库 |
 | 16 | Chris Hegarty | 812 | 网络 |
-| 17 | Jan Lahoda | 785 | javac |
-| 18 | Brian Burkhalter | 779 | NIO |
-| 19 | Prasanta Sadhukhan | 772 | Swing |
-| 20 | Albert Mingkun Yang | 747 | GC |
-| 21 | David Holmes | 720 | 线程 |
+| 17 | [Jan Lahoda](../jan-lahoda.md) | 785 | javac |
+| 18 | [Brian Burkhalter](../brian-burkhalter.md) | 779 | NIO |
+| 19 | [Prasanta Sadhukhan](../prasanta-sadhukhan.md) | 772 | Swing |
+| 20 | [Albert Mingkun Yang](../albert-mingkun-yang.md) | 747 | GC |
+| 21 | [David Holmes](../david-holmes.md) | 720 | 线程 |
 | 22 | Stefan Karlsson | 692 | ZGC |
 | 23 | Sundararajan Athijegannathan | 689 | Nashorn |
 | 24 | Claes Redestad | 688 | 核心库 |
 | 25 | Mandy Chung | 687 | 模块系统 |
-| 26 | Kim Barrett | 680 | GC |
+| 26 | [Kim Barrett](../kim-barrett.md) | 680 | GC |
 | 27 | Igor Ignatyev | 673 | 测试 |
 | 28 | Maurizio Cimadamore | 670 | 语言特性 |
-| 29 | Ioi Lam | 661 | CDS/AOT |
+| 29 | [Ioi Lam](../ioi-lam.md) | 661 | CDS/AOT |
 | 30 | Zhengyu Gu | 582 | GC |
 
 ---
@@ -132,13 +132,15 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 | 贡献者 | Commits | 领域 |
 |--------|---------|------|
 | Weijun Wang | 954 | 安全/工具 |
-| Albert Mingkun Yang | 747 | GC |
+| [Albert Mingkun Yang](../albert-mingkun-yang.md) | 747 | GC |
 | Sundararajan Athijegannathan | 689 | Nashorn |
 | Zhengyu Gu | 582 | GC |
-| Naoto Sato | 569 | 国际化 |
+| [Naoto Sato](../naoto-sato.md) | 569 | 国际化 |
 | Xue-Lei Andrew Fan | 412 | 安全 |
-| Hamlin Li | 301 | RISC-V |
+| [Hamlin Li](../hamlin-li.md) | 301 | RISC-V |
 | Jiangli Zhou | 251 | CDS |
+| [Chen Liang](../chen-liang.md) | 211 | ClassFile API |
+| [SendaoYan](../sendaoyan.md) | 182 | 测试稳定性 |
 
 ---
 

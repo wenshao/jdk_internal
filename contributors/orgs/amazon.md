@@ -39,7 +39,7 @@ Amazon 通过 Corretto 团队参与 OpenJDK 开发，专注于 AArch64 优化、
 | 排名 | 贡献者 | Commits | 领域 |
 |------|--------|---------|------|
 | 1 | Xiaolong Peng | 269 | C2 编译器 |
-| 2 | William Kemper | 231 | Shenandoah GC |
+| 2 | [William Kemper](../william-kemper.md) | 231 | Shenandoah GC |
 | 3 | Kelvin Nilsen | 186 | AArch64 |
 | 4 | Evgeny Astigeevich | 58 | C2 编译器 |
 | 5 | Joshua Cao | 24 | 编译器 |

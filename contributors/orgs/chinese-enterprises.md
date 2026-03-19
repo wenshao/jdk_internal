@@ -52,8 +52,8 @@
 
 | 贡献者 | Commits | 领域 |
 |--------|---------|------|
-| Shaojin Wen | 28 | 核心库优化 |
-| Kuai Wei | 13 | C2 编译器 |
+| [Shaojin Wen](../shaojin-wen.md) | 28 | 核心库优化 |
+| [Kuai Wei](../kuai-wei.md) | 13 | C2 编译器 |
 | Yude Lin | 8 | 测试 |
 
 ### 关键贡献
@@ -82,7 +82,7 @@
 |--------|---------|------|
 | Bob Peng Xie | 15 | 测试、构建 |
 | Caspar Wang | 7 | 测试 |
-| Tongbao Zhang | 5 | G1 GC |
+| [Tongbao Zhang](../tongbao-zhang.md) | 5 | G1 GC |
 
 ### 关键贡献
 
@@ -108,7 +108,7 @@
 
 | 贡献者 | Commits | 领域 |
 |--------|---------|------|
-| Anjian Wen | 12 | RISC-V 向量指令 |
+| [Anjian Wen](../anjian-wen.md) | 12 | RISC-V 向量指令 |
 
 ### 关键贡献
 

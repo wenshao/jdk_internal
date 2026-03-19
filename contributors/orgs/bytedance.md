@@ -33,7 +33,7 @@
 
 | 贡献者 | Commits | 领域 |
 |--------|---------|------|
-| Anjian Wen | 12 | RISC-V 向量指令 |
+| [Anjian Wen](../anjian-wen.md) | 12 | RISC-V 向量指令 |
 
 ---
 

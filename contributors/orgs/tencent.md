@@ -38,7 +38,7 @@
 |------|--------|---------|------|
 | 1 | Bob Peng Xie | 15 | 测试、构建 |
 | 2 | Caspar Wang | 7 | 测试 |
-| 3 | Tongbao Zhang | 5 | G1 GC |
+| 3 | [Tongbao Zhang](../tongbao-zhang.md) | 5 | G1 GC |
 | 4 | Emory Zheng | 4 | 测试 |
 | 5 | Lin Zang | 2 | 测试 |
 | 6 | Lehua Ding | 2 | 编译器 |

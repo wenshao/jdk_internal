@@ -39,8 +39,8 @@
 
 | 排名 | 贡献者 | Commits | 领域 |
 |------|--------|---------|------|
-| 1 | Shaojin Wen | 28 | 核心库优化 |
-| 2 | Kuai Wei | 13 | C2 编译器 |
+| 1 | [Shaojin Wen](../shaojin-wen.md) | 28 | 核心库优化 |
+| 2 | [Kuai Wei](../kuai-wei.md) | 13 | C2 编译器 |
 | 3 | Yude Lin | 8 | 测试 |
 | 4 | Zhuoren Wang | 3 | 测试 |
 | 5 | Xiaowei Lu | 3 | 测试 |

@@ -61,7 +61,7 @@ Red Hat 是 OpenJDK 的重要贡献者，尤其在 Shenandoah GC、Zero VM 和 A
 | 9 | Michal Vala | 8 | - |
 | 10 | Roman Kennke | 6 | Shenandoah |
 
-> 注：Aleksey Shipilev (1,320 commits) 使用 @openjdk.org 邮箱，统计在 Oracle 中
+> 注：[Aleksey Shipilev](../aleksey-shipilev.md) (1,320 commits) 使用 @openjdk.org 邮箱，统计在 Oracle 中
 
 ---
 

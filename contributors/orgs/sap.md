@@ -54,7 +54,7 @@ SAP 是 OpenJDK 的长期贡献者，专注于 PowerPC (PPC) 移植、AIX 平台
 | 2 | Goetz Lindenmaier | 9 | HotSpot |
 | 3 | Richard Reingruber | 8 | - |
 | 4 | David Briemann | 8 | - |
-| 5 | Matthias Baesken | 7 | 构建系统 |
+| 5 | [Matthias Baesken](../matthias-baesken.md) | 7 | 构建系统 |
 | 6 | Axel Siebenborn | 7 | - |
 | 7 | Joachim Kern | 7 | - |
 | 8 | Thomas Stuefe | 6 | HotSpot |
