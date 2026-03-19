@@ -84,7 +84,7 @@
 ### 数据更新
 
 - **更新频率**: 每个 JDK 版本发布后更新
-- **上次更新**: 2026-03-19
+- **上次更新**: 2026-03-20
 - **数据验证**: `scripts/contributor_stats.py`
 
 ---
@@ -95,3 +95,6 @@
 - [中国贡献者](/by-contributor/profiles/chinese-contributors.md)
 - [按领域分类](by-domain.md)
 - [按组织分类](by-org.md)
+- [年度趋势](by-year.md)
+- [地区分布](by-region.md)
+- [新星贡献者](rising-stars.md)
