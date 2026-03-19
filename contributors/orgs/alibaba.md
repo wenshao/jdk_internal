@@ -39,17 +39,17 @@
 | Yude Lin | 8 | 测试 |
 | Zhuo Wang | 3 | 测试 |
 | Xiaowei Lu | 3 | 测试 |
-| Yibo Yang | 2 | 测试 |
-| Yansendao Yan | 2 | 测试 |
-| Xingqi Zheng | 2 | 测试 |
-| Qingfeng Yang | 2 | 测试 |
-| Lingjun Chen | 2 | 测试 |
 | Denghui Dong | 2 | 测试 |
 | Hao Tang | 2 | AArch64 |
-| Yifeng Jiang | 1 | 测试 |
-| Lusou Zhang | 1 | 测试 |
-| Jinguojie Jin | 1 | 测试 |
-| Gaodan Gao | 1 | 测试 |
+| Yang Yi | 2 | 测试 |
+| lingjun.cg | 2 | 测试 |
+| MaxXSoft | 2 | 测试 |
+| sendaoYan | 2 | 测试 |
+| yibo.yl | 2 | 测试 |
+| Quan Zhang | 1 | 测试 |
+| gaogao-mem | 1 | 测试 |
+| yifeng.jyf | 1 | 测试 |
+| 释天 | 1 | 测试 |
 
 ---
 
@@ -57,14 +57,16 @@
 
 ```
 2018: █░░░░░░░░░░░░░░░░░░░ 1 commit
-2019: █░░░░░░░░░░░░░░░░░░░ 2 commits
-2020: ███░░░░░░░░░░░░░░░░░ 5 commits
-2021: ███████░░░░░░░░░░░░░ 13 commits
+2019: ██░░░░░░░░░░░░░░░░░░ 2 commits
+2020: █████░░░░░░░░░░░░░░░ 5 commits
+2021: ██████████░░░░░░░░░░ 10 commits
 2022: ███░░░░░░░░░░░░░░░░░ 3 commits
-2023: ███████░░░░░░░░░░░░░ 11 commits
-2024: ████████████████████ 38 commits (高峰期)
+2023: ██████████░░░░░░░░░░ 10 commits
+2024: ████████████████████████████████████████ 38 commits (高峰期)
 2025: ████░░░░░░░░░░░░░░░░ 4 commits
 ```
+
+> **总计**: 73 commits (2018-2025)
 
 ---
 
