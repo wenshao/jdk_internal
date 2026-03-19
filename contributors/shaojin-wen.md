@@ -1,4 +1,4 @@
-# Shaojin Wen (温绍锦)
+# Shaojin Wen
 
 > Alibaba DataWorks Tech Leader, OpenJDK Committer, fastjson/fastjson2/druid 作者
 
