@@ -4,6 +4,29 @@
 
 ---
 
+## 演进概览
+
+```
+JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 14-17 ─── JDK 21-26
+   │           │           │            │              │
+ 基础语法    泛型/注解    Lambda      Records       模式匹配
+ 反射        变参        invokedynamic  Sealed        String Templates
+             枚举        Stream        隐式类         分代 ZGC
+```
+
+### 版本里程碑
+
+| 版本 | 主题 | 关键特性 |
+|------|------|----------|
+| **JDK 5** | 语法革命 | 泛型、枚举、注解、变参、增强 for |
+| **JDK 8** | 函数式 | Lambda、Stream、invokedynamic |
+| **JDK 11 LTS** | 模块化成熟 | Compact Strings、var、HttpClient |
+| **JDK 17 LTS** | 模式匹配 | Records、Sealed Classes、switch 表达式 |
+| **JDK 21 LTS** | 并发增强 | 虚拟线程、分代 ZGC、String Templates |
+| **JDK 26** | 性能优化 | G1 +10-20%、ZGC NUMA、Primitive Patterns |
+
+---
+
 ## 主题列表
 
 ### [字符串处理](string/)
@@ -78,6 +101,198 @@
 | JDK 17 | Sealed Classes 支持 | - |
 
 → [注解时间线](annotations/timeline.md)
+
+---
+
+## 核心贡献者
+
+### 语法与类型
+
+| 贡献者 | 公司 | 主要贡献 |
+|--------|------|----------|
+| **Brian Goetz** | Oracle | Java Language Architect, JSR-335 (Lambda) |
+| **Gavin Bierman** | Oracle | Records, Sealed Classes, Pattern Matching |
+| **Jim Laskey** | Oracle | String Templates, Text Blocks |
+| **Alex Buckley** | Oracle | JLS 维护者, JSR-308 |
+
+### 字符串与性能
+
+| 贡献者 | 公司 | 主要贡献 |
+|--------|------|----------|
+| **Aleksey Shipilev** | Red Hat | JEP 254 (Compact Strings) |
+| **Shaojin Wen** (温绍锦) | Alibaba | JDK-8336856 (+40% 启动), 25+ PR |
+| **Claes Redestad** | Oracle | String 压缩、字节码优化 |
+
+### 反射与注解
+
+| 贡献者 | 公司/机构 | 主要贡献 |
+|--------|----------|----------|
+| **Joshua Bloch** | Google/Sun | JSR 175 (注解), 《Effective Java》 |
+| **Joseph Darcy** | Oracle | JSR 269 (注解处理器), Project Coin |
+| **Michael Ernst** | UW | JSR 308 (类型注解), Checker Framework |
+
+---
+
+## 按 JDK 版本索引
+
+### JDK 5 (2004) - 语法革命
+
+- **泛型** (JSR 14)
+- **枚举** (enum)
+- **注解** (JSR 175)
+- **变参** (T...)
+- **增强 for 循环**
+- **静态导入**
+- **自动装箱/拆箱**
+
+### JDK 6 (2006)
+
+- **注解处理器 API** (JSR 269)
+- **Compiler API** (javax.tools)
+
+### JDK 7 (2011)
+
+- **Diamond 操作符** (`<>`)
+- **Try-with-resources**
+- **多异常捕获**
+- **二进制字面量**
+- **字面串下划线**
+- **switch 字符串**
+- **MethodHandle** (JSR 292)
+
+### JDK 8 (2014) - 函数式编程
+
+- **Lambda 表达式**
+- **方法引用**
+- **Stream API**
+- **CompletableFuture**
+- **invokedynamic 字符串拼接**
+- **重复注解** (@Repeatable)
+- **类型注解** (JSR 308)
+- **参数反射** (Parameter)
+
+### JDK 9 (2017)
+
+- **Compact Strings** (JEP 254)
+- **私有接口方法**
+- **模块化** (JPMS)
+
+### JDK 10 (2018)
+
+- **局部变量类型推断** (var)
+
+### JDK 11 (2018) LTS
+
+- **字符串新方法**: repeat(), strip(), isBlank(), lines()
+- **HTTP Client**
+- **Constable/ConstantDesc**
+
+### JDK 14-16 (2020-2021)
+
+- **Records** (JEP 395, JDK 16 正式)
+- **instanceof 模式匹配** (JEP 394, JDK 16 正式)
+- **Text Blocks** (JEP 378, JDK 15 正式)
+- **switch 表达式** (JEP 361, JDK 14 正式)
+
+### JDK 17 (2021) LTS
+
+- **Sealed Classes** (JEP 409)
+- **Pattern Matching for switch** (预览)
+- **Record Patterns** (预览)
+
+### JDK 21 (2023) LTS
+
+- **String Templates** (JEP 430, 预览)
+- **Record Patterns** (正式)
+- **Pattern Matching for switch** (正式)
+- **未命名模式和变量** (JEP 443)
+- **隐式类** (JEP 469)
+
+### JDK 24-26 (2025-2026)
+
+- **隐藏类拼接策略** (JDK-8336856, +40% 启动)
+- **分代 ZGC** (JDK 21+, JDK 23 默认)
+- **Primitive Patterns** (JEP 455)
+- **G1 吞吐量提升** (JEP 522, +10-20%)
+
+---
+
+## 内部开发者资源
+
+### 源码结构
+
+```
+src/java.base/share/classes/java/lang/
+├── String.java              # 字符串核心
+├── StringBuilder.java       # 可变字符串
+├── Record.java              # 记录类注解
+├── Enum.java                # 枚举基类
+├── invoke/                  # invokedynamic 相关
+│   ├── StringConcatFactory.java
+│   └── MethodHandle.java
+└── reflect/                 # 反射 API
+
+src/java.base/share/classes/java/lang/compiler/
+├── SyntaxException.java     # 语法异常
+└── └── 相关编译器 API
+
+src/java.compiler/share/classes/javax/annotation/processing/
+├── Processor.java           # 注解处理器接口
+└── └── 相关工具类
+```
+
+### 关键内部类
+
+| 类 | 作用 | 访问级别 |
+|---|------|----------|
+| `StringLatin1` | LATIN1 编码操作 | 包级私有 |
+| `StringUTF16` | UTF16 编码操作 | 包级私有 |
+| `StringConcatHelper` | 拼接辅助方法 | `@ForceInline` |
+| `LambdaMetafactory` | Lambda 元工厂 | 内部 API |
+| `ConstantBootstraps` | invokedynamic 引导 | 内部 API |
+
+### VM 参数速查
+
+```bash
+# 字符串相关
+-XX:+CompactStrings           # 启用压缩字符串 (默认)
+-XX:+UseStringDeduplication    # 启用字符串去重
+-XX:StringDeduplicationAgeThreshold=3
+
+# Lambda/invokedynamic
+-Djdk.invoke.LambdaMetafactory.dumpProxyClassFiles=true
+
+# 注解处理器
+-processor <类名>             # 指定注解处理器
+-proc:only                    # 仅处理注解，不编译
+
+# 泛型/类型
+-XX:+TypeProfileGCLevel       # 类型 profiling 级别
+```
+
+### 常用调试工具
+
+```bash
+# javac 详细输出
+javac -Xprint:Round           # 打印注解处理轮次
+javac -Xlint:unchecked        # 未检查转换警告
+
+# jdk.internal.misc.VM
+VM.getFinalRefCount()         # Finalizer 引用计数
+VM.latestUserDefinedLoader()  # 最新类加载器
+```
+
+---
+
+## 统计数据
+
+| 指标 | 数值 |
+|------|------|
+| 语言特性 JEP (JDK 5-26) | 45+ |
+| JSR 规范 | 10+ |
+| 新增关键字 | 3 (enum, assert, var) |
+| 新增运算符 | 2 (::, ->) |
+| 新增注解 | 8+ |
 
 ---
 
