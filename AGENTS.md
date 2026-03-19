@@ -75,6 +75,41 @@ https://api.github.com/search/issues?q=repo:openjdk/jdk+author:{username}+type:p
 - Contributors without GitHub PRs
 - Commit-based timelines
 
+### Contributor PR Verification
+
+**To verify all PRs are documented for a contributor:**
+
+1. **Get all integrated PRs from GitHub:**
+   ```bash
+   gh pr list --repo openjdk/jdk --limit 300 \
+     --search "author:{username} state:closed label:integrated" \
+     --json number,title --jq '.[] | "\(.number) \(.title)"'
+   ```
+
+   Or use the web interface:
+   ```
+   https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+is%3Aclosed+label%3Aintegrated+
+   ```
+
+2. **Compare with documented PRs:**
+   - Extract Issue numbers from contributor page
+   - Identify missing PRs
+   - Categorize and add to appropriate section
+
+3. **Update statistics:**
+   - Recalculate category distribution
+   - Update total PR count
+   - Adjust percentages accordingly
+
+**Example output:**
+```markdown
+### ClassFile API 优化 (35)
+| Issue | 标题 |
+|-------|------|
+| [8342336](https://bugs.openjdk.org/browse/JDK-8342336) | Optimize ClassFile imports |
+| ...
+```
+
 ### Module Documents
 - Module overview
 - Package structure
