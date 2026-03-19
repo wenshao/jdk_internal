@@ -142,9 +142,9 @@ String message = STR."Hello \{name}, you have \{count} messages.";
 | 类加载时间 | -50% |
 | 元空间占用 | -60% |
 
-**贡献者**: Shaojin Wen (@shaojin-wen), Claes Redestad (@cl4es)
+**贡献者**: Shaojin Wen (温少, Alibaba), Claes Redestad (Oracle)
 
-→ [详细说明](optimization.md#jdk-24-隐藏类策略)
+→ [详细说明](optimization.md#贡献者)
 
 ---
 
@@ -155,7 +155,7 @@ String message = STR."Hello \{name}, you have \{count} messages.";
 - 使用 Unsafe.copyMemory
 - **+15%** 吞吐量
 
-**贡献者**: Shaojin Wen (@shaojin-wen)
+**贡献者**: Shaojin Wen (温少, Alibaba)
 
 ---
 
@@ -166,7 +166,7 @@ String message = STR."Hello \{name}, you have \{count} messages.";
 - 专用 LATIN1 路径
 - **+16%** C1 编译性能
 
-**贡献者**: Shaojin Wen (@shaojin-wen)
+**贡献者**: Shaojin Wen (温少, Alibaba)
 
 ---
 

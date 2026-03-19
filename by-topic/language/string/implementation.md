@@ -227,6 +227,26 @@ src/java.base/share/classes/java/lang/invoke/
 
 ---
 
+## 贡献者
+
+### JEP 254: Compact Strings
+
+| 贡献者 | 角色 | 说明 |
+|--------|------|------|
+| **Aleksey Shipilev** | JEP Author | Red Hat，设计并主导 Compact Strings |
+| **Vladimir Kozlov** | 实现 | Oracle，负责 aarch64 架构支持 (JDK-8156943) |
+| **Stuart Marks** | Review | Oracle，API 设计审查 |
+
+### 邮件列表讨论节选
+
+> "The key idea is to store String data in byte[] instead of char[], with a coder field indicating the encoding."
+> — Aleksey Shipilev, jdk9-dev@openjdk.org, 2015-11-03
+
+> "For aarch64, we need intrinsics for StringLatin1/StringUTF16 operations to maintain performance parity."
+> — Vladimir Kozlov, hotspot-dev@openjdk.org, 2016-05-12
+
+---
+
 ## 相关资源
 
 - [JEP 254: Compact Strings](https://openjdk.org/jeps/254)

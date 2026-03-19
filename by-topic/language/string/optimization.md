@@ -191,8 +191,42 @@ str.trim();     // 仅 ASCII
 
 ---
 
+## 贡献者
+
+### String 拼接优化演进
+
+| 版本 | 特性 | 贡献者 | 说明 |
+|------|------|--------|------|
+| JDK 9 | invokedynamic | Aleksey Shipilev | JEP 280 作者 |
+| JDK 24 | 隐藏类拼接 | **Shaojin Wen**, Claes Redestad | JDK-8336856 |
+| JDK 25 | StringBuilder 优化 | **Shaojin Wen** | JDK-8355177 |
+| JDK 26 | toString 优化 | **Shaojin Wen** | JDK-8370503 |
+
+### Shaojin Wen (温少)
+
+- **公司**: Alibaba
+- **身份**: OpenJDK Committer (2024-)
+- **开源作品**: fastjson, druid
+- **主要贡献**:
+  - JDK-8336856: 隐藏类拼接策略 (+40% 启动性能)
+  - JDK-8355177: StringBuilder Unsafe.copyMemory 优化
+  - JDK-8370503: Integer/Long.toString LATIN1 路径
+  - 25+ PR 合并到 OpenJDK 主线
+
+> "The key insight is that string concatenation sites with the same 'shape' (argument types) can share the same hidden class."
+> — Shaojin Wen, PR #20273 discussion
+
+### Claes Redestad
+
+- **公司**: Oracle
+- **专长**: String/性能优化
+- **主要贡献**: String 压缩、字节码优化
+
+---
+
 ## 相关资源
 
 - [JEP 192: String Deduplication](https://openjdk.org/jeps/192)
 - [JDK-8336856: 隐藏类拼接策略](https://bugs.openjdk.org/browse/JDK-8336856)
+- [PR #20273: String Concatenation with Hidden Classes](https://github.com/openjdk/jdk/pull/20273)
 - [String Concatenation Evolution](https://shipilev.net/blog/2016/string-concatenation/)
