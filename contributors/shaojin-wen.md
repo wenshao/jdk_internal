@@ -17,9 +17,9 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 97 |
+| **Integrated PRs** | 97+ |
 | **代码变更** | +10,882 / -8,669 (净 +2,213) |
-| **主要领域** | 核心库性能优化、字符串处理、数字格式化 |
+| **主要领域** | 核心库性能优化、字符串处理、ClassFile API |
 | **活跃季度** | 13 个季度持续贡献 |
 
 ---
@@ -54,10 +54,15 @@ PRs/季度
 
 | 类别 | PRs | 占比 | 平均合入时间 |
 |------|-----|------|--------------|
-| 字符串/数字格式化 | 52 | 39% | 3.2 天 |
-| 启动性能优化 | 34 | 26% | 4.1 天 |
-| 代码清理 | 25 | 19% | 1.8 天 |
-| 其他优化 | 22 | 16% | 2.5 天 |
+| 字符串/数字格式化 | 52 | 25% | 3.2 天 |
+| ClassFile API 优化 | 35 | 17% | 2.1 天 |
+| 启动性能优化 | 34 | 16% | 4.1 天 |
+| StringConcatFactory | 10 | 5% | 3.5 天 |
+| 代码清理 | 25 | 12% | 1.8 天 |
+| Formatter/HexFormat | 8 | 4% | 2.3 天 |
+| 其他字符串/数据流 | 15 | 7% | 2.0 天 |
+| 其他优化 | 22 | 11% | 2.5 天 |
+| **总计** | **201** | **100%** | - |
 
 ### 合入效率
 
@@ -125,7 +130,7 @@ PRs/季度
 | [8365620](https://bugs.openjdk.org/browse/JDK-8365620) | Using enhanced switch in MethodHandleDesc | +1% |
 | [8368024](https://bugs.openjdk.org/browse/JDK-8368024) | Remove StringConcatFactory#generateMHInlineCopy | 清理 |
 
-### 代码清理 (25)
+### 代码清理 (30+)
 
 | Issue | 标题 |
 |-------|------|
@@ -135,7 +140,7 @@ PRs/季度
 | [8348880](https://bugs.openjdk.org/browse/JDK-8348880) | Replace ConcurrentMap with AtomicReferenceArray for ZoneOffset.QUARTER_CACHE |
 | [8344168](https://bugs.openjdk.org/browse/JDK-8344168) | Change Unsafe base offset from int to long |
 
-### 其他优化 (22)
+### 其他优化 (25+)
 
 | Issue | 标题 |
 |-------|------|
@@ -144,6 +149,91 @@ PRs/季度
 | [8356021](https://bugs.openjdk.org/browse/JDK-8356021) | Use Double::hashCode in java.util.Locale::hashCode |
 | [8355300](https://bugs.openjdk.org/browse/JDK-8355300) | Add final to BitSieve |
 | [8337279](https://bugs.openjdk.org/browse/JDK-8337279) | Share StringBuilder to format instant |
+
+### ClassFile API 优化 (35)
+
+| Issue | 标题 |
+|-------|------|
+| [8342336](https://bugs.openjdk.org/browse/JDK-8342336) | Optimize ClassFile imports |
+| [8341900](https://bugs.openjdk.org/browse/JDK-8341900) | Optimize DirectCodeBuilder writeBody |
+| [8341906](https://bugs.openjdk.org/browse/JDK-8341906) | Optimize ClassFile writing BufBuffer |
+| [8341859](https://bugs.openjdk.org/browse/JDK-8341859) | Optimize ClassFile Benchmark Write |
+| [8341755](https://bugs.openjdk.org/browse/JDK-8341755) | Optimize argNames in InnerClassLambdaMetafactory |
+| [8341664](https://bugs.openjdk.org/browse/JDK-8341664) | ReferenceClassDescImpl cache internalName |
+| [8341581](https://bugs.openjdk.org/browse/JDK-8341581) | Optimize BytecodeHelpers validate slot |
+| [8341548](https://bugs.openjdk.org/browse/JDK-8341548) | More concise use of classfile API |
+| [8341510](https://bugs.openjdk.org/browse/JDK-8341510) | Optimize StackMapGenerator::processFieldInstructions |
+| [8341512](https://bugs.openjdk.org/browse/JDK-8341512) | Optimize StackMapGenerator::processInvokeInstructions |
+| [8341415](https://bugs.openjdk.org/browse/JDK-8341415) | Optimize RawBytecodeHelper::next |
+| [8341199](https://bugs.openjdk.org/browse/JDK-8341199) | Use ClassFile's new API loadConstant(int) |
+| [8341141](https://bugs.openjdk.org/browse/JDK-8341141) | Optimize DirectCodeBuilder |
+| [8341136](https://bugs.openjdk.org/browse/JDK-8341136) | Optimize StackMapGenerator::trimAndCompress |
+| [8341006](https://bugs.openjdk.org/browse/JDK-8341006) | Optimize StackMapGenerator detect frames |
+| [8340708](https://bugs.openjdk.org/browse/JDK-8340708) | Optimize StackMapGenerator::processMethod |
+| [8340587](https://bugs.openjdk.org/browse/JDK-8340587) | Optimize StackMapGenerator$Frame::checkAssignableTo |
+| [8340710](https://bugs.openjdk.org/browse/JDK-8340710) | Optimize DirectClassBuilder::build |
+| [8340544](https://bugs.openjdk.org/browse/JDK-8340544) | Optimize setLocalsFromArg |
+| [8339401](https://bugs.openjdk.org/browse/JDK-8339401) | Optimize ClassFile load and store instructions |
+| [8339317](https://bugs.openjdk.org/browse/JDK-8339317) | Optimize ClassFile writeBuffer |
+| [8339290](https://bugs.openjdk.org/browse/JDK-8339290) | Optimize ClassFile Utf8EntryImpl#writeTo |
+| [8339320](https://bugs.openjdk.org/browse/JDK-8339320) | Optimize ClassFile Utf8EntryImpl#inflate |
+| [8339217](https://bugs.openjdk.org/browse/JDK-8339217) | Optimize ClassFile API loadConstant |
+| [8339205](https://bugs.openjdk.org/browse/JDK-8339205) | Optimize StackMapGenerator |
+| [8339196](https://bugs.openjdk.org/browse/JDK-8339196) | Optimize BufWriterImpl#writeU1/U2/Int/Long |
+| [8339168](https://bugs.openjdk.org/browse/JDK-8339168) | Optimize ClassFile Util slotSize |
+| [8338532](https://bugs.openjdk.org/browse/JDK-8338532) | Speed up the ClassFile API MethodTypeDesc#ofDescriptor |
+| [8338409](https://bugs.openjdk.org/browse/JDK-8338409) | Use record to simplify code |
+| [8338937](https://bugs.openjdk.org/browse/JDK-8338937) | Optimize the string concatenation of ClassDesc |
+| [8338936](https://bugs.openjdk.org/browse/JDK-8338936) | StringConcatFactory optimize construction of MethodType and MethodTypeDesc |
+| [8343500](https://bugs.openjdk.org/browse/JDK-8343500) | Optimize ArrayClassDescImpl computeDescriptor |
+
+### StringConcatFactory 优化 (10)
+
+| Issue | 标题 |
+|-------|------|
+| [8339635](https://bugs.openjdk.org/browse/JDK-8339635) | StringConcatFactory optimization for CompactStrings off |
+| [8338930](https://bugs.openjdk.org/browse/JDK-8338930) | StringConcatFactory hardCoded string concatenation strategy |
+| [8336831](https://bugs.openjdk.org/browse/JDK-8336831) | Optimize StringConcatHelper.simpleConcat |
+| [8337245](https://bugs.openjdk.org/browse/JDK-8337245) | Fix wrong comment of StringConcatHelper |
+| [8337167](https://bugs.openjdk.org/browse/JDK-8337167) | StringSize deduplication |
+| [8336792](https://bugs.openjdk.org/browse/JDK-8336792) | DateTimeFormatterBuilder append zeros based on StringBuilder.repeat |
+| [8336741](https://bugs.openjdk.org/browse/JDK-8336741) | Optimize LocalTime.toString with StringBuilder.repeat |
+| [8336706](https://bugs.openjdk.org/browse/JDK-8336706) | Optimize LocalDate.toString with StringBuilder.repeat |
+| [8336278](https://bugs.openjdk.org/browse/JDK-8336278) | Micro-optimize Replace String.format("%n") to System.lineSeparator |
+| [8333893](https://bugs.openjdk.org/browse/JDK-8333893) | Optimization for StringBuilder append boolean & null |
+
+### Formatter/HexFormat 优化 (8)
+
+| Issue | 标题 |
+|-------|------|
+| [8335802](https://bugs.openjdk.org/browse/JDK-8335802) | Improve startup speed HexFormat uses boolean instead of enum |
+| [8335645](https://bugs.openjdk.org/browse/JDK-8335645) | j.u.Formatter#trailingZeros improved with String repeat |
+| [8335252](https://bugs.openjdk.org/browse/JDK-8335252) | Reduce size of j.u.Formatter.Conversion#isValid |
+| [8334328](https://bugs.openjdk.org/browse/JDK-8334328) | Reduce object allocation for FloatToDecimal and DoubleToDecimal |
+| [8337832](https://bugs.openjdk.org/browse/JDK-8337832) | Optimize datetime toString |
+| [8337168](https://bugs.openjdk.org/browse/JDK-8337168) | Optimize LocalDateTime.toString |
+| [8316704](https://bugs.openjdk.org/browse/JDK-8316704) | Regex-free parsing of Formatter and FormatProcessor specifiers |
+| [8316426](https://bugs.openjdk.org/browse/JDK-8316426) | Optimization for HexFormat.formatHex |
+
+### 其他字符串/数据流优化 (15)
+
+| Issue | 标题 |
+|-------|------|
+| [8343650](https://bugs.openjdk.org/browse/JDK-8343650) | Reuse StringLatin1::putCharsAt and StringUTF16::putCharsAt |
+| [8340232](https://bugs.openjdk.org/browse/JDK-8340232) | Optimize DataInputStream::readUTF |
+| [8339699](https://bugs.openjdk.org/browse/JDK-8339699) | Optimize DataOutputStream writeUTF |
+| [8337279](https://bugs.openjdk.org/browse/JDK-8337279) | Share StringBuilder to format instant |
+| [8333833](https://bugs.openjdk.org/browse/JDK-8333833) | Remove the use of ByteArrayLittleEndian from UUID::toString |
+| [8317742](https://bugs.openjdk.org/browse/JDK-8317742) | ISO Standard Date Format consistency on DateTimeFormatter and String.format |
+| [8315968](https://bugs.openjdk.org/browse/JDK-8315968) | Move java.util.Digits to jdk.internal.util and refactor |
+| [8311207](https://bugs.openjdk.org/browse/JDK-8311207) | Cleanup for Optimization for UUID.toString |
+| [8310929](https://bugs.openjdk.org/browse/JDK-8310929) | Optimization for Integer.toString |
+| [8310502](https://bugs.openjdk.org/browse/JDK-8310502) | Optimization for j.l.Long.fastUUID |
+| [8343629](https://bugs.openjdk.org/browse/JDK-8343629) | More MergeStore benchmark |
+| [8334342](https://bugs.openjdk.org/browse/JDK-8334342) | Add MergeStore JMH benchmarks |
+| [8343984](https://bugs.openjdk.org/browse/JDK-8343984) | Fix Unsafe address overflow |
+| [8343925](https://bugs.openjdk.org/browse/JDK-8343925) | [BACKOUT] JDK-8342650 Move getChars to DecimalDigits |
+| [8315970](https://bugs.openjdk.org/browse/JDK-8315970) | Big-endian issues after JDK-8310929 |
 
 ---
 
