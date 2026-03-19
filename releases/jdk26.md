@@ -39,11 +39,9 @@ void main() {
 
 ---
 
-### JEP 530: Primitive Types in Patterns, instanceof, and switch (Fourth Preview)
+### [JEP 530: Primitive Types in Patterns](../jeps/jep-530.md)
 
 **状态**: 第四次预览  
-**Commit**: `99135d2e05b`  
-**作者**: Aggelos Biboudis  
 **概述**: 允许在模式匹配中使用原始类型。
 
 ```java
@@ -56,10 +54,14 @@ switch (value) {
 
 ---
 
-### JEP 526: Lazy Constants (Second Preview)
+### [JEP 526: Lazy Constants](../jeps/jep-526.md)
 
 **状态**: 第二次预览  
 **概述**: 引入延迟初始化的常量声明。
+
+```java
+private static lazy ExpensiveObject CACHE = new ExpensiveObject();
+```
 
 ---
 
@@ -80,7 +82,7 @@ public Logger getLogger() {
 
 ---
 
-### JEP 506: Scoped Values
+### [JEP 506: Scoped Values](../jeps/jep-506.md)
 
 **状态**: 正式发布  
 **概述**: Scoped Values 正式发布，提供线程局部变量的替代方案。
@@ -95,11 +97,9 @@ ScopedValue.where(CURRENT_USER, user).run(() -> {
 
 ---
 
-### JEP 510: Key Derivation Function API
+### [JEP 510: Key Derivation Function API](../jeps/jep-510.md)
 
 **状态**: 正式发布  
-**Commit**: `079fccfa9a0`  
-**作者**: Weijun Wang  
 **概述**: 提供标准化的密钥派生函数 (KDF) API。
 
 ```java
@@ -111,11 +111,9 @@ SecretKey key = kdf.deriveKey("HKDF-SHA256", params);
 
 ## 并发与多线程
 
-### JEP 525: Structured Concurrency (Sixth Preview)
+### [JEP 525: Structured Concurrency](../jeps/jep-525.md)
 
 **状态**: 第六次预览  
-**Commit**: `0bae56b6149`  
-**作者**: Alan Bateman  
 **概述**: 结构化并发继续预览，简化多线程编程模型。
 
 ```java
@@ -132,67 +130,53 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ## 性能与监控
 
-### JEP 509: JFR CPU-Time Profiling
+### [JEP 509: JFR CPU-Time Profiling](../jeps/jep-509.md)
 
 **状态**: 正式发布  
-**Commit**: `ace70a6d6ac`  
-**作者**: Johannes Bechberger  
 **概述**: JFR 支持 CPU 时间采样，提供更准确的性能分析数据。
 
 ---
 
-### JEP 514: Ahead-of-Time Command Line Ergonomics
+### [JEP 514: AOT Command Line Ergonomics](../jeps/jep-514.md)
 
 **状态**: 正式发布  
-**Commit**: `dede3532f72`  
-**作者**: Ioi Lam  
 **概述**: 改进 AOT 缓存的命令行参数处理，优化启动性能。
 
 ---
 
-### JEP 515: Ahead-of-Time Method Profiling
+### [JEP 515: AOT Method Profiling](../jeps/jep-515.md)
 
 **状态**: 正式发布  
-**Commit**: `e3f85c961b4`  
-**作者**: Igor Veresov  
 **概述**: 支持在 AOT 阶段收集方法分析数据，优化 JIT 编译决策。
 
 ---
 
-### JEP 518: JFR Cooperative Sampling
+### [JEP 518: JFR Cooperative Sampling](../jeps/jep-518.md)
 
 **状态**: 正式发布  
-**Commit**: `bbceab07255`  
-**作者**: Markus Grönlund  
 **概述**: JFR 协作式采样，减少采样开销，提高准确性。
 
 ---
 
-### JEP 519: Compact Object Headers
+### [JEP 519: Compact Object Headers](../jeps/jep-519.md)
 
 **状态**: 正式发布  
-**Commit**: `1e57648abd5`  
-**作者**: Roman Kennke  
 **概述**: 压缩对象头，减少内存占用，提高缓存效率。
 
 ---
 
-### JEP 520: JFR Method Timing and Tracing
+### [JEP 520: JFR Method Timing and Tracing](../jeps/jep-520.md)
 
 **状态**: 正式发布  
-**Commit**: `07f5b762a09`  
-**作者**: Erik Gahlin  
 **概述**: JFR 方法级计时和追踪，提供细粒度的性能分析能力。
 
 ---
 
 ## 垃圾回收
 
-### JEP 521: Generational Shenandoah
+### [JEP 521: Generational Shenandoah](../jeps/jep-521.md)
 
 **状态**: 正式发布  
-**Commit**: `2e8b195a96e`  
-**作者**: William Kemper  
 **概述**: Shenandoah GC 支持分代模式，提升年轻代对象的处理效率。
 
 ---
@@ -221,11 +205,9 @@ HttpClient client = HttpClient.newBuilder()
 
 ## 安全
 
-### JEP 470: PEM Encodings of Cryptographic Objects (Preview)
+### [JEP 470: PEM Encodings](../jeps/jep-470.md)
 
 **状态**: 预览  
-**Commit**: `bb2c80c0e99`  
-**作者**: Anthony Scarpino  
 **概述**: 支持 PEM 格式的加密对象编码/解码。
 
 ```java
@@ -235,7 +217,7 @@ String pem = encoder.encode(privateKey);
 
 ---
 
-### JEP 524: PEM Encodings of Cryptographic Objects (Second Preview)
+### JEP 524: PEM Encodings (Second Preview)
 
 **状态**: 第二次预览  
 **概述**: JEP 470 的第二次预览，根据反馈进行改进。
@@ -258,11 +240,9 @@ String pem = encoder.encode(privateKey);
 
 ---
 
-### JEP 500: Prepare to Make Final Mean Final
+### [JEP 500: Prepare to Make Final Mean Final](../jeps/jep-500.md)
 
 **状态**: 正式发布  
-**Commit**: `26460b6f12c`  
-**作者**: Alan Bateman  
 **概述**: 为最终字段提供更强的不可变性保证，限制通过反射和 JNI 修改 final 字段。
 
 ---
@@ -271,14 +251,14 @@ String pem = encoder.encode(privateKey);
 
 | 类别 | JEP 数量 | 亮点 |
 |------|----------|------|
-| 语言特性 | 4 | 模块导入、紧凑源文件 |
-| 核心库 | 3 | StableValue、KDF API |
+| 语言特性 | 4 | 模块导入、紧凑源文件、原始类型模式、延迟常量 |
+| 核心库 | 3 | StableValue、Scoped Values、KDF API |
 | 并发 | 1 | 结构化并发 |
-| 性能监控 | 6 | JFR 增强、AOT 优化 |
+| 性能监控 | 6 | JFR 增强、AOT 优化、紧凑对象头 |
 | 垃圾回收 | 2 | 分代 Shenandoah、G1 优化 |
 | 网络 | 1 | HTTP/3 |
 | 安全 | 2 | PEM 编码 |
-| 移除 | 3 | 32位 x86、Applet API |
+| 移除 | 3 | 32位 x86、Applet API、Final 限制 |
 
 ---
 

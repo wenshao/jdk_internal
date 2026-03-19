@@ -10,16 +10,27 @@ jdk_docs/
 ├── releases/          # 版本发布分析
 │   └── jdk26.md       # JDK 26 发布说明
 ├── jeps/              # JEP 详细分析
+│   ├── jep-470.md     # PEM Encodings (Preview)
+│   ├── jep-500.md     # Prepare to Make Final Mean Final
 │   ├── jep-502.md     # Stable Values
 │   ├── jep-503.md     # Remove 32-bit x86
 │   ├── jep-504.md     # Remove Applet API
+│   ├── jep-506.md     # Scoped Values
 │   ├── jep-509.md     # JFR CPU-Time Profiling
 │   ├── jep-510.md     # Key Derivation Function API
 │   ├── jep-511.md     # Module Import Declarations
 │   ├── jep-512.md     # Compact Source Files
+│   ├── jep-514.md     # AOT Command Line Ergonomics
+│   ├── jep-515.md     # AOT Method Profiling
 │   ├── jep-517.md     # HTTP/3
+│   ├── jep-518.md     # JFR Cooperative Sampling
 │   ├── jep-519.md     # Compact Object Headers
-│   └── jep-522.md     # G1 GC Throughput
+│   ├── jep-520.md     # JFR Method Timing and Tracing
+│   ├── jep-521.md     # Generational Shenandoah
+│   ├── jep-522.md     # G1 GC Throughput
+│   ├── jep-525.md     # Structured Concurrency
+│   ├── jep-526.md     # Lazy Constants
+│   └── jep-530.md     # Primitive Types in Patterns
 ├── issues/            # Issue 分析文档
 ├── prs/               # Pull Request 分析文档
 └── modules/           # 模块/组件源码分析文档
