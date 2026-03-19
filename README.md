@@ -8,6 +8,15 @@
 jdk_docs/
 ├── README.md          # 项目说明
 ├── releases/          # 版本发布分析
+│   └── jdk26.md       # JDK 26 发布说明
+├── jeps/              # JEP 详细分析
+│   ├── jep-502.md     # Stable Values
+│   ├── jep-503.md     # Remove 32-bit x86
+│   ├── jep-504.md     # Remove Applet API
+│   ├── jep-511.md     # Module Import Declarations
+│   ├── jep-512.md     # Compact Source Files
+│   ├── jep-517.md     # HTTP/3
+│   └── jep-522.md     # G1 GC Throughput
 ├── issues/            # Issue 分析文档
 ├── prs/               # Pull Request 分析文档
 └── modules/           # 模块/组件源码分析文档
