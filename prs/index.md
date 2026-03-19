@@ -1,164 +1,185 @@
-# JDK PR 分析索引
+# JDK PR Analysis Index
 
-> 本仓库索引 JDK 重要的 PR 和 Issue 分析文档
-
----
-
-## 文件组织
-
-```
-prs/
-├── {前4位Issue号}/     # 如 8371/ 代表 8371000-8371999
-│   ├── {完整Issue号}.md   # 如 8371259.md
-│   └── jep{JEP号}-{名称}.md  # JEP 相关文档
-├── index.md            # 本文件
-├── jdk-history.md      # JDK 历史概览
-├── jdk26-contributors.md
-└── jdk26-important-changes.md
-```
-
-**URL 规则**: `prs/{前4位}/{Issue号}.md`
-- 例如: `prs/8371/8371259.md`
+> Last updated: 2026-03-19
 
 ---
 
-## JDK 26 重要改动 (已分析)
+## JDK 26 Overview
 
-### 🔴 严重问题
+JDK 26 is the current non-LTS release. This document provides an index to all JDK 26 PR and commit analysis.
 
-| Issue | 标题 | 作者 | 文档 |
-|-------|------|------|------|
-| 8326498 | HTTP/2 连接泄漏修复 | Jaikiran Pai | [8326/8326498.md](./8326/8326498.md) |
+### Quick Stats
 
-### ⭐⭐⭐ 安全
+| Metric | Value |
+|--------|-------|
+| Total Commits | 3,936 |
+| Development Period | 2025-06 to 2026-03 |
+| Top Contributors | Thomas Schatzl (140), Albert Mingkun Yang (136), Phil Race (110) |
 
-| Issue | 标题 | 作者 | 文档 |
-|-------|------|------|------|
-| 8371259 | ML-DSA Intrinsics | Volodymyr Paprotski | [8371/8371259.md](./8371/8371259.md) |
-| 8347606 | ML-KEM 后量子密钥交换 | Weijun Wang | [8347/8347606.md](./8347/8347606.md) |
+### Component Distribution
 
-### ⭐⭐⭐ 网络 (HttpClient)
-
-| Issue | 标题 | 作者 | 文档 |
-|-------|------|------|------|
-| 8371475 | CUBIC 拥塞控制 | Daniel Jeliński | [8371/8371475.md](./8371/8371475.md) |
-| 8372159 | VirtualThread 优化 | Daniel Fuchs | [8372/8372159.md](./8372/8372159.md) |
-
-### ⭐⭐⭐ GC
-
-| Issue | 标题 | 作者 | 文档 |
-|-------|------|------|------|
-| 8372162 | G1 Claim Table 优化 | Albert Mingkun Yang | [8372/8372162.md](./8372/8372162.md) |
-| 8359683 | ZGC NUMA-Aware Relocation | Joel Sikström | [8359/8359683.md](./8359/8359683.md) |
-| JEP 521 | 分代 Shenandoah | William Kemper | [8370/jep521-generational-shenandoah.md](./8370/jep521-generational-shenandoah.md) |
-
-### ⭐⭐⭐ 编译器 (C2)
-
-| Issue | 标题 | 作者 | 文档 |
-|-------|------|------|------|
-| 8371146 | SuperWord 向量化优化 | Hamlin Li | [8371/8371146.md](./8371/8371146.md) |
-
-### ⭐⭐⭐ 性能与并发
-
-| Issue | 标题 | 作者 | 文档 |
-|-------|------|------|------|
-| 8371701 | NUMA 线程亲和性 | Joel Sikström | [8371/8371701.md](./8371/8371701.md) |
-
-### ⭐⭐⭐ JNI
-
-| Issue | 标题 | 作者 | 文档 |
-|-------|------|------|------|
-| 8298432 | GetPrimitiveArrayCritical 优化 | Albert Mingkun Yang | [8298/8298432.md](./8298/8298432.md) |
-
-### ⭐⭐⭐ 核心库
-
-| Issue | 标题 | 作者 | 文档 |
-|-------|------|------|------|
-| 8371953 | 反射 API 优化 | Chen Liang | [8371/8371953.md](./8371/8371953.md) |
-
-### ⭐⭐⭐ 启动优化
-
-| Issue | 标题 | 作者 | 文档 |
-|-------|------|------|------|
-| JEP 514 | AOT 链接启动优化 | Ioi Lam | [8370/jep514-aot-linking.md](./8370/jep514-aot-linking.md) |
-| JEP 519 | Compact Object Headers | Roman Kennke | [8370/jep519-compact-headers.md](./8370/jep519-compact-headers.md) |
-
-### ⭐⭐⭐ 监控诊断
-
-| Issue | 标题 | 作者 | 文档 |
-|-------|------|------|------|
-| JEP 520 | JFR 方法计时追踪 | Erik Gahlin | [8370/jep520-jfr-method-timing.md](./8370/jep520-jfr-method-timing.md) |
-
-### ⭐⭐ 构建
-
-| Issue | 标题 | 作者 | 文档 |
-|-------|------|------|------|
-| 8371626 | Linux ICF 链接优化 | Aleksey Shipilev | [8371/8371626.md](./8371/8371626.md) |
+| Component | Commits | Percentage |
+|-----------|---------|------------|
+| GC | 745 | 18.9% |
+| Compiler | 725 | 18.4% |
+| Core | 694 | 17.6% |
+| Test | 491 | 12.5% |
+| Other | 423 | 10.7% |
+| Security | 234 | 5.9% |
+| Network | 208 | 5.3% |
+| Concurrency | 177 | 4.5% |
+| Build | 153 | 3.9% |
+| JFR | 86 | 2.2% |
 
 ---
 
-## 按类别浏览
+## JEPs in JDK 26
 
-### GC 优化
-- [G1 Claim Table](./8372/8372162.md) - 吞吐量 +10-15%
-- [ZGC NUMA-Aware](./8359/8359683.md) - 吞吐量 +20-35%
-- [分代 Shenandoah](./8370/jep521-generational-shenandoah.md) - 吞吐量 +20-40%
+> 详细分析: [JEP 深度分析](./jeps/jdk26-jeps.md)
 
-### 网络优化
-- [HTTP/2 连接泄漏](./8326/8326498.md) - 🔴 严重
-- [CUBIC 拥塞控制](./8371/8371475.md) - 高延迟网络 +35-60%
-- [VirtualThread 优化](./8372/8372159.md) - 资源 -1000x
-
-### 后量子安全
-- [ML-DSA Intrinsics](./8371/8371259.md) - 签名性能 +2-5x
-- [ML-KEM 实现](./8347/8347606.md) - 密钥交换
-
-### 启动与内存
-- [AOT 链接](./8370/jep514-aot-linking.md) - 启动 -30-50%
-- [Compact Headers](./8370/jep519-compact-headers.md) - 内存 -12-25%
-
----
-
-## 按作者浏览
-
-### 顶级贡献者
-
-| 作者 | 贡献数 | 主要领域 | 详细分析 |
-|------|--------|----------|----------|
-| Albert Mingkun Yang | 2 | GC, JNI | [contributors/albert-mingkun-yang.md](../contributors/albert-mingkun-yang.md) |
-| Joel Sikström | 2 | NUMA, ZGC | [contributors/joel-sikstrom.md](../contributors/joel-sikstrom.md) |
-| Daniel Fuchs | 1 | HttpClient | [contributors/daniel-fuchs.md](../contributors/daniel-fuchs.md) |
-| Chen Liang | 1 | 核心库 | [contributors/chen-liang.md](../contributors/chen-liang.md) |
-| Ioi Lam | 1 | AOT/CDS | [contributors/ioi-lam.md](../contributors/ioi-lam.md) |
-| Roman Kennke | 1 | 对象布局 | [contributors/roman-kennke.md](../contributors/roman-kennke.md) |
+| JEP | Title | Issue | Status |
+|-----|-------|-------|--------|
+| 516 | Ahead-of-Time Object Caching | 8365932 | ✅ |
+| 517 | HTTP/3 for the HTTP Client | 8349910 | ✅ |
+| 519 | Compact Object Headers | 8373845 | ✅ |
+| 521 | Generational Shenandoah | 8350562 | ✅ |
+| 522 | G1 GC Throughput Improvements | 8342382 | ✅ |
+| 524 | PEM Encodings | 8360564 | ✅ |
+| 525 | Structured Concurrency (6th Preview) | 8367857 | ✅ |
+| 526 | Lazy Constants (2nd Preview) | 8366178 | ✅ |
+| 500 | Prepare to Make Final Mean Final | 8353835 | ✅ |
+| 504 | Remove Applet API | 8359053 | ✅ |
+| 509 | JFR CPU-Time Profiling | 8342818 | ✅ |
+| 527 | TLS 1.3 Hybrid Key Exchange | 8314323 | ✅ |
 
 ---
 
-## 统计
+## Key Documents
 
-| 指标 | 值 |
-|------|-----|
-| 已分析 PR 数量 | 16 |
-| 覆盖 JDK 版本 | 26 |
-| 覆盖类别 | 10 |
-
----
-
-## 相关链接
-
-- [JDK 26 JEP 列表](https://openjdk.org/projects/jdk/26/)
-- [OpenJDK Bug System](https://bugs.openjdk.org/)
-- [JDK Commit History](https://github.com/openjdk/jdk/commits/)
+- **[Full Commit Report](./jdk26-commits.md)** - Complete analysis of all 3,936 commits
+- **[Top 50 PRs](./jdk26-top-prs.md)** - Most impactful commits by code changes
+- **[JEP Analysis](./jeps/jdk26-jeps.md)** - Detailed JEP analysis
+- **[Analysis Strategy](./ANALYSIS_STRATEGY.md)** - Methodology and approach
 
 ---
 
-## 如何添加新的 PR 分析
+## Component Reports
 
-1. 确定目录: `prs/{Issue号前4位}/`
-2. 创建文件: `{完整Issue号}.md`
-3. 更新索引: 添加到本文件相应类别
-4. 提交 PR
+| Component | Commits | Report |
+|-----------|---------|--------|
+| GC | 745 | [gc.md](./components/gc.md) |
+| Compiler | 725 | [compiler.md](./components/compiler.md) |
+| Network | 208 | [network.md](./components/network.md) |
+| Security | 234 | [security.md](./components/security.md) |
 
-文件命名规则:
-- Issue: `{Issue号}.md` (如 `8371259.md`)
-- JEP: `jep{JEP号}-{简短名称}.md` (如 `jep521-generational-shenandoah.md`)
+---
+
+## Top 30 Contributors
+
+| Rank | Contributor | Commits | Focus Areas |
+|------|-------------|---------|-------------|
+| 1 | Thomas Schatzl | 140 | G1 GC |
+| 2 | Albert Mingkun Yang | 136 | GC, Parallel GC |
+| 3 | Phil Race | 110 | Printing, Desktop |
+| 4 | Matthias Baesken | 105 | Build, Ports |
+| 5 | Alexey Semenyuk | 85 | jpackage |
+| 6 | Aleksey Shipilev | 80 | Shenandoah, Performance |
+| 7 | Ioi Lam | 76 | CDS, AOT |
+| 8 | Kim Barrett | 76 | GC, HotSpot |
+| 9 | SendaoYan | 71 | Testing |
+| 10 | Jaikiran Pai | 67 | Networking |
+| 11 | Francesco Andreuzzi | 60 | Testing |
+| 12 | Prasanta Sadhukhan | 59 | Desktop |
+| 13 | Chen Liang | 59 | ClassFile API, Core |
+| 14 | Sergey Bylokhov | 57 | Desktop |
+| 15 | Erik Gahlin | 57 | JFR |
+| 16 | Brian Burkhalter | 53 | Networking |
+| 17 | Axel Boldt-Christmas | 52 | ZGC |
+| 18 | David Holmes | 50 | Threading |
+| 19 | Emanuel Peter | 49 | C2 Compiler |
+| 20 | Jan Lahoda | 48 | javac |
+| 21 | Daniel Fuchs | 47 | HTTP Client |
+| 22 | Volkan Yazici | 45 | HTTP Client |
+| 23 | Joel Sikström | 44 | ZGC |
+| 24 | Justin Lu | 43 | Localization |
+| 25 | William Kemper | 43 | Shenandoah |
+| 26 | Manuel Hässig | 39 | Testing |
+| 27 | Naoto Sato | 36 | i18n |
+| 28 | Leonid Mesnik | 33 | JVMTI |
+| 29 | Coleen Phillimore | 32 | HotSpot |
+| 30 | Yasumasa Suenaga | 32 | Serviceability |
+
+---
+
+## Major Changes by Area
+
+### GC (Garbage Collection)
+
+- **G1**: Throughput improvements (JEP 522), heap resizing optimizations
+- **Shenandoah**: Generational mode (JEP 521), improved allocation
+- **ZGC**: Allocator cleanup, uncommit logic improvements
+- **Parallel**: Improved heap resizing heuristics
+
+### Compiler (C1/C2)
+
+- Template-based testing framework
+- SuperWord vectorization improvements
+- Known bits analysis for TypeInt/Long
+- RISC-V backend improvements
+- AVX10/AVX512 intrinsics
+
+### Network
+
+- **HTTP/3** (JEP 517): Full implementation with QUIC
+- **TLS 1.3**: Hybrid key exchange (JEP 527)
+- HttpClient improvements: CUBIC congestion control
+- PEM encodings (JEP 524)
+
+### Security
+
+- Post-quantum cryptography: ML-KEM, ML-DSA improvements
+- Hybrid Public Key Encryption (HPKE)
+- Certificate validation enhancements
+- PKCS#12 improvements
+
+### Core Libraries
+
+- **Structured Concurrency** (JEP 525): 6th preview
+- **Lazy Constants** (JEP 526): 2nd preview
+- CLDR 48.0 update
+- Unicode 17.0.0 support
+- JDBC 4.5 MR support
+
+---
+
+## Detailed PR Analysis
+
+Individual PR analysis documents:
+
+| Directory | Description | Files |
+|-----------|-------------|-------|
+| [8298/](./8298/) | Early JDK 26 backports | 1 |
+| [8326/](./8326/) | Core library changes | 1 |
+| [8347/](./8347/) | Security changes | 1 |
+| [8359/](./8359/) | Mid-development changes | 1 |
+| [8370/](./8370/) | JEP implementations | 4 |
+| [8371/](./8371/) | Compiler/GC changes | 6 |
+| [8372/](./8372/) | Late-stage changes | 2 |
+
+---
+
+## Related Resources
+
+- [Contributors](../contributors/) - Contributor profiles and statistics
+- [Guides](../guides/) - JDK development guides
+- [Issues](../issues/) - Issue analysis
+- [Deep Dive](../deep-dive/) - In-depth technical analysis
+
+---
+
+## Change Log
+
+| Date | Change |
+|------|--------|
+| 2026-03-19 | Initial JDK 26 analysis with 3,936 commits |
+| 2026-03-19 | Added JEP deep analysis, component reports |
