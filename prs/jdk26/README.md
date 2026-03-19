@@ -136,6 +136,86 @@ ZGC 在对象迁移时考虑 NUMA 亲和性，减少跨节点内存访问。
 
 ---
 
+### 5. 编译器 (C2)
+
+#### [pr-8371146: SuperWord 向量化优化](./pr-8371146.md)
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | JDK-8371146 |
+| **作者** | Hamlin Li |
+| **重要性** | ⭐⭐⭐ |
+| **影响** | 数值计算性能提升 5-10% |
+
+修复 C2 SuperWord (自动向量化) 中的多个关键 bug，提升循环向量化效率。
+
+**关键特性:**
+- 类型转换向量化支持
+- 非标准步长支持
+- 未对齐内存访问优化
+
+---
+
+### 6. JNI 性能
+
+#### [pr-8298432: GetPrimitiveArrayCritical 优化](./pr-8298432.md)
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | JDK-8298432 |
+| **作者** | Albert Mingkun Yang |
+| **重要性** | ⭐⭐⭐ |
+| **影响** | JNI 数组访问性能提升 20% |
+
+优化 JNI GetPrimitiveArrayCritical 实现，减少获取和释放原始数组的开销。
+
+**关键特性:**
+- 轻量级 GC 禁用
+- 数组访问优化
+- 批量操作支持
+
+---
+
+### 7. 构建优化
+
+#### [pr-8371626: Linux ICF 链接优化](./pr-8371626.md)
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | JDK-8371626 |
+| **作者** | Aleksey Shipilev |
+| **重要性** | ⭐⭐ |
+| **影响** | JVM 库大小减少 5% |
+
+为 Linux 平台实现 ICF (Identical Code Folding) 链接优化，减少 JVM 共享库大小。
+
+**关键特性:**
+- GNU ld / gold / lld 支持
+- 相同函数合并
+- 内存占用优化
+
+---
+
+### 8. 内存优化 (JEP 相关)
+
+#### [pr-jep519: Compact Object Headers](./pr-jep519-compact-headers.md)
+
+| 属性 | 值 |
+|------|-----|
+| **JEP** | JEP 519 |
+| **作者** | Roman Kennke |
+| **重要性** | ⭐⭐⭐ |
+| **影响** | 对象内存占用减少 12-25% |
+
+紧凑对象头的实现细节分析，减少 Java 对象的内存占用。
+
+**关键特性:**
+- 8 字节紧凑头部
+- 快速对象遍历
+- 缓存效率提升
+
+---
+
 ## 快速导航
 
 ### 按重要性
@@ -147,7 +227,11 @@ ZGC 在对象迁移时考虑 NUMA 亲和性，减少跨节点内存访问。
 | ⭐⭐⭐ | [pr-8371475: CUBIC 拥塞控制](./pr-8371475.md) |
 | ⭐⭐⭐ | [pr-8371701: NUMA 线程亲和性](./pr-8371701.md) |
 | ⭐⭐⭐ | [pr-8359683: ZGC NUMA-Aware Relocation](./pr-8359683.md) |
+| ⭐⭐⭐ | [pr-8371146: SuperWord 向量化](./pr-8371146.md) |
+| ⭐⭐⭐ | [pr-8298432: JNI 数组优化](./pr-8298432.md) |
+| ⭐⭐⭐ | [pr-jep519: Compact Object Headers](./pr-jep519-compact-headers.md) |
 | ⭐⭐ | [pr-8372159: VirtualThread 优化](./pr-8372159.md) |
+| ⭐⭐ | [pr-8371626: Linux ICF 链接](./pr-8371626.md) |
 
 ### 按类别
 
@@ -159,6 +243,10 @@ ZGC 在对象迁移时考虑 NUMA 亲和性，减少跨节点内存访问。
 | 网络 | [pr-8372159: VirtualThread 优化](./pr-8372159.md) |
 | 并发 | [pr-8371701: NUMA 线程亲和性](./pr-8371701.md) |
 | GC | [pr-8359683: ZGC NUMA-Aware Relocation](./pr-8359683.md) |
+| 编译器 | [pr-8371146: SuperWord 向量化](./pr-8371146.md) |
+| JNI | [pr-8298432: GetPrimitiveArrayCritical](./pr-8298432.md) |
+| 构建 | [pr-8371626: Linux ICF 链接](./pr-8371626.md) |
+| 内存 | [pr-jep519: Compact Object Headers](./pr-jep519-compact-headers.md) |
 
 ### 按作者
 
@@ -170,6 +258,10 @@ ZGC 在对象迁移时考虑 NUMA 亲和性，减少跨节点内存访问。
 | Daniel Fuchs | [pr-8372159: VirtualThread 优化](./pr-8372159.md) |
 | Joel Sikström | [pr-8371701: NUMA 线程亲和性](./pr-8371701.md) |
 | Joel Sikström | [pr-8359683: ZGC NUMA-Aware Relocation](./pr-8359683.md) |
+| Hamlin Li | [pr-8371146: SuperWord 向量化](./pr-8371146.md) |
+| Albert Mingkun Yang | [pr-8298432: JNI 数组优化](./pr-8298432.md) |
+| Aleksey Shipilev | [pr-8371626: Linux ICF 链接](./pr-8371626.md) |
+| Roman Kennke | [pr-jep519: Compact Object Headers](./pr-jep519-compact-headers.md) |
 
 ---
 
@@ -185,6 +277,10 @@ ZGC 在对象迁移时考虑 NUMA 亲和性，减少跨节点内存访问。
 | 大内存应用 (128GB+) | [pr-8359683](./pr-8359683.md) | +20-35% 吞吐量 |
 | 后量子安全需求 | [pr-8371259](./pr-8371259.md) | 2-5x 性能 |
 | 高并发连接 | [pr-8372159](./pr-8372159.md) | 资源占用 -1000x |
+| 数值计算密集型 | [pr-8371146](./pr-8371146.md) | +5-10% 性能 |
+| JNI 密集型应用 | [pr-8298432](./pr-8298432.md) | +20% 性能 |
+| 内存敏感型应用 | [pr-jep519](./pr-jep519-compact-headers.md) | -12-25% 内存 |
+| 容器化部署 | [pr-8371626](./pr-8371626.md) | -5% 镜像大小 |
 
 ### 升级检查清单
 
@@ -193,6 +289,8 @@ ZGC 在对象迁移时考虑 NUMA 亲和性，减少跨节点内存访问。
 - [ ] 启用 `-XX:+ZNUMAAwareRelocation` (ZGC 用户)
 - [ ] 评估 ML-DSA 迁移计划 (安全敏感应用)
 - [ ] 验证虚拟线程兼容性
+- [ ] 启用 `-XX:+UseCompactObjectHeaders` (内存优化)
+- [ ] 启用 `-XX:+UseSuperWord` (数值计算)
 
 ---
 
@@ -209,3 +307,4 @@ ZGC 在对象迁移时考虑 NUMA 亲和性，减少跨节点内存访问。
 | 版本 | 日期 | 变更 |
 |------|------|------|
 | 1.0 | 2025-03 | 初始版本，索引 6 个重要改动 |
+| 1.1 | 2025-03 | 新增 4 个改动: SuperWord、JNI、ICF、Compact Headers |

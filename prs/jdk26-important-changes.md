@@ -32,6 +32,10 @@ JDK 26 包含 **4,913 个 commit**，其中仅 **33 个** 是 JEP 相关的。�
 | NUMA 线程亲和性 | JDK-8371701 | Joel Sikström | ⭐⭐⭐ | [pr-8371701.md](./jdk26/pr-8371701.md) |
 | ZGC NUMA-Aware Relocation | JDK-8359683 | Joel Sikström | ⭐⭐⭐ | [pr-8359683.md](./jdk26/pr-8359683.md) |
 | VirtualThread 优化 | JDK-8372159 | Daniel Fuchs | ⭐⭐ | [pr-8372159.md](./jdk26/pr-8372159.md) |
+| SuperWord 向量化优化 | JDK-8371146 | Hamlin Li | ⭐⭐⭐ | [pr-8371146.md](./jdk26/pr-8371146.md) |
+| JNI 数组访问优化 | JDK-8298432 | Albert Mingkun Yang | ⭐⭐⭐ | [pr-8298432.md](./jdk26/pr-8298432.md) |
+| Linux ICF 链接优化 | JDK-8371626 | Aleksey Shipilev | ⭐⭐ | [pr-8371626.md](./jdk26/pr-8371626.md) |
+| Compact Object Headers | JEP 519 | Roman Kennke | ⭐⭐⭐ | [pr-jep519-compact-headers.md](./jdk26/pr-jep519-compact-headers.md) |
 
 ---
 
