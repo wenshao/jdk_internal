@@ -21,12 +21,12 @@
 
 ## 贡献者
 
-| 贡献者 | GitHub | PRs | 主要领域 |
-|--------|--------|-----|----------|
-| [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | 核心库优化 |
-| [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | C2 编译器 |
-| [Yude Lin](../../by-contributor/profiles/yude-lin.md) | [@linade](https://github.com/linade) | 8 | G1 GC, AArch64 |
-| [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | ZGC |
+| 贡献者 | GitHub | PRs | 角色 | 主要领域 |
+|--------|--------|-----|------|----------|
+| [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | Committer | 核心库优化 |
+| [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | Author | C2 编译器 |
+| [Yude Lin](../../by-contributor/profiles/yude-lin.md) | [@linade](https://github.com/linade) | 8 | Author | G1 GC, AArch64 |
+| [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | Author | ZGC |
 
 ---
 
@@ -64,15 +64,34 @@
 
 ### 核心库性能优化 (Shaojin Wen)
 
-| Issue | 标题 | 性能影响 |
-|-------|------|----------|
-| 8337832 | DateTime toString 优化 | +10% |
-| 8338936 | StringConcatFactory MethodType 优化 | 启动优化 |
-| 8338532 | ClassFile API MethodTypeDesc 优化 | 启动优化 |
-| 8336856 | 高效的隐藏类字符串拼接策略 | 启动优化 |
-| 8336831 | StringConcatHelper.simpleConcat 优化 | +5% |
-| 8310929 | Integer.toString 优化 | +10% |
-| 8310502 | Long.fastUUID 优化 | +8% |
+| Issue | 标题 | 性能影响 | 深度分析 |
+|-------|------|----------|----------|
+| 8337832 | DateTime toString 优化 | +10% | [分析](../../by-pr/8337/8337832.md) |
+| 8338936 | StringConcatFactory MethodType 优化 | 启动优化 | [分析](../../by-pr/8338/8338936.md) |
+| 8338532 | ClassFile API MethodTypeDesc 优化 | 启动优化 | [分析](../../by-pr/8338/8338532.md) |
+| 8336856 | 高效的隐藏类字符串拼接策略 | 启动优化 | [分析](../../by-pr/8336/8336856.md) |
+| 8336831 | StringConcatHelper.simpleConcat 优化 | +5% | [分析](../../by-pr/8336/8336831.md) |
+| 8310929 | Integer.toString 优化 | +10% | [分析](../../by-pr/8310/8310929.md) |
+| 8310502 | Long.fastUUID 优化 | +8% | [分析](../../by-pr/8310/8310502.md) |
+| 8370013 | ArraysSupport big endian 支持 | 新功能 | - |
+| 8365832 | HexFormat boolean 替换 enum | 启动优化 | [分析](../../by-pr/8365/8365832.md) |
+| 8366224 | Character checkTitleCase 优化 | 性能优化 | - |
+| 8368825 | StringBuilder CharSequence 支持 | API 增强 | - |
+| 8357685 | String indexOf.last 优化 | +5% | [分析](../../by-pr/8357/8357685.md) |
+| 8353741 | HexFormat toUpper/toLower 优化 | 性能优化 | [分析](../../by-pr/8353/8353741.md) |
+| 8348870 | ByteOrder.toString 优化 | 性能优化 | - |
+| 8343962 | ArraysSupport.arrayToString 优化 | +3% | [分析](../../by-pr/8343/8343962.md) |
+| 8343984 | Unsafe 越界检查优化 | 安全性 | - |
+| 8316426 | HexFormat 实现 | 新功能 | [分析](../../by-pr/8316/8316426.md) |
+| 8316704 | HexFormat fromHexDigit 实现 | 新功能 | - |
+| 8335802 | Formatter formatSpecifier 优化 | 性能优化 | - |
+| 8335645 | Formatter parseType 优化 | 性能优化 | - |
+| 8335252 | Formatter formatWith 优化 | 性能优化 | - |
+| 8334328 | Formatter isFixed 优化 | 性能优化 | - |
+| 8337168 | Formatter minIntegerDigits 优化 | 性能优化 | - |
+| 8337167 | Formatter parse 优化 | 性能优化 | - |
+
+> **更多**: [Shaojin Wen 贡献者档案](../../by-contributor/profiles/shaojin-wen.md) | [完整 PR 列表](../../by-contributor/profiles/shaojin-wen.md#complete-pr-list)
 
 ### C2 编译器 (Kuai Wei)
 
@@ -83,6 +102,8 @@
 | 8339299 | C1 内联 final 方法丢失类型 profile | 性能修复 |
 | 8326135 | ADLC 报告未使用的操作数 | 工具改进 |
 
+> **更多**: [Kuai Wei 贡献者档案](../../by-contributor/profiles/kuai-wei.md)
+
 ### G1 GC 和 AArch64 (Yude Lin)
 
 | Issue | 标题 | 说明 |
@@ -91,6 +112,8 @@
 | 8298521 | G1MonitoringSupport 成员重命名 | 代码清理 |
 | 8323122 | AArch64 itable stub 大小估算 | 正确性修复 |
 
+> **更多**: [Yude Lin 贡献者档案](../../by-contributor/profiles/yude-lin.md)
+
 ### ZGC 优化 (Xiaowei Lu)
 
 | Issue | 标题 | 说明 |
@@ -98,6 +121,46 @@
 | 8272138 | ZGC 采用宽松顺序进行自愈 | **性能优化** |
 | 8270347 | ZGC 转发表采用 release-acquire 顺序 | 正确性修复 |
 | 8273112 | -Xloggc 应覆盖 -verbose:gc | 功能修复 |
+
+> **更多**: [Xiaowei Lu 贡献者档案](../../by-contributor/profiles/xiaowei-lu.md) |
+
+---
+
+## 相关 PR 分析文档
+
+### 字符串/数字格式化优化
+
+| PR | 标题 | 分析文档 |
+|----|------|----------|
+| JDK-8336856 | Inline concat with InlineHiddenClassStrategy | [详情](../../by-pr/8336/8336856.md) |
+| JDK-8310929 | Integer.toString() 优化 | [详情](../../by-pr/8310/8310929.md) |
+| JDK-8310502 | Long.fastUUID() 优化 | [详情](../../by-pr/8310/8310502.md) |
+| JDK-8357685 | String.indexOf.last() 优化 | [详情](../../by-pr/8357/8357685.md) |
+| JDK-8353741 | HexFormat toUpper/toLower() 优化 | [详情](../../by-pr/8353/8353741.md) |
+| JDK-8365832 | HexFormat boolean 替换 enum | [详情](../../by-pr/8365/8365832.md) |
+| JDK-8343962 | ArraysSupport.arrayToString() 优化 | [详情](../../by-pr/8343/8343962.md) |
+
+### ClassFile API 相关
+
+| PR | 标题 | 分析文档 |
+|----|------|----------|
+| JDK-8338936 | StringConcatFactory MethodType 优化 | [详情](../../by-pr/8338/8338936.md) |
+| JDK-8338532 | MethodTypeDesc 实现优化 | [详情](../../by-pr/8338/8338532.md) |
+
+### Formatter/HexFormat
+
+| PR | 标题 | 分析文档 |
+|----|------|----------|
+| JDK-8335802 | Formatter formatSpecifier 优化 | [详情](../../by-pr/8335/8335802.md) |
+| JDK-8335645 | Formatter parseType 优化 | [详情](../../by-pr/8335/8335645.md) |
+| JDK-8335252 | Formatter formatWith 优化 | [详情](../../by-pr/8335/8335252.md) |
+| JDK-8334328 | Formatter isFixed 优化 | [详情](../../by-pr/8334/8334328.md) |
+| JDK-8337168 | Formatter minIntegerDigits 优化 | [详情](../../by-pr/8337/8337168.md) |
+| JDK-8337167 | Formatter parse 优化 | [详情](../../by-pr/8337/8167.md) |
+| JDK-8316426 | HexFormat 实现 | [详情](../../by-pr/8316/8316426.md) |
+| JDK-8316704 | HexFormat fromHexDigit 实现 | [详情](../../by-pr/8316/8316704.md) |
+
+[→ 返回组织索引](../../by-contributor/index.md)
 
 ---
 

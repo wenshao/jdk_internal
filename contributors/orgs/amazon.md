@@ -20,11 +20,11 @@ Amazon 通过 Corretto 团队参与 OpenJDK 开发，专注于 AArch64 架构优
 
 ## Top 贡献者
 
-| 排名 | 贡献者 | GitHub | PRs | 领域 |
-|------|--------|--------|-----|------|
-| 1 | Andrew Dinn | [@earthling-amzn](https://github.com/earthling-amzn) | 123 | AArch64 |
-| 2 | Nick Gasson | [@benty-amzn](https://github.com/benty-amzn) | 15 | AArch64 |
-| 3 | David Beaumont | [@david-beaumont](https://github.com/david-beaumont) | 27 | 编译器 |
+| 排名 | 贡献者 | GitHub | PRs | 角色 | 领域 | 档案 |
+|------|--------|--------|-----|------|------|------|
+| 1 | Andrew Dinn | [@earthling-amzn](https://github.com/earthling-amzn) | 123 | Reviewer | AArch64 | [详情](../../by-contributor/profiles/andrew-dinn.md) |
+| 2 | Nick Gasson | [@benty-amzn](https://github.com/benty-amzn) | 15 | Committer | AArch64 | [详情](../../by-contributor/profiles/nick-gasson.md) |
+| 3 | David Beaumont | [@david-beaumont](https://github.com/david-beaumont) | 27 | Committer | 编译器 | [详情](../../by-contributor/profiles/david-beaumont.md) |
 
 **小计**: 165 PRs (以上 3 人)
 
@@ -86,3 +86,5 @@ Amazon 维护自己的 JDK 发行版 Corretto：
 - [Amazon Corretto](https://aws.amazon.com/corretto/)
 - [Corretto GitHub](https://github.com/corretto)
 - [Corretto 文档](https://docs.aws.amazon.com/corretto/)
+
+[→ 返回组织索引](../../by-contributor/index.md)

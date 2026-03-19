@@ -20,12 +20,12 @@ SAP 是 OpenJDK 的长期贡献者，专注于 PowerPC (PPC) 移植、AIX 平台
 
 ## Top 贡献者
 
-| 排名 | 贡献者 | GitHub | PRs | 领域 |
-|------|--------|--------|-----|------|
-| 1 | Matthias Baesken | [@MBaesken](https://github.com/MBaesken) | 515 | 构建系统 |
-| 2 | Erik Joelsson | [@eirbjo](https://github.com/eirbjo) | 103 | 构建系统 |
-| 3 | Martin Haessig | [@mhaessig](https://github.com/mhaessig) | 57 | 测试 |
-| 4 | Anatoly Zelenin | [@toxaart](https://github.com/toxaart) | 29 | PPC |
+| 排名 | 贡献者 | GitHub | PRs | 角色 | 领域 | 档案 |
+|------|--------|--------|-----|------|------|------|
+| 1 | Matthias Baesken | [@MBaesken](https://github.com/MBaesken) | 515 | Reviewer | 构建系统 | [详情](../../by-contributor/profiles/matthias-baesken.md) |
+| 2 | Erik Joelsson | [@eirbjo](https://github.com/eirbjo) | 103 | Committer | 构建系统 | [详情](../../by-contributor/profiles/erik-joelsson.md) |
+| 3 | Martin Haessig | [@mhaessig](https://github.com/mhaessig) | 57 | Committer | 测试 | [详情](../../by-contributor/profiles/martin-haessig.md) |
+| 4 | Anatoly Zelenin | [@toxaart](https://github.com/toxaart) | 29 | Committer | PPC | [详情](../../by-contributor/profiles/anatoly-zelenin.md) |
 
 **小计**: 704 PRs (以上 4 人)
 
@@ -103,3 +103,5 @@ SAP 维护自己的 JVM 发行版 SapMachine：
 - [SAP SapMachine](https://sap.github.io/SapMachine/)
 - [SAP GitHub](https://github.com/SAP/SapMachine)
 - [SAP OpenJDK](https://openjdk.org/groups/hotspot/)
+
+[→ 返回组织索引](../../by-contributor/index.md)

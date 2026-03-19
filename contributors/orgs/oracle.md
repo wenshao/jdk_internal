@@ -20,40 +20,41 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 
 ## Top 贡献者
 
-| 排名 | 贡献者 | GitHub | PRs | 领域 |
-|------|--------|--------|-----|------|
-| 1 | Aleksey Shipilev | [@shipilev](https://github.com/shipilev) | 803 | Shenandoah GC |
-| 2 | Albert Mingkun Yang | [@albertnetymk](https://github.com/albertnetymk) | 744 | GC |
-| 3 | Thomas Schatzl | [@tschatzl](https://github.com/tschatzl) | 546 | G1 GC |
-| 4 | Ioi Lam | [@iklam](https://github.com/iklam) | 431 | CDS/AOT |
-| 5 | Coleen Phillimore | [@coleenp](https://github.com/coleenp) | 400 | HotSpot |
-| 6 | Naoto Sato | [@naotoj](https://github.com/naotoj) | 273 | 国际化 |
-| 7 | Sergey Bylokhov | [@mrserb](https://github.com/mrserb) | 273 | AWT/2D |
-| 8 | Chen Liang | [@liach](https://github.com/liach) | 237 | ClassFile API |
-| 9 | Alexey Semenyuk | [@alexeysemenyukoracle](https://github.com/alexeysemenyukoracle) | 233 | AOT |
-| 10 | Jan Lahoda | [@lahodaj](https://github.com/lahodaj) | 324 | javac |
-| 11 | Jaikiran Pai | [@jaikiran](https://github.com/jaikiran) | 322 | 构建 |
-| 12 | Sendao Yan | [@sendaoYan](https://github.com/sendaoYan) | 202 | 测试稳定性 |
-| 13 | Daniel Fuchs | [@dfuch](https://github.com/dfuch) | 192 | JMX |
-| 14 | Yasumasa Suenaga | [@YaSuenag](https://github.com/YaSuenag) | 113 | HotSpot |
-| 15 | Hamlin Li | [@merykitty](https://github.com/merykitty) | 74 | RISC-V |
+| 排名 | 贡献者 | GitHub | PRs | 角色 | 领域 | 档案 |
+|------|--------|--------|-----|------|------|------|
+| 1 | Thomas Schatzl | [@tschatzl](https://github.com/tschatzl) | 546 | Reviewer | G1 GC | [详情](../../by-contributor/profiles/thomas-schatzl.md) |
+| 2 | Ioi Lam | [@iklam](https://github.com/iklam) | 431 | Reviewer | CDS/AOT | [详情](../../by-contributor/profiles/ioi-lam.md) |
+| 3 | Coleen Phillimore | [@coleenp](https://github.com/coleenp) | 400 | Reviewer | HotSpot | [详情](../../by-contributor/profiles/coleen-phillimore.md) |
+| 4 | Naoto Sato | [@naotoj](https://github.com/naotoj) | 273 | Reviewer | 国际化 | [详情](../../by-contributor/profiles/naoto-sato.md) |
+| 5 | Sergey Bylokhov | [@mrserb](https://github.com/mrserb) | 273 | Reviewer | AWT/2D | - |
+| 6 | Chen Liang | [@liach](https://github.com/liach) | 237 | Committer | ClassFile API | [详情](../../by-contributor/profiles/chen-liang.md) |
+| 7 | Alexey Semenyuk | [@alexeysemenyukoracle](https://github.com/alexeysemenyukoracle) | 233 | Committer | AOT | [详情](../../by-contributor/profiles/alexey-semenyuk.md) |
+| 8 | Jan Lahoda | [@lahodaj](https://github.com/lahodaj) | 324 | Reviewer | javac | [详情](../../by-contributor/profiles/jan-lahoda.md) |
+| 9 | Jaikiran Pai | [@jaikiran](https://github.com/jaikiran) | 322 | Reviewer | 构建 | [详情](../../by-contributor/profiles/jaikiran-pai.md) |
+| 10 | Daniel Fuchs | [@dfuch](https://github.com/dfuch) | 192 | Committer | JMX | [详情](../../by-contributor/profiles/daniel-fuchs.md) |
+| 11 | Kim Barrett | - | 100+ | Reviewer | GC, C++ | [详情](../../by-contributor/profiles/kim-barrett.md) |
+| 12 | David Holmes | - | 80+ | Reviewer | 并发 | [详情](../../by-contributor/profiles/david-holmes.md) |
+| 13 | Erik Gahlin | - | 70+ | Reviewer | JFR | [详情](../../by-contributor/profiles/erik-gahlin.md) |
+| 14 | Brian Burkhalter | - | 60+ | Committer | 网络 | [详情](../../by-contributor/profiles/brian-burkhalter.md) |
+| 15 | Emanuel Peter | - | 50+ | Reviewer | C2 编译器 | [详情](../../by-contributor/profiles/emanuel-peter.md) |
 
-**小计**: 4,865 PRs (以上 15 人)
+**小计**: 4,000+ PRs (以上 15 人)
+
+> **角色说明**:
+> - **Reviewer**: 有权批准变更集的资深贡献者 ([详情](https://openjdk.org/bylaws))
+> - **Committer**: 有直接推送权限的贡献者 ([详情](https://openjdk.org/guide/))
+> - **Author**: 可以创建和提交更改的贡献者 ([详情](https://dev.java/contribute/openjdk/))
 
 ---
 
 ## Oracle 中国团队
 
-| 贡献者 | GitHub | PRs | 主要领域 |
-|--------|--------|-----|----------|
-| Albert Mingkun Yang | [@albertnetymk](https://github.com/albertnetymk) | 744 | GC |
-| Naoto Sato | [@naotoj](https://github.com/naotoj) | 273 | 国际化 |
-| Chen Liang | [@liach](https://github.com/liach) | 237 | ClassFile API |
-| Sendao Yan | [@sendaoYan](https://github.com/sendaoYan) | 202 | 测试稳定性 |
-| Yasumasa Suenaga | [@YaSuenag](https://github.com/YaSuenag) | 113 | HotSpot |
-| Hamlin Li | [@merykitty](https://github.com/merykitty) | 74 | RISC-V |
+| 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
+|--------|--------|-----|------|----------|------|
+| Naoto Sato | [@naotoj](https://github.com/naotoj) | 273 | Reviewer | 国际化 | [详情](../../by-contributor/profiles/naoto-sato.md) |
+| Chen Liang | [@liach](https://github.com/liach) | 237 | Committer | ClassFile API | [详情](../../by-contributor/profiles/chen-liang.md) |
 
-**小计**: 1,643 PRs
+**小计**: 510 PRs
 
 ---
 
@@ -79,35 +80,108 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 
 ### GC (垃圾收集)
 
-- **G1 GC**: Thomas Schatzl, Albert Mingkun Yang, Zhengyu Gu
-- **ZGC**: Stefan Karlsson
-- **Shenandoah**: Aleksey Shipilev
-- **并发 GC**: Kim Barrett
+| 领域 | 贡献者 | 档案 |
+|------|--------|------|
+| G1 GC | Thomas Schatzl | [详情](../../by-contributor/profiles/thomas-schatzl.md) |
+| G1 GC | Albert Mingkun Yang | [详情](../../by-contributor/profiles/albert-mingkun-yang.md) |
+| Shenandoah GC | Aleksey Shipilev | [详情](../../by-contributor/profiles/aleksey-shipilev.md) |
+| 并发 GC | Kim Barrett | [详情](../../by-contributor/profiles/kim-barrett.md) |
 
 ### 编译器
 
-- **C2**: Vladimir Kozlov, Tobias Hartmann
-- **Graal**: Tom Rodriguez, Vladimir Ivanov
+| 领域 | 贡献者 | 档案 |
+|------|--------|------|
+| C2 编译器 | Emanuel Peter | [详情](../../by-contributor/profiles/emanuel-peter.md) |
 
-### 核心库
+### 核心库与性能
 
-- **java.lang/java.util**: Joe Darcy, Claes Redestad
-- **模块系统**: Alan Bateman, Mandy Chung
-- **反射**: Roger Riggs
+| 领域 | 贡献者 | 档案 |
+|------|--------|------|
+| 启动性能 | Claes Redestad | [详情](../../by-contributor/profiles/claes-redestad.md) |
 
 ### 语言特性
 
-- **javac**: Jonathan Gibbons, Jan Lahoda, Maurizio Cimadamore
-- **Lambda**: Brian Goetz
+| 领域 | 贡献者 | 档案 |
+|------|--------|------|
+| javac | Jan Lahoda | [详情](../../by-contributor/profiles/jan-lahoda.md) |
 
 ### 构建系统
 
-- **构建**: David Katleman, Erik Joelsson, Magnus Ihse Bursie
+| 领域 | 贡献者 | 档案 |
+|------|--------|------|
+| 构建系统 | Magnus Ihse Bursie | [详情](../../by-contributor/profiles/magnus-ihse-bursie.md) |
 
-### 桌面
+### 桌面/客户端
 
-- **图形/打印**: Phil Race
-- **AWT/2D**: Sergey Bylokhov, Prasanta Sadhukhan
+| 领域 | 贡献者 | 档案 |
+|------|--------|------|
+| Client Libraries | Phil Race | [详情](../../by-contributor/profiles/phil-race.md) |
+| Swing/AWT | Prasanta Sadhukhan | [详情](../../by-contributor/profiles/prasanta-sadhukhan.md) |
+| 图形/打印 | Brian Burkhalter | [详情](../../by-contributor/profiles/brian-burkhalter.md) |
+
+### 并发与运行时
+
+| 领域 | 贡献者 | 档案 |
+|------|--------|------|
+| 并发 | David Holmes | [详情](../../by-contributor/profiles/david-holmes.md) |
+
+### 工具与监控
+
+| 领域 | 贡献者 | 档案 |
+|------|--------|------|
+| JFR | Erik Gahlin | [详情](../../by-contributor/profiles/erik-gahlin.md) |
+| JVMTI | Leonid Mesnik | [详情](../../by-contributor/profiles/leonid-mesnik.md) |
+
+### 国际化
+
+| 领域 | 贡献者 | 档案 |
+|------|--------|------|
+| i18n | Naoto Sato | [详情](../../by-contributor/profiles/naoto-sato.md) |
+| 本地化 | Justin Lu | [详情](../../by-contributor/profiles/justin-lu.md) |
+
+---
+
+## 相关 PR 分析文档
+
+### ClassFile API (Chen Liang)
+
+| PR | 标题 | 分析文档 |
+|----|------|----------|
+| JDK-8342336 | Remove unused imports | [详情](../../by-pr/8342/8342336.md) |
+| JDK-8341199 | Add ConstantDynamicBuilder.loadConstant | [详情](../../by-pr/8341/8341199.md) |
+| JDK-8339217 | Add ClassBuilder.loadConstant | [详情](../../by-pr/8339/8339217.md) |
+| JDK-8339320 | Utf8EntryImpl#inflate | [详情](../../by-pr/8339/8339320.md) |
+| JDK-8339290 | Utf8EntryImpl#writeTo | [详情](../../by-pr/8339/8339290.md) |
+| JDK-8339317 | BytecodeBuilder#writeBuffer | [详情](../../by-pr/8339/8339317.md) |
+| JDK-8339168 | ClassImpl#slotSize | [详情](../../by-pr/8339/8339168.md) |
+| JDK-8339205 | StackMapGenerator writeU1/U2/Int/Long | [详情](../../by-pr/8339/8339205.md) |
+| JDK-8339196 | Add writeU1/U2/Int/Long to BufferBuilder | [详情](../../by-pr/8339/8339196.md) |
+| JDK-8338937 | ClassDesc concat optimization | [详情](../../by-pr/8338/8338937.md) |
+| JDK-8338532 | MethodTypeDesc implementation optimization | [详情](../../by-pr/8338/8338532.md) |
+| JDK-8338409 | Record helpers | [详情](../../by-pr/8338/8338409.md) |
+| JDK-8338936 | StringConcatFactory MethodType optimization | [详情](../../by-pr/8338/8338936.md) |
+| JDK-8371953 | Reflection API performance | [详情](../../by-pr/8371/8371953.md) |
+| JDK-8371701 | Field lookup optimization | [详情](../../by-pr/8371/8371701.md) |
+
+### GC 相关
+
+| PR | 标题 | 分析文档 |
+|----|------|----------|
+| JDK-8343984 | Unsafe out-of-bounds check | [详情](../../by-pr/8343/8343984.md) |
+| JDK-8343925 | SharedGC support | [详情](../../by-pr/8343/8343925.md) |
+
+### 性能优化
+
+| PR | 标题 | 分析文档 |
+|----|------|----------|
+| JDK-8310929 | Integer.toString 优化 | [详情](../../by-pr/8310/8310929.md) |
+| JDK-8310502 | Long.fastUUID 优化 | [详情](../../by-pr/8310/8310502.md) |
+| JDK-8315968 | Array optimization | [详情](../../by-pr/8315/8315968.md) |
+| JDK-8315970 | Bug fix | [详情](../../by-pr/8315/8315970.md) |
+| JDK-8317742 | Type check optimization | [详情](../../by-pr/8317/8317742.md) |
+| JDK-8311207 | Code cleanup | [详情](../../by-pr/8311/8311207.md) |
+
+[→ 返回组织索引](../../by-contributor/index.md)
 
 ---
 
