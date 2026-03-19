@@ -41,6 +41,49 @@
 
 ## 重要贡献
 
+### JDK-8352748: 移除 com.sun.tools.classfile（Author）
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8352748](https://bugs.openjdk.org/browse/JDK-8352748) |
+| **PR** | [#24356](https://github.com/openjdk/jdk/pull/24356) |
+| **角色** | Author |
+| **合入时间** | 2024-11 |
+| **影响** | 重大 API 变更，完全移除旧的类文件解析 API |
+
+**背景**: `com.sun.tools.classfile` 是旧的类文件解析 API，已被新的 `java.lang.classfile` API 取代。此 PR 完全移除了旧 API，统一了类文件处理方式。
+
+### JDK-8367585: 防止创建无法表示的 UTF-8 条目（Author）
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8367585](https://bugs.openjdk.org/browse/JDK-8367585) |
+| **PR** | [#26842](https://github.com/openjdk/jdk/pull/26842) |
+| **角色** | Author |
+| **合入时间** | 2025-02 |
+| **影响** | 正确性修复，防止生成无效类文件 |
+
+### JDK-8371953: 核心反射 API null 处理文档（Author）
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8371953](https://bugs.openjdk.org/browse/JDK-8371953) |
+| **PR** | [#28336](https://github.com/openjdk/jdk/pull/28336) |
+| **角色** | Author |
+| **合入时间** | 2025-03 |
+| **影响** | 文档改进 + 性能优化 |
+| **详细分析** | [反射 API 性能优化](../../by-pr/8371/8371953.md) |
+
+### JDK-8297271: AccessFlag 版本感知（Author）
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8297271](https://bugs.openjdk.org/browse/JDK-8297271) |
+| **PR** | [#10947](https://github.com/openjdk/jdk/pull/10947) |
+| **角色** | Author |
+| **合入时间** | 2022-12 |
+| **影响** | API 改进，版本感知的访问标志解析 |
+
 ### JDK-8336856: String "+" 运算符优化（Reviewer）
 
 作为 Reviewer 参与了这一重大的 Java 核心优化项目：
