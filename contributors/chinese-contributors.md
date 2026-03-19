@@ -9,20 +9,16 @@
 中国开发者在 OpenJDK 社区中做出了重要贡献，涵盖 GC、编译器、RISC-V、LoongArch、核心库、国际化等多个领域。
 
 ```
-中国贡献者统计 (2007-2026)
-├── Oracle 中国团队成员: 4,500+ commits (统计在 Oracle)
-├── 阿里巴巴: 100+ PRs
-├── 龙芯: 52 commits
-├── 腾讯: 44 commits
-├── 海光: 60+ commits
-├── 字节跳动: 12 commits
+中国贡献者 Integrated PRs 统计 (2007-2026)
+├── Oracle 中国团队: 1,640+ PRs
+├── 阿里巴巴: 110 PRs
+├── 字节跳动: 25 PRs
+├── 龙芯: 50+ PRs
+├── 腾讯: 40+ PRs
 └── 总贡献者: 50+
 ```
 
-> **统计说明**: OpenJDK Committer 通常使用 `@openjdk.org` 邮箱提交代码，因此 git commits 统计可能不准确。建议以 GitHub PR 数量为准。
-
-> **数据来源**: OpenJDK git 仓库 `upstream_master` 分支
-> **统计时间**: 2026-03-19
+> **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
 
 ---
 
@@ -30,10 +26,10 @@
 
 | 页面 | 说明 |
 |------|------|
-| [阿里巴巴](orgs/alibaba.md) | 核心库优化 (100+ PRs) |
-| [龙芯](orgs/loongson.md) | LoongArch (52 commits) |
-| [腾讯](orgs/tencent.md) | G1 GC、容器 (44 commits) |
-| [字节跳动](orgs/bytedance.md) | RISC-V (12 commits) |
+| [阿里巴巴](orgs/alibaba.md) | 核心库优化 (110 PRs) |
+| [字节跳动](orgs/bytedance.md) | RISC-V (25 PRs) |
+| [龙芯](orgs/loongson.md) | LoongArch (50+ PRs) |
+| [腾讯](orgs/tencent.md) | G1 GC、容器 (40+ PRs) |
 
 ---
 
@@ -41,22 +37,17 @@
 
 > 统计在 [Oracle](orgs/oracle.md) 组织中
 
-| 排名 | 贡献者 | Commits | 主要领域 | 详情 |
-|------|--------|---------|----------|------|
-| 1 | Weijun Wang | 953 | 安全、工具、keytool | - |
-| 2 | [Albert Mingkun Yang](albert-mingkun-yang.md) | 747 | GC (G1/Parallel) | [详情](albert-mingkun-yang.md) |
-| 3 | Sundararajan Athijegannathan | 688 | Nashorn、脚本引擎 | - |
-| 4 | Zhengyu Gu | 582 | G1 GC | - |
-| 5 | [Naoto Sato](naoto-sato.md) | 569 | 国际化、Unicode | [详情](naoto-sato.md) |
-| 6 | Xue-Lei Andrew Fan | 412 | 安全、加密 | - |
-| 7 | [Hamlin Li](hamlin-li.md) | 301 | RISC-V | [详情](hamlin-li.md) |
-| 8 | Jiangli Zhou | 251 | CDS、类共享 | - |
-| 9 | Yasumasa Suenaga | 243 | HotSpot、JFR | - |
-| 10 | [Chen Liang](chen-liang.md) | 211 | ClassFile API | [详情](chen-liang.md) |
-| 11 | [SendaoYan](sendaoyan.md) | 182 | 测试稳定性 | [详情](sendaoyan.md) |
-| 12 | Michael Fang | 155 | 国际化 | - |
-| 13 | Suchen Chien | 148 | 安全 | - |
-| 14 | [Fei Yang](fei-yang.md) | 116 | RISC-V | [详情](fei-yang.md) |
+| 排名 | 贡献者 | GitHub | PRs | 主要领域 |
+|------|--------|--------|-----|----------|
+| 1 | Albert Mingkun Yang | [@albertnetymk](https://github.com/albertnetymk) | 744 | GC |
+| 2 | Naoto Sato | [@naotoj](https://github.com/naotoj) | 273 | 国际化 |
+| 3 | [Chen Liang](chen-liang.md) | [@liach](https://github.com/liach) | 237 | ClassFile API |
+| 4 | Sendao Yan | [@sendaoYan](https://github.com/sendaoYan) | 202 | 测试稳定性 |
+| 5 | Yasumasa Suenaga | [@YaSuenag](https://github.com/YaSuenag) | 113 | HotSpot |
+| 6 | [Hamlin Li](hamlin-li.md) | [@merykitty](https://github.com/merykitty) | 74 | RISC-V |
+| 7 | Weijun Wang | - | - | 安全/工具 |
+| 8 | Zhengyu Gu | - | - | G1 GC |
+| 9 | Xue-Lei Andrew Fan | - | - | 安全 |
 
 ---
 
@@ -66,11 +57,10 @@
 
 👉 [查看完整详情](orgs/alibaba.md)
 
-| 贡献者 | Commits | 主要领域 |
-|--------|---------|----------|
-| [Shaojin Wen](shaojin-wen.md) | 28 | 核心库优化、字符串处理 |
-| [Kuai Wei](kuai-wei.md) | 13 | C2 编译器 |
-| Yude Lin | 8 | 测试 |
+| 贡献者 | GitHub | PRs | 主要领域 |
+|--------|--------|-----|----------|
+| [Shaojin Wen](shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | 核心库优化 |
+| [Kuai Wei](kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | C2 编译器 |
 
 **关键贡献**:
 - 字符串拼接优化 (+15%)
@@ -79,7 +69,22 @@
 
 ---
 
-### 龙芯 (Loongson)
+### 字节跳动
+
+👉 [查看完整详情](orgs/bytedance.md)
+
+| 贡献者 | GitHub | PRs | 主要领域 |
+|--------|--------|-----|----------|
+| [Anjian Wen](anjian-wen.md) | [@Anjian-Wen](https://github.com/Anjian-Wen) | 25 | RISC-V 向量指令 |
+
+**关键贡献**:
+- RISC-V Zvbb 向量指令
+- RISC-V Zfa 浮点指令
+- 数组填充优化
+
+---
+
+### 龙芯
 
 👉 [查看完整详情](orgs/loongson.md)
 
@@ -92,7 +97,6 @@
 **关键贡献**:
 - LoongArch Zero VM 支持
 - 编译器正确性修复
-- 测试稳定性改进
 
 ---
 
@@ -104,58 +108,27 @@
 |--------|---------|----------|
 | Bob Peng Xie | 15 | 测试、构建 |
 | Caspar Wang | 7 | 测试 |
-| [Tongbao Zhang](tongbao-zhang.md) | 5 | G1 GC |
+| Tongbao Zhang | 5 | G1 GC |
 
 **关键贡献**:
 - G1 压缩指针边界修复
 - 容器资源检测修复
-- 编译器崩溃修复
-
----
-
-### 字节跳动 (ByteDance)
-
-👉 [查看完整详情](orgs/bytedance.md)
-
-| 贡献者 | Commits | 主要领域 |
-|--------|---------|----------|
-| [Anjian Wen](anjian-wen.md) | 12 | RISC-V 向量指令 |
-
-**关键贡献**:
-- RISC-V Zvbb 向量指令
-- RISC-V Zfa 浮点指令
-- 数组填充优化
-
----
-
-### 海光 (Hygon)
-
-| 贡献者 | Commits | 主要领域 |
-|--------|---------|----------|
-| SendaoYan | 56 | 测试稳定性 |
-
-**关键贡献**:
-- 虚拟线程测试修复
-- 测试超时问题解决
-
----
-
-### 华为
-
-| 贡献者 | Commits | 主要领域 |
-|--------|---------|----------|
-| Dong Bo | 3 | 测试 |
-| Dongbo He | 3 | 测试 |
-| Huang Wang | 3 | 测试 |
 
 ---
 
 ### ISCAS (中科院软件所)
 
+| 贡献者 | GitHub | PRs | 主要领域 |
+|--------|--------|-----|----------|
+| Dingli Zhang | [@DingliZhang](https://github.com/DingliZhang) | 53 | RISC-V |
+
+---
+
+### 海光
+
 | 贡献者 | Commits | 主要领域 |
 |--------|---------|----------|
-| Dingli Zhang | 11 | RISC-V |
-| Fei Yang | 6 | RISC-V |
+| Sendao Yan | 56 | 测试稳定性 |
 
 ---
 
@@ -163,59 +136,33 @@
 
 ### GC (垃圾收集)
 
-| 贡献者 | Commits | 组织 | 领域 |
-|--------|---------|------|------|
-| [Albert Mingkun Yang](albert-mingkun-yang.md) | 747 | Oracle | G1/Parallel GC |
-| Zhengyu Gu | 582 | Oracle | G1 GC |
-| [Tongbao Zhang](tongbao-zhang.md) | 5 | 腾讯 | G1 GC |
+| 贡献者 | PRs | 组织 | 领域 |
+|--------|-----|------|------|
+| Albert Mingkun Yang | 744 | Oracle | G1/Parallel GC |
+| Zhengyu Gu | - | Oracle | G1 GC |
+| Tongbao Zhang | 5 | 腾讯 | G1 GC |
 
 ### 编译器
 
-| 贡献者 | Commits | 组织 | 领域 |
-|--------|---------|------|------|
-| [Kuai Wei](kuai-wei.md) | 13 | 阿里巴巴 | C2 编译器 |
-| [Anjian Wen](anjian-wen.md) | 12 | 字节跳动 | RISC-V 后端 |
-| Qi Ao | 11 | 龙芯 | C1/C2 |
+| 贡献者 | PRs | 组织 | 领域 |
+|--------|-----|------|------|
+| Kuai Wei | 13 | 阿里巴巴 | C2 编译器 |
+| Anjian Wen | 25 | 字节跳动 | RISC-V 后端 |
 
 ### RISC-V
 
-| 贡献者 | Commits | 组织 |
-|--------|---------|------|
-| [Hamlin Li](hamlin-li.md) | 301 | Oracle |
-| [Anjian Wen](anjian-wen.md) | 12 | 字节跳动 |
-| Dingli Zhang | 11 | ISCAS |
-| [Fei Yang](fei-yang.md) | 116 | Oracle |
-
-### LoongArch
-
-| 贡献者 | Commits | 组织 |
-|--------|---------|------|
-| Guoyun Sun | 14 | 龙芯 |
-| Qi Ao | 11 | 龙芯 |
-| Jie Fu | 6 | 龙芯 |
+| 贡献者 | PRs | 组织 |
+|--------|-----|------|
+| Hamlin Li | 74 | Oracle |
+| Anjian Wen | 25 | 字节跳动 |
+| Dingli Zhang | 53 | ISCAS |
 
 ### 核心库
 
-| 贡献者 | Commits | 组织 |
-|--------|---------|------|
-| Weijun Wang | 953 | Oracle |
-| [Shaojin Wen](shaojin-wen.md) | 27 | 阿里巴巴 |
-| [Naoto Sato](naoto-sato.md) | 569 | Oracle |
-
-### 安全
-
-| 贡献者 | Commits | 组织 |
-|--------|---------|------|
-| Weijun Wang | 953 | Oracle |
-| Xue-Lei Andrew Fan | 412 | Oracle |
-| Suchen Chien | 148 | Oracle |
-
-### 国际化
-
-| 贡献者 | Commits | 组织 |
-|--------|---------|------|
-| [Naoto Sato](naoto-sato.md) | 569 | Oracle |
-| Michael Fang | 155 | Oracle |
+| 贡献者 | PRs | 组织 |
+|--------|-----|------|
+| Shaojin Wen | 97 | 阿里巴巴 |
+| Naoto Sato | 273 | Oracle |
 
 ---
 
@@ -223,32 +170,15 @@
 
 ### 中国企业
 
-| 组织 | 贡献者数 | 贡献量 | 详情 |
-|------|----------|---------|------|
-| 阿里巴巴 | 16 | 100+ PRs | [详情](orgs/alibaba.md) |
-| 龙芯 | 9 | 52 commits | [详情](orgs/loongson.md) |
-| 腾讯 | 13 | 44 commits | [详情](orgs/tencent.md) |
-| 海光 | 2 | 60+ commits | - |
-| 字节跳动 | 1 | 12 commits | [详情](orgs/bytedance.md) |
-| 华为 | 4 | 11 commits | - |
-| ISCAS | 2 | 17 commits | - |
+| 组织 | 贡献者数 | PRs | 详情 |
+|------|----------|-----|------|
+| 阿里巴巴 | 2+ | 110 | [详情](orgs/alibaba.md) |
+| 字节跳动 | 1 | 25 | [详情](orgs/bytedance.md) |
+| 龙芯 | 9 | 50+ | [详情](orgs/loongson.md) |
+| 腾讯 | 13 | 40+ | [详情](orgs/tencent.md) |
+| ISCAS | 1+ | 53 | - |
 
-> 注：Oracle 中国团队成员 (4,500+ commits) 统计在 [Oracle](orgs/oracle.md) 组织中
-
-### 按领域
-
-| 领域 | Commits | 主要贡献者 |
-|------|---------|-----------|
-| 安全/工具 | 1,365 | Weijun Wang, Xue-Lei Andrew Fan |
-| GC | 1,334 | Albert Mingkun Yang, Zhengyu Gu |
-| 国际化 | 724 | Naoto Sato, Michael Fang |
-| Nashorn | 688 | Sundararajan Athijegannathan |
-| RISC-V | 429 | Hamlin Li, Anjian Wen |
-| CDS | 251 | Jiangli Zhou |
-| HotSpot | 243 | Yasumasa Suenaga |
-| ClassFile API | 211 | Chen Liang |
-| 核心库优化 | 27 | Shaojin Wen |
-| LoongArch | 52 | 龙芯团队 |
+> 注：Oracle 中国团队成员 (1,640+ PRs) 统计在 [Oracle](orgs/oracle.md) 组织中
 
 ---
 

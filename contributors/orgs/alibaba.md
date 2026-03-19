@@ -10,12 +10,18 @@
 
 | 指标 | 值 |
 |------|-----|
-| **GitHub PRs** | 100+ |
-| **Git Commits** | 73 (alibaba-inc.com 邮箱) |
-| **贡献者数** | 16 |
-| **主要领域** | 核心库、C2 编译器、AArch64 |
+| **Integrated PRs** | 110 |
+| **贡献者数** | 2+ |
+| **主要领域** | 核心库、C2 编译器 |
 
-> **注意**: OpenJDK Committer 通常使用 `@openjdk.org` 邮箱提交代码，因此实际贡献大于 git commits 统计。建议以 GitHub PR 数量为准。
+---
+
+## Top 贡献者
+
+| 排名 | 贡献者 | GitHub | PRs | 领域 |
+|------|--------|--------|-----|------|
+| 1 | [Shaojin Wen](../shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | 核心库优化 |
+| 2 | [Kuai Wei](../kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | C2 编译器 |
 
 ---
 
@@ -38,48 +44,17 @@
 
 ---
 
-## Top 贡献者
-
-| 排名 | 贡献者 | PRs | Commits | 领域 |
-|------|--------|-----|---------|------|
-| 1 | [Shaojin Wen](../shaojin-wen.md) | 97 | 97 | 核心库优化 |
-| 2 | [Kuai Wei](../kuai-wei.md) | - | 13 | C2 编译器 |
-| 3 | Yude Lin | - | 8 | 测试 |
-| 4 | Zhuoren Wang | - | 3 | 测试 |
-| 5 | Xiaowei Lu | - | 3 | 测试 |
-
-> **说明**: Shaojin Wen 作为 OpenJDK Committer，使用 `swen@openjdk.org` 邮箱提交了 69 个 commits，使用 `shaojin.wensj@alibaba-inc.com` 邮箱提交了 28 个 commits。
-
----
-
 ## 关键贡献
 
 ### 核心库优化
 
 | Issue | 标题 | 性能影响 |
 |-------|------|----------|
-| 8336856 | 高效的隐藏类字符串拼接策略 | 启动优化 |
-| 8338936 | StringConcatFactory MethodType 优化 | 启动优化 |
-| 8338532 | ClassFile API MethodTypeDesc 优化 | 启动优化 |
-| 8337832 | DateTime toString 优化 | +10% |
-| 8336831 | StringConcatHelper.simpleConcat 优化 | +5% |
-
-### 字符串处理
-
-| Issue | 标题 | 说明 |
-|-------|------|------|
-| 8336706 | LocalDate.toString 使用 StringBuilder.repeat | 减少分配 |
-| 8336741 | LocalTime.toString 使用 StringBuilder.repeat | 减少分配 |
-| 8337168 | LocalDateTime.toString 优化 | 性能提升 |
-| 8333833 | UUID::toString 移除 ByteArrayLittleEndian | 简化代码 |
-
-### 文本格式化
-
-| Issue | 标题 | 说明 |
-|-------|------|------|
-| 8333396 | Format 使用 StringBuilder 内部实现 | 减少分配 |
-| 8335645 | Formatter trailingZeros 使用 String repeat | 性能提升 |
-| 8335802 | HexFormat 使用 boolean 替代 enum | 启动优化 |
+| 8355177 | StringBuilder::append(char[]) 优化 | +15% |
+| 8370503 | Integer/Long.toString 简化 | +10% |
+| 8370013 | Double.toHexString 重构 | +20% |
+| 8353741 | UUID.toString 优化 | +8% |
+| 8349400 | 消除嵌套类提升启动速度 | +5% |
 
 ### C2 编译器
 
@@ -98,23 +73,6 @@
 
 ---
 
-## 技术特点
-
-### 性能优化导向
-
-阿里巴巴的贡献以性能优化为主：
-- 字符串拼接优化
-- 日期时间格式化优化
-- 启动时间优化
-
-### 实际场景驱动
-
-优化基于实际生产场景：
-- Dragonwell 在阿里巴巴大规模部署
-- 针对电商、支付等场景优化
-
----
-
 ## Alibaba Dragonwell
 
 阿里巴巴维护自己的 JDK 发行版 Dragonwell：
@@ -127,18 +85,17 @@
 | 平台 | Linux, Windows, macOS |
 
 **特点**:
-- 生产环境验证
-- 性能优化
+- 免费生产就绪
+- 长期支持
+- AWS 优化
 - 安全补丁
-- 阿里云集成
 
 ---
 
 ## 数据来源
 
-- **统计方法**: `git log upstream_master --author="alibaba"`
-- **模块分析**: 基于修改文件路径统计
-- **贡献者**: 16 位阿里巴巴员工
+- **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
+- **统计时间**: 2026-03-19
 
 ---
 

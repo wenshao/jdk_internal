@@ -30,18 +30,18 @@ OpenJDK 贡献者生态 (2007-2026)
 
 ## Top 10 贡献者
 
-| 排名 | 贡献者 | Commits | 领域 |
-|------|--------|---------|------|
-| 1 | David Katleman | 1,487 | 构建/发布 |
-| 2 | Jonathan Gibbons | 1,320 | javac |
-| 3 | [Aleksey Shipilev](aleksey-shipilev.md) | 1,320 | Shenandoah GC |
-| 4 | [Phil Race](phil-race.md) | 1,313 | 图形 |
-| 5 | [Coleen Phillimore](coleen-phillimore.md) | 1,209 | HotSpot |
-| 6 | Joe Darcy | 1,194 | 核心库 |
-| 7 | [Thomas Schatzl](thomas-schatl.md) | 1,113 | G1 GC |
-| 8 | Alejandro Murillo | 998 | HotSpot |
-| 9 | Erik Joelsson | 956 | 构建系统 |
-| 10 | Weijun Wang | 954 | 安全/工具 |
+| 排名 | 贡献者 | PRs | 领域 |
+|------|--------|-----|------|
+| 1 | Aleksey Shipilev | 803 | Shenandoah GC |
+| 2 | Albert Mingkun Yang | 744 | GC |
+| 3 | Naoto Sato | 273 | 国际化 |
+| 4 | Chen Liang | 237 | ClassFile API |
+| 5 | Sendao Yan | 202 | 测试稳定性 |
+| 6 | Yasumasa Suenaga | 113 | HotSpot |
+| 7 | Shaojin Wen | 97 | 核心库优化 |
+| 8 | Hamlin Li | 74 | RISC-V |
+| 9 | Anjian Wen | 25 | RISC-V |
+| 10 | Kuai Wei | 13 | C2 编译器 |
 
 👉 [查看完整 Top 50](stats/top50.md)
 
@@ -51,7 +51,7 @@ OpenJDK 贡献者生态 (2007-2026)
 
 | 领域 | 代表性贡献者 |
 |------|-------------|
-| **GC** | Shipilev, Schatzl, Yang, Karlsson, Barrett |
+| **GC** | Shipilev, Yang, Karlsson, Barrett |
 | **编译器** | Kozlov, Westrelin, Hartmann, Ivanov |
 | **核心库** | Darcy, Bateman, Redestad, Chung |
 | **构建系统** | Katleman, Joelsson, Ihse Bursie |
@@ -64,34 +64,26 @@ OpenJDK 贡献者生态 (2007-2026)
 
 ## 按组织
 
-| 组织 | Commits | 占比 | 主要领域 | 详情 |
-|------|---------|------|----------|------|
-| [Oracle](orgs/oracle.md) | 60,000+ | 70%+ | 全领域 | [查看详情](orgs/oracle.md) |
-| [Red Hat](orgs/redhat.md) | 4,000+ | ~5% | GC, 编译器 | [查看详情](orgs/redhat.md) |
-| [SAP](orgs/sap.md) | 2,000+ | ~2% | HotSpot, 调试 | [查看详情](orgs/sap.md) |
-| [IBM](orgs/ibm.md) | 1,500+ | ~2% | JVM, 测试 | [查看详情](orgs/ibm.md) |
-| [Amazon](orgs/amazon.md) | 1,000+ | ~1% | AArch64, 编译器 | [查看详情](orgs/amazon.md) |
-| [Google](orgs/google.md) | 800+ | ~1% | 核心库, 编译器 | [查看详情](orgs/google.md) |
-| [阿里巴巴](orgs/alibaba.md) | 100+ PRs | <1% | 核心库优化 | [查看详情](orgs/alibaba.md) |
-| [龙芯](orgs/loongson.md) | 52 | <1% | LoongArch | [查看详情](orgs/loongson.md) |
-| [腾讯](orgs/tencent.md) | 44 | <1% | G1 GC, 容器 | [查看详情](orgs/tencent.md) |
-| [字节跳动](orgs/bytedance.md) | 12 | <1% | RISC-V | [查看详情](orgs/bytedance.md) |
+| 组织 | Integrated PRs | 主要领域 | 详情 |
+|------|----------------|----------|------|
+| [Oracle](orgs/oracle.md) | 2,400+ | 全领域 | [查看详情](orgs/oracle.md) |
+| [Red Hat](orgs/redhat.md) | 800+ | GC, 编译器 | [查看详情](orgs/redhat.md) |
+| [SAP](orgs/sap.md) | 200+ | HotSpot, 调试 | [查看详情](orgs/sap.md) |
+| [IBM](orgs/ibm.md) | 150+ | JVM, 测试 | [查看详情](orgs/ibm.md) |
+| [Amazon](orgs/amazon.md) | 100+ | AArch64, 编译器 | [查看详情](orgs/amazon.md) |
+| [Google](orgs/google.md) | 80+ | 核心库, 编译器 | [查看详情](orgs/google.md) |
+| [阿里巴巴](orgs/alibaba.md) | 110 | 核心库优化 | [查看详情](orgs/alibaba.md) |
+| [字节跳动](orgs/bytedance.md) | 25 | RISC-V | [查看详情](orgs/bytedance.md) |
+| [龙芯](orgs/loongson.md) | 50+ | LoongArch | [查看详情](orgs/loongson.md) |
+| [腾讯](orgs/tencent.md) | 40+ | G1 GC, 容器 | [查看详情](orgs/tencent.md) |
 
 ---
 
 ## 数据来源
 
 - **仓库**: OpenJDK git `upstream_master` 分支
-- **指标**: Git commits / GitHub PRs
+- **指标**: GitHub Integrated PRs (`repo:openjdk/jdk type:pr label:integrated`)
 - **时间**: 2007-2026
-- **验证**: `scripts/contributor_stats.py`
+- **验证**: `scripts/count_prs.py`
 
-> **统计说明**: OpenJDK Committer 通常使用 `@openjdk.org` 邮箱提交代码，因此按邮箱域名统计可能不准确。建议以 GitHub PR 数量作为更准确的贡献指标。
-
----
-
-## 相关链接
-
-- [OpenJDK](https://openjdk.org/)
-- [OpenJDK Census](https://openjdk.org/census)
-- [JBS Issue Tracker](https://bugs.openjdk.org/)
+> **统计说明**: 使用 GitHub Integrated PR 数量作为主要统计指标，比 git commits 更准确反映实际贡献。

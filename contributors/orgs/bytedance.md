@@ -10,9 +10,17 @@
 
 | 指标 | 值 |
 |------|-----|
-| **总 Commits** | 12 |
+| **Integrated PRs** | 25 |
 | **贡献者数** | 1 |
 | **主要领域** | RISC-V 向量指令 |
+
+---
+
+## 贡献者
+
+| 贡献者 | GitHub | PRs | 领域 |
+|--------|--------|-----|------|
+| [Anjian Wen](../anjian-wen.md) | [@Anjian-Wen](https://github.com/Anjian-Wen) | 25 | RISC-V 向量指令 |
 
 ---
 
@@ -26,14 +34,6 @@
 | RISC-V GC 共享 | 1 | GC 共享代码 |
 | 向量 API 测试 | 2 | Vector API 测试 |
 | IR 框架测试 | 2 | 编译器 IR 测试 |
-
----
-
-## 贡献者
-
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| [Anjian Wen](../anjian-wen.md) | 12 | RISC-V 向量指令 |
 
 ---
 
@@ -77,15 +77,6 @@
 | 8356700 | RISC-V: fill_words/zero_memory 声明不可压缩范围 | 正确性 |
 | 8356869 | RISC-V: 改进数组填充 stub 尾部处理 | 性能优化 |
 
-### RISC-V 编译器输出改进
-
-| Issue | 标题 | 说明 |
-|-------|------|------|
-| 8355562 | RISC-V: 清理向量标量指令名称 | 代码清理 |
-| 8355657 | RISC-V: 改进向量标量指令 PrintOptoAssembly 输出 | 调试支持 |
-| 8355796 | RISC-V: 修复 AllBitsSetVectorMatchRuleTest 测试 | 测试修复 |
-| 8354815 | RISC-V: 改变位旋转移位类型 | 正确性修复 |
-
 ---
 
 ## 技术特点
@@ -104,32 +95,12 @@
 - **Zfa**: 附加浮点指令
 - **V**: 向量扩展
 
-### 性能优化
-
-- 数组填充优化
-- 内存操作 intrinsic
-- 向量化支持
-
----
-
-## RISC-V 背景
-
-RISC-V 是开源指令集架构，字节跳动在以下方面有贡献：
-
-| 领域 | 贡献 |
-|------|------|
-| 向量计算 | Zvbb 指令支持 |
-| 浮点运算 | Zfa 指令支持 |
-| 内存操作 | setMemory intrinsic |
-| 编译器 | C2 后端优化 |
-
 ---
 
 ## 数据来源
 
-- **统计方法**: `git log upstream_master --author="bytedance"`
-- **模块分析**: 基于修改文件路径统计
-- **贡献者**: Anjian Wen
+- **统计方法**: GitHub PR search `repo:openjdk/jdk author:Anjian-Wen type:pr label:integrated`
+- **统计时间**: 2026-03-19
 
 ---
 
