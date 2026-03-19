@@ -10,9 +10,12 @@
 
 | 指标 | 值 |
 |------|-----|
-| **总 Commits** | 73 |
+| **GitHub PRs** | 100+ |
+| **Git Commits** | 73 (alibaba-inc.com 邮箱) |
 | **贡献者数** | 16 |
 | **主要领域** | 核心库、C2 编译器、AArch64 |
+
+> **注意**: OpenJDK Committer 通常使用 `@openjdk.org` 邮箱提交代码，因此实际贡献大于 git commits 统计。建议以 GitHub PR 数量为准。
 
 ---
 
@@ -37,13 +40,15 @@
 
 ## Top 贡献者
 
-| 排名 | 贡献者 | Commits | 领域 |
-|------|--------|---------|------|
-| 1 | [Shaojin Wen](../shaojin-wen.md) | 28 | 核心库优化 |
-| 2 | [Kuai Wei](../kuai-wei.md) | 13 | C2 编译器 |
-| 3 | Yude Lin | 8 | 测试 |
-| 4 | Zhuoren Wang | 3 | 测试 |
-| 5 | Xiaowei Lu | 3 | 测试 |
+| 排名 | 贡献者 | PRs | Commits | 领域 |
+|------|--------|-----|---------|------|
+| 1 | [Shaojin Wen](../shaojin-wen.md) | 97 | 97 | 核心库优化 |
+| 2 | [Kuai Wei](../kuai-wei.md) | - | 13 | C2 编译器 |
+| 3 | Yude Lin | - | 8 | 测试 |
+| 4 | Zhuoren Wang | - | 3 | 测试 |
+| 5 | Xiaowei Lu | - | 3 | 测试 |
+
+> **说明**: Shaojin Wen 作为 OpenJDK Committer，使用 `swen@openjdk.org` 邮箱提交了 69 个 commits，使用 `shaojin.wensj@alibaba-inc.com` 邮箱提交了 28 个 commits。
 
 ---
 

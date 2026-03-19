@@ -15,6 +15,7 @@
 | **OpenJDK** | [@swen](https://openjdk.org/census#swen) |
 | **角色** | JDK Committer |
 | **PRs** | [97 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Awenshao+is%3Aclosed+label%3Aintegrated) |
+| **Commits** | 97 (28 via alibaba-inc.com, 69 via openjdk.org) |
 | **主要领域** | 核心库性能优化、字符串处理、数字格式化 |
 | **活跃时间** | 2023 - 至今 |
 
