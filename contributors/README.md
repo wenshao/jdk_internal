@@ -12,6 +12,7 @@
 | [Top 50 贡献者](stats/top50.md) | 历史贡献排名 |
 | [按领域分类](stats/by-domain.md) | GC、编译器、核心库等 |
 | [中国贡献者](chinese-contributors.md) | 中国开发者专题 |
+| [按组织分类](#按组织) | Oracle、Red Hat、SAP 等 |
 
 ---
 
@@ -37,7 +38,7 @@ OpenJDK 贡献者生态 (2007-2026)
 | 4 | [Phil Race](phil-race.md) | 1,313 | 图形 |
 | 5 | [Coleen Phillimore](coleen-phillimore.md) | 1,209 | HotSpot |
 | 6 | Joe Darcy | 1,194 | 核心库 |
-| 7 | [Thomas Schatzl](thomas-schatzl.md) | 1,113 | G1 GC |
+| 7 | [Thomas Schatzl](thomas-schatl.md) | 1,113 | G1 GC |
 | 8 | Alejandro Murillo | 998 | HotSpot |
 | 9 | Erik Joelsson | 956 | 构建系统 |
 | 10 | Weijun Wang | 954 | 安全/工具 |
@@ -58,6 +59,20 @@ OpenJDK 贡献者生态 (2007-2026)
 | **网络** | Hegarty, Burkhalter, Fuchs |
 
 👉 [查看完整分类](stats/by-domain.md)
+
+---
+
+## 按组织
+
+| 组织 | Commits | 占比 | 主要领域 | 详情 |
+|------|---------|------|----------|------|
+| [Oracle](orgs/oracle.md) | 60,000+ | 70%+ | 全领域 | [查看详情](orgs/oracle.md) |
+| [Red Hat](orgs/redhat.md) | 4,000+ | ~5% | GC, 编译器 | [查看详情](orgs/redhat.md) |
+| [SAP](orgs/sap.md) | 2,000+ | ~2% | HotSpot, 调试 | [查看详情](orgs/sap.md) |
+| [IBM](orgs/ibm.md) | 1,500+ | ~2% | JVM, 测试 | [查看详情](orgs/ibm.md) |
+| [Amazon](orgs/amazon.md) | 1,000+ | ~1% | AArch64, 编译器 | [查看详情](orgs/amazon.md) |
+| [Google](orgs/google.md) | 800+ | ~1% | 核心库, 编译器 | [查看详情](orgs/google.md) |
+| [中国企业](orgs/chinese-enterprises.md) | 500+ | <1% | 核心库, RISC-V | [查看详情](orgs/chinese-enterprises.md) |
 
 ---
 
