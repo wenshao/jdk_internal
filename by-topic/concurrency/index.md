@@ -4,6 +4,30 @@
 
 ---
 
+## 演进概览
+
+```
+JDK 1.0 ─── JDK 5 ─── JDK 7 ─── JDK 11 ─── JDK 19 ─── JDK 21 ─── JDK 26
+   │           │           │            │            │            │           │
+ Thread     Executor    NIO       HTTP Client  Virtual     分代 ZGC    HTTP/3
+ Runnable   ForkJoin    AJS       CompletableFuture  Thread    Structured  QUIC
+ Locks      Future      Async      (正式)       (正式)     Concurrency
+```
+
+### 版本里程碑
+
+| 版本 | 主题 | 关键特性 |
+|------|------|----------|
+| **JDK 5** | 并发基础 | Executor 框架、并发集合、锁 |
+| **JDK 7** | 异步 I/O | AsynchronousSocketChannel、Fork/Join |
+| **JDK 8** | 函数式并发 | CompletableFuture、Parallel Stream |
+| **JDK 11** | HTTP 标准化 | HTTP Client 正式版 |
+| **JDK 19** | 虚拟线程预览 | Virtual Threads (预览) |
+| **JDK 21** | 并发革命 | Virtual Threads (正式)、Scoped Values |
+| **JDK 26** | 网络升级 | HTTP/3 (预览) |
+
+---
+
 ## 主题列表
 
 ### [并发编程](concurrency/)
@@ -69,6 +93,120 @@ Java 序列化从 JDK 1.0 到 JDK 26 的完整演进。
 | JDK 21 | Record 序列化 | 简化序列化 |
 
 → [序列化时间线](serialization/timeline.md)
+
+---
+
+## 核心贡献者
+
+### 并发编程
+
+| 贡献者 | 公司/机构 | 主要贡献 |
+|--------|----------|----------|
+| **Doug Lea** | SUNY Oswego | JSR-166 (并发工具), ConcurrentHashMap |
+| **Ron Pressler** | Oracle | Virtual Threads (JEP 444) |
+| **Alan Bateman** | Oracle | NIO、NIO.2 (JSR 51, JSR 203) |
+| **David Holmes** | Oracle | JSR-166 规范负责人 |
+
+### HTTP/网络
+
+| 贡献者 | 公司 | 主要贡献 |
+|--------|------|----------|
+| **Michael McMahon** | Oracle | HTTP Client (JEP 321) |
+| **Chris Newland** | Oracle | HTTP/2, HTTP/3 支持 |
+
+---
+
+## 内部开发者资源
+
+### 源码结构
+
+```
+src/java.base/share/classes/java/util/concurrent/
+├── atomic/                       # 原子类
+│   ├── AtomicBoolean.java
+│   ├── AtomicInteger.java
+│   └── AtomicReference.java
+├── locks/                        # 锁实现
+│   ├── Lock.java
+│   ├── ReentrantLock.java
+│   ├── StampedLock.java
+│   └── AbstractQueuedSynchronizer.java
+├── ExecutorService.java          # 执行器接口
+├── ForkJoinPool.java             # Fork/Join 池
+├── CompletableFuture.java        # 异步编程
+└── Flow.java                     # Reactive Streams
+
+src/java.base/share/classes/java/lang/
+├── Thread.java                   # 线程核心类
+├── VirtualThread.java            # 虚拟线程 (JDK 21+)
+└── ScopedValue.java              # 作用域值 (JDK 21+)
+
+src/java.net.http/
+├── HttpClient.java               # HTTP 客户端
+├── HttpRequest.java
+├── HttpResponse.java
+└── WebSocket.java                # WebSocket 支持
+
+src/java.base/share/classes/nio/
+├── channels/                     # NIO 通道
+│   ├── AsynchronousSocketChannel
+│   ├── AsynchronousServerSocketChannel
+│   └── SocketChannel
+├── buffer/                       # NIO 缓冲区
+└── file/                         # NIO.2 文件 API
+```
+
+### 关键内部类
+
+| 类 | 作用 | 访问级别 |
+|---|------|----------|
+| `jdk.internal.vm.ScopedValueContainer` | Scoped Value 存储 | 内部 |
+| `jdk.internal.misc.Blocker` | 虚拟线程 Pin 检测 | `@Restricted` |
+| `jdk.internal.net.http.HttpClientImpl` | HTTP Client 实现 | 内部 |
+| `java.util.concurrent.locks.AbstractQueuedSynchronizer` | AQS 同步器 | public |
+
+### VM 参数速查
+
+```bash
+# 虚拟线程 (JDK 21+)
+-Djdk.virtualThreadScheduler.parallelism=8  # 并发度
+-Djdk.virtualThreadScheduler.maxPoolSize=256 # 最大载体线程
+
+# Fork/Join Pool
+-Djava.util.concurrent.ForkJoinPool.common.parallelism=8
+
+# HTTP/2
+-XX:MaxDirectMemorySize=512m     # 直接内存 (用于 NIO)
+-Djdk.httpclient.connectionPoolSize=20
+
+# 网络调试
+-Djdk.httpclient.enableAllMethodRetry=true
+-Djdk.httpclient.websocket.debug=true
+-Djavax.net.debug=ssl             # SSL 调试
+```
+
+### 诊断工具
+
+```bash
+# 线程转储 (包含虚拟线程)
+jcmd <pid> Thread.dump_to_file -format=json threads.json
+
+# 虚拟线程统计
+jcmd <pid> VM.native_memory summary
+
+# HTTP Client 调试
+-Djdk.httpclient.HttpClient.log=errors,requests,headers
+```
+
+---
+
+## 统计数据
+
+| 指标 | 数值 |
+|------|------|
+| 并发 JEP (JDK 5-26) | 15+ |
+| 并发工具类 | 50+ |
+| HTTP 协议支持 | HTTP/1.1, HTTP/2, HTTP/3 (预览) |
 
 ---
 

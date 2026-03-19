@@ -4,6 +4,28 @@
 
 ---
 
+## 演进概览
+
+```
+JDK 1.0 ─── JDK 8 ─── JDK 11 ─── JDK 17 ─── JDK 21 ─── JDK 26
+   │           │            │            │            │           │
+ JSSE       TLS 1.2      TLS 1.3      KMAC        后量子签名   ML-DSA
+ HTTPS      ChaCha20     ChaCha20     SHA-3       KDF API     (正式)
+            (JEP 329)    (JEP 332)    (JEP 370)   (JEP 495)   (JEP 518)
+```
+
+### 版本里程碑
+
+| 版本 | 主题 | 关键特性 |
+|------|------|----------|
+| **JDK 8** | TLS 1.2 | TLS 1.2 默认启用 |
+| **JDK 11** | TLS 1.3 | TLS 1.3 (JEP 332)、ChaCha20-Poly1305 (JEP 329) |
+| **JDK 17** | 新密码学 | KMAC (JEP 370)、SHA-3 家族 |
+| **JDK 21** | 签名增强 | HSS/LMS 签名 |
+| **JDK 26** | 后量子密码 | ML-DSA (JEP 518)、KDF API 正式 (JEP 510) |
+
+---
+
 ## 主题列表
 
 ### [安全特性](security/)
@@ -37,6 +59,125 @@ Java 国际化 (i18n) 从 JDK 1.0 到 JDK 26 的完整演进。
 | JDK 18 | Unicode 扩展 | EAI 支持 |
 
 → [国际化时间线](i18n/timeline.md)
+
+---
+
+## 核心贡献者
+
+### 安全/密码学
+
+| 贡献者 | 公司 | 主要贡献 |
+|--------|------|----------|
+| **Sean Mullan** | Oracle | 安全架构、JEP 332 (TLS 1.3) |
+| **Brad Wetmore** | Oracle | JSSE (TLS/SSL) 实现 |
+| **Xuelei Fan** | Oracle | TLS 1.3、密码学算法 |
+
+### 国际化
+
+| 贡献者 | 公司 | 主要贡献 |
+|--------|------|----------|
+| **Naoto Sato** | Oracle | Unicode 支持、CLDR 集成 |
+| **Brian Beckhoff** | Oracle | ResourceBundle、格式化 |
+
+---
+
+## 内部开发者资源
+
+### 源码结构
+
+```
+src/java.base/share/classes/java/security/
+├── MessageDigest.java           # 消息摘要
+├── Signature.java               # 数字签名
+├── Cipher.java                  # 加密/解密
+├── KeyStore.java                # 密钥存储
+└── cert/                        # 证书处理
+
+src/java.base/share/classes/javax/crypto/
+├── Cipher.java                  # 密码学引擎
+├── SecretKeyFactory.java        # 密钥工厂
+└── interfaces/                  # 密码学接口
+
+src/java.base/share/classes/com/sun/crypto/  # 内部实现
+src/java.base/share/classes/sun/security/    # 安全提供者
+├── provider/
+│   ├── SunProvider.java        # 默认安全提供者
+│   └── NativeP11.java           # PKCS#11 实现
+├── ssl/                         # TLS/SSL 实现
+│   ├── ServerContext.java
+│   └── ClientContext.java
+└── x509/                        # X.509 证书
+
+src/java.base/share/classes/java/util/
+├── Locale.java                  # 地区设置
+├── ResourceBundle.java          # 资源包
+├── Currency.java                # 货币
+└── calendar/                    # 日历
+
+src/java.base/share/classes/sun/util/locale/  # 内部国际化
+├── LocaleProviderAdapter.java
+└── cldr/                        # CLDR 数据
+```
+
+### 关键内部类
+
+| 类 | 作用 | 访问级别 |
+|---|------|----------|
+| `sun.security.ssl.SSLContextImpl` | TLS 上下文实现 | 内部 |
+| `sun.security.provider.Sun` | 默认安全提供者 | 内部 |
+| `sun.security.util.SecurityProviderConstants` | 安全常量 | 内部 |
+| `jdk.internal.misc.Cleaner` | 用于密钥清理 | `@Restricted` |
+
+### VM 参数速查
+
+```bash
+# TLS/SSL
+-Djdk.tls.client.protocols=TLSv1.3,TLSv1.2  # 启用的协议
+-Djdk.tls.server.cipherSuites=TLS_AES_256_GCM_SHA384  # 密码套件
+-Djavax.net.ssl.trustStore=/path/to/cacerts  # 信任库
+-Djavax.net.ssl.keyStore=/path/to/keystore  # 密钥库
+-Djavax.net.debug=ssl,handshake             # SSL 调试
+
+# 安全提供者
+-Djava.security.policy=/path/to/policy      # 安全策略
+-Djava.security.debug=access,failure        # 安全调试
+
+# 密码学
+-Djdk.crypto.KeyAgreement.legacyKDF=true     # 兼容旧版 KDF
+
+# 国际化
+-Duser.language=en                          # 语言
+-Duser.country=US                            # 国家
+-Duser.timezone=America/New_York            # 时区
+-Djava.locale.providers=CLDR,SPI            # 本地化提供者
+```
+
+### 诊断工具
+
+```bash
+# 列出所有密码算法
+java -XshowSettings:properties -version 2>&1 | grep security
+
+# 列出所有 SSL/TLS 协议
+java -Djdk.tls.server.protocols=TLSv1.3,TLSv1.2 -Djavax.net.debug=ssl -version
+
+# 测试密钥库
+keytool -list -v -keystore $JAVA_HOME/lib/security/cacerts
+
+# 检查默认 Locale
+java -Duser.language=zh -Duser.country=CN -XshowSettings:locale
+```
+
+---
+
+## 统计数据
+
+| 指标 | 数值 |
+|------|------|
+| 安全 JEP (JDK 8-26) | 15+ |
+| TLS 协议支持 | TLS 1.2, 1.3 |
+| 密码算法 | 100+ |
+| Locale 数量 | 150+ |
 
 ---
 

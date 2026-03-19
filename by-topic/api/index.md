@@ -4,6 +4,29 @@
 
 ---
 
+## 演进概览
+
+```
+JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 11 ─── JDK 22 ─── JDK 26
+   │           │           │            │            │           │
+ 集合框架    泛型       Stream      HTTP Client  Foreign     Stream
+ I/O流      EnumSet/Map Optional    标准化      Memory API   Gatherers
+ Date       NIO        java.time    Collections  Panama      (正式)
+```
+
+### 版本里程碑
+
+| 版本 | 主题 | 关键特性 |
+|------|------|----------|
+| **JDK 1.2** | 集合框架 | Collections Framework 引入 |
+| **JDK 5** | 类型安全 | 泛型、EnumSet/EnumMap、并发集合 |
+| **JDK 8** | 函数式 API | Stream API、Optional、java.time |
+| **JDK 11** | HTTP 标准化 | HTTP Client 正式版 |
+| **JDK 22** | 外部内存 | Foreign Memory API 正式 |
+| **JDK 26** | Stream 增强 | Stream Gatherers 正式 |
+
+---
+
 ## 主题列表
 
 ### [集合框架](collections/)
@@ -113,6 +136,109 @@ XML 和 JSON 处理从 DOM 到现代 API 的演进。
 | JDK 21 | 模式匹配异常 | instanceof with pattern |
 
 → [异常处理时间线](exceptions/timeline.md)
+
+---
+
+## 核心贡献者
+
+### 集合框架
+
+| 贡献者 | 公司/机构 | 主要贡献 |
+|--------|----------|----------|
+| **Joshua Bloch** | Google/Sun | Collections Framework 设计 |
+| **Doug Lea** | SUNY Oswego | 并发集合、ConcurrentHashMap |
+| **Guy Steele** | Oracle | Stream API (JEP 107) |
+
+### 日期时间
+
+| 贡献者 | 公司 | 主要贡献 |
+|--------|------|----------|
+| **Stephen Colebourne** | | JSR-310 (java.time) 规范负责人 |
+| **Michael Nascimento** | | ThreeTen Extra 扩展库 |
+
+### Foreign Memory API
+
+| 贡献者 | 公司 | 主要贡献 |
+|--------|------|----------|
+| **Maurizio Cimadamore** | Oracle | Panama/Foreign Memory (JEP 454) |
+| **Vladimir Ivanov** | Oracle | JIT 优化、Foreign 接口 |
+
+---
+
+## 内部开发者资源
+
+### 源码结构
+
+```
+src/java.base/share/classes/java/util/
+├── ArrayList.java               # 数组列表
+├── HashMap.java                 # 哈希表
+├── ConcurrentHashMap.java       # 并发哈希表
+├── stream/                      # Stream API
+│   ├── Stream.java
+│   ├── Collectors.java
+│   └── Gatherer.java            # JDK 26
+└── zip/                         # ZIP 压缩
+
+src/java.base/share/classes/java/time/
+├── LocalDate.java               # 本地日期
+├── Instant.java                 # 时间戳
+├── ZonedDateTime.java           # 时区日期时间
+└── format/                      # 格式化
+
+src/java.base/share/classes/java/io/
+├── InputStream.java             # 输入流
+├── OutputStream.java            # 输出流
+├── BufferedReader.java          # 缓冲读取
+└── StringWriter.java            # 字符串写入
+
+src/java.base/share/classes/nio/
+├── ByteBuffer.java              # 字节缓冲区
+├── channels/                    # 通道
+├── file/                        # NIO.2 文件 API
+└── charset/                     # 字符集
+
+src/jdk.incubator.vector/        # Vector API (JDK 26 前)
+src/java.base/share/classes/jdk/internal/foreign/  # Foreign Memory 内部实现
+```
+
+### 关键内部类
+
+| 类 | 作用 | 访问级别 |
+|---|------|----------|
+| `java.util.ImmutableCollections` | 不可变集合内部实现 | 包级私有 |
+| `java.util.stream.Nodes` | Stream 中间节点 | 内部 |
+| `jdk.internal.misc.Cleaner` | 清理器 (替代 finalize) | `@Restricted` |
+| `jdk.internal.foreign.MemoryImpl` | Foreign Memory 实现 | 内部 |
+
+### VM 参数速查
+
+```bash
+# Stream API
+-Djava.util.stream.parallelism=8  # 并行流默认并行度
+
+# I/O
+-XX:MaxDirectMemorySize=512m     # 直接内存大小 (用于 NIO)
+-Dio.netty.leakDetection.level=simple # Netty 泄漏检测
+
+# 日期时间
+-Duser.timezone=Asia/Shanghai    # 默认时区
+-Djava.locale.providers=CLDR     # 使用 CLDR 本地化数据
+
+# Foreign Memory API
+-XX:MaxDirectMemorySize=1G       # 外部内存限制
+```
+
+---
+
+## 统计数据
+
+| 指标 | 数值 |
+|------|------|
+| 集合实现类 | 40+ |
+| Stream 操作符 | 50+ |
+| java.time 类 | 30+ |
+| I/O 实现类 | 60+ |
 
 ---
 
