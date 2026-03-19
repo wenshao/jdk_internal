@@ -86,44 +86,44 @@
 
 | 主题 | 链接 | 说明 |
 |------|------|------|
-| GC 演进 | [by-topic/gc/](../by-topic/gc/) | G1/ZGC/Shenandoah 时间线 |
-| 并发编程 | [by-topic/concurrency/](../by-topic/concurrency/) | Virtual Threads, Structured Concurrency |
-| 字符串处理 | [by-topic/string/](../by-topic/string/) | 字符串 API 演进 |
-| HTTP 客户端 | [by-topic/http/](../by-topic/http/) | HTTP Client, HTTP/3 |
-| 安全特性 | [by-topic/security/](../by-topic/security/) | 加密、认证、TLS |
+| GC 演进 | [by-topic/gc/](/by-topic/gc/) | G1/ZGC/Shenandoah 时间线 |
+| 并发编程 | [by-topic/concurrency/](/by-topic/concurrency/) | Virtual Threads, Structured Concurrency |
+| 字符串处理 | [by-topic/string/](/by-topic/string/) | 字符串 API 演进 |
+| HTTP 客户端 | [by-topic/http/](/by-topic/http/) | HTTP Client, HTTP/3 |
+| 安全特性 | [by-topic/security/](/by-topic/security/) | 加密、认证、TLS |
 
 ### 按贡献者浏览
 
 | 链接 | 说明 |
 |------|------|
-| [by-contributor/](../by-contributor/) | 贡献者索引 |
-| [JDK 26 Top 100](../by-contributor/profiles/jdk26-top-contributors.md) | JDK 26 贡献者排名 |
-| [中国贡献者](../by-contributor/profiles/chinese-contributors.md) | 中国开发者贡献 |
+| [by-contributor/](/by-contributor/) | 贡献者索引 |
+| [JDK 26 Top 100](/by-contributor/profiles/jdk26-top-contributors.md) | JDK 26 贡献者排名 |
+| [中国贡献者](/by-contributor/profiles/chinese-contributors.md) | 中国开发者贡献 |
 
 ### JEP 详细分析
 
 | JEP | 标题 | 链接 |
 |-----|------|------|
-| JEP 470 | PEM Encodings | [分析](../jeps/jep-470.md) |
-| JEP 514 | JEP 514: Ahead-of-Time Command Line Ergonomics | [分析](../jeps/jep-514.md) |
-| JEP 515 | JEP 515: Ahead-of-Time Method Profiling | [分析](../jeps/jep-515.md) |
-| JEP 517 | HTTP/3 for HTTP Client | [分析](../jeps/jep-517.md) |
-| JEP 518 | JFR Cooperative Sampling | [分析](../jeps/jep-518.md) |
-| JEP 519 | Compact Object Headers | [分析](../jeps/jep-519.md) |
-| JEP 520 | JFR Method Timing and Tracing | [分析](../jeps/jep-520.md) |
-| JEP 521 | Generational Shenandoah | [分析](../jeps/jep-521.md) |
-| JEP 525 | Structured Concurrency | [分析](../jeps/jep-525.md) |
-| JEP 526 | Lazy Constants | [分析](../jeps/jep-526.md) |
-| JEP 530 | Primitive Types in Patterns | [分析](../jeps/jep-530.md) |
+| JEP 470 | PEM Encodings | [分析](/jeps/jep-470.md) |
+| JEP 514 | JEP 514: Ahead-of-Time Command Line Ergonomics | [分析](/jeps/jep-514.md) |
+| JEP 515 | JEP 515: Ahead-of-Time Method Profiling | [分析](/jeps/jep-515.md) |
+| JEP 517 | HTTP/3 for HTTP Client | [分析](/jeps/jep-517.md) |
+| JEP 518 | JFR Cooperative Sampling | [分析](/jeps/jep-518.md) |
+| JEP 519 | Compact Object Headers | [分析](/jeps/jep-519.md) |
+| JEP 520 | JFR Method Timing and Tracing | [分析](/jeps/jep-520.md) |
+| JEP 521 | Generational Shenandoah | [分析](/jeps/jep-521.md) |
+| JEP 525 | Structured Concurrency | [分析](/jeps/jep-525.md) |
+| JEP 526 | Lazy Constants | [分析](/jeps/jep-526.md) |
+| JEP 530 | Primitive Types in Patterns | [分析](/jeps/jep-530.md) |
 
 ### PR/Issue 深度分析
 
 | 链接 | 说明 |
 |------|------|
-| [by-pr/](../by-pr/) | PR 索引 |
-| [by-pr/8355/](../by-pr/8355/) | JDK-8355xxx 系列 (核心库优化) |
-| [by-pr/8366/](../by-pr/8366/) | JDK-8366xxx 系列 (ClassFile API) |
-| [by-pr/8370/](../by-pr/8370/) | JDK-8370xxx 系列 (字符串优化) |
+| [by-pr/](/by-pr/) | PR 索引 |
+| [by-pr/8355/](/by-pr/8355/) | JDK-8355xxx 系列 (核心库优化) |
+| [by-pr/8366/](/by-pr/8366/) | JDK-8366xxx 系列 (ClassFile API) |
+| [by-pr/8370/](/by-pr/8370/) | JDK-8370xxx 系列 (字符串优化) |
 
 ---
 

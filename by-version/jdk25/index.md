@@ -12,7 +12,7 @@
 | 我想了解 | 链接 |
 |---------|------|
 | 所有 JEP 详细列表 | [JEP 汇总](./jeps.md) |
-| 重要 PR 分析 | [Top 50 Commits](/prs/jdk25-top-prs.md) |
+| 重要 PR 分析 | Top 50 Commits |
 | 深度技术分析 | [深度分析文档](./deep-dive/) |
 | 如何试用 | [快速开始](#快速开始) |
 | 从 JDK 21 升级 | [迁移指南](./migration/from-21.md) |
@@ -111,35 +111,35 @@ void main() {
 
 | JEP | 标题 | 状态 | 描述 |
 |-----|------|------|------|
-| [JEP 455](/jeps/jep-455.md) | Primitive Types in Patterns | 🔍 预览 | 模式匹配支持原始类型 |
-| [JEP 469](/jeps/jep-469.md) | Implicit Classes and Instance Main Methods | 🔍 预览 | 隐式类 (第4次) |
-| [JEP 466](/jeps/jep-466.md) | Class-File API (Second Preview) | 🔍 预览 | 类文件 API |
-| [JEP 454](/jeps/jep-454.md) | Foreign Function & Memory API | ✅ 正式 | FFM API 正式版 |
-| [JEP 444](/jeps/jep-444.md) | Virtual Threads | ✅ 正式 | 虚拟线程正式版 |
-| [JEP 430](/jeps/jep-430.md) | String Templates | ✅ 正式 | 字符串模板 |
+| JEP 455 | Primitive Types in Patterns | 🔍 预览 | 模式匹配支持原始类型 |
+| JEP 469 | Implicit Classes and Instance Main Methods | 🔍 预览 | 隐式类 (第4次) |
+| JEP 466 | Class-File API (Second Preview) | 🔍 预览 | 类文件 API |
+| JEP 454 | Foreign Function & Memory API | ✅ 正式 | FFM API 正式版 |
+| JEP 444 | Virtual Threads | ✅ 正式 | 虚拟线程正式版 |
+| JEP 430 | String Templates | ✅ 正式 | 字符串模板 |
 
 ### 性能
 
 | JEP | 标题 | 影响 | 描述 |
 |-----|------|------|------|
-| [JEP 468](/jeps/jep-468.md) | Generational ZGC | 🚀 大幅提升 | 分代 ZGC |
-| [JEP 462](/jeps/jep-462.md) | Structured Concurrency | 🔍 预览 | 结构化并发 (第5次) |
-| [JEP 448](/jeps/jep-448.md) | JVM Code Heap | 🚀 启动优化 | 代码堆分段 |
-| [JEP 449](/jeps/jep-449.md) | Barrier-Based C2 | 🚀 吞吐量 | C2 编译器优化 |
+| JEP 468 | Generational ZGC | 🚀 大幅提升 | 分代 ZGC |
+| JEP 462 | Structured Concurrency | 🔍 预览 | 结构化并发 (第5次) |
+| JEP 448 | JVM Code Heap | 🚀 启动优化 | 代码堆分段 |
+| JEP 449 | Barrier-Based C2 | 🚀 吞吐量 | C2 编译器优化 |
 
 ### 并发
 
 | JEP | 标题 | 状态 | 描述 |
 |-----|------|------|------|
-| [JEP 462](/jeps/jep-462.md) | Structured Concurrency | 🔍 预览 | 结构化并发 (第5次) |
-| [JEP 467](/jeps/jep-467.md) | Scoped Values | 🔍 预览 | 作用域值 (第3次) |
+| JEP 462 | Structured Concurrency | 🔍 预览 | 结构化并发 (第5次) |
+| JEP 467 | Scoped Values | 🔍 预览 | 作用域值 (第3次) |
 
 ### 安全
 
 | JEP | 标题 | 状态 | 描述 |
 |-----|------|------|------|
-| [JEP 451](/jeps/jep-451.md) | Prepare to Restrict Dynamic Loading | ⚠️ 废弃 | 动态加载限制 |
-| [JEP 452](/jeps/jep-452.md) | Key Encapsulation Mechanism API | ✅ 正式 | KEM API |
+| JEP 451 | Prepare to Restrict Dynamic Loading | ⚠️ 废弃 | 动态加载限制 |
+| JEP 452 | Key Encapsulation Mechanism API | ✅ 正式 | KEM API |
 
 > 图例: ✅ 正式发布 | 🔍 预览特性 (需要 `--enable-preview`) | 🚀 性能提升 | ⚠️ 废弃/移除
 
@@ -302,6 +302,6 @@ java --enable-preview MyApp
 ## 更多阅读
 
 - [JDK 25 JEP 汇总](./jeps.md) - 所有 JEP 详细列表
-- [Top 50 Commits](/prs/jdk25-top-prs.md) - 重要的代码变更
+- Top 50 Commits - 重要的代码变更
 - [按主题浏览](/by-topic/) - 跨版本追踪技术演进
 - [按贡献者浏览](/by-contributor/) - 了解贡献者和他们的工作
