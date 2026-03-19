@@ -11,8 +11,8 @@
 | [统计概览](stats/overview.md) | 总体数据、年度趋势、组织分布 |
 | [Top 50 贡献者](stats/top50.md) | 历史贡献排名 |
 | [按领域分类](stats/by-domain.md) | GC、编译器、核心库等 |
-| [中国贡献者](chinese-contributors.md) | 中国开发者专题 |
 | [按组织分类](#按组织) | Oracle、Red Hat、SAP 等 |
+| [中国贡献者](chinese-contributors.md) | 中国开发者专题 |
 
 ---
 
@@ -64,8 +64,6 @@ OpenJDK 贡献者生态 (2007-2026)
 
 ## 按组织
 
-### 国际企业
-
 | 组织 | Commits | 占比 | 主要领域 | 详情 |
 |------|---------|------|----------|------|
 | [Oracle](orgs/oracle.md) | 60,000+ | 70%+ | 全领域 | [查看详情](orgs/oracle.md) |
@@ -74,41 +72,10 @@ OpenJDK 贡献者生态 (2007-2026)
 | [IBM](orgs/ibm.md) | 1,500+ | ~2% | JVM, 测试 | [查看详情](orgs/ibm.md) |
 | [Amazon](orgs/amazon.md) | 1,000+ | ~1% | AArch64, 编译器 | [查看详情](orgs/amazon.md) |
 | [Google](orgs/google.md) | 800+ | ~1% | 核心库, 编译器 | [查看详情](orgs/google.md) |
-
-### 中国企业
-
-| 组织 | Commits | 主要领域 | 详情 |
-|------|---------|----------|------|
-| [阿里巴巴](orgs/alibaba.md) | 72 | 核心库优化 | [查看详情](orgs/alibaba.md) |
-| [腾讯](orgs/tencent.md) | 44 | G1 GC, 容器 | [查看详情](orgs/tencent.md) |
-| [龙芯](orgs/loongson.md) | 52 | LoongArch | [查看详情](orgs/loongson.md) |
-| [字节跳动](orgs/bytedance.md) | 12 | RISC-V | [查看详情](orgs/bytedance.md) |
-| [海光](orgs/chinese-enterprises.md#海光-hygon) | 60+ | 测试稳定性 | [查看详情](orgs/chinese-enterprises.md) |
-
----
-
-## 中国贡献者
-
-### Oracle 中国团队
-
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| Weijun Wang | 954 | 安全/工具 |
-| [Albert Mingkun Yang](albert-mingkun-yang.md) | 747 | GC |
-| Sundararajan Athijegannathan | 689 | Nashorn |
-| Zhengyu Gu | 582 | GC |
-| Naoto Sato | 569 | 国际化 |
-
-### 企业贡献者
-
-| 组织 | Commits | 主要贡献者 |
-|------|---------|-----------|
-| [阿里巴巴](orgs/alibaba.md) | 72 | Shaojin Wen, Kuai Wei |
-| [腾讯](orgs/tencent.md) | 44 | Bob Peng Xie, Tongbao Zhang |
-| [字节跳动](orgs/bytedance.md) | 12 | Anjian Wen |
-| 龙芯 | 40+ | sunguoyun, Ao Qi |
-
-👉 [查看完整列表](chinese-contributors.md)
+| [阿里巴巴](orgs/alibaba.md) | 72 | <1% | 核心库优化 | [查看详情](orgs/alibaba.md) |
+| [龙芯](orgs/loongson.md) | 52 | <1% | LoongArch | [查看详情](orgs/loongson.md) |
+| [腾讯](orgs/tencent.md) | 44 | <1% | G1 GC, 容器 | [查看详情](orgs/tencent.md) |
+| [字节跳动](orgs/bytedance.md) | 12 | <1% | RISC-V | [查看详情](orgs/bytedance.md) |
 
 ---
 
