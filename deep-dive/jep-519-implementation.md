@@ -376,5 +376,5 @@ GC 暂停时间对比:
 
 ## 7. 相关链接
 
-- [JEP 519: Compact Object Headers](../jeps/jep-519.md)
+- [JEP 519: Compact Object Headers](/jeps/jep-519.md)
 - [源码浏览](https://github.com/openjdk/jdk/tree/master/src/hotspot/share/oops)

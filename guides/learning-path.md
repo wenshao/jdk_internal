@@ -13,16 +13,16 @@
 **推荐路径** (约 2 小时):
 
 ```
-1. [JEP 512: Compact Source Files](../jeps/jep-512.md)
+1. [JEP 512: Compact Source Files](/jeps/jep-512.md)
    └── 学习如何用最少的代码写 Java 程序
    
-2. [JEP 511: Module Import Declarations](../jeps/jep-511.md)
+2. [JEP 511: Module Import Declarations](/jeps/jep-511.md)
    └── 学习如何简化 import 语句
    
-3. [JEP 530: Primitive Types in Patterns](../jeps/jep-530.md)
+3. [JEP 530: Primitive Types in Patterns](/jeps/jep-530.md)
    └── 学习模式匹配的新用法
    
-4. [JEP 526: Lazy Constants](../jeps/jep-526.md)
+4. [JEP 526: Lazy Constants](/jeps/jep-526.md)
    └── 了解延迟初始化的概念
 ```
 
@@ -50,17 +50,17 @@ void main() {
 
 ```
 核心特性
-├── [JEP 511: Module Import Declarations](../jeps/jep-511.md)
-├── [JEP 502: Stable Values](../jeps/jep-502.md)
-├── [JEP 506: Scoped Values](../jeps/jep-506.md)
-└── [JEP 525: Structured Concurrency](../jeps/jep-525.md)
+├── [JEP 511: Module Import Declarations](/jeps/jep-511.md)
+├── [JEP 502: Stable Values](/jeps/jep-502.md)
+├── [JEP 506: Scoped Values](/jeps/jep-506.md)
+└── [JEP 525: Structured Concurrency](/jeps/jep-525.md)
 
 网络编程
-└── [JEP 517: HTTP/3](../jeps/jep-517.md)
+└── [JEP 517: HTTP/3](/jeps/jep-517.md)
 
 安全编程
-├── [JEP 510: KDF API](../jeps/jep-510.md)
-└── [JEP 470: PEM Encodings](../jeps/jep-470.md)
+├── [JEP 510: KDF API](/jeps/jep-510.md)
+└── [JEP 470: PEM Encodings](/jeps/jep-470.md)
 ```
 
 **实用代码示例**:
@@ -100,22 +100,22 @@ HttpClient client = HttpClient.newBuilder()
 
 ```
 架构影响评估
-├── [JEP 500: Make Final Mean Final](../jeps/jep-500.md) - 安全影响
-├── [JEP 503: Remove 32-bit x86](../jeps/jep-503.md) - 平台支持
-├── [JEP 504: Remove Applet API](../jeps/jep-504.md) - 遗留系统
+├── [JEP 500: Make Final Mean Final](/jeps/jep-500.md) - 安全影响
+├── [JEP 503: Remove 32-bit x86](/jeps/jep-503.md) - 平台支持
+├── [JEP 504: Remove Applet API](/jeps/jep-504.md) - 遗留系统
 └── [迁移指南](migration-guide.md) - 升级策略
 
 性能优化
-├── [JEP 522: G1 GC Throughput](../jeps/jep-522.md)
-├── [JEP 521: Generational Shenandoah](../jeps/jep-521.md)
-├── [JEP 519: Compact Object Headers](../jeps/jep-519.md)
-├── [JEP 514: AOT Ergonomics](../jeps/jep-514.md)
-└── [JEP 515: AOT Method Profiling](../jeps/jep-515.md)
+├── [JEP 522: G1 GC Throughput](/jeps/jep-522.md)
+├── [JEP 521: Generational Shenandoah](/jeps/jep-521.md)
+├── [JEP 519: Compact Object Headers](/jeps/jep-519.md)
+├── [JEP 514: AOT Ergonomics](/jeps/jep-514.md)
+└── [JEP 515: AOT Method Profiling](/jeps/jep-515.md)
 
 监控与诊断
-├── [JEP 509: JFR CPU-Time Profiling](../jeps/jep-509.md)
-├── [JEP 518: JFR Cooperative Sampling](../jeps/jep-518.md)
-└── [JEP 520: JFR Method Timing](../jeps/jep-520.md)
+├── [JEP 509: JFR CPU-Time Profiling](/jeps/jep-509.md)
+├── [JEP 518: JFR Cooperative Sampling](/jeps/jep-518.md)
+└── [JEP 520: JFR Method Timing](/jeps/jep-520.md)
 ```
 
 **决策矩阵**:
@@ -137,15 +137,15 @@ HttpClient client = HttpClient.newBuilder()
 
 ```
 性能调优
-├── [JEP 522: G1 GC Throughput](../jeps/jep-522.md)
-├── [JEP 521: Generational Shenandoah](../jeps/jep-521.md)
-├── [JEP 519: Compact Object Headers](../jeps/jep-519.md)
+├── [JEP 522: G1 GC Throughput](/jeps/jep-522.md)
+├── [JEP 521: Generational Shenandoah](/jeps/jep-521.md)
+├── [JEP 519: Compact Object Headers](/jeps/jep-519.md)
 └── [速查表](cheat-sheet.md) - JVM 参数
 
 监控诊断
-├── [JEP 509: JFR CPU-Time Profiling](../jeps/jep-509.md)
-├── [JEP 518: JFR Cooperative Sampling](../jeps/jep-518.md)
-└── [JEP 520: JFR Method Timing](../jeps/jep-520.md)
+├── [JEP 509: JFR CPU-Time Profiling](/jeps/jep-509.md)
+├── [JEP 518: JFR Cooperative Sampling](/jeps/jep-518.md)
+└── [JEP 520: JFR Method Timing](/jeps/jep-520.md)
 ```
 
 **关键配置**:
@@ -174,9 +174,9 @@ HttpClient client = HttpClient.newBuilder()
 
 ```
 测试相关
-├── [JEP 500: Make Final Mean Final](../jeps/jep-500.md) - 反射测试影响
-├── [JEP 506: Scoped Values](../jeps/jep-506.md) - 测试上下文传递
-└── [JEP 525: Structured Concurrency](../jeps/jep-525.md) - 并发测试
+├── [JEP 500: Make Final Mean Final](/jeps/jep-500.md) - 反射测试影响
+├── [JEP 506: Scoped Values](/jeps/jep-506.md) - 测试上下文传递
+└── [JEP 525: Structured Concurrency](/jeps/jep-525.md) - 并发测试
 ```
 
 ---

@@ -170,10 +170,10 @@ Individual PR analysis documents:
 
 ## Related Resources
 
-- [Contributors](../contributors/) - Contributor profiles and statistics
-- [Guides](../guides/) - JDK development guides
-- [Issues](../issues/) - Issue analysis
-- [Deep Dive](../deep-dive/) - In-depth technical analysis
+- [Contributors](/by-contributor/) - Contributor profiles and statistics
+- [Guides](/guides/) - JDK development guides
+- [Issues](/issues/) - Issue analysis
+- [Deep Dive](/deep-dive/) - In-depth technical analysis
 
 ---
 

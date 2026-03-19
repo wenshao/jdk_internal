@@ -10,44 +10,44 @@
 |------|--------|---------|------|------|------|
 | 1 | David Katleman | 1,487 | 构建/发布 | Oracle | - |
 | 2 | Jonathan Gibbons | 1,320 | javac/工具 | Oracle | - |
-| 3 | [Aleksey Shipilev](../aleksey-shipilev.md) | 1,320 | Shenandoah GC | Red Hat | [详情](../aleksey-shipilev.md) |
-| 4 | [Phil Race](../phil-race.md) | 1,313 | 图形/打印 | Oracle | [详情](../phil-race.md) |
-| 5 | [Coleen Phillimore](../coleen-phillimore.md) | 1,209 | HotSpot VM | Oracle | [详情](../coleen-phillimore.md) |
+| 3 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 1,320 | Shenandoah GC | Red Hat | [详情](/by-contributor/profiles/aleksey-shipilev.md) |
+| 4 | [Phil Race](/by-contributor/profiles/phil-race.md) | 1,313 | 图形/打印 | Oracle | [详情](/by-contributor/profiles/phil-race.md) |
+| 5 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 1,209 | HotSpot VM | Oracle | [详情](/by-contributor/profiles/coleen-phillimore.md) |
 | 6 | Joe Darcy | 1,194 | 核心库 | Oracle | - |
-| 7 | [Thomas Schatzl](../thomas-schatzl.md) | 1,113 | G1 GC | Oracle | [详情](../thomas-schatzl.md) |
+| 7 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 1,113 | G1 GC | Oracle | [详情](/by-contributor/profiles/thomas-schatzl.md) |
 | 8 | Alejandro Murillo | 998 | HotSpot | Oracle | - |
 | 9 | Erik Joelsson | 956 | 构建系统 | Oracle | - |
 | 10 | Weijun Wang | 954 | 安全/工具 | Oracle 中国 | - |
 | 11 | Sergey Bylokhov | 953 | AWT/2D | Oracle | - |
 | 12 | Vladimir Kozlov | 942 | C2 编译器 | Oracle | - |
-| 13 | [Magnus Ihse Bursie](../magnus-ihse-bursie.md) | 925 | 构建系统 | Oracle | [详情](../magnus-ihse-bursie.md) |
+| 13 | [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md) | 925 | 构建系统 | Oracle | [详情](/by-contributor/profiles/magnus-ihse-bursie.md) |
 | 14 | Jesper Wilhelmsson | 912 | GC | Oracle | - |
 | 15 | Daniel D. Daugherty | 867 | HotSpot/测试 | Oracle | - |
 | 16 | Alan Bateman | 867 | 核心库/模块 | Oracle | - |
 | 17 | Chris Hegarty | 812 | 核心库/网络 | Oracle | - |
-| 18 | [Jan Lahoda](../jan-lahoda.md) | 785 | javac | Oracle | [详情](../jan-lahoda.md) |
-| 19 | [Brian Burkhalter](../brian-burkhalter.md) | 779 | NIO/网络 | Oracle | [详情](../brian-burkhalter.md) |
+| 18 | [Jan Lahoda](/by-contributor/profiles/jan-lahoda.md) | 785 | javac | Oracle | [详情](/by-contributor/profiles/jan-lahoda.md) |
+| 19 | [Brian Burkhalter](/by-contributor/profiles/brian-burkhalter.md) | 779 | NIO/网络 | Oracle | [详情](/by-contributor/profiles/brian-burkhalter.md) |
 | 20 | Prasanta Sadhukhan | 772 | Swing/AWT | Oracle | - |
-| 21 | [Albert Mingkun Yang](../albert-mingkun-yang.md) | 747 | GC | Oracle 中国 | [详情](../albert-mingkun-yang.md) |
-| 22 | [Matthias Baesken](../matthias-baesken.md) | 742 | 构建系统 | SAP | [详情](../matthias-baesken.md) |
-| 23 | [David Holmes](../david-holmes.md) | 720 | 线程/并发 | Oracle | [详情](../david-holmes.md) |
+| 21 | [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) | 747 | GC | Oracle 中国 | [详情](/by-contributor/profiles/albert-mingkun-yang.md) |
+| 22 | [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | 742 | 构建系统 | SAP | [详情](/by-contributor/profiles/matthias-baesken.md) |
+| 23 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 720 | 线程/并发 | Oracle | [详情](/by-contributor/profiles/david-holmes.md) |
 | 24 | Stefan Karlsson | 692 | ZGC | Oracle | - |
 | 25 | Sundararajan Athijegannathan | 689 | Nashorn | Oracle 中国 | - |
 | 26 | Claes Redestad | 688 | 核心库/性能 | Oracle | - |
 | 27 | Mandy Chung | 687 | 模块系统 | Oracle | - |
-| 28 | [Kim Barrett](../kim-barrett.md) | 680 | GC/并发 | Oracle | [详情](../kim-barrett.md) |
+| 28 | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | 680 | GC/并发 | Oracle | [详情](/by-contributor/profiles/kim-barrett.md) |
 | 29 | Roland Westrelin | 676 | C2 编译器 | Red Hat | - |
 | 30 | Igor Ignatyev | 673 | 测试 | Oracle | - |
 | 31 | Maurizio Cimadamore | 670 | 语言特性 | Oracle | - |
-| 32 | [Ioi Lam](../ioi-lam.md) | 661 | CDS/AOT | Oracle | [详情](../ioi-lam.md) |
+| 32 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 661 | CDS/AOT | Oracle | [详情](/by-contributor/profiles/ioi-lam.md) |
 | 33 | Zhengyu Gu | 582 | G1 GC | Oracle 中国 | - |
 | 34 | Naoto Sato | 569 | 国际化 | Oracle 中国 | - |
 | 35 | Tobias Hartmann | 563 | Graal | Oracle | - |
 | 36 | Hannes Wallnöfer | 550 | Nashorn | Oracle | - |
 | 37 | Thomas Stuefe | 548 | HotSpot | SAP | - |
 | 38 | Kelly O'Hair | 523 | 构建系统 | Oracle | - |
-| 39 | [Daniel Fuchs](../daniel-fuchs.md) | 492 | HTTP/JMX | Oracle | [详情](../daniel-fuchs.md) |
-| 40 | [Erik Gahlin](../erik-gahlin.md) | 481 | JFR | Oracle | [详情](../erik-gahlin.md) |
+| 39 | [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | 492 | HTTP/JMX | Oracle | [详情](/by-contributor/profiles/daniel-fuchs.md) |
+| 40 | [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | 481 | JFR | Oracle | [详情](/by-contributor/profiles/erik-gahlin.md) |
 | 41 | Vicente Romero | 480 | javac | Oracle | - |
 | 42 | Roger Riggs | 461 | 核心库 | Oracle | - |
 | 43 | Tom Rodriguez | 460 | Graal | Oracle | - |

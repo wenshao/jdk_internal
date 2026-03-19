@@ -31,7 +31,7 @@ CMS 废弃        Shenandoah     Windows       JEP 379       JEP 439       JEP 5
 | JDK 21 | Region 固定 | 降低延迟 |
 | JDK 26 | **吞吐量提升** (JEP 522) | +10-20% 吞吐量 |
 
-→ [JDK 26 G1 优化](../../by-version/jdk26/#g1-吞吐量提升)
+→ [JDK 26 G1 优化](/by-version/jdk26/index.md#g1-吞吐量提升)
 
 ---
 

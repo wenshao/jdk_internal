@@ -150,6 +150,6 @@ try (var __ = ScopedValue.where(CURRENT_USER, user).bind()) {
 ## 相关链接
 
 - [虚拟线程文档](https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html)
-- [Structured Concurrency](../../by-version/jdk26/deep-dive/structured-concurrency.md)
+- [Structured Concurrency](/by-version/jdk26/deep-dive/structured-concurrency.md)
 - [JEP 444: Virtual Threads](https://openjdk.org/jeps/444)
 - [JEP 453: Structured Concurrency (Preview)](https://openjdk.org/jeps/453)

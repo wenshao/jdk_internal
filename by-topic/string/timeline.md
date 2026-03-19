@@ -183,4 +183,4 @@ if (Objects.equals(str1, str2)) { }
 
 - [Compact Strings JEP](https://openjdk.org/jeps/254)
 - [String Templates JEP](https://openjdk.org/jeps/430)
-- [StringBuilder 源码分析](../../by-version/jdk26/deep-dive/)
+- [StringBuilder 源码分析](/by-version/jdk26/deep-dive/)

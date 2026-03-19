@@ -10,15 +10,15 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Aleksey Shipilev](../aleksey-shipilev.md) | 1,320 | Red Hat |
-| [William Kemper](../william-kemper.md) | 34 | Red Hat |
+| [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 1,320 | Red Hat |
+| [William Kemper](/by-contributor/profiles/william-kemper.md) | 34 | Red Hat |
 
 ### G1 GC
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Thomas Schatzl](../thomas-schatzl.md) | 1,113 | Oracle |
-| [Albert Mingkun Yang](../albert-mingkun-yang.md) | 747 | Oracle |
+| [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 1,113 | Oracle |
+| [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) | 747 | Oracle |
 | Zhengyu Gu | 582 | Oracle |
 
 ### ZGC
@@ -31,7 +31,7 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Kim Barrett](../kim-barrett.md) | 680 | Oracle |
+| [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | 680 | Oracle |
 
 ---
 
@@ -43,7 +43,7 @@
 |--------|---------|------|
 | Vladimir Kozlov | 942 | Oracle |
 | Roland Westrelin | 676 | Red Hat |
-| [Emanuel Peter](../emanuel-peter.md) | 42 | Oracle |
+| [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 42 | Oracle |
 
 ### Graal
 
@@ -70,7 +70,7 @@
 |--------|---------|------|
 | Joe Darcy | 1,194 | Oracle |
 | Claes Redestad | 688 | Oracle |
-| [Shaojin Wen](../shaojin-wen.md) | 27 | 阿里巴巴 |
+| [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 27 | 阿里巴巴 |
 
 ### 模块系统
 
@@ -85,13 +85,13 @@
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
 | Roger Riggs | 461 | Oracle |
-| [Chen Liang](../chen-liang.md) | 36 | Oracle |
+| [Chen Liang](/by-contributor/profiles/chen-liang.md) | 36 | Oracle |
 
 ### ClassFile API
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Chen Liang](../chen-liang.md) | 36 | Oracle |
+| [Chen Liang](/by-contributor/profiles/chen-liang.md) | 36 | Oracle |
 | Adam Sotona | 100+ | Oracle |
 
 ---
@@ -101,7 +101,7 @@
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
 | Jonathan Gibbons | 1,320 | Oracle |
-| [Jan Lahoda](../jan-lahoda.md) | 785 | Oracle |
+| [Jan Lahoda](/by-contributor/profiles/jan-lahoda.md) | 785 | Oracle |
 | Maurizio Cimadamore | 670 | Oracle |
 | Vicente Romero | 480 | Oracle |
 
@@ -113,8 +113,8 @@
 |--------|---------|------|
 | David Katleman | 1,487 | Oracle |
 | Erik Joelsson | 956 | Oracle |
-| [Magnus Ihse Bursie](../magnus-ihse-bursie.md) | 925 | Oracle |
-| [Matthias Baesken](../matthias-baesken.md) | 742 | SAP |
+| [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md) | 925 | Oracle |
+| [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | 742 | SAP |
 | Kelly O'Hair | 523 | Oracle |
 
 ---
@@ -148,15 +148,15 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Brian Burkhalter](../brian-burkhalter.md) | 779 | Oracle |
+| [Brian Burkhalter](/by-contributor/profiles/brian-burkhalter.md) | 779 | Oracle |
 | Chris Hegarty | 812 | Oracle |
 
 ### HTTP Client
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Daniel Fuchs](../daniel-fuchs.md) | 492 | Oracle |
-| [Jaikiran Pai](../jaikiran-pai.md) | 111 | Oracle |
+| [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | 492 | Oracle |
+| [Jaikiran Pai](/by-contributor/profiles/jaikiran-pai.md) | 111 | Oracle |
 
 ---
 
@@ -164,8 +164,8 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Coleen Phillimore](../coleen-phillimore.md) | 1,209 | Oracle |
-| [David Holmes](../david-holmes.md) | 720 | Oracle |
+| [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 1,209 | Oracle |
+| [David Holmes](/by-contributor/profiles/david-holmes.md) | 720 | Oracle |
 | Thomas Stuefe | 548 | SAP |
 | Chris Plummer | 437 | Oracle |
 
@@ -175,7 +175,7 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Erik Gahlin](../erik-gahlin.md) | 481 | Oracle |
+| [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | 481 | Oracle |
 
 ---
 
@@ -183,7 +183,7 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Ioi Lam](../ioi-lam.md) | 661 | Oracle |
+| [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 661 | Oracle |
 | Jiangli Zhou | 251 | Oracle |
 
 ---

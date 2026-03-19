@@ -249,6 +249,6 @@ HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
 ## 相关链接
 
 - [HTTP Client 文档](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html)
-- [HTTP/3 深度分析](../../by-version/jdk26/deep-dive/http3-implementation.md)
+- [HTTP/3 深度分析](/by-version/jdk26/deep-dive/http3-implementation.md)
 - [JEP 321: HTTP Client](https://openjdk.org/jeps/321)
 - [JEP 517: HTTP/3](https://openjdk.org/jeps/517)

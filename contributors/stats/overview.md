@@ -92,6 +92,6 @@
 ## 相关页面
 
 - [Top 50 贡献者](top50.md)
-- [中国贡献者](../chinese-contributors.md)
+- [中国贡献者](/by-contributor/profiles/chinese-contributors.md)
 - [按领域分类](by-domain.md)
 - [按组织分类](by-org.md)

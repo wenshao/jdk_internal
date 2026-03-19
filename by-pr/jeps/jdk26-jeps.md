@@ -39,7 +39,7 @@
 
 **内存影响**: 对象大小减少 4-8 字节
 
-**详细分析**: [deep-dive/jep-519-implementation.md](../../deep-dive/jep-519-implementation.md)
+**详细分析**: [deep-dive/jep-519-implementation.md](/deep-dive/jep-519-implementation.md)
 
 ---
 
@@ -92,7 +92,7 @@
 
 **性能影响**: 分配密集型工作负载暂停时间减少 40-60%
 
-**详细分析**: [prs/8370/jep521-generational-shenandoah.md](../8370/jep521-generational-shenandoah.md)
+**详细分析**: [prs/8370/jep521-generational-shenandoah.md](/prs/8370/jep521-generational-shenandoah.md)
 
 ---
 
@@ -111,7 +111,7 @@
 
 **性能影响**: 多核系统吞吐量提升 10-15%
 
-**详细分析**: [deep-dive/jep-522-implementation.md](../../deep-dive/jep-522-implementation.md)
+**详细分析**: [deep-dive/jep-522-implementation.md](/deep-dive/jep-522-implementation.md)
 
 ---
 
@@ -150,7 +150,7 @@
 
 **性能影响**: 高延迟连接性能提升 20-40%
 
-**详细分析**: [deep-dive/jep-517-implementation.md](../../deep-dive/jep-517-implementation.md)
+**详细分析**: [deep-dive/jep-517-implementation.md](/deep-dive/jep-517-implementation.md)
 
 ---
 
@@ -230,5 +230,5 @@
 
 - [OpenJDK JEP Index](https://openjdk.org/jeps/)
 - [JDK 26 JEP List](https://openjdk.org/projects/jdk/26/)
-- [组件分析](../components/) - GC、编译器、网络、安全
-- [Top PRs](../jdk26-top-prs.md) - 最重要的变更
+- [组件分析](/by-pr/components/) - GC、编译器、网络、安全
+- [Top PRs](/prs/jdk26-top-prs.md) - 最重要的变更
