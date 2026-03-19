@@ -1,0 +1,293 @@
+# JSR (Java Specification Request) 索引
+
+> Java 规范请求 - Java 平台正式规范文档
+
+---
+
+## 什么是 JSR？
+
+JSR (Java Specification Request) 是通过 **JCP (Java Community Process)** 提交和审批的 Java 平台规范请求。与 JEP 不同，JSR 是正式的规范文档，需要经过 JCP 执行委员会投票通过。
+
+---
+
+## JSR vs JEP 对比
+
+| 维度 | JSR | JEP |
+|------|-----|-----|
+| **组织** | JCP (Java Community Process) | OpenJDK |
+| **类型** | 规范 (Specification) | 实现 (Implementation) |
+| **审批** | JCP 执行委员会投票 | OpenJDK 项目组决定 |
+| **内容** | API 契约、语言语法 | 实现细节、性能、工具 |
+| **生命周期** | 独立版本 (JSR 335) | 绑定 JDK 版本 |
+| **示例** | Lambda (JSR 335) | Virtual Threads (JEP 444) |
+
+### 关系图
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    Java 平台演进                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│   JSR (规范)                    JEP (实现)                      │
+│   ┌──────────────┐              ┌──────────────┐                │
+│   │ JSR 335      │ ──────────► │ JEP 126      │                │
+│   │ Lambda       │   定义       │ 实现         │                │
+│   └──────────────┘              └──────────────┘                │
+│                                                                 │
+│   ┌──────────────┐              ┌──────────────┐                │
+│   │ JSR 376      │ ──────────► │ JEP 261      │                │
+│   │ 模块系统     │   定义       │ 模块实现     │                │
+│   └──────────────┘              └──────────────┘                │
+│                                                                 │
+│   ┌──────────────┐              ┌──────────────┐                │
+│   │ (无 JSR)     │ ◄────────── │ JEP 444      │                │
+│   │              │   纯实现     │ 虚拟线程     │                │
+│   └──────────────┘              └──────────────┘                │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### 何时需要 JSR？
+
+| 场景 | 需要 JSR | 只需 JEP |
+|------|----------|----------|
+| 新语言语法 | ✅ | ❌ |
+| 新 API | ✅ | ❌ |
+| JVM 内部优化 | ❌ | ✅ |
+| GC 改进 | ❌ | ✅ |
+| 工具改进 | ❌ | ✅ |
+| 性能优化 | ❌ | ✅ |
+
+---
+
+## 主题分类
+
+### 语言规范
+
+| JSR | 标题 | JDK | 状态 | 说明 |
+|-----|------|-----|------|------|
+| [JSR 335](language/jsr-335.md) | Lambda Expressions | 8 | ✅ Final | Lambda 表达式、Stream API |
+| [JSR 335](language/jsr-335.md) | Default Methods | 8 | ✅ Final | 接口默认方法 |
+| [JSR 308](language/jsr-308.md) | Type Annotations | 8 | ✅ Final | 类型注解 |
+| [JSR 310](api/jsr-310.md) | Date and Time API | 8 | ✅ Final | 日期时间 API |
+| [JSR 335](language/jsr-335.md) | Stream API | 8 | ✅ Final | 流式 API |
+| [JSR 376](platform/jsr-376.md) | Module System | 9 | ✅ Final | 模块系统 |
+| [JSR 379](platform/jsr-379.md) | Compact Profiles | 8 | ✅ Final | 紧凑配置 |
+| [JSR 394](language/jsr-394.md) | Pattern Matching for instanceof | 16 | ✅ Final | 类型模式匹配 |
+| [JSR 395](language/jsr-395.md) | Records | 16 | ✅ Final | 记录类 |
+| [JSR 397](language/jsr-397.md) | Sealed Classes | 17 | ✅ Final | 密封类 |
+| [JSR 398](language/jsr-398.md) | Pattern Matching for switch | 21 | ✅ Final | switch 模式匹配 |
+| [JSR 409](language/jsr-409.md) | Value Types | TBD | 🚧 Draft | 值类型 (未完成) |
+
+### API 规范
+
+| JSR | 标题 | JDK | 状态 | 说明 |
+|-----|------|-----|------|------|
+| [JSR 166](api/jsr-166.md) | Concurrency Utilities | 5 | ✅ Final | 并发工具 |
+| [JSR 203](api/jsr-203.md) | NIO.2 | 7 | ✅ Final | 新 I/O API |
+| [JSR 310](api/jsr-310.md) | Date and Time API | 8 | ✅ Final | 日期时间 |
+| [JSR 337](api/jsr-337.md) | Java EE Connector | 6 | ✅ Final | 连接器 |
+| [JSR 353](api/jsr-353.md) | JSON Processing | 8 | ✅ Final | JSON 处理 |
+| [JSR 354](api/jsr-354.md) | Money and Currency | 9 | ✅ Final | 货币 API |
+| [JSR 366](api/jsr-366.md) | HTTP Client | 11 | ✅ Final | HTTP 客户端 |
+| [JSR 380](api/jsr-380.md) | Bean Validation 2.0 | 8 | ✅ Final | Bean 验证 |
+
+### 平台规范
+
+| JSR | 标题 | 版本 | 状态 | 说明 |
+|-----|------|------|------|------|
+| [JSR 376](platform/jsr-376.md) | Java SE 9 Platform | 9 | ✅ Final | Java SE 9 平台 |
+| [JSR 383](platform/jsr-383.md) | Java SE 11 Platform | 11 | ✅ Final | Java SE 11 平台 |
+| [JSR 384](platform/jsr-384.md) | Java SE 17 Platform | 17 | ✅ Final | Java SE 17 平台 |
+| [JSR 396](platform/jsr-396.md) | Java SE 21 Platform | 21 | ✅ Final | Java SE 21 平台 |
+| [JSR 400](platform/jsr-400.md) | Java SE 25 Platform | 25 | ✅ Final | Java SE 25 平台 |
+
+---
+
+## JSR 生命周期
+
+```
+┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐
+│  Draft   │───►│  Early   │───►│  Public  │───►│ Proposed │───►│  Final   │
+│ Review   │    │  Draft   │    │  Review  │    │  Final   │    │ Release  │
+└──────────┘    └──────────┘    └──────────┘    └──────────┘    └──────────┘
+     │               │               │               │               │
+   几周            1-3个月          30-90天         投票期          完成
+```
+
+### 状态说明
+
+| 状态 | 说明 |
+|------|------|
+| 📝 Draft | 草稿阶段 |
+| 🔍 Early Draft | 早期草案审查 |
+| 👁️ Public Review | 公开审查 |
+| 📊 Proposed Final | 提议最终草案 |
+| ✅ Final Release | 最终发布 |
+| ❌ Withdrawn | 撤回 |
+| 💤 Dormant | 休眠 |
+
+---
+
+## 重要 JSR 详解
+
+### JSR 335: Lambda Expressions (JDK 8)
+
+**最重要的语言特性 JSR 之一**
+
+```java
+// Lambda 表达式
+List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+names.stream()
+     .filter(s -> s.startsWith("A"))
+     .forEach(System.out::println);
+
+// 方法引用
+list.stream().map(String::toUpperCase)
+
+// 默认方法
+interface Collection {
+    default Stream<E> stream() { ... }
+}
+```
+
+**关联 JEP**: JEP 126
+
+**详见**: [JSR 335 分析](language/jsr-335.md)
+
+---
+
+### JSR 310: Date and Time API (JDK 8)
+
+**取代 Date 和 Calendar 的新日期时间 API**
+
+```java
+// 本地日期时间
+LocalDate date = LocalDate.of(2024, 3, 20);
+LocalTime time = LocalTime.of(10, 30);
+LocalDateTime dateTime = LocalDateTime.of(date, time);
+
+// 时区
+ZonedDateTime zoned = ZonedDateTime.of(dateTime, ZoneId.of("Asia/Shanghai"));
+
+// 时间段
+Duration duration = Duration.between(start, end);
+Period period = Period.between(date1, date2);
+
+// 格式化
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+String formatted = dateTime.format(formatter);
+```
+
+**详见**: [JSR 310 分析](api/jsr-310.md)
+
+---
+
+### JSR 376: Java Platform Module System (JDK 9)
+
+**模块系统的核心规范**
+
+```java
+// module-info.java
+module com.example.myapp {
+    requires java.sql;
+    requires transitive java.logging;
+    exports com.example.api;
+    opens com.example.internal to com.example.tests;
+}
+```
+
+**关联 JEP**: JEP 261
+
+**详见**: [JSR 376 分析](platform/jsr-376.md)
+
+---
+
+### JSR 395: Records (JDK 16)
+
+**记录类的规范**
+
+```java
+// 记录类
+public record Point(int x, int y) {
+    // 自动生成: constructor, equals, hashCode, toString
+}
+
+// 使用
+Point p = new Point(10, 20);
+System.out.println(p.x());  // 10
+```
+
+**关联 JEP**: JEP 395
+
+**详见**: [JSR 395 分析](language/jsr-395.md)
+
+---
+
+### JSR 397: Sealed Classes (JDK 17)
+
+**密封类的规范**
+
+```java
+// 密封类
+public sealed class Shape 
+    permits Circle, Rectangle, Triangle {
+}
+
+public final class Circle extends Shape {
+    private final double radius;
+}
+
+public final class Rectangle extends Shape {
+    private final double width, height;
+}
+```
+
+**关联 JEP**: JEP 409
+
+**详见**: [JSR 397 分析](language/jsr-397.md)
+
+---
+
+## JSR 与 JEP 的协同
+
+### 同时有 JSR 和 JEP 的特性
+
+| 特性 | JSR | JEP | 关系 |
+|------|-----|-----|------|
+| Lambda | 335 | 126 | JSR 定义语法，JEP 实现编译器 |
+| 模块系统 | 376 | 261 | JSR 定义规范，JEP 实现 jlink |
+| Records | 395 | 395 | JSR 和 JEP 编号相同 |
+| Sealed Classes | 397 | 409 | 不同编号 |
+| Pattern Matching | 394, 398 | 394, 411 | 多个 JSR 和 JEP |
+
+### 只有 JEP 的特性
+
+这些特性不需要 JSR，因为它们不改变语言语法或 API 契约：
+
+| 特性 | JEP | 原因 |
+|------|-----|------|
+| Virtual Threads | 444 | API 不变，只是实现 |
+| ZGC | 333 | JVM 内部 |
+| String Templates | 430 | 语法糖 |
+| FFM API | 454 | 新 API (有争议) |
+
+---
+
+## 相关链接
+
+- [JCP 官网](https://jcp.org/)
+- [JSR 列表](https://jcp.org/en/jsr/all)
+- [OpenJDK JEPs](https://openjdk.org/jeps/)
+- [JEP 索引](/jeps/)
+- [语言特性时间线](/by-topic/language/)
+
+---
+
+## 参考
+
+- [JSR 335: Lambda Expressions](https://jcp.org/en/jsr/detail?id=335)
+- [JSR 310: Date and Time API](https://jcp.org/en/jsr/detail?id=310)
+- [JSR 376: Module System](https://jcp.org/en/jsr/detail?id=376)
+- [JSR 395: Records](https://jcp.org/en/jsr/detail?id=395)
+- [JSR 397: Sealed Classes](https://jcp.org/en/jsr/detail?id=397)

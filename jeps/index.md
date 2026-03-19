@@ -111,7 +111,22 @@ JEP (JDK Enhancement Proposals) 是 Java 平台新特性的设计和规范文档
 
 ---
 
-## 猉版本浏览
+## JSR 与 JEP
+
+许多重要特性同时有 JSR (规范) 和 JEP (实现)：
+
+| 特性 | JSR | JEP | 说明 |
+|------|-----|-----|------|
+| Lambda | [JSR 335](/jsr/language/jsr-335.md) | JEP 126 | JSR 定义语法， JEP 实现编译 |
+| Records | [JSR 395](/jsr/language/jsr-395.md) | JEP 395 | 同编号 |
+| Sealed Classes | [JSR 397](/jsr/language/jsr-397.md) | JEP 409 | 不同编号 |
+| 模块系统 | [JSR 376](/jsr/platform/jsr-376.md) | JEP 261 | JSR 定义规范， JEP 实现 |
+
+> **详见**: [JSR 索引](/jsr/)
+
+---
+
+## 按版本浏览
 
 - [JDK 21 JEPs](by-version/jdk21.md)
 - [JDK 22 JEPs](by-version/jdk22.md)
@@ -125,6 +140,7 @@ JEP (JDK Enhancement Proposals) 是 Java 平台新特性的设计和规范文档
 ## 相关链接
 
 - [OpenJDK JEP Index](https://openjdk.org/jeps/)
+- [JSR 索引](/jsr/)
 - [JDK 21 Features](https://openjdk.org/projects/jdk/21/)
 - [JDK 22 Features](https://openjdk.org/projects/jdk/22/)
 - [JDK 23 Features](https://openjdk.org/projects/jdk/23/)
