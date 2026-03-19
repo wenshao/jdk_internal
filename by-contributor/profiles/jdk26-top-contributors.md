@@ -14,105 +14,105 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 | Rank | Contributor | Organization | Commits | Primary Focus |
 |------|-------------|--------------|---------|---------------|
-| 1 | [Thomas Schatzl](./thomas-schatzl.md) | Oracle | 140 | G1 GC |
-| 2 | [Albert Mingkun Yang](./albert-mingkun-yang.md) | Oracle | 136 | GC, Parallel GC |
-| 3 | [Phil Race](./phil-race.md) | Oracle | 110 | Printing, Desktop |
-| 4 | [Matthias Baesken](./matthias-baesken.md) | Oracle | 105 | Build, Ports |
-| 5 | [Alexey Semenyuk](./alexey-semenyuk.md) | Oracle | 85 | jpackage |
-| 6 | [Aleksey Shipilev](./aleksey-shipilev.md) | Red Hat | 80 | Shenandoah, Performance |
-| 7 | [Ioi Lam](./ioi-lam.md) | Oracle | 76 | CDS, AOT |
-| 8 | [Kim Barrett](./kim-barrett.md) | Red Hat | 76 | GC, HotSpot |
-| 9 | [SendaoYan](./sendaoyan.md) | Oracle | 71 | Testing |
-| 10 | [Jaikiran Pai](./jaikiran-pai.md) | Oracle | 67 | Networking |
-| 11 | Francesco Andreuzzi | Oracle | 60 | Testing |
-| 12 | [Prasanta Sadhukhan](./prasanta-sadhukhan.md) | Oracle | 59 | Desktop |
-| 13 | [Chen Liang](./chen-liang.md) | Oracle | 59 | ClassFile API, Core |
-| 14 | Sergey Bylokhov | Oracle | 57 | Desktop |
-| 15 | [Erik Gahlin](./erik-gahlin.md) | Oracle | 57 | JFR |
-| 16 | [Brian Burkhalter](./brian-burkhalter.md) | Oracle | 53 | Networking |
-| 17 | Axel Boldt-Christmas | SAP | 52 | ZGC |
-| 18 | [David Holmes](./david-holmes.md) | Oracle | 50 | Threading |
+| 1 | [Thomas Schatzl](./thomas-schatzl.md) | [Oracle](https://www.oracle.com/java/) | 140 | G1 GC |
+| 2 | [Albert Mingkun Yang](./albert-mingkun-yang.md) | [Oracle](https://www.oracle.com/java/) | 136 | GC, Parallel GC |
+| 3 | [Phil Race](./phil-race.md) | [Oracle](https://www.oracle.com/java/) | 110 | Printing, Desktop |
+| 4 | [Matthias Baesken](./matthias-baesken.md) | [Oracle](https://www.oracle.com/java/) | 105 | Build, Ports |
+| 5 | [Alexey Semenyuk](./alexey-semenyuk.md) | [Oracle](https://www.oracle.com/java/) | 85 | jpackage |
+| 6 | [Aleksey Shipilev](./aleksey-shipilev.md) | [Red Hat](https://www.redhat.com/en/about/openjdk) | 80 | Shenandoah, Performance |
+| 7 | [Ioi Lam](./ioi-lam.md) | [Oracle](https://www.oracle.com/java/) | 76 | CDS, AOT |
+| 8 | [Kim Barrett](./kim-barrett.md) | [Red Hat](https://www.redhat.com/en/about/openjdk) | 76 | GC, HotSpot |
+| 9 | [SendaoYan](./sendaoyan.md) | [Oracle](https://www.oracle.com/java/) | 71 | Testing |
+| 10 | [Jaikiran Pai](./jaikiran-pai.md) | [Oracle](https://www.oracle.com/java/) | 67 | Networking |
+| 11 | Francesco Andreuzzi | [Oracle](https://www.oracle.com/java/) | 60 | Testing |
+| 12 | [Prasanta Sadhukhan](./prasanta-sadhukhan.md) | [Oracle](https://www.oracle.com/java/) | 59 | Desktop |
+| 13 | [Chen Liang](./chen-liang.md) | [Oracle](https://www.oracle.com/java/) | 59 | ClassFile API, Core |
+| 14 | Sergey Bylokhov | [Oracle](https://www.oracle.com/java/) | 57 | Desktop |
+| 15 | [Erik Gahlin](./erik-gahlin.md) | [Oracle](https://www.oracle.com/java/) | 57 | JFR |
+| 16 | [Brian Burkhalter](./brian-burkhalter.md) | [Oracle](https://www.oracle.com/java/) | 53 | Networking |
+| 17 | Axel Boldt-Christmas | [SAP](https://sap.github.io/SapMachine/) | 52 | ZGC |
+| 18 | [David Holmes](./david-holmes.md) | [Oracle](https://www.oracle.com/java/) | 50 | Threading |
 | 19 | [Emanuel Peter](./emanuel-peter.md) | Independent | 49 | C2 Compiler |
-| 20 | [Jan Lahoda](./jan-lahoda.md) | Oracle | 48 | javac |
-| 21 | [Daniel Fuchs](./daniel-fuchs.md) | Oracle | 47 | HTTP Client |
-| 22 | [Volkan Yazici](./volkan-yazici.md) | Oracle | 45 | HTTP Client |
-| 23 | Joel Sikström | Oracle | 44 | ZGC |
-| 24 | [Justin Lu](./justin-lu.md) | Oracle | 43 | Localization |
-| 25 | [William Kemper](./william-kemper.md) | Red Hat | 43 | Shenandoah |
-| 26 | Manuel Hässig | Oracle | 39 | Testing |
-| 27 | [Naoto Sato](./naoto-sato.md) | Oracle | 36 | i18n |
-| 28 | [Leonid Mesnik](./leonid-mesnik.md) | Oracle | 33 | JVMTI |
-| 29 | [Coleen Phillimore](./coleen-phillimore.md) | Oracle | 32 | HotSpot |
-| 30 | Yasumasa Suenaga | Oracle | 32 | Serviceability |
-| 31 | [Hamlin Li](./hamlin-li.md) | Oracle | 31 | C2 Compiler |
-| 32 | Roman Kennke | Red Hat | 30 | Compact Headers |
-| 33 | Weijun Wang | Oracle | 29 | Security |
-| 34 | Jatin Bhateja | Oracle | 28 | Vector API |
-| 35 | Roland Westrelin | Oracle | 27 | C2 Compiler |
+| 20 | [Jan Lahoda](./jan-lahoda.md) | [Oracle](https://www.oracle.com/java/) | 48 | javac |
+| 21 | [Daniel Fuchs](./daniel-fuchs.md) | [Oracle](https://www.oracle.com/java/) | 47 | HTTP Client |
+| 22 | [Volkan Yazici](./volkan-yazici.md) | [Oracle](https://www.oracle.com/java/) | 45 | HTTP Client |
+| 23 | Joel Sikström | [Oracle](https://www.oracle.com/java/) | 44 | ZGC |
+| 24 | [Justin Lu](./justin-lu.md) | [Oracle](https://www.oracle.com/java/) | 43 | Localization |
+| 25 | [William Kemper](./william-kemper.md) | [Red Hat](https://www.redhat.com/en/about/openjdk) | 43 | Shenandoah |
+| 26 | Manuel Hässig | [Oracle](https://www.oracle.com/java/) | 39 | Testing |
+| 27 | [Naoto Sato](./naoto-sato.md) | [Oracle](https://www.oracle.com/java/) | 36 | i18n |
+| 28 | [Leonid Mesnik](./leonid-mesnik.md) | [Oracle](https://www.oracle.com/java/) | 33 | JVMTI |
+| 29 | [Coleen Phillimore](./coleen-phillimore.md) | [Oracle](https://www.oracle.com/java/) | 32 | HotSpot |
+| 30 | Yasumasa Suenaga | [Oracle](https://www.oracle.com/java/) | 32 | Serviceability |
+| 31 | [Hamlin Li](./hamlin-li.md) | [Oracle](https://www.oracle.com/java/) | 31 | C2 Compiler |
+| 32 | Roman Kennke | [Red Hat](https://www.redhat.com/en/about/openjdk) | 30 | Compact Headers |
+| 33 | Weijun Wang | [Oracle](https://www.oracle.com/java/) | 29 | Security |
+| 34 | Jatin Bhateja | [Oracle](https://www.oracle.com/java/) | 28 | Vector API |
+| 35 | Roland Westrelin | [Oracle](https://www.oracle.com/java/) | 27 | C2 Compiler |
 | 36 | Quan Anh Mai | Independent | 26 | Type System |
-| 37 | Per Minborg | Oracle | 25 | Core Libraries |
+| 37 | Per Minborg | [Oracle](https://www.oracle.com/java/) | 25 | Core Libraries |
 | 38 | Anton Seoane Ampudia | Independent | 24 | x86 Cleanup |
-| 39 | Eric Fang | Oracle | 23 | AOT |
-| 40 | Alan Bateman | Oracle | 22 | Concurrency |
-| 41 | Johannes Bechberger | SAP | 21 | JFR |
-| 42 | Andrew Haley | Red Hat | 20 | RISC-V |
-| 43 | Fredrik Bredberg | Red Hat | 19 | Monitors |
+| 39 | Eric Fang | [Oracle](https://www.oracle.com/java/) | 23 | AOT |
+| 40 | Alan Bateman | [Oracle](https://www.oracle.com/java/) | 22 | Concurrency |
+| 41 | Johannes Bechberger | [SAP](https://sap.github.io/SapMachine/) | 21 | JFR |
+| 42 | Andrew Haley | [Red Hat](https://www.redhat.com/en/about/openjdk) | 20 | RISC-V |
+| 43 | Fredrik Bredberg | [Red Hat](https://www.redhat.com/en/about/openjdk) | 19 | Monitors |
 | 44 | Artur Barashev | Independent | 18 | Security |
-| 45 | Markus Grönlund | Oracle | 17 | JFR |
-| 46 | Damon Nguyen | Oracle | 16 | Desktop |
-| 47 | Jayathirth D V | Oracle | 15 | ImageIO |
-| 48 | Anthony Scarpino | Oracle | 14 | Security |
-| 49 | Erik Österlund | Oracle | 13 | AOT |
-| 50 | Hai-May Chao | Oracle | 12 | Security |
-| 51 | [Magnus Ihse Bursie](./magnus-ihse-bursie.md) | Oracle | 12 | Build |
-| 52 | [Shaojin Wen](./shaojin-wen.md) | Alibaba | 11 | Core Libraries |
-| 53 | Stuart Marks | Oracle | 11 | Core Libraries |
-| 54 | [Yude Lin](./yude-lin.md) | Alibaba | 10 | Compiler |
-| 55 | [Xiaowei Lu](./xiaowei-lu.md) | Alibaba | 10 | GC |
-| 56 | [Tongbao Zhang](./tongbao-zhang.md) | Alibaba | 9 | Testing |
-| 57 | [Kuai Wei](./kuai-wei.md) | Alibaba | 9 | Compiler |
-| 58 | [Fei Yang](./fei-yang.md) | Alibaba | 9 | C2 Compiler |
-| 59 | [Han GQ](./han-gq.md) | Alibaba | 8 | Core |
-| 60 | [Anjian Wen](./anjian-wen.md) | Alibaba | 8 | Security |
-| 61 | Doug Simon | Oracle Labs | 8 | Graal |
-| 62 | Christian Hagedorn | Oracle Labs | 7 | Graal |
+| 45 | Markus Grönlund | [Oracle](https://www.oracle.com/java/) | 17 | JFR |
+| 46 | Damon Nguyen | [Oracle](https://www.oracle.com/java/) | 16 | Desktop |
+| 47 | Jayathirth D V | [Oracle](https://www.oracle.com/java/) | 15 | ImageIO |
+| 48 | Anthony Scarpino | [Oracle](https://www.oracle.com/java/) | 14 | Security |
+| 49 | Erik Österlund | [Oracle](https://www.oracle.com/java/) | 13 | AOT |
+| 50 | Hai-May Chao | [Oracle](https://www.oracle.com/java/) | 12 | Security |
+| 51 | [Magnus Ihse Bursie](./magnus-ihse-bursie.md) | [Oracle](https://www.oracle.com/java/) | 12 | Build |
+| 52 | [Shaojin Wen](./shaojin-wen.md) | [Alibaba](https://alibaba.github.io/) | 11 | Core Libraries |
+| 53 | Stuart Marks | [Oracle](https://www.oracle.com/java/) | 11 | Core Libraries |
+| 54 | [Yude Lin](./yude-lin.md) | [Alibaba](https://alibaba.github.io/) | 10 | Compiler |
+| 55 | [Xiaowei Lu](./xiaowei-lu.md) | [Alibaba](https://alibaba.github.io/) | 10 | GC |
+| 56 | [Tongbao Zhang](./tongbao-zhang.md) | [Alibaba](https://alibaba.github.io/) | 9 | Testing |
+| 57 | [Kuai Wei](./kuai-wei.md) | [Alibaba](https://alibaba.github.io/) | 9 | Compiler |
+| 58 | [Fei Yang](./fei-yang.md) | [Alibaba](https://alibaba.github.io/) | 9 | C2 Compiler |
+| 59 | [Han GQ](./han-gq.md) | [Alibaba](https://alibaba.github.io/) | 8 | Core |
+| 60 | [Anjian Wen](./anjian-wen.md) | [Alibaba](https://alibaba.github.io/) | 8 | Security |
+| 61 | Doug Simon | [Oracle Labs](https://labs.oracle.com/) | 8 | Graal |
+| 62 | Christian Hagedorn | [Oracle Labs](https://labs.oracle.com/) | 7 | Graal |
 | 63 | Oleg Pekhovskiy | Independent | 7 | Testing |
-| 64 | Rahul Bhosale | Oracle | 7 | Networking |
+| 64 | Rahul Bhosale | [Oracle](https://www.oracle.com/java/) | 7 | Networking |
 | 65 | Sergey Tsypanov | Independent | 6 | Security |
 | 66 | Pavel Rappo | Independent | 6 | Core Libraries |
-| 67 | Lance Andersen | Oracle | 6 | JDBC |
-| 68 | Joe Darcy | Oracle | 6 | Core Libraries |
-| 69 | Roger Riggs | Oracle | 6 | Serialization |
+| 67 | Lance Andersen | [Oracle](https://www.oracle.com/java/) | 6 | JDBC |
+| 68 | Joe Darcy | [Oracle](https://www.oracle.com/java/) | 6 | Core Libraries |
+| 69 | Roger Riggs | [Oracle](https://www.oracle.com/java/) | 6 | Serialization |
 | 70 | Peter Levart | Independent | 5 | Core Libraries |
-| 71 | Claes Redestad | Oracle | 5 | Core Libraries |
-| 72 | Ulf Adams | Google | 5 | Build |
-| 73 | Martin Buchholz | Google | 5 | Concurrency |
-| 74 | Ivan Gerasimov | Oracle | 5 | Desktop |
-| 75 | Alexandr Scherbatiy | Oracle | 5 | Desktop |
-| 76 | Semyon Sadetsky | Oracle | 5 | Desktop |
-| 77 | Pankaj Bansal | Arm | 4 | Build |
-| 78 | Bhavesh Patel | Oracle | 4 | GC |
-| 79 | Poonam Bajaj | Oracle | 4 | Testing |
-| 80 | Amit Kumar | Oracle | 4 | Testing |
-| 81 | Ravi Reddy | Oracle | 4 | GC |
-| 82 | Jonathan Gibbons | Oracle | 4 | javac |
-| 83 | Liam Miller-Cushon | Google | 4 | javac |
-| 84 | Michael Ernst | University of Washington | 4 | javac |
-| 85 | Srikanth Adayapalam | Oracle | 4 | javac |
-| 86 | Vicente Romero | Oracle | 4 | javac |
+| 71 | Claes Redestad | [Oracle](https://www.oracle.com/java/) | 5 | Core Libraries |
+| 72 | Ulf Adams | [Google](https://opensource.google/projects/java) | 5 | Build |
+| 73 | Martin Buchholz | [Google](https://opensource.google/projects/java) | 5 | Concurrency |
+| 74 | Ivan Gerasimov | [Oracle](https://www.oracle.com/java/) | 5 | Desktop |
+| 75 | Alexandr Scherbatiy | [Oracle](https://www.oracle.com/java/) | 5 | Desktop |
+| 76 | Semyon Sadetsky | [Oracle](https://www.oracle.com/java/) | 5 | Desktop |
+| 77 | Pankaj Bansal | [Arm](https://www.arm.com/) | 4 | Build |
+| 78 | Bhavesh Patel | [Oracle](https://www.oracle.com/java/) | 4 | GC |
+| 79 | Poonam Bajaj | [Oracle](https://www.oracle.com/java/) | 4 | Testing |
+| 80 | Amit Kumar | [Oracle](https://www.oracle.com/java/) | 4 | Testing |
+| 81 | Ravi Reddy | [Oracle](https://www.oracle.com/java/) | 4 | GC |
+| 82 | Jonathan Gibbons | [Oracle](https://www.oracle.com/java/) | 4 | javac |
+| 83 | Liam Miller-Cushon | [Google](https://opensource.google/projects/java) | 4 | javac |
+| 84 | Michael Ernst | [University of Washington](https://www.washington.edu/) | 4 | javac |
+| 85 | Srikanth Adayapalam | [Oracle](https://www.oracle.com/java/) | 4 | javac |
+| 86 | Vicente Romero | [Oracle](https://www.oracle.com/java/) | 4 | javac |
 | 87 | Eric Bruneton | Independent | 3 | ASM |
 | 88 | Remi Forax | Independent | 3 | Core Libraries |
-| 89 | John Rose | Oracle | 3 | HotSpot |
+| 89 | John Rose | [Oracle](https://www.oracle.com/java/) | 3 | HotSpot |
 | 90 | Charles Nutter | Independent | 3 | InvokeDynamic |
-| 91 | Chris Thalinger | Oracle | 3 | Graal |
-| 92 | Gilles Duboscq | Oracle Labs | 3 | Graal |
-| 93 | Tom Rodriguez | Oracle Labs | 3 | Graal |
-| 94 | Dean Long | Oracle | 3 | HotSpot |
-| 95 | Mikael Vidstedt | Oracle | 3 | HotSpot |
-| 96 | Harold Seigel | Oracle | 3 | Security |
-| 97 | Valerie Peng | Oracle | 3 | Security |
-| 98 | Sean Mullan | Oracle | 3 | Security |
-| 99 | Xuelei Fan | Oracle | 3 | Security |
+| 91 | Chris Thalinger | [Oracle](https://www.oracle.com/java/) | 3 | Graal |
+| 92 | Gilles Duboscq | [Oracle Labs](https://labs.oracle.com/) | 3 | Graal |
+| 93 | Tom Rodriguez | [Oracle Labs](https://labs.oracle.com/) | 3 | Graal |
+| 94 | Dean Long | [Oracle](https://www.oracle.com/java/) | 3 | HotSpot |
+| 95 | Mikael Vidstedt | [Oracle](https://www.oracle.com/java/) | 3 | HotSpot |
+| 96 | Harold Seigel | [Oracle](https://www.oracle.com/java/) | 3 | Security |
+| 97 | Valerie Peng | [Oracle](https://www.oracle.com/java/) | 3 | Security |
+| 98 | Sean Mullan | [Oracle](https://www.oracle.com/java/) | 3 | Security |
+| 99 | Xuelei Fan | [Oracle](https://www.oracle.com/java/) | 3 | Security |
 | 100 | Weibing Xiao | Independent | 3 | Testing |
 
 ---
