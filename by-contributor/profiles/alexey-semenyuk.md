@@ -34,102 +34,102 @@
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
-| JDK-8372359 | Clean jpackage error messages | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8372292 | Remove redundant "throws ConfigException" | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8372290 | jpackage test lib improvements | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8360571 | Description of launchers is lost in two phase packaging | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8333727 | Use JOpt in jpackage to parse command line | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8371384 | libapplauncher.so is copied to a wrong location in two step packaging | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8371440 | jpackage should exit with an error if it finds multiple matching signing certificates | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8372118 | Test tools/jpackage/macosx/DmgContentTest.java failed | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8369206 | jpackage should not set R/O permission on app launchers | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8364560 | The default value of --linux-menu-group option is invalid | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8356574 | Test --linux-menu-group option | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8371184 | Improve jpackage test coverage for "--app-image" option | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8371094 | --mac-signing-key-user-name no longer works | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8371076 | jpackage will wrongly overwrite the plist file in the embedded runtime | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8370969 | --launcher-as-service option is ignored when used with --app-image option | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8370965 | Remove SigningPackageFromTwoStepAppImageTest test | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8370956 | ShortcutHintTest test fails when executed locally on Linux | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8370963 | Errors in jpackage jtreg test descriptions | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8370100 | Redundant .png files in Linux app-image cause unnecessary bloat | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8343220 | Add test cases to AppContentTest jpackage test | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8370156 | Fix jpackage IconTest | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8370442 | Compilation error in jpackage EntitlementsTest test | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8370122 | jpackage test lib improvements | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8370126 | Improve jpackage signing testing | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8370123 | Minor jpackage refactoring | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8370136 | Support async execution of jpackage tests | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8370120 | Make jpackage tests output more stable | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8370134 | Fix minor jpackage issues | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8356575 | Test order in which jpackage fills app image | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8369853 | jpackage signing tests fail after JDK-8358723 | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8363979 | Add JDK bundle/image validation for --runtime-image option | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8368890 | open/test/jdk/tools/jpackage/macosx/NameWithSpaceTest.java fails randomly | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8358723 | jpackage signing issues: the main launcher doesn't have entitlements | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8368030 | Make package bundlers stateless | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8343221 | IOUtils.copyRecursive() doesn't create parent directories | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8365790 | Shutdown hook for application image does not work on Windows | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8365555 | Cleanup redundancies in jpackage implementation | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8308349 | missing working directory option for launcher when invoked from shortcuts | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8364564 | Shortcut configuration is not recorded in .jpackage.xml file | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8364129 | Rename libwixhelper | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8364984 | Many jpackage tests are failing on Linux after JDK-8334238 | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8334238 | Enhance AddLShortcutTest jpackage test | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8364587 | Update jpackage internal javadoc | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8359756 | Bug in RuntimePackageTest.testName test | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8362352 | Fix references to non-existing resource strings | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8358017 | Various enhancements of jpackage test helpers | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8357930 | Amendment for JDK-8333664 | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8357171 | Test tools/jpackage/windows/WinOSConditionTest.java fails for non administrator | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8357503 | gcbasher fails with java.lang.IllegalArgumentException: Unknown constant pool type | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8357478 | Fix copyright header in AppImageDesc.java | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8333664 | Decouple command line parsing and package building in jpackage | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8333568 | Test that jpackage doesn't modify R/O files/directories | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8356562 | SigningAppImageTwoStepsTest test fails | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8356309 | Fix issues uncovered after running jpackage tests locally | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8356219 | jpackage places libapplauncher.so in incorrect location | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8355651 | Issues with post-image hook | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8355328 | Improve negative tests coverage for jpackage signing | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8354990 | Improve negative tests coverage for jpackage signing | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8354989 | Bug in MacCertificate class | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8354988 | Separate stderr and stdout in Executor class | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8354985 | Add unit tests for Executor class | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8354320 | Changes to jpackage.md cause pandoc warning | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8341641 | Make %APPDATA% and %LOCALAPPDATA% env variables available in *.cfg files | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8353681 | jpackage suppresses errors when executed with --verbose option | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8353679 | Restructure classes in jdk.jpackage.internal package | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8352419 | Test tools/jpackage/share/ErrorTest.java#id0 and #id1 fail | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8353321 | [macos] ErrorTest.testAppContentWarning test case requires signing environment | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8353196 | [macos] Contents of ".jpackage.xml" file are wrong when building .pkg | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8334322 | Misleading values of keys in jpackage resource bundle | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8352289 | [macos] Review skipped tests in tools/jpackage/macosx/SigningPackage* | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8352176 | Automate setting up environment for mac signing tests | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8352275 | Clean up dead code in jpackage | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8352293 | jpackage tests build rpm packages on Ubuntu test machines | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8351372 | Improve negative tests coverage of jpackage | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8350013 | Add a test for JDK-8150442 | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8350594 | Misleading warning about install dir for DMG packaging | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8326447 | jpackage creates Windows installers that cannot be signed | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8350601 | Miscellaneous updates to jpackage test lib | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8350102 | Decouple jpackage test-lib Executor.Result and Executor classes | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8350098 | jpackage test lib erroneously will run methods without @Test annotation | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8350011 | Convert jpackage test lib tests in JUnit format | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8285624 | jpackage fails to create exe, msi when Windows OS is in FIPS mode | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8349564 | Clean warnings found in jpackage tests when building with -Xlint:all | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8150442 | Enforce Supported Platforms in Packager for MSI bundles | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8346434 | Add test for non-automatic service binding | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8349504 | Support platform-specific JUnit tests in jpackage | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8333569 | jpackage tests must run app launchers with retries on Linux only | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8348892 | Properly fix compilation error for zip_util.c on Windows | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347272 | [ubsan] JvmLauncher.cpp runtime error | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347295 | Fix WinResourceTest to make it work with WiX v4.0+ | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347298 | Bug in JPackageCommand.ignoreFakeRuntime() | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347300 | Don't exclude the "PATH" var from the environment when running app launchers | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347299 | Add annotations to test cases in LicenseTest | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347297 | Skip the RuntimeImageSymbolicLinksTest test on Windows | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347296 | WinInstallerUiTest fails in local test runs | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8346872 | tools/jpackage/windows/WinLongPathTest.java fails | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
+| JDK-8372359 | Clean jpackage error messages | [Link]([需要补充 PR 链接]) |
+| JDK-8372292 | Remove redundant "throws ConfigException" | [Link]([需要补充 PR 链接]) |
+| JDK-8372290 | jpackage test lib improvements | [Link]([需要补充 PR 链接]) |
+| JDK-8360571 | Description of launchers is lost in two phase packaging | [Link]([需要补充 PR 链接]) |
+| JDK-8333727 | Use JOpt in jpackage to parse command line | [Link]([需要补充 PR 链接]) |
+| JDK-8371384 | libapplauncher.so is copied to a wrong location in two step packaging | [Link]([需要补充 PR 链接]) |
+| JDK-8371440 | jpackage should exit with an error if it finds multiple matching signing certificates | [Link]([需要补充 PR 链接]) |
+| JDK-8372118 | Test tools/jpackage/macosx/DmgContentTest.java failed | [Link]([需要补充 PR 链接]) |
+| JDK-8369206 | jpackage should not set R/O permission on app launchers | [Link]([需要补充 PR 链接]) |
+| JDK-8364560 | The default value of --linux-menu-group option is invalid | [Link]([需要补充 PR 链接]) |
+| JDK-8356574 | Test --linux-menu-group option | [Link]([需要补充 PR 链接]) |
+| JDK-8371184 | Improve jpackage test coverage for "--app-image" option | [Link]([需要补充 PR 链接]) |
+| JDK-8371094 | --mac-signing-key-user-name no longer works | [Link]([需要补充 PR 链接]) |
+| JDK-8371076 | jpackage will wrongly overwrite the plist file in the embedded runtime | [Link]([需要补充 PR 链接]) |
+| JDK-8370969 | --launcher-as-service option is ignored when used with --app-image option | [Link]([需要补充 PR 链接]) |
+| JDK-8370965 | Remove SigningPackageFromTwoStepAppImageTest test | [Link]([需要补充 PR 链接]) |
+| JDK-8370956 | ShortcutHintTest test fails when executed locally on Linux | [Link]([需要补充 PR 链接]) |
+| JDK-8370963 | Errors in jpackage jtreg test descriptions | [Link]([需要补充 PR 链接]) |
+| JDK-8370100 | Redundant .png files in Linux app-image cause unnecessary bloat | [Link]([需要补充 PR 链接]) |
+| JDK-8343220 | Add test cases to AppContentTest jpackage test | [Link]([需要补充 PR 链接]) |
+| JDK-8370156 | Fix jpackage IconTest | [Link]([需要补充 PR 链接]) |
+| JDK-8370442 | Compilation error in jpackage EntitlementsTest test | [Link]([需要补充 PR 链接]) |
+| JDK-8370122 | jpackage test lib improvements | [Link]([需要补充 PR 链接]) |
+| JDK-8370126 | Improve jpackage signing testing | [Link]([需要补充 PR 链接]) |
+| JDK-8370123 | Minor jpackage refactoring | [Link]([需要补充 PR 链接]) |
+| JDK-8370136 | Support async execution of jpackage tests | [Link]([需要补充 PR 链接]) |
+| JDK-8370120 | Make jpackage tests output more stable | [Link]([需要补充 PR 链接]) |
+| JDK-8370134 | Fix minor jpackage issues | [Link]([需要补充 PR 链接]) |
+| JDK-8356575 | Test order in which jpackage fills app image | [Link]([需要补充 PR 链接]) |
+| JDK-8369853 | jpackage signing tests fail after JDK-8358723 | [Link]([需要补充 PR 链接]) |
+| JDK-8363979 | Add JDK bundle/image validation for --runtime-image option | [Link]([需要补充 PR 链接]) |
+| JDK-8368890 | open/test/jdk/tools/jpackage/macosx/NameWithSpaceTest.java fails randomly | [Link]([需要补充 PR 链接]) |
+| JDK-8358723 | jpackage signing issues: the main launcher doesn't have entitlements | [Link]([需要补充 PR 链接]) |
+| JDK-8368030 | Make package bundlers stateless | [Link]([需要补充 PR 链接]) |
+| JDK-8343221 | IOUtils.copyRecursive() doesn't create parent directories | [Link]([需要补充 PR 链接]) |
+| JDK-8365790 | Shutdown hook for application image does not work on Windows | [Link]([需要补充 PR 链接]) |
+| JDK-8365555 | Cleanup redundancies in jpackage implementation | [Link]([需要补充 PR 链接]) |
+| JDK-8308349 | missing working directory option for launcher when invoked from shortcuts | [Link]([需要补充 PR 链接]) |
+| JDK-8364564 | Shortcut configuration is not recorded in .jpackage.xml file | [Link]([需要补充 PR 链接]) |
+| JDK-8364129 | Rename libwixhelper | [Link]([需要补充 PR 链接]) |
+| JDK-8364984 | Many jpackage tests are failing on Linux after JDK-8334238 | [Link]([需要补充 PR 链接]) |
+| JDK-8334238 | Enhance AddLShortcutTest jpackage test | [Link]([需要补充 PR 链接]) |
+| JDK-8364587 | Update jpackage internal javadoc | [Link]([需要补充 PR 链接]) |
+| JDK-8359756 | Bug in RuntimePackageTest.testName test | [Link]([需要补充 PR 链接]) |
+| JDK-8362352 | Fix references to non-existing resource strings | [Link]([需要补充 PR 链接]) |
+| JDK-8358017 | Various enhancements of jpackage test helpers | [Link]([需要补充 PR 链接]) |
+| JDK-8357930 | Amendment for JDK-8333664 | [Link]([需要补充 PR 链接]) |
+| JDK-8357171 | Test tools/jpackage/windows/WinOSConditionTest.java fails for non administrator | [Link]([需要补充 PR 链接]) |
+| JDK-8357503 | gcbasher fails with java.lang.IllegalArgumentException: Unknown constant pool type | [Link]([需要补充 PR 链接]) |
+| JDK-8357478 | Fix copyright header in AppImageDesc.java | [Link]([需要补充 PR 链接]) |
+| JDK-8333664 | Decouple command line parsing and package building in jpackage | [Link]([需要补充 PR 链接]) |
+| JDK-8333568 | Test that jpackage doesn't modify R/O files/directories | [Link]([需要补充 PR 链接]) |
+| JDK-8356562 | SigningAppImageTwoStepsTest test fails | [Link]([需要补充 PR 链接]) |
+| JDK-8356309 | Fix issues uncovered after running jpackage tests locally | [Link]([需要补充 PR 链接]) |
+| JDK-8356219 | jpackage places libapplauncher.so in incorrect location | [Link]([需要补充 PR 链接]) |
+| JDK-8355651 | Issues with post-image hook | [Link]([需要补充 PR 链接]) |
+| JDK-8355328 | Improve negative tests coverage for jpackage signing | [Link]([需要补充 PR 链接]) |
+| JDK-8354990 | Improve negative tests coverage for jpackage signing | [Link]([需要补充 PR 链接]) |
+| JDK-8354989 | Bug in MacCertificate class | [Link]([需要补充 PR 链接]) |
+| JDK-8354988 | Separate stderr and stdout in Executor class | [Link]([需要补充 PR 链接]) |
+| JDK-8354985 | Add unit tests for Executor class | [Link]([需要补充 PR 链接]) |
+| JDK-8354320 | Changes to jpackage.md cause pandoc warning | [Link]([需要补充 PR 链接]) |
+| JDK-8341641 | Make %APPDATA% and %LOCALAPPDATA% env variables available in *.cfg files | [Link]([需要补充 PR 链接]) |
+| JDK-8353681 | jpackage suppresses errors when executed with --verbose option | [Link]([需要补充 PR 链接]) |
+| JDK-8353679 | Restructure classes in jdk.jpackage.internal package | [Link]([需要补充 PR 链接]) |
+| JDK-8352419 | Test tools/jpackage/share/ErrorTest.java#id0 and #id1 fail | [Link]([需要补充 PR 链接]) |
+| JDK-8353321 | [macos] ErrorTest.testAppContentWarning test case requires signing environment | [Link]([需要补充 PR 链接]) |
+| JDK-8353196 | [macos] Contents of ".jpackage.xml" file are wrong when building .pkg | [Link]([需要补充 PR 链接]) |
+| JDK-8334322 | Misleading values of keys in jpackage resource bundle | [Link]([需要补充 PR 链接]) |
+| JDK-8352289 | [macos] Review skipped tests in tools/jpackage/macosx/SigningPackage* | [Link]([需要补充 PR 链接]) |
+| JDK-8352176 | Automate setting up environment for mac signing tests | [Link]([需要补充 PR 链接]) |
+| JDK-8352275 | Clean up dead code in jpackage | [Link]([需要补充 PR 链接]) |
+| JDK-8352293 | jpackage tests build rpm packages on Ubuntu test machines | [Link]([需要补充 PR 链接]) |
+| JDK-8351372 | Improve negative tests coverage of jpackage | [Link]([需要补充 PR 链接]) |
+| JDK-8350013 | Add a test for JDK-8150442 | [Link]([需要补充 PR 链接]) |
+| JDK-8350594 | Misleading warning about install dir for DMG packaging | [Link]([需要补充 PR 链接]) |
+| JDK-8326447 | jpackage creates Windows installers that cannot be signed | [Link]([需要补充 PR 链接]) |
+| JDK-8350601 | Miscellaneous updates to jpackage test lib | [Link]([需要补充 PR 链接]) |
+| JDK-8350102 | Decouple jpackage test-lib Executor.Result and Executor classes | [Link]([需要补充 PR 链接]) |
+| JDK-8350098 | jpackage test lib erroneously will run methods without @Test annotation | [Link]([需要补充 PR 链接]) |
+| JDK-8350011 | Convert jpackage test lib tests in JUnit format | [Link]([需要补充 PR 链接]) |
+| JDK-8285624 | jpackage fails to create exe, msi when Windows OS is in FIPS mode | [Link]([需要补充 PR 链接]) |
+| JDK-8349564 | Clean warnings found in jpackage tests when building with -Xlint:all | [Link]([需要补充 PR 链接]) |
+| JDK-8150442 | Enforce Supported Platforms in Packager for MSI bundles | [Link]([需要补充 PR 链接]) |
+| JDK-8346434 | Add test for non-automatic service binding | [Link]([需要补充 PR 链接]) |
+| JDK-8349504 | Support platform-specific JUnit tests in jpackage | [Link]([需要补充 PR 链接]) |
+| JDK-8333569 | jpackage tests must run app launchers with retries on Linux only | [Link]([需要补充 PR 链接]) |
+| JDK-8348892 | Properly fix compilation error for zip_util.c on Windows | [Link]([需要补充 PR 链接]) |
+| JDK-8347272 | [ubsan] JvmLauncher.cpp runtime error | [Link]([需要补充 PR 链接]) |
+| JDK-8347295 | Fix WinResourceTest to make it work with WiX v4.0+ | [Link]([需要补充 PR 链接]) |
+| JDK-8347298 | Bug in JPackageCommand.ignoreFakeRuntime() | [Link]([需要补充 PR 链接]) |
+| JDK-8347300 | Don't exclude the "PATH" var from the environment when running app launchers | [Link]([需要补充 PR 链接]) |
+| JDK-8347299 | Add annotations to test cases in LicenseTest | [Link]([需要补充 PR 链接]) |
+| JDK-8347297 | Skip the RuntimeImageSymbolicLinksTest test on Windows | [Link]([需要补充 PR 链接]) |
+| JDK-8347296 | WinInstallerUiTest fails in local test runs | [Link]([需要补充 PR 链接]) |
+| JDK-8346872 | tools/jpackage/windows/WinLongPathTest.java fails | [Link]([需要补充 PR 链接]) |
 
 ## Key Contributions
 

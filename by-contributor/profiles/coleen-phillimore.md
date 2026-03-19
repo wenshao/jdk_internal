@@ -95,74 +95,74 @@ Extensive code cleanup, removing deprecated code and modernizing codebase.
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
-| JDK-8371860 | Make non-public methods in java_lang_Class private | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8364360 | Defining hidden class with no room in constant pool crashes the VM | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8369622 | GlobalChunkPoolMutex is recursively locked during error handling | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8361451 | Test vmTestbase/metaspace/stressHierarchy/stressHierarchy012 fails | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8367989 | Remove InstanceKlass::allocate_objArray and ArrayKlass::allocate_arrayArray | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8365823 | Revert storing abstract and interface Klasses to non-class metaspace | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8367368 | Add message for verify_legal_class_modifiers for inner classes | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8366908 | Use a different class for testing JDK-8351654 | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8364750 | Remove unused declaration in jvm.h | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8343218 | Add option to disable allocating interface and abstract classes in non-class metaspace | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8364187 | Make getClassAccessFlagsRaw non-native | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8363816 | Refactor array name creation | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8359707 | Add classfile modification code to RedefineClassHelper | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8295851 | Do not use ttyLock in BytecodeTracer::trace | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8268406 | Deallocate jmethodID native memory | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8359920 | Use names for frame types in stackmaps | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8358326 | Use oopFactory array allocation | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8358205 | Remove unused JFR array allocation code | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8356173 | Remove ThreadCritical | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8330022 | Failure test/hotspot/jtreg/vmTestbase/nsk/sysdict/share/BTreeTest.java | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8356172 | IdealGraphPrinter doesn't need ThreadCritical | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8355353 | File Leak in os::read_image_release_file | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8355627 | Don't use ThreadCritical for EventLog list | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8349405 | Redundant and confusing null checks on data from CP::resolved_klasses | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8354448 | [REDO] Remove friends for ObjectMonitor | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8354446 | [BACKOUT] Remove friends for ObjectMonitor | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8354180 | Clean up uses of ObjectMonitor caches | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8354234 | Remove friends for ObjectMonitor | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8349007 | The jtreg test ResolvedMethodTableHash takes excessive time | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8351654 | Agent transformer bytecodes should be verified | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8353584 | [BACKOUT] DaCapo xalan performance with -XX:+UseObjectMonitorTable | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8351673 | Clean up a case of if (LockingMode == LM_LIGHTWEIGHT) | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8351046 | Rename ObjectMonitor functions | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8351165 | Remove unused includes from vmStructs | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8350974 | The os_cpu VM_STRUCTS, VM_TYPES, etc have no declarations | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8315488 | Remove outdated and unused ciReplay support from SA | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8328473 | StringTable and SymbolTable statistics delay time to safepoint | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8349860 | Make Class.isArray(), Class.isInterface() and Class.isPrimitive() non-native | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8349145 | Make Class.getProtectionDomain() non-native | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8346567 | Make Class.getModifiers() non-native | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8349559 | Compiler interface doesn't need to store protection domain | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8334320 | Replace vmTestbase/metaspace/share/TriggerUnloadingWithWhiteBox.java | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8337548 | Parallel class loading can pass is_superclass true for interfaces | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8337458 | Remove debugging code print_cpool_bytes | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347990 | Remove SIZE_FORMAT macros and replace remaining uses | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347733 | Replace SIZE_FORMAT in runtime code | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347924 | Replace SIZE_FORMAT in memory and metaspace | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347609 | Replace SIZE_FORMAT in os/os_cpu/cpu directories | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347730 | Replace SIZE_FORMAT in g1 | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347731 | Replace SIZE_FORMAT in zgc | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347732 | Replace SIZE_FORMAT in shenandoah | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347431 | Update ObjectMonitor comments | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347727 | Replace SIZE_FORMAT in shared gc | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347729 | Replace SIZE_FORMAT in parallel and serial gc | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347721 | Replace SIZE_FORMAT in compiler directories | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347724 | Replace SIZE_FORMAT in jfr directory | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347566 | Replace SSIZE_FORMAT with 'z' length modifier | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8346990 | Remove INTX_FORMAT and UINTX_FORMAT macros | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8293123 | Fix various include file ordering | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8346929 | runtime/ClassUnload/DictionaryDependsTest.java fails | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8347147 | [REDO] AccessFlags can be u2 in metadata | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8329549 | Remove FORMAT64_MODIFIER | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8339113 | AccessFlags can be u2 in metadata | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8337016 | serviceability/jvmti/RedefineClasses/RedefineLeakThrowable.java gets Metaspace OOM | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8346304 | SA doesn't need a copy of getModifierFlags | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8345678 | compute_modifiers should not be in create_mirror | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8346040 | Zero interpreter build on Linux Aarch64 is broken | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
-| JDK-8340212 | -Xshare:off -XX:CompressedClassSpaceBaseAddress=... crashes on macos-aarch64 | [Link](https://github.com/openjdk/jdk/pull/XXXX) |
+| JDK-8371860 | Make non-public methods in java_lang_Class private | [Link]([需要补充 PR 链接]) |
+| JDK-8364360 | Defining hidden class with no room in constant pool crashes the VM | [Link]([需要补充 PR 链接]) |
+| JDK-8369622 | GlobalChunkPoolMutex is recursively locked during error handling | [Link]([需要补充 PR 链接]) |
+| JDK-8361451 | Test vmTestbase/metaspace/stressHierarchy/stressHierarchy012 fails | [Link]([需要补充 PR 链接]) |
+| JDK-8367989 | Remove InstanceKlass::allocate_objArray and ArrayKlass::allocate_arrayArray | [Link]([需要补充 PR 链接]) |
+| JDK-8365823 | Revert storing abstract and interface Klasses to non-class metaspace | [Link]([需要补充 PR 链接]) |
+| JDK-8367368 | Add message for verify_legal_class_modifiers for inner classes | [Link]([需要补充 PR 链接]) |
+| JDK-8366908 | Use a different class for testing JDK-8351654 | [Link]([需要补充 PR 链接]) |
+| JDK-8364750 | Remove unused declaration in jvm.h | [Link]([需要补充 PR 链接]) |
+| JDK-8343218 | Add option to disable allocating interface and abstract classes in non-class metaspace | [Link]([需要补充 PR 链接]) |
+| JDK-8364187 | Make getClassAccessFlagsRaw non-native | [Link]([需要补充 PR 链接]) |
+| JDK-8363816 | Refactor array name creation | [Link]([需要补充 PR 链接]) |
+| JDK-8359707 | Add classfile modification code to RedefineClassHelper | [Link]([需要补充 PR 链接]) |
+| JDK-8295851 | Do not use ttyLock in BytecodeTracer::trace | [Link]([需要补充 PR 链接]) |
+| JDK-8268406 | Deallocate jmethodID native memory | [Link]([需要补充 PR 链接]) |
+| JDK-8359920 | Use names for frame types in stackmaps | [Link]([需要补充 PR 链接]) |
+| JDK-8358326 | Use oopFactory array allocation | [Link]([需要补充 PR 链接]) |
+| JDK-8358205 | Remove unused JFR array allocation code | [Link]([需要补充 PR 链接]) |
+| JDK-8356173 | Remove ThreadCritical | [Link]([需要补充 PR 链接]) |
+| JDK-8330022 | Failure test/hotspot/jtreg/vmTestbase/nsk/sysdict/share/BTreeTest.java | [Link]([需要补充 PR 链接]) |
+| JDK-8356172 | IdealGraphPrinter doesn't need ThreadCritical | [Link]([需要补充 PR 链接]) |
+| JDK-8355353 | File Leak in os::read_image_release_file | [Link]([需要补充 PR 链接]) |
+| JDK-8355627 | Don't use ThreadCritical for EventLog list | [Link]([需要补充 PR 链接]) |
+| JDK-8349405 | Redundant and confusing null checks on data from CP::resolved_klasses | [Link]([需要补充 PR 链接]) |
+| JDK-8354448 | [REDO] Remove friends for ObjectMonitor | [Link]([需要补充 PR 链接]) |
+| JDK-8354446 | [BACKOUT] Remove friends for ObjectMonitor | [Link]([需要补充 PR 链接]) |
+| JDK-8354180 | Clean up uses of ObjectMonitor caches | [Link]([需要补充 PR 链接]) |
+| JDK-8354234 | Remove friends for ObjectMonitor | [Link]([需要补充 PR 链接]) |
+| JDK-8349007 | The jtreg test ResolvedMethodTableHash takes excessive time | [Link]([需要补充 PR 链接]) |
+| JDK-8351654 | Agent transformer bytecodes should be verified | [Link]([需要补充 PR 链接]) |
+| JDK-8353584 | [BACKOUT] DaCapo xalan performance with -XX:+UseObjectMonitorTable | [Link]([需要补充 PR 链接]) |
+| JDK-8351673 | Clean up a case of if (LockingMode == LM_LIGHTWEIGHT) | [Link]([需要补充 PR 链接]) |
+| JDK-8351046 | Rename ObjectMonitor functions | [Link]([需要补充 PR 链接]) |
+| JDK-8351165 | Remove unused includes from vmStructs | [Link]([需要补充 PR 链接]) |
+| JDK-8350974 | The os_cpu VM_STRUCTS, VM_TYPES, etc have no declarations | [Link]([需要补充 PR 链接]) |
+| JDK-8315488 | Remove outdated and unused ciReplay support from SA | [Link]([需要补充 PR 链接]) |
+| JDK-8328473 | StringTable and SymbolTable statistics delay time to safepoint | [Link]([需要补充 PR 链接]) |
+| JDK-8349860 | Make Class.isArray(), Class.isInterface() and Class.isPrimitive() non-native | [Link]([需要补充 PR 链接]) |
+| JDK-8349145 | Make Class.getProtectionDomain() non-native | [Link]([需要补充 PR 链接]) |
+| JDK-8346567 | Make Class.getModifiers() non-native | [Link]([需要补充 PR 链接]) |
+| JDK-8349559 | Compiler interface doesn't need to store protection domain | [Link]([需要补充 PR 链接]) |
+| JDK-8334320 | Replace vmTestbase/metaspace/share/TriggerUnloadingWithWhiteBox.java | [Link]([需要补充 PR 链接]) |
+| JDK-8337548 | Parallel class loading can pass is_superclass true for interfaces | [Link]([需要补充 PR 链接]) |
+| JDK-8337458 | Remove debugging code print_cpool_bytes | [Link]([需要补充 PR 链接]) |
+| JDK-8347990 | Remove SIZE_FORMAT macros and replace remaining uses | [Link]([需要补充 PR 链接]) |
+| JDK-8347733 | Replace SIZE_FORMAT in runtime code | [Link]([需要补充 PR 链接]) |
+| JDK-8347924 | Replace SIZE_FORMAT in memory and metaspace | [Link]([需要补充 PR 链接]) |
+| JDK-8347609 | Replace SIZE_FORMAT in os/os_cpu/cpu directories | [Link]([需要补充 PR 链接]) |
+| JDK-8347730 | Replace SIZE_FORMAT in g1 | [Link]([需要补充 PR 链接]) |
+| JDK-8347731 | Replace SIZE_FORMAT in zgc | [Link]([需要补充 PR 链接]) |
+| JDK-8347732 | Replace SIZE_FORMAT in shenandoah | [Link]([需要补充 PR 链接]) |
+| JDK-8347431 | Update ObjectMonitor comments | [Link]([需要补充 PR 链接]) |
+| JDK-8347727 | Replace SIZE_FORMAT in shared gc | [Link]([需要补充 PR 链接]) |
+| JDK-8347729 | Replace SIZE_FORMAT in parallel and serial gc | [Link]([需要补充 PR 链接]) |
+| JDK-8347721 | Replace SIZE_FORMAT in compiler directories | [Link]([需要补充 PR 链接]) |
+| JDK-8347724 | Replace SIZE_FORMAT in jfr directory | [Link]([需要补充 PR 链接]) |
+| JDK-8347566 | Replace SSIZE_FORMAT with 'z' length modifier | [Link]([需要补充 PR 链接]) |
+| JDK-8346990 | Remove INTX_FORMAT and UINTX_FORMAT macros | [Link]([需要补充 PR 链接]) |
+| JDK-8293123 | Fix various include file ordering | [Link]([需要补充 PR 链接]) |
+| JDK-8346929 | runtime/ClassUnload/DictionaryDependsTest.java fails | [Link]([需要补充 PR 链接]) |
+| JDK-8347147 | [REDO] AccessFlags can be u2 in metadata | [Link]([需要补充 PR 链接]) |
+| JDK-8329549 | Remove FORMAT64_MODIFIER | [Link]([需要补充 PR 链接]) |
+| JDK-8339113 | AccessFlags can be u2 in metadata | [Link]([需要补充 PR 链接]) |
+| JDK-8337016 | serviceability/jvmti/RedefineClasses/RedefineLeakThrowable.java gets Metaspace OOM | [Link]([需要补充 PR 链接]) |
+| JDK-8346304 | SA doesn't need a copy of getModifierFlags | [Link]([需要补充 PR 链接]) |
+| JDK-8345678 | compute_modifiers should not be in create_mirror | [Link]([需要补充 PR 链接]) |
+| JDK-8346040 | Zero interpreter build on Linux Aarch64 is broken | [Link]([需要补充 PR 链接]) |
+| JDK-8340212 | -Xshare:off -XX:CompressedClassSpaceBaseAddress=... crashes on macos-aarch64 | [Link]([需要补充 PR 链接]) |
 
 ## Key Contributions
 

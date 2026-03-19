@@ -1,0 +1,109 @@
+# 从 JDK 21 迁移到 JDK 26
+
+> **目标版本**: JDK 26 (GA 2025-09-16)
+> **来源版本**: JDK 21 (LTS)
+
+---
+
+## 快速切换
+
+```bash
+# SDKMAN
+sdk install java 26
+sdk default java 26
+
+# 验证版本
+java -version  # 应显示 openjdk version "26"
+```
+
+---
+
+## 重要变更
+
+### ✅ 兼容性
+
+JDK 26 与 JDK 21 具有良好的二进制兼容性，大部分应用无需修改即可运行。
+
+### ⚠️ 破坏性变更
+
+| 变更 | 影响 | 建议 |
+|------|------|------|
+| Applet API 移除 | 使用 `javax.swing.JApplet` 的应用 | 迁移到现代 Web 技术 |
+| Final 语义更严格 | 依赖 final 字段构造行为的代码 | 检查并修复 |
+| 部分预览特性默认值变化 | 使用 `--enable-preview` 的代码 | 明确启用预览特性 |
+
+---
+
+## 新特性推荐
+
+### 网络应用
+
+```java
+// HTTP/3 自动协商
+HttpClient client = HttpClient.newBuilder()
+    .version(HttpClient.Version.HTTP_3_AUTO)  // 新增
+    .build();
+```
+
+### 并发编程
+
+```java
+// 结构化并发 (第六次预览)
+try (var scope = StructuredTaskScope.open()) {
+    Subtask<String> user = scope.fork(() -> fetchUser());
+    Subtask<List<Order>> orders = scope.fork(() -> fetchOrders());
+    scope.join();
+    return new Response(user.get(), orders.get());
+}
+```
+
+### 性能优化
+
+```bash
+# G1 GC 自动获得 10-20% 吞吐量提升
+java -XX:+UseG1GC MyApp
+
+# 大内存应用启用分代 ZGC
+java -XX:+UseZGC -XX:+ZGenerational MyApp
+```
+
+---
+
+## JVM 参数更新
+
+| 参数 (JDK 21) | 参数 (JDK 26) | 说明 |
+|--------------|--------------|------|
+| `-XX:+UseZGC` | `-XX:+UseZGC -XX:+ZGenerational` | 启用分代 ZGC |
+| 无需更改 | `-XX:+G1UseClaimTable` | G1 吞吐量优化 (默认启用) |
+
+---
+
+## 测试清单
+
+- [ ] 编译通过 (`javac --release 26`)
+- [ ] 单元测试通过
+- [ ] 集成测试通过
+- [ ] 性能基准测试
+- [ ] 预览特性测试 (如使用)
+
+---
+
+## 回滚方案
+
+如果遇到问题：
+
+```bash
+# SDKMAN
+sdk default java 21
+
+# 或直接使用特定版本
+sdk use java 21
+```
+
+---
+
+## 更多信息
+
+- [JDK 26 发布说明](https://openjdk.org/projects/jdk/26/)
+- [JDK 26 完整特性](../index.md)
+- [JDK 26 JEP 列表](./jeps.md)

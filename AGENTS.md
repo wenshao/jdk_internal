@@ -16,7 +16,7 @@ jdk_internal/
 │   ├── jdk11/             # JDK 11 (LTS 2018)
 │   ├── jdk17/             # JDK 17 (LTS 2021)
 │   ├── jdk21/             # JDK 21 (LTS 2023)
-│   └── jdk26/             # JDK 26 (开发中)
+│   └── jdk26/             # JDK 26 (GA 2025-09-16)
 │       ├── index.md       # 版本概览
 │       ├── jeps.md        # JEP 汇总
 │       └── migration/     # 迁移指南
@@ -83,7 +83,7 @@ jdk_internal/
 | JDK 11 | 高 | LTS 主流版本，完整文档 |
 | JDK 17 | 高 | LTS 主流版本，完整文档 |
 | JDK 21 | 高 | 当前 LTS，重点内容 |
-| JDK 26 | 最高 | 开发中，详细追踪 |
+| JDK 26 | 最高 | 已发布 (GA 2025-09-16)，详细追踪 |
 
 ## Documentation Standards
 

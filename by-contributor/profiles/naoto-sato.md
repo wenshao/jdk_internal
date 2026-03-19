@@ -39,60 +39,60 @@
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
-| 8372117 | Correct the misleading comment in Character.UnicodeBlock | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8346944 | Update Unicode Data Files to 17.0.0 | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8346947 | Update ICU4J to Version 78.1 | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8371339 | Illegal pattern char 'B' with locale.providers as HOST on macOS for Taiwanese | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8354548 | Update CLDR to Version 48.0 | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8369184 | SimpleTimeZone equals() Returns True for Unequal Instances with Different hashCode Values | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8368845 | x-IBM930 uses incorrect character for Hex 42 60 | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8368328 | CompactNumberFormat.clone does not produce independent instances | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8366261 | Provide utility methods for sun.security.util.Password | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8367021 | Regression in LocaleDataTest refactoring | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8366517 | Refine null locale processing of ctor/factory methods in Date/DecimalFormatSymbols | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8366375 | Collator example for SECONDARY uses wrong code point | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8364752 | java.time.Instant should be able to parse ISO 8601 offsets of the form HH:mm:ss | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8361972 | Clarify the condition of System.console() about standard input/output | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8363972 | Lenient parsing of minus sign pattern in DecimalFormat/CompactNumberFormat | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8361613 | System.console() should only be available for interactive terminal | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8361717 | Refactor Collections.emptyList() in Locale related classes | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8361519 | Obsolete Unicode Scalar Value link in Character class | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8360554 | Use the title from the JSON RFC for the @spec tag | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8360045 | StringTokenizer.hasMoreTokens() throws NPE after nextToken(null) | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8359732 | Make standard i/o encoding related system properties StaticProperty | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8358819 | The first year is not displayed correctly in Japanese Calendar | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8358734 | Remove JavaTimeSupplementary resource bundles | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8358626 | Emit UTF-8 CLDR resources | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8358158 | test/jdk/java/io/Console/CharsetTest.java failing with NoClassDefFoundError | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8357882 | Use UTF-8 encoded data in LocaleDataTest | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8357886 | Remove TimeZoneNames_* of the COMPAT locale data provider | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8356985 | Use "stdin.encoding" in Console's read*() methods | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8357075 | Remove leftover COMPAT locale data tests | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8356822 | Refactor HTML anchor tags to javadoc in Charset | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8356420 | Provide examples on wrapping System.in | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8356450 | NPE in CLDRTimeZoneNameProviderImpl for tzdata downgrades | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8356221 | Clarify Console.charset() method description | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8355558 | SJIS.java test is always ignored | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8355215 | Add @spec tags to Emoji related methods | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8343157 | Examine large files for character encoding/decoding | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8353118 | Deprecate the use of java.locale.useOldISOCodes system property | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8351435 | Change the default Console implementation back to the built-in one in java.base | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8352906 | stdout/err.encoding on Windows set by incorrect Win32 call | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8352716 | (tz) Update Timezone Data to 2025b | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8346948 | Update CLDR to Version 47.0 | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8352628 | Refine Grapheme test | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8351017 | ChronoUnit.MONTHS.between() not giving correct result when date is in February | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8345213 | JVM Prefers /etc/timezone Over /etc/localtime on Debian 12 | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8349873 | StackOverflowError after JDK-8342550 if -Duser.timezone= is set to deprecated zone id | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8349254 | Disable "best-fit" mapping on Windows environment variables | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8301875 | java.util.TimeZone.getSystemTimeZoneID uses C library default file mode | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8347841 | Test fixes that use deprecated time zone IDs | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8342550 | Log warning for using JDK1.1 compatible time zone IDs for future removal | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8347146 | Convert IncludeLocalesPluginTest to use JUnit | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8166983 | Remove old/legacy unused tzdata files | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8175709 | DateTimeFormatterBuilder.appendZoneId() has misleading JavaDoc | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8345668 | ZoneOffset.ofTotalSeconds performance regression | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8346300 | Add @Test annotation to TCKZoneId.test_constant_OLD_IDS_POST_2024b test | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
+| 8372117 | Correct the misleading comment in Character.UnicodeBlock | [PR]([需要补充 PR 链接]) |
+| 8346944 | Update Unicode Data Files to 17.0.0 | [PR]([需要补充 PR 链接]) |
+| 8346947 | Update ICU4J to Version 78.1 | [PR]([需要补充 PR 链接]) |
+| 8371339 | Illegal pattern char 'B' with locale.providers as HOST on macOS for Taiwanese | [PR]([需要补充 PR 链接]) |
+| 8354548 | Update CLDR to Version 48.0 | [PR]([需要补充 PR 链接]) |
+| 8369184 | SimpleTimeZone equals() Returns True for Unequal Instances with Different hashCode Values | [PR]([需要补充 PR 链接]) |
+| 8368845 | x-IBM930 uses incorrect character for Hex 42 60 | [PR]([需要补充 PR 链接]) |
+| 8368328 | CompactNumberFormat.clone does not produce independent instances | [PR]([需要补充 PR 链接]) |
+| 8366261 | Provide utility methods for sun.security.util.Password | [PR]([需要补充 PR 链接]) |
+| 8367021 | Regression in LocaleDataTest refactoring | [PR]([需要补充 PR 链接]) |
+| 8366517 | Refine null locale processing of ctor/factory methods in Date/DecimalFormatSymbols | [PR]([需要补充 PR 链接]) |
+| 8366375 | Collator example for SECONDARY uses wrong code point | [PR]([需要补充 PR 链接]) |
+| 8364752 | java.time.Instant should be able to parse ISO 8601 offsets of the form HH:mm:ss | [PR]([需要补充 PR 链接]) |
+| 8361972 | Clarify the condition of System.console() about standard input/output | [PR]([需要补充 PR 链接]) |
+| 8363972 | Lenient parsing of minus sign pattern in DecimalFormat/CompactNumberFormat | [PR]([需要补充 PR 链接]) |
+| 8361613 | System.console() should only be available for interactive terminal | [PR]([需要补充 PR 链接]) |
+| 8361717 | Refactor Collections.emptyList() in Locale related classes | [PR]([需要补充 PR 链接]) |
+| 8361519 | Obsolete Unicode Scalar Value link in Character class | [PR]([需要补充 PR 链接]) |
+| 8360554 | Use the title from the JSON RFC for the @spec tag | [PR]([需要补充 PR 链接]) |
+| 8360045 | StringTokenizer.hasMoreTokens() throws NPE after nextToken(null) | [PR]([需要补充 PR 链接]) |
+| 8359732 | Make standard i/o encoding related system properties StaticProperty | [PR]([需要补充 PR 链接]) |
+| 8358819 | The first year is not displayed correctly in Japanese Calendar | [PR]([需要补充 PR 链接]) |
+| 8358734 | Remove JavaTimeSupplementary resource bundles | [PR]([需要补充 PR 链接]) |
+| 8358626 | Emit UTF-8 CLDR resources | [PR]([需要补充 PR 链接]) |
+| 8358158 | test/jdk/java/io/Console/CharsetTest.java failing with NoClassDefFoundError | [PR]([需要补充 PR 链接]) |
+| 8357882 | Use UTF-8 encoded data in LocaleDataTest | [PR]([需要补充 PR 链接]) |
+| 8357886 | Remove TimeZoneNames_* of the COMPAT locale data provider | [PR]([需要补充 PR 链接]) |
+| 8356985 | Use "stdin.encoding" in Console's read*() methods | [PR]([需要补充 PR 链接]) |
+| 8357075 | Remove leftover COMPAT locale data tests | [PR]([需要补充 PR 链接]) |
+| 8356822 | Refactor HTML anchor tags to javadoc in Charset | [PR]([需要补充 PR 链接]) |
+| 8356420 | Provide examples on wrapping System.in | [PR]([需要补充 PR 链接]) |
+| 8356450 | NPE in CLDRTimeZoneNameProviderImpl for tzdata downgrades | [PR]([需要补充 PR 链接]) |
+| 8356221 | Clarify Console.charset() method description | [PR]([需要补充 PR 链接]) |
+| 8355558 | SJIS.java test is always ignored | [PR]([需要补充 PR 链接]) |
+| 8355215 | Add @spec tags to Emoji related methods | [PR]([需要补充 PR 链接]) |
+| 8343157 | Examine large files for character encoding/decoding | [PR]([需要补充 PR 链接]) |
+| 8353118 | Deprecate the use of java.locale.useOldISOCodes system property | [PR]([需要补充 PR 链接]) |
+| 8351435 | Change the default Console implementation back to the built-in one in java.base | [PR]([需要补充 PR 链接]) |
+| 8352906 | stdout/err.encoding on Windows set by incorrect Win32 call | [PR]([需要补充 PR 链接]) |
+| 8352716 | (tz) Update Timezone Data to 2025b | [PR]([需要补充 PR 链接]) |
+| 8346948 | Update CLDR to Version 47.0 | [PR]([需要补充 PR 链接]) |
+| 8352628 | Refine Grapheme test | [PR]([需要补充 PR 链接]) |
+| 8351017 | ChronoUnit.MONTHS.between() not giving correct result when date is in February | [PR]([需要补充 PR 链接]) |
+| 8345213 | JVM Prefers /etc/timezone Over /etc/localtime on Debian 12 | [PR]([需要补充 PR 链接]) |
+| 8349873 | StackOverflowError after JDK-8342550 if -Duser.timezone= is set to deprecated zone id | [PR]([需要补充 PR 链接]) |
+| 8349254 | Disable "best-fit" mapping on Windows environment variables | [PR]([需要补充 PR 链接]) |
+| 8301875 | java.util.TimeZone.getSystemTimeZoneID uses C library default file mode | [PR]([需要补充 PR 链接]) |
+| 8347841 | Test fixes that use deprecated time zone IDs | [PR]([需要补充 PR 链接]) |
+| 8342550 | Log warning for using JDK1.1 compatible time zone IDs for future removal | [PR]([需要补充 PR 链接]) |
+| 8347146 | Convert IncludeLocalesPluginTest to use JUnit | [PR]([需要补充 PR 链接]) |
+| 8166983 | Remove old/legacy unused tzdata files | [PR]([需要补充 PR 链接]) |
+| 8175709 | DateTimeFormatterBuilder.appendZoneId() has misleading JavaDoc | [PR]([需要补充 PR 链接]) |
+| 8345668 | ZoneOffset.ofTotalSeconds performance regression | [PR]([需要补充 PR 链接]) |
+| 8346300 | Add @Test annotation to TCKZoneId.test_constant_OLD_IDS_POST_2024b test | [PR]([需要补充 PR 链接]) |
 
 > **JBS Link**: https://bugs.openjdk.org/browse/JDK-[Issue Number]
 

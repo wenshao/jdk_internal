@@ -44,66 +44,66 @@
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
-| 8370039 | GenShen: array copy SATB barrier improvements | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8370041 | GenShen: Filter young pointers from thread local SATB buffers when only marking old | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8370521 | GenShen: Various code cleanup related to promotion | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8370667 | GenShen: Only make assertions about region pinning for collected generation | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8370726 | GenShen: Misplaced assertion that old referent is marked during young collection | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8370520 | GenShen: Track and report on promotion failures | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8369068 | GenShen: Generations still aren't reconciled assertion failure | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8369447 | GenShen: Regulator thread may observe inconsistent states | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8241066 | Shenandoah: fix or cleanup SH::do_full_collection | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8370050 | Shenandoah: Obsolete ShenandoahPacing option | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8367709 | GenShen: Dirty cards for objects that get promoted by safepoint | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8367646 | [GenShen] Control thread may overwrite gc cancellation cause set by mutator | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8368501 | Shenandoah: GC progress evaluation does not use generation | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8264851 | Shenandoah: Rework control loop mechanics to use timed waits | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8368499 | GenShen: Do not collect age census during evac when adaptive tenuring is disabled | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8368152 | Shenandoah: Incorrect behavior at end of degenerated cycle | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8365792 | GenShen: assertion "Generations aren't reconciled" | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8367473 | Shenandoah: Make the detailed evacuation metrics a runtime diagnostic option | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8367450 | Shenandoah: Log the composition of the collection set | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8367451 | GenShen: Remove the option to compute age census during evacuation | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8367378 | GenShen: Missing timing stats when old mark buffers are flushed during final update refs | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8365956 | GenShen: Adaptive tenuring threshold algorithm may raise threshold prematurely | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8365622 | Shenandoah: Fix Shenandoah simple bit map test | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8365571 | GenShen: PLAB promotions may remain disabled for evacuation threads | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8365572 | Shenandoah: Remove unused thread local _paced_time field | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8361726 | Shenandoah: More detailed evacuation instrumentation | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8360288 | Shenandoah crash at size_given_klass in op_degenerated | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8357550 | GenShen crashes during freeze: assert(!chunk->requires_barriers()) failed | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8359394 | GC cause cleanup | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8357976 | GenShen crash in swap_card_tables: Should be clean | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8358102 | GenShen: Age tables could be seeded with cumulative values | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8354078 | Implement JEP 521: Generational Shenandoah | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8355372 | GenShen: Test gc/shenandoah/generational/TestOldGrowthTriggers.java fails | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8355789 | GenShen: assert(_degen_point == ShenandoahGC::_degenerated_unset) failed | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8353596 | GenShen: Test TestClone.java#generational-no-coops intermittent timed out | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8354452 | Shenandoah: Enforce range checks on parameters controlling heuristic sleep times | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8353218 | Shenandoah: Out of date comment references Brooks pointers | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8352918 | Shenandoah: Verifier does not deactivate barriers as intended | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8348400 | GenShen: assert(ShenandoahHeap::heap()->is_full_gc_in_progress() || ...) failed | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8352299 | GenShen: Young cycles that interrupt old cycles cannot be cancelled | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8352091 | GenShen: assert(!(request.generation->is_old() && ...)) failed | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8350898 | Shenandoah: Eliminate final roots safepoint | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8351464 | Shenandoah: Hang on ShenandoahController::handle_alloc_failure | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8350905 | Shenandoah: Releasing a WeakHandle's referent may extend its lifetime | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8351444 | Shenandoah: Class Unloading may encounter recycled oops | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8350605 | assert(!heap->is_uncommit_in_progress()) failed | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8349094 | GenShen: Race between control and regulator threads may violate assertions | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8348092 | Shenandoah: assert(nk >= _lowest_valid_narrow_klass_id ...) failed | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8348268 | Test gc/shenandoah/TestResizeTLAB.java#compact: fatal error | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8349002 | GenShen: Deadlock during shutdown | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8348420 | Shenandoah: Check is_reserved before using ReservedSpace instances | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8345750 | Shenandoah: Test TestJcmdHeapDump.java#aggressive intermittent assert | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8347617 | Shenandoah: Use consistent name for update references phase | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8344049 | Shenandoah: Eliminate init-update-refs safepoint | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8347620 | Shenandoah: Use 'free' tag for free set related logging | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8346737 | GenShen: Generational memory pools should not report zero for maximum capacity | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8346688 | GenShen: Missing metadata trigger log message | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8346690 | Shenandoah: Fix log message for end of GC usage report | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8346051 | MemoryTest fails when Shenandoah's generational mode is enabled | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
-| 8345970 | pthread_getcpuclockid related crashes in shenandoah tests | [PR](https://github.com/openjdk/jdk/pull/XXXX) |
+| 8370039 | GenShen: array copy SATB barrier improvements | [PR]([需要补充 PR 链接]) |
+| 8370041 | GenShen: Filter young pointers from thread local SATB buffers when only marking old | [PR]([需要补充 PR 链接]) |
+| 8370521 | GenShen: Various code cleanup related to promotion | [PR]([需要补充 PR 链接]) |
+| 8370667 | GenShen: Only make assertions about region pinning for collected generation | [PR]([需要补充 PR 链接]) |
+| 8370726 | GenShen: Misplaced assertion that old referent is marked during young collection | [PR]([需要补充 PR 链接]) |
+| 8370520 | GenShen: Track and report on promotion failures | [PR]([需要补充 PR 链接]) |
+| 8369068 | GenShen: Generations still aren't reconciled assertion failure | [PR]([需要补充 PR 链接]) |
+| 8369447 | GenShen: Regulator thread may observe inconsistent states | [PR]([需要补充 PR 链接]) |
+| 8241066 | Shenandoah: fix or cleanup SH::do_full_collection | [PR]([需要补充 PR 链接]) |
+| 8370050 | Shenandoah: Obsolete ShenandoahPacing option | [PR]([需要补充 PR 链接]) |
+| 8367709 | GenShen: Dirty cards for objects that get promoted by safepoint | [PR]([需要补充 PR 链接]) |
+| 8367646 | [GenShen] Control thread may overwrite gc cancellation cause set by mutator | [PR]([需要补充 PR 链接]) |
+| 8368501 | Shenandoah: GC progress evaluation does not use generation | [PR]([需要补充 PR 链接]) |
+| 8264851 | Shenandoah: Rework control loop mechanics to use timed waits | [PR]([需要补充 PR 链接]) |
+| 8368499 | GenShen: Do not collect age census during evac when adaptive tenuring is disabled | [PR]([需要补充 PR 链接]) |
+| 8368152 | Shenandoah: Incorrect behavior at end of degenerated cycle | [PR]([需要补充 PR 链接]) |
+| 8365792 | GenShen: assertion "Generations aren't reconciled" | [PR]([需要补充 PR 链接]) |
+| 8367473 | Shenandoah: Make the detailed evacuation metrics a runtime diagnostic option | [PR]([需要补充 PR 链接]) |
+| 8367450 | Shenandoah: Log the composition of the collection set | [PR]([需要补充 PR 链接]) |
+| 8367451 | GenShen: Remove the option to compute age census during evacuation | [PR]([需要补充 PR 链接]) |
+| 8367378 | GenShen: Missing timing stats when old mark buffers are flushed during final update refs | [PR]([需要补充 PR 链接]) |
+| 8365956 | GenShen: Adaptive tenuring threshold algorithm may raise threshold prematurely | [PR]([需要补充 PR 链接]) |
+| 8365622 | Shenandoah: Fix Shenandoah simple bit map test | [PR]([需要补充 PR 链接]) |
+| 8365571 | GenShen: PLAB promotions may remain disabled for evacuation threads | [PR]([需要补充 PR 链接]) |
+| 8365572 | Shenandoah: Remove unused thread local _paced_time field | [PR]([需要补充 PR 链接]) |
+| 8361726 | Shenandoah: More detailed evacuation instrumentation | [PR]([需要补充 PR 链接]) |
+| 8360288 | Shenandoah crash at size_given_klass in op_degenerated | [PR]([需要补充 PR 链接]) |
+| 8357550 | GenShen crashes during freeze: assert(!chunk->requires_barriers()) failed | [PR]([需要补充 PR 链接]) |
+| 8359394 | GC cause cleanup | [PR]([需要补充 PR 链接]) |
+| 8357976 | GenShen crash in swap_card_tables: Should be clean | [PR]([需要补充 PR 链接]) |
+| 8358102 | GenShen: Age tables could be seeded with cumulative values | [PR]([需要补充 PR 链接]) |
+| 8354078 | Implement JEP 521: Generational Shenandoah | [PR]([需要补充 PR 链接]) |
+| 8355372 | GenShen: Test gc/shenandoah/generational/TestOldGrowthTriggers.java fails | [PR]([需要补充 PR 链接]) |
+| 8355789 | GenShen: assert(_degen_point == ShenandoahGC::_degenerated_unset) failed | [PR]([需要补充 PR 链接]) |
+| 8353596 | GenShen: Test TestClone.java#generational-no-coops intermittent timed out | [PR]([需要补充 PR 链接]) |
+| 8354452 | Shenandoah: Enforce range checks on parameters controlling heuristic sleep times | [PR]([需要补充 PR 链接]) |
+| 8353218 | Shenandoah: Out of date comment references Brooks pointers | [PR]([需要补充 PR 链接]) |
+| 8352918 | Shenandoah: Verifier does not deactivate barriers as intended | [PR]([需要补充 PR 链接]) |
+| 8348400 | GenShen: assert(ShenandoahHeap::heap()->is_full_gc_in_progress() || ...) failed | [PR]([需要补充 PR 链接]) |
+| 8352299 | GenShen: Young cycles that interrupt old cycles cannot be cancelled | [PR]([需要补充 PR 链接]) |
+| 8352091 | GenShen: assert(!(request.generation->is_old() && ...)) failed | [PR]([需要补充 PR 链接]) |
+| 8350898 | Shenandoah: Eliminate final roots safepoint | [PR]([需要补充 PR 链接]) |
+| 8351464 | Shenandoah: Hang on ShenandoahController::handle_alloc_failure | [PR]([需要补充 PR 链接]) |
+| 8350905 | Shenandoah: Releasing a WeakHandle's referent may extend its lifetime | [PR]([需要补充 PR 链接]) |
+| 8351444 | Shenandoah: Class Unloading may encounter recycled oops | [PR]([需要补充 PR 链接]) |
+| 8350605 | assert(!heap->is_uncommit_in_progress()) failed | [PR]([需要补充 PR 链接]) |
+| 8349094 | GenShen: Race between control and regulator threads may violate assertions | [PR]([需要补充 PR 链接]) |
+| 8348092 | Shenandoah: assert(nk >= _lowest_valid_narrow_klass_id ...) failed | [PR]([需要补充 PR 链接]) |
+| 8348268 | Test gc/shenandoah/TestResizeTLAB.java#compact: fatal error | [PR]([需要补充 PR 链接]) |
+| 8349002 | GenShen: Deadlock during shutdown | [PR]([需要补充 PR 链接]) |
+| 8348420 | Shenandoah: Check is_reserved before using ReservedSpace instances | [PR]([需要补充 PR 链接]) |
+| 8345750 | Shenandoah: Test TestJcmdHeapDump.java#aggressive intermittent assert | [PR]([需要补充 PR 链接]) |
+| 8347617 | Shenandoah: Use consistent name for update references phase | [PR]([需要补充 PR 链接]) |
+| 8344049 | Shenandoah: Eliminate init-update-refs safepoint | [PR]([需要补充 PR 链接]) |
+| 8347620 | Shenandoah: Use 'free' tag for free set related logging | [PR]([需要补充 PR 链接]) |
+| 8346737 | GenShen: Generational memory pools should not report zero for maximum capacity | [PR]([需要补充 PR 链接]) |
+| 8346688 | GenShen: Missing metadata trigger log message | [PR]([需要补充 PR 链接]) |
+| 8346690 | Shenandoah: Fix log message for end of GC usage report | [PR]([需要补充 PR 链接]) |
+| 8346051 | MemoryTest fails when Shenandoah's generational mode is enabled | [PR]([需要补充 PR 链接]) |
+| 8345970 | pthread_getcpuclockid related crashes in shenandoah tests | [PR]([需要补充 PR 链接]) |
 
 > **JBS Link**: https://bugs.openjdk.org/browse/JDK-[Issue Number]
 
