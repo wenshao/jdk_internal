@@ -1,4 +1,4 @@
-# Chen Liang (陈亮)
+# Chen Liang
 
 > ClassFile API 核心开发者，JDK Reviewer
 
@@ -8,7 +8,7 @@
 
 | 属性 | 值 |
 |------|-----|
-| **姓名** | Chen Liang (陈亮) |
+| **姓名** | Chen Liang |
 | **当前组织** | Oracle |
 | **位置** | 奥斯汀, 德克萨斯州, 美国 |
 | **GitHub** | [@liach](https://github.com/liach) |
