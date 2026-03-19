@@ -172,7 +172,7 @@
 | 主题 | 链接 |
 |------|------|
 | HTTP/3 实现 | [深度分析](jdk26/deep-dive/http3-implementation.md) |
-| 结构化并发 | [深度分析](jdk26/deep-dive/structured-concurrency.md) |
+| 结构化并发 | 深度分析 |
 | 原始类型模式匹配 | [深度分析](jdk26/deep-dive/primitive-pattern-matching.md) |
 | Vector API 改进 | [深度分析](jdk26/deep-dive/vectorapi-improvements.md) |
 | G1 GC 吞吐量优化 | [深度分析](jdk26/deep-dive/g1-gc-throughput.md) |
@@ -241,7 +241,7 @@ JDK 8 ───────► JDK 11 ───────► JDK 17 ───�
 | JEP 462 | Structured Concurrency | [分析](/jeps/jep-462.md) |
 | JEP 467 | Scoped Values | [分析](/jeps/jep-467.md) |
 | JEP 468 | Generational ZGC | [分析](/jeps/jep-468.md) |
-| JEP 469 | Implicit Classes | [分析](/jeps/jep-469.md) |
+| JEP 469 | Implicit Classes | 分析 |
 | JEP 470 | PEM Encodings | [分析](/jeps/jep-470.md) |
 | JEP 500 | Make Final Mean Final | [分析](/jeps/jep-500.md) |
 | JEP 502 | Stable Values | [分析](/jeps/jep-502.md) |

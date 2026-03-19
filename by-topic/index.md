@@ -188,6 +188,6 @@
 
 ## 相关链接
 
-- [按版本浏览](../by-version/)
-- [JEP 索引](../jeps/)
-- [PR 分析](../by-pr/)
+- [按版本浏览](/by-version/)
+- [JEP 索引](/jeps/)
+- [PR 分析](/by-pr/)
