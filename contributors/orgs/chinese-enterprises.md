@@ -12,8 +12,8 @@
 |------|---------|----------|------|
 | [阿里巴巴](alibaba.md) | 72 | 核心库优化 | [查看详情](alibaba.md) |
 | [腾讯](tencent.md) | 44 | G1 GC, 容器 | [查看详情](tencent.md) |
+| [龙芯](loongson.md) | 52 | LoongArch | [查看详情](loongson.md) |
 | [字节跳动](bytedance.md) | 12 | RISC-V | [查看详情](bytedance.md) |
-| [龙芯](#龙芯-loongson) | 40+ | LoongArch | - |
 | [海光](#海光-hygon) | 60+ | 测试稳定性 | - |
 | [华为](#华为-huawei) | 10+ | 测试 | - |
 | [ISCAS](#iscas-中科院软件所) | 17+ | RISC-V | - |
@@ -120,31 +120,29 @@
 
 ## 龙芯 (Loongson)
 
-> LoongArch 架构移植
+> LoongArch 架构支持和测试修复
+
+👉 [查看完整详情](loongson.md)
 
 | 指标 | 值 |
 |------|-----|
-| **Commits** | 40+ |
-| **贡献者** | 6+ |
-| **主要领域** | LoongArch 移植 |
+| **Commits** | 52 |
+| **贡献者** | 9 |
+| **主要领域** | LoongArch、测试 |
 
 ### Top 贡献者
 
 | 贡献者 | Commits | 领域 |
 |--------|---------|------|
-| sunguoyun | 14 | LoongArch |
-| Ao Qi | 11 | LoongArch |
-| Jie Fu | 6 | LoongArch |
+| Guoyun Sun | 14 | 测试、文档 |
+| Qi Ao | 11 | 测试、编译器 |
+| Jie Fu | 8 | 测试 |
 
 ### 关键贡献
 
-- LoongArch 架构移植
-- LoongArch 指令集支持
-- 构建系统配置
-
-### 相关项目
-
-- [Loongson JDK](https://github.com/loongson/jdk)
+- LoongArch Zero VM 支持
+- 编译器正确性修复
+- 测试稳定性改进
 
 ---
 

@@ -81,8 +81,8 @@ OpenJDK 贡献者生态 (2007-2026)
 |------|---------|----------|------|
 | [阿里巴巴](orgs/alibaba.md) | 72 | 核心库优化 | [查看详情](orgs/alibaba.md) |
 | [腾讯](orgs/tencent.md) | 44 | G1 GC, 容器 | [查看详情](orgs/tencent.md) |
+| [龙芯](orgs/loongson.md) | 52 | LoongArch | [查看详情](orgs/loongson.md) |
 | [字节跳动](orgs/bytedance.md) | 12 | RISC-V | [查看详情](orgs/bytedance.md) |
-| [龙芯](orgs/chinese-enterprises.md#龙芯-loongson) | 40+ | LoongArch | [查看详情](orgs/chinese-enterprises.md) |
 | [海光](orgs/chinese-enterprises.md#海光-hygon) | 60+ | 测试稳定性 | [查看详情](orgs/chinese-enterprises.md) |
 
 ---
