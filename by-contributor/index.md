@@ -10,16 +10,18 @@
 
 | 组织 | 贡献者 | 领域 |
 |------|--------|------|
-| [Alibaba](by-org/alibaba.md) | 15+ | 核心库、RISC-V、编译器 |
-| [Oracle](by-org/oracle.md) | 50+ | 全领域 |
-| [IBM](by-org/ibm.md) | 10+ | GC、编译器 |
-| [Red Hat](by-org/redhat.md) | 10+ | Shenandoah GC |
+| Alibaba | 15+ | 核心库、RISC-V、编译器 |
+| Oracle | 50+ | 全领域 |
+| IBM | 10+ | GC、编译器 |
+| Red Hat | 10+ | Shenandoah GC |
+
+> 按组织分类页面待补充
 
 ### 按地区
 
 | 地区 | 贡献者 | 查看 |
 |------|--------|------|
-| 中国 | 20+ | [中国贡献者](profiles/chinese.md) |
+| 中国 | 20+ | [中国贡献者](profiles/chinese-contributors.md) |
 | 美国 | 50+ | 待补充 |
 | 欧洲 | 30+ | 待补充 |
 
@@ -41,7 +43,7 @@
 | 1 | Shaojin Wen | Alibaba | 97 | 核心库 |
 | 2 | ... | ... | ... | ... |
 
-→ [完整榜单](profiles/top-contributors.md)
+→ [完整榜单](profiles/jdk26-top-contributors.md)
 
 ---
 
