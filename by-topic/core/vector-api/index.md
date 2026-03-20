@@ -2,7 +2,7 @@
 
 > **状态**: 🥚 Incubator | **模块**: jdk.incubator.vector | **JEP**: 338, 414, 417, 426, 448, 460
 
-[← 返回核心](..) | [时间线](timeline.md) | [使用指南](usage.md) | [平台支持](platform.md) | [贡献者](contributors.md)
+[← 返回核心](..) | [时间线](timeline.md) | [使用指南](usage.md) | [平台支持](platform.md) | [贡献者](contributors.md) | [各版本详情](versions.md)
 
 ---
 
@@ -344,6 +344,7 @@ java --add-modules jdk.incubator.vector VectorAdd
 
 - [时间线](timeline.md) - 版本演进历史
 - [使用指南](usage.md) - 详细使用示例
+- [各版本详情](versions.md) - 每个版本究竟做了什么
 
 ### 源码位置
 
