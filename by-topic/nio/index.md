@@ -25,6 +25,22 @@ File     Selector WatchService  List
 | **JDK 7** | NIO.2 | JSR 203 | Path, Files, WatchService |
 | **JDK 11** | 增强 | - | Files.readString/writeString |
 | **JDK 21** | 虚拟线程 | - | 并发优化 |
+| **JDK 22** | Foreign Memory | JEP 454 | 外部内存 API |
+
+---
+
+## OpenJDK 项目
+
+### [Project Panama](../core/panama/)
+
+外部函数接口和外部内存器。
+
+| 特性 | 版本 | JEP |
+|------|------|-----|
+| Foreign Memory Access API | JDK 22 | JEP 454 |
+| Foreign Function Interface | JDK 22 | JEP 454 |
+
+→ [Panama 时间线](../core/panama/timeline.md)
 
 ---
 

@@ -22,6 +22,31 @@ JVM、内存、性能、模块系统等底层技术。
 | [Record 类型](core/records/) | 不可变数据载体、Compact Constructor | JDK 14 |
 | [模块系统](core/modules/) | JPMS、module-info、jlink | JDK 9 |
 
+---
+
+## OpenJDK 重大项目
+
+### 核心项目
+
+| 项目 | 状态 | 关键特性 | 文档 |
+|------|------|----------|------|
+| **Project Amber** | 持续交付 | 语言特性简化、模式匹配 | [详情](core/amber/) |
+| **Project Loom** | JDK 21+ | 虚拟线程、结构化并发 | [详情](core/loom/) |
+| **Project Panama** | JDK 22+ | 外部函数接口、外部内存 | [详情](core/panama/) |
+| **Project Valhalla** | 开发中 | 值类型、泛型特化 | [详情](core/valhalla/) |
+
+### 项目关系
+
+```
+Amber (语言) ─────┐
+                 ├──→ 更简洁、更安全的 Java
+Loom (并发) ─────┤
+                 │
+Panama (FFI) ────┤
+                 │
+Valhalla (值类型) ┘
+```
+
 ### [语言特性](language/)
 
 语法、类型、反射等语言层面演进。

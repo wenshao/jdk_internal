@@ -30,6 +30,22 @@ JDK 1.0 ─── JDK 5 ─── JDK 7 ─── JDK 11 ─── JDK 19 ──
 
 ---
 
+## OpenJDK 项目
+
+### [Project Loom](../core/loom/)
+
+虚拟线程和结构化并发。
+
+| 特性 | 版本 | JEP |
+|------|------|-----|
+| 虚拟线程 | JDK 21 | JEP 444 |
+| 结构化并发 (预览) | JDK 21+ | JEP 453 |
+| Scoped Values (预览) | JDK 21 | JEP 446 |
+
+→ [Loom 时间线](../core/loom/timeline.md)
+
+---
+
 ## 主题列表
 
 ### [并发编程](concurrency/)

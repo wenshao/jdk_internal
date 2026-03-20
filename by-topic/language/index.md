@@ -29,6 +29,28 @@ JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 14-17 ─── JDK 21-26
 
 ---
 
+## OpenJDK 项目
+
+### [Project Amber](../core/amber/)
+
+Java 语言特性演进项目。
+
+| 特性 | 版本 | JEP |
+|------|------|-----|
+| var 关键字 | JDK 10 | JEP 286 |
+| Switch 表达式 | JDK 14 | JEP 361 |
+| Text Blocks | JDK 15 | JEP 378 |
+| Records | JDK 16 | JEP 395 |
+| instanceof 模式 | JDK 16 | JEP 394 |
+| Sealed Classes | JDK 17 | JEP 409 |
+| switch 模式 | JDK 21 | JEP 441 |
+| Record Patterns | JDK 21 | JEP 440 |
+| Primitive Patterns | JDK 26 | JEP 455 |
+
+→ [Amber 时间线](../core/amber/timeline.md)
+
+---
+
 ## 主题列表
 
 ### [字符串处理](string/)

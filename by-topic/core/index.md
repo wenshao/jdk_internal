@@ -94,6 +94,81 @@ C1、C2、Graal JIT 编译器从 JDK 1.0 到 JDK 26 的完整演进。
 
 → [JIT 编译详情](jit/)
 
+---
+
+## OpenJDK 重大项目
+
+### [Project Amber](amber/)
+
+Java 语言特性演进项目：更简洁、更安全、更易表达。
+
+| 特性 | 版本 | JEP |
+|------|------|-----|
+| Local Variable Type Inference (var) | JDK 10 | JEP 286 |
+| Switch Expressions | JDK 14 | JEP 361 |
+| Text Blocks | JDK 15 | JEP 378 |
+| Records | JDK 16 | JEP 395 |
+| Pattern Matching for instanceof | JDK 16 | JEP 394 |
+| Sealed Classes | JDK 17 | JEP 409 |
+| Pattern Matching for switch | JDK 21 | JEP 441 |
+| Record Patterns | JDK 21 | JEP 440 |
+| Unnamed Patterns & Variables | JDK 21 | JEP 443 |
+| Primitive Patterns | JDK 26 | JEP 455 |
+
+→ [Amber 时间线](amber/timeline.md)
+
+### [Project Loom](loom/)
+
+虚拟线程和结构化并发：轻量级并发，百万级线程无压力。
+
+| 特性 | 版本 | JEP |
+|------|------|-----|
+| 虚拟线程 | JDK 21 | JEP 444 |
+| 结构化并发 (预览) | JDK 21+ | JEP 453 |
+
+**核心优势**:
+- 虚拟线程: ~几 KB 内存，vs 平台线程 ~1MB
+- 阻塞无开销: 阻塞时不阻塞 Carrier Thread
+- 同步式编程: 不再需要回调地狱
+
+→ [Loom 时间线](loom/timeline.md)
+
+### [Project Panama](panama/)
+
+外部函数接口和外部内存器：与原生代码的无缝互操作。
+
+| 特性 | 版本 | JEP |
+|------|------|-----|
+| Foreign Memory Access API | JDK 22 | JEP 454 |
+| Foreign Function Interface | JDK 22 | JEP 454 |
+
+**核心优势**:
+- 替代 JNI: 无需生成胶水代码
+- 类型安全: 编译时检查
+- 零拷贝: 直接访问堆外内存
+- 性能: 接近原生调用
+
+→ [Panama 时间线](panama/timeline.md)
+
+### [Project Valhalla](valhalla/)
+
+值类型和泛型特化：让 Java 拥有像 C++ 一样高效的值类型。
+
+| 特性 | 状态 | JEP |
+|------|------|-----|
+| Inline Classes / Primitive Classes | 开发中 | JEP 401 |
+| 增强泛型 (List<int>) | 开发中 | JEP 402 |
+| Primitive Patterns | JDK 26 | JEP 455 |
+
+**核心优势**:
+- 消除对象头: 节省 30-50% 内存
+- 原始类型特化: `List<int>` 无装箱
+- 缓存友好: 扁平化内存布局
+
+→ [Valhalla 时间线](valhalla/timeline.md)
+
+---
+
 ### [GraalVM](graalvm/)
 
 Oracle Labs 开发的高性能 JDK 发行版。
