@@ -63,6 +63,17 @@ JVM、内存、性能、模块系统等底层技术。
 | [安全特性](security/security/) | 加密、TLS、后量子密码 | JDK 1.0 |
 | [国际化](security/i18n/) | Locale、ResourceBundle、Unicode | JDK 1.0 |
 
+### [专题深入](net/)
+
+网络、I/O、加密、数学等核心技术深入讲解。
+
+| 主题 | 说明 | 首发版本 |
+|------|------|----------|
+| [网络编程](net/) | Socket、HTTP Client、WebSocket | JDK 1.0 |
+| [NIO 新 I/O](nio/) | Buffer、Channel、Selector、NIO.2 | JDK 1.4 |
+| [加密与安全](crypto/) | JCE、Cipher、Signature、SSL/TLS | JDK 1.0 |
+| [数学计算](math/) | BigDecimal、BigInteger、Random | JDK 1.0 |
+
 ---
 
 ## 学习路径
