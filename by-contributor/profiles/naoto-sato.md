@@ -249,6 +249,43 @@ TimeZone.getTimeZone("America/New_York"); // 推荐使用
 
 - **JDK-8364752**: java.time.Instant 支持 ISO 8601 的 HH:mm:ss 偏移格式
 - **JDK-8351017**: 修复 ChronoUnit.MONTHS.between() 在二月的计算问题
+- **JDK-8175709**: DateTimeFormatterBuilder.appendZoneId() JavaDoc 修复
+
+### 8. ListFormat 实现
+
+- **JDK-8041488**: Locale-Dependent List Patterns (ListFormat 实现)
+- **JDK-8317265**: ListFormat::format 规范澄清
+- **JDK-8318487**: ListFormat.equals() 方法规范
+- **JDK-8318569**: 为 ListFormat 添加 Locale 和 Patterns 的 getter 方法
+
+```java
+// ListFormat 示例
+ListFormat formatter = ListFormat.getInstance(Locale.US);
+String result = formatter.format(List.of("Alice", "Bob", "Charlie"));
+// "Alice, Bob, and Charlie"
+```
+
+### 9. Locale Provider 现代化
+
+- **JDK-8174269**: 移除 COMPAT locale data provider (JDK 23)
+  - 减少 JDK footprint 和启动时间
+  - 迁移到 CLDR 数据
+- **JDK-8138613**: 从默认提供者列表中移除 SPI locale provider adapter
+  - 改善运行时启动性能
+- **JDK-8304982**: 为 COMPAT provider 移除发出警告
+
+### 10. Collation 增强
+
+- **JDK-8308108**: 支持 Unicode 扩展的排序设置
+  - BCP 47 U 扩展支持
+  - `ks` (colStrength) 和 `kk` (colNormalization) 参数
+
+```java
+// BCP 47 collation extensions
+Locale locale = Locale.forLanguageTag("en-US-u-ks-level4-kk-true");
+Collator collator = Collator.getInstance(locale);
+// 使用四级排序强度和规范化
+```
 
 ---
 
@@ -263,10 +300,17 @@ TimeZone.getTimeZone("America/New_York"); // 推荐使用
 
 ### 2024 年工作
 
-- **JDK-8308108**: 支持 Unicode 扩展的排序设置
+- **JDK-8174269**: 移除 COMPAT locale data provider (v3, v5, v6 review)
+- **JDK-8308108**: 支持 Unicode 扩展的排序设置 (BCP 47 U extension)
 - **JDK-8318761**: MessageFormat 模式支持增强
 - **JDK-8317265**: ListFormat::format 规范改进
+- **JDK-8318487**: ListFormat.equals() 方法规范
 - **JDK-8301991**: 将 l10n 属性资源包转换为 UTF-8 原生格式
+
+### 2023 年工作
+
+- **JDK-8041488**: Locale-Dependent List Patterns 实现
+- 多个 Unicode 和 CLDR 更新
 
 ### 邮件列表活跃度
 
@@ -415,4 +459,8 @@ Naoto Sato 是 International Unicode Conference (IUC) 的常驻演讲者：
 - [OpenJDK i18n Group](https://openjdk.org/groups/i18n/)
 - [i18n-dev Mailing List - 2025-06](https://mail.openjdk.org/archives/list/i18n-dev@openjdk.org/2025/6/)
 - [i18n-dev Mailing List - JDK-8301991](https://mail.openjdk.org/pipermail/i18n-dev/2023-September/003977.html)
+- [i18n-dev Mailing List - Locale Enhancement Withdrawal](https://mail.openjdk.org/pipermail/i18n-dev/2025-December/012223.html)
+- [JDK-8174269 Webrev - COMPAT Removal](https://cr.openjdk.org/~naoto/JDK-8174269-COMPAT-Removal/)
+- [JDK-8041488 Webrev - List Patterns](https://cr.openjdk.org/~naoto/JDK-8041488-ListPatterns/webrev.04/)
+- [JDK-8318487 Webrev - ListFormat.equals](https://cr.openjdk.org/~naoto/JDK-8318487-ListFormat.equals/webrev.00/)
 - [ZoomInfo - Naoto Sato Profile](https://www.zoominfo.com/p/Naoto-Sato/186129467)
