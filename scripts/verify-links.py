@@ -241,7 +241,8 @@ class LinkVerifier:
 
 def main():
     """主函数"""
-    root_dir = "/root/git/jdk_internal-1"
+    # 获取脚本所在目录的父目录作为根目录
+    root_dir = Path(__file__).resolve().parent.parent
     
     print(f"开始验证链接，根目录: {root_dir}")
     print("=" * 60)

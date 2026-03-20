@@ -786,6 +786,27 @@ void testMethod() {
 
 ---
 
+## Project Valhalla 贡献
+
+Chen Liang 是 **Project Valhalla 的顶级贡献者**，在项目中排名 **#1**。
+
+| 指标 | 数值 |
+|------|------|
+| **PR 数量** | 11 |
+| **排名** | #1 (所有贡献者中最高) |
+| **主要领域** | javac 编译器、语言特性实现 |
+| **活跃时间** | 2023 - 2025 |
+
+### 贡献领域
+
+- **javac 编译器**: 原始类型（Primitive Classes）的编译支持
+- **语言特性**: 值类型（Value Types）的语法和语义实现
+- **类文件生成**: 原始类型的字节码表示
+
+> **来源**: [Valhalla 开发活动分析](/by-topic/core/valhalla/development.md)
+
+---
+
 ## 技术特长
 
 `ClassFile API` `核心反射` `Method Handles` `常量池` `Valhalla` `API 设计`

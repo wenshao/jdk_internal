@@ -226,10 +226,10 @@ GitHub API → PR 数据 → 分类分析 → 文档生成 → 链接验证 → 
 - [JDK 26 文档](/by-version/jdk26/) - GA 2025
 
 ### 主题浏览
-- [垃圾收集演进](/by-topic/gc/)
-- [并发编程演进](/by-topic/concurrency/)
-- [字符串处理演进](/by-topic/string/)
-- [HTTP 客户端演进](/by-topic/http/)
+- [垃圾收集演进](/by-topic/core/gc/)
+- [并发编程演进](/by-topic/concurrency/concurrency/)
+- [字符串处理演进](/by-topic/language/string/)
+- [HTTP 客户端演进](/by-topic/concurrency/http/)
 
 ### 贡献者
 - [贡献者索引](/by-contributor/)
