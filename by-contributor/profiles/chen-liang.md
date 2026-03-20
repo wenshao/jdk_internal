@@ -586,7 +586,24 @@ public T newInstance(Object... initargs) {
 
 ---
 
-### Method Handles (15 PRs)
+### Method Handles (15+ PRs)
+
+#### JDK-8335638: VarHandle 反射调用异常修复
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8335638](https://bugs.openjdk.org/browse/JDK-8335638) |
+| **角色** | Committer |
+| **合入时间** | 2024-08-01 |
+| **影响** | 正确性修复 |
+
+**背景**: 根据 API 规范，反射调用 VarHandle 访问模式方法应该抛出 `UnsupportedOperationException`，但实现抛出了错误的异常类型。
+
+**解决方案**: 为 VarHandle 的签名多态方法添加特殊处理，类似 MethodHandle 的 `invoke`/`invokeExact`。
+
+**相关发布说明**: JDK 24 Release Notes - "Reflective Invocation of VarHandle Signature Polymorphic Methods Throws UnsupportedOperationException"
+
+---
 
 #### JDK-8351996: ClassValue::remove 行为更新
 
@@ -724,7 +741,40 @@ public MethodHandle downcallHandle(...) {
 
 ---
 
-### javac 编译器 (9 PRs)
+### javac 编译器 (9+ PRs)
+
+#### JDK-8336754: Remodel TypeAnnotation
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8336754](https://bugs.openjdk.org/browse/JDK-8336754) |
+| **角色** | Author |
+| **合入时间** | 2024-08 |
+| **影响** | 架构改进 |
+
+**背景**: `TypeAnnotation` 不是真正的注解，应该包含注解而不是成为注解。
+
+**解决方案**: 将 `TypeAnnotation` 重塑为包含注解而不是成为注解，使其不能用于 `AnnotationValue.ofAnnotation` 等地方。
+
+---
+
+#### JDK-8335927: Revisit AnnotationConstantValueEntry
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8335927](https://bugs.openjdk.org/browse/JDK-8335927) |
+| **角色** | Author |
+| **合入时间** | 2024-08-02 |
+| **影响** | API 清理 |
+
+**背景**: `AnnotationConstantValueEntry` 和 `AnnotationValue.OfConstant` 是旧模型的遗留物。
+
+**解决方案**:
+- 移除 `AnnotationConstantValueEntry` 和 `AnnotationValue.OfConstant`
+- 移除令人困惑的 `ConstantPoolBuilder.annotationConstantValueEntry`
+- 添加文档说明已解析常量和常量池描述符的区别
+
+---
 
 #### JDK-8365676: javac 错误允许通过类型变量调用接口静态方法
 
@@ -810,7 +860,26 @@ void generateDoWhile(JCDoWhileLoop tree) {
 
 ---
 
-### 测试迁移 (3 PRs)
+### NIO / I/O (3+ PRs)
+
+#### JDK-8353795: 添加 Writer.of(StringBuilder)
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8353795](https://bugs.openjdk.org/browse/JDK-8353795) |
+| **角色** | Author |
+| **合入时间** | 2024 |
+| **影响** | API 扩展 |
+
+**背景**: 当前没有便捷的方式创建针对 StringBuilder 的 Writer。
+
+**解决方案**: 添加新的静态工厂方法 `Writer.of(StringBuilder)`，提供优化的非同步 Writer 实现。
+
+**相关邮件列表讨论**: [nio-dev](https://mail.openjdk.org/archives/list/nio-dev@openjdk.org/thread/KREXHKIHUYKVSHY527NWRNKVA65RQQ2S/)
+
+---
+
+### 测试迁移 (3+ PRs)
 
 #### JDK-8376277: 迁移 java/lang/reflect 测试到 JUnit
 
