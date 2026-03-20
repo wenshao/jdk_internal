@@ -193,6 +193,19 @@ int result = x * 3;
 
 ## 代码生成改进
 
+### MergeStore 优化专题
+
+> **完整文档**: [MergeStore 优化](mergestore.md)
+
+MergeStore 是 C2 JIT 编译器的重要优化，将多次连续的内存写入合并为单次宽写入。
+
+**相关 PR**:
+- [JDK-8333893](/by-pr/8333/8333893.md): StringBuilder append(boolean/null) 优化 (+5-15%)
+- [JDK-8334342](/by-pr/8334/8334342.md): JMH 基准测试
+- [PR #28228](https://github.com/openjdk/jdk/pull/28228): 合并两个 append(char)
+- [PR #29688](https://github.com/openjdk/jdk/pull/29688): Latin1 字符优化
+- [PR #29699](https://github.com/openjdk/jdk/pull/29699): StringBuilder char 优化
+
 ### JDK-8347405: MergeStores with Reverse Bytes Order
 
 **版本**: JDK 23

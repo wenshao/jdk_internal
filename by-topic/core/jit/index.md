@@ -99,6 +99,10 @@ Level 4: C2 (深度优化)
 - [C2 优化阶段](c2-phases.md) - 15 个编译阶段详解
   - PhaseIterGVN、PhaseIdealLoop、PhaseCCP
   - 逃逸分析、标量替换、向量化
+- [MergeStore 优化](mergestore.md) - 内存写入合并优化
+  - 多次字节存储合并为单次宽写入
+  - StringBuilder 优化案例
+  - JMH 基准测试
 
 ### 配置参考
 
@@ -218,6 +222,47 @@ PhaseSuperWord ────────► SIMD 向量化
 ---
 
 ## 重要 PR 分析
+
+### MergeStore 优化系列
+
+> **完整专题**: [MergeStore 优化](mergestore.md)
+
+MergeStore 是 C2 JIT 编译器的一项优化技术，将多次连续的内存写入合并为单次宽写入。
+
+#### JDK-8333893: StringBuilder append(boolean/null) 优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐⭐ +5-15% 性能提升
+
+重写 `appendNull` 和 `append(boolean)` 方法，使其能被 C2 JIT 的 MergeStore 优化：
+
+```java
+// 优化后 - 可触发 MergeStore
+static void putCharsAt(byte[] val, int index, int c1, int c2, int c3, int c4) {
+    UNSAFE.putByte(val, address, (byte)(c1));
+    UNSAFE.putByte(val, address + 1, (byte)(c2));
+    UNSAFE.putByte(val, address + 2, (byte)(c3));
+    UNSAFE.putByte(val, address + 3, (byte)(c4));
+}
+// JIT 优化为: UNSAFE.putInt(val, address, packedValue)
+```
+
+**效果**: append(boolean) +14.7%, append(null) +9.2%
+
+→ [详细分析](/by-pr/8333/8333893.md) | [MergeStore 专题](mergestore.md)
+
+#### JDK-8334342: MergeStore JMH 基准测试
+
+> **作者**: Shaojin Wen
+> **影响**: ⭐⭐⭐ 测试基础设施
+
+为 MergeStore JIT 优化添加标准化 JMH 基准测试：
+
+- Big-Endian / Little-Endian 写入
+- VarHandle vs Unsafe vs 数组访问
+- 性能回归测试
+
+→ [详细分析](/by-pr/8334/8334342.md)
 
 ### JDK-8365186: Reduce size of DateTimePrintContext::adjust
 
