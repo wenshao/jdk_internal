@@ -14,8 +14,21 @@
 | 所有 JEP 详细列表 | [JEP 汇总](./jeps.md) |
 | 重要 PR 分析 | [Top 50 Commits](/prs/jdk26-top-prs.md) |
 | 深度技术分析 | [深度分析文档](./deep-dive/) |
+| 发布说明 | [完整 Release Notes](./release-notes.md) |
+| 贡献者排名 | [Top 贡献者](/by-contributor/profiles/jdk26-top-contributors.md) |
 | 如何试用 | [快速开始](#快速开始) |
 | 从 JDK 21 升级 | [迁移指南](./migration/from-21.md) |
+
+### 深度分析文章
+
+| 主题 | 链接 |
+|------|------|
+| HTTP/3 实现原理 | [→](./deep-dive/http3-implementation.md) |
+| G1 GC 吞吐量提升 | [→](./deep-dive/g1-gc-throughput.md) |
+| 结构化并发详解 | [→](./deep-dive/structured-concurrency.md) |
+| 原始类型模式匹配 | [→](./deep-dive/primitive-pattern-matching.md) |
+| AOT 改进详解 | [→](./deep-dive/aot-improvements.md) |
+| Vector API 改进 | [→](./deep-dive/vectorapi-improvements.md) |
 
 ---
 
@@ -296,6 +309,64 @@ java -XX:AOTLibrary+ -XX:ArchiveClassesAtExit=app.jsa MyApp
 
 ---
 
+## 核心贡献者
+
+> **相关链接**: [JDK 26 Top 贡献者详解](/by-contributor/profiles/jdk26-top-contributors.md)
+
+### Oracle 核心开发者
+
+| 贡献者 | 专长领域 | 详细资料 |
+|--------|----------|----------|
+| [Brian Goetz](/by-contributor/profiles/brian-goetz.md) | Java 语言架构师、结构化并发 | → |
+| [Joe Darcy](/by-contributor/profiles/joe-darcy.md) | 语言特性、JEP 领导 | → |
+| [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 类加载、运行时 | → |
+| [David Holmes](/by-contributor/profiles/david-holmes.md) | 并发、线程 | → |
+| [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | CDS、类加载 | → |
+
+### GC 团队
+
+| 贡献者 | 专长 | 详细资料 |
+|--------|------|----------|
+| [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | Metaspace、CDS | → |
+| [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | GC 架构 | → |
+| [Per Lofgren](/by-contributor/profiles/) | G1 GC | → |
+
+### JIT/编译器团队
+
+| 贡献者 | 专长 | 详细资料 |
+|--------|------|----------|
+| [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | C2 JIT、循环优化 | → |
+| [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | MergeStore 优化 | → |
+| [Vladimir Kozlov](/by-contributor/profiles/) | C2 编译器负责人 | → |
+
+### 中国贡献者
+
+| 贡献者 | 组织 | 专长 | 详细资料 |
+|--------|------|------|----------|
+| [Shaojin Wen (温绍锦)](/by-contributor/profiles/shaojin-wen.md) | Alibaba | JIT 优化、字符串 | → |
+| [Chen Liang](/by-contributor/profiles/chen-liang.md) | Alibaba | Class File API | → |
+
+### Red Hat 贡献者
+
+| 贡献者 | 专长 | 详细资料 |
+|--------|------|----------|
+| [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | Shenandoah GC | → |
+| [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | JIT 编译 | → |
+
+---
+
+## 相关主题
+
+| 主题 | 说明 | 链接 |
+|------|------|------|
+| **GC 演进** | G1、ZGC、Shenandoah | [→](/by-topic/core/gc/) |
+| **JIT 编译** | C2、MergeStore、分层编译 | [→](/by-topic/core/jit/) |
+| **并发编程** | 虚拟线程、结构化并发 | [→](/by-topic/concurrency/concurrency/) |
+| **网络编程** | HTTP/3、HttpClient | [→](/by-topic/concurrency/network/) |
+| **安全特性** | KDF API、后量子密码 | [→](/by-topic/security/security/) |
+
+---
+
 ## 贡献者统计
 
 > **数据来源**: Oracle 官方博客 "The Arrival of Java 26"
@@ -374,6 +445,37 @@ Oracle 特别感谢以下个人和项目对 JDK 26 质量保证的贡献：
 
 ---
 
+## 重要 PR 分析
+
+> **完整列表**: [JDK 26 Top 50 Commits](/prs/jdk26-top-prs.md)
+
+### JEP 实现
+
+| PR | 标题 | 贡献者 | 分析 |
+|----|------|--------|------|
+| JDK-8349910 | HTTP/3 (JEP 517) | [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | [→](./deep-dive/http3-implementation.md) |
+| JDK-8342382 | G1 GC Throughput (JEP 522) | Thomas Schatzl | [→](./deep-dive/g1-gc-throughput.md) |
+| JDK-8365932 | AOT Caching (JEP 516) | Erik Österlund | [→](./deep-dive/aot-improvements.md) |
+| JDK-8366178 | Lazy Constants (JEP 526) | [Per Minborg](/by-contributor/profiles/per-minborg.md) | [→](/prs/) |
+| JDK-8353835 | Final Mean Final (JEP 500) | Alan Bateman | [→](/prs/) |
+
+### JIT 优化
+
+| PR | 标题 | 贡献者 | 分析 |
+|----|------|--------|------|
+| JDK-8318446 | MergeStore 初始实现 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | [→](/by-topic/core/jit/mergestore.md) |
+| JDK-8333893 | StringBuilder boolean/null | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | [→](/by-pr/8333/8333893.md) |
+| JDK-8336856 | 隐藏类拼接策略 | Shaojin Wen | [→](/by-pr/8336/8336856.md) |
+
+### GC 优化
+
+| PR | 标题 | 贡献者 | 分析 |
+|----|------|--------|------|
+| JDK-8370191 | 分代 Shenandoah (JEP 521) | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | [→](/by-pr/8370/jep521-generational-shenandoah.md) |
+| JDK-8370142 | Compact Object Headers (JEP 519) | Erik Österlund | [→](/by-pr/8370/jep519-compact-headers.md) |
+
+---
+
 ## 相关链接
 
 | 资源 | 链接 |
@@ -387,10 +489,36 @@ Oracle 特别感谢以下个人和项目对 JDK 26 质量保证的贡献：
 
 ## 更多阅读
 
+### 版本相关
+
 - [JDK 26 JEP 汇总](./jeps.md) - 所有 JEP 详细列表
-- [Top 50 Commits](/prs/jdk26-top-prs.md) - 重要的代码变更
-- [按主题浏览](/by-topic/) - 跨版本追踪技术演进
-- [按贡献者浏览](../../by-contributor/) - 了解贡献者和他们的工作
+- [JDK 26 Release Notes](./release-notes.md) - 完整发布说明
+- [JDK 26 Top 50 Commits](/prs/jdk26-top-prs.md) - 重要的代码变更
+- [从 JDK 21 迁移](./migration/from-21.md) - 升级指南
+
+### 深度分析
+
+- [HTTP/3 实现原理](./deep-dive/http3-implementation.md) - QUIC 协议详解
+- [G1 GC 吞吐量提升](./deep-dive/g1-gc-throughput.md) - Claim Table 机制
+- [结构化并发详解](./deep-dive/structured-concurrency.md) - API 设计与使用
+- [原始类型模式匹配](./deep-dive/primitive-pattern-matching.md) - 语言特性演进
+- [AOT 改进详解](./deep-dive/aot-improvements.md) - 启动性能优化
+- [Vector API 改进](./deep-dive/vectorapi-improvements.md) - SIMD 编程
+
+### 按主题浏览
+
+- [JIT 编译优化](/by-topic/core/jit/) - C2 编译器、MergeStore
+- [GC 演进历史](/by-topic/core/gc/) - G1、ZGC、Shenandoah
+- [并发编程](/by-topic/concurrency/concurrency/) - 虚拟线程、结构化并发
+- [网络编程](/by-topic/concurrency/network/) - HTTP/3、HttpClient
+- [安全特性](/by-topic/security/security/) - KDF API、后量子密码
+- [语言特性](/by-topic/language/) - 模式匹配、Records
+
+### 贡献者
+
+- [JDK 26 Top 贡献者](/by-contributor/profiles/jdk26-top-contributors.md)
+- [所有贡献者列表](/by-contributor/)
+- [中国贡献者](/by-contributor/profiles/chinese-contributors.md)
 
 ---
 
