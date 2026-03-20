@@ -330,11 +330,13 @@ ClassDesc 内部名称缓存优化：
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要领域 |
 |------|--------|--------|------|----------|
-| 1 | Chen Liang | 85 | Oracle | API 设计、验证器 |
-| 2 | Adam Sotona | 59 | Oracle | 主实现者、JEP 负责人 |
-| 3 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 25 | [Alibaba](/contributors/orgs/alibaba.md) | 常量池优化、性能提升 |
+| 1 | [Chen Liang](/by-contributor/profiles/chen-liang.md) | 85 | Oracle | API 设计、验证器 |
+| 2 | [Adam Sotona](/by-contributor/profiles/adam-sotona.md) | 59 | Oracle | 主实现者、JEP 负责人 |
+| 3 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 25 | Alibaba | 常量池优化、性能提升 |
 
 ### Adam Sotona
+
+> **贡献者档案**: [Adam Sotona](/by-contributor/profiles/adam-sotona.md)
 
 - **职位**: Principal Java Engineer, Oracle
 - **地点**: Prague, Czech Republic
@@ -351,6 +353,8 @@ ClassDesc 内部名称缓存优化：
 > **关键提交**: `8294982: Implementation of Classfile API` (2023-03-09), `8308753: Class-File API transition to Preview` (2023-12-04), `8334714: Implement JEP 484: Class-File API` (2024-11-15)
 
 ### Chen Liang (@liach)
+
+> **贡献者档案**: [Chen Liang](/by-contributor/profiles/chen-liang.md)
 
 - **职位**: Java Software Engineer, Oracle
 - **Git 提交**: 111 commits (总计，含 liach 别名)
@@ -370,6 +374,8 @@ ClassDesc 内部名称缓存优化：
 
 ### Shaojin Wen (@wenshao)
 
+> **贡献者档案**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+
 - **职位**: Alibaba FastJSON 负责人
 - **Git 提交**: 242 commits (最多)
 - **主要贡献**:
@@ -384,6 +390,8 @@ ClassDesc 内部名称缓存优化：
 > - CodeStackTracker pop count 修复
 
 ### Brian Goetz
+
+> **贡献者档案**: [Brian Goetz](/by-contributor/profiles/brian-goetz.md)
 
 - **职位**: Java Language Architect, Oracle
 - **角色**: JEP Author, API 设计指导
