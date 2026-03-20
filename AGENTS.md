@@ -145,6 +145,195 @@ jdk_internal/
 ## 相关 PR
 ```
 
+## Research Methodology
+
+### Research Quality Levels
+
+Define completion levels to ensure consistent research depth across all documentation.
+
+| Level | Name | PR Document Requirements | Topic Document Requirements | Use Case |
+|-------|------|--------------------------|------------------------------|----------|
+| **L1** | Summary | Title + link + one-sentence description | Timeline overview | Bulk P4 PR processing |
+| **L2** | Brief | Overview + key changes | Version comparison table | P3 PRs, minor features |
+| **L3** | Standard | Full template structure | Technical details + examples | P2 PRs, important features |
+| **L4** | Deep | Principle analysis + benchmarks + design decisions | Multi-version evolution + source analysis | P1 PRs, JEPs, core features |
+
+### Standard Research Process
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                     JDK Feature/PR Research Process              │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  1. Information Gathering                                        │
+│     ├─ JBS Issue reading                                        │
+│     ├─ GitHub PR description and discussion                     │
+│     ├─ Mailing list discussion (if applicable)                  │
+│     └─ Related JEP/JSR documents                                │
+│         ↓                                                       │
+│  2. Code Analysis                                               │
+│     ├─ Locate changed files                                     │
+│     ├─ Understand technical details                             │
+│     └─ Identify impact scope                                    │
+│         ↓                                                       │
+│  3. Context Building                                            │
+│     ├─ Related Issue/PR links                                   │
+│     ├─ Historical evolution                                     │
+│     └─ Contributor background                                   │
+│         ↓                                                       │
+│  4. Documentation                                               │
+│     ├─ Write following template structure                       │
+│     ├─ Code examples                                            │
+│     └─ Visualizations (charts/timelines)                        │
+│         ↓                                                       │
+│  5. Quality Check                                               │
+│     └─ Verify against review checklist                          │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Data Source Priority
+
+| Priority | Data Source | Reliability | Purpose |
+|----------|-------------|-------------|---------|
+| **P0** | JBS Issue | Official | Problem definition, review status |
+| **P0** | GitHub PR | Official | Change content, discussion |
+| **P1** | Mailing Lists | Authoritative | Design decision background |
+| **P1** | JEP/JSR Docs | Official | Specification definition |
+| **P2** | Source Code | Factual | Implementation details |
+| **P3** | Blogs/Talks | Reference | Explanation and context |
+
+**Key Principles**:
+- All conclusions must be supported by P0-P2 sources
+- P3 sources are for auxiliary explanation only, never as primary evidence
+- Always preserve original links when citing
+
+### AI-Assisted Research Prompt Templates
+
+#### Template 1: PR Initial Analysis
+
+```
+You are a JDK internal implementation expert. Please analyze the following PR:
+
+**PR Information:**
+- Title: {title}
+- Description: {body}
+- Author: {author}
+- Changed files: {files}
+
+Please provide:
+1. **One-line overview** (under 30 characters)
+2. **Technical category**: [GC/Compiler/Runtime/CoreLibs/Network/Security/Other]
+3. **Impact assessment**: [Performance/Compatibility/Feature/Refactor]
+4. **Key change points** (3-5 items)
+5. **Related Issues/JEPs** (if any)
+```
+
+#### Template 2: Deep Technical Analysis
+
+```
+Perform deep technical analysis based on the following information:
+
+**Source code changes:**
+```diff
+{diff}
+```
+
+**PR discussion:**
+{discussion}
+
+Please analyze:
+1. **Technical principle**: What underlying problem does this change solve?
+2. **Design trade-offs**: Why was this approach chosen? What are the alternatives?
+3. **Potential risks**: What problems could this introduce? How are they mitigated?
+4. **Use cases**: What scenarios benefit from this change?
+```
+
+#### Template 3: Topic Evolution Analysis
+
+```
+Analyze the evolution of {topic} in JDK:
+
+**Known version information:**
+{version_info}
+
+Please generate:
+1. **Evolution timeline**: List key changes by version
+2. **Technical turning points**: Important design decisions
+3. **Version migration advice**: Considerations when upgrading from older versions
+4. **Future direction**: Related unfinished/discussed JEPs
+```
+
+### Documentation Review Checklist
+
+Verify the following before marking documentation as complete:
+
+#### Content Completeness
+- [ ] Clear overview (一眼看懂/概述 section)
+- [ ] All key data has source links
+- [ ] Code examples are runnable or explained
+- [ ] Technical terms have explanations or links
+
+#### Structure Consistency
+- [ ] Follows corresponding template structure
+- [ ] Heading levels are reasonable (max 4 levels)
+- [ ] Tables have header descriptions
+- [ ] Code blocks have language tags
+
+#### Quality Standards
+- [ ] No "TODO"/"待补充" placeholders
+- [ ] External links are accessible
+- [ ] Internal relative paths are correct
+- [ ] Proper Chinese-English mixing (technical terms kept in English)
+
+#### Type-Specific Checks
+
+**PR Document Additional Checks:**
+- [ ] Issue link is correct
+- [ ] PR link is correct
+- [ ] Author information is accurate
+- [ ] Impact assessment has supporting evidence
+
+**Topic Document Additional Checks:**
+- [ ] Has timeline.md
+- [ ] Version coverage is continuous
+- [ ] Key JEPs are linked
+
+**Contributor Document Additional Checks:**
+- [ ] PR statistics use GitHub Integrated PRs
+- [ ] Statistics data has source links
+- [ ] Representative works have JBS links
+
+### Error Pattern Recognition
+
+Common issues and detection methods:
+
+| Issue Type | Manifestation | Detection Method |
+|------------|---------------|------------------|
+| Data source error | Using git commit for contribution stats | Check for `git log` results |
+| Broken links | JBS links return 404 | Periodic external link check |
+| Version misattribution | Feature attributed to wrong version | Cross-verify JEP and version |
+| Over-interpretation | Conclusions without data support | Check key statements for citations |
+| Template inconsistency | Structure deviates from standard | Compare against template |
+
+### Research Collaboration Guidelines
+
+When multiple Agents collaborate:
+
+1. **Task Assignment Principles**
+   - Assign by component/topic to avoid duplication
+   - Priority: P1 > P2 > P3 > P4
+   - Related PRs should be handled by the same Agent
+
+2. **Progress Synchronization**
+   - Update index.md upon completion
+   - Add cross-references in related documents
+   - Research log (optional)
+
+3. **Quality Assurance**
+   - P1/P2 documents require cross-validation
+   - Major updates require notifying related document maintainers
+
 ## Contribution Statistics Principles
 
 **IMPORTANT: Use GitHub Integrated PRs as the ONLY metric for contribution statistics.**
