@@ -735,7 +735,7 @@ src/hotspot/share/gc/
 | 7 | Paul Sandoz | 17 | Oracle | 字符串格式化 |
 | 8 | Pavel Rappo | 15 | Oracle | 文档, 工具 |
 | 9 | Maurizio Cimadamore | 15 | Oracle | javac, 模板 |
-| 10 | Shaojin Wen | 14 | Alibaba | 性能优化 |
+| 10 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 14 | [Alibaba](/contributors/orgs/alibaba.md) | 性能优化 |
 
 ---
 

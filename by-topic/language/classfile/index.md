@@ -332,7 +332,7 @@ ClassDesc 内部名称缓存优化：
 |------|--------|--------|------|----------|
 | 1 | Chen Liang | 85 | Oracle | API 设计、验证器 |
 | 2 | Adam Sotona | 59 | Oracle | 主实现者、JEP 负责人 |
-| 3 | Shaojin Wen | 25 | Alibaba | 常量池优化、性能提升 |
+| 3 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 25 | [Alibaba](/contributors/orgs/alibaba.md) | 常量池优化、性能提升 |
 
 ### Adam Sotona
 

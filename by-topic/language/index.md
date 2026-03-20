@@ -182,9 +182,9 @@ JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 14-17 ─── JDK 21-26
 
 | 贡献者 | 公司 | 主要贡献 |
 |--------|------|----------|
-| **Aleksey Shipilev** | Red Hat | JEP 254 (Compact Strings) |
-| **Shaojin Wen** (温绍锦) | Alibaba | JDK-8336856 (+40% 启动), 25+ PR |
-| **Claes Redestad** | Oracle | String 压缩、字节码优化 |
+| **Aleksey Shipilev** | [Red Hat](/contributors/orgs/redhat.md) | JEP 254 (Compact Strings) |
+| **Shaojin Wen** (温绍锦) | [Alibaba](/contributors/orgs/alibaba.md) | JDK-8336856 (+40% 启动), 25+ PR |
+| **Claes Redestad** | [Oracle](/contributors/orgs/oracle.md) | String 压缩、字节码优化 |
 
 ### 反射与注解
 
