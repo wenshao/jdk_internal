@@ -480,11 +480,11 @@ java -XX:AOTCacheConfiguration=aot_config.txt \
 |------|--------|--------|------|----------|
 | 1 | Coleen Phillimore | 317 | Oracle | 类加载, 运行时 |
 | 2 | Ioi Lam | 215 | Oracle | CDS, AOT, 内存 |
-| 3 | David Holmes | 174 | Oracle | 并发, 线程 |
+| 3 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 174 | Oracle | 并发, 线程 |
 | 4 | Thomas Stuefe | 163 | Oracle | 内存, 跨平台 |
 | 5 | Stefan Karlsson | 149 | Oracle | 并发 GC |
 | 6 | Kim Barrett | 113 | Oracle | C++ 现代化 |
-| 7 | Aleksey Shipilev | 112 | Oracle | 性能基准 |
+| 7 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 112 | Oracle | 性能基准 |
 | 8 | Robbin Ehn | 77 | Oracle | 并发, 锁 |
 | 9 | Calvin Cheung | 77 | Oracle | 类加载 |
 | 10 | Patricio Chilano Mateo | 76 | Oracle | 运行时 |

@@ -227,7 +227,7 @@ JVM 参数、调优工具和监控技术从 JDK 1.0 到 JDK 26 的演进。
 |------|--------|--------|------|----------|
 | 1 | Albert Mingkun Yang | 681 | Oracle | G1 GC, 内存管理 |
 | 2 | Thomas Schatzl | 674 | Oracle | G1 GC 维护者 |
-| 3 | Aleksey Shipilev | 324 | Oracle | 性能基准, 内存 |
+| 3 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 324 | Oracle | 性能基准, 内存 |
 | 4 | Zhengyu Gu | 252 | Oracle | JVM 运行时 |
 | 5 | Kim Barrett | 235 | Oracle | C++ 现代化 |
 | 6 | Stefan Karlsson | 229 | Oracle | 分代 ZGC (JEP 439) |
@@ -239,12 +239,12 @@ JVM 参数、调优工具和监控技术从 JDK 1.0 到 JDK 26 的演进。
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Coleen Phillimore | 333 | Oracle | 类加载, 运行时 |
-| 2 | David Holmes | 201 | Oracle | 并发, 线程 |
-| 3 | Ioi Lam | 167 | Oracle | CDS, AOT |
-| 4 | Aleksey Shipilev | 123 | Oracle | 性能基准 |
+| 1 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 333 | Oracle | 类加载, 运行时 |
+| 2 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 201 | Oracle | 并发, 线程 |
+| 3 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 167 | Oracle | CDS, AOT |
+| 4 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 123 | Oracle | 性能基准 |
 | 5 | Kim Barrett | 115 | Oracle | C++ 现代化 |
-| 6 | Thomas Stuefe | 112 | Oracle | 内存, 跨平台 |
+| 6 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 112 | Oracle | 内存, 跨平台 |
 | 7 | Serguei Spitsyn | 107 | Oracle | JVMTI, JFR |
 
 ### 模块系统

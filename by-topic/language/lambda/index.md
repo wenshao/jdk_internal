@@ -1235,7 +1235,7 @@ list.stream()
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Brian Goetz | 50+ | Oracle | Lambda 规范负责人 |
+| 1 | [Brian Goetz](/by-contributor/profiles/brian-goetz.md) | 50+ | Oracle | Lambda 规范负责人 |
 | 2 | Maurizio Cimadamore | 40+ | Oracle | Lambda 编译器 |
 | 3 | Alex Buckley | 20+ | Oracle | 语言规范 |
 | 4 | Paul Sandoz | 15+ | Oracle | Stream API |

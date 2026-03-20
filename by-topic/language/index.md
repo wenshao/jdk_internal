@@ -173,7 +173,7 @@ JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 14-17 ─── JDK 21-26
 
 | 贡献者 | 公司 | 主要贡献 |
 |--------|------|----------|
-| **Brian Goetz** | Oracle | Java Language Architect, JSR-335 (Lambda) |
+| **[Brian Goetz](/by-contributor/profiles/brian-goetz.md)** | Oracle | Java Language Architect, JSR-335 (Lambda) |
 | **Gavin Bierman** | Oracle | Records, Sealed Classes, Pattern Matching |
 | **Jim Laskey** | Oracle | String Templates, Text Blocks |
 | **Alex Buckley** | Oracle | JLS 维护者, JSR-308 |

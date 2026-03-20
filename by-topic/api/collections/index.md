@@ -447,7 +447,7 @@ Stream.of(1, 2, 3, 4, 5)
 |------|--------|--------|------|----------|
 | 1 | Stuart Marks | 30+ | Oracle | 集合 API 设计 |
 | 2 | Martin Buchholz | 20+ | Oracle | Collections 实现 |
-| 3 | Brian Goetz | 15+ | Oracle | Stream API |
+| 3 | [Brian Goetz](/by-contributor/profiles/brian-goetz.md) | 15+ | Oracle | Stream API |
 | 4 | Henry Jen | 12 | Oracle | 集合增强 |
 | 5 | Paul Sandoz | 10 | Oracle | Stream/Optional |
 

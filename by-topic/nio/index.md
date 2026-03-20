@@ -553,7 +553,7 @@ int optimalSize = 8192;  // 根据系统调整
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
 | 1 | Alan Bateman | 40+ | Oracle | NIO, NIO.2 (JSR 51, JSR 203) |
-| 2 | Brian Goetz | 10+ | Oracle | API 设计 |
+| 2 | [Brian Goetz](/by-contributor/profiles/brian-goetz.md) | 10+ | Oracle | API 设计 |
 | 3 | Henry Jen | 8+ | Oracle | NIO.2 增强 |
 | 4 | Paul Sandoz | 5+ | Oracle | I/O 增强 |
 | 5 | Xu Shen | 5+ | Oracle | HTTP/2 |

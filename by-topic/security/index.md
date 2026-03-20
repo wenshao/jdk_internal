@@ -88,7 +88,7 @@ Java 国际化 (i18n) 从 JDK 1.0 到 JDK 26 的完整演进。
 | 1 | Naoto Sato | 64 | Oracle | Unicode 支持、CLDR 集成 |
 | 2 | [Shaojin Wen (温绍锦)](../../by-contributor/profiles/shaojin-wen.md) | 12 | Alibaba | java.time 优化 |
 | 3 | Roger Riggs | 12 | Oracle | 日期时间 |
-| 4 | Claes Redestad | 8 | Oracle | 启动优化 |
+| 4 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 8 | Oracle | 启动优化 |
 | 5 | Andrey Turbanov | 7 | Oracle | 格式化 |
 | 6 | Pavel Rappo | 6 | Oracle | 文档, 工具 |
 

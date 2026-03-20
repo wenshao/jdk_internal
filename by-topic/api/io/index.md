@@ -42,7 +42,7 @@ Stream   Writer    Buffer  Path    增强    线程
 |------|--------|--------|------|----------|
 | 1 | Alan Bateman | 43 | Oracle | NIO, NIO.2 (JSR 51, JSR 203) |
 | 2 | Chris Hegarty | 17 | Oracle | 网络基础 |
-| 3 | Brian Goetz | 12 | Oracle | API 设计 |
+| 3 | [Brian Goetz](/by-contributor/profiles/brian-goetz.md) | 12 | Oracle | API 设计 |
 | 4 | Henry Jen | 10 | Oracle | NIO.2 增强 |
 | 5 | Paul Sandoz | 8 | Oracle | IO 增强 |
 | 6 | Xueming Shen | 7 | Oracle | 字符编码 |

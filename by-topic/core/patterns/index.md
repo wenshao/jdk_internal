@@ -615,7 +615,7 @@ public String describeBad(Object obj) {
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
 | 1 | Gavin Bierman | 30+ | Oracle | 模式匹配规范 |
-| 2 | Brian Goetz | 20+ | Oracle | 语言设计 |
+| 2 | [Brian Goetz](/by-contributor/profiles/brian-goetz.md) | 20+ | Oracle | 语言设计 |
 | 3 | Jan Lahoda | 15+ | Oracle | 编译器实现 |
 | 4 | Vicente Romero | 10+ | Oracle | 类型检查 |
 

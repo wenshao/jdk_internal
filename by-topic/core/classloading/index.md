@@ -45,7 +45,7 @@ JDK 1.0 ── JDK 2 ── JDK 6 ── JDK 8 ── JDK 9 ── JDK 17 ──
 | 4 | Harold Seigel | 89 | Oracle | JVM 运行时 |
 | 5 | Stefan Karlsson | 87 | Oracle | 并发 GC |
 | 6 | Jiangli Zhou | 74 | Oracle | CDS, 存档 |
-| 7 | David Holmes | 68 | Oracle | 并发类加载 |
+| 7 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 68 | Oracle | 并发类加载 |
 
 ---
 

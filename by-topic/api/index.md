@@ -161,7 +161,7 @@ XML 和 JSON 处理从 DOM 到现代 API 的演进。
 | 1 | Brian Burkhalter | 90 | Oracle | I/O, 字符串 |
 | 2 | Naoto Sato | 84 | Oracle | 国际化, java.time |
 | 3 | Doug Lea | 73 | SUNY Oswego | 并发集合 |
-| 4 | Claes Redestad | 66 | Oracle | 性能优化 |
+| 4 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 66 | Oracle | 性能优化 |
 | 5 | Roger Riggs | 56 | Oracle | I/O, 工具类 |
 | 6 | Justin Lu | 52 | Oracle | 本地化 |
 | 7 | Viktor Klang | 44 | Lightbend/Oracle | CompletableFuture |

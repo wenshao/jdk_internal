@@ -46,7 +46,7 @@ ServerSocket Channel  Async  Client Domain  Concurrency Threads  (预览)
 | 4 | Chris Hegarty | 17 | Oracle | HTTP Client 基础 |
 | 5 | Daniel Jeliński | 16 | Oracle | HTTP/2, 连接池 |
 | 6 | Michael McMahon | 19 | Oracle | HTTP Client, NIO |
-| 7 | Brian Goetz | 12 | Oracle | 并发架构 |
+| 7 | [Brian Goetz](/by-contributor/profiles/brian-goetz.md) | 12 | Oracle | 并发架构 |
 
 ---
 

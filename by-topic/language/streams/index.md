@@ -1200,7 +1200,7 @@ list.stream()
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Brian Goetz | 30+ | Oracle | Lambda/Stream 规范 |
+| 1 | [Brian Goetz](/by-contributor/profiles/brian-goetz.md) | 30+ | Oracle | Lambda/Stream 规范 |
 | 2 | Paul Sandoz | 25+ | Oracle | Stream API 实现 |
 | 3 | Stuart Marks | 15+ | Oracle | 集合框架 |
 | 4 | Maurice Naftalin | | 技术写作 | Stream 指南 |
@@ -1209,7 +1209,7 @@ list.stream()
 
 | 贡献者 | 组织 | 主要优化 |
 |--------|------|----------|
-| **Shaojin Wen** | Alibaba | StringConcat, UTF-8 编码 |
+| **[Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)** | Alibaba | StringConcat, UTF-8 编码 |
 
 ---
 

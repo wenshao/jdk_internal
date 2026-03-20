@@ -787,7 +787,7 @@ employees.stream()
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Brian Goetz | 20+ | Oracle | Record 规范负责人 |
+| 1 | [Brian Goetz](/by-contributor/profiles/brian-goetz.md) | 20+ | Oracle | Record 规范负责人 |
 | 2 | Gavin Bierman | 15+ | Oracle | Record/模式匹配 |
 | 3 | Jan Lahoda | 10+ | Oracle | 编译器实现 |
 | 4 | Vicente Romero | 8+ | Oracle | 类型检查 |

@@ -448,7 +448,7 @@ java -XX:+UseShenandoahGC -jar app.jar
 |------|--------|--------|------|----------|
 | 1 | Albert Mingkun Yang | 681 | Oracle | G1 GC, 内存管理 |
 | 2 | Thomas Schatzl | 674 | Oracle | G1 GC 维护者 |
-| 3 | Aleksey Shipilev | 324 | Oracle | Shenandoah GC |
+| 3 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 324 | Oracle | Shenandoah GC |
 | 4 | Zhengyu Gu | 252 | Oracle | Shenandoah 核心开发者 |
 | 5 | Kim Barrett | 235 | Oracle | C++ 现代化 |
 | 6 | Stefan Karlsson | 229 | Oracle | 分代 ZGC (JEP 439) |
