@@ -28,11 +28,21 @@ Leonid Mesnik 是 Oracle 的 Principal Member of Technical Staff，专注于 Hot
 | **LinkedIn** | [lmesnik](https://www.linkedin.com/in/lmesnik) |
 | **Email** | lmesnik@openjdk.org, leonid.mesnik@oracle.com |
 | **OpenJDK** | [@lmesnik](https://openjdk.org/census#lmesnik) |
-| **Role** | JDK Reviewer (since September 2021) |
+| **角色** | JDK Committer (2018-07), JDK Reviewer (2021-09) |
 | **PRs** | [243 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Almesnik+is%3Aclosed+label%3Aintegrated) |
-| **Primary Areas** | JVMTI, Testing Infrastructure, HotSpot, JFR |
+| **主要领域** | JVMTI, Testing Infrastructure, HotSpot, JFR, Project Loom |
 
-> **数据来源**: [LinkedIn](https://www.linkedin.com/in/lmesnik), [GitHub](https://github.com/lmesnik), [OpenJDK 邮件列表](https://mail.openjdk.org/)
+> **数据来源**: [LinkedIn](https://www.linkedin.com/in/lmesnik), [GitHub](https://github.com/lmesnik), [CFV JDK Committer 2018](https://mail.openjdk.org/pipermail/jdk-dev/2018-August/001735.html), [CFV JDK Reviewer 2021](https://mail.openjdk.org/pipermail/jdk-dev/2021-September/006033.html)
+
+## 职业时间线
+
+| 时间 | 事件 | 详情 |
+|------|------|------|
+| **2018-07** | JDK Committer 提名 | 由 Igor Ignatyev 提名 |
+| **2018-08** | 成为 JDK Committer | 通过 CFV 投票 |
+| **2020** | Project Loom 贡献 | 95+ commits 到 Loom 仓库 |
+| **2021-09** | JDK Reviewer 提名 | 基于 Loom 和 JDK 贡献 |
+| **2021-09-25** | 成为 JDK Reviewer | 投票通过 |
 
 ## Contribution Overview
 
