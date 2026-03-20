@@ -2,12 +2,28 @@
 
 > **OpenJDK**: [@darcy](https://openjdk.org/census#darcy)
 > **Organization**: Oracle
+> **LinkedIn**: [jddarcy](https://www.linkedin.com/in/jddarcy)
+> **Education**: Stanford University (HCP Master's)
 
 ---
 
 ## 概述
 
-Joe Darcy 是 Oracle 的杰出工程师，长期担任 JDK 核心库的技术负责人。他对 JDK 的贡献涵盖数学库、常量折叠、注解处理等多个领域。
+Joe Darcy 是 Oracle 的杰出工程师，长期担任 JDK 核心库的技术负责人。他对 JDK 的贡献涵盖数学库、常量折叠、注解处理等多个领域。他在 Java 平台上工作超过 20 年，包括核心库、数值计算和 Project Coin。
+
+> **数据来源**: [LinkedIn](https://www.linkedin.com/in/jddarcy)
+
+---
+
+## 基本信息
+
+| 属性 | 值 |
+|------|-----|
+| **姓名** | Joseph D. Darcy (Joe Darcy) |
+| **当前组织** | Oracle |
+| **教育** | Stanford University (HCP Master's program) |
+| **专长** | Math Libraries, FDLIBM, Constant Folding, Numerics, Project Coin |
+| **工作经验** | Sun Microsystems → Oracle (20+ years) |
 
 ---
 
