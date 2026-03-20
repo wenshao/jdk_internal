@@ -22,12 +22,12 @@ Kim Barrett 是 Oracle 的资深 Java 开发者，专注于 HotSpot 运行时、
 | **LinkedIn** | [kim-barrett-7b19a97](https://www.linkedin.com/in/kim-barrett-7b19a97) |
 | **GitHub** | [@kimbarrett](https://github.com/kimbarrett) |
 | **OpenJDK** | [@kbarrett](https://openjdk.org/census#kbarrett) |
-| **Role** | OpenJDK Member, JDK Reviewer |
-| **PRs** | [352 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akimbarrett+is%3Aclosed+label%3Aintegrated) |
+| **Role** | OpenJDK Member, JDK Committer (2015-03), JDK Reviewer |
+| **PRs** | [352+ integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akimbarrett+is%3Aclosed+label%3Aintegrated) |
 | **Primary Areas** | Concurrency, Atomic Operations, C++ Modernization, HotSpot Runtime |
 | **Experience** | 25+ years in software design and implementation |
 
-> **数据来源**: [LinkedIn](https://www.linkedin.com/in/kim-barrett-7b19a97), [OpenJDK Census](https://openjdk.org/census#kbarrett)
+> **数据来源**: [LinkedIn](https://www.linkedin.com/in/kim-barrett-7b19a97), [OpenJDK Census](https://openjdk.org/census#kbarrett), [CFV Committer](https://mail.openjdk.org/pipermail/jdk9-dev/2015-March/001994.html)
 
 ## Contribution Overview
 
@@ -250,3 +250,26 @@ cleaner.register(object, cleanupAction);
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20kbarrett)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=kbarrett)
 - [HotSpot Style Guide](https://openjdk.org/groups/hotspot/docs/CodingStyle.html)
+- [CFV: JDK 9 Committer](https://mail.openjdk.org/pipermail/jdk9-dev/2015-March/001994.html)
+
+---
+
+## Career Timeline
+
+| Year | Event | Details |
+|------|-------|---------|
+| **~1990s** | Career Start | 25+ years software design and implementation |
+| **~2010** | Joined Oracle | Technical Staff |
+| **2015-03** | JDK Committer | Nominated for JDK 9 Committer status |
+| **2020s** | C++17 Migration | Led HotSpot C++17 migration effort |
+| **2023-2024** | Atomic<T> Template | Introduced type-safe Atomic operations |
+| **2024-2025** | HotSpot Style Guide | Modernized coding conventions |
+
+---
+
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-20
+> **更新内容**:
+> - 添加 JDK 9 Committer 提名时间 (2015-03)
+> - 添加职业时间线
+> - 添加 CFV 提名链接
