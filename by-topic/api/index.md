@@ -172,7 +172,7 @@ XML 和 JSON 处理从 DOM 到现代 API 的演进。
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
 | 1 | Naoto Sato | 64 | Oracle | java.time 主维护者 |
-| 2 | Shaojin Wen | 12 | Alibaba | 性能优化 |
+| 2 | [Shaojin Wen (温绍锦)](../../by-contributor/profiles/shaojin-wen.md) | 12 | Alibaba | 性能优化 |
 | 3 | Roger Riggs | 12 | Oracle | 日期时间 |
 | 4 | Claes Redestad | 8 | Oracle | 启动优化 |
 | 5 | Andrey Turbanov | 7 | Oracle | 格式化 |

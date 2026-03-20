@@ -1,4 +1,4 @@
-# Shaojin Wen (温少金) - JDK 26 PR 深度分析
+# Shaojin Wen (温绍锦) - JDK 26 PR 深度分析
 
 > **贡献者**: [Shaojin Wen](shaojin-wen.md)
 > **组织**: Oracle 中国

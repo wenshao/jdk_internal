@@ -35,7 +35,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 | 贡献者 | 主要领域 | 查看 |
 |--------|----------|------|
-| Shaojin Wen | 核心库优化 | [详情](/by-contributor/profiles/shaojin-wen.md) |
+| Shaojin Wen (温绍锦) | 核心库优化 | [详情](/by-contributor/profiles/shaojin-wen.md) |
 | Fei Yang | RISC-V | [详情](/by-contributor/profiles/fei-yang.md) |
 | Albert Mingkun Yang | Oracle | GC | [详情](/by-contributor/profiles/albert-mingkun-yang.md) |
 

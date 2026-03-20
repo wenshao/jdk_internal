@@ -848,13 +848,13 @@ if (date1.compareTo(date2) < 0) {  // ❌ 不清晰
 | 1 | Stephen Colebourne | 50+ | Joda | JSR 310 规范负责人 |
 | 2 | Roger Riggs | 30+ | Oracle | java.time 实现 |
 | 3 | Joe Darcy | 15+ | Oracle | 集成到 JDK |
-| 4 | Shaojin Wen | 5+ | Alibaba | 性能优化 |
+| 4 | [Shaojin Wen (温绍锦)](../../by-contributor/profiles/shaojin-wen.md) | 5+ | Alibaba | 性能优化 |
 
 ### 性能优化贡献者
 
 | 贡献者 | 组织 | 主要优化 |
 |--------|------|----------|
-| **Shaojin Wen** | Alibaba | DateTime toString (+30%), ZoneOffset 缓存 (+15-25%) |
+| [**Shaojin Wen (温绍锦)**](../../by-contributor/profiles/shaojin-wen.md) | Alibaba | DateTime toString (+30%), ZoneOffset 缓存 (+15-25%) |
 
 ---
 
