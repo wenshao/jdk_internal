@@ -10,13 +10,16 @@
 |-------|-------|
 | **Name** | Coleen Phillimore |
 | **Current Organization** | Oracle |
+| **Location** | Acton, Massachusetts, USA |
 | **GitHub** | [@coleenp](https://github.com/coleenp) |
+| **LinkedIn** | [coleen-phillimore-0a042b9](https://www.linkedin.com/in/coleen-phillimore-0a042b9) |
 | **OpenJDK** | [@coleenp](https://openjdk.org/census#coleenp) |
-| **Role** | OpenJDK Member, JDK Reviewer |
+| **Role** | OpenJDK Member, JDK Reviewer, Valhalla Committer (2024-07) |
 | **PRs** | [400 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Acoleenp+is%3Aclosed+label%3Aintegrated) |
 | **Primary Areas** | JVM Core, HotSpot, Metaspace, Class Loading |
 
 > **Data as of**: 2026-03-19
+> **数据来源**: [LinkedIn](https://www.linkedin.com/in/coleen-phillimore-0a042b9), [CFV Valhalla Committer](https://mail.openjdk.org/pipermail/valhalla-dev/2024-July/012818.html)
 
 ---
 
