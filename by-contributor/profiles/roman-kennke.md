@@ -1,19 +1,36 @@
 # Roman Kennke
 
+> Red Hat Principal Software Engineer | JEP 519 Lead | Shenandoah GC Contributor
+
+---
+
 ## Basic Information
 
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Roman Kennke |
 | **Current Organization** | Red Hat |
+| **Position** | Principal Software Engineer |
+| **Location** | Germany |
 | **GitHub** | [@rkennke](https://github.com/rkennke) |
 | **Email** | rkennke@redhat.com |
 | **OpenJDK** | [@rkennke](https://openjdk.org/census#rkennke) |
-| **Role** | Committer, Reviewer |
-| **Primary Areas** | Shenandoah GC, Compact Object Headers |
+| **Role** | JDK Committer, JDK Reviewer |
+| **Primary Areas** | Shenandoah GC, Compact Object Headers, AArch64 |
 | **Active Since** | 2018+ |
 
-> **数据来源**: [GitHub](https://github.com/rkennke), [OpenJDK Census](https://openjdk.org/census)
+> **数据来源**: [GitHub](https://github.com/rkennke), [OpenJDK Census](https://openjdk.org/census#rkennke), [JEP 519](https://openjdk.org/jeps/519)
+
+---
+
+## JEP Leadership
+
+| JEP | Title | Role | Status | Target |
+|-----|------|------|--------|--------|
+| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Lead | Final | JDK 21 |
+| [JEP 521](https://openjdk.org/jeps/521) | Generational ZGC | Co-contributor | Proposed | - |
+
+---
 
 ## Contribution Overview
 
@@ -36,29 +53,49 @@
 
 ### JEP 519: Compact Object Headers
 
-Led the implementation of compact object headers in JDK 21+:
+Led the implementation of compact object headers in JDK 21:
 
-- Reduced object header size
-- Improved memory efficiency
-- Enhanced application performance
-- Coordinated with GC teams
+- Reduced object header size from 12-16 bytes to 8 bytes
+- Improved memory efficiency for most applications
+- Enhanced application performance through better cache utilization
+- Coordinated with all GC teams (G1, ZGC, Shenandoah, Parallel)
+- Design allows for 400K+ classes with 8-byte headers
 
 ### Shenandoah GC
 
-Contributed to Shenandoah garbage collector improvements:
+Core contributor to Shenandoah garbage collector:
 
-- Generational Shenandoah (JEP 521 co-contributor)
+- Generational Shenandoah (JEP 521 co-author)
 - Performance optimizations
-- Cross-platform support
+- Cross-platform support improvements
+- Memory management enhancements
 
-## Development Style
+### AArch64 Support
 
-- Focuses on memory efficiency improvements
-- Collaborates across GC and runtime teams
-- Data-driven optimization approach
+Contributions to AArch64 platform support:
 
-## Related Links
+- HotSpot runtime improvements
+- Platform-specific optimizations
+- Testing infrastructure
 
-- [OpenJDK Profile](https://openjdk.org/census#rkennke)
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=rkennke)
-- [JEP 519](https://openjdk.org/jeps/519)
+---
+
+## External Resources
+
+| Type | Link |
+|------|------|
+| **GitHub** | [@rkennke](https://github.com/rkennke) |
+| **OpenJDK Census** | [rkennke](https://openjdk.org/census#rkennke) |
+| **JEP 519** | [Compact Object Headers](https://openjdk.org/jeps/519) |
+| **JEP 521** | [Generational ZGC](https://openjdk.org/jeps/521) |
+
+---
+
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-20
+> **更新内容**:
+> - 添加职位: Principal Software Engineer
+> - 添加位置: Germany
+> - 添加 JEP 521 (Generational ZGC) co-contributor
+> - 添加 Compact Object Headers 技术细节
+> - 添加 AArch64 支持贡献
