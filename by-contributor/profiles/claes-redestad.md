@@ -132,10 +132,14 @@ Claes 的工作特点是：
 
 ### 链接
 
-- **GitHub**: [https://github.com/redestad](https://github.com/redestad)
-- **博客**: [https://cl4es.github.io](https://cl4es.github.io)
-- **OpenJDK Member 邮件列表**: [CFV: New OpenJDK Member Group Member](https://mail.openjdk.org/pipermail/members/2022-March/001617.html)
-- **Inside.java 文章**: [Performance Improvements in JDK 25](https://inside.java/2025/10/20/jdk-25-performance-improvements/)
+| 类型 | 链接 |
+|------|------|
+| **GitHub** | [@redestad](https://github.com/redestad) |
+| **博客** | [cl4es.github.io](https://cl4es.github.io) |
+| **OpenJDK Census** | [redestad](https://openjdk.org/census#redestad) |
+| **OpenJDK Member CFV** | [2022-03 Nomination](https://mail.openjdk.org/pipermail/members/2022-March/001617.html) |
+| **Inside.java** | [JDK 25 Performance](https://inside.java/2025/10/20/jdk-25-performance-improvements/) |
+| **LinkedIn** | [Claes Redestad](https://www.linkedin.com/in/claes-redestad) |
 
 ### 数据来源
 
@@ -161,6 +165,9 @@ Claes 的工作特点是：
 
 ---
 
-> **文档版本**: 3.0
+> **文档版本**: 3.1
 > **最后更新**: 2026-03-20
-> **更新内容**: 补充职业历程（2011年加入Oracle）、技术博客文章列表、OpenJDK Member 提名详情、数据来源章节
+> **更新内容**:
+> - 添加 LinkedIn 链接
+> - 添加 OpenJDK Census 链接
+> - 改进外部资源章节格式
