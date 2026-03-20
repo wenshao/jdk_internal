@@ -10,14 +10,26 @@
 |------|-----|
 | **姓名** | Nick Gasson |
 | **组织** | [Amazon](/contributors/orgs/amazon.md) |
-| **位置** | 英国 |
-| **GitHub** | [@benty-amzn](https://github.com/benty-amzn) |
+| **位置** | Cambridge, England, United Kingdom |
+| **GitHub** | [@benty-amzn](https://github.com/benty-amzn) (work), [@nick-arm](https://github.com/nick-arm) (personal) |
+| **LinkedIn** | [ngasson](https://uk.linkedin.com/in/ngasson) |
 | **OpenJDK** | [@ngasson](https://openjdk.org/census#ngasson) |
-| **角色** | Committer |
+| **Email** | ngasson@openjdk.org |
+| **角色** | JDK Reviewer (2021-07), Committer |
 | **主要领域** | AArch64 架构，C2 编译器，性能优化 |
 | **活跃时间** | 2020 - 至今 |
 
-> **数据调查时间**: 2026-03-20
+> **数据来源**: [LinkedIn](https://uk.linkedin.com/in/ngasson), [CFV Reviewer](https://mail.openjdk.org/pipermail/jdk-dev/2021-July/005755.html)
+
+---
+
+## 职业时间线
+
+| 年份 | 事件 | 详情 |
+|------|------|------|
+| **2020** | 开始参与 OpenJDK | AArch64 架构贡献 |
+| **2021-07** | JDK Reviewer | 提名为 JDK Reviewer (CFV 投票截止: 27 July 2021) |
+| **2021-至今** | Amazon Corretto | Amazon JDK 发行版维护 |
 
 ---
 
@@ -142,8 +154,11 @@ Nick Gasson 专注于 AArch64 平台的 C2 编译器后端优化，致力于生�
 
 | 类型 | 链接 |
 |------|------|
-| **GitHub** | [@benty-amzn](https://github.com/benty-amzn) |
+| **GitHub (Work)** | [@benty-amzn](https://github.com/benty-amzn) |
+| **GitHub (Personal)** | [@nick-arm](https://github.com/nick-arm) |
+| **LinkedIn** | [ngasson](https://uk.linkedin.com/in/ngasson) |
 | **OpenJDK Census** | [ngasson](https://openjdk.org/census#ngasson) |
+| **CFV: JDK Reviewer** | [2021-07 Nomination](https://mail.openjdk.org/pipermail/jdk-dev/2021-July/005755.html) |
 | **邮件列表** | [ngasson@openjdk.org](mailto:ngasson@openjdk.org) |
 
 ---
