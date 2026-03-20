@@ -964,11 +964,20 @@ Chen Liang 是 **Project Valhalla 的顶级贡献者**，在项目中排名 **#1
 
 ## 兴趣领域
 
-根据 GitHub 组织关联，Chen Liang 可能对以下领域感兴趣：
-- **Minecraft** 开发 - 可能参与 Minecraft 相关项目或模组开发
-- **开源项目** - 在 GitHub 上维护多个开源项目
+根据 GitHub 仓库和社交媒体关联，Chen Liang 对以下领域感兴趣：
 
-> **来源**: [GitHub Profile](https://github.com/liach)
+### 开源项目
+
+- **Minecraft 模组开发**: 维护 [liachmodded](https://github.com/liachmodded) 组织
+  - [brandpacket](https://github.com/liachmodded/brandpacket) - 修改 Fabric 客户端品牌
+  - [pathsuggestion](https://github.com/liachmodded/pathsuggestion) - 长ID建议工具
+  - [ShulkerBoxBackpack](https://github.com/liachmodded/ShulkerBoxBackpack) - Sponge 插件
+
+### 个人博客
+
+- [liachmodded.github.io](https://liachmodded.github.io/) - 个人技术博客
+
+> **来源**: [GitHub Profile (@liach)](https://github.com/liach), [liachmodded Organization](https://github.com/liachmodded)
 
 ---
 
@@ -989,6 +998,14 @@ Chen Liang 的贡献特点:
 3. 实现修复并完善文档
 4. 添加全面的测试
 5. 更新相关文档
+6. 通过邮件列表进行代码审查
+
+### 开发特点
+
+- **API 设计优先**: 注重 API 的一致性和易用性
+- **文档驱动**: 同时改进代码和文档
+- **向后兼容**: 谨慎处理 API 变更
+- **测试完善**: 添加全面的测试覆盖
 
 ### 协作者
 
