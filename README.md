@@ -12,8 +12,8 @@
 | **JDK 11** | LTS | 2018-09 | 2032-01 | [进入](by-version/jdk11/) |
 | **JDK 17** | LTS | 2021-09 | 2029-10 | [进入](by-version/jdk17/) |
 | **JDK 21** | LTS | 2023-09 | 2031-10 | [进入](by-version/jdk21/) |
-| **JDK 25** | LTS | 2025-09 | 2032+ | [进入](by-version/jdk25/) |
-| **JDK 26** | Feature | 2025-09 | - | [进入](by-version/jdk26/) |
+| **JDK 25** | LTS | 2025-09-16 | 2032+ | [进入](by-version/jdk25/) |
+| **JDK 26** | Feature | 2026-03-17 | - | [进入](by-version/jdk26/) |
 
 ---
 
@@ -71,7 +71,7 @@ jdk_internal/
 │   ├── jdk17/             # JDK 17 (LTS 2021)
 │   ├── jdk21/             # JDK 21 (LTS 2023)
 │   ├── jdk25/             # JDK 25 (LTS 2025)
-│   └── jdk26/             # JDK 26 (Feature 2025)
+│   └── jdk26/             # JDK 26 (Feature 2026-03)
 │
 ├── by-topic/              # 按主题跨版本
 │   ├── index.md           # 主题索引

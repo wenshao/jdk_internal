@@ -33,7 +33,7 @@
 | **JDK 22** | 2024-03 | String Templates (预览) |
 | **JDK 23** | 2024-09 | Markdown 文档注释 |
 | **JDK 24** | 2025-03 | String Templates (第3次预览) |
-| **JDK 26** | 2025-09 | HTTP/3、G1 吞吐量提升 |
+| **JDK 26** | 2026-03-17 | HTTP/3、G1 吞吐量提升 |
 
 ---
 
@@ -164,7 +164,7 @@
 - Structured Concurrency (第4次预览)
 - [版本详情](jdk24/index.md)
 
-#### [JDK 26](jdk26/) - 2025
+#### [JDK 26](jdk26/) - 2026-03
 - 新特性：HTTP/3、G1 吞吐量提升、分代 Shenandoah、Compact Object Headers
 - [版本详情](jdk26/index.md) | [JEP 汇总](jdk26/jeps.md) | [迁移指南](jdk26/migration/from-21.md)
 
