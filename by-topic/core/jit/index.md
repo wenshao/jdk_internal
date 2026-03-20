@@ -188,6 +188,10 @@ Level 4: C2 (深度优化)
   - 各场景性能数据
   - 启动/稳态性能对比
   - 实际应用建议
+- [Graal 高级优化特性](graal-advanced-optimizations.md) - 类似 MergeStore 的优化对比
+  - 部分转义分析
+  - 数组消除优化
+  - 死存储消除对比
 
 #### 优化技术深度分析
 
