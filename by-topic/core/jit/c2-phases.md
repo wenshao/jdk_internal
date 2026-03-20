@@ -101,11 +101,12 @@ b = x + y  →   b = a (复用)
 c = a * 2      c = a * 2
 ```
 
-**相关 Bug**:
+**相关 Bug 修复**:
+- [JDK-8347645](/by-pr/8347/8347645.md) - XOR 有界值处理阻止常量折叠 ([Johannes Graham](/by-contributor/profiles/johannes-graham.md))
 - [JDK-8360035](https://bugs.openjdk.org/browse/JDK-8360035) - PhaseIterGVN 无限循环优化崩溃 (JDK 11)
 
 **参考资料**:
-- [Introduction to C2 - Part 2: GVN](https://eme64.github.io/blog/2024/12/24/Intro-to-C2-Part02.html)
+- [Introduction to C2 - Part 2: GVN](https://eme64.github.io/blog/2024/12/24/Intro-to-C2-Part02.html) - [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md)
 
 ---
 
@@ -283,6 +284,15 @@ for (int i = 0; i < 1024; i += 16) {
 }
 ```
 
+**相关 PR 分析**:
+| Issue | 标题 | 作者 | 说明 |
+|-------|------|------|------|
+| [JDK-8334431](/by-pr/8333/8334431.md) | 修复 SuperWord Store-to-Load 转发失败 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 性能回归修复 |
+| [JDK-8344085](/by-pr/8344/8344085.md) | 改进小循环迭代计数的 SuperWord 向量化 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 小循环优化 |
+| [JDK-8328938](https://bugs.openjdk.org/browse/JDK-8328938) | SuperWord 大步长禁用 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 算法边界修复 |
+| [JDK-8324890](/by-pr/8324/8324890.md) | SuperWord VLoop 分析器重构 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 架构改进 |
+| [JDK-8333713](/by-pr/8333/8333713.md) | SuperWord 清理重命名 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 代码质量 |
+
 **近期改进 (JDK 23+)**:
 - **JDK-8340093**: SuperWord 成本模型 ([PR #20964](https://github.com/openjdk/jdk/pull/20964))
   - 智能判断向量化收益
@@ -368,6 +378,26 @@ PhaseCFG ──► PhaseChaitin ──► PhaseBlockLayout ──► Output
 
 ## 相关链接
 
+### 本地文档
+
 - [VM 参数](../vm-parameters.md) - 编译器参数配置
 - [诊断工具](../diagnostics.md) - 如何观察优化阶段
-- [Emanuel's C2 Blog](https://eme64.github.io/blog/) - 详细技术分析
+- [SuperWord 向量化](/by-topic/core/jit/superword/) - SuperWord 专题
+
+### 贡献者
+
+| 贡献者 | 领域 | 链接 |
+|--------|------|------|
+| [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | C2 SuperWord 向量化 | [档案](/by-contributor/profiles/emanuel-peter.md) |
+| [Johannes Graham](/by-contributor/profiles/johannes-graham.md) | C2 编译器优化 | [档案](/by-contributor/profiles/johannes-graham.md) |
+| [Vladimir Kozlov](https://openjdk.org/census#kvn) | C2 编译器创始人 | OpenJDK Census |
+
+### 外部资源
+
+- [Emanuel's C2 Blog](https://eme64.github.io/blog/) - [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) 的详细技术分析
+  - [Introduction to C2 - Part 1: Overview](https://eme64.github.io/blog/2024/12/06/Intro-to-C2-Part01.html)
+  - [Introduction to C2 - Part 2: GVN](https://eme64.github.io/blog/2024/12/24/Intro-to-C2-Part02.html)
+  - [Introduction to C2 - Part 3: Inlining](https://eme64.github.io/blog/2024/12/31/Intro-to-C2-Part03.html)
+  - [Introduction to C2 - Part 4: Loop Optimizations](https://eme64.github.io/blog/2025/01/23/Intro-to-C2-Part04.html)
+- [OpenJDK Wiki: Loop optimizations](https://wiki.openjdk.org/spaces/HotSpot/pages/20415918/Loop+optimizations+in+Hotspot+Server+VM+Compiler+C2)
+- [HotSpot Escape Analysis Status](https://cr.openjdk.org/~cslucas/escape-analysis/EscapeAnalysis.html)
