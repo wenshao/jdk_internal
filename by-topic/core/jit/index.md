@@ -192,6 +192,11 @@ Level 4: C2 (深度优化)
   - 部分转义分析
   - 数组消除优化
   - 死存储消除对比
+- [GraalVM 独有技术](graal-unique-features.md) - C2没有而GraalVM有的完整清单
+  - 帧状态分离
+  - 推测性优化
+  - LoopPredication
+  - 虚拟对象材料化
 
 #### 优化技术深度分析
 
