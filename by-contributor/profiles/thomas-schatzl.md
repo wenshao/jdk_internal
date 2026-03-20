@@ -19,19 +19,21 @@ Thomas Schatzl 是 Oracle HotSpot GC 团队核心成员，G1 (Garbage First) GC 
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Thomas Schatzl |
+| **学位** | Dipl.-Ing. (Diplom-Ingenieur, JKU) |
 | **当前组织** | Oracle |
 | **团队** | HotSpot GC Team |
+| **位置** | 德国 |
 | **GitHub** | [@tschatzl](https://github.com/tschatzl) |
 | **Blog** | [tschatzl.github.io](https://tschatzl.github.io/) |
 | **Email** | thomas.schatzl@oracle.com |
 | **OpenJDK** | [@tschatzl](https://openjdk.org/census#tschatzl) |
 | **角色** | OpenJDK Member, JDK Reviewer |
-| **PRs** | [545 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Atschatzl+is%3Aclosed+label%3Aintegrated) |
+| **PRs** | [545+ integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Atschatzl+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | G1 GC, Parallel GC |
 | **主导 JEP** | JEP 522: G1 GC Throughput Improvement |
 | **活跃时间** | 2012 - 至今 |
 
-> **数据来源**: [个人博客](https://tschatzl.github.io/), [Inside.java](https://inside.java/u/ThomasSchatzl/)
+> **数据来源**: [个人博客](https://tschatzl.github.io/), [Inside.java](https://inside.java/u/ThomasSchatzl/), [JKU Staff Profile](https://ssw.jku.at/General/Staff/TS/)
 
 ---
 
@@ -99,6 +101,29 @@ Thomas 在 [tschatzl.github.io](https://tschatzl.github.io/) 撰写关于 OpenJD
 | **Blog** | [tschatzl.github.io](https://tschatzl.github.io/) |
 | **OpenJDK Census** | [tschatzl](https://openjdk.org/census#tschatzl) |
 | **Inside.java** | [ThomasSchatzl](https://inside.java/u/ThomasSchatzl/) |
+
+---
+
+## 教育背景
+
+| 属性 | 值 |
+|------|-----|
+| **学位** | Dipl.-Ing. (Diplom-Ingenieur) |
+| **大学** | Johannes Kepler University (JKU) |
+| **院系** | System Software Department |
+| **专业** | 系统软件 |
+
+---
+
+## 职业时间线
+
+| 年份 | 事件 | 详情 |
+|------|------|------|
+| **~2010** | JKU 学术背景 | Johannes Kepler University 系统软件部门 |
+| **2012** | 加入 Oracle | HotSpot GC 团队 |
+| **2012-至今** | GC 专家 | 专注 G1 GC 和 Parallel GC 超过 12 年 |
+| **2024-2025** | JEP 522 | 主导 G1 GC 吞吐量改进 |
+| **2025-至今** | JDK Reviewer | 持续审查和优化 GC 代码 |
 
 ---
 
@@ -272,6 +297,17 @@ Thomas 的贡献特点:
 
 ## 相关链接
 
+- [JKU Staff Profile](https://ssw.jku.at/General/Staff/TS/)
 - [OpenJDK Changesets](https://hg.openjdk.org/jdk/jdk/user?user=tschatzl)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=Thomas%20Schatzl)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20tschatzl)
+
+---
+
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-20
+> **更新内容**:
+> - 添加学位: Dipl.-Ing. (JKU)
+> - 添加教育背景: Johannes Kepler University
+> - 添加职业时间线
+> - 添加 JKU Staff Profile 链接
