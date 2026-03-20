@@ -82,13 +82,14 @@ Level 4: C2 (深度优化)
 
 ### C2 专项贡献者
 
-| 排名 | 贡献者 | 主要贡献 |
-|------|--------|----------|
-| 1 | [Vladimir Kozlov](https://github.com/vklang) | C2 架构师 |
-| 2 | [Roland Westrelin](https://github.com/rwestrel) | C2 优化 (JDK-8325495 Add 优化) |
-| 3 | [John Rose](https://github.com/jrose) | invokedynamic, JIT |
-| 4 | [Emanuel Peter](https://eme64.github.io/blog/) | C2 博客作者, 编译器工程师 |
-| 5 | [Christian Hagedorn](https://github.com/chhagedorn) | C2 优化, GVN |
+| 排名 | 贡献者 | 主要贡献 | 档案 |
+|------|--------|----------|------|
+| 1 | [Vladimir Kozlov](https://github.com/vklang) | C2 架构师 | [OpenJDK Census](https://openjdk.org/census#kvn) |
+| 2 | [Roland Westrelin](https://github.com/rwestrel) | C2 优化 (JDK-8325495) | OpenJDK Census |
+| 3 | [John Rose](https://github.com/jrose) | invokedynamic, JIT | [OpenJDK Census](https://openjdk.org/census#jrose) |
+| 4 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | SuperWord 向量化, C2 博客作者 | [档案](/by-contributor/profiles/emanuel-peter.md) |
+| 5 | [Christian Hagedorn](https://github.com/chhagedorn) | C2 优化, GVN | OpenJDK Census |
+| 6 | [Johannes Graham](/by-contributor/profiles/johannes-graham.md) | C2 常量折叠优化 | [档案](/by-contributor/profiles/johannes-graham.md) |
 
 ---
 
@@ -180,7 +181,8 @@ src/hotspot/share/
 │   ├── gvn.cpp                    # Global Value Numbering
 │   ├── loopopts.cpp               # 循环优化
 │   ├── escape.cpp                 # 逃逸分析
-│   ├── superword.cpp              # 向量化
+│   ├── superword.cpp              # SuperWord 向量化
+│   ├── vtransform.cpp             # VTransform 架构 (JDK 26+)
 │   ├── matcher.cpp                # 指令匹配
 │   ├── chaitin.cpp                # 寄存器分配
 │   └── output.cpp                 # 代码生成
@@ -222,6 +224,92 @@ PhaseSuperWord ────────► SIMD 向量化
 ---
 
 ## 重要 PR 分析
+
+### SuperWord 向量化优化系列
+
+> **主要贡献者**: [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md)
+
+SuperWord 是 C2 JIT 编译器的 SIMD 向量化优化组件，在 JDK 23-26 中经历了重大架构改进。
+
+#### JDK-8340093: SuperWord 成本模型
+
+> **作者**: [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md)
+> **影响**: ⭐⭐⭐⭐⭐ 智能向量化决策
+
+引入了成本模型来智能判断向量化是否真的能带来性能提升：
+
+**优化前**:
+- 盲目向量化所有可向量化的循环
+- 未考虑 shuffle/pack/unpack 开销
+- 可能导致性能下降
+
+**优化后**:
+- 计算向量化的真实成本
+- 考虑数据重排开销
+- 评估归约操作的收益
+- 只在真正有利可图时才向量化
+
+**成本模型考虑因素**:
+| 因素 | 说明 |
+|------|------|
+| 向量宽度 | 128-bit (SSE) vs 256-bit (AVX) vs 512-bit (AVX-512) |
+| 循环迭代次数 | 少量迭代可能不值得向量化 |
+| 内存访问模式 | 连续访问 vs 随机访问 |
+| Shuffle 开销 | 数据重排操作的 CPU 周期 |
+| 对齐状态 | 对齐访问更快，不对齐需要额外处理 |
+
+#### JDK-8334431: 修复 SuperWord Store-to-Load 转发失败
+
+> **作者**: [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md)
+> **影响**: ⭐⭐⭐⭐⭐ 性能回归修复
+
+修复了 JDK-8325155 引入的性能回归问题，恢复 Store-to-Load 转发优化。
+
+→ [详细分析](/by-pr/8333/8334431.md)
+
+#### JDK-8344085: 改进小循环迭代计数的 SuperWord 向量化
+
+> **作者**: [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md)
+> **影响**: ⭐⭐⭐⭐ 小循环优化
+
+改进小循环（4-16 次迭代）的向量化决策，避免错误地向量化导致性能下降。
+
+→ [详细分析](/by-pr/8344/8344085.md)
+
+#### JDK-8328938: SuperWord 大步长禁用
+
+> **作者**: [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md)
+> **影响**: ⭐⭐⭐ 算法边界修复
+
+禁用步长 > 1 的循环向量化，避免错误的优化。
+
+#### JDK-8324890: SuperWord VLoop 分析器重构
+
+> **作者**: [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md)
+> **影响**: ⭐⭐⭐⭐ 架构改进
+
+重构 VLoopAnalyzer 和 VTransformGraph 架构，为后续优化奠定基础。
+
+→ [详细分析](/by-pr/8324/8324890.md)
+
+#### JDK-8333713: SuperWord 清理重命名
+
+> **作者**: [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md)
+> **影响**: ⭐⭐ 代码质量
+
+清理 SuperWord 代码，改进命名和可维护性。
+
+→ [详细分析](/by-pr/8333/8333713.md)
+
+**SuperWord VM 参数**:
+```bash
+-XX:+UseSuperWord                 # 启用向量化 (默认开启)
+-XX:MaxVectorSize=32               # 最大向量大小 (字节)
+-XX:+TraceSuperWord               # 跟踪向量化决策
+-XX:CompileCommand=print,*SuperWord*  # 打印 SuperWord 信息
+```
+
+---
 
 ### MergeStore 优化系列
 
@@ -438,11 +526,13 @@ private void processUncommon() {
 - [HotSpot Internals Wiki](https://wiki.openjdk.org/display/HotSpot)
 
 **技术博客:**
-- [Emanuel's HotSpot C2 Blog](https://eme64.github.io/blog/) - C2 编译器深入解析
+- [Emanuel's HotSpot C2 Blog](https://eme64.github.io/blog/) - [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) 的 C2 编译器深入解析
+  - [Part 1: C2 Overview](https://eme64.github.io/blog/2024/12/06/Intro-to-C2-Part01.html)
   - [Part 2: GVN](https://eme64.github.io/blog/2024/12/24/Intro-to-C2-Part02.html)
-  - [Part 3: 优化阶段](https://eme64.github.io/blog/2025/01/23/Intro-to-C2-Part03.html)
-  - [Part 4: 循环优化](https://eme64.github.io/blog/2025/01/23/Intro-to-C2-Part04.html)
+  - [Part 3: Inlining](https://eme64.github.io/blog/2024/12/31/Intro-to-C2-Part03.html)
+  - [Part 4: Loop Optimizations](https://eme64.github.io/blog/2025/01/23/Intro-to-C2-Part04.html)
 
 **Bug 跟踪:**
 - [JDK-8325497: C2 性能调查](https://bugs.openjdk.org/browse/JDK-8325497)
-- [JDK-8340093: SuperWord 成本模型](https://bugs.openjdk.org/browse/JDK-8340093)
+- [JDK-8340093: SuperWord 成本模型](https://bugs.openjdk.org/browse/JDK-8340093) - [相关 PR](/by-pr/8340/8340093.md)
+- [JDK-8347645: XOR 常量折叠修复](https://bugs.openjdk.org/browse/JDK-8347645) - [分析](/by-pr/8347/8347645.md)
