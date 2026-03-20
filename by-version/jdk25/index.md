@@ -348,9 +348,8 @@ java --enable-preview MyApp
 |------|------|------|
 | String Templates | 字符串模板实现 | [→](./deep-dive/string-templates.md) |
 | Generational ZGC | 分代 ZGC 架构 | [→](./deep-dive/generational-zgc.md) |
-| Structured Concurrency | 结构化并发实现 | → |
-| Virtual Threads | 虚拟线程实现 | → |
-| Scoped Values | 作用域值实现 | → |
+| DateTime toString 优化 | 日期时间格式化性能 | [→](./deep-dive/datetime-tostring-optimization.md) |
+| I/O 优化 | DataInput/Output UTF 处理 | [→](./deep-dive/io-optimization.md) |
 
 ---
 

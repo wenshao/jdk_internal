@@ -409,6 +409,17 @@ String json = "{\"name\":\"" + name + "\",\"age\":" + age + "}";
 
 ---
 
+## JDK 25 深度分析
+
+以下是在 JDK 25 中包含 Shaojin Wen 贡献的深度分析文档：
+
+| 主题 | 链接 | 性能提升 |
+|------|------|----------|
+| DateTime toString 优化 | [→](../../by-version/jdk25/deep-dive/datetime-tostring-optimization.md) | +20-40% |
+| I/O 优化 (readUTF/writeUTF) | [→](../../by-version/jdk25/deep-dive/io-optimization.md) | +15-30% |
+
+---
+
 ## JDK 26 深度分析
 
 以下是在 JDK 26 中包含 Shaojin Wen 贡献的深度分析文档：
