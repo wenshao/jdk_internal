@@ -1,6 +1,8 @@
 # GraalVM vs C2 高级优化特性对比
 
 > 类似 MergeStore 的内存优化及其他高级特性深度对比
+>
+> **定位**: 从 HotSpot/JIT 角度对比优化特性。更全面的技术对比见 [GraalVM 技术内幕](../../graalvm/graal-vs-c2.md)
 
 [← 返回 JIT 编译](../)
 

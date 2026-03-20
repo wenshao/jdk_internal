@@ -501,14 +501,21 @@ native-image -jar app.jar
 
 ## 相关链接
 
+### JIT 目录文档 (从 HotSpot 视角)
+- [JIT 编译索引](../../../by-topic/core/jit/)
+- [C2 优化阶段](../../../by-topic/core/jit/c2-phases.md) - C2 编译流程
+- [C2 vs Graal 性能数据](../../../by-topic/core/jit/graal-vs-c2-performance.md) - 2024-2025 基准测试
+- [Graal 高级优化](../../../by-topic/core/jit/graal-advanced-optimizations.md) - 优化特性对比
+- [Graal 独有特性](../../../by-topic/core/jit/graal-unique-features.md) - 差异化技术
+
 ### 技术文档
-- [C2 Compiler](../../../by-topic/core/jit/hotspot-c2.md)
 - [Graal JIT](../../../by-topic/core/jit/graal-jit.md)
 - [JVMCI (JEP 243)](../../../jeps/compiler/jep-243.md)
 
 ### 性能对比
 - [性能基准测试](benchmarks.md)
 - [性能优化技术](performance.md)
+- [C2 vs Graal 性能数据](../../../by-topic/core/jit/graal-vs-c2-performance.md) - 2024-2025 基准测试
 
 ### 源码
 - [HotSpot C2 Source](https://github.com/openjdk/jdk/tree/master/src/hotspot/share/opto)

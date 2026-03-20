@@ -198,6 +198,8 @@ Level 4: C2 (深度优化)
   - LoopPredication
   - 虚拟对象材料化
 
+> 💡 **提示**: 还有 [GraalVM 技术内幕专题](../graalvm/) 目录，包含更全面的 GraalVM 技术文档，包括架构、性能、Native Image 等。
+
 #### 优化技术深度分析
 
 - [内联优化](inlining.md) - JIT 内联策略和启发式算法

@@ -1,6 +1,8 @@
 # GraalVM vs C2 性能对比调查
 
 > 基于 2024-2025 最新基准测试数据的深度分析
+>
+> **定位**: 从 HotSpot/JIT 角度分析 Graal 性能。更全面的技术对比见 [GraalVM 技术内幕](../../graalvm/graal-vs-c2.md)
 
 [← 返回 JIT 编译](../)
 
