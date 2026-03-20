@@ -138,18 +138,18 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 | JEP | Title | Lead(s) | 档案 |
 |-----|-------|---------|------|
-| 516 | Ahead-of-Time Object Caching | Erik Österlund | [详情](./erik-osterlund.md) |
-| 517 | HTTP/3 for HTTP Client | Daniel Fuchs | [详情](./daniel-fuchs.md) |
-| 519 | Compact Object Headers | Roman Kennke | [详情](./roman-kennke.md) |
-| 521 | Generational Shenandoah | William Kemper, Aleksey Shipilev | [详情](./william-kemper.md), [详情](./aleksey-shipilev.md) |
-| 522 | G1 GC Throughput | Thomas Schatzl | [详情](./thomas-schatzl.md) |
-| 524 | PEM Encodings | Anthony Scarpino | [详情](./anthony-scarpino.md) |
-| 525 | Structured Concurrency | Alan Bateman | [详情](./alan-bateman.md) |
-| 526 | Lazy Constants | Per Minborg | [详情](./per-minborg.md) |
-| 500 | Make Final Mean Final | Alan Bateman | [详情](./alan-bateman.md) |
-| 504 | Remove Applet API | Phil Race | [详情](./phil-race.md) |
-| 509 | JFR CPU-Time Profiling | Johannes Bechberger | [详情](./johannes-bechberger.md) |
-| 527 | TLS 1.3 Hybrid Key Exchange | Hai-May Chao | [详情](./hai-may-chao.md) |
+| 516 | Ahead-of-Time Object Caching | [Erik Österlund](./erik-osterlund.md) | [详情](./erik-osterlund.md) |
+| 517 | HTTP/3 for HTTP Client | [Daniel Fuchs](./daniel-fuchs.md) | [详情](./daniel-fuchs.md) |
+| 519 | Compact Object Headers | [Roman Kennke](./roman-kennke.md) | [详情](./roman-kennke.md) |
+| 521 | Generational Shenandoah | [William Kemper](./william-kemper.md), [Aleksey Shipilev](./aleksey-shipilev.md) | [详情](./william-kemper.md), [详情](./aleksey-shipilev.md) |
+| 522 | G1 GC Throughput | [Thomas Schatzl](./thomas-schatzl.md) | [详情](./thomas-schatzl.md) |
+| 524 | PEM Encodings | [Anthony Scarpino](./anthony-scarpino.md) | [详情](./anthony-scarpino.md) |
+| 525 | Structured Concurrency | [Alan Bateman](./alan-bateman.md) | [详情](./alan-bateman.md) |
+| 526 | Lazy Constants | [Per Minborg](./per-minborg.md) | [详情](./per-minborg.md) |
+| 500 | Make Final Mean Final | [Alan Bateman](./alan-bateman.md) | [详情](./alan-bateman.md) |
+| 504 | Remove Applet API | [Phil Race](./phil-race.md) | [详情](./phil-race.md) |
+| 509 | JFR CPU-Time Profiling | [Johannes Bechberger](./johannes-bechberger.md) | [详情](./johannes-bechberger.md) |
+| 527 | TLS 1.3 Hybrid Key Exchange | [Hai-May Chao](./hai-may-chao.md) | [详情](./hai-may-chao.md) |
 
 ---
 
