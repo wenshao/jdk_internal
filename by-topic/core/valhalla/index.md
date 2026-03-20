@@ -6,6 +6,16 @@
 
 ---
 
+## 核心文档
+
+- **[架构与源码分析](architecture.md)** - 分层架构、核心类分析、C2 优化、字段布局
+- **[值类型详解](value-types.md)** - Inline Classes、L-World、内存布局
+- **[泛型特化详解](generics.md)** - 原始类型泛型、Any-generics
+- **[时间线](timeline.md)** - 2014-2026 完整发展历程
+- **[开发活动分析](development.md)** - GitHub PR 分析、贡献者统计
+
+---
+
 ## TL;DR
 
 **Project Valhalla** 是 OpenJDK 的长期项目，旨在解决 Java 的两个核心问题：
