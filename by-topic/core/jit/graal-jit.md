@@ -16,7 +16,7 @@
 | **架构** | 基于 JVMCI (JVM Compiler Interface) |
 | **优势** | 可扩展、可调试、可插拔 |
 | **状态** | JDK 9+ 实验性，GraalVM 默认 |
-| **主要作者** | [Doug Simon](/by-contributor/profiles/doug-simon.md), [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md), [Christian Wimmer](https://github.com/chriswimmer) |
+| **主要作者** | [Doug Simon](/by-contributor/profiles/doug-simon.md), [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md), [Christian Wimmer](/by-contributor/profiles/christian-wimmer.md) |
 
 ---
 
@@ -428,9 +428,9 @@ public int process() {
 |--------|------|------|
 | [Doug Simon](/by-contributor/profiles/doug-simon.md) | Graal 架构师 | Oracle |
 | [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | JIT 编译器 | Oracle |
-| [Thomas Wuerthinger](https://github.com/thomaswue) | Truffle 框架 | Oracle |
-| [Christian Wimmer](https://github.com/chriswimmer) | Graal 编译器 | Oracle |
-| [Lukas Stadler](https://github.com/lukastedler) | JIT 优化 | Oracle |
+| [Thomas Wuerthinger](/by-contributor/profiles/thomas-wuerthinger.md) | Truffle 框架 | Oracle |
+| [Christian Wimmer](/by-contributor/profiles/christian-wimmer.md) | Graal 编译器 | Oracle |
+| [Lukas Stadler](/by-contributor/profiles/lukas-stadler.md) | JIT 优化 | Oracle |
 
 ---
 
