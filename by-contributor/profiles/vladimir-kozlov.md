@@ -19,11 +19,15 @@ Vladimir Kozlov (OpenJDK 用户名: **kvn**) 是 Oracle 的资深工程师，**H
 |------|-----|
 | **姓名** | Vladimir Kozlov |
 | **当前组织** | Oracle Corporation |
-| **职位** | HotSpot C2 Compiler Lead |
+| **职位** | Consulting Member of Technical Staff, HotSpot C2 Compiler Lead |
+| **位置** | Sunnyvale, California |
 | **GitHub** | [@vnkozlov](https://github.com/vnkozlov) |
+| **LinkedIn** | [vladimir-kozlov-7a9a172](https://www.linkedin.com/in/vladimir-kozlov-7a9a172) |
 | **OpenJDK** | [@kvn](https://openjdk.org/census#kvn) |
 | **邮件** | vladimir.kozlov@oracle.com |
 | **专长** | C2 JIT Compiler, Loop Optimizations, Vector API, AVX-512 |
+
+> **数据来源**: [LinkedIn](https://www.linkedin.com/in/vladimir-kozlov-7a9a172), [RocketReach](https://rocketreach.co/vladimir-kozlov-email_43893808)
 
 ---
 
