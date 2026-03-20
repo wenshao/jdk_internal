@@ -26,12 +26,29 @@ Brian Burkhalter 是 Oracle 的 Principal Member of Technical Staff，专注于�
 | **LinkedIn** | [brian-burkhalter-56b735](https://www.linkedin.com/in/brian-burkhalter-56b735) |
 | **OpenJDK** | [@bpb](https://openjdk.org/census#bpb) |
 | **Role** | OpenJDK Member, JDK Reviewer |
-| **PRs** | [361 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Abplb+is%3Aclosed+label%3Aintegrated) |
+| **PRs** | [363 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Abplb+is%3Aclosed+label%3Aintegrated) |
 | **Primary Areas** | Image Processing, Multimedia, NIO, File Systems, I/O |
 | **JEP Leadership** | JEP 262: TIFF Image I/O |
 | **JSR** | JSR 148: Java Advanced Imaging |
 
 > **数据来源**: [LinkedIn](https://www.linkedin.com/in/brian-burkhalter-56b735), [GitHub](https://github.com/bplb)
+
+### 最近 10 个 Integrated PRs (2026 年 2-3 月)
+
+| PR # | Issue | 标题 | 日期 |
+|------|-------|------|------|
+| #30289 | 8379824 | Refactor java/io tests to use JUnit | Mar 19, 2026 |
+| #30282 | 8380204 | java/io/File/EmptyPath.java fails due to unexpected listRoots value | Mar 19, 2026 |
+| #30271 | 8380221 | Change jdk/nio/Basic.java to use JUnit | Mar 17, 2026 |
+| #30268 | 8380198 | Convert java/util/prefs/PrefsSpiTest.java to JUnit | Mar 17, 2026 |
+| #30206 | 8379155 | Refactor Files TestNG tests to use JUnit | Mar 16, 2026 |
+| #30066 | 8379154 | Refactor Selector TestNG tests to use JUnit | Mar 9, 2026 |
+| #30063 | 8379153 | Refactor java/nio/channels/File{Channel,Lock} TestNG tests to JUnit | Mar 9, 2026 |
+| #30038 | 8378879 | Refactor java/nio/channels/Channels TestNG tests to JUnit | Mar 9, 2026 |
+| #29973 | 8378878 | Refactor java/nio/channels/AsynchronousSocketChannel test to JUnit | Mar 4, 2026 |
+| #29971 | 8378808 | Refactor java/nio/Buffer TestNG tests to JUnit | Mar 10, 2026 |
+
+> **观察**: 最近工作集中在 **JUnit 测试重构**、**NIO 测试改进** 和 **java.io 测试现代化**
 
 ## Contribution Overview
 

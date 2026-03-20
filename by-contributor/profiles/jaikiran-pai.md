@@ -22,12 +22,31 @@ Jaikiran Pai 是 Oracle Java Core Libraries 团队成员，专注于 HttpClient�
 | **GitHub** | [@jpai](https://github.com/jpai) |
 | **OpenJDK** | [@jpai](https://openjdk.org/census#jpai) |
 | **Role** | OpenJDK Member, JDK Reviewer, JDK Committer |
+| **PRs** | [322 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ajpai+is%3Aclosed+label%3Aintegrated) |
 | **Primary Areas** | HttpClient, Networking, ZIP/JAR, Test Infrastructure |
 | **Apache Projects** | Ant Committer, Ant PMC (2018-01), Apache APISIX VP |
 | **编程经验** | Java since 2004 |
 | **LinkedIn** | [Jaikiran Pai](https://www.linkedin.com/in/jaikiranpai/) |
+| **Blog** | [jaitechwriteups.blogspot.com](http://www.jaitechwriteups.blogspot.com/) |
 
 > **数据来源**: [OpenJDK 邮件列表](https://mail.openjdk.org/pipermail/jdk-dev/2020-September/004704.html), [Apache Ant](https://github.com/apache/ant), [Apache Ant Contributors](https://ant.apache.org/contributors.html), [Code Tools Reviewer CFV](https://mail.openjdk.org/pipermail/code-tools-dev/2024-August/000704.html)
+
+### 最近 10 个 Integrated PRs (2026 年 2-3 月)
+
+| PR # | Issue | 标题 | 日期 |
+|------|-------|------|------|
+| #30162 | 8379622 | Problemlist java/nio/channels/SocketChannel/OpenLeak.java and CloseDuringConnect.java on macos | Mar 10, 2026 |
+| #30158 | 8379477 | Tests in test/jdk/com/sun/net/httpserver/ may need to use othervm | Mar 11, 2026 |
+| #29916 | 8378631 | Update Zlib Data Compression Library to Version 1.3.2 | Feb 26, 2026 |
+| #29872 | 8378379 | Remove reference to obsolete jdk.net.usePlainSocketImpl property from SSLSocketReset test | Feb 27, 2026 |
+| #29871 | 8378378 | Remove references to obsolete jdk.net.usePlainDatagramSocketImpl property from tests | Feb 24, 2026 |
+| #29865 | 8378397 | Disable usage of system level jshell history in test/hotspot/jtreg/runtime/os/TestWXHealing.java | Feb 23, 2026 |
+| #29814 | 8377425 | Test runtime/os/TestWXHealing.java fails on macosx-aarch64 product build | Feb 21, 2026 |
+| #29760 | 8326487 | ZipFileSystem.getPath("").getFileName() returns null instead of an empty Path | Feb 19, 2026 |
+| #29748 | 8378003 | JarURLConnection.getCertificates() and getCodeSigners() incorrectly return null for signed JAR files after JDK-8377338 | Feb 20, 2026 |
+| #29705 | 8377857 | Add since checker test for java.naming module | Feb 14, 2026 |
+
+> **观察**: 最近工作集中在 **测试稳定性修复**、**Zlib 库更新** 和 **网络栈清理**
 
 ---
 

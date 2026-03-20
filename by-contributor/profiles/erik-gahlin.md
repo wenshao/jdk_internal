@@ -32,6 +32,23 @@ Erik Gahlin 是 Oracle HotSpot Runtime 团队核心成员，JDK Flight Recorder 
 
 > **数据来源**: [Inside.java](https://inside.java/u/ErikGahlin/), [个人博客](https://egahlin.github.io/), [Twitter](https://x.com/ErikGahlin)
 
+### 最近 10 个 Integrated PRs (2026 年 2-3 月)
+
+| PR # | Issue | 标题 | 日期 |
+|------|-------|------|------|
+| #30243 | 8380037 | JFR: Don't format identifiers as numbers | Mar 16, 2026 |
+| #30228 | 8379917 | JFR: Method timing event can have incorrect minimum value | Mar 13, 2026 |
+| #29791 | 8378171 | JFR: Copy of a closed recording should not be available | Feb 19, 2026 |
+| #29191 | 8372321 | TestBackToBackSensitive fails intermittently after JDK-8365972 backport | Jan 14, 2026 |
+| #29117 | 8372321 | TestBackToBackSensitive fails intermittently after JDK-8365972 | Jan 12, 2026 |
+| #28947 | 8367949 | JFR: MethodTrace double-counts methods that catch their own exceptions | Jan 8, 2026 |
+| #28636 | 8373024 | JFR: CPU throttle rate can't handle incorrect values | Dec 4, 2025 |
+| #28481 | 8372441 | JFR: Improve logging of TestBackToBackSensitive | Nov 25, 2025 |
+| #28153 | 8365972 | JFR: ThreadDump and ClassLoaderStatistics events may cause back to back rotations | Nov 10, 2025 |
+| #28135 | 8370884 | JFR: Overflow in aggregators | Nov 6, 2025 |
+
+> **观察**: 最近工作集中在 **JFR 方法跟踪**、**事件准确性修复** 和 **测试稳定性**
+
 ---
 
 ## 技术影响力

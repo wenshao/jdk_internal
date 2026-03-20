@@ -24,7 +24,24 @@
 | 2022 - 2024 | 阿里巴巴 (Alibaba) | yansendao.ysd@alibaba-inc.com |
 | 2025 - 至今 | 海光信息 (Hygon) | yansendao@hygon.cn |
 
-> **数据调查时间**: 2026-03-19
+> **数据调查时间**: 2026-03-20
+
+### 最近 10 个 Integrated PRs (2026 年 2-3 月)
+
+| PR # | Issue | 标题 | 日期 |
+|------|-------|------|------|
+| #30156 | 8279196 | Test: jdk/jfr/event/gc/stacktrace/TestG1OldAllocationPendingStackTrace.java timed out | Mar 13, 2026 |
+| #29931 | 8378746 | ZGC: jdk/jfr/event/gc/detailed/TestZRelocationSetGroupEvent.java intermittent OOME | Mar 9, 2026 |
+| #29919 | 8378684 | Fix -Wdeprecated-declarations warnings from gtest by clang23 build | Mar 3, 2026 |
+| #29914 | 8378642 | Add src/utils/LogCompilation/logc.jar to .gitignore | Mar 1, 2026 |
+| #29895 | 8378561 | Mark gc/shenandoah/compiler/TestLinkToNativeRBP.java as /native | Feb 27, 2026 |
+| #29756 | 8378083 | Mark shenandoah/generational/TestOldGrowthTriggers.java as flagless | Mar 3, 2026 |
+| #29732 | 8377949 | TestZRelocationSetEvent.java intermittent fails OOME | Feb 20, 2026 |
+| #29729 | 8377944 | LowMemoryTest2.java#id1 intermittent fails OOME: Metaspace | Feb 24, 2026 |
+| #29623 | 8371979 | Convert java/nio/file/FileStore/Basic.java to JUnit | Feb 13, 2026 |
+| #29601 | 8377347 | jdk/jfr/event/gc/detailed/TestZAllocationStallEvent.java intermittent OOME | Feb 13, 2026 |
+
+> **观察**: 最近工作集中在 **测试稳定性修复**、**间歇性测试超时** 和 **JUnit 转换**
 
 ---
 
