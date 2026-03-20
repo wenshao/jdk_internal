@@ -409,6 +409,17 @@ String json = "{\"name\":\"" + name + "\",\"age\":" + age + "}";
 
 ---
 
+## JDK 26 深度分析
+
+以下是在 JDK 26 中包含 Shaojin Wen 贡献的深度分析文档：
+
+| 主题 | 链接 | 性能提升 |
+|------|------|----------|
+| String 构造函数优化 | [→](../../by-version/jdk26/deep-dive/string-constructor-optimization.md) | +5-10% |
+| 完整 PR 分析 | [→](../../by-pr/8357/8357289.md) | JIT 内联优化 |
+
+---
+
 ## 外部资源
 
 | 类型 | 链接 |

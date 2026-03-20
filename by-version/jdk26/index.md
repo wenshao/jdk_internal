@@ -26,6 +26,7 @@
 | HTTP/3 实现原理 | [→](./deep-dive/http3-implementation.md) |
 | G1 GC 吞吐量提升 | [→](./deep-dive/g1-gc-throughput.md) |
 | AOT 对象缓存详解 | [→](./deep-dive/aot-improvements.md) |
+| String 构造函数优化 | [→](./deep-dive/string-constructor-optimization.md) |
 | 结构化并发详解 | [→](./deep-dive/structured-concurrency.md) |
 | 原始类型模式匹配 | [→](./deep-dive/primitive-pattern-matching.md) |
 | Vector API 改进 | [→](./deep-dive/vectorapi-improvements.md) |
