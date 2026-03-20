@@ -1,6 +1,6 @@
-# Xiaowei Lu
+# Xiaowei Lu (陆晓伟)
 
-> ZGC 优化贡献者，阿里巴巴
+> ZGC 优化贡献者，Jade GC 论文作者，阿里巴巴
 
 ---
 
@@ -8,12 +8,35 @@
 
 | 属性 | 值 |
 |------|-----|
-| **姓名** | Xiaowei Lu |
-| **当前组织** | 阿里巴巴 (Alibaba) |
+| **姓名** | Xiaowei Lu (陆晓伟) |
+| **当前组织** | 阿里巴巴云 (Alibaba Cloud) |
+| **位置** | 杭州，中国 |
+| **邮箱** | lxw263044@alibaba-inc.com |
 | **GitHub** | [@weixlu](https://github.com/weixlu) |
+| **ORCID** | [0009-0001-6990-5081](https://orcid.org/0009-0001-6990-5081) |
 | **Integrated PRs** | [3](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aweixlu+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | ZGC |
-| **活跃时间** | 2021 |
+| **主要领域** | ZGC, Jade GC, 垃圾回收器, 内存模型 |
+| **活跃时间** | 2021 - 至今 |
+
+> **数据来源**: [GitHub](https://github.com/weixlu), [ORCID](https://orcid.org/0009-0001-6990-5081), [OpenJDK JBS](https://bugs.openjdk.org/browse/JDK-8270347)
+
+---
+
+## 学术贡献
+
+### Jade GC 论文 (EuroSys 2024)
+
+| 属性 | 值 |
+|------|-----|
+| **标题** | Jade: A High-throughput Concurrent Copying Garbage Collector |
+| **会议** | EuroSys 2024 (ACM European Conference on Computer Systems) |
+| **发表日期** | 2024-04-22 |
+| **作者** | Mingyu Wu, Liang Mao, **Xiaowei Lu**, Yude Lin, Yifeng Jin, Zhe Li, Hongtao, Hao Tang, Denghui Dong, Haibo Chen, Binyu Zang |
+| **机构** | Shanghai Jiao Tong University (IPADS), Alibaba Group |
+| **链接** | [ACM DL](https://dl.acm.org/doi/10.1145/3627703.3650087), [PDF](https://dl.acm.org/doi/pdf/10.1145/3627703.3650087) |
+
+**论文摘要**:
+Jade 是一个高吞吐量的并发复制垃圾收集器，针对现代多核服务器环境设计。通过创新的并发复制算法和内存管理策略，Jade 在保持低延迟的同时显著提高了 GC 吞吐量。
 
 ---
 
@@ -79,14 +102,71 @@ if (Arguments::has_xloggc()) {
 
 ---
 
+## Dragonwell JDK 贡献
+
+Xiaowei Lu 在阿里巴巴 Dragonwell JDK 项目中也有重要贡献：
+
+### 活跃领域
+
+| 领域 | 说明 |
+|------|------|
+| **ZGC MXBean** | 修复 ZGC 监控 bean 在类卸载时的暂停时间和计数收集问题 |
+| **数组对齐** | 参与讨论紧凑对象头 (compact object headers) 的数组元素对齐放宽 |
+| **RISC-V 架构** | 参与 RISC-V (riscv64) 架构的字段布局相关工作 |
+| **ARM64 (aarch64)** | 参与 ARM64 平台的编译器相关问题 |
+
+---
+
+## 职业时间线
+
+| 年份 | 事件 | 详情 |
+|------|------|------|
+| **2021** | OpenJDK 首次贡献 | ZGC 内存顺序优化 (JDK-8270347, JDK-8272138) |
+| **2021** | GC 日志修复 | JDK-8273112: -Xloggc 覆盖 -verbose:gc |
+| **2024** | EuroSys 2024 论文 | 发表 Jade GC 论文 |
+| **2024** | Dragonwell 贡献 | 继续为 Dragonwell JDK 做出贡献 |
+
+---
+
+## 技术专长
+
+- **ZGC (Z Garbage Collector)**: 内存顺序优化、自愈机制
+- **Jade GC**: 高吞吐量并发复制垃圾收集器
+- **内存模型**: release-acquire 语义、内存屏障
+- **跨平台**: RISC-V、ARM64 (aarch64) 架构支持
+- **Dragonwell JDK**: 阿里巴巴 OpenJDK 发行版
+
+---
+
 ## 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:weixlu type:pr label:integrated`
-- **统计时间**: 2026-03-19
+- **统计时间**: 2026-03-20
+- **论文**: EuroSys 2024 Proceedings
+- **ORCID**: Open Researcher and Contributor ID
 
 ---
 
 ## 相关链接
 
-- [GitHub Profile](https://github.com/weixlu)
-- [OpenJDK PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aweixlu)
+| 类型 | 链接 |
+|------|------|
+| **GitHub** | [@weixlu](https://github.com/weixlu) |
+| **ORCID** | [0009-0001-6990-5081](https://orcid.org/0009-0001-6990-5081) |
+| **OpenJDK PRs** | [GitHub Search](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aweixlu) |
+| **Jade GC Paper** | [ACM DL](https://dl.acm.org/doi/10.1145/3627703.3650087) |
+| **Jade GC PDF** | [PDF](https://dl.acm.org/doi/pdf/10.1145/3627703.3650087) |
+
+---
+
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-20
+> **更新内容**:
+> - 添加中文名 (陆晓伟)
+> - 添加邮箱: lxw263044@alibaba-inc.com
+> - 添加位置: 杭州，阿里巴巴云
+> - 添加 ORCID: 0009-0001-6990-5081
+> - 添加 EuroSys 2024 Jade GC 论文信息
+> - 添加 Dragonwell JDK 贡献详情
+> - 添加职业时间线
+> - 添加技术专长列表
