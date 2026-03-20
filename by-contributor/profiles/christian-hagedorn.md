@@ -2,8 +2,11 @@
 
 > **GitHub**: [@chhagedorn](https://github.com/chhagedorn)
 > **Organization**: Oracle (HotSpot JVM Compiler Team)
-> **Role**: Software Engineer
+> **Role**: Principal Member of Technical Staff
 > **Location**: Zürich, Switzerland
+> **Full Name**: Christian Felix Hagedorn
+
+> **数据来源**: [CFV Committer 2019-12](https://mail.openjdk.org/pipermail/jdk-dev/2019-December/003735.html), [CFV HotSpot 2021-03](https://mail.openjdk.org/pipermail/hotspot-dev/2021-March/061859.html), [LinkedIn](https://ch.linkedin.com/in/christian-hagedorn)
 
 ---
 
@@ -24,6 +27,20 @@ Christian Hagedorn 是 Oracle **HotSpot JVM Compiler Team** 的软件工程师�
 | **位置** | 瑞士苏黎世 |
 | **教育** | ETH Zürich |
 | **专长** | C2 JIT Compiler, Loop Optimizations, IR Framework |
+| **OpenJDK** | [@chagedorn](https://openjdk.org/census#chagedorn) |
+| **角色** | JDK Committer (2019-12), HotSpot Group Member (2021-03) |
+
+---
+
+## 职业时间线
+
+| 年份 | 事件 | 详情 |
+|------|------|------|
+| **~2015** | ETH Zürich | 计算机科学学位 |
+| **~2017** | 加入 Oracle | HotSpot Compiler Team |
+| **2019-12** | JDK Committer | 提名为 JDK Committer |
+| **2021-03** | HotSpot Group Member | 提名为 HotSpot Group 成员 |
+| **至今** | Principal MTS | Oracle Java Platform Group |
 
 ---
 
@@ -89,6 +106,11 @@ Christian Hagedorn 修复了大量 C2 编译器的重要问题：
 ### 官方资料
 - [GitHub Profile](https://github.com/chhagedorn)
 - [LinkedIn Profile](https://ch.linkedin.com/in/christian-hagedorn)
+- [OpenJDK Census](https://openjdk.org/census#chagedorn)
+
+### CFV Nominations
+- [JDK Committer (2019-12)](https://mail.openjdk.org/pipermail/jdk-dev/2019-December/003735.html)
+- [HotSpot Group Member (2021-03)](https://mail.openjdk.org/pipermail/hotspot-dev/2021-March/061859.html)
 
 ### OpenJDK Issues
 - [JDK-8254129: IR Framework](https://bugs.openjdk.org/browse/JDK-8254129)
