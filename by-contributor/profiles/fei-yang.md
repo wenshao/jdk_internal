@@ -1,6 +1,6 @@
-# Fei Yang
+# Fei Yang (杨飞)
 
-> JDK 26 RISC-V 后端专家，中科院软件所，30 个 commits
+> JDK RISC-V 后端专家，ISCAS PLCT 实验室，OpenJDK Reviewer
 
 ---
 
@@ -8,16 +8,40 @@
 
 | 属性 | 值 |
 |------|-----|
-| **姓名** | Fei Yang |
-| **当前组织** | 中科院软件所 (ISCAS) |
+| **姓名** | Fei Yang (杨飞) |
+| **当前组织** | 中科院软件所 PLCT 实验室 (ISCAS PLCT Lab) |
+| **位置** | 杭州，中国 |
 | **GitHub** | [@RealFYang](https://github.com/RealFYang) |
 | **OpenJDK** | [@fyang](https://openjdk.org/census#fyang) |
-| **角色** | HotSpot Group, RISC-V Port Lead |
-| **PRs** | [100 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3ARealFYang+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | RISC-V 后端、向量指令 |
-| **活跃时间** | 2024 - 至今 |
+| **角色** | OpenJDK Reviewer, HotSpot Group, RISC-V Port Lead |
+| **PRs** | [100+ integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3ARealFYang+is%3Aclosed+label%3Aintegrated) |
+| **主要领域** | RISC-V 后端、向量指令、性能分析 |
+| **活跃时间** | 2023 - 至今 |
 
-> **数据调查时间**: 2026-03-19
+> **数据来源**: [PLCT Lab](https://plctlab.org/zh/news/050/), [华为鲲鹏社区](https://www.hikunpeng.com/forum/thread-0236125983383936008-1-1.html)
+
+---
+
+## 演讲和会议
+
+Fei Yang 经常在 RISC-V 和 Java 相关会议上发表演讲：
+
+| 会议 | 主题 | 日期 |
+|------|------|------|
+| **RISC-V 中国峰会 2023** | OpenJDK RISC-V 移植进展 | 2023-08-23~25 |
+| **RISC-V 杭州 2024** | OpenJDK RISC-V 平台最近两年进展 | 2024 |
+| **PLCT Lab 开放日** | RISC-V 平台上 Java 性能分析 | 2024 |
+
+---
+
+## 提名贡献
+
+Fei Yang 积极参与 OpenJDK 社区建设，提名华为毕昇 JDK 团队成员获得 Committer 身份：
+
+| 被提名人 | 角色 | 提名时间 |
+|----------|------|----------|
+| Yadong Wang | Committer | 由 Fei Yang 发起提名 |
+| Feilong Jiang | Committer | 由 Fei Yang 发起提名 |
 
 ---
 
@@ -174,5 +198,24 @@ Fei Yang 的贡献特点:
 
 ## 相关链接
 
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=Fei%20Yang)
-- [JBS Issues](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20fyang)
+| 类型 | 链接 |
+|------|------|
+| **GitHub** | [@RealFYang](https://github.com/RealFYang) |
+| **OpenJDK Census** | [fyang](https://openjdk.org/census#fyang) |
+| **PLCT Lab** | [plctlab.org](https://plctlab.org/) |
+| **GitHub Commits** | [Fei Yang](https://github.com/openjdk/jdk/commits?author=Fei%20Yang) |
+| **JBS Issues** | [fyang assignee](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20fyang) |
+| **RISC-V 峰会新闻** | [Design-Reuse-China](https://www.design-reuse-china.com/news/202310006/openjdk-21-risc-v/) |
+
+---
+
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-20
+> **更新内容**:
+> - 添加中文名 (杨飞)
+> - 添加实验室详情: ISCAS PLCT Lab (杭州)
+> - 添加 OpenJDK Reviewer 角色
+> - 添加 RISC-V 中国峰会 2023 演讲
+> - 添加 RISC-V 杭州 2024 演讲
+> - 添加 PLCT Lab 开放日演讲
+> - 添加提名华为毕昇 JDK 团队成员 (Yadong Wang, Feilong Jiang)
