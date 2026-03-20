@@ -246,6 +246,28 @@ TimeZone.getTimeZone("America/New_York"); // 推荐使用
 - **JDK-8352906**: 修复 Windows 上 stdout/err.encoding 设置
 - **JDK-8359732**: 将标准 I/O 编码相关系统属性设为 StaticProperty
 - **JDK-8356985**: Console 的 read*() 方法使用 stdin.encoding
+- **JDK-8265989**: 新增 native.encoding 系统属性
+- **JDK-8266075**: native.encoding 系统属性命名
+- **JDK-8283620**: 修复 System.out 编码/字符集使用问题
+- **JDK-8284778**: System.out charset 相关问题修复
+
+> **说明**: Naoto Sato 引入了 native.encoding 系统属性，为 JEP 400 (UTF-8 by Default) 提供向后兼容支持。
+
+### 6.1. Text Segmentation 和 Grapheme Clusters
+
+- **JDK-8222978**: 升级扩展字素簇支持 (Unicode UAX #29)
+- **JDK-8221431**: 更新 Unicode 数据文件到 12.1.0 (子任务)
+- **JDK-8292387**: BreakIterator 中的 Grapheme 支持
+- **JDK-8174266**: 重新审视文本分段 (ZWJ 支持)
+- **JDK-8243579**: Unicode 13.0 支持发布说明
+- **JDK-8352628**: 优化 Grapheme 测试
+
+```java
+// Grapheme Cluster 示例
+BreakIterator bi = BreakIterator.getCharacterInstance();
+bi.setText("café\u0301"); // café + combining acute accent
+// 正确处理用户感知字符
+```
 
 ### 7. DateTime API 增强
 
@@ -316,6 +338,13 @@ Locale locale = Locale.forLanguageTag("en-US-u-ks-level4-kk-true");
 Collator collator = Collator.getInstance(locale);
 // 使用四级排序强度和规范化
 ```
+
+### 11. 其他重要修复
+
+- **JDK-8360045**: StringTokenizer.hasMoreTokens() 在 nextToken(null) 后抛出 NPE
+- **JDK-8352628**: 优化 Grapheme 测试
+- **JDK-8304982**: 为 COMPAT provider 移除发出警告
+- **JDK-8305487**: COMPAT/JRE 警告消息
 
 ---
 
@@ -494,4 +523,6 @@ Naoto Sato 是 International Unicode Conference (IUC) 的常驻演讲者：
 - [JDK-8174269 Webrev - COMPAT Removal](https://cr.openjdk.org/~naoto/JDK-8174269-COMPAT-Removal/)
 - [JDK-8041488 Webrev - List Patterns](https://cr.openjdk.org/~naoto/JDK-8041488-ListPatterns/webrev.04/)
 - [JDK-8318487 Webrev - ListFormat.equals](https://cr.openjdk.org/~naoto/JDK-8318487-ListFormat.equals/webrev.00/)
+- [JDK-8265989 - native.encoding property](https://bugs.openjdk.org/browse/JDK-8265989)
+- [JDK-8222978 - Extended grapheme cluster support](https://bugs.openjdk.org/browse/JDK-8222978)
 - [ZoomInfo - Naoto Sato Profile](https://www.zoominfo.com/p/Naoto-Sato/186129467)
