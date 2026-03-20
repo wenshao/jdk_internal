@@ -16,5 +16,5 @@
 
 ## 相关链接
 
-- [HTTP 主题时间线](/by-topic/http/)
+- [HTTP 主题时间线](/by-topic/concurrency/http/)
 - [HTTP Client (JDK 11)](https://openjdk.org/jeps/321)

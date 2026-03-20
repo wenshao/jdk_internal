@@ -9,17 +9,17 @@
 ## 损坏链接详情
 
 ### dashboard.md:229
-- **链接**: [垃圾收集演进](/by-topic/gc/)
+- **链接**: [垃圾收集演进](/by-topic/core/gc/)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### dashboard.md:231
-- **链接**: [字符串处理演进](/by-topic/string/)
+- **链接**: [字符串处理演进](/by-topic/language/string/)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### dashboard.md:232
-- **链接**: [HTTP 客户端演进](/by-topic/http/)
+- **链接**: [HTTP 客户端演进](/by-topic/concurrency/http/)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
@@ -4278,7 +4278,7 @@
 - **类型**: 本地链接
 
 ### reports/link_verification_report.md:3876
-- **链接**: [HTTP 主题时间线](/by-topic/http/)
+- **链接**: [HTTP 主题时间线](/by-topic/concurrency/http/)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
@@ -4348,7 +4348,7 @@
 - **类型**: 本地链接
 
 ### reports/link_verification_report.md:3946
-- **链接**: [GC 主题时间线](/by-topic/gc/)
+- **链接**: [GC 主题时间线](/by-topic/core/gc/)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
@@ -8233,7 +8233,7 @@
 - **类型**: 本地链接
 
 ### reports/link_verification_report.md:7836
-- **链接**: [HTTP 主题时间线](/by-topic/http/)
+- **链接**: [HTTP 主题时间线](/by-topic/concurrency/http/)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
@@ -8303,7 +8303,7 @@
 - **类型**: 本地链接
 
 ### reports/link_verification_report.md:7906
-- **链接**: [GC 主题时间线](/by-topic/gc/)
+- **链接**: [GC 主题时间线](/by-topic/core/gc/)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
@@ -12590,12 +12590,12 @@
 - **类型**: 本地链接
 
 ### jeps/gc/index.md:162
-- **链接**: [GC 主题时间线](/by-topic/gc/)
+- **链接**: [GC 主题时间线](/by-topic/core/gc/)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### jeps/network/index.md:19
-- **链接**: [HTTP 主题时间线](/by-topic/http/)
+- **链接**: [HTTP 主题时间线](/by-topic/concurrency/http/)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 

@@ -159,4 +159,4 @@ Gen ZGC     Region      Gen ZGC     移除非Gen    Gen Sheno.   G1 吞吐
 
 - [OpenJDK: ZGC](https://wiki.openjdk.org/display/zgc)
 - [OpenJDK: Shenandoah](https://wiki.openjdk.org/display/shenandoah/Main)
-- [GC 主题时间线](/by-topic/gc/)
+- [GC 主题时间线](/by-topic/core/gc/)
