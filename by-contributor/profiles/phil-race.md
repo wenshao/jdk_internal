@@ -21,11 +21,22 @@ Phil Race 是 Oracle 的 Consulting Member of Technical Staff，OpenJDK Client L
 | **Position** | Consulting Member of Technical Staff, Client Libraries Lead |
 | **GitHub** | [@prrace](https://github.com/prrace) (19 repositories) |
 | **OpenJDK** | [@prr](https://openjdk.org/census#prr) |
-| **Role** | OpenJDK Member, JDK Reviewer, Client Libs Lead, OpenJDK Governing Board Member |
+| **角色** | OpenJDK Member, JDK Reviewer, Client Libs Group Lead, OpenJDK Governing Board Member |
 | **PRs** | [303 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aprrace+is%3Aclosed+label%3Aintegrated) |
-| **Primary Areas** | Graphics, Printing, AWT, Swing, Security, Java 2D |
+| **主要领域** | Graphics, Printing, AWT, Swing, Security, Java 2D |
 
-> **数据来源**: [FOSDEM 2024](https://archive.fosdem.org/2024/schedule/speaker/BD3NMJ/), [OpenJDK Governing Board](https://openjdk.org/poll/gb/2024/), [GitHub](https://github.com/prrace)
+> **数据来源**: [FOSDEM 2024](https://archive.fosdem.org/2024/schedule/speaker/BD3NMJ/), [OpenJDK Governing Board](https://openjdk.org/poll/gb/2024/), [GitHub](https://github.com/prrace), [Client Libraries Group CFV](https://mail.openjdk.org/pipermail/gb-discuss/2021-June/000358.html)
+
+## 职业时间线
+
+| 时间 | 事件 | 详情 |
+|------|------|------|
+| **1990s** | Sun Microsystems | 开始从事 Java 2D 图形开发 |
+| **2010** | Oracle 收购 Sun | 随 Sun Microsystems 并入 Oracle |
+| **2015** | Marlin Renderer | 与 Jim Graham 合作集成 Marlin 渲染器 |
+| **2021-07** | Client Libraries Group Lead | OpenJDK 管理委员会全票通过，成立 Client Libraries Group |
+| **2021-09** | swing-dev 邮件列表退役 | 原 AWT/2D/Swing/Sound 组合并 |
+| **2023-2025** | OpenJDK GB 成员 | Oracle 代表，多次当选 |
 
 ## Contribution Overview
 
