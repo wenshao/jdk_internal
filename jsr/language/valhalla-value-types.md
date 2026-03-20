@@ -269,7 +269,7 @@ test/jdk/valhalla/valuetypes/
 - [OpenJDK Valhalla](https://openjdk.org/projects/valhalla/)
 - [JEP 401: Value Classes](https://openjdk.org/jeps/401)
 - [Valhalla Wiki](https://wiki.openjdk.org/display/valhalla/Main)
-- [本地仓库](../valhalla/)
+- [本地文档](/by-topic/core/valhalla/)
 
 ---
 
