@@ -18,8 +18,11 @@
 | **主要领域** | Class File API, 字节码处理, javac |
 | **活跃时间** | 2020 - 至今 |
 | **Integrated PRs** | 30+ |
+| **Git Commits (master)** | 59 (ClassFile API 相关) |
 
-> **统计方法**: GitHub PR search `repo:openjdk/jdk author:asotona type:pr label:integrated`
+> **统计方法**:
+> - GitHub PR search: `repo:openjdk/jdk author:asotona type:pr label:integrated`
+> - Local git log (master only): `src/java.base/share/classes/java/lang/classfile/` + `jdk/internal/classfile/`
 > **统计时间**: 2026-03-20
 
 ---

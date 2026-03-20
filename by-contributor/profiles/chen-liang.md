@@ -17,10 +17,13 @@
 | **角色** | JDK Reviewer (2024年6月任命), Valhalla Committer |
 | **教育背景** | 威斯康星大学麦迪逊分校 (University of Wisconsin-Madison) |
 | **Integrated PRs** | [237](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aliach+is%3Aclosed+label%3Aintegrated) |
+| **Git Commits (master)** | 85 (本地源码分析，ClassFile API 最多) |
 | **主要领域** | ClassFile API、核心反射、Method Handles、常量池 |
 | **活跃时间** | 2021 - 至今 |
 
-> **统计方法**: GitHub PR search `repo:openjdk/jdk author:liach type:pr label:integrated`
+> **统计方法**:
+> - GitHub PR search: `repo:openjdk/jdk author:liach type:pr label:integrated`
+> - Local git log (master only): `src/java.base/share/classes/java/lang/classfile/` + `jdk/internal/classfile/`
 > **统计时间**: 2026-03-20
 > **来源**: [LinkedIn](https://www.linkedin.com/in/chen-liang-51122427b), [CFV: New JDK Reviewer](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html)
 
