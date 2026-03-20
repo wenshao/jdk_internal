@@ -6,6 +6,64 @@
 
 ---
 
+## TL;DR 快速概览
+
+> 💡 **1 分钟掌握 Stream API**
+
+### 常用操作速查
+
+```java
+// 创建流
+list.stream()
+array.stream()
+Stream.of(1, 2, 3)
+IntStream.range(1, 10)
+
+// 中间操作
+.filter(x -> x > 0)    // 过滤
+.map(x -> x * 2)       // 转换
+.distinct()            // 去重
+.sorted()              // 排序
+.limit(10)            // 限制
+
+// 终端操作
+toList()               // 收集为 List (JDK 16+)
+collect(Collectors.toList())
+forEach(System.out::println)
+count()                 // 计数
+reduce((a, b) -> a + b) // 归约
+```
+
+### 快速示例
+
+```java
+// 过滤和转换
+List<String> result = list.stream()
+    .filter(s -> s.startsWith("A"))
+    .map(String::toUpperCase)
+    .toList();
+
+// 分组
+Map<Integer, List<String>> grouped = list.stream()
+    .collect(Collectors.groupingBy(String::length));
+
+// 求和
+int sum = numbers.stream()
+    .mapToInt(Integer::intValue)
+    .sum();
+```
+
+### 性能提示
+
+| 操作 | 建议 |
+|------|------|
+| 小集合 (< 100) | 传统 for 循环更快 |
+| 大集合 (1000+) | Stream 并行更快 |
+| CPU 密集 | `.parallel()` |
+| IO 密集 | 保持串行 |
+
+---
+
 ## 快速概览
 
 ```

@@ -6,6 +6,73 @@
 
 ---
 
+## TL;DR 快速概览
+
+> 💡 **1 分钟掌握 Record**
+
+### 基本用法
+
+```java
+// 声明 Record
+record Point(int x, int y) { }
+
+// 使用
+Point p = new Point(1, 2);
+System.out.println(p.x());  // 1
+
+// 带验证的 Record
+record PositiveInt(int value) {
+    public PositiveInt {
+        if (value < 0) throw new IllegalArgumentException();
+    }
+}
+```
+
+### Record vs Class vs Lombok
+
+| 特性 | Class | Record | Lombok @Data |
+|------|-------|--------|--------------|
+| 字段 | 手动 | 自动 | 自动 |
+| 构造器 | 手动 | 自动 | 自动 |
+| equals/hashCode | 手动 | 自动 | 自动 |
+| toString | 手动 | 自动 | 自动 |
+| 可变性 | 可变 | 不可变 | 可变 |
+| 继承 | 支持 | 仅 extends | 支持 |
+
+### 最佳实践
+
+```java
+// ✅ 适合 Record: 数据载体 (DTO, 响应对象)
+record User(String name, int age) { }
+
+// ✅ 适合 Record: 配置对象
+record Config(int port, String host) { }
+
+// ✅ 适合 Record: 多返回值
+record Result(String value, int status) { }
+
+// ❌ 不适合 Record: 需要可变状态
+// ❌ 不适合 Record: 复杂继承层次
+```
+
+### 模式匹配 (JDK 21+)
+
+```java
+// 解构 Record
+if (obj instanceof Point(int x, int y)) {
+    System.out.println("x=" + x + ", y=" + y);
+}
+
+// switch 模式匹配
+String format = switch (shape) {
+    case Point(int x, int y) -> "Point at (%d, %d)".formatted(x, y);
+    case Circle(int r) -> "Circle radius %d".formatted(r);
+    default -> "Unknown";
+};
+```
+
+---
+
 ## 快速概览
 
 ```

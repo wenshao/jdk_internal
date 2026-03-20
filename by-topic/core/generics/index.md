@@ -6,6 +6,65 @@
 
 ---
 
+## TL;DR 快速概览
+
+> 💡 **1 分钟掌握泛型要点**
+
+### 常用模式速查
+
+```java
+// 泛型类
+public class Box<T> {
+    private T value;
+    public void set(T value) { this.value = value; }
+    public T get() { return value; }
+}
+
+// 泛型方法
+public static <T> T swap(T[] a, int i, int j) {
+    T temp = a[i]; a[i] = a[j]; a[j] = temp; return a[i];
+}
+
+// 有界类型参数
+public class Box<T extends Number> { }
+
+// 通配符
+List<? extends Number> list;  // 只读
+List<? super Integer> list;   // 只写
+```
+
+### PECS 原则
+
+```
+Producer Extends, Consumer Super
+
+生产者用 extends  → List<? extends Number>
+消费者用 super    → List<? super Integer>
+```
+
+### 类型擦除注意事项
+
+```java
+// ❌ 不能这样做
+if (obj instanceof List<String>) { }
+
+// ✅ 正确做法
+if (obj instanceof List<?>) { }
+List<?> list = (List<?>) obj;
+```
+
+### 创建泛型数组
+
+```java
+// ❌ 不能直接创建泛型数组
+List<String>[] array = new List<String>[10];
+
+// ✅ 使用数组转型
+List<String>[] array = (List<String>[]) new List[10];
+```
+
+---
+
 ## 快速概览
 
 ```

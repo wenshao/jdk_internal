@@ -4,6 +4,51 @@
 
 ---
 
+## TL;DR 快速概览
+
+> 💡 **1 分钟了解 String 性能优化**
+
+### 关键优化汇总
+
+| 优化项 | JDK | 性能提升 | 适用场景 |
+|--------|-----|----------|----------|
+| **Compact Strings** | 9 | 内存 -50% | ASCII 字符串 |
+| **String Deduplication** | 8u20 | 内存 10-40% | 重复字符串 |
+| **invokedynamic 拼接** | 9 | 启动 +10% | 字符串拼接 |
+| **隐藏类策略** | 24 | 启动 +40% | 拼接优化 |
+| **StringBuilder 优化** | 24 | 吞吐 +15-40% | append(char[]) |
+
+### 快速决策
+
+```java
+// 简单拼接 → 直接用 +
+String s = "Hello " + name;
+
+// 循环拼接 → StringBuilder
+StringBuilder sb = new StringBuilder(size);
+for (String s : list) sb.append(s);
+
+// 处理重复字符串 → 启用 Deduplication
+-XX:+UseStringDeduplication
+
+// 内存敏感 → Compact Strings (JDK 9+ 默认)
+```
+
+### VM 参数速查
+
+```bash
+# 启用 String 去重 (G1 GC)
+-XX:+UseG1GC -XX:+UseStringDeduplication
+
+# 查看去重统计
+-XX:+PrintStringDeduplicationStatistics
+
+# 调整字符串表大小
+-XX:StringTableSize=10000
+```
+
+---
+
 ## String Deduplication (JEP 192)
 
 ### 工作原理

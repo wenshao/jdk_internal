@@ -6,6 +6,45 @@
 
 ---
 
+## TL;DR 快速概览
+
+> 💡 **1 分钟了解 C2 编译阶段**
+
+### 编译流程速览
+
+```
+字节码 → 控制流图 → 优化 → 代码生成
+  ↓        ↓         ↓        ↓
+Parse  PhaseIterGVN  Loop  Peephole
+```
+
+### 15 个阶段分类
+
+| 类别 | 阶段 | 数量 |
+|------|------|------|
+| **分析** | Parse, CCP, Escape Analysis | 3 |
+| **优化** | IterGVN, Loop, StringOpts, Vector 等 | 8 |
+| **后端** | CFG, Chaitin, BlockLayout, Output | 4 |
+
+### 关键阶段影响
+
+| 阶段 | 优化效果 | 性能提升 |
+|------|----------|----------|
+| PhaseIterGVN | 消除冗余计算 | 10-30% |
+| PhaseIdealLoop | 循环优化 | 20-50% |
+| PhaseEscapeAnalysis | 栈上分配 | 减少 GC |
+| PhaseVector | SIMD 向量化 | 2-8x |
+
+### 快速参考
+
+```
+热点代码 → 解释器 → C1 → C2 (15 阶段) → 本地代码
+                    ↑                    ↓
+                  性能                  峰值性能
+```
+
+---
+
 ## 完整编译流程
 
 ```

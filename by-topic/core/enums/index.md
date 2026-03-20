@@ -6,6 +6,60 @@
 
 ---
 
+## TL;DR 快速概览
+
+> 💡 **1 分钟掌握 Enum**
+
+### 基本用法
+
+```java
+// 定义枚举
+enum Status {
+    PENDING, RUNNING, COMPLETED, FAILED
+}
+
+// 使用
+Status s = Status.RUNNING;
+
+// 带构造器
+enum Priority {
+    LOW(1), MEDIUM(2), HIGH(3);
+    private int value;
+    Priority(int value) { this.value = value; }
+}
+
+// 枚举集合
+EnumSet<Status> set = EnumSet.of(Status.PENDING, Status.RUNNING);
+EnumMap<Status, String> map = new EnumMap<>(Status.class);
+```
+
+### Enum vs 常量
+
+| 特性 | Enum | int/String 常量 |
+|------|------|-----------------|
+| 类型安全 | ✅ | ❌ |
+| switch 支持 | ✅ | ❌ |
+| 可遍历 | ✅ | 需手动维护 |
+| 单例模式 | 天然支持 | 需额外代码 |
+
+### 最佳实践
+
+```java
+// ✅ 使用 Enum 替代常量
+// ❌ public static final int STATUS_PENDING = 0;
+// ✅ public enum Status { PENDING }
+
+// ✅ EnumSet 替代位域
+// ❌ int flags = 0;
+// ✅ EnumSet<Flag> flags = EnumSet.noneOf(Flag.class);
+
+// ✅ EnumMap 替代顺序索引 Map
+// ❌ Map<Status, String> map = new HashMap<>();
+// ✅ EnumMap<Status, String> map = new EnumMap<>(Status.class);
+```
+
+---
+
 ## 快速概览
 
 ```
