@@ -199,12 +199,14 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | Aleksey Shipilev | AWS | 性能优化 | [详情](/by-contributor/profiles/aleksey-shipilev.md) |
 | Alexey Semenyuk | Oracle | 编译器 | [详情](/by-contributor/profiles/alexey-semenyuk.md) |
 | Anjian Wen | ByteDance | RISC-V | [详情](/by-contributor/profiles/anjian-wen.md) |
+| Ben Perez | Trail of Bits | 后量子密码学 | [详情](/by-contributor/profiles/ben-perez.md) |
 | Brian Burkhalter | Oracle | 图形/打印 | [详情](/by-contributor/profiles/brian-burkhalter.md) |
 | Chen Liang | Oracle | ClassFile API | [详情](/by-contributor/profiles/chen-liang.md) |
 | Claes Redestad | Oracle | 性能优化 | [详情](/by-contributor/profiles/claes-redestad.md) |
 | Coleen Phillimore | Oracle | HotSpot | [详情](/by-contributor/profiles/coleen-phillimore.md) |
 | Daniel Fuchs | Oracle | HTTP/3 | [详情](/by-contributor/profiles/daniel-fuchs.md) |
 | David Holmes | Oracle | 并发 | [详情](/by-contributor/profiles/david-holmes.md) |
+| Joe Darcy | Oracle | 数学库 | [详情](/by-contributor/profiles/joe-darcy.md) |
 
 ### F-J
 
@@ -218,6 +220,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | Ioi Lam | Oracle | AOT/CDS | [详情](/by-contributor/profiles/ioi-lam.md) |
 | Jaikiran Pai | Oracle | JavaEE | [详情](/by-contributor/profiles/jaikiran-pai.md) |
 | Jan Lahoda | Oracle | javac | [详情](/by-contributor/profiles/jan-lahoda.md) |
+| Johannes Graham | Oracle | C2 编译器 | [详情](/by-contributor/profiles/johannes-graham.md) |
 | Justin Lu | Oracle | 本地化 | [详情](/by-contributor/profiles/justin-lu.md) |
 
 ### K-O
@@ -237,6 +240,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 |--------|------|----------|------|
 | Phil Race | Oracle | Client Libraries | [详情](/by-contributor/profiles/phil-race.md) |
 | Prasanta Sadhukhan | Oracle | Swing/AWT | [详情](/by-contributor/profiles/prasanta-sadhukhan.md) |
+| Roger Riggs | Oracle | 核心库 | [详情](/by-contributor/profiles/roger-riggs.md) |
 | Sendaoyan | Independent | 测试 | [详情](/by-contributor/profiles/sendaoyan.md) |
 | Shaojin Wen | Alibaba | 核心库 | [详情](/by-contributor/profiles/shaojin-wen.md) |
 | Thomas Schatzl | Oracle | G1 GC | [详情](/by-contributor/profiles/thomas-schatzl.md) |
@@ -280,8 +284,29 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 贡献者 | PR 分析文档 |
 |--------|-----------|
 | Shaojin Wen | [String "+" 优化](/by-pr/8336/8336856.md) |
+| Claes Redestad | [字符串拼接优化](/by-pr/8335/8335182.md) |
+| Claes Redestad | [C2 内存修复](/by-pr/8327/8327247.md) |
+| Claes Redestad | [字节码生成优化](/by-pr/8339/8339799.md) |
 | Claes Redestad | [HexFormat 优化](/by-pr/8335/8335802.md) |
 | Chen Liang | [反射 API 性能优化](/by-pr/8371/8371953.md) |
+| Roger Riggs | [StringBuilder 健壮性](/by-pr/8351/8351443.md) |
+
+### 编译器优化
+
+| 贡献者 | PR 分析文档 |
+|--------|-----------|
+| Emanuel Peter | [Store-to-Load 转发修复](/by-pr/8333/8334431.md) |
+| Emanuel Peter | [小循环向量化](/by-pr/8344/8344085.md) |
+| Emanuel Peter | SuperWord Cost Model |
+| Emanuel Peter | 模板测试框架  |
+| Johannes Graham | [XOR 常量折叠](/by-pr/8347/8347645.md) |
+
+### 数学库与密码学
+
+| 贡献者 | PR 分析文档 |
+|--------|-----------|
+| Joe Darcy | [FDLIBM @Stable](/by-pr/8362/8362376.md) |
+| Ben Perez | [ML-KEM 优化](/by-pr/8347/8347608.md) |
 
 ### ClassFile API
 
@@ -289,13 +314,6 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 |--------|-----------|
 | Chen Liang | 移除 com.sun.tools.classfile |
 | Chen Liang | UTF-8 条目验证  |
-
-### 编译器优化
-
-| 贡献者 | PR 分析文档 |
-|--------|-----------|
-| Emanuel Peter | SuperWord Cost Model |
-| Emanuel Peter | 模板测试框架  |
 
 ### JVM 运行时
 

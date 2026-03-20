@@ -1,5 +1,37 @@
 # Emanuel Peter
 
+> **GitHub**: [@eme64](https://github.com/eme64)
+> **OpenJDK**: [@epeter](https://openjdk.org/census#epeter)
+> **Location**: Zürich, Switzerland
+> **Organization**: Oracle (Java Platform Group)
+
+---
+
+## 概述
+
+Emanuel Peter 是 Oracle 的 C2 编译器工程师，专注于 SuperWord 自动向量化优化。他在 JDK 26 中的工作代表了向量化基础设施的重大演进，引入了新的成本模型、别名分析系统和创新的基于模板的测试框架。
+
+---
+
+## 主要贡献
+
+### JDK 26 (2025-2026)
+
+| PR/Issue | 标题 | 角色 |
+|----------|------|------|
+| [JDK-8334431](/by-pr/8333/8334431.md) | 修复 SuperWord Store-to-Load 转发失败导致的性能回归 | Author |
+| [JDK-8344085](/by-pr/8344/8344085.md) | 改进小循环迭代计数的 SuperWord 向量化 | Author |
+
+### 核心优化领域
+
+| 领域 | 说明 |
+|------|------|
+| **SuperWord 向量化** | 自动向量化优化、成本模型、别名分析 |
+| **C2 编译器** | IR 节点操作、循环优化 |
+| **测试框架** | Template-Based Testing Framework |
+
+---
+
 ## Basic Information
 
 | Field | Value |
