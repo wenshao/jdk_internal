@@ -505,17 +505,29 @@ jfr print --events jdk.ObjectAllocationInNewTLAB alloc.jfr
 
 ## 相关 PR 和改进
 
+### 直接相关的 PR 分析
+
+| Issue | 标题 | 作者 | 说明 |
+|-------|------|------|------|
+| [JDK-8370405](/by-pr/8370/8370405.md) | MergeStores 在分配消除中被错误标量替换 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 逃逸分析 + MergeStore 交互 bug 修复 |
+| [JDK-8357690](/by-pr/8357/8357690.md) | CharacterDataLatin1 添加 @Stable 注解 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 启用标量替换优化 |
+| [JDK-8357913](/by-pr/8357/8357913.md) | StringCoding 添加 @Stable 注解 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 启用标量替换和循环展开 |
+| [JDK-8368172](/by-pr/8368/8368172.md) | DateTimePrintContext 不可变对象优化 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | JIT 逃逸分析优化 (+6-10%) |
+| [JDK-8366224](/by-pr/8366/8366224.md) | DecimalDigits 数组优化 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 逃逸分析受益 |
+
 ### 近期改进
 
 | Issue | 标题 | 影响 |
 |-------|------|------|
 | JDK-8339799 | 减少 java.lang.invoke 字节码生成 | 改善逃逸分析效果 |
 | JDK-8327247 | 复杂字符串拼接内存爆炸 | 限制复杂度以支持逃逸分析 |
+| JDK-8356761 | IGV dump escape analysis information | 逃逸分析诊断改进 |
 
 ### 相关文档
 
 - [MergeStore 优化](mergestore.md) - 标量替换后的优化
 - [C2 优化阶段](c2-phases.md) - PhaseEscapeAnalysis 位置
+- [String 构造函数优化](/by-pr/8355/8357289.md) - 方法拆分以支持内联和逃逸分析
 
 ---
 
