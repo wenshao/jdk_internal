@@ -478,8 +478,8 @@ java -XX:AOTCacheConfiguration=aot_config.txt \
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Coleen Phillimore | 317 | Oracle | 类加载, 运行时 |
-| 2 | Ioi Lam | 215 | Oracle | CDS, AOT, 内存 |
+| 1 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 317 | Oracle | 类加载, 运行时 |
+| 2 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 215 | Oracle | CDS, AOT, 内存 |
 | 3 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 174 | Oracle | 并发, 线程 |
 | 4 | Thomas Stuefe | 163 | Oracle | 内存, 跨平台 |
 | 5 | Stefan Karlsson | 149 | Oracle | 并发 GC |

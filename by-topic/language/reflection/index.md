@@ -485,7 +485,7 @@ byte[] bytes = cf.build(classDesc, builder -> {
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
 | 1 | Coleen Phillimore | 341 | Oracle | 类加载, 运行时 |
-| 2 | Ioi Lam | 254 | Oracle | 反射, CDS, AOT |
+| 2 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 254 | Oracle | 反射, CDS, AOT |
 | 3 | Calvin Cheung | 103 | Oracle | 类加载 |
 | 4 | Harold Seigel | 89 | Oracle | JVM 运行时 |
 | 5 | Stefan Karlsson | 87 | Oracle | 并发 GC |

@@ -121,9 +121,9 @@ JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 14-17 ─── JDK 21-26
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Coleen Phillimore | 333 | Oracle | 类加载, 运行时 |
+| 1 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 333 | Oracle | 类加载, 运行时 |
 | 2 | David Holmes | 201 | Oracle | 并发, 线程 |
-| 3 | Ioi Lam | 167 | Oracle | 反射, CDS |
+| 3 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 167 | Oracle | 反射, CDS |
 | 4 | Serguei Spitsyn | 107 | Oracle | JVMTI, 反射 |
 | 隐式类 | JDK 25 | void main() {} |
 

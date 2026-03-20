@@ -39,8 +39,8 @@ JDK 1.0 ── JDK 2 ── JDK 6 ── JDK 8 ── JDK 9 ── JDK 17 ──
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Coleen Phillimore | 341 | Oracle | SystemDictionary |
-| 2 | Ioi Lam | 254 | Oracle | CDS, AOT |
+| 1 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 341 | Oracle | SystemDictionary |
+| 2 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 254 | Oracle | CDS, AOT |
 | 3 | Calvin Cheung | 103 | Oracle | 类加载器 |
 | 4 | Harold Seigel | 89 | Oracle | JVM 运行时 |
 | 5 | Stefan Karlsson | 87 | Oracle | 并发 GC |

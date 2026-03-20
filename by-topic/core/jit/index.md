@@ -69,9 +69,9 @@ Level 4: C2 (深度优化)
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Coleen Phillimore | 72 | Oracle | C1/C2 编译器 |
+| 1 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 72 | Oracle | C1/C2 编译器 |
 | 2 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 68 | Oracle | JIT 编译器 |
-| 3 | Ioi Lam | 62 | Oracle | 编译器, 运行时 |
+| 3 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 62 | Oracle | 编译器, 运行时 |
 | 4 | Stefan Karlsson | 31 | Oracle | 编译器, GC |
 | 5 | Doug Simon | 29 | Oracle | JIT 编译器 |
 | 6 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 24 | Oracle | 并发, 编译器 |
