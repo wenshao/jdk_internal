@@ -27,6 +27,8 @@ JVM、内存、性能、模块系统等底层技术。
 | [字符串处理](language/string/) | String、StringBuilder、Text Blocks | JDK 1.0 |
 | [反射与元数据](language/reflection/) | 反射、注解、MethodHandle | JDK 1.0 |
 | [语法演进](language/syntax/) | 泛型、枚举、Lambda、Record、Pattern Matching | - |
+| [Lambda 表达式](language/lambda/) | 函数式接口、方法引用、闭包 | JDK 8 |
+| [Stream API](language/streams/) | 函数式数据处理、流式操作 | JDK 8 |
 | [注解与元编程](language/annotations/) | 注解处理器、编译期元编程 | JDK 5 |
 | [Class File API](language/classfile/) | Class 文件读写 API | JDK 22 |
 
