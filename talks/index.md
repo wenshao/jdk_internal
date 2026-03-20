@@ -167,7 +167,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/aleksey-shipilev.md)
 - [Shenandoah GC 分析](../by-topic/core/gc/)
-- [组织: Red Hat](../contributors/organizations/redhat.md)
+- [组织: Red Hat](../contributors/orgs/redhat.md)
 
 ---
 
@@ -199,7 +199,7 @@
 
 **本地资源**:
 - [ZGC 演进](../by-topic/core/gc/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 - **OpenJDK Wiki**: [ZGC Main](https://wiki.openjdk.org/spaces/zgc/pages/34668579/Main)
 
 ---
@@ -215,7 +215,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/thomas-schatzl.md)
 - [G1 GC 演进](../by-topic/core/gc/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 - [个人博客](https://tschatzl.github.io/)
 
 ---
@@ -229,7 +229,7 @@
 
 **本地资源**:
 - [ZGC 演进](../by-topic/core/gc/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 - **OpenJDK**: [JEP 439 Owner](https://openjdk.org/jeps/439)
 
 ---
@@ -244,7 +244,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/roman-kennke.md)
 - [Shenandoah GC](../by-topic/core/gc/)
-- [组织: Red Hat](../contributors/organizations/redhat.md)
+- [组织: Red Hat](../contributors/orgs/redhat.md)
 
 ---
 
@@ -258,7 +258,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/william-kemper.md)
 - [Shenandoah GC](../by-topic/core/gc/)
-- [组织: Red Hat](../contributors/organizations/redhat.md)
+- [组织: Red Hat](../contributors/orgs/redhat.md)
 
 ---
 
@@ -287,7 +287,7 @@
 **本地资源**:
 - [模式匹配](../by-topic/core/patterns/)
 - [语法演进](../by-topic/language/syntax/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 - **Inside.Java**: [@GavinBierman](https://inside.java/u/GavinBierman/)
 
 ---
@@ -302,7 +302,7 @@
 **本地资源**:
 - [语法演进](../by-topic/language/syntax/)
 - [Class File API](../by-topic/language/classfile/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -317,7 +317,7 @@
 - [贡献者档案](../by-contributor/profiles/david-holmes.md)
 - [并发编程](../by-topic/concurrency/concurrency/)
 - [网络编程](../by-topic/concurrency/network/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -331,7 +331,7 @@
 **本地资源**:
 - [集合框架](../by-topic/api/collections/)
 - [Stream API](../by-topic/language/streams/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 - **Inside.Java**: [@PaulSandoz](https://inside.java/u/PaulSandoz/)
 
 ---
@@ -347,7 +347,7 @@
 - [贡献者档案](../by-contributor/profiles/claes-redestad.md)
 - [字符串处理](../by-topic/language/string/)
 - [性能优化](../by-topic/core/performance/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -363,7 +363,7 @@
 - [贡献者档案](../by-contributor/profiles/coleen-phillimore.md)
 - [类加载器](../by-topic/core/classloading/)
 - [JVM 架构](../by-topic/core/jit/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -378,7 +378,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/david-beaumont.md)
 - [javac](../by-topic/language/syntax/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -410,7 +410,7 @@
 - [贡献者档案](../by-contributor/profiles/kim-barrett.md)
 - [G1 GC](../by-topic/core/gc/)
 - [JIT 编译](../by-topic/core/jit/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -426,7 +426,7 @@
 - [贡献者档案](../by-contributor/profiles/chen-liang.md)
 - [javac 编译器](../by-topic/language/syntax/)
 - [ClassFile API](../by-topic/core/classfile/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -444,7 +444,7 @@
 **本地资源**:
 - [语法演进](../by-topic/language/syntax/)
 - [模式匹配](../by-topic/core/patterns/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 - **Inside.Java**: [@vicente-romero](https://inside.java/u/vicente-romero/)
 
 ---
@@ -460,7 +460,7 @@
 - [贡献者档案](../by-contributor/profiles/albert-mingkun-yang.md)
 - [G1 GC](../by-topic/core/gc/)
 - [内存管理](../by-topic/core/memory/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -474,7 +474,7 @@
 **本地资源**:
 - [并发编程](../by-topic/concurrency/concurrency/)
 - [Project Loom](../by-topic/core/loom/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 - **Inside.Java**: [@ronpressler](https://inside.java/u/ronpressler/)
 
 ---
@@ -488,7 +488,7 @@
 **本地资源**:
 - [并发编程](../by-topic/concurrency/concurrency/)
 - [Project Loom](../by-topic/core/loom/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 - **OpenJDK Wiki**: [NathanReynolds](https://wiki.openjdk.org/display/Main/NathanReynolds)
 
 ---
@@ -504,7 +504,7 @@
 - [贡献者档案](../by-contributor/profiles/ioi-lam.md)
 - [JIT 编译](../by-topic/core/jit/)
 - [性能优化](../by-topic/core/performance/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -519,7 +519,7 @@
 - [贡献者档案](../by-contributor/profiles/johannes-graham.md)
 - [JDK 版本](../by-version/)
 - [JEP 流程](../jeps/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -535,7 +535,7 @@
 - [贡献者档案](../by-contributor/profiles/joe-darcy.md)
 - [Records](../by-topic/core/records/)
 - [模式匹配](../by-topic/core/patterns/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -550,7 +550,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/roger-riggs.md)
 - [核心库](../by-topic/core/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -566,7 +566,7 @@
 - [贡献者档案](../by-contributor/profiles/tobias-hartmann.md)
 - [C2 编译器](../by-topic/core/jit/c2-phases.md)
 - [JIT 参数](../by-topic/core/jit/vm-parameters.md)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -580,7 +580,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/christian-hagedorn.md)
 - [C2 编译器](../by-topic/core/jit/c2-phases.md)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -596,7 +596,7 @@
 - [JIT 编译](../by-topic/core/jit/)
 - [C2 优化](../by-topic/core/jit/c2-phases.md)
 - [VM 参数](../by-topic/core/jit/vm-parameters.md)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -611,7 +611,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/weijun-wang.md)
 - [安全模块](../by-topic/core/security/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -626,7 +626,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/phil-race.md)
 - [2D 图形](../by-topic/desktop/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -683,7 +683,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/nick-gasson.md)
 - [AArch64](../by-topic/core/arch/aarch64.md)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -697,7 +697,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/erik-joelsson.md)
 - [JDK 版本](../by-version/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -711,7 +711,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/erik-gahlin.md)
 - [JFR](../by-topic/diagnostics/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -725,7 +725,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/volkan-yazici.md)
 - [ZGC](../by-topic/core/gc/zgc.md)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -739,7 +739,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/leonid-mesnik.md)
 - [JVM TI](../by-topic/diagnostics/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -753,7 +753,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/justin-lu.md)
 - [ZGC](../by-topic/core/gc/zgc.md)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -767,7 +767,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/rooland-westrelin.md)
 - [GraalVM](../by-topic/core/graalvm/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -795,7 +795,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/per-minborg.md)
 - [Project Panama](../by-topic/core/panama/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -809,7 +809,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/francesco-andreuzzi.md)
 - [GraalVM](../by-topic/core/graalvm/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -823,7 +823,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/daniel-fuchs.md)
 - [JMX 监控](../by-topic/diagnostics/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -837,7 +837,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/adam-sotona.md)
 - [移动平台](../by-topic/platform/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -851,7 +851,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/jim-laskey.md)
 - [字符串处理](../by-topic/language/string/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -866,7 +866,7 @@
 - [贡献者档案](../by-contributor/profiles/ben-perez.md)
 - [性能优化](../by-topic/core/performance/)
 - [JIT 编译](../by-topic/core/jit/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -881,7 +881,7 @@
 - [贡献者档案](../by-contributor/profiles/matthias-baesken.md)
 - [诊断工具](../by-topic/diagnostics/)
 - [Windows 平台](../by-topic/platform/windows/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -895,7 +895,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/naoto-sato.md)
 - [国际化](../by-topic/core/i18n/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -909,7 +909,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/magnus-ihse-bursie.md)
 - [构建系统](../by-topic/core/jit/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -923,7 +923,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/brian-burkhalter.md)
 - [核心库](../by-topic/core/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -937,7 +937,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/prasanta-sadhukhan.md)
 - [Web 服务](../by-topic/web/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -951,7 +951,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/jatin-bhateja.md)
 - [ZGC](../by-topic/core/gc/zgc.md)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -966,7 +966,7 @@
 - [贡献者档案](../by-contributor/profiles/anatoly-zelenin.md)
 - [JVM 运行时](../by-topic/core/jit/)
 - [内存管理](../by-topic/core/memory/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -980,7 +980,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/alexey-semenyuk.md)
 - [JFR](../by-topic/diagnostics/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -994,7 +994,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/amit-kumar.md)
 - [安全模块](../by-topic/core/security/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -1022,7 +1022,7 @@
 **本地资源**:
 - [类加载器](../by-topic/core/classloading/)
 - [模块系统](../by-topic/core/modules/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 - **Inside.Java**: [@mchung](https://inside.java/u/mchung/)
 
 ---
@@ -1038,7 +1038,7 @@
 - [贡献者档案](../by-contributor/profiles/goetz-lindenmaier.md)
 - [JIT 编译](../by-topic/core/jit/)
 - [性能优化](../by-topic/core/performance/)
-- [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -1047,7 +1047,7 @@
 查看完整的贡献者列表：
 - [贡献者索引](../by-contributor/)
 - [贡献者档案](../by-contributor/profiles/)
-- [组织统计](../contributors/organizations/)
+- [组织统计](../contributors/orgs/)
 
 ---
 
