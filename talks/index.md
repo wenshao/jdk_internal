@@ -31,17 +31,33 @@
 | 演讲者 | 主题 | 类型 | 相关本地文档 |
 |--------|------|------|-------------|
 | Georges Saab, Mark Reinhold | Keynote: Java in 2024 | [视频](https://www.youtube.com/watch?v=NV4v7KXKQ-c) | [JDK 21](../by-version/jdk21/) |
-| Brian Goetz | Project Valhalla | [报道](https://realjenius.com/2024/12/15/valhalla-simplicity/) | [Valhalla](../jeps/) |
-| Per Liden | Generational ZGC | - | [ZGC](../by-topic/core/gc/) |
-| Thomas Schatzl | G1 GC Improvements | - | [G1 GC](../by-topic/core/gc/) |
-| Stefan Karlsson | 分代 ZGC 实现 | - | [ZGC](../by-topic/core/gc/) |
+| Brian Goetz | Project Valhalla | [报道](https://realjenius.com/2024/12/15/valhalla-simplicity/) | [Valhalla](../by-topic/core/valhalla/) |
+| Per Liden | Generational ZGC | - | [ZGC](../by-topic/core/gc/zgc.md) |
+| Thomas Schatzl | G1 GC Improvements | - | [G1 GC](../by-topic/core/gc/g1-gc.md) |
+| Stefan Karlsson | 分代 ZGC 实现 | - | [ZGC](../by-topic/core/gc/zgc.md) |
+| Roman Kennke | Shenandoah 分代 | - | [Shenandoah](../by-topic/core/gc/shenandoah.md) |
+| William Kemper | 分代 Shenandoah | - | [Shenandoah](../by-topic/core/gc/shenandoah.md) |
+| Tobias Hartmann | C2 JIT 编译器 | - | [JIT](../by-topic/core/jit/) |
+| Christian Hagedorn | JIT 优化 | - | [JIT](../by-topic/core/jit/) |
+| Roland Westrelin | Graal JIT | - | [GraalVM](../by-topic/core/graalvm/) |
 
 ### JVMLS 2023 精选
 
 | 演讲者 | 主题 | 类型 | 相关本地文档 |
 |--------|------|------|-------------|
 | Georges Saab, Mark Reinhold | Keynote | [视频](https://www.youtube.com/watch?v=Ma0NtbG0mHY) | [JDK 21](../by-version/jdk21/) |
-| Roman Kennke | 分代 Shenandoah | - | [Shenandoah](../by-topic/core/gc/) |
+| Roman Kennke | 分代 Shenandoah | - | [Shenandoah](../by-topic/core/gc/shenandoah.md) |
+| Gavin Bierman | Record Patterns | - | [模式匹配](../by-topic/core/patterns/) |
+| Jan Lahoda | 模式匹配编译器 | - | [语法](../by-topic/language/syntax/) |
+| Claes Redestad | String Deduplication | - | [字符串](../by-topic/language/string/) |
+| David Holmes | 并发编程 | - | [并发](../by-topic/concurrency/) |
+
+### JVMLS 2022 精选
+
+| 演讲者 | 主题 | 类型 | 相关本地文档 |
+|--------|------|------|-------------|
+| Ron Pressler | Virtual Threads | - | [虚拟线程](../by-topic/core/loom/) |
+| Nathan Reynolds | Structured Concurrency | - | [结构化并发](../by-topic/core/loom/) |
 
 ### JVMLS 常见主题
 
@@ -137,7 +153,9 @@
 
 ## 按贡献者索引
 
-### Aleksey Shipilev - Shenandoah GC
+### A-D
+
+#### Aleksey Shipilev - Shenandoah GC
 
 | 会议 | 年份 | 主题 | 本地文档 |
 |------|------|------|----------|
@@ -333,6 +351,37 @@
 
 ---
 
+### Coleen Phillimore - 类加载器
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| 类加载器 | 实现 | [类加载](../by-topic/core/classloading/) |
+| HotSpot 内部 | 架构 | [JVM](../by-topic/core/jit/) |
+| Valhalla | 值类型 | [Valhalla](../by-topic/core/valhalla/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/coleen-phillimore.md)
+- [类加载器](../by-topic/core/classloading/)
+- [JVM 架构](../by-topic/core/jit/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### David Beaumont - javac 编译器
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| javac | 编译器实现 | [语法](../by-topic/language/syntax/) |
+| 构建系统 | 工具 | [构建](../by-topic/core/jit/) |
+| ClassFile API | API | [ClassFile](../by-topic/core/classfile/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/david-beaumont.md)
+- [javac](../by-topic/language/syntax/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
 ### Shaojin Wen - 性能优化
 
 | 资源 | 类型 | 本地文档 |
@@ -362,6 +411,26 @@
 - [G1 GC](../by-topic/core/gc/)
 - [JIT 编译](../by-topic/core/jit/)
 - [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Chen Liang - javac 编译器
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| javac 实现 | 编译器 | [语法](../by-topic/language/syntax/) |
+| ClassFile API | API 设计 | [ClassFile](../by-topic/core/classfile/) |
+| Project Valhalla | 值类型 | [Valhalla](../by-topic/core/valhalla/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/chen-liang.md)
+- [javac 编译器](../by-topic/language/syntax/)
+- [ClassFile API](../by-topic/core/classfile/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Claes Redestad - 性能优化
 
 ---
 
@@ -404,6 +473,7 @@
 
 **本地资源**:
 - [并发编程](../by-topic/concurrency/concurrency/)
+- [Project Loom](../by-topic/core/loom/)
 - [组织: Oracle](../contributors/organizations/oracle.md)
 - **Inside.Java**: [@ronpressler](https://inside.java/u/ronpressler/)
 
@@ -417,8 +487,528 @@
 
 **本地资源**:
 - [并发编程](../by-topic/concurrency/concurrency/)
+- [Project Loom](../by-topic/core/loom/)
 - [组织: Oracle](../contributors/organizations/oracle.md)
 - **OpenJDK Wiki**: [NathanReynolds](https://wiki.openjdk.org/display/Main/NathanReynolds)
+
+---
+
+### IoI Lam - C2 JIT 编译器
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| JIT 编译 | 实现 | [JIT](../by-topic/core/jit/) |
+| 性能优化 | 演讲 | [性能](../by-topic/core/performance/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/ioi-lam.md)
+- [JIT 编译](../by-topic/core/jit/)
+- [性能优化](../by-topic/core/performance/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Johannes Graham - JDK 更新
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| JDK Release | 版本管理 | [版本](../by-version/) |
+| JEP 流程 | 治理 | [JEP](../jeps/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/johannes-graham.md)
+- [JDK 版本](../by-version/)
+- [JEP 流程](../jeps/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Joe Darcy - 语言特性
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| Records | 语言特性 | [Records](../by-topic/core/records/) |
+| Pattern Matching | 模式匹配 | [模式](../by-topic/core/patterns/) |
+| Sealed Classes | 密封类 | [语法](../by-topic/language/syntax/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/joe-darcy.md)
+- [Records](../by-topic/core/records/)
+- [模式匹配](../by-topic/core/patterns/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Roger Riggs - 核心库
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| 核心库 | API 设计 | [核心库](../by-topic/core/) |
+| 序列化 | 实现 | [序列化](../by-topic/core/) |
+| Process API | 进程管理 | [进程](../by-topic/core/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/roger-riggs.md)
+- [核心库](../by-topic/core/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Tobias Hartmann - C2 JIT 编译器
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| C2 编译器 | 实现 | [JIT](../by-topic/core/jit/) |
+| JIT 优化 | 性能 | [性能](../by-topic/core/performance/) |
+| Valhalla | 值类型 | [Valhalla](../by-topic/core/valhalla/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/tobias-hartmann.md)
+- [C2 编译器](../by-topic/core/jit/c2-phases.md)
+- [JIT 参数](../by-topic/core/jit/vm-parameters.md)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Christian Hagedorn - C2 JIT 编译器
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| C2 编译器 | 实现 | [JIT](../by-topic/core/jit/) |
+| 优化阶段 | IR | [C2](../by-topic/core/jit/c2-phases.md) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/christian-hagedorn.md)
+- [C2 编译器](../by-topic/core/jit/c2-phases.md)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Vladimir Kozlov - JIT 编译器架构
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| JIT Compilation | 架构 | [JIT](../by-topic/core/jit/) |
+| C2 编译器 | 实现 | [C2](../by-topic/core/jit/c2-phases.md) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/vladimir-kozlov.md)
+- [JIT 编译](../by-topic/core/jit/)
+- [C2 优化](../by-topic/core/jit/c2-phases.md)
+- [VM 参数](../by-topic/core/jit/vm-parameters.md)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Weijun Wang - 安全/加密
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| 安全 | 实现 | [安全](../by-topic/core/security/) |
+| 加密 | API | [加密](../by-topic/core/security/) |
+| 密钥管理 | 工具 | [密钥](../by-topic/core/security/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/weijun-wang.md)
+- [安全模块](../by-topic/core/security/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Phil Race - 2D 图形
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| 2D 图形 | 实现 | [图形](../by-topic/desktop/) |
+| 渲染 | 性能 | [渲染](../by-topic/desktop/) |
+| Font | 字体 | [字体](../by-topic/desktop/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/phil-race.md)
+- [2D 图形](../by-topic/desktop/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Jaikiran Pai - NIO/网络
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| NIO | 实现 | [NIO](../by-topic/io/) |
+| 网络 | 编程 | [网络](../by-topic/io/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/jaikiran-pai.md)
+- [NIO API](../by-topic/io/)
+- [网络编程](../by-topic/io/)
+- [组织: Red Hat](../contributors/orgs/redhat.md)
+
+---
+
+### Andrew Dinn - JVM 代码生成
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| 代码生成 | JIT | [JIT](../by-topic/core/jit/) |
+| 寄存器 | 架构 | [架构](../by-topic/core/arch/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/andrew-dinn.md)
+- [JIT 编译](../by-topic/core/jit/)
+- [组织: Red Hat](../contributors/orgs/redhat.md)
+
+---
+
+### Tomas Stuefe - JVM 工具
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| JVM 工具 | 诊断 | [诊断](../by-topic/diagnostics/) |
+| hsdis | 反汇编 | [工具](../by-topic/diagnostics/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/thomas-stuefe.md)
+- [诊断工具](../by-topic/diagnostics/)
+- [组织: SAP](../contributors/orgs/sap.md)
+
+---
+
+### Nick Gasson - AArch64 移植
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| AArch64 | 移植 | [AArch64](../by-topic/core/arch/aarch64.md) |
+| ARM | 架构 | [架构](../by-topic/core/arch/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/nick-gasson.md)
+- [AArch64](../by-topic/core/arch/aarch64.md)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Erik Joelsson - 版本管理
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| JDK 版本 | 发布 | [版本](../by-version/) |
+| Git | 工具 | [工具](../by-topic/core/jit/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/erik-joelsson.md)
+- [JDK 版本](../by-version/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Erik Gahlin - JFR
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| JFR | 实现 | [JFR](../by-topic/diagnostics/) |
+| 性能分析 | 工具 | [诊断](../by-topic/diagnostics/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/erik-gahlin.md)
+- [JFR](../by-topic/diagnostics/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Volkan Yazici - ZGC
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| ZGC | 实现 | [ZGC](../by-topic/core/gc/zgc.md) |
+| GC | 垃圾收集 | [GC](../by-topic/core/gc/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/volkan-yazici.md)
+- [ZGC](../by-topic/core/gc/zgc.md)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Leonid Mesnik - JVM 诊断
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| JVM TI | 实现 | [JVM TI](../by-topic/diagnostics/) |
+| 诊断 | 工具 | [诊断](../by-topic/diagnostics/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/leonid-mesnik.md)
+- [JVM TI](../by-topic/diagnostics/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Justin Lu - ZGC
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| ZGC | 实现 | [ZGC](../by-topic/core/gc/zgc.md) |
+| GC | 垃圾收集 | [GC](../by-topic/core/gc/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/justin-lu.md)
+- [ZGC](../by-topic/core/gc/zgc.md)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Roland Westrelin - Graal JIT
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| Graal | JIT 编译器 | [GraalVM](../by-topic/core/graalvm/) |
+| JVMCI | 接口 | [JVMCI](../by-topic/core/graalvm/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/rooland-westrelin.md)
+- [GraalVM](../by-topic/core/graalvm/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Martin Haessig - 性能分析
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| 性能 | 分析 | [性能](../by-topic/core/performance/) |
+| JMH | 基准 | [性能](../by-topic/core/performance/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/martin-haessig.md)
+- [性能优化](../by-topic/core/performance/)
+- [组织: Red Hat](../contributors/orgs/redhat.md)
+
+---
+
+### Per Minborg - Java 集成
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| Java 集成 | 演讲 | [集成](../by-topic/core/) |
+| Panama | FFI | [Panama](../by-topic/core/panama/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/per-minborg.md)
+- [Project Panama](../by-topic/core/panama/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Francesco Andreuzzi - GraalVM
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| GraalVM | 演讲 | [GraalVM](../by-topic/core/graalvm/) |
+| Truffle | DSL | [GraalVM](../by-topic/core/graalvm/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/francesco-andreuzzi.md)
+- [GraalVM](../by-topic/core/graalvm/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Daniel Fuchs - JMX/监控
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| JMX | 实现 | [监控](../by-topic/diagnostics/) |
+| 管理 | API | [管理](../by-topic/diagnostics/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/daniel-fuchs.md)
+- [JMX 监控](../by-topic/diagnostics/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Adam Sotona - 移动/嵌入式
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| 移动 | Java | [移动](../by-topic/platform/) |
+| 嵌入式 | IoT | [嵌入式](../by-topic/platform/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/adam-sotona.md)
+- [移动平台](../by-topic/platform/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Jim Laskey - 字符串处理
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| 字符串 | API | [字符串](../by-topic/language/string/) |
+| 模板字符串 | 特性 | [语法](../by-topic/language/syntax/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/jim-laskey.md)
+- [字符串处理](../by-topic/language/string/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Ben Perez - 性能优化
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| 性能 | 优化 | [性能](../by-topic/core/performance/) |
+| JIT | 编译器 | [JIT](../by-topic/core/jit/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/ben-perez.md)
+- [性能优化](../by-topic/core/performance/)
+- [JIT 编译](../by-topic/core/jit/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Matthias Baesken - 支持/诊断
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| 支持 | 工具 | [诊断](../by-topic/diagnostics/) |
+| Windows | 平台 | [Windows](../by-topic/platform/windows/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/matthias-baesken.md)
+- [诊断工具](../by-topic/diagnostics/)
+- [Windows 平台](../by-topic/platform/windows/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Naoto Sato - 国际化
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| i18n | 国际化 | [国际化](../by-topic/core/i18n/) |
+| Locale | 本地化 | [本地化](../by-topic/core/i18n/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/naoto-sato.md)
+- [国际化](../by-topic/core/i18n/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Magnus Ihse Bursie - 构建系统
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| 构建 | 工具 | [构建](../by-topic/core/jit/) |
+| make | 实现 | [构建](../by-topic/core/jit/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/magnus-ihse-bursie.md)
+- [构建系统](../by-topic/core/jit/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Brian Burkhalter - 数学库
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| Math | 数学库 | [核心库](../by-topic/core/) |
+| BigDecimal | 精度 | [核心库](../by-topic/core/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/brian-burkhalter.md)
+- [核心库](../by-topic/core/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Prasanta Sadhukhan - Web 服务
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| JAX-WS | Web 服务 | [Web](../by-topic/web/) |
+| XML | 处理 | [XML](../by-topic/web/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/prasanta-sadhukhan.md)
+- [Web 服务](../by-topic/web/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Jatin Bhateja - ZGC
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| ZGC | 实现 | [ZGC](../by-topic/core/gc/zgc.md) |
+| GC | 垃圾收集 | [GC](../by-topic/core/gc/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/jatin-bhateja.md)
+- [ZGC](../by-topic/core/gc/zgc.md)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Anatoly Zelenin - JVM 运行时
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| 运行时 | 实现 | [JVM](../by-topic/core/jit/) |
+| 内存 | 管理 | [内存](../by-topic/core/memory/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/anatoly-zelenin.md)
+- [JVM 运行时](../by-topic/core/jit/)
+- [内存管理](../by-topic/core/memory/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Alexey Semenyuk - JFR
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| JFR | 实现 | [JFR](../by-topic/diagnostics/) |
+| 性能 | 分析 | [诊断](../by-topic/diagnostics/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/alexey-semenyuk.md)
+- [JFR](../by-topic/diagnostics/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Amit Kumar - 安全
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| 安全 | 实现 | [安全](../by-topic/core/security/) |
+| 加密 | 算法 | [加密](../by-topic/core/security/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/amit-kumar.md)
+- [安全模块](../by-topic/core/security/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+
+---
+
+### Yasumasa Suenaga - ZGC
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| ZGC | 移植 | [ZGC](../by-topic/core/gc/zgc.md) |
+| 文档 | 翻译 | [文档](../by-topic/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/yasumasa-suenaga.md)
+- [ZGC](../by-topic/core/gc/zgc.md)
+- [组织: Fujitsu](../contributors/orgs/)
 
 ---
 
