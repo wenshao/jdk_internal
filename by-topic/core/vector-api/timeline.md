@@ -131,7 +131,7 @@ FloatVector.fromMemorySegment(species, memorySegment, offset, ByteOrder.NATIVE_O
 
 ---
 
-### JDK 20: JEP 448 (Fifth Incubator)
+### JDK 20: JEP 438 (Fifth Incubator)
 
 **发布**: 2023-03-21
 
@@ -154,7 +154,7 @@ IntVector.fromArray(species, array, 0, indexes, 0);  // 间接加载
 
 ---
 
-### JDK 21: JEP 460 (Sixth Incubator)
+### JDK 21: JEP 448 (Sixth Incubator)
 
 **发布**: 2023-09-19
 
@@ -340,9 +340,14 @@ FloatVector sqrt = a.lanewise(VectorOperators.SQRT);
 | 414 | 17 | Vector API (Second Incubator) |
 | 417 | 18 | Vector API (Third Incubator) |
 | 426 | 19 | Vector API (Fourth Incubator) |
-| 448 | 20 | Vector API (Fifth Incubator) |
-| 460 | 21 | Vector API (Sixth Incubator) |
+| 438 | 20 | Vector API (Fifth Incubator) |
+| 448 | 21 | Vector API (Sixth Incubator) |
+| - | 22 | Vector API (Seventh Incubator) |
+| - | 23 | Vector API (Eighth Incubator) |
+| - | 24 | Vector API (Ninth Incubator) |
+| 508 | 25 | Vector API (Tenth Incubator) |
+| 529 | 26 | Vector API (Eleventh Incubator) |
 
 ---
 
-> **最后更新**: 2026-03-20
+> **最后更新**: 2026-03-21

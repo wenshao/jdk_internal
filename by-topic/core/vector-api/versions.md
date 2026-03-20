@@ -301,57 +301,106 @@ FloatVector cos = va.lanewise(VectorOperators.COS);
 
 ---
 
-## JDK 22 (2024-03)
-
-**继续孵化**
-
-### 变更
-
-- 性能优化
-- Bug 修复
-- 文档更新
-
-### 关键提交
-
-```
-(主要是 Bug 修复和小优化)
-```
-
----
-
-## JDK 23 (2024-09)
+## JDK 22 (2024-03) - Seventh Incubator
 
 **继续孵化**
 
 ### 新增功能
 
-- 子字 gather 加载优化
-- 性能改进
-- 更多平台支持
+- **VectorShuffle 重构**: 重构 VectorShuffle 实现
+- **向量化分析增强**: 改进 C2 编译器向量化分析
+- **SLEEF 优化**: AArch64 向量数学操作优化
+
+### 关键提交
+
+```
+8310691: [REDO] [vectorapi] Refactor VectorShuffle implementation
+8328544: Improve handling of vectorization
+8335713: Enhance vectorization analysis
+8312425: [vectorapi] AArch64: Optimize vector math operations with SLEEF
+8338021: Support new unsigned and saturating vector operators in VectorAPI
+8338023: Support two vector selectFrom API
+```
+
+### API 变更
+
+```java
+// JDK 22: 新增 selectFrom API
+IntVector a = IntVector.fromArray(species, array1, 0);
+IntVector b = IntVector.fromArray(species, array2, 0);
+IntVector selected = a.selectFrom(b);  // 新增
+```
+
+---
+
+## JDK 23 (2024-09) - Eighth Incubator
+
+**继续孵化**
+
+### 新增功能
+
+- **子字 gather 加载优化**: x86 平台优化
+- **rearrange/selectFrom 语义修改**: wrapIndexes 替代 checkIndexes
+- **饱和运算支持**: SUADD/SUSUB 操作
 
 ### 关键提交
 
 ```
 8318650: Optimized subword gather for x86 targets
+8340079: Modify rearrange/selectFrom Vector API methods to perform wrapIndexes instead of checkIndexes
+8342677: Add IR validation tests for newly added saturated vector add / sub operations
+8341137: Optimize long vector multiplication using x86 VPMUL[U]DQ instruction
+8341260: Add Float16 to jdk.incubator.vector
+```
+
+### API 变更
+
+```java
+// JDK 23: rearrange 语义变更
+// 之前: 越界索引抛出异常
+// 之后: 自动 wrap 索引
+VectorShuffle<Integer> shuffle = VectorShuffle.fromArray(species, indexes, 0);
+IntVector result = v.rearrange(shuffle);  // 索引自动 wrap
 ```
 
 ---
 
-## JDK 24 (2025-03)
+## JDK 24 (2025-03) - Ninth Incubator
 
 **继续孵化**
 
 ### 新增功能
 
-- `UMIN/UMAX` 归约支持
-- Float16 注解 (`@ValueBased`)
-- 文档改进
+- **UMIN/UMAX 归约**: 无符号最小/最大归约支持
+- **Float16 注解**: `@ValueBased` 注解
+- **向量化哈希码**: AArch64 C2 向量化实现
+- **RISC-V 优化**: 向量数学操作 SLEEF 集成
 
 ### 关键提交
 
 ```
 8346174: UMAX/UMIN are missing from XXXVector::reductionOperations
 8344259: Annotate Float16 with jdk.internal.ValueBased
+8322770: Implement C2 VectorizedHashCode on AArch64
+8320500: [vectorapi] RISC-V: Optimize vector math operations with SLEEF
+8346532: XXXVector::rearrangeTemplate misses null check
+8345669: RISC-V: fix client build failure due to AlignVector
+```
+
+### API 变更
+
+```java
+// JDK 24: UMIN/UMAX 归约
+IntVector a = IntVector.fromArray(species, array1, 0);
+IntVector b = IntVector.fromArray(species, array2, 0);
+
+// 无符号最小/最大
+IntVector min = a.lanewise(VectorOperators.UMIN, b);
+IntVector max = a.lanewise(VectorOperators.UMAX, b);
+
+// 归约
+int unsignedMin = min.reduceLanes(VectorOperators.UMIN);
+int unsignedMax = max.reduceLanes(VectorOperators.UMAX);
 ```
 
 ---
