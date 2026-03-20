@@ -2,7 +2,7 @@
 
 > **状态**: 🥚 Incubator | **模块**: jdk.incubator.vector | **JEP**: 338, 414, 417, 426, 448, 460
 
-[← 返回核心](..) | [时间线](timeline.md) | [使用指南](usage.md) | [平台支持](platform.md)
+[← 返回核心](..) | [时间线](timeline.md) | [使用指南](usage.md) | [平台支持](platform.md) | [贡献者](contributors.md)
 
 ---
 
