@@ -1,0 +1,72 @@
+# Eric Bruneton
+
+> **Organization**: Independent
+> **Role**: ASM Framework Contributor
+
+---
+
+## 概述
+
+Eric Bruneton 是独立贡献者，专注于 **ASM 字节码操作框架**。他是 ASM 的核心维护者之一，对 Java 字节码处理和工具生态系统有重要贡献。
+
+---
+
+## 基本信息
+
+| 属性 | 值 |
+|------|-----|
+| **姓名** | Eric Bruneton |
+| **当前组织** | Independent |
+| **专长** | ASM, Bytecode Manipulation |
+| **JDK 26 贡献** | 3 commits (ASM) |
+
+---
+
+## 核心技术贡献
+
+### 1. ASM 框架
+
+Eric Bruneton 是 **ASM** 字节码操作框架的核心维护者：
+- **ASM Core**: 核心 API
+- **Tree API**: 语法树 API
+- **Analysis**: 字节码分析
+
+### 2. 字节码操作
+
+- **Bytecode Generation**: 字节码生成
+- **Bytecode Transformation**: 字节码转换
+- **Class Manipulation**: 类文件操作
+
+```java
+// ASM 示例
+ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
+MethodVisitor mv = cw.visitMethod(...);
+mv.visitCode();
+// 生成字节码指令
+mv.visitInsn(Opcodes.RETURN);
+mv.visitMaxs(1, 1);
+mv.visitEnd();
+```
+
+---
+
+## 技术专长
+
+### 字节码
+
+- **Class File Format**: 类文件格式
+- **Bytecode**: 字节码指令
+- **Verification**: 字节码验证
+
+---
+
+## 相关链接
+
+### ASM 项目
+- [ASM GitHub](https://github.com/ASM/asm)
+- [ASM Documentation](https://asm.ow2.io/)
+
+---
+
+**Sources**:
+- [JDK 26 Top Contributors](./jdk26-top-contributors.md)
