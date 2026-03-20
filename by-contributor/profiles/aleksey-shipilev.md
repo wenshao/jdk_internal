@@ -30,7 +30,7 @@
 | 2012 - 2016 | Oracle | Java Performance Engineer | aleksey.shipilev@oracle.com |
 | ~2009 - 2012 | Intel | Software Engineer | - |
 
-> **数据来源**: [CV](https://shipilev.net/Aleksey_Shipilev_CV.pdf), [LinkedIn](https://de.linkedin.com/in/alekseyshipilev), [OpenJDK Census](https://openjdk.org/census#shade)
+> **数据来源**: [CV](https://shipilev.net/Aleksey_Shipilev_CV.pdf), [LinkedIn](https://de.linkedin.com/in/alekseyshipilev), [OpenJDK Census](https://openjdk.org/census#shade), [JDK 9 Reviewer CFV](https://mail.openjdk.org/pipermail/jdk9-dev/2016-April/004138.html)
 
 ---
 
@@ -152,6 +152,7 @@ Java 微基准测试框架的创始人和主要维护者，为 Java 性能测试
 | **Twitter** | [@shipilev](https://twitter.com/shipilev) |
 | **GitHub** | [@shipilev](https://github.com/shipilev) |
 | **OpenJDK Census** | [shade](https://openjdk.org/census#shade) |
+| **演讲集合** | [shipilev.net/talks](https://shipilev.net/talks/) |
 | **构建服务** | [builds.shipilev.net](https://builds.shipilev.net/) |
 
 ### JVM Anatomy Quarks
@@ -165,13 +166,35 @@ Java 微基准测试框架的创始人和主要维护者，为 Java 性能测试
 
 Aleksey 经常在各大 Java 会议发表演讲：
 
-| 会议 | 主题 |
-|------|------|
-| Devoxx | JVM Benchmarking |
-| Joker Conference | Performance |
-| JavaZone | Java Memory Model |
-| GeeCON | JCStress Workshop |
-| Froscon | Java Memory Model for Beginners |
+#### Devoxx
+
+| 年份 | 主题 | 链接 |
+|------|------|------|
+| 2012 | Performance Methodology | [PDF](https://shipilev.net/talks/devoxx-Nov2012-perfMethodology.pdf) |
+| 2013 | JMH: The Lesser of Two Evils | [PDF](https://shipilev.net/talks/devoxx-Nov2013-benchmarking.pdf) |
+| 2017 | Shenandoah: The GC That Could | [PDF](https://shipilev.net/talks/devoxx-Nov2017-shenandoah.pdf) [Video](https://www.youtube.com/watch?v=VCeHkcwfF9Q) |
+
+#### JavaZone
+
+| 年份 | 主题 | 链接 |
+|------|------|------|
+| 2018 | Shenandoah GC - Part I | [PDF](https://shipilev.net/talks/javazone-Sep2018-shenandoah.pdf) |
+| - | JVM Benchmarking | [Video](https://www.youtube.com/watch?v=x3Vlze1mUj4) |
+
+#### GeeCON
+
+| 年份 | 主题 | 链接 |
+|------|------|------|
+| 2018 | Java Memory Model Unlearning Experience | [PDF](https://shipilev.net/talks/geecon-May2018-jmm.pdf) [Video](https://www.youtube.com/watch?v=TK-7GCCDF_I) |
+| - | JCStress Workshop | [Video Playlist](https://www.youtube.com/playlist?list=PLC5OGTO4dWxYC9Eh9RJYRSP85GKROho3S) |
+
+#### 其他会议
+
+- **Joker Conference**: Performance, Java Memory Model
+- **Øredev**: The Art of Java Benchmarking (2013)
+- **Jfokus**: Speaker (2018)
+- **Froscon**: Java Memory Model for Beginners
+- **HydraConf**: JCStress Workshop (2021)
 | HydraConf | JCStress Workshop |
 
 ### 开源工具
