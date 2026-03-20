@@ -220,6 +220,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | Ioi Lam | Oracle | AOT/CDS | [详情](/by-contributor/profiles/ioi-lam.md) |
 | Jaikiran Pai | Oracle | JavaEE | [详情](/by-contributor/profiles/jaikiran-pai.md) |
 | Jan Lahoda | Oracle | javac | [详情](/by-contributor/profiles/jan-lahoda.md) |
+| Jim Laskey | Oracle | 语言设计 | [详情](/by-contributor/profiles/jim-laskey.md) |
 | Johannes Graham | Oracle | C2 编译器 | [详情](/by-contributor/profiles/johannes-graham.md) |
 | Justin Lu | Oracle | 本地化 | [详情](/by-contributor/profiles/justin-lu.md) |
 

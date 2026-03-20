@@ -1,20 +1,58 @@
 # 语言特性 JEPs
 
-> JDK 21-26 语言特性相关 JEP 汇总
+> Java 语言特性相关 JEP 汇总 (JDK 8-26)
 
 ---
 
 ## 概览
 
 ```
-JDK 21 ───── JDK 22 ───── JDK 23 ───── JDK 24 ───── JDK 25 ───── JDK 26
-   │            │            │            │            │            │
-String     Unnamed    Implicit    String     Pattern      Primitive
-Templates  Variables  Classes     Templates  Matching   Patterns
-(撤回)      (正式)      (正式)      (预览)      (预览)        (预览)
+JDK 9 ───── JDK 15 ───── JDK 21 ───── JDK 22 ───── JDK 23 ───── JDK 26
+  │           │            │            │            │            │
+Compact    Text      String     Unnamed    Implicit    Primitive
+Strings    Blocks    Templates  Variables  Classes     Patterns
+(JEP 254) (JEP 378)  (JEP 430)   (JEP 456)   (JEP 477)   (JEP 530)
 ```
 
 ---
+
+## 字符串处理
+
+### Compact Strings (JDK 9)
+
+| JEP | 标题 | 作者 | 状态 |
+|-----|------|------|------|
+| [JEP 254](jep-254.md) | Compact Strings | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | ✅ 正式 |
+
+**核心改进**: 将 String 内部表示从 `char[]` 改为 `byte[]`，ASCII 字符串节省 50% 内存。
+
+### String Concatenation (JDK 9)
+
+| JEP | 标题 | 作者 | 状态 |
+|-----|------|------|------|
+| [JEP 280](jep-280.md) | Indify String Concatenation | Remi Forax, Aleksey Shipilev | ✅ 正式 |
+
+**核心改进**: 使用 `invokedynamic` 替代 `StringBuilder` 模式，为后续优化奠定基础。
+
+### Text Blocks (JDK 15)
+
+| JEP | 标题 | 作者 | 状态 |
+|-----|------|------|------|
+| [JEP 378](jep-378.md) | Text Blocks (Second Preview) | Jim Laskey | ✅ 正式 |
+
+**核心改进**: 多行字符串字面量语法 `"""..."""`。
+
+### String Templates (已撤回)
+
+| JEP | 标题 | 作者 | 状态 |
+|-----|------|------|------|
+| [JEP 430](jep-430.md) | String Templates (First Preview) | Jim Laskey | ⚠️ 已撤回 |
+
+**注意**: String Templates 在 JDK 23 前被撤回，参见 [JDK-8343684](https://bugs.openjdk.org/browse/JDK-8343684)
+
+---
+
+## 模式匹配
 
 ## String Templates
 
