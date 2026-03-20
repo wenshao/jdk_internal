@@ -1,6 +1,6 @@
 # API 框架
 
-标准库框架和工具类。
+> 集合框架、I/O 处理、日期时间、JDBC、日志、XML/JSON、异常处理
 
 [← 返回主题索引](../)
 
@@ -9,23 +9,29 @@
 ## 演进概览
 
 ```
-JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 11 ─── JDK 22 ─── JDK 26
-   │           │           │            │            │           │
- 集合框架    泛型       Stream      HTTP Client  Foreign     Stream
- I/O流      EnumSet/Map Optional    标准化      Memory API   Gatherers
- Date       NIO        java.time    Collections  Panama      (正式)
+JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 11 ─── JDK 21 ─── JDK 22 ─── JDK 24 ─── JDK 26
+   │           │           │            │            │            │           │
+ 集合框架    泛型       Stream      HTTP Client  Sequenced   Stream     Stream
+ I/O流      EnumSet/Map Optional    标准化     Collection Gatherers  增强
+ Date       NIO        java.time   Collections  (JEP 431)  (JEP 485)  (最新)
 ```
 
 ### 版本里程碑
 
-| 版本 | 主题 | 关键特性 |
-|------|------|----------|
-| **JDK 1.2** | 集合框架 | Collections Framework 引入 |
-| **JDK 5** | 类型安全 | 泛型、EnumSet/EnumMap、并发集合 |
-| **JDK 8** | 函数式 API | Stream API、Optional、java.time |
-| **JDK 11** | HTTP 标准化 | HTTP Client 正式版 |
-| **JDK 22** | 外部内存 | Foreign Memory API 正式 |
-| **JDK 26** | Stream 增强 | Stream Gatherers 正式 |
+| 版本 | 主题 | 关键特性 | JEP |
+|------|------|----------|-----|
+| **JDK 1.2** | 集合框架 | Collections Framework 引入 | - |
+| **JDK 1.4** | NIO | Buffer, Channel, Selector | JSR 51 |
+| **JDK 5** | 类型安全 | 泛型、EnumSet/EnumMap、并发集合 | JSR 14 |
+| **JDK 7** | NIO.2 | Path, Files, WatchService | JSR 203 |
+| **JDK 8** | 函数式 API | Stream API、Optional、java.time | JEP 107, JSR 310 |
+| **JDK 9** | 不可变集合 | List.of/Set.of/Map.of | - |
+| **JDK 11** | HTTP 标准化 | HTTP Client 正式版 | JEP 321 |
+| **JDK 16** | Stream 简化 | Stream.toList() | - |
+| **JDK 17** | 增强随机数 | RandomGenerator | JEP 356 |
+| **JDK 21** | 有序集合 | SequencedCollection | JEP 431 |
+| **JDK 22** | 外部内存 | Foreign Memory API 正式 | JEP 454 |
+| **JDK 24** | Stream 增强 | Stream Gatherers 正式 | JEP 485 |
 
 ---
 
@@ -33,7 +39,7 @@ JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 11 ─── JDK 22 ──
 
 ### [集合框架](collections/)
 
-Java 集合框架从 JDK 1.0 到现在的完整演进。
+Java 集合框架从 JDK 1.0 到 JDK 26 的完整演进。
 
 | 版本 | 主要变化 | JEP |
 |------|----------|-----|
@@ -44,9 +50,11 @@ Java 集合框架从 JDK 1.0 到现在的完整演进。
 | JDK 8 | Stream API | JEP 107 |
 | JDK 9 | List.of/Set.of/Map.of | - |
 | JDK 16 | Stream.toList() | - |
-| JDK 21 | Stream Gatherers (预览) | JEP 461 |
+| JDK 21 | SequencedCollection | JEP 431 |
+| JDK 22 | Stream Gatherers (预览) | JEP 461 |
+| JDK 24 | Stream Gatherers (正式) | JEP 485 |
 
-→ [集合框架时间线](collections/timeline.md)
+→ [集合框架文档](collections/)
 
 ### [I/O 处理](io/)
 
@@ -61,7 +69,7 @@ Java I/O 从传统 BIO 到 Foreign Memory Access 的演进。
 | JDK 11 | Files.readString/writeString | - |
 | JDK 22 | Foreign Memory Access | JEP 454 |
 
-→ [I/O 演进时间线](io/timeline.md)
+→ [I/O 演进文档](io/)
 
 ### [日期时间](datetime/)
 
@@ -75,7 +83,7 @@ java.time API 从旧 API 到现代日期时间处理的演进。
 | JDK 16 | Timeline Format | - |
 | JDK 21 | Date/Calendar 废弃 | - |
 
-→ [日期时间时间线](datetime/timeline.md)
+→ [日期时间文档](datetime/)
 
 ### [JDBC 数据库](jdbc/)
 
@@ -90,7 +98,7 @@ java.time API 从旧 API 到现代日期时间处理的演进。
 | JDK 11 | JDBC 4.3 | JSR 221 |
 | JDK 26 | JDBC 4.4 | JSR 221 |
 
-→ [JDBC 时间线](jdbc/timeline.md)
+→ [JDBC 文档](jdbc/)
 
 ### [日志框架](logging/)
 
@@ -106,7 +114,7 @@ java.time API 从旧 API 到现代日期时间处理的演进。
 | 2014 | Log4j 2.x | 重写版本 |
 | JDK 9 | System.Logger | 统一日志接口 |
 
-→ [日志框架时间线](logging/timeline.md)
+→ [日志框架文档](logging/)
 
 ### [XML/JSON 处理](xml-json/)
 
@@ -122,7 +130,7 @@ XML 和 JSON 处理从 DOM 到现代 API 的演进。
 | JDK 11 | JSON-P 1.1 | - |
 | JDK 21 | JSON-P 2.1 | - |
 
-→ [XML/JSON 时间线](xml-json/timeline.md)
+→ [XML/JSON 文档](xml-json/)
 
 ### [异常处理](exceptions/)
 
@@ -137,7 +145,7 @@ XML 和 JSON 处理从 DOM 到现代 API 的演进。
 | JDK 16 | 异常记录 SPI | 自定义异常处理 |
 | JDK 21 | 模式匹配异常 | instanceof with pattern |
 
-→ [异常处理时间线](exceptions/timeline.md)
+→ [异常处理文档](exceptions/)
 
 ---
 
@@ -169,25 +177,15 @@ XML 和 JSON 处理从 DOM 到现代 API 的演进。
 | 4 | Claes Redestad | 8 | Oracle | 启动优化 |
 | 5 | Andrey Turbanov | 7 | Oracle | 格式化 |
 
-### 集合框架
+### 历史贡献者
 
 | 贡献者 | 公司/机构 | 主要贡献 |
 |--------|----------|----------|
 | **Joshua Bloch** | Google/Sun | Collections Framework 设计 |
 | **Doug Lea** | SUNY Oswego | 并发集合、ConcurrentHashMap |
 | **Guy Steele** | Oracle | Stream API (JEP 107) |
-
-### 日期时间
-
-| 贡献者 | 公司 | 主要贡献 |
-|--------|------|----------|
 | **Stephen Colebourne** | | JSR-310 (java.time) 规范负责人 |
 | **Michael Nascimento** | | ThreeTen Extra 扩展库 |
-
-### Foreign Memory API
-
-| 贡献者 | 公司 | 主要贡献 |
-|--------|------|----------|
 | **Maurizio Cimadamore** | Oracle | Panama/Foreign Memory (JEP 454) |
 | **Vladimir Ivanov** | Oracle | JIT 优化、Foreign 接口 |
 
@@ -205,14 +203,16 @@ src/java.base/share/classes/java/util/
 ├── stream/                      # Stream API
 │   ├── Stream.java
 │   ├── Collectors.java
-│   └── Gatherer.java            # JDK 26
+│   └── Gatherer.java            # JDK 24+
+├── ImmutableCollections.java    # 不可变集合
 └── zip/                         # ZIP 压缩
 
 src/java.base/share/classes/java/time/
 ├── LocalDate.java               # 本地日期
 ├── Instant.java                 # 时间戳
 ├── ZonedDateTime.java           # 时区日期时间
-└── format/                      # 格式化
+├── format/                      # 格式化
+└── chrono/                      # 日历系统
 
 src/java.base/share/classes/java/io/
 ├── InputStream.java             # 输入流
@@ -226,7 +226,6 @@ src/java.base/share/classes/nio/
 ├── file/                        # NIO.2 文件 API
 └── charset/                     # 字符集
 
-src/jdk.incubator.vector/        # Vector API (JDK 26 前)
 src/java.base/share/classes/jdk/internal/foreign/  # Foreign Memory 内部实现
 ```
 
@@ -236,6 +235,7 @@ src/java.base/share/classes/jdk/internal/foreign/  # Foreign Memory 内部实现
 |---|------|----------|
 | `java.util.ImmutableCollections` | 不可变集合内部实现 | 包级私有 |
 | `java.util.stream.Nodes` | Stream 中间节点 | 内部 |
+| `java.util.stream.Gatherers` | Gatherer 实现 | 公共 (JDK 24+) |
 | `jdk.internal.misc.Cleaner` | 清理器 (替代 finalize) | `@Restricted` |
 | `jdk.internal.foreign.MemoryImpl` | Foreign Memory 实现 | 内部 |
 
@@ -247,14 +247,13 @@ src/java.base/share/classes/jdk/internal/foreign/  # Foreign Memory 内部实现
 
 # I/O
 -XX:MaxDirectMemorySize=512m     # 直接内存大小 (用于 NIO)
--Dio.netty.leakDetection.level=simple # Netty 泄漏检测
+
+# Foreign Memory API
+-XX:MaxDirectMemorySize=1G       # 外部内存限制
 
 # 日期时间
 -Duser.timezone=Asia/Shanghai    # 默认时区
 -Djava.locale.providers=CLDR     # 使用 CLDR 本地化数据
-
-# Foreign Memory API
--XX:MaxDirectMemorySize=1G       # 外部内存限制
 ```
 
 ---
@@ -267,6 +266,7 @@ src/java.base/share/classes/jdk/internal/foreign/  # Foreign Memory 内部实现
 | Stream 操作符 | 50+ |
 | java.time 类 | 30+ |
 | I/O 实现类 | 60+ |
+| JDBC 驱动类型 | 20+ |
 
 ---
 
@@ -276,3 +276,23 @@ src/java.base/share/classes/jdk/internal/foreign/  # Foreign Memory 内部实现
 2. **进阶**: [I/O 处理](io/) → [异常处理](exceptions/) → 核心编程能力
 3. **深入**: [JDBC 数据库](jdbc/) → [XML/JSON](xml-json/) → 数据处理
 4. **实践**: [日志框架](logging/) → 生产必备
+
+---
+
+## 相关链接
+
+### 外部资源
+
+- [JEP 107: Stream API](https://openjdk.org/jeps/107)
+- [JEP 356: Enhanced Random Number Generator](https://openjdk.org/jeps/356)
+- [JEP 321: HTTP Client](https://openjdk.org/jeps/321)
+- [JEP 431: Sequenced Collections](https://openjdk.org/jeps/431)
+- [JEP 454: Foreign Function & Memory API](https://openjdk.org/jeps/454)
+- [JEP 485: Stream Gatherers](https://openjdk.org/jeps/485)
+- [JSR 310: Date and Time API](https://jcp.org/en/jsr/detail?id=310)
+- [JSR 203: More New I/O APIs](https://jcp.org/en/jsr/detail?id=203)
+- [JSR 221: JDBC 4.0](https://jcp.org/en/jsr/detail?id=221)
+
+---
+
+**最后更新**: 2026-03-20
