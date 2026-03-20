@@ -26,8 +26,11 @@ Yasumasa Suenaga 是 NTT DATA 的 Technical Lead，OpenJDK Reviewer 和 IcedTea 
 | **Twitter/X** | [@YaSuenag](https://twitter.com/YaSuenag) |
 | **LinkedIn** | [yasumasa-suenaga-3b9b87143](https://jp.linkedin.com/in/yasumasa-suenaga-3b9b87143) |
 | **SlideShare** | [@YaSuenag](https://www.slideshare.net/YaSuenag) |
-| **OpenJDK** | OpenJDK Reviewer |
+| **OpenJDK** | OpenJDK Reviewer, JDK 8u Committer |
 | **IcedTea** | Committer |
+| **HeapStats** | Chief Architect |
+
+> **数据来源**: [CFV JDK 8u Committer](https://mail.openjdk.org/archives/list/jdk8u-dev@openjdk.org/thread/GHMTUY6VW5ALZDH2SHEM3VSNDMB5RQDA/), [Java Day Tokyo Interview](https://www.youtube.com/watch?v=4cj7brOtYqg) |
 | **主要领域** | JFR, HotSpot JVM, Serviceability, jpackage |
 | **位置** | Japan (日本) |
 
