@@ -7,10 +7,10 @@
 ## 快速概览
 
 ```
-JDK 22 ───── JDK 23 ───── JDK 24 ───── JDK 26
-   │             │             │             │
- 预览版        第二次预览      正式版        增强
- JEP 459       JEP 466       JEP 484       优化
+JDK 21 ───── JDK 22 ───── JDK 23 ───── JDK 24 ───── JDK 26
+   │             │             │             │             │
+ 内部工具      预览版        第二次预览      正式版        增强
+ jdk.internal  JEP 459       JEP 466       JEP 484       持续优化
 ```
 
 ### 核心特性
@@ -30,9 +30,68 @@ JDK 22 ───── JDK 23 ───── JDK 24 ───── JDK 26
 
 ### [时间线](timeline.md)
 
-Class File API 从预览到正式的完整演进。
+Class File API 从内部工具到正式 API 的完整演进。
 
 → [查看时间线](timeline.md)
+
+### [内部实现](implementation.md)
+
+API 设计、源码结构、性能优化。
+
+→ [查看实现](implementation.md)
+
+---
+
+## 贡献者
+
+### JEP 负责人
+
+| JEP | 标题 | Author | Owner |
+|-----|------|--------|-------|
+| JEP 459 | Class-File API (First Preview) | Brian Goetz | Adam Sotona |
+| JEP 466 | Class-File API (Second Preview) | - | Adam Sotona |
+| JEP 484 | Class-File API (Final) | Brian Goetz | Adam Sotona |
+
+### Adam Sotona
+
+- **职位**: Principal Java Engineer, Oracle
+- **地点**: Prague, Czech Republic
+- **经验**: 25+ 年 Java 技术开发经验
+- **专长**: Java, RDF, SPARQL, Semantic Technologies, Linked Data, Big Data
+- **主要贡献**:
+  - Class File API 实现负责人 (JDK-8294982)
+  - 56+ 版本迭代 (v6 → v56)
+  - 从 `jdk.internal.classfile` 到标准 API 的迁移主导者
+
+> "The Class-File API provides a standard way to parse, generate, and transform Java class files, eventually replacing ASM within the JDK."
+> — Adam Sotona, RFR: 8294982
+
+### Brian Goetz
+
+- **职位**: Java Language Architect, Oracle
+- **角色**: JEP Author, API 设计指导
+- **主要贡献**:
+  - Class File API 整体架构设计
+  - 与 Lambda、Stream API 的一致性设计
+
+---
+
+## 关键 Bug 与 PR
+
+| Bug ID | 描述 | 状态 |
+|--------|------|------|
+| JDK-8294982 | Implementation of Classfile API | 已集成 |
+| JDK-8308753 | Class-File API transition to Preview | 已集成 |
+| JDK-8308754 | Class-File API (Preview) | 已集成 |
+| JDK-8334714 | Implement JEP 484: Class-File API | 已集成 |
+| JDK-8338981 | Access to private classes during transformation | 已集成 |
+
+### PR #10982
+
+- **标题**: Implementation of Classfile API
+- **链接**: https://git.openjdk.org/jdk/pull/10982
+- **范围**: API、测试、基准测试
+- **版本迭代**: 56+ 个版本
 
 ---
 
@@ -55,11 +114,13 @@ classModel.flags();                     // 状态
 // 遍历方法
 classModel.methods().forEach(method -> {
     System.out.println(method.methodName());
+    System.out.println(method.methodType().stringValue());
 });
 
 // 遍历字段
 classModel.fields().forEach(field -> {
     System.out.println(field.fieldName());
+    System.out.println(field.fieldType().stringValue());
 });
 ```
 
@@ -76,7 +137,7 @@ byte[] bytecode = ClassFile.of().build(
         classBuilder.withFlags(AccessFlag.PUBLIC);
         classBuilder.withMethod(
             "main",
-            MethodTypeDesc.of("(Ljava/lang/String;)V"),
+            MethodTypeDesc.of("([Ljava/lang/String;)V"),
             AccessFlag.PUBLIC | AccessFlag.STATIC,
             methodBuilder -> {
                 methodBuilder.withCode(
@@ -94,102 +155,41 @@ byte[] bytecode = ClassFile.of().build(
         );
     }
 );
+
+// 写入文件
+Files.write(Path.of("HelloWorld.class"), bytecode);
 ```
 
 ### 转换 Class 文件
 
 ```java
-// 添加日志到每个方法
+// 添加方法调用追踪
 byte[] transformed = ClassFile.of().transformClass(
     ClassFile.of().parse(originalBytes),
     ClassTransform.transformingMethods(
         (classBuilder, method, methodBuilder) -> {
             // 在每个方法开始添加日志
             methodBuilder.withCode(
-                codeBuilder -> codeBuilder
-                    .getstatic(ClassDesc.of("java/lang/System"), "out",
-                             ClassDesc.of("java/io/PrintStream"))
-                    .ldc("Method: " + method.methodName().stringValue())
-                    .invokevirtual(
-                        ClassDesc.of("java/io/PrintStream"),
-                        "println",
-                        MethodTypeDesc.of("(Ljava/lang/String;)V"))
-                    .with(method.code().orElseThrow())
+                codeBuilder -> {
+                    // 创建日志代码
+                    Label start = codeBuilder.newLabel();
+                    codeBuilder.labelBinding(start);
+
+                    codeBuilder.getstatic(ClassDesc.of("java/lang/System"), "out",
+                                          ClassDesc.of("java/io/PrintStream"))
+                               .ldc("Method: " + method.methodName().stringValue())
+                               .invokevirtual(
+                                   ClassDesc.of("java/io/PrintStream"),
+                                   "println",
+                                   MethodTypeDesc.of("(Ljava/lang/String;)V"));
+
+                    // 原方法体
+                    codeBuilder.with(method.code().orElseThrow());
+                }
             );
         }
     )
 );
-```
-
-### 注解处理
-
-```java
-// 查找所有带 @Deprecated 注解的方法
-ClassFile.of().parse(bytes)
-    .methods()
-    .forEach(method -> {
-        boolean hasDeprecated = method.findAttribute(Attributes.deprecated())
-                                     .isPresent();
-        if (hasDeprecated) {
-            System.out.println("Deprecated: " + method.methodName());
-        }
-    });
-```
-
----
-
-## 核心组件
-
-### ClassFile
-
-```java
-ClassFile cf = ClassFile.of();
-
-// 解析选项
-ClassFile cf = ClassFile.of(
-    ClassFile.ConstantPoolSharingOption.SHARED_POOL,
-    ClassFile.DeadCodeOption.KEEP_DEAD_CODE,
-    ClassFile.DebugElementsOption.KEEP_DEBUG_INFO
-);
-```
-
-### ClassModel
-
-```java
-ClassModel cm = cf.parse(bytes);
-
-cm.thisClass();              // 类名
-cm.superclass();             // 父类
-cm.interfaces();             // 接口列表
-cm.fields();                 // 字段
-cm.methods();                // 方法
-cm.attributes();             // 类属性
-cm.majorVersion();           // 主版本
-cm.minorVersion();           // 次版本
-```
-
-### CodeBuilder
-
-```java
-methodBuilder.withCode(codeBuilder -> {
-    // 加载指令
-    codeBuilder.aload(0);           // 加载 this
-    codeBuilder.iload(1);           // 加载 int 参数
-    codeBuilder.ldc("constant");    // 加载常量
-
-    // 存储指令
-    codeBuilder.astore(0);          // 存储引用
-    codeBuilder.istore(1);          // 存储 int
-
-    // 数组指令
-    codeBuilder.aaload();           // 加载引用数组元素
-    codeBuilder.aastore();          // 存储引用数组元素
-
-    // 控制流
-    codeBuilder.ifnull(label);      // 条件跳转
-    codeBuilder.goto_(label);       // 无条件跳转
-    codeBuilder.return_();          // 返回 void
-});
 ```
 
 ---
@@ -198,11 +198,51 @@ methodBuilder.withCode(codeBuilder -> {
 
 | 特性 | Class File API | ASM |
 |------|----------------|-----|
-| 来源 | JDK 标准库 | 外部依赖 |
-| API 风格 | 流式函数式 | 访问者模式 |
-| 类型安全 | 编译时检查 | 运行时检查 |
-| 维护成本 | JDK 维护 | 社区维护 |
-| JDK 版本兼容 | 需要重新编译 | 单一 jar 支持多版本 |
+| **来源** | JDK 标准库 | 外部依赖 |
+| **许可证** | GPL + Classpath Exception | BSD |
+| **API 风格** | 流式函数式 | 访问者模式 |
+| **类型安全** | 编译时检查 | 运行时检查 |
+| **不可变性** | Model 不可变 | 可变 |
+| **维护** | Oracle/JDK 社区 | ObjectWeb |
+
+### 迁移示例
+
+```java
+// ASM 代码
+ClassReader cr = new ClassReader(bytes);
+ClassWriter cw = new ClassWriter(cr, 0);
+cr.accept(new ClassVisitor(Opcodes.ASM9, cw) {
+    @Override
+    public MethodVisitor visitMethod(int access, String name, String descriptor,
+                                     String signature, String[] exceptions) {
+        return new MethodVisitor(api, super.visitMethod(access, name, descriptor, signature, exceptions)) {
+            @Override
+            public void visitCode() {
+                // 插入代码
+                super.visitCode();
+                mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
+                mv.visitLdcInsn("Method: " + name);
+                mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
+            }
+        };
+    }
+}, 0);
+
+// Class File API 等价代码
+byte[] transformed = ClassFile.of().transformClass(
+    ClassFile.of().parse(bytes),
+    ClassTransform.transformingMethods((cb, m, mb) -> {
+        mb.withCode(code -> {
+            code.getstatic(ClassDesc.of("java/lang/System"), "out",
+                          ClassDesc.of("java/io/PrintStream"))
+               .ldc("Method: " + m.methodName().stringValue())
+               .invokevirtual(ClassDesc.of("java/io/PrintStream"), "println",
+                            MethodTypeDesc.of("(Ljava/lang/String;)V"))
+               .with(m.code().orElseThrow());
+        });
+    })
+);
+```
 
 ---
 
@@ -212,28 +252,52 @@ methodBuilder.withCode(codeBuilder -> {
 
 ```
 src/java.base/share/classes/java/lang/classfile/
-├── ClassFile.java                # 主入口
-├── ClassModel.java               # 类模型
-├── ClassBuilder.java             # 类构建器
-├── MethodModel.java              # 方法模型
-├── FieldModel.java               # 字段模型
-├── CodeBuilder.java              # 字节码构建器
-├── Instruction.java              # 指令接口
-├── attribute/                    # 属性
-│   ├── Attributes.java
+├── ClassFile.java                    # 主入口接口
+├── ClassModel.java                   # 类模型 (不可变)
+├── ClassBuilder.java                 # 类构建器
+├── MethodModel.java                  # 方法模型
+├── FieldModel.java                   # 字段模型
+├── CodeModel.java                    # 字节码模型
+├── CodeBuilder.java                  # 字节码构建器
+├── Instruction.java                  # 指令接口
+├── ClassFileFormat.java              # 常量定义
+├── attribute/                        # 属性
+│   ├── Attributes.java               # 属性工厂
+│   ├── CodeAttribute.java            # Code 属性
+│   ├── DeprecatedAttribute.java      # @Deprecated
+│   ├── SignatureAttribute.java       # 泛型签名
 │   └── ...
-├── constantpool/                 # 常量池
-│   ├── ConstantPoolBuilder.java
+├── constantpool/                     # 常量池
+│   ├── ConstantPool.java             # 常量池接口
+│   ├── ConstantPoolBuilder.java      # 常量池构建器
+│   ├── PoolEntry.java                # 常量池条目
 │   └── ...
-└── enums/                        # 枚举和标志
-    ├── AccessFlag.java
-    └── Opcode.java
+├── enums/                            # 枚举和标志
+│   ├── AccessFlag.java               # 访问标志
+│   ├── Opcode.java                   # 操作码
+│   ├── TypeKind.java                 # 类型种类
+│   └── ...
+└── instruction/                      # 指令
+    ├── ArrayLoadInstruction.java
+    ├── ArrayStoreInstruction.java
+    ├── ConstantInstruction.java
+    ├── FieldInstruction.java
+    ├── InvokeInstruction.java
+    └── ...
 
 src/java.base/share/classes/jdk/internal/classfile/
-└── impl/                         # 内部实现
-    ├── ClassImpl.java
-    ├── ClassBuilderImpl.java
-    ├── Util.java
+├── impl/                             # 内部实现
+│   ├── ClassImpl.java                # ClassModel 实现
+│   ├── ClassBuilderImpl.java         # ClassBuilder 实现
+│   ├── MethodImpl.java               # MethodModel 实现
+│   ├── CodeBuilderImpl.java          # CodeBuilder 实现
+│   ├── Util.java                     # 工具方法
+│   ├── SplitConstantPool.java        # 常量池处理
+│   ├── Verifier.java                 # 字节码验证
+│   └── ...
+└── instruction/                      # 内部指令实现
+    ├── BoundInstruction.java
+    ├── SimpleInstruction.java
     └── ...
 ```
 
@@ -244,16 +308,51 @@ src/java.base/share/classes/jdk/internal/classfile/
 | `jdk.internal.classfile.impl.ClassImpl` | ClassModel 实现 | 内部 |
 | `jdk.internal.classfile.impl.BufWriter` | 字节码写入器 | 内部 |
 | `jdk.internal.classfile.impl.Util` | 工具方法 | 内部 |
+| `jdk.internal.classfile.impl.DirectClassBuilder` | 直接类构建器 | 内部 |
+| `jdk.internal.classfile.impl.NonterminalCode` | 代码验证 | 内部 |
+
+---
+
+## 邮件列表讨论
+
+### RFR: JDK-8294982 (v56)
+
+**主题**: RFR: 8294982: Implementation of Classfile API [v56]
+
+> "This is the root PR for the Classfile API implementation, including comprehensive tests and benchmarks."
+> — Adam Sotona, build-dev@openjdk.org
+
+**讨论要点**:
+- 56 个版本迭代
+- 完整的测试覆盖
+- JMH 基准测试
+
+### RFR: JDK-8308753 (v2)
+
+**主题**: RFR: 8308753: Class-File API transition to Preview [v2]
+
+> "All JDK modules using the Classfile API are newly participating in the preview feature."
+> — Adam Sotona, compiler-dev@openjdk.org
+
+**变更内容**:
+- 从 `jdk.internal.classfile` 迁移到 `java.lang.classfile`
+- 所有使用该 API 的 JDK 模块启用预览
+- javac 相关修改
 
 ---
 
 ## VM 参数
 
 ```bash
-# Class File API 无需特殊 VM 参数
-# 但可以启用验证
+# 启用预览功能 (JDK 22-23)
+--enable-preview
+
+# 类加载日志
+-Xlog:class+load=info
+
+# 验证选项
 -XX:+VerifyAppCDS                 # 验证 AOT 编译的类
--Xlog:class+load=info             # 记录类加载
+-XX:+VerifyRecursive              # 递归验证
 ```
 
 ---
@@ -263,4 +362,7 @@ src/java.base/share/classes/jdk/internal/classfile/
 - [JEP 484: Class-File API](https://openjdk.org/jeps/484)
 - [JEP 466: Class-File API (Second Preview)](https://openjdk.org/jeps/466)
 - [JEP 459: Class-File API (First Preview)](https://openjdk.org/jeps/459)
-- [java.lang.classfile 包文档](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/classfile/package-summary.html)
+- [PR #10982: Implementation of Classfile API](https://git.openjdk.org/jdk/pull/10982)
+- [JDK-8294982: Classfile API Implementation](https://bugs.openjdk.org/browse/JDK-8294982)
+- [ClassFile API Documentation](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/classfile/package-summary.html)
+- [mail.openjdk.org: Class-File API Discussions](https://mail.openjdk.org/archives/list/compiler-dev@openjdk.org/)
