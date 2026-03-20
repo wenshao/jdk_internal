@@ -4,6 +4,59 @@
 
 ---
 
+## TL;DR 快速概览
+
+> 💡 **1 分钟了解核心要点**
+
+### 优化成果
+
+| 指标 | 原始 | 最终 | 提升 |
+|------|------|------|------|
+| 吞吐量 | ~2000 ops/ms | ~4000+ ops/ms | **+100%+** |
+| 函数调用 | 8 次 | 4 次 | -50% |
+| 内存访问 | 24+ 次 | 4 次 | -83% |
+| 分支预测 | 16+ 次 | 0 次 | 消除 |
+
+### 核心技术
+
+```
+查表法 ──────────────────────→ hex8 向量化 ─────────────────→ 内联优化
+   ↓                            ↓                              ↓
+HexDigits.put4()          Long.expand()            ByteArrayLittleEndian
+256 元素查找表              SIMD 风格并行              无查找表
+```
+
+### 时间线
+
+```
+2016 ──── 2020 ─────────── 2024 ─────────────────────── 2025
+ │         │                  │                              │
+适配       fromString        hex8 SIMD                  消除查表
+Compact   优化              向量运算                    (JDK-8353741)
+Strings
+```
+
+### 主要贡献者
+
+- **[Shaojin Wen (温绍锦)](../../by-contributor/profiles/shaojin-wen.md)** - hex8 算法、消除查找表
+- **Kieran Farrell** - UUIDv7、循环展开
+- **Aleksey Shipilev** - Compact Strings 适配
+- **Claes Redestad** - fromString 优化
+
+### 关键代码
+
+```java
+// 核心：8 个数字并行转 ASCII
+private static long hex8(long i) {
+    i = Long.expand(i, 0x0F0F_0F0F_0F0F_0F0FL);
+    long m = (i + 0x0606_0606_0606_0606L) & 0x1010_1010_1010_1010L;
+    return Long.reverseBytes(((m << 1) + (m >> 1) - (m >> 4))
+            + 0x3030_3030_3030_3030L + i);
+}
+```
+
+---
+
 ## 目录
 
 - [背景](#背景)
