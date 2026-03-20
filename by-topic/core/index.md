@@ -94,6 +94,25 @@ C1、C2、Graal JIT 编译器从 JDK 1.0 到 JDK 26 的完整演进。
 
 → [JIT 编译详情](jit/)
 
+### [Vector API (SIMD)](vector-api/)
+
+SIMD 向量化计算 API，从 JDK 16 开始孵化。
+
+| 版本 | JEP | 状态 |
+|------|-----|------|
+| JDK 16 | JEP 338 | 🥚 First Incubator |
+| JDK 17 | JEP 414 | 🥚 Second Incubator |
+| JDK 18 | JEP 417 | 🥚 Third Incubator |
+| JDK 19 | JEP 426 | 🥚 Fourth Incubator |
+| JDK 20 | JEP 448 | 🥚 Fifth Incubator |
+| JDK 21 | JEP 460 | 🥚 Sixth Incubator |
+| JDK 22-24 | - | 🥚 继续孵化 |
+| JDK 25+ | - | ⏳ 期望成为标准 API |
+
+**性能提升**: 2x-8x (取决于 CPU 向量宽度)
+
+→ [Vector API 详情](vector-api/) | [时间线](vector-api/timeline.md) | [使用指南](vector-api/usage.md)
+
 ---
 
 ## OpenJDK 重大项目
