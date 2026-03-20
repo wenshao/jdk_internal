@@ -1,92 +1,84 @@
 # Doug Simon
 
-> **Organization**: Oracle Labs
-> **Role**: GraalVM Lead
-> **GitHub**: [doug-simon](https://github.com/doug-simon)
+> **Oracle Labs**: GraalVM 技术负责人  
+> **活跃时间**: 2012–至今 (14 年+)  
+> **状态**: ✅ 活跃
+
+[← 返回贡献者索引](../)
 
 ---
 
-## 概述
-
-Doug Simon 是 Oracle Labs 的 **GraalVM 技术负责人**，专注于 **Graal 编译器**和 **Truffle 语言实现框架**。他是 GraalVM 项目的核心架构师之一。
-
----
-
-## 基本信息
+## 快速概览
 
 | 属性 | 值 |
 |------|-----|
-| **姓名** | Doug Simon |
-| **当前组织** | Oracle Labs |
-| **职位** | Senior Researcher |
-| **专长** | Graal Compiler, Truffle, Polyglot Runtime |
-| **GitHub** | [doug-simon](https://github.com/doug-simon) |
-| **JDK 26 贡献** | 8 commits (Graal) |
+| **组织** | Oracle Labs |
+| **角色** | GraalVM Lead |
+| **专长** | Graal 编译器、Truffle、多语言运行时 |
+| **GitHub** | [@doug-simon](https://github.com/doug-simon) |
+| **JDK 26 贡献** | 8 commits |
 
 ---
 
-## 核心技术贡献
+## 职业时间线
 
-### 1. Graal Compiler
-
-Doug Simon 是 Graal 编译器的核心开发者：
-- **Graal**: 基于 Java 的高性能 JIT 编译器
-- **Truffle**: 语言实现框架
-- **Sulong**: LLVM bitcode 执行引擎
-
-### 2. GraalVM
-
-- **Polyglot**: 多语言运行时
-- **Native Image**: AOT 编译
-- **Enterprise**: 企业级功能
+| 时间 | 事件 | 备注 |
+|------|------|------|
+| **2012–2017** | Graal 项目创始人 | 从研究到生产 |
+| **2014–2017** | JEP 243 (JVMCI) 主要作者 | 推动 Java 编译器集成 |
+| **2017–至今** | GraalVM 技术负责人 | CE/EE 发布 |
+| **2021–2023** | Native Image 重点开发 | 云原生转型 |
+| **2023–至今** | 团队缩减后继续领导 | 核心 Graal 开发 |
 
 ---
 
-## 技术专长
+## 核心贡献
 
-### 编译器技术
+### Graal 编译器
+- 基于 Java 的高性能 JIT 编译器
+- 可替代 HotSpot C2 编译器
+- 通过 JVMCI (JEP 243) 集成到 HotSpot
 
-- **Graal**: Java 写的 JIT 编译器
-- **Truffle**: AST 解释器框架
-- **Native Image**: 提前编译
+### GraalVM
+- Polyglot 多语言运行时
+- Native Image AOT 编译
+- 社区版/企业版架构
 
-### 多语言运行时
-
-- **Polyglot**: 多语言互操作
-- **Language Implementation**: 语言实现
-- **Interop**: 语言间互操作
+### Truffle 框架
+- AST 解释器框架
+- 自动优化动态语言
+- 支持 JavaScript、Python、Ruby 等
 
 ---
 
-## 研究成果
+## 技术愿景
 
-### 学术发表
+> *"一个虚拟机运行所有语言"*
 
-- **Dynamic Languages**: 动态语言优化
-- **Partial Evaluation**: 部分求值
-- **Type Specialization**: 类型特化
+Doug Simon 领导的 GraalVM 团队致力于构建统一的多语言运行时，通过 Truffle 框架简化语言实现，通过 Graal 编译器自动优化语言性能。
 
 ---
 
 ## 合作关系
 
-与以下 GraalVM 开发者合作：
-- **Thomas Würthinger**: GraalVM 创始人
-- **Christian Hagedorn**: Graal Compiler Developer
-- **Chris Thalinger**: Graal Developer
-- **Gilles Duboscq**: Graal Developer
+与以下开发者紧密合作：
+
+| 贡献者 | 角色 |
+|--------|------|
+| Thomas Wuerthinger | Truffle 创始人 |
+| Christian Wimmer | Graal 编译器优化 |
+| Gilles Duboscq | Truffle/Graal 开发 |
+| Tom Rodriguez | HotSpot 集成 |
 
 ---
 
 ## 相关链接
 
-### 官方资料
 - [GitHub: doug-simon](https://github.com/doug-simon)
-- [GraalVM Website](https://www.graalvm.org/)
+- [GraalVM 官网](https://www.graalvm.org/)
 - [Oracle Labs](https://labs.oracle.com/)
 
 ---
 
-**Sources**:
-- [GitHub: doug-simon](https://github.com/doug-simon)
-- [JDK 26 Top Contributors](./jdk26-top-contributors.md)
+**来源**: GitHub, JDK 26 贡献者统计  
+**最后更新**: 2026-03-21

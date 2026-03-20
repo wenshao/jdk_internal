@@ -16,9 +16,21 @@ Gilles Duboscq 是 Oracle Labs 的 **GraalVM 研究员**，专注于编译器优
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Gilles Duboscq |
+| **活跃时间** | 2012–Present (13+ 年) |
 | **当前组织** | Oracle Labs |
 | **专长** | Graal, Truffle, Compiler Optimization |
 | **JDK 26 贡献** | 3 commits (Graal) |
+| **活跃状态** | ✅ 活跃 |
+
+---
+
+## 职业时间线
+
+| 时间 | 事件 | 组织 | 备注 |
+|------|------|------|------|
+| **2012–2016** | 博士研究，Truffle 框架开发 | Oracle Labs / University | 博士论文 |
+| **2016–2020** | GraalVM 核心开发 | Oracle Labs | Truffle/Graal |
+| **2020–Present** | 编译器优化研究 | Oracle Labs | 持续开发 |
 
 ---
 

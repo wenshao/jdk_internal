@@ -16,10 +16,23 @@ Tom Rodriguez 是 Oracle Labs 的 **HotSpot 编译器专家**，专注于 C2 JIT
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Tom Rodriguez |
+| **活跃时间** | 2010–Present (15+ 年) |
 | **当前组织** | Oracle Labs |
 | **专长** | C2 JIT Compiler, HotSpot, Graal |
 | **OpenJDK** | [@never](https://openjdk.org/census#never) |
 | **JDK 26 贡献** | 3 commits (Graal) |
+| **活跃状态** | ✅ 活跃 |
+
+---
+
+## 职业时间线
+
+| 时间 | 事件 | 组织 | 备注 |
+|------|------|------|------|
+| **2010–2015** | C2 编译器核心开发 | Oracle | HotSpot 团队 |
+| **2015–2018** | JVMCI 集成，Graal 支持 | Oracle Labs | 桥梁角色 |
+| **2018–2022** | C2/Graal 协同优化 | Oracle Labs | 双编译器 |
+| **2022–Present** | HotSpot 编译器维护 | Oracle Labs | 持续开发 |
 
 ---
 

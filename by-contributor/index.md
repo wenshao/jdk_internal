@@ -2,6 +2,29 @@
 
 了解 OpenJDK 贡献者和他们的工作。
 
+> 💡 **提示**: 每个贡献者页面都包含活跃时间、职业时间线和贡献详情。
+
+---
+
+## 快速导航
+
+### 按活跃状态
+
+| 状态 | 说明 | 代表贡献者 |
+|------|------|------------|
+| ✅ **活跃** | 2025-2026 有提交 | Doug Simon, Thomas Schatzl, Phil Race |
+| ⚠️ **减少参与** | 2022 年后减少 | Thomas Wuerthinger |
+
+### GraalVM 团队
+
+| 贡献者 | 活跃时间 | 状态 | 档案 |
+|--------|----------|------|------|
+| Doug Simon | 2012–至今 | ✅ | [详情](profiles/doug-simon.md) |
+| Thomas Wuerthinger | 2010–至今 | ⚠️ | [详情](profiles/thomas-wuerthinger.md) |
+| Christian Wimmer | 2011–至今 | ✅ | [详情](profiles/christian-wimmer.md) |
+| Gilles Duboscq | 2012–至今 | ✅ | [详情](profiles/gilles-duboscq.md) |
+| Tom Rodriguez | 2010–至今 | ✅ | [详情](profiles/tom-rodriguez.md) |
+
 ---
 
 ## 浏览方式
