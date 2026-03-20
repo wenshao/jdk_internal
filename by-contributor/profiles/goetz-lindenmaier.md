@@ -1,6 +1,6 @@
-# Goetz Lindenmaier
+# Goetz Lindenmaier (Götz Lindenmaier)
 
-> HotSpot Runtime 专家，IBM JVM 团队核心成员
+> SAP OpenJDK Lead Maintainer，IA64 JVM Port 专家
 
 ---
 
@@ -8,16 +8,30 @@
 
 | 属性 | 值 |
 |------|-----|
-| **姓名** | Goetz Lindenmaier |
-| **组织** | [IBM](/contributors/orgs/ibm.md) |
+| **姓名** | Götz Lindenmaier (Goetz Lindenmaier) |
+| **当前组织** | SAP |
+| **职位** | Lead Maintainer, OpenJDK at SAP |
 | **位置** | 德国 |
 | **GitHub** | [@goetzk](https://github.com/goetzk) |
 | **OpenJDK** | [@goetz](https://openjdk.org/census#goetz) |
-| **角色** | Reviewer |
-| **主要领域** | HotSpot Runtime, GC, 线程系统 |
-| **活跃时间** | 2014 - 至今 |
+| **角色** | JDK Reviewer (JDK 9), Lead Maintainer |
+| **主要领域** | HotSpot Runtime, GC, IA64 Port, SapMachine |
+| **活跃时间** | 2010+ - 至今 |
 
-> **数据调查时间**: 2026-03-20
+> **数据来源**: [JCP Executive Profile](https://jcp.org/en/press/news/ec-feature), [CFV jdk9 Reviewer](https://mail.openjdk.org/archives/list/jdk9-dev@openjdk.org/message/FCO5VSP5HGYANFJ6KFCIFEQBJFUHMRR5/), [SAP Open Source 2024](https://community.sap.com/t5/technology-blog-posts-by-sap/a-year-of-collaboration-and-innovation-sap-open-source-report-2024/ba-p/13978967)
+
+---
+
+## 职业时间线
+
+| 年份 | 事件 | 详情 |
+|------|------|------|
+| **~2000s** | 加入 SAP | SAP Java Virtual Machine Team |
+| **~2005-2010** | IA64 Port | 实现和调优 SAP JVM 的 IA64 移植 |
+| **2010+** | SAP > 10年 | 在 SAP 工作超过 10 年 |
+| **2014-2017** | JDK 9 Reviewer | 提名为 jdk9 Reviewer |
+| **2019** | SapMachine Wiki | 编辑 SapMachine 与 OpenJDK 差异文档 |
+| **2024** | Lead Maintainer | SAP Open Source Report 2024 列为 OpenJDK Lead Maintainer |
 
 ---
 
@@ -151,6 +165,10 @@ Goetz Lindenmaier 是 HotSpot Runtime 子系统的核心维护者，专注于 JV
 |------|------|
 | **GitHub** | [@goetzk](https://github.com/goetzk) |
 | **OpenJDK Census** | [goetz](https://openjdk.org/census#goetz) |
+| **CFV: jdk9 Reviewer** | [2017 Nomination](https://mail.openjdk.org/archives/list/jdk9-dev@openjdk.org/message/FCO5VSP5HGYANFJ6KFCIFEQBJFUHMRR5/) |
+| **SapMachine Wiki** | [Differences](https://github.com/SAP/SapMachine/wiki/Differences-between-SapMachine-and-OpenJDK) |
+| **JCP Profile** | [Executive Bio](https://jcp.org/en/press/news/ec-feature) |
+| **SAP OS Report 2024** | [Lead Maintainer](https://community.sap.com/t5/technology-blog-posts-by-sap/a-year-of-collaboration-and-innovation-sap-open-source-report-2024/ba-p/13978967) |
 | **邮件列表** | [goetz@openjdk.org](mailto:goetz@openjdk.org) |
 
 ---
