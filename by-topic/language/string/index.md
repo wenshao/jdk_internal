@@ -6,6 +6,49 @@
 
 ---
 
+## TL;DR 快速概览
+
+> 💡 **1 分钟掌握 String 关键特性**
+
+### 核心特性
+
+| 特性 | 版本 | 内存/性能 | 说明 |
+|------|------|----------|------|
+| **Compact Strings** | JDK 9 | 内存 -50% | ASCII 用 byte[] |
+| **String Deduplication** | JDK 8u20 | 内存 10-40% | GC 自动去重 |
+| **Text Blocks** | JDK 15 | - | 多行字符串 `"""..."""` |
+| **isBlank()/strip()** | JDK 11 | - | 空白处理 |
+| **repeat()** | JDK 11 | - | 重复字符串 |
+
+### 字符串拼接最佳实践
+
+```java
+// ✅ 简单拼接 (编译器优化)
+String s = "Hello " + name;
+
+// ✅ 循环拼接
+StringBuilder sb = new StringBuilder();
+for (String s : list) sb.append(s);
+
+// ✅ 格式化
+String s = String.format("Hello %s", name);
+
+// ❌ 循环中用 +
+String s = "";
+for (String s : list) { s = s + item; }  // 性能差
+```
+
+### 性能提示
+
+| 场景 | 推荐 | 避免 |
+|------|------|------|
+| 大量拼接 | StringBuilder | `+` 操作符 |
+| 常量字符串 | `intern()` 或 直接使用 | 重复创建 |
+| 编译时确定 | `+` 拼接 | StringBuilder |
+| 运行时拼接 | StringBuilder | - |
+
+---
+
 ## 快速概览
 
 ```

@@ -6,6 +6,74 @@
 
 ---
 
+## TL;DR 快速概览
+
+> 💡 **1 分钟掌握 Lambda**
+
+### 语法速查
+
+```java
+// Lambda 语法
+() -> expression              // 无参数，单表达式
+x -> x * 2                    // 单参数，单表达式
+(x, y) -> x + y              // 多参数，单表达式
+(x, y) -> { return x + y; }   // 多语句，需要 return
+
+// 方法引用
+String::new                  // 构造器引用
+System.out::println          // 实例方法引用
+String::toUpperCase          // 静态方法引用
+ArrayList::new               // 构造器引用
+```
+
+### 常用函数式接口
+
+```java
+// Predicate<T> - 断言
+Predicate<String> isEmpty = s -> s.isEmpty();
+Predicate<String> notEmpty = isEmpty.negate();
+
+// Function<T, R> - 函数
+Function<String, Integer> len = s -> s.length();
+
+// Consumer<T> - 消费者
+Consumer<String> print = System.out::println;
+
+// Supplier<T> - 供应者
+Supplier<String> get = () -> "Hello";
+
+// BinaryOperator<T> - 二元操作
+BinaryOperator<Integer> add = Integer::sum;
+```
+
+### Stream 常用操作
+
+```java
+list.stream()
+   .filter(x -> x > 0)           // 过滤
+   .map(String::toUpperCase)      // 转换
+   .distinct()                    // 去重
+   .limit(10)                     // 限制
+   .collect(Collectors.toList()); // 收集
+```
+
+### Lambda vs 匿名类
+
+```java
+// 之前: 匿名类
+button.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        System.out.println("Clicked");
+    }
+});
+
+// 之后: Lambda
+button.addActionListener(e -> System.out.println("Clicked"));
+```
+
+---
+
 ## 快速概览
 
 ```

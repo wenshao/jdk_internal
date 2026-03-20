@@ -6,6 +6,64 @@
 
 ---
 
+## TL;DR 快速概览
+
+> 💡 **1 分钟了解 Java 性能优化**
+
+### 快速决策树
+
+```
+性能问题？
+  │
+  ├─ 启动慢 → 检查分层编译、类加载
+  │
+  ├─ 内存高 → 检查 GC、内存泄漏
+  │
+  ├─ CPU 高 → 检查算法、锁竞争
+  │
+  └─ 响应慢 → 检查 GC 停顿、I/O 阻塞
+```
+
+### 常用 VM 参数
+
+```bash
+# 堆内存设置
+-Xms2g -Xmx2g
+
+# GC 选择 (JDK 17+)
+-XX:+UseZGC                    # 低延迟
+-XX:+UseG1GC                   # 通用
+
+# 性能调优
+-XX:+UnlockDiagnosticVMOptions
+-XX:+PrintGCDetails
+-XX:+PrintCompilation
+-XX:+PrintAssembly
+
+# JFR 记录
+-XX:StartFlightRecording=dump.jfr
+```
+
+### 性能工具
+
+| 工具 | 用途 | 命令 |
+|------|------|------|
+| **JFR** | 生产监控 | `-XX:StartFlightRecording` |
+| **JMC** | JVM 分析 | `jmc` |
+| **JHSDB** | 热点调试 | `jhsdb` |
+| **VisualVM** | 性能分析 | `visualvm` |
+
+### 优化方向
+
+| 问题 | 检查工具 | 解决方案 |
+|------|----------|----------|
+| GC 频繁 | JFR GC 日志 | 调整堆大小、切换 GC |
+| CPU 高 | JFR CPU 采样 | 优化算法、使用并行流 |
+| 内存泄漏 | JFR 内存 | Heap Dump 分析 |
+| 锁竞争 | JFR 线程 | 优化锁粒度 |
+
+---
+
 ## 快速概览
 
 ```

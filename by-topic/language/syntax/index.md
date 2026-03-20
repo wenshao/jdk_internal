@@ -6,6 +6,59 @@
 
 ---
 
+## TL;DR 快速概览
+
+> 💡 **1 分钟掌握 Java 语法演进**
+
+### 语法速查
+
+```java
+// 泛型 (JDK 5+)
+List<String> list = new ArrayList<>();
+Map<String, Integer> map = new HashMap<>();
+
+// 枚举 (JDK 5+)
+enum Status { PENDING, RUNNING, COMPLETED }
+
+// 变长参数 (JDK 5+)
+void varargs(String... args) { }
+
+// Diamond (JDK 7+)
+List<String> list = new ArrayList<>();
+
+// Lambda (JDK 8+)
+Runnable r = () -> System.out.println("Hello");
+
+// 方法引用 (JDK 8+)
+list.forEach(System.out::println);
+
+// var 类型推断 (JDK 10+)
+var name = "Alice";  // 推断为 String
+
+// Records (JDK 16+)
+record Point(int x, int y) { }
+
+// 模式匹配 (JDK 21+)
+if (obj instanceof String s) { }
+
+// Switch 表达式 (JDK 14+)
+int result = switch (day) {
+    case MONDAY, FRIDAY -> 1;
+    default -> 0;
+};
+```
+
+### 关键版本选择
+
+| JDK | 新增特性 | 推荐 |
+|-----|----------|------|
+| **8** | Lambda, Stream | 函数式编程 |
+| **11** | var, G1 GC | LTS (至 2026) |
+| **17** | Record, Sealed Class | LTS (至 2029) |
+| **21** | Pattern Matching, Virtual Threads | **当前 LTS** |
+
+---
+
 ## 快速概览
 
 ```

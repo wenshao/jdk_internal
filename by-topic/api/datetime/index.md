@@ -6,6 +6,50 @@
 
 ---
 
+## 快速概览
+
+```
+JDK 1.0 ── JDK 1.1 ── JDK 5 ── JDK 8 ── JDK 21 ── JDK 23 ── JDK 24
+   │         │        │        │        │        │        │
+Date      Calendar  Scanner java.time Date/    DateTime  Decimal
+(毫秒)    (日历)   (格式) (JSR 310) Calendar  Helper   Digits
+                                    Deprecated 优化    查找表
+```
+
+### 核心演进
+
+| 版本 | 特性 | 说明 | JSR |
+|------|------|------|-----|
+| **JDK 1.0** | Date | 基础日期类 (毫秒精度) | - |
+| **JDK 1.1** | Calendar | 日历类, SimpleDateFormat | - |
+| **JDK 5** | Scanner | 简化输入/格式化 | - |
+| **JDK 8** | java.time | 现代日期时间 API | JSR 310 |
+| **JDK 21** | Date/Calendar Deprecated | 标记废弃 | - |
+| **JDK 23** | DateTimeHelper | 内部格式化工具 | - |
+| **JDK 24** | DecimalDigits | 查找表优化 | - |
+
+### API 选择指南
+
+| 需求 | 推荐类 | 示例 |
+|------|--------|------|
+| 仅日期 | `LocalDate` | `2024-03-20` |
+| 仅时间 | `LocalTime` | `10:30:45` |
+| 日期时间 (无时区) | `LocalDateTime` | `2024-03-20T10:30:45` |
+| 时间戳 | `Instant` | UTC 时间戳 |
+| 带时区 | `ZonedDateTime` | `2024-03-20T10:30+08:00[Asia/Shanghai]` |
+| 时间段 | `Duration` | `PT2H30M` (2小时30分) |
+| 日期段 | `Period` | `P2M` (2个月) |
+
+### 性能对比 (JDK 23-24 优化)
+
+| 操作 | JDK 21 | JDK 24 | 提升 |
+|------|--------|--------|------|
+| LocalDate.toString | 45 ns | 35 ns | **+22%** |
+| LocalTime.toString | 38 ns | 30 ns | **+21%** |
+| LocalDateTime.toString | 55 ns | 42 ns | **+24%** |
+
+---
+
 ## 核心源码位置
 
 ### java.time 包结构
