@@ -653,6 +653,7 @@ src/hotspot/share/gc/
 - [时间线](timeline.md) - 完整版本演进历史
 - [内部实现](implementation.md) - Compact Strings、StringLatin1、StringUTF16
 - [性能优化](optimization.md) - String Deduplication、VM 调优参数
+- [UUID.toString() 优化](uuid-toString-optimization.md) - 从查表法到 SIMD 向量运算 (JDK-8353741)
 
 ### 相关主题
 
