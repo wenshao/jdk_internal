@@ -1,6 +1,6 @@
 # Andrew Dinn
 
-> AArch64 架构专家，Amazon Corretto 团队核心成员
+> AArch64 架构专家，Red Hat 杰出工程师，JBoss Byteman 项目负责人
 
 ---
 
@@ -9,15 +9,16 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Andrew Dinn |
-| **组织** | [Amazon](/contributors/orgs/amazon.md) |
+| **当前组织** | Red Hat (IBM) |
+| **职位** | Distinguished Engineer |
 | **位置** | 英国 |
-| **GitHub** | [@earthling-amzn](https://github.com/earthling-amzn) |
+| **GitHub** | [@adinn](https://github.com/adinn) |
 | **OpenJDK** | [@adinn](https://openjdk.org/census#adinn) |
-| **角色** | Reviewer |
-| **主要领域** | AArch64 架构，ARM 优化，HotSpot Runtime |
-| **活跃时间** | 2018 - 至今 |
+| **角色** | JDK Reviewer (JDK 10, 2017) |
+| **主要领域** | AArch64 架构，ARM 优化，HotSpot Runtime，Byteman |
+| **活跃时间** | 2017 - 至今 |
 
-> **数据调查时间**: 2026-03-20
+> **数据来源**: [Red Hat Developer](https://developers.redhat.com/author/andrew-dinn), [CFV JDK 10 Reviewer](https://mail.openjdk.org/pipermail/jdk10-dev/2017-May/000210.html)
 
 ---
 
@@ -40,18 +41,65 @@
 
 ---
 
+## 项目负责人
+
+### JBoss Byteman
+
+**项目**: JBoss Byteman - Java 运行时测试和诊断工具
+
+- **角色**: Project Lead
+- **功能**: 运行时 Java 代码注入、测试、故障排除
+- **用途**: 在不修改源代码的情况下动态注入代码进行测试和诊断
+
+---
+
+## 演讲和会议
+
+Andrew Dinn 经常在各大 Java 会议发表演讲：
+
+| 会议 | 主题 |
+|------|------|
+| **FOSDEM** | Static Java, GraalVM Native |
+| **JokerConf** | What Lies Beneath: A tour of the dark gritty underbelly of OpenJDK |
+| **JUG Events** | Native images as the future for Java |
+
+### 演讲视频
+
+- **Static Java, GraalVM Native and OpenJDK**: [YouTube](https://www.youtube.com/watch?v=QUbA4tcYrTM)
+
+---
+
 ## 贡献时间线
 
 ```
-2018: ████████████ 开始参与 OpenJDK
-2019: ████████████████████ AArch64 优化
-2020: ████████████████████████ 成为 Reviewer
+2017: ████████████ JDK 10 Reviewer 提名
+2018: ████████████████████ AArch64 优化继续
+2019: ████████████████████████ Red Hat ARM 移植历史贡献
+2020: ████████████████████████████ AArch64 基础设施
 2021: ██████████████████████████ ARM SVE 支持
 2022: ████████████████████████████ AArch64 性能优化
-2023: ████████████████████████████ Corretto 集成
-2024: ████████████████████████████ AArch64 向量指令
+2023: ████████████████████████████ Project Leyden 贡献
+2024: ████████████████████████████ GraalVM Native 相关工作
 2025: ████████████████████████████ 持续贡献
 ```
+
+---
+
+## 职业历史
+
+### Red Hat / IBM
+
+| 时间段 | 角色 | 职位 |
+|--------|------|------|
+| 2017-至今 | Red Hat | Distinguished Engineer |
+| 2019-至今 | IBM OpenJDK Team | Java Platform Team Member |
+
+### 关键成就
+
+- **OpenJDK Project Reviewer**: JDK 10 Reviewer (2017)
+- **JBoss Byteman**: Project Lead
+- **GraalVM Project**: Contributor
+- **Project Leyden**: 参与改善 Java 启动时间
 
 ---
 
@@ -145,18 +193,30 @@ Andrew Dinn 是 OpenJDK 中 AArch64 移植的核心维护者，专注于 ARM 架
 
 | 类型 | 链接 |
 |------|------|
-| **GitHub** | [@earthling-amzn](https://github.com/earthling-amzn) |
+| **GitHub** | [@adinn](https://github.com/adinn) |
 | **OpenJDK Census** | [adinn](https://openjdk.org/census#adinn) |
-| **邮件列表** | [adinn@openjdk.org](mailto:adinn@openjdk.org) |
+| **Red Hat Developer** | [Andrew Dinn](https://developers.redhat.com/author/andrew-dinn) |
+| **邮件列表** | [adinn@redhat.com](mailto:adinn@redhat.com) |
+| **JBoss Byteman** | [Project Page](https://github.com/bytemanproject/byteman) |
 
 ---
 
 ## 相关链接
 
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20adinn)
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=earthling-amzn)
-- [Amazon Corretto](https://aws.amazon.com/corretto/)
+- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=adinn)
+- [Red Hat ARM Porting History](https://developers.redhat.com/blog/2021/02/01/how-red-hat-ported-openjdk-to-64-bit-arm-a-community-history/)
+- [CFV: JDK 10 Reviewer](https://mail.openjdk.org/pipermail/jdk10-dev/2017-May/000210.html)
 
 ---
 
-> **注**: 此档案基于公开信息创建，具体数据可能需要进一步验证和补充。
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-20
+> **更新内容**:
+> - 修正组织归属: Amazon → Red Hat
+> - 添加职位: Distinguished Engineer
+> - 添加 JBoss Byteman Project Lead 身份
+> - 添加 JDK 10 Reviewer CFV 提名信息 (2017)
+> - 添加演讲和会议信息
+> - 修正 GitHub 用户名: earthling-amzn → adinn
+> - 添加 GraalVM 和 Project Leyden 相关工作
