@@ -1,6 +1,6 @@
 # Erik Joelsson
 
-> 构建系统专家，SAP 构建和测试框架核心贡献者
+> 构建系统专家，Oracle 构建基础设施核心贡献者
 
 ---
 
@@ -9,15 +9,28 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Erik Joelsson |
-| **组织** | [SAP](/contributors/orgs/sap.md) |
-| **位置** | 瑞典 |
+| **当前组织** | Oracle |
+| **位置** | Stockholm, Sweden |
 | **GitHub** | [@eirbjo](https://github.com/eirbjo) |
+| **Email** | erik.joelsson@oracle.com |
 | **OpenJDK** | [@erikj](https://openjdk.org/census#erikj) |
-| **角色** | Committer |
+| **角色** | build-infra Committer |
 | **主要领域** | 构建系统，测试框架，跨平台构建 |
-| **活跃时间** | 2016 - 至今 |
+| **活跃时间** | 2011+ - 至今 |
 
-> **数据调查时间**: 2026-03-20
+> **数据来源**: [CFV build-infra Committer](https://mail.openjdk.org/archives/list/build-infra-dev@openjdk.org/message/7KVZVKLJL4GLKTHNDEQDT475DCJOPFHL/), [build-dev mailing list](https://mail.openjdk.org/archives/list/build-dev@openjdk.org/)
+
+---
+
+## 职业时间线
+
+| 年份 | 事件 | 详情 |
+|------|------|------|
+| **2011+** | Oracle | 开始参与 OpenJDK 构建 |
+| **2011-2013** | JDK 7/8 | 构建系统改进 |
+| **2014-2017** | JDK 9 | MSYS2 支持，构建平台升级 |
+| **~2017** | build-infra Committer | 提名为 build-infra Committer |
+| **至今** | Oracle | 持续贡献构建基础设施 |
 
 ---
 
@@ -149,6 +162,7 @@ Erik Joelsson 是 OpenJDK 构建系统和测试框架的核心贡献者，专注
 |------|------|
 | **GitHub** | [@eirbjo](https://github.com/eirbjo) |
 | **OpenJDK Census** | [erikj](https://openjdk.org/census#erikj) |
+| **CFV: build-infra Committer** | [Nomination](https://mail.openjdk.org/archives/list/build-infra-dev@openjdk.org/message/7KVZVKLJL4GLKTHNDEQDT475DCJOPFHL/) |
 | **邮件列表** | [erikj@openjdk.org](mailto:erikj@openjdk.org) |
 
 ---
