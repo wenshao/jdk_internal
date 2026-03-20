@@ -1,9 +1,6 @@
-# Justin Lu
+# Justin Lu (陆鸣)
 
-> **GitHub**: [@justin-lu](https://github.com/justin-lu)
-> **LinkedIn**: [Justin Lu](https://www.linkedin.com/in/justin-c-lu)
-> **Email**: justin.curtis.lu@gmail.com
-> **Organization**: Oracle
+> Oracle Software Engineer | JDK Committer | i18n/L10n 专家
 
 ---
 
@@ -17,18 +14,19 @@ Justin Lu 是 Oracle 的 Software Engineer，专注于 Java 核心库开发，�
 
 | Attribute | Value |
 |-----------|-------|
-| **Name** | Justin Lu |
+| **姓名** | Justin Lu (陆鸣) |
 | **Current Organization** | Oracle |
 | **Position** | Software Engineer |
-| **Focus** | Java Core Libraries |
+| **教育背景** | UC Davis (Computer Science, 2018-2022) |
+| **GPA** | 3.87 Major GPA |
 | **GitHub** | [@justin-lu](https://github.com/justin-lu) |
 | **LinkedIn** | [justin-c-lu](https://www.linkedin.com/in/justin-c-lu) |
 | **Email** | justin.curtis.lu@gmail.com |
 | **OpenJDK** | [@jlu](https://openjdk.org/census#jlu) |
-| **Role** | OpenJDK Member, JDK Reviewer |
+| **Role** | JDK Committer (2023-04), JDK Reviewer |
 | **Primary Areas** | Locale, Internationalization (i18n), NumberFormat, Currency |
 
-> **数据来源**: [LinkedIn](https://www.linkedin.com/in/justin-c-lu), [GitHub](https://github.com/justin-lu)
+> **数据来源**: [LinkedIn](https://www.linkedin.com/in/justin-c-lu), [CFV Committer](https://mail.openjdk.org/pipermail/jdk-dev/2023-April/007567.html)
 
 ## Contribution Overview
 
@@ -219,6 +217,19 @@ public static NumberFormat getPercentInstance(Locale inLocale) {
 }
 ```
 
+---
+
+## 职业时间线
+
+| 年份 | 事件 | 详情 |
+|------|------|------|
+| **2018-2022** | UC Davis | Computer Science 学士 (3.87 GPA) |
+| **2022** | 加入 Oracle | Software Engineer |
+| **2023-04** | JDK Committer | 提名为 JDK Committer |
+| **2023-至今** | i18n 核心贡献者 | Locale, NumberFormat, Currency 主要开发者 |
+
+---
+
 ## Development Style
 
 ### Code Quality Focus
@@ -247,3 +258,15 @@ public static NumberFormat getPercentInstance(Locale inLocale) {
 - [OpenJDK Profile](https://openjdk.org/people/jlu)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=jlu)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20jlu)
+- [CFV: JDK Committer](https://mail.openjdk.org/pipermail/jdk-dev/2023-April/007567.html)
+
+---
+
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-20
+> **更新内容**:
+> - 添加中文名 (陆鸣)
+> - 添加教育背景: UC Davis (2018-2022, CS, 3.87 GPA)
+> - 添加 JDK Committer 提名时间 (2023-04)
+> - 添加职业时间线
+> - 添加 CFV 链接
