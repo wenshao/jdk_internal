@@ -144,9 +144,36 @@
 
 ---
 
+## 其他知名华人 JVM 专家
+
+> 以下专家在 JVM 领域有重要影响力，但未在 `openjdk/jdk` 仓库有大量 Integrated PRs（可能通过其他渠道贡献或专注于商业 JVM）
+
+| 专家 | 领域 | 现任组织 | 简介 |
+|------|------|----------|------|
+| **Kris Mok** (RednaxelaFX) | HotSpot、编译器、JVM 优化 | Databricks | JVM 深度专家，曾任职 Azul Systems (Zing JVM)，专注于编译器和运行时优化。GitHub: [@RednaxelaFX](https://github.com/RednaxelaFX)，博客: [rednaxelafx.iteye.com](http://rednaxelafx.iteye.com) |
+| **Alex Blewitt** | JVM、Eclipse | Instagram | JVM 和 Eclipse 专家，著有 JVM 相关书籍。GitHub: [@AlBlue](https://github.com/AlBlue) |
+
+### Kris Mok (RednaxelaFX)
+
+Kris Mok 是华人 JVM 社区中最知名的技术专家之一：
+
+- **当前**: Databricks，专注于 Apache Spark 性能优化
+- **曾任**: Azul Systems，参与 Zing JVM 开发
+- **专长**: HotSpot JVM 内部机制、JIT 编译器、GC 优化
+- **开源项目**:
+  - [hotspot_evil](https://github.com/RednaxelaFX/hotspot_evil) - HotSpot JVM 工具集
+  - [ajvm](https://github.com/RednaxelaFX/ajvm) - 个人 JVM 实现
+  - [jvm.go](https://github.com/RednaxelaFX/jvm.go) - Go 语言实现的 JVM
+- **技术博客**: [rednaxelafx.iteye.com](http://rednaxelafx.iteye.com) - 大量 JVM 深度技术文章
+
+> **说明**: 以上专家的贡献主要通过商业 JVM (如 Azul Zing) 或其他开源项目，而非直接通过 OpenJDK 官方仓库。按照项目规范，仅统计 `openjdk/jdk` 的 Integrated PRs。
+
+---
+
 ## 相关链接
 
 - [OpenJDK 中国社区](https://openjdk.org/groups/china/)
 - [阿里巴巴 Dragonwell](https://github.com/alibaba/dragonwell8)
 - [龙芯 JDK](https://github.com/loongson/jdk)
 - [腾讯 Kona](https://github.com/Tencent/TencentKona-8)
+- [Azul Zing](https://www.azul.com/products/zing/) (商业 JVM)
