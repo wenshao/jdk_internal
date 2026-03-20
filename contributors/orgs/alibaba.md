@@ -156,7 +156,7 @@
 | JDK-8335252 | Formatter formatWith 优化 | [详情](../../by-pr/8335/8335252.md) |
 | JDK-8334328 | Formatter isFixed 优化 | [详情](../../by-pr/8334/8334328.md) |
 | JDK-8337168 | Formatter minIntegerDigits 优化 | [详情](../../by-pr/8337/8337168.md) |
-| JDK-8337167 | Formatter parse 优化 | [详情](../../by-pr/8337/8167.md) |
+| JDK-8337167 | Formatter parse 优化 | [详情](../../by-pr/8337/8337167.md) |
 | JDK-8316426 | HexFormat 实现 | [详情](../../by-pr/8316/8316426.md) |
 | JDK-8316704 | HexFormat fromHexDigit 实现 | [详情](../../by-pr/8316/8316704.md) |
 
