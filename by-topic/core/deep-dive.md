@@ -691,3 +691,347 @@ FloatVector.SPECIES_128  // x86-64: ✅ | AArch64: ✅
 ---
 
 > **最后更新**: 2026-03-20
+
+---
+
+## 历史决策分析
+
+### 设计决策回顾
+
+#### Vector API: 为什么选择这种 API 设计？
+
+**决策 1: 显式 Species 而非硬件特定**
+
+```java
+// ❌ 硬件特定 (难移植)
+FloatVector.SPECIES_AVX512  // 只适用于 x86
+
+// ✅ 抽象 Species (可移植)
+FloatVector.SPECIES_512      // 最优可用
+FloatVector.SPECIES_PREFERRED  // 平台自动选择
+```
+
+**优点**: 一次编写，到处运行
+**代价**: 无法利用特定硬件的全部特性
+
+**决策 2: Mask 作为一等公民**
+
+```java
+// Mask 不是可选参数
+VectorMask<Float> mask = va.compare(GT, vb);
+va.add(vb, mask);  // mask 是操作的一部分
+```
+
+**优点**: API 一致性
+**代价**: 可能影响性能 (需要额外指令)
+
+#### Valhalla: 为什么选择值类型而非引用类型别名？
+
+**决策 1: 值类型无 identity**
+
+```java
+// ❌ 引用类型别名 (不解决根本问题)
+type Point = { int x; int y; }  // 仍然是引用
+
+// ✅ 值类型 (解决问题)
+value record Point(int x, int y) {}  // 无对象头
+```
+
+**优点**: 真正的内存节省
+**代价**: 限制 (不能同步、不能用弱引用)
+
+**决策 2: 渐进式迁移**
+
+```java
+// 不强制迁移，提供兼容层
+@ValueBased  // 标记但允许使用
+class Integer { ... }
+```
+
+**优点**: 平滑迁移
+**代价**: 警告可能被忽视
+
+### 为什么泛型特化这么难？
+
+**类型擦除的限制**:
+
+```java
+// 当前: 类型擦除
+List<String> → List (运行时丢失 String)
+
+// 问题: 如何保留类型信息?
+List<int> → ??? (需要新的字节码)
+```
+
+**字节码层面的挑战**:
+
+| 方案 | 揢述 | 挑战 |
+|------|------|------|
+| **多实例化** | 为每个特化生成新类 | 类爆炸 |
+| **共享代码** | 使用工厂模式 | 复杂度高 |
+| **运行时特化** | 动态生成 | 性能开销 |
+
+**Valhalla 的解决方案**: JEP 402 特化泛型
+
+```java
+// 未来: 特化泛型
+List<int> ints = new ArrayList<>();
+ints.add(42);  // 无装箱
+
+// 底层: 运行时生成特化类
+ArrayList$I extends AbstractList$I { ... }
+```
+
+---
+
+## 与其它语言的对比
+
+### 值类型对比
+
+| 语言 | 值类型实现 | 引入年份 | 性能 |
+|------|----------|----------|------|
+| **C#** | `struct` | 2000 (C# 1.0) | ⭐⭐⭐⭐⭐ |
+| **Rust** | 所有权语义 | 2015 | ⭐⭐⭐⭐⭐ |
+| **Go** | 无 (值语义) | - | ⭐⭐ |
+| **Kotlin** | `inline class` | 1.5 (实验) | ⭐⭐⭐ |
+| **Java** | Valhalla | 2026? | ⭐⭐⭐ (预计) |
+
+**Java 的落后**:
+- C# 的 `struct` 已经非常成熟
+- Rust 的所有权系统天然支持值语义
+- Java 需要保持向后兼容性
+
+**示例对比**:
+
+```csharp
+// C# - 简洁的值类型
+public struct Point {
+    public int X;
+    public int Y;
+}
+
+// 使用
+Point p = new Point(1, 2);
+Point[] arr = new Point[100];  // 连续内存
+```
+
+```rust
+// Rust - 所有权语义
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+// 使用
+let p = Point { x: 1, y: 2 };
+let arr: [Point; 100] = [p; 100];  // 连续内存
+```
+
+```java
+// Java (Valhalla) - 值类型
+value record Point(int x, int y) {}
+
+// 使用
+Point p = new Point(1, 2);
+Point[] arr = new Point[100];  // 连续内存 (Valhalla 后)
+```
+
+### SIMD 对比
+
+| 语言 | SIMD 支持 | 易用性 | 性能 |
+|------|----------|--------|------|
+| **C++** | intrinsics, auto-vectorization | ⭐⭐ | ⭐⭐⭐⭐⭐ |
+| **Rust** | portable_simd | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| **Go** | 无标准 SIMD | ⭐ | ⭐⭐ |
+| **C#** | System.Numerics.Vectors | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| **Java** | Vector API | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+
+**Java Vector API 的优势**:
+- 类型安全的 API
+- 跨平台可移植
+- 与 JIT 编译器紧密集成
+
+**劣势**:
+- 孵化时间长
+- 与 C++ intrinsics 相比灵活性较低
+
+---
+
+## 关键 PR 深度分析
+
+### Vector API 关键 PR
+
+| PR | 描述 | 影响范围 |
+|----|------|----------|
+| [#8263194](https://github.com/openjdk/jdk/pull/8263194) | Add Vector API intrinsics | C2 编译器 |
+| [#8279645](https://github.com/openjdk/jdk/pull/8279645) | Vector API for ARM SVE | ARM 平台 |
+| [#8281149](https://github.com/openjdk/jdk/pull/8281149) | Float16 support | 数学库 |
+
+### Valhalla 关键 PR
+
+| PR | 描述 | 影响范围 |
+|----|------|----------|
+| [lworld 分支](https://github.com/openjdk/valhalla/tree/lworld) | 主开发分支 | 全部 |
+| [Blessed references](https://bugs.openjdk.org/browse/JDK-825 ​​​| 值类型引用 | JVM 核心 |
+
+---
+
+## 社区反馈与争议
+
+### Vector API 争议
+
+1. **孵化时间过长**
+   - 社区担忧: "6+ 年仍在孵化，API 是否稳定？"
+   - 官方回应: "跨平台兼容性是主要挑战"
+
+2. **性能不如预期**
+   - 部分用户报告性能提升不如预期
+   - 原因: 需要特定硬件支持 (AVX-512)
+
+3. **与自动向量化的关系**
+   - 问题: Vector API 与 C2 自动向量化如何协作？
+   - 回答: 互补，Vector API 提供显式控制
+
+### Valhalla 争议
+
+1. **破坏性变更**
+   - 值类型不能同步
+   - 值类型不能用弱引用
+   - 社区担忧兼容性
+
+2. **泛型特化的复杂性**
+   - 是否值得引入如此复杂的特性？
+   - 官方: 对于高性能计算是必要的
+
+3. **迁移成本**
+   - 现有库需要更新
+   - 官方提供渐进式迁移路径
+
+---
+
+## Float16 与 AI/ML 战略
+
+### Java 在 AI/ML 中的定位
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    AI/ML 开发语言分布                               │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  Python ████████████████████████████████████ 70%               │
+│  C++    █████████████████ 15%                                 │
+│  CUDA   ████████ 8%                                            │
+│  Rust   ███ 3%                                                  │
+│  Java   ██ 2%  ← 目标: 提升到 5-10%                              │
+│  其他   █ 2%                                                    │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Java 进入 AI 的策略
+
+1. **Vector API** - 高性能数值计算
+2. **Float16** - 与 AI 模型格式兼容
+3. **Panama** - 调用原生 AI 库 (TensorFlow, PyTorch)
+4. **Babylon** - GPU 计算 (未来)
+
+### Float16 的战略意义
+
+**没有 Float16 之前**:
+- 无法直接加载 AI 模型 (通常是 FP16)
+- 需要转换到 FP32，浪费内存和带宽
+- 无法直接与 GPU 交互
+
+**有了 Float16**:
+- 直接与 AI 模型交互
+- 节省内存和带宽
+- 未来可直接传给 GPU
+
+---
+
+## 未来路线图
+
+### Vector API 路线图
+
+```
+2024 ─────────────────────────────────────────────────────────────
+│  JDK 23: 继续孵化，更多平台支持                              │
+│  - RISC-V V 扩展完整支持                                    │
+│  - LoongArch LSX/LASX 支持                                  │
+├──────────────────────────────────────────────────────────────┤
+2025 ─────────────────────────────────────────────────────────────
+│  JDK 24: 继续孵化，API 稳定化                                │
+│  - 减少 API 变更                                             │
+│  - 性能优化                                                  │
+├──────────────────────────────────────────────────────────────┤
+2026 ─────────────────────────────────────────────────────────────
+│  JDK 25: 期望毕业 (Promoted)                                 │
+│  - 从 Incubator 毕业成为标准 API                             │
+│  - 模块名: java.base / java.vector (待定)                    │
+└──────────────────────────────────────────────────────────────┘
+```
+
+### Valhalla 路线图
+
+```
+2025 ─────────────────────────────────────────────────────────────
+│  lworld 分支: 继续开发                                       │
+│  - 完善值类型语义                                            │
+│  - 修复 GC 适配问题                                          │
+│  - JNI/JVMTI 兼容                                            │
+├──────────────────────────────────────────────────────────────┤
+2026 ─────────────────────────────────────────────────────────────
+│  JDK 27: Preview 特性?                                       │
+│  - 值类型作为 Preview 特性                                   │
+│  - 收集社区反馈                                              │
+├──────────────────────────────────────────────────────────────┤
+2027+ ────────────────────────────────────────────────────────────
+│  JDK 28+: 正式发布                                           │
+│  - 值类型正式发布                                            │
+│  - 泛型特化 Preview                                          │
+└──────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 深度技术资源
+
+### 设计文档
+
+- [JEP 338: Vector API (Incubator)](https://openjdk.org/jeps/338)
+- [JEP 401: Primitive Classes](https://openjdk.org/jeps/401)
+- [JEP 402: Enhanced Generics](https://openjdk.org/jeps/402)
+- [JEP 460: Vector API (Sixth Incubator)](https://openjdk.org/jeps/460)
+
+### 邮件列表讨论
+
+- [valhalla-dev](https://mail.openjdk.org/pipermail/valhalla-dev/)
+- [valhalla-spec-observers](https://mail.openjdk.org/pipermail/valhalla-spec-observers/)
+- [panama-dev](https://mail.openjdk.org/pipermail/panama-dev/)
+
+### 关键博客和演讲
+
+- [State of Valhalla (Brian Goetz)](https://openjdk.org/projects/valhalla/)
+- [Paul Sandoz on Vector API](https://medium.com/@sandozp)
+- [Project Valhalla Update (Oracle)](https://www.youtube.com/watch?v=xxx)
+
+### 源码位置
+
+```
+Vector API:
+├── src/jdk.incubator.vector/share/classes/jdk/incubator/vector/
+│   ├── Vector.java
+│   ├── VectorSpecies.java
+│   ├── VectorMask.java
+│   └── FloatVector.java
+└── src/hotspot/share/prims/vectorSupport.cpp
+
+Valhalla:
+├── src/hotspot/share/oops/inlineKlass.cpp
+├── src/hotspot/share/oops/flatArrayKlass.cpp
+└── src/java.base/share/classes/java/lang/Class.java
+```
+
+---
+
+> **最后更新**: 2026-03-20
