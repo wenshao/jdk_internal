@@ -226,11 +226,11 @@ JVM 参数、调优工具和监控技术从 JDK 1.0 到 JDK 26 的演进。
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
 | 1 | Albert Mingkun Yang | 681 | Oracle | G1 GC, 内存管理 |
-| 2 | Thomas Schatzl | 674 | Oracle | G1 GC 维护者 |
+| 2 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 674 | Oracle | G1 GC 维护者 |
 | 3 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 324 | Oracle | 性能基准, 内存 |
 | 4 | Zhengyu Gu | 252 | Oracle | JVM 运行时 |
-| 5 | Kim Barrett | 235 | Oracle | C++ 现代化 |
-| 6 | Stefan Karlsson | 229 | Oracle | 分代 ZGC (JEP 439) |
+| 5 | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | 235 | Oracle | C++ 现代化 |
+| 6 | [Stefan Karlsson](/by-contributor/profiles/stefan-karlsson.md) | 229 | Oracle | 分代 ZGC (JEP 439) |
 | 7 | Per Lidén | 198 | Oracle | ZGC 创始人 |
 | 8 | Roman Kennke | 163 | Red Hat | Shenandoah GC |
 | 9 | William Kemper | 112 | Red Hat | 分代 Shenandoah (JEP 429) |

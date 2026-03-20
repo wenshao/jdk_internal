@@ -447,11 +447,11 @@ java -XX:+UseShenandoahGC -jar app.jar
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
 | 1 | Albert Mingkun Yang | 681 | Oracle | G1 GC, 内存管理 |
-| 2 | Thomas Schatzl | 674 | Oracle | G1 GC 维护者 |
+| 2 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 674 | Oracle | G1 GC 维护者 |
 | 3 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 324 | Oracle | Shenandoah GC |
 | 4 | Zhengyu Gu | 252 | Oracle | Shenandoah 核心开发者 |
-| 5 | Kim Barrett | 235 | Oracle | C++ 现代化 |
-| 6 | Stefan Karlsson | 229 | Oracle | 分代 ZGC (JEP 439) |
+| 5 | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | 235 | Oracle | C++ 现代化 |
+| 6 | [Stefan Karlsson](/by-contributor/profiles/stefan-karlsson.md) | 229 | Oracle | 分代 ZGC (JEP 439) |
 | 7 | Per Lidén | 198 | Oracle | ZGC 创始人 |
 | 8 | Roman Kennke | 163 | Red Hat | Shenandoah 架构 |
 | 9 | William Kemper | 112 | Red Hat | 分代 Shenandoah (JEP 429) |
@@ -461,9 +461,9 @@ java -XX:+UseShenandoahGC -jar app.jar
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Thomas Schatzl | 600 | Oracle | G1 GC 维护者 |
+| 1 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 600 | Oracle | G1 GC 维护者 |
 | 2 | Albert Mingkun Yang | 202 | Oracle | G1 GC, 内存管理 |
-| 3 | Kim Barrett | 129 | Oracle | C++ 现代化 |
+| 3 | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | 129 | Oracle | C++ 现代化 |
 | 4 | Ivan Walulya | 83 | Oracle | G1 GC |
 | 5 | Stefan Karlsson | 75 | Oracle | 并发 GC |
 | 6 | Stefan Johansson | 56 | Oracle | G1 GC |
