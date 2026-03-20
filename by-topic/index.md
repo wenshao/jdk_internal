@@ -76,6 +76,17 @@ JVM、内存、性能、模块系统等底层技术。
 | [安全特性](security/security/) | 加密、TLS、后量子密码 | JDK 1.0 |
 | [国际化](security/i18n/) | Locale、ResourceBundle、Unicode | JDK 1.0 |
 
+### [平台特定](platform/)
+
+不同操作系统和容器环境的特定支持。
+
+| 主题 | 说明 | 首发版本 |
+|------|------|----------|
+| [Linux 平台](platform/linux/) | 容器支持、cgroup、性能调优 | JDK 1.0 |
+| [Windows 平台](platform/windows/) | 服务集成、注册表、部署 | JDK 1.0 |
+| [macOS 平台](platform/macos/) | Apple Silicon、Metal、公证 | JDK 1.0 |
+| [容器环境](platform/containers/) | Docker、Kubernetes、资源感知 | JDK 10 |
+
 ### [专题深入](net/)
 
 网络、I/O、加密、数学等核心技术深入讲解。
