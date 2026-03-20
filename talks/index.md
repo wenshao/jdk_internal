@@ -563,7 +563,6 @@
 | Valhalla | 值类型 | [Valhalla](../by-topic/core/valhalla/) |
 
 **本地资源**:
-- [贡献者档案](../by-contributor/profiles/tobias-hartmann.md)
 - [C2 编译器](../by-topic/core/jit/c2-phases.md)
 - [JIT 参数](../by-topic/core/jit/vm-parameters.md)
 - [组织: Oracle](../contributors/orgs/oracle.md)
@@ -578,7 +577,6 @@
 | 优化阶段 | IR | [C2](../by-topic/core/jit/c2-phases.md) |
 
 **本地资源**:
-- [贡献者档案](../by-contributor/profiles/christian-hagedorn.md)
 - [C2 编译器](../by-topic/core/jit/c2-phases.md)
 - [组织: Oracle](../contributors/orgs/oracle.md)
 
@@ -592,7 +590,6 @@
 | C2 编译器 | 实现 | [C2](../by-topic/core/jit/c2-phases.md) |
 
 **本地资源**:
-- [贡献者档案](../by-contributor/profiles/vladimir-kozlov.md)
 - [JIT 编译](../by-topic/core/jit/)
 - [C2 优化](../by-topic/core/jit/c2-phases.md)
 - [VM 参数](../by-topic/core/jit/vm-parameters.md)
@@ -1046,7 +1043,6 @@
 
 查看完整的贡献者列表：
 - [贡献者索引](../by-contributor/)
-- [贡献者档案](../by-contributor/profiles/)
 - [组织统计](../contributors/orgs/)
 
 ---

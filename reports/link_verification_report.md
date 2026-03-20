@@ -294,7 +294,7 @@
 - **类型**: 本地链接
 
 ### talks/index.md:152
-- **链接**: [组织: Red Hat](../contributors/organizations/redhat.md)
+- **链接**: [组织: Red Hat](../contributors/orgs/redhat.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
@@ -304,12 +304,12 @@
 - **类型**: 本地链接
 
 ### talks/index.md:184
-- **链接**: [组织: Oracle](../contributors/organizations/oracle.md)
+- **链接**: [组织: Oracle](../contributors/orgs/oracle.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### talks/index.md:200
-- **链接**: [组织: Oracle](../contributors/organizations/oracle.md)
+- **链接**: [组织: Oracle](../contributors/orgs/oracle.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
@@ -319,7 +319,7 @@
 - **类型**: 本地链接
 
 ### talks/index.md:214
-- **链接**: [组织: Oracle](../contributors/organizations/oracle.md)
+- **链接**: [组织: Oracle](../contributors/orgs/oracle.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
@@ -329,7 +329,7 @@
 - **类型**: 本地链接
 
 ### talks/index.md:229
-- **链接**: [组织: Red Hat](../contributors/organizations/redhat.md)
+- **链接**: [组织: Red Hat](../contributors/orgs/redhat.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
@@ -339,77 +339,77 @@
 - **类型**: 本地链接
 
 ### talks/index.md:243
-- **链接**: [组织: Red Hat](../contributors/organizations/redhat.md)
+- **链接**: [组织: Red Hat](../contributors/orgs/redhat.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### talks/index.md:272
-- **链接**: [组织: Oracle](../contributors/organizations/oracle.md)
+- **链接**: [组织: Oracle](../contributors/orgs/oracle.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### talks/index.md:287
-- **链接**: [组织: Oracle](../contributors/organizations/oracle.md)
+- **链接**: [组织: Oracle](../contributors/orgs/oracle.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### talks/index.md:302
-- **链接**: [组织: Oracle](../contributors/organizations/oracle.md)
+- **链接**: [组织: Oracle](../contributors/orgs/oracle.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### talks/index.md:316
-- **链接**: [组织: Oracle](../contributors/organizations/oracle.md)
+- **链接**: [组织: Oracle](../contributors/orgs/oracle.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### talks/index.md:332
-- **链接**: [组织: Oracle](../contributors/organizations/oracle.md)
+- **链接**: [组织: Oracle](../contributors/orgs/oracle.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### talks/index.md:349
-- **链接**: [组织: Alibaba](../contributors/organizations/alibaba.md)
+- **链接**: [组织: Alibaba](../contributors/orgs/alibaba.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### talks/index.md:364
-- **链接**: [组织: Oracle](../contributors/organizations/oracle.md)
+- **链接**: [组织: Oracle](../contributors/orgs/oracle.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### talks/index.md:378
-- **链接**: [组织: Oracle](../contributors/organizations/oracle.md)
+- **链接**: [组织: Oracle](../contributors/orgs/oracle.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### talks/index.md:394
-- **链接**: [组织: Oracle](../contributors/organizations/oracle.md)
+- **链接**: [组织: Oracle](../contributors/orgs/oracle.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### talks/index.md:407
-- **链接**: [组织: Oracle](../contributors/organizations/oracle.md)
+- **链接**: [组织: Oracle](../contributors/orgs/oracle.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### talks/index.md:420
-- **链接**: [组织: Oracle](../contributors/organizations/oracle.md)
+- **链接**: [组织: Oracle](../contributors/orgs/oracle.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### talks/index.md:435
-- **链接**: [组织: Oracle](../contributors/organizations/oracle.md)
+- **链接**: [组织: Oracle](../contributors/orgs/oracle.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### talks/index.md:451
-- **链接**: [组织: Oracle](../contributors/organizations/oracle.md)
+- **链接**: [组织: Oracle](../contributors/orgs/oracle.md)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
 ### talks/index.md:460
-- **链接**: [组织统计](../contributors/organizations/)
+- **链接**: [组织统计](../contributors/orgs/)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
