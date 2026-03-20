@@ -2,6 +2,8 @@
 
 > Java String 从 JDK 1.0 到 JDK 26 的演进历程
 
+[← 返回语言特性](../)
+
 ---
 
 ## 快速概览
@@ -231,6 +233,29 @@ src/hotspot/share/gc/
 
 ## 相关链接
 
+### 本地文档
+
+- [时间线](timeline.md) - 完整版本演进历史
+- [内部实现](implementation.md) - Compact Strings、StringLatin1、StringUTF16
+- [性能优化](optimization.md) - String Deduplication、VM 调优参数
+
+### 相关主题
+
+- [日期时间 API](../../api/datetime/) - DateTimeHelper 字符串格式化
+- [集合框架](../../api/collections/) - StringBuilder 与集合
+- [性能优化](../../core/performance/) - 字符串性能基准
+- [内存管理](../../core/memory/) - String Deduplication
+- [JVM 调优](../../core/jvm/) - 字符串相关 VM 参数
+- [语法演进](../syntax/) - String Templates 语法
+
+### 贡献者档案
+
+- [Claes Redestad](../../../by-contributor/profiles/claes-redestad.md) - Compact Strings, 启动优化 (101 提交)
+- [Chen Liang](../../../by-contributor/profiles/chen-liang.md) - invokedynamic, ClassFile (35 提交)
+- [Shaojin Wen](../../../by-contributor/profiles/shaojin-wen.md) - 性能优化 (14 提交)
+
+### 外部参考
+
 - [JEP 254: Compact Strings](https://openjdk.org/jeps/254)
 - [JEP 280: Indify String Concatenation](https://openjdk.org/jeps/280)
 - [JEP 378: Text Blocks](https://openjdk.org/jeps/378)
@@ -248,13 +273,13 @@ src/hotspot/share/gc/
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Claes Redestad | 101 | Oracle | Compact Strings, 启动优化 |
+| 1 | [Claes Redestad](../../../by-contributor/profiles/claes-redestad.md) | 101 | Oracle | Compact Strings, 启动优化 |
 | 2 | Mandy Chung | 54 | Oracle | String 模板 |
-| 3 | Chen Liang | 35 | Oracle | invokedynamic, ClassFile |
+| 3 | [Chen Liang](../../../by-contributor/profiles/chen-liang.md) | 35 | Oracle | invokedynamic, ClassFile |
 | 4 | Jim Laskey | 29 | Oracle | String Templates (JEP 430) |
 | 5 | Joe Darcy | 20 | Oracle | Text Blocks (JEP 378) |
 | 6 | Jorn Vernee | 19 | Oracle | Foreign Memory |
 | 7 | Paul Sandoz | 17 | Oracle | 字符串格式化 |
 | 8 | Pavel Rappo | 15 | Oracle | 文档, 工具 |
 | 9 | Maurizio Cimadamore | 15 | Oracle | javac, 模板 |
-| 10 | Shaojin Wen | 14 | Alibaba | 性能优化 |
+| 10 | [Shaojin Wen](../../../by-contributor/profiles/shaojin-wen.md) | 14 | Alibaba | 性能优化 |
