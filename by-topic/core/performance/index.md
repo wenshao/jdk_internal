@@ -419,13 +419,13 @@ java -XX:AOTCache=cache.aot ...
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Coleen Phillimore | 72 | Oracle | C1/C2 编译器 |
+| 1 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 72 | Oracle | C1/C2 编译器 |
 | 2 | Aleksey Shipilev | 68 | Oracle | JIT 编译器 |
-| 3 | Ioi Lam | 62 | Oracle | 编译器, 运行时 |
+| 3 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 62 | Oracle | 编译器, 运行时 |
 | 4 | Stefan Karlsson | 31 | Oracle | 编译器, GC |
 | 5 | Doug Simon | 29 | Oracle | JIT 编译器 |
 | 6 | David Holmes | 24 | Oracle | 并发, 编译器 |
-| 7 | Claes Redestad | 24 | Oracle | 启动性能 |
+| 7 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 24 | Oracle | 启动性能 |
 | 8 | Thomas Stuefe | 22 | Oracle | 编译器 |
 | 9 | Vladimir Kozlov | 20 | Oracle | JIT 编译器 |
 | 10 | Igor Veresov | 17 | Oracle | JIT 编译器 |
@@ -434,10 +434,10 @@ java -XX:AOTCache=cache.aot ...
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Ioi Lam | 167 | Oracle | CDS, AOT |
+| 1 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 167 | Oracle | CDS, AOT |
 | 2 | Albert Mingkun Yang | 75 | Oracle | G1 GC, 内存 |
-| 3 | Claes Redestad | 70 | Oracle | 字符串, 启动优化 |
-| 4 | Thomas Stuefe | 37 | Oracle | CDS, 归档 |
+| 3 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 70 | Oracle | 字符串, 启动优化 |
+| 4 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 37 | Oracle | CDS, 归档 |
 | 5 | Stefan Karlsson | 35 | Oracle | 并发 GC |
 
 ### JFR 贡献者

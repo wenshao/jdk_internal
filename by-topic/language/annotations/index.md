@@ -44,7 +44,7 @@ Javadoc   注解    注解    可重复    类型    Record   注解    注解
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
 | 1 | Joe Darcy | 30 | Oracle | 注解, 类型系统 |
-| 2 | Jan Lahoda | 18 | Oracle | 注解处理器 |
+| 2 | [Jan Lahoda](/by-contributor/profiles/jan-lahoda.md) | 18 | Oracle | 注解处理器 |
 | 3 | Pavel Rappo | 10 | Oracle | API 设计 |
 | 4 | Jonathan Gibbons | 10 | Oracle | Javadoc, 注解 |
 | 5 | Vicente Romero | 6 | Oracle | javac 编译器 |

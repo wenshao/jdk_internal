@@ -616,7 +616,7 @@ public String describeBad(Object obj) {
 |------|--------|--------|------|----------|
 | 1 | Gavin Bierman | 30+ | Oracle | 模式匹配规范 |
 | 2 | [Brian Goetz](/by-contributor/profiles/brian-goetz.md) | 20+ | Oracle | 语言设计 |
-| 3 | Jan Lahoda | 15+ | Oracle | 编译器实现 |
+| 3 | [Jan Lahoda](/by-contributor/profiles/jan-lahoda.md) | 15+ | Oracle | 编译器实现 |
 | 4 | Vicente Romero | 10+ | Oracle | 类型检查 |
 
 ### 历史贡献者

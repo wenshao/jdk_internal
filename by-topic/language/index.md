@@ -112,7 +112,7 @@ JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 14-17 ─── JDK 21-26
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Jan Lahoda | 98 | Oracle | javac, 模式匹配 |
+| 1 | [Jan Lahoda](/by-contributor/profiles/jan-lahoda.md) | 98 | Oracle | javac, 模式匹配 |
 | 2 | Vicente Romero | 52 | Oracle | javac, Records |
 | 3 | Jonathan Gibbons | 43 | Oracle | javadoc, 注解 |
 | 4 | Liam Miller-Cushon | 31 | Oracle | javac, Lambda |
