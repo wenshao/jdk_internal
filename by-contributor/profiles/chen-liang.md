@@ -14,18 +14,19 @@
 | **GitHub** | [@liach](https://github.com/liach) |
 | **Blog** | [liachmodded.github.io](https://liachmodded.github.io/) |
 | **OpenJDK** | [@liach](https://openjdk.org/census#liach) |
-| **角色** | JDK Reviewer (2024年6月任命), Valhalla Committer |
+| **CR 目录** | [~liach](https://cr.openjdk.org/~liach/) |
+| **角色** | JDK Reviewer (2024年6月任命), Valhalla Committer (2025年5月提名) |
 | **教育背景** | 威斯康星大学麦迪逊分校 (University of Wisconsin-Madison) |
 | **Integrated PRs** | [237](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aliach+is%3Aclosed+label%3Aintegrated) |
 | **Git Commits (master)** | 85 (本地源码分析，ClassFile API 最多) |
-| **主要领域** | ClassFile API、核心反射、Method Handles、常量池 |
+| **主要领域** | ClassFile API、核心反射、Method Handles、javac 编译器、Valhalla |
 | **活跃时间** | 2021 - 至今 |
 
 > **统计方法**:
 > - GitHub PR search: `repo:openjdk/jdk author:liach type:pr label:integrated`
 > - Local git log (master only): `src/java.base/share/classes/java/lang/classfile/` + `jdk/internal/classfile/`
 > **统计时间**: 2026-03-20
-> **来源**: [LinkedIn](https://www.linkedin.com/in/chen-liang-51122427b), [CFV: New JDK Reviewer](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html)
+> **来源**: [LinkedIn](https://www.linkedin.com/in/chen-liang-51122427b), [CFV: New JDK Reviewer](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html), [CFV: New Valhalla Committer](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html)
 
 ---
 
@@ -37,8 +38,10 @@
 | **2021-2024** | 贡献 237+ 个 PR | ClassFile API、核心反射、Method Handles |
 | **2024-06** | 被任命为 JDK Reviewer | 由 Jonathan Gibbons 提名 |
 | **2024-08** | 参与 JDK-8336856 String "+" 优化 | 作为 Reviewer 与 Shaojin Wen、Claes Redestad 合作 |
+| **2024-12** | 发布 javadoc types-facelift | [javadoc 类型展示改进](https://cr.openjdk.org/~liach/javadoc/types-facelift/) |
+| **2025-05** | 被提名为 Valhalla Committer | [CFV 投票](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html) |
 
-> **来源**: [CFV: New JDK Reviewer: Chen Liang](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html)
+> **来源**: [CFV: New JDK Reviewer: Chen Liang](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html), [CFV: New Valhalla Committer: Chen Liang](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html)
 
 ---
 
@@ -124,7 +127,9 @@
 
 ## PR 深度分析
 
-### ClassFile API (28 PRs)
+### ClassFile API (28+ PRs)
+
+Chen Liang 是 ClassFile API 的核心开发者之一，主要贡献包括：
 
 #### JDK-8352748: 移除 com.sun.tools.classfile
 
@@ -348,6 +353,57 @@ package java.lang.classfile;
 ```
 
 **影响**: 提高了 API 的可用性。
+
+---
+
+#### JDK-8346013: 改进 java.lang.classfile.instruction 文档
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8346013](https://bugs.openjdk.org/browse/JDK-8346013) |
+| **合入时间** | 2024-12 |
+| **影响** | 文档改进 |
+
+改进 ClassFile API 指令集的文档。
+
+---
+
+#### JDK-8347399: 改进 java.lang.classfile.attribute 文档
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8347399](https://bugs.openjdk.org/browse/JDK-8347399) |
+| **合入时间** | 2024-12 |
+| **影响** | 文档改进 |
+
+规范化属性文档，添加指向 mappers 的链接，并为需要注意的属性添加特殊说明。
+
+---
+
+#### JDK-8335642: 隐藏 Transform 实现
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8335642](https://bugs.openjdk.org/browse/JDK-8335642) |
+| **PR** | [#19938](https://github.com/openjdk/jdk/pull/19938) |
+| **角色** | Author |
+| **合入时间** | 2024-07 |
+| **影响** | API 封装改进 |
+
+隐藏了不正确暴露的 ClassFile 转换 API，包括 `ClassFileTransform$ResolvedTransform`。
+
+---
+
+#### JDK-8338542: 减少 ClassFile API 迁移的启动开销
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8338542](https://bugs.openjdk.org/browse/JDK-8338542) |
+| **角色** | Contributor |
+| **合入时间** | 2024 |
+| **影响** | 性能优化 |
+
+减少与 `java.lang.invoke` 包迁移到 ClassFile API 相关的启动开销（JDK 24-b28 起）。
 
 ---
 
@@ -794,16 +850,42 @@ Chen Liang 是 **Project Valhalla 的顶级贡献者**，在项目中排名 **#1
 |------|------|
 | **PR 数量** | 11 |
 | **排名** | #1 (所有贡献者中最高) |
-| **主要领域** | javac 编译器、语言特性实现 |
+| **主要领域** | javac 编译器、语言特性实现、ClassFile 适配 |
 | **活跃时间** | 2023 - 2025 |
+| **角色** | Valhalla Committer (2025年5月提名) |
 
 ### 贡献领域
 
 - **javac 编译器**: 原始类型（Primitive Classes）的编译支持
 - **语言特性**: 值类型（Value Types）的语法和语义实现
 - **类文件生成**: 原始类型的字节码表示
+- **ClassFile API 适配**: Valhalla 特性的 ClassFile 支持
 
-> **来源**: [Valhalla 开发活动分析](/by-topic/core/valhalla/development.md)
+### 重要贡献
+
+#### JDK-8379559: 避免为 Valhalla 使用新的 ClassFileFormatVersion
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8379559](https://bugs.openjdk.org/browse/JDK-8379559) |
+| **PR** | [#2023](https://github.com/openjdk/valhalla/pull/2023) |
+| **合入时间** | 2026-02 |
+| **影响** | ClassFile API 优化 |
+
+改进预览访问标志枚举常量的 ClassFileFormatVersion 处理方式。
+
+#### JDK-8377171: Valhalla 内部注解警告注释
+
+| 属性 | 值 |
+|------|-----|
+| **Issue** | [JDK-8377171](https://bugs.openjdk.org/browse/JDK-8377171) |
+| **PR** | [#2023](https://github.com/openjdk/valhalla/pull/2023) |
+| **合入时间** | 2026-02 |
+| **影响** | 代码质量 |
+
+为 Valhalla 内部注解添加警告注释。
+
+> **来源**: [Valhalla 开发活动分析](/by-topic/core/valhalla/development.md), [CFV: New Valhalla Committer: Chen Liang](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html)
 
 ---
 
@@ -846,11 +928,15 @@ Chen Liang 的贡献特点:
   - Review 了 JDK-8336856 (String "+" 优化)
 - **Claes Redestad (@redestad)**: 性能优化协作者
   - 共同参与 JDK-8336856 审查
-- **Magnus Ihse Bursie (ihse)**: 构建系统审查者
+- **Adam Sotona (asotona)**: ClassFile API 审查者
+  - 共同合作 ClassFile API 开发
+- **Jonathan Gibbons**: JDK Reviewer 提名人
+  - LangTools 团队负责人
 - **Jan Lahoda (jlahoda)**: javac 相关审查
 - **Vicente Romero (vromero)**: javac 相关审查
-- **Adam Sotona (asotona)**: ClassFile API 审查者
 - **John Rose (jrose)**: Method Handles / ClassValue 协作者
+- **David Holmes (dholmes-ora)**: 运行时协作者
+- **Tobias Hartmann (TobiHartmann)**: Valhalla C2 编译器协作者
 
 ### 重要协作：String "+" 优化 (JDK-8336856)
 
@@ -878,14 +964,22 @@ Chen Liang 的贡献特点:
 - **统计时间**: 2026-03-20
 - **LinkedIn**: [Chen Liang - Oracle | LinkedIn](https://www.linkedin.com/in/chen-liang-51122427b)
 - **JDK Reviewer 任命**: [CFV: New JDK Reviewer: Chen Liang](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html)
+- **Valhalla Committer 提名**: [CFV: New Valhalla Committer: Chen Liang](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html)
 - **GitHub**: [@liach](https://github.com/liach)
 - **Blog**: [liachmodded.github.io](https://liachmodded.github.io/)
+- **CR 目录**: [cr.openjdk.org/~liach](https://cr.openjdk.org/~liach/)
+- **Bug Database**: [Chen Liang Issues](https://bugs.openjdk.org/issues/?jql=project%20%3D%20JDK%20AND%20reporter%20in%20(liach%2C%20%22Chen%20Liang%22))
 
 ---
 
-> **文档版本**: 3.0
+> **文档版本**: 4.0
 > **最后更新**: 2026-03-20
-> **更新内容**: 补充教育背景、职业里程碑、JDK Reviewer 任命信息，添加网络搜索来源
+> **更新内容**:
+> - 补充 Valhalla Committer 提名信息 (2025-05)
+> - 添加 javadoc types-facelift 项目信息
+> - 补充 ClassFile API 文档改进贡献
+> - 更新协作者列表
+> - 添加更多数据来源链接
 
 ## 相关链接
 
