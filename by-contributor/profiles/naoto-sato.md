@@ -132,8 +132,9 @@ FileReader reader = new FileReader("test.txt");
 | **角色** | Owner |
 | **状态** | Closed / Delivered |
 | **发布版本** | JDK 9 |
+| **相关 Bug** | JDK-8136032, JDK-8027607 |
 
-**影响**: 允许 ResourceBundle 使用 UTF-8 编码的属性文件，简化国际化资源管理。
+**影响**: 允许 ResourceBundle 使用 UTF-8 编码的属性文件，简化国际化资源管理。Naoto Sato 作为 Assignee 负责实现。
 
 ```properties
 # 之前需要 native2ascii 转换
@@ -252,12 +253,31 @@ TimeZone.getTimeZone("America/New_York"); // 推荐使用
 - **JDK-8351017**: 修复 ChronoUnit.MONTHS.between() 在二月的计算问题
 - **JDK-8175709**: DateTimeFormatterBuilder.appendZoneId() JavaDoc 修复
 
+### 8. Japanese Imperial Calendar 维护
+
+Naoto Sato 是日本历法支持的主要维护者：
+
+- **JDK-8358819**: 修复日本历法第一年显示不正确的问题 (2025年6月)
+- **JDK-8279185**: JapaneseDate/MinguoDate/ThaiBuddhistDate 中支持 IsoFields (2022年5月)
+- **JDK-8215926**: 支持新的日本年号 (Reiwa/令和)
+- **JDK-8218643**: 替换占位符日本年号名称
+- **JDK-8217939**: 澄清对新日本年号的支持
+
+```java
+// 日本历法
+JapaneseDate date = JapaneseDate.now();
+Locale jpImperialLocale = Locale.of("ja", "JP", "JP");
+```
+
 ### 8. ListFormat 实现
 
 - **JDK-8041488**: Locale-Dependent List Patterns (ListFormat 实现)
+- **JDK-8295240**: 新增 java.text.ListFormat 类
 - **JDK-8317265**: ListFormat::format 规范澄清
 - **JDK-8318487**: ListFormat.equals() 方法规范
 - **JDK-8318569**: 为 ListFormat 添加 Locale 和 Patterns 的 getter 方法
+
+> **说明**: Naoto Sato 主导了 locale-dependent list patterns 的实现，基于 Unicode LDML Part 2 规范。
 
 ```java
 // ListFormat 示例
