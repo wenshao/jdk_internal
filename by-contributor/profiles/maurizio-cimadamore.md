@@ -21,9 +21,12 @@ Maurizio Cimadamore 是 Oracle 的 **Java 编译器架构师** 和 **Project Pan
 | **当前组织** | Oracle (Java Platform Group) |
 | **职位** | Java Compiler Architect, Project Panama Lead |
 | **GitHub** | [@mcimadamore](https://github.com/mcimadamore) |
+| **LinkedIn** | [mcimadamore](https://ie.linkedin.com/in/mcimadamore) |
 | **教育** | University of Bologna |
 | **专长** | javac Compiler, Lambda Expressions, Project Panama, Foreign Function & Memory API |
 | **职业经历** | Sun Microsystems → Oracle → Amazon → Oracle |
+
+> **数据来源**: [LinkedIn](https://ie.linkedin.com/in/mcimadamore), [nipafx.dev Interview](https://nipafx.dev/maurizio-cimadamore-26h/)
 
 ---
 
