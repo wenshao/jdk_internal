@@ -45,6 +45,170 @@
 
 ---
 
+## 按版本贡献
+
+### JDK 24 (开发中)
+
+阿里巴巴积极参与 JDK 24 的开发，贡献了多个核心优化。
+
+| Issue | 标题 | 贡献者 | 类型 | 影响 |
+|-------|------|--------|------|------|
+| 8370503 | Integer/Long toString 使用 String.newStringWithLatin1Bytes | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +10% |
+| 8370013 | Double.toHexString 消除 regex 和 StringBuilder | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +20% |
+| 8368825 | DateTimeFormatterBuilder 使用 switch 表达式 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码质量 | - |
+| 8368172 | DateTimePrintContext 改为不可变 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +8-10% |
+| 8368024 | 移除 StringConcatFactory#generateMHInlineCopy | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码清理 | -800 行 |
+| 8366224 | DecimalDigits.appendPair 高效两位数格式化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +15% |
+| 8365620 | MethodHandleDesc 使用增强 switch | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码质量 | - |
+| 8365186 | 减少 DateTimePrintContext::adjust 大小 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +1% |
+
+**JDK 24 统计**: 8 PRs (Shaojin Wen: 8)
+
+### JDK 23
+
+JDK 23 是阿里巴巴贡献最活跃的版本，包含大量性能优化。
+
+| Issue | 标题 | 贡献者 | 类型 | 影响 |
+|-------|------|--------|------|------|
+| 8357913 | BigInteger 和 BigDecimal 添加 @Stable | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +3% |
+| 8357690 | CharacterData 添加 @Stable 和 final | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +2% |
+| 8357685 | String.indexOf/lastIndexOf 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +5% |
+| 8357289 | String 构造函数拆分为更小的方法 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +2% |
+| 8357063 | DecimalDigits 方法前置条件文档 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 文档改进 | - |
+| 8356605 | JRSUIControl.hashCode 使用 Long.hashCode | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码简化 | - |
+| 8356328 | C2 IR 节点 size_of() 函数 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 正确性修复 | - |
+| 8356036 | FileKey.hashCode 使用 Long.hashCode | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码简化 | - |
+| 8356021 | Locale.hashCode 使用 Double::hashCode | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | NaN 处理 | - |
+| 8355300 | BitSieve 添加 final | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +2% |
+| 8355240 | 移除 StringUTF16 未使用的 Import | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码清理 | - |
+| 8355177 | StringBuilder 空构造优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +5% |
+| 8353741 | HexFormat toUpper/toLower 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | - |
+| 8351565 | String.concat 微优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +3% |
+| 8351443 | InlineHiddenClassStrategy 实现 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 架构改进 | +5% |
+| 8349400 | 消除嵌套类提升启动速度 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +5% |
+| 8348898 | 移除未使用的 OctalDigits | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码清理 | -130 行 |
+| 8348880 | ZoneOffset.QUARTER_CACHE 使用 AtomicReferenceArray | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 内存优化 | -85% |
+| 8348870 | ByteOrder.toString 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | - |
+| 8347405 | MergeStores 反向字节顺序 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 正确性修复 | - |
+| 8344168 | Unsafe base offset 从 int 改为 long | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 溢出修复 | - |
+| 8343984 | Unsafe 地址溢出修复 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 安全修复 | - |
+| 8343962 | ArraysSupport.arrayToString 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +3% |
+| 8343925 | [BACKOUT] 移动 getChars 到 DecimalDigits | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 回退 | - |
+| 8343650 | 复用 StringLatin1::putCharsAt | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码复用 | - |
+| 8343629 | 更多 MergeStore 基准测试 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 测试 | - |
+| 8343500 | ArrayClassDescImpl computeDescriptor 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +37% |
+| 8342336 | ClassFile imports 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | -480 行 |
+| 8341906 | ClassFile BufBuffer 写入优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +28% |
+| 8341900 | DirectCodeBuilder writeBody 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | codeSize -10% |
+| 8341859 | ClassFile Benchmark Write 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 稳定性 | - |
+| 8341755 | InnerClassLambdaMetafactory argNames 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +17-20% |
+| 8341664 | ReferenceClassDescImpl 缓存 internalName | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +93% |
+| 8341581 | BytecodeHelpers validate slot 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 内联优化 | - |
+| 8341548 | 更简洁的 ClassFile API 使用 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码简化 | -19 行 |
+| 8341512 | StackMapGenerator processInvokeInstructions | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | codeSize -5% |
+| 8341510 | StackMapGenerator processFieldInstructions | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | codeSize -15% |
+| 8341415 | RawBytecodeHelper::next 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +5-10% |
+| 8341199 | ClassFile loadConstant(int) | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +3-5% |
+| 8341141 | DirectCodeBuilder 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +8-15% |
+| 8341136 | StackMapGenerator trimAndCompress | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +2-5% |
+| 8341006 | StackMapGenerator detect frames | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +5-10% |
+| 8340708 | StackMapGenerator processMethod | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +2-4% |
+| 8340587 | Frame::checkAssignableTo | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +3-7% |
+| 8340544 | setLocalsFromArg 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +8-12% |
+| 8340232 | DataInputStream::readUTF 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | - |
+| 8340710 | DirectClassBuilder::build | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +5-10% |
+| 8339699 | DataOutputStream writeUTF | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | - |
+| 8339635 | CompactStrings 关闭时优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | - |
+| 8339401 | ClassFile load/store 指令 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +10-20% |
+| 8339320 | Utf8EntryImpl#inflate | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 方法拆分 | - |
+| 8339317 | ClassFile writeBuffer | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 写入优化 | - |
+| 8339299 | C1 内联 final 方法丢失类型 profile | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 性能修复 | - |
+| 8339290 | Utf8EntryImpl#writeTo | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | ASCII 快速路径 | - |
+| 8339217 | ClassFile API loadConstant | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 新增重载 | - |
+| 8339205 | StackMapGenerator | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | codeSize 优化 | - |
+| 8339196 | BufWriterImpl#writeU1/U2/Int/Long | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | C2 友好 | - |
+| 8339168 | ClassFile Util slotSize | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 引用比较 | - |
+| 8338937 | ClassDesc 字符串拼接优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | String.concat | - |
+| 8338936 | StringConcatFactory MethodType 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +10% |
+| 8338930 | StringConcatFactory 静态方法优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 静态方法 | - |
+| 8338532 | MethodTypeDesc#ofDescriptor | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | 消除 ArrayList |
+| 8338409 | 使用 record 简化代码 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码简化 | -9 行 |
+| 8337832 | DateTime toString 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +10% |
+| 8337279 | 共享 StringBuilder 格式化 instant | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 优化 | - |
+| 8337245 | StringConcatHelper 注释修复 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 文档修正 | - |
+| 8337168 | LocalDateTime.toString 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | - |
+| 8337167 | StringSize 去重 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码清理 | -95 行 |
+| 8336856 | InlineHiddenClassStrategy | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | **架构改进** | +5% |
+| 8336831 | StringConcatHelper.simpleConcat | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +10-15% |
+| 8336792 | DateTimeFormatterBuilder 使用 repeat | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码简化 | -33% |
+| 8336741 | LocalTime.toString 使用 repeat | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +15-20% |
+| 8336706 | LocalDate.toString 使用 repeat | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +20% |
+| 8336278 | String.format("%n") 替换为 lineSeparator | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | 60x |
+| 8335802 | HexFormat boolean 替换 enum | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 启动优化 | - |
+| 8335645 | Formatter trailingZeros 使用 repeat | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码简化 | - |
+| 8335252 | Formatter.Conversion#isValid | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | codeSize -30% | - |
+| 8335182 | MergeStore C2 优化模式 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 性能优化 | +30% |
+| 8334342 | MergeStore JMH 基准测试 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 基准测试 | - |
+| 8334328 | FloatToDecimal/DoubleToDecimal 减少分配 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 减少分配 | - |
+| 8333893 | StringBuilder append boolean & null | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +10-15% |
+| 8333833 | UUID.toString 移除 ByteArrayLittleEndian | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 平台无关 | - |
+| 8334431 | C2 IR Graph 将 MemBarAcquire 放入循环 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 正确性修复 | - |
+| 8328064 | 移除 constantPool 过时注释 | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | 代码清理 | - |
+| 8326135 | ADLC 报告未使用的操作数 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 工具改进 | - |
+| 8323122 | AArch64 itable stub 大小估算 | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | 正确性修复 | - |
+
+**JDK 23 统计**: 93 PRs (Shaojin Wen: 89, Kuai Wei: 4, Yude Lin: 3)
+
+### JDK 21 / JDK 22
+
+JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
+
+| Issue | 标题 | 贡献者 | 类型 | 影响 |
+|-------|------|--------|------|------|
+| 8317742 | DateTimeFormatter 和 String.format ISO 标准一致性 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 标准一致性 | - |
+| 8316704 | Formatter/FormatProcessor 消除正则 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | - |
+| 8316426 | HexFormat.formatHex 查找表优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | - |
+| 8315968 | java.util.Digits 移动到 jdk.internal.util | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 重构 | - |
+| 8315970 | JDK-8310929 后的大端序问题 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 大端序修复 | - |
+| 8311207 | UUID.toString 优化清理 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 清理 | - |
+| 8310929 | Integer.toString 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | **性能优化** | +10% |
+| 8310502 | Long.fastUUID 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | **性能优化** | +8% |
+| 8298521 | G1MonitoringSupport 成员重命名 | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | 代码清理 | - |
+| 8297247 | G1 添加 Remark/Cleanup MXBean | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | **监控增强** | 新功能 |
+
+**JDK 21/22 统计**: 10 PRs (Shaojin Wen: 8, Yude Lin: 2)
+
+### JDK 17 / JDK 11
+
+早期贡献主要在 ZGC 和 Shenandoah GC。
+
+| Issue | 标题 | 贡献者 | 类型 | 影响 |
+|-------|------|--------|------|------|
+| 8274546 | Shenandoah 移除未使用的 ShenandoahUpdateRootsTask | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | 代码清理 | - |
+| 8273112 | -Xloggc 应覆盖 -verbose:gc | [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | 功能修复 | - |
+| 8272138 | ZGC 采用宽松顺序进行自愈 | [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | **性能优化** | - |
+| 8270347 | ZGC 转发表 release-acquire | [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | 正确性修复 | - |
+| 8266963 | 移除 safepoint poll (重入问题) | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | 正确性修复 | - |
+| 8266185 | Shenandoah 修正注释/断言 | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | 代码质量 | - |
+
+**JDK 17/11 统计**: 6 PRs (Yude Lin: 3, Xiaowei Lu: 3)
+
+---
+
+## 版本贡献统计
+
+| 版本 | PRs | 主要贡献者 | 主要领域 |
+|------|-----|-----------|----------|
+| **JDK 24** | 8 | Shaojin Wen | 核心库性能优化 |
+| **JDK 23** | 93 | Shaojin Wen (89), Kuai Wei (4), Yude Lin (3) | ClassFile API, String, C2 |
+| **JDK 21/22** | 10 | Shaojin Wen (8), Yude Lin (2) | 数字格式化, GC 监控 |
+| **JDK 17/11** | 6 | Yude Lin (3), Xiaowei Lu (3) | ZGC, Shenandoah |
+| **总计** | **117** | **4 位贡献者** | - |
+
+> **注**: 部分 PR 可能跨版本合入，统计基于主要目标版本
+
+---
+
 ## 贡献时间线
 
 ```
