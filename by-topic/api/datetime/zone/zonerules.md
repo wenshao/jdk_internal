@@ -597,7 +597,7 @@ if (validOffsets.size() > 1) {
 
 - [ZoneId 实现](zoneid.md)
 - [ZoneOffset 实现](zoneoffset.md)
-- [ZoneOffsetTransition 实现](transition.md)
+- [ZoneOffsetTransition](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/zone/ZoneOffsetTransition.html) (外部文档)
 - [主索引](../index.md)
 
 ---

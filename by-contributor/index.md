@@ -24,7 +24,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | JVMTI | Leonid Mesnik | [详情](/by-contributor/profiles/leonid-mesnik.md) |
 | ClassFile API | Chen Liang | [详情](/by-contributor/profiles/chen-liang.md) |
 | C++ 现代化 | Kim Barrett | [详情](/by-contributor/profiles/kim-barrett.md) |
-| AOT/CDS | Ioi Lam | [详情](by-contributor/profiles/ioi-lam.md) |
+| AOT/CDS | Ioi Lam | [详情](/by-contributor/profiles/ioi-lam.md) |
 | 构建系统 | Magnus Ihse Bursie | [详情](/by-contributor/profiles/magnus-ihse-bursie.md) |
 | Swing/AWT | Prasanta Sadhukhan | [详情](/by-contributor/profiles/prasanta-sadhukhan.md) |
 | HTTP/3 | Daniel Fuchs | [详情](/by-contributor/profiles/daniel-fuchs.md) |
@@ -45,9 +45,9 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 | 贡献者 | 主要领域 | 查看 |
 |--------|----------|------|
-| Andrew Dinn | AArch64 | 详情  |
-| Nick Gasson | AArch64 | 详情  |
-| David Beaumont | 编译器 | 详情  |
+| Andrew Dinn | AArch64 | [详情](/by-contributor/profiles/andrew-dinn.md) |
+| Nick Gasson | AArch64 | [详情](/by-contributor/profiles/nick-gasson.md) |
+| David Beaumont | 编译器 | [详情](/by-contributor/profiles/david-beaumont.md) |
 
 [→ Amazon 全部贡献者](/contributors/orgs/amazon.md)
 
@@ -55,9 +55,9 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 | 贡献者 | 主要领域 | 查看 |
 |--------|----------|------|
-| Raffaello Giulietti | 核心库 | 详情  |
+| Raffaello Giulietti | 核心库 | [OpenJDK Census](https://openjdk.org/census#rsgiulie) |
 | Roman Kennke | Shenandoah GC | [详情](/by-contributor/profiles/roman-kennke.md) |
-| Andrew Dinn | AArch64 | 详情  |
+| Andrew Dinn | AArch64 | [详情](/by-contributor/profiles/andrew-dinn.md) |
 
 [→ Red Hat 全部贡献者](/contributors/orgs/redhat.md)
 
@@ -65,9 +65,9 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 | 贡献者 | 主要领域 | 查看 |
 |--------|----------|------|
-| Goetz Lindenmaier | HotSpot Runtime | 详情  |
-| Thomas Stuefe | HotSpot | 详情  |
-| Amit Kumar | s390x, Compiler | 详情  |
+| Goetz Lindenmaier | HotSpot Runtime | [详情](/by-contributor/profiles/goetz-lindenmaier.md) |
+| Thomas Stuefe | HotSpot | [详情](/by-contributor/profiles/thomas-stuefe.md) |
+| Amit Kumar | s390x, Compiler | [详情](/by-contributor/profiles/amit-kumar.md) |
 
 [→ IBM 全部贡献者](/contributors/orgs/ibm.md)
 
@@ -76,7 +76,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 贡献者 | 主要领域 | 查看 |
 |--------|----------|------|
 | Matthias Baesken | 跨平台构建 | [详情](/by-contributor/profiles/matthias-baesken.md) |
-| Erik Joelsson | 构建系统 | 详情  |
+| Erik Joelsson | 构建系统 | [详情](/by-contributor/profiles/erik-joelsson.md) |
 
 [→ SAP 全部贡献者](/contributors/orgs/sap.md)
 
@@ -86,8 +86,8 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 | 贡献者 | 实际组织 | 查看 |
 |--------|----------|------|
-| Amit Kumar | IBM | 详情  |
-| Christian Stein | Oracle | 详情  |
+| Amit Kumar | IBM | [详情](/by-contributor/profiles/amit-kumar.md) |
+| Christian Stein | Oracle | [OpenJDK Mail](https://mail.openjdk.org/pipermail/) |
 
 [→ Google 全部贡献者](/contributors/orgs/google.md)
 
@@ -106,8 +106,8 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 地区 | 贡献者 | 查看 |
 |------|--------|------|
 | 中国 | 20+ | [中国贡献者](/by-contributor/profiles/chinese-contributors.md) |
-| 美国 | 50+ | 待补充 |
-| 欧洲 | 30+ | 待补充 |
+| 美国 | 50+ | [Oracle 贡献者](/contributors/orgs/oracle.md) |
+| 欧洲 | 30+ | [Red Hat/SAP 贡献者](/contributors/orgs/redhat.md) |
 
 ### 按领域
 

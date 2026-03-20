@@ -322,7 +322,7 @@ ClassDesc 内部名称缓存优化：
 
 | JEP | 标题 | Author | Owner |
 |-----|------|--------|-------|
-| [JEP 459](/jeps/tools/jep-459.md) | Class-File API (First Preview) | Brian Goetz | Adam Sotona |
+| [JEP 459](https://openjdk.org/jeps/459) | Class-File API (First Preview) | Brian Goetz | Adam Sotona |
 | [JEP 466](/jeps/tools/jep-466.md) | Class-File API (Second Preview) | - | Adam Sotona |
 | [JEP 484](/jeps/tools/jep-484.md) | Class-File API (Final) | Brian Goetz | Adam Sotona |
 

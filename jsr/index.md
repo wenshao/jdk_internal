@@ -77,7 +77,7 @@ JSR (Java Specification Request) 是通过 **JCP (Java Community Process)** 提�
 | [JSR 395](language/jsr-395.md) | Records | 16 | ✅ Final | 记录类 |
 | [JSR 397](language/jsr-397.md) | Sealed Classes | 17 | ✅ Final | 密封类 |
 | [JSR 398](language/jsr-398.md) | Pattern Matching for switch | 21 | ✅ Final | switch 模式匹配 |
-| [JSR 409](language/jsr-409.md) | Value Types | TBD | 🚧 Draft | 值类型 (未完成) |
+| ~~JSR 409~~ | Value Types | ❌ Withdrawn | 值类型 (已撤回，并入 Project Valhalla) |
 
 ### API 规范
 
