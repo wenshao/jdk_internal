@@ -91,7 +91,7 @@
 | [JEP 503](https://openjdk.org/jeps/503) | Remove the 32-bit x86 Port | JDK 23 | 移除 32 位 x86 支持 |
 | [JEP 501](https://openjdk.org/jeps/501) | Deprecate the 32-bit x86 Port for Removal | JDK 22 | 弃用 32 位 x86 |
 | [JEP 379](https://openjdk.org/jeps/379) | Shenandoah: Low-Pause-Time Garbage Collector (Production) | JDK 15 | Shenandoah GC 正式版 |
-| [JEP 318](https://openjdk.org/jeps/318) | Epsilon: A No-Op Garbage Collector (Experimental) | JDK 11 | 无操作 GC |
+| [JEP 318](https://openjdk.org/jeps/318) | Epsilon: A No-Op Garbage Collector (Experimental) | JDK 11 | 无操作 GC，性能测试专用 |
 | [JEP 280](https://openjdk.org/jeps/280) | Indify String Concatenation | JDK 9 | 字符串拼接优化 |
 
 ### 1. JMH (Java Microbenchmark Harness)
@@ -112,10 +112,28 @@ Java 微基准测试框架的创始人和主要维护者，为 Java 性能测试
 
 ### 3. 其他工具开发
 
-| 工具 | 全称 | 用途 |
-|------|------|------|
-| **JOL** | Java Object Layout | 对象内存布局分析 |
-| **JCStress** | Java Concurrency Stress | 并发压力测试 |
+| 工具 | 全称 | 用途 | 链接 |
+|------|------|------|------|
+| **JOL** | Java Object Layout | 对象内存布局分析 | [openjdk.org/jol](https://openjdk.org/projects/code-tools/jol/) |
+| **JCStress** | Java Concurrency Stress | 并发压力测试 | [openjdk.org/jcstress](https://openjdk.org/projects/code-tools/jcstress/) |
+
+#### JOL (Java Object Layout)
+
+分析 Java 对象在 JVM 中的内存布局的工具。
+
+- **功能**: 分析对象内存布局、内存占用、类结构
+- **技术**: 使用 Unsafe、JVMTI、Serviceability Agent
+- **用途**: JVM 内部分析、对象内存优化
+- **代码示例**: JOLSample_01_Basic.java, JOLSample_19_Promotion.java
+
+#### JCStress (Java Concurrency Stress)
+
+实验性的并发正确性测试框架。
+
+- **功能**: 测试低级 JVM 并发问题、硬件级并发
+- **目标**: 破坏 Java 实现的并发行为以发现问题
+- **资源**: [YouTube 播放列表](https://www.youtube.com/playlist?list=PLC5OGTO4dWxYC9Eh9RJYRSP85GKROho3S)
+- **工作坊**: [HydraConf 2021 JCStress Workshop](https://shipilev.net/talks/hydraconf-June2021-jcstress-workshop.pdf)
 
 ### 4. C2 编译器优化
 多项 C2 编译器优化，包括逃逸分析、内联优化等。
@@ -154,6 +172,20 @@ Aleksey 经常在各大 Java 会议发表演讲：
 | JavaZone | Java Memory Model |
 | GeeCON | JCStress Workshop |
 | Froscon | Java Memory Model for Beginners |
+| HydraConf | JCStress Workshop |
+
+### 开源工具
+
+| 项目 | 链接 | 说明 |
+|------|------|------|
+| **builds.shipilev.net** | [builds.shipilev.net](https://builds.shipilev.net/) | OpenJDK 每日构建 |
+| **backports-monitor** | [GitHub](https://github.com/shipilev/jdk-backports-monitor) | JDK 回迁监控 |
+
+**builds.shipilev.net** 提供：
+- OpenJDK 8u, 11u, 17u 每日构建
+- Fastdebug/Slowdebug 调试版本
+- JDK 回迁监控报告
+- 多架构构建支持
 
 ---
 
