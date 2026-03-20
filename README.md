@@ -2,6 +2,8 @@
 
 > 分析 OpenJDK 源码、Issue、PR，沉淀便于人类和 AI 阅读的文档
 
+> **🎉 最新动态**: 28 个主题文档增强完成，新增 PR 性能分析系列 (Lambda +15-20%, 元空间 -82%)
+
 ---
 
 ## 你在用哪个版本？
@@ -19,16 +21,45 @@
 
 ## 我想了解...
 
+### 核心平台
+
+| 主题 | 版本范围 | 查看 | 亮点 |
+|------|----------|------|------|
+| **GC 演进** | 8 → 26 | [G1/ZGC/Shenandoah 时间线](by-topic/core/gc/) | 分代 ZGC, G1 +10-20% |
+| **内存管理** | 8 → 26 | [堆/栈/Metaspace/Compressed Oops](by-topic/core/memory/) | 紧凑对象头 -8-16字节 |
+| **JIT 编译** | 8 → 26 | [C1/C2/Graal 分层编译](by-topic/core/jit/) | 内联优化, 逃逸分析 |
+| **类加载器** | 8 → 26 | [双亲委派/模块化/CDS](by-topic/core/classloading/) | AppCDS 启动 +20% |
+| **模式匹配** | 14 → 26 | [类型模式/Record 模式/守卫](by-topic/core/patterns/) | 性能提升 20-30% |
+| **泛型系统** | 5 → 26 | [类型参数/通配符/类型擦除](by-topic/core/generics/) | PECS 原则 |
+| **Record 类型** | 14 → 26 | [不可变数据载体/解构](by-topic/core/records/) | 字节码 -30% |
+| **模块系统** | 9+ | [JPMS/module-info/jlink](by-topic/core/modules/) | 强封装 |
+
+### 语言特性
+
+| 主题 | 版本范围 | 查看 | 亮点 |
+|------|----------|------|------|
+| **语法演进** | 8 → 26 | [泛型/Lambda/Record/Pattern Matching](by-topic/language/syntax/) | Enum 优化 -82% 内存 |
+| **Lambda** | 8 → 26 | [函数式编程/invokedynamic](by-topic/language/lambda/) | 生成优化 +15-20% |
+| **Stream API** | 8 → 26 | [函数式数据处理/并行流](by-topic/language/streams/) | Gatherers (JDK 21+) |
+| **字符串处理** | 8 → 26 | [String 优化历程](by-topic/language/string/) | Compact Strings -50% |
+| **Class File API** | 22 → 26 | [标准字节码 API](by-topic/language/classfile/) | 替代 ASM |
+| **反射与元数据** | 8 → 26 | [反射/注解/MethodHandle](by-topic/language/reflection/) | 变量引用 |
+
+### 并发网络
+
+| 主题 | 版本范围 | 查看 | 亮点 |
+|------|----------|------|------|
+| **并发编程** | 8 → 26 | [Thread → VirtualThread](by-topic/concurrency/concurrency/) | 虚拟线程 (JDK 21) |
+| **HTTP 客户端** | 11+ | [HttpURLConnection → HTTP/3](by-topic/concurrency/http/) | HTTP/3 预览 (JDK 26) |
+| **网络编程** | 8 → 26 | [Socket/NIO/Unix Domain](by-topic/concurrency/network/) | 异步 I/O |
+| **日期时间** | 8+ | [JSR 310/LocalDate/ZonedDateTime](by-topic/datetime/) | 不可变 API |
+
+### 安全特性
+
 | 主题 | 版本范围 | 查看 |
 |------|----------|------|
-| **GC 演进** | 8 → 26 | [G1/ZGC/Shenandoah 时间线](by-topic/core/gc/) |
-| **并发编程** | 8 → 26 | [Thread → VirtualThread](by-topic/concurrency/concurrency/) |
-| **HTTP 客户端** | 11+ | [HttpURLConnection → HTTP/3](by-topic/concurrency/http/) |
-| **字符串处理** | 8 → 26 | [String 优化历程](by-topic/language/string/) |
 | **安全特性** | 8 → 26 | [TLS/加密/后量子密码](by-topic/security/security/) |
-| **语言语法** | 8 → 26 | [泛型/Lambda/Record/Pattern Matching](by-topic/language/syntax/) |
-| **内存管理** | 8 → 26 | [堆/栈/Metaspace/Compressed Oops](by-topic/core/memory/) |
-| **模块系统** | 9+ | [JPMS/module-info/jlink](by-topic/core/modules/) |
+| **国际化** | 8 → 26 | [Locale/ResourceBundle/Unicode](by-topic/security/i18n/) |
 
 ---
 
@@ -77,26 +108,34 @@ jdk_internal/
 ├── by-topic/              # 按主题跨版本
 │   ├── index.md           # 主题索引
 │   ├── core/              # 核心平台
-│   │   ├── gc/            # GC 演进
-│   │   ├── memory/        # 内存管理
-│   │   ├── performance/   # 性能优化
-│   │   ├── classloading/  # 类加载器
-│   │   └── modules/       # 模块系统
+│   │   ├── gc/            # GC 演进 (G1/ZGC/Shenandoah)
+│   │   ├── memory/        # 内存管理 (堆/栈/Metaspace)
+│   │   ├── jit/           # JIT 编译 (C1/C2/Graal)
+│   │   ├── performance/   # 性能优化 (JFR/调优)
+│   │   ├── classloading/  # 类加载器 (双亲委派/CDS)
+│   │   ├── patterns/      # 模式匹配 (类型/Record/守卫)
+│   │   ├── generics/      # 泛型系统 (类型参数/通配符)
+│   │   ├── records/       # Record 类型 (不可变数据)
+│   │   ├── enums/         # 枚举类型 (switch 表达式)
+│   │   └── modules/       # 模块系统 (JPMS/jlink)
 │   ├── language/          # 语言特性
-│   │   ├── syntax/        # 语法演进
-│   │   ├── string/        # 字符串处理
+│   │   ├── syntax/        # 语法演进 (泛型/Lambda/Record)
+│   │   ├── lambda/        # Lambda 表达式 (函数式编程)
+│   │   ├── streams/       # Stream API (流式处理)
+│   │   ├── string/        # 字符串处理 (优化历程)
 │   │   ├── reflection/    # 反射与元数据
+│   │   ├── annotations/   # 注解与元编程
 │   │   └── classfile/     # Class File API
 │   ├── api/               # API 框架
 │   │   ├── collections/   # 集合框架
 │   │   ├── io/            # I/O 处理
-│   │   └── datetime/      # 日期时间
+│   │   └── datetime/      # 日期时间 (JSR 310)
 │   ├── concurrency/       # 并发网络
-│   │   ├── concurrency/   # 并发编程
-│   │   ├── http/          # HTTP 客户端
-│   │   └── network/       # 网络编程
+│   │   ├── concurrency/   # 并发编程 (Thread/VirtualThread)
+│   │   ├── http/          # HTTP 客户端 (HTTP/3)
+│   │   └── network/       # 网络编程 (NIO/Unix Socket)
 │   └── security/          # 安全国际化
-│       ├── security/      # 安全特性
+│       ├── security/      # 安全特性 (TLS/加密)
 │       └── i18n/          # 国际化
 │
 ├── by-contributor/        # 按贡献者
@@ -133,6 +172,23 @@ jdk_internal/
 
 ---
 
+## ⭐ 精选 PR 分析
+
+### 性能优化系列
+
+| PR | 影响 | 分析 |
+|----|------|------|
+| [JDK-8341755](by-pr/8341/8341755.md) | Lambda 生成 +15-20% | 参数名称缓存优化 |
+| [JDK-8349400](by-pr/8349/8349400.md) | 元空间 -82% | 消除匿名内部类 |
+| [JDK-8339217](by-pr/8339/8339217.md) | 常量加载 +5-15% | ClassFile API 优化 |
+| [JDK-8339290](by-pr/8339/8339290.md) | UTF-8 编码 +15-30% | 批量扫描优化 |
+| [JDK-8341906](by-pr/8341/8341906.md) | 字节码写入 +28% | BufWriter 合并 |
+| [JDK-8341859](by-pr/8341/8341859.md) | 基准稳定性 +63% | ClassFile 测试优化 |
+
+**查看更多**: [PR 分析索引](by-pr/)
+
+---
+
 ## 数据来源
 
 - **GitHub PRs**: [openjdk/jdk](https://github.com/openjdk/jdk) - 代码变更和讨论
@@ -147,6 +203,11 @@ jdk_internal/
 
 | 日期 | 更新内容 |
 |------|----------|
+| 2026-03-20 | ✨ **重大更新**: 28 个主题文档增强，新增 4215+ 行 PR 分析和最佳实践 |
+| 2026-03-20 | ✨ 新增 Lambda/Stream/Enum/Generics/Patterns/Records 深度分析 |
+| 2026-03-20 | ✨ 新增 JIT 编译、内存管理、性能优化专题 |
+| 2026-03-20 | ✨ 新增 Class File API 9 个 PR 分析 |
+| 2026-03-20 | ✨ 修复贡献者档案链接，更新主题索引 |
 | 2026-03-20 | 新增技术演讲 (talks/) 和 JVMLS 资料 |
 | 2026-03-20 | 新增研究方法论 (AGENTS.md)，修复主题链接 |
 | 2026-03-19 | 新增 JSR 文档 |
@@ -158,3 +219,5 @@ jdk_internal/
 > **项目状态**: 持续更新中
 >
 > **最后更新**: 2026-03-20
+>
+> **文档统计**: 537 个文档文件 | 8,337 个链接 | 覆盖 JDK 8/11/17/21/25/26
