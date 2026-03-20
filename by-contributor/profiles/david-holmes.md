@@ -2,13 +2,13 @@
 
 > **GitHub**: [@dholmes-ora](https://github.com/dholmes-ora)
 > **Organization**: Oracle
-> **Book Author**: Java Concurrency in Practice
+> **Book Author**: Java Concurrency in Practice, The Java Programming Language (4th Edition)
 
 ---
 
 ## 概述
 
-David Holmes 是 Oracle 的 JVM 运行时专家，专注于线程、并发和信号处理。他是经典著作《Java Concurrency in Practice》的合著者之一（与 Brian Goetz、Tim Peierls、Joshua Bloch、Joseph Bowbeer 合著）。在加入 Oracle 之前，他曾担任 DLTeCH Pty Ltd 的总监和首席科学家，位于澳大利亚布里斯班，专注于并发和实时 Java 技术。
+David Holmes 是 Oracle 的 JVM 运行时专家，专注于线程、并发和信号处理。他是经典著作《Java Concurrency in Practice》和《The Java Programming Language (4th Edition)》的合著者之一。在加入 Oracle 之前，他曾担任 DLTeCH Pty Ltd 的总监和首席科学家，位于澳大利亚布里斯班，专注于并发和实时 Java 技术。他于 1999 年在麦考瑞大学（Macquarie University）获得博士学位，研究面向对象系统中的同步问题。
 
 ---
 
@@ -18,16 +18,20 @@ David Holmes 是 Oracle 的 JVM 运行时专家，专注于线程、并发和信
 |-------|-------|
 | **Name** | David Holmes |
 | **Current Organization** | Oracle |
+| **Current Role** | Consulting Member of Technical Staff, JVM Runtime Group |
 | **Previous Organization** | DLTeCH Pty Ltd (Brisbane, Australia) |
-| **Role** | Director and Chief Scientist (DLTeCH) |
+| **Previous Role** | Director and Chief Scientist |
+| **Education** | Ph.D. Macquarie University (1999) - Synchronization in Object-Oriented Systems |
 | **GitHub** | [@dholmes-ora](https://github.com/dholmes-ora) |
 | **OpenJDK** | [@dholmes](https://openjdk.org/census#dholmes) |
 | **Role** | OpenJDK Member, JDK Reviewer |
-| **PRs** | [303 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Adholmes-ora+is%3Aclosed+label%3Aintegrated) |
-| **Primary Areas** | Threading, Concurrency, JVM Runtime, Signal Handling |
-| **Book** | Java Concurrency in Practice (Co-author) |
+| **PRs** | [303+ integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Adholmes-ora+is%3Aclosed+label%3Aintegrated) |
+| **Primary Areas** | Threading, Concurrency, JVM Runtime, Signal Handling, Memory Model |
+| **Books** | Java Concurrency in Practice (2006), The Java Programming Language 4th Ed (2005) |
+| **JSR-166** | Expert Group Member (Concurrency Utilities) |
+| **RTSJ** | Specification Contributor |
 
-> **数据来源**: [RTSJ Profile](https://www.rtsj.org/DavidBio.html), [Java Concurrency in Practice](https://www.oreilly.com/library/view/java-concurrency-in/0321349601/)
+> **数据来源**: [RTSJ Profile](https://www.rtsj.org/DavidBio.html), [Java Concurrency in Practice](https://www.oreilly.com/library/view/java-concurrency-in/0321349601/), [Understanding OrderAccess](https://cr.openjdk.org/~dholmes/presentations/Understanding-OrderAccess-v1.1.pdf)
 
 ---
 
@@ -51,7 +55,60 @@ David Holmes 是 Oracle 的 JVM 运行时专家，专注于线程、并发和信
 
 ## Technical Expertise
 
-`Threading` `Concurrency` `Signal Handling` `JNI` `JVM Runtime` `Error Reporting`
+`Threading` `Concurrency` `Signal Handling` `JNI` `JVM Runtime` `Error Reporting` `Memory Model` `OrderAccess`
+
+---
+
+## Books and Publications
+
+### Java Concurrency in Practice (2006)
+
+**Co-authors**: Brian Goetz, Tim Peierls, Joshua Bloch, Joseph Bowbeer, David Holmes
+
+- **Publisher**: Addison-Wesley Professional
+- **ISBN**: 978-0321349606
+- **Impact**: The definitive guide to concurrent programming in Java
+- **Topics**: Threads, synchronization, latches, barriers, executors, concurrent collections
+
+### The Java Programming Language, Fourth Edition (2005)
+
+**Co-authors**: Ken Arnold, James Gosling, David Holmes
+
+- **Publisher**: Addison-Wesley Professional
+- **ISBN**: 978-0321349804
+- **Coverage**: Java 2 Standard Edition 5.0 (J2SE 5.0)
+- **Topics**: Generics, enums, annotations, and other Java 5 features
+
+### JSR-166: Concurrency Utilities
+
+**Expert Group Member** (with Doug Lea, Josh Bloch, Joe Bowbeer, Brian Goetz, Tim Peierls)
+
+- **Specification**: Java Specification Request for Concurrency Utilities
+- **Release**: Java 5 (J2SE 5.0)
+- **Package**: `java.util.concurrent`
+- **Impact**: Revolutionized concurrent programming in Java
+
+### Real-Time Specification for Java (RTSJ)
+
+**Specification Contributor** (with Peter Dibble, Rudy Belliardi, Ben Brosgol, Andy Wellings)
+
+- **Focus**: Real-time Java systems
+- **Work**: Java Real-Time System at Sun Microsystems
+
+---
+
+## Career Timeline
+
+| Year | Event | Details |
+|------|-------|---------|
+| **1999** | Completed Ph.D. | Macquarie University, Sydney - Synchronization in Object-Oriented Systems |
+| **~2000-2005** | Sun Microsystems | Software Engineer, VM Real-Time group, Java Real-Time System |
+| **2005** | Book Published | The Java Programming Language, 4th Edition (with Ken Arnold, James Gosling) |
+| **2006** | Book Published | Java Concurrency in Practice (with Brian Goetz et al.) |
+| **~2005-2010** | DLTeCH Pty Ltd | Director and Chief Scientist, Brisbane, Australia |
+| **2010-Present** | Oracle | Consulting Member of Technical Staff, JVM Runtime Group |
+| **2016** | Presentation | Understanding OrderAccess - Managing Data Races |
+| **2020-Present** | Virtual Threads | Key contributor to Project Loom threading implementation |
 
 ---
 
@@ -74,12 +131,34 @@ VM startup and thread creation improvements.
 
 ---
 
+## Presentations and Talks
+
+| Year | Title | Event/Context | Link |
+|------|-------|---------------|------|
+| 2016 | Understanding OrderAccess: Managing Data Races in a Hostile Environment | OpenJDK Internal | [PDF](https://cr.openjdk.org/~dholmes/presentations/Understanding-OrderAccess-v1.1.pdf) |
+
+### Understanding OrderAccess (2016)
+
+A comprehensive presentation on memory models, acquire/release semantics, fences and barriers, and the OrderAccess API in HotSpot:
+
+- **Topics Covered**:
+  - Memory Models (Java, C++, Hardware)
+  - Acquire/Release Memory Ordering Semantics
+  - Architectural Support (SPARC, x86, ARM, Power/PPC, Itanium)
+  - OrderAccess API and Implementation
+  - Atomic API and C++11 Compatibility
+- **Key Quote**: "Concurrent Programming is like Physics" - Newtonian mechanics vs Quantum mechanics vs Special Theory of Relativity
+
+---
+
 ## External Resources
 
 | Type | Link |
 |------|------|
 | **GitHub** | [@dholmes-ora](https://github.com/dholmes-ora) |
 | **OpenJDK Census** | [@dholmes](https://openjdk.org/census#dholmes) |
+| **RTSJ Bio** | [David Holmes - RTSJ](https://www.rtsj.org/DavidBio.html) |
+| **Presentations** | [cr.openjdk.org/~dholmes](https://cr.openjdk.org/~dholmes/presentations/) |
 
 ---
 
@@ -305,5 +384,19 @@ void VMError::report_and_die() {
 
 - [OpenJDK Profile](https://openjdk.org/census#dholmes)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20dholmes)
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=dholmes)
-- [David Holmes Blog](https://blogs.oracle.com/dholmes)
+- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=dholmes-ora)
+- [GitHub PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Adholmes-ora+is%3Aclosed+label%3Aintegrated)
+
+---
+
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-20
+> **更新内容**:
+> - 添加 Ph.D. 教育背景 (Macquarie University, 1999)
+> - 添加 Oracle 职位详情 (Consulting MTS, JVM Runtime Group)
+> - 添加第二本书籍 《The Java Programming Language 4th Edition》(2005)
+> - 添加 JSR-166 Expert Group 成员身份
+> - 添加 RTSJ 规范贡献者身份
+> - 添加 "Understanding OrderAccess" 演讲 (2016)
+> - 添加职业时间线
+> - 更新 GitHub 链接为 dholmes-ora
