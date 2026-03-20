@@ -315,6 +315,37 @@ Common issues and detection methods:
 | Version misattribution | Feature attributed to wrong version | Cross-verify JEP and version |
 | Over-interpretation | Conclusions without data support | Check key statements for citations |
 | Template inconsistency | Structure deviates from standard | Compare against template |
+| **Wrong local path** | `contributors/organizations/` should be `contributors/orgs/` | Verify actual directory structure with `ls` |
+
+### Local Link Verification Rules
+
+**CRITICAL: Always verify local link paths against actual directory structure.**
+
+When adding or checking local links:
+
+1. **Verify directory structure**:
+   ```bash
+   # Check actual directory names
+   ls -la contributors/
+   # Output shows: orgs/ (NOT organizations/)
+   ```
+
+2. **Common path patterns in this project**:
+   - Contributor profiles: `by-contributor/profiles/{username}.md`
+   - Organizations: `contributors/orgs/{orgname}.md` (⚠️ NOT `organizations/`)
+   - Topic pages: `by-topic/{category}/{topic}.md`
+   - PR analysis: `by-pr/{issue-id}/{pr-number}.md`
+
+3. **Before committing link changes**:
+   - Use `Glob` or `ls` to verify target file exists
+   - For bulk link updates, verify the path pattern first
+   - Check all similar links in the same file
+
+**Example of missed detection (2026-03)**:
+- `talks/index.md` had 100+ links using `contributors/organizations/`
+- Actual directory is `contributors/orgs/`
+- Only detected after user reported broken link
+- **Lesson**: When checking one type of link, check all similar patterns in the file
 
 ### Research Collaboration Guidelines
 
