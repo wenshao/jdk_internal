@@ -94,6 +94,25 @@ C1、C2、Graal JIT 编译器从 JDK 1.0 到 JDK 26 的完整演进。
 
 → [JIT 编译详情](jit/)
 
+### [GraalVM](graalvm/)
+
+Oracle Labs 开发的高性能 JDK 发行版。
+
+| 特性 | 说明 |
+|------|------|
+| **Graal JIT** | 用 Java 编写的高性能 JIT 编译器 |
+| **Native Image** | AOT 编译，毫秒级启动 |
+| **Truffle** | 多语言运行时框架 |
+| **Polyglot** | JavaScript/Python/Ruby/R 等语言支持 |
+
+| 版本 | JDK 基线 | 主要特性 |
+|------|----------|----------|
+| GraalVM 19 | JDK 11 | 首个社区版本 |
+| GraalVM 22 | JDK 17 | Native Image 性能提升 |
+| GraalVM 24 | JDK 21 | JDK 21 基线 |
+
+→ [GraalVM 详情](graalvm/)
+
 ### [类加载器](classloading/)
 
 Java 类加载器从 JDK 1.0 到 JDK 26 的完整演进。
