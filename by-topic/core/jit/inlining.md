@@ -490,6 +490,8 @@ static void putCharsAt(byte[] val, int index, int c1, int c2, int c3, int c4) {
 - [C2 优化阶段](c2-phases.md) - 内联在编译流程中的位置
 - [VM 参数](vm-parameters.md) - 完整参数参考
 - [诊断工具](diagnostics.md) - 调试内联决策
+- [Graal JIT](graal-jit.md) - Graal 内联策略对比
+- [Graal 高级优化](graal-advanced-optimizations.md) - 内联优化对比
 
 ### 外部资源
 

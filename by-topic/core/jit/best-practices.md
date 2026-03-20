@@ -653,6 +653,7 @@ for (int i = 0; i < 1000; i++) {
 - [循环优化详解](loop-optimizations.md) - 循环优化技术
 - [逃逸分析详解](escape-analysis.md) - 标量替换条件
 - [诊断工具](diagnostics.md) - 如何诊断 JIT 问题
+- [Graal JIT](graal-jit.md) - Graal 代码模式差异
 
 ### 外部资源
 

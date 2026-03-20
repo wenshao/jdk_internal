@@ -385,9 +385,11 @@ PhaseCFG ──► PhaseChaitin ──► PhaseBlockLayout ──► Output
 
 ### 本地文档
 
-- [VM 参数](../vm-parameters.md) - 编译器参数配置
-- [诊断工具](../diagnostics.md) - 如何观察优化阶段
-- [SuperWord 向量化](/by-topic/core/jit/superword/) - SuperWord 专题
+- [VM 参数](vm-parameters.md) - 编译器参数配置
+- [诊断工具](diagnostics.md) - 如何观察优化阶段
+- [SuperWord 向量化](superword.md) - SuperWord 专题
+- [Graal JIT](graal-jit.md) - Graal 编译器对比
+- [Graal vs C2 性能对比](graal-vs-c2-performance.md) - 性能基准测试
 
 ### 贡献者
 

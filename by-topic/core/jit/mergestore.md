@@ -490,9 +490,10 @@ public void putChars4(byte[] buf) {
 
 ### 内部文档
 
-- [JIT 编译索引](./index.md)
-- [C2 编译阶段](./c2-phases.md)
-- [JIT 诊断工具](./diagnostics.md)
+- [JIT 编译索引](index.md)
+- [C2 编译阶段](c2-phases.md)
+- [JIT 诊断工具](diagnostics.md)
+- [Graal 高级优化](graal-advanced-optimizations.md) - MergeStore 对比
 - [性能优化](../performance/)
 
 ### PR 分析

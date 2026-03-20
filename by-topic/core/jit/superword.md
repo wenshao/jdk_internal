@@ -440,6 +440,7 @@ void vectorAdd(float[] a, float[] b, float[] c) {
 - [C2 优化阶段](c2-phases.md) - PhaseVector 详解
 - [循环优化](loop-optimizations.md) - 循环优化总览
 - [Vector API](/by-topic/core/vector-api/) - 显式向量化
+- [Graal 高级优化](graal-advanced-optimizations.md) - 向量化对比
 
 ### 外部资源
 

@@ -548,6 +548,7 @@ for (int i = 0; i < list.size(); i++) {
 - [C2 优化阶段](c2-phases.md) - PhaseIdealLoop 详解
 - [SuperWord 向量化](superword.md) - 循环向量化
 - [Ideal Graph](ideal-graph.md) - 循环节点表示
+- [Graal 高级优化](graal-advanced-optimizations.md) - 循环优化对比
 
 ### 外部资源
 

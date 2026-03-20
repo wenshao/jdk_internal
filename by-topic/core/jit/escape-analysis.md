@@ -527,6 +527,8 @@ jfr print --events jdk.ObjectAllocationInNewTLAB alloc.jfr
 
 - [MergeStore 优化](mergestore.md) - 标量替换后的优化
 - [C2 优化阶段](c2-phases.md) - PhaseEscapeAnalysis 位置
+- [Graal 独有特性](graal-unique-features.md) - 部分转逃分析 (C2 不支持)
+- [Graal 高级优化](graal-advanced-optimizations.md) - 逃逸分析对比
 - [String 构造函数优化](/by-pr/8355/8357289.md) - 方法拆分以支持内联和逃逸分析
 
 ---
