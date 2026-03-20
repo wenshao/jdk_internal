@@ -55,6 +55,14 @@ list.add(Integer.valueOf(42));
 // 运行时无法优化为原始类型存储
 ```
 
+### 装箱/拆箱开销
+
+| 操作 | 开销 | 频率 |
+|------|------|------|
+| **装箱** | 分配对象 + 复制 | 每次 add |
+| **拆箱** | 方法调用 + 类型转换 | 每次 get |
+| **内存** | 对象头 + 引用 | 持续占用 |
+
 ---
 
 ## 解决方案: Primitive Specialization
@@ -150,6 +158,18 @@ buffer.add(42);
 // 注意: 无装箱/拆箱
 ```
 
+### 描述符系统
+
+```
+当前描述符:
+  Ljava/lang/String;  - 引用类型
+  [I                 - int 数组
+
+Valhalla 描述符:
+  Qjava/lang/String;  - 值类型 (Inline Class)
+  Qjava/util/List;<I> - 特化泛型 (int 参数)
+```
+
 ---
 
 ## 类型系统变化
@@ -195,6 +215,28 @@ var ints = of(1, 2, 3);  // List<int>
 var doubles = of(1.0, 2.0, 3.0);  // List<double>
 ```
 
+### 类型层次
+
+```
+当前:
+  Object
+    ├── Number
+    │   ├── Integer
+    │   ├── Double
+    │   └── ...
+    └── 其他引用类型
+
+Valhalla:
+  Object
+    ├── Number
+    │   ├── Integer (引用)
+    │   ├── Double (引用)
+    │   └── ...
+    ├── int (值类型)
+    ├── double (值类型)
+    └── Point (值类型)
+```
+
 ---
 
 ## 核心库特化
@@ -219,7 +261,7 @@ interface Stream<T> {
     <R> Stream<R> map(Function<T, R> mapper);
 }
 
-// 原始类型 Stream (现有)
+// 原始类型 Stream (现有 - 临时方案)
 IntStream intStream();
 LongStream longStream();
 DoubleStream doubleStream();
@@ -231,12 +273,12 @@ Stream<int> stream = List.of(1, 2, 3).stream();
 ### 函数式接口
 
 ```java
-// 现有原始类型函数式接口
-IntFunction, LongFunction, DoubleFunction
-IntPredicate, LongPredicate, DoublePredicate
-IntUnaryOperator, LongUnaryOperator, DoubleUnaryOperator
+// 现有原始类型函数式接口 (临时方案)
+IntFunction<Integer, String> intToIntString = i -> "Value: " + i;
+IntPredicate intPredicate = i -> i > 0;
+IntUnaryOperator intNegator = i -> -i;
 
-// 未来: 自动特化
+// 未来: 统一函数式接口
 Function<int, String> intToString = i -> "Value: " + i;
 Predicate<int> isPositive = i -> i > 0;
 UnaryOperator<int> negate = i -> -i;
@@ -314,7 +356,7 @@ void process(List<? extends Number> list) {
 
 ```java
 // 反射获取特化类型
-Class<?> listType = List.class.getTypeParameter("T");
+Class<?> elementType = List.class.getTypeParameter("T");
 // 对于 List<int>, 返回 int.class
 
 // Method.getGenericParameterTypes()
@@ -347,39 +389,101 @@ Type[] params = add.getGenericParameterTypes();
 
 ---
 
+## 当前最佳实践
+
+### 使用原始类型集合库
+
+```java
+// FastUtil - 高性能原始类型集合
+import it.unimi.dsi.fastutil.ints.IntArrayList;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import it.unimi.dsi.fastutil.longs.LongArrayList;
+
+// IntArrayList - 替代 List<Integer>
+IntArrayList ints = new IntArrayList();
+ints.add(42);
+ints.add(100);
+int sum = ints.stream().sum();  // 无装箱
+
+// LongArrayList - 替代 List<Long>
+LongArrayList longs = new LongArrayList();
+longs.add(1_000_000L);
+
+// Int2ObjectMap - 原始类型键 Map
+Int2ObjectMap<String> map = new Int2ObjectOpenHashMap<>();
+map.put(1, "one");
+String value = map.get(1);
+```
+
+### Eclipse Collections
+
+```java
+// Eclipse Collections - 原始类型集合
+import org.eclipse.collections.impl.list.mutable.primitive.IntArrayList;
+import org.eclipse.collections.api.list.primitive.ImmutableIntList;
+
+IntArrayList ints = new IntArrayList();
+ints.addAllWith(1, 2, 3, 4, 5);
+
+IntList immutable = ints.toImmutable();
+int sum = ints.sum();  // 无装箱
+```
+
+### HPPC (High Performance Primitive Collections)
+
+```java
+// HPPC - 另一个高性能集合库
+import com.carrotsearch.hppc.IntArrayList;
+import com.carrotsearch.hppc.IntCursor;
+
+IntArrayList ints = new IntArrayList();
+ints.add(42);
+ints.add(100);
+
+IntCursor cursor = ints.cursor();
+while (cursor.moveNext()) {
+    System.out.println(cursor.value);
+}
+```
+
+---
+
 ## 示例应用
 
 ### 高性能集合
 
 ```java
-// 金融计算: 使用 List<double> 替代 List<Double>
-List<double> prices = new ArrayList<>(1_000_000);
+// 金融计算: 使用原始类型集合
+IntArrayList prices = new IntArrayList(1_000_000);
 for (int i = 0; i < 1_000_000; i++) {
-    prices.add(Math.random() * 100);
+    prices.add((int)(Math.random() * 100));
 }
 
-// 计算
-double sum = 0;
-for (double price : prices) {
-    sum += price;  // 无拆箱
-}
+// 计算 - 无装箱
+int sum = prices.stream().sum();
+int max = prices.stream().max();
 ```
 
 ### 科学计算
 
 ```java
+// 矩阵运算
 class Matrix {
-    private final List<List<double>> data;
+    private final IntArrayList[] data;
 
     Matrix(int rows, int cols) {
-        data = new ArrayList<>(rows);
+        data = new IntArrayList[rows];
         for (int i = 0; i < rows; i++) {
-            data.add(new ArrayList<>(cols));
+            data[i] = new IntArrayList(cols);
         }
     }
 
-    double get(int row, int col) {
-        return data.get(row).get(col);  // 无装箱
+    int get(int row, int col) {
+        return data[row].getInt(col);
+    }
+
+    void set(int row, int col, int value) {
+        data[row].set(col, value);
     }
 }
 ```
@@ -388,8 +492,26 @@ class Matrix {
 
 ## 参考资料
 
+### JEP 文档
+
 - [JEP 402: Unified Generics](https://openjdk.org/jeps/402)
 - [JEP 218: Generics over Primitive Types](https://openjdk.org/jeps/218)
+
+### 技术论文
+
+- [Universal Generics for Java](https://openjdk.org/jeps/402/spec)
+- [Specialized Generic Classes](https://cr.openjdk.org/~briangoetz/valhalla/specialization-impactus.html)
+
+### 邮件列表
+
 - [Valhalla Spec Observers](https://mail.openjdk.org/pipermail/valhalla-spec-observers/)
 
-→ [返回 Valhalla](./) | [值类型详解](value-types.md)
+---
+
+## 相关主题
+
+- [值类型详解](value-types.md)
+- [Project Amber](../amber/) - 语言特性配合
+- [Project Loom](../loom/) - 性能配合
+
+→ [返回 Valhalla](./)

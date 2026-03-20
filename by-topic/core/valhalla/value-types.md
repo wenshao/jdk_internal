@@ -28,6 +28,7 @@ Inline Classes、L-World 和值语义的深入分析。
 | **比较** | `==` 比较引用 | `==` 比较值 |
 | **默认值** | `null` | 类的默认值 |
 | **锁定** | 可 synchronized | 不支持 |
+| **继承** | 可以 extends | 不支持继承 |
 
 ---
 
@@ -160,6 +161,7 @@ L-World 类型层次:
 | 引用类型 | `Ltype;` | `Ljava/lang/String;` |
 | 值类型 | `Qtype;` | `QPoint;` |
 | 原始类型 | `I` (int) | `[I` (int[]) |
+| 特化泛型 | `QList;<I>` | `QList;<I>` |
 
 ---
 
@@ -364,10 +366,96 @@ public inline class Rectangle {
 
 ---
 
+## 当前最佳实践
+
+### 在 Valhalla 到来之前
+
+```java
+// 1. 使用原始类型数组
+public class PointArray {
+    private final int[] x;
+    private final int[] y;
+
+    public PointArray(int capacity) {
+        this.x = new int[capacity];
+        this.y = new int[capacity];
+    }
+}
+
+// 2. 使用 Record (JDK 16+)
+public record Point(int x, int y) {}
+
+// 3. 使用不可变类
+public final class Point {
+    public final int x;
+    public final int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Point)) return false;
+        Point point = (Point) o;
+        return x == point.x && y == point.y;
+    }
+
+    @Override
+    public int hashCode() {
+        return 31 * x + y;
+    }
+}
+```
+
+### 使用第三方库
+
+```java
+// Eclipse Collections
+import org.eclipse.collections.impl.list.mutable.IntArrayList;
+import org.eclipse.collections.impl.list.mutable.primitive.IntArrayList;
+
+IntArrayList ints = new IntArrayList();
+ints.add(1);
+ints.add(2);
+int sum = ints.sum();  // 无装箱
+
+// FastUtil
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+
+Int2ObjectMap<String> map = new Int2ObjectOpenHashMap<>();
+map.put(1, "one");
+String value = map.get(1);  // 无装箱
+```
+
+---
+
 ## 参考资料
 
+### JEP 文档
+
 - [JEP 401: Primitive Classes](https://openjdk.org/jeps/401)
-- [Value Types: One Path to Valhalla](https://openjdk.org/jeps/401)
+- [JEP 390: Warnings for Value-Based Classes](https://openjdk.org/jeps/390)
+
+### 技术论文
+
+- [Value Types: Reviving Java's Original Ideal](https://cr.openjdk.org/~jrose/papers/valhalla/valhalla-2014-slides.pdf)
 - [L-World Design Notes](https://openjdk.org/projects/valhalla/design-notes/)
 
-→ [返回 Valhalla](./) | [泛型特化详解](generics.md)
+### 邮件列表
+
+- [Valhalla Spec Observers](https://mail.openjdk.org/pipermail/valhalla-spec-observers/)
+
+---
+
+## 相关主题
+
+- [泛型特化详解](generics.md)
+- [Project Amber](../amber/) - Records 配合值类型
+- [Project Loom](../loom/) - 虚拟线程配合值类型
+- [内存管理](../memory/) - 对象头详解
+
+→ [返回 Valhalla](./)
