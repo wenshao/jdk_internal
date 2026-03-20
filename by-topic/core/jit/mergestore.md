@@ -108,7 +108,8 @@ for (int i = 0; i < unknown; i++) {
 - **JDK-8334342**: 添加 JMH 基准测试
 - **JDK-8333893**: StringBuilder append(boolean/null) 优化
 - **JDK-8347405**: 支持反向字节序
-- **JDK-8343629**: 扩展基准测试覆盖
+- **JDK-8343629**: 扩展基准测试覆盖（新增 MergeLoadBench）
+- **JDK-8349142**: 修复 MergeLoadBench 测试（VarHandle 偏移量错误）
 
 ### JDK 24 (2025)
 
@@ -227,6 +228,19 @@ static void putCharsAt(byte[] val, int index, int c1, int c2, int c3, int c4) {
 ```
 
 ### Bug 修复
+
+#### JDK-8349142: MergeLoadBench 测试修复
+
+> **状态**: 已修复 (2025-02-02)
+> **影响**: ⭐⭐⭐ 测试稳定性
+
+**问题**: MergeLoadBench 中 VarHandle 使用错误的多余偏移量
+
+**根因**: 在创建测试时复制了 Unsafe 代码模式，误加了 `Unsafe.ARRAY_BYTE_BASE_OFFSET`
+
+**修复**: 移除 VarHandle 调用中的多余偏移量
+
+→ [详细分析](/by-pr/8349/8349142.md)
 
 #### JDK-8370405: 标量替换错误
 
@@ -402,6 +416,7 @@ public void putChars4(byte[] buf) {
 - [JDK-8334342: MergeStore JMH 基准测试](/by-pr/8334/8334342.md)
 - [JDK-8333893: StringBuilder boolean/null 优化](/by-pr/8333/8333893.md)
 - [JDK-8343629: 更多 MergeStore 基准测试](/by-pr/8343/8343629.md)
+- [JDK-8349142: MergeLoadBench 测试修复](/by-pr/8349/8349142.md)
 
 ### 外部资源
 
