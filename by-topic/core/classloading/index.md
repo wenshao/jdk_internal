@@ -9,21 +9,24 @@
 ## 快速概览
 
 ```
-JDK 1.0 ── JDK 2 ── JDK 6 ── JDK 8 ── JDK 9 ── JDK 17
-   │         │        │        │        │        │
-类加载   双亲    线程上下   元空间   模块化   层层初始化
-机制    委派    类加载器   类加载   类加载   (Layinit)
+JDK 1.0 ── JDK 2 ── JDK 6 ── JDK 8 ── JDK 9 ── JDK 17 ── JDK 21 ── JDK 26
+   │         │        │        │        │        │        │        │
+类加载   双亲    线程上下   元空间   模块化   层层    外部    CDS
+机制    委派    类加载器   类加载   类加载   初始化   函数    改进
+                (TCCL)   (Metaspace) (JPMS) (Layinit) (FFM)  (AOT)
 ```
 
 ### 核心演进
 
-| 版本 | 特性 | 说明 |
-|------|------|------|
-| **JDK 1.0** | ClassLoader | 基础类加载 |
-| **JDK 2** | 双亲委派 | 安全性保证 |
-| **JDK 6** | 线程上下文类加载器 | JavaEE 支持 |
-| **JDK 8** | 元空间 | 取代永久代 |
-| **JDK 9** | 模块化类加载 | JPMS |
+| 版本 | 特性 | 说明 | JEP |
+|------|------|------|-----|
+| **JDK 1.0** | ClassLoader | 基础类加载 | - |
+| **JDK 2** | 双亲委派 | 安全性保证 | - |
+| **JDK 6** | 线程上下文类加载器 | JavaEE 支持 | - |
+| **JDK 8** | 元空间 | 取代永久代 | - |
+| **JDK 9** | 模块化类加载 | JPMS | JEP 220 |
+| **JDK 21** | 外部函数 | 不依赖 JNI | JEP 444 |
+| **JDK 26** | CDS 改进 | 应用类数据共享 | JEP 467 |
 
 ---
 
@@ -32,7 +35,7 @@ JDK 1.0 ── JDK 2 ── JDK 6 ── JDK 8 ── JDK 9 ── JDK 17
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
 
-### 类加载 (按 Git 提交数)
+### 类加载团队 (按 Git 提交数)
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
@@ -41,11 +44,484 @@ JDK 1.0 ── JDK 2 ── JDK 6 ── JDK 8 ── JDK 9 ── JDK 17
 | 3 | Calvin Cheung | 103 | Oracle | 类加载器 |
 | 4 | Harold Seigel | 89 | Oracle | JVM 运行时 |
 | 5 | Stefan Karlsson | 87 | Oracle | 并发 GC |
+| 6 | Jiangli Zhou | 74 | Oracle | CDS, 存档 |
+| 7 | David Holmes | 68 | Oracle | 并发类加载 |
+
+---
+
+## 类加载过程
+
+### 加载阶段
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    类加载过程                             │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  1. 加载 (Loading)                                      │
+│     ├── 获取二进制流                                      │
+│     ├── 转换为运行时结构                                  │
+│     └── 生成 Class 对象                                  │
+│                                                         │
+│  2. 验证 (Verification)                                 │
+│     ├── 文件格式验证                                      │
+│     ├── 字节码验证                                        │
+│     └── 符号引用验证                                      │
+│                                                         │
+│  3. 准备 (Preparation)                                  │
+│     ├── 分配静态变量内存                                  │
+│     └── 设置初始值 (0, null, false)                      │
+│                                                         │
+│  4. 解析 (Resolution)                                   │
+│     ├── 符号引用转直接引用                                │
+│     └── 类、接口、字段、方法解析                           │
+│                                                         │
+│  5. 初始化 (Initialization)                             │
+│     ├── 执行 <clinit> 方法                               │
+│     └── 静态变量赋值和静态块                              │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+### 类加载器层次
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                  类加载器层次结构                         │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│                    BootstrapClassLoader                 │
+│                    (启动类加载器/C++)                     │
+│                         │                               │
+│                         ▼                               │
+│                   PlatformClassLoader                  │
+│                   (平台类加载器/Java)                     │
+│                         │                               │
+│                         ▼                               │
+│                   AppClassLoader                       │
+│                   (应用类加载器/Java)                     │
+│                         │                               │
+│                         ▼                               │
+│                   CustomClassLoader                    │
+│                   (自定义类加载器)                        │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 双亲委派模型
+
+### 原理
+
+```java
+// 双亲委派伪代码
+public Class<?> loadClass(String name) {
+    // 1. 检查是否已加载
+    Class<?> c = findLoadedClass(name);
+    if (c == null) {
+        // 2. 委派父加载器
+        try {
+            if (parent != null) {
+                c = parent.loadClass(name);
+            } else {
+                c = findBootstrapClassOrNull(name);
+            }
+        } catch (ClassNotFoundException e) {
+            // 3. 父加载器无法加载，自己加载
+            c = findClass(name);
+        }
+    }
+    return c;
+}
+```
+
+### 优势
+
+1. **安全性**: 防止替换核心类 (如 java.lang.String)
+2. **避免重复加载**: 父加载器已加载的类不会重复加载
+3. **层次清晰**: 职责明确
+
+### 打破双亲委派
+
+```java
+// 自定义类加载器
+public class CustomClassLoader extends ClassLoader {
+    @Override
+    protected Class<?> loadClass(String name, boolean resolve)
+            throws ClassNotFoundException {
+        // 1. 检查是否已加载
+        Class<?> c = findLoadedClass(name);
+        if (c == null) {
+            // 2. 自己先尝试加载 (打破双亲委派)
+            try {
+                c = findClass(name);
+            } catch (ClassNotFoundException e) {
+                // 3. 无法加载，委派父加载器
+                c = super.loadClass(name, resolve);
+            }
+        }
+        return c;
+    }
+
+    @Override
+    protected Class<?> findClass(String name)
+            throws ClassNotFoundException {
+        // 自定义类查找逻辑
+        byte[] classBytes = loadClassBytes(name);
+        return defineClass(name, classBytes, 0, classBytes.length);
+    }
+}
+```
+
+---
+
+## 内置类加载器
+
+### Bootstrap ClassLoader
+
+**实现**: C++ (HotSpot)
+
+**加载路径**:
+```bash
+# 查看 Bootstrap ClassLoader 路径
+java -Xbootclasspath/a:/path -version
+
+# 输出
+$ java -XshowSettings:properties -version 2>&1 | grep sun.boot.class.path
+sun.boot.class.path = /usr/lib/jvm/java-21/jre/lib/resources.jar:...
+```
+
+**加载内容**:
+- `java.*` 核心类
+- `javax.*` 部分核心类
+- 启动相关类
+
+### Platform ClassLoader (JDK 9+)
+
+**替代**: Extension ClassLoader (JDK 8)
+
+**加载内容**:
+- Java SE 平台 API
+- JDK 扩展类
+
+```java
+// 获取 Platform ClassLoader
+ClassLoader platformLoader = ClassLoader.getPlatformClassLoader();
+```
+
+### Application ClassLoader
+
+**别名**: System ClassLoader
+
+**加载内容**:
+- 应用类路径 (`-cp` / `-classpath`)
+- 用户类
+
+```java
+// 获取 Application ClassLoader
+ClassLoader appLoader = ClassLoader.getSystemClassLoader();
+```
+
+---
+
+## 线程上下文类加载器 (TCCL)
+
+### 用途
+
+**问题**: 双亲委派无法加载应用类
+
+**解决**: 线程上下文类加载器
+
+### 使用场景
+
+```java
+// JavaEE SPI (Service Provider Interface)
+// 核心库 (Bootstrap ClassLoader) 需要加载应用类
+
+// 1. 设置 TCCL
+Thread.currentThread().setContextClassLoader(
+    Thread.currentThread().getContextClassLoader());
+
+// 2. 使用 TCCL 加载
+Class<?> clazz = Thread.currentThread()
+    .getContextClassLoader()
+    .loadClass("com.example.Provider");
+
+// 3. JDBC 示例
+// DriverManager 在 rt.jar 中 (Bootstrap)
+// 需要加载应用提供的 JDBC 驱动
+Connection conn = DriverManager.getConnection(url);
+```
+
+### 实现原理
+
+```java
+// DriverManager 使用 TCCL
+public static Driver getService(Iterator<Driver> drivers) {
+    ClassLoader cl = Thread.currentThread().getContextClassLoader();
+    ServiceLoader<Driver> loadedDrivers = ServiceLoader.load(Driver.class, cl);
+    // ...
+}
+```
+
+---
+
+## 元空间 (Metaspace)
+
+### JDK 8 变化
+
+**JDK 7**: 永久代 (PermGen)
+**JDK 8+**: 元空间 (Metaspace)
+
+### 对比
+
+| 特性 | 永久代 (PermGen) | 元空间 (Metaspace) |
+|------|-----------------|-------------------|
+| 位置 | 堆内 | 本地内存 |
+| 大小 | 固定 | 动态增长 |
+| GC | Full GC 触发 | 自动触发 |
+| OOM | java.lang.OutOfMemoryError: PermGen space | java.lang.OutOfMemoryError: Metaspace |
+
+### 配置参数
+
+```bash
+# 元空间大小
+-XX:MetaspaceSize=256m              # 初始大小
+-XX:MaxMetaspaceSize=512m           # 最大大小
+
+# 类数据共享
+-XX:SharedClassListFile=classes.lst # 类列表
+-XX:SharedArchiveFile=app.jsa       # 共享归档
+
+# 压缩类指针
+-XX:CompressedClassSpaceSize=1g     # 压缩类空间大小
+```
+
+---
+
+## 模块化类加载 (JDK 9+)
+
+### JEP 220: 模块化系统
+
+**影响**:
+- 扩展机制移除
+- 类加载器重构
+- 封装性增强
+
+### 模块化类加载器
+
+```
+┌─────────────────────────────────────────────────────────┐
+│              模块化类加载器结构 (JDK 9+)                   │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  Bootstrap ClassLoader                                  │
+│  └── java.base                                         │
+│                                                         │
+│  Platform ClassLoader                                   │
+│  ├── java.sql                                          │
+│  ├── java.xml                                           │
+│  └── ...                                               │
+│                                                         │
+│  App ClassLoader                                        │
+│  └── 应用模块                                           │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+### 模块化类加载特性
+
+```java
+// 模块化类加载检查
+Module module = MyClass.class.getModule();
+
+// 检查模块是否导出包
+boolean isExported = module.isExported("com.example.internal");
+
+// 检查模块是否打开包 (反射)
+boolean isOpen = module.isOpen("com.example.internal");
+
+// 添加读取边 (运行时)
+ModuleLayer.boot().addOpens(
+    "java.base",
+    "com.example",
+    MyClass.class.getModule());
+```
+
+---
+
+## 自定义类加载器
+
+### 热部署
+
+```java
+public class HotSwapClassLoader extends ClassLoader {
+    private final String classpath;
+
+    public HotSwapClassLoader(String classpath, ClassLoader parent) {
+        super(parent);
+        this.classpath = classpath;
+    }
+
+    @Override
+    protected Class<?> findClass(String name)
+            throws ClassNotFoundException {
+        byte[] classBytes = loadClassBytes(name);
+        if (classBytes == null) {
+            throw new ClassNotFoundException(name);
+        }
+        return defineClass(name, classBytes, 0, classBytes.length);
+    }
+
+    private byte[] loadClassBytes(String name) {
+        String path = classpath + "/"
+            + name.replace('.', '/') + ".class";
+        try {
+            return Files.readAllBytes(Paths.get(path));
+        } catch (IOException e) {
+            return null;
+        }
+    }
+}
+```
+
+### 字节码加密
+
+```java
+public class DecryptClassLoader extends ClassLoader {
+    private final String key;
+
+    @Override
+    protected Class<?> findClass(String name)
+            throws ClassNotFoundException {
+        byte[] encrypted = loadEncryptedClass(name);
+        byte[] decrypted = decrypt(encrypted, key);
+        return defineClass(name, decrypted, 0, decrypted.length);
+    }
+
+    private byte[] decrypt(byte[] data, String key) {
+        // 解密逻辑
+        return data;
+    }
+}
+```
+
+---
+
+## 类加载器泄漏
+
+### 常见原因
+
+1. **静态集合持有引用**
+2. **ThreadLocal 未清理**
+3. **未关闭的资源**
+4. **JDBC 驱动注册**
+
+### 检测
+
+```bash
+# 查看类加载器数量
+jcmd <pid> GC.classloader_stats
+
+# 查看类加载器层次
+jcmd <pid> VM.classloader_stats
+
+# 堆转储分析
+jmap -dump:format=b,file=heap.hprof <pid>
+```
+
+### 预防
+
+```java
+// 1. 清理 ThreadLocal
+try {
+    threadLocal.set(value);
+} finally {
+    threadLocal.remove();  // 防止内存泄漏
+}
+
+// 2. 取消 JDBC 驱动注册
+try {
+    DriverManager.deregisterDriver(driver);
+} catch (SQLException e) {
+    // 忽略
+}
+
+// 3. 使用弱引用
+private static final Map<String, Object> CACHE =
+    new WeakHashMap<>();
+```
+
+---
+
+## CDS (Class Data Sharing)
+
+### 原理
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    CDS 工作流程                          │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  1. 类列表生成                                           │
+│     java -Xshare:dump -XX:SharedClassListFile=classes.lst│
+│                                                         │
+│  2. 归档生成                                             │
+│     java -Xshare:dump -XX:SharedArchiveFile=app.jsa     │
+│                                                         │
+│  3. 使用归档                                             │
+│     java -Xshare:on -XX:SharedArchiveFile=app.jsa       │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+### AppCDS (JDK 13+)
+
+**应用类数据共享**
+
+```bash
+# 1. 生成类列表
+java -XX:DumpLoadedClassList=classes.lst -cp app.jar Main
+
+# 2. 生成归档
+java -Xshare:dump -XX:SharedClassListFile=classes.lst \
+    -XX:SharedArchiveFile=app.jsa -cp app.jar
+
+# 3. 使用归档
+java -Xshare:on -XX:SharedArchiveFile=app.jsa -cp app.jar Main
+```
+
+### AOT (JDK 26+)
+
+**JEP 467: 准备简化 AppCDS**
+
+**改进**:
+- 自动类归档
+- 无需手动生成类列表
+- 更快的启动时间
+
+```bash
+# JDK 26+ 自动 AOT
+java -XX:AOTMode=create -jar app.jar
+java -XX:AOTMode=use -jar app.jar
+```
 
 ---
 
 ## 相关链接
 
-- [类加载时间线](timeline.md)
-- [JVM 调优](../jvm/)
-- [内存管理](../memory/)
+### 本地文档
+
+- [JVM 调优](../jvm/) - 类加载调优
+- [内存管理](../memory/) - Metaspace 管理
+
+### 外部参考
+
+**JEP 文档:**
+- [JEP 220: Modular Run-Time Image](https://openjdk.org/jeps/220)
+- [JEP 467: Prepare to Simplify AppCDS](https://openjdk.org/jeps/467)
+
+**技术文档:**
+- [Class Loading](https://docs.oracle.com/javase/specs/jvms/se21/html/jvms-5.html)
+- [ClassLoader API](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/ClassLoader.html)
