@@ -395,7 +395,7 @@
 - [贡献者档案](../by-contributor/profiles/shaojin-wen.md)
 - [语法演进](../by-topic/language/syntax/)
 - [Lambda 表达式](../by-topic/language/lambda/)
-- [组织: Alibaba](../contributors/organizations/alibaba.md)
+- [组织: Alibaba](../contributors/orgs/alibaba.md)
 
 ---
 
