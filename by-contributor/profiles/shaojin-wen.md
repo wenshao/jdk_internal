@@ -431,6 +431,18 @@ String json = "{\"name\":\"" + name + "\",\"age\":" + age + "}";
 
 ---
 
+## 相关 PR 深度分析
+
+| Issue | 标题 | 性能提升 | 链接 |
+|-------|------|----------|------|
+| JDK-8355177 | StringBuilder::append(char[]) 优化 | +15% | [→](../../by-pr/8355/8355177.md) |
+| JDK-8366224 | DecimalDigits.appendPair 高效格式化 | +12% | [→](../../by-pr/8366/8366224.md) |
+| JDK-8370013 | Double.toHexString 重构 | +20% | [→](../../by-pr/8370/8370013.md) |
+| JDK-8349400 | 消除嵌套类提升启动速度 | +5% | [→](../../by-pr/8349/8349400.md) |
+| JDK-8337279 | 共享 StringBuilder 格式化 Instant | +24% | [→](../../by-topic/api/datetime/prs/jdk-8337279.md) |
+
+---
+
 ## 外部资源
 
 | 类型 | 链接 |

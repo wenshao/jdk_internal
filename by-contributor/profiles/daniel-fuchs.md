@@ -281,6 +281,13 @@ JEP 517 的主要协作者:
 |-----|------|------|
 | [JEP 517](https://openjdk.org/jeps/517) | HTTP/3 for the HTTP Client API | ✅ JDK 26 |
 
+### 深度分析
+
+| 主题 | 链接 |
+|------|------|
+| HTTP/3 实现原理 | [→](/by-version/jdk26/deep-dive/http3-implementation.md) |
+| JDK 26 JEP 汇总 | [→](/by-version/jdk26/jeps.md) |
+
 ---
 
 ## 协作网络

@@ -132,14 +132,15 @@ for (int i = 0; i < unknown; i++) {
 
 | 贡献者 | 公司 | 主要贡献 |
 |--------|------|----------|
-| **Emanuel Peter** | Oracle | MergeStore 初始实现 (JDK-8318446) |
-| **Shaojin Wen** (温绍锦) | Alibaba | StringBuilder 优化, 性能测试 |
-| **Vladimir Kozlov** | Oracle | C2 编译器团队负责人, 技术指导 |
-| **Roland Westrelin** | Oracle | C2 编译器团队, 循环优化 |
+| [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | Oracle | MergeStore 初始实现 (JDK-8318446) |
+| [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) (温绍锦) | Alibaba | StringBuilder 优化, 性能测试 |
+| [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | Oracle | C2 编译器团队负责人, 技术指导 |
+| [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | Oracle | C2 编译器团队, 循环优化 |
 
 ### Emanuel Peter
 
 > **博客**: [Emanuel's HotSpot JVM C2 Blog](https://eme64.github.io/blog/)
+> **档案**: [贡献者档案](/by-contributor/profiles/emanuel-peter.md)
 
 - **职位**: OpenJDK Compiler Engineer, Oracle
 - **团队**: HotSpot Compiler Team
@@ -173,6 +174,8 @@ for (int i = 0; i < unknown; i++) {
   - Code Cache 优化
 
 ### Shaojin Wen (温绍锦)
+
+> **档案**: [贡献者档案](/by-contributor/profiles/shaojin-wen.md)
 
 - **职位**: Alibaba, fastjson 负责人
 - **主要贡献**:
@@ -276,7 +279,7 @@ public AbstractStringBuilder append(boolean b) {
 
 #### PR #28228: 合并两个 append(char)
 
-> **作者**: Shaojin Wen
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
 > **影响**: ⭐⭐⭐⭐ char append 优化
 
 **改进**: 将两个连续的 `append(char)` 合并为 `append(char, char)`
@@ -292,7 +295,7 @@ sb.append('a', 'b');  // 可触发 MergeStore
 
 #### PR #29688: 连续 Latin1 字符优化
 
-> **作者**: Shaojin Wen
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
 > **影响**: ⭐⭐⭐⭐ Latin1 字符串优化
 
 **改进**: 优化 `StringLatin1.putCharsAt` 以触发 MergeStore

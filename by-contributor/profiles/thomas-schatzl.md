@@ -235,10 +235,10 @@ Thomas 在 [tschatzl.github.io](https://tschatzl.github.io/) 撰写关于 OpenJD
 // 核心数据结构
 class G1CardTableClaimTable {
     uint* _claim_table;  // 每个卡表项的归属线程
-    
+
     bool claim(size_t card_index) {
         uint current_id = Thread::current()->id();
-        return Atomic::cmpxchg(&_claim_table[card_index], 
+        return Atomic::cmpxchg(&_claim_table[card_index],
                                (uint)0, current_id) == 0;
     }
 };
@@ -246,7 +246,7 @@ class G1CardTableClaimTable {
 // 优化后的写屏障
 void write_ref_field_post(oop* field, oop new_val) {
     size_t index = card_table->index_for(field);
-    
+
     if (claim_table->is_claimed_by_current(index)) {
         // 无需同步，直接标记
         card_table->dirty_card(index);
@@ -265,6 +265,13 @@ void write_ref_field_post(oop* field, oop new_val) {
 | 高并发写入 | +15-20% |
 | 大堆 (>32GB) | +10-15% |
 | SPECjbb2015 | +15% |
+
+### 深度分析
+
+| 主题 | 链接 |
+|------|------|
+| G1 GC 吞吐量提升 | [→](/by-version/jdk26/deep-dive/g1-gc-throughput.md) |
+| JDK 26 JEP 汇总 | [→](/by-version/jdk26/jeps.md) |
 
 ### 2. 大对象急切回收 (JDK-8294178)
 

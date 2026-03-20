@@ -335,6 +335,8 @@ if (obj instanceof Point(int x, int y)) {
 - [VM 参数](vm-parameters.md) - JIT 参数配置
 - [诊断工具](diagnostics.md) - 编译器调试
 - [近期改进](recent-changes.md) - 2024-2025 更新
+- [StringBuilder 优化 PR](/by-pr/8355/8355177.md) - Unsafe.copyMemory 优化
+- [String 构造函数优化](/by-version/jdk26/deep-dive/string-constructor-optimization.md) - JIT 内联优化
 
 ### 外部参考
 

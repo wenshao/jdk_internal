@@ -386,11 +386,14 @@ PhaseCFG ──► PhaseChaitin ──► PhaseBlockLayout ──► Output
 
 ### 贡献者
 
-| 贡献者 | 领域 | 链接 |
+| 贡献者 | 领域 | 组织 |
 |--------|------|------|
-| [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | C2 SuperWord 向量化 | [档案](/by-contributor/profiles/emanuel-peter.md) |
-| [Johannes Graham](/by-contributor/profiles/johannes-graham.md) | C2 编译器优化 | [档案](/by-contributor/profiles/johannes-graham.md) |
-| [Vladimir Kozlov](https://openjdk.org/census#kvn) | C2 编译器创始人 | OpenJDK Census |
+| [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | C2 SuperWord 向量化、C2 博客作者 | Oracle |
+| [Johannes Graham](/by-contributor/profiles/johannes-graham.md) | C2 编译器优化、常量折叠 | Oracle |
+| [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | C2 编译器创始人 | Oracle |
+| [Christian Hagedorn](/by-contributor/profiles/christian-hagedorn.md) | C2 优化、GVN | Oracle |
+| [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | C2 循环优化 | Oracle |
+| [John Rose](/by-contributor/profiles/john-rose.md) | invokedynamic、JIT | Oracle |
 
 ### 外部资源
 

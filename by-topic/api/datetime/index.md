@@ -756,6 +756,7 @@ main (master)
 | JDK-8368825 | DateTimeFormatterBuilder switch 优化 | 24 | 代码简化 | [分析](prs/jdk-8368825.md) |
 | JDK-8365186 | DateTimePrintContext.adjust 方法拆分 | 24 | +3-12% | [分析](prs/jdk-8365186.md) |
 | JDK-8366224 | DecimalDigits.appendPair 高效两位数格式化 | 24 | +12% | [分析](prs/jdk-8366224.md) |
+| JDK-8317742 | Formatter ISO 日期格式一致性修复 | 22 | Bug 修复 | [分析](prs/jdk-8317742.md) |
 
 ### 内部重构
 
