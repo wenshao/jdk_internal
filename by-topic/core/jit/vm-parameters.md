@@ -661,3 +661,7 @@
 - [Tobias Hartmann](/by-contributor/profiles/tobias-hartmann.md) - JIT 编译器优化
 - [Christian Hagedorn](/by-contributor/profiles/christian-hagedorn.md) - C2 编译器
 - [Roman Kennke](/by-contributor/profiles/roman-kennke.md) - JIT 编译、Shenandoah
+
+---
+
+**最后更新**: 2026-03-21

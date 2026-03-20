@@ -404,6 +404,10 @@ PhaseCFG ──► PhaseChaitin ──► PhaseBlockLayout ──► Output
 
 - [Emanuel's C2 Blog](https://eme64.github.io/blog/) - [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) 的详细技术分析
   - [Introduction to C2 - Part 1: Overview](https://eme64.github.io/blog/2024/12/06/Intro-to-C2-Part01.html)
+
+---
+
+**最后更新**: 2026-03-21
   - [Introduction to C2 - Part 2: GVN](https://eme64.github.io/blog/2024/12/24/Intro-to-C2-Part02.html)
   - [Introduction to C2 - Part 3: Inlining](https://eme64.github.io/blog/2024/12/31/Intro-to-C2-Part03.html)
   - [Introduction to C2 - Part 4: Loop Optimizations](https://eme64.github.io/blog/2025/01/23/Intro-to-C2-Part04.html)

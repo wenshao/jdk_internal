@@ -349,3 +349,7 @@ if (obj instanceof Point(int x, int y)) {
 **技术博客:**
 - [HotSpot JIT Compiler](https://wiki.openjdk.org/display/HotSpot/)
 - [Tiered Compilation in HotSpot](https://blogs.oracle.com/jonthecryptist/entry/tiered_compilation_in_hotspot)
+
+---
+
+**最后更新**: 2026-03-21

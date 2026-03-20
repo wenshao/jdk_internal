@@ -236,6 +236,19 @@ Level 4: C2 (深度优化)
   - 编译日志、JFR、jhsdb
   - Ideal Graph 可视化
 
+### 实战指南
+
+- [JIT 友好代码模式](best-practices.md) - 编写高性能代码的最佳实践
+  - 方法内联友好设计
+  - 循环优化技巧
+  - 避免对象逃逸
+  - 常见陷阱与案例
+- [JIT 与 GC 协作](jit-gc-collaboration.md) - 编译器与垃圾收集器的协作机制
+  - 逃逸分析如何减少 GC 压力
+  - Safepoint 插入策略
+  - Barrier 优化
+  - 标量替换效果
+
 ### 历史演进
 
 - [版本时间线](timeline.md) - JDK 1.0 到 JDK 26
@@ -721,3 +734,7 @@ private void processUncommon() {
 - [JDK-8325497: C2 性能调查](https://bugs.openjdk.org/browse/JDK-8325497)
 - [JDK-8340093: SuperWord 成本模型](https://bugs.openjdk.org/browse/JDK-8340093) - [相关 PR](/by-pr/8340/8340093.md)
 - [JDK-8347645: XOR 常量折叠修复](https://bugs.openjdk.org/browse/JDK-8347645) - [分析](/by-pr/8347/8347645.md)
+
+---
+
+**最后更新**: 2026-03-21

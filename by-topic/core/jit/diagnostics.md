@@ -397,6 +397,10 @@ cat hs_err_pid.log | grep "Current CompileTask"
 - [C2 优化阶段](c2-phases.md) - 诊断特定阶段
 - [JVM 调优](../../jvm/) - 更多诊断工具
 
+---
+
+**最后更新**: 2026-03-21
+
 ### 贡献者
 
 | 贡献者 | 领域 | 组织 |
