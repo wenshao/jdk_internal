@@ -1,19 +1,24 @@
 # Magnus Ihse Bursie
 
+> OpenJDK 构建系统主要维护者
+
 ## Basic Information
 
 | Field | Value |
 |-------|-------|
 | **Name** | Magnus Ihse Bursie |
-| **Current Organization** | Oracle (OpenJDK Build Team) |
+| **Current Organization** | Oracle (Java Engineering Infrastructure Team) |
+| **Location** | Sweden |
 | **GitHub** | [@magicus](https://github.com/magicus) |
 | **GitHub Bio** | "I work at Oracle with the OpenJDK Build Team, but most of the repos here are hobby projects" |
+| **LinkedIn** | [ihsebursie](https://se.linkedin.com/in/ihsebursie) |
+| **Education** | KTH Royal Institute of Technology |
 | **OpenJDK** | [@ihse](https://openjdk.org/census#ihse) |
-| **Role** | OpenJDK Member, JDK Reviewer |
+| **Role** | OpenJDK Member, JDK Reviewer, Leyden Committer |
 | **PRs** | [351 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Amagicus+is%3Aclosed+label%3Aintegrated) |
 | **Primary Areas** | Build System, Makefiles, Configure Scripts, Cross-Platform Builds |
 
-> **数据来源**: [GitHub](https://github.com/magicus), [OpenJDK 邮件列表](https://mail.openjdk.org/pipermail/build-infra-dev/)
+> **数据来源**: [GitHub](https://github.com/magicus), [LinkedIn](https://se.linkedin.com/in/ihsebursie), [Leyden CFV](https://mail.openjdk.org/archives/list/leyden-dev@openjdk.org/thread/SMPLFXZZWMZ5OMFV5IL5KFYSPSM6EDI2/)
 
 ## Contribution Overview
 
