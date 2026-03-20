@@ -23,9 +23,11 @@ Jaikiran Pai 是 Oracle Java Core Libraries 团队成员，专注于 HttpClient�
 | **OpenJDK** | [@jpai](https://openjdk.org/census#jpai) |
 | **Role** | OpenJDK Member, JDK Reviewer, JDK Committer |
 | **Primary Areas** | HttpClient, Networking, ZIP/JAR, Test Infrastructure |
-| **Apache Projects** | Ant Committer |
+| **Apache Projects** | Ant Committer, Ant PMC (2018-01), Apache APISIX VP |
+| **编程经验** | Java since 2004 |
+| **LinkedIn** | [Jaikiran Pai](https://www.linkedin.com/in/jaikiranpai/) |
 
-> **数据来源**: [OpenJDK 邮件列表](https://mail.openjdk.org/pipermail/jdk-dev/2020-September/004704.html), [Apache Ant](https://github.com/apache/ant)
+> **数据来源**: [OpenJDK 邮件列表](https://mail.openjdk.org/pipermail/jdk-dev/2020-September/004704.html), [Apache Ant](https://github.com/apache/ant), [Apache Ant Contributors](https://ant.apache.org/contributors.html), [Code Tools Reviewer CFV](https://mail.openjdk.org/pipermail/code-tools-dev/2024-August/000704.html)
 
 ---
 
@@ -33,9 +35,14 @@ Jaikiran Pai 是 Oracle Java Core Libraries 团队成员，专注于 HttpClient�
 
 | 时间 | 事件 | 详情 |
 |------|------|------|
-| **Apache Ant 时期** | Apache Ant Committer | 贡献 19 个 JDK 修复 |
+| **2004 年** | 开始 Java 编程 | 编程经验开始 |
+| **2017-06** | 加入 Apache 软件基金会 | 成为 ASF 成员 |
+| **2018-01** | Apache Ant PMC | 成为 Ant 项目管理委员会成员 |
 | **2020 年 9 月** | 提名为 JDK Committer | 由 Daniel Fuchs 提名 |
 | **2022 年 5 月** | 晋升为 JDK Reviewer | CFV 投票通过 |
+| **2023-12** | 提名 Eirik Bjorsnos | 作为 Committer 提名其他人 |
+| **2024-08** | Code Tools Reviewer CFV | 提名为 Code Tools 审查者 |
+| **2025-05** | 提名 Volkan Yazıcı | 作为 Reviewer 提名其他人 |
 | **至今** | Oracle Java Core Libraries 团队 | 专注于网络和 I/O |
 
 > **来源**: [New JDK Committer: Jaikiran Pai](https://mail.openjdk.org/pipermail/jdk-dev/2020-September/004704.html), [CFV: New JDK Reviewer](https://mail.openjdk.org/pipermail/jdk-dev/2022-May/006564.html)
