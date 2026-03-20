@@ -8,7 +8,7 @@
 
 ## 概述
 
-Jan Lahoda 是 Oracle 的 Java 编译器 (javac) 核心开发者，自 2006 年起参与 OpenJDK 开发。他主导了 JEP 511 (Module Import Declarations) 和 JEP 512 (Compact Source Files and Instance Main Methods)，并在 JShell 交互式编程环境方面做出大量改进。他是捷克人，在 Oracle 公司担任软件工程师。
+Jan Lahoda 是 Oracle 的 Java 编译器 (javac) 核心开发者，自 2006 年起参与 OpenJDK 开发。他主导了 JEP 511 (Module Import Declarations) 和 JEP 512 (Compact Source Files and Instance Main Methods)，并在 JShell 交互式编程环境方面做出大量改进。他是捷克人，在 Oracle 公司担任软件工程师。在加入 Oracle 之前，他在 NetBeans 项目工作，专注于 Java 开发工具和重构功能。
 
 ---
 
