@@ -2,7 +2,7 @@
 
 JVM、内存、性能、模块系统等底层技术。
 
-[← 返回主题索引](../)
+[← 返回主题索引](../) | [深度分析](deep-dive.md)
 
 ---
 
@@ -105,13 +105,19 @@ SIMD 向量化计算 API，从 JDK 16 开始孵化。
 | JDK 18 | JEP 417 | 🥚 Third Incubator |
 | JDK 19 | JEP 426 | 🥚 Fourth Incubator |
 | JDK 20 | JEP 448 | 🥚 Fifth Incubator |
-| JDK 21 | JEP 460 | 🥚 Sixth Incubator |
+| JDK 21 | JEP 460 | 🥚 Sixth Incubator + **Float16** |
 | JDK 22-24 | - | 🥚 继续孵化 |
 | JDK 25+ | - | ⏳ 期望成为标准 API |
 
 **性能提升**: 2x-8x (取决于 CPU 向量宽度)
 
-→ [Vector API 详情](vector-api/) | [时间线](vector-api/timeline.md) | [使用指南](vector-api/usage.md)
+**为什么孵化这么慢？**
+- 跨平台指令集差异 (x86 AVX vs ARM SVE vs RISC-V V)
+- ARM SVE 可变向量长度的复杂性
+- C2 编译器需要大量适配
+- 与 Valhalla 的协同设计
+
+→ [Vector API 详情](vector-api/) | [时间线](vector-api/timeline.md) | [使用指南](vector-api/usage.md) | [平台支持](vector-api/platform.md)
 
 ---
 
@@ -184,7 +190,14 @@ Java 语言特性演进项目：更简洁、更安全、更易表达。
 - 原始类型特化: `List<int>` 无装箱
 - 缓存友好: 扁平化内存布局
 
-→ [Valhalla 时间线](valhalla/timeline.md)
+→ [Valhalla 时间线](valhalla/timeline.md) | [进度追踪](valhalla/progress.md) | [架构分析](valhalla/architecture.md)
+
+**为什么进度这么慢？**
+- 需要修改 JVM 核心层 (Klass 系统、对象布局)
+- 修改 2000+ 文件，涉及所有 GC
+- 与现有生态兼容 (反射、序列化、JNI、JVMTI)
+- 泛型特化需要语言层面重大变更
+- 已开发 10+ 年，预计 JDK 27-28
 
 ---
 
@@ -478,3 +491,16 @@ jcmd <pid> JFR.dump name=myrecording filename=recording.jfr
 2. **进阶**: [内存管理](memory/) → [GC 演进](gc/) → 理解内存和 GC
 3. **深入**: [类加载器](classloading/) → [模块系统](modules/) → 理解类加载机制
 4. **专家**: [JVM 调优](jvm/) → 掌握生产调优
+
+---
+
+## 深度分析
+
+→ [核心平台深度分析](deep-dive.md) - 技术挑战、设计权衡与项目依赖
+
+**核心话题**:
+- [为什么 Vector API 孵化这么慢？](deep-dive.md#为什么-vector-api-孵化这么慢)
+- [为什么 Valhalla 进度缓慢？](deep-dive.md#为什么-valhalla-进度缓慢)
+- [Float16 深度分析](deep-dive.md#float16-深度分析) - AI/ML 的 Java 就绪
+- [项目依赖关系图](deep-dive.md#项目依赖关系图)
+- [技术挑战与权衡](deep-dive.md#技术挑战与权衡)
