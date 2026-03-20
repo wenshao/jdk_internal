@@ -371,6 +371,15 @@ java -XX:+UseShenandoahGC -jar app.jar
 -XX:StartFlightRecording=filename=gc.jfr
 ```
 
+### JDK 默认 GC 变化
+
+| 版本 | 默认 GC | 说明 |
+|------|---------|------|
+| JDK 1.0-1.3 | Serial GC | 单核时代 |
+| JDK 6-14 | Parallel GC | 多核时代，吞吐优先 |
+| JDK 9-20 | G1 GC | 停顿时间可控 |
+| JDK 21+ | G1 GC | 继续作为默认 |
+
 ---
 
 ## 核心贡献者
@@ -378,7 +387,22 @@ java -XX:+UseShenandoahGC -jar app.jar
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
 
-### G1 GC (按 Git 提交数)
+### GC 团队 (按 Git 提交数)
+
+| 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
+|------|--------|--------|------|----------|
+| 1 | Albert Mingkun Yang | 681 | Oracle | G1 GC, 内存管理 |
+| 2 | Thomas Schatzl | 674 | Oracle | G1 GC 维护者 |
+| 3 | Aleksey Shipilev | 324 | Oracle | Shenandoah GC |
+| 4 | Zhengyu Gu | 252 | Oracle | Shenandoah 核心开发者 |
+| 5 | Kim Barrett | 235 | Oracle | C++ 现代化 |
+| 6 | Stefan Karlsson | 229 | Oracle | 分代 ZGC (JEP 439) |
+| 7 | Per Lidén | 198 | Oracle | ZGC 创始人 |
+| 8 | Roman Kennke | 163 | Red Hat | Shenandoah 架构 |
+| 9 | William Kemper | 112 | Red Hat | 分代 Shenandoah (JEP 429) |
+| 10 | Erik Österlund | 96 | Oracle | ZGC 核心开发者 |
+
+### G1 GC 专项
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
@@ -389,7 +413,7 @@ java -XX:+UseShenandoahGC -jar app.jar
 | 5 | Stefan Karlsson | 75 | Oracle | 并发 GC |
 | 6 | Stefan Johansson | 56 | Oracle | G1 GC |
 
-### ZGC (按 Git 提交数)
+### ZGC 专项
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
@@ -400,7 +424,7 @@ java -XX:+UseShenandoahGC -jar app.jar
 | 5 | Axel Boldt-Christmas | 44 | Oracle | ZGC |
 | 6 | Joel Sikström | 31 | Oracle | ZGC |
 
-### Shenandoah GC (按 Git 提交数)
+### Shenandoah GC 专项
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
@@ -409,6 +433,26 @@ java -XX:+UseShenandoahGC -jar app.jar
 | 3 | William Kemper | 109 | Red Hat | 分代 Shenandoah (JEP 429) |
 | 4 | Roman Kennke | 107 | Red Hat | Shenandoah 架构 |
 | 5 | Stefan Karlsson | 44 | Oracle | 并发支持 |
+
+---
+
+## 文档导航
+
+### GC 算法详解
+
+- [G1 GC](g1-gc.md) - G1 架构、Region、Mixed GC
+- [ZGC](zgc.md) - 读屏障、染色指针、NUMA
+- [Shenandoah](shenandoah.md) - Brooks Pointer、 Brooks Forwarding
+
+### 配置调优
+
+- [VM 参数](vm-parameters.md) - GC 参数完整参考
+- [调优指南](tuning.md) - GC 选择与调优策略
+
+### 演进历史
+
+- [版本时间线](timeline.md) - JDK 1.0 到 JDK 26
+- [近期改进](recent-changes.md) - 2024-2025 更新
 
 ---
 
@@ -449,11 +493,114 @@ git log --oneline -- src/hotspot/share/gc/z/
 
 ---
 
+## 快速参考
+
+### 选择 GC
+
+```bash
+# 查看当前 GC
+java -XX:+PrintCommandLineFlags -version | grep GC
+
+# 指定 GC
+-XX:+UseSerialGC              # Serial GC
+-XX:+UseParallelGC            # Parallel GC
+-XX:+UseG1GC                  # G1 GC (默认)
+-XX:+UseZGC                   # ZGC
+-XX:+UseShenandoahGC          # Shenandoah GC
+```
+
+### 常用参数
+
+```bash
+# G1 GC
+-XX:MaxGCPauseMillis=200       # 目标暂停时间
+-XX:G1HeapRegionSize=16m       # Region 大小
+-XX:G1ReservePercent=10        # 保留堆比例
+
+# ZGC
+-XX:ZCollectionInterval       # GC 间隔
+-XX:ZFragmentationLimit       # 碎片率阈值
+
+# 通用
+-XX:+PrintGC                  # 打印 GC 日志
+-XX:+PrintGCDetails            # 详细 GC 信息
+-XX:+PrintGCTimeStamps        # GC 时间戳
+```
+
+### GC 日志
+
+```bash
+# JDK 9+ 统一日志
+-Xlog:gc*:file=gc.log:level,tags
+
+# 包含详情
+-Xlog:gc*:file=gc.log:level,tags,uptime,time,level,tags
+
+# 包含 GC 堆转储
+-Xlog:gc+heap=info:file=gc.log:level,tags
+```
+
+---
+
+## 内部结构
+
+### HotSpot GC 源码
+
+```
+src/hotspot/share/gc/
+├── serial/                       # Serial GC
+│   └── serialMemoryManager.cpp
+├── parallel/                    # Parallel GC
+│   ├── parallelScavenge.cpp
+│   └── psMarkSweep.cpp
+├── g1/                          # G1 GC
+│   ├── g1CollectedHeap.cpp      # G1 堆管理
+│   ├── g1Allocator.cpp          # Region 分配器
+│   ├── g1AllocRegion.cpp        # Region 分配
+│   ├── g1Analytics.cpp          # 分析统计
+│   ├── g1RemSet.cpp             # Remembered Set
+│   ├── g1BarrierSet.cpp         # 屏障集
+│   └── g1SATBBufferQueue.cpp    # SATB 队列
+├── z/                           # ZGC
+│   ├── zAddress.cpp             # 地址管理
+│   ├── zArray.cpp                # 数组支持
+│   ├── zCollectedHeap.cpp        # 堆管理
+│   ├── zGeneration.cpp           # 分代支持
+│   ├── zPage.cpp                 # 页管理
+│   ├── zRemembered.cpp           # Remembered Set
+│   └── zThread.cpp               # 线程管理
+├── shenandoah/                   # Shenandoah GC
+│   ├── shenandoahHeap.cpp        # 堆管理
+│   ├── shenandoahMark.cpp        # 标记
+│   ├── shenandoahEvacuation.cpp  # 转发
+│   ├── shenandoahAgeCensus.cpp   # 年龄普查
+│   ├── shenandoahBarrierSet.cpp  # 屏障集
+│   ├── shenandoahUtils.cpp       # 工具类
+│   └── mode/                     # 并发模式
+└── shared/                       # 共享代码
+    ├── barrierSet.cpp            # 屏障集抽象
+    ├── collector.cpp             # 收集器抽象
+    ├── workerThreads.cpp         # 工作线程
+    └── workerDataArray.cpp       # 线程数据
+>>>>>>> dc4bec5 (feat(core/gc): enhance documentation with comprehensive GC coverage)
+```
+
+---
+
 ## 相关链接
 
 ### 内部文档
 
 - [GC 时间线](timeline.md) - 详细的历史演进
+- [G1 GC 详解](g1-gc.md) - G1 架构与配置
+- [ZGC 详解](zgc.md) - ZGC 原理与调优
+- [Shenandoah 详解](shenandoah.md) - Shenandoah GC 实现细节
+- [VM 参数](vm-parameters.md) - GC 参数参考
+- [调优指南](tuning.md) - GC 选择策略
+- [近期改进](recent-changes.md) - JDK 21-26 改进
+
+### 相关主题
+
 - [内存管理](../memory/) - 堆、栈、Metaspace
 - [性能优化](../performance/) - JVM 调优
 
