@@ -184,6 +184,10 @@ Level 4: C2 (深度优化)
   - JVMCI 架构
   - Truffle 框架
   - SubstrateVM Native Image
+- [Graal vs C2 性能对比](graal-vs-c2-performance.md) - 2024-2025 最新基准测试
+  - 各场景性能数据
+  - 启动/稳态性能对比
+  - 实际应用建议
 
 #### 优化技术深度分析
 
