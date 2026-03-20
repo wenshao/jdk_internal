@@ -1,13 +1,28 @@
 # Jim Laskey
 
-> **Organization**: Oracle
+> **Organization**: Oracle (Retired)
 > **Role**: Java Language Designer
+> **Location**: Lunenburg, Nova Scotia, Canada
 
 ---
 
 ## 概述
 
-Jim Laskey 是 Oracle 的 Java 语言设计师，专注于字符串处理、模板和语言简化。他是多个重要 JEP 的作者。
+Jim Laskey 是 Oracle 的 Java 语言设计师（已退休），专注于字符串处理、模板和语言简化。他是多个重要 JEP 的作者，包括 Text Blocks 和 String Templates。
+
+> **数据来源**: [getprog.ai profile](https://www.getprog.ai/profile/63007666), [JEP 459](https://openjdk.org/jeps/459)
+
+---
+
+## 基本信息
+
+| 属性 | 值 |
+|------|-----|
+| **姓名** | Jim Laskey |
+| **状态** | Retired |
+| **位置** | Lunenburg, Nova Scotia, Canada |
+| **工作经验** | 15+ years |
+| **专长** | String Processing, Text Blocks, String Templates, Java Language Design |
 
 ---
 
