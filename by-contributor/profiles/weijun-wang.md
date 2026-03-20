@@ -7,12 +7,13 @@
 | **Name** | Weijun Wang |
 | **Current Organization** | Oracle |
 | **Email** | weijun.wang@oracle.com |
+| **GitHub** | [@wangweij](https://github.com/wangweij) |
 | **OpenJDK** | [@weijun](https://openjdk.org/census#weijun) |
 | **Role** | Committer, Reviewer |
-| **Primary Areas** | Security, Cryptography |
+| **Primary Areas** | Security, Cryptography, PKI, TLS |
 | **Active Since** | 2009+ |
 
-> **数据来源**: [OpenJDK Census](https://openjdk.org/census)
+> **数据来源**: [OpenJDK Census](https://openjdk.org/census#weijun), [CFV Vote 2022-03](https://mail.openjdk.org/pipermail/members/2022-March/001633.html)
 
 ## Contribution Overview
 
