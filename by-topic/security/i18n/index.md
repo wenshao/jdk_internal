@@ -42,8 +42,8 @@ Locale   ResourceBundle Unicode Formatter Locale ICU4J   Unicode  Bidi
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Naoto Sato | 87 | Oracle | 日期, 国际化 |
-| 2 | Justin Lu | 81 | Oracle | Locale, ResourceBundle |
+| 1 | [Naoto Sato](/by-contributor/profiles/naoto-sato.md) | 87 | Oracle | 日期, 国际化 |
+| 2 | [Justin Lu](/by-contributor/profiles/justin-lu.md) | 81 | Oracle | Locale, ResourceBundle |
 | 3 | Andrey Turbanov | 12 | Independent | 格式化 |
 | 4 | Pavel Rappo | 8 | Oracle | API 设计 |
 | 5 | Rachna Goel | 7 | Oracle | 国际化 |

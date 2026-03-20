@@ -159,11 +159,11 @@ XML 和 JSON 处理从 DOM 到现代 API 的演进。
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
 | 1 | Brian Burkhalter | 90 | Oracle | I/O, 字符串 |
-| 2 | Naoto Sato | 84 | Oracle | 国际化, java.time |
+| 2 | [Naoto Sato](/by-contributor/profiles/naoto-sato.md) | 84 | Oracle | 国际化, java.time |
 | 3 | Doug Lea | 73 | SUNY Oswego | 并发集合 |
 | 4 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 66 | Oracle | 性能优化 |
 | 5 | Roger Riggs | 56 | Oracle | I/O, 工具类 |
-| 6 | Justin Lu | 52 | Oracle | 本地化 |
+| 6 | [Justin Lu](/by-contributor/profiles/justin-lu.md) | 52 | Oracle | 本地化 |
 | 7 | Viktor Klang | 44 | Lightbend/Oracle | CompletableFuture |
 | 8 | Stuart Marks | 44 | Oracle | 集合框架 |
 
@@ -171,7 +171,7 @@ XML 和 JSON 处理从 DOM 到现代 API 的演进。
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Naoto Sato | 64 | Oracle | java.time 主维护者 |
+| 1 | [Naoto Sato](/by-contributor/profiles/naoto-sato.md) | 64 | Oracle | java.time 主维护者 |
 | 2 | [Shaojin Wen (温绍锦)](../../by-contributor/profiles/shaojin-wen.md) | 12 | Alibaba | 性能优化 |
 | 3 | Roger Riggs | 12 | Oracle | 日期时间 |
 | 4 | Claes Redestad | 8 | Oracle | 启动优化 |
