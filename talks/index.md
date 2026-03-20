@@ -122,6 +122,10 @@
 | Vladimir Kozlov | Oracle | 2021 | JIT Compilation | [JIT](../by-topic/core/jit/) |
 | Claes Redestad | JVMLS | 2023 | String Deduplication | [字符串](../by-topic/language/string/) |
 
+**Vladimir Kozlov** - JIT 编译专家
+- [JIT 编译](../by-topic/core/jit/)
+- **OpenJDK Wiki**: [VladimirKozlov](https://wiki.openjdk.org/display/Main/VladimirKozlov)
+
 ### 类加载与模块
 
 | 演讲者 | 会议 | 年份 | 主题 | 本地文档 |
@@ -159,10 +163,10 @@
 | State of Pattern Matching | 视频 | [模式匹配](../by-topic/core/patterns/) |
 
 **本地资源**:
-- [贡献者档案](../by-contributor/profiles/brian-goetz.md)
 - [语法演进](../by-topic/language/syntax/)
 - [模式匹配](../by-topic/core/patterns/)
 - [泛型系统](../by-topic/core/generics/)
+- **Inside.Java**: [@BrianGoetz](https://inside.java/u/BrianGoetz/)
 
 ---
 
@@ -176,9 +180,9 @@
 | Generational ZGC | 文档 | [ZGC](../by-topic/core/gc/) |
 
 **本地资源**:
-- [贡献者档案](../by-contributor/profiles/per-liden.md)
 - [ZGC 演进](../by-topic/core/gc/)
 - [组织: Oracle](../contributors/organizations/oracle.md)
+- **OpenJDK Wiki**: [ZGC Main](https://wiki.openjdk.org/spaces/zgc/pages/34668579/Main)
 
 ---
 
@@ -206,9 +210,9 @@
 | JEP 439 | JEP Owner | [JEP 439](../jeps/core/jep-439.md) |
 
 **本地资源**:
-- [贡献者档案](../by-contributor/profiles/stefan-karlsson.md)
 - [ZGC 演进](../by-topic/core/gc/)
 - [组织: Oracle](../contributors/organizations/oracle.md)
+- **OpenJDK**: [JEP 439 Owner](https://openjdk.org/jeps/439)
 
 ---
 
@@ -248,6 +252,7 @@
 | Introduction to C2 Part 3 | 博客 | [JIT](../by-topic/core/jit/) |
 
 **本地资源**:
+- [贡献者档案](../by-contributor/profiles/emanuel-peter.md)
 - [JIT 编译](../by-topic/core/jit/)
 - [性能优化](../by-topic/core/performance/)
 - [个人博客](https://eme64.github.io/blog/)
@@ -265,6 +270,7 @@
 - [模式匹配](../by-topic/core/patterns/)
 - [语法演进](../by-topic/language/syntax/)
 - [组织: Oracle](../contributors/organizations/oracle.md)
+- **Inside.Java**: [@GavinBierman](https://inside.java/u/GavinBierman/)
 
 ---
 
@@ -290,6 +296,7 @@
 | JSR-166 | Spec Lead | [并发](../by-topic/concurrency/concurrency/) |
 
 **本地资源**:
+- [贡献者档案](../by-contributor/profiles/david-holmes.md)
 - [并发编程](../by-topic/concurrency/concurrency/)
 - [网络编程](../by-topic/concurrency/network/)
 - [组织: Oracle](../contributors/organizations/oracle.md)
@@ -307,6 +314,7 @@
 - [集合框架](../by-topic/api/collections/)
 - [Stream API](../by-topic/language/streams/)
 - [组织: Oracle](../contributors/organizations/oracle.md)
+- **Inside.Java**: [@PaulSandoz](https://inside.java/u/PaulSandoz/)
 
 ---
 
@@ -318,6 +326,7 @@
 | JDK-8341755 | PR 相关 | [分析](../by-pr/8341/8341755.md) |
 
 **本地资源**:
+- [贡献者档案](../by-contributor/profiles/claes-redestad.md)
 - [字符串处理](../by-topic/language/string/)
 - [性能优化](../by-topic/core/performance/)
 - [组织: Oracle](../contributors/organizations/oracle.md)
@@ -349,6 +358,7 @@
 | JDK 相关 | C++ 现代化 | [JVM](../by-topic/core/jit/) |
 
 **本地资源**:
+- [贡献者档案](../by-contributor/profiles/kim-barrett.md)
 - [G1 GC](../by-topic/core/gc/)
 - [JIT 编译](../by-topic/core/jit/)
 - [组织: Oracle](../contributors/organizations/oracle.md)
@@ -366,6 +376,7 @@
 - [语法演进](../by-topic/language/syntax/)
 - [模式匹配](../by-topic/core/patterns/)
 - [组织: Oracle](../contributors/organizations/oracle.md)
+- **Inside.Java**: [@vicente-romero](https://inside.java/u/vicente-romero/)
 
 ---
 
@@ -377,6 +388,7 @@
 | 性能优化 | 内存管理 | [内存](../by-topic/core/memory/) |
 
 **本地资源**:
+- [贡献者档案](../by-contributor/profiles/albert-mingkun-yang.md)
 - [G1 GC](../by-topic/core/gc/)
 - [内存管理](../by-topic/core/memory/)
 - [组织: Oracle](../contributors/organizations/oracle.md)
@@ -393,6 +405,7 @@
 **本地资源**:
 - [并发编程](../by-topic/concurrency/concurrency/)
 - [组织: Oracle](../contributors/organizations/oracle.md)
+- **Inside.Java**: [@ronpressler](https://inside.java/u/ronpressler/)
 
 ---
 
@@ -405,6 +418,7 @@
 **本地资源**:
 - [并发编程](../by-topic/concurrency/concurrency/)
 - [组织: Oracle](../contributors/organizations/oracle.md)
+- **OpenJDK Wiki**: [NathanReynolds](https://wiki.openjdk.org/display/Main/NathanReynolds)
 
 ---
 
@@ -418,7 +432,23 @@
 **本地资源**:
 - [类加载器](../by-topic/core/classloading/)
 - [模块系统](../by-topic/core/modules/)
-| [组织: Oracle](../contributors/organizations/oracle.md)
+- [组织: Oracle](../contributors/organizations/oracle.md)
+- **Inside.Java**: [@mchung](https://inside.java/u/mchung/)
+
+---
+
+### Goetz Lindenmaier - HotSpot Runtime
+
+| 资源 | 类型 | 本地文档 |
+|------|------|----------|
+| HotSpot 内部 | 文档 | [JVM](../by-topic/core/jit/) |
+| 运行时优化 | 演讲 | [性能](../by-topic/core/performance/) |
+
+**本地资源**:
+- [贡献者档案](../by-contributor/profiles/goetz-lindenmaier.md)
+- [JIT 编译](../by-topic/core/jit/)
+- [性能优化](../by-topic/core/performance/)
+- [组织: Oracle](../contributors/organizations/oracle.md)
 
 ---
 
