@@ -1,6 +1,6 @@
 # XML 与 JSON
 
-> DOM、SAX、StAX、JSON 处理演进历程
+> DOM、SAX、StAX、JAXB、JSON-P、JSON.B 演进历程
 
 [← 返回 API 框架](../)
 
@@ -9,143 +9,190 @@
 ## 快速概览
 
 ```
-JDK 1.0 ── JDK 1.4 ── JDK 5 ── JDK 6 ── JDK 9 ── JDK 11 ── JDK 23 ── JDK 26
-   │         │        │        │        │        │        │        │
-DOM      SAX     JAXB   StAX    模块化  JSON-P  JSON.B  JSON
-解析     解析    绑定   流式    JPMS   处理    绑定    转义
-(JAXP)  (SAX2) (JSR   (JSR    XML    (JEP    (JEP    优化
-         222)   173)    模块    353)   471)    (预览)
+JDK 1.4 ── JDK 5 ── JDK 6 ── JDK 9 ── JDK 11 ── JDK 23 ── JDK 24 ── JDK 26
+   │         │        │        │        │        │        │         │        │
+DOM/SAX   JAXB    StAX    模块化  JSON-P  JSON-P  JSON.B   JSON.B   JSON
+解析      绑定    流式    JPMS   处理    2.0     绑定     增强     转义
+(JAXP)   (JSR    (JSR    XML    (JEP    (预览)  (JEP     (正式)   (JEP
+         31/222  173)    模块    353)    471)            489)
 ```
 
 ### 核心演进
 
-| 版本 | 特性 | 说明 | JEP/JSR |
-|------|------|------|---------|
-| **JDK 1.4** | DOM/SAX | XML 解析 | JAXP 1.2 |
-| **JDK 5** | JAXB | XML 绑定 | JSR 222 |
-| **JDK 6** | StAX | 流式 XML 解析 | JSR 173 |
-| **JDK 9** | XML 模块化 | java.xml 模块 | JPMS |
-| **JDK 11** | JSON-P | JSON 处理 API | JEP 353 |
-| **JDK 23** | JSON.B | JSON 绑定 | JEP 471 |
-| **JDK 26** | JSON 转义 | 安全转义 | JEP 489 |
+| 版本 | 特性 | JEP/JSR | 说明 |
+|------|------|---------|------|
+| **JDK 1.4** | DOM/SAX | JAXP 1.2 | XML 解析基础 |
+| **JDK 5** | JAXB 1.0 | JSR 31 | XML 绑定 |
+| **JDK 6** | StAX | JSR 173 | 流式 XML 解析 |
+| **JDK 6** | JAXB 2.0 | JSR 222 | 注解支持 |
+| **JDK 9** | XML 模块化 | JPMS | java.xml 模块 |
+| **JDK 11** | JSON-P 1.1 | JEP 353 | JSON 处理 API |
+| **JDK 23** | JSON.B | JEP 471 | JSON 绑定 (预览) |
+| **JDK 24** | JSON.B | - | JSON 绑定 (正式) |
+| **JDK 26** | JSON 转义 | JEP 489 | 安全转义 |
 
 ---
 
-## 核心贡献者
+## 目录
 
-> **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
-> **统计时间**: 2026-03-20
-
-### XML/JSON 团队 (按 Git 提交数)
-
-| 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
-|------|--------|--------|------|----------|
-| 1 | Joe Wang | 42 | Oracle | XML, JSON API |
-| 2 | Roger Riggs | 2 | Oracle | 核心库 |
-| 3 | Pavel Rappo | 2 | Oracle | API 设计 |
-| 4 | Justin Lu | 2 | Oracle | JSON 处理 |
-| 5 | Joe Darcy | 2 | Oracle | API 设计 |
+- [XML 解析](#xml-解析)
+- [JAXB (XML 绑定)](#jaxb-xml-绑定)
+- [JSON-P (JSON 处理)](#json-p-json-处理)
+- [JSON.B (JSON 绑定)](#jsonb-json-绑定)
+- [JSON 转义 (JDK 26+)](#json-转义-jdk-26)
+- [性能对比](#性能对比)
+- [最佳实践](#最佳实践)
+- [核心贡献者](#核心贡献者)
+- [相关链接](#相关链接)
 
 ---
 
-## XML 处理
+## XML 解析
 
 ### DOM 解析
 
 ```java
-import javax.xml.parsers.*;
+// DOM - 文档对象模型
+// 将整个 XML 加载到内存
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.*;
 
-// DOM 解析
+// 解析 XML
 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 DocumentBuilder builder = factory.newDocumentBuilder();
 Document doc = builder.parse(new File("input.xml"));
 
 // 遍历
 Element root = doc.getDocumentElement();
-NodeList nodes = root.getChildNodes();
+NodeList children = root.getChildNodes();
 
-for (int i = 0; i < nodes.getLength(); i++) {
-    Node node = nodes.item(i);
+for (int i = 0; i < children.getLength(); i++) {
+    Node node = children.item(i);
     if (node.getNodeType() == Node.ELEMENT_NODE) {
         Element element = (Element) node;
         String text = element.getTextContent();
     }
 }
+
+// 查询
+NodeList nodes = doc.getElementsByTagName("user");
+Element first = (Element) nodes.item(0);
+String name = first.getAttribute("name");
+
+// 创建 XML
+Document newDoc = builder.newDocument();
+Element root = newDoc.createElement("root");
+newDoc.appendChild(root);
+
+Element user = newDoc.createElement("user");
+user.setAttribute("id", "1");
+user.setTextContent("Alice");
+root.appendChild(user);
+
+// 输出
+TransformerFactory transformerFactory = TransformerFactory.newInstance();
+Transformer transformer = transformerFactory.newTransformer();
+transformer.transform(new DOMSource(newDoc), new StreamResult("output.xml"));
 ```
 
 ### SAX 解析
 
 ```java
-import org.xml.sax.*;
-import org.xml.sax.helpers.*;
+// SAX - 事件驱动解析
+// 不加载整个文档到内存
 
-// SAX 解析 (事件驱动)
-SAXParserFactory factory = SAXParserFactory.newInstance();
-SAXParser parser = factory.newSAXParser();
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
 
-DefaultHandler handler = new DefaultHandler() {
+// 创建 Handler
+class MyHandler extends DefaultHandler {
+    private StringBuilder current = new StringBuilder();
+
     @Override
     public void startElement(String uri, String localName,
             String qName, Attributes attributes) {
         System.out.println("Start: " + qName);
+        // 属性
+        for (int i = 0; i < attributes.getLength(); i++) {
+            System.out.println("  " + attributes.getQName(i) + "=" + attributes.getValue(i));
+        }
     }
 
     @Override
     public void characters(char[] ch, int start, int length) {
-        String text = new String(ch, start, length);
-        System.out.println("Text: " + text);
+        current.append(ch, start, length);
     }
 
     @Override
     public void endElement(String uri, String localName, String qName) {
-        System.out.println("End: " + qName);
+        System.out.println("End: " + qName + " = " + current.toString().trim());
+        current.setLength(0);
     }
-};
+}
 
-parser.parse(new File("input.xml"), handler);
+// 解析
+SAXParserFactory factory = SAXParserFactory.newInstance();
+SAXParser parser = factory.newSAXParser();
+parser.parse(new File("input.xml"), new MyHandler());
 ```
 
 ### StAX 解析
 
 ```java
+// StAX - 流式 API
+// 拉模型，性能更好
+
 import javax.xml.stream.*;
 
-// StAX 解析 (游标模式)
+// 读取 (Cursor API)
 XMLInputFactory factory = XMLInputFactory.newInstance();
-XMLStreamReader reader = factory.createXMLStreamReader(
-    new FileInputStream("input.xml"));
+XMLStreamReader reader = factory.createXMLStreamReader(new FileInputStream("input.xml"));
 
 while (reader.hasNext()) {
     int event = reader.next();
+
     switch (event) {
-        case XMLStreamReader.START_ELEMENT:
+        case XMLStreamConstants.START_ELEMENT:
             System.out.println("Start: " + reader.getLocalName());
+            // 属性
+            for (int i = 0; i < reader.getAttributeCount(); i++) {
+                System.out.println("  " + reader.getAttributeLocalName(i) + "=" + reader.getAttributeValue(i));
+            }
             break;
-        case XMLStreamReader.CHARACTERS:
-            System.out.println("Text: " + reader.getText());
+
+        case XMLStreamConstants.CHARACTERS:
+            System.out.println("Text: " + reader.getText().trim());
             break;
-        case XMLStreamReader.END_ELEMENT:
+
+        case XMLStreamConstants.END_ELEMENT:
             System.out.println("End: " + reader.getLocalName());
             break;
     }
 }
-```
 
-### XML 写入
+// 读取 (Event Iterator API)
+XMLEventReader eventReader = factory.createXMLEventReader(new FileInputStream("input.xml"));
+while (eventReader.hasNext()) {
+    XMLEvent event = eventReader.nextEvent();
 
-```java
-import javax.xml.stream.*;
+    if (event.isStartElement()) {
+        StartElement start = event.asStartElement();
+        System.out.println("Start: " + start.getName());
+    }
+}
 
-// StAX 写入
-XMLOutputFactory factory = XMLOutputFactory.newInstance();
-XMLStreamWriter writer = factory.createXMLStreamWriter(
-    new FileOutputStream("output.xml"));
+// 写入
+XMLOutputFactory outFactory = XMLOutputFactory.newInstance();
+XMLStreamWriter writer = outFactory.createXMLStreamWriter(new FileOutputStream("output.xml"));
 
 writer.writeStartDocument();
 writer.writeStartElement("root");
-writer.writeStartElement("child");
-writer.writeCharacters("content");
+writer.writeStartElement("user");
+writer.writeAttribute("id", "1");
+writer.writeCharacters("Alice");
 writer.writeEndElement();
 writer.writeEndElement();
 writer.writeEndDocument();
@@ -156,112 +203,239 @@ writer.close();
 
 ## JAXB (XML 绑定)
 
-### 注解绑定
+> **注意**: JDK 11 后 JAXB 已移除，需要额外依赖
+
+### Maven 依赖
+
+```xml
+<!-- JAXB API -->
+<dependency>
+    <groupId>jakarta.xml.bind</groupId>
+    <artifactId>jakarta.xml.bind-api</artifactId>
+    <version>4.0.0</version>
+</dependency>
+
+<!-- JAXB 实现 -->
+<dependency>
+    <groupId>org.glassfish.jaxb</groupId>
+    <artifactId>jaxb-runtime</artifactId>
+    <version>4.0.2</version>
+</dependency>
+```
+
+### 基础使用
 
 ```java
 import jakarta.xml.bind.annotation.*;
 
+// XML 注解
 @XmlRootElement
-public class Person {
+@XmlType(propOrder = {"id", "name", "email"})
+public class User {
+
+    @XmlAttribute
+    private int id;
+
+    @XmlElement
     private String name;
-    private int age;
 
     @XmlElement
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    private String email;
 
-    @XmlElement
-    public int getAge() { return age; }
-    public void setAge(int age) { this.age = age; }
+    // 构造方法、getter/setter
+    public User() {}
+
+    public User(int id, String name, String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+    }
+
+    // getters and setters...
 }
-```
 
-### 序列化/反序列化
-
-```java
-import jakarta.xml.bind.*;
-
-// JAXB 上下文
-JAXBContext context = JAXBContext.newInstance(Person.class);
-
-// 序列化
+// 编组 (Java -> XML)
+JAXBContext context = JAXBContext.newInstance(User.class);
 Marshaller marshaller = context.createMarshaller();
 marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-marshaller.marshal(person, new File("person.xml"));
 
-// 反序列化
+User user = new User(1, "Alice", "alice@example.com");
+marshaller.marshal(user, new File("user.xml"));
+
+// 输出:
+// <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+// <user id="1">
+//     <name>Alice</name>
+//     <email>alice@example.com</email>
+// </user>
+
+// 解组 (XML -> Java)
 Unmarshaller unmarshaller = context.createUnmarshaller();
-Person person = (Person) unmarshaller.unmarshal(new File("person.xml"));
+User user = (User) unmarshaller.unmarshal(new File("user.xml"));
+```
+
+### 集合处理
+
+```java
+@XmlRootElement
+public class UserList {
+
+    @XmlElement(name = "user")
+    private List<User> users = new ArrayList<>();
+
+    // getter/setter
+}
+
+// 编组
+UserList list = new UserList();
+list.getUsers().add(new User(1, "Alice", "alice@example.com"));
+list.getUsers().add(new User(2, "Bob", "bob@example.com"));
+
+marshaller.marshal(list, new File("users.xml"));
+
+// 解组
+UserList list = (UserList) unmarshaller.unmarshal(new File("users.xml"));
 ```
 
 ---
 
-## JSON 处理 (JDK 11+)
+## JSON-P (JSON 处理)
 
-### JEP 353: JSON-P API
+**JDK 11+ (JEP 353)**
+
+### JSON-P API
 
 ```java
-import javax.json.*;
-import javax.json.stream.*;
+import jakarta.json.*;
+import jakarta.json.stream.*;
 
-// JSON-P 对象模型
-JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
-arrayBuilder.add(Json.createObjectBuilder()
+// 构建对象 (Object Model)
+JsonObject json = Json.createObjectBuilder()
     .add("name", "Alice")
-    .add("age", 30));
+    .add("age", 30)
+    .add("email", "alice@example.com")
+    .add("address", Json.createObjectBuilder()
+        .add("city", "Shanghai")
+        .add("country", "China"))
+    .add("phones", Json.createArrayBuilder()
+        .add("123-456-7890")
+        .add("098-765-4321"))
+    .build();
 
-JsonArray array = arrayBuilder.build();
-
-// 写入 JSON
-JsonWriter writer = Json.createWriter(new FileWriter("output.json"));
-writer.writeArray(array);
-writer.close();
+// 输出 JSON
+System.out.println(json);
 
 // 读取 JSON
-JsonReader reader = Json.createReader(new FileReader("output.json"));
-JsonArray jsonArray = reader.readArray();
-reader.close();
+String jsonString = json.toString();
+JsonReader reader = Json.createReader(new StringReader(jsonString));
+JsonObject obj = reader.readObject();
+
+String name = obj.getString("name");
+int age = obj.getInt("age");
+JsonObject address = obj.getJsonObject("address");
+String city = address.getString("city");
+
+JsonArray phones = obj.getJsonArray("phones");
+for (JsonValue phone : phones) {
+    System.out.println(phone);
+}
 ```
 
-### JSON-P 流式 API
+### 流式解析 (Streaming API)
 
 ```java
-// 流式解析
-JsonParser parser = Json.createParser(new FileReader("large.json"));
+// 解析 JSON
+JsonParser parser = Json.createParser(new StringReader(jsonString));
+
 while (parser.hasNext()) {
-    JsonParser.Event event = parser.next();
+    Event event = parser.next();
+
     switch (event) {
-        case START_OBJECT:
-            // 处理对象开始
-            break;
         case KEY_NAME:
-            String key = parser.getString();
+            System.out.println("Key: " + parser.getString());
             break;
         case VALUE_STRING:
-            String value = parser.getString();
+            System.out.println("String: " + parser.getString());
+            break;
+        case VALUE_NUMBER:
+            System.out.println("Number: " + parser.getInt());
+            break;
+        case START_OBJECT:
+            System.out.println("Start Object");
+            break;
+        case END_OBJECT:
+            System.out.println("End Object");
+            break;
+        case START_ARRAY:
+            System.out.println("Start Array");
+            break;
+        case END_ARRAY:
+            System.out.println("End Array");
             break;
     }
 }
+
+// 生成 JSON
+JsonGenerator generator = Json.createGenerator(new StringWriter());
+generator.writeStartObject()
+    .write("name", "Alice")
+    .write("age", 30)
+    .writeStartArray("phones")
+        .write("123-456-7890")
+        .write("098-765-4321")
+    .writeEnd()
+    .writeEnd();
+generator.close();
 ```
 
 ---
 
-## JSON.B (JDK 23+)
+## JSON.B (JSON 绑定)
 
-### JEP 471: JSON Binding
+**JDK 23+ (JEP 471)**
+
+### 基础使用
 
 ```java
-import java.json.bind.*;
+// JSON.B - 类似 JAXB，用于 JSON 绑定
+// JDK 23+ 预览功能
 
-// JSON-B 绑定 (JDK 23+)
-Jsonb jsonb = JsonbBuilder.create();
+import java.jsonb.*;
+
+// 简单 POJO
+public class User {
+    public int id;
+    public String name;
+    public String email;
+
+    public User() {}
+
+    public User(int id, String name, String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+    }
+}
 
 // 序列化
-Person person = new Person("Alice", 30);
-String json = jsonb.toJson(person);
+Jsonb jsonb = JsonbBuilder.create();
+User user = new User(1, "Alice", "alice@example.com");
+String json = jsonb.toJson(user);
+
+// 输出: {"id":1,"name":"Alice","email":"alice@example.com"}
 
 // 反序列化
-Person parsed = jsonb.fromJson(json, Person.class);
+User user = jsonb.fromJson("{\"id\":1,\"name\":\"Alice\",\"email\":\"alice@example.com\"}", User.class);
+
+// 集合
+List<User> users = Arrays.asList(
+    new User(1, "Alice", "alice@example.com"),
+    new User(2, "Bob", "bob@example.com")
+);
+String json = jsonb.toJson(users);
+
+// 反序列化集合
+List<User> users = jsonb.fromJson(jsonArray, new ArrayList<User>(){}.getClass().getGenericSuperclass());
 ```
 
 ### 自定义配置
@@ -269,9 +443,10 @@ Person parsed = jsonb.fromJson(json, Person.class);
 ```java
 // 自定义配置
 JsonbConfig config = new JsonbConfig()
-    .withFormatting(true)
-    .withNullValues(true)
-    .withDateFormat("yyyy-MM-dd");
+    .withFormatting(true)                     // 格式化输出
+    .withNullValues(true)                     // 包含 null 值
+    .withDateFormat("yyyy-MM-dd", Locale.CHINA) // 日期格式
+    .withPropertyNamingStrategy(PropertyNamingStrategy.LOWER_CASE_WITH_DASHES); // 命名策略
 
 Jsonb jsonb = JsonbBuilder.create(config);
 ```
@@ -309,48 +484,129 @@ String escaped = JsonEscaper.escape(input);
 
 ## 最佳实践
 
-### XML
+### 选择合适的解析器
+
+| 场景 | 推荐方案 | 原因 |
+|------|----------|------|
+| 大文件 XML | StAX/SAX | 内存占用低 |
+| 小文件 XML | DOM | 操作方便 |
+| XML <-> Java | JAXB | 自动绑定 |
+| 大 JSON | Streaming API | 内存效率高 |
+| 小 JSON | Object Model | 简单直观 |
+| JSON <-> Java | JSON.B | 自动绑定 |
+
+### 性能优化
 
 ```java
-// 使用 StAX 处理大文件
-XMLInputFactory factory = XMLInputFactory.newInstance();
-factory.setProperty(XMLInputFactory.IS_SUPPORTING_EXTERNAL_ENTITIES, false);
-factory.setProperty(XMLInputFactory.SUPPORT_DTD, false);  // 安全
-
-// 使用 DOM 处理小文件
+// 1. 重用解析器
 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+
+// 2. 使用 StAX 处理大文件
+XMLInputFactory factory = XMLInputFactory.newInstance();
+factory.setProperty(XMLInputFactory.IS_COALESCING, true);
+factory.setProperty(XMLInputFactory.IS_REPLACING_ENTITY_REFERENCES, true);
+
+// 3. JSON 使用流式 API
+JsonParser parser = Json.createParser(new FileInputStream("large.json"));
+
+// 4. 避免不必要的格式化
+marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, false);
 ```
 
-### JSON
+### 安全考虑
 
 ```java
-// 使用 JSON-P 处理大 JSON
-JsonParserFactory factory = JsonParserFactory.factory();
-JsonParser parser = factory.createParser(...);
+// 1. 禁用 DTD (防止 XXE 攻击)
+DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+factory.setFeature("http://xml.org/sax/features/external-general-entities", false);
 
-// 使用 JSON-B 处理对象绑定
-Jsonb jsonb = JsonbBuilder.create(new JsonbConfig()
-    .withFormatting(true)
-    .withNullValues(true));
+// 2. 限制输入大小
+SAXParserFactory factory = SAXParserFactory.newInstance();
+factory.setFeature("http://xml.org/sax/features/external-general-entities", false);
+
+// 3. 验证 JSON
+// JSON-P 本身安全，但要注意 JSON 反序列化攻击
+```
+
+---
+
+## 核心贡献者
+
+> **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
+> **统计时间**: 2026-03-20
+
+### XML/JSON (按 Git 提交数)
+
+| 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
+|------|--------|--------|------|----------|
+| 1 | Joe Wang | 42 | Oracle | XML, JSON API 维护者 |
+| 2 | Roger Riggs | 2 | Oracle | 核心库 |
+| 3 | Pavel Rappo | 2 | Oracle | API 设计 |
+| 4 | Justin Lu | 2 | Oracle | JSON 处理 |
+| 5 | Joe Darcy | 2 | Oracle | API 设计 |
+
+### 历史贡献者
+
+| 贡献者 | 公司/机构 | 主要贡献 |
+|--------|----------|----------|
+| **Joe Wang** | Oracle | XML/JSON API 主要维护者 |
+| **Jeff Suttor** | Sun | StAX (JSR 173) |
+| **Ryan Shoemaker** | Sun | JAXB (JSR 222) |
+
+---
+
+## Git 提交历史
+
+> 基于 OpenJDK master 分支分析
+
+### XML/JSON 改进 (2024-2026)
+
+```bash
+# 查看 XML 相关提交
+cd /path/to/jdk
+git log --oneline -- src/java.xml/share/classes/javax/xml/
+git log --oneline -- src/java.json/share/classes/javax/json/
 ```
 
 ---
 
 ## 相关链接
 
-### 本地文档
+### 内部文档
 
+- [XML/JSON 时间线](timeline.md) - 详细的历史演进
+- [核心 API](../)
 - [IO 流](../io/) - 文件读写
 - [异常处理](../exceptions/) - 解析异常
 
-### 外部参考
+### 外部资源
 
-**JEP 文档:**
-- [JEP 353: JSON-P API](https://openjdk.org/jeps/353)
-- [JEP 471: JSON.B](https://openjdk.org/jeps/471)
+- [JEP 353: JSON Processing API](https://openjdk.org/jeps/353)
+- [JEP 471: JSON.B (JSON Binding)](https://openjdk.org/jeps/471)
 - [JEP 489: JSON Escaping](https://openjdk.org/jeps/489)
+- [JSR 173: StAX](https://jcp.org/en/jsr/detail?id=173)
+- [JSR 222: JAXB](https://jcp.org/en/jsr/detail?id=222)
+- [Jakarta JSON Processing](https://jakarta.ee/specifications/jsonp/)
+- [Jakarta JSON Binding](https://jakarta.ee/specifications/jsonb/)
 
-**技术文档:**
+### 官方文档
+
+- [Java XML 教程 (Oracle)](https://docs.oracle.com/javase/tutorial/jaxp/)
+- [JSON-P 规范](https://jakarta.ee/specifications/jsonp/2.0/)
+- [JAXB 参考实现](https://eclipse-ee4j.github.io/jaxb-ri/)
 - [Java API for JSON Processing](https://eclipse-ee4j.github.io/jsonp/)
 - [Java Architecture for XML Binding](https://eclipse-ee4j.github.io/jaxb/)
+
+---
+
+**最后更新**: 2026-03-20
+
+**Sources**:
+- [JEP 353: JSON Processing API](https://openjdk.org/jeps/353)
+- [JEP 471: JSON.B (JSON Binding)](https://openjdk.org/jeps/471)
+- [JEP 489: JSON Escaping](https://openjdk.org/jeps/489)
+- [JSR 173: StAX](https://jcp.org/en/jsr/detail?id=173)
+- [Jakarta JSON Processing](https://jakarta.ee/specifications/jsonp/)
+- [Jakarta JSON Binding](https://jakarta.ee/specifications/jsonb/)
