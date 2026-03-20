@@ -13,11 +13,11 @@
 | **Connections** | 84+ |
 | **Email** | psadhukhan@openjdk.org |
 | **OpenJDK** | [@psadhukhan](https://openjdk.org/census#psadhukhan) |
-| **Role** | OpenJDK Member, JDK Reviewer |
-| **Primary Areas** | Swing, AWT, JavaFX, Client Libraries, Focus Management |
-| **Active Since** | 2015+ |
+| **角色** | OpenJDK Member, JDK Reviewer, OpenJFX Committer (2017-09), Client Libraries Group Member (2021-09) |
+| **主要领域** | Swing, AWT, JavaFX, Client Libraries, Focus Management |
+| **活跃时间** | 2015+ |
 
-> **数据来源**: [GitHub](https://github.com/prsadhuk), [LinkedIn](https://in.linkedin.com/in/prasantasadhukhan), [OpenJDK](https://openjdk.org/census#psadhukhan)
+> **数据来源**: [GitHub](https://github.com/prsadhuk), [LinkedIn](https://in.linkedin.com/in/prasantasadhukhan), [OpenJDK](https://openjdk.org/census#psadhukhan), [CFV OpenJFX Committer](https://mail.openjdk.org/pipermail/openjfx-dev/2017-September/020857.html), [CFV Client Libraries Group Member](https://mail.openjdk.org/pipermail/client-libs-dev/2021-September/000502.html)
 
 ## Contribution Overview
 
