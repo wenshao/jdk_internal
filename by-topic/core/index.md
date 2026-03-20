@@ -78,6 +78,22 @@ Java 性能优化从 JDK 1.0 到 JDK 26 的完整演进。
 
 → [性能优化时间线](performance/timeline.md)
 
+### [JIT 编译](jit/)
+
+C1、C2、Graal JIT 编译器从 JDK 1.0 到 JDK 26 的完整演进。
+
+| 版本 | 主要变化 | 说明 |
+|------|----------|------|
+| JDK 1.0 | 解释器 | 纯解释执行 |
+| JDK 1.3 | C2 (Server Compiler) | 高性能编译器 |
+| JDK 1.4 | C1 (Client Compiler) | 快速启动编译器 |
+| JDK 5 | C1/C2 分离 | -client/-server |
+| JDK 6 | 分层编译 | C1 + C2 组合 |
+| JDK 9 | Graal JIT | 实验性高性能 JIT |
+| JDK 23 | Graal 优化 | 性能提升 |
+
+→ [JIT 编译详情](jit/)
+
 ### [类加载器](classloading/)
 
 Java 类加载器从 JDK 1.0 到 JDK 26 的完整演进。
