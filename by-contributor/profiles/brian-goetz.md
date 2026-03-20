@@ -17,11 +17,28 @@ Brian Goetz 是 Oracle 的 Java Language Architect，是 Java 语言演进的核
 | **姓名** | Brian Goetz |
 | **组织** | [Oracle](https://www.oracle.com/) |
 | **角色** | Java Language Architect |
+| **教育背景** | Carnegie Mellon University (计算机科学硕士, 1990) |
+| **位置** | Williston, Vermont, 美国 |
 | **主要领域** | 语言设计、并发编程、内存模型 |
-| **知名著作** | 《Java Concurrency in Practice》 |
-| **活跃时间** | 2001 年至今 |
+| **知名著作** | 《Java Concurrency in Practice》(2006) |
+| **文章数量** | 75+ 篇技术文章 |
+| **活跃时间** | 1986 - 至今 (20+ 年软件开发经验) |
 
-> **数据调查时间**: 2026-03-20
+> **数据来源**: [ÜberConf](https://uberconf.com/conference/speaker/brian_goetz), [LinkedIn](https://www.linkedin.com/in/briangoetz), [UberConf Blog](https://uberconf.com/blog/brian_goetz/2006/09/farewell_quiotix_hello_sun_)
+
+---
+
+## 职业时间线
+
+| 年份 | 事件 | 详情 |
+|------|------|------|
+| **1990** | 硕士学位 | Carnegie Mellon University 计算机科学 |
+| **~1990-2006** | Quiotix | 软件顾问 (Software Consultant) |
+| **2006-09** | 加入 Sun Microsystems | Sr. Staff Engineer |
+| **2006-2010** | Sun 时期 | JavaFX Script 编译器架构师、Java Warehouse 架构师 |
+| **2010-至今** | Oracle | Java Language Architect |
+| **2014** | JDK 8 发布 | JSR-335 Lambda 表达式规范负责人 |
+| **2023** | JDK 21 发布 | Virtual Threads (Project Loom) 正式版 |
 
 ---
 
@@ -170,8 +187,12 @@ Brian Goetz 强调语言的渐进式演进，而非革命性变化。
 | 类型 | 链接 |
 |------|------|
 | **Twitter** | [@BrianGoetz](https://twitter.com/BrianGoetz) |
+| **LinkedIn** | [Brian Goetz](https://www.linkedin.com/in/briangoetz) |
 | **OpenJDK Email** | brian.goetz@oracle.com |
 | **Book** | [Java Concurrency in Practice](https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601) |
+| **InfoQ Profile** | [Brian Goetz](https://www.infoq.com/profile/Brian-Goetz/) |
+| **ÜberConf Profile** | [Speaker Bio](https://uberconf.com/conference/speaker/brian_goetz) |
+| **UberConf Blog** | [Farewell Quiotix, Hello Sun](https://uberconf.com/blog/brian_goetz/2006/09/farewell_quiotix_hello_sun_) |
 
 ---
 
@@ -183,4 +204,10 @@ Brian Goetz 强调语言的渐进式演进，而非革命性变化。
 ---
 
 > **数据调查时间**: 2026-03-20
-> **文档版本**: 1.0
+> **文档版本**: 2.0
+> **更新内容**:
+> - 添加教育背景 (Carnegie Mellon University, 1990)
+> - 添加职业时间线 (Quiotix → Sun → Oracle)
+> - 添加位置信息 (Williston, Vermont)
+> - 添加文章数量 (75+ 篇)
+> - 添加演讲者档案链接
