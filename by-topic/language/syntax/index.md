@@ -615,6 +615,152 @@ private static lazy ExpensiveObject CACHE = new ExpensiveObject();
 
 ---
 
+## 重要 PR 分析
+
+### 枚举优化
+
+#### JDK-8349400: 消除匿名内部类优化启动
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ 减少 10 个类加载，元空间占用减少 82%
+
+将 `KnownOIDs` 枚举中的匿名内部类转换为构造函数参数：
+
+**核心改进**:
+- 消除 10 个匿名内部类
+- 减少启动时的类加载开销
+- 元空间占用减少 82%
+
+```java
+// 优化前：使用匿名内部类覆盖方法
+KP_TimeStamping("1.3.6.1.5.5.7.3.8", "timeStamping") {
+    @Override
+    boolean registerNames() { return false; }
+}
+
+// 优化后：使用构造函数参数
+KP_TimeStamping("1.3.6.1.5.5.7.3.8", "timeStamping", false),
+```
+
+→ [详细分析](/by-pr/8349/8349400.md)
+
+### Lambda 表达式优化
+
+#### JDK-8341755: Lambda 参数名称生成优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ +15-20% Lambda 生成性能
+
+优化 `InnerClassLambdaMetafactory` 的参数名称构造：
+
+**优化点**:
+- 0 参数 Lambda 使用常量（消除数组分配）
+- 缓存常见参数名称（1-8 参数）
+- 使用 `@Stable` 注解启用 JIT 优化
+
+```java
+// 优化前：每次创建新数组
+String[] argNames = new String[parameterCount];
+for (int i = 0; i < parameterCount; i++) {
+    argNames[i] = "arg$" + (i + 1);  // 字符串拼接
+}
+
+// 优化后：使用缓存
+private static final @Stable String[] ARG_NAME_CACHE;
+static {
+    var argNameCache = new String[8];
+    for (int i = 0; i < 8; i++) {
+        argNameCache[i] = "arg$" + (i + 1);
+    }
+    ARG_NAME_CACHE = argNameCache;
+}
+```
+
+→ [详细分析](/by-pr/8341/8341755.md)
+
+---
+
+## 语法特性最佳实践
+
+### 枚举设计优化
+
+```java
+// ✅ 推荐：避免匿名内部类
+enum Operation {
+    ADD, SUBTRACT, MULTIPLY, DIVIDE;
+
+    // 使用枚举实例字段替代方法覆盖
+    private final boolean isBinary;
+
+    Operation() {
+        this.isBinary = true;
+    }
+
+    // 或使用构造函数参数控制行为
+    enum SpecialEnum {
+        VALUE1("oid1", false),  // registerNames = false
+        VALUE2("oid2", true);   // registerNames = true
+
+        private final String oid;
+        private final boolean registerNames;
+
+        SpecialEnum(String oid, boolean registerNames) {
+            this.oid = oid;
+            this.registerNames = registerNames;
+        }
+    }
+}
+
+// ❌ 避免：不必要的匿名内部类
+enum BadEnum {
+    VALUE {
+        @Override
+        void someMethod() { }  // 匿名类增加类加载开销
+    };
+}
+```
+
+### Lambda 表达式最佳实践
+
+```java
+// ✅ 推荐：使用方法引用
+list.stream()
+    .map(Object::toString)  // 比 lambda 更高效
+    .filter(Objects::nonNull);
+
+// ✅ 推荐：使用标准函数式接口
+Function<String, Integer> parser = Integer::parseInt;
+Predicate<Integer> isPositive = n -> n > 0;
+Supplier<List<String>> supplier = ArrayList::new;
+
+// ❌ 避免：不必要的 lambda 语法
+list.stream()
+    .map(s -> s.toString())  // 方法引用更清晰
+    .filter(s -> s != null); // Objects::nonNull 更标准
+```
+
+### 泛型最佳实践
+
+```java
+// ✅ 推荐：使用泛型方法避免类型转换
+public static <T> List<T> singletonList(T item) {
+    return Collections.singletonList(item);
+}
+
+// ✅ 推荐：使用通配符提高 API 灵活性
+public void processList(List<? extends Number> list) {
+    // 只能读取，不能写入
+    Number first = list.get(0);
+}
+
+// ❌ 避免：不必要的类型参数
+public <T> void print(T item) {  // T 可以用 Object 替代
+    System.out.println(item);
+}
+```
+
+---
+
 ## 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析

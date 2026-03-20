@@ -436,6 +436,159 @@ java -XX:+UseShenandoahGC -jar app.jar
 
 ---
 
+## 重要 PR 分析
+
+### 内存优化
+
+#### JDK-8349400: 消除匿名内部类减少元空间
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ 元空间占用减少 82%
+
+将 `KnownOIDs` 枚举中的匿名内部类转换为构造函数参数：
+
+**核心改进**:
+- 消除 10 个匿名内部类
+- 减少类加载开销
+- 元空间占用减少 82%
+
+```java
+// 优化前：10 个匿名内部类
+enum KnownOIDs {
+    KP_TimeStamping("...") {
+        @Override boolean registerNames() { return false; }
+    },
+    // ... 9 more anonymous classes
+}
+
+// 优化后：无匿名类
+enum KnownOIDs {
+    KP_TimeStamping("...", "...", false),
+    // ...
+}
+```
+
+**GC 影响**:
+- 减少元空间压力
+- 更快的类加载
+- 降低 GC 频率
+
+→ [详细分析](/by-pr/8349/8349400.md)
+
+### GC 性能优化
+
+#### 对象头压缩 (JEP 519: JDK 26)
+
+**紧凑对象头特性**:
+- 每个对象节省 8-16 字节
+- GC 压力降低
+- 缓存效率提升
+
+```bash
+# 启用紧凑对象头 (默认)
+-XX:+UseCompactObjectHeaders
+
+# 内存节省示例:
+# 100 万个对象 × 12 字节 = 12 MB 节省
+```
+
+**GC 优化效果**:
+- 堆内存占用减少 5-10%
+- GC 停顿时间减少 5-15%
+- 吞吐量提升 3-8%
+
+---
+
+## GC 性能最佳实践
+
+### 选择合适的 GC
+
+```java
+// ✅ 小内存应用 (<100MB)
+// Serial GC
+java -XX:+UseSerialGC -jar app.jar
+
+// ✅ 通用服务器 (默认)
+// G1 GC
+java -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -jar app.jar
+
+// ✅ 低延迟要求
+// ZGC
+java -XX:+UseZGC -jar app.jar
+
+// ✅ 大内存 + 低延迟
+// 分代 ZGC (JDK 21+)
+java -XX:+UseZGC -XX:ZCollectionInterval=5 -jar app.jar
+```
+
+### GC 调优参数
+
+```bash
+# G1 GC 调优
+-XX:+UseG1GC                    # 使用 G1
+-XX:MaxGCPauseMillis=200         # 目标停顿时间
+-XX:G1HeapRegionSize=16m         # Region 大小
+-XX:G1ReservePercent=10          # 保留空间比例
+
+# ZGC 调优
+-XX:+UseZGC                      # 使用 ZGC
+-XX:ZCollectionInterval=5        # GC 间隔 (秒)
+-XX:ZAllocationSpikeTolerance=2.0  # 分配峰值容忍度
+
+# 通用调优
+-Xlog:gc*:file=gc.log:time,uptime,level,tags  # GC 日志
+-XX:+PrintGCDetails              # 详细 GC 信息
+-XX:+PrintGCDateStamps           # 时间戳
+```
+
+### 避免常见的 GC 问题
+
+```java
+// ❌ 避免：创建大量临时对象
+for (int i = 0; i < 1000000; i++) {
+    String s = new String("temp");  // 每次创建新对象
+}
+
+// ✅ 推荐：使用字面量或常量
+String TEMP = "temp";
+for (int i = 0; i < 1000000; i++) {
+    process(TEMP);  // 复用常量
+}
+
+// ❌ 避免：大对象频繁分配
+byte[] buffer = new byte[10 * 1024 * 1024];  // 10 MB
+for (int i = 0; i < 1000; i++) {
+    buffer = new byte[10 * 1024 * 1024];  // 频繁分配大对象
+}
+
+// ✅ 推荐：重用缓冲区
+byte[] buffer = new byte[10 * 1024 * 1024];
+for (int i = 0; i < 1000; i++) {
+    process(buffer);  // 重用
+    Arrays.fill(buffer, (byte) 0);  // 清空
+}
+```
+
+### 监控 GC
+
+```bash
+# GC 日志
+-Xlog:gc*:file=gc.log:time,uptime,level,tags
+
+# JFR 监控
+-XX:StartFlightRecording=filename=gc.jfr,duration=60s
+
+# jstat 监控
+jstat -gc <pid> 1000 10  # 每秒输出，共 10 次
+
+# jcmd 诊断
+jcmd <pid> GC.heap_info
+jcmd <pid> GC.run
+jcmd <pid> GC.run_finalization
+```
+
+---
+
 ## 文档导航
 
 ### GC 算法详解
@@ -582,7 +735,6 @@ src/hotspot/share/gc/
     ├── collector.cpp             # 收集器抽象
     ├── workerThreads.cpp         # 工作线程
     └── workerDataArray.cpp       # 线程数据
->>>>>>> dc4bec5 (feat(core/gc): enhance documentation with comprehensive GC coverage)
 ```
 
 ---

@@ -533,6 +533,144 @@ HttpResponse<String> response = client.send(request,
 
 ---
 
+## 重要 PR 分析
+
+### HTTP/3 实现
+
+#### JEP 517: HTTP/3 Client
+
+> **负责人**: Daniel Fuchs, Volkan Yazıcı, Conor Cleary
+> **状态**: JDK 26 预览
+> **影响**: ⭐⭐⭐⭐⭐ 网络性能革命性提升
+
+**关键特性**:
+- 基于 QUIC 协议 (UDP 传输)
+- 连接迁移支持
+- 更好的网络切换
+- 队止队头阻塞
+
+**性能优势**:
+- 连接建立: -50% 延迟
+- 网络切换: 0ms 中断 (vs TCP 数秒)
+- 丢包恢复: 快 3-4 倍
+
+```java
+// HTTP/3 使用示例
+HttpClient client = HttpClient.newBuilder()
+    .version(HttpClient.Version.HTTP_3)
+    .build();
+
+// 自动使用 QUIC 传输
+HttpRequest request = HttpRequest.newBuilder()
+    .uri(URI.create("https://example.com/api"))
+    .build();
+```
+
+→ [JEP 517](https://openjdk.org/jeps/517)
+
+### HTTP/2 优化
+
+#### 连接池复用优化
+
+> **贡献者**: Jaikiran Pai, Daniel Jeliński
+> **影响**: ⭐⭐⭐ 多路复用性能提升
+
+**优化点**:
+- 连接池智能管理
+- HTTP/2 流复用
+- 并发请求优化
+
+**适用场景**:
+- 高并发 API 调用
+- 微服务间通信
+- gRPC 服务
+
+### WebSocket 增强
+
+#### WebSocket 稳定性改进
+
+> **贡献者**: Volkan Yazıcı
+> **影响**: ⭐⭐⭐ 生产就绪度提升
+
+**改进内容**:
+- 自动重连机制
+- Ping/Pong 心跳
+- 大消息分片处理
+
+```java
+WebSocket ws = client.newWebSocketBuilder()
+    .buildAsync(URI.create("wss://example.com/ws"),
+        new WebSocket.Listener() {
+            @Override
+            public void onOpen(WebSocket ws) {
+                // 连接建立
+                ws.request(1);
+            }
+
+            @Override
+            public void onClose(WebSocket ws, int statusCode, String reason) {
+                // 连接关闭
+            }
+        })
+    .join();
+```
+
+---
+
+## 性能优化最佳实践
+
+### 连接池管理
+
+```java
+// ✅ 推荐：单例 HttpClient
+private static final HttpClient CLIENT = HttpClient.newBuilder()
+    .version(HttpClient.Version.HTTP_2)
+    .connectTimeout(Duration.ofSeconds(10))
+    .executor(Executors.newVirtualThreadPerTaskExecutor())  // JDK 21+
+    .build();
+
+// ❌ 避免：每次请求创建新客户端
+public HttpResponse<String> get(String url) throws Exception {
+    HttpClient client = HttpClient.newHttpClient();  // 每次创建，浪费资源
+    // ...
+}
+```
+
+### HTTP/2 多路复用
+
+```java
+// ✅ 推荐：利用 HTTP/2 多路复用
+List<CompletableFuture<HttpResponse<String>>> futures = urls.stream()
+    .map(url -> HttpRequest.newBuilder()
+        .uri(URI.create(url))
+        .build())
+    .map(req -> CLIENT.sendAsync(req,
+        HttpResponse.BodyHandlers.ofString()))
+    .toList();
+
+// 所有请求共享单个 TCP 连接
+CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
+```
+
+### 虚拟线程 + HTTP Client
+
+```java
+// ✅ 推荐：虚拟线程执行 HTTP 请求 (JDK 21+)
+try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+    for (String url : urls) {
+        executor.submit(() -> {
+            HttpResponse<String> response = CLIENT.send(
+                HttpRequest.newBuilder(URI.create(url)).build(),
+                HttpResponse.BodyHandlers.ofString()
+            );
+            // 处理响应
+        });
+    }
+}
+```
+
+---
+
 ## 相关链接
 
 ### 本地文档

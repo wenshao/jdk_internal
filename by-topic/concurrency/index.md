@@ -129,6 +129,70 @@ Java 序列化从 JDK 1.0 到 JDK 26 的完整演进。
 
 ---
 
+## 重要 PR 分析
+
+### 并发集合优化
+
+#### JDK-8348880: ZoneOffset 缓存优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ +15-25% 时区偏移缓存性能
+
+将 `ConcurrentHashMap<Integer, ZoneOffset>` 改为 `AtomicReferenceArray<ZoneOffset>`：
+
+**核心改进**:
+- 消除 `int` → `Integer` 自动装箱
+- 数组访问比 HashMap 更快
+- 内存占用减少 85%
+
+```java
+// 优化前
+ConcurrentMap<Integer, ZoneOffset> cache = new ConcurrentHashMap<>();
+Integer key = quarters;  // 装箱
+ZoneOffset result = cache.get(key);
+
+// 优化后
+AtomicReferenceArray<ZoneOffset> cache = new AtomicReferenceArray<>(256);
+int key = quarters & 0xff;  // 无装箱
+ZoneOffset result = cache.getOpaque(key);
+```
+
+→ [详细分析](/by-pr/8348/8348880.md)
+
+### 分布式系统优化
+
+#### JDK-8353741: UUID.toString SWAR 优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐⭐ +40-60% UUID.toString 性能提升
+
+使用 SWAR (SIMD Within A Register) 技术替代查找表：
+
+**优化点**:
+- 消除查找表缓存未命中
+- 寄存器内并行计算
+- 使用 `Long.expand` intrinsic
+
+→ [详细分析](/by-pr/8353/8353741.md)
+
+### 字节码生成优化
+
+#### JDK-8340587: StackMapGenerator 优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐ +3-7% StackMap 生成性能
+
+优化 `checkAssignableTo` 方法，避免空栈复制：
+
+**优化点**:
+- 空栈时跳过复制
+- 用 `clone()` 替代 `Array.copyOf`
+- 局部变量缓存
+
+→ [详细分析](/by-pr/8340/8340587.md)
+
+---
+
 ## 内部开发者资源
 
 ### 源码结构

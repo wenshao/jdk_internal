@@ -439,6 +439,158 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
+## 重要 PR 分析
+
+### JIT 内联优化
+
+#### JDK-8365186: DateTimePrintContext 方法拆分
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ +3-12% 日期格式化性能提升
+
+**问题**: `DateTimePrintContext.adjust` 方法 382 字节 > 325 字节内联阈值
+
+**解决方案**: 拆分为三个方法，热路径降至 27 字节
+
+**关键数据**:
+- 方法大小：382 → 27 字节（热路径）
+- 多平台验证：+3% ~ +12% 性能提升
+- 静态 final 场景：+11.66% 提升
+
+→ [详细分析](/by-pr/8365/8365186.md)
+
+### 字符串拼接优化
+
+#### JDK-8355177: StringBuilder append(char[]) 优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐⭐ +15% 性能提升
+
+使用 `Unsafe.copyMemory` 替代 `System.arraycopy`：
+
+**优化效果**:
+- 消除 JNI 边界
+- 消除冗余边界检查
+- JIT 可完全内联
+
+```java
+// 优化前
+System.arraycopy(str, 0, value, count, len);
+
+// 优化后
+UNSAFE.copyMemory(str, CHAR_ARRAY_BASE_OFFSET,
+                  value, CHAR_ARRAY_BASE_OFFSET + (count << 1),
+                  len << 1);
+```
+
+→ [详细分析](/by-pr/8355/8355177.md)
+
+#### JDK-8343650: StringConcatHelper 优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ +5-8% UTF16 拼接性能提升
+
+复用 `StringLatin1.putCharsAt` 和 `StringUTF16.putCharsAt`：
+
+**优化点**:
+- 减少方法调用：4-5 次 → 1 次
+- 减少边界检查：4-5 次 → 1 次
+- 代码更简洁
+
+→ [详细分析](/by-pr/8343/8343650.md)
+
+### 启动性能优化
+
+#### JDK-8349400: 消除匿名内部类
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ 类加载 -90%
+
+将枚举匿名类转换为构造函数参数：
+
+**效果**:
+- 类加载数量：11 → 1
+- 元空间占用：22KB → 4KB
+- Java Agent 场景显著受益
+
+→ [详细分析](/by-pr/8349/8349400.md)
+
+### 字节码生成优化
+
+#### JDK-8341906: ClassFile 写入合并
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ +28% 字节码写入性能
+
+通过写入合并减少方法调用：
+
+```java
+// 优化前：3 次调用
+buf.writeU1(u1);
+buf.writeU2(u2);
+buf.writeU4(u4);
+
+// 优化后：1 次调用
+buf.writeU1U2U4(u1, u2, u4);
+```
+
+**性能分解**:
+- 方法调用减少：15%
+- 边界检查减少：8%
+- 内联优化：3%
+- 局部性：2%
+
+→ [详细分析](/by-pr/8341/8341906.md)
+
+---
+
+## 性能优化最佳实践
+
+### 方法设计原则
+
+| 原则 | 说明 | 示例 |
+|------|------|------|
+| **保持简短** | 热方法 < 50 字节 | JIT 可内联 |
+| **早期返回** | 常见情况优先 | 分支预测友好 |
+| **冷热分离** | 边界情况单独方法 | 不影响热路径优化 |
+| **静态方法** | 消除虚调用 | 更容易内联 |
+
+### 内存分配优化
+
+```java
+// ❌ 避免：循环内创建对象
+for (int i = 0; i < 1000; i++) {
+    String result = "prefix" + i;  // 每次创建新对象
+}
+
+// ✅ 推荐：重用对象
+StringBuilder sb = new StringBuilder();
+for (int i = 0; i < 1000; i++) {
+    sb.setLength(0);
+    sb.append("prefix").append(i);
+}
+```
+
+### 字符串拼接优化
+
+```java
+// ✅ 简单拼接：使用 +
+String result = "Hello " + name;  // 编译器优化为 StringBuilder
+
+// ✅ 循环拼接：使用 StringBuilder
+StringBuilder sb = new StringBuilder();
+for (String s : list) {
+    sb.append(s);  // 受益于 JDK-8355177 优化
+}
+
+// ✅ 格式化：使用 String.format（静态 final 更优）
+private static final DateTimeFormatter FORMATTER =
+    DateTimeFormatter.ofPattern("yyyy-MM-dd");
+String date = FORMATTER.format(LocalDate.now());  // 受益于 JIT 常量传播
+```
+
+---
+
 ## 相关链接
 
 ### 内部文档

@@ -257,6 +257,58 @@ byte[] transformed = ClassFile.of().transformClass(
 
 → [详细分析](/by-pr/8334/8334328.md)
 
+#### JDK-8339205: Optimize StackMapGenerator
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐⭐ +5-8% Lambda 生成性能提升
+
+StackMapTable 生成优化：
+- 缓存 `this` 引用，减少字段访问
+- 缓存 `labelContext`，减少方法调用
+- 使用 `PrimitiveClassDescImpl.CD_xxx` 常量
+- 代码大小减少 20%，更易 JIT 编译
+
+[详细分析](/by-pr/8339/8339205.md)
+
+#### JDK-8339217: Optimize ClassFile API loadConstant
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐⭐ +5-15% 字节码生成性能提升
+
+方法重载优化，提升 JIT 内联能力：
+- 新增 `loadConstant(int/long/float/double)` 重载方法
+- 消除装箱，直接使用基本类型
+- 小方法可内联，消除调用开销
+- 原方法 465 字节 → 新方法各 ~60 字节
+
+[详细分析](/by-pr/8339/8339217.md)
+
+#### JDK-8339290: Optimize ClassFile Utf8EntryImpl#writeTo
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐⭐ +15-30% UTF-8 常量池写入性能提升
+
+UTF-8 编码优化：
+- `countNonZeroAscii()` 快速扫描 ASCII 前缀
+- `writeUTF()` 批量复制 + 手动编码
+- 纯 ASCII 场景: +31.8% 提升
+- 混合场景: +15% 提升
+
+[详细分析](/by-pr/8339/8339290.md)
+
+#### JDK-8341664: ReferenceClassDescImpl cache internalName
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐⭐ +93.3% 后续调用性能提升
+
+ClassDesc 内部名称缓存优化：
+- 懒加载缓存，首次访问时计算
+- `instanceof` 快速类型检查
+- 后续调用 O(1)，无内存分配
+- ClassFile 生成性能 +9-10%
+
+[详细分析](/by-pr/8341/8341664.md)
+
 ---
 
 ## 贡献者
@@ -411,6 +463,53 @@ src/java.base/share/classes/jdk/internal/classfile/
 - 标准库优势 (无外部依赖)
 - 类型安全 (编译时检查)
 - JDK 长期维护保证
+
+---
+
+## 重要 PR 分析
+
+### 字节码生成优化
+
+#### JDK-8341906: BufWriter 写入合并
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ +28% 字节码写入性能
+
+优化注解处理器生成的字节码写入性能：
+
+**优化策略**: 将多次小写入合并为一次大写入
+
+```java
+// 优化前：3 次方法调用
+buf.writeU1(u1Value);
+buf.writeU2(u2Value);
+buf.writeU4(u4Value);
+
+// 优化后：1 次方法调用
+buf.writeU1U2U4(u1Value, u2Value, u4Value);
+```
+
+→ [详细分析](/by-pr/8341/8341906.md)
+
+### 基准测试优化
+
+#### JDK-8341859: ClassFile Benchmark 优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ 测试稳定性提升 63%
+
+通过缓存方法名减少基准测试中的噪声：
+
+**优化点**:
+- 静态初始化时预生成所有方法名
+- 避免基准测试期间的字符串拼接
+- 减少内存分配
+
+**效果**:
+- 标准差：2.34% → 0.87%（-62.8%）
+- 95% CI 半宽：±4.6% → ±1.7%（-63%）
+
+→ [详细分析](/by-pr/8341/8341859.md)
 
 ---
 

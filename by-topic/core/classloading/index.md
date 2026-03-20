@@ -509,6 +509,146 @@ java -XX:AOTMode=use -jar app.jar
 
 ---
 
+## 重要 PR 分析
+
+### 启动性能优化
+
+#### JDK-8349400: 消除匿名内部类优化启动
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ 减少 10 个类加载，元空间占用减少 82%
+
+将 `KnownOIDs` 枚举中的匿名内部类转换为构造函数参数：
+
+**核心改进**:
+- 消除 10 个匿名内部类
+- 减少 Java Agent 场景的启动类加载
+- 元空间占用减少 82%
+
+```java
+// 优化前：使用匿名内部类覆盖方法
+enum KnownOIDs {
+    KP_TimeStamping("1.3.6.1.5.5.7.3.8", "timeStamping") {
+        @Override
+        boolean registerNames() { return false; }
+    }
+}
+
+// 优化后：使用构造函数参数
+enum KnownOIDs {
+    KP_TimeStamping("1.3.6.1.5.5.7.3.8", "timeStamping", false)
+}
+```
+
+→ [详细分析](/by-pr/8349/8349400.md)
+
+### Lambda 生成优化
+
+#### JDK-8341755: Lambda 参数名称生成优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ +15-20% Lambda 生成性能
+
+优化 `InnerClassLambdaMetafactory` 的参数名称构造：
+
+**优化点**:
+- 0 参数 Lambda 使用常量（消除数组分配）
+- 缓存常见参数名称（1-8 参数）
+- 使用 `@Stable` 注解启用 JIT 优化
+
+```java
+// 优化前：每次创建新数组
+String[] argNames = new String[parameterCount];
+for (int i = 0; i < parameterCount; i++) {
+    argNames[i] = "arg$" + (i + 1);
+}
+
+// 优化后：使用缓存
+private static final @Stable String[] ARG_NAME_CACHE;
+static {
+    var argNameCache = new String[8];
+    for (int i = 0; i < 8; i++) {
+        argNameCache[i] = "arg$" + (i + 1);
+    }
+    ARG_NAME_CACHE = argNameCache;
+}
+```
+
+→ [详细分析](/by-pr/8341/8341755.md)
+
+---
+
+## 类加载最佳实践
+
+### 避免类加载泄漏
+
+```java
+// ✅ 推荐：使用弱引用
+private static final Map<String, Object> CACHE =
+    new WeakHashMap<>();
+
+// ✅ 推荐：清理 ThreadLocal
+try {
+    threadLocal.set(value);
+} finally {
+    threadLocal.remove();  // 防止内存泄漏
+}
+
+// ❌ 避免：静态集合持有强引用
+private static final Map<String, Object> CACHE = new HashMap<>();
+// 类加载器无法被回收
+```
+
+### 选择合适的类加载器
+
+```java
+// ✅ 推荐：使用双亲委派
+protected Class<?> loadClass(String name, boolean resolve) {
+    // 1. 检查已加载
+    Class<?> c = findLoadedClass(name);
+    if (c != null) return c;
+
+    // 2. 委派父加载器
+    if (parent != null) {
+        c = parent.loadClass(name);
+    } else {
+        c = findBootstrapClassOrNull(name);
+    }
+
+    // 3. 自己加载
+    if (c == null) {
+        c = findClass(name);
+    }
+    return c;
+}
+
+// ❌ 避免：破坏双亲委派（除非必要）
+protected Class<?> loadClass(String name, boolean resolve) {
+    // 直接自己加载，可能重复加载类
+    return findClass(name);
+}
+```
+
+### 模块化类加载
+
+```java
+// ✅ 推荐：使用模块化反射
+Module module = MyClass.class.getModule();
+
+// 检查导出
+if (module.isExported("com.example.api")) {
+    // 可以访问
+}
+
+// 添加 opens 边（运行时）
+ModuleLayer.boot().addOpens(
+    "java.base",
+    "com.example",
+    MyClass.class.getModule());
+```
+
+---
+
 ## 相关链接
 
 ### 本地文档

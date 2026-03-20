@@ -615,6 +615,172 @@ public Logger getLogger() {
 
 ---
 
+## 重要 PR 分析
+
+### 并发集合优化
+
+#### JDK-8348880: ZoneOffset 缓存优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ +15-25% 时区偏移缓存性能
+
+将 `ZoneOffset.QUARTER_CACHE` 从 `ConcurrentHashMap` 改为 `AtomicReferenceArray`：
+
+**优化点**:
+- 消除 `int` → `Integer` 自动装箱
+- 数组访问比 HashMap 更快
+- 内存占用减少 85%
+
+```java
+// 优化前：ConcurrentHashMap 需要装箱
+Integer key = quarters;  // 自动装箱
+ZoneOffset result = QUARTER_CACHE.get(key);
+
+// 优化后：AtomicReferenceArray 无装箱
+int key = quarters & 0xff;
+ZoneOffset result = QUARTER_CACHE.getOpaque(key);
+```
+
+**性能数据**:
+- 吞吐量：+15-25%
+- 对象分配：-100%（无装箱）
+- GC 压力：-50%
+
+→ [详细分析](/by-pr/8348/8348880.md)
+
+### 字节码生成优化
+
+#### JDK-8340587: StackMapGenerator 优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐ +3-7% StackMap 生成性能提升
+
+优化 `checkAssignableTo` 方法，避免不必要的栈复制：
+
+**优化点**:
+- 空栈时跳过复制
+- 用 `clone()` 替代 `Array.copyOf`
+- 局部变量缓存
+
+**适用场景**: Lambda 表达式、动态代理生成
+
+→ [详细分析](/by-pr/8340/8340587.md)
+
+#### JDK-8340544: setLocalsFromArg 优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐ +8-12% 局部变量初始化性能
+
+优化方法签名到局部变量的初始化：
+
+**优化点**:
+- 一次 `checkLocal` 调用
+- 直接数组访问
+- 类型常量比较
+
+→ [详细分析](/by-pr/8340/8340544.md)
+
+### 分布式系统优化
+
+#### JDK-8353741: UUID.toString 性能提升
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐⭐ +40-60% UUID.toString 性能提升
+
+使用 SWAR (SIMD Within A Register) 技术替代查找表：
+
+**优化点**:
+- 消除查找表缓存未命中
+- 寄存器内并行计算
+- 使用 `Long.expand` intrinsic
+
+**适用场景**: 分布式追踪、会话管理、日志系统
+
+```java
+// 优化前：查找表（可能缓存未命中）
+char c = DIGITS[b & 0xff];
+
+// 优化后：SWAR 并行计算
+long expanded = Long.expand(value, 0x04040404L);
+long result = expanded + 0x3030303030303030L;
+```
+
+→ [详细分析](/by-pr/8353/8353741.md)
+
+---
+
+## 并发性能最佳实践
+
+### 并发集合选择
+
+| 集合类型 | 适用场景 | 性能特点 |
+|----------|----------|----------|
+| **ConcurrentHashMap** | 高读写并发 | 分段锁，O(1) 操作 |
+| **CopyOnWriteArrayList** | 读多写少 | 写时复制，读无锁 |
+| **ConcurrentLinkedQueue** | 无界队列 | 无锁，CAS 实现 |
+| **LinkedBlockingQueue** | 有界队列 | 阻塞式，可控制流量 |
+
+```java
+// ✅ 推荐：根据场景选择
+// 读多写少
+List<String> list = new CopyOnWriteArrayList<>();
+
+// 高并发映射
+ConcurrentHashMap<String, Integer> map = new ConcurrentHashMap<>();
+
+// 生产者-消费者
+BlockingQueue<String> queue = new LinkedBlockingQueue<>(1000);
+
+// 无界高性能队列
+ConcurrentLinkedQueue<String> q = new ConcurrentLinkedQueue<>();
+```
+
+### 避免装箱开销
+
+```java
+// ❌ 避免：ConcurrentHashMap<int[], Integer>
+ConcurrentHashMap<Integer, String> map = new ConcurrentHashMap<>();
+map.put(1, "value");  // 每次都装箱
+
+// ✅ 推荐：使用 AtomicReferenceArray
+AtomicReferenceArray<String> array = new AtomicReferenceArray<>(256);
+array.set(1, "value");  // 无装箱
+```
+
+### 虚拟线程最佳实践
+
+```java
+// ✅ 推荐：I/O 密集型任务
+try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+    // HTTP 请求、数据库查询
+    executor.submit(() -> httpClient.send(request));
+    executor.submit(() -> db.query("SELECT * FROM users"));
+}
+
+// ❌ 避免：CPU 密集型任务使用虚拟线程
+// 应使用 ForkJoinPool.commonPool()
+```
+
+### Pinning 避免模式
+
+```java
+// ❌ 避免：synchronized 中阻塞
+synchronized (lock) {
+    Thread.sleep(1000);  // Pinning 发生
+}
+
+// ✅ 推荐：使用 ReentrantLock
+ReentrantLock lock = new ReentrantLock();
+lock.lock();
+try {
+    Thread.sleep(1000);  // OK，虚拟线程可卸载
+} finally {
+    lock.unlock();
+}
+```
+
+---
+
 ## 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析

@@ -524,6 +524,123 @@ Selector[] selectors = new Selector[Runtime.getRuntime().availableProcessors()];
 
 ---
 
+## 重要 PR 分析
+
+### NIO 性能优化
+
+#### JDK-8348880: AtomicReferenceArray 优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ +15-25% 缓存访问性能
+
+将 `ConcurrentHashMap` 替换为 `AtomicReferenceArray`：
+
+**优化点**:
+- 消除 `int` → `Integer` 装箱
+- 数组访问比 HashMap 快
+- 内存占用减少 85%
+
+**适用场景**: 高频访问的缓存结构
+
+```java
+// 优化前：需要装箱
+ConcurrentMap<Integer, ZoneOffset> cache = new ConcurrentHashMap<>();
+Integer key = index;  // 装箱
+ZoneOffset value = cache.get(key);
+
+// 优化后：无装箱
+AtomicReferenceArray<ZoneOffset> cache = new AtomicReferenceArray<>(256);
+int key = index & 0xff;
+ZoneOffset value = cache.getOpaque(key);
+```
+
+→ [详细分析](/by-pr/8348/8348880.md)
+
+### UUID 性能优化
+
+#### JDK-8353741: UUID.toString SWAR 优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐⭐ +40-60% 性能提升
+
+使用 SWAR (SIMD Within A Register) 技术：
+
+**优化点**:
+- 消除查找表
+- 寄存器内并行计算
+- 使用 `Long.expand` intrinsic
+
+**适用场景**: 分布式追踪、会话管理
+
+→ [详细分析](/bypr/8353/8353741.md)
+
+---
+
+## 网络编程最佳实践
+
+### I/O 模型选择
+
+| 场景 | 推荐方案 | 说明 |
+|------|----------|------|
+| **简单应用** | BIO | 代码简单，易于理解 |
+| **高并发** | NIO + Selector | 单线程处理多连接 |
+| **极高并发** | 虚拟线程 + BIO | JDK 21+，简化异步代码 |
+| **本地 IPC** | Unix Domain Socket | 比 TCP loopback 更快 |
+
+### 虚拟线程网络编程 (JDK 21+)
+
+```java
+// ✅ 推荐：虚拟线程处理阻塞 I/O
+try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+    for (String url : urls) {
+        executor.submit(() -> {
+            try (Socket socket = new Socket(host, port)) {
+                // 阻塞 I/O 不阻塞平台线程
+                // 处理请求
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### NIO + 虚拟线程混合模式
+
+```java
+// NIO 处理连接
+ServerSocketChannel server = ServerSocketChannel.open();
+server.configureBlocking(false);
+Selector selector = Selector.open();
+server.register(selector, SelectionKey.OP_ACCEPT);
+
+// 虚拟线程处理 I/O
+try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+    while (true) {
+        selector.select(1000);
+        for (SelectionKey key : selector.selectedKeys()) {
+            if (key.isAcceptable()) {
+                SocketChannel client = server.accept();
+                executor.submit(() -> handleConnection(client));
+            }
+        }
+    }
+}
+```
+
+### Unix Domain Socket 优化 (JDK 16+)
+
+```java
+// ✅ 推荐：本地通信使用 UDS
+SocketChannel channel = SocketChannel.open(StandardProtocolFamily.UNIX);
+channel.connect(UnixDomainSocketAddress.of(new File("/tmp/my.sock")));
+
+// 比 TCP loopback 快 2-3 倍
+// 无网络协议栈开销
+```
+
+---
+
 ## 相关链接
 
 ### 本地文档

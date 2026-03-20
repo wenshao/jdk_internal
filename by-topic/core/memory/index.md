@@ -491,6 +491,125 @@ java -XX:AOTCacheConfiguration=aot_config.txt \
 
 ---
 
+## 重要 PR 分析
+
+### 元空间优化
+
+#### JDK-8349400: 消除匿名内部类
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ 元空间占用 -82%
+
+通过消除枚举中的匿名内部类来减少元空间占用：
+
+**问题**: `KnownOIDs` 枚举有 10 个匿名内部类，每个占用约 1-2KB 元空间
+
+**解决方案**: 将方法覆盖转换为构造函数参数
+
+```java
+// 优化前：匿名内部类
+KP_TimeStamping("1.3.6.1.5.5.7.3.8", "timeStamping") {
+    @Override
+    boolean registerNames() { return false; }
+}
+
+// 优化后：构造函数参数
+KP_TimeStamping("1.3.6.1.5.5.7.3.8", "timeStamping", false)
+```
+
+**效果**:
+- 类加载数量：11 → 1（-90%）
+- 元空间占用：22KB → 4KB（-82%）
+
+→ [详细分析](/by-pr/8349/8349400.md)
+
+### 字符串内存优化
+
+#### JDK-8334328: FloatToDecimal/DoubleToDecimal 优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐⭐ +30-50% 性能提升
+
+重构浮点数转字符串实现，减少对象分配：
+
+**优化点**:
+- 创建共享实例 (`LATIN1`, `UTF16`)
+- 无状态方法设计
+- 直接写入 StringBuilder 内部数组
+
+→ [详细分析](/by-pr/8334/8334328.md)
+
+### StringBuilder 内存优化
+
+#### JDK-8355177: append(char[]) 优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐⭐ +15% 性能提升
+
+使用 `Unsafe.copyMemory` 替代 `System.arraycopy`：
+
+**内存优势**:
+- 减少临时对象创建
+- 消除 JNI 边界跨越
+- 更好的缓存局部性
+
+→ [详细分析](/by-pr/8355/8355177.md)
+
+---
+
+## 内存优化最佳实践
+
+### 减少元空间占用
+
+```java
+// ❌ 避免：匿名内部类
+enum MyEnum {
+    VALUE {
+        @Override
+        void method() { /* ... */ }
+    }
+}
+
+// ✅ 推荐：使用枚举字段或构造函数参数
+enum MyEnum {
+    VALUE(false);  // 通过参数控制行为
+    final boolean flag;
+    MyEnum(boolean flag) { this.flag = flag; }
+}
+```
+
+### 减少对象分配
+
+```java
+// ❌ 避免：循环内创建对象
+for (int i = 0; i < 1000; i++) {
+    String result = prefix + i + suffix;  // 每次创建新对象
+}
+
+// ✅ 推荐：使用 StringBuilder
+StringBuilder sb = new StringBuilder();
+for (int i = 0; i < 1000; i++) {
+    sb.setLength(0);
+    sb.append(prefix).append(i).append(suffix);
+}
+```
+
+### 使用对象池
+
+```java
+// ✅ 推荐：重用昂贵对象
+private static final DateTimeFormatter DATE_FORMATTER =
+    DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+// ❌ 避免：重复创建
+for (LocalDate date : dates) {
+    DateTimeFormatter formatter =
+        DateTimeFormatter.ofPattern("yyyy-MM-dd");  // 每次创建
+}
+```
+
+---
+
 ## 相关链接
 
 ### 内部文档

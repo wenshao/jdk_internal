@@ -545,6 +545,117 @@ git log --oneline -- src/java.base/share/classes/java/lang/invoke/
 
 ---
 
+## 重要 PR 分析
+
+### Lambda 生成优化
+
+#### JDK-8341755: Optimize LambdaMetafactory
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ +5-8% Lambda 生成性能提升
+
+优化 Lambda 表达式的字节码生成性能：
+
+**优化点**:
+- StackMapTable 生成优化
+- 缓存 `this` 引用，减少字段访问
+- 缓存 `labelContext`，减少方法调用
+- 使用 `PrimitiveClassDescImpl.CD_xxx` 常量
+
+→ [详细分析](/by-pr/8341/8341755.md)
+
+### 字符串拼接 invokedynamic 优化
+
+#### JDK-8336831: StringConcatHelper 优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ +40% 启动性能提升
+
+使用隐藏类实现高效的字符串拼接：
+
+**关键改进**:
+- 按形状（shape）生成拼接类，而非每个调用点一个类
+- 使用隐藏类 (`Lookup.defineHiddenClass`) 实现
+- 类生成数量减少约 50%
+
+```java
+// invokedynamic 字节码示例
+// 编译器将 "Hello " + name 编译为：
+invokedynamic makeConcatWithConstants(Ljava/lang/String;)Ljava/lang/String;
+    // BootstrapMethods:
+    // 0: #REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants
+```
+
+→ [详细分析](/by-pr/8336/8336831.md)
+
+### 大参数字符串拼接优化
+
+#### JDK-8338930: 优化大参数字符串拼接
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐⭐ +50-200% 性能提升
+
+优化包含多个参数的字符串拼接：
+
+**优化策略**:
+- 超过 2 个参数时使用 StringBuilder 而非 MethodHandle
+- 减少方法调用开销
+- 更好的代码缓存局部性
+
+→ [详细分析](/by-pr/8338/8338930.md)
+
+---
+
+## 反射性能最佳实践
+
+### 性能对比
+
+| 方法 | 相对性能 | 说明 |
+|------|----------|------|
+| **直接调用** | 1x | 基准 |
+| **MethodHandle.invokeExact** | 1.2x | 接近直接调用 |
+| **MethodHandle.invoke** | 1.5x | 类型转换开销 |
+| **反射 Method.invoke** | 3-5x | 权限检查、装箱 |
+| **缓存 Method.invoke** | 2-3x | 减少查找开销 |
+
+### 优化建议
+
+```java
+// ❌ 避免：每次反射调用
+public void slow() {
+    Method method = obj.getClass().getMethod("method");
+    method.invoke(obj);
+}
+
+// ✅ 推荐：缓存 Method 对象
+private static final Method CACHED_METHOD;
+static {
+    try {
+        CACHED_METHOD = MyClass.class.getMethod("method");
+    } catch (NoSuchMethodException e) {
+        throw new RuntimeException(e);
+    }
+}
+
+// ✅ 更好：使用 MethodHandle
+private static final MethodHandle HANDLE;
+static {
+    try {
+        MethodHandles.Lookup lookup = MethodHandles.lookup();
+        HANDLE = lookup.findVirtual(MyClass.class, "method",
+                                   MethodType.methodType(void.class));
+    } catch (Exception e) {
+        throw new RuntimeException(e);
+    }
+}
+
+public void fast() throws Throwable {
+    HANDLE.invokeExact(obj);  // invokeExact 可被 JIT 内联
+}
+```
+
+---
+
 ## 相关链接
 
 ### 内部文档

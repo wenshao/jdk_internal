@@ -388,6 +388,92 @@ public class AnnotationProcessor {
 
 ---
 
+## 重要 PR 分析
+
+### 注解处理器性能优化
+
+#### JDK-8341859: ClassFile Benchmark 优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐⭐ 测试稳定性提升 63%
+
+通过缓存方法名减少基准测试中的噪声：
+
+**优化点**:
+- 静态初始化时预生成所有方法名
+- 避免基准测试期间的字符串拼接
+- 减少内存分配
+
+**效果**:
+- 标准差：2.34% → 0.87%（-62.8%）
+- 95% CI 半宽：±4.6% → ±1.7%（-63%）
+
+→ [详细分析](/by-pr/8341/8341859.md)
+
+### 字节码生成优化
+
+#### JDK-8341906: BufWriter 写入合并
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ +28% 字节码写入性能
+
+优化注解处理器生成的字节码写入性能：
+
+**优化策略**: 将多次小写入合并为一次大写入
+
+```java
+// 优化前：3 次方法调用
+buf.writeU1(u1Value);
+buf.writeU2(u2Value);
+buf.writeU4(u4Value);
+
+// 优化后：1 次方法调用
+buf.writeU1U2U4(u1Value, u2Value, u4Value);
+```
+
+→ [详细分析](/by-pr/8341/8341906.md)
+
+---
+
+## 注解性能最佳实践
+
+### Retention 策略选择
+
+| 策略 | 性能影响 | 推荐场景 |
+|------|----------|----------|
+| **SOURCE** | 无运行时开销 | 编译期检查（@Override） |
+| **CLASS** | 轻微字节码开销 | 字节码工具 |
+| **RUNTIME** | 反射开销 | 运行时处理 |
+
+```java
+// ✅ 推荐：使用最弱的 Retention 策略
+@Retention(RetentionPolicy.SOURCE)  // 编译后丢弃
+@interface CompileTimeCheck {}
+
+// ❌ 避免：不必要的 RUNTIME 策略
+@Retention(RetentionPolicy.RUNTIME)  // 增加类文件大小
+@interface SimpleMarker {}
+```
+
+### 注解处理器优化
+
+```java
+// ✅ 推荐：缓存 Elements
+private static final Map<String, Element> CACHE = new HashMap<>();
+
+@Override
+public boolean process(Set<? extends TypeElement> annotations,
+                      RoundEnvironment roundEnv) {
+    for (Element element : roundEnv.getRootElements()) {
+        String key = element.getSimpleName().toString();
+        CACHE.putIfAbsent(key, element);
+    }
+    return false;
+}
+```
+
+---
+
 ## 相关链接
 
 ### 本地文档

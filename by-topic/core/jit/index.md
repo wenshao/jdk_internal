@@ -217,6 +217,159 @@ PhaseSuperWord ────────► SIMD 向量化
 
 ---
 
+## 重要 PR 分析
+
+### JDK-8365186: Reduce size of DateTimePrintContext::adjust
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ +3-12% 日期格式化性能提升
+
+这个 PR 展示了方法大小对 JIT 内联的影响：
+
+**问题**: `DateTimePrintContext.adjust` 方法字节码大小 382 > 325 字节，导致 C2 无法内联
+
+**解决方案**: 将 382 字节的单一方法拆分为三个方法
+
+| 方法 | 大小 | 用途 |
+|------|------|------|
+| `adjust()` | 27 字节 | 热路径：快速返回（90%+ 场景） |
+| `adjustWithOverride()` | 123 字节 | 中等路径：有覆盖的情况 |
+| `adjustSlow()` | 232 字节 | 冷路径：复杂边界情况 |
+
+**性能数据**:
+
+| 平台 | Benchmark | 提升 |
+|------|-----------|------|
+| MacBook M1 Pro | formatInstants (HH:mm:ss) | +6.84% |
+| Intel Xeon | formatInstants (HH:mm:ss) | +6.53% |
+| Aliyun Yitian 710 | formatInstants (HH:mm:ss) | +9.89% |
+
+**关键启示**:
+- C2 热方法内联阈值约 325 字节
+- 方法拆分可以让热路径被内联
+- 冷热代码分离可以提升整体性能
+
+→ [详细分析](/by-pr/8365/8365186.md)
+
+### JDK-8349400: Improve startup speed via eliminating nested classes
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ 启动类加载数量 -90%
+
+这个 PR 通过消除枚举中的匿名内部类来优化启动性能：
+
+**问题**: `KnownOIDs` 枚举中有 10 个匿名内部类覆盖 `registerNames()` 方法
+
+**解决方案**: 将方法覆盖转换为构造函数参数
+
+```java
+// 优化前：匿名内部类
+KP_TimeStamping("1.3.6.1.5.5.7.3.8", "timeStamping") {
+    @Override
+    boolean registerNames() { return false; }
+}
+
+// 优化后：构造函数参数
+KP_TimeStamping("1.3.6.1.5.5.7.3.8", "timeStamping", false)
+```
+
+**效果**:
+- 类加载数量：11 个 → 1 个（-90%）
+- 元空间占用：约 22KB → 4KB
+- 对 Java Agent 场景特别有益
+
+→ [详细分析](/by-pr/8349/8349400.md)
+
+### JDK-8355177: Speed up StringBuilder::append(char[])
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐⭐ +15% 性能提升
+
+使用 `Unsafe.copyMemory` 替代 `System.arraycopy` 优化字符数组复制：
+
+**优化点**:
+- 消除 JNI 边界跨越
+- 消除边界检查（容量已确保）
+- 消除类型检查
+- `Unsafe.copyMemory` 是 `@IntrinsicCandidate`，JIT 会内联
+
+**性能提升**: +15.2% (微基准)
+
+→ [详细分析](/by-pr/8355/8355177.md)
+
+### JDK-8341906: Optimize ClassFile writing BufBuffer
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ +28% 字节码写入性能提升
+
+通过写入合并优化 ClassFile API 性能：
+
+**优化策略**: 将多次小写入合并为一次大写入
+
+```java
+// 优化前：3 次方法调用
+buf.writeU1(u1Value);
+buf.writeU2(u2Value);
+buf.writeU4(u4Value);
+
+// 优化后：1 次方法调用
+buf.writeU1U2U4(u1Value, u2Value, u4Value);
+```
+
+**性能提升分解**:
+- 减少方法调用：~15%
+- 减少边界检查：~8%
+- 更好的内联：~3%
+- 局部性优化：~2%
+
+→ [详细分析](/by-pr/8341/8341906.md)
+
+---
+
+## JIT 内联优化最佳实践
+
+### 方法大小控制
+
+| 方法类型 | 推荐大小 | 说明 |
+|----------|----------|------|
+| **热路径方法** | < 50 字节 | 确保 C1/C2 都能内联 |
+| **常规方法** | < 200 字节 | C2 可内联 |
+| **复杂方法** | 拆分为多个方法 | 冷热分离 |
+
+### 方法拆分模式
+
+```java
+// 不推荐：大方法混合冷热代码
+public void process() {
+    // 200 行热路径代码
+    // ...
+    // 100 行边界情况处理
+}
+
+// 推荐：拆分为多个方法
+public void process() {
+    // 20 行热路径
+    if (commonCase) {
+        return;
+    }
+    processUncommon();
+}
+
+private void processUncommon() {
+    // 边界情况处理
+}
+```
+
+### 内联友好设计
+
+1. **保持方法简短** - 热路径 < 50 字节
+2. **早期返回** - 常见情况优先处理
+3. **避免大 switch** - 使用策略模式
+4. **静态方法** - 比虚方法更容易内联
+5. **final 方法** - 消除多态调用
+
+---
+
 ## 相关链接
 
 ### 本地文档

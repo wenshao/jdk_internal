@@ -14,8 +14,12 @@ JVM、内存、性能、模块系统等底层技术。
 |------|------|----------|
 | [GC 演进](core/gc/) | 垃圾收集器发展历程 | JDK 1.0 |
 | [内存管理](core/memory/) | 堆、栈、Metaspace、Compressed Oops | JDK 1.0 |
-| [性能优化](core/performance/) | JIT、分层编译、逃逸分析、JFR | JDK 1.0 |
+| [JIT 编译](core/jit/) | C2 编译器、分层编译、内联优化 | JDK 1.0 |
+| [性能优化](core/performance/) | 逃逸分析、JFR、性能调优 | JDK 1.0 |
 | [类加载器](core/classloading/) | 双亲委派、模块化加载、Instrumentation | JDK 1.0 |
+| [模式匹配](core/patterns/) | 类型模式、Record 模式、解构 | JDK 14 |
+| [泛型系统](core/generics/) | 类型参数、通配符、类型擦除 | JDK 5 |
+| [Record 类型](core/records/) | 不可变数据载体、Compact Constructor | JDK 14 |
 | [模块系统](core/modules/) | JPMS、module-info、jlink | JDK 9 |
 
 ### [语言特性](language/)
@@ -40,10 +44,17 @@ JVM、内存、性能、模块系统等底层技术。
 |------|------|----------|
 | [集合框架](api/collections/) | List、Set、Map、Stream API | JDK 1.0 |
 | [I/O 处理](api/io/) | BIO、NIO、NIO.2、Foreign Memory | JDK 1.0 |
-| [日期时间](api/datetime/) | Date、Calendar → java.time | JDK 1.0 |
 | [JDBC 数据库](api/jdbc/) | JDBC 1.x → JDBC 4.4 | JDK 1.1 |
 | [日志框架](api/logging/) | System.out → JUL → SLF4J/Logback | JDK 1.0 |
 | [XML/JSON](api/xml-json/) | DOM/SAX/StAX、Jackson、Gson | JDK 1.4 |
+
+### [日期时间](datetime/)
+
+现代日期时间处理 API。
+
+| 主题 | 说明 | 首发版本 |
+|------|------|----------|
+| [java.time](datetime/) | JSR 310、LocalDate、ZonedDateTime | JDK 8 |
 
 ### [并发网络](concurrency/)
 
@@ -86,7 +97,7 @@ JVM、内存、性能、模块系统等底层技术。
 1. language/syntax/     → 基础语法
 2. language/string/     → 字符串使用
 3. api/collections/     → 集合操作
-4. api/datetime/        → 日期处理
+4. datetime/            → 日期处理
 ```
 
 ### 中级路径
@@ -222,7 +233,6 @@ JVM、内存、性能、模块系统等底层技术。
 | Vector API | JDK 16 | 预览→正式JDK23 | JEP 338, 417, 426, 448 |
 | Stream API | JDK 8 | 生产 | JEP 107 |
 | NIO.2 | JDK 7 | 生产 | JSR 203 |
-| java.time | JDK 8 | 生产 | JSR 310 |
 
 ---
 

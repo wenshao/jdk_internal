@@ -243,7 +243,145 @@ String result = a + b + c;
 // 相关: JDK-8370503
 ```
 
+### 字符串拼接优化实战 (基于 PR 分析)
+
+#### StringConcatHelper 优化 (JDK-8336831)
+
+```java
+// PR: https://github.com/openjdk/jdk/pull/20253
+// 性能提升: +10-15%
+
+// 问题: 原始实现使用复杂的 mix/prepend 机制
+public static String simpleConcat(Object first, Object second) {
+    String s1 = stringOf(first);
+    String s2 = stringOf(second);
+    // 复杂的 mix/prepend 路径
+    long indexCoder = mix(initialCoder(), s1);
+    indexCoder = mix(indexCoder, s2);
+    byte[] buf = newArray(indexCoder);
+    indexCoder = prepend(indexCoder, buf, s2, s1);
+    return newString(buf, indexCoder);
+}
+
+// 优化: 使用直接的正向复制
+static String doConcat(String s1, String s2) {
+    byte coder = (byte) (s1.coder() | s2.coder());
+    byte[] buf = newArray(s1.length() + s2.length() << coder);
+    s1.getBytes(buf, 0, coder);       // 正向复制
+    s2.getBytes(buf, s1.length(), coder);
+    return new String(buf, coder);
+}
+```
+
+#### 大参数拼接优化 (JDK-8338930)
+
+```java
+// PR: https://github.com/openjdk/jdk/pull/20675
+// 参数 >= 256 时: +5-15% 性能提升
+
+// 问题: 大参数量时缓存命中率低
+// 解决: 使用静态方法，跳过缓存
+
+// 配置参数
+java -Djava.lang.invoke.StringConcat.cacheThreshold=256 MyApp
+
+// 性能影响:
+// - 首次调用: +10-20% (无实例化)
+// - 后续调用: +5-15% (直接静态调用)
+// - 内存占用: 减少 (无 SoftReference 开销)
+```
+
+#### StringBuilder char[] 优化 (JDK-8355177)
+
+```java
+// PR: https://github.com/openjdk/jdk/pull/22430
+// StringBuilder.append(char[]) 优化
+
+// 问题: 原始实现逐个字符处理
+public AbstractStringBuilder append(char[] str) {
+    int len = str.length;
+    ensureCapacityInternal(count + len);
+    for (int i = 0; i < len; i++) {  // 逐个处理
+        append(str[i]);  // 每次调用开销大
+    }
+    return this;
+}
+
+// 优化: 批量复制 (使用 System.arraycopy 或 getBytes)
+public AbstractStringBuilder append(char[] str) {
+    int len = str.length;
+    ensureCapacityInternal(count + len);
+    if (isLatin1()) {
+        StringLatin1.getChars(str, 0, len, value, count);  // 批量
+    } else {
+        StringUTF16.getChars(str, 0, len, value, count);
+    }
+    count += len;
+    return this;
+}
+
+// 性能提升: +15-40% 吞吐量
+```
+
+### Lambda 生成优化 (JDK-8341755)
+
+```java
+// PR: https://github.com/openjdk/jdk/pull/21399
+// InnerClassLambdaMetafactory 优化
+// 性能提升: 0参数 +20%, 1参数 +17%
+
+// 问题: 参数名称总是创建新数组和字符串
+String[] argNames = new String[parameterCount];
+for (int i = 0; i < parameterCount; i++) {
+    argNames[i] = "arg$" + (i + 1);  // 每次创建新字符串
+}
+
+// 优化: 使用缓存的参数名称
+private static final @Stable String[] ARG_NAME_CACHE;
+
+static {
+    var argNameCache = new String[8];
+    for (int i = 0; i < 8; i++) {
+        argNameCache[i] = "arg$" + (i + 1);  // 启动时预生成
+    }
+    ARG_NAME_CACHE = argNameCache;
+}
+
+// 0 参数: 使用常量
+if (parameterCount == 0) {
+    argNames = EMPTY_STRING_ARRAY;
+} else {
+    argNames = Arrays.copyOf(ARG_NAME_CACHE, parameterCount);
+}
+
+// 性能影响:
+// - 0 参数 Lambda: +20%, -24 bytes 分配
+// - 1 参数 Lambda: +17%, -16 bytes 分配
+// - 2 参数 Lambda: +15%, -8 bytes 分配
+```
+
+### Unsafe 优化陷阱与回退 (JDK-8343925)
+
+```java
+// PR: https://github.com/openjdk/jdk/pull/22012
+// 回退 JDK-8342650 的优化 (JVM 崩溃修复)
+
+// 问题: ByteArrayLittleEndian.setInt() 地址溢出
+int charPos = spaceNeeded;  // 接近 Integer.MAX_VALUE
+ByteArrayLittleEndian.setInt(buf, charPos << 1, inflated);
+//                                         ^^^
+//                             charPos << 1 溢出 → 负数
+//                             → 访问非法内存 → JVM 崩溃
+
+// 教训:
+// 1. 优化需要充分测试边界条件
+// 2. Unsafe 操作需要谨慎处理大偏移
+// 3. 快速回退比带病上线更重要
+```
+
 ---
+
+## 性能基准测试
 
 ## 版本演进
 

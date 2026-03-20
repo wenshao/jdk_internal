@@ -129,6 +129,44 @@ Java 类加载器从 JDK 1.0 到 JDK 26 的完整演进。
 
 → [类加载器时间线](classloading/timeline.md)
 
+### [模式匹配](patterns/)
+
+类型模式、Record 模式、解构模式从 JDK 14 到 JDK 26 的演进。
+
+| 版本 | 主要变化 | JEP |
+|------|----------|-----|
+| JDK 14 | instanceof 模式 (预览) | JEP 305 |
+| JDK 15 | instanceof 模式 (二次预览) | JEP 375 |
+| JDK 16 | instanceof 模式 (正式) | JEP 394 |
+| JDK 17 | switch 模式 (预览) | JEP 406 |
+| JDK 19 | Record 模式 (预览) | JEP 405 |
+| JDK 21 | Record/switch 模式 (正式) | JEP 440, JEP 441 |
+| JDK 23 | Switch Guards | JEP 456 |
+| JDK 26 | 原始类型模式 | JEP 455 |
+
+### [泛型系统](generics/)
+
+类型参数、泛型方法、通配符从 JDK 5 到现在的演进。
+
+| 版本 | 主要变化 | JSR |
+|------|----------|-----|
+| JDK 5 | 泛型引入 | JSR 14 |
+| JDK 5 | 泛型方法、通配符 | - |
+| JDK 7 | Diamond 操作符 | - |
+| JDK 8 | 类型注解 | - |
+| JDK 17 | var 增强 | - |
+
+### [Record 类型](records/)
+
+不可变数据载体从 JDK 14 到现在的演进。
+
+| 版本 | 主要变化 | JEP |
+|------|----------|-----|
+| JDK 14 | Record (预览) | JEP 359 |
+| JDK 15 | Record (二次预览) | JEP 384 |
+| JDK 16 | Record (正式) | JEP 395 |
+| JDK 21 | Record 模式 | JEP 440 |
+
 ### [模块系统](modules/)
 
 Java 模块系统 (JPMS) 从 JDK 9 到现在的完整演进。

@@ -841,6 +841,298 @@ list.stream()
 
 ---
 
+## Stream 实现深入
+
+### Spliterator 接口
+
+```java
+// Spliterator 是 Stream 的底层迭代器
+// 负责将数据源分割为可并行处理的块
+
+public interface Spliterator<T> {
+    // 尝试遍历并处理元素
+    boolean tryAdvance(Consumer<? super T> action);
+
+    // 批量处理元素 (性能优化)
+    default void forEachRemaining(Consumer<? super T> action) { ... }
+
+    // 尝试分割 (用于并行流)
+    Spliterator<T> trySplit();
+
+    // 估算剩余元素数量
+    long estimateSize();
+
+    // 特性标志
+    int characteristics();
+}
+
+// 特性标志:
+// ORDERED - 顺序重要
+// DISTINCT - 元素唯一
+// SORTED - 已排序
+// SIZED - 大小已知
+// NONNULL - 无 null 元素
+// IMMUTABLE - 不可变
+// CONCURRENT - 支持并发修改
+// SUBSIZED - 子分割器大小已知
+```
+
+### Stream 流水线执行
+
+```java
+// Stream 操作通过链式调用实现惰性求值
+
+// 1. 中间操作创建新的 Stream 实例
+Stream<T> filter(Predicate<? super T> predicate)
+Stream<R> map(Function<? super T, ? extends R> mapper)
+
+// 2. 终端操作触发流水线执行
+<R> R collect(Collector<? super T, A, R> collector)
+void forEach(Consumer<? super T> action)
+
+// 3. 惰性执行示例
+List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
+
+Stream<Integer> stream = list.stream()
+    .filter(n -> {
+        System.out.println("Filter: " + n);
+        return n % 2 == 0;
+    })
+    .map(n -> {
+        System.out.println("Map: " + n);
+        return n * 2;
+    });
+// 此时没有输出 - 惰性执行
+
+List<Integer> result = stream.toList();
+// 输出:
+// Filter: 1
+// Filter: 2
+// Map: 2
+// Filter: 3
+// Filter: 4
+// Map: 4
+// Filter: 5
+```
+
+### 并行流 Fork-Join 实现
+
+```java
+// 并行流使用 ForkJoinPool 实现
+
+// 1. 默认使用 commonPool
+ForkJoinPool commonPool = ForkJoinPool.commonPool();
+int parallelism = commonPool.getParallelism();  // = CPU 核心数
+
+// 2. Spliterator 分割逻辑
+// 数据被递归分割成小块，每个块由独立线程处理
+
+// 3. 工作窃取 (Work Stealing)
+// 空闲线程可以从其他线程的队列尾部窃取任务
+
+// 4. 自定义线程池
+ForkJoinPool customPool = new ForkJoinPool(4);
+List<T> result = customPool.submit(() ->
+    list.parallelStream()
+        .map(this::process)
+        .toList()
+).get();
+```
+
+### Stream 汇编优化
+
+```java
+// JIT 编译器对 Stream 流水线的优化
+
+// 1. 操作融合
+// 多个中间操作可能被融合为单个循环
+
+// 原始代码
+list.stream()
+    .filter(x -> x > 0)
+    .map(x -> x * 2)
+    .filter(x -> x < 100)
+    .toList();
+
+// JIT 优化后类似:
+for (x in list) {
+    if (x > 0) {
+        int y = x * 2;
+        if (y < 100) {
+            result.add(y);
+        }
+    }
+}
+
+// 2. 方法内联
+// Lambda 表达式被内联到调用点
+
+// 3. 边界检查消除
+// 循环优化减少不必要的边界检查
+```
+
+## 性能优化实战
+
+### 基于 JDK PR 的优化洞察
+
+#### 字符串拼接优化 (JDK-8336831)
+
+```java
+// StringConcatHelper.simpleConcat 优化
+// PR: https://github.com/openjdk/jdk/pull/20253
+
+// 问题: 原始实现使用复杂的 mix/prepend 机制
+// 优化: 直接使用字节数组复制
+
+// 优化前
+String result = a + b;  // mix -> prepend -> newString
+
+// 优化后
+String result = doConcat(a, b);  // 直接复制字节数组
+
+// 性能提升: +10-15%
+// 影响: 所有使用 + 拼接的场景
+```
+
+#### 大参数拼接优化 (JDK-8338930)
+
+```java
+// StringConcatFactory 硬编码策略
+// PR: https://github.com/openjdk/jdk/pull/20675
+
+// 问题: 参数 >= 256 时缓存命中率低
+// 优化: 使用静态方法，跳过缓存
+
+// 配置参数
+java -Djava.lang.invoke.StringConcat.cacheThreshold=256 MyApp
+
+// 性能影响:
+// - 首次调用: +10-20% (无实例化)
+// - 后续调用: +5-15% (直接静态调用)
+// - 内存占用: 减少 (无 SoftReference 开销)
+```
+
+#### UTF-8 编码优化 (JDK-8339290)
+
+```java
+// Utf8EntryImpl#writeTo 优化
+// PR: https://github.com/openjdk/jdk/pull/20772
+
+// 问题: 逐字符检查是否 ASCII，分支预测失败
+// 优化: 批量扫描 ASCII 前缀，快速路径复制
+
+// 核心方法
+StringCoding.countNonZeroAscii(String s)  // 快速扫描 ASCII
+BufWriterImpl.writeUTF(String str)         // 批量复制 + 手动编码
+
+// 性能提升 (纯 ASCII): +31.8%
+// 性能提升 (混合场景): +15%
+// 影响: Lambda 生成、动态代理、AOP 代码生成
+```
+
+### Stream 性能基准
+
+```java
+@BenchmarkMode(Mode.AverageTime)
+@OutputTimeUnit(TimeUnit.MICROSECONDS)
+public class StreamBenchmarks {
+
+    private List<Integer> data = IntStream.range(0, 10_000)
+        .boxed()
+        .toList();
+
+    // 顺序流
+    @Benchmark
+    public long sequentialSum() {
+        return data.stream()
+            .mapToLong(Integer::longValue)
+            .sum();
+    }
+
+    // 并行流
+    @Benchmark
+    public long parallelSum() {
+        return data.parallelStream()
+            .mapToLong(Integer::longValue)
+            .sum();
+    }
+
+    // 典型结果 (8核 CPU):
+    // sequentialSum: ~200 μs
+    // parallelSum:   ~60 μs  (3.3x 加速)
+}
+```
+
+### 性能优化清单
+
+| 优化项 | 提升范围 | 适用场景 |
+|--------|----------|----------|
+| 使用原始类型流 | +50-200% | 数值计算 |
+| 并行流 (大数据) | +2-8x | CPU 密集型 |
+| 避免装箱 | +30-100% | 原始类型操作 |
+| 重用 Predicate | +5-10% | 热点代码 |
+| 方法引用 vs Lambda | +5-15% | 简单操作 |
+
+---
+
+## 重要 PR 分析
+
+### Lambda 生成优化
+
+#### JDK-8341755: Lambda 参数名称生成优化
+
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
+> **影响**: ⭐⭐⭐ +15-20% Lambda 生成性能
+
+Stream API 大量使用 Lambda 表达式，此 PR 优化了 Lambda 生成：
+
+**核心改进**:
+- 0 参数 Lambda 使用常量（消除数组分配）
+- 缓存常见参数名称（1-8 参数）
+- 使用 `@Stable` 注解启用 JIT 优化
+
+```java
+// Stream 操作中的 Lambda 优化受益
+List<String> names = List.of("Alice", "Bob", "Charlie");
+
+names.stream()
+    .filter(s -> s.length() > 3)  // Lambda 优化
+    .map(String::toUpperCase)       // 方法引用
+    .forEach(System.out::println);
+```
+
+→ [详细分析](/by-pr/8341/8341755.md)
+
+### 性能优化建议
+
+基于实际 PR 分析数据的 Stream 性能建议：
+
+```java
+// ✅ 推荐：使用原始类型流避免装箱
+IntStream.of(1, 2, 3, 4, 5)
+    .map(x -> x * 2)
+    .sum();
+
+// ❌ 避免：不必要的装箱
+Stream.of(1, 2, 3, 4, 5)
+    .map(x -> x * 2)
+    .collect(Collectors.summingInt(Integer::intValue));
+
+// ✅ 推荐：方法引用优于 Lambda
+list.stream()
+    .map(Object::toString)  // 更快
+    .forEach(System.out::println);
+
+// ❌ 避免：复杂的 Lambda
+list.stream()
+    .map(s -> {
+        // 复杂逻辑
+        return s.toString();
+    });
+```
+
+---
+
 ## 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
@@ -854,6 +1146,12 @@ list.stream()
 | 2 | Paul Sandoz | 25+ | Oracle | Stream API 实现 |
 | 3 | Stuart Marks | 15+ | Oracle | 集合框架 |
 | 4 | Maurice Naftalin | | 技术写作 | Stream 指南 |
+
+### 性能优化贡献者
+
+| 贡献者 | 组织 | 主要优化 |
+|--------|------|----------|
+| **Shaojin Wen** | Alibaba | StringConcat, UTF-8 编码 |
 
 ---
 
