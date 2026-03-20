@@ -38,18 +38,56 @@ Emanuel Peter 是 Oracle 的 C2 编译器工程师，专注于 SuperWord 自动�
 |-------|-------|
 | **Name** | Emanuel Peter |
 | **Current Organization** | Oracle (Java Platform Group) |
-| **Position** | Compiler Engineer |
+| **Position** | Compiler Engineer, HotSpot JVM Compiler Team |
 | **Location** | Zürich, Switzerland |
 | **Education** | ETH Zürich |
 | **GitHub** | [@eme64](https://github.com/eme64) |
 | **LinkedIn** | [Emanuel Peter](https://ch.linkedin.com/in/emanuel-peter-4286a2207) |
 | **Blog** | [Emanuel's Hotspot JVM C2 Blog](https://eme64.github.io/blog/) |
 | **OpenJDK** | [@epeter](https://openjdk.org/census#epeter) |
-| **Role** | JDK Reviewer |
-| **PRs** | [226 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aeme64+is%3Aclosed+label%3Aintegrated) |
+| **Role** | JDK Committer (2022-05), JDK Reviewer (2023-05) |
+| **PRs** | [226+ integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aeme64+is%3Aclosed+label%3Aintegrated) |
 | **Primary Areas** | C2 Compiler, SuperWord Auto-Vectorization, Template Testing Framework |
 
-> **数据来源**: [LinkedIn](https://ch.linkedin.com/in/emanuel-peter-4286a2207), [GitHub](https://github.com/eme64), [个人博客](https://eme64.github.io/blog/)
+> **数据来源**: [LinkedIn](https://ch.linkedin.com/in/emanuel-peter-4286a2207), [GitHub](https://github.com/eme64), [个人博客](https://eme64.github.io/blog/), [CFV Committer](https://mail.openjdk.org/pipermail/jdk-dev/2022-May/007238.html), [CFV Reviewer](https://mail.openjdk.org/pipermail/jdk-dev/2023-May/008085.html)
+
+---
+
+## Career Timeline
+
+| Year | Event | Details |
+|------|-------|---------|
+| **Education** | ETH Zürich | Computer Science education at Swiss Federal Institute of Technology |
+| **~2020** | Joined Oracle | HotSpot JVM Compiler Team |
+| **2022-05** | JDK Committer | Nominated by Tobias Hartmann, CFV approved |
+| **2023-02** | Blog Started | First SuperWord article published |
+| **2023-05** | JDK Reviewer | Nominated by Andrew Dinn (Red Hat), CFV approved |
+| **2023-2025** | Major Contributions | VTransform refactoring, Template Framework, Cost Model |
+| **2024-2025** | Blog Series | Introduction to HotSpot JVM C2 JIT Compiler (Parts 0-4) |
+
+---
+
+## Blog Posts
+
+Emanuel Peter maintains an excellent technical blog about C2 compiler internals:
+
+| Date | Title | Topic | Link |
+|------|-------|-------|------|
+| 2025-01-23 | Introduction to HotSpot JVM C2 JIT Compiler, Part 4 | C2 Compiler | [Blog](https://eme64.github.io/blog/2025/01/23/Intro-to-C2-Part-4.html) |
+| 2025-01-23 | Introduction to HotSpot JVM C2 JIT Compiler, Part 3 | C2 Compiler | [Blog](https://eme64.github.io/blog/2025/01/23/Intro-to-C2-Part-3.html) |
+| 2025-01-01 | AutoVectorization (SuperWord) Status | SuperWord | [Blog](https://eme64.github.io/blog/2025/01/01/SuperWord-Status.html) |
+| 2024-12-24 | Introduction to HotSpot JVM C2 JIT Compiler, Part 2 | C2 Compiler | [Blog](https://eme64.github.io/blog/2024/12/24/Intro-to-C2-Part-2.html) |
+| 2024-12-24 | Introduction to HotSpot JVM C2 JIT Compiler, Part 1 | C2 Compiler | [Blog](https://eme64.github.io/blog/2024/12/24/Intro-to-C2-Part-1.html) |
+| 2024-12-24 | Introduction to HotSpot JVM C2 JIT Compiler, Part 0 | C2 Compiler | [Blog](https://eme64.github.io/blog/2024/12/24/Intro-to-C2-Part-0.html) |
+| 2024-06-24 | Auto-Vectorization and Store-to-Load-Forwarding | SuperWord | [Blog](https://eme64.github.io/blog/2024/06/24/store-to-load-forwarding.html) |
+| 2023-11-03 | C2 AutoVectorizer Improvement Ideas | SuperWord | [Blog](https://eme64.github.io/blog/2023/11/03/AutoVectorizer-Ideas.html) |
+| 2023-05-16 | SuperWord (Auto-Vectorization) - Scheduling | SuperWord | [Blog](https://eme64.github.io/blog/2023/05/16/SuperWord-Scheduling.html) |
+| 2023-02-23 | SuperWord (Auto-Vectorization) - An Introduction | SuperWord | [Blog](https://eme64.github.io/blog/2023/02/23/SuperWord-Introduction.html) |
+
+### Blog Description
+*"This blog focuses on my work I do in the C2 compiler of the HotSpot JVM. I currently work at Oracle as an OpenJDK compiler engineer. The views expressed on this blog are my own and do not necessarily reflect the views of my employer."*
+
+---
 
 ## Contribution Overview
 
@@ -249,3 +287,13 @@ The cost model considers:
 - Operation types (load/store, arithmetic, reduction)
 - Alignment requirements
 - Loop trip count estimates
+
+---
+
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-20
+> **更新内容**:
+> - 添加 CFV 提名详情 (Committer 2022-05 by Tobias Hartmann, Reviewer 2023-05 by Andrew Dinn)
+> - 添加博客文章列表 (10 篇技术文章)
+> - 添加职业时间线
+> - 添加 C2 编译器系列博客链接
