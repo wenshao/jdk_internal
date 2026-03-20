@@ -41,9 +41,9 @@ JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 14-17 ─── JDK 21-26
 | JDK 9 | **Compact Strings** (JEP 254)、invokedynamic 拼接 (JEP 280) | JEP 254, JEP 280 |
 | JDK 11 | repeat()、strip()、isBlank()、lines() | - |
 | JDK 15 | **Text Blocks** (正式) | JEP 378 |
-| JDK 21 | String Templates (预览) | JEP 430 |
+| JDK 21 | String Templates (预览，后撤回) | JEP 430 |
+| JDK 23 | String Templates 移除 | - |
 | JDK 24 | 隐藏类拼接策略 (+40% 启动性能) | JDK-8336856 |
-| JDK 25 | String Templates (第二次预览) | JEP 459 |
 | JDK 26 | Integer/Long.toString 优化 | JDK-8370503 |
 
 → [字符串优化时间线](string/timeline.md)

@@ -408,19 +408,20 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 ### JDK 22-24: 持续优化
 
 **JDK 22 (2024-03)**:
-- **String Templates** - 预览版 (JEP 459)
+- **Class-File API** - 预览版 (JEP 459)
 - **Implicit Classes** - 预览版 (JEP 463)
-- **Stream Gatherers** - 预览版 (JEP 461)
+- **Stream Gatherers** - 正式版 (JEP 461)
 
 **JDK 23 (2024-09)**:
+- **String Templates** - 已撤回 (原 JEP 430)
 - **Markdown 文档注释** (JEP 467)
 - **Flexible Constructors** (JEP 448)
 - **Module Import Declarations** - 预览版 (JEP 476)
 
 **JDK 24 (2025-03)**:
-- **String Templates** - 第3次预览
-- **Implicit Classes** - 第4次预览
-- **Structured Concurrency** - 第4次预览
+- **Class-File API** - 正式版 (JEP 484)
+- **Implicit Classes** - 第4次预览 (JEP 463)
+- **Structured Concurrency** - 第4次预览 (JEP 453)
 
 **性能改进** (JDK 22-24):
 - C2 编译器优化 (内联改进)

@@ -703,22 +703,27 @@ void test(Object obj) {
 }
 ```
 
-### JDK 24 - String Templates (第三次预览)
+### JDK 23 - String Templates 撤回
+
+**JEP 430 已撤回**
 
 ```java
-// 继续改进的模板表达式
-String result = STR."\{x} + \{y} = \{x + y}";
+// ⚠️ String Templates 在 JDK 21-22 预览后
+// 从 JDK 23 开始移除，不再继续预览
+
+// 原计划语法:
+String name = "World";
+String message = STR."Hello \{name}!";
 ```
 
-### JDK 25 - String Templates (第四次预览)
+**撤回原因**:
+- 设计需要进一步讨论
+- 社区反馈需要更多考虑
+- 没有确定何时会重新引入
 
-```java
-// 逐渐稳定的模板 API
-StringTemplate.Processor<String, RuntimeException> SQL = st -> {
-    // SQL 安全模板
-    return buildQuery(st);
-};
-```
+### JDK 24-25 - String Templates 未发布
+
+由于 JEP 430 已撤回，JDK 24-25 没有继续此特性的预览。
 
 ### JDK 25 - 隐式类 (正式)
 
@@ -782,7 +787,7 @@ String describe(Vehicle v) {
 | Sealed Classes | JDK 17 | `sealed class C permits S1, S2 {}` |
 | switch 模式 | JDK 21 | `case Type t -> ...` |
 | Record Patterns | JDK 21 | `case P(int x, int y)` |
-| String Templates | JDK 21+ | `STR."\{value}"` |
+| String Templates | ~~JDK 21+~~ | **已撤回** (JEP 430) |
 | 隐式类 | JDK 25 | `void main() {}` |
 
 ---
