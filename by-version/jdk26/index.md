@@ -385,28 +385,71 @@ java -XX:AOTLibrary+ -XX:ArchiveClassesAtExit=app.jsa MyApp
 
 ### Top 10 贡献组织
 
-| 排名 | 组织 | 主要贡献领域 |
-|------|------|-------------|
-| 1 | **Oracle** | 全栈 JVM、GC、语言特性 |
-| 2 | **Alibaba** | JIT 优化、字符串处理 |
-| 3 | **Red Hat** | GC (Shenandoah)、Linux 支持 |
-| 4 | **IBM** | JIT 编译器、AIX 平台 |
-| 5 | **Google** | Android 兼容性、工具链 |
-| 6 | **Microsoft** | Windows 平台、Azure 优化 |
-| 7 | **ARM** | ARM 架构支持 |
-| 8 | **SAP** | 企业级应用、性能 |
-| 9 | **NVIDIA** | GPU 加速、AI 相关 |
-| 10 | **NTT Data** | 分布式系统、网络 |
+> **统计时间**: 2025-06 至 2026-03 (JDK 26 开发周期)
+> **总提交数**: 3,936 | **活跃贡献者**: ~380 人
+
+| 排名 | 组织 | 提交数 | 贡献者数 | 主要贡献领域 |
+|------|------|--------|----------|-------------|
+| 1 | **Oracle** | ~3,200 | ~60 | 全栈 JVM、GC、语言特性、核心库 |
+| 2 | **SAP** | 73 | 2 | ZGC、JFR、性能分析 |
+| 3 | **Alibaba** | 74 | 8 | JIT 优化、字符串处理、GC、测试 |
+| 4 | **Red Hat** | 69 | 3 | Shenandoah、RISC-V、Linux 支持 |
+| 5 | **Amazon** | 43 | 1 | Shenandoah GC |
+| 6 | **NTT DATA** | 32 | 1 | 服务能力、工具 |
+| 7 | **Google** | 14 | 3 | 构建系统、javac、并发 |
+| 8 | **ARM** | 4 | 1 | ARM 架构构建支持 |
+| 9 | **Oracle Labs** | 15 | 2 | Graal、Truffle |
+| 10 | **独立贡献者** | ~300 | ~280 | 测试、安全、各领域 |
+
+### 重点组织贡献详情
+
+#### Oracle (68.2%)
+- **3,200+ 提交**，~60 位核心开发者
+- 主要领域: G1 GC、C2 编译器、核心库、HTTP/3、类加载
+
+#### Alibaba (1.9%)
+- **74 提交**，8 位贡献者
+- 代表: Shaojin Wen (11), Yude Lin (10), Xiaowei Lu (10)
+- 主要领域: JIT 优化、字符串处理、GC、测试
+
+#### Red Hat (1.8%)
+- **69 提交**，3 位贡献者
+- 代表: Roman Kennke (30), Andrew Haley (20)
+- 主要领域: Shenandoah GC、RISC-V 架构
+
+#### SAP (1.9%)
+- **73 提交**，2 位贡献者
+- 代表: Axel Boldt-Christmas (52)
+- 主要领域: ZGC、JFR
+
+#### Amazon (1.1%)
+- **43 提交**，1 位贡献者 (William Kemper)
+- 主要领域: Shenandoah GC
 
 ### 其他贡献组织
 
-| 组织 | 说明 |
-|------|------|
-| **ISCAS** | 中国科学院软件研究所 |
-| **Rivos** | RISC-V 架构支持 |
-| **Bellsoft** | Liberica JDK 发行版 |
-| **Bytesoft** | Bellsoft 子品牌 |
-| **Loongson** | 龙芯中科（国产 CPU） |
+| 组织 | 提交数 | 贡献者数 | 说明 |
+|------|--------|----------|------|
+| **ISCAS (中科院软件所)** | - | - | PLCT 实验室、LoongArch 移植 |
+| **Rivos** | - | - | RISC-V 架构支持 |
+| **Bellsoft** | - | - | Liberica JDK 发行版维护 |
+| **Loongson (龙芯)** | - | - | 国产 CPU 架构支持 |
+| **University of Washington** | 4 | 1 | javac 编译器研究 |
+
+### 独立贡献者
+
+**独立/未归属贡献者** 占比约 7.6%，~300 位贡献者：
+
+| 贡献者 | 提交数 | 主要领域 |
+|--------|--------|----------|
+| SendaoYan | 71 | 测试 |
+| Quan Anh Mai | 26 | 类型系统 |
+| Anton Seoane Ampudia | 24 | x86 清理 |
+| Artur Barashev | 18 | 安全 |
+| Oleg Pekhovskiy | 7 | 测试 |
+| Sergey Tsypanov | 6 | 安全 |
+| Pavel Rappo | 6 | 核心库 |
+| Peter Levart | 5 | 核心库 |
 
 ### 历史对比 (JDK 11 - JDK 26)
 
