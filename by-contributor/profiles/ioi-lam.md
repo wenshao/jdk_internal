@@ -1,6 +1,6 @@
 # Ioi Lam
 
-> AOT/CDS 核心开发者，JEP 514 主导者
+> AOT/CDS 核心开发者，JEP 514 主导者，Project Leyden 演讲者
 
 ---
 
@@ -9,16 +9,41 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Ioi Lam |
-| **当前组织** | Oracle |
+| **当前组织** | Oracle (Java Platform Group) |
+| **职位** | HotSpot JVM Engineer |
+| **位置** | Mountain View, California, 美国 |
 | **GitHub** | [@iklam](https://github.com/iklam) |
+| **LinkedIn** | [ioi-lam-3b07731](https://www.linkedin.com/in/ioi-lam-3b07731) |
 | **OpenJDK** | [@iklam](https://openjdk.org/census#iklam) |
-| **角色** | OpenJDK Member, JDK Reviewer |
-| **PRs** | [431 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aiklam+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | AOT, CDS, 启动优化 |
+| **角色** | OpenJDK Member, JDK Reviewer, HSX Committer (2013-04) |
+| **PRs** | [431+ integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aiklam+is%3Aclosed+label%3Aintegrated) |
+| **主要领域** | AOT, CDS, 启动优化, Project Leyden |
 | **主导 JEP** | JEP 514: Ahead-of-Time Command Line Ergonomics |
-| **活跃时间** | 2018 - 至今 |
+| **活跃时间** | 2013 - 至今 |
 
-> **数据调查时间**: 2026-03-19
+> **数据来源**: [LinkedIn](https://www.linkedin.com/in/ioi-lam-3b07731), [CFV HSX Committer](https://mail.openjdk.org/pipermail/hotspot-dev/2013-April/009124.html), [JVMLS Leyden](https://inside.java/2024/08/25/jvmls-leyden/)
+
+---
+
+## 职业时间线
+
+| 年份 | 事件 | 详情 |
+|------|------|------|
+| **2013-04** | HSX Committer | 被 Volker Simonis 提名为 HSX Committer |
+| **2013-至今** | Oracle HotSpot Engineer | Java Platform Group |
+| **2018-至今** | AppCDS 主要贡献者 | Application Class Data Sharing 核心开发 |
+| **2024** | Project Leyden 演讲 | JVM Language Summit 2024 与 Dan Heidinga 一起展示 |
+| **2024-2025** | JEP 514 | AOT 命令行人体工程学主导者 |
+
+---
+
+## 语言能力
+
+| 语言 | 熟练度 |
+|------|--------|
+| **英语** | Native/Bilingual |
+| **中文** | Native/Bilingual |
+| **日语** | Professional Working Proficiency |
 
 ---
 
@@ -72,10 +97,14 @@ AOT 编译类的预加载优化，减少启动时间。
 | 类型 | 链接 |
 |------|------|
 | **GitHub** | [@iklam](https://github.com/iklam) |
+| **LinkedIn** | [ioi-lam-3b07731](https://www.linkedin.com/in/ioi-lam-3b07731) |
 | **OpenJDK Census** | [iklam](https://openjdk.org/census#iklam) |
 | **YouTube** | [AppCDS Presentation](https://www.youtube.com/watch?v=nniYSR4GAH4) |
-| **Patents** | [Justia Patents](https://patents.justia.com/inventor/ioi-lam) |
+| **Project Leyden JVMLS** | [Inside.java](https://inside.java/2024/08/25/jvmls-leyden/) |
+| **AppCDS Wiki** | [OpenJDK Wiki](https://wiki.openjdk.org/spaces/HotSpot/pages/49250346/Application+Class+Data+Sharing+-+AppCDS) |
+| **HSX CFV** | [hotspot-dev](https://mail.openjdk.org/pipermail/hotspot-dev/2013-April/009124.html) |
 | **Blog** | [Medium @ioilam](https://medium.com/@ioilam) |
+| **Patents** | [Justia Patents](https://patents.justia.com/inventor/ioi-lam) |
 
 ---
 
@@ -264,3 +293,16 @@ Ioi 的贡献特点:
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=Ioi%20Lam)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20iklam)
 - [Blog: AOT & CDS](https://medium.com/@ioilam)
+
+---
+
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-20
+> **更新内容**:
+> - 添加位置: Mountain View, California
+> - 添加职位: HotSpot JVM Engineer
+> - 添加 HSX Committer 提名 (2013-04 by Volker Simonis)
+> - 添加 Project Leyden JVMLS 2024 演讲
+> - 添加语言能力 (英语、中文、日语)
+> - 添加 AppCDS Wiki 维护者角色
+> - 添加 LinkedIn 档案链接
