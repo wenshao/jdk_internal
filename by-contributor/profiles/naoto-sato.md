@@ -62,8 +62,9 @@ Naoto Sato 是 Oracle Java Platform Group 的**首席技术工程师 (Principal 
 
 ### 教育背景
 
-- **学位**: M. Engineering (精密机械系统工程)
-- **学校**: 东京工业大学 (Tokyo Institute of Technology)
+- **学位**: Master of Science (M.S.) in Precision Machinery Systems
+- **学校**: 东京工业大学 (Tokyo Institute of Technology), 日本
+- **说明**: 从精密机械工程转向软件国际化领域
 
 ---
 
@@ -272,7 +273,16 @@ String result = formatter.format(List.of("Alice", "Bob", "Charlie"));
   - 迁移到 CLDR 数据
 - **JDK-8138613**: 从默认提供者列表中移除 SPI locale provider adapter
   - 改善运行时启动性能
-- **JDK-8304982**: 为 COMPAT provider 移除发出警告
+- **JDK-8305402**: 为 COMPAT provider 移除发出警告
+- **JDK-8263202**: 更新 Hebrew/Indonesian/Yiddish ISO 639 语言代码
+  - 使用当前 ISO 639 标准
+  - 引入 java.locale.useOldISOCodes 系统属性以保持向后兼容
+- **JDK-8269513**: 澄清 useOldISOCodes 系统属性规范
+- **JDK-8267552**: ISO 639 语言代码发布说明
+- **JDK-8353118**: 弃用 java.locale.useOldISOCodes 系统属性 (2025年4月)
+- **JDK-8355522**: 移除 java.locale.useOldISOCodes 系统属性 (2025年12月)
+
+> **说明**: Naoto Sato 主导了从旧版 ISO 639 代码到当前标准的迁移，提供了完整的迁移路径。
 
 ### 10. Collation 增强
 
@@ -460,6 +470,7 @@ Naoto Sato 是 International Unicode Conference (IUC) 的常驻演讲者：
 - [i18n-dev Mailing List - 2025-06](https://mail.openjdk.org/archives/list/i18n-dev@openjdk.org/2025/6/)
 - [i18n-dev Mailing List - JDK-8301991](https://mail.openjdk.org/pipermail/i18n-dev/2023-September/003977.html)
 - [i18n-dev Mailing List - Locale Enhancement Withdrawal](https://mail.openjdk.org/pipermail/i18n-dev/2025-December/012223.html)
+- [Build-dev Mailing List - JDK-8263202](https://mail.openjdk.org/archives/list/build-dev@openjdk.org/thread/XQ7SFQZNRTMEKY5M2SJCGEMJTVRRC5CI/)
 - [JDK-8174269 Webrev - COMPAT Removal](https://cr.openjdk.org/~naoto/JDK-8174269-COMPAT-Removal/)
 - [JDK-8041488 Webrev - List Patterns](https://cr.openjdk.org/~naoto/JDK-8041488-ListPatterns/webrev.04/)
 - [JDK-8318487 Webrev - ListFormat.equals](https://cr.openjdk.org/~naoto/JDK-8318487-ListFormat.equals/webrev.00/)
