@@ -105,9 +105,10 @@ SIMD 向量化计算 API，从 JDK 16 开始孵化。
 | JDK 18 | JEP 417 | 🥚 Third Incubator |
 | JDK 19 | JEP 426 | 🥚 Fourth Incubator |
 | JDK 20 | JEP 448 | 🥚 Fifth Incubator |
-| JDK 21 | JEP 460 | 🥚 Sixth Incubator + **Float16** |
-| JDK 22-24 | - | 🥚 继续孵化 |
-| JDK 25+ | - | ⏳ 期望成为标准 API |
+| JDK 21 | JEP 460 | 🥚 Sixth Incubator + Float16 |
+| JDK 22-23 | - | 🥚 继续孵化 |
+| JDK 24 | - | 🥚 继续孵化 |
+| **JDK 26** | - | 🥚 **继续孵化** (GA 2026-03) |
 
 **性能提升**: 2x-8x (取决于 CPU 向量宽度)
 

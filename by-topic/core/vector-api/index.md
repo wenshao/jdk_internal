@@ -361,9 +361,14 @@ java --add-modules jdk.incubator.vector VectorAdd
 | JDK 18 | 417 | 🥚 Third Incubator |
 | JDK 19 | 426 | 🥚 Fourth Incubator |
 | JDK 20 | 448 | 🥚 Fifth Incubator |
-| JDK 21 | 460 | 🥚 Sixth Incubator |
-| JDK 22-24 | - | 🥚 继续孵化中 |
-| JDK 25+ | - | ⏳ 期望成为标准 API |
+| JDK 21 | 460 | 🥚 Sixth Incubator + Float16 |
+| JDK 22 | - | 🥚 继续孵化 |
+| JDK 23 | - | 🥚 继续孵化 |
+| JDK 24 | - | 🥚 继续孵化 |
+| **JDK 26** | - | 🥚 **继续孵化 (GA 2026-03)** |
+| JDK 27 | - | 🔄 开发中 |
+
+> **注意**: Vector API 在 JDK 26 GA 中仍然是 Incubator 状态，> 已孵化 **10 年** (JDK 16-26)，> 是 OpenJDK 历史上孵化时间最长的 API 之一
 
 ---
 
