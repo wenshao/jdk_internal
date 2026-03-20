@@ -123,6 +123,87 @@ for (int i = 0; i < unknown; i++) {
 
 ---
 
+## 贡献者
+
+> **统计来源**: OpenJDK HotSpot 编译器团队 git 历史分析
+> **统计时间**: 2026-03-20
+
+### MergeStore 核心贡献者
+
+| 贡献者 | 公司 | 主要贡献 |
+|--------|------|----------|
+| **Emanuel Peter** | Oracle | MergeStore 初始实现 (JDK-8318446) |
+| **Shaojin Wen** (温绍锦) | Alibaba | StringBuilder 优化, 性能测试 |
+| **Vladimir Kozlov** | Oracle | C2 编译器团队负责人, 技术指导 |
+| **Roland Westrelin** | Oracle | C2 编译器团队, 循环优化 |
+
+### Emanuel Peter
+
+> **博客**: [Emanuel's HotSpot JVM C2 Blog](https://eme64.github.io/blog/)
+
+- **职位**: OpenJDK Compiler Engineer, Oracle
+- **团队**: HotSpot Compiler Team
+- **经验**: 75+ JDK 贡献
+- **身份**: JDK Committer (2023年5月获得)
+- **专长**: C2 JIT 编译器优化
+- **主要贡献**:
+  - JDK-8318446: MergeStore 初始实现
+  - JDK-8331311: Big-Endian 移植
+  - C2 编译器博客系列作者
+
+> "MergeStore combines multiple consecutive store operations into a single larger store operation."
+> — Emanuel Peter, RFR: 8318446
+
+### Vladimir Kozlov
+
+- **职位**: HotSpot Compiler Team Lead, Oracle
+- **经验**: 20+ 年 JVM 开发经验
+- **主要贡献**:
+  - C2 编译器架构设计
+  - 循环优化文档 ([Loop optimizations in C2](https://wiki.openjdk.org/spaces/HotSpot/pages/20415918))
+  - JDK-8371385: 非对齐访问修复
+
+### Roland Westrelin
+
+- **职位**: HotSpot Compiler Engineer, Oracle
+- **经验**: JDK Committer (2017年加入)
+- **主要贡献**:
+  - Loop Strip Mining in C2
+  - C2 编译器优化和 Bug 修复
+  - Code Cache 优化
+
+### Shaojin Wen (温绍锦)
+
+- **职位**: Alibaba, fastjson 负责人
+- **主要贡献**:
+  - JDK-8333893: StringBuilder boolean/null 优化
+  - PR #28228: 合并两个 append(char)
+  - PR #29688: Latin1 字符优化
+  - MergeStore 基准测试完善
+
+---
+
+## 邮件列表讨论
+
+### RFR: JDK-8318446 (v12)
+
+**主题**: [RFR: 8318446: C2: optimize stores into primitive arrays by combining values into larger store](https://mail.openjdk.org/pipermail/hotspot-compiler-dev/2024-February/073213.html)
+
+> "This optimizes stores into primitive arrays by combining values into larger stores when possible."
+> — Emanuel Peter, hotspot-compiler-dev@openjdk.org
+
+**关键讨论点**:
+- Big-Endian 平台支持 (s390x, PPC64)
+- 与逃逸分析的交互
+- 基准测试验证方法
+
+### MergeStore 设计原则
+
+> "The key insight is that the JIT can recognize patterns of consecutive stores to the same array and combine them into a single wider store."
+> — HotSpot compiler-dev mailing list, 2024
+
+---
+
 ## 相关 PR
 
 ### 核心 JIT 优化
