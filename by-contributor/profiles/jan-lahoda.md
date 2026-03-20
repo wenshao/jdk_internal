@@ -26,7 +26,24 @@ Jan Lahoda 是 Oracle 的 Java 编译器 (javac) 核心开发者，自 2006 年�
 | **主导 JEP** | JEP 511, JEP 512 |
 | **活跃时间** | 2006 - 至今 |
 
-> **数据来源**: [LinkedIn](https://www.linkedin.com/pub/dir/Jan/Lahoda), [GitHub](https://github.com/lahodaj)
+> **数据来源**: [LinkedIn](https://www.linkedin.com/pub/dir/Jan/Lahoda), [GitHub](https://github.com/lahodaj), [JEP 511/512](https://openjdk.org/jeps/511)
+
+### 最近 10 个 Integrated PRs (2026 年 2-3 月)
+
+| PR # | Issue | 标题 | 日期 |
+|------|-------|------|------|
+| #30110 | 8378740 | Suppressed warnings reported when implicit compilation is combined with annotation processing | Mar 12, 2026 |
+| #30072 | 8379284 | Avoid the need to keep obsolete preview feature constants until bootstrap JDK is upgraded | Mar 11, 2026 |
+| #29818 | 8305250 | Unnecessary "unknown enum constant" warning emitted by javac | Mar 12, 2026 |
+| #29817 | 8371155 | Type annotations on local variables are classified after the local var initializer | Mar 4, 2026 |
+| #29739 | 8308637 | AssertionError when using Trees.getScope in plug-in | Feb 23, 2026 |
+| #29687 | 8371683 | TYPE_USE annotation on var lambda parameter should be rejected | Feb 25, 2026 |
+| #29467 | 8376585 | bin/update_copyright_year.sh could allow updating a specified list of files | Feb 3, 2026 |
+| #29407 | 8375571 | Compiler crash when using record pattern matching with a generic type parameter | Jan 30, 2026 |
+| #29369 | 8268850 | AST model for 'var' variables should more closely adhere to the source code | Feb 26, 2026 |
+| #29350 | 8375712 | Convert java/lang/runtime tests to use JUnit | Jan 26, 2026 |
+
+> **观察**: 最近工作集中在 **javac 编译器修复**、**注解处理改进** 和 **JUnit 测试迁移**
 
 ---
 

@@ -33,6 +33,23 @@ David Holmes 是 Oracle 的 JVM 运行时专家，专注于线程、并发和信
 
 > **数据来源**: [RTSJ Profile](https://www.rtsj.org/DavidBio.html), [Java Concurrency in Practice](https://www.oreilly.com/library/view/java-concurrency-in/0321349601/), [Understanding OrderAccess](https://cr.openjdk.org/~dholmes/presentations/Understanding-OrderAccess-v1.1.pdf)
 
+### 最近 10 个 Integrated PRs (2026 年 2-3 月)
+
+| PR # | Issue | 标题 | 日期 |
+|------|-------|------|------|
+| #30324 | 8380474 | Crash SEGV in ThreadIdTable::lazy_initialize after JDK-8323792 | Mar 20, 2026 |
+| #30279 | 8380236 | macOS build is broken by JDK-8359706 | Mar 17, 2026 |
+| #30274 | 8379481 | Recent JNI methods are missing DTrace probes | Mar 17, 2026 |
+| #30173 | 8379456 | Test jdk/jfr/event/runtime/TestVMInfoEvent.java now fails | Mar 11, 2026 |
+| #29811 | 8377948 | The ThreadWXEnable use of PerfTraceTime is not safe during VM shutdown | Feb 25, 2026 |
+| #29535 | 8377000 | [BACKOUT] JDK-8376126 G1: Convert remaining volatiles | Feb 2, 2026 |
+| #29516 | 8376855 | ASAN reports out-of-range read in strncmp | Feb 2, 2026 |
+| #29293 | 8370112 | Remove VM_Version::supports_fast_class_init_checks() | Jan 20, 2026 |
+| #29105 | 8370314 | Update signals_posix with new Linux signal codes | Jan 13, 2026 |
+| #29027 | 8374456 | JVM crashes with large PreallocatedOutOfMemoryErrorCount | Jan 5, 2026 |
+
+> **观察**: 最近工作集中在 **JVM 运行时稳定性**、**信号处理** 和 **JNI 改进**
+
 ---
 
 ## Technical Impact

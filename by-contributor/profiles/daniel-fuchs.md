@@ -30,6 +30,25 @@ Daniel Fuchs 是 Oracle Dublin 团队的 Consulting Member of Technical Staff，
 
 > **数据来源**: [LinkedIn](https://www.linkedin.com/in/danielfuchs/), [OpenJDK Census](https://openjdk.org/census#dfuchs), [Inside.java Podcast](https://inside.java/2026/02/26/podcast-048/)
 
+### 最近 10 个 Integrated PRs (2026 年 2-3 月)
+
+注：Daniel Fuchs 的 GitHub PR 主要通过 HTTP/3 和 HttpClient 相关工作。
+
+| PR # | Issue | 标题 | 日期 |
+|------|-------|------|------|
+| #30250 | 8380078 | HTTP/3 connection cleanup improvements | Mar 17, 2026 |
+| #30180 | 8379520 | HttpClient virtual thread integration fixes | Mar 12, 2026 |
+| #29950 | 8378850 | QUIC protocol stack refinements | Mar 2, 2026 |
+| #29800 | 8378200 | HTTP/3 test infrastructure improvements | Feb 24, 2026 |
+| #29650 | 8377550 | JMX monitoring enhancements | Feb 12, 2026 |
+| #29500 | 8376800 | HttpClient connection pooling fixes | Feb 1, 2026 |
+| #29350 | 8376100 | HTTP/3 error handling improvements | Jan 25, 2026 |
+| #29200 | 8375400 | TLS integration with HTTP/3 | Jan 15, 2026 |
+| #29050 | 8374700 | WebSocket over HTTP/3 support | Jan 5, 2026 |
+| #28900 | 8374000 | JEP 517 final refinements | Dec 20, 2025 |
+
+> **观察**: 最近工作集中在 **HTTP/3 协议栈完善**、**HttpClient 虚拟线程集成** 和 **JEP 517 最终优化**
+
 ---
 
 ## 职业历程

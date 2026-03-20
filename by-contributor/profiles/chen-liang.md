@@ -28,6 +28,23 @@
 > **统计时间**: 2026-03-20
 > **来源**: [LinkedIn](https://www.linkedin.com/in/chen-liang-51122427b), [CFV: New JDK Reviewer](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html), [CFV: New Valhalla Committer](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html)
 
+### 最近 10 个 Integrated PRs (2026 年 2-3 月)
+
+| PR # | Issue | 标题 | 日期 |
+|------|-------|------|------|
+| #30202 | 8379799 | Upstream redundant diffs fixed in Valhalla - langtool tests 1 | Mar 12, 2026 |
+| #29944 | 8379166 | Upstream redundant diffs fixed in Valhalla - Part 1 | Mar 4, 2026 |
+| #29941 | 8378792 | ObjectMethods.bootstrap missing getter validation | Feb 27, 2026 |
+| #29926 | 8378715 | Use early field initialization for java.lang.invoke generated code | Feb 26, 2026 |
+| #29659 | 8377601 | JavacTemplateTestBase not reporting javac crashes | Feb 11, 2026 |
+| #29620 | 8377334 | Test framework used by langtools regression tests can produce false positives | Feb 8, 2026 |
+| #29435 | 8376422 | Run compiler/corelibs/OptionalFold.java with tiered compilation | Jan 27, 2026 |
+| #29405 | 8376277 | Migrate java/lang/reflect tests away from TestNG | Jan 27, 2026 |
+| #29402 | 8376274 | JSpec preview support and output enhancement | Jan 27, 2026 |
+| #29396 | 8376234 | Migrate java/lang/constant tests away from TestNG | Feb 25, 2026 |
+
+> **观察**: 最近工作集中在 **Valhalla 上游合并**、**TestNG 到 JUnit 迁移** 和 **java.lang.invoke 优化**
+
 ---
 
 ## 职业里程碑
