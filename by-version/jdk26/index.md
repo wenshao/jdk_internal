@@ -296,6 +296,69 @@ java -XX:AOTLibrary+ -XX:ArchiveClassesAtExit=app.jsa MyApp
 
 ---
 
+## 贡献者统计
+
+> **数据来源**: Oracle 官方博客 "The Arrival of Java 26"
+> **统计时间**: JDK 26 GA 发布 (2025-09-16)
+
+### JDK 26 贡献分布
+
+| 组织 | JIRA 问题数 | 占比 | 说明 |
+|------|------------|------|------|
+| **Oracle** | 1,729 | 68.2% | 主要贡献者 |
+| **其他社区** | 806 | 31.8% | 社区联合贡献 |
+
+### Top 10 贡献组织
+
+| 排名 | 组织 | 主要贡献领域 |
+|------|------|-------------|
+| 1 | **Oracle** | 全栈 JVM、GC、语言特性 |
+| 2 | **Alibaba** | JIT 优化、字符串处理 |
+| 3 | **Red Hat** | GC (Shenandoah)、Linux 支持 |
+| 4 | **IBM** | JIT 编译器、AIX 平台 |
+| 5 | **Google** | Android 兼容性、工具链 |
+| 6 | **Microsoft** | Windows 平台、Azure 优化 |
+| 7 | **ARM** | ARM 架构支持 |
+| 8 | **SAP** | 企业级应用、性能 |
+| 9 | **NVIDIA** | GPU 加速、AI 相关 |
+| 10 | **NTT Data** | 分布式系统、网络 |
+
+### 其他贡献组织
+
+| 组织 | 说明 |
+|------|------|
+| **ISCAS** | 中国科学院软件研究所 |
+| **Rivos** | RISC-V 架构支持 |
+| **Bellsoft** | Liberica JDK 发行版 |
+| **Bytesoft** | Bellsoft 子品牌 |
+| **Loongson** | 龙芯中科（国产 CPU） |
+
+### 历史对比 (JDK 11 - JDK 26)
+
+| 指标 | 数值 | Oracle | 社区 |
+|------|------|--------|------|
+| 总 JIRA 问题 | 36,328 | 25,491 (70.2%) | 10,837 (29.8%) |
+
+> **说明**: 从 JDK 11 到 JDK 26，Oracle 贡献约 70% 的代码，社区贡献约 30%。JDK 26 的社区贡献比例 (31.8%) 略高于历史平均水平，显示出 OpenJDK 社区的持续增长。
+
+### 社区质量贡献特别感谢
+
+Oracle 特别感谢以下个人和项目对 JDK 26 质量保证的贡献：
+
+| 个人/项目 | 贡献 |
+|-----------|------|
+| **Lukas Eder** | JOOQ |
+| **Marc Hoffmann** | JaCoCo |
+| **Ben Evans** | Java Champion |
+| **Simon Steiner** | Apache Batik |
+| **Uwe Schindler** | Apache Lucene |
+| **Yoann Rodiere** | Hibernate ORM |
+| **Apache Ant** | Jaikiran Pai |
+| **Apache Tomcat** | Mark Thomas |
+| **Parallel Collectors & Vavr** | Grzegorz Piwowarek |
+
+---
+
 ## 重要非 JEP 改动
 
 详见 [JDK 26 Top 50 Commits](/prs/jdk26-top-prs.md)
@@ -328,3 +391,9 @@ java -XX:AOTLibrary+ -XX:ArchiveClassesAtExit=app.jsa MyApp
 - [Top 50 Commits](/prs/jdk26-top-prs.md) - 重要的代码变更
 - [按主题浏览](/by-topic/) - 跨版本追踪技术演进
 - [按贡献者浏览](../../by-contributor/) - 了解贡献者和他们的工作
+
+---
+
+**Sources**:
+- [The Arrival of Java 26 - Oracle Blogs](https://blogs.oracle.com/java/the-arrival-of-java-26)
+- [OpenJDK JDK 26 Project](https://openjdk.org/projects/jdk/26/)
