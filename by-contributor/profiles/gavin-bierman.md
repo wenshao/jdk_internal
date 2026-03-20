@@ -20,8 +20,11 @@ Gavin Bierman 是 Oracle Labs UK 的 **咨询技术 staff** 和 **编程语言�
 | **当前组织** | Oracle Labs UK |
 | **职位** | Consulting Member of Technical Staff |
 | **部门** | Programming Language Research Group |
-| **Java Platform Group** | Java Platform Group |
+| **位置** | Cambridge, UK |
+| **GitHub** | [@GavinBierman](https://github.com/GavinBierman) |
 | **专长** | Programming Language Theory, Java Language Design, Pattern Matching |
+
+> **数据来源**: [Oracle Labs Bio](https://labs.oracle.com/pls/apex/f?p=labs:bio:0:2044), [GitHub](https://github.com/GavinBierman)
 
 ---
 
