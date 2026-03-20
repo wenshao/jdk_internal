@@ -23,8 +23,22 @@ Vicente Arturo Romero Zaldivar 是 Oracle 的 **首席技术 staff** 和 **编�
 | **GitHub** | [@vicente-romero-oracle](https://github.com/vicente-romero-oracle) |
 | **OpenJDK** | [@vromero](https://openjdk.org/census#vromero) |
 | **邮件** | vromero@openjdk.org |
+| **角色** | JDK 8 Reviewer (2013-08) |
 | **专长** | javac Compiler, Records, Pattern Matching, Switch Expressions |
-| **经验** | 13+ 年 Java 编译器开发 |
+| **经验** | 2011+ 年 OpenJDK 贡献 |
+
+> **数据来源**: [CFV jdk8 Reviewer 2013-08](https://mail.openjdk.org/pipermail/jdk8-dev/2013-August/003077.html)
+
+---
+
+## 职业时间线
+
+| 年份 | 事件 | 详情 |
+|------|------|------|
+| **2011** | 开始贡献 OpenJDK | 开始参与 OpenJDK 项目 |
+| **2013-08** | JDK 8 Reviewer | 由 Jonathan Gibbons 提名为 jdk8 Reviewer |
+| **2014-2020** | Records 实现 | 主要实现者，JEP 359/384 |
+| **至今** | Oracle | Principal MTS, Compiler Engineer |
 
 ---
 
