@@ -33,22 +33,22 @@
 
 | 排名 | 贡献者 | PRs | GitHub | 组织 | 主要领域 |
 |------|--------|-----|--------|------|----------|
-| 1 | **[Chen Liang](../../by-contributor/profiles/chen-liang.md)** | 11 | @liach | Oracle | javac, 语言特性 |
+| 1 | **[Chen Liang](../../../by-contributor/profiles/chen-liang.md)** | 11 | @liach | Oracle | javac, 语言特性 |
 | 2 | **Tobias Hartmann** | 9 | @TobiHartmann | Oracle | C2 JIT 编译器 |
-| 3 | **[David Holmes](../../by-contributor/profiles/david-holmes.md)** | 6 | @dholmes-ora | Oracle | JNI, 运行时 |
+| 3 | **[David Holmes](../../../by-contributor/profiles/david-holmes.md)** | 6 | @dholmes-ora | Oracle | JNI, 运行时 |
 | 4 | **Axel Boldt-Christmas** | 6 | @xmas92 | Oracle | GC, 内存屏障 |
 | 5 | **Daniel D. Daugherty** | 5 | @dcubed-ojdk | Oracle | 测试基础设施 |
-| 6 | **[Roger Riggs](../../by-contributor/profiles/roger-riggs.md)** | 4 | @RogerRiggs | Oracle | 核心库, 序列化 |
+| 6 | **[Roger Riggs](../../../by-contributor/profiles/roger-riggs.md)** | 4 | @RogerRiggs | Oracle | 核心库, 序列化 |
 | 7 | **Benoît Maillard** | 4 | @benoitmaillard | Oracle | C2 JIT 编译器 |
 | 8 | **Frederic Parain** | 4 | @fparain | Oracle | 字段, JNI |
 | 9 | **Quan Anh Mai** | 4 | @merykitty | Oracle | C2 JIT 编译器 |
 | 10 | **Stefan Karlsson** | 4 | @stefank | Oracle | GC, 数组 |
 | 11 | **Christian Hagedorn** | 5 | @chhagedorn | Oracle | C2 JIT 编译器 |
-| 12 | **[David Beaumont](../../by-contributor/profiles/david-beaumont.md)** | 3 | @david-beaumont | Oracle | javac, 构建系统 |
+| 12 | **[David Beaumont](../../../by-contributor/profiles/david-beaumont.md)** | 3 | @david-beaumont | Oracle | javac, 构建系统 |
 | 13 | **Alex Menkov** | 3 | @alexmenkov | Oracle | JDWP, JVMTI |
 | 14 | **Markus Grönlund** | 3 | @mgronlun | Oracle | JFR |
 | 15 | **Ivan Walulya** | 3 | @walulyai | Oracle | 字段布局 |
-| 16 | **[Coleen Phillimore](../../by-contributor/profiles/coleen-phillimore.md)** | 2 | @coleenp | Oracle | 类加载, SA |
+| 16 | **[Coleen Phillimore](../../../by-contributor/profiles/coleen-phillimore.md)** | 2 | @coleenp | Oracle | 类加载, SA |
 | 17 | **Vicente Romero** | 2 | @vicente-romero-oracle | Oracle | javac |
 | 18 | **Casper Norrbin** | 2 | @caspernorrbin | Oracle | 类加载 |
 | 19 | **Arraying** | 2 | - | Oracle | 调试方法 |
@@ -75,11 +75,11 @@
 
 ### 3月19日 (2 PRs)
 - `8343835`: C2 assert fails with "no mismatched stores" (@chhagedorn)
-- `8379333`: [REDO] JNI NewWeakGlobalRef IdentityException ([dholmes-ora](../../by-contributor/profiles/david-holmes.md))
+- `8379333`: [REDO] JNI NewWeakGlobalRef IdentityException ([dholmes-ora](../../../by-contributor/profiles/david-holmes.md))
 
 ### 3月18日 (3 PRs)
 - `8380395`: TestCallingConvention ProblemList (@dcubed-ojdk)
-- `8377324`: Remove MethodData SA tests ([coleenp](../../by-contributor/profiles/coleen-phillimore.md))
+- `8377324`: Remove MethodData SA tests ([coleenp](../../../by-contributor/profiles/coleen-phillimore.md))
 - `8379863`: C2 assert scalar_reallocated (@benoitmaillard)
 
 ### 3月16日 (2 PRs)
@@ -95,54 +95,54 @@
 - `8380006`: Deoptimization OOM Mark (@stefank)
 
 ### 3月12日 (5 PRs)
-- `8379906`: Suppressed warnings annotation processing ([david-beaumont](../../by-contributor/profiles/david-beaumont.md))
+- `8379906`: Suppressed warnings annotation processing ([david-beaumont](../../../by-contributor/profiles/david-beaumont.md))
 - `8379791`: C2 Blackhole MemBar (@chhagedorn)
 - `8370070`: TestLWorld IR 不匹配 (@benoitmaillard)
 - `8379847`: GC 数组元素 klass (@stefank)
-- `8377351`: ClassInitBarrier crash ([dafedafe](../../by-contributor/profiles/))
+- `8377351`: ClassInitBarrier crash (@dafedafe)
 
 ### 3月11日 (2 PRs)
-- `8379820`: javac launcher release version ([liach](../../by-contributor/profiles/chen-liang.md))
-- `8379803`: langtool 测试清理 ([liach](../../by-contributor/profiles/chen-liang.md))
+- `8379820`: javac launcher release version ([liach](../../../by-contributor/profiles/chen-liang.md))
+- `8379803`: langtool 测试清理 ([liach](../../../by-contributor/profiles/chen-liang.md))
 
 ### 3月10日 (3 PRs)
-- `8379619`: FieldLayoutBuilder heapOopSize ([walulyai](../../by-contributor/profiles/))
-- `8377882`: OptimizePtrCompare 保守 ([rwestrel](../../by-contributor/profiles/))
-- `8379592`: EA3 version flick ([MrSimms](../../by-contributor/profiles/))
+- `8379619`: FieldLayoutBuilder heapOopSize (@walulyai)
+- `8377882`: OptimizePtrCompare 保守 (@rwestrel)
+- `8379592`: EA3 version flick (@MrSimms)
 
 ### 3月9日 (3 PRs)
-- `8379559`: ClassFileFormatVersion preview ([liach](../../by-contributor/profiles/chen-liang.md))
-- `8375051`: 调试方法 Valhalla 信息 ([Arraying](../../by-contributor/profiles/))
-- `8379514`: 数组 klass 清理 ([stefank](../../by-contributor/profiles/stefan-karlsson.md))
+- `8379559`: ClassFileFormatVersion preview ([liach](../../../by-contributor/profiles/chen-liang.md))
+- `8375051`: 调试方法 Valhalla 信息 (@Arraying)
+- `8379514`: 数组 klass 清理 (@stefank)
 
 ### 3月6日 (6 PRs)
-- `8378662`: UBSAN 构建失败 ([xmas92](../../by-contributor/profiles/))
-- `8379406`: allocateInstance 行为 ([merykitty](../../by-contributor/profiles/))
-- `8378560`: 反射构造 C2 assert ([merykitty](../../by-contributor/profiles/))
-- `8379365`: JNI IsValueObject ([dholmes-ora](../../by-contributor/profiles/david-holmes.md))
+- `8378662`: UBSAN 构建失败 (@xmas92)
+- `8379406`: allocateInstance 行为 (@merykitty)
+- `8378560`: 反射构造 C2 assert (@merykitty)
+- `8379365`: JNI IsValueObject ([dholmes-ora](../../../by-contributor/profiles/david-holmes.md))
 - `8379355`: 字段布局测试 (@fparain)
 - `8379328`: [BACKOUT] JNI NewWeakGlobalRef (@dcubed-ojdk)
 
 ### 3月5日 (5 PRs)
-- `8378521`: CardTableBarrierSet 预屏障 ([xmas92](../../by-contributor/profiles/))
-- `8378523`: CardTableBarrierSet post-barriers ([xmas92](../../by-contributor/profiles/))
-- `8379263`: JVMTI HeapMonitoring ProblemList ([dholmes-ora](../../by-contributor/profiles/david-holmes.md))
+- `8378521`: CardTableBarrierSet 预屏障 (@xmas92)
+- `8378523`: CardTableBarrierSet post-barriers (@xmas92)
+- `8379263`: JVMTI HeapMonitoring ProblemList ([dholmes-ora](../../../by-contributor/profiles/david-holmes.md))
 - `8375357`: TestLWorld compilable (@marc-chevalier)
 - `8378862`: flatArrayKlass 内存屏障 (@fparain)
 
 ### 3月4日 (4 PRs)
-- `8379184`: fieldLayoutBuilder 清理 ([walulyai](../../by-contributor/profiles/))
-- `8379007`: JNI NewWeakGlobalRef ([dholmes-ora](../../by-contributor/profiles/david-holmes.md))
-- `8379163`: Port 8378792 to lworld ([liach](../../by-contributor/profiles/chen-liang.md))
-- `8379164`: jdk.jdeps 反射 API ([liach](../../by-contributor/profiles/chen-liang.md))
+- `8379184`: fieldLayoutBuilder 清理 (@walulyai)
+- `8379007`: JNI NewWeakGlobalRef ([dholmes-ora](../../../by-contributor/profiles/david-holmes.md))
+- `8379163`: Port 8378792 to lworld ([liach](../../../by-contributor/profiles/chen-liang.md))
+- `8379164`: jdk.jdeps 反射 API ([liach](../../../by-contributor/profiles/chen-liang.md))
 
 ### 3月3日 (2 PRs)
-- `8379012`: JNI MonitorEnter 异常消息 ([dholmes-ora](../../by-contributor/profiles/david-holmes.md))
-- `8378609`: JNI AllocObject/NewObject 恢复 ([dholmes-ora](../../by-contributor/profiles/david-holmes.md))
+- `8379012`: JNI MonitorEnter 异常消息 ([dholmes-ora](../../../by-contributor/profiles/david-holmes.md))
+- `8378609`: JNI AllocObject/NewObject 恢复 ([dholmes-ora](../../../by-contributor/profiles/david-holmes.md))
 
 ### 3月2日 (2 PRs)
 - `8335187`: Object::finalize 注释 (@vicente-romero-oracle)
-- `8379006`: 值类序列化 JUnit ([RogerRiggs](../../by-contributor/profiles/roger-riggs.md))
+- `8379006`: 值类序列化 JUnit ([RogerRiggs](../../../by-contributor/profiles/roger-riggs.md))
 
 ---
 
@@ -397,17 +397,17 @@ test/jdk/
 ### Oracle (主导)
 
 **核心团队**:
-- [David Holmes](../../by-contributor/profiles/david-holmes.md) - 运行时架构 (6 PRs)
+- [David Holmes](../../../by-contributor/profiles/david-holmes.md) - 运行时架构 (6 PRs)
 - Tobias Hartmann - C2 JIT 编译器 (9 PRs)
 - Christian Hagedorn - C2 JIT 编译器 (5 PRs)
 - Stefan Karlsson - GC (4 PRs)
-- [Coleen Phillimore](../../by-contributor/profiles/coleen-phillimore.md) - 类加载 (2 PRs)
-- [Roger Riggs](../../by-contributor/profiles/roger-riggs.md) - 核心库 (4 PRs)
+- [Coleen Phillimore](../../../by-contributor/profiles/coleen-phillimore.md) - 类加载 (2 PRs)
+- [Roger Riggs](../../../by-contributor/profiles/roger-riggs.md) - 核心库 (4 PRs)
 - Frederic Parain - 字段, JNI (4 PRs)
-- [Chen Liang](../../by-contributor/profiles/chen-liang.md) - javac (11 PRs)
+- [Chen Liang](../../../by-contributor/profiles/chen-liang.md) - javac (11 PRs)
 - Markus Grönlund - JFR (3 PRs)
 - Vicente Romero - javac (2 PRs)
-- [David Beaumont](../../by-contributor/profiles/david-beaumont.md) - javac, 构建 (3 PRs)
+- [David Beaumont](../../../by-contributor/profiles/david-beaumont.md) - javac, 构建 (3 PRs)
 - Daniel D. Daugherty - 测试 (5 PRs)
 - Alex Menkov - JDWP, JVMTI (3 PRs)
 
@@ -519,11 +519,11 @@ PR 创建
 ### 贡献者档案
 
 - [完整贡献者列表](../../by-contributor/)
-- [Chen Liang](../../by-contributor/profiles/chen-liang.md)
-- [David Holmes](../../by-contributor/profiles/david-holmes.md)
-- [Roger Riggs](../../by-contributor/profiles/roger-riggs.md)
-- [Coleen Phillimore](../../by-contributor/profiles/coleen-phillimore.md)
-- [David Beaumont](../../by-contributor/profiles/david-beaumont.md)
+- [Chen Liang](../../../by-contributor/profiles/chen-liang.md)
+- [David Holmes](../../../by-contributor/profiles/david-holmes.md)
+- [Roger Riggs](../../../by-contributor/profiles/roger-riggs.md)
+- [Coleen Phillimore](../../../by-contributor/profiles/coleen-phillimore.md)
+- [David Beaumont](../../../by-contributor/profiles/david-beaumont.md)
 
 ---
 
