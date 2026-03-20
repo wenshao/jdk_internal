@@ -58,6 +58,22 @@
 | **核心库** | java.base 改进 |
 | **FFM API** | Foreign Function & Memory API |
 
+### 重要 Bug/Enhancement 修复
+
+| Issue | 标题 | 日期 |
+|-------|------|------|
+| [JDK-8324383](https://bugs.openjdk.org/browse/JDK-8324383) | SegmentAllocator:allocateFrom(ValueLayout...) | 2024-01-12 |
+| [JDK-8323552](https://bugs.openjdk.org/browse/JDK-8323552) | AbstractMemorySegmentImpl#mismatch | 2024-03-25 |
+| [JDK-8339531](https://bugs.openjdk.org/browse/JDK-8339531) | Improve MemorySegment::mismatch performance | 2024 |
+
+### 技术文章
+
+| 主题 | 链接 |
+|------|------|
+| Java 22: Panama FFM 性能基准测试 | [博客](http://minborgsjavapot.blogspot.com/2023/08/java-22-panama-ffm-provides-massive.html) |
+| Java 22 FFM API 视频演讲 | [YouTube](https://www.youtube.com/watch?v=xlrRwaq1n2s) |
+| FFM API 预览特性 (Java 20) | [YouTube](https://www.youtube.com/watch?v=8sFt1_7RxGk) |
+
 ### JEP 贡献
 
 | JEP | 标题 | 角色 | 状态 |
@@ -90,7 +106,18 @@ Java Stream ORM 工具包和运行时，可以直接从数据库模式生成代�
   - 将 Hibernate/JPA 查询表示为 Java Streams
   - 内存加速技术 (最高 1000x 加速)
   - 超低延迟 (200 纳秒内流处理)
-  - JPAstreamer 库
+
+### JPAStreamer
+
+**类型**: 开源库
+
+扩展 Hibernate/JPA 以支持 Java Stream API 的轻量级开源扩展。
+
+- **功能**: 使用标准 Java Stream API 表达数据库查询
+- **类型安全**: 提供类型安全的查询构造
+- **集成**: Quarkus 扩展 (`quarkus-jpastreamer`)
+- **版本**: 3.0.0+ 支持 Hibernate 6 和 Spring Boot 3
+- **价值**: 保持使用 Hibernate/JPA，同时用 Java Stream API 编写查询
 
 ### Minborg's Java Pot
 
