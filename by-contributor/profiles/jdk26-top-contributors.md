@@ -26,7 +26,7 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 | 10 | [Jaikiran Pai](./jaikiran-pai.md) | [Oracle](https://www.oracle.com/java/) | 67 | Networking |
 | 11 | Francesco Andreuzzi | [Oracle](https://www.oracle.com/java/) | 60 | Testing | [详情](./francesco-andreuzzi.md) |
 | 12 | [Prasanta Sadhukhan](./prasanta-sadhukhan.md) | [Oracle](https://www.oracle.com/java/) | 59 | Desktop |
-| 13 | [Chen Liang](./chen-liang.md) | [Oracle](https://www.oracle.com/java/) | 59 | ClassFile API, Core |
+| 13 | [Chen Liang](./chen-liang.md) | Oracle | 59 | ClassFile API, Core |
 | 14 | Sergey Bylokhov | [Oracle](https://www.oracle.com/java/) | 57 | Desktop | [详情](./mrserb.md) |
 | 15 | [Erik Gahlin](./erik-gahlin.md) | [Oracle](https://www.oracle.com/java/) | 57 | JFR |
 | 16 | [Brian Burkhalter](./brian-burkhalter.md) | [Oracle](https://www.oracle.com/java/) | 53 | Networking |

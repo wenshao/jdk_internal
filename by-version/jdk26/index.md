@@ -348,7 +348,6 @@ java -XX:AOTLibrary+ -XX:ArchiveClassesAtExit=app.jsa MyApp
 | 贡献者 | 组织 | 专长 | 详细资料 |
 |--------|------|------|----------|
 | [Shaojin Wen (温绍锦)](/by-contributor/profiles/shaojin-wen.md) | Alibaba | JIT 优化、字符串 | → |
-| [Chen Liang](/by-contributor/profiles/chen-liang.md) | Alibaba | Class File API | → |
 
 ### Red Hat 贡献者
 
@@ -409,7 +408,7 @@ java -XX:AOTLibrary+ -XX:ArchiveClassesAtExit=app.jsa MyApp
 
 #### Alibaba (1.9%)
 - **74 提交**，8 位贡献者
-- 代表: Shaojin Wen (11), Yude Lin (10), Xiaowei Lu (10)
+- 代表: Shaojin Wen (11), Yude Lin (10), Xiaowei Lu (10), Tongbao Zhang (9)
 - 主要领域: JIT 优化、字符串处理、GC、测试
 
 #### Red Hat (1.8%)
