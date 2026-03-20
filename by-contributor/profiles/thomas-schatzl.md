@@ -4,13 +4,13 @@
 > **Blog**: [tschatzl.github.io](https://tschatzl.github.io/)
 > **Email**: thomas.schatzl@oracle.com
 > **Organization**: Oracle
-> **Location**: Germany (推测)
+> **Location**: Germany
 
 ---
 
 ## 概述
 
-Thomas Schatzl 是 Oracle HotSpot GC 团队核心成员，G1 (Garbage First) GC 的主要维护者和优化者。自 2012 年起参与 OpenJDK 开发，专注于垃圾回收器领域超过 12 年。他主导了 JEP 522 (G1 GC 吞吐量改进)，并在个人博客上撰写了大量关于 G1 GC 和 Parallel GC 的技术文章。
+Thomas Schatzl 是 Oracle HotSpot GC 团队核心成员，G1 (Garbage First) GC 的主要维护者和优化者。自 2012 年起参与 OpenJDK 开发，专注于垃圾回收器领域超过 12 年。他主导了 JEP 522 (G1 GC 吞吐量改进)，并在个人博客上撰写了大量关于 G1 GC 和 Parallel GC 的技术文章。截至 2026 年 3 月，他已有 **546 个 Integrated PRs**，是 GC 领域最高产的贡献者之一。
 
 ---
 
@@ -28,12 +28,12 @@ Thomas Schatzl 是 Oracle HotSpot GC 团队核心成员，G1 (Garbage First) GC 
 | **Email** | thomas.schatzl@oracle.com |
 | **OpenJDK** | [@tschatzl](https://openjdk.org/census#tschatzl) |
 | **角色** | OpenJDK Member, JDK Reviewer |
-| **PRs** | [545+ integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Atschatzl+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | G1 GC, Parallel GC |
+| **PRs** | [546 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Atschatzl+is%3Aclosed+label%3Aintegrated) |
+| **主要领域** | G1 GC, Parallel GC, Serial GC |
 | **主导 JEP** | JEP 522: G1 GC Throughput Improvement |
 | **活跃时间** | 2012 - 至今 |
 
-> **数据来源**: [个人博客](https://tschatzl.github.io/), [Inside.java](https://inside.java/u/ThomasSchatzl/), [JKU Staff Profile](https://ssw.jku.at/General/Staff/TS/)
+> **数据来源**: [个人博客](https://tschatzl.github.io/), [Inside.java](https://inside.java/u/ThomasSchatzl/), [JKU Staff Profile](https://ssw.jku.at/General/Staff/TS/), [GitHub PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Atschatzl+is%3Aclosed+label%3Aintegrated)
 
 ---
 
@@ -41,9 +41,10 @@ Thomas Schatzl 是 Oracle HotSpot GC 团队核心成员，G1 (Garbage First) GC 
 
 | 指标 | 值 |
 |------|-----|
+| **Integrated PRs** | 546 |
 | **代码行数** | +77,908 / -66,352 (净 +11,556) |
-| **影响模块** | hotspot (G1 GC) |
-| **主要贡献** | G1 GC 优化、性能改进 |
+| **影响模块** | hotspot (G1 GC, Parallel GC, Serial GC) |
+| **主要贡献** | G1 GC 优化、性能改进、Atomic<T> 转换 |
 
 ### 影响的主要目录
 
@@ -51,6 +52,24 @@ Thomas Schatzl 是 Oracle HotSpot GC 团队核心成员，G1 (Garbage First) GC 
 |------|--------|------|
 | gc/g1 | 2,772 | G1 GC 核心实现 |
 | gc/shared | 354 | GC 共享代码 |
+| gc/parallel | 50+ | Parallel GC 优化 |
+
+### 最近 10 个 Integrated PRs (2026 年 2-3 月)
+
+| PR # | Issue | 标题 | 日期 |
+|------|-------|------|------|
+| #30217 | 8379781 | G1: Full GC does not print partial array task stats | Mar 13, 2026 |
+| #30144 | 8379511 | G1: G1CollectorState should derive concurrent cycle state from G1ConcurrentMark | Mar 19, 2026 |
+| #30114 | 8379404 | G1: Hide ConcurrentMarkThread reference from outside ConcurrentMark | Mar 9, 2026 |
+| #30054 | 8379200 | G1: Remove G1HeapRegion completion facility | Mar 10, 2026 |
+| #30024 | 8379119 | G1: Move NoteStartOfMarkHRClosure out of global namespace | Mar 4, 2026 |
+| #29958 | 8378845 | Add NoSafepointVerifier to CriticalSection classes | Mar 3, 2026 |
+| #29823 | 8377224 | Initialization cleanups after Atomic<T> conversion | Feb 23, 2026 |
+| #29820 | 8378266 | Update atomicAccess include after Atomic<T> changes | Feb 24, 2026 |
+| #29653 | 8377008 | [REDO] G1: Convert remaining volatiles in G1ConcurrentMark to Atomic<T> | Feb 17, 2026 |
+| #29650 | 8376664 | Find a better place for the Atomic<HeapWord*> vmstructs toplevel declaration | Feb 13, 2026 |
+
+> **观察**: 最近工作集中在 **Atomic<T> 转换** 和 **G1 并发标记优化**
 
 ---
 
@@ -90,7 +109,9 @@ Thomas 在 [tschatzl.github.io](https://tschatzl.github.io/) 撰写关于 OpenJD
 | 标题 | 日期 | 主题 | 链接 |
 |------|------|------|------|
 | "JDK 26 G1/Parallel/Serial GC changes" | 2026-02-26 | JDK 26 GC 变更总结 | [文章](https://tschatzl.github.io/2026/02/26/jdk26-g1-serial-parallel-gc-changes.html) |
-| "JDK 24 GC changes" | 2025 | JDK 24 GC 更新 | [博客](https://tschatzl.github.io/) |
+| "JDK 25 G1/Parallel/Serial GC changes" | 2025-08-12 | JDK 25 GC 更新 | [文章](https://tschatzl.github.io/2025/08/12/jdk25-g1-parallel-serial-gc-changes.html) |
+| "JDK 24 G1/Parallel/Serial GC changes" | 2025-04-01 | JDK 24 GC 更新 | [文章](https://tschatzl.github.io/2025/04/01/jdk24-g1-parallel-serial-gc-changes.html) |
+| "New Write Barriers for G1" | 2025-02-21 | G1 写屏障改进 (JDK-8340827) | [文章](https://tschatzl.github.io/2025/02/21/new-write-barriers-for-g1.html) |
 | "G1 and Parallel GC" | 长期系列 | G1 和 Parallel GC 专题 | [博客](https://tschatzl.github.io/) |
 
 ### 链接
@@ -101,6 +122,7 @@ Thomas 在 [tschatzl.github.io](https://tschatzl.github.io/) 撰写关于 OpenJD
 | **Blog** | [tschatzl.github.io](https://tschatzl.github.io/) |
 | **OpenJDK Census** | [tschatzl](https://openjdk.org/census#tschatzl) |
 | **Inside.java** | [ThomasSchatzl](https://inside.java/u/ThomasSchatzl/) |
+| **JKU Staff Profile** | [Thomas Schatzl](https://ssw.jku.at/General/Staff/TS/) |
 
 ---
 

@@ -3,12 +3,13 @@
 > **GitHub**: [@prrace](https://github.com/prrace)
 > **Organization**: Oracle
 > **Position**: Consulting Member of Technical Staff, Client Libraries Lead
+> **OpenJDK Governing Board Member**
 
 ---
 
 ## 概述
 
-Phil Race 是 Oracle 的 Consulting Member of Technical Staff，OpenJDK Client Libraries 团队负责人，负责核心 Swing、Java 2D 和 AWT API。他是 OpenJDK Governing Board 成员（Oracle 代表），在 Java 2D 图形、打印、Swing GUI 组件和桌面应用开发方面做出重要贡献。他在 2D 计算机图形行业有丰富经验，并在 FOSDEM 2024 和 JavaOne 2026 等会议上担任演讲者和程序委员会成员。
+Phil Race 是 Oracle 的 Consulting Member of Technical Staff，OpenJDK Client Libraries 团队负责人，负责核心 Swing、Java 2D 和 AWT API。他是 OpenJDK Governing Board 成员（Oracle 代表），在 Java 2D 图形、打印、Swing GUI 组件和桌面应用开发方面做出重要贡献。他在 2D 计算机图形行业有丰富经验，并在 FOSDEM 2024 和 JavaOne 2026 等会议上担任演讲者和程序委员会成员。截至 2026 年 3 月，他已有 **303 个 Integrated PRs**，主导了 AppContext 移除和 finalize() 方法清理等重大重构工作。
 
 ---
 
@@ -19,11 +20,11 @@ Phil Race 是 Oracle 的 Consulting Member of Technical Staff，OpenJDK Client L
 | **Name** | Phil Race |
 | **Current Organization** | Oracle |
 | **Position** | Consulting Member of Technical Staff, Client Libraries Lead |
-| **GitHub** | [@prrace](https://github.com/prrace) (19 repositories) |
+| **GitHub** | [@prrace](https://github.com/prrace) |
 | **OpenJDK** | [@prr](https://openjdk.org/census#prr) |
 | **角色** | OpenJDK Member, JDK Reviewer, Client Libs Group Lead, OpenJDK Governing Board Member |
 | **PRs** | [303 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aprrace+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | Graphics, Printing, AWT, Swing, Security, Java 2D |
+| **主要领域** | Graphics, Printing, AWT, Swing, Desktop, AppContext Removal |
 
 > **数据来源**: [FOSDEM 2024](https://archive.fosdem.org/2024/schedule/speaker/BD3NMJ/), [OpenJDK Governing Board](https://openjdk.org/poll/gb/2024/), [GitHub](https://github.com/prrace), [Client Libraries Group CFV](https://mail.openjdk.org/pipermail/gb-discuss/2021-June/000358.html)
 
@@ -37,6 +38,23 @@ Phil Race 是 Oracle 的 Consulting Member of Technical Staff，OpenJDK Client L
 | **2021-07** | Client Libraries Group Lead | OpenJDK 管理委员会全票通过，成立 Client Libraries Group |
 | **2021-09** | swing-dev 邮件列表退役 | 原 AWT/2D/Swing/Sound 组合并 |
 | **2023-2025** | OpenJDK GB 成员 | Oracle 代表，多次当选 |
+
+### 最近 10 个 Integrated PRs (2026 年 2-3 月)
+
+| PR # | Issue | 标题 | 日期 |
+|------|-------|------|------|
+| #30226 | 8379937 | NullActiveWindowOnFocusLost.java fails intermittently | Mar 12, 2026 |
+| #30060 | 8379229 | Remove AppContext from javax.swing.JComponent | Mar 9, 2026 |
+| #30028 | 8379137 | Remove AppContext from javax.swing.JOptionPane | Mar 9, 2026 |
+| #29990 | 8378920 | Remove AppContext from SequencedEvent | Mar 11, 2026 |
+| #30008 | 8378999 | BeanContextSupport.add(Object) synchronizes on its argument | Mar 6, 2026 |
+| #29987 | 8378917 | InputEvent checks for SystemClipboard access are unused | Mar 5, 2026 |
+| #29985 | 8378899 | Remove AppContext from java.awt.Toolkit implementation | Mar 10, 2026 |
+| #29969 | 8378865 | After fix for JDK-8378385 two tests are failing on windows | Feb 27, 2026 |
+| #29904 | 8378607 | GlyphLayout cache can prevent Fonts from being GC'd | Feb 28, 2026 |
+| #29901 | 8376152 | Test javax/sound/sampled/Clip/bug5070081.java timed out | Feb 25, 2026 |
+
+> **观察**: 最近工作集中在 **AppContext 移除** 和 **Client 库测试修复**
 
 ## Contribution Overview
 

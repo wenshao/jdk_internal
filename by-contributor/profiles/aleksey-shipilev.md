@@ -32,6 +32,23 @@
 
 > **数据来源**: [CV](https://shipilev.net/Aleksey_Shipilev_CV.pdf), [LinkedIn](https://de.linkedin.com/in/alekseyshipilev), [OpenJDK Census](https://openjdk.org/census#shade), [JDK 9 Reviewer CFV](https://mail.openjdk.org/pipermail/jdk9-dev/2016-April/004138.html)
 
+### 最近 10 个 Integrated PRs (2026 年 2-3 月)
+
+| PR # | Issue | 标题 | 日期 |
+|------|-------|------|------|
+| #29843 | 8378338 | Shenandoah: Heap-used generic verification error after update-refs | Mar 11, 2026 |
+| #29754 | 8378080 | Zero: JNIEnv argument is corrupted in native calls | Feb 20, 2026 |
+| #29743 | 8377990 | Zero: Replace Java math ops with UB-safe implementations | Feb 20, 2026 |
+| #29528 | 8376761 | ARM32: Constant base assert after JDK-8373266 | Feb 4, 2026 |
+| #29527 | 8376970 | Shenandoah: Verifier should do basic verification before touching oops | Feb 3, 2026 |
+| #29526 | 8376969 | Shenandoah: GC state getters should be inlineable | Feb 3, 2026 |
+| #29468 | 8376604 | C2: EA should assert is_oop_field for AddP with oop outs | Jan 30, 2026 |
+| #29462 | 8376570 | GrowableArray::remove_{till,range} should work on empty list | Feb 2, 2026 |
+| #29444 | 8376472 | Shenandoah: Assembler store barriers read destination memory despite the decorators | Feb 2, 2026 |
+| #29254 | 8375359 | Improve GC serviceability init staging | Feb 23, 2026 |
+
+> **观察**: 最近工作集中在 **Shenandoah GC 验证**、**Zero 端口维护** 和 **C2 编译器优化**
+
 ---
 
 ## 技术影响力

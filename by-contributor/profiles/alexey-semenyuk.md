@@ -1,17 +1,46 @@
 # Alexey Semenyuk
 
+> **GitHub**: [@alexeysemenyukoracle](https://github.com/alexeysemenyukoracle)
+> **Organization**: Oracle
+> **Role**: JDK Reviewer, jpackage Lead
+> **Integrated PRs**: 235
+
+---
+
+## 概述
+
+Alexey Semenyuk 是 Oracle 的 JDK Reviewer，jpackage 工具的主要维护者。他专注于跨平台打包和部署解决方案，负责 jpackage 工具的核心开发和测试改进。他的工作涵盖 Windows (MSI/EXE)、macOS (DMG/PKG) 和 Linux (RPM/DEB) 等多种安装包格式，包括代码签名、版本处理和错误处理等关键功能。截至 2026 年 3 月，他已有 **235 个 Integrated PRs**。
+
 ## Basic Information
 
 | Field | Value |
 |-------|-------|
 | **Name** | Alexey Semenyuk |
 | **Current Organization** | Oracle |
-| **GitHub** | [@asemenyuk](https://github.com/asemenyuk) |
+| **GitHub** | [@alexeysemenyukoracle](https://github.com/alexeysemenyukoracle) |
 | **OpenJDK** | [@asemenyuk](https://openjdk.org/census#asemenyuk) |
-| **Role** | JDK Reviewer |
-| **Primary Areas** | jpackage, Installers, Packaging, Cross-Platform Deployment |
+| **Role** | JDK Reviewer, jpackage Lead |
+| **PRs** | [235 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aalexeysemenyukoracle+is%3Aclosed+label%3Aintegrated) |
+| **Primary Areas** | jpackage, Installers, Packaging, Cross-Platform Deployment, Code Signing |
 
-> **Data as of**: 2026-03-19
+> **Data as of**: 2026-03-20
+
+### 最近 10 个 Integrated PRs (2026 年 2-3 月)
+
+| PR # | Issue | 标题 | 日期 |
+|------|-------|------|------|
+| #30308 | 8379431 | [macos] jpackage issues unexpected warning when bundling an unsigned runtime package | Mar 20, 2026 |
+| #30229 | 8379938 | [macos] jpackage SigningPackageTest test doesn't create .pkg and .dmg bundles | Mar 12, 2026 |
+| #30172 | 8278591 | Jpackage post installation information message | Mar 19, 2026 |
+| #30086 | 8379426 | [macos] jpackage: runtime bundle version suffix is out of sync | Mar 9, 2026 |
+| #30085 | 8379348 | jpackage will use wrong arch suffix for RPM bundle when running on Debian Linux | Mar 6, 2026 |
+| #30084 | 8379432 | jpackage: Make default equals() in jdk.jpackage.test.CannedFormattedString class work | Mar 10, 2026 |
+| #30083 | 8379341 | jpackage: consolidate modular app tests | Mar 6, 2026 |
+| #30081 | 8379345 | jpackage: Fix issues in tests to improve their flexibility | Mar 6, 2026 |
+| #30080 | 8379334 | jpackage: fix bug in DottedVersion.greedy() function | Mar 6, 2026 |
+| #29963 | 8378873 | jpackage: remove macOS-specific code from jdk.jpackage.internal.ModuleInfo | Mar 3, 2026 |
+
+> **观察**: 最近工作集中在 **jpackage 测试改进**、**macOS 签名** 和 **版本处理**
 
 ## Contribution Overview
 

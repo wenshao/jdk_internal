@@ -23,6 +23,23 @@
 
 > **数据来源**: [LinkedIn](https://www.linkedin.com/in/ioi-lam-3b07731), [CFV HSX Committer](https://mail.openjdk.org/pipermail/hotspot-dev/2013-April/009124.html), [JVMLS Leyden](https://inside.java/2024/08/25/jvmls-leyden/)
 
+### 最近 10 个 Integrated PRs (2026 年 2-3 月)
+
+| PR # | Issue | 标题 | 日期 |
+|------|-------|------|------|
+| #29947 | 8378211 | Test ChangedJarFile.java failed: missing "timestamp has changed" | Mar 17, 2026 |
+| #29869 | 8376822 | UseCompactObjectHeaders: fill Klass alignment gaps in AOT cache | Mar 17, 2026 |
+| #29834 | 8378298 | Remove obsolete CDS string tests | Feb 21, 2026 |
+| #29825 | 8377512 | AOT cache creation fails with invalid native pointer | Mar 17, 2026 |
+| #29778 | 8378152 | Upstream AOT heap object improvements from Leyden repo | Mar 17, 2026 |
+| #29728 | 8377932 | AOT cache is not rejected when JAR file has changed | Feb 16, 2026 |
+| #29678 | 8377712 | ConstantPool of WeakReferenceKey is not deterministic in CDS archive | Feb 19, 2026 |
+| #29590 | 8377307 | Refactor code for AOT cache pointer compression | Feb 11, 2026 |
+| #29549 | 8377096 | Refactor AOTMapLogger::OopDataIterator implementations | Feb 10, 2026 |
+| #29472 | 8375569 | Store Java mirrors in AOT configuration file | Jan 29, 2026 |
+
+> **观察**: 最近工作集中在 **AOT 缓存优化**、**CDS 改进** 和 **Project Leyden 上游合并**
+
 ---
 
 ## 职业时间线

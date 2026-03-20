@@ -1,5 +1,16 @@
 # Matthias Baesken
 
+> **GitHub**: [@MBaesken](https://github.com/MBaesken)
+> **Organization**: SAP (JVM Team)
+> **Role**: OpenJDK Member, JDK-Updates Reviewer
+> **Integrated PRs**: 515
+
+---
+
+## 概述
+
+Matthias Baesken 是 SAP JVM 团队的核心成员，OpenJDK Member 和 JDK-Updates Reviewer。他是 SapMachine (SAP 的 OpenJDK 发行版) 的活跃贡献者，专注于构建系统、跨平台支持和静态分析工具。他的工作涵盖 AIX、Linux (ppc64/ppc64le/aarch64)、Windows 和 macOS 等多个平台，为 JDK 的跨平台兼容性和构建质量做出重要贡献。截至 2026 年 3 月，他已有 **515 个 Integrated PRs**。
+
 ## Basic Information
 
 | Field | Value |
@@ -7,15 +18,31 @@
 | **Name** | Matthias Baesken |
 | **Current Organization** | SAP (JVM Team) |
 | **GitHub** | [@MBaesken](https://github.com/MBaesken) |
-| **Repositories** | 18 public repositories |
 | **Email** | mbaesken@openjdk.org, matthias.baesken@sap.com |
 | **OpenJDK** | [@mbaesken](https://openjdk.org/census#mbaesken) |
 | **Role** | OpenJDK Member, JDK-Updates Reviewer |
-| **PRs** | [514 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AMBaesken+is%3Aclosed+label%3Aintegrated) |
+| **PRs** | [515 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AMBaesken+is%3Aclosed+label%3Aintegrated) |
 | **Primary Areas** | Build System, Cross-Platform, AIX, Windows, Linux, Static Analyzers |
 | **SapMachine** | Active contributor to SAP's OpenJDK distribution |
 
 > **数据来源**: [GitHub](https://github.com/MBaesken), [OpenJDK Wiki](https://wiki.openjdk.org/display/Build/Supported+Build+Platforms), [OpenJDK 邮件列表](https://mail.openjdk.org/pipermail/jdk-updates-dev/)
+
+### 最近 10 个 Integrated PRs (2026 年 2-3 月)
+
+| PR # | Issue | 标题 | 日期 |
+|------|-------|------|------|
+| #30220 | 8379802 | [AIX] unify DL_info struct and put it into a single header | Mar 14, 2026 |
+| #30168 | 8379416 | AIX build fails if system (not GNU) date tool is in PATH | Mar 11, 2026 |
+| #30148 | 8379425 | Windows and macOS should not allow unsupported headless-only build | Mar 19, 2026 |
+| #30145 | 8379499 | [AIX] headless-only build of libjawt.so fails | Mar 10, 2026 |
+| #30071 | 8379202 | Support linktime-gc on Linux with clang | Mar 6, 2026 |
+| #30032 | 8378836 | Enable linktime-gc by default on Linux ppc64le | Mar 4, 2026 |
+| #29953 | 8378823 | AIX build fails after zlib updated by JDK-8378631 | Feb 27, 2026 |
+| #29878 | 8377880 | Enable unused function warnings in hotspot with clang too | Feb 25, 2026 |
+| #29877 | 8378347 | AIX version checks for 7.1 and 5.X are obsolete | Feb 24, 2026 |
+| #29757 | 8378098 | Problem list compiler/vectorization/TestVectorAlgorithms.java on AIX and Linux s390x | Feb 18, 2026 |
+
+> **观察**: 最近工作集中在 **AIX 平台支持**、**linktime-gc 优化** 和 **构建系统改进**
 
 ## Contribution Overview
 
