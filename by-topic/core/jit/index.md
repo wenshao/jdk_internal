@@ -235,6 +235,11 @@ Level 4: C2 (深度优化)
 - [诊断工具](diagnostics.md) - 调试和性能分析
   - 编译日志、JFR、jhsdb
   - Ideal Graph 可视化
+- [IGV 实战教程](igv-tutorial.md) - Ideal Graph Visualizer 使用指南
+  - 安装和配置
+  - 导出和查看编译图
+  - 分析优化阶段
+  - 实战案例
 
 ### 实战指南
 
