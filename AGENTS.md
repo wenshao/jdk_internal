@@ -406,7 +406,7 @@ curl "https://api.github.com/search/issues?q=repo:openjdk/jdk+author:{username}+
 | **主要领域** | xxx |
 | **平均合入时间** | x.x 天 |
 
-> **统计来源**: [GitHub Integrated PRs](链接)
+> **统计来源**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+is%3Aclosed+label%3Aintegrated)
 
 ### Integrated PRs 统计
 
