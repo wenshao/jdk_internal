@@ -2,260 +2,417 @@
 
 > **GitHub**: [@naotoj](https://github.com/naotoj)
 > **Inside.java**: [NaotoSato](https://inside.java/u/NaotoSato/)
-> **Organization**: Oracle
+> **Organization**: Oracle (Java Platform Group)
+> **Location**: San Jose, California
 
 ---
 
 ## 概述
 
-Naoto Sato 是 Oracle Java Platform Group 的工程师，专注于 JDK 核心库，特别是国际化 (i18n) 方面。他是 Unicode 和 CLDR (Common Locale Data Repository) 更新的主要负责人，在 System.console() 改进、时区处理和字符编码方面做出重要贡献。
+Naoto Sato 是 Oracle Java Platform Group 的**首席技术工程师 (Principal Member of Technical Staff)**，专注于 JDK 核心库的**国际化 (i18n)** 和**本地化** 功能。他是 Java UTF-8 标准化的重要推动者，作为 **6 个 JEP 的负责人**，彻底改变了 Java 的字符编码和本地化处理方式。
+
+**教育背景**: 东京工业大学精密机械系统工程硕士 (M. Engineering)
+
+**主要成就**:
+- JEP 127/128: JDK 8 国际化基础架构
+- JEP 226/252: JDK 9 CLDR 集成
+- JEP 400: JDK 18 UTF-8 默认编码
+- JEP draft 8344154: JSON 便捷方法 (当前进行中)
 
 ---
 
-## Basic Information
+## 基本信息
 
-| Attribute | Value |
-|-----------|-------|
-| **Name** | Naoto Sato |
-| **Current Organization** | Oracle America |
-| **Team** | Java Platform Group |
-| **GitHub** | [@naotoj](https://github.com/naotoj) (24 followers, 22 repositories) |
+| 属性 | 值 |
+|------|-----|
+| **姓名** | Naoto Sato |
+| **当前组织** | Oracle America, Inc. |
+| **团队** | Java Platform Group |
+| **职位** | Engineer / Principal Member of Technical Staff |
+| **GitHub** | [@naotoj](https://github.com/naotoj) |
 | **Twitter** | [@naotoj](https://twitter.com/naotoj) |
+| **Bluesky** | [@naotoj.bsky.social](https://bsky.app/profile/naotoj.bsky.social) |
 | **OpenJDK** | [@naoto](https://openjdk.org/census#naoto) |
-| **Role** | OpenJDK Member, JDK Reviewer, i18n Lead |
-| **PRs** | [273 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Anaotoj+is%3Aclosed+label%3Aintegrated) |
-| **Primary Areas** | Unicode, Internationalization, Console, TimeZone |
-| **Email** | naoto@openjdk.org |
+| **角色** | OpenJDK Member, JDK Reviewer, i18n Lead |
+| **邮件** | naoto@openjdk.org, naoto.sato@oracle.com |
+| **专长** | Unicode, Internationalization, Charset, Console, TimeZone |
 
-> **数据来源**: [Inside.java](https://inside.java/u/NaotoSato/), [GitHub](https://github.com/naotoj), [OpenJDK 邮件列表](https://mail.openjdk.org/archives/list/build-dev@openjdk.org/)
+---
 
-## Contribution Overview
+## 职业经历
 
-### By Category
+### Sun Microsystems (2000-2010)
 
-| Category | Count | Description |
-|----------|-------|-------------|
-| Unicode/CLDR Updates | 8 | Unicode 17.0, CLDR 47/48 updates |
-| Console Improvements | 10 | System.console() enhancements, encoding |
-| TimeZone | 8 | Time zone updates, deprecation warnings |
-| Locale/Charset | 12 | Locale processing, charset handling |
-| Date/Time | 5 | Instant parsing, Calendar fixes |
-| Character/Emoji | 5 | Unicode block, emoji methods |
+- **职位**: Software Engineer
+- **部门**: Java & Developer Platforms Group
+- **工作**: Java 国际化 (i18n) 库开发
+- **地点**: 加利福尼亚州
 
-### Key Areas of Expertise
+### Oracle (2010-至今)
 
-- **Unicode Standards**: Unicode 17.0, CLDR updates
-- **Console API**: System.console() improvements, charset handling
-- **TimeZone**: Time zone data updates, deprecation handling
-- **Character**: Unicode blocks, emoji support
-- **Locale Data**: COMPAT removal, UTF-8 resources
+- **职位**: Principal Member of Technical Staff
+- **部门**: Java Platform Group
+- **专注**: JDK 核心库，国际化与本地化
+- **地点**: 加利福尼亚州圣何塞 / 德克萨斯州奥斯汀
 
-## Complete PR List
+### IBM Japan
 
-| Issue | Title | PR Link |
-|-------|-------|---------|
-| 8372117 | Correct the misleading comment in Character.UnicodeBlock | [PR]([需要补充 PR 链接]) |
-| 8346944 | Update Unicode Data Files to 17.0.0 | [PR]([需要补充 PR 链接]) |
-| 8346947 | Update ICU4J to Version 78.1 | [PR]([需要补充 PR 链接]) |
-| 8371339 | Illegal pattern char 'B' with locale.providers as HOST on macOS for Taiwanese | [PR]([需要补充 PR 链接]) |
-| 8354548 | Update CLDR to Version 48.0 | [PR]([需要补充 PR 链接]) |
-| 8369184 | SimpleTimeZone equals() Returns True for Unequal Instances with Different hashCode Values | [PR]([需要补充 PR 链接]) |
-| 8368845 | x-IBM930 uses incorrect character for Hex 42 60 | [PR]([需要补充 PR 链接]) |
-| 8368328 | CompactNumberFormat.clone does not produce independent instances | [PR]([需要补充 PR 链接]) |
-| 8366261 | Provide utility methods for sun.security.util.Password | [PR]([需要补充 PR 链接]) |
-| 8367021 | Regression in LocaleDataTest refactoring | [PR]([需要补充 PR 链接]) |
-| 8366517 | Refine null locale processing of ctor/factory methods in Date/DecimalFormatSymbols | [PR]([需要补充 PR 链接]) |
-| 8366375 | Collator example for SECONDARY uses wrong code point | [PR]([需要补充 PR 链接]) |
-| 8364752 | java.time.Instant should be able to parse ISO 8601 offsets of the form HH:mm:ss | [PR]([需要补充 PR 链接]) |
-| 8361972 | Clarify the condition of System.console() about standard input/output | [PR]([需要补充 PR 链接]) |
-| 8363972 | Lenient parsing of minus sign pattern in DecimalFormat/CompactNumberFormat | [PR]([需要补充 PR 链接]) |
-| 8361613 | System.console() should only be available for interactive terminal | [PR]([需要补充 PR 链接]) |
-| 8361717 | Refactor Collections.emptyList() in Locale related classes | [PR]([需要补充 PR 链接]) |
-| 8361519 | Obsolete Unicode Scalar Value link in Character class | [PR]([需要补充 PR 链接]) |
-| 8360554 | Use the title from the JSON RFC for the @spec tag | [PR]([需要补充 PR 链接]) |
-| 8360045 | StringTokenizer.hasMoreTokens() throws NPE after nextToken(null) | [PR]([需要补充 PR 链接]) |
-| 8359732 | Make standard i/o encoding related system properties StaticProperty | [PR]([需要补充 PR 链接]) |
-| 8358819 | The first year is not displayed correctly in Japanese Calendar | [PR]([需要补充 PR 链接]) |
-| 8358734 | Remove JavaTimeSupplementary resource bundles | [PR]([需要补充 PR 链接]) |
-| 8358626 | Emit UTF-8 CLDR resources | [PR]([需要补充 PR 链接]) |
-| 8358158 | test/jdk/java/io/Console/CharsetTest.java failing with NoClassDefFoundError | [PR]([需要补充 PR 链接]) |
-| 8357882 | Use UTF-8 encoded data in LocaleDataTest | [PR]([需要补充 PR 链接]) |
-| 8357886 | Remove TimeZoneNames_* of the COMPAT locale data provider | [PR]([需要补充 PR 链接]) |
-| 8356985 | Use "stdin.encoding" in Console's read*() methods | [PR]([需要补充 PR 链接]) |
-| 8357075 | Remove leftover COMPAT locale data tests | [PR]([需要补充 PR 链接]) |
-| 8356822 | Refactor HTML anchor tags to javadoc in Charset | [PR]([需要补充 PR 链接]) |
-| 8356420 | Provide examples on wrapping System.in | [PR]([需要补充 PR 链接]) |
-| 8356450 | NPE in CLDRTimeZoneNameProviderImpl for tzdata downgrades | [PR]([需要补充 PR 链接]) |
-| 8356221 | Clarify Console.charset() method description | [PR]([需要补充 PR 链接]) |
-| 8355558 | SJIS.java test is always ignored | [PR]([需要补充 PR 链接]) |
-| 8355215 | Add @spec tags to Emoji related methods | [PR]([需要补充 PR 链接]) |
-| 8343157 | Examine large files for character encoding/decoding | [PR]([需要补充 PR 链接]) |
-| 8353118 | Deprecate the use of java.locale.useOldISOCodes system property | [PR]([需要补充 PR 链接]) |
-| 8351435 | Change the default Console implementation back to the built-in one in java.base | [PR]([需要补充 PR 链接]) |
-| 8352906 | stdout/err.encoding on Windows set by incorrect Win32 call | [PR]([需要补充 PR 链接]) |
-| 8352716 | (tz) Update Timezone Data to 2025b | [PR]([需要补充 PR 链接]) |
-| 8346948 | Update CLDR to Version 47.0 | [PR]([需要补充 PR 链接]) |
-| 8352628 | Refine Grapheme test | [PR]([需要补充 PR 链接]) |
-| 8351017 | ChronoUnit.MONTHS.between() not giving correct result when date is in February | [PR]([需要补充 PR 链接]) |
-| 8345213 | JVM Prefers /etc/timezone Over /etc/localtime on Debian 12 | [PR]([需要补充 PR 链接]) |
-| 8349873 | StackOverflowError after JDK-8342550 if -Duser.timezone= is set to deprecated zone id | [PR]([需要补充 PR 链接]) |
-| 8349254 | Disable "best-fit" mapping on Windows environment variables | [PR]([需要补充 PR 链接]) |
-| 8301875 | java.util.TimeZone.getSystemTimeZoneID uses C library default file mode | [PR]([需要补充 PR 链接]) |
-| 8347841 | Test fixes that use deprecated time zone IDs | [PR]([需要补充 PR 链接]) |
-| 8342550 | Log warning for using JDK1.1 compatible time zone IDs for future removal | [PR]([需要补充 PR 链接]) |
-| 8347146 | Convert IncludeLocalesPluginTest to use JUnit | [PR]([需要补充 PR 链接]) |
-| 8166983 | Remove old/legacy unused tzdata files | [PR]([需要补充 PR 链接]) |
-| 8175709 | DateTimeFormatterBuilder.appendZoneId() has misleading JavaDoc | [PR]([需要补充 PR 链接]) |
-| 8345668 | ZoneOffset.ofTotalSeconds performance regression | [PR]([需要补充 PR 链接]) |
-| 8346300 | Add @Test annotation to TCKZoneId.test_constant_OLD_IDS_POST_2024b test | [PR]([需要补充 PR 链接]) |
+- **职位**: Globalization Team
+- **工作**: Java 国际化与本地化
 
-> **JBS Link**: https://bugs.openjdk.org/browse/JDK-[Issue Number]
+### 教育背景
 
-## Key Contributions
+- **学位**: M. Engineering (精密机械系统工程)
+- **学校**: 东京工业大学 (Tokyo Institute of Technology)
 
-### 1. Unicode 17.0 Update (JDK-8346944)
+---
 
-Updated Unicode Data Files to version 17.0.0.
+## 主要 JEP 贡献
+
+### JEP draft 8344154: Convenience Methods for JSON Documents (进行中)
+
+| 属性 | 值 |
+|------|-----|
+| **角色** | Author, Owner |
+| **合作者** | Paul Sandoz, Justin Lu, Stuart Marks |
+| **状态** | Draft → Submitted |
+| **说明** | 为 Java 提供 JSON 文档读写便捷方法，无需外部库 |
+
+**影响**: 终结 Java 对 JSON 库的依赖，提供内置 JSON 支持。
 
 ```java
-// Character.java - Updated Unicode version
-public static final byte MIN_RADIX = 2;
-public static final byte MAX_RADIX = 36;
-
-// Unicode 17.0.0 data
-private static final int UnicodeVersion = 17;
-private static final int UnicodeMinorVersion = 0;
-private static final int UnicodeUpdateVersion = 0;
-```
-
-### 2. CLDR 48.0 Update (JDK-8354548)
-
-Updated CLDR (Common Locale Data Repository) to version 48.0.
-
-```java
-// CLDRLocaleProviderAdapter.java
-public class CLDRLocaleProviderAdapter {
-    // CLDR 48.0 data paths
-    private static final String CLDR_VERSION = "48.0";
-    
-    // Updated locale data handling
-    @Override
-    public LocaleResources getLocaleResources(Locale locale) {
-        // Use UTF-8 encoded CLDR resources
-        return new CLDRResources(locale, CLDR_VERSION);
+// 计划中的 API
+String json = """
+    {
+        "name": "Alice",
+        "age": 30
     }
-}
+    """;
+JSON.parse(json); // 无需外部库
 ```
 
-### 3. Console Interactive Terminal Check (JDK-8361613)
+### JEP 400: UTF-8 by Default (JDK 18)
 
-Added check for interactive terminal in System.console().
+| 属性 | 值 |
+|------|-----|
+| **角色** | Author, Owner |
+| **合作者** | Alan Bateman |
+| **状态** | Closed / Delivered |
+| **发布版本** | JDK 18 |
+
+**影响**: 使 UTF-8 成为所有平台的默认字符集，解决了 Java 多年来的跨平台编码不一致问题。
 
 ```java
-// System.java
-public static Console console() {
-    // Only return Console for interactive terminals
-    if (!isInteractiveTerminal()) {
-        return null;
-    }
-    return cons;
-}
+// JDK 18 之前 - 平台依赖的默认编码
+FileReader reader = new FileReader("test.txt");
+// Windows: 使用 Cp1252
+// macOS: 使用 UTF-8
 
-private static boolean isInteractiveTerminal() {
-    // Check if stdin/stdout are connected to a terminal
-    return System.in != null && 
-           System.out != null &&
-           isTerminal(System.in) && 
-           isTerminal(System.out);
-}
+// JDK 18+ - 统一使用 UTF-8
+FileReader reader = new FileReader("test.txt");
+// 所有平台: UTF-8
 ```
 
-### 4. Instant ISO 8601 Parsing (JDK-8364752)
+### JEP 252: Use CLDR Locale Data by Default (JDK 9)
 
-Extended Instant parsing to support HH:mm:ss offset format.
+| 属性 | 值 |
+|------|-----|
+| **角色** | Author, Owner |
+| **合作者** | Alex Buckley |
+| **状态** | Closed / Delivered |
+| **发布版本** | JDK 9 |
+
+**影响**: 使用 Unicode CLDR 作为默认本地化数据源，提供更准确的本地化支持。
+
+### JEP 226: UTF-8 Property Resource Bundles (JDK 9)
+
+| 属性 | 值 |
+|------|-----|
+| **角色** | Owner |
+| **状态** | Closed / Delivered |
+| **发布版本** | JDK 9 |
+
+**影响**: 允许 ResourceBundle 使用 UTF-8 编码的属性文件，简化国际化资源管理。
+
+```properties
+# 之前需要 native2ascii 转换
+message=\u4f60\u597d\u4e16\u754c
+
+# 现在可以直接使用 UTF-8
+message=你好世界
+```
+
+### JEP 128: Unicode BCP 47 Locale Matching (JDK 8)
+
+| 属性 | 值 |
+|------|-----|
+| **角色** | Author |
+| **Owner** | Yuka Kamiya |
+| **状态** | Closed / Delivered |
+| **发布版本** | JDK 8 |
+
+**影响**: 实现 Unicode LDML 规范的 BCP 47 语言标签匹配。
 
 ```java
-// DateTimeFormatter.java - ISO_INSTANT pattern
-static final String ISO_INSTANT_PATTERN = 
-    "yyyy-MM-dd'T'HH:mm:ss[.SSSSSSSSS][.SSSSSS][.SSS]" +
-    "[XXX][XX][X][HH:mm:ss]";
+// BCP 47 语言范围匹配
+List<Locale> locales = List.of(
+    Locale.forLanguageTag("ja-JP"),
+    Locale.forLanguageTag("en-US")
+);
 
-// Instant.java
-public static Instant parse(CharSequence text) {
-    // Now supports ISO 8601 offsets of the form HH:mm:ss
-    // e.g., "2024-01-15T10:30:00+01:00:00"
-    return DateTimeFormatter.ISO_INSTANT.parse(text, Instant::from);
-}
+LanguageRange range = new LanguageRange("ja-JP");
+Locale.filter(range, locales); // 匹配 ja-JP
 ```
 
-### 5. TimeZone Deprecation Warning (JDK-8342550)
+### JEP 127: Improve Locale Data Packaging and Adopt Unicode CLDR Data (JDK 8)
 
-Added warning for JDK1.1 compatible time zone IDs.
+| 属性 | 值 |
+|------|-----|
+| **角色** | Owner |
+| **状态** | Closed / Delivered |
+| **发布版本** | JDK 8 |
+
+**影响**: 改进本地化数据打包，采用 Unicode CLDR 数据，减少堆内存占用。
+
+---
+
+## 核心技术贡献
+
+### 1. CompactNumberFormat 实现 (JDK 11)
+
+- **JDK-8177552**: Compact Number Formatting support
+- **JDK-8222756**: Plural support in CompactNumberFormat
+- **JDK-8232633**: 复数规则增强
+
+实现紧凑数字格式化，支持 locale 相关的缩写形式：
 
 ```java
-// TimeZone.java
-public static TimeZone getTimeZone(String ID) {
-    // Check for deprecated zone IDs
-    if (isDeprecatedZoneId(ID)) {
-        // Log warning for future removal
-        LOGGER.warning("Time zone ID \"" + ID + "\" is deprecated " +
-                       "and will be removed in a future release. " +
-                       "Use \"" + getReplacementZoneId(ID) + "\" instead.");
-    }
-    return getTimeZone0(ID);
-}
-
-private static boolean isDeprecatedZoneId(String id) {
-    // JDK1.1 compatible IDs like "EST", "MST", "HST"
-    return DEPRECATED_ZONE_IDS.contains(id);
-}
+NumberFormat fmt = NumberFormat.getCompactNumberInstance(Locale.US, NumberFormat.Style.SHORT);
+fmt.format(1000)   // "1K"
+fmt.format(1000000) // "1M"
+fmt.format(1000000000) // "1B"
 ```
 
-### 6. CompactNumberFormat Clone Fix (JDK-8368328)
+### 2. Console API 改进
 
-Fixed clone to produce independent instances.
+- **JDK-8308591**: JLine 作为默认 Console 提供者
+- **JDK-8298322**: Console 实现分离 (ProxyingConsole)
+- **JDK-8361613**: System.console() 仅对交互式终端可用
+- **JDK-8295803**: Console 在 jshell 等环境中可用
 
 ```java
-// CompactNumberFormat.java
-@Override
-public Object clone() {
-    CompactNumberFormat other = (CompactNumberFormat) super.clone();
-    // Deep copy arrays for independent instance
-    other.compactPatterns = compactPatterns.clone();
-    other.decimalPatterns = decimalPatterns.clone();
-    other.symbols = symbols.clone();
-    // Ensure independent DecimalFormatSymbols
-    other.decimalFormatSymbols = (DecimalFormatSymbols) decimalFormatSymbols.clone();
-    return other;
+// 交互式终端检查
+Console console = System.console();
+if (console != null) {
+    // 仅在真实终端环境中可用
+    String line = console.readLine("Enter input: ");
 }
 ```
 
-## Development Style
+### 3. Unicode 和 CLDR 更新
 
-### Code Quality Focus
+持续负责 Unicode 和 CLDR (Common Locale Data Repository) 版本更新：
 
-1. **Standards Compliance**: Unicode, CLDR, ISO 8601 adherence
-2. **Deprecation Management**: Careful deprecation with migration paths
-3. **Documentation**: Clear Javadoc with @spec tags
-4. **Performance**: Static property optimization
+| 版本 | JDK | 说明 |
+|------|-----|------|
+| Unicode 17.0 | JDK 26 | 最新 Unicode 标准 |
+| CLDR 48.0 | JDK 26 | 本地化数据更新 |
+| CLDR 47.0 | JDK 25 | 本地化数据更新 |
+| ICU4J 78.1 | JDK 26 | ICU 库更新 |
 
-### Commit Patterns
+### 4. TimeZone 数据维护
 
-- Groups Unicode/CLDR updates together
-- Platform-specific fixes (Windows, macOS, Linux)
-- Test infrastructure improvements
-- Documentation enhancements
+- **JDK-8352716**: 更新时区数据到 2025b
+- **JDK-8342550**: 对 JDK1.1 兼容时区 ID 发出弃用警告
+- **JDK-8166983**: 移除旧版/遗留 tzdata 文件
 
-### Testing Approach
+```java
+// 弃用的时区 ID
+TimeZone.getTimeZone("EST"); // 警告: 已弃用
+TimeZone.getTimeZone("America/New_York"); // 推荐使用
+```
 
-- Locale data validation
-- Time zone transition testing
-- Character encoding verification
-- Console behavior testing
+### 5. Locale 和 Charset 改进
 
-## Related Links
+- **JDK-8353118**: 弃用 java.locale.useOldISOCodes 系统属性
+- **JDK-8358626**: 生成 UTF-8 编码的 CLDR 资源
+- **JDK-8357886**: 移除 COMPAT locale data provider 的 TimeZoneNames_*
+- **JDK-8301971**: 使 JDK 源代码使用 UTF-8
 
+### 6. System.out/err 编码改进
+
+- **JDK-8352906**: 修复 Windows 上 stdout/err.encoding 设置
+- **JDK-8359732**: 将标准 I/O 编码相关系统属性设为 StaticProperty
+- **JDK-8356985**: Console 的 read*() 方法使用 stdin.encoding
+
+### 7. DateTime API 增强
+
+- **JDK-8364752**: java.time.Instant 支持 ISO 8601 的 HH:mm:ss 偏移格式
+- **JDK-8351017**: 修复 ChronoUnit.MONTHS.between() 在二月的计算问题
+
+---
+
+## 近期动态 (2024-2025)
+
+### 2025 年工作
+
+- **JEP draft 8344154**: JSON 便捷方法 - Owner，提交状态
+- **JDK-8358626**: 生成 UTF-8 编码的 CLDR 资源 (6月)
+- **JDK-8175709**: DateTimeFormatterBuilder.appendZoneId() JavaDoc 修复 (1月)
+- **2025-12**: 撤回 Locale Enhancement Project 赞助
+
+### 2024 年工作
+
+- **JDK-8308108**: 支持 Unicode 扩展的排序设置
+- **JDK-8318761**: MessageFormat 模式支持增强
+- **JDK-8317265**: ListFormat::format 规范改进
+- **JDK-8301991**: 将 l10n 属性资源包转换为 UTF-8 原生格式
+
+### 邮件列表活跃度
+
+在 i18n-dev 邮件列表中持续活跃：
+- 2025-06: RFR: 8358626 UTF-8 CLDR resources
+- 2025-01: RFR: 8175709 DateTimeFormatterBuilder JavaDoc
+- 2024: 多个 Collation 和 MessageFormat 相关 RFC
+
+---
+
+## 社区贡献与演讲
+
+### Unicode Conference 演讲
+
+Naoto Sato 是 International Unicode Conference (IUC) 的常驻演讲者：
+
+| 会议 | 主题 | 合作者 |
+|------|------|--------|
+| IUC 31 | New Internationalization Features of the Java Platform | Craig Cummings |
+| IUC 30 | Java Internationalization Updates | - |
+| IUC 29 | XML Data Handling and Internationalization | - |
+| IUC 28 | Java i18n Best Practices | - |
+| IUC 26 | New Internationalization Features of the Java(TM) Platform | Craig Cummings |
+| IUC 22 | Thai and Hindi Support in Sun's Java 2 Runtime Environment | - |
+
+### Inside.java Podcast
+
+- **Episode 23** (2022-03-22): "Java 18 is Here!"
+  - 讨论 JEP 400: UTF-8 by Default
+  - [收听链接](https://inside.java/2022/03/22/podcast-023/)
+
+### 博客文章
+
+- **"JEP 400 and the Default Charset"** (2021-10-04)
+  - 详细解释 UTF-8 成为默认字符集的背景和影响
+  - [文章链接](https://inside.java/2021/10/04/the-default-charset-jep400/)
+
+---
+
+## 贡献统计
+
+### OpenJDK PR 统计
+
+| 指标 | 数值 |
+|------|------|
+| **GitHub PRs** | 273+ 已合并 |
+| **主要领域** | i18n, Unicode, CLDR, Console, TimeZone |
+| **活跃时间** | 2000 - 至今 |
+
+### 按类别贡献
+
+| 类别 | 数量 | 描述 |
+|------|------|------|
+| Unicode/CLDR 更新 | 8+ | Unicode 17.0, CLDR 47/48, ICU4J 更新 |
+| Console 改进 | 10+ | System.console() 增强, 编码处理 |
+| TimeZone | 8+ | 时区数据更新, 弃用警告 |
+| Locale/Charset | 12+ | Locale 处理, 字符集处理 |
+| Date/Time | 5+ | Instant 解析, Calendar 修复 |
+| Character/Emoji | 5+ | Unicode 块, emoji 方法 |
+
+---
+
+## 开发风格
+
+### 代码质量关注点
+
+1. **标准合规性**: 严格遵循 Unicode、CLDR、ISO 8601 等标准
+2. **弃用管理**: 仔细规划弃用策略，提供迁移路径
+3. **文档完善**: 清晰的 Javadoc 和 @spec 标签
+4. **性能优化**: Static property 优化等性能改进
+
+### 提交模式
+
+- 将 Unicode/CLDR 更新分组处理
+- 平台特定修复 (Windows, macOS, Linux)
+- 测试基础设施改进
+- 文档增强
+
+### 测试方法
+
+- Locale 数据验证
+- 时区转换测试
+- 字符编码验证
+- Console 行为测试
+
+---
+
+## 主要 Bug 修复精选
+
+| Issue | 标题 | 影响 |
+|-------|------|------|
+| 8372117 | Character.UnicodeBlock 注释修正 | 文档准确性 |
+| 8346944 | 更新 Unicode 数据文件到 17.0.0 | Unicode 支持 |
+| 8346947 | 更新 ICU4J 到 78.1 | 国际化 |
+| 8354548 | 更新 CLDR 到 48.0 | 本地化数据 |
+| 8369184 | SimpleTimeZone equals() 修复 | 正确性 |
+| 8368328 | CompactNumberFormat.clone() 修复 | 线程安全 |
+| 8364752 | Instant 支持 HH:mm:ss 偏移 | API 兼容性 |
+| 8361972 | 明确 System.console() 条件 | 行为澄清 |
+| 8361613 | System.console() 交互式终端检查 | 用户体验 |
+| 8352906 | Windows stdout/err.encoding 修复 | 平台兼容性 |
+| 8352716 | 时区数据更新到 2025b | 时区准确性 |
+| 8342550 | JDK1.1 兼容时区 ID 弃用警告 | 迁移提示 |
+| 8301971 | 使 JDK 源代码 UTF-8 | 代码现代化 |
+
+---
+
+## 相关链接
+
+### 官方资料
 - [OpenJDK Profile](https://openjdk.org/people/naoto)
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=naoto)
+- [Inside.java Profile](https://inside.java/u/NaotoSato/)
+- [GitHub Profile](https://github.com/naotoj)
+
+### JEP 文档
+- [JEP draft 8344154: Convenience Methods for JSON Documents](https://openjdk.org/jeps/8344154)
+- [JEP 400: UTF-8 by Default](https://openjdk.org/jeps/400)
+- [JEP 252: Use CLDR Locale Data by Default](https://openjdk.org/jeps/252)
+- [JEP 226: UTF-8 Property Resource Bundles](https://openjdk.org/jeps/226)
+- [JEP 128: Unicode BCP 47 Locale Matching](https://openjdk.org/jeps/128)
+- [JEP 127: Improve Locale Data Packaging](https://openjdk.org/jeps/127)
+
+### 文章和演讲
+- [JEP 400 and the Default Charset](https://inside.java/2021/10/04/the-default-charset-jep400/)
+- [Inside Java Podcast Episode 23](https://inside.java/2022/03/22/podcast-023/)
+- [Unicode Conference Presentations](https://www.unicodeconference.org/)
+
+### 开发资源
+- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=naotoj)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20naoto)
-- [Unicode 17.0.0](https://www.unicode.org/versions/Unicode17.0.0/)
+- [i18n-dev Mailing List](https://mail.openjdk.org/mailman/listinfo/i18n-dev)
+
+---
+
+**Sources**:
+- [Inside.java - NaotoSato](https://inside.java/u/NaotoSato/)
+- [OpenJDK JEP draft 8344154: JSON Convenience Methods](https://openjdk.org/jeps/8344154)
+- [OpenJDK JEP 400: UTF-8 by Default](https://openjdk.org/jeps/400)
+- [OpenJDK JEP 252: Use CLDR Locale Data by Default](https://openjdk.org/jeps/252)
+- [OpenJDK JEP 226: UTF-8 Property Resource Bundles](https://openjdk.org/jeps/226)
+- [OpenJDK JEP 128: Unicode BCP 47 Locale Matching](https://openjdk.org/jeps/128)
+- [OpenJDK JEP 127: Improve Locale Data Packaging](https://openjdk.org/jeps/127)
+- [JEP 400 and the Default Charset - Inside.java](https://inside.java/2021/10/04/the-default-charset-jep400/)
+- [Inside Java Podcast Episode 23](https://inside.java/2022/03/22/podcast-023/)
+- [Unicode Conference Biographies](http://www.unicode.org/iuc/iuc28/biosabstracts/b030.html)
+- [OpenJDK i18n Group](https://openjdk.org/groups/i18n/)
+- [i18n-dev Mailing List - 2025-06](https://mail.openjdk.org/archives/list/i18n-dev@openjdk.org/2025/6/)
+- [i18n-dev Mailing List - JDK-8301991](https://mail.openjdk.org/pipermail/i18n-dev/2023-September/003977.html)
+- [ZoomInfo - Naoto Sato Profile](https://www.zoominfo.com/p/Naoto-Sato/186129467)
