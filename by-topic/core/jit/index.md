@@ -227,6 +227,8 @@ Level 4: C2 (深度优化)
 
 - [版本时间线](timeline.md) - JDK 1.0 到 JDK 26
 - [近期改进](recent-changes.md) - 2024-2025 更新
+- [C2 迭代速度分析](c2-pace-analysis.md) - C2是否"迭代慢"？事实核查
+- [C2 活跃度时间线](c2-activity-timeline.md) - 按月度展示PR、新功能、活跃度
 - [分层编译历史](tiered-compilation.md#分层编译的历史) - JDK 6 引入
 - [Graal JIT 演进](graal-jit.md#近期发展) - JDK 9+ 支持
 
