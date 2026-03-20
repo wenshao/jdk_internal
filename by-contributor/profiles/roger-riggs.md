@@ -3,12 +3,31 @@
 > **GitHub**: [@RogerRiggs](https://github.com/RogerRiggs)
 > **OpenJDK**: [@rriggs](https://openjdk.org/census#rriggs)
 > **Organization**: Oracle
+> **Location**: Burlington, Massachusetts, United States
 
 ---
 
 ## 概述
 
-Roger Riggs 是 Oracle 的资深 JDK 工程师，专注于核心库的健壮性和安全性改进。他对 JDK 的主要贡献包括 StringBuilder 健壮性增强和状态一致性检查。
+Roger Riggs 是 Oracle 的资深 JDK 工程师，专注于核心库的健壮性和安全性改进。他对 JDK 的主要贡献包括 StringBuilder 健壮性增强和状态一致性检查。他领导 client-libs 组，在 Java 客户端技术方面工作多年，从 Sun Microsystems 时代到 Oracle。
+
+> **数据来源**: [CFV Valhalla Committer](https://mail.openjdk.org/pipermail/valhalla-dev/2019-April/005567.html), [LinkedIn](https://www.linkedin.com/in/roger-riggs-1803061), [OpenJDK GB 2024](https://openjdk.org/poll/gb/2024/)
+
+---
+
+## 基本信息
+
+| 属性 | 值 |
+|------|-----|
+| **姓名** | Roger Riggs |
+| **当前组织** | Oracle |
+| **位置** | Burlington, Massachusetts, USA |
+| **GitHub** | [@RogerRiggs](https://github.com/RogerRiggs) |
+| **LinkedIn** | [roger-riggs-1803061](https://www.linkedin.com/in/roger-riggs-1803061) |
+| **OpenJDK** | [@rriggs](https://openjdk.org/census#rriggs) |
+| **角色** | Valhalla Committer (2019-04), client-libs Group Lead |
+| **主要领域** | Core Libraries, StringBuilder, Client Libraries |
+| **经验** | Sun Microsystems → Oracle (pre-dating OpenJDK) |
 
 ---
 
