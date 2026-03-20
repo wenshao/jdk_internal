@@ -14,8 +14,9 @@
 | **GitHub** | [@asotona](https://github.com/asotona) |
 | **OpenJDK** | [@asotona](https://openjdk.org/census#asotona) |
 | **LinkedIn** | [sotona](https://cz.linkedin.com/in/sotona) |
-| **角色** | JDK Committer |
-| **主要领域** | Class File API, 字节码处理, javac |
+| **角色** | JDK Committer, Amber Committer |
+| **主要领域** | Class File API, 字节码处理, javac, Project Babylon |
+| **经验** | 25+ years Java engineer |
 | **活跃时间** | 2020 - 至今 |
 | **Integrated PRs** | 30+ |
 | **Git Commits (master)** | 59 (ClassFile API 相关) |
@@ -225,6 +226,7 @@ Adam Sotona 是 Class File API 的主要实现者，负责将这个 API 从内�
 | **GitHub** | [@asotona](https://github.com/asotona) |
 | **OpenJDK Census** | [@asotona](https://openjdk.org/census#asotona) |
 | **LinkedIn** | [sotona](https://cz.linkedin.com/in/sotona) |
+| **CFV: Amber Committer** | [Nomination](https://mail.openjdk.org/archives/list/amber-dev@openjdk.org/thread/PV2DO5FLBYMLLLWBCPDF5EJYNNXS7X67/) |
 | **Location** | Prague, Czech Republic |
 | **Blog** | LinkedIn technical articles |
 
