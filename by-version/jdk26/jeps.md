@@ -1,6 +1,8 @@
 # JDK 26 JEP 汇总
 
 > JDK 26 包含的所有 JEP (JDK Enhancement Proposal)
+> **官方来源**: [OpenJDK JDK 26](https://openjdk.org/projects/jdk/26/)
+> **GA 日期**: 2026-03-17
 
 ---
 
@@ -10,42 +12,41 @@
 
 | JEP | 标题 | 状态 | 文档 |
 |-----|------|------|------|
-| JEP 530 | Primitive Types in Patterns | 预览 | [详情](/jeps/concurrency/jep-530.md) |
-| JEP 526 | Lazy Constants | 预览 | [详情](/jeps/concurrency/jep-526.md) |
-| JEP 512 | Compact Source Files | 正式 | [详情](/jeps/language/jep-512.md) |
-| JEP 511 | Module Import Declarations | 正式 | [详情](/jeps/language/jep-511.md) |
+| JEP 530 | Primitive Types in Patterns, instanceof, and switch | 预览 (第4次) | [详情](https://openjdk.org/jeps/530) |
+| JEP 526 | Lazy Constants | 预览 (第2次) | [详情](https://openjdk.org/jeps/526) |
+| JEP 500 | Prepare to Make Final Mean Final | 正式 | [详情](https://openjdk.org/jeps/500) |
 
 ### 性能
 
 | JEP | 标题 | 影响 | 文档 |
 |-----|------|------|------|
-| JEP 522 | G1 GC Throughput | +10-20% | [详情](/jeps/gc/jep-522.md) |
-| JEP 521 | Generational Shenandoah | -30% pause | [详情](/jeps/gc/jep-521.md) |
-| JEP 519 | Compact Object Headers | -16% heap | [详情](/jeps/gc/jep-519.md) |
-| JEP 514 | AOT Ergonomics | 更快启动 | [详情](/jeps/performance/jep-514.md) |
-| JEP 515 | AOT Method Profiling | 更好性能 | [详情](/jeps/performance/jep-515.md) |
+| JEP 522 | G1 GC: Improve Throughput by Reducing Synchronization | +10-20% | [详情](https://openjdk.org/jeps/522) |
+| JEP 516 | Ahead-of-Time Object Caching with Any GC | 更快启动 | [详情](https://openjdk.org/jeps/516) |
+| JEP 529 | Vector API (Eleventh Incubator) | 孵化 (第11次) | [详情](https://openjdk.org/jeps/529) |
 
 ### 网络
 
 | JEP | 标题 | 状态 | 文档 |
 |-----|------|------|------|
-| JEP 517 | HTTP/3 | 正式 | [详情](/jeps/network/jep-517.md) |
+| JEP 517 | HTTP/3 for the HTTP Client API | 正式 | [详情](https://openjdk.org/jeps/517) |
 
 ### 并发
 
 | JEP | 标题 | 状态 | 文档 |
 |-----|------|------|------|
-| JEP 525 | Structured Concurrency | 预览 | [详情](/jeps/concurrency/jep-525.md) |
-| JEP 506 | Scoped Values | 预览 | [详情](/jeps/concurrency/jep-506.md) |
-| JEP 502 | Stable Values | 正式 | [详情](/jeps/performance/jep-502.md) |
+| JEP 525 | Structured Concurrency (Sixth Preview) | 预览 (第6次) | [详情](https://openjdk.org/jeps/525) |
 
 ### 安全
 
-| JEP | 标题 | 文档 |
-|-----|------|------|
-| JEP 510 | KDF API | [详情](/jeps/security/jep-510.md) |
-| JEP 500 | Make Final Mean Final | [详情](/jeps/removed/jep-500.md) |
-| JEP 470 | PEM Encodings | [详情](/jeps/security/jep-470.md) |
+| JEP | 标题 | 状态 | 文档 |
+|-----|------|------|------|
+| JEP 524 | PEM Encodings of Cryptographic Objects (Second Preview) | 预览 (第2次) | [详情](https://openjdk.org/jeps/524) |
+
+### 移除功能
+
+| JEP | 标题 | 状态 | 文档 |
+|-----|------|------|------|
+| JEP 504 | Remove the Applet API | 正式 | [详情](https://openjdk.org/jeps/504) |
 
 ---
 
@@ -55,7 +56,21 @@
 |------|------|
 | 正式 | 包含在 JDK 26 中，可生产使用 |
 | 预览 | 包含在 JDK 26 中，需要 `--enable-preview` |
-| 提议 | 计划包含，可能延后 |
+| 孵化 | 包含在 JDK 26 中，API 可能变化 |
+
+---
+
+## 与 JDK 25 的 JEP 差异
+
+以下 JEP 在 JDK 25 中，**不在** JDK 26 中：
+
+| JEP | 标题 | 目标版本 |
+|-----|------|----------|
+| JEP 511 | Module Import Declarations | JDK 25 |
+| JEP 512 | Compact Source Files and Instance Main Methods | JDK 25 |
+| JEP 519 | Compact Object Headers | JDK 25 |
+| JEP 521 | Generational Shenandoah | JDK 25 |
+| JEP 510 | Key Derivation Function API | JDK 25 |
 
 ---
 
