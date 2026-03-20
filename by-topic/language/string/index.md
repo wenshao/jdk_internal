@@ -236,3 +236,25 @@ src/hotspot/share/gc/
 - [JEP 378: Text Blocks](https://openjdk.org/jeps/378)
 - [JEP 430: String Templates](https://openjdk.org/jeps/430)
 - [OpenJDK String 源码](https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/lang/String.java)
+
+---
+
+## 核心贡献者
+
+> **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
+> **统计时间**: 2026-03-20
+
+### String 处理 (按 Git 提交数)
+
+| 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
+|------|--------|--------|------|----------|
+| 1 | Claes Redestad | 101 | Oracle | Compact Strings, 启动优化 |
+| 2 | Mandy Chung | 54 | Oracle | String 模板 |
+| 3 | Chen Liang | 35 | Oracle | invokedynamic, ClassFile |
+| 4 | Jim Laskey | 29 | Oracle | String Templates (JEP 430) |
+| 5 | Joe Darcy | 20 | Oracle | Text Blocks (JEP 378) |
+| 6 | Jorn Vernee | 19 | Oracle | Foreign Memory |
+| 7 | Paul Sandoz | 17 | Oracle | 字符串格式化 |
+| 8 | Pavel Rappo | 15 | Oracle | 文档, 工具 |
+| 9 | Maurizio Cimadamore | 15 | Oracle | javac, 模板 |
+| 10 | Shaojin Wen | 14 | Alibaba | 性能优化 |

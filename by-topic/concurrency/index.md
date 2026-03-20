@@ -98,21 +98,32 @@ Java 序列化从 JDK 1.0 到 JDK 26 的完整演进。
 
 ## 核心贡献者
 
-### 并发编程
+> **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
+> **统计时间**: 2026-03-20
 
-| 贡献者 | 公司/机构 | 主要贡献 |
-|--------|----------|----------|
-| **Doug Lea** | SUNY Oswego | JSR-166 (并发工具), ConcurrentHashMap |
-| **Ron Pressler** | Oracle | Virtual Threads (JEP 444) |
-| **Alan Bateman** | Oracle | NIO、NIO.2 (JSR 51, JSR 203) |
-| **David Holmes** | Oracle | JSR-166 规范负责人 |
+### 并发编程 (按 Git 提交数)
 
-### HTTP/网络
+| 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
+|------|--------|--------|------|----------|
+| 1 | Doug Lea | 65 | SUNY Oswego | JSR-166 (并发工具), ConcurrentHashMap |
+| 2 | Alan Bateman | 43 | Oracle | NIO、NIO.2 (JSR 51, JSR 203) |
+| 3 | Viktor Klang | 29 | Lightbend/Oracle | CompletableFuture |
+| 4 | Martin Buchholz | 13 | Google | 并发工具, 算法 |
+| 5 | Stuart Marks | 8 | Oracle | 集合, 并发 |
+| 6 | David Holmes | 6 | Oracle | JSR-166 规范负责人 |
+| 7 | Roger Riggs | 4 | Oracle | 工具类, 集合 |
 
-| 贡献者 | 公司 | 主要贡献 |
-|--------|------|----------|
-| **Michael McMahon** | Oracle | HTTP Client (JEP 321) |
-| **Chris Newland** | Oracle | HTTP/2, HTTP/3 支持 |
+### HTTP/网络 (按 Git 提交数)
+
+| 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
+|------|--------|--------|------|----------|
+| 1 | Daniel Fuchs | 95 | Oracle | HTTP Client, HTTP/3 |
+| 2 | Michael McMahon | 19 | Oracle | HTTP Client (JEP 321) |
+| 3 | Jaikiran Pai | 18 | Red Hat/Oracle | HTTP/2, 网络层 |
+| 4 | Volkan Yazıcı | 17 | Oracle | HTTP/3, WebSocket |
+| 5 | Chris Hegarty | 17 | Oracle | HTTP Client 基础 |
+| 6 | Daniel Jeliński | 16 | Oracle | HTTP/2, 连接池 |
+| 7 | Conor Cleary | 14 | Oracle | HTTP/3 (QUIC) |
 
 ---
 

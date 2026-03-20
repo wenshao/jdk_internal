@@ -127,23 +127,34 @@ JVM 参数、调优工具和监控技术从 JDK 1.0 到 JDK 26 的演进。
 
 ## 核心贡献者
 
-### GC 团队
+> **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
+> **统计时间**: 2026-03-20
 
-| 贡献者 | 公司 | 主要贡献 |
-|--------|------|----------|
-| **Per Liden** | Oracle | ZGC 创始人, G1 优化 |
-| **Erik Österlund** | Oracle | ZGC 核心开发者 |
-| **Stefan Karlsson** | Oracle | 分代 ZGC (JEP 439) |
-| **William Kemper** | Red Hat | 分代 Shenandoah (JEP 429) |
-| **Thomas Schatzl** | Oracle | G1 GC 维护者 |
+### GC 团队 (按 Git 提交数)
 
-### JVM/性能团队
+| 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
+|------|--------|--------|------|----------|
+| 1 | Albert Mingkun Yang | 681 | Oracle | G1 GC, 内存管理 |
+| 2 | Thomas Schatzl | 674 | Oracle | G1 GC 维护者 |
+| 3 | Aleksey Shipilev | 324 | Oracle | 性能基准, 内存 |
+| 4 | Zhengyu Gu | 252 | Oracle | JVM 运行时 |
+| 5 | Kim Barrett | 235 | Oracle | C++ 现代化 |
+| 6 | Stefan Karlsson | 229 | Oracle | 分代 ZGC (JEP 439) |
+| 7 | Per Lidén | 198 | Oracle | ZGC 创始人 |
+| 8 | Roman Kennke | 163 | Red Hat | Shenandoah GC |
+| 9 | William Kemper | 112 | Red Hat | 分代 Shenandoah (JEP 429) |
 
-| 贡献者 | 公司 | 主要贡献 |
-|--------|------|----------|
-| **John Rose** | Oracle | invokedynamic, Lambda |
-| **Vladimir Kozlov** | Oracle | JIT 编译器, aarch64 |
-| **Christian Thalinger** | Oracle | JIT 编译器 |
+### JVM/性能团队 (按 Git 提交数)
+
+| 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
+|------|--------|--------|------|----------|
+| 1 | Coleen Phillimore | 333 | Oracle | 类加载, 运行时 |
+| 2 | David Holmes | 201 | Oracle | 并发, 线程 |
+| 3 | Ioi Lam | 167 | Oracle | CDS, AOT |
+| 4 | Aleksey Shipilev | 123 | Oracle | 性能基准 |
+| 5 | Kim Barrett | 115 | Oracle | C++ 现代化 |
+| 6 | Thomas Stuefe | 112 | Oracle | 内存, 跨平台 |
+| 7 | Serguei Spitsyn | 107 | Oracle | JVMTI, JFR |
 
 ### 模块系统
 
