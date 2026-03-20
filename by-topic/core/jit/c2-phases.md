@@ -235,6 +235,14 @@ int p_y = 2;
 - 自动回收 (无 GC)
 - 更好的缓存局部性
 
+**相关 PR 分析**:
+| Issue | 标题 | 作者 | 说明 |
+|-------|------|------|------|
+| [JDK-8370405](/by-pr/8370/8370405.md) | MergeStores 在分配消除中被错误标量替换 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 逃逸分析 + MergeStore 交互 bug |
+| [JDK-8357913](/by-pr/8357/8357913.md) | StringCoding 添加 @Stable 注解 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 启用标量替换和循环展开 |
+| [JDK-8357690](/by-pr/8357/8357690.md) | CharacterDataLatin1 添加 @Stable 注解 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 启用标量替换优化 |
+| [JDK-8368172](/by-pr/8368/8368172.md) | DateTimePrintContext 不可变对象优化 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | JIT 逃逸分析优化 (+6-10%) |
+
 **参考资料**:
 - [HotSpot Escape Analysis Status](https://cr.openjdk.org/~cslucas/escape-analysis/EscapeAnalysis.html)
 - [JDConf 2024: Improving HotSpot Scalar Replacement](https://jdconf.com/2024/downloads/JDConf%20202024-Improving%20HotSpot%20Scalar%20Replacement-Soares.pdf)
@@ -287,17 +295,14 @@ for (int i = 0; i < 1024; i += 16) {
 **相关 PR 分析**:
 | Issue | 标题 | 作者 | 说明 |
 |-------|------|------|------|
+| [JDK-8340093](/by-pr/8340/8340093.md) | SuperWord 成本模型实现 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 智能判断向量化收益 |
+| [JDK-8332163](/by-pr/8332/8332163.md) | SuperWord VTransformGraph 重构 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 架构重构，为成本模型奠定基础 |
+| [JDK-8371146](/by-pr/8371/8371146.md) | C2 SuperWord 向量化优化 | [Hamlin Li](/by-contributor/profiles/hamlin-li.md) | 修复多个关键 bug |
 | [JDK-8334431](/by-pr/8333/8334431.md) | 修复 SuperWord Store-to-Load 转发失败 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 性能回归修复 |
 | [JDK-8344085](/by-pr/8344/8344085.md) | 改进小循环迭代计数的 SuperWord 向量化 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 小循环优化 |
 | [JDK-8328938](https://bugs.openjdk.org/browse/JDK-8328938) | SuperWord 大步长禁用 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 算法边界修复 |
 | [JDK-8324890](/by-pr/8324/8324890.md) | SuperWord VLoop 分析器重构 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 架构改进 |
 | [JDK-8333713](/by-pr/8333/8333713.md) | SuperWord 清理重命名 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 代码质量 |
-
-**近期改进 (JDK 23+)**:
-- **JDK-8340093**: SuperWord 成本模型 ([PR #20964](https://github.com/openjdk/jdk/pull/20964))
-  - 智能判断向量化收益
-  - 处理 shuffle/pack/unpack 操作的开销
-  - 优化归约 (reduction) 向量化
 
 **相关参数**:
 ```bash
