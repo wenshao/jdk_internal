@@ -2,6 +2,8 @@
 
 > 堆、栈、Metaspace、Compressed Oops 演进历程
 
+[← 返回核心平台](../)
+
 ---
 
 ## 快速概览
