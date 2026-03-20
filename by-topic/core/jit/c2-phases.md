@@ -1,0 +1,334 @@
+# C2 优化阶段详解
+
+> HotSpot C2 编译器的 15 个优化阶段完整解析
+
+[← 返回 JIT 编译](../)
+
+---
+
+## 完整编译流程
+
+```
+1. Parse Phase              解析字节码 → 控制流图
+2. PhaseIterGVN (第一次)     全局值编号
+3. PhaseIdealLoop (多轮)     循环优化
+4. PhaseCCP                 条件常量传播
+5. PhaseStringOpts           字符串优化
+6. PhaseEliminateNullChecks  空值检查消除
+7. PhaseEscapeAnalysis       逃逸分析
+8. PhaseScalarReplace        标量替换
+9. PhaseMacroExpand          宏扩展
+10. PhaseIterGVN (最终)      最终优化
+11. PhaseVector              向量化
+12. PhaseCFG                 控制流图构建
+13. PhaseChaitin             寄存器分配
+14. PhaseBlockLayout         基本块布局
+15. PhasePeephole/Output     窥孔优化/代码生成
+```
+
+---
+
+## Phase 1: Parse Phase
+
+**作用**: 将字节码解析为 Ideal Graph
+
+**关键操作**:
+- 字节码 → Ideal 节点图
+- 基础内联优化
+- 初始 GVN (Global Value Numbering)
+
+**源码位置**: `src/hotspot/share/opto/compile.cpp`
+
+**相关类**:
+- `GraphKit` - 图构建工具
+- `Parse` - 字节码解析器
+
+---
+
+## Phase 2: PhaseIterGVN (Iterative GVN)
+
+**作用**: 全局值编号，识别和消除冗余计算
+
+**关键优化**:
+- **常量折叠**: `2 + 3` → `5`
+- **公共子表达式消除**: `x + y` 复用
+- **类型特化**: 基于 profiling 的类型优化
+
+**工作原理**:
+```
+原始:          优化后:
+a = x + y      a = x + y
+b = x + y  →   b = a (复用)
+c = a * 2      c = a * 2
+```
+
+**相关 Bug**:
+- [JDK-8360035](https://bugs.openjdk.org/browse/JDK-8360035) - PhaseIterGVN 无限循环优化崩溃 (JDK 11)
+
+**参考资料**:
+- [Introduction to C2 - Part 2: GVN](https://eme64.github.io/blog/2024/12/24/Intro-to-C2-Part02.html)
+
+---
+
+## Phase 3: PhaseIdealLoop (循环优化)
+
+**作用**: 循环结构分析和优化 (执行 3+ 轮)
+
+**子优化阶段**:
+
+### 3.1 循环识别
+- 构建循环树
+- 识别归纳变量
+- 分析循环依赖
+
+### 3.2 Partial Peeling (部分剥离)
+```
+原始:                  剥离后:
+for (int i = 0;) {      if (rare) {
+  if (rare) check();      check();
+  body();                }
+}                       for (int i = 0;) {
+                          body();
+                        }
+```
+
+### 3.3 Full Peeling (完全剥离)
+- 完全展开循环体
+- 消除循环条件判断
+- 适用于小迭代次数
+
+### 3.4 Unswitching (条件外提)
+```
+原始:                  外提后:
+for (int i = 0;) {      if (cond) {
+  if (cond) {             for (int i = 0;) { a(); }
+    a();                } else {
+  } else {                for (int i = 0;) { b(); }
+    b();                }
+  }
+}
+```
+
+### 3.5 Unrolling (循环展开)
+```
+原始:          展开:
+for (i=0;i<4;)  a[0]; a[1];
+  a[i++]        a[2]; a[3];
+```
+
+### 3.6 Range Check Elimination
+- 数组边界检查消除
+- 基于循环分析的优化
+
+**源码位置**: `src/hotspot/share/opto/loopnode.cpp`, `loopopts.cpp`
+
+**参考资料**:
+- [OpenJDK Wiki: Loop optimizations](https://wiki.openjdk.org/spaces/HotSpot/pages/20415918/Loop+optimizations+in+Hotspot+Server+VM+Compiler+C2)
+- [Introduction to C2 - Part 4: Loop Optimizations](https://eme64.github.io/blog/2025/01/23/Intro-to-C2-Part04.html)
+
+---
+
+## Phase 4: PhaseCCP (Conditional Constant Propagation)
+
+**作用**: 条件常量传播
+
+**关键优化**:
+- 基于条件的常量传播
+- 死分支消除
+- 不可达代码移除
+
+**示例**:
+```
+原始:                  优化后:
+if (x > 5 && x < 10) {  if (false) {
+  ...                   ...  (死代码, 移除)
+}                      }
+```
+
+---
+
+## Phase 5: PhaseStringOpts
+
+**作用**: 字符串操作优化
+
+**关键优化**:
+- 字符串拼接优化
+- StringBuilder 转换
+- String.substring 优化 (JDK 7u6+)
+
+---
+
+## Phase 6: PhaseEliminateNullChecks
+
+**作用**: 空值检查消除
+
+**技术**:
+- 基于类型的空值检查消除
+- 基于控制流的空值检查消除
+- 隐式空值检查 (利用硬件异常)
+
+---
+
+## Phase 7 & 8: PhaseEscapeAnalysis & ScalarReplace
+
+**作用**: 逃逸分析和标量替换
+
+**逃逸分析**: 分析对象作用域
+- **No Escape**: 不逃逸，可完全优化
+- **Argument Escape**: 作为参数传递
+- **Global Escape**: 全局逃逸，无法优化
+
+**标量替换**: 对象字段拆分为独立变量
+```java
+// 原始
+class Point { int x, y; }
+Point p = new Point();
+p.x = 1; p.y = 2;
+
+// 标量替换后
+int p_x = 1;
+int p_y = 2;
+// (无对象分配)
+```
+
+**栈上分配**: 不逃逸对象分配在栈上
+- 自动回收 (无 GC)
+- 更好的缓存局部性
+
+**参考资料**:
+- [HotSpot Escape Analysis Status](https://cr.openjdk.org/~cslucas/escape-analysis/EscapeAnalysis.html)
+- [JDConf 2024: Improving HotSpot Scalar Replacement](https://jdconf.com/2024/downloads/JDConf%20202024-Improving%20HotSpot%20Scalar%20Replacement-Soares.pdf)
+
+---
+
+## Phase 9: PhaseMacroExpand
+
+**作用**: 宏节点扩展
+
+**关键操作**:
+- 锁消除 (Lock Elision)
+- 锁粗化 (Lock Coarsening)
+- 原子操作优化
+- Unsafe 操作内联
+
+---
+
+## Phase 10: PhaseIterGVN (最终)
+
+**作用**: 最终优化遍历
+
+**与第一次 IGVN 的区别**:
+- 基于前面优化的结果
+- 更激进的优化
+- 准备代码生成
+
+---
+
+## Phase 11: PhaseVector (SuperWord)
+
+**作用**: SIMD 向量化优化
+
+**向量化转换**:
+```java
+// 原始标量代码
+for (int i = 0; i < 1024; i++) {
+  a[i] = b[i] + c[i];
+}
+
+// 向量化后 (伪代码)
+for (int i = 0; i < 1024; i += 16) {
+  vector a = load(&b[i]);      // SIMD 加载 16 个元素
+  vector b = load(&c[i]);
+  vector result = a + b;        // SIMD 加法
+  store(&a[i], result);         // SIMD 存储
+}
+```
+
+**近期改进 (JDK 23+)**:
+- **JDK-8340093**: SuperWord 成本模型 ([PR #20964](https://github.com/openjdk/jdk/pull/20964))
+  - 智能判断向量化收益
+  - 处理 shuffle/pack/unpack 操作的开销
+  - 优化归约 (reduction) 向量化
+
+**相关参数**:
+```bash
+-XX:+UseSuperWord                 # 启用向量化
+-XX:MaxVectorSize=32               # 最大向量大小
+-XX:+TraceSuperWord               # 跟踪向量化决策
+```
+
+---
+
+## Phase 12-15: 代码生成阶段
+
+### Phase 12: PhaseCFG
+**作用**: 构建控制流图
+
+### Phase 13: PhaseChaitin
+**作用**: 寄存器分配 (图着色算法)
+- 构建干涉图
+- 图着色分配寄存器
+- Spilling (溢出到栈)
+
+### Phase 14: PhaseBlockLayout
+**作用**: 基本块布局优化
+- 热路径连续
+- 减少跳转
+
+### Phase 15: PhasePeephole / PhaseOutput
+**作用**: 窥孔优化和机器码生成
+- 局部模式匹配优化
+- 生成最终机器码
+
+---
+
+## 优化阶段顺序图
+
+```
+Parse
+   │
+   ├─────────────────────────────────────────┐
+   │                                         │
+   ▼                                         ▼
+Inline                                Initial GVN
+   │                                         │
+   ▼                                         │
+PhaseIterGVN ◄──────────────────────────────┘
+   │
+   ▼
+PhaseIdealLoop (多轮迭代)
+   │
+   ├─► Loop 1: Partial Peeling
+   ├─► Loop 2: Full Peeling
+   ├─► Loop 3: Unswitching
+   └─► Loop 4+: Unrolling
+   │
+   ▼
+PhaseCCP
+   │
+   ▼
+PhaseStringOpts ──► PhaseEliminateNullChecks
+   │
+   ▼
+PhaseEscapeAnalysis ──► PhaseScalarReplace
+   │
+   ▼
+PhaseMacroExpand
+   │
+   ▼
+PhaseIterGVN (最终)
+   │
+   ▼
+PhaseVector (SuperWord)
+   │
+   ▼
+PhaseCFG ──► PhaseChaitin ──► PhaseBlockLayout ──► Output
+```
+
+---
+
+## 相关链接
+
+- [VM 参数](../vm-parameters.md) - 编译器参数配置
+- [诊断工具](../diagnostics.md) - 如何观察优化阶段
+- [Emanuel's C2 Blog](https://eme64.github.io/blog/) - 详细技术分析
