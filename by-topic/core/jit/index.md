@@ -27,7 +27,7 @@ JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 9 ── JDK 17 ── JDK 21 ─�
 | **JDK 6** | 分层编译 | C1 + C2 组合 | [分层编译详解](tiered-compilation.md) |
 | **JDK 9** | Graal JIT | 实验性高性能 JIT | [Graal JIT](graal-jit.md) |
 | **JDK 17** | JIT 优化 | 编译器改进 | [近期改进](recent-changes.md) |
-| **JDK 21** | Record 支持 | 编译器优化 | - |
+| **JDK 21** | String Templates, Record Patterns | 模式匹配优化 | [近期改进](recent-changes.md) |
 | **JDK 23** | JIT 性能 | 编译吞吐量提升 | [近期改进](recent-changes.md) |
 | **JDK 26** | SuperWord 成本模型 | 智能向量化 | [SuperWord 向量化](superword.md) |
 

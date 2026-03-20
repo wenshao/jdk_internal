@@ -393,6 +393,13 @@ cat hs_err_pid.log | grep "Current CompileTask"
 
 ## 相关链接
 
-- [VM 参数](../vm-parameters.md) - 诊断参数配置
-- [C2 优化阶段](../c2-phases.md) - 诊断特定阶段
+- [VM 参数](vm-parameters.md) - 诊断参数配置
+- [C2 优化阶段](c2-phases.md) - 诊断特定阶段
 - [JVM 调优](../../jvm/) - 更多诊断工具
+
+### 贡献者
+
+| 贡献者 | 领域 | 组织 |
+|--------|------|------|
+| [Igor Veresov](/by-contributor/profiles/igor-veresov.md) | 编译器诊断 | Oracle |
+| [David Holmes](/by-contributor/profiles/david-holmes.md) | JVM 工具 | Oracle |

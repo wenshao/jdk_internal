@@ -11,9 +11,9 @@
 ```
 JDK 1.0 ─── JDK 1.3 ─── JDK 5 ─── JDK 6 ─── JDK 9 ─── JDK 17 ─── JDK 21 ─── JDK 23 ─── JDK 26
    │          │        │        │        │        │        │        │        │
-纯解释    C2       C1/C2   分层    Graal   JIT    Record  SuperWord  成本
-(慢启动)   Server   分离    编译    JIT     优化    支持    向量化    模型
-          (高性能)  编译    Tiered  (实验)  性能   (编译时) (正式)   (集成)
+纯解释    C2       C1/C2   分层    Graal   JIT    模式     SuperWord  成本
+(慢启动)   Server   分离    编译    JIT     优化    匹配     向量化    模型
+          (高性能)  编译    Tiered  (实验)  性能   优化     (正式)   (集成)
 ```
 
 ---
@@ -230,11 +230,13 @@ list.forEach(s -> System.out.println(s));
 
 ### JDK 14-16 (2020-2021)
 
-**Record 支持**
+**编译器改进**
 
-- 编译器识别 Record 类型
-- 优化构造器生成
-- 优化 accessor 方法
+- **JDK 14**: NullPointerException 增强 (JEP 358) - 更好的错误消息
+- **JDK 15**: 文本字符串 (JEP 378) - 编译时字符串优化
+- **JDK 16**: Pattern Matching for instanceof (JEP 394) - 编译器优化模式匹配
+
+**注意**: Record (JDK 14) 是语言特性，主要在 javac 编译器处理，不属于 JIT 运行时优化
 
 ---
 
