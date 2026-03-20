@@ -210,9 +210,26 @@ boolean hasAVX512 = features.hasFeature(CPUFeatures.Feature.AVX512F);
 
 ---
 
-### JDK 25+ (2025-09+)
+### JDK 26 (2026-03) - GA 已发布
 
-**预期**: 从 Incubator 毕业成为标准 API
+**继续孵化**
+
+**重要更新**:
+- **FFM API 集成**: 迁移数学库支持到 FFM API ([JDK-8353786](https://bugs.openjdk.org/browse/JDK-8353786))
+- **VectorShuffle + MemorySegments**: 支持与 MemorySegments 交互 ([JDK-8351993](https://bugs.openjdk.org/browse/JDK-8351993))
+- **Float16 增强**: 多项 Float16 重构和优化
+- **UMIN/UMAX 归约**: 无符号最小/最大归约支持 ([JDK-8362279](https://bugs.openjdk.org/browse/JDK-8362279))
+- **VectorShape 公开**: `largestShapeFor()` 方法公开访问 ([JDK-8356634](https://bugs.openjdk.org/browse/JDK-8356634))
+- **子字 gather 加载**: 重构子字 gather 加载 API ([JDK-8355563](https://bugs.openjdk.org/browse/JDK-8355563))
+
+---
+
+### JDK 27 (2026-09) - 开发中
+
+**预期改进**:
+- 继续 FFM API 深度集成
+- 更多平台支持优化
+- 性能增强
 
 ---
 

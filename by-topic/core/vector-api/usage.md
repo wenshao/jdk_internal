@@ -302,16 +302,38 @@ import java.lang.foreign.*;
 void processMemorySegment(MemorySegment segment) {
     VectorSpecies<Float> species = FloatVector.SPECIES_PREFERRED;
     long floatCount = segment.byteSize() / 4;
-    
+
     long i = 0;
     long bound = species.loopBound(floatCount);
-    
+
     for (; i < bound; i += species.length()) {
         FloatVector v = FloatVector.fromMemorySegment(
             species, segment, i * 4, ByteOrder.nativeOrder());
         // ... 处理 v ...
         v.intoMemorySegment(segment, i * 4, ByteOrder.nativeOrder());
     }
+}
+```
+
+### VectorShuffle 与 MemorySegment (JDK 26+)
+
+```java
+import java.lang.foreign.*;
+import jdk.incubator.vector.*;
+
+// JDK 26+: VectorShuffle 可以直接与 MemorySegment 交互
+void shuffleWithMemorySegment(MemorySegment segment) {
+    VectorSpecies<Integer> species = IntVector.SPECIES_256;
+    
+    // 从 MemorySegment 创建 Shuffle
+    VectorShuffle<Integer> shuffle = VectorShuffle.fromArray(species, segment, 0);
+    
+    // 应用 Shuffle
+    IntVector v = IntVector.fromArray(species, array, 0);
+    IntVector shuffled = v.rearrange(shuffle);
+    
+    // 将 Shuffle 存储到 MemorySegment
+    shuffle.intoMemorySegment(segment, 0, ByteOrder.nativeOrder());
 }
 ```
 

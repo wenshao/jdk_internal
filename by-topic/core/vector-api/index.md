@@ -365,10 +365,21 @@ java --add-modules jdk.incubator.vector VectorAdd
 | JDK 22 | - | 🥚 继续孵化 |
 | JDK 23 | - | 🥚 继续孵化 |
 | JDK 24 | - | 🥚 继续孵化 |
-| **JDK 26** | - | 🥚 **继续孵化 (GA 2026-03)** |
+| JDK 25 | - | 🥚 继续孵化 |
+| **JDK 26** | - | 🥚 **继续孵化 (GA 2026-03)** + FFM 集成 |
 | JDK 27 | - | 🔄 开发中 |
 
-> **注意**: Vector API 在 JDK 26 GA 中仍然是 Incubator 状态，> 已孵化 **10 年** (JDK 16-26)，> 是 OpenJDK 历史上孵化时间最长的 API 之一
+> **注意**: Vector API 在 JDK 26 GA 中仍然是 Incubator 状态
+> 已孵化 **10+ 年** (JDK 16-26)，是 OpenJDK 历史上孵化时间最长的 API 之一
+
+### JDK 26 重要更新
+
+| 特性 | JBS | 描述 |
+|------|-----|------|
+| **FFM API 集成** | [8353786](https://bugs.openjdk.org/browse/JDK-8353786) | 迁移数学库支持到 FFM API |
+| **VectorShuffle + MemorySegments** | [8351993](https://bugs.openjdk.org/browse/JDK-8351993) | 与 MemorySegments 交互 |
+| **UMIN/UMAX 归约** | [8362279](https://bugs.openjdk.org/browse/JDK-8362279) | 无符号最小/最大归约 |
+| **VectorShape 公开** | [8356634](https://bugs.openjdk.org/browse/JDK-8356634) | `largestShapeFor()` 公开 |
 
 ---
 
