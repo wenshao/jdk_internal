@@ -113,6 +113,22 @@ Oracle Labs 开发的高性能 JDK 发行版。
 
 → [GraalVM 详情](graalvm/)
 
+### [CPU 架构](arch/)
+
+OpenJDK 支持的 CPU 架构演进。
+
+| 架构 | 引入版本 | 状态 | 说明 |
+|------|----------|------|------|
+| **x86_64** | JDK 5 | ✅ 主流 | Intel/AMD 64位 |
+| **x86_32** | JDK 1.0 | ⚠️ JDK 26 移除 | 32位 x86 |
+| **AArch64** | JDK 9 | ✅ 主流 | ARM 64位, Apple Silicon |
+| **RISC-V** | JDK 19 | ✅ 活跃 | 开源指令集 |
+| **LoongArch** | JDK 21 | ✅ 活跃 | 龙芯架构 |
+| **PPC64** | JDK 9 | ✅ 维护 | PowerPC |
+| **s390x** | JDK 9 | ✅ 维护 | IBM 大型机 |
+
+→ [CPU 架构详情](arch/)
+
 ### [类加载器](classloading/)
 
 Java 类加载器从 JDK 1.0 到 JDK 26 的完整演进。
