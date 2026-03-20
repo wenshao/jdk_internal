@@ -1,6 +1,6 @@
 # IO 与 NIO
 
-> File、Stream、Channel、Buffer、Foreign Memory 演进历程
+> File、Stream、Channel、Buffer 演进历程
 
 [← 返回 API 框架](../)
 
@@ -9,374 +9,25 @@
 ## 快速概览
 
 ```
-JDK 1.0 ── JDK 1.4 ── JDK 7 ── JDK 11 ── JDK 17 ── JDK 22 ── JDK 23
-   │         │        │        │        │        │        │
-File     NIO     NIO.2   增强   增强   Foreign  FFM
-Stream   Channel Path   Files  Record Memory  (JEP
-         Selector  Files Stream API  API    454)
+JDK 1.0 ── JDK 1.1 ── JDK 1.4 ── JDK 7 ── JDK 11 ── JDK 21
+   │         │         │        │        │        │
+File     Reader/   NIO     NIO.2   Files   虚拟
+Stream   Writer    Buffer  Path    增强    线程
+         (字符)    Channel Watch   readFile 支持
+                  Selector Service (Lazy)
 ```
 
 ### 核心演进
 
-| 版本 | 特性 | JEP | 说明 |
-|------|------|-----|------|
-| **JDK 1.0** | Stream IO | - | InputStream/OutputStream |
-| **JDK 1.0** | File API | - | java.io.File |
-| **JDK 1.4** | NIO | JSR 51 | Buffer, Channel, Selector |
-| **JDK 5** | Scanner/Formatter | - | 简化 IO |
-| **JDK 7** | NIO.2 | JSR 203 | Path, Files, WatchService |
-| **JDK 11** | Files.readString | - | 简化文件读写 |
-| **JDK 17** | Record Stream | - | 文件记录流 |
-| **JDK 22** | Foreign Memory | JEP 454 | 外部内存 API 正式 |
-| **JDK 23** | FFM 增强 | - | 继续改进 |
-
----
-
-## 目录
-
-- [传统 IO](#传统-io)
-- [NIO](#nio)
-- [NIO.2](#nio2)
-- [Foreign Memory API](#foreign-memory-api)
-- [核心贡献者](#核心贡献者)
-- [相关链接](#相关链接)
-
----
-
-## 传统 IO
-
-### InputStream/OutputStream
-
-```java
-// 字节流
-InputStream is = new FileInputStream("input.txt");
-OutputStream os = new FileOutputStream("output.txt");
-
-// 读写
-int b;
-while ((b = is.read()) != -1) {
-    os.write(b);
-}
-
-// 缓冲区
-byte[] buffer = new byte[1024];
-int n;
-while ((n = is.read(buffer)) != -1) {
-    os.write(buffer, 0, n);
-}
-
-// 自动关闭 (JDK 7+)
-try (InputStream is2 = new FileInputStream("input.txt")) {
-    // 使用
-}
-```
-
-### Reader/Writer
-
-```java
-// 字符流
-Reader reader = new FileReader("input.txt");
-Writer writer = new FileWriter("output.txt");
-
-// 缓冲
-BufferedReader br = new BufferedReader(reader);
-BufferedWriter bw = new BufferedWriter(writer);
-
-// 读取行
-String line;
-while ((line = br.readLine()) != null) {
-    System.out.println(line);
-}
-
-// JDK 8+ Lines
-br.lines().forEach(System.out::println);
-```
-
-### Scanner (JDK 5)
-
-```java
-// 简化输入
-Scanner scanner = new Scanner(System.in);
-String input = scanner.nextLine();
-int number = scanner.nextInt();
-
-// 文件扫描
-Scanner fileScanner = new Scanner(new File("input.txt"));
-while (fileScanner.hasNextLine()) {
-    String line = fileScanner.nextLine();
-}
-```
-
----
-
-## NIO
-
-**JDK 1.4 引入 (JSR 51)**
-
-### Buffer
-
-```java
-// ByteBuffer
-ByteBuffer buffer = ByteBuffer.allocate(1024);
-
-// 写入
-buffer.putInt(123);
-buffer.putChar('A');
-
-// 读取
-buffer.flip();  // 切换到读模式
-int i = buffer.getInt();
-char c = buffer.getChar();
-
-// 直接缓冲区
-ByteBuffer direct = ByteBuffer.allocateDirect(1024);
-```
-
-### Channel
-
-```java
-// FileChannel
-try (FileChannel channel = FileChannel.open(
-        Paths.get("input.txt"),
-        StandardOpenOption.READ)) {
-
-    ByteBuffer buffer = ByteBuffer.allocate(1024);
-    int n = channel.read(buffer);
-
-    buffer.flip();
-    while (buffer.hasRemaining()) {
-        System.out.print((char) buffer.get());
-    }
-}
-
-// 文件复制
-try (FileChannel src = FileChannel.open(Paths.get("src.txt"));
-     FileChannel dest = FileChannel.open(Paths.get("dest.txt"),
-         StandardOpenOption.CREATE, StandardOpenOption.WRITE)) {
-    dest.transferFrom(src, 0, src.size());
-}
-```
-
-### Selector
-
-```java
-// 多路复用
-Selector selector = Selector.open();
-
-ServerSocketChannel server = ServerSocketChannel.open();
-server.bind(new InetSocketAddress(8080));
-server.configureBlocking(false);
-server.register(selector, SelectionKey.OP_ACCEPT);
-
-while (true) {
-    selector.select();
-    Set<SelectionKey> keys = selector.selectedKeys();
-
-    for (SelectionKey key : keys) {
-        if (key.isAcceptable()) {
-            // 接受连接
-        }
-        if (key.isReadable()) {
-            // 读取数据
-        }
-    }
-    keys.clear();
-}
-```
-
----
-
-## NIO.2
-
-**JDK 7 引入 (JSR 203)**
-
-### Path
-
-```java
-// Path - 文件路径
-Path path = Paths.get("dir", "subdir", "file.txt");
-
-// 路径操作
-Path parent = path.getParent();      // 父路径
-Path fileName = path.getFileName();  // 文件名
-Path root = path.getRoot();          // 根路径
-
-// 路径解析
-Path resolved = path.resolve("other.txt");
-Path normalized = path.normalize();  // 规范化
-Path absolute = path.toAbsolutePath(); // 绝对路径
-
-// 比较路径
-Path other = Paths.get("other.txt");
-boolean starts = path.startsWith(other);
-```
-
-### Files
-
-```java
-// 文件操作
-Path path = Paths.get("file.txt");
-
-// 读写
-String content = Files.readString(path);
-Files.writeString(path, "Hello");
-
-// 复制移动
-Files.copy(path, Paths.get("copy.txt"));
-Files.move(path, Paths.get("new.txt"), StandardCopyOption.REPLACE_EXISTING);
-
-// 创建删除
-Files.createFile(path);
-Files.createDirectory(path);
-Files.createDirectories(path);
-Files.delete(path);
-
-// 属性
-boolean exists = Files.exists(path);
-boolean isDirectory = Files.isDirectory(path);
-long size = Files.size(path);
-```
-
-### WatchService
-
-```java
-// 文件监控
-WatchService watcher = FileSystems.getDefault().newWatchService();
-Path dir = Paths.get(".");
-dir.register(watcher,
-    StandardWatchEventKinds.ENTRY_CREATE,
-    StandardWatchEventKinds.ENTRY_DELETE,
-    StandardWatchEventKinds.ENTRY_MODIFY);
-
-while (true) {
-    WatchKey key = watcher.take();
-    for (WatchEvent<?> event : key.pollEvents()) {
-        Path changed = (Path) event.context();
-        System.out.println(changed + ": " + event.kind());
-    }
-    key.reset();
-}
-```
-
----
-
-## Foreign Memory API
-
-**JDK 22 正式 (JEP 454)**
-
-### MemorySegment
-
-```java
-// 分配外部内存
-try (MemorySession session = MemorySession.openConfined()) {
-    // 分配内存
-    MemorySegment segment = session.allocate(100);
-
-    // 写入数据
-    segment.set(ValueLayout.JAVA_INT, 0, 42);
-    segment.set(ValueLayout.JAVA_LONG, 8, 123456789L);
-
-    // 读取数据
-    int intValue = segment.get(ValueLayout.JAVA_INT, 0);
-    long longValue = segment.get(ValueLayout.JAVA_LONG, 8);
-
-    // 字节数组
-    byte[] bytes = "Hello".getBytes(StandardCharsets.UTF_8);
-    MemorySegment fromArray = MemorySegment.ofArray(bytes);
-}  // 自动释放内存
-```
-
-### MemorySession
-
-```java
-// 内存会话管理
-// 1. Confined - 单线程
-try (MemorySession session = MemorySession.openConfined()) {
-    MemorySegment segment = session.allocate(1024);
-    // ...
-}
-
-// 2. Shared - 多线程
-try (MemorySession session = MemorySession.openShared()) {
-    MemorySegment segment = session.allocate(1024);
-    // ...
-}
-
-// 3. Global - 全局
-MemorySegment global = MemorySegment.GlobalScope().allocate(1024);
-```
-
-### Slicing
-
-```java
-// 内存切片
-MemorySegment segment = MemorySession.openConfined()
-    .allocate(100);
-
-// 切片
-MemorySegment slice = segment.asSlice(10, 20);
-// 从偏移 10 开始, 长度 20
-
-// 只读视图
-MemorySegment readOnly = segment.asReadOnly();
-```
-
----
-
-## Foreign Function Interface
-
-**JDK 22 正式 (JEP 454)**
-
-### Linker 和 SymbolLookup
-
-```java
-// 调用 C 函数
-Linker linker = Linker.nativeLinker();
-
-// 查找符号
-SymbolLookup stdlib = linker.defaultLookup();
-
-// strlen 函数描述符
-FunctionDescriptor strlenDesc = FunctionDescriptor.of(
-    ValueLayout.JAVA_LONG,
-    ValueLayout.ADDRESS
-);
-
-// 创建 downcall handle
-MethodHandle strlen = linker.downcallHandle(
-    stdlib.find("strlen").orElseThrow(),
-    strlenDesc
-);
-
-// 调用
-try (MemorySession session = MemorySession.openConfined()) {
-    MemorySegment str = session.allocateUtf8String("Hello");
-    long len = (long) strlen.invokeExact(str);
-    System.out.println("Length: " + len);
-}
-```
-
-### Upcall
-
-```java
-// Java 回调 C
-// 创建 upcall stub
-FunctionDescriptor callbackDesc = FunctionDescriptor.of(
-    ValueLayout.JAVA_INT,
-    ValueLayout.JAVA_INT,
-    ValueLayout.JAVA_INT
-);
-
-MethodHandle callback = MethodHandles.lookup()
-    .findStatic(MyClass.class, "callback",
-        MethodType.methodType(int.class, int.class, int.class));
-
-MemorySession session = MemorySession.openConfined();
-MemorySession.SessionStub upcallStub = session.upcallStub(
-    callback,
-    callbackDesc
-);
-```
+| 版本 | 特性 | 说明 | JSR |
+|------|------|------|-----|
+| **JDK 1.0** | Stream IO | InputStream/OutputStream | - |
+| **JDK 1.0** | File API | java.io.File | - |
+| **JDK 1.1** | Reader/Writer | 字符流 | - |
+| **JDK 1.4** | NIO | Buffer, Channel, Selector | JSR 51 |
+| **JDK 7** | NIO.2 | Path, Files, WatchService | JSR 203 |
+| **JDK 11** | Files 增强 | readFile, readString | - |
+| **JDK 21** | 虚拟线程 | 阻塞 IO 不阻塞平台线程 | JEP 444 |
 
 ---
 
@@ -385,7 +36,7 @@ MemorySession.SessionStub upcallStub = session.upcallStub(
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
 
-### IO/NIO (按 Git 提交数)
+### IO/NIO 团队 (按 Git 提交数)
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
@@ -394,64 +45,385 @@ MemorySession.SessionStub upcallStub = session.upcallStub(
 | 3 | Brian Goetz | 12 | Oracle | API 设计 |
 | 4 | Henry Jen | 10 | Oracle | NIO.2 增强 |
 | 5 | Paul Sandoz | 8 | Oracle | IO 增强 |
-
-### Foreign Memory API
-
-| 贡献者 | 公司 | 主要贡献 |
-|--------|------|----------|
-| **Maurizio Cimadamore** | Oracle | Panama/Foreign Memory (JEP 454) |
-| **Vladimir Ivanov** | Oracle | JIT 优化、Foreign 接口 |
+| 6 | Xueming Shen | 7 | Oracle | 字符编码 |
 
 ---
 
-## Git 提交历史
+## Stream IO (JDK 1.0)
 
-> 基于 OpenJDK master 分支分析
+### InputStream/OutputStream
 
-### IO/NIO 改进 (2024-2026)
+```java
+import java.io.*;
 
-```bash
-# 查看 IO 相关提交
-cd /path/to/jdk
-git log --oneline -- src/java.base/share/classes/java/io/
-git log --oneline -- src/java.base/share/classes/java/nio/
-git log --oneline -- src/java.base/share/classes/jdk/internal/foreign/
+// 字节流
+try (InputStream is = new FileInputStream("input.txt");
+     OutputStream os = new FileOutputStream("output.txt")) {
+
+    byte[] buffer = new byte[1024];
+    int len;
+    while ((len = is.read(buffer)) != -1) {
+        os.write(buffer, 0, len);
+    }
+}
+```
+
+### Reader/Writer (JDK 1.1)
+
+```java
+import java.io.*;
+
+// 字符流
+try (Reader reader = new FileReader("input.txt");
+     Writer writer = new FileWriter("output.txt")) {
+
+    char[] buffer = new char[1024];
+    int len;
+    while ((len = reader.read(buffer)) != -1) {
+        writer.write(buffer, 0, len);
+    }
+}
+```
+
+### 缓冲流
+
+```java
+// 缓冲字节流
+try (BufferedInputStream bis = new BufferedInputStream(
+        new FileInputStream("input.txt"));
+     BufferedOutputStream bos = new BufferedOutputStream(
+        new FileOutputStream("output.txt"))) {
+    // 自动缓冲
+}
+
+// 缓冲字符流
+try (BufferedReader br = new BufferedReader(new FileReader("input.txt"));
+     BufferedWriter bw = new BufferedWriter(new FileWriter("output.txt"))) {
+
+    // 按行读取
+    String line;
+    while ((line = br.readLine()) != null) {
+        bw.write(line);
+        bw.newLine();
+    }
+}
+```
+
+---
+
+## NIO Buffer (JDK 1.4)
+
+### ByteBuffer
+
+```java
+import java.nio.*;
+
+// 创建 Buffer
+ByteBuffer buffer = ByteBuffer.allocate(1024);
+
+// 写入模式
+buffer.put("Hello NIO".getBytes(StandardCharsets.UTF_8));
+
+// 切换读模式
+buffer.flip();
+
+// 读取数据
+while (buffer.hasRemaining()) {
+    byte b = buffer.get();
+    System.out.print((char) b);
+}
+
+// 清空 Buffer
+buffer.clear();
+
+// Compact (保留未读数据)
+buffer.compact();
+```
+
+### Buffer 类型
+
+```java
+// ByteBuffer
+ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+
+// CharBuffer
+CharBuffer charBuffer = CharBuffer.allocate(512);
+
+// ShortBuffer
+ShortBuffer shortBuffer = ShortBuffer.allocate(256);
+
+// IntBuffer
+IntBuffer intBuffer = IntBuffer.allocate(128);
+
+// LongBuffer
+LongBuffer longBuffer = LongBuffer.allocate(64);
+
+// FloatBuffer
+FloatBuffer floatBuffer = FloatBuffer.allocate(32);
+
+// DoubleBuffer
+DoubleBuffer doubleBuffer = DoubleBuffer.allocate(16);
+```
+
+### 直接 Buffer
+
+```java
+// 堆外内存
+ByteBuffer direct = ByteBuffer.allocateDirect(1024);
+
+// 优势:
+// - 避免 JVM 堆与本地内存复制
+// - 适合大文件、网络 I/O
+
+// 劣势:
+// - 分配/释放成本高
+// - 不受 GC 直接管理
+```
+
+---
+
+## NIO Channel (JDK 1.4)
+
+### FileChannel
+
+```java
+import java.nio.channels.*;
+import java.nio.*;
+
+// FileChannel
+try (FileChannel channel = FileChannel.open(
+        Paths.get("input.txt"),
+        StandardOpenOption.READ)) {
+
+    ByteBuffer buffer = ByteBuffer.allocate(1024);
+    while (channel.read(buffer) != -1) {
+        buffer.flip();
+        // 处理数据
+        buffer.clear();
+    }
+}
+```
+
+### Channel 间传输
+
+```java
+// 零拷贝传输
+try (FileChannel src = FileChannel.open(Paths.get("src.txt"),
+        StandardOpenOption.READ);
+     FileChannel dest = FileChannel.open(Paths.get("dest.txt"),
+        StandardOpenOption.WRITE,
+        StandardOpenOption.CREATE)) {
+
+    // 直接传输，不经过用户空间
+    src.transferTo(0, src.size(), dest);
+}
+```
+
+---
+
+## NIO.2 (JDK 7+)
+
+### Path 和 Files
+
+```java
+import java.nio.file.*;
+
+// Path 操作
+Path path = Paths.get("/tmp/example.txt");
+
+// 文件操作
+if (!Files.exists(path)) {
+    Files.createFile(path);
+}
+
+// 写入文件
+Files.writeString(path, "Hello NIO.2");
+
+// 读取文件
+String content = Files.readString(path);
+
+// 复制文件
+Path copy = Files.copy(path, Paths.get("/tmp/copy.txt"),
+    StandardCopyOption.REPLACE_EXISTING);
+
+// 移动文件
+Files.move(path, Paths.get("/tmp/moved.txt"),
+    StandardCopyOption.REPLACE_EXISTING);
+
+// 删除文件
+Files.deleteIfExists(path);
+```
+
+### 目录操作
+
+```java
+// 创建目录
+Path dir = Paths.get("/tmp/test");
+Files.createDirectories(dir);
+
+// 遍历目录
+try (Stream<Path> stream = Files.walk(dir)) {
+    stream.filter(Files::isRegularFile)
+          .forEach(System.out::println);
+}
+
+// 查找文件
+try (Stream<Path> stream = Files.find(dir, 10,
+        (path, attrs) -> path.toString().endsWith(".txt"))) {
+    stream.forEach(System.out::println);
+}
+```
+
+### WatchService
+
+```java
+import java.nio.file.*;
+
+// 监控文件变化
+Path dir = Paths.get("/tmp");
+WatchService watcher = FileSystems.getDefault().newWatchService();
+WatchKey key = dir.register(watcher,
+    StandardWatchEventKinds.ENTRY_CREATE,
+    StandardWatchEventKinds.ENTRY_DELETE,
+    StandardWatchEventKinds.ENTRY_MODIFY);
+
+while (true) {
+    WatchKey watchKey = watcher.take();
+    for (WatchEvent<?> event : watchKey.pollEvents()) {
+        System.out.println(event.kind() + ": " + event.context());
+    }
+    watchKey.reset();
+}
+```
+
+### 文件属性
+
+```java
+// 读取属性
+Path path = Paths.get("file.txt");
+BasicFileAttributes attrs = Files.readAttributes(path,
+    BasicFileAttributes.class);
+
+System.out.println("Size: " + attrs.size());
+System.out.println("Created: " + attrs.creationTime());
+System.out.println("Modified: " + attrs.lastModifiedTime());
+System.out.println("Is Directory: " + attrs.isDirectory());
+
+// POSIX 属性
+PosixFileAttributes posixAttrs = Files.readAttributes(path,
+    PosixFileAttributes.class);
+System.out.println("Permissions: " + posixAttrs.permissions());
+```
+
+---
+
+## Files 增强 (JDK 11+)
+
+### 便捷方法
+
+```java
+// 读文件
+String content = Files.readString(Paths.get("file.txt"));
+List<String> lines = Files.readAllLines(Paths.get("file.txt"));
+
+// 写文件
+Files.writeString(Paths.get("output.txt"), "Hello JDK 11");
+
+// 带 Charset
+String content = Files.readString(Paths.get("file.txt"),
+    StandardCharsets.UTF_8);
+
+// 写入并创建
+Files.writeString(Paths.get("new.txt"), "content",
+    StandardOpenOption.CREATE,
+    StandardOpenOption.TRUNCATE_EXISTING);
+```
+
+---
+
+## 虚拟线程 IO (JDK 21+)
+
+### 阻塞 IO 不阻塞平台线程
+
+```java
+import java.util.concurrent.*;
+
+// 虚拟线程中的阻塞 IO
+try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
+    executor.submit(() -> {
+        // 阻塞读操作不阻塞平台线程
+        String content = Files.readString(Paths.get("large.txt"));
+        System.out.println(content);
+    });
+}
+```
+
+---
+
+## 性能优化
+
+### Buffer 池化
+
+```java
+// 复用 Buffer
+private static final ByteBuffer REUSABLE_BUFFER =
+    ByteBuffer.allocateDirect(8192);
+
+public void processData() {
+    REUSABLE_BUFFER.clear();
+    // 使用 Buffer
+    REUSABLE_BUFFER.flip();
+    // 读取数据
+}
+```
+
+### 零拷贝
+
+```java
+// Channel 间直接传输
+try (FileChannel src = FileChannel.open(Paths.get("src.txt"),
+        StandardOpenOption.READ);
+     FileChannel dest = FileChannel.open(Paths.get("dest.txt"),
+        StandardOpenOption.WRITE,
+        StandardOpenOption.CREATE)) {
+
+    // 零拷贝传输
+    src.transferTo(0, src.size(), dest);
+}
+```
+
+### 内存映射
+
+```java
+// MappedByteBuffer
+try (FileChannel channel = FileChannel.open(Paths.get("large.dat"),
+        StandardOpenOption.READ,
+        StandardOpenOption.WRITE)) {
+
+    MappedByteBuffer mapped = channel.map(
+        FileChannel.MapMode.READ_WRITE, 0, channel.size());
+
+    // 直接访问内存
+    mapped.put(0, (byte) 42);
+    byte value = mapped.get(0);
+}
 ```
 
 ---
 
 ## 相关链接
 
-### 内部文档
+### 本地文档
 
-- [IO 时间线](timeline.md) - 详细的历史演进
-- [核心 API](../)
-- [网络编程](../../concurrency/network/)
-- [HTTP 客户端](../../concurrency/http/)
+- [网络编程](../../concurrency/network/) - Socket Channel
+- [序列化](../../concurrency/serialization/) - IO 序列化
 
-### 外部资源
+### 外部参考
 
+**JSR 文档:**
 - [JSR 51: New I/O APIs](https://jcp.org/en/jsr/detail?id=51)
 - [JSR 203: More New I/O APIs](https://jcp.org/en/jsr/detail?id=203)
-- [JEP 454: Foreign Function & Memory API](https://openjdk.org/jeps/454)
-- [Foreign Memory API Tutorial](https://openjdk.org/projects/panama/)
-- [Accessing Native C Functions](https://bazlur.ca/2023/10/16/accessing-native-c-functions-from-java-using-openjdks-jep-454-foreign-function-memory-api/)
 
-### Git 仓库
-
-```bash
-# 查看 IO 相关提交
-git log --oneline -- src/java.base/share/classes/java/io/
-git log --oneline -- src/java.base/share/classes/java/nio/
-```
-
----
-
-**最后更新**: 2026-03-20
-
-**Sources**:
-- [JEP 454: Foreign Function & Memory API](https://openjdk.org/jeps/454)
-- [JSR 51: New I/O APIs](https://jcp.org/en/jsr/detail?id=51)
-- [JSR 203: More New I/O APIs](https://jcp.org/en/jsr/detail?id=203)
-- [JDK 22 Foreign Function & Memory API](https://www.infoq.com/news/2024/03/java22-released/)
-- [JDK 22 FFM API Deep Dive](https://cyberjos.blog/java/se/jdk-22-jep-454-foreign-function-memory/)
+**技术文档:**
+- [Java NIO Tutorial](https://docs.oracle.com/javase/tutorial/essential/io/)
+- [File API](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/package-summary.html)
