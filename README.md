@@ -44,6 +44,7 @@
 | **按 PR** | 深入具体 Issue/PR | [浏览 PR](by-pr/) |
 | **按 JEP** | JDK Enhancement Proposals | [浏览 JEP](jeps/) |
 | **按 JSR** | Java Specification Requests | [浏览 JSR](jsr/) |
+| **技术演讲** | JVMLS 等会议演讲 | [浏览演讲](talks/) |
 
 ### 按角色
 
@@ -126,7 +127,8 @@ jdk_internal/
 │
 ├── contributors/          # 贡献者统计
 ├── modules/               # 模块/组件分析
-└── scripts/               # 数据获取脚本
+├── scripts/               # 数据获取脚本
+└── talks/                 # 技术演讲 (JVMLS 等)
 ```
 
 ---
@@ -145,6 +147,7 @@ jdk_internal/
 
 | 日期 | 更新内容 |
 |------|----------|
+| 2026-03-20 | 新增技术演讲 (talks/) 和 JVMLS 资料 |
 | 2026-03-20 | 新增研究方法论 (AGENTS.md)，修复主题链接 |
 | 2026-03-19 | 新增 JSR 文档 |
 | 2026-03-18 | 新增 Class File API 主题 |
