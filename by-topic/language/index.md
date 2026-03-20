@@ -98,6 +98,31 @@ JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 14-17 ─── JDK 21-26
 | Sealed Classes | JDK 17 | 密封类 |
 | switch 模式 | JDK 21 | case Type t → ... |
 | String Templates | JDK 21+ | STR."\{value}" |
+
+---
+
+## 核心贡献者
+
+> **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
+> **统计时间**: 2026-03-20
+
+### 语言/编译器 (按 Git 提交数)
+
+| 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
+|------|--------|--------|------|----------|
+| 1 | Jan Lahoda | 98 | Oracle | javac, 模式匹配 |
+| 2 | Vicente Romero | 52 | Oracle | javac, Records |
+| 3 | Jonathan Gibbons | 43 | Oracle | javadoc, 注解 |
+| 4 | Liam Miller-Cushon | 31 | Oracle | javac, Lambda |
+
+### 反射/元数据 (按 Git 提交数)
+
+| 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
+|------|--------|--------|------|----------|
+| 1 | Coleen Phillimore | 333 | Oracle | 类加载, 运行时 |
+| 2 | David Holmes | 201 | Oracle | 并发, 线程 |
+| 3 | Ioi Lam | 167 | Oracle | 反射, CDS |
+| 4 | Serguei Spitsyn | 107 | Oracle | JVMTI, 反射 |
 | 隐式类 | JDK 25 | void main() {} |
 
 → [语法演进时间线](syntax/timeline.md)

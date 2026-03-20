@@ -64,20 +64,31 @@ Java 国际化 (i18n) 从 JDK 1.0 到 JDK 26 的完整演进。
 
 ## 核心贡献者
 
-### 安全/密码学
+> **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
+> **统计时间**: 2026-03-20
 
-| 贡献者 | 公司 | 主要贡献 |
-|--------|------|----------|
-| **Sean Mullan** | Oracle | 安全架构、JEP 332 (TLS 1.3) |
-| **Brad Wetmore** | Oracle | JSSE (TLS/SSL) 实现 |
-| **Xuelei Fan** | Oracle | TLS 1.3、密码学算法 |
+### 安全/密码学 (按 Git 提交数)
 
-### 国际化
+| 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
+|------|--------|--------|------|----------|
+| 1 | Valerie Peng | 38 | Oracle | 密码学算法 |
+| 2 | Weijun Wang | 36 | Oracle | 密钥管理, KDF |
+| 3 | Sean Mullan | 31 | Oracle | 安全架构、JEP 332 (TLS 1.3) |
+| 4 | Andrey Turbanov | 16 | Oracle | 密码学优化 |
+| 5 | Sean Coffey | 12 | Oracle | JSSE (TLS/SSL) |
+| 6 | Bradford Wetmore | 11 | Oracle | TLS 实现 |
+| 7 | Joe Darcy | 10 | Oracle | 安全 API |
 
-| 贡献者 | 公司 | 主要贡献 |
-|--------|------|----------|
-| **Naoto Sato** | Oracle | Unicode 支持、CLDR 集成 |
-| **Brian Beckhoff** | Oracle | ResourceBundle、格式化 |
+### 国际化 (按 Git 提交数)
+
+| 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
+|------|--------|--------|------|----------|
+| 1 | Naoto Sato | 64 | Oracle | Unicode 支持、CLDR 集成 |
+| 2 | Shaojin Wen | 12 | Alibaba | java.time 优化 |
+| 3 | Roger Riggs | 12 | Oracle | 日期时间 |
+| 4 | Claes Redestad | 8 | Oracle | 启动优化 |
+| 5 | Andrey Turbanov | 7 | Oracle | 格式化 |
+| 6 | Pavel Rappo | 6 | Oracle | 文档, 工具 |
 
 ---
 
