@@ -149,16 +149,12 @@ mvn verify
 # Docker 示例
 FROM eclipse-temurin:25-jdk
 COPY app.jar /app/app.jar
-ENTRYPOINT ["java", "-XX:+UseZGC", "-XX:+ZGenerational", "-jar", "/app/app.jar"]
+ENTRYPOINT ["java", "-XX:+UseZGC", "-jar", "/app/app.jar"]
 ```
 
 ---
 
 ## 7. 常见问题
-
-### Q: String Templates 性能如何？
-
-A: String Templates 在编译时优化，性能优于字符串拼接。
 
 ### Q: 虚拟线程一定更快吗？
 

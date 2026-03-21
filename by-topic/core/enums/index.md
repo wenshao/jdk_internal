@@ -445,17 +445,14 @@ public String getDayMessage(Day day) {
 
 // Record 模式匹配
 record Point(int x, int y) {}
-enum Shape {
-    CIRCLE(double radius),
-    RECTANGLE(double width, double height),
-    POINT(Point p)
-}
+sealed interface Shape permits Circle, Rectangle {}
+record Circle(double radius) implements Shape {}
+record Rectangle(double width, double height) implements Shape {}
 
 public double area(Shape shape) {
     return switch (shape) {
-        case CIRCLE(double r) -> Math.PI * r * r;
-        case RECTANGLE(double w, double h) -> w * h;
-        case POINT(Point p) -> 0;
+        case Circle(double r) -> Math.PI * r * r;
+        case Rectangle(double w, double h) -> w * h;
     };
 }
 ```

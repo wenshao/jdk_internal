@@ -27,13 +27,13 @@
 ## 1. 快速概览
 
 ```
-JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 7 ── JDK 8 ── JDK 16 ── JDK 21 ── JDK 23
-   │         │        │        │        │        │        │        │
-Javadoc   注解    注解    可重复    类型    Record   注解    注解
-标签    JSR 175  处理器   注解     注解   支持    模式    值对象
-         @Override  JSR   @Repeatable  Type   @Target  匹配   (预览)
-         @Deprecated  269               Use            for     (JEP
-         @SuppressWarnings                           instanceof      466)
+JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 8 ── JDK 16 ── JDK 21 ── JDK 23
+   │         │        │        │        │        │        │
+Javadoc   注解    注解    类型注解  Record   注解    注解
+标签    JSR 175  处理器  可重复注解  支持    模式    增强
+         @Override  JSR   JSR 308   @Target  匹配
+         @Deprecated  269  @Repeatable       for
+         @SuppressWarnings                 instanceof
 ```
 
 ### 核心演进
@@ -43,12 +43,11 @@ Javadoc   注解    注解    可重复    类型    Record   注解    注解
 | **JDK 1.0** | Javadoc | 文档注释 | - |
 | **JDK 5** | 注解 | @Override, @Deprecated | JSR 175 |
 | **JDK 6** | 注解处理器 | Pluggable Annotation Processing | JSR 269 |
-| **JDK 7** | 类型注解 (预览) | Type Use | JSR 308 |
-| **JDK 8** | 类型注解 | 正式 | JSR 308 |
+| **JDK 8** | 类型注解 | Type Use | JSR 308 |
 | **JDK 8** | 可重复注解 | @Repeatable | - |
 | **JDK 16** | Record 支持 | @Target(RECORD_COMPONENT) | - |
 | **JDK 21** | 注解模式匹配 | for instanceof, switch | JEP 441 |
-| **JDK 23** | 注解值对象 | Flexible Constructors | JEP 466 (预览) |
+| **JDK 23** | Class-File API | 字节码操作标准 API | JEP 466 |
 
 ---
 

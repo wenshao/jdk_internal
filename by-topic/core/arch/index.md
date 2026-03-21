@@ -78,7 +78,7 @@ ARM 64位架构，广泛用于移动设备、云服务器和 Apple Silicon。
 | 属性 | 值 |
 |------|-----|
 | **引入版本** | JDK 9 (JEP 237) |
-| **macOS 支持** | JDK 17 (JEP 383) |
+| **macOS 支持** | JDK 17 (JEP 391) |
 | **状态** | ✅ 主流支持 |
 | **主要贡献者** | Oracle, Red Hat, Arm, Amazon |
 
@@ -86,7 +86,7 @@ ARM 64位架构，广泛用于移动设备、云服务器和 Apple Silicon。
 | 版本 | JEP | 说明 |
 |------|-----|------|
 | JDK 9 | JEP 237 | AArch64 Linux 移植 |
-| JDK 17 | JEP 383 | macOS/AArch64 (Apple Silicon) |
+| JDK 17 | JEP 391 | macOS/AArch64 (Apple Silicon) |
 | JDK 18 | - | Windows/AArch64 |
 
 ---
@@ -174,7 +174,7 @@ IBM System z 大型机架构，主要用于企业级后端系统。
 |------|------|-----|
 | JDK 9 | AArch64 Linux | JEP 237 |
 | JDK 11 | Intrinsics 改进 | JEP 315 |
-| JDK 17 | macOS/AArch64 | JEP 383 |
+| JDK 17 | macOS/AArch64 | JEP 391 |
 | JDK 18 | Windows/AArch64 | - |
 
 ### RISC-V
@@ -228,9 +228,6 @@ IBM System z 大型机架构，主要用于企业级后端系统。
 ### AArch64
 
 ```bash
-# Apple Silicon 优化
--XX:UseSVE=2
-
 # LSE 原子指令
 -XX:+UseLSE
 ```
@@ -272,7 +269,7 @@ java -XX:+PrintFlagsFinal -version | grep -i riscv
 |--------|------|
 | sunguoyun | 龙芯 |
 | Ao Qi | 龙芯 |
-| Jie Fu | 龙芯 |
+| Jie Fu | Huawei |
 
 ---
 

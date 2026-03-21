@@ -21,7 +21,7 @@
 
 | 版本 | 发布时间 | 支持截止 | 状态 |
 |------|----------|----------|------|
-| **JDK 25** | 2025-09 | 2026-03 | LTS |
+| **JDK 25** | 2025-09 | 2033+ | LTS |
 | **JDK 21** | 2023-09 | 2031-10 | 稳定 LTS |
 | **JDK 17** | 2021-09 | 2029-10 | 稳定 LTS |
 | **JDK 11** | 2018-09 | 2032-01 | 稳定 LTS |
@@ -60,7 +60,7 @@
 | JDK 17-20 | G1 | ZGC, Shenandoah |
 | JDK 15-16 | G1 | ZGC, Shenandoah |
 | JDK 11-14 | G1 | ZGC (实验), Shenandoah (实验) |
-| JDK 9-10 | G1 | ZGC (实验) |
+| JDK 9-10 | G1 | - |
 | JDK 8 | ParallelGC | G1, CMS |
 
 ### 主要特性演进
@@ -104,8 +104,8 @@
 
 #### [JDK 21](jdk21/) - LTS 2023
 - 新特性：Virtual Threads (正式版)、Pattern Matching for switch (正式版)
-- Generational ZGC (正式版)、Generational Shenandoah (正式版)
-- Record Patterns (预览)、String Templates (预览，后撤销)
+- Generational ZGC (正式版)
+- Record Patterns (正式版)、String Templates (预览，后撤销)
 - Scoped Values (预览)、Structured Concurrency (预览)
 - [版本详情](jdk21/index.md) | [发布说明](jdk21/release-notes.md)
 
@@ -150,8 +150,8 @@
 ```
 JDK 8 ───────► JDK 11 ───────► JDK 17 ───────► JDK 21 ───────► JDK 25 ───────► JDK 26+
  │              │               │               │               │               │
- ├─ 2017 EOL     ├─ 2026 EOL     ├─ 2029 EOL     ├─ 2031 EOL     ├─ 2026-03      └─ Feature
- └─ 付费延长    └─ 8 年 LTS       └─ 8 年 LTS       └─ 8 年 LTS       └─ Feature
+ ├─ 2017 EOL     ├─ 2026 EOL     ├─ 2029 EOL     ├─ 2031 EOL     ├─ 2033+ EOL    └─ Feature
+ └─ 付费延长    └─ 8 年 LTS       └─ 8 年 LTS       └─ 8 年 LTS       └─ 8 年 LTS
 ```
 
 ---

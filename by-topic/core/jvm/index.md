@@ -42,7 +42,7 @@ JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 7 ── JDK 8 ── JDK 11 ──
 | **jcmd** | JDK 7 | 统一诊断 | 命令行 |
 | **jconsole** | JDK 5 | JMX 监控 | GUI |
 | **jvisualvm** | JDK 6 | 综合分析 | GUI |
-| **JFR** | JDK 7 | 飞行记录 | 生产级 |
+| **JFR** | JDK 7 (商业), JDK 11 (开源, JEP 328) | 飞行记录 | 生产级 |
 | **JMC** | JDK 7 | Mission Control | GUI |
 
 ---
@@ -138,9 +138,10 @@ JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 7 ── JDK 8 ── JDK 11 ──
 # 紧凑对象头 (JDK 26)
 -XX:+UseCompactObjectHeaders
 
-# 偏向锁
--XX:+UseBiasedLocking        # 启用偏向锁
--XX:BiasedLockingStartupDelay=0  # 启动延迟
+# 偏向锁 (已废弃: JDK 15 废弃, JDK 18 移除)
+# 注意: 以下参数在 JDK 18+ 中不再可用
+# -XX:+UseBiasedLocking
+# -XX:BiasedLockingStartupDelay=0
 ```
 
 ### 日志参数
