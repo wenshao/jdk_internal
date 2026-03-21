@@ -157,6 +157,8 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 |--------|----------------|------|-----|------|------|
 | Hamlin Li | RISC-V | **Rivos** | 20+ | RISC-V | [详情](../../by-contributor/profiles/hamlin-li.md) |
 | Zhengyu Gu | HotSpot GC | **Datadog** | 30+ | G1 GC, Shenandoah | [详情](../../by-contributor/profiles/zhengyu-gu.md) |
+| Chris Thalinger | HotSpot Compiler | **Twitter/X** | - | JIT 编译器 | - |
+| Xuelei Fan | Security | **Salesforce** | - | Security, TLS | - |
 
 > **注**:
 > - 位置信息基于贡献者档案、LinkedIn 和 OpenJDK Census

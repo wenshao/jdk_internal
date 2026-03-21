@@ -102,9 +102,9 @@ William Kemper 是 **JEP 521: Generational Shenandoah** 的主要实现者：
     │Kemper   │           │Shipilev │           │Schatzl  │
     │(123)    │           │(80+)    │           │(G1 GC)  │
     │         │           │         │           │         │
-    │Nick     │           │Roman    │           │         │
-    │Gasson   │           │Kennke   │           │         │
-    │(15)     │           │(Shen.)  │           │         │
+    │         │           │Roman    │           │         │
+    │         │           │Kennke   │           │         │
+    │         │           │(Shen.)  │           │         │
     └─────────┘           └─────────┘           └─────────┘
 ```
 
@@ -120,7 +120,7 @@ William Kemper 是 **JEP 521: Generational Shenandoah** 的主要实现者：
 | 贡献者 | 组织 | 合作领域 | 关系类型 |
 |--------|------|----------|----------|
 | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | Amazon | Shenandoah GC | 同事/协作者 |
-| [Roman Kennke](../../by-contributor/profiles/roman-kennke.md) | Red Hat | Shenandoah GC | 外部协作者 |
+| [Roman Kennke](../../by-contributor/profiles/roman-kennke.md) | Datadog | Shenandoah GC | 外部协作者 |
 | [Thomas Schatzl](../../by-contributor/profiles/thomas-schatzl.md) | Oracle | G1 GC | 技术同行 |
 
 ### 4.2 技术影响力网络
@@ -171,20 +171,19 @@ William Kemper 是 **JEP 521: Generational Shenandoah** 的主要实现者：
                     │   Seattle, WA    │
                     └────────┬─────────┘
                              │ Corretto 团队
-                    ┌────────┴─────────┐
-                    │                  │
-                    ▼                  ▼
-            ┌──────────────┐   ┌──────────────┐
-            │  Shenandoah  │   │   AArch64    │
-            │     GC       │   │  优化团队    │
-            └──────┬───────┘   └──────┬───────┘
-                   │                  │
-              ┌────┴────┐        ┌────┴────┐
-              │         │        │         │
-              ▼         ▼        ▼         ▼
-         William   Aleksey   Nick    其他
-         Kemper   Shipilev  Gasson   成员
-         (主导)   (同事)    (主导)
+                             │
+                             ▼
+                    ┌──────────────┐
+                    │  Shenandoah  │
+                    │     GC       │
+                    └──────┬───────┘
+                           │
+                      ┌────┴────┐
+                      │         │
+                      ▼         ▼
+                 William   Aleksey
+                 Kemper   Shipilev
+                 (主导)   (同事)
 ```
 
 ### 4.4 协作深度分析
@@ -203,7 +202,7 @@ William Kemper 是 **JEP 521: Generational Shenandoah** 的主要实现者：
               │         │
               ▼         ▼
         Aleksey   Roman Kennke
-        Shipilev  (Red Hat)
+        Shipilev  (Datadog)
         (同事)
               │
               └────┬────┘
@@ -240,12 +239,12 @@ William Kemper 是 **JEP 521: Generational Shenandoah** 的主要实现者：
 | 指标 | 数值 | 说明 |
 |------|------|------|
 | 合作 PRs | 10+ | Shenandoah GC |
-| Roman 角色 | Red Hat Reviewer | Shenandoah 协作者 |
+| Roman 角色 | Datadog Reviewer | Shenandoah 协作者 |
 | William 角色 | JEP 521 Owner | Generational Shenandoah |
-| 协作模式 | 跨公司协作 | Red Hat → Amazon |
+| 协作模式 | 跨公司协作 | Datadog → Amazon |
 
 **Roman Kennke 背景**:
-- Red Hat Principal Software Engineer
+- Datadog Principal Software Engineer
 - JEP 519 (Compact Object Headers) Lead
 - GitHub: [@rkennke](https://github.com/rkennke)
 - Shenandoah GC 核心贡献者
@@ -268,7 +267,7 @@ Amazon 积极参与技术社区活动：
     ┌─────────────┐          ┌─────────────┐          ┌─────────────┐
     │ Aleksey     │          │ Roman       │          │ 新贡献者    │
     │ Shipilev    │◄────────►│ Kennke      │          │ (通过 PR    │
-    │ (Shenandoah)│  协作    │ (Red Hat)   │──协作──►│  学习)      │
+    │ (Shenandoah)│  协作    │ (Datadog)   │──协作──►│  学习)      │
     └─────────────┘          └─────────────┘          └──────┬──────┘
                                                               │
                                                               │
@@ -281,11 +280,11 @@ Amazon 积极参与技术社区活动：
                     │         - Generational Mode                     │
                     └─────────────────────────────────────────────────┘
                                                               │
-                    ┌─────────────┐          ┌─────────────┐  │
-                    │ Nick        │          │ 其他        │  │
-                    │ Gasson      │◄────────►│ Amazon      │◄─┘
-                    │ (AArch64)   │  协作    │ 成员        │   协作
-                    └─────────────┘          └─────────────┘
+                    ┌─────────────┐  │
+                    │ 其他        │  │
+                    │ Amazon      │◄─┘
+                    │ 成员        │   协作
+                    └─────────────┘
 ```
 
 ---

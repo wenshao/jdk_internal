@@ -25,8 +25,8 @@ ARM Ltd. 通过构建系统和 AArch64 架构支持参与 OpenJDK 开发。
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 4+ |
-| **贡献者数** | 1 |
+| **Integrated PRs** | 50+ |
+| **贡献者数** | 2+ |
 | **活跃时间** | 2026 - 至今 |
 | **主要领域** | Build System, AArch64 |
 
