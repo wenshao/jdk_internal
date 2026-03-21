@@ -113,8 +113,9 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 | 贡献者 | 位置 | GitHub | PRs | 角色 | 领域 | 档案 |
 |--------|------|--------|-----|------|------|------|
 | Zhengyu Gu | 中国 | - | 30+ | Committer | G1 GC | [详情](../../by-contributor/profiles/zhengyu-gu.md) |
-| Hamlin Li | 中国 | - | 20+ | Committer | RISC-V | [详情](../../by-contributor/profiles/hamlin-li.md) |
 | Weijun Wang | - | - | 15+ | Reviewer | Security | [详情](../../by-contributor/profiles/weijun-wang.md) |
+
+> **注**: Hamlin Li 曾在 Oracle 工作 (RISC-V 贡献)，现已加入 **Rivos**，不计入当前 Oracle 团队
 
 ### Oracle Labs
 
@@ -122,7 +123,8 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 |--------|------|--------|-----|------|------|------|
 | Doug Simon | - | - | 10+ | Member | Graal | [详情](../../by-contributor/profiles/doug-simon.md) |
 
-> **注**: 部分贡献者的位置信息未在公开资料中标注。位置信息基于贡献者档案和 OpenJDK Census。
+> **注**: 
+> - 部分贡献者的位置信息未在公开资料中标注。位置信息基于贡献者档案和 OpenJDK Census。
 
 ---
 
@@ -269,13 +271,14 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 
 ---
 
-> **文档版本**: 3.0
+> **文档版本**: 4.0
 > **最后更新**: 2026-03-21
 > **更新内容**:
 > - 修正"Oracle 中国团队"错误分类
 > - 改为"按地区分类"，准确标注贡献者位置
 > - 美国团队：13 人 (包括 Naoto Sato, Chen Liang 等)
 > - 欧洲团队：7 人 (Thomas Schatzl-德国，Claes Redestad-瑞典等)
-> - 亚洲团队：3 人 (Zhengyu Gu-中国，Hamlin Li-中国，Weijun Wang)
+> - 亚洲团队：2 人 (Zhengyu Gu-中国，Weijun Wang)
 > - Oracle Labs: 1 人 (Doug Simon)
+> - **职业流动核实**: Hamlin Li 已离开 Oracle 加入 Rivos
 > - 数据来源：贡献者档案和 OpenJDK Census
