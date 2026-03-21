@@ -33,8 +33,8 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 121 |
-| **贡献者数** | 4 |
+| **Integrated PRs** | 121 (核心) + 202 (测试) = 323 |
+| **贡献者数** | 5 (4 核心 + 1 测试) |
 | **活跃时间** | 2021 - 至今 |
 | **主要领域** | 核心库、C2 编译器、AArch64、ZGC |
 | **Dragonwell** | [Alibaba Dragonwell](https://github.com/alibaba/dragonwell8), [Dragonwell Team](dragonwell.md) |
@@ -126,20 +126,20 @@ JDK 25 继续了核心库性能优化的工作。
 
 ### JDK 24 (GA 2024-09)
 
-阿里巴巴积极参与 JDK 24 的开发，贡献了多个核心优化。
+JDK 24 是阿里巴巴开始活跃贡献的版本。
 
 | Issue | 标题 | 贡献者 | 类型 | 影响 |
 |-------|------|--------|------|------|
-| 8370503 | Integer/Long toString 使用 String.newStringWithLatin1Bytes | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +10% |
-| 8370013 | Double.toHexString 消除 regex 和 StringBuilder | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +20% |
-| 8368825 | DateTimeFormatterBuilder 使用 switch 表达式 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码质量 | - |
-| 8368172 | DateTimePrintContext 改为不可变 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +8-10% |
-| 8368024 | 移除 StringConcatFactory#generateMHInlineCopy | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码清理 | -800 行 |
-| 8366224 | DecimalDigits.appendPair 高效两位数格式化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +15% |
-| 8365620 | MethodHandleDesc 使用增强 switch | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码质量 | - |
-| 8365186 | 减少 DateTimePrintContext::adjust 大小 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +1% |
+| 8343650 | 复用 StringLatin1::putCharsAt | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码复用 | - |
+| 8342336 | ClassFile imports 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | -480 行 |
+| 8341906 | ClassFile Buffer 写入优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +28% |
+| 8339401 | ClassFile load/store 指令 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +10-20% |
+| 8336856 | InlineHiddenClassStrategy | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | **架构改进** | +5% |
+| 8336831 | StringConcatHelper.simpleConcat | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +10-15% |
+| 8335182 | MergeStore C2 优化模式 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 性能优化 | +30% |
+| 8334431 | C2 IR Graph 将 MemBarAcquire 放入循环 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 正确性修复 | - |
 
-**JDK 24 统计**: 8 PRs (Shaojin Wen: 8)
+**JDK 24 统计**: 8 PRs (Shaojin Wen: 6, Kuai Wei: 2)
 
 ### JDK 23
 
@@ -300,9 +300,9 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 | 类别 | PRs | 占比 |
 |------|-----|------|
-| 核心贡献者 | 117 | 37% |
+| 核心贡献者 | 121 | 37% |
 | 测试贡献 | 202 | 63% |
-| **总计** | **319** | 100% |
+| **总计** | **323** | 100% |
 
 > **注**: 部分 PR 可能跨版本合入，统计基于主要目标版本。Sendaoyan Yan 202+ PRs 为 2022-2025 年在职期间贡献，归属于 Alibaba。
 
