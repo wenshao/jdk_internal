@@ -45,6 +45,20 @@
 > **统计时间**: 2026-03-20
 > **来源**: [LinkedIn](https://www.linkedin.com/in/chen-liang-51122427b), [CFV: New JDK Reviewer](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html), [CFV: New Valhalla Committer](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html)
 
+### LangTools 团队成员
+
+Chen Liang 是 Oracle Java LangTools 团队的核心成员，该团队负责：
+
+| 成员 | 角色 | 主要领域 |
+|------|------|----------|
+| [Jonathan Gibbons](../../by-contributor/profiles/jonathan-gibbons.md) | 团队负责人 | javac 编译器、javadoc |
+| [Adam Sotona](../../by-contributor/profiles/adam-sotona.md) | 核心工程师 | ClassFile API、字节码处理 |
+| [Chen Liang](../../by-contributor/profiles/chen-liang.md) | JDK Reviewer | ClassFile API、核心反射 |
+| [Vicente Romero](../../by-contributor/profiles/vicente-romero.md) | 核心工程师 | javac 编译器、语言模型 |
+| [Jan Lahoda](../../by-contributor/profiles/jan-lahoda.md) | 核心工程师 | javac、语言特性 |
+
+> **团队职责**: javac 编译器、ClassFile API、语言模型 API、注解处理、javadoc 工具
+
 ### 最近 10 个 Integrated PRs (2026 年 2-3 月)
 
 | PR # | Issue | 标题 | 日期 |
@@ -1290,7 +1304,7 @@ Chen Liang 的贡献特点:
 
 ---
 
-> **文档版本**: 5.0
+> **文档版本**: 6.0
 > **最后更新**: 2026-03-21
 > **更新内容**:
 > - 补充 Valhalla Committer 提名信息 (2025-05)
@@ -1301,6 +1315,8 @@ Chen Liang 的贡献特点:
 > - 新增多层网络分析章节 (协作网络、技术影响力、组织关系)
 > - 添加可视化协作网络图
 > - 补充知识传承网络分析
+> - 添加 LangTools 团队成员介绍
+> - 补充多层关联调查信息
 
 ## 12. 相关链接
 
