@@ -246,7 +246,7 @@ JDK 17 ─── 改进 CPU 检测
 
 ## 12. 参考资料
 
-- [JEP 307: Container Awareness](https://openjdk.org/jeps/307)
+- [JEP 307](/jeps/platform/jep-307.md)
 - [Docker 文档](https://docs.docker.com/)
 - [Kubernetes 文档](https://kubernetes.io/docs/)
 

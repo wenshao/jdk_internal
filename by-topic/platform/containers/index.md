@@ -719,5 +719,5 @@ startupProbe:
 
 - [Docker 最佳实践](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 - [Kubernetes 文档](https://kubernetes.io/docs/)
-- [JDK 容器支持](https://openjdk.org/jeps/307)
+- [JDK 容器支持](/jeps/platform/jep-307.md)
 - [性能优化](/by-topic/core/performance/)
