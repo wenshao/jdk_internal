@@ -492,9 +492,54 @@ Keep technical artifacts unchanged:
 
 ## Link Verification Rule
 
-**When adding or fixing links in markdown files, the push must be verified by direct access check before it can be considered passed.**
+**CRITICAL: All local links must be verified BEFORE committing changes.**
 
-This means:
-1. After pushing changes with links, use `web_fetch` to access the GitHub raw URL and verify the linked file exists
-2. Example verification: `https://raw.githubusercontent.com/wenshao/jdk_internal/main/by-contributor/profiles/thomas-schatzl.md`
-3. Only after successful verification can the task be marked as complete
+### Pre-Commit Link Verification Process
+
+**When adding or modifying local links in markdown files:**
+
+1. **Extract all local links from the file**:
+   ```bash
+   # Extract markdown links
+   grep -oE '\]\([^)]+\.md\)' path/to/file.md | sort -u
+   ```
+
+2. **Verify each target file exists**:
+   ```bash
+   # Check if linked files exist
+   for link in $(grep -oE '\]\(../../[^)]+\.md\)' file.md | sed 's/\](//;s/)//'); do
+     target=$(realpath -m "$(dirname file.md)/$link")
+     if [ ! -f "$target" ]; then
+       echo "BROKEN: $link -> $target"
+     fi
+   done
+   ```
+
+3. **Common link patterns in this project**:
+   | From | To | Pattern |
+   |------|-----|---------|
+   | `contributors/orgs/*.md` | `by-contributor/profiles/*.md` | `../../by-contributor/profiles/{name}.md` |
+   | `by-contributor/profiles/*.md` | `contributors/orgs/*.md` | `/contributors/orgs/{org}.md` |
+   | `by-version/jdk26/*.md` | `by-pr/*.md` | `../../by-pr/{issue}/{pr}.md` |
+   | `anywhere` | `jeps/*.md` | `/jeps/{category}/jep-{num}.md` |
+
+4. **Required verification steps**:
+   - [ ] All `../../` relative paths resolved correctly
+   - [ ] All `/absolute` paths point to existing files
+   - [ ] Profile links use correct filenames (lowercase, hyphens)
+   - [ ] Organization links use `orgs/` NOT `organizations/`
+
+### Post-Push Verification
+
+After pushing changes with links, verify via GitHub raw URL:
+1. `https://raw.githubusercontent.com/wenshao/jdk_internal/main/{path/to/file}.md`
+2. Only after successful verification can the task be marked as complete
+
+### Common Link Errors
+
+| Error | Wrong | Correct |
+|-------|-------|---------|
+| Wrong directory | `contributors/organizations/` | `contributors/orgs/` |
+| Case sensitivity | `Thomas-Schatzl.md` | `thomas-schatzl.md` |
+| Missing subdirectory | `by-pr/8336856.md` | `by-pr/8336/8336856.md` |
+| Wrong relative depth | `../profiles/` | `../../by-contributor/profiles/` |
