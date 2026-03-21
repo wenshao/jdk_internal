@@ -1,6 +1,6 @@
 # Chen Liang
 
-> ClassFile API 核心开发者，JDK Reviewer
+> ClassFile API 核心开发者，JDK Reviewer，Valhalla Committer
 
 ---
 
@@ -72,7 +72,7 @@
 | **2024-06** | 被任命为 JDK Reviewer | 由 Jonathan Gibbons 提名 |
 | **2024-08** | 参与 JDK-8336856 String "+" 优化 | 作为 Reviewer 与 Shaojin Wen、Claes Redestad 合作 |
 | **2024-12** | 发布 javadoc types-facelift | [javadoc 类型展示改进](https://cr.openjdk.org/~liach/javadoc/types-facelift/) |
-| **2025-05** | 被提名为 Valhalla Committer | [CFV 投票](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html) |
+| **2025-05** | 被任命为 Valhalla Committer | [CFV 投票](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html) |
 
 > **来源**: [CFV: New JDK Reviewer: Chen Liang](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html), [CFV: New Valhalla Committer: Chen Liang](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html)
 
