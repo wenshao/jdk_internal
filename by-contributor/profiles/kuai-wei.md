@@ -143,11 +143,31 @@ void release_barrier() {
 
 Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一。Dragonwell 是阿里巴巴基于 OpenJDK 的发行版，针对电商、金融、物流等场景优化。
 
-| 版本 | 基础 JDK | 状态 |
-|------|----------|------|
-| Dragonwell 8 | OpenJDK 8 | LTS |
-| Dragonwell 11 | OpenJDK 11 | LTS |
-| Dragonwell 21 | OpenJDK 21 | LTS |
+| 版本 | Stars | Forks | Commits | Kuai Wei 贡献 |
+|------|-------|-------|---------|--------------|
+| Dragonwell 8 | 4,318 | 501 | 91,553 | 5+ commits |
+| Dragonwell 11 | 584 | 118 | 112,268 | 5+ commits |
+| Dragonwell 21 | 134 | 28 | - | 5+ commits |
+
+**Dragonwell 主要维护者**:
+- **GoeLin** (林珑): 1,200+ commits (Dragonwell 11/21)
+- **wangweij** (王卫建): 600+ commits
+- **Kuai Wei** (魏快): 15+ commits (JIT 优化，backport)
+
+### Dragonwell 贡献详情
+
+**JIT 编译器 Backport**:
+- [JIT] Backport 8318446: C2 optimize stores into primitive arrays
+- [JIT] Backport 8255120: C2 assert fix for MemNode
+- [JIT] Compress method entries for aarch64
+
+**构建系统改进**:
+- Support build with gcc 10
+- Make UseAIExtension experimental options
+
+**Bug 修复**:
+- [Backport] 6563994: assert(wf.check_method_context) fix
+- [Backport] 8239429: AbsPathsInImage.java Windows 失败修复
 
 ### 技术专长
 
@@ -157,7 +177,7 @@ Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一。Dragonwel
 | **内存屏障** | ARM/AArch64 内存模型，并发优化 |
 | **RISC-V** | MacroAssembler，架构移植 |
 | **ZGC** | 垃圾回收器优化和移植 |
-| **开发工具** | Windows/WSL/MSYS2 开发环境 |
+| **Dragonwell** | JIT backport, 构建系统，aarch64 优化 |
 
 ---
 
@@ -168,7 +188,10 @@ Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一。Dragonwel
 | **GitHub** | https://github.com/kuaiwei |
 | **GitHub PRs** | https://github.com/openjdk/jdk/pulls?q=author%3Akuaiwei |
 | **OpenJDK Census** | https://openjdk.org/census#kuaiwei |
-| **Dragonwell** | https://github.com/alibaba/dragonwell11 |
+| **Dragonwell 8** | https://github.com/dragonwell-project/dragonwell8 |
+| **Dragonwell 11** | https://github.com/dragonwell-project/dragonwell11 |
+| **Dragonwell 21** | https://github.com/dragonwell-project/dragonwell21 |
+| **Dragonwell 官网** | https://dragonwell-jdk.io/ |
 
 ---
 
