@@ -679,7 +679,7 @@ ModuleLayer.boot().addOpens(
 
 **JEP 文档:**
 - [JEP 220: Modular Run-Time Image](https://openjdk.org/jeps/220)
-- [JEP 467: Prepare to Simplify AppCDS](https://openjdk.org/jeps/467)
+- [JEP 467](/jeps/tools/jep-467.md)
 
 **技术文档:**
 - [Class Loading](https://docs.oracle.com/javase/specs/jvms/se21/html/jvms-5.html)

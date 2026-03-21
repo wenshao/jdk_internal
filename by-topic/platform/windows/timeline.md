@@ -190,7 +190,7 @@ JDK 17 ─── 注册表性能优化
 ## 11. 参考资料
 
 - [JEP 343: Packaging Tool](https://openjdk.org/jeps/343)
-- [JEP 449: Deprecate Windows 32-bit](https://openjdk.org/jeps/449)
+- [JEP 449](/jeps/tools/jep-449.md)
 - [Windows 服务最佳实践](https://docs.microsoft.com/en-us/windows/win32/services/)
 
 → [返回 Windows 平台](./)

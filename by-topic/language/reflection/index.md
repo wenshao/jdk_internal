@@ -667,11 +667,11 @@ public void fast() throws Throwable {
 
 ### 外部资源
 
-- [JEP 395: Class File API (Preview)](https://openjdk.org/jeps/395)
-- [JEP 484: Class-File API](https://openjdk.org/jeps/484)
+- [JEP 395](/jeps/language/jep-395.md)
+- [JEP 484](/jeps/tools/jep-484.md)
 - [JEP 370: Foreign Memory Access (Experimental)](https://openjdk.org/jeps/370)
 - [JEP 389: Foreign Linker API (Experimental)](https://openjdk.org/jeps/389)
-- [JEP 454: Foreign Function & Memory API](https://openjdk.org/jeps/454)
+- [JEP 454](/jeps/ffi/jep-454.md)
 - [JSR 292: Supporting Dynamically Typed Languages](https://jcp.org/en/jsr/detail?id=292)
 - [JSR 308: Annotations on Java Types](https://jcp.org/en/jsr/detail?id=308)
 
@@ -680,7 +680,7 @@ public void fast() throws Throwable {
 **最后更新**: 2026-03-20
 
 **Sources**:
-- [JEP 484: Class-File API](https://openjdk.org/jeps/484)
-- [JEP 454: Foreign Function & Memory API](https://openjdk.org/jeps/454)
-- [JEP 395: Class File API (Preview)](https://openjdk.org/jeps/395)
+- [JEP 484](/jeps/tools/jep-484.md)
+- [JEP 454](/jeps/ffi/jep-454.md)
+- [JEP 395](/jeps/language/jep-395.md)
 - [OpenJDK Git Commits](https://github.com/openjdk/jdk/commits/master/src/java.base/share/classes/java/lang/String.java)

@@ -596,9 +596,9 @@ java VectorAdd
 - [JEP 417: Vector API (Third Incubator)](https://openjdk.org/jeps/417)
 - [JEP 426: Vector API (Fourth Incubator)](https://openjdk.org/jeps/426)
 - [JEP 438: Vector API (Fifth Incubator)](https://openjdk.org/jeps/438)
-- [JEP 448: Vector API (Sixth Incubator)](https://openjdk.org/jeps/448)
-- [JEP 508: Vector API (Tenth Incubator)](https://openjdk.org/jeps/508)
-- [JEP 529: Vector API (Eleventh Incubator)](https://openjdk.org/jeps/529)
+- [JEP 448](/jeps/tools/jep-448.md)
+- [JEP 508](/jeps/concurrency/jep-508.md)
+- [JEP 529](/jeps/language/jep-529.md)
 - [JEP 401: Value Classes and Objects (Valhalla)](https://openjdk.org/jeps/401)
 
 ### 相关项目

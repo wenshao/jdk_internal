@@ -842,16 +842,16 @@ public <T> void print(T item) {  // T 可以用 Object 替代
 
 ### 外部资源
 
-- [JEP 395: Records](https://openjdk.org/jeps/395)
-- [JEP 394: Pattern Matching for instanceof](https://openjdk.org/jeps/394)
+- [JEP 395](/jeps/language/jep-395.md)
+- [JEP 394](/jeps/language/jep-394.md)
 - [JEP 409: Sealed Classes](https://openjdk.org/jeps/409)
-- [JEP 441: Pattern Matching for switch](https://openjdk.org/jeps/441)
-- [JEP 440: Record Patterns](https://openjdk.org/jeps/440)
-- [JEP 456: Unnamed Patterns and Variables](https://openjdk.org/jeps/456)
-- [JEP 530: Primitive Types in Patterns](https://openjdk.org/jeps/530)
-- [JEP 511: Module Import Declarations](https://openjdk.org/jeps/511)
-- [JEP 512: Compact Source Files](https://openjdk.org/jeps/512)
-- [JEP 526: Lazy Constants](https://openjdk.org/jeps/526)
+- [JEP 441](/jeps/language/jep-441.md)
+- [JEP 440](/jeps/language/jep-440.md)
+- [JEP 456](/jeps/language/jep-456.md)
+- [JEP 530](/jeps/language/jep-530.md)
+- [JEP 511](/jeps/tools/jep-511.md)
+- [JEP 512](/jeps/language/jep-512.md)
+- [JEP 526](/jeps/tools/jep-526.md)
 
 ### Git 仓库
 
@@ -866,9 +866,9 @@ git log --oneline -- src/jdk.compiler/share/classes/com/sun/tools/javac/
 **最后更新**: 2026-03-20
 
 **Sources**:
-- [JEP 395: Records](https://openjdk.org/jeps/395)
+- [JEP 395](/jeps/language/jep-395.md)
 - [JEP 409: Sealed Classes](https://openjdk.org/jeps/409)
-- [JEP 441: Pattern Matching for switch](https://openjdk.org/jeps/441)
-- [JEP 530: Primitive Types in Patterns](https://openjdk.org/jeps/530)
+- [JEP 441](/jeps/language/jep-441.md)
+- [JEP 530](/jeps/language/jep-530.md)
 - [Records Sealed Classes Pattern Matching](https://blog.csdn.net/qq_42055933/article/details/156172037)
 - [Java 8 to 17 New Features Guide](https://medium.com/@shankar.singla1709/from-java-8-to-17-a-comprehensive-guide-to-new-features-354759b59350)

@@ -262,6 +262,6 @@ src/java.base/share/classes/java/lang/invoke/
 
 ## 8. 相关资源
 
-- [JEP 254: Compact Strings](https://openjdk.org/jeps/254)
+- [JEP 254](/jeps/language/jep-254.md)
 - [OpenJDK String 源码](https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/lang/String.java)
 - [Compact Strings in JDK 9](https://openjdk.org/projects/jdk9/)

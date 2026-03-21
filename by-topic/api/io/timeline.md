@@ -624,4 +624,4 @@ try (BufferedReader br = new BufferedReader(new FileReader(file))) {
 - [I/O Streams](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/package-summary.html)
 - [NIO](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/package-summary.html)
 - [NIO.2](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/package-summary.html)
-- [JEP 454: Foreign Memory Access](https://openjdk.org/jeps/454)
+- [JEP 454](/jeps/ffi/jep-454.md)

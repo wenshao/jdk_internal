@@ -508,5 +508,5 @@ public boolean process(Set<? extends TypeElement> annotations,
 - [JSR 308: Annotations on Java Types](https://jcp.org/en/jsr/detail?id=308)
 
 **JEP 文档:**
-- [JEP 441: Pattern Matching for switch](https://openjdk.org/jeps/441)
-- [JEP 466: Class-File API (Preview)](https://openjdk.org/jeps/466)
+- [JEP 441](/jeps/language/jep-441.md)
+- [JEP 466](/jeps/tools/jep-466.md)

@@ -813,8 +813,8 @@ employees.stream()
 
 - [JEP 359: Records (Preview)](https://openjdk.org/jeps/359)
 - [JEP 384: Records (Second Preview)](https://openjdk.org/jeps/384)
-- [JEP 395: Records](https://openjdk.org/jeps/395)
-- [JEP 440: Record Patterns](https://openjdk.org/jeps/440)
+- [JEP 395](/jeps/language/jep-395.md)
+- [JEP 440](/jeps/language/jep-440.md)
 - [Records (Java Language Specification)](https://docs.oracle.com/javase/specs/jls/se17/html/jls-8.html#jls-8.10)
 
 ---

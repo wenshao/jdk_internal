@@ -961,7 +961,7 @@ ForkJoinPool.commonPool().submit(() -> {
 ## 15. 相关链接
 
 - [虚拟线程文档](https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html)
-- [JEP 444: Virtual Threads](https://openjdk.org/jeps/444)
-- [JEP 453: Structured Concurrency (Preview)](https://openjdk.org/jeps/453)
-- [JEP 446: Scoped Values (Preview)](https://openjdk.org/jeps/446)
-- [JEP 493: Structured Concurrency (Preview)](https://openjdk.org/jeps/493)
+- [JEP 444](/jeps/concurrency/jep-444.md)
+- [JEP 453](/jeps/concurrency/jep-453.md)
+- [JEP 446](/jeps/concurrency/jep-446.md)
+- [JEP 493](/jeps/tools/jep-493.md)

@@ -672,7 +672,7 @@ git log --oneline -- src/java.base/share/classes/java/lang/Exception.java
 ### 外部资源
 
 - [JEP 259: StackWalker](https://openjdk.org/jeps/259)
-- [JEP 394: Pattern Matching for instanceof](https://openjdk.org/jeps/394)
+- [JEP 394](/jeps/language/jep-394.md)
 - [JEP 406: Pattern Matching for switch](https://openjdk.org/jeps/406)
 - [Java 异常处理指南 (Oracle)](https://docs.oracle.com/javase/tutorial/essential/exceptions/)
 - [Effective Java - 异常章节](https://www.oreilly.com/library/view/effective-java/9780134686097/)
@@ -688,6 +688,6 @@ git log --oneline -- src/java.base/share/classes/java/lang/Exception.java
 
 **Sources**:
 - [JEP 259: StackWalker](https://openjdk.org/jeps/259)
-- [JEP 394: Pattern Matching for instanceof](https://openjdk.org/jeps/394)
+- [JEP 394](/jeps/language/jep-394.md)
 - [Java Exceptions Tutorial (Oracle)](https://docs.oracle.com/javase/tutorial/essential/exceptions/)
 - [Effective Java: Exceptions](https://www.oreilly.com/library/view/effective-java/9780134686097/)

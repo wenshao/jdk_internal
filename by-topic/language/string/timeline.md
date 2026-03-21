@@ -197,11 +197,11 @@ String message = STR."Hello \{name}, you have \{count} messages.";
 
 | JEP | 标题 | 版本 |
 |-----|------|------|
-| [JEP 254](https://openjdk.org/jeps/254) | Compact Strings | JDK 9 |
-| [JEP 280](https://openjdk.org/jeps/280) | Indify String Concatenation | JDK 9 |
+| [JEP 254](/jeps/language/jep-254.md) | Compact Strings | JDK 9 |
+| [JEP 280](/jeps/language/jep-280.md) | Indify String Concatenation | JDK 9 |
 | [JEP 192](https://openjdk.org/jeps/192) | String Deduplication | JDK 8 |
-| [JEP 378](https://openjdk.org/jeps/378) | Text Blocks | JDK 15 |
-| [JEP 430](https://openjdk.org/jeps/430) | String Templates | JDK 21 |
+| [JEP 378](/jeps/language/jep-378.md) | Text Blocks | JDK 15 |
+| [JEP 430](/jeps/language/jep-430.md) | String Templates | JDK 21 |
 
 ---
 

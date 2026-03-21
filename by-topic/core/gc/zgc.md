@@ -262,7 +262,7 @@ Large: 32MB+
 
 ## 8. 相关链接
 
-- [JEP 439: Generational ZGC](https://openjdk.org/jeps/439) - 分代 ZGC 规范
+- [JEP 439](/jeps/gc/jep-439.md) - 分代 ZGC 规范
 - [ZGC Wiki](https://wiki.openjdk.org/spaces/zgc/) - 技术文档
 - [Understanding ZGC](https://inside.java/2023/11/28/gen-zgc-explainer/) - 深入解析
 - [VM 参数](../vm-parameters.md) - GC 参数参考

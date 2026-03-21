@@ -4307,10 +4307,10 @@ src/hotspot/share/gc/
 - [Getting Started with G1 GC](https://openjdk.org/projects/jdk/features/g1)
 - [The ZGC Garbage Collector](https://openjdk.org/projects/jdk/features/zgc)
 - [Shenandoah GC](https://wiki.openjdk.org/display/shenandoah/Main)
-- [JEP 439: Generational ZGC](https://openjdk.org/jeps/439)
-- [JEP 521: Generational Shenandoah](https://openjdk.org/jeps/521)
-- [JEP 522: G1 GC Throughput Improvement](https://openjdk.org/jeps/522)
-- [JEP 519: Compact Object Headers](https://openjdk.org/jeps/519)
+- [JEP 439](/jeps/gc/jep-439.md)
+- [JEP 521](/jeps/gc/jep-521.md)
+- [JEP 522](/jeps/gc/jep-522.md)
+- [JEP 519](/jeps/gc/jep-519.md)
 
 ### Git 仓库
 
@@ -4351,12 +4351,12 @@ git log --oneline -- src/hotspot/share/gc/shenandoah/
 - **Shenandoah**: `shenandoahForwarding.hpp`, `shenandoahBarrierSet.cpp`, `shenandoahGenerationalHeap.cpp`
 
 **Sources**:
-- [JEP 522: G1 GC Throughput Improvement](https://openjdk.org/jeps/522) - Thomas Schatzl (Oracle)
-- [JEP 521: Generational Shenandoah](https://openjdk.org/jeps/521) - William Kemper (Amazon)
-- [JEP 519: Compact Object Headers](https://openjdk.org/jeps/519) - Roman Kennke (Red Hat)
-- [JEP 439: Generational ZGC](https://openjdk.org/jeps/439) - Stefan Karlsson (Oracle)
-- [JEP 474: Generational ZGC Improvements](https://openjdk.org/jeps/474) - Stefan Karlsson (Oracle)
-- [JEP 379: Shenandoah GC](https://openjdk.org/jeps/379) - Aleksey Shipilev (Oracle)
+- [JEP 522](/jeps/gc/jep-522.md) - Thomas Schatzl (Oracle)
+- [JEP 521](/jeps/gc/jep-521.md) - William Kemper (Amazon)
+- [JEP 519](/jeps/gc/jep-519.md) - Roman Kennke (Red Hat)
+- [JEP 439](/jeps/gc/jep-439.md) - Stefan Karlsson (Oracle)
+- [JEP 474](/jeps/gc/jep-474.md) - Stefan Karlsson (Oracle)
+- [JEP 379](/jeps/gc/jep-379.md) - Aleksey Shipilev (Oracle)
 - [JEP 333: ZGC](https://openjdk.org/jeps/333) - Per Lidén (Oracle)
 
 **贡献者档案**:

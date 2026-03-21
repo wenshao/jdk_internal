@@ -396,8 +396,8 @@ synchronized (lock) {
 ## 12. 参考资料
 
 - [Project Loom Official Page](https://openjdk.org/projects/loom/)
-- [JEP 444: Virtual Threads](https://openjdk.org/jeps/444)
-- [JEP 453: Structured Concurrency (Preview)](https://openjdk.org/jeps/453)
-- [JEP 436: Virtual Threads (Second Preview)](https://openjdk.org/jeps/436)
+- [JEP 444](/jeps/concurrency/jep-444.md)
+- [JEP 453](/jeps/concurrency/jep-453.md)
+- [JEP 436](/jeps/concurrency/jep-436.md)
 
 → [时间线](timeline.md) | [并发主题](../../concurrency/)

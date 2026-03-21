@@ -670,7 +670,7 @@ channel.connect(UnixDomainSocketAddress.of(new File("/tmp/my.sock")));
 **JEP 文档:**
 - [JEP 380: Unix Domain Sockets](https://openjdk.org/jeps/380)
 - [JEP 426: Virtual Threads](https://openjdk.org/jeps/426)
-- [JEP 521: Structured Concurrency](https://openjdk.org/jeps/521)
+- [JEP 521](/jeps/gc/jep-521.md)
 
 **技术文档:**
 - [Java NIO Tutorial](https://docs.oracle.com/javase/tutorial/essential/io/)

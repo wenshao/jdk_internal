@@ -840,13 +840,13 @@ git log --oneline -- src/java.base/share/classes/java/util/concurrent/
 
 ### 外部资源
 
-- [JEP 444: Virtual Threads](https://openjdk.org/jeps/444)
-- [JEP 453: Structured Concurrency (Preview)](https://openjdk.org/jeps/453)
-- [JEP 462: Structured Concurrency (Second Preview)](https://openjdk.org/jeps/462)
-- [JEP 446: Scoped Values (Preview)](https://openjdk.org/jeps/446)
-- [JEP 506: Scoped Values](https://openjdk.org/jeps/506)
-- [JEP 526: Lazy Constants](https://openjdk.org/jeps/526)
-- [JEP 502: Stable Values](https://openjdk.org/jeps/502)
+- [JEP 444](/jeps/concurrency/jep-444.md)
+- [JEP 453](/jeps/concurrency/jep-453.md)
+- [JEP 462](/jeps/concurrency/jep-462.md)
+- [JEP 446](/jeps/concurrency/jep-446.md)
+- [JEP 506](/jeps/concurrency/jep-506.md)
+- [JEP 526](/jeps/tools/jep-526.md)
+- [JEP 502](/jeps/performance/jep-502.md)
 - [Project Loom](https://openjdk.org/projects/loom/)
 - [Inside Java: Project Loom Updates](https://inside.java/2025/02/22/devoxxbelgium-loom-next/)
 
@@ -855,9 +855,9 @@ git log --oneline -- src/java.base/share/classes/java/util/concurrent/
 **最后更新**: 2026-03-20
 
 **Sources**:
-- [JEP 444: Virtual Threads](https://openjdk.org/jeps/444)
-- [JEP 462: Structured Concurrency (Second Preview)](https://openjdk.org/jeps/462)
-- [JEP 506: Scoped Values](https://openjdk.org/jeps/506)
+- [JEP 444](/jeps/concurrency/jep-444.md)
+- [JEP 462](/jeps/concurrency/jep-462.md)
+- [JEP 506](/jeps/concurrency/jep-506.md)
 - [Project Loom and Virtual Threads Best Practices](https://metadesignsolutions.com/reactive-java-2025-project-loom-virtual-threads-best-practices/)
 - [Virtual Threads Improvements 2024](https://www.jvm-weekly.com/p/loom-strikes-again-what-improvements)
 - [Java Virtual Threads Complete Guide](https://blog.marcnuri.com/java-virtual-threads-project-loom-complete-guide)

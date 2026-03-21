@@ -774,12 +774,12 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ### JEP 文档
 
-- [JEP 483: AOT Class Loading](https://openjdk.org/jeps/483)
-- [JEP 509: JFR CPU-Time Profiling](https://openjdk.org/jeps/509)
-- [JEP 518: JFR Cooperative Sampling](https://openjdk.org/jeps/518)
-- [JEP 520: JFR Method Timing & Tracing](https://openjdk.org/jeps/520)
-- [JEP 519: Compact Object Headers](https://openjdk.org/jeps/519)
-- [JEP 522: G1 GC Throughput Improvement](https://openjdk.org/jeps/522)
+- [JEP 483](/jeps/tools/jep-483.md)
+- [JEP 509](/jeps/jfr/jep-509.md)
+- [JEP 518](/jeps/jfr/jep-518.md)
+- [JEP 520](/jeps/jfr/jep-520.md)
+- [JEP 519](/jeps/gc/jep-519.md)
+- [JEP 522](/jeps/gc/jep-522.md)
 
 ### 外部资源
 
@@ -799,10 +799,10 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 **Sources**:
 - [Inside Java: Performance Improvements in JDK 24](https://inside.java/2025/03/19/performance-improvements-in-jdk24/)
-- [JEP 483: AOT Class Loading](https://openjdk.org/jeps/483)
-- [JEP 509: JFR CPU-Time Profiling](https://openjdk.org/jeps/509)
-- [JEP 518: JFR Cooperative Sampling](https://openjdk.org/jeps/518)
-- [JEP 520: JFR Method Timing & Tracing](https://openjdk.org/jeps/520)
+- [JEP 483](/jeps/tools/jep-483.md)
+- [JEP 509](/jeps/jfr/jep-509.md)
+- [JEP 518](/jeps/jfr/jep-518.md)
+- [JEP 520](/jeps/jfr/jep-520.md)
 - [Inside Java: Java Performance Update](https://inside.java/2025/01/26/devoxxbelgium-java-perfromance-update/)
 - [Understanding and Finding JIT Compiler Performance Bugs](https://arxiv.org/html/2603.06551v1)
 - [Project Leyden: Java Cloud-Native Optimization](https://blog.csdn.net/D1237890/article/details/155417254)

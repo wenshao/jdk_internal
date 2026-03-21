@@ -586,7 +586,7 @@ HttpRequest request = HttpRequest.newBuilder()
     .build();
 ```
 
-→ [JEP 517](https://openjdk.org/jeps/517)
+→ [JEP 517](/jeps/network/jep-517.md)
 
 ### HTTP/2 优化
 
@@ -702,7 +702,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 **JEP 文档:**
 - [JEP 321: HTTP Client](https://openjdk.org/jeps/321) - 标准化
-- [JEP 517: HTTP/3 Client](https://openjdk.org/jeps/517) - HTTP/3 预览
+- [JEP 517](/jeps/network/jep-517.md) - HTTP/3 预览
 
 **RFC 文档:**
 - [RFC 9114: HTTP/3](https://datatracker.ietf.org/doc/html/rfc9114)

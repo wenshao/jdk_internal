@@ -35,7 +35,7 @@
 - 吞吐量提升 10-20%
 
 **相关链接**:
-- [JEP 522](https://openjdk.org/jeps/522)
+- [JEP 522](/jeps/gc/jep-522.md)
 - [PR #21373](https://github.com/openjdk/jdk/pull/21373)
 
 ### JDK-8340592: ZGC NUMA 支持
@@ -112,7 +112,7 @@
 ```
 
 **相关链接**:
-- [JEP 439](https://openjdk.org/jeps/439)
+- [JEP 439](/jeps/gc/jep-439.md)
 - [Inside Java: Generational ZGC](https://inside.java/2023/11/28/gen-zgc-explainer/)
 
 ### JEP 521: 分代 Shenandoah
@@ -130,7 +130,7 @@
 ```
 
 **相关链接**:
-- [JEP 521](https://openjdk.org/jeps/521)
+- [JEP 521](/jeps/gc/jep-521.md)
 
 ### JDK-8307390: ZGC 并发线程栈扫描
 
@@ -216,10 +216,10 @@
 
 ### JEP 文档
 
-- [JEP 439: Generational ZGC](https://openjdk.org/jeps/439)
-- [JEP 521: Generational Shenandoah](https://openjdk.org/jeps/521)
-- [JEP 522: G1 GC Throughput](https://openjdk.org/jeps/522)
-- [JEP 474: ZGC Defaults to Generational](https://openjdk.org/jeps/474)
+- [JEP 439](/jeps/gc/jep-439.md)
+- [JEP 521](/jeps/gc/jep-521.md)
+- [JEP 522](/jeps/gc/jep-522.md)
+- [JEP 474](/jeps/gc/jep-474.md)
 
 ### 技术博客
 

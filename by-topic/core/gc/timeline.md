@@ -227,7 +227,7 @@ HeapSize = 32GB → RegionSize = 32GB / 2048 = 16MB
 - `Eden: X(X)->Y(Y)` - Eden 使用变化
 - `Heap: X(X)->Y(Y)` - 整堆使用变化
 
-→ [JEP 522: G1 GC Throughput](https://openjdk.org/jeps/522)
+→ [JEP 522](/jeps/gc/jep-522.md)
 
 ---
 
@@ -397,7 +397,7 @@ Object load_barrier(Object obj) {
 | 128GB | 每 2min | < 1ms | 97% |
 | 512GB | 每 5min | < 1ms | 96% |
 
-→ [JEP 439: Generational ZGC](https://openjdk.org/jeps/439)
+→ [JEP 439](/jeps/gc/jep-439.md)
 
 ---
 
@@ -481,7 +481,7 @@ Object load_barrier(Object obj) {
 -XX:ShenandoahRegionSize=32m    # Region 大小 (256k-32m)
 ```
 
-→ [JEP 521: Generational Shenandoah](https://openjdk.org/jeps/521)
+→ [JEP 521](/jeps/gc/jep-521.md)
 
 ---
 
@@ -702,9 +702,9 @@ jcmd <pid> GC.run_finalization
 
 ## 12. 相关链接
 
-- [JEP 522: G1 GC Throughput](https://openjdk.org/jeps/522)
-- [JEP 439: Generational ZGC](https://openjdk.org/jeps/439)
-- [JEP 474: Generational ZGC Improvements](https://openjdk.org/jeps/474)
-- [JEP 521: Generational Shenandoah](https://openjdk.org/jeps/521)
-- [JEP 379: Shenandoah](https://openjdk.org/jeps/379)
+- [JEP 522](/jeps/gc/jep-522.md)
+- [JEP 439](/jeps/gc/jep-439.md)
+- [JEP 474](/jeps/gc/jep-474.md)
+- [JEP 521](/jeps/gc/jep-521.md)
+- [JEP 379](/jeps/gc/jep-379.md)
 - [JEP 333: ZGC](https://openjdk.org/jeps/333)

@@ -169,5 +169,5 @@ Eden 满时触发，采用多线程并行复制存活对象。
 ## 相关链接
 - [GC 演进时间线](timeline.md)
 - [VM 参数完整参考](vm-parameters.md)
-- [JEP 522 官方提案](https://openjdk.org/jeps/522)
+- [JEP 522](/jeps/gc/jep-522.md)
 - [G1 GC 源码 (GitHub)](https://github.com/openjdk/jdk/tree/master/src/hotspot/share/gc/g1)

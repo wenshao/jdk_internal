@@ -514,7 +514,7 @@ byte[] transformed = ClassFile.of().transformClass(
 
 ## 8. 相关资源
 
-- [JEP 484: Class-File API](https://openjdk.org/jeps/484)
+- [JEP 484](/jeps/tools/jep-484.md)
 - [OpenJDK 源码: java.lang.classfile](https://github.com/openjdk/jdk/tree/master/src/java.base/share/classes/java/lang/classfile)
 - [OpenJDK 源码: jdk.internal.classfile.impl](https://github.com/openjdk/jdk/tree/master/src/java.base/share/classes/jdk/internal/classfile/impl)
 - [返回概览](index.md)

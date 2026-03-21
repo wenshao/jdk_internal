@@ -428,8 +428,8 @@ byte[] transformed = ClassFile.of().transformClass(
 | JEP | 标题 | 版本 | 状态 |
 |-----|------|------|------|
 | [JEP 459](https://openjdk.org/jeps/459) | Class-File API (First Preview) | JDK 22 | 已完成 |
-| [JEP 466](https://openjdk.org/jeps/466) | Class-File API (Second Preview) | JDK 23 | 已完成 |
-| [JEP 484](https://openjdk.org/jeps/484) | Class-File API | JDK 24 | 正式版 |
+| [JEP 466](/jeps/tools/jep-466.md) | Class-File API (Second Preview) | JDK 23 | 已完成 |
+| [JEP 484](/jeps/tools/jep-484.md) | Class-File API | JDK 24 | 正式版 |
 
 ---
 

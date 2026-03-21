@@ -268,7 +268,7 @@ Region: 256KB ~ 32MB (动态调整)
 
 ## 8. 相关链接
 
-- [JEP 521: Generational Shenandoah](https://openjdk.org/jeps/521) - 分代 Shenandoah 规范
+- [JEP 521](/jeps/gc/jep-521.md) - 分代 Shenandoah 规范
 - [Shenandoah GC Wiki](https://wiki.openjdk.org/spaces/shenandoah/) - 技术文档
 - [Understanding Shenandoah](https://inside.java/2024/05/07/generational-shenandoah/) - 深入解析
 - [VM 参数](vm-parameters.md) - GC 参数参考

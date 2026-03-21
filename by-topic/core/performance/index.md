@@ -776,15 +776,15 @@ String date = FORMATTER.format(LocalDate.now());  // 受益于 JIT 常量传播
 
 | JEP | 标题 | 版本 | 状态 |
 |-----|------|------|------|
-| [JEP 483](https://openjdk.org/jeps/483) | Ahead-of-Time Class Loading & Linking | JDK 25 | ✅ Delivered |
-| [JEP 509](https://openjdk.org/jeps/509) | JFR CPU-Time Profiling | JDK 25 | ✅ Delivered |
-| [JEP 514](https://openjdk.org/jeps/514) | Ahead-of-Time Command-Line Ergonomics | JDK 25 | ✅ Delivered |
-| [JEP 515](https://openjdk.org/jeps/515) | Ahead-of-Time Method Analysis | JDK 25 | ✅ Delivered |
+| [JEP 483](/jeps/tools/jep-483.md) | Ahead-of-Time Class Loading & Linking | JDK 25 | ✅ Delivered |
+| [JEP 509](/jeps/jfr/jep-509.md) | JFR CPU-Time Profiling | JDK 25 | ✅ Delivered |
+| [JEP 514](/jeps/performance/jep-514.md) | Ahead-of-Time Command-Line Ergonomics | JDK 25 | ✅ Delivered |
+| [JEP 515](/jeps/performance/jep-515.md) | Ahead-of-Time Method Analysis | JDK 25 | ✅ Delivered |
 | [JEP 516](https://openjdk.org/jeps/516) | Ahead-of-Time Object Caching with Any GC | JDK 26 | ✅ Delivered |
-| [JEP 518](https://openjdk.org/jeps/518) | JFR Cooperative Sampling | JDK 25 | ✅ Delivered |
-| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | JDK 25 | ✅ Delivered |
-| [JEP 520](https://openjdk.org/jeps/520) | JFR Method Timing & Tracing | JDK 25 | ✅ Delivered |
-| [JEP 522](https://openjdk.org/jeps/522) | G1 GC: Improve Throughput by Reducing Synchronization | JDK 26 | ✅ Delivered |
+| [JEP 518](/jeps/jfr/jep-518.md) | JFR Cooperative Sampling | JDK 25 | ✅ Delivered |
+| [JEP 519](/jeps/gc/jep-519.md) | Compact Object Headers | JDK 25 | ✅ Delivered |
+| [JEP 520](/jeps/jfr/jep-520.md) | JFR Method Timing & Tracing | JDK 25 | ✅ Delivered |
+| [JEP 522](/jeps/gc/jep-522.md) | G1 GC: Improve Throughput by Reducing Synchronization | JDK 26 | ✅ Delivered |
 
 ### Git 命令参考
 

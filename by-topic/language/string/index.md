@@ -753,9 +753,9 @@ src/hotspot/share/gc/
 **最后更新**: 2026-03-20
 
 **Sources**:
-- [JEP 254: Compact Strings](https://openjdk.org/jeps/254)
-- [JEP 280: Indify String Concatenation](https://openjdk.org/jeps/280)
-- [JEP 378: Text Blocks](https://openjdk.org/jeps/378)
-- [JEP 430: String Templates](https://openjdk.org/jeps/430)
+- [JEP 254](/jeps/language/jep-254.md)
+- [JEP 280](/jeps/language/jep-280.md)
+- [JEP 378](/jeps/language/jep-378.md)
+- [JEP 430](/jeps/language/jep-430.md)
 - [Inside Java: What Happened to String Templates](https://nipafx.dev/inside-java-newscast-71/)
 - [Baeldung: String Templates](https://www.baeldung.com/java-21-string-templates)

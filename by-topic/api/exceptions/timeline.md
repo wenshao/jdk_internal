@@ -629,7 +629,7 @@ public sealed interface Result<T> {
 |-----|------|------|------|
 | [JSR 203](https://jcp.org/en/jsr/detail?id=203) | More New I/O APIs for the Java Platform | JDK 7 | Try-with-resources |
 | [JEP 305](https://openjdk.org/jeps/305) | Pattern Matching for instanceof | JDK 14 | 异常模式匹配 |
-| [JEP 394](https://openjdk.org/jeps/394) | Pattern Matching for instanceof | JDK 16 | 正式版 |
+| [JEP 394](/jeps/language/jep-394.md) | Pattern Matching for instanceof | JDK 16 | 正式版 |
 
 ---
 

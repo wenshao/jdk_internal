@@ -541,8 +541,8 @@ buf.writeU1U2U4(u1Value, u2Value, u4Value);
 
 ### 官方文档
 
-- [JEP 484: Class-File API](https://openjdk.org/jeps/484)
-- [JEP 466: Class-File API (Second Preview)](https://openjdk.org/jeps/466)
+- [JEP 484](/jeps/tools/jep-484.md)
+- [JEP 466](/jeps/tools/jep-466.md)
 - [JEP 459: Class-File API (First Preview)](https://openjdk.org/jeps/459)
 - [ClassFile API Documentation](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/classfile/package-summary.html)
 
