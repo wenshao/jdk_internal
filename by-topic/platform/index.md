@@ -58,7 +58,7 @@ Windows 企业部署的重要平台。
 | [性能调优](windows/performance.md) | Windows 特定优化 |
 
 **关键演进**:
-- JDK 14: jpackage 正式版
+- JDK 16: jpackage 正式版 (JEP 392)
 - JDK 21: 废弃 32 位 x86 端口
 - JDK 26: 移除 32 位支持
 
@@ -145,7 +145,7 @@ JDK 26 ──── 容器优化增强
 ```
 JDK 8  ──── 基本支持
           │
-JDK 14 ──── jpackage 正式版
+JDK 16 ──── jpackage 正式版 (JEP 392)
           │
 JDK 17 ──── 改进安装程序
           │
@@ -159,7 +159,7 @@ JDK 26 ──── 移除 32 位支持
 ```
 JDK 8  ──── 基本支持
           │
-JDK 14 ──── jpackage 正式版
+JDK 16 ──── jpackage 正式版 (JEP 392)
           │
 JDK 17 ──── Apple Silicon 原生支持
           │   Metal 渲染正式版

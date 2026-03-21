@@ -43,7 +43,7 @@ Windows 是企业环境中 Java 应用部署的重要平台。
 ```
 JDK 8  ──── x86 (32位) 和 x64 (64位) 支持
           │
-JDK 14 ──── jpackage 正式版
+JDK 16 ──── jpackage 正式版 (JEP 392)
           │
 JDK 17 ──── 改进安装程序
           │

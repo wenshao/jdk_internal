@@ -31,34 +31,6 @@ JDK 25 是继 JDK 21 之后的下一个 LTS 版本，包含大量语言增强、
 
 ## 2. 语言特性
 
-### JEP 430: String Templates (正式版) ⭐
-
-**状态**: 正式发布
-**概述**: 字符串模板正式版，提供更安全、更易读的字符串拼接方式。
-
-```java
-// 之前：字符串拼接
-String message = "Hello, " + name + "! You have " + count + " messages.";
-
-// 现在：字符串模板
-String message = STR."Hello, \{name}! You have \{count} messages.";
-
-// 多行模板
-String json = STR."""
-    {
-        "name": "\{user.name()}",
-        "email": "\{user.email()}"
-    }
-    """;
-```
-
-**优势**:
-- 自动转义，防止 SQL 注入和 XSS
-- 编译时类型检查
-- 更好的可读性
-
----
-
 ### JEP 455: Primitive Types in Patterns (第三次预览)
 
 **状态**: 第三次预览
@@ -75,9 +47,9 @@ switch (value) {
 
 ---
 
-### JEP 482: Flexible Constructor Bodies (第三次预览)
+### JEP 513: Flexible Constructor Bodies (正式版)
 
-**状态**: 第三次预览
+**状态**: 正式发布
 **概述**: 允许在构造函数中更灵活地初始化字段。
 
 ```java
@@ -96,9 +68,9 @@ class Person {
 
 ---
 
-### JEP 463: Implicitly Declared Classes and Instance Main Methods (第二次预览)
+### JEP 512: Compact Source Files (正式版)
 
-**状态**: 第二次预览
+**状态**: 正式发布
 **概述**: 简化 Java 入门体验。
 
 ```java
@@ -112,7 +84,7 @@ void main() {
 
 ## 3. 核心库
 
-### JEP 404: Generational Shenandoah (正式版) ⭐
+### JEP 521: Generational Shenandoah (正式版) ⭐
 
 **状态**: 正式发布
 **概述**: Shenandoah GC 支持分代模式，显著降低 GC 开销。
@@ -128,7 +100,7 @@ java -XX:+UseShenandoahGC -XX:ShenandoahGCMode=generational MyApp
 
 ---
 
-### JEP 447: Scoped Values (正式版)
+### JEP 506: Scoped Values (正式版)
 
 **状态**: 正式发布
 **概述**: Scoped Values 正式版，提供比 ThreadLocal 更好的替代方案。
@@ -144,38 +116,11 @@ ScopedValue.where(CURRENT_USER, user).run(() -> {
 
 ---
 
-### JEP 464: Scoped Values (第二次预览)
-
-**状态**: 第二次预览
-**概述**: 根据反馈进一步改进 Scoped Values API。
-
----
-
 ## 4. 并发与多线程
 
-### JEP 444: Virtual Threads (正式版) ⭐⭐⭐
+### JEP 505: Structured Concurrency (第五次预览)
 
-**状态**: 正式发布
-**概述**: 虚拟线程正式版，这是 JDK 21 引入后在 JDK 25 的持续优化。
-
-```java
-// 创建虚拟线程
-Thread.ofVirtual().start(() -> {
-    // 虚拟线程中执行 I/O 操作
-    String response = httpClient.send(request, BodyHandlers.ofString());
-});
-
-// 使用 ExecutorService
-try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
-    List<Future<String>> futures = executor.invokeAll(tasks);
-}
-```
-
----
-
-### JEP 453: Structured Concurrency (第三次预览)
-
-**状态**: 第三次预览
+**状态**: 第五次预览
 **概述**: 结构化并发继续预览。
 
 ```java
@@ -193,35 +138,6 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 ---
 
 ## 5. 性能与监控
-
-### JEP 439: Generational ZGC (正式版) ⭐⭐
-
-**状态**: 正式发布
-**概述**: 分代 ZGC 正式版，默认启用。
-
-```bash
-# JDK 25 默认使用分代 ZGC
-java -XX:+UseZGC MyApp
-
-# 显式启用（已默认）
-java -XX:+UseZGC -XX:+ZGenerational MyApp
-```
-
-**性能数据**:
-| 场景 | 非分代 | 分代 ZGC | 改善 |
-|------|--------|----------|------|
-| 吞吐量下降 | 5-10% | < 3% | **+70%** |
-| GC 频率 | 基准 | -60% | **-60%** |
-| Pause 时间 | < 1ms | < 1ms | 持平 |
-
----
-
-### JEP 416: Reimplement Core Reflection with Method Handles
-
-**状态**: 正式发布
-**概述**: 使用 Method Handles 重新实现核心反射，提升性能。
-
----
 
 ## 6. 安全
 
@@ -247,17 +163,16 @@ java -XX:+UseZGC -XX:+ZGenerational MyApp
 
 | JEP | 标题 | 状态 |
 |-----|------|------|
-| JEP 430 | String Templates | ✅ 正式 |
 | JEP 455 | Primitive Types in Patterns | 🔍 预览 |
-| JEP 482 | Flexible Constructor Bodies | 🔍 预览 |
-| JEP 463 | Implicit Classes | 🔍 预览 |
+| JEP 512 | Compact Source Files | ✅ 正式 |
+| JEP 513 | Flexible Constructor Bodies | ✅ 正式 |
 
 ### 核心库
 
 | JEP | 标题 | 状态 |
 |-----|------|------|
-| JEP 404 | Generational Shenandoah | ✅ 正式 |
-| JEP 447 | Scoped Values | ✅ 正式 |
+| JEP 506 | Scoped Values | ✅ 正式 |
+| JEP 521 | Generational Shenandoah | ✅ 正式 |
 
 ### 并发
 

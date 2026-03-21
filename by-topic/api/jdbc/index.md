@@ -9,11 +9,11 @@
 ## 1. 快速概览
 
 ```
-JDK 1.0 ── JDK 1.2 ── JDK 4 ── JDK 6 ── JDK 7 ── JDK 11 ── JDK 21 ── JDK 26
-   │         │        │        │        │        │        │        │
+JDK 1.1 ── JDK 1.2 ── JDK 1.4 ── JDK 6 ── JDK 7 ── JDK 11 ── JDK 21 ── JDK 26
+   │         │         │         │        │        │        │        │
 JDBC 1.0  JDBC 2.0  JDBC 3.0  JDBC 4.0  JDBC 4.1  JDBC 4.3  JDBC 4.3  分片
-ODBC桥   RowSet    连接池    自动    Try-with   模块化   增强    支持
-                    加载     resources
+ODBC桥   RowSet    连接池    自动     Try-with   模块化   增强    支持
+                    加载      resources
 ```
 
 ### 核心演进
@@ -22,10 +22,10 @@ ODBC桥   RowSet    连接池    自动    Try-with   模块化   增强    支�
 |------|----------|-----|------|
 | **JDK 1.1** | JDBC 1.0 | - | 基础数据库连接、ODBC 桥 |
 | **JDK 1.2** | JDBC 2.0 | - | RowSet、可滚动结果集、批量更新 |
-| **JDK 4** | JDBC 3.0 | JSR 114 | 连接池、Savepoints、参数命名 |
+| **JDK 1.4** | JDBC 3.0 | JSR 54 | 连接池、Savepoints、参数命名 |
 | **JDK 6** | JDBC 4.0 | JSR 221 | 自动驱动加载、SQLXML |
 | **JDK 7** | JDBC 4.1 | JSR 221 | Try-with-resources、Connection |
-| **JDK 11** | JDBC 4.3 | JSR 221 | 模块化 (java.sql.jinc) |
+| **JDK 11** | JDBC 4.3 | JSR 221 | 模块化 (java.sql) |
 | **JDK 26** | JDBC 4.3 | JSR 221 | 分片支持增强 |
 
 ---
@@ -257,11 +257,12 @@ try {
 import java.sql.ShardingKey;
 import java.sql.ConnectionBuilder;
 
-// 创建分片键
-ShardingKey shardingKey = conn.createShardingKey(
-    ShardingKey.SHARD_KEY,
-    "shard1"
-);
+// 创建分片键 (通过 DataSource)
+DataSource ds = ... ;
+ShardingKeyBuilder keyBuilder = ds.createShardingKeyBuilder();
+ShardingKey shardingKey = keyBuilder
+    .subkey("Eastern", JDBCType.VARCHAR)
+    .build();
 
 // 在请求中使用
 conn.beginRequest();

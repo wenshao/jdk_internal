@@ -66,56 +66,7 @@ void main(String[] args) {
 
 ---
 
-### JEP 454: Foreign Function & Memory API (正式版)
-
-**状态**: ✅ Final
-
-FFM API 允许 Java 代码安全地与本地代码和内存交互。
-
-```java
-import java.lang.foreign.*;
-
-// 分配本地内存
-try (Arena arena = Arena.ofConfined()) {
-    MemorySegment segment = arena.allocate(100);
-    segment.set(ValueLayout.JAVA_INT, 0, 42);
-}
-
-// 调用本地函数
-Linker linker = Linker.nativeLinker();
-SymbolLookup stdlib = linker.defaultLookup();
-MethodHandle strlen = linker.downcallHandle(
-    stdlib.find("strlen").get(),
-    FunctionDescriptor.of(ValueLayout.JAVA_LONG, ValueLayout.ADDRESS)
-);
-```
-
-**相关**: [JEP 文档](https://openjdk.org/jeps/454)
-
----
-
 ## 2. 性能
-
-### JEP 468: Generational ZGC
-
-**状态**: ✅ Final
-
-分代 ZGC 将堆分为年轻代和老年代，大幅降低 GC 开销。
-
-| 指标 | 改进 |
-|------|------|
-| GC 开销 | -50% |
-| 吞吐量 | +10-20% |
-| 堆占用 | -30% |
-
-```bash
-# 启用分代 ZGC
-java -XX:+UseZGC -XX:+ZGenerational MyApp
-```
-
-**相关**: [JEP 文档](https://openjdk.org/jeps/468)
-
----
 
 ### JEP 448: JVM Code Heap Segmentation
 
@@ -142,7 +93,7 @@ C2 编译器使用内存屏障优化，提升吞吐量。
 
 ## 3. 并发
 
-### JEP 462: Structured Concurrency (第五次预览)
+### JEP 505: Structured Concurrency (第五次预览)
 
 **状态**: 🔍 Preview
 
@@ -160,13 +111,13 @@ try (var scope = new StructuredTaskScope<Object>()) {
 }
 ```
 
-**相关**: [JEP 文档](https://openjdk.org/jeps/462)
+**相关**: [JEP 文档](https://openjdk.org/jeps/505)
 
 ---
 
-### JEP 467: Scoped Values (第三次预览)
+### JEP 506: Scoped Values (正式版)
 
-**状态**: 🔍 Preview
+**状态**: ✅ Final
 
 作用域值提供线程安全的隐式参数传递。
 
@@ -181,62 +132,11 @@ ScopedValue.where(USER, "alice")
     });
 ```
 
-**相关**: [JEP 文档](https://openjdk.org/jeps/467)
-
----
-
-### JEP 444: Virtual Threads (正式版)
-
-**状态**: ✅ Final
-
-虚拟线程正式版，轻量级线程实现。
-
-```java
-// 创建虚拟线程
-Thread vthread = Thread.ofVirtual().start(() -> {
-    System.out.println("Hello from virtual thread");
-});
-
-// 使用 ExecutorService
-try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
-    for (int i = 0; i < 1000; i++) {
-        executor.submit(() -> {
-            // 任务
-        });
-    }
-}
-```
-
-**相关**: [JEP 文档](https://openjdk.org/jeps/444)
+**相关**: [JEP 文档](https://openjdk.org/jeps/506)
 
 ---
 
 ## 4. 安全
-
-### JEP 452: Key Encapsulation Mechanism API
-
-**状态**: ✅ Final
-
-KEM API 提供密钥封装机制的标准接口。
-
-```java
-import javax.crypto.KEM;
-
-// 发送方
-KEM kem = KEM.getInstance("DHKEM");
-KEM.Encapsulator enc = kem.newEncapsulator(receiverPublicKey);
-KEM.Encapsulated encap = enc.encapsulate();
-byte[] ciphertext = encap.encapsulation();
-SecretKey sharedKey = encap.key();
-
-// 接收方
-KEM.Decapsulator dec = kem.newDecapsulator(receiverPrivateKey);
-SecretKey sharedKey = dec.decapsulate(ciphertext);
-```
-
-**相关**: [JEP 文档](https://openjdk.org/jeps/452)
-
----
 
 ### JEP 451: Prepare to Restrict Dynamic Loading of Agents
 
@@ -252,18 +152,12 @@ SecretKey sharedKey = dec.decapsulate(ciphertext);
 
 | JEP | 标题 | 状态 |
 |-----|------|------|
-| 430 | String Templates | ✅ |
-| 444 | Virtual Threads | ✅ |
 | 448 | JVM Code Heap Segmentation | ✅ |
 | 449 | Barrier-Based C2 Compilation | ✅ |
 | 451 | Prepare to Restrict Dynamic Loading | ⚠️ |
-| 452 | Key Encapsulation Mechanism API | ✅ |
-| 454 | Foreign Function & Memory API | ✅ |
+| 505 | Structured Concurrency | 🔍 |
+| 506 | Scoped Values | ✅ |
 | 507 | Primitive Types in Patterns | 🔍 |
-| 462 | Structured Concurrency | 🔍 |
-| 466 | Class-File API | 🔍 |
-| 467 | Scoped Values | 🔍 |
-| 468 | Generational ZGC | ✅ |
-| 469 | Implicit Classes and Instance Main Methods | 🔍 |
+| 512 | Compact Source Files | 🔍 |
 
 > 图例: ✅ Final | 🔍 Preview | ⚠️ Deprecated

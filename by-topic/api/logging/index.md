@@ -153,7 +153,7 @@ if (logger.isLoggable(Level.DEBUG)) {
 
 ```java
 // 自定义 LoggerFinder (服务提供)
-public class MyLoggerFinder implements System.LoggerFinder {
+public class MyLoggerFinder extends System.LoggerFinder {
     @Override
     public System.Logger getLogger(String name, Module module) {
         return new MyLogger(name);
@@ -316,9 +316,9 @@ java.util.logging.Logger.getLogger("").setLevel(java.util.logging.Level.ALL);
 ```xml
 <!-- log4j-to-slf4j -->
 <dependency>
-    <groupId>org.slf4j</groupId>
+    <groupId>org.apache.logging.log4j</groupId>
     <artifactId>log4j-to-slf4j</artifactId>
-    <version>2.0.9</version>
+    <version>2.23.1</version>
 </dependency>
 ```
 

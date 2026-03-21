@@ -44,7 +44,7 @@ JDK 8  ──── 仅支持 Intel x64
           │
 JDK 16 ──── Apple Silicon (M1) 预览支持
           │
-JDK 17 ──── Apple Silicon 正式支持 (JEP 358)
+JDK 17 ──── Apple Silicon 正式支持 (JEP 391)
           │   Metal 渲染管道正式版 (JEP 382)
           │
 JDK 21 ──── Metal 渲染优化
@@ -121,9 +121,7 @@ Metal 是 Apple 的低开销图形 API，替代 OpenGL。
 
 **演进时间线**:
 ```
-JDK 14 ──── Metal 渲染管道孵化
-          │
-JDK 17 ──── Metal 正式版 (JEP 382)
+JDK 17 ──── Metal 渲染管道正式版 (JEP 382)
           │   替代 OpenGL
           │
 JDK 21 ──── Metal 性能优化

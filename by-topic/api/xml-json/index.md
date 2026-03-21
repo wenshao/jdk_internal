@@ -9,12 +9,12 @@
 ## 1. 快速概览
 
 ```
-JDK 1.4 ── JDK 5 ── JDK 6 ── JDK 9 ── JDK 11 ── JDK 23 ── JDK 24 ── JDK 26
-   │         │        │        │        │        │        │         │        │
-DOM/SAX   JAXB    StAX    模块化  JSON-P  JSON-P  JSON.B   JSON.B   JSON
-解析      绑定    流式    JPMS   处理    2.0     绑定     增强     转义
-(JAXP)   (JSR    (JSR    XML    (JEP    (预览)  (JEP     (正式)   (JEP
-         31/222  173)    模块    353)    471)            489)
+JDK 1.4 ── JDK 6 ── JDK 6 ── JDK 9 ── JDK 11
+   │         │        │        │        │
+DOM/SAX   JAXB 2.0  StAX    模块化  JAXB
+解析      绑定      流式    JPMS   移除
+(JAXP)   (JSR 222) (JSR    XML    (JEP
+                    173)    模块    320)
 ```
 
 ### 核心演进
@@ -22,14 +22,11 @@ DOM/SAX   JAXB    StAX    模块化  JSON-P  JSON-P  JSON.B   JSON.B   JSON
 | 版本 | 特性 | JEP/JSR | 说明 |
 |------|------|---------|------|
 | **JDK 1.4** | DOM/SAX | JAXP 1.2 | XML 解析基础 |
-| **JDK 5** | JAXB 1.0 | JSR 31 | XML 绑定 |
+| **JDK 6** | JAXB 2.0 | JSR 222 | XML 绑定 |
 | **JDK 6** | StAX | JSR 173 | 流式 XML 解析 |
 | **JDK 6** | JAXB 2.0 | JSR 222 | 注解支持 |
 | **JDK 9** | XML 模块化 | JPMS | java.xml 模块 |
-| **JDK 11** | JSON-P 1.1 | JEP 353 | JSON 处理 API |
-| **JDK 23** | JSON.B | JEP 471 | JSON 绑定 (预览) |
-| **JDK 24** | JSON.B | - | JSON 绑定 (正式) |
-| **JDK 26** | JSON 转义 | JEP 489 | 安全转义 |
+| **JDK 11** | JAXB 移除 | JEP 320 | JAXB 从 JDK 移除 |
 
 ---
 
@@ -301,7 +298,7 @@ UserList list = (UserList) unmarshaller.unmarshal(new File("users.xml"));
 
 ## 4. JSON-P (JSON 处理)
 
-**JDK 11+ (JEP 353)**
+**Jakarta EE (非 JDK 内置)**
 
 ### JSON-P API
 
@@ -392,7 +389,7 @@ generator.close();
 
 ## 5. JSON.B (JSON 绑定)
 
-**JDK 23+ (JEP 471)**
+**Jakarta EE (非 JDK 内置)**
 
 ### 基础使用
 
