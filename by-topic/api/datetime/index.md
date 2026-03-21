@@ -12,22 +12,21 @@
 3. [VM 诊断参数](#3-vm-诊断参数)
 4. [关键 JDK Bug ID](#4-关键-jdk-bug-id)
 5. [设计决策记录](#5-设计决策记录)
-6. [性能基准](#6-性能基准)
+6. [性能概要](#6-性能概要)
 7. [内部工具类详解](#7-内部工具类详解)
 8. [JIT 编译优化分析](#8-jit-编译优化分析)
 9. [快速导航](#9-快速导航)
 10. [时间线概览](#10-时间线概览)
-11. [核心源码位置](#11-核心源码位置)
+11. [源码路径一览](#11-源码路径一览)
 12. [Git 提交历史](#12-git-提交历史)
 13. [相关 PR 分析](#13-相关-pr-分析)
 14. [贡献者](#14-贡献者)
-15. [性能对比](#15-性能对比)
+15. [旧 API vs 新 API 对比](#15-旧-api-vs-新-api-对比)
 16. [选择指南](#16-选择指南)
 17. [时区处理](#17-时区处理)
 18. [常见陷阱](#18-常见陷阱)
 19. [迁移指南](#19-迁移指南)
-20. [旧 API vs 新 API](#20-旧-api-vs-新-api)
-21. [相关文档](#21-相关文档)
+20. [相关文档](#20-相关文档)
 
 ---
 
@@ -65,14 +64,6 @@ Date      Calendar  Scanner java.time java.time DateTime  Decimal
 | 带时区 | `ZonedDateTime` | `2024-03-20T10:30+08:00[Asia/Shanghai]` |
 | 时间段 | `Duration` | `PT2H30M` (2小时30分) |
 | 日期段 | `Period` | `P2M` (2个月) |
-
-### 性能对比 (JDK 23-24 优化)
-
-| 操作 | JDK 21 | JDK 24 | 提升 |
-|------|--------|--------|------|
-| LocalDate.toString | 45 ns | 35 ns | **+22%** |
-| LocalTime.toString | 38 ns | 30 ns | **+21%** |
-| LocalDateTime.toString | 55 ns | 42 ns | **+24%** |
 
 ---
 
@@ -291,37 +282,18 @@ public static void appendPair(StringBuilder buf, int v) {
 
 ---
 
-## 6. 性能基准
+## 6. 性能概要
 
-### 格式化性能对比 (JMH)
+JDK 23-24 introduced significant `toString()` and formatting optimizations via
+`DateTimeHelper` and `DecimalDigits` lookup tables. Key bug IDs with measured
+improvements include:
 
-| 操作 | 旧 API (ns/op) | java.time (ns/op) | 提升 |
-|------|----------------|-------------------|------|
-| 日期格式化 | 150 | 40 | **+73%** |
-| 时间格式化 | 120 | 35 | **+71%** |
-| ISO 格式化 | 180 | 45 | **+75%** |
-| 解析日期 | 200 | 80 | **+60%** |
+- **JDK-8336706** / **JDK-8336741** / **JDK-8337168**: `LocalDate`, `LocalTime`, `LocalDateTime` toString optimizations (JDK 23)
+- **JDK-8365186**: `DateTimePrintContext.adjust` method split for C2 inlining (JDK 24)
+- **JDK-8366224**: `DecimalDigits.appendPair` lookup-table optimization (JDK 24)
 
-### JDK 23-24 优化后性能
-
-| 操作 | JDK 21 | JDK 23 | JDK 24 | 总提升 |
-|------|--------|--------|--------|--------|
-| LocalDate.toString | 45 ns | 40 ns | 35 ns | **+22%** |
-| LocalTime.toString | 38 ns | 33 ns | 30 ns | **+21%** |
-| LocalDateTime.toString | 55 ns | 48 ns | 42 ns | **+24%** |
-| ZoneOffset.getId | 30 ns | 26 ns | 25 ns | **+17%** |
-| DateTimeFormatter.format | 100 ns | 88 ns | 80 ns | **+20%** |
-
-### 内存占用
-
-| 类型 | 大小 (bytes) | 说明 |
-|------|--------------|------|
-| LocalDate | 24 | year (int) + month (byte) + day (byte) |
-| LocalTime | 24 | hour + minute + second + nano |
-| LocalDateTime | 48 | LocalDate (24) + LocalTime (24) |
-| Instant | 16 | seconds (long) + nanos (int) |
-| ZoneOffset | 16 | offset (int) |
-| ZonedDateTime | ~64 | LocalDateTime + ZoneId + ZoneOffset |
+Refer to the individual JDK bug reports and their attached JMH benchmarks for
+specific numbers.
 
 ---
 
@@ -694,7 +666,7 @@ caload       // 无边界检查！
 
 ---
 
-## 11. 核心源码位置
+## 11. 源码路径一览
 
 | 功能 | 源码路径 | 实现分析 |
 |------|----------|----------|
@@ -817,7 +789,7 @@ main (master)
 
 ---
 
-## 15. 性能对比
+## 15. 旧 API vs 新 API 对比
 
 | 操作 | 旧 API | java.time |
 |------|--------|-----------|
@@ -827,6 +799,39 @@ main (master)
 | 月份索引 | ❌ 0-11 | ✅ 1-12 (枚举) |
 | 时区处理 | ❌ 复杂 | ✅ 简单 |
 | 不可变性 | ❌ 可变 | ✅ 不可变 |
+
+### 旧 API 问题
+
+```java
+// 问题 1: 月份从 0 开始
+Calendar calendar = Calendar.getInstance();
+calendar.set(2024, 2, 20);  // 实际上是 3月!
+int month = calendar.get(Calendar.MONTH);  // 返回 0-11
+
+// 问题 2: 非线程安全
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+// 多线程环境下不安全!
+
+// 问题 3: 类型不安全
+Date date = new Date();  // 包含日期和时间，无法区分
+```
+
+### 新 API 解决方案
+
+```java
+// 解决 1: 月份使用枚举
+LocalDate date = LocalDate.of(2024, Month.MARCH, 20);
+Month month = date.getMonth();  // 返回 Month 枚举
+
+// 解决 2: 完全线程安全
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+// 所有类都是不可变的，线程安全!
+
+// 解决 3: 类型明确
+LocalDate onlyDate = LocalDate.now();        // 仅日期
+LocalTime onlyTime = LocalTime.now();        // 仅时间
+LocalDateTime dateTime = LocalDateTime.now(); // 日期时间
+```
 
 ---
 
@@ -991,44 +996,7 @@ String formatted = now.format(dtf);
 
 ---
 
-## 20. 旧 API vs 新 API
-
-### 旧 API 问题
-
-```java
-// 问题 1: 月份从 0 开始
-Calendar calendar = Calendar.getInstance();
-calendar.set(2024, 2, 20);  // 实际上是 3月!
-int month = calendar.get(Calendar.MONTH);  // 返回 0-11
-
-// 问题 2: 非线程安全
-SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-// 多线程环境下不安全!
-
-// 问题 3: 类型不安全
-Date date = new Date();  // 包含日期和时间，无法区分
-```
-
-### 新 API 解决方案
-
-```java
-// 解决 1: 月份使用枚举
-LocalDate date = LocalDate.of(2024, Month.MARCH, 20);
-Month month = date.getMonth();  // 返回 Month 枚举
-
-// 解决 2: 完全线程安全
-DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-// 所有类都是不可变的，线程安全!
-
-// 解决 3: 类型明确
-LocalDate onlyDate = LocalDate.now();        // 仅日期
-LocalTime onlyTime = LocalTime.now();        // 仅时间
-LocalDateTime dateTime = LocalDateTime.now(); // 日期时间
-```
-
----
-
-## 21. 相关文档
+## 20. 相关文档
 
 - [完整时间线](timeline.md)
 - [基础 API](basics.md)

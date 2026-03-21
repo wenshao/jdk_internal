@@ -52,12 +52,11 @@ for (String s : list) { s = s + item; }  // 性能差
 ## 2. 快速概览
 
 ```
-JDK 1.0 ── JDK 5 ── JDK 7u6 ── JDK 9 ── JDK 11 ── JDK 15 ── JDK 21 ── JDK 24 ── JDK 25 ── JDK 26
-   │         │         │          │         │          │          │         │         │         │
- String   StringBuilder Substring Compact  repeat()  Text Blocks  String   Hidden   String   toString
-  诞生      无同步      修复     Strings   strip()    (JEP 378)  Templates Class    repeat   优化
- 常量池                                            (JEP 378)  (撤回)    Strategy  优化    (JDK 25)
-(+40%启动)
+JDK 1.0 ── JDK 5 ── JDK 7u6 ── JDK 9 ── JDK 11 ── JDK 15 ── JDK 21 ── JDK 24
+   │         │         │          │         │          │          │         │
+ String   StringBuilder Substring Compact  repeat()  Text Blocks  String   隐藏类
+  诞生      无同步      修复     Strings   strip()    (JEP 378)  Templates  拼接优化
+ 常量池                                                         (撤回)    (+40%启动)
 ```
 
 ### 核心特性
@@ -69,7 +68,7 @@ JDK 1.0 ── JDK 5 ── JDK 7u6 ── JDK 9 ── JDK 11 ── JDK 15 ─
 | **invokedynamic 拼接** | JDK 9 | JEP 280 | 编译时优化，+10% 启动性能 |
 | **Text Blocks** | JDK 15 | JEP 378 | 多行字符串 `"""..."""` |
 | **String Templates** | JDK 21 | JEP 430 | **已撤回** (JDK 23 移除) |
-| **隐藏类拼接** | JDK 24 | - | +40% 启动性能 |
+| **隐藏类拼接** | JDK 24 | JDK-8227379 | +40% 启动性能 |
 
 ---
 
@@ -267,25 +266,6 @@ String result = a + b + c;
 └─────────────────────────────────────────────────────────┘
 ```
 
-### StringBuilder 优化 (JDK 25)
-
-```java
-// JDK 25 Unsafe 优化
-// StringBuilder.append(char) 使用 sun.misc.Unsafe
-
-// 性能提升: +15% 吞吐量
-// 相关: JDK-8355177
-```
-
-### toString 优化 (JDK 26)
-
-```java
-// Integer.toString LATIN1 路径优化
-// 性能提升: +16% C1 编译
-
-// 相关: JDK-8370503
-```
-
 ### 字符串拼接优化实战 (基于 PR 分析)
 
 #### StringConcatHelper 优化 (JDK-8336831)
@@ -424,9 +404,7 @@ ByteArrayLittleEndian.setInt(buf, charPos << 1, inflated);
 
 ---
 
-## 6. 性能基准测试
-
-## 7. 版本演进
+## 6. 版本演进
 
 ### JDK 1.0 - String 诞生
 
@@ -535,47 +513,11 @@ String message = STR."Hello \{name}!";  // 使用 STR 模板处理器
 // - 相关: JDK-8227379
 ```
 
-### JDK 25 - String repeat 优化
-
-```java
-// String.repeat() 性能优化
-// JDK-8357288
-
-// 新实现更高效:
-String repeated = "abc".repeat(1000);
-```
-
 ---
 
-## 8. 最新增强
+## 8. 性能基准与优化细节
 
-### JDK 25: StringBuilder Unsafe 优化
-
-```java
-// JDK-8355177: StringBuilder 使用 Unsafe 操作
-// append(char) 性能提升 15%
-
-// 优化前: 使用数组 + 范围检查
-// 优化后: 使用 Unsafe.putByte()
-```
-
-### JDK 26: Integer.toString LATIN1 路径
-
-```java
-// JDK-8370503: Integer.toString 优化
-// 当目标字符串是 LATIN1 时, 使用优化路径
-
-// 性能提升: C1 编译后 +16%
-```
-
-### JDK 26: String.format() C2 优化
-
-```java
-// JDK-8367129: String.format() JIT 优化
-// C2 编译器优化
-
-// 性能提升: 显著提升 (取决于场景)
-```
+> 以下为已合入 OpenJDK 主线的优化，可通过 JDK Bug ID 验证。
 
 ---
 

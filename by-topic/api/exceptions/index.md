@@ -9,10 +9,10 @@
 ## 1. 快速概览
 
 ```
-JDK 1.0 ── JDK 1.4 ── JDK 7 ── JDK 9 ── JDK 20 ── JDK 21
-   │         │        │        │        │        │
-异常体系   异常链   try-with  StackWalker  异常模式   精简异常
-Throwable  getCause  resources  (JEP 259)  匹配     层次
+JDK 1.0 ── JDK 1.4 ── JDK 7 ── JDK 9
+   │         │        │        │
+异常体系   异常链   try-with  StackWalker
+Throwable  getCause  resources  (JEP 259)
           异常包装  多捕获
 ```
 
@@ -26,8 +26,6 @@ Throwable  getCause  resources  (JEP 259)  匹配     层次
 | **JDK 7** | multi-catch | - | catch (A \| B e) |
 | **JDK 7** | 精确异常重抛 | - | final 重抛 |
 | **JDK 9** | StackWalker | JEP 259 | 栈遍历 API |
-| **JDK 20** | 模式匹配异常 | - | instanceof 模式 (预览) |
-| **JDK 21** | 模式匹配异常 | - | when 守卫 (预览) |
 
 ---
 
@@ -462,42 +460,24 @@ List<StackFrame> frames = walker.walk(s ->
 
 ---
 
-## 7. 模式匹配异常
+## 7. 与模式匹配结合使用
 
-**JDK 20+ 预览**
-
-### instanceof 模式
+### instanceof 模式匹配 (JDK 16+, JEP 394)
 
 ```java
-// JDK 20+ 预览功能
-// --enable-preview
+// instanceof 模式匹配是通用语言特性 (非异常专用)
+// 可用于 catch 块中简化类型判断
 
 try {
     // ...
-} catch (IOException e) {
-    System.err.println("IO: " + e.getMessage());
-} catch (SQLException e) {
-    System.err.println("SQL: " + e.getMessage());
 } catch (Exception e) {
-    // 使用模式匹配
-    if (e instanceof BusinessException(int code, String message)) {
-        System.err.println("Business[" + code + "]: " + message);
+    if (e instanceof IOException ioe) {
+        System.err.println("IO: " + ioe.getMessage());
+    } else if (e instanceof SQLException sqle) {
+        System.err.println("SQL: " + sqle.getMessage());
     } else {
         System.err.println("Unknown: " + e.getMessage());
     }
-}
-```
-
-### when 守卫 (JDK 21+)
-
-```java
-// when 守卫
-try {
-    // ...
-} catch (Exception e)
-    when (e instanceof BusinessException && ((BusinessException) e).isRecoverable()) {
-    // 只处理可恢复的业务异常
-    System.err.println("Recoverable: " + e.getMessage());
 }
 ```
 

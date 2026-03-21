@@ -9,10 +9,10 @@
 ## 1. 快速概览
 
 ```
-JDK 1.1 ── JDK 1.2 ── JDK 1.4 ── JDK 6 ── JDK 7 ── JDK 11 ── JDK 21 ── JDK 26
-   │         │         │         │        │        │        │        │
-JDBC 1.0  JDBC 2.0  JDBC 3.0  JDBC 4.0  JDBC 4.1  JDBC 4.3  JDBC 4.3  分片
-ODBC桥   RowSet    连接池    自动     Try-with   模块化   增强    支持
+JDK 1.1 ── JDK 1.2 ── JDK 1.4 ── JDK 6 ── JDK 7 ── JDK 11 ── JDK 21
+   │         │         │         │        │        │        │
+JDBC 1.0  JDBC 2.0  JDBC 3.0  JDBC 4.0  JDBC 4.1  JDBC 4.3  JDBC 4.3
+ODBC桥   RowSet    连接池    自动     Try-with   模块化   增强
                     加载      resources
 ```
 
@@ -26,7 +26,6 @@ ODBC桥   RowSet    连接池    自动     Try-with   模块化   增强    支
 | **JDK 6** | JDBC 4.0 | JSR 221 | 自动驱动加载、SQLXML |
 | **JDK 7** | JDBC 4.1 | JSR 221 | Try-with-resources、Connection |
 | **JDK 11** | JDBC 4.3 | JSR 221 | 模块化 (java.sql) |
-| **JDK 26** | JDBC 4.3 | JSR 221 | 分片支持增强 |
 
 ---
 
@@ -73,11 +72,13 @@ props.setProperty("user", "root");
 props.setProperty("password", "password");
 Connection conn = DriverManager.getConnection(url, props);
 
-// JDBC 4.3+ ConnectionBuilder (JDK 26)
-Connection conn = DriverManager.getConnection(
-    "jdbc:mysql://localhost:3306/mydb",
-    "user", "password"
-);
+// JDBC 4.3+ ConnectionBuilder (通过 DataSource)
+DataSource ds = ... ;
+ConnectionBuilder builder = ds.createConnectionBuilder();
+Connection conn = builder
+    .user("user")
+    .password("password")
+    .build();
 ```
 
 ### 执行查询
@@ -225,20 +226,16 @@ try (PreparedStatement pstmt = conn.prepareStatement(
 
 ## 3. JDBC 4.3 新特性
 
-### ConnectionBuilder (JDK 26)
+### ConnectionBuilder (JDBC 4.3)
 
 ```java
-// JDBC 4.3 ConnectionBuilder API
-Connection conn = DriverManager.getConnection(
-    "jdbc:mysql://localhost:3306/mydb",
-    "user", "password"
-);
-
-// 或使用 ConnectionBuilder
-Connection conn = DriverManager.getConnection(
-    "jdbc:mysql://localhost:3306/mydb",
-    props
-);
+// JDBC 4.3 ConnectionBuilder API (通过 DataSource)
+DataSource ds = ... ;
+ConnectionBuilder builder = ds.createConnectionBuilder();
+Connection conn = builder
+    .user("user")
+    .password("password")
+    .build();
 
 // 请求生命周期 (JDBC 4.3)
 conn.beginRequest();

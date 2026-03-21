@@ -9,10 +9,10 @@
 ## 1. 快速概览
 
 ```
-JDK 1.0 ── JDK 5 ── JDK 8 ── JDK 17 ── JDK 21
-   │        │        │        │        │
+JDK 1.0 ── JDK 1.2 ── JDK 8 ── JDK 17 ── JDK 21
+   │        │          │        │        │
 Math     StrictMath  Random  增强   随机数
-类       精确数学  (API)   分割器  生成器
+类       精确数学    (API)   分割器  生成器
 ```
 
 ### 核心演进
@@ -21,7 +21,7 @@ Math     StrictMath  Random  增强   随机数
 |------|------|------|
 | **JDK 1.0** | Math, Random | 基础数学函数 |
 | **JDK 1.0** | BigDecimal | 精确小数 |
-| **JDK 5** | StrictMath | 精确数学函数 |
+| **JDK 1.2** | StrictMath | 精确数学函数 |
 | **JDK 8** | SplittableRandom | 可分割随机数 |
 | **JDK 17** | RandomGenerator | 随机数增强 (JEP 356) |
 | **JDK 21** | Math 增强 | 性能优化 |
@@ -73,7 +73,7 @@ double pow = Math.pow(2, 10);              // 1024.0
 // 取整
 double ceil = Math.ceil(3.5);               // 4.0 (向上)
 double floor = Math.floor(3.5);             // 3.0 (向下)
-double round = Math.round(3.5);             // 4.0 (四舍五入)
+long round = Math.round(3.5);               // 4 (四舍五入)
 double rint = Math.rint(3.5);               // 4.0 (最近偶数)
 
 // 其他
@@ -117,7 +117,7 @@ double cbrt = Math.cbrt(27);       // 3.0 (立方根，JDK 8+)
 
 ## 3. StrictMath 类
 
-**JDK 5 引入**
+**JDK 1.2 引入**
 
 ### 与 Math 的区别
 

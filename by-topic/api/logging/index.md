@@ -9,11 +9,11 @@
 ## 1. 快速概览
 
 ```
-JDK 1.0 ── JDK 1.4 ── JDK 9 ── JDK 11 ── 2002 ── 2006 ── 2014 ── JDK 9
-   │         │        │        │         │         │         │        │
-System.out  JUL    System.Logger  Log4j  SLF4J  Logback  JUL桥接
+JDK 1.0 ── JDK 1.4 ── JDK 9 ── JDK 11 ── 2002 ── 2006 ── 2014
+   │         │        │        │         │         │         │
+System.out  JUL    System.Logger  Log4j  SLF4J  Logback
 PrintStream  java.util.  桥接    门面   原生    SLF4J
-          logging    支持           实现    实现    to JUL
+          logging    支持           实现    实现
 ```
 
 ### 核心演进
@@ -35,7 +35,7 @@ PrintStream  java.util.  桥接    门面   原生    SLF4J
 - [java.util.logging (JUL)](#javautillogging-jul)
 - [System.Logger (JDK 9+)](#systemlogger-jdk-9)
 - [SLF4J + Logback](#slf4j--logback)
-- [Log4j 2.x]((#log4j-2x)
+- [Log4j 2.x](#log4j-2x)
 - [日志桥接](#日志桥接)
 - [最佳实践](#最佳实践)
 - [核心贡献者](#核心贡献者)
@@ -82,8 +82,8 @@ ConsoleHandler console = new ConsoleHandler();
 console.setLevel(Level.ALL);
 logger.addHandler(console);
 
-FileHandler file = new FileHandler("app.log", true);
-file.setLevel(Level.ALL);
+FileHandler fileHandler = new FileHandler("app.log", true);
+fileHandler.setLevel(Level.ALL);
 logger.addHandler(fileHandler);
 
 // Formatter - 格式化

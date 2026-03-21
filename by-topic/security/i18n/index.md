@@ -42,9 +42,9 @@ Locale   ResourceBundle Unicode Formatter Locale ICU4J   Unicode  Bidi
 | **JDK 1.1** | UTF-8 | 字符编码 | - |
 | **JDK 5** | Unicode 4.0 | 完整 Unicode | - |
 | **JDK 6** | Formatter | 格式化增强 | - |
-| **JDK 8** | ICU4J | 国际化组件库 | - |
+| **JDK 8** | ICU4J | 国际化组件库 | JEP 252 |
 | **JDK 17** | Locale 增强 | 更多语言 | - |
-| **JDK 21** | Unicode 15.1 | 最新标准 | - |
+| **JDK 21** | Unicode 15.1 | 最新标准 | JEP 457 |
 | **JDK 24** | Bidi 文本方向 | 双向文本 | - |
 
 ---
@@ -83,15 +83,15 @@ Locale US = Locale.US;
 Locale CHINA = Locale.CHINA;
 Locale FRANCE = Locale.FRANCE;
 
-// 使用语言代码
-Locale japanese = new Locale("ja");
-Locale korean = new Locale("ko");
+// 使用语言代码 (JDK 19+, Locale.of 替代已弃用的构造函数)
+Locale japanese = Locale.of("ja");
+Locale korean = Locale.of("ko");
 
 // 语言 + 国家
-Locale canadianFrench = new Locale("fr", "CA");
+Locale canadianFrench = Locale.of("fr", "CA");
 
 // 语言 + 国家 + 变体
-Locale customLocale = new Locale("zh", "CN", "WIN");
+Locale customLocale = Locale.of("zh", "CN", "WIN");
 
 // Builder (JDK 7+)
 Locale locale = new Locale.Builder()

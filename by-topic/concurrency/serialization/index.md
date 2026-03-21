@@ -25,12 +25,11 @@
 ## 1. 快速概览
 
 ```
-JDK 1.0 ── JDK 1.2 ── JDK 6 ── JDK 9 ── JDK 12 ── JDK 17 ── JDK 21 ── JDK 26
-   │         │        │        │        │        │        │        │
-序列化   Externalizable  过滤器  Records  Switch   模式    模式    序列化
-接口      优化          JEP     不可序列  表达式   匹配    匹配    优化
-                     290      默认      简化    for     for
-                              序列化            instance instanceof
+JDK 1.0 ── JDK 1.2 ── JDK 6 ── JDK 9 ── JDK 17
+   │         │        │        │        │
+序列化   Externalizable  过滤器  Records
+接口      优化          JEP     序列化
+                     290
 ```
 
 ### 核心演进
@@ -41,10 +40,7 @@ JDK 1.0 ── JDK 1.2 ── JDK 6 ── JDK 9 ── JDK 12 ── JDK 17 ─
 | **JDK 1.2** | Externalizable | 自定义序列化 | - |
 | **JDK 6** | readResolve/writeReplace | 序列化代理模式 | - |
 | **JDK 9** | 过滤器 | 序列化安全过滤 | JEP 290 |
-| **JDK 12** | Switch 表达式 | 简化序列化逻辑 | JEP 325 |
 | **JDK 17** | Record 序列化 | 不可变对象序列化 | - |
-| **JDK 21** | 模式匹配 | for/instanceof | JEP 441 |
-| **JDK 26** | 序列化优化 | 性能改进 | - |
 
 ---
 
@@ -62,8 +58,7 @@ JDK 1.0 ── JDK 1.2 ── JDK 6 ── JDK 9 ── JDK 12 ── JDK 17 ─
 | 3 | Mandy Chung | 8 | Oracle | 序列化核心 |
 | 4 | Joe Darcy | 5 | Oracle | Record 序列化 |
 | 5 | Ioi Lam | 5 | Oracle | 序列化优化 |
-| 6 | Roman Kennke | 4 | Red Hat | Shenandoah GC |
-| 7 | Pavel Rappo | 4 | Oracle | API 设计 |
+| 6 | Pavel Rappo | 4 | Oracle | API 设计 |
 
 ---
 

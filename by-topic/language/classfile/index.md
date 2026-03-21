@@ -97,7 +97,7 @@ byte[] bytecode = ClassFile.of().build(
         classBuilder.withFlags(AccessFlag.PUBLIC);
         classBuilder.withMethod(
             "main",
-            MethodTypeDesc.of("([Ljava/lang/String;)V"),
+            MethodTypeDesc.ofDescriptor("([Ljava/lang/String;)V"),
             AccessFlag.PUBLIC | AccessFlag.STATIC,
             methodBuilder -> {
                 methodBuilder.withCode(codeBuilder -> codeBuilder
@@ -107,7 +107,7 @@ byte[] bytecode = ClassFile.of().build(
                     .invokevirtual(
                         ClassDesc.of("java/io/PrintStream"),
                         "println",
-                        MethodTypeDesc.of("(Ljava/lang/String;)V"))
+                        MethodTypeDesc.ofDescriptor("(Ljava/lang/String;)V"))
                     .return_()
                 );
             }
@@ -135,7 +135,7 @@ byte[] transformed = ClassFile.of().transformClass(
                            .invokevirtual(
                                ClassDesc.of("java/io/PrintStream"),
                                "println",
-                               MethodTypeDesc.of("(Ljava/lang/String;)V"));
+                               MethodTypeDesc.ofDescriptor("(Ljava/lang/String;)V"));
 
                 // 原方法体
                 codeBuilder.with(method.code().orElseThrow());

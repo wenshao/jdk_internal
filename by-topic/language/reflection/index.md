@@ -9,12 +9,12 @@
 ## 1. 快速概览
 
 ```
-JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 7 ── JDK 8 ── JDK 11 ── JDK 16 ── JDK 21 ── JDK 24 ── JDK 26
-   │         │        │        │        │        │        │        │        │        │
-反射    注解    注解   MethodHandle Lambda   Foreign  ClassFile ClassFile  Mirror  invokedynamic
-API    (JSR   处理   (JSR   invokedynamic  (JEP   (JEP    (JEP    API     API
-        175)    JSR    JSR   292)      389)   395)    484)    增强    更新
-                269)                                               反射
+JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 7 ── JDK 8 ── JDK 11 ── JDK 16 ── JDK 21 ── JDK 24
+   │         │        │        │        │        │        │        │        │
+反射    注解    注解   MethodHandle Lambda   Foreign  Records  Virtual  ClassFile
+API    (JSR   处理   (JSR   invokedynamic  (JEP   (JEP    Threads  API
+        175)    JSR    JSR   292)      389)   395)    (JEP    (JEP
+                269)                                         444)    484)
 ```
 
 ### 核心演进
@@ -31,7 +31,6 @@ API    (JSR   处理   (JSR   invokedynamic  (JEP   (JEP    (JEP    API     API
 | **JDK 16** | Records | JEP 395 | Record 类型 |
 | **JDK 21** | Virtual Threads | JEP 444 | 虚拟线程 |
 | **JDK 24** | Class-File API | JEP 484 | 正式版 |
-| **JDK 26** | Mirror API | - | 反射 API 增强 |
 
 ---
 
@@ -461,16 +460,6 @@ ClassModel cm = cf.parse(bytes);
 byte[] bytes = cf.build(classDesc, builder -> {
     // ...
 });
-```
-
-### JDK 26: Mirror API 增强
-
-反射 API 性能改进：
-
-```java
-// 更快的反射调用
-// 改进的 Method.invoke() 性能
-// 更好的缓存机制
 ```
 
 ---

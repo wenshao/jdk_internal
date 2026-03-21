@@ -9,10 +9,10 @@
 ## 1. 快速概览
 
 ```
-JDK 1.0 ── JDK 1.4 ── JDK 7 ── JDK 11 ── JDK 21
-   │         │        │        │        │
-IO流     NIO     NIO.2   增强   虚拟线程
-Stream   Channel  Path    Files  优化
+JDK 1.0 ── JDK 1.4 ── JDK 7 ── JDK 11 ── JDK 21 ── JDK 26
+   │         │        │        │        │        │
+IO流     NIO     NIO.2   增强   虚拟线程  持续
+Stream   Channel  Path    Files  优化    改进
 File     Selector WatchService  List
 ```
 
@@ -26,21 +26,7 @@ File     Selector WatchService  List
 | **JDK 11** | 增强 | - | Files.readString/writeString |
 | **JDK 21** | 虚拟线程 | - | 并发优化 |
 | **JDK 22** | Foreign Memory | JEP 454 | 外部内存 API |
-
----
-
-## 2. OpenJDK 项目
-
-### [Project Panama](../core/panama/)
-
-外部函数接口和外部内存器。
-
-| 特性 | 版本 | JEP |
-|------|------|-----|
-| Foreign Memory Access API | JDK 22 | JEP 454 |
-| Foreign Function Interface | JDK 22 | JEP 454 |
-
-→ [Panama 时间线](../core/panama/timeline.md)
+| **JDK 26** | 持续改进 | - | I/O 增强 |
 
 ---
 
@@ -57,7 +43,7 @@ File     Selector WatchService  List
 
 ---
 
-## 3. NIO 核心
+## 2. NIO 核心
 
 ### 三大组件
 
@@ -91,7 +77,7 @@ File     Selector WatchService  List
 
 ---
 
-## 4. Buffer 详解
+## 3. Buffer 详解
 
 ### Buffer 层次
 
@@ -168,7 +154,7 @@ longView.put(1000L);
 
 ---
 
-## 5. Channel 详解
+## 4. Channel 详解
 
 ### Channel 类型
 
@@ -273,7 +259,7 @@ int bytesRead = client.read(buffer);
 
 ---
 
-## 6. Selector 多路复用
+## 5. Selector 多路复用
 
 ### Selector 工作原理
 
@@ -381,7 +367,7 @@ Object data = key.attachment();
 
 ---
 
-## 7. NIO.2 文件 API
+## 6. NIO.2 文件 API
 
 **JDK 7 (JSR 203)**
 
@@ -513,7 +499,7 @@ Files.walk(Paths.get("."))
 
 ---
 
-## 8. 最佳实践
+## 7. 最佳实践
 
 ### 直接缓冲 vs 堆内缓冲
 
@@ -559,7 +545,7 @@ int optimalSize = 8192;  // 根据系统调整
 
 ---
 
-## 9. 核心贡献者
+## 8. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -583,7 +569,7 @@ int optimalSize = 8192;  // 根据系统调整
 
 ---
 
-## 10. 相关链接
+## 9. 相关链接
 
 ### 内部文档
 
