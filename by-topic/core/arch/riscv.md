@@ -57,7 +57,7 @@ RISC-V 是一个开源的指令集架构 (ISA)，OpenJDK 从 JDK 19 开始正式
 | **JDK 23** | 2024-09 | - | 更多向量指令 |
 | **JDK 24** | 2025-03 | - | 向量支持完善 |
 | **JDK 25** | 2025-09 | - | 继续优化 |
-| **JDK 26** | 2025-09 | - | 紧凑对象头支持 |
+| **JDK 26** | 2026-03 | - | 紧凑对象头支持 |
 
 ---
 
@@ -210,10 +210,10 @@ java -XX:+PrintFlagsFinal -version | grep -i riscv
 
 | 贡献者 | 组织 | PRs | 主要贡献 |
 |--------|------|-----|----------|
-| [Fei Yang](/by-contributor/profiles/fei-yang.md) | ISCAS | 100 | RISC-V Port Lead |
-| [Hamlin Li](/by-contributor/profiles/hamlin-li.md) | Oracle | 74 | RISC-V 向量 |
-| [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | 字节跳动 | 25 | Zvbb/Zfa 指令 |
-| Dingli Zhang | ISCAS | 53 | RISC-V 测试 |
+| [Fei Yang](/by-contributor/profiles/fei-yang.md) | ISCAS | 100+ | RISC-V Port Lead |
+| [Hamlin Li](/by-contributor/profiles/hamlin-li.md) | Rivos | 65+ | RISC-V 向量 |
+| [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | 字节跳动 | 25+ | Zvbb/Zfa 指令 |
+| Dingli Zhang | ISCAS | 50+ | RISC-V 测试 |
 
 ### 组织贡献
 

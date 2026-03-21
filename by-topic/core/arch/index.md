@@ -106,9 +106,10 @@ ARM 64位架构，广泛用于移动设备、云服务器和 Apple Silicon。
 | 版本 | JEP | 说明 |
 |------|-----|------|
 | JDK 19 | JEP 422 | RISC-V Linux 移植 |
-| JDK 20 | JEP 439 | 向量 intrinsic |
+| JDK 20 | - | 向量 intrinsic 初步支持 |
 | JDK 21 | - | Zvbb/Zfa 扩展 |
-| JDK 26 | - | 完善向量支持 |
+| JDK 24 | - | 向量支持完善 |
+| JDK 26 | - | 紧凑对象头支持 |
 
 ---
 
@@ -253,7 +254,7 @@ java -XX:+PrintFlagsFinal -version | grep -i riscv
 | 贡献者 | 组织 | 主要贡献 |
 |--------|------|----------|
 | [Fei Yang](/by-contributor/profiles/fei-yang.md) | ISCAS | RISC-V Port Lead |
-| [Hamlin Li](/by-contributor/profiles/hamlin-li.md) | Oracle | RISC-V 向量 |
+| [Hamlin Li](/by-contributor/profiles/hamlin-li.md) | Rivos | RISC-V 向量 |
 | [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | 字节跳动 | Zvbb/Zfa 指令 |
 | Dingli Zhang | ISCAS | RISC-V 测试 |
 
