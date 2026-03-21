@@ -62,17 +62,18 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 | 22 | Claes Redestad | - | 30+ | Reviewer | Performance | Java Platform | [详情](../../by-contributor/profiles/claes-redestad.md) |
 | 23 | Magnus Ihse Bursie | - | 28+ | Reviewer | Build | Infrastructure | [详情](../../by-contributor/profiles/magnus-ihse-bursie.md) |
 | 24 | Hamlin Li | - | 20+ | Committer | RISC-V | **已离职 (Rivos)** | [详情](../../by-contributor/profiles/hamlin-li.md) |
-| 25 | Roman Kennke | - | 18+ | Reviewer | Compact Headers | HotSpot GC | [详情](../../by-contributor/profiles/roman-kennke.md) |
-| 26 | Per Minborg | - | 15+ | Member | Core Libs | Core Libraries | [详情](../../by-contributor/profiles/per-minborg.md) |
-| 27 | Weijun Wang | - | 15+ | Reviewer | Security | Security | [详情](../../by-contributor/profiles/weijun-wang.md) |
-| 28 | Alan Bateman | - | 12+ | Reviewer | Concurrency | Concurrency & Runtime | [详情](../../by-contributor/profiles/alan-bateman.md) |
-| 29 | Erik Österlund | - | 12+ | Reviewer | AOT, GC | HotSpot GC | [详情](../../by-contributor/profiles/erik-osterlund.md) |
-| 30 | Doug Simon | - | 10+ | Member | Graal | Oracle Labs | [详情](../../by-contributor/profiles/doug-simon.md) |
-| 31 | Adam Sotona | [@asotona](https://github.com/asotona) | 30+ | Committer | ClassFile API | LangTools | [详情](../../by-contributor/profiles/adam-sotona.md) |
-| 32 | Jonathan Gibbons | - | 100+ | Reviewer | javac, javadoc | LangTools | [详情](../../by-contributor/profiles/jonathan-gibbons.md) |
-| 33 | Vicente Romero | - | 50+ | Reviewer | javac | LangTools | [详情](../../by-contributor/profiles/vicente-romero.md) |
+| 25 | Per Minborg | - | 15+ | Member | Core Libs | Core Libraries | [详情](../../by-contributor/profiles/per-minborg.md) |
+| 26 | Weijun Wang | - | 15+ | Reviewer | Security | Security | [详情](../../by-contributor/profiles/weijun-wang.md) |
+| 27 | Alan Bateman | - | 12+ | Reviewer | Concurrency | Concurrency & Runtime | [详情](../../by-contributor/profiles/alan-bateman.md) |
+| 28 | Erik Österlund | - | 12+ | Reviewer | AOT, GC | HotSpot GC | [详情](../../by-contributor/profiles/erik-osterlund.md) |
+| 29 | Doug Simon | - | 10+ | Member | Graal | Oracle Labs | [详情](../../by-contributor/profiles/doug-simon.md) |
+| 30 | Adam Sotona | [@asotona](https://github.com/asotona) | 30+ | Committer | ClassFile API | LangTools | [详情](../../by-contributor/profiles/adam-sotona.md) |
+| 31 | Jonathan Gibbons | - | 100+ | Reviewer | javac, javadoc | LangTools | [详情](../../by-contributor/profiles/jonathan-gibbons.md) |
+| 32 | Vicente Romero | - | 50+ | Reviewer | javac | LangTools | [详情](../../by-contributor/profiles/vicente-romero.md) |
 
-**小计**: 4,000+ PRs (以上 33 人，含 1 位已离职)
+**小计**: 4,000+ PRs (以上 32 人，含 1 位已离职)
+
+> **注**: Roman Kennke (Compact Headers) 是 Red Hat 员工，不是 Oracle，已从列表中移除
 
 > **角色说明**:
 > - **Reviewer**: 有权批准变更集的资深贡献者 ([详情](https://openjdk.org/bylaws))
@@ -175,9 +176,7 @@ Oracle JDK 开发团队
 │   ├── Ioi Lam - CDS, AOT
 │   ├── Coleen Phillimore - HotSpot VM Core, Metaspace
 │   ├── Kim Barrett - HotSpot Runtime, C++ 现代化
-│   ├── Zhengyu Gu - Shenandoah GC
 │   ├── Erik Österlund - AOT, GC
-│   ├── Roman Kennke - Compact Headers
 │   └── Albert Mingkun Yang - G1 GC
 │
 ├── HotSpot Compiler Team (HotSpot 编译器团队)
@@ -200,14 +199,14 @@ Oracle JDK 开发团队
 | 团队 | 人数 | 代表贡献者 | PR 总数 |
 |------|------|------------|---------|
 | **Java Platform Group** | 19 人 | Chen Liang, Jan Lahoda, Daniel Fuchs, Phil Race, Sergey Bylokhov, Jaikiran Pai, Per Minborg, Adam Sotona, Jonathan Gibbons, Vicente Romero | 2,780+ |
-| **HotSpot GC Team** | 9 人 | Thomas Schatzl, Ioi Lam, Coleen Phillimore, Albert Mingkun Yang | 2,350+ |
+| **HotSpot GC Team** | 8 人 | Thomas Schatzl, Ioi Lam, Coleen Phillimore, Albert Mingkun Yang | 2,350+ |
 | **HotSpot Compiler Team** | 3 人 | Emanuel Peter, Erik Gahlin, Alexey Semenyuk | 150+ |
 | **Java Engineering Infrastructure** | 1 人 | Magnus Ihse Bursie | 28+ |
 | **Security Team** | 1 人 | Weijun Wang | 15+ |
 | **Oracle Labs** | 1 人 | Doug Simon | 10+ |
-| **总计** | **34 人** | - | **5,300+** |
+| **总计** | **33 人** | - | **5,300+** |
 
-> **注**: 当前 Oracle 团队 33 人 + 已离职 (Hamlin Li) 1 人 = Top 贡献者列表 34 人
+> **注**: 当前 Oracle 团队 32 人 + 已离职 (Hamlin Li) 1 人 = Top 贡献者列表 33 人
 
 ### Group Leads
 
@@ -364,7 +363,7 @@ Oracle JDK 开发团队
 
 ---
 
-> **文档版本**: 9.0
+> **文档版本**: 10.0
 > **最后更新**: 2026-03-21
 > **更新内容**:
 > - 修正"Oracle 中国团队"错误分类
@@ -374,11 +373,12 @@ Oracle JDK 开发团队
 > - 亚洲团队：2 人 (Zhengyu Gu-中国，Weijun Wang)
 > - Oracle Labs: 1 人 (Doug Simon)
 > - **职业流动核实**: Hamlin Li 已离开 Oracle 加入 Rivos
-> - **新增完整组织架构**: 6 个团队，34 人，5 位 Group Leads
+> - **新增完整组织架构**: 6 个团队，33 人，5 位 Group Leads
 > - **修复**: 添加缺失贡献者 (Sergey Bylokhov, Alexey Semenyuk, Jaikiran Pai, Albert Mingkun Yang, Per Minborg, Adam Sotona)
 > - **修复**: 移除 Aleksey Shipilev (Amazon，不是 Oracle)
+> - **修复**: 移除 Roman Kennke (Red Hat，不是 Oracle)
 > - **修复**: 修正章节编号重复问题
-> - **新增**: Top 贡献者列表添加"团队"列，所有 33 位成员都归属到组织架构
+> - **新增**: Top 贡献者列表添加"团队"列，所有 32 位成员都归属到组织架构
 > - **新增**: Adam Sotona (ClassFile API 实现负责人)
 > - **新增**: Jonathan Gibbons (LangTools 团队负责人，javac/javadoc)
 > - **新增**: Vicente Romero (javac 编译器)
