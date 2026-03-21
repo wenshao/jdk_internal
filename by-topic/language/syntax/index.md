@@ -844,7 +844,7 @@ public <T> void print(T item) {  // T 可以用 Object 替代
 
 - [JEP 395](/jeps/language/jep-395.md)
 - [JEP 394](/jeps/language/jep-394.md)
-- [JEP 409: Sealed Classes](https://openjdk.org/jeps/409)
+- [JEP 409](/jeps/language/jep-409.md)
 - [JEP 441](/jeps/language/jep-441.md)
 - [JEP 440](/jeps/language/jep-440.md)
 - [JEP 456](/jeps/language/jep-456.md)
@@ -867,7 +867,7 @@ git log --oneline -- src/jdk.compiler/share/classes/com/sun/tools/javac/
 
 **Sources**:
 - [JEP 395](/jeps/language/jep-395.md)
-- [JEP 409: Sealed Classes](https://openjdk.org/jeps/409)
+- [JEP 409](/jeps/language/jep-409.md)
 - [JEP 441](/jeps/language/jep-441.md)
 - [JEP 530](/jeps/language/jep-530.md)
 - [Records Sealed Classes Pattern Matching](https://blog.csdn.net/qq_42055933/article/details/156172037)

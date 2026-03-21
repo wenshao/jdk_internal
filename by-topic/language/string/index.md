@@ -719,10 +719,10 @@ src/hotspot/share/gc/
 
 #### 外部链接
 
-- [OpenJDK JEP 254](https://openjdk.org/jeps/254)
-- [OpenJDK JEP 280](https://openjdk.org/jeps/280)
-- [OpenJDK JEP 378](https://openjdk.org/jeps/378)
-- [OpenJDK JEP 430](https://openjdk.org/jeps/430) ⚠️ 已撤回
+- [OpenJDK JEP 254](/jeps/language/jep-254.md)
+- [OpenJDK JEP 280](/jeps/language/jep-280.md)
+- [OpenJDK JEP 378](/jeps/language/jep-378.md)
+- [OpenJDK JEP 430](/jeps/language/jep-430.md) ⚠️ 已撤回
 - [Inside Java Newscast #71](https://nipafx.dev/inside-java-newscast-71/) - String Templates 撤回说明
 - [OpenJDK String 源码](https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/lang/String.java)
 

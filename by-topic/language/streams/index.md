@@ -1222,8 +1222,8 @@ list.stream()
 
 ### 外部资源
 
-- [JEP 107: Collections](https://openjdk.org/jeps/107)
-- [JEP 461: Gatherers](https://openjdk.org/jeps/461)
+- [JEP 107](/jeps/language/jep-107.md)
+- [JEP 461](/jeps/language/jep-461.md)
 - [Stream API Javadoc](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/package-summary.html)
 
 ---

@@ -199,7 +199,7 @@ String message = STR."Hello \{name}, you have \{count} messages.";
 |-----|------|------|
 | [JEP 254](/jeps/language/jep-254.md) | Compact Strings | JDK 9 |
 | [JEP 280](/jeps/language/jep-280.md) | Indify String Concatenation | JDK 9 |
-| [JEP 192](https://openjdk.org/jeps/192) | String Deduplication | JDK 8 |
+| [JEP 192](/jeps/language/jep-192.md) | String Deduplication | JDK 8 |
 | [JEP 378](/jeps/language/jep-378.md) | Text Blocks | JDK 15 |
 | [JEP 430](/jeps/language/jep-430.md) | String Templates | JDK 21 |
 

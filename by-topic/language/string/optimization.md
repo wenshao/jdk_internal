@@ -284,7 +284,7 @@ str.trim();     // 仅 ASCII
 
 ## 8. 相关资源
 
-- [JEP 192: String Deduplication](https://openjdk.org/jeps/192)
+- [JEP 192](/jeps/language/jep-192.md)
 - [JDK-8336856: 隐藏类拼接策略](https://bugs.openjdk.org/browse/JDK-8336856)
 - [PR #20273: String Concatenation with Hidden Classes](https://github.com/openjdk/jdk/pull/20273)
 - [String Concatenation Evolution](https://shipilev.net/blog/2016/string-concatenation/)
