@@ -28,10 +28,10 @@
 2. [JEP 511: Module Import Declarations](/jeps/language/jep-511.md)
    └── 学习如何简化 import 语句
    
-3. [JEP 530: Primitive Types in Patterns](/jeps/concurrency/jep-530.md)
+3. [JEP 530: Primitive Types in Patterns](/jeps/language/jep-530.md)
    └── 学习模式匹配的新用法
    
-4. [JEP 526: Lazy Constants](/jeps/concurrency/jep-526.md)
+4. [JEP 526: Lazy Constants](/jeps/tools/jep-526.md)
    └── 了解延迟初始化的概念
 ```
 
@@ -44,7 +44,7 @@ import module java.base;
 void main() {
     println("Hello, JDK 26!");
     
-    var name = readln("What's your name? ");
+    var name = System.console().readLine("What's your name? ");
     println("Hello, " + name + "!");
 }
 ```

@@ -137,16 +137,16 @@ gantt
     Mark Reinhold     :2023-01, 12M
     Brian Goetz       :2024-01, 8M
     
-    section Red Hat  
-    Aleksey Shipilev  :2023-03, 18M
+    section Red Hat
     Roman Kennke      :2024-06, 6M
-    
+    Andrew Dinn       :2023-03, 18M
+
     section Amazon
+    Aleksey Shipilev  :2023-03, 18M
+    William Kemper    :2024-01, 14M
+
+    section Alibaba
     Shaojin Wen       :2024-01, 14M
-    Jason Greene      :2024-08, 4M
-    
-    section Microsoft
-    Magnus Ihse Bursie :2023-09, 12M
 ```
 
 ---
