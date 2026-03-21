@@ -1,6 +1,6 @@
 # 网络编程
 
-> Socket, ServerSocket, HTTP Client, 网络编程演进历程
+> Socket, ServerSocket, HTTP Client, Unix Domain Sockets, 网络编程演进历程
 
 [← 返回主题索引](../)
 
@@ -9,31 +9,40 @@
 ## 1. 快速概览
 
 ```
-JDK 1.0 ── JDK 1.4 ── JDK 5 ── JDK 7 ── JDK 11 ── JDK 21
-   │         │        │        │        │        │
-Socket   NIO     Scanner URLClassLoader HTTP/2  Virtual
-ServerSocket (JSR51)  HttpURLConnection  Client  Threads
+JDK 1.0 ── JDK 1.4 ── JDK 7 ── JDK 11 ── JDK 13/14 ── JDK 16 ── JDK 21 ── JDK 26
+   │         │        │        │          │           │        │        │
+Socket   NIO     NIO.2    HTTP/2      Socket      Unix     Virtual  HTTP/3
+ServerSocket (JSR51)  (JSR203)  Client    Reimpl     Domain   Threads  Client
+                              (JEP 321)  (353/373)  Sockets  (JEP    (JEP
+                                                    (JEP     444)    517)
+                                                     380)
 ```
 
 ### 核心演进
 
-| 版本 | 特性 | 说明 |
-|------|------|------|
-| **JDK 1.0** | Socket/ServerSocket | TCP 网络基础 |
-| **JDK 1.1** | HttpURLConnection | HTTP 支持 |
-| **JDK 1.4** | NIO | JSR 51 |
-| **JDK 5** | Scanner | 简化输入 |
-| **JDK 7** | NIO.2 | JSR 203 |
-| **JDK 11** | HTTP Client | JEP 321 |
-| **JDK 21** | Virtual Threads | 轻量级并发 |
+| 版本 | 特性 | JEP | 说明 |
+|------|------|-----|------|
+| **JDK 1.0** | Socket/ServerSocket | - | TCP 网络基础 |
+| **JDK 1.1** | HttpURLConnection | - | HTTP 支持 |
+| **JDK 1.4** | NIO | JSR 51 | 非阻塞 I/O, Selector |
+| **JDK 7** | NIO.2 | JSR 203 | 异步通道, 文件系统 API |
+| **JDK 11** | HTTP Client | JEP 321 | 支持 HTTP/1.1 和 HTTP/2 |
+| **JDK 13** | Socket API 重新实现 | JEP 353 | 替换 PlainSocketImpl |
+| **JDK 14** | DatagramSocket API 重新实现 | JEP 373 | 替换 PlainDatagramSocketImpl |
+| **JDK 16** | Unix Domain Sockets | JEP 380 | SocketChannel/ServerSocketChannel 支持 AF_UNIX |
+| **JDK 21** | Virtual Threads | JEP 444 | 轻量级并发, 简化阻塞式网络编程 |
+| **JDK 26** | HTTP/3 Client | JEP 517 | 基于 QUIC 的 HTTP/3 支持 (预览) |
 
 ---
 
 ## 目录
 
 - [TCP 网络编程](#tcp-网络编程)
+- [Socket 重新实现 (JDK 13/14)](#socket-重新实现-jdk-1314)
 - [HTTP 编程](#http-编程)
 - [HTTP Client (JDK 11+)](#http-client-jdk-11)
+- [HTTP/3 Client (JDK 26)](#http3-client-jdk-26)
+- [Unix Domain Sockets (JDK 16+)](#unix-domain-sockets-jdk-16)
 - [NIO 网络编程](#nio-网络编程)
 - [最佳实践](#最佳实践)
 - [核心贡献者](#核心贡献者)
@@ -112,7 +121,32 @@ serverSocket.setReceiveBufferSize(8192); // 接收缓冲区
 
 ---
 
-## 3. HTTP 编程
+## 3. Socket 重新实现 (JDK 13/14)
+
+### JEP 353: 重新实现旧版 Socket API (JDK 13)
+
+JDK 13 用全新的 `NioSocketImpl` 替换了 `PlainSocketImpl`：
+
+| 方面 | 旧实现 (PlainSocketImpl) | 新实现 (NioSocketImpl) |
+|------|--------------------------|------------------------|
+| 代码来源 | JDK 1.0, 混合 Java/C | 纯 Java (基于 NIO) |
+| 线程安全 | 依赖平台原生锁 | Java locks |
+| 维护性 | 脆弱, 难以维护 | 清晰, 易于维护 |
+| 虚拟线程 | 不兼容 | 天然兼容 |
+
+```java
+// 对应用程序透明, 无需代码修改
+// 可通过系统属性回退到旧实现 (已在后续版本移除):
+// -Djdk.net.usePlainSocketImpl=true
+```
+
+### JEP 373: 重新实现旧版 DatagramSocket API (JDK 14)
+
+与 JEP 353 类似, 将 `DatagramSocket` 和 `MulticastSocket` 的底层实现替换为基于 NIO 的版本。
+
+---
+
+## 4. HTTP 编程
 
 ### HttpURLConnection (JDK 1.1+)
 
@@ -188,7 +222,7 @@ String decoded = URLDecoder.decode(encoded, "UTF-8");
 
 ---
 
-## 4. HTTP Client (JDK 11+)
+## 5. HTTP Client (JDK 11+)
 
 **JEP 321: HTTP Client**
 
@@ -225,7 +259,6 @@ System.out.println("Body: " + response.body());
 // JSON POST
 import java.net.http.*;
 
-// 使用 Jackson 构建 JSON
 String json = "{\"name\":\"John\",\"age\":30}";
 
 HttpRequest request = HttpRequest.newBuilder()
@@ -254,9 +287,6 @@ client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
         System.err.println("Error: " + e);
         return null;
     });
-
-// 等待完成
-// Thread.sleep(1000);
 ```
 
 ### 文件上传
@@ -331,7 +361,113 @@ ws.sendClose(WebSocket.NORMAL_CLOSURE, "Goodbye", true);
 
 ---
 
-## 5. NIO 网络编程
+## 6. HTTP/3 Client (JDK 26)
+
+**JEP 517: HTTP/3 for the HTTP Client API (Preview)**
+
+JDK 26 为 `java.net.http.HttpClient` 添加 HTTP/3 支持, 基于 QUIC 协议。
+
+### 关键特性
+
+| 特性 | 说明 |
+|------|------|
+| **QUIC 传输** | 基于 UDP, 减少连接建立延迟 |
+| **0-RTT 握手** | 复用已知连接, 首次请求即可发送数据 |
+| **多路复用** | 无队头阻塞 (区别于 HTTP/2 的 TCP 层队头阻塞) |
+| **连接迁移** | 网络切换时无需重新连接 |
+
+### 使用方式
+
+```java
+// HTTP/3 使用与 HTTP/2 相同的 API
+// 需要启用预览特性: --enable-preview
+HttpClient client = HttpClient.newBuilder()
+    .version(HttpClient.Version.HTTP_2)  // 自动协商升级到 HTTP/3
+    .connectTimeout(Duration.ofSeconds(10))
+    .build();
+
+HttpRequest request = HttpRequest.newBuilder()
+    .uri(URI.create("https://api.example.com/data"))
+    .GET()
+    .build();
+
+// 如果服务器支持 HTTP/3, 客户端会自动升级
+HttpResponse<String> response = client.send(request,
+    HttpResponse.BodyHandlers.ofString());
+
+System.out.println("Protocol: " + response.version());  // 可能是 HTTP_3
+```
+
+### HTTP 协议演进对比
+
+| 特性 | HTTP/1.1 | HTTP/2 | HTTP/3 |
+|------|----------|--------|--------|
+| 传输层 | TCP | TCP | QUIC (UDP) |
+| 多路复用 | 无 | 有 (TCP 队头阻塞) | 有 (无队头阻塞) |
+| 头部压缩 | 无 | HPACK | QPACK |
+| 连接建立 | TCP + TLS | TCP + TLS | 0-RTT / 1-RTT |
+| JDK 支持 | JDK 1.1+ | JDK 11+ | JDK 26+ (预览) |
+
+---
+
+## 7. Unix Domain Sockets (JDK 16+)
+
+**JEP 380: Unix-Domain Socket Channels**
+
+JDK 16 为 `SocketChannel` 和 `ServerSocketChannel` 添加 Unix 域套接字支持 (AF_UNIX), 适用于同一主机上的进程间通信。
+
+### 优势
+
+| 方面 | TCP Loopback | Unix Domain Socket |
+|------|-------------|-------------------|
+| 性能 | 经过网络栈 | 绕过网络栈, 更快 |
+| 安全 | 需要端口管理 | 文件系统权限控制 |
+| 可移植 | 所有平台 | Linux, macOS, Windows 10+ |
+
+### 服务端
+
+```java
+import java.net.UnixDomainSocketAddress;
+import java.nio.channels.*;
+import java.nio.ByteBuffer;
+import java.nio.file.Path;
+
+// Unix Domain Socket 服务端
+Path socketPath = Path.of("/tmp/my-server.sock");
+UnixDomainSocketAddress address = UnixDomainSocketAddress.of(socketPath);
+
+try (ServerSocketChannel server = ServerSocketChannel.open(StandardProtocolFamily.UNIX)) {
+    server.bind(address);
+
+    try (SocketChannel client = server.accept()) {
+        ByteBuffer buffer = ByteBuffer.allocate(1024);
+        client.read(buffer);
+        buffer.flip();
+        // 处理数据...
+    }
+} finally {
+    Files.deleteIfExists(socketPath);
+}
+```
+
+### 客户端
+
+```java
+// Unix Domain Socket 客户端
+Path socketPath = Path.of("/tmp/my-server.sock");
+UnixDomainSocketAddress address = UnixDomainSocketAddress.of(socketPath);
+
+try (SocketChannel channel = SocketChannel.open(StandardProtocolFamily.UNIX)) {
+    channel.connect(address);
+
+    ByteBuffer buffer = ByteBuffer.wrap("Hello".getBytes());
+    channel.write(buffer);
+}
+```
+
+---
+
+## 8. NIO 网络编程
 
 **JDK 1.4 (JSR 51)**
 
@@ -404,7 +540,7 @@ while (buffer.hasRemaining()) {
 
 ---
 
-## 6. 最佳实践
+## 9. 最佳实践
 
 ### 超时设置
 
@@ -468,9 +604,23 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 }
 ```
 
+### 同机进程间通信
+
+```java
+// 优先使用 Unix Domain Sockets (JDK 16+) 进行本机 IPC
+// 比 TCP loopback 更快, 且无需占用端口
+Path socketPath = Path.of("/tmp/app.sock");
+UnixDomainSocketAddress addr = UnixDomainSocketAddress.of(socketPath);
+
+try (SocketChannel channel = SocketChannel.open(StandardProtocolFamily.UNIX)) {
+    channel.connect(addr);
+    // ...
+}
+```
+
 ---
 
-## 7. 核心贡献者
+## 10. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -479,15 +629,22 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Chris Hegarty | 25+ | Oracle | 网络基础 |
-| 2 | Alan Bateman | 20+ | Oracle | NIO, NIO.2 |
-| 3 | Michael McMahon | 10+ | Oracle | HTTP Client |
-| 4 | Daniel Fuchs | 8+ | Oracle | 网络安全 |
-| 5 | Xu Shen | 5+ | Oracle | HTTP/2 |
+| 1 | [Alan Bateman](/by-contributor/profiles/alan-bateman.md) | 20+ | Oracle | NIO, NIO.2, Unix Domain Sockets (JEP 380), Virtual Threads |
+| 2 | [Chris Hegarty](/by-contributor/profiles/chris-hegarty.md) | 25+ | Oracle | HTTP Client (JEP 321), 网络基础 |
+| 3 | [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | 8+ | Oracle | HTTP Client, 网络安全 |
+| 4 | Michael McMahon | 10+ | Oracle | Socket 重新实现 (JEP 353/373), HTTP Client |
+
+### 历史贡献者
+
+| 贡献者 | 公司/机构 | 主要贡献 |
+|--------|----------|----------|
+| **Alan Bateman** | Oracle | NIO.2 (JSR 203), JEP 380 Unix Domain Sockets |
+| **Chris Hegarty** | Oracle | HTTP Client API 实现 |
+| **Michael McMahon** | Oracle | Socket/DatagramSocket 重新实现 |
 
 ---
 
-## 8. 相关链接
+## 11. 相关链接
 
 ### 内部文档
 
@@ -500,10 +657,14 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 - [JSR 51: New I/O APIs](https://jcp.org/en/jsr/detail?id=51)
 - [JSR 203: More New I/O APIs](https://jcp.org/en/jsr/detail?id=203)
-- [JEP 321](/jeps/network/jep-321.md)
+- [JEP 321: HTTP Client](/jeps/network/jep-321.md)
+- [JEP 353: Reimplement the Legacy Socket API](https://openjdk.org/jeps/353)
+- [JEP 373: Reimplement the Legacy DatagramSocket API](https://openjdk.org/jeps/373)
+- [JEP 380: Unix-Domain Socket Channels](https://openjdk.org/jeps/380)
+- [JEP 517: HTTP/3 for the HTTP Client API (Preview)](https://openjdk.org/jeps/517)
 - [Java Networking Tutorial](https://docs.oracle.com/javase/tutorial/networking/)
 - [WebSocket RFC](https://tools.ietf.org/html/rfc6455)
 
 ---
 
-**最后更新**: 2026-03-20
+**最后更新**: 2026-03-22
