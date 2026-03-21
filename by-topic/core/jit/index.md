@@ -294,7 +294,9 @@ Level 4: C2 (深度优化)
 ### 历史演进
 
 - [版本时间线](timeline.md) - JDK 1.0 到 JDK 26
-- [近期改进](recent-changes.md) - 2024-2025 更新
+- [近期改进](recent-changes.md) - 2024-2026 更新
+  - **JDK 25**: 修复 `(a | 3) | 6` 常量折叠回归 (特定场景 10,000x 提升); MergeStores 优化拆分为独立 pass (解决与 range check smearing 冲突); `String::hashCode` 可常量折叠 (常量键 Map 查找约 8x 提升); 无限循环块频率计算修复
+  - **JDK 26**: C2 支持编译大参数方法 (此前回退至 C1/解释器); 更快 JVM 启动; 扩展 C2 编译覆盖范围
 - [C2 迭代速度分析](c2-pace-analysis.md) - C2是否"迭代慢"？事实核查
 - [C2 活跃度时间线](c2-activity-timeline.md) - 按月度展示PR、新功能、活跃度
 - [分层编译历史](tiered-compilation.md#分层编译的历史) - JDK 6 引入

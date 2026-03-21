@@ -413,9 +413,9 @@ java -XX:AOTCacheConfiguration=aot_config.txt \
 java -XX:AOTCache=cache.aot ...
 ```
 
-#### JEP 515: Ahead-of-Time Method Analysis
+#### JEP 515: Ahead-of-Time Method Profiling
 
-AOT 方法分析，进一步优化启动性能。
+AOT 方法 profiling 数据缓存，使 JIT 在启动时立即生成原生代码，部分程序比 JDK 24 训练后应用启动快 **15-25%**。
 
 #### JEP 519: Compact Object Headers
 

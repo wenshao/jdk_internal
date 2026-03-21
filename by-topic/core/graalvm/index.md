@@ -328,13 +328,13 @@ jdk.vm.ci/
 ### GraalVM 发展时间线
 
 ```
-2012        2017        2019        2021        2024
-│           │           │           │           │
-├─ Graal    ├─ GraalVM  ├─ 社区版    ├─ JDK 17   ├─ JDK 21
-│  项目       │  1.0      │  19.0      │  移除      │  基线
-│  (Oracle   │  (Oracle  │  (CE/EE)   │  Graal     │
-│   Labs)    │   Labs)   │            │            │
-└───────────────────────────────────────────────────┘
+2012        2017        2019        2021        2024        2025
+│           │           │           │           │           │
+├─ Graal    ├─ GraalVM  ├─ 社区版    ├─ JDK 17   ├─ JDK 21   ├─ GraalVM 25
+│  项目       │  1.0      │  19.0      │  移除      │  基线      │  (JDK 25)
+│  (Oracle   │  (Oracle  │  (CE/EE)   │  Graal     │           │
+│   Labs)    │   Labs)   │            │            │           │
+└───────────────────────────────────────────────────────────────┘
 ```
 
 ### 关键事件
@@ -348,6 +348,8 @@ jdk.vm.ci/
 | **2021** | JDK 17 移除实验性 Graal | HotSpot 团队决定 |
 | **2023** | Oracle 裁员 | Graal 团队 -30% |
 | **2023** | JDK 21 成为 GraalVM 基线 | LTS 对齐 |
+| **2025** | GraalVM 25 发布 (2025-09-16) | 对齐 JDK 25 LTS；WP-SCCP 默认启用；XGBoost 静态剖析器；高级混淆 (实验性) |
+| **2025** | GraalVM for JDK 24 为最后 Java SE 捆绑版 | 后续通过 GraalVM Free Terms 和 CE 提供 |
 
 👉 [深度分析：Oracle 内部冲突](deep-dive.md)
 

@@ -26,8 +26,9 @@ PermGen   Oops     Oops   字符串  低延迟  ZGC    紧凑对象头
 | **JDK 11** | ZGC | 低延迟 GC | 大内存友好 |
 | **JDK 15** | ZGC 生产可用 | 正式版 | 稳定 |
 | **JDK 21** | 分代 ZGC | 降低 GC 频率 | 更高效 |
-| **JDK 24** | AOT 缓存 | 预加载类链接 | 减少运行时分配 |
-| **JDK 25** | 紧凑对象头 | 压缩对象头 | 4字节/对象 |
+| **JDK 24** | AOT 缓存 (JEP 483) | 预加载类链接 | 减少运行时分配 |
+| **JDK 24** | 紧凑对象头实验 (JEP 450) | 实验性压缩对象头 | 需 UnlockExperimentalVMOptions |
+| **JDK 25** | 紧凑对象头正式 (JEP 519) | 对象头 12→8 字节，生产就绪 | ~10-20% 堆内存节省 |
 
 ---
 
@@ -449,19 +450,38 @@ java -XX:AOTCacheConfiguration=aot_config.txt \
 - 减少元空间使用
 - 降低 GC 压力
 
-### JDK 24: 紧凑对象头
+### JDK 24: 紧凑对象头 (实验)
 
-**JEP 450: Compact Object Headers**
+**JEP 450: Compact Object Headers (Experimental)**
 
 ```bash
-# 启用紧凑对象头 (非默认，需显式启用)
+# JDK 24: 需要 UnlockExperimentalVMOptions
+-XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders
+```
+
+### JDK 25: 紧凑对象头 (正式)
+
+**JEP 519: Compact Object Headers** — Project Lilliput 首个正式集成特性
+
+```bash
+# JDK 25+: 生产就绪，不再需要 UnlockExperimentalVMOptions
+# 注意: 非默认启用，需显式开启
 -XX:+UseCompactObjectHeaders
 ```
 
+**演进路线**:
+- JDK 22: Object Monitor Tables 基础设施
+- JDK 24 (JEP 450): 实验性紧凑对象头
+- JDK 25 (JEP 519): 正式生产就绪特性 (非默认启用)
+- 未来版本: 计划默认启用
+
 **内存节省**:
-- 每个对象节省 4 字节
-- 对象头从 12 字节减少到 8 字节
-- 提高缓存效率
+- 对象头从 12 字节减少到 8 字节 (类指针合并到 Mark Word)
+- SPECjbb2015: 堆空间减少 **22%**, CPU 时间减少 **8%**
+- 含大量小对象的应用: 总活跃数据内存减少 **10-20%**
+- GC 改进: SPECjbb2015 中 G1/Parallel 收集器 GC 周期减少约 **15%**, 标记阶段缩短, GC 暂停减少 **10-15%**
+
+**生产验证**: Amazon 已将此特性反向移植至 JDK 17/21 并在数百个生产服务中部署，测量到一致的效率提升且无回归
 
 ---
 
