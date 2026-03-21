@@ -213,12 +213,12 @@ stream.map(_ -> "constant")
 
 ---
 
-## 8. 2024: JDK 22 - 构造器改进
+## 8. 2024: JDK 22-23 - 构造器改进
 
-### JEP 448: Flexible Constructor Bodies
+### JEP 447: Statements before super (Preview)
 
-- **日期**: 2024-03 (正式, JDK 22)
-- **特性**: 构造器中可以在 super() 前执行语句
+- **日期**: 2024-03 (预览, JDK 22)
+- **特性**: 更灵活的构造器语法
 
 ```java
 public class Sub extends Super {
@@ -233,10 +233,17 @@ public class Sub extends Super {
 }
 ```
 
-### JEP 447: Statements before super (Preview)
+### JEP 477: Implicitly Declared Classes (正式)
 
-- **日期**: 2024-03 (预览, JDK 22)
-- **特性**: 更灵活的构造器语法
+- **日期**: 2024-09 (正式, JDK 23)
+- **特性**: 简化 Java 入门语法
+
+```java
+// 最简形式
+void main() {
+    System.out.println("Hello, World!");
+}
+```
 
 ---
 
@@ -256,12 +263,22 @@ String message = STR."Hello, \{name}!";
 
 ---
 
-## 10. 2025: JDK 26 - Primitive Patterns
+## 10. 2025-2026: JDK 25-26 - Primitive Patterns
 
-### JEP 455: Primitive Patterns
+### JEP 507: Primitive Types in Patterns (Third Preview)
 
-- **日期**: 2025 (正式, JDK 26)
-- **特性**: 原始类型模式匹配
+- **日期**: 2025-09 (第三预览, JDK 25)
+- **特性**: 原始类型模式匹配持续预览
+
+### JEP 513: Flexible Constructor Bodies (正式)
+
+- **日期**: 2025-09 (正式, JDK 25)
+- **特性**: 灵活构造器体正式发布
+
+### JEP 530: Primitive Types in Patterns (Fourth Preview)
+
+- **日期**: 2026-03 (第四预览, JDK 26)
+- **特性**: 原始类型模式匹配继续预览
 
 ```java
 switch (value) {
@@ -276,24 +293,29 @@ switch (value) {
 
 ## 11. 未来计划
 
-### 阶段性进行中的 JEP
+### 预览中特性
 
 | JEP | 标题 | 状态 |
 |-----|------|------|
-| JEP 463 | Implicit Classes | 预览中 |
-| JEP 465 | String Templates (第二版) | 重新设计中 |
+| JEP 530 | Primitive Types in Patterns | 第四预览 (JDK 26) |
+
+### 已撤回特性
+
+| JEP | 标题 | 状态 |
+|-----|------|------|
+| JEP 465 | String Templates | 已撤回，重新设计中 |
 
 ---
 
 ## 12. 时间线总览
 
 ```
-2017 ── 2018 ── 2020 ── 2021 ── 2023 ── 2025 ── 2026
-  │        │        │        │        │        │        │
-启动     var      Switch   Records  Pattern  Primitive  未来
-        JDK10    表达式   Sealed   Matching  Patterns   优化
-                  JDK14    JDK17    JDK21     JDK26
-                           JDK16
+2017 ── 2018 ── 2020 ── 2021 ── 2023 ── 2024 ── 2025 ── 2026
+  │        │        │        │        │        │        │        │
+启动     var      Switch   Records  Pattern  Implicit  Flexible  Primitive
+        JDK10    表达式   Sealed   Matching  Classes   Constructor  Patterns
+                  JDK14    JDK17    JDK21     JDK23     JDK25      JDK26
+                           JDK16                       (预览)
 ```
 
 ---
@@ -308,6 +330,8 @@ switch (value) {
 | **JDK 16** | Records | 数据类减少 95% 代码 |
 | **JDK 17** | Sealed Classes | 代数数据类型 |
 | **JDK 21** | 模式匹配 | 类型安全 + 简洁 |
-| **JDK 26** | Primitive Patterns | 泛型特化配合 |
+| **JDK 23** | Implicit Classes | 简化 Java 入门 |
+| **JDK 25** | Flexible Constructor Bodies | 更灵活的构造器 |
+| **JDK 26** | Primitive Patterns (预览) | 泛型特化配合 |
 
 → [返回 Amber](./)
