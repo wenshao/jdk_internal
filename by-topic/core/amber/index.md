@@ -38,7 +38,6 @@ Java 语言特性演进项目：让 Java 更简洁、更安全、更易表达。
 | 特性 | 版本 | JEP |
 |------|------|-----|
 | **Local Variable Type Inference** | JDK 10 | JEP 286 |
-| **Lambda Parameter Names** | JDK 11 | JEP 323 |
 | **Switch Expressions** | JDK 14 | JEP 361 |
 | **Text Blocks** | JDK 15 | JEP 378 |
 | **Records** | JDK 16 | JEP 395 |
@@ -46,12 +45,11 @@ Java 语言特性演进项目：让 Java 更简洁、更安全、更易表达。
 | **Sealed Classes** | JDK 17 | JEP 409 |
 | **Pattern Matching for switch** | JDK 21 | JEP 441 |
 | **Record Patterns** | JDK 21 | JEP 440 |
-| **String Templates** | (撤回) | JEP 430 |
 | **Unnamed Patterns & Variables** | JDK 21 | JEP 443 |
-| **Implicit Classes** | JDK 21+ | JEP 463 |
-| **Flexible Constructor Bodies** | JDK 22 | JEP 448 |
-| **Statements before super** | JDK 22 | JEP 447 |
-| **Primitive Patterns** | JDK 26 | JEP 455 |
+| **Implicit Classes** | JDK 22 | JEP 463 |
+| **Statements before super** | JDK 22+ | JEP 447 → 482 → 492 |
+| **String Templates** | (已撤回) | JEP 430 → 459 → 465 |
+| **Primitive Patterns** | JDK 23+ (预览) | JEP 455 → 488 → 507 → 530 |
 
 ---
 
@@ -108,9 +106,67 @@ String formatted = switch (obj) {
     case String s  -> String.format("String %s", s);
     default        -> obj.toString();
 };
+
+// 守卫语法 (Guards)
+String check = switch (obj) {
+    case String s && s.length() > 5 -> "Long string: " + s;
+    case String s                    -> "Short string: " + s;
+    case Integer i && i > 0         -> "Positive int";
+    case Integer i                   -> "Non-positive int";
+    default                          -> "Unknown";
+};
+
+// null 处理 (JDK 21)
+String result = switch (obj) {
+    case null      -> "null value";
+    case String s  -> "String: " + s;
+    default        -> "Other type";
+};
 ```
 
-### 3. Sealed Classes (JEP 409)
+### 3. Record Patterns (JEP 440)
+
+```java
+// 嵌套解构
+record Point(int x, int y) {}
+record Rectangle(Point topLeft, Point bottomRight) {}
+
+// 旧写法
+void printOld(Rectangle r) {
+    Point tl = r.topLeft();
+    int x = tl.x();
+    int y = tl.y();
+    System.out.println("Top-left: (" + x + ", " + y + ")");
+}
+
+// 新写法 - Record Pattern
+void printNew(Rectangle r) {
+    if (r instanceof Rectangle(Point(int x, int y), Point bottomRight)) {
+        System.out.println("Top-left: (" + x + ", " + y + ")");
+    }
+}
+
+// switch + Record Pattern
+String describe(Object obj) {
+    return switch (obj) {
+        case Rectangle(Point(int x1, int y1), Point(int x2, int y2)) ->
+            "Rectangle from (%d,%d) to (%d,%d)".formatted(x1, y1, x2, y2);
+        case Point(int x, int y) ->
+            "Point at (%d,%d)".formatted(x, y);
+        default -> "Unknown shape";
+    };
+}
+
+// 结合 unnamed pattern
+void extractX(Object obj) {
+    if (obj instanceof Point(int x, _)) {
+        // 只关心 x 坐标，忽略 y
+        System.out.println("X coordinate: " + x);
+    }
+}
+```
+
+### 4. Sealed Classes (JEP 409)
 
 ```java
 // 定义密封类
@@ -119,7 +175,7 @@ public sealed interface Shape
     double area();
 }
 
-// 实现类必须是 sealed 或 final
+// 实现类必须是 sealed、non-sealed 或 final
 public final record Circle(double radius) implements Shape {
     public double area() { return Math.PI * radius * radius; }
 }
@@ -128,17 +184,25 @@ public final record Rectangle(double width, double height) implements Shape {
     public double area() { return width * height; }
 }
 
+public non-sealed class Square implements Shape {
+    // non-sealed 允许继续扩展
+    private final double side;
+    public Square(double side) { this.side = side; }
+    public double area() { return side * side; }
+}
+
 // 编译器检查穷尽性
 String describe(Shape s) {
     return switch (s) {
-        case Circle c -> "Circle with radius " + c.radius();
+        case Circle c    -> "Circle with radius " + c.radius();
         case Rectangle r -> "Rectangle " + r.width() + "x" + r.height();
-        // 编译器会检查是否覆盖所有 permits
+        case Square sq   -> "Square with side " + sq.side;
+        // 如果缺少某个 case，编译器会报错
     };
 }
 ```
 
-### 4. Text Blocks (JEP 378)
+### 5. Text Blocks (JEP 378)
 
 ```java
 // 旧写法
@@ -154,12 +218,38 @@ String json = """
       "age": 30
     }
     """;
+
+// 多行字符串
+String query = """
+    SELECT id, name, email
+    FROM users
+    WHERE status = 'active'
+    ORDER BY created_at DESC
+    """;
+
+// 文本块缩进和格式化
+// \s 保留尾部空格，\< 取消换行
+String text = """
+    Line 1\s\s
+    Line 2 \
+    Line 3
+    """;
+// 输出: "Line 1  \nLine 2 Line 3\n"
+
+// 文本块用于 SQL、JSON、XML 等场景
+String html = """
+    <html>
+        <body>
+            <p>Hello, %s!</p>
+        </body>
+    </html>
+    """.formatted(name);
 ```
 
-### 5. Switch Expressions (JEP 361)
+### 6. Switch Expressions (JEP 361)
 
 ```java
-// 旧写法
+// 旧写法 - 语句形式
 int result;
 switch (day) {
     case MONDAY:
@@ -174,75 +264,161 @@ switch (day) {
         result = 0;
 }
 
-// 新写法
+// 新写法 - 表达式形式
 int result = switch (day) {
     case MONDAY, FRIDAY, SUNDAY -> 6;
     case TUESDAY               -> 7;
     default                   -> 0;
 };
+
+// 使用 yield 返回复杂值
+String message = switch (status) {
+    case 0 -> {
+        System.out.println("Processing...");
+        yield "OK";  // yield 用于代码块
+    }
+    case 1 -> "Warning";
+    case 2 -> "Error";
+    default -> "Unknown";
+};
+
+// 多标签 case
+int numLetters = switch (day) {
+    case MONDAY, FRIDAY, SUNDAY -> 6;
+    case TUESDAY                -> 7;
+    case THURSDAY, SATURDAY     -> 8;
+    case WEDNESDAY              -> 9;
+};
 ```
 
-### 6. Unnamed Patterns & Variables (JEP 443)
+### 7. Unnamed Patterns & Variables (JEP 443)
 
 ```java
 // 使用 _ 忽略不关心的值
-// 旧写法
-if (obj instanceof String s && s.length() > 0) {
-    System.out.println(s);
-}
 
-// 新写法 - 忽略长度检查
-if (obj instanceof String _ && obj.hashCode() != 0) {
-    System.out.println("Non-empty string");
+// instanceof 中忽略变量
+if (obj instanceof String _) {
+    // 只关心类型，不关心具体值
+    System.out.println("It's a string!");
 }
 
 // Lambda 中忽略参数
 stream.map(_ -> "constant")  // 所有元素映射为 "constant"
 
-// Record 模式中忽略字段
+// Record 模式中忽略组件
 if (obj instanceof Point(int x, _)) {
-    // 只关心 x 坐标
+    // 只关心 x 坐标，忽略 y
+    System.out.println("X: " + x);
+}
+
+// 异常处理中忽略异常对象
+try {
+    riskyOperation();
+} catch (Exception _) {
+    logger.error("Failed");
+}
+
+// for-each 中忽略键
+for (var (_, value) : map.entrySet()) {
+    System.out.println(value);
 }
 ```
 
-### 7. Implicit Classes (JEP 463)
+### 8. Implicit Classes & Instance Main Methods (JEP 463)
 
 ```java
-// 单文件程序无需类声明
-// main.java
+// 单文件程序无需类声明 (JDK 22 预览)
+// HelloWorld.java
 void main() {
     System.out.println("Hello, World!");
 }
 
-// 等价于
-// 隐式类生成
-final class main {
-    private main() {}  // 私有构造器
+// 也支持实例 main 方法
+class HelloWorld {
+    void main() {
+        System.out.println("Hello without static!");
+    }
+}
+
+// 隐式类转换
+// 上面的 void main() 会被编译器转换为：
+final class HelloWorld {
+    private HelloWorld() {}  // 私有构造器
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
 }
 ```
 
-### 8. Primitive Patterns (JEP 455)
+### 8. Flexible Constructor Bodies (JEP 447 → 482 → 492)
 
 ```java
-// 原始类型模式匹配 (JDK 26)
-switch (value) {
-    case int i    -> "Integer: " + i;
-    case long l   -> "Long: " + l;
-    case double d -> "Double: " + d;
-    default       -> "Other";
+// 在构造器中，允许在 super() 或 this() 之前执行语句
+class Point {
+    private final int x, y;
+    private final String description;
+
+    // 旧写法：需要辅助方法或静态工厂
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+        this.description = validate(x, y);
+    }
+
+    // 新写法 (JDK 22+ 预览)
+    public Point(int x, int y) {
+        // Prologue: 在 super() 之前执行的语句
+        if (x < 0 || y < 0) {
+            throw new IllegalArgumentException("Coordinates must be non-negative");
+        }
+        String desc = "Point(" + x + "," + y + ")";
+
+        // Constructor invocation
+        super();  // 或 this(...)
+
+        // Epilogue: 在 super() 之后执行的语句
+        this.x = x;
+        this.y = y;
+        this.description = desc;
+    }
+}
+```
+
+### 9. Primitive Patterns (JEP 455 → 488 → 507 → 530)
+
+```java
+// 原始类型模式匹配 (JDK 23+ 预览，持续到 JDK 26)
+// 支持 instanceof 和 switch 使用所有原始类型
+
+// instanceof 原始类型
+if (obj instanceof int i) {
+    System.out.println("It's an int: " + i);
 }
 
-// 结合泛型特化
-<T> String describe(T value) {
-    return switch (value) {
-        case int i    -> "int " + i;
-        case String s -> "String " + s;
-        case null     -> "null";
-        default       -> "unknown";
+// switch 原始类型模式
+String formatted = switch (value) {
+    case int i    -> "int %d".formatted(i);
+    case long l   -> "long %d".formatted(l);
+    case double d -> "double %f".formatted(d);
+    case boolean b -> "boolean %b".formatted(b);
+    default        -> "unknown type";
+};
+
+// 结合守卫语法
+String checkRange(Object obj) {
+    return switch (obj) {
+        case int i && i > 0  -> "positive int";
+        case int i && i < 0  -> "negative int";
+        case int i           -> "zero";
+        default              -> "not an int";
     };
+}
+
+// 拆箱原始类型
+Number num = 42;
+if (num instanceof Integer i) {
+    // i 已拆箱，可以直接使用
+    System.out.println(i + 1);  // 输出 43
 }
 ```
 
@@ -262,9 +438,18 @@ switch (value) {
 | **2021** | JDK 17 | Sealed Classes (正式) |
 | **2023** | JDK 21 | Record Patterns (正式) |
 | **2023** | JDK 21 | Pattern Matching for switch (正式) |
-| **2023** | JDK 21 | Unnamed Patterns & Variables |
-| **2024** | JDK 22 | Flexible Constructor Bodies |
-| **2025** | JDK 26 | Primitive Patterns |
+| **2023** | JDK 21 | Unnamed Patterns & Variables (正式) |
+| **2023** | JDK 21 | String Templates (第一预览) |
+| **2024** | JDK 22 | Implicit Classes (第二预览) |
+| **2024** | JDK 22 | Statements before super (第一预览) |
+| **2024** | JDK 22 | String Templates (第二预览) |
+| **2024** | JDK 23 | Primitive Patterns (第一预览) |
+| **2024** | JDK 23 | String Templates **撤回** |
+| **2024** | JDK 23 | Flexible Constructor Bodies (第二预览) |
+| **2025** | JDK 24 | Flexible Constructor Bodies (第三预览) |
+| **2025** | JDK 24 | Primitive Patterns (第二预览) |
+| **2025** | JDK 25 | Primitive Patterns (第三预览) |
+| **2026** | JDK 26 | Primitive Patterns (第四预览) |
 
 → [完整时间线](timeline.md)
 
@@ -292,11 +477,12 @@ switch (value) {
 │   Project Amber ──────► 语言层面改进                     │
 │        │                                                │
 │        ├─── 配合 ────► Project Valhalla (值类型)         │
-│        │                  - 模式匹配支持值类型            │
+│        │                  - Primitive Patterns          │
 │        │                  - Record 与 Inline Class      │
 │        │                                                │
 │        ├─── 配合 ────► Project Loom (虚拟线程)           │
-│        │                  - 结构化并发                  │
+│        │                  - Structured Concurrency      │
+│        │                  - 模式匹配用于并发任务         │
 │        │                                                │
 │        └─── 配合 ────► Project Panama (FFI)             │
 │                           - 外部函数的类型安全            │
@@ -304,34 +490,110 @@ switch (value) {
 └─────────────────────────────────────────────────────────┘
 ```
 
+### 与 Valhalla 的协同
+
+```
+Record (Amber) + Inline Class (Valhalla)
+                    ↓
+        无需装箱的数据载体
+                    ↓
+     更高性能的领域建模
+```
+
+**Primitive Patterns** 正是 Amber 与 Valhalla 协作的典型例子：
+- 当 Valhalla 的值类型最终实现时
+- Primitive Patterns 确保模式匹配能无缝处理原始类型和值类型
+
 ---
 
 ## 语法对比
 
-### 数据类
+### 数据类定义
 
 | Java (旧) | Java (Amber) |
 |-----------|--------------|
-| 50+ 行类 | 1 行 record |
-| 手动 equals/hashCode | 自动生成 |
-| 手动 getter/accessor | 自动生成 |
+| 50+ 行类定义 | 1 行 `record Point(int x, int y) {}` |
+| 手动 equals/hashCode/toString | 自动生成 |
+| 手动 getter/accessor | 自动生成 `x()`, `y()` |
+| 手动构造器 | 自动生成 |
+| 可变对象（需额外工作） | 默认不可变 |
 
-### 类型检查
+### 类型检查与转换
 
 | Java (旧) | Java (Amber) |
 |-----------|--------------|
-| `if (x instanceof T) { T t = (T)x; }` | `if (x instanceof T t) { }` |
+| `if (x instanceof String) { String s = (String)x; }` | `if (x instanceof String s) { }` |
+| 显式类型转换 `(T)obj` | 模式变量自动推断 |
 | 多层 if-else 检查 | switch 表达式 + 模式匹配 |
-| 运行时类型错误 | 编译时穷尽性检查 |
+| 运行时发现遗漏的 case | 编译时穷尽性检查 |
+| null 需要单独检查 | `case null` 统一处理 |
+
+### Switch 表达式
+
+| Java (旧) | Java (Amber) |
+|-----------|--------------|
+| 语句形式（statement） | 表达式形式（expression） |
+| 需要 `break` 防止 fall-through | `->` 语法无需 break |
+| 多个 case 需要分开写 | `case MONDAY, FRIDAY ->` |
+| 无法直接赋值给变量 | `int result = switch(...) { ... }` |
+| 无法嵌套使用 | 可作为表达式嵌套 |
+
+### 字符串处理
+
+| Java (旧) | Java (Amber) |
+|-----------|--------------|
+| 字符串连接 `"\n" +` | Text Blocks `"""..."""` |
+| 转义字符 `\"` 难以阅读 | 直接使用引号 |
+| SQL/JSON 需要外部文件 | 内联多行字符串 |
+| `\s` 保留空格 | `\<` 取消换行 |
+
+---
+
+## 特性状态说明
+
+### 已撤回特性
+
+| 特性 | JEP | 撤回时间 | 原因 |
+|------|-----|----------|------|
+| **String Templates** | 430 → 459 → 465 | 2024年3月 | 安全性顾虑，设计需重新评估 |
+
+**String Templates 撤回详情**：
+- JDK 21: 第一预览 (JEP 430)
+- JDK 22: 第二预览 (JEP 459)
+- JDK 23: **撤回** (JEP 465 Closed/Withdrawn)
+- 原因：社区反馈对字符串插值的安全性和表达方式存在分歧，需要重新设计
+
+### 预览中特性 (截至 2026年)
+
+| 特性 | 当前 JEP | 目标版本 |
+|------|----------|----------|
+| **Primitive Patterns** | JEP 530 (第四预览) | JDK 26+ |
+| **Flexible Constructor Bodies** | JEP 492 (第三预览) | JDK 24+ |
 
 ---
 
 ## 参考资料
 
+### 官方资源
 - [Project Amber Official Page](https://openjdk.org/projects/amber/)
+- [Amber JEPs Complete List](https://openjdk.org/jeps/?q=amber)
+
+### 已正式发布的 JEP
+- [JEP 286: Local-Variable Type Inference](https://openjdk.org/jeps/286)
+- [JEP 361: Switch Expressions](https://openjdk.org/jeps/361)
+- [JEP 378: Text Blocks](https://openjdk.org/jeps/378)
 - [JEP 395: Records](https://openjdk.org/jeps/395)
 - [JEP 394: Pattern Matching for instanceof](https://openjdk.org/jeps/394)
 - [JEP 441: Pattern Matching for switch](https://openjdk.org/jeps/441)
+- [JEP 440: Record Patterns](https://openjdk.org/jeps/440)
 - [JEP 409: Sealed Classes](https://openjdk.org/jeps/409)
+- [JEP 443: Unnamed Patterns & Variables](https://openjdk.org/jeps/443)
+
+### 预览中 / 撤回的 JEP
+- [JEP 447: Statements before super (Preview)](https://openjdk.org/jeps/447)
+- [JEP 463: Implicitly Declared Classes and Instance Main Methods (Preview)](https://openjdk.org/jeps/463)
+- [JEP 455: Primitive Types in Patterns (Preview)](https://openjdk.org/jeps/455)
+- [JEP 430: String Templates (First Preview - Withdrawn)](https://openjdk.org/jeps/430)
+- [JEP 465: String Templates (Third Preview - Withdrawn)](https://openjdk.org/jeps/465)
 
 → [相关主题: Records](../records/) | [模式匹配](../patterns/) | [语法演进](../../language/syntax/)
