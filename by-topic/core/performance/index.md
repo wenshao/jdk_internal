@@ -472,9 +472,7 @@ G1 GC 吞吐量改进，详见 [GC 演进](../gc/)。
 |--------|------|----------|
 | [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | Oracle | JFR 架构师, JEP 520 Owner |
 | [Markus Grönlund](/by-contributor/profiles/markus-gronlund.md) | Oracle | JFR 事件系统, JEP 518 Owner |
-| Jaroslav Bachorik | Oracle | JFR 工具 |
-
-> 注：Jaroslav Bachorik 暂无详细 profile，待补充。
+| [Jaroslav Bachorik](/by-contributor/profiles/jaroslav-bachorik.md) | DataDog | JFR 工具，BTrace 创始人 |
 
 ---
 
