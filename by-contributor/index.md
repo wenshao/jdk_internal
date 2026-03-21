@@ -148,7 +148,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 |------|------------|------|
 | G1 GC | Thomas Schatzl | [详情](/by-contributor/profiles/thomas-schatzl.md) |
 | Shenandoah GC | William Kemper | [详情](/by-contributor/profiles/william-kemper.md) |
-| ZGC | Stefan Karlsson | 详情  |
+| ZGC | Stefan Karlsson | [详情](/by-contributor/profiles/stefan-karlsson.md) |
 
 #### 网络与通信
 
@@ -237,7 +237,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 |--------|------|----------|------|
 | Emanuel Peter | Oracle | C2 编译器 | [详情](/by-contributor/profiles/emanuel-peter.md) |
 | Erik Gahlin | Oracle | JFR | [详情](/by-contributor/profiles/erik-gahlin.md) |
-| Fei Yang | Alibaba | RISC-V | [详情](/by-contributor/profiles/fei-yang.md) |
+| Fei Yang | ISCAS PLCT | RISC-V | [详情](/by-contributor/profiles/fei-yang.md) |
 | Han Gq | - | - | [详情](/by-contributor/profiles/han-gq.md) |
 | Hamlin Li | - | - | [详情](/by-contributor/profiles/hamlin-li.md) |
 | Ioi Lam | Oracle | AOT/CDS | [详情](/by-contributor/profiles/ioi-lam.md) |
@@ -256,7 +256,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | Leonid Mesnik | Oracle | JVMTI | [详情](/by-contributor/profiles/leonid-mesnik.md) |
 | Magnus Ihse Bursie | Oracle | 构建系统 | [详情](/by-contributor/profiles/magnus-ihse-bursie.md) |
 | Matthias Baesken | SAP | 跨平台 | [详情](/by-contributor/profiles/matthias-baesken.md) |
-| Naoto Sato | Oracle | i18n | [详情](by-contributor/profiles/naoto-sato.md) |
+| Naoto Sato | Oracle | i18n | [详情](/by-contributor/profiles/naoto-sato.md) |
 
 ### P-Z
 
@@ -293,9 +293,9 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 贡献者 | 组织 | PRs | 领域 |
 |--------|------|-----|------|
 | Shaojin Wen | Alibaba | 97 | 核心库 |
-| Fei Yang | Alibaba | 30 | RISC-V |
-| Anjian Wen | ByteDance | 12 | RISC-V |
-| Sendaoyan | Independent | 88 | 测试 |
+| Fei Yang | ISCAS PLCT | 100 | RISC-V |
+| Anjian Wen | ByteDance | 25 | RISC-V |
+| Sendaoyan | Independent | 202 | 测试 |
 
 → [中国贡献者专题](/by-contributor/profiles/chinese-contributors.md)
 
@@ -321,8 +321,8 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 |--------|-----------|
 | Emanuel Peter | [Store-to-Load 转发修复](/by-pr/8333/8334431.md) |
 | Emanuel Peter | [小循环向量化](/by-pr/8344/8344085.md) |
-| Emanuel Peter | SuperWord Cost Model |
-| Emanuel Peter | 模板测试框架  |
+| Emanuel Peter | SuperWord Cost Model (待补充) |
+| Emanuel Peter | 模板测试框架 (待补充) |
 | Johannes Graham | [XOR 常量折叠](/by-pr/8347/8347645.md) |
 
 ### 数学库与密码学
@@ -336,17 +336,17 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 | 贡献者 | PR 分析文档 |
 |--------|-----------|
-| Chen Liang | 移除 com.sun.tools.classfile |
-| Chen Liang | UTF-8 条目验证  |
+| Chen Liang | 移除 com.sun.tools.classfile (待补充) |
+| Chen Liang | UTF-8 条目验证 (待补充) |
 
 ### JVM 运行时
 
 | 贡献者 | PR 分析文档 |
 |--------|-----------|
-| Kim Barrett | Atomic<T> 模板  |
-| David Holmes | 信号处理安全  |
-| Leonid Mesnik | JVMTI 压力测试  |
-| William Kemper | 分代 Shenandoah |
+| Kim Barrett | Atomic<T> 模板 (待补充) |
+| David Holmes | 信号处理安全 (待补充) |
+| Leonid Mesnik | JVMTI 压力测试 (待补充) |
+| William Kemper | 分代 Shenandoah (待补充) |
 
 [→ 全部 PR 分析文档](/by-pr/)
 
