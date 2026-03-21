@@ -157,7 +157,7 @@ Level 4: C2 (深度优化)
 | 5 | [Doug Simon](/by-contributor/profiles/doug-simon.md) | 29 | Oracle | JIT 编译器 |
 | 6 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 24 | Oracle | 并发, 编译器 |
 | 7 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 24 | Oracle | 编译器优化 |
-| 8 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 22 | IBM | 编译器 |
+| 8 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 22 | Red Hat | 编译器 |
 | 9 | [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | 20 | Oracle | JIT 编译器 |
 | 10 | [Igor Veresov](/by-contributor/profiles/igor-veresov.md) | 17 | Oracle | JIT 编译器 |
 

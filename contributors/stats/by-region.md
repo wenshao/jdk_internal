@@ -90,7 +90,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 200+ | Oracle | 瑞士 |
 | [Tobias Hartmann](/by-contributor/profiles/tobias-hartmann.md) | 150+ | Oracle | 瑞典 |
 | [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | 100+ | SAP | 德国 |
-| [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | IBM | 德国 |
+| [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | Red Hat | 德国 |
 | [Stefan Karlsson](/by-contributor/profiles/stefan-karlsson.md) | 50+ | Oracle | 瑞典 |
 | [Jaroslav Bachorik](/by-contributor/profiles/jaroslav-bachorik.md) | 6 | DataDog | 捷克 |
 

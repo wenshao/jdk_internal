@@ -224,20 +224,16 @@ Per Minborg 经常在各大 Java 会议发表演讲：
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=pminborg)
 - [JDK Commits (2022)](https://mail.openjdk.org/pipermail/jdk-dev/2022-December/007268.html)
 - [JDK Reviewer CFV](https://mail.openjdk.org/pipermail/jdk-dev/2023/msg/4ZNHONUC7PGMZP4NRZKCRLTLBEOG5RE4/)
-- [JEP 526: Lazy Constants](https://openjdk.org/jeps/526)
+- [JEP 502: Lazy Constants (First Preview)](https://openjdk.org/jeps/502)
+- [JEP 526: Lazy Constants (Second Preview)](https://openjdk.org/jeps/526)
+- [Inside.java Podcast Ep 49: LazyConstants in JDK 26](https://inside.java/2026/03/06/podcast-049/)
 
 ---
 
-> **文档版本**: 2.0
-> **最后更新**: 2026-03-20
+> **文档版本**: 2.1
+> **最后更新**: 2026-03-22
 > **更新内容**:
-> - 添加全名 Per-Åke Minborg
-> - 添加 Oracle 职位详情 (Consulting MTS)
-> - 添加 20+ 年 Java 开发经验
-> - 添加 JDK Committer/Reviewer 提名信息
-> - 添加 Speedment 项目详情
-> - 添加 Minborg's Java Pot 博客
-> - 添加 GitHub 文章仓库
-> - 添加会议演讲列表
-> - 添加 FFM API 性能对比数据
-> - 添加 Inside.java 和 Foojay 链接
+> - 添加 header 区域链接 (GitHub, OpenJDK, Inside.java)
+> - 修正 JEP 526 为 "Second Preview"，添加 JEP 502 (First Preview, JDK 25)
+> - 添加 LazyConstant API 和 @Stable 集成说明
+> - 添加 Inside.java Podcast Episode 49 链接

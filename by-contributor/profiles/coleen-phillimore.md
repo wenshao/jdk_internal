@@ -1,6 +1,9 @@
 # Coleen Phillimore
 
-> HotSpot VM 核心架构师，JVM 运行时专家
+> **Organization**: Oracle
+> **Role**: HotSpot VM 核心架构师, JDK Reviewer, Valhalla Committer
+> **Career**: 30+ years in compilers, 12+ years at Sun then Oracle on HotSpot
+> **GitHub**: [@coleenp](https://github.com/coleenp)
 
 ---
 ## 目录
@@ -30,11 +33,13 @@
 | **LinkedIn** | [coleen-phillimore-0a042b9](https://www.linkedin.com/in/coleen-phillimore-0a042b9) |
 | **OpenJDK** | [@coleenp](https://openjdk.org/census#coleenp) |
 | **Role** | OpenJDK Member, JDK Reviewer, Valhalla Committer (2024-07) |
+| **Career** | ~30 years in compilers; 12+ years at Sun then Oracle on HotSpot; since 2000, 1,200+ changes to JDK |
+| **Projects** | JDK, Loom, Lilliput, Galahad, Valhalla |
 | **PRs** | [400 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Acoleenp+is%3Aclosed+label%3Aintegrated) |
-| **Primary Areas** | JVM Core, HotSpot, Metaspace, Class Loading |
+| **Primary Areas** | JVM Core, HotSpot Runtime, Metaspace, Class Loading, Object Monitor |
 
-> **Data as of**: 2026-03-19
-> **数据来源**: [LinkedIn](https://www.linkedin.com/in/coleen-phillimore-0a042b9), [CFV Valhalla Committer](https://mail.openjdk.org/pipermail/valhalla-dev/2024-July/012818.html)
+> **Data as of**: 2026-03-22
+> **数据来源**: [LinkedIn](https://www.linkedin.com/in/coleen-phillimore-0a042b9), [CFV Valhalla Committer](https://mail.openjdk.org/pipermail/valhalla-dev/2024-July/012818.html), [Heroes of Java Interview](https://blog.eisele.net/2013/01/the-heroes-of-java-coleen-phillimore.html)
 
 ---
 
@@ -67,11 +72,11 @@
 ### 1. HotSpot VM Core Architect
 Long-time HotSpot VM contributor and architect, shaping JVM internals.
 
-### 2. Metaspace Improvements
-Major contributions to metaspace memory management for class metadata.
+### 2. PermGen Removal / Metaspace
+Together with Stefan Karlsson and Jon Masamitsu, removed the permanent generation from HotSpot VM, replacing it with Metaspace. Continues to drive metaspace memory management improvements for class metadata.
 
 ### 3. Class Loading Modernization
-Class file loading and verification improvements.
+Class file loading, parsing, verification improvements. Focus on startup and footprint optimizations, interpreter, and internal class data representation.
 
 ### 4. Object Monitor Optimization
 Synchronization primitives and object monitor optimizations.
@@ -307,3 +312,6 @@ if (HAS_PENDING_EXCEPTION) {
 - [OpenJDK Profile](https://openjdk.org/census#coleenp)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20coleenp)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=coleenp)
+- [LinkedIn](https://www.linkedin.com/in/coleen-phillimore-0a042b9/)
+- [The Heroes of Java: Coleen Phillimore](https://blog.eisele.net/2013/01/the-heroes-of-java-coleen-phillimore.html)
+- [CFV: Valhalla Committer](https://mail.openjdk.org/pipermail/valhalla-dev/2024-July/012818.html)

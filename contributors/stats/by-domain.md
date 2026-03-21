@@ -185,7 +185,7 @@
 |--------|---------|------|
 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 1,209 | Oracle |
 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 720 | Oracle |
-| Thomas Stuefe | 548 | IBM |
+| Thomas Stuefe | 548 | Red Hat |
 | Chris Plummer | 437 | Oracle |
 
 ---

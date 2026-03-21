@@ -34,7 +34,7 @@
 | 15 | [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | 50+ | HTTP/JMX | Oracle | [详情](/by-contributor/profiles/daniel-fuchs.md) |
 | 16 | [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | 50+ | JFR | Oracle | [详情](/by-contributor/profiles/erik-gahlin.md) |
 | 17 | [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | 50+ | AArch64 | Red Hat | [详情](/by-contributor/profiles/andrew-dinn.md) |
-| 18 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | HotSpot, CDS | IBM | [详情](/by-contributor/profiles/thomas-stuefe.md) |
+| 18 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | HotSpot, CDS | Red Hat | [详情](/by-contributor/profiles/thomas-stuefe.md) |
 | 19 | [Amit Kumar](/by-contributor/profiles/amit-kumar.md) | 50+ | s390x, Compiler | IBM | [详情](/by-contributor/profiles/amit-kumar.md) |
 | 20 | [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | RISC-V | Huawei | [详情](/by-contributor/profiles/fei-yang.md) |
 
@@ -62,13 +62,13 @@
 
 [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md), [William Kemper](/by-contributor/profiles/william-kemper.md)
 
-### Red Hat (1 人)
+### Red Hat (2 人)
 
-[Andrew Dinn](/by-contributor/profiles/andrew-dinn.md)
+[Andrew Dinn](/by-contributor/profiles/andrew-dinn.md), [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md)
 
-### IBM (2 人)
+### IBM (1 人)
 
-[Amit Kumar](/by-contributor/profiles/amit-kumar.md), [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md)
+[Amit Kumar](/by-contributor/profiles/amit-kumar.md)
 
 ### Alibaba (1 人)
 

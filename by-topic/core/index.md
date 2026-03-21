@@ -366,7 +366,7 @@ JVM 参数、调优工具和监控技术从 JDK 1.0 到 JDK 26 的演进。
 | 3 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 167 | Oracle | CDS, AOT |
 | 4 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 123 | Amazon | 性能基准 |
 | 5 | Kim Barrett | 115 | Oracle | C++ 现代化 |
-| 6 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 112 | IBM | 内存, 跨平台 |
+| 6 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 112 | Red Hat | 内存, 跨平台 |
 | 7 | Serguei Spitsyn | 107 | Oracle | JVMTI, JFR |
 
 ### 模块系统

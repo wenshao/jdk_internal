@@ -477,7 +477,7 @@ java -XX:AOTCacheConfiguration=aot_config.txt \
 | 1 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 317 | Oracle | 类加载, 运行时 |
 | 2 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 215 | Oracle | CDS, AOT, 内存 |
 | 3 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 174 | Oracle | 并发, 线程 |
-| 4 | Thomas Stuefe | 163 | SAP | 内存, 跨平台 |
+| 4 | Thomas Stuefe | 163 | Red Hat | 内存, 跨平台 |
 | 5 | Stefan Karlsson | 149 | Oracle | 并发 GC |
 | 6 | Kim Barrett | 113 | Oracle | C++ 现代化 |
 | 7 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 112 | Amazon | 性能基准 |
