@@ -481,6 +481,53 @@ static void putCharsAt(byte[] val, int index, int c1, int c2, int c3, int c4) {
 
 → [详细分析](/by-pr/8327/8327247.md)
 
+### 案例 5: Formatter.isValid 内联优化
+
+> **JDK-8335252**: Reduce size of j.u.Formatter.Conversion#isValid
+> **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) (Alibaba)
+
+**问题**: `Formatter.Conversion#isValid` 方法 358 字节，超过内联阈值
+
+```java
+// 原始实现：大型 switch 表达式
+static boolean isValid(char c) {
+    switch (c) {
+        case 'b', 'B', 'h', 'H', 's', 'S', 'c', 'C', 'd', 'o',
+             'x', 'X', 'e', 'E', 'f', 'g', 'G', 'a', 'A',
+             't', 'T', 'n', '%', DECIMAL_FLOAT, HEXADECIMAL_FLOAT,
+             HEXADECIMAL_FLOAT_UPPER, LINE_SEPARATOR, PERCENT_SIGN -> true;
+        default -> false;
+    };
+}
+// 方法大小: 358 字节 > 325 字节阈值
+// JIT 日志: failed to inline: hot method too big
+```
+
+**解决方案**: 简化 switch，将部分常量移到 default 处理
+
+```java
+// 优化后：可内联的小方法
+static boolean isValid(char c) {
+    return switch (c) {
+        case 'b', 'B', 'h', 'H', 's', 'S', 'c', 'C', 'd', 'o',
+             'x', 'X', 'e', 'E', 'f', 'g', 'G', 'a', 'A',
+             't', 'T', LINE_SEPARATOR -> true;
+        // 不要把 PERCENT_SIGN 放在 switch 里，
+        // 那样会使方法大小超过 325，无法内联
+        default -> c == PERCENT_SIGN;
+    };
+}
+// 方法大小: 10 字节 < 325 字节阈值
+// JIT 日志: inline (hot)
+```
+
+**效果**:
+- 方法大小: 358 → 10 字节
+- 内联状态: 失败 → 成功
+- 性能提升: +15-25%
+
+→ [详细分析](/by-pr/8335/8335252.md)
+
 ---
 
 ## 相关链接
