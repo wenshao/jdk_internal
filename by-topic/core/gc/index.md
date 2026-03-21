@@ -577,7 +577,7 @@ Amazon:   ██████                  10%
 |------|--------|-----|----------|----------|
 | **Amazon** | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 324+ | JEP 379 | `shenandoahHeap.cpp` |
 | **Oracle** | [Zhengyu Gu](/by-contributor/profiles/zhengyu-gu.md) | 217+ | - | `shenandoahMark.cpp` |
-| **Red Hat** | [William Kemper](/by-contributor/profiles/william-kemper.md) | 112+ | JEP 521 | `shenandoahGenerationalHeap.cpp` |
+| **Amazon** | [William Kemper](/by-contributor/profiles/william-kemper.md) | 112+ | JEP 521 | `shenandoahGenerationalHeap.cpp` |
 | **Red Hat** | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | 163+ | JEP 519 | `shenandoahBarrierSet.cpp` |
 
 **JEP 521 核心团队**:

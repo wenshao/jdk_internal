@@ -12,7 +12,7 @@ import time
 # GitHub usernames mapped to real names and organizations
 CONTRIBUTORS = {
     # Oracle
-    'shipilev': ('Aleksey Shipilev', 'Oracle'),
+    'shipilev': ('Aleksey Shipilev', 'Amazon'),
     'albertnetymk': ('Albert Mingkun Yang', 'Oracle'),
     'naotoj': ('Naoto Sato', 'Oracle'),
     'liach': ('Chen Liang', 'Oracle'),

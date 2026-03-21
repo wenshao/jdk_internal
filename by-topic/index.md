@@ -232,7 +232,7 @@ Valhalla (值类型) ┘
 | Local Variable Type Inference | JDK 10 | - | JDK 10 | JEP 286 |
 | Var Handles | JDK 9 | - | JDK 9 | JEP 193 |
 | Records | JDK 14 | 2 | JDK 16 | JEP 395, JEP 384 |
-| Pattern Matching for instanceof | JDK 14 | 2 | JDK 16 | JEP 375, JEP 305 |
+| Pattern Matching for instanceof | JDK 14 | 2 | JDK 16 | JEP 394, JEP 375, JEP 305 |
 | Sealed Classes | JDK 15 | 2 | JDK 17 | JEP 409, JEP 360 |
 | Pattern Matching for switch | JDK 17 | 4 | JDK 21 | JEP 406, JEP 420, JEP 433, JEP 441 |
 | Record Patterns | JDK 19 | 2 | JDK 21 | JEP 405, JEP 432, JEP 440 |
@@ -247,8 +247,8 @@ Valhalla (值类型) ┘
 | 特性 | 首发版本 | 预览次数 | 正式版本 | JEP |
 |------|----------|----------|----------|-----|
 | Virtual Threads | JDK 19 | 2 | JDK 21 | JEP 425, JEP 436, JEP 444 |
-| Scoped Values | JDK 20 | 4+ | JDK 23+ | JEP 429, JEP 446, JEP 464, JEP 467 |
-| Structured Concurrency | JDK 21 | 6+ | JDK 27+ | JEP 453, 462, 477, 483, 491, 493 |
+| Scoped Values | JDK 20 | 4+ | JDK 25 | JEP 429, JEP 446, JEP 464, JEP 467, JEP 481, JEP 487, JEP 506 |
+| Structured Concurrency | JDK 19 | 6+ | JDK 27+ | JEP 428, JEP 453, 462, 477, 483, 491, 493 |
 
 ### GC 特性
 
@@ -271,7 +271,7 @@ Valhalla (值类型) ┘
 | ML-DSA (后量子) | JDK 26 | 生产 | JEP 518 |
 | ML-KEM (后量子) | JDK 26 | 生产 | - |
 | KDF API | JDK 22 | 预览→正式JDK26 | JEP 495, 508, 510 |
-| PEM Encodings | JDK 26 | 生产 | JEP 470 |
+| PEM Encodings | JDK 26 | 预览 | JEP 470 |
 
 ### API 特性
 
