@@ -124,6 +124,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 |------|--------|------|
 | NTT DATA | Yasumasa Suenaga | [详情](/by-contributor/profiles/yasumasa-suenaga.md) |
 | ByteDance | Anjian Wen | [详情](/by-contributor/profiles/anjian-wen.md) |
+| DataDog | Jaroslav Bachorik | [详情](/by-contributor/profiles/jaroslav-bachorik.md) |
 | Tencent | (无主要贡献者) | - |
 | ISCAS PLCT | Fei Yang | [详情](/by-contributor/profiles/fei-yang.md) |
 | 龙芯 | Zhang Xiaofeng, Liu Xinyu | [详情](/contributors/orgs/loongson.md) |
@@ -175,6 +176,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 领域 | 代表贡献者 | 查看 |
 |------|------------|------|
 | JFR | Erik Gahlin | [详情](/by-contributor/profiles/erik-gahlin.md) |
+| JFR 工具 | [Jaroslav Bachorik](/by-contributor/profiles/jaroslav-bachorik.md) | DataDog |
 | JVMTI | Leonid Mesnik | [详情](/by-contributor/profiles/leonid-mesnik.md) |
 | JMX | Claes Redestad | [详情](/by-contributor/profiles/claes-redestad.md) |
 
@@ -223,7 +225,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 贡献者 | 组织 | 主要领域 | 档案 |
 |--------|------|----------|------|
 | Albert Mingkun Yang | Oracle | GC | [详情](/by-contributor/profiles/albert-mingkun-yang.md) |
-| Aleksey Shipilev | AWS | 性能优化 | [详情](/by-contributor/profiles/aleksey-shipilev.md) |
+| Aleksey Shipilev | Amazon | 性能优化 | [详情](/by-contributor/profiles/aleksey-shipilev.md) |
 | Alexey Semenyuk | Oracle | 编译器 | [详情](/by-contributor/profiles/alexey-semenyuk.md) |
 | Anjian Wen | ByteDance | RISC-V | [详情](/by-contributor/profiles/anjian-wen.md) |
 | Ben Perez | Trail of Bits | 后量子密码学 | [详情](/by-contributor/profiles/ben-perez.md) |
@@ -247,6 +249,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | Ioi Lam | Oracle | AOT/CDS | [详情](/by-contributor/profiles/ioi-lam.md) |
 | Jaikiran Pai | Oracle | JavaEE | [详情](/by-contributor/profiles/jaikiran-pai.md) |
 | Jan Lahoda | Oracle | javac | [详情](/by-contributor/profiles/jan-lahoda.md) |
+| Jaroslav Bachorik | DataDog | JFR 工具，BTrace | [详情](/by-contributor/profiles/jaroslav-bachorik.md) |
 | Jim Laskey | Oracle | 语言设计 | [详情](/by-contributor/profiles/jim-laskey.md) |
 | Johannes Graham | Oracle | C2 编译器 | [详情](/by-contributor/profiles/johannes-graham.md) |
 | Justin Lu | Oracle | 本地化 | [详情](/by-contributor/profiles/justin-lu.md) |
