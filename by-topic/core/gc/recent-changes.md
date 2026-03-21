@@ -115,9 +115,9 @@
 - [JEP 439](https://openjdk.org/jeps/439)
 - [Inside Java: Generational ZGC](https://inside.java/2023/11/28/gen-zgc-explainer/)
 
-### JEP 429: 分代 Shenandoah
+### JEP 521: 分代 Shenandoah
 
-**状态**: 正式
+**状态**: 正式 (JDK 25)
 
 **改进内容**:
 - 年轻代/老年代分离
@@ -126,11 +126,11 @@
 
 **配置**:
 ```bash
--XX:ShenandoahGCHeuristics=generational
+-XX:+UseShenandoahGC -XX:ShenandoahGCMode=generational
 ```
 
 **相关链接**:
-- [JEP 429](https://openjdk.org/jeps/429)
+- [JEP 521](https://openjdk.org/jeps/521)
 
 ### JDK-8307390: ZGC 并发线程栈扫描
 
@@ -167,8 +167,8 @@
 ### JDK 12 (2019)
 - Shenandoah 首次发布
 
-### JDK 21+
-- 分代 Shenandoah (JEP 429)
+### JDK 25+
+- 分代 Shenandoah (JEP 521)
 
 ---
 
@@ -189,11 +189,11 @@
 
 | 版本 | 主要 GC 改进 |
 |------|--------------|
-| **JDK 21** | 分代 ZGC, 分代 Shenandoah |
+| **JDK 21** | 分代 ZGC |
 | **JDK 22** | G1 Region Pinning, Shenandoah 并发优化 |
 | **JDK 23** | 分代 ZGC 默认, 压缩指针优化 |
 | **JDK 24** | 稳定性修复, 性能调优 |
-| **JDK 25** | NUMA 优化, 内存管理改进 |
+| **JDK 25** | 分代 Shenandoah, NUMA 优化 |
 | **JDK 26** | JEP 522: G1 吞吐量优化 |
 
 ---
@@ -217,7 +217,7 @@
 ### JEP 文档
 
 - [JEP 439: Generational ZGC](https://openjdk.org/jeps/439)
-- [JEP 429: Generational Shenandoah](https://openjdk.org/jeps/429)
+- [JEP 521: Generational Shenandoah](https://openjdk.org/jeps/521)
 - [JEP 522: G1 GC Throughput](https://openjdk.org/jeps/522)
 - [JEP 474: ZGC Defaults to Generational](https://openjdk.org/jeps/474)
 

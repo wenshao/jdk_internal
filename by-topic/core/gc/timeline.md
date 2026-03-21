@@ -24,13 +24,13 @@
 ## 1. 时间线概览
 
 ```
-JDK 8 ───── JDK 11 ───── JDK 15 ───── JDK 17 ───── JDK 21 ───── JDK 26
- │              │              │              │              │              │
- │              │              │              │              │              │
-G1 默认        ZGC 引入       ZGC 生产      并发扫描      分代 ZGC      G1 +10-20%
-Parallel 默认   (实验)                       Shenandoah    分代 Shen     ZGC NUMA
-CMS 废弃        Shenandoah     Windows       JEP 379       JEP 439       JEP 522
-               (实验)                                    JEP 429
+JDK 8 ───── JDK 11 ───── JDK 15 ───── JDK 17 ───── JDK 21 ───── JDK 25 ───── JDK 26
+ │              │              │              │              │              │              │
+ │              │              │              │              │              │              │
+G1 默认        ZGC 引入       ZGC 生产      并发扫描      分代 ZGC      分代 Shen    G1 +10-20%
+Parallel 默认   (实验)                       Shenandoah    JEP 439       JEP 521       ZGC NUMA
+CMS 废弃        Shenandoah     Windows       JEP 379                     (正式)        JEP 522
+               (实验)
 ```
 
 ---
@@ -447,7 +447,8 @@ Object load_barrier(Object obj) {
 | JDK 12 | Shenandoah 引入 | JEP 189 | 实验性, Red Hat |
 | JDK 15 | Shenandoah 生产可用 | JEP 379 | 脱离实验标签 |
 | JDK 17 | 并发线程栈扫描 | JEP 379 | 降低 pause 时间 |
-| JDK 21 | **分代 Shenandoah** | JEP 429 | William Kemper (Owner), Red Hat 团队 |
+| JDK 21 | **分代 ZGC** | JEP 439 | Stefan Karlsson (Owner), Oracle |
+| JDK 25 | **分代 Shenandoah** | JEP 521 | William Kemper (Owner), Amazon |
 | JDK 26 | 进一步优化 | - | 持续改进 |
 
 ### Shenandoah 配置详解
@@ -480,7 +481,7 @@ Object load_barrier(Object obj) {
 -XX:ShenandoahRegionSize=32m    # Region 大小 (256k-32m)
 ```
 
-→ [JEP 429: Generational Shenandoah](https://openjdk.org/jeps/429)
+→ [JEP 521: Generational Shenandoah](https://openjdk.org/jeps/521)
 
 ---
 
@@ -704,6 +705,6 @@ jcmd <pid> GC.run_finalization
 - [JEP 522: G1 GC Throughput](https://openjdk.org/jeps/522)
 - [JEP 439: Generational ZGC](https://openjdk.org/jeps/439)
 - [JEP 474: Generational ZGC Improvements](https://openjdk.org/jeps/474)
-- [JEP 429: Generational Shenandoah](https://openjdk.org/jeps/429)
+- [JEP 521: Generational Shenandoah](https://openjdk.org/jeps/521)
 - [JEP 379: Shenandoah](https://openjdk.org/jeps/379)
 - [JEP 333: ZGC](https://openjdk.org/jeps/333)

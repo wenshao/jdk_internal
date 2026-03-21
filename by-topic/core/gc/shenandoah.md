@@ -133,9 +133,9 @@ Region: 256KB ~ 32MB (动态调整)
    └── 重置 Region 状态
 ```
 
-### 分代 Shenandoah (JDK 21+)
+### 分代 Shenandoah (JDK 25+)
 
-**JEP 429: Generational Shenandoah**
+**JEP 521: Generational Shenandoah**
 
 **改进**:
 - 年轻代/老年代分离
@@ -145,7 +145,7 @@ Region: 256KB ~ 32MB (动态调整)
 
 **配置**:
 ```bash
--XX:+ShenandoahGCHeuristics=generational  # 启用分代 (JDK 21+)
+-XX:+UseShenandoahGC -XX:ShenandoahGCMode=generational  # 启用分代 (JDK 25+)
 ```
 
 ---
@@ -222,9 +222,9 @@ Region: 256KB ~ 32MB (动态调整)
 
 ---
 
-## 5. JDK 21+ 改进
+## 5. JDK 25+ 改进
 
-### JEP 429: Generational Shenandoah
+### JEP 521: Generational Shenandoah
 
 **效果**:
 - 吞吐量提升 15%
@@ -268,7 +268,7 @@ Region: 256KB ~ 32MB (动态调整)
 
 ## 8. 相关链接
 
-- [JEP 429: Generational Shenandoah](https://openjdk.org/jeps/429) - 分代 Shenandoah 规范
+- [JEP 521: Generational Shenandoah](https://openjdk.org/jeps/521) - 分代 Shenandoah 规范
 - [Shenandoah GC Wiki](https://wiki.openjdk.org/spaces/shenandoah/) - 技术文档
 - [Understanding Shenandoah](https://inside.java/2024/05/07/generational-shenandoah/) - 深入解析
 - [VM 参数](vm-parameters.md) - GC 参数参考
