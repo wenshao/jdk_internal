@@ -124,7 +124,7 @@ String result = switch (value) {
 ### 结构化并发
 
 ```java
-try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+try (var scope = StructuredTaskScope.open()) {
     Subtask<String> user = scope.fork(() -> fetchUser());
     Subtask<List<Order>> orders = scope.fork(() -> fetchOrders());
 
