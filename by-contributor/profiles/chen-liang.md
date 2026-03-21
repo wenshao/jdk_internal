@@ -38,6 +38,7 @@
 | **Git Commits (master)** | 85 (本地源码分析，ClassFile API 最多) |
 | **主要领域** | ClassFile API、核心反射、Method Handles、javac 编译器、Valhalla |
 | **活跃时间** | 2021 - 至今 |
+| **背景** | 从 Minecraft Fabric 模组社区起步，8 年 Java 经验，从业余模组开发成长为 JDK 核心贡献者 |
 
 > **统计方法**:
 > - GitHub PR search: `repo:openjdk/jdk author:liach type:pr label:integrated`
@@ -82,12 +83,14 @@ Chen Liang 是 Oracle Java LangTools 团队的核心成员，该团队负责：
 
 | 日期 | 事件 | 详情 |
 |------|------|------|
-| **2021** | 加入 Oracle Java LangTools 团队 | 开始全职参与 JDK 开发 |
-| **2021-2024** | 贡献 237+ 个 PR | ClassFile API、核心反射、Method Handles |
-| **2024-06** | 被任命为 JDK Reviewer | 由 Jonathan Gibbons 提名 |
+| **早期** | Minecraft 模组开发 | 从 Minecraft Fabric 社区起步，积累 Java 字节码和底层 API 经验 |
+| **加入前** | OpenJDK 开源贡献 | 在加入 Oracle 前已有数年 OpenJDK 开源贡献经历 |
+| **2021** | 加入 Oracle Java LangTools 团队 | 开始全职参与 JDK 开发，8 年 Java 编程经验 |
+| **2021-2026** | 贡献 237+ 个 PR | ClassFile API、核心反射、Method Handles |
+| **2024-06** | 被任命为 JDK Reviewer | 由 [Pavel Rappo](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html) 提名，至此已 author 57 个 commit、review 53 个 commit |
 | **2024-08** | 参与 JDK-8336856 String "+" 优化 | 作为 Reviewer 与 Shaojin Wen、Claes Redestad 合作 |
 | **2024-12** | 发布 javadoc types-facelift | [javadoc 类型展示改进](https://cr.openjdk.org/~liach/javadoc/types-facelift/) |
-| **2025-05** | 被任命为 Valhalla Committer | [CFV 投票](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html) |
+| **2025-05** | 被任命为 Valhalla Committer | 由 [David Simms](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html) 提名 |
 
 > **来源**: [CFV: New JDK Reviewer: Chen Liang](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html), [CFV: New Valhalla Committer: Chen Liang](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html)
 
