@@ -615,6 +615,7 @@ for (LocalDate date : dates) {
 ### 内部文档
 
 - [内存时间线](timeline.md) - 详细的历史演进
+- [Arena 详解](../panama/arena.md) - 堆外内存生命周期管理
 - [GC 演进](../gc/) - 垃圾回收器
 - [JVM 调优](../jvm/) - JVM 参数调优
 - [性能优化](../performance/) - JIT 编译

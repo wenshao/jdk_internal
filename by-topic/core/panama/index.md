@@ -315,32 +315,19 @@ glClearColor.invokeExact(1.0f, 0.0f, 0.0f, 1.0f);
 
 ---
 
-## Arena 详解
+## 深入阅读
 
-### Arena 类型
+### Arena 专题
 
-| Arena | 生命周期 | 使用场景 |
-|-------|----------|----------|
-| **Arena.ofConfined()** | 单线程 | 高性能，单线程访问 |
-| **Arena.ofShared()** | 多线程 | 需要多线程访问 |
-| **Arena.ofAuto()** | 自动释放 | 简单场景 |
+→ [Arena 详解](arena.md) - 内存生命周期管理器
 
-### 生命周期管理
-
-```java
-// Confined Arena - 单线程
-try (Arena arena = Arena.ofConfined()) {
-    MemorySegment segment = arena.allocate(1000);
-    // 使用 segment
-    // 离开 try 块自动释放
-}
-
-// Shared Arena - 多线程
-try (Arena arena = Arena.ofShared()) {
-    MemorySegment segment = arena.allocate(1000);
-    // 可以多线程访问 segment
-}
-```
+**内容**:
+- 三种 Arena 类型的详细对比
+- SegmentedAllocator 分配策略
+- 生命周期管理与作用域
+- 与 ByteBuffer/Unsafe/JNI 的对比
+- 性能分析与最佳实践
+- 常见陷阱与高级主题
 
 ---
 
