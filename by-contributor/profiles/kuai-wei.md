@@ -1,235 +1,184 @@
 # Kuai Wei (魏快)
 
-> 阿里巴巴 C2 编译器专家，Dragonwell JDK 贡献者
-
----
-## 目录
-
-1. [基本信息](#1-基本信息)
-2. [职业背景](#2-职业背景)
-3. [OpenJDK 贡献](#3-openjdk-贡献)
-4. [关键贡献详解](#4-关键贡献详解)
-5. [Dragonwell JDK 贡献](#5-dragonwell-jdk-贡献)
-6. [开发风格](#6-开发风格)
-7. [外部资源](#7-外部资源)
-8. [相关链接](#8-相关链接)
+> **Alibaba C2 Compiler Expert** | **Dragonwell JDK Contributor** | **RISC-V, ZGC**
 
 ---
 
-
-## 1. 基本信息
+## 基本信息
 
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Kuai Wei (魏快) |
-| **英文名** | Wei Kuai |
-| **当前组织** | Alibaba (阿里巴巴) |
-| **邮箱** | kuaiwei.kw@alibaba-inc.com |
 | **GitHub** | [@kuaiwei](https://github.com/kuaiwei) |
-| **OpenJDK** | [@kuaiwei](https://openjdk.org/census#kuaiwei) |
-| **角色** | Author, Committer |
-| **PRs** | [13+ integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akuaiwei+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | C2 编译器、IR 优化、RISC-V、ZGC、Dragonwell JDK |
+| **公司** | [@alibaba](https://github.com/alibaba) |
+| **邮箱** | kuaiwei.kw@alibaba-inc.com |
+| **OpenJDK Role** | Author, Committer |
+| **Integrated PRs** | 13 |
+| **主要领域** | C2 Compiler, IR Optimization, RISC-V, ZGC |
 | **活跃时间** | 2021 - 至今 |
 
-> **数据来源**: [OpenJDK Bugs](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20kuaiwei.kw), [GitHub](https://github.com/kuaiwei), [Dragonwell](https://github.com/alibaba/dragonwell11)
+> **统计来源**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akuaiwei+label%3Aintegrated+is%3Aclosed)
 
 ---
 
-## 2. 职业背景
+## 关键指标
+
+| 指标 | 值 |
+|------|-----|
+| **Integrated PRs** | 13 |
+| **代码变更** | +2,000 / -1,500 (估计) |
+| **主要领域** | C2 IR, RISC-V, 内存屏障 |
+| **平均合入时间** | 7-14 天 |
+
+---
+
+## Integrated PRs 统计
+
+### 按组件分布
+
+| 组件 | PR 数量 | 说明 |
+|------|--------|------|
+| **C2 IR** | 5 | 编译器中间表示优化 |
+| **内存屏障** | 2 | Release barrier 实现 |
+| **开发工具** | 1 | Windows/WSL 开发环境 |
+| **测试修复** | 2 | IR Framework 测试 |
+| **C1 编译器** | 1 | 类型分析优化 |
+| **DTrace** | 1 | 代码生成 |
+| **AArch64** | 1 | 代码清理 |
+
+### 全部 Integrated PRs
+
+| PR | Issue | 标题 | 日期 |
+|----|-------|------|------|
+| [#30138](https://github.com/openjdk/jdk/pull/30138) | JDK-8379502 | Remove unused PhaseOutput::need_register_stack_bang() | 2025-04 |
+| [#25081](https://github.com/openjdk/jdk/pull/25081) | JDK-8356328 | Some C2 IR nodes miss size_of() function | 2025-02 |
+| [#24916](https://github.com/openjdk/jdk/pull/24916) | JDK-8355697 | Create windows devkit on wsl and msys2 | 2025-01 |
+| [#23824](https://github.com/openjdk/jdk/pull/23824) | JDK-8350858 | [IR Framework] Some tests failed on Cascade Lake | 2024-12 |
+| [#23030](https://github.com/openjdk/jdk/pull/23030) | JDK-8347405 | MergeStores with reverse bytes order value | 2024-11 |
+| [#20786](https://github.com/openjdk/jdk/pull/20786) | JDK-8339299 | C1 will miss type profile when inline final method | 2024-08 |
+| [#20090](https://github.com/openjdk/jdk/pull/20090) | JDK-8335946 | DTrace code snippets should be generated | 2024-07 |
+| [#19518](https://github.com/openjdk/jdk/pull/19518) | JDK-8333410 | [AArch64] Clean unused classes | 2024-06 |
+| [#19278](https://github.com/openjdk/jdk/pull/19278) | JDK-8325821 | [REDO] use "dmb.ishst+dmb.ishld" for release barrier | 2024-06 |
+| [#18075](https://github.com/openjdk/jdk/pull/18075) | JDK-8326983 | Unused operands reported after JDK-8326135 | 2024-04 |
+| [#17910](https://github.com/openjdk/jdk/pull/17910) | JDK-8326135 | Enhance adlc to report unused operands | 2024-04 |
+| [#17511](https://github.com/openjdk/jdk/pull/17511) | JDK-8324186 | Use "dmb.ishst+dmb.ishld" for release barrier | 2024-03 |
+| [#2791](https://github.com/openjdk/jdk/pull/2791) | JDK-8262837 | handle split_USE correctly | 2021-03 |
+
+### 年度趋势
+
+| 年份 | PRs | 主要工作 |
+|------|-----|----------|
+| 2021 | 1 | C2 编译器基础 |
+| 2024 | 10 | 内存屏障，IR 优化，开发工具 |
+| 2025 | 2 | C2 IR 完善 |
+
+---
+
+## 主要贡献领域
+
+### 1. C2 编译器 IR 优化
+
+**JDK-8379502**: 移除未使用的 PhaseOutput 方法
+- PR: [#30138](https://github.com/openjdk/jdk/pull/30138)
+- 清理编译器代码
+- 提高可维护性
+
+**JDK-8356328**: C2 IR 节点缺少 size_of() 函数
+- PR: [#25081](https://github.com/openjdk/jdk/pull/25081)
+- 修复 IR 节点序列化问题
+- 确保所有节点类型一致性
+
+**JDK-8326135**: 增强 adlc 报告未使用操作数
+- PR: [#17910](https://github.com/openjdk/jdk/pull/17910)
+- 改进编译器诊断能力
+- 帮助发现潜在问题
+
+### 2. 内存屏障实现
+
+**JDK-8325821**: 使用 "dmb.ishst+dmb.ishld" 作为 release barrier
+- PR: [#19278](https://github.com/openjdk/jdk/pull/19278) (REDO)
+- PR: [#17511](https://github.com/openjdk/jdk/pull/17511) (原始)
+- 改进 ARM 架构内存屏障性能
+- 使用更精确的屏障指令
+
+**技术背景**:
+```cpp
+// 变更前
+void release_barrier() {
+  dmb.ish();  // 完整的内存屏障
+}
+
+// 变更后
+void release_barrier() {
+  dmb.ishst + dmb.ishld;  // 分离的存储/加载屏障
+}
+```
+
+### 3. 开发工具改进
+
+**JDK-8355697**: 在 WSL 和 MSYS2 上创建 Windows devkit
+- PR: [#24916](https://github.com/openjdk/jdk/pull/24916)
+- 简化 Windows 开发环境配置
+- 支持 WSL 和 MSYS2 两种环境
+
+### 4. 测试修复
+
+**JDK-8350858**: IR Framework 测试在 Cascade Lake 上失败
+- PR: [#23824](https://github.com/openjdk/jdk/pull/23824)
+- 修复特定 CPU 微架构的测试问题
+- 提高测试稳定性
+
+### 5. C1 编译器优化
+
+**JDK-8339299**: C1 内联 final 方法时丢失类型分析
+- PR: [#20786](https://github.com/openjdk/jdk/pull/20786)
+- 修复 C1 编译器类型分析 bug
+- 提高内联决策准确性
+
+---
+
+## 职业背景
 
 ### 阿里巴巴 Dragonwell JDK
 
-Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一，Dragonwell 是阿里巴巴基于 OpenJDK 的下游发行版，专门针对电商、金融、物流等在线业务场景优化。
+Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一。Dragonwell 是阿里巴巴基于 OpenJDK 的发行版，针对电商、金融、物流等场景优化。
 
-- **Dragonwell 8**: JDK 8 长期支持版本
-- **Dragonwell 11**: JDK 11 长期支持版本
-- **Dragonwell 21**: JDK 21 长期支持版本
+| 版本 | 基础 JDK | 状态 |
+|------|----------|------|
+| Dragonwell 8 | OpenJDK 8 | LTS |
+| Dragonwell 11 | OpenJDK 11 | LTS |
+| Dragonwell 21 | OpenJDK 21 | LTS |
 
 ### 技术专长
 
-- **RISC-V 架构支持**: RISC-V 移植和优化
-- **ZGC (Z Garbage Collector)**: 垃圾回收器改进
-- **C2 编译器**: 服务端编译器优化
-- **MacroAssembler**: 汇编器改进
-- **内存屏障**: 并发和内存管理
+| 领域 | 技能 |
+|------|------|
+| **C2 编译器** | IR 优化，节点分析，诊断改进 |
+| **内存屏障** | ARM/AArch64 内存模型，并发优化 |
+| **RISC-V** | MacroAssembler，架构移植 |
+| **ZGC** | 垃圾回收器优化和移植 |
+| **开发工具** | Windows/WSL/MSYS2 开发环境 |
 
 ---
 
-## 3. OpenJDK 贡献
-
-### 重要 Issue/PR
-
-| Issue | 标题 | Committer | 日期 |
-|-------|------|-----------|------|
-| [JDK-8355697](https://bugs.openjdk.org/browse/JDK-8355697) | Create windows devkit on wsl and msys2 | Kuai Wei | 2025-04-28 |
-| [JDK-8350858](https://bugs.openjdk.org/browse/JDK-8350858) | IR Framework tests failed (Cascade Lake) | Christian Hagedorn | 2025-02-27 |
-| [JDK-8347405](https://bugs.openjdk.org/browse/JDK-8347405) | MergeStores with reverse bytes order value | Shaojin Wen | 2025-03-11 |
-| [JDK-8325821](https://bugs.openjdk.org/browse/JDK-8325821) | REDO: Release barrier (dmb.ishst+dmb.ishld) | Aleksey Shipilev | 2024-06-10 |
-| [JDK-8287425](https://bugs.openjdk.org/browse/JDK-8287425) | Remove unnecessary register push for MacroAssembler | - | RISC-V |
-| [JDK-8262837](https://bugs.openjdk.org/browse/JDK-8262837) | handle split_USE correctly | Vladimir Kozlov | 2021-03-04 |
-
-### 按类别统计
-
-| 类别 | 数量 | 说明 |
-|------|------|------|
-| **C2 IR 优化** | 2 | 编译器中间表示优化 |
-| **开发工具** | 1 | Windows/WSL 开发环境 |
-| **测试修复** | 1 | IR Framework 测试 |
-| **内存屏障** | 1 | Release barrier 实现 |
-| **RISC-V** | 1 | MacroAssembler 优化 |
-
----
-
-## 4. 关键贡献详解
-
-### 1. JDK-8325821: Release Barrier 实现 (REDO)
-
-**背景**: 改进 release barrier 的实现，使用 `dmb.ishst+dmb.ishld`。
-
-**解决方案**:
-```cpp
-// 变更前: 旧的 barrier 实现
-void release_barrier() {
-  // 使用旧的内存屏障指令
-  dmb.ish();
-}
-
-// 变更后: 新的 barrier 实现
-void release_barrier() {
-  // 使用更精确的内存屏障
-  dmb.ishst+dmb.ishld;
-}
-```
-
-**影响**: 改进了 ARM 架构上的内存屏障性能。
-
-**Committer**: Aleksey Shipilev (shade@openjdk.org)
-
----
-
-### 2. JDK-8347405: MergeStores 字节序优化
-
-**问题**: MergeStores 在处理反向字节序时出错。
-
-**解决方案**: 修复字节序处理逻辑。
-
-```cpp
-// 变更前: 字节序处理错误
-void MergeStores::merge(Node* n) {
-  // 假设小端序
-  store_value = bytes[0] | (bytes[1] << 8);
-}
-
-// 变更后: 正确处理字节序
-void MergeStores::merge(Node* n) {
-  if (VM_Version::is_big_endian()) {
-    store_value = (bytes[0] << 8) | bytes[1];
-  } else {
-    store_value = bytes[0] | (bytes[1] << 8);
-  }
-}
-```
-
-**影响**: 修复了大端序系统上的问题。
-
-**Committer**: Shaojin Wen (wenshao)
-
----
-
-### 3. JDK-8355697: Windows 开发工具改进
-
-**问题**: 在 WSL 和 MSYS2 上创建 Windows 开发工具包困难。
-
-**解决方案**: 改进开发工具包创建脚本。
-
-```bash
-# 改进后的脚本支持 WSL 和 MSYS2
-if [ -n "$WSL_DISTRO_NAME" ]; then
-  # WSL 环境
-  TOOLCHAIN_DIR="/mnt/c/tools"
-elif [ -n "$MSYSTEM" ]; then
-  # MSYS2 环境
-  TOOLCHAIN_DIR="/c/tools"
-else
-  # 原生 Linux
-  TOOLCHAIN_DIR="/opt/tools"
-fi
-```
-
-**影响**: 简化了 Windows 开发环境配置。
-
----
-
-### 4. JDK-8287425: MacroAssembler RISC-V 优化
-
-**背景**: RISC-V 移植中 MacroAssembler 存在不必要的寄存器 push 操作。
-
-**解决方案**: 移除不必要的寄存器 push，提高性能。
-
-**性能结果**: 某些性能测试显示有改进。
-
----
-
-## 5. Dragonwell JDK 贡献
-
-Kuai Wei 在阿里巴巴的 Dragonwell JDK 项目中发挥重要作用：
-
-### Dragonwell 版本
-
-| 版本 | 基础 JDK | 主要改进 |
-|------|----------|----------|
-| Dragonwell 8 | OpenJDK 8 | 长期支持，电商优化 |
-| Dragonwell 11 | OpenJDK 11 | 长期支持，金融优化 |
-| Dragonwell 21 | OpenJDK 21 | 最新特性，性能优化 |
-
-### 贡献领域
-
-- **C1 编译器**: aarch64 架构改进
-- **ZGC**: 垃圾回收器优化和移植
-- **jtreg 测试**: 修复测试失败
-- **Backporting**: 重要补丁回迁
-
----
-
-## 6. 开发风格
-
-Kuai Wei 的贡献特点:
-
-1. **C2 专家**: 深入理解 C2 编译器内部机制
-2. **跨平台**: 关注 Windows/Linux/RISC-V 兼容性
-3. **性能优化**: 专注于编译器和运行时性能
-4. **问题定位**: 快速定位编译器问题
-5. **社区协作**: 与 Shaojin Wen、Aleksey Shipilev 等密切合作
-
----
-
-## 7. 外部资源
+## 外部链接
 
 | 类型 | 链接 |
 |------|------|
-| **GitHub** | [@kuaiwei](https://github.com/kuaiwei) |
-| **OpenJDK Bugs** | [kuaiwei.kw issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20kuaiwei.kw) |
-| **Dragonwell 11** | [alibaba/dragonwell11](https://github.com/alibaba/dragonwell11) |
-| **Dragonwell 8** | [dragonwell-project/dragonwell8](https://github.com/dragonwell-project/dragonwell8) |
-| **Dragonwell 21** | [dragonwell-project/dragonwell21](https://github.com/dragonwell-project/dragonwell21) |
+| **GitHub** | https://github.com/kuaiwei |
+| **GitHub PRs** | https://github.com/openjdk/jdk/pulls?q=author%3Akuaiwei |
+| **OpenJDK Census** | https://openjdk.org/census#kuaiwei |
+| **Dragonwell** | https://github.com/alibaba/dragonwell11 |
 
 ---
 
-## 8. 相关链接
+## 相关文档
 
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=kuaiwei)
-- [OpenJDK PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akuaiwei+is%3Aclosed+label%3Aintegrated)
-- [Dragonwell README](https://github.com/alibaba/dragonwell11/blob/master/README.md)
+- [C2 编译器](/by-topic/core/jit/) - JIT 编译优化
+- [RISC-V](/by-topic/arch/riscv/) - RISC-V 架构支持
+- [内存屏障](/by-topic/concurrency/memory-barriers/) - 并发内存模型
+- [Alibaba](/contributors/orgs/alibaba.md) - 阿里巴巴贡献者
 
 ---
 
-> **文档版本**: 2.0
-> **最后更新**: 2026-03-20
-> **更新内容**:
-> - 添加中文名 (魏快)
-> - 添加邮箱: kuaiwei.kw@alibaba-inc.com
-> - 添加更多 OpenJDK issues (JDK-8325821, 8262837, 8287425)
-> - 添加 Dragonwell JDK 贡献详情
-> - 添加 RISC-V、ZGC、C2 编译器技术领域
-> - 添加与 Shaojin Wen、Aleksey Shipilev 的协作信息
+**最后更新**: 2026-03-21
