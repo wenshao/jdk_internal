@@ -32,7 +32,7 @@
 | **Blog** | [liachmodded.github.io](https://liachmodded.github.io/) |
 | **OpenJDK** | [@liach](https://openjdk.org/census#liach) |
 | **CR 目录** | [~liach](https://cr.openjdk.org/~liach/) |
-| **角色** | JDK Reviewer (2024年6月任命), Valhalla Committer (2025年5月提名) |
+| **角色** | JDK Reviewer (2024年6月任命), Valhalla Committer (2025年5月任命) |
 | **教育背景** | 威斯康星大学麦迪逊分校 (University of Wisconsin-Madison) |
 | **Integrated PRs** | [237](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aliach+is%3Aclosed+label%3Aintegrated) |
 | **Git Commits (master)** | 85 (本地源码分析，ClassFile API 最多) |
@@ -969,7 +969,7 @@ Chen Liang 是 **Project Valhalla 的顶级贡献者**，在项目中排名 **#1
 | **排名** | #1 (所有贡献者中最高) |
 | **主要领域** | javac 编译器、语言特性实现、ClassFile 适配 |
 | **活跃时间** | 2023 - 2025 |
-| **角色** | Valhalla Committer (2025年5月提名) |
+| **角色** | Valhalla Committer (2025年5月任命) |
 
 ### 贡献领域
 
@@ -1385,7 +1385,7 @@ Chen Liang 的贡献特点:
 - **统计时间**: 2026-03-20
 - **LinkedIn**: [Chen Liang - Oracle | LinkedIn](https://www.linkedin.com/in/chen-liang-51122427b)
 - **JDK Reviewer 任命**: [CFV: New JDK Reviewer: Chen Liang](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html)
-- **Valhalla Committer 提名**: [CFV: New Valhalla Committer: Chen Liang](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html)
+- **Valhalla Committer 任命**: [CFV: New Valhalla Committer: Chen Liang](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html)
 - **GitHub**: [@liach](https://github.com/liach)
 - **Blog**: [liachmodded.github.io](https://liachmodded.github.io/)
 - **CR 目录**: [cr.openjdk.org/~liach](https://cr.openjdk.org/~liach/)
@@ -1396,7 +1396,7 @@ Chen Liang 的贡献特点:
 > **文档版本**: 7.0
 > **最后更新**: 2026-03-21
 > **更新内容**:
-> - 补充 Valhalla Committer 提名信息 (2025-05)
+> - 补充 Valhalla Committer 任命信息 (2025-05)
 > - 添加 javadoc types-facelift 项目信息
 > - 补充 ClassFile API 文档改进贡献
 > - 更新协作者列表
