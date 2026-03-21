@@ -45,20 +45,20 @@ Bhavesh Patel 贡献于 Javadoc 文档工具：
 
 ## 4. 技术专长
 
-### 垃圾回收
+### 文档工具
 
-- **G1 GC**: Garbage First 收集器
-- **Memory Management**: 内存管理
-- **Performance**: GC 性能调优
+- **Javadoc**: API 文档生成工具
+- **Doclet**: Doclet 框架
+- **Documentation**: 文档生成和格式化
 
 ---
 
 ## 5. 合作关系
 
-与以下 GC 开发者合作：
-- **Thomas Schatzl**: G1 GC Lead (140 commits)
-- **Albert Mingkun Yang**: GC Developer (136 commits)
-- **Kim Barrett**: GC Architect
+与以下文档工具开发者合作：
+- **Jonathan Gibbons**: Javadoc/Compiler Lead
+- **Hannes Wallnoefer**: Javadoc Developer
+- **Pavel Rappo**: Javadoc Developer
 
 ---
 

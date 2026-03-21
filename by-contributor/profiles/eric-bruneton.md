@@ -17,7 +17,7 @@
 
 ## 1. 概述
 
-Eric Bruneton 是独立贡献者，专注于 **ASM 字节码操作框架**。他是 ASM 的核心维护者之一，对 Java 字节码处理和工具生态系统有重要贡献。
+Eric Bruneton 是 INRIA（法国国家信息与自动化研究所）的研究人员，专注于 **ASM 字节码操作框架**。他是 ASM 的核心维护者之一，对 Java 字节码处理和工具生态系统有重要贡献。
 
 ---
 
@@ -26,7 +26,7 @@ Eric Bruneton 是独立贡献者，专注于 **ASM 字节码操作框架**。他
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Eric Bruneton |
-| **当前组织** | Independent |
+| **当前组织** | INRIA |
 | **专长** | ASM, Bytecode Manipulation |
 | **JDK 26 贡献** | 3 commits (ASM) |
 
@@ -73,7 +73,7 @@ mv.visitEnd();
 ## 5. 相关链接
 
 ### ASM 项目
-- [ASM GitHub](https://github.com/ASM/asm)
+- [ASM on OW2 GitLab](https://gitlab.ow2.org/asm/asm)
 - [ASM Documentation](https://asm.ow2.io/)
 
 ---
