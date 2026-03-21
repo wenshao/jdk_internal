@@ -1,6 +1,6 @@
 # Fei Yang (杨飞)
 
-> JDK RISC-V 后端专家，ISCAS PLCT 实验室，OpenJDK Reviewer
+> JDK RISC-V 后端专家，华为 JVM 团队，OpenJDK Reviewer，RISC-V Port Project Lead
 
 ---
 ## 目录
@@ -22,16 +22,16 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Fei Yang (杨飞) |
-| **当前组织** | 中科院软件所 PLCT 实验室 (ISCAS PLCT Lab) |
-| **位置** | 杭州，中国 |
+| **当前组织** | [华为 (Huawei Technologies)](../../contributors/orgs/huawei.md) - JVM 团队 / 毕昇 JDK 团队 |
+| **位置** | 中国 |
 | **GitHub** | [@RealFYang](https://github.com/RealFYang) |
 | **OpenJDK** | [@fyang](https://openjdk.org/census#fyang) |
-| **角色** | OpenJDK Reviewer, HotSpot Group, RISC-V Port Lead |
+| **角色** | OpenJDK Reviewer (2022-03), RISC-V Port Project Lead |
 | **PRs** | [100+ integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3ARealFYang+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | RISC-V 后端、向量指令、性能分析 |
-| **活跃时间** | 2023 - 至今 |
+| **主要领域** | RISC-V 后端 (C1/C2 JIT)、向量指令、性能分析 |
+| **活跃时间** | 2015 - 至今 (AArch64); 2021 - 至今 (RISC-V) |
 
-> **数据来源**: [PLCT Lab](https://plctlab.org/zh/news/050/), [华为鲲鹏社区](https://www.hikunpeng.com/forum/thread-0236125983383936008-1-1.html)
+> **数据来源**: [CFV Reviewer](https://mail.openjdk.org/pipermail/jdk-dev/2022-March/006470.html), [RISC-V Port CFD](https://mail.openjdk.org/pipermail/discuss/2021-September/005957.html), [GitHub](https://github.com/RealFYang)
 
 ---
 
@@ -71,9 +71,13 @@ Fei Yang 积极参与 OpenJDK 社区建设，提名华为毕昇 JDK 团队成员
 
 ### 关键成就
 
+- **RISC-V Port Project Lead**: 领导 OpenJDK RISC-V 移植项目 (首个华为团队主导的 OpenJDK 社区项目)
+- **JEP 422**: Linux/RISC-V Port，在 OpenJDK 19 中正式集成
+- **C1/C2 JIT 后端**: RISC-V 平台的 C1 和 C2 JIT 编译器后端实现
 - RISC-V 向量 Min/Max 指令支持
 - RISC-V 扩展自动检测
 - 紧凑对象头 RISC-V 支持
+- **AArch64 贡献**: 自 2015 年起参与 OpenJDK AArch64 移植工作
 
 ---
 
@@ -219,16 +223,17 @@ Fei Yang 的贡献特点:
 | **GitHub Commits** | [Fei Yang](https://github.com/openjdk/jdk/commits?author=Fei%20Yang) |
 | **JBS Issues** | [fyang assignee](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20fyang) |
 | **RISC-V 峰会新闻** | [Design-Reuse-China](https://www.design-reuse-china.com/news/202310006/openjdk-21-risc-v/) |
+| **OpenJDK RISC-V Port Wiki** | [RISC-V Port](https://wiki.openjdk.org/spaces/RISCVPort/overview) |
+| **JEP 422** | [Linux/RISC-V Port](https://openjdk.org/jeps/422) |
 
 ---
 
 > **文档版本**: 2.0
-> **最后更新**: 2026-03-20
+> **最后更新**: 2026-03-22
 > **更新内容**:
-> - 添加中文名 (杨飞)
-> - 添加实验室详情: ISCAS PLCT Lab (杭州)
-> - 添加 OpenJDK Reviewer 角色
-> - 添加 RISC-V 中国峰会 2023 演讲
-> - 添加 RISC-V 杭州 2024 演讲
-> - 添加 PLCT Lab 开放日演讲
-> - 添加提名华为毕昇 JDK 团队成员 (Yadong Wang, Feilong Jiang)
+> - 修正组织: 华为 JVM 团队 / 毕昇 JDK 团队 (非 ISCAS PLCT Lab)
+> - 添加 JEP 422 (Linux/RISC-V Port) 贡献
+> - 添加 AArch64 贡献历史 (2015 年起)
+> - 添加 OpenJDK Reviewer CFV 日期 (2022-03)
+> - 添加 RISC-V Port Wiki 和 JEP 422 链接
+> - 修正数据来源为 OpenJDK 邮件列表可验证来源

@@ -218,11 +218,12 @@ Brian Goetz 强调语言的渐进式演进，而非革命性变化。
 
 ---
 
-> **数据调查时间**: 2026-03-20
-> **文档版本**: 2.0
+> **数据调查时间**: 2026-03-22
+> **文档版本**: 2.1
 > **更新内容**:
-> - 添加教育背景 (Carnegie Mellon University, 1990)
-> - 添加职业时间线 (Quiotix → Sun → Oracle)
+> - 修正教育背景: 数学学位 (非计算机科学, 非 Carnegie Mellon)
+> - 添加 GitHub 资料 (312 followers, 3 repos)
+> - 添加职业时间线 (Quiotix -> Sun -> Oracle)
 > - 添加位置信息 (Williston, Vermont)
 > - 添加文章数量 (75+ 篇)
 > - 添加演讲者档案链接

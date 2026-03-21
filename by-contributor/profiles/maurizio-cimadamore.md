@@ -1,9 +1,9 @@
 # Maurizio Cimadamore
 
 > **GitHub**: [@mcimadamore](https://github.com/mcimadamore)
-> **Inside.java**: [mcimadamore](https://inside.java/u/mcimadamore/)
+> **Inside.java**: [MaurizioCimadamore](https://inside.java/u/MaurizioCimadamore/)
 > **Organization**: Oracle (Java Platform Group)
-> **Role**: Java Compiler Architect, Project Panama Lead
+> **Role**: Consulting Member of Technical Staff, Java Compiler Architect, Project Panama Lead
 
 ---
 ## 目录
@@ -22,7 +22,7 @@
 
 ## 1. 概述
 
-Maurizio Cimadamore 是 Oracle 的 **Java 编译器架构师** 和 **Project Panama 的技术负责人**。他是 Java 编译器 (javac) 的关键贡献者，主导了 Lambda 表达式在 javac 中的实现，并正在领导 Project Panama，重新定义 Java 与本地代码和内存的互操作。
+Maurizio Cimadamore 是 Oracle 的 **Consulting Member of Technical Staff**、**Java 编译器架构师** 和 **Project Panama 的技术负责人**。他拥有 University of Bologna 的语言设计与实现博士学位 (2010)。他是 Java 编译器 (javac) 的关键贡献者，主导了 Diamond Inference、Lambda 表达式和 Local Variable Type-Inference 在 javac 中的实现。他目前领导 Project Panama (FFM API) 并参与 Project Valhalla (Value Types) 的语言和运行时方面。
 
 ---
 
@@ -32,14 +32,14 @@ Maurizio Cimadamore 是 Oracle 的 **Java 编译器架构师** 和 **Project Pan
 |------|-----|
 | **姓名** | Maurizio Cimadamore |
 | **当前组织** | Oracle (Java Platform Group) |
-| **职位** | Java Compiler Architect, Project Panama Lead |
+| **职位** | Consulting Member of Technical Staff, Java Compiler Architect |
 | **GitHub** | [@mcimadamore](https://github.com/mcimadamore) |
-| **LinkedIn** | [mcimadamore](https://ie.linkedin.com/in/mcimadamore) |
-| **教育** | University of Bologna |
-| **专长** | javac Compiler, Lambda Expressions, Project Panama, Foreign Function & Memory API |
+| **LinkedIn** | [mcimadamore](https://www.linkedin.com/in/mcimadamore/) |
+| **教育** | PhD in Language Design and Implementation, University of Bologna (2010) |
+| **专长** | javac Compiler, Lambda Expressions, Diamond Inference, Local Variable Type-Inference, Project Panama, Project Valhalla, Foreign Function & Memory API |
 | **职业经历** | Sun Microsystems → Oracle |
 
-> **数据来源**: [LinkedIn](https://ie.linkedin.com/in/mcimadamore), [nipafx.dev Interview](https://nipafx.dev/maurizio-cimadamore-26h/)
+> **数据来源**: [LinkedIn](https://www.linkedin.com/in/mcimadamore/), [nipafx.dev Interview](https://nipafx.dev/maurizio-cimadamore-26h/), [ResearchGate](https://www.researchgate.net/scientific-contributions/Maurizio-Cimadamore-70142914)
 
 ---
 
@@ -114,12 +114,12 @@ Maurizio Cimadamore 是 Oracle 的 **Java 编译器架构师** 和 **Project Pan
 
 ## 4. 核心技术贡献
 
-### 1. Lambda 表达式实现
+### 1. javac 语言特性实现
 
-Maurizio Cimadamore 在 **Project Lambda** 中发挥了关键作用：
-- 设计和实现了 javac 中的 Lambda 表达式
-- 从最早阶段开始参与 Lambda 表达式开发
-- 被称为 Project Lambda 的 "英雄" 贡献者
+Maurizio Cimadamore 在 javac 编译器中实现了多项重要语言特性：
+- **Diamond Inference** (JDK 7): 泛型类型推断 `<>`
+- **Lambda 表达式** (JDK 8): 设计和实现了 javac 中的 Lambda 表达式，从最早阶段开始参与，被称为 Project Lambda 的 "英雄" 贡献者
+- **Local Variable Type-Inference** (JDK 10): `var` 关键字的编译器支持
 
 ### 2. Project Panama 领导
 
@@ -152,11 +152,18 @@ try (Arena arena = Arena.ofConfined()) {
 
 ### 3. javac 编译器架构
 
-- **Lambda 表达式**: 编译器实现
+- **Diamond Inference**: JDK 7 泛型类型推断
+- **Lambda 表达式**: JDK 8 编译器实现
+- **Local Variable Type-Inference**: JDK 10 `var` 支持
 - **注解管道**: JEP 217 重新设计
 - **类型推断**: 改进编译器类型推断
 
-### 4. Pattern Matching
+### 4. Project Valhalla
+
+- 参与 Project Valhalla 的语言和运行时方面
+- Value Types 的编译器支持
+
+### 5. Pattern Matching
 
 - instanceof 模式匹配的编译器实现
 - 类型模式支持
@@ -200,7 +207,9 @@ try (Arena arena = Arena.ofConfined()) {
 ### 编译器技术
 
 - **javac**: Java 编译器架构
-- **Lambda 表达式**: 编译器实现
+- **Diamond Inference**: JDK 7 泛型 `<>` 推断
+- **Lambda 表达式**: JDK 8 编译器实现
+- **Local Variable Type-Inference**: JDK 10 `var`
 - **类型系统**: Java 类型推断
 
 ### 本地互操作
@@ -214,9 +223,11 @@ try (Arena arena = Arena.ofConfined()) {
 ## 8. 相关链接
 
 ### 官方资料
-- [Inside.java - mcimadamore](https://inside.java/u/mcimadamore/)
+- [Inside.java - MaurizioCimadamore](https://inside.java/u/MaurizioCimadamore/)
 - [GitHub Profile](https://github.com/mcimadamore)
-- [Oracle Labs - Maurizio Cimadamore](https://www.getprog.ai/profile/54672762)
+- [LinkedIn](https://www.linkedin.com/in/mcimadamore/)
+- [ResearchGate](https://www.researchgate.net/scientific-contributions/Maurizio-Cimadamore-70142914)
+- [DBLP Publications](https://dblp.org/pid/18/208.html)
 
 ### JEP 文档
 - [JEP 454: Foreign Function & Memory API](https://openjdk.org/jeps/454)

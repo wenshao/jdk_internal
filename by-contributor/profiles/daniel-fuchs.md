@@ -1,6 +1,6 @@
 # Daniel Fuchs
 
-> **GitHub**: [@dfuchs](https://github.com/dfuchs)
+> **GitHub**: [@dfuch](https://github.com/dfuch)
 > **LinkedIn**: [Daniel Fuchs](https://www.linkedin.com/in/danielfuchs/)
 > **Location**: Dublin, Ireland
 > **Organization**: Oracle
@@ -37,7 +37,7 @@ Daniel Fuchs 是 Oracle Dublin 团队的 Consulting Member of Technical Staff，
 | **姓名** | Daniel Fuchs |
 | **当前组织** | Oracle |
 | **职位** | Consulting Member of Technical Staff |
-| **GitHub** | [@dfuchs](https://github.com/dfuchs) |
+| **GitHub** | [@dfuch](https://github.com/dfuch) |
 | **OpenJDK** | [@dfuchs](https://openjdk.org/census#dfuchs) |
 | **角色** | OpenJDK Member, JDK Reviewer |
 | **主要领域** | HttpClient, HTTP/3, QUIC, JMX |
@@ -72,7 +72,8 @@ Daniel Fuchs 是 Oracle Dublin 团队的 Consulting Member of Technical Staff，
 
 | 时间 | 事件 | 详情 |
 |------|------|------|
-| **2012 年** | 加入 Oracle Java Core Libraries 团队 | 在 Dublin 工作，专注于网络栈开发 |
+| **2012 年** | 加入 Oracle Java Core Libraries 团队 | 在 Dublin 工作，专注于 JMX 和网络栈开发 |
+| **2013 年** | JDK 8 Reviewer | 获得 JDK 8 Reviewer 身份 |
 | **2016 年** | 参与 JDK 9 Committer 提名 | 提名 Vyom Tewari 为 JDK9 Committer |
 | **2021 年** | 参与 Guoxiong Li 的 Committer 投票 | 参与社区治理 |
 | **2022 年 3 月** | 参与 Jaikiran Pai 的 Reviewer CFV | 参与 OpenJDK 审查者提名 |
@@ -288,9 +289,11 @@ JEP 517 的主要协作者:
 
 ## 10. 相关链接
 
-- **GitHub**: [https://github.com/dfuchs](https://github.com/dfuchs)
+- **GitHub**: [https://github.com/dfuch](https://github.com/dfuch)
 - **LinkedIn**: [https://www.linkedin.com/in/danielfuchs/](https://www.linkedin.com/in/danielfuchs/)
 - **OpenJDK Census**: [dfuchs](https://openjdk.org/census#dfuchs)
+- **Inside.java**: [Daniel Fuchs](https://inside.java/u/DanielFuchs/)
+- **OpenJDK Wiki**: [dfuchs](https://wiki.openjdk.org/display/~dfuchs)
 - **OpenJDK Changesets**: [hg.openjdk.org](https://hg.openjdk.org/jdk/jdk/user?user=dfuchs)
 - **JBS Issues**: [bugs.openjdk.org](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20dfuchs)
 
@@ -302,6 +305,7 @@ JEP 517 的主要协作者:
 
 | 标题 | 日期 | 主题 | 链接 |
 |------|------|------|------|
+| "Episode 16: Let's Discuss JDK and Networking" | 2021-04-12 | 与 Michael McMahon 讨论 JDK 16/17 网络功能 | [Podcast](https://inside.java/2021/04/12/podcast-016/) |
 | "Episode 48: HTTP/3 in Java 26" | 2026-02-26 | 与 Daniel Jeliński 一起讨论 HTTP/3 实现 | [Podcast](https://inside.java/2026/02/26/podcast-048/) |
 | "HTTP/3 Support in JDK 26" | 2025-10-22 | Inside.java 文章 | [文章](https://inside.java/2025/10/22/http3-support/) |
 
@@ -340,5 +344,5 @@ Daniel Fuchs 与其他核心开发者紧密合作：
 ---
 
 > **文档版本**: 2.0
-> **最后更新**: 2026-03-20
-> **更新内容**: 补充职业历程（2012年加入Oracle）、教育背景（ISAE-SUPAERO）、LinkedIn信息、Podcast访谈、协作网络、数据来源章节
+> **最后更新**: 2026-03-22
+> **更新内容**: 修正 GitHub 用户名 (dfuch, 非 dfuchs)、添加 JDK 8 Reviewer (2013) 历史、添加 Inside.java Episode 16 (2021) podcast 链接、添加 Inside.java 作者页面链接

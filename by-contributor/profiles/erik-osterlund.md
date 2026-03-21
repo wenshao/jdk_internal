@@ -32,7 +32,7 @@
 | **著作** | 《The Z Garbage Collector: In JDK 25》(CRC Press) |
 | **活跃时间** | 2016 - 至今 |
 
-> **数据来源**: [OpenJDK Census](https://openjdk.org/census#eosterlund), [ZGC Timeline](../by-topic/core/gc/timeline.md)
+> **数据来源**: [OpenJDK Census](https://openjdk.org/census#eosterlund), [Linnaeus University PhD Defence](https://lnu.se/en/meet-linnaeus-university/current/events/2019/public-defence-erik-osterlund-191018/), [Amazon Author Page](https://www.amazon.com/Garbage-Collector-JDK-25/dp/1032976926)
 
 ---
 
@@ -110,10 +110,14 @@ ZGC 性能持续提升，- 吞吐量改进
 | 类型 | 链接 |
 |------|------|
 | **OpenJDK Census** | [eosterlund](https://openjdk.org/census#eosterlund) |
+| **Inside.java** | [Erik Österlund](https://inside.java/u/ErikOsterlund/) |
+| **Mastodon** | [@eosterlund_fisk](https://mastodon.social/@eosterlund_fisk) |
 | **ZGC 文档** | [ZGC](https://wiki.openjdk.org/zgc) |
+| **著作** | [The Z Garbage Collector: In JDK 25](https://www.amazon.com/Garbage-Collector-JDK-25/dp/1032976926) |
+| **PLDI 2020 论文** | [Improving Program Locality in the GC using Hotness](https://pldi20.sigplan.org/details/pldi-2020-papers/17/Improving-Program-Locality-in-the-GC-using-Hotness) |
 | **协作者** | Per Lidén, Stefan Karlsson, Ioi Lam |
 
 ---
 > **文档版本**: 2.0
-> **最后更新**: 2026-03-21
-> **更新内容**: 添加 ZGC 背景、 JEP 516 详情
+> **最后更新**: 2026-03-22
+> **更新内容**: 添加教育背景 (Linnaeus University PhD 2019)、职位 (CMTS)、著作 (ZGC 书籍)、PLDI 2020 论文、Mastodon 链接、Inside.java 链接、完善职业时间线

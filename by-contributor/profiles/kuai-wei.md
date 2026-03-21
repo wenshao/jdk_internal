@@ -12,12 +12,12 @@
 | **GitHub** | [@kuaiwei](https://github.com/kuaiwei) |
 | **组织** | [Alibaba](../../contributors/orgs/alibaba.md) |
 | **邮箱** | kuaiwei.kw@alibaba-inc.com, wei.kuai@gmail.com |
-| **OpenJDK Census** | ✅ [Author, JDK Project](https://openjdk.org/census) (username: `kwei`) |
+| **OpenJDK Census** | ✅ [Author, JDK Project](https://openjdk.org/census#kwei) (username: `kwei`) |
 | **Integrated PRs** | 13 |
 | **Dragonwell Commits** | 15+ |
 | **GitHub 统计** | 19 public repos, 15 followers, 8 following |
 | **主要领域** | C2 Compiler, IR Optimization, RISC-V, ZGC |
-| **活跃时间** | 2021 - 至今 |
+| **活跃时间** | 2018 - 至今 (首个 Integrated PR: 2021) |
 
 > **统计来源**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akuaiwei+label%3Aintegrated+is%3Aclosed), [OpenJDK Census](https://openjdk.org/census#kwei)
 
@@ -62,7 +62,7 @@
 
 | 来源 | 显示名称 | 邮箱 | 组织 | 状态 |
 |------|----------|------|------|------|
-| **GitHub** | kuaiwei | - | @alibaba | ✅ 已验证 |
+| **GitHub** | kuaiwei | - | @alibaba | ✅ 已验证 (19 repos, 15 followers) |
 | **OpenJDK Census** | Kuai Wei | - | - | ✅ 记录在案 |
 | **Dragonwell Commits** | Kuai Wei | kuaiwei.kw@alibaba-inc.com | Alibaba | ✅ 已验证 |
 | **Dragonwell Commits** | Kuai Wei | wei.kuai@gmail.com | - | ✅ 个人邮箱 |
@@ -74,6 +74,12 @@
   - 单位：Alibaba Group
   - DBLP: [记录](https://dblp.org/rec/conf/kbse/0001GZYKL21)
   - Semantic Scholar: [记录](https://www.semanticscholar.org/paper/Towards-a-Serverless-Java-Runtime-Zhang-Gu)
+
+**GitHub 成就徽章**:
+- Pair Extraordinaire (x2)
+- Pull Shark (x2)
+- Quickdraw
+- Arctic Code Vault Contributor
 
 **GitHub Gists** (技术笔记):
 - [JMH alloc with final field](https://gist.github.com/kuaiwei/f71fba40df29991c93325a8600e34c13) - 性能测试
@@ -125,15 +131,18 @@
 **OpenJDK 贡献时间线**：
 | 日期 | Issue | 说明 | Reviewer |
 |------|-------|------|----------|
-| 2025-05 | JDK-8356328 | C2 IR 节点 size_of() 函数 | thartmann, chagedor |
+| 2026-03 | JDK-8379502 | 移除未使用的 PhaseOutput 方法 | chagedorn |
+| 2025-05 | JDK-8356328 | C2 IR 节点 size_of() 函数 | thartmann, chagedorn |
 | 2025-04 | JDK-8355697 | Windows devkit on WSL/MSYS2 | ihse, erikj |
 | 2025-03 | JDK-8347405 | MergeStores 反向字节顺序 | Richard Reingruber |
-| 2025-02 | JDK-8350858 | IR Framework 测试失败 (Cascade Lake) | chagedor |
+| 2025-02 | JDK-8350858 | IR Framework 测试失败 (Cascade Lake) | chagedorn |
 | 2024-09 | JDK-8339299 | C1 内联 final 方法丢失类型 profile | lmesnik |
 | 2024-06 | JDK-8325821 | [REDO] release barrier (dmb.ishst+dmb.ishld) | shade |
 | 2024-06 | JDK-8333410 | [AArch64] 清理未使用的类 | - |
 | 2024-03 | JDK-8326983 | 未使用的操作数报告 | kvn, vlivanov |
 | 2024-02 | JDK-8326135 | 增强 adlc 报告未使用操作数 | kvn, vlivanov |
+| 2024-01 | JDK-8324186 | release barrier (dmb.ishst+dmb.ishld) 原始版本 | RealFYang, aph |
+| 2022-03 | JEP 422 | Linux/RISC-V Port (co-author) | ihse, dholmes, rriggs, kvn, shade |
 | 2021-03 | JDK-8262837 | handle split_USE correctly | - |
 | 2020-04 | JDK-8242449 | AArch64: r27 分配 (CompressedOops 模式) | aph |
 | 2018-10 | JDK-8210853 | JIT: C2 新分配对象后屏障优化 | - |
@@ -187,18 +196,18 @@
 
 | PR | Issue | 标题 | 日期 |
 |----|-------|------|------|
-| [#30138](https://github.com/openjdk/jdk/pull/30138) | JDK-8379502 | Remove unused PhaseOutput::need_register_stack_bang() | 2025-04 |
-| [#25081](https://github.com/openjdk/jdk/pull/25081) | JDK-8356328 | Some C2 IR nodes miss size_of() function | 2025-02 |
-| [#24916](https://github.com/openjdk/jdk/pull/24916) | JDK-8355697 | Create windows devkit on wsl and msys2 | 2025-01 |
-| [#23824](https://github.com/openjdk/jdk/pull/23824) | JDK-8350858 | [IR Framework] Some tests failed on Cascade Lake | 2024-12 |
-| [#23030](https://github.com/openjdk/jdk/pull/23030) | JDK-8347405 | MergeStores with reverse bytes order value | 2024-11 |
-| [#20786](https://github.com/openjdk/jdk/pull/20786) | JDK-8339299 | C1 will miss type profile when inline final method | 2024-08 |
+| [#30138](https://github.com/openjdk/jdk/pull/30138) | JDK-8379502 | Remove unused PhaseOutput::need_register_stack_bang() | 2026-03 |
+| [#25081](https://github.com/openjdk/jdk/pull/25081) | JDK-8356328 | Some C2 IR nodes miss size_of() function | 2025-05 |
+| [#24916](https://github.com/openjdk/jdk/pull/24916) | JDK-8355697 | Create windows devkit on wsl and msys2 | 2025-04 |
+| [#23824](https://github.com/openjdk/jdk/pull/23824) | JDK-8350858 | [IR Framework] Some tests failed on Cascade Lake | 2025-02 |
+| [#23030](https://github.com/openjdk/jdk/pull/23030) | JDK-8347405 | MergeStores with reverse bytes order value | 2025-03 |
+| [#20786](https://github.com/openjdk/jdk/pull/20786) | JDK-8339299 | C1 will miss type profile when inline final method | 2024-09 |
 | [#20090](https://github.com/openjdk/jdk/pull/20090) | JDK-8335946 | DTrace code snippets should be generated | 2024-07 |
 | [#19518](https://github.com/openjdk/jdk/pull/19518) | JDK-8333410 | [AArch64] Clean unused classes | 2024-06 |
 | [#19278](https://github.com/openjdk/jdk/pull/19278) | JDK-8325821 | [REDO] use "dmb.ishst+dmb.ishld" for release barrier | 2024-06 |
-| [#18075](https://github.com/openjdk/jdk/pull/18075) | JDK-8326983 | Unused operands reported after JDK-8326135 | 2024-04 |
-| [#17910](https://github.com/openjdk/jdk/pull/17910) | JDK-8326135 | Enhance adlc to report unused operands | 2024-04 |
-| [#17511](https://github.com/openjdk/jdk/pull/17511) | JDK-8324186 | Use "dmb.ishst+dmb.ishld" for release barrier | 2024-03 |
+| [#18075](https://github.com/openjdk/jdk/pull/18075) | JDK-8326983 | Unused operands reported after JDK-8326135 | 2024-03 |
+| [#17910](https://github.com/openjdk/jdk/pull/17910) | JDK-8326135 | Enhance adlc to report unused operands | 2024-02 |
+| [#17511](https://github.com/openjdk/jdk/pull/17511) | JDK-8324186 | Use "dmb.ishst+dmb.ishld" for release barrier | 2024-01 |
 | [#2791](https://github.com/openjdk/jdk/pull/2791) | JDK-8262837 | handle split_USE correctly | 2021-03 |
 
 ### 年度趋势
@@ -217,9 +226,10 @@
 ### 1. C2 编译器 IR 优化
 
 **JDK-8379502**: 移除未使用的 PhaseOutput 方法
-- PR: [#30138](https://github.com/openjdk/jdk/pull/30138)
-- 清理编译器代码
-- 提高可维护性
+- PR: [#30138](https://github.com/openjdk/jdk/pull/30138) (2026-03 集成)
+- Reviewed by Christian Hagedorn (@chhagedorn), sponsored by D-D-H
+- 移除 IA64 遗留代码 `need_register_stack_bang()`
+- 清理编译器代码，提高可维护性
 
 **JDK-8356328**: C2 IR 节点缺少 size_of() 函数
 - PR: [#25081](https://github.com/openjdk/jdk/pull/25081)
@@ -234,10 +244,10 @@
 ### 2. 内存屏障实现
 
 **JDK-8325821**: 使用 "dmb.ishst+dmb.ishld" 作为 release barrier
-- PR: [#19278](https://github.com/openjdk/jdk/pull/19278) (REDO)
-- PR: [#17511](https://github.com/openjdk/jdk/pull/17511) (原始)
-- 改进 ARM 架构内存屏障性能
-- 使用更精确的屏障指令
+- PR: [#17511](https://github.com/openjdk/jdk/pull/17511) (原始, 2024-01 集成, reviewed by Fei Yang, sponsored by Andrew Haley)
+- 原始 PR 集成后发现性能回归 (JDK-8325449, JDK-8325269)
+- PR: [#19278](https://github.com/openjdk/jdk/pull/19278) (REDO, 2024-06 集成, 修复回归问题)
+- 改进 ARM 架构内存屏障性能，使用更精确的屏障指令
 
 **技术背景**:
 ```cpp
@@ -294,6 +304,10 @@ Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一。Dragonwel
 
 ### Dragonwell 贡献详情
 
+**JWarmUp 模块**:
+- Dragonwell 8u JWarmUp 功能移植与修复
+- 与 Xiaoming Gu 合作演讲 "Speed JVM Performance with JWarmUp"
+
 **JIT 编译器 Backport**:
 - [JIT] Backport 8318446: C2 optimize stores into primitive arrays
 - [JIT] Backport 8255120: C2 assert fix for MemNode
@@ -313,8 +327,9 @@ Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一。Dragonwel
 |------|------|
 | **C2 编译器** | IR 优化，节点分析，诊断改进 |
 | **内存屏障** | ARM/AArch64 内存模型，并发优化 |
-| **RISC-V** | MacroAssembler，架构移植 |
+| **RISC-V** | JEP 422 co-author，MacroAssembler，架构移植 |
 | **ZGC** | 垃圾回收器优化和移植 |
+| **JWarmUp** | Dragonwell JWarmUp 模块移植与优化 |
 | **Dragonwell** | JIT backport, 构建系统，aarch64 优化 |
 
 ---
@@ -325,7 +340,10 @@ Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一。Dragonwel
 |------|------|
 | **GitHub** | https://github.com/kuaiwei |
 | **GitHub PRs** | https://github.com/openjdk/jdk/pulls?q=author%3Akuaiwei |
-| **OpenJDK Census** | https://openjdk.org/census#kuaiwei |
+| **OpenJDK Census** | https://openjdk.org/census#kwei |
+
+**JEP 贡献**:
+- [JEP 422: Linux/RISC-V Port](https://openjdk.org/jeps/422) - Co-author ([commit 5905b02](https://github.com/openjdk/jdk/commit/5905b02c0e2643ae8d097562f181953f6c88fc89))
 
 **Dragonwell 相关**:
 - [Dragonwell 团队](../../contributors/orgs/dragonwell.md) - 核心团队成员和社交网络
@@ -362,4 +380,4 @@ Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一。Dragonwel
 
 ---
 
-**最后更新**: 2026-03-21
+**最后更新**: 2026-03-22

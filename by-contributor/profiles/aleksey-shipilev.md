@@ -27,11 +27,11 @@
 | **姓名** | Aleksey Shipilëv |
 | **当前组织** | Amazon Web Services (Principal Engineer) |
 | **位置** | 波茨坦, 德国 |
-| **GitHub** | [@shipilev](https://github.com/shipilev) |
+| **GitHub** | [@shipilev](https://github.com/shipilev) (1.3k followers, 72 repos) |
 | **Twitter** | [@shipilev](https://twitter.com/shipilev) |
 | **Blog** | [shipilev.net](https://shipilev.net/) |
 | **OpenJDK** | [@shade](https://openjdk.org/census#shade) |
-| **角色** | OpenJDK Member, JDK Reviewer (JDK 9+) |
+| **角色** | OpenJDK Member, JDK Reviewer (JDK 9+), Java Champion (2017) |
 | **PRs** | [803+ integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ashipilev+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | C2 编译器、Shenandoah GC、性能优化、JMH、基准测试 |
 | **活跃时间** | 2012 - 至今 |
@@ -185,6 +185,7 @@ Java 微基准测试框架的创始人和主要维护者，为 Java 性能测试
 | **Twitter** | [@shipilev](https://twitter.com/shipilev) |
 | **GitHub** | [@shipilev](https://github.com/shipilev) |
 | **OpenJDK Census** | [shade](https://openjdk.org/census#shade) |
+| **Java Champion** | [2017 announcement](https://blogs.oracle.com/java/post/new-java-champions-holly-cummins-aleksey-shipilev-and-david-heffelfinger) |
 | **演讲集合** | [shipilev.net/talks](https://shipilev.net/talks/) |
 | **构建服务** | [builds.shipilev.net](https://builds.shipilev.net/) |
 
@@ -256,9 +257,14 @@ Aleksey 经常在各大 Java 会议发表演讲：
 
 ### 关键成就
 
+- **Java Champion**: 2017 年获评 (与 Holly Cummins, David Heffelfinger 同批)
+- **Top 20 Java Influencers**: JAX London 2019 年评选
 - **JEP 503**: 移除 32位 x86 支持
+- **JEP 318**: Epsilon GC (无操作 GC, JDK 11)
+- **JEP 379**: Shenandoah GC 正式版 (JDK 15)
+- **JMH**: Java 微基准测试框架创建者
+- **JOL/JCStress**: JVM 分析和并发测试工具创建者
 - **C2 优化**: 多项编译器优化
-- **JMH**: Java 微基准测试框架主要贡献者
 
 ---
 
@@ -387,8 +393,8 @@ Aleksey Shipilev 从 JDK 8 开始就有重要贡献：
 
 ---
 
-> **文档版本**: 2.0
-> **最后更新**: 2026-03-20
+> **文档版本**: 2.1
+> **最后更新**: 2026-03-22
 > **更新内容**:
 > - 修正教育背景 (ITMO University MSc, 2003-2009)
 > - 补充职业历史 (Intel 时期)

@@ -33,6 +33,7 @@ Alan Bateman 是 Oracle 的 **Java 核心库架构师**，负责 java.base 模�
 | **当前组织** | Oracle (Java Platform Group) |
 | **职位** | Principal Member of Technical Staff |
 | **专长** | Core Libraries, I/O, NIO, Concurrency, Project Loom |
+| **GitHub** | [@AlanBateman](https://github.com/AlanBateman) (148 followers, 9 repos) |
 | **OpenJDK** | [@alanb](https://openjdk.org/census#alanb) |
 | **角色** | JDK Committer, JDK Reviewer |
 | **JDK 26 贡献** | 22 commits (Concurrency) |
@@ -129,10 +130,13 @@ Alan Bateman 是 Java I/O 系统的维护者：
 - **java.nio.channels**: 通道和选择器
 - **java.nio.file**: NIO.2 文件 API
 
-### 4. Java Module System
+### 4. Java Module System (Project Jigsaw)
 
+Alan Bateman 是 Project Jigsaw 的核心团队成员之一，从项目初始阶段就参与其中：
+- **JEP 261**: Java Platform Module System 的合著者
 - **java.base**: 基础模块维护者
-- **模块化**: 参与设计和实现 JPMS
+- **Quick-Start Guide**: 编写模块系统快速入门指南
+- **核心团队**: 与 Alex Buckley, Mandy Chung, Jonathan Gibbons, Karen Kinnear 一起从零开始构建模块系统
 
 ---
 
@@ -143,7 +147,9 @@ Alan Bateman 是 Java I/O 系统的维护者：
 Alan Bateman 长期在 Oracle (前身为 Sun Microsystems) 工作：
 - **Java Core Libraries Lead**: 核心库负责人
 - **I/NIO Expert**: I/O 和 NIO 子系统专家
-- **Project Loom**: 虚拟线程核心贡献者
+- **Project Jigsaw**: Java Module System 核心团队成员
+- **Project Loom**: 虚拟线程核心贡献者 (初始 Reviewer 和 Committer)
+- **JSR-163**: 工具和分析 API 实现者
 
 ---
 
@@ -185,12 +191,16 @@ Alan Bateman 长期在 Oracle (前身为 Sun Microsystems) 工作：
 - [OpenJDK Census - alanb](https://openjdk.org/census#alanb)
 - [OpenJDK Mail Archives](https://mail.openjdk.org/pipermail/core-libs-dev/)
 
+### GitHub
+- [AlanBateman on GitHub](https://github.com/AlanBateman) - Pinned repos: openjdk/jdk, openjdk/loom
+
 ### JEP 文档
 - [JEP 525: Structured Concurrency (Second Preview)](https://openjdk.org/jeps/525)
 - [JEP 505: Structured Concurrency (Preview)](https://openjdk.org/jeps/505)
 - [JEP 499: Structured Concurrency (Preview)](https://openjdk.org/jeps/499)
 - [JEP 453: Structured Concurrency (Incubator)](https://openjdk.org/jeps/453)
 - [JEP 500: Make Final Mean Final](https://openjdk.org/jeps/500)
+- [JEP 261: Module System](https://openjdk.org/jeps/261)
 
 ---
 
