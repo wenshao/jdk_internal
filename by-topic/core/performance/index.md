@@ -6,6 +6,22 @@
 
 ---
 
+## 目录
+
+1. [TL;DR 快速概览](#1-tldr-快速概览)
+2. [快速概览](#2-快速概览)
+3. [核心技术](#3-核心技术)
+4. [性能工具](#4-性能工具)
+5. [最新增强](#5-最新增强)
+6. [核心贡献者](#6-核心贡献者)
+7. [性能最佳实践](#7-性能最佳实践)
+8. [性能对比](#8-性能对比)
+9. [重要 PR 分析](#9-重要-pr-分析)
+10. [性能优化最佳实践](#10-性能优化最佳实践)
+11. [相关链接](#11-相关链接)
+
+---
+
 ## 1. TL;DR 快速概览
 
 > 💡 **1 分钟了解 Java 性能优化**
@@ -231,6 +247,7 @@ public class EscapeAnalysis {
 
 #### 实战案例：DecimalDigits.appendPair (JDK-8366224)
 
+> **Issue**: [JDK-8366224](https://bugs.openjdk.org/browse/JDK-8366224)
 > **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
 > **影响**: ⭐⭐⭐⭐ +12% 日期格式化性能提升
 
@@ -385,67 +402,76 @@ java -XX:AOTCacheConfiguration=aot_config.txt \
 - 不支持动态 CDS 归档
 - 需要训练运行来捕获类加载行为
 
-### JDK 26 性能改进
+### JDK 25 其他性能增强
 
-#### AOT 增强 (JEP 514, JEP 515)
+#### JEP 514: Ahead-of-Time Command-Line Ergonomics
 
-- **JEP 514**: AOT 命令行参数优化
-- **JEP 515**: AOT 方法分析
+简化 AOT 缓存的命令行参数：
 
 ```bash
-# 改进的 AOT 缓存创建
+# JDK 25 简化后的 AOT 缓存创建
 java -XX:AOTCache=cache.aot ...
 ```
 
-#### 紧凑对象头 (JEP 519)
+#### JEP 515: Ahead-of-Time Method Analysis
 
-压缩对象头，减少内存占用：
+AOT 方法分析，进一步优化启动性能。
+
+#### JEP 519: Compact Object Headers
+
+紧凑对象头，减少内存占用：
 
 ```bash
-# 启用紧凑对象头 (JDK 26+ 默认)
+# 启用紧凑对象头 (JDK 25+ 默认)
 -XX:+UseCompactObjectHeaders
 ```
 
 **内存节省**: 每个对象节省 8-16 字节
 
+### JDK 26 性能改进
+
+#### JEP 516: Ahead-of-Time Object Caching
+
+进一步扩展 AOT 缓存能力，支持对象和元数据缓存。
+
+**性能影响**: 启动时间减少 30-50%
+
+#### JEP 522: G1 GC Throughput Improvement
+
+G1 GC 吞吐量改进，详见 [GC 演进](../gc/)。
+
 ---
 
 ## 6. 核心贡献者
 
-> **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
-> **统计时间**: 2026-03-20
+> **统计来源**: GitHub Integrated PRs
+> **统计时间**: 2026-03-21
 
-### JIT 编译器贡献者 (按 Git 提交数)
+### JIT 编译器贡献者
 
-| 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
-|------|--------|--------|------|----------|
-| 1 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 72 | Oracle | C1/C2 编译器 |
-| 2 | Aleksey Shipilev | 68 | Oracle | JIT 编译器 |
-| 3 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 62 | Oracle | 编译器, 运行时 |
-| 4 | Stefan Karlsson | 31 | Oracle | 编译器, GC |
-| 5 | Doug Simon | 29 | Oracle | JIT 编译器 |
-| 6 | David Holmes | 24 | Oracle | 并发, 编译器 |
-| 7 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 24 | Oracle | 启动性能 |
-| 8 | Thomas Stuefe | 22 | Oracle | 编译器 |
-| 9 | Vladimir Kozlov | 20 | Oracle | JIT 编译器 |
-| 10 | Igor Veresov | 17 | Oracle | JIT 编译器 |
+| 排名 | 贡献者 | Integrated PRs | 组织 | 主要贡献 |
+|------|--------|----------------|------|----------|
+| 1 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 803+ | Amazon | C2 编译器, JMH |
+| 2 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 200+ | Oracle | C2 编译器优化 |
+| 3 | [Tobias Hartmann](/by-contributor/profiles/tobias-hartmann.md) | 150+ | Oracle | JIT 编译器 |
+| 4 | [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | 100+ | Oracle | C2 架构 |
+| 5 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 90+ | Oracle | C1/C2 编译器 |
 
-### 启动性能贡献者 (按 Git 提交数)
+### 启动性能贡献者
 
-| 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
-|------|--------|--------|------|----------|
-| 1 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 167 | Oracle | CDS, AOT |
-| 2 | Albert Mingkun Yang | 75 | Oracle | G1 GC, 内存 |
-| 3 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 70 | Oracle | 字符串, 启动优化 |
-| 4 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 37 | Oracle | CDS, 归档 |
-| 5 | Stefan Karlsson | 35 | Oracle | 并发 GC |
+| 排名 | 贡献者 | Integrated PRs | 组织 | 主要贡献 |
+|------|--------|----------------|------|----------|
+| 1 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 68 | Oracle | CDS, AOT |
+| 2 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 150+ | Oracle | 字符串, 启动优化 |
+| 3 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 97 | Alibaba | 核心库性能优化 |
+| 4 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | Oracle | CDS, 归档 |
 
 ### JFR 贡献者
 
 | 贡献者 | 组织 | 主要贡献 |
 |--------|------|----------|
-| Erik Gahlin | Oracle | JFR 架构师 |
-| Markus Grönlund | Oracle | JFR 事件系统 |
+| [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | Oracle | JFR 架构师, JEP 520 Owner |
+| [Markus Grönlund](/by-contributor/profiles/markus-gronlund.md) | Oracle | JFR 事件系统, JEP 518 Owner |
 | Jaroslav Bachorik | Oracle | JFR 工具 |
 
 ---
@@ -527,8 +553,8 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 | JDK 11 | +10% | +5% | -10% | HTTP Client, var |
 | JDK 17 | +15% | +10% | -15% | Records, 密封类 |
 | JDK 21 | +20% | +8% | -20% | 虚拟线程, 分代 ZGC |
-| JDK 25 | +35% | +12% | -22% | AOT 缓存, JFR 增强 |
-| JDK 26 | +40% | +15% | -25% | 紧凑对象头, HTTP/3 |
+| JDK 25 | +35% | +12% | -22% | AOT 缓存, JFR 增强, 紧凑对象头 |
+| JDK 26 | +40% | +15% | -25% | AOT 对象缓存, G1 吞吐量改进 |
 
 > 注: 启动时间对比基于使用 AOT 缓存的场景
 
@@ -550,6 +576,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 #### JDK-8366224: DecimalDigits.appendPair
 
+> **Issue**: [JDK-8366224](https://bugs.openjdk.org/browse/JDK-8366224)
 > **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
 > **影响**: ⭐⭐⭐⭐ +12% 日期格式化性能提升
 
@@ -578,6 +605,7 @@ public static void appendPair(StringBuilder buf, int v) {
 
 #### JDK-8365186: DateTimePrintContext 方法拆分
 
+> **Issue**: [JDK-8365186](https://bugs.openjdk.org/browse/JDK-8365186)
 > **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
 > **影响**: ⭐⭐⭐ +3-12% 日期格式化性能提升
 
@@ -596,6 +624,7 @@ public static void appendPair(StringBuilder buf, int v) {
 
 #### JDK-8355177: StringBuilder append(char[]) 优化
 
+> **Issue**: [JDK-8355177](https://bugs.openjdk.org/browse/JDK-8355177)
 > **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
 > **影响**: ⭐⭐⭐⭐ +15% 性能提升
 
@@ -620,6 +649,7 @@ UNSAFE.copyMemory(str, CHAR_ARRAY_BASE_OFFSET,
 
 #### JDK-8343650: StringConcatHelper 优化
 
+> **Issue**: [JDK-8343650](https://bugs.openjdk.org/browse/JDK-8343650)
 > **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
 > **影响**: ⭐⭐⭐ +5-8% UTF16 拼接性能提升
 
@@ -636,6 +666,7 @@ UNSAFE.copyMemory(str, CHAR_ARRAY_BASE_OFFSET,
 
 #### JDK-8349400: 消除匿名内部类
 
+> **Issue**: [JDK-8349400](https://bugs.openjdk.org/browse/JDK-8349400)
 > **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
 > **影响**: ⭐⭐⭐ 类加载 -90%
 
@@ -652,6 +683,7 @@ UNSAFE.copyMemory(str, CHAR_ARRAY_BASE_OFFSET,
 
 #### JDK-8341906: ClassFile 写入合并
 
+> **Issue**: [JDK-8341906](https://bugs.openjdk.org/browse/JDK-8341906)
 > **作者**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
 > **影响**: ⭐⭐⭐ +28% 字节码写入性能
 
@@ -739,25 +771,51 @@ String date = FORMATTER.format(LocalDate.now());  // 受益于 JIT 常量传播
 - [Java Flight Recorder](https://docs.oracle.com/en/java/javase/21/docs/specs/man/jfr.html)
 - [Inside Java: Performance Updates](https://inside.java/)
 - [Project Leyden](https://openjdk.org/projects/leyden/)
-- [JEP 483: AOT Class Loading](https://openjdk.org/jeps/483)
-- [JEP 509: JFR CPU-Time Profiling](https://openjdk.org/jeps/509)
-- [JEP 518: JFR Cooperative Sampling](https://openjdk.org/jeps/518)
-- [JEP 520: JFR Method Timing & Tracing](https://openjdk.org/jeps/520)
 
-### Git 提交历史
+### 相关 JEP
+
+| JEP | 标题 | 版本 | 状态 |
+|-----|------|------|------|
+| [JEP 483](https://openjdk.org/jeps/483) | Ahead-of-Time Class Loading & Linking | JDK 25 | ✅ Delivered |
+| [JEP 509](https://openjdk.org/jeps/509) | JFR CPU-Time Profiling | JDK 25 | ✅ Delivered |
+| [JEP 514](https://openjdk.org/jeps/514) | Ahead-of-Time Command-Line Ergonomics | JDK 25 | ✅ Delivered |
+| [JEP 515](https://openjdk.org/jeps/515) | Ahead-of-Time Method Analysis | JDK 25 | ✅ Delivered |
+| [JEP 516](https://openjdk.org/jeps/516) | Ahead-of-Time Object Caching with Any GC | JDK 26 | ✅ Delivered |
+| [JEP 518](https://openjdk.org/jeps/518) | JFR Cooperative Sampling | JDK 25 | ✅ Delivered |
+| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | JDK 25 | ✅ Delivered |
+| [JEP 520](https://openjdk.org/jeps/520) | JFR Method Timing & Tracing | JDK 25 | ✅ Delivered |
+| [JEP 522](https://openjdk.org/jeps/522) | G1 GC: Improve Throughput by Reducing Synchronization | JDK 26 | ✅ Delivered |
+
+### Git 命令参考
 
 ```bash
 # 查看 JIT 编译器相关提交
-cd /path/to/jdk
-git log --oneline -- src/hotspot/share/compiler/
+cd /root/git/jdk
+git log --oneline -- src/hotspot/share/compiler/ | head -20
 
 # 查看 JFR 相关提交
-git log --oneline -- src/hotspot/share/jfr/
+git log --oneline -- src/hotspot/share/jfr/ | head -20
 
 # 查看 CDS/AOT 相关提交
-git log --oneline -- src/hotspot/share/cds/
+git log --oneline -- src/hotspot/share/cds/ | head -20
+
+# 查看 GC 相关提交
+git log --oneline -- src/hotspot/share/gc/g1/ | head -20
+```
+
+### 性能测试命令
+
+```bash
+# 使用 JMH 运行基准测试
+java -jar target/benchmarks.jar
+
+# 使用 async-profiler 进行 CPU 采样
+./profiler.sh -d 30 -f profile.html <pid>
+
+# 查看 JIT 编译日志
+java -XX:+PrintCompilation -XX:+UnlockDiagnosticVMOptions MyApp
 ```
 
 ---
 
-**最后更新**: 2026-03-20
+**最后更新**: 2026-03-21
