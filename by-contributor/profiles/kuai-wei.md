@@ -80,17 +80,17 @@
 
 | 关联类型 | 用户 | 真实姓名 | 位置 | 组织 | 推断 |
 |----------|------|----------|------|------|------|
-| **论文合著者** | sanhong | Sanhong Li | - | - | ASE 2021 论文合著者，互相关注 |
-| **阿里巴巴同事** | JoshuaZhuwj | Joshua Zhu | 上海 | @Alibaba | 互相关注 |
-| **阿里巴巴同事** | sendaoYan | Sendaoyan Yan | 上海 | - | Kuai Wei 的 follower, compiler tester |
-| **阿里巴巴同事** | yanglong1010 | Long Yang | 杭州 | @Alibaba | 互相关注 |
-| **社区联系** | luchsh | Jonathan Lu | 上海 | - | 互相关注 |
-| **社区联系** | tanghaoth90 | Hao Tang | 杭州 | ByteDance | 互相关注 |
-| **社区联系** | XHao | shako | 上海 | - | 互相关注 |
-| **龙芯联系** | xiangzhai | Leslie Zhai | 北京 | @loongson | Kuai Wei 的 follower |
-| **JDK 社区** | alijvm | Sanhong Li | - | - | 阿里巴巴 JVM 团队账号 |
-| **JDK 社区** | Aitozi | WenjunMin | - | - | 互相关注 |
-| **JDK 社区** | headius | Charles Nutter | - | - | Kuai Wei 关注 (JRuby 创始人) |
+| **论文合著者** | [sanhong](sanhong.md) | Sanhong Li | - | - | ASE 2021 论文合著者，互相关注 |
+| **阿里巴巴同事** | [JoshuaZhuwj](joshua-zhu.md) | Joshua Zhu | 上海 | @Alibaba | 互相关注 |
+| **阿里巴巴同事** | [sendaoYan](sendaoyan.md) | Sendaoyan Yan | 上海 | - | Kuai Wei 的 follower, compiler tester |
+| **阿里巴巴同事** | [yanglong1010](yanglong1010.md) | Long Yang | 杭州 | @Alibaba | 互相关注 |
+| **社区联系** | [luchsh](luchsh.md) | Jonathan Lu | 上海 | - | 互相关注 |
+| **社区联系** | [tanghaoth90](tanghaoth90.md) | Hao Tang | 杭州 | ByteDance | 互相关注 |
+| **社区联系** | [XHao](xhao.md) | shako | 上海 | - | 互相关注 |
+| **龙芯联系** | [xiangzhai](xiangzhai.md) | Leslie Zhai | 北京 | @loongson | Kuai Wei 的 follower |
+| **JDK 社区** | [alijvm](alijvm.md) | Sanhong Li | - | - | 阿里巴巴 JVM 团队账号 |
+| **JDK 社区** | [Aitozi](aitozi.md) | WenjunMin | - | - | 互相关注 |
+| **JDK 社区** | [headius](headius.md) | Charles Nutter | - | - | Kuai Wei 关注 (JRuby 创始人) |
 
 **地理位置推断**：
 - 多个互相关注者位于**上海**（Joshua Zhu, Jonathan Lu, Sendaoyan Yan, shako）
@@ -325,10 +325,27 @@ Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一。Dragonwel
 
 ## 相关文档
 
+### 阿里巴巴 JVM 团队
+- [Sanhong Li](sanhong.md) - ASE 2021 论文作者，阿里巴巴 JVM 团队
+- [Long Yang](yanglong1010.md) - 阿里巴巴 JVM 团队，杭州
+- [Sendaoyan Yan](sendaoyan.md) - 编译器测试工程师，上海
+- [Joshua Zhu](joshua-zhu.md) - 阿里巴巴上海团队
+- [alijvm](alijvm.md) - 阿里巴巴 JVM 团队账号
+
+### 技术社区
+- [Jonathan Lu](luchsh.md) - 上海 JVM 社区
+- [Hao Tang](tanghaoth90.md) - ByteDance，杭州
+- [shako](xhao.md) - 上海 JVM 社区
+- [WenjunMin](aitozi.md) - JVM 社区
+- [Leslie Zhai](xiangzhai.md) - 龙芯，北京
+- [Charles Nutter](headius.md) - JRuby 创始人
+
+### 技术主题
 - [C2 编译器](/by-topic/core/jit/) - JIT 编译优化
 - [RISC-V](/by-topic/arch/riscv/) - RISC-V 架构支持
 - [内存屏障](/by-topic/concurrency/memory-barriers/) - 并发内存模型
 - [Alibaba](/contributors/orgs/alibaba.md) - 阿里巴巴贡献者
+- [中国贡献者](chinese-contributors.md) - 中国 OpenJDK 贡献者
 
 ---
 
