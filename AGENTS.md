@@ -1,938 +1,378 @@
-## 1. Agent Context
+# AGENTS.md - AI Assistant Guide
 
-- `../jdk` is the JDK source code repository
-- This project analyzes JDK issues, pull requests, and source code to create documentation that is easy for both humans and AI to read
+> **Purpose**: Help AI assistants understand this project and contribute effectively
+> **Last Updated**: 2026-03-21
 
-## 2. Project Structure
+---
+
+## Quick Start
+
+### 📚 What is this project?
+- **`../jdk`**: JDK source code repository
+- **This project (`jdk_internal`)**: Documentation analyzing JDK issues, PRs, and source code
+- **Goal**: Create documentation easy for both humans and AI to read
+
+### 🎯 Your Tasks
+1. **Read** existing documentation structure
+2. **Verify** links before committing (use `ls` or `glob`)
+3. **Use GitHub PRs** for contribution statistics (NOT git commits)
+4. **Write in English** for explanations, keep technical terms unchanged
+
+---
+
+## Table of Contents
+
+1. [Project Structure](#1-project-structure)
+2. [Documentation Standards](#2-documentation-standards)
+3. [Research Methodology](#3-research-methodology)
+4. [Contribution Statistics](#4-contribution-statistics)
+5. [Quality Checklist](#5-quality-checklist)
+6. [Common Mistakes](#6-common-mistakes)
+
+---
+
+## 1. Project Structure
 
 ```
 jdk_internal/
-├── AGENTS.md              # Agent context (this file)
-├── README.md              # Project overview with version selection
+├── AGENTS.md              # This file - AI assistant guide
+├── README.md              # Project overview
 │
-├── by-version/            # 按版本浏览 ⭐ 主要入口
-│   ├── index.md           # 版本概览和对比
+├── by-version/            # ⭐ Browse by JDK version
+│   ├── index.md
 │   ├── jdk8/              # JDK 8 (LTS 2014)
 │   ├── jdk11/             # JDK 11 (LTS 2018)
 │   ├── jdk17/             # JDK 17 (LTS 2021)
 │   ├── jdk21/             # JDK 21 (LTS 2023)
 │   └── jdk26/             # JDK 26 (GA 2026-03-17)
-│       ├── index.md       # 版本概览
-│       ├── jeps.md        # JEP 汇总
-│       └── migration/     # 迁移指南
 │
-├── by-topic/              # 按主题跨版本浏览 ⭐ 架构视角
-│   ├── index.md           # 主题索引
-│   ├── gc/                # GC 演进
-│   │   └── timeline.md    # G1/ZGC/Shenandoah 时间线
-│   ├── concurrency/       # 并发编程
-│   ├── string/            # 字符串处理
-│   ├── http/              # HTTP 客户端
-│   └── security/          # 安全特性
+├── by-topic/              # ⭐ Browse by topic (architecture view)
+│   ├── index.md
+│   ├── gc/timeline.md     # G1/ZGC/Shenandoah timeline
+│   ├── concurrency/
+│   ├── string/
+│   └── http/
 │
-├── by-contributor/        # 按贡献者
-│   ├── index.md           # 贡献者索引
-│   ├── profiles/          # 个人详细页面 (50+ files)
-│   │   ├── shaojin-wen.md
-│   │   └── ...
-│   └── by-org/            # 按组织
+├── by-contributor/        # Browse by contributor
+│   ├── index.md
+│   ├── profiles/          # 137 contributor profiles
+│   └── by-org/
 │
-├── by-pr/                 # 按 PR/Issue 深度分析
-│   ├── index.md           # PR 索引
-│   ├── {issue}/           # 按 issue 号分组
-│   │   └── {number}.md
-│   └── components/        # 按组件分组
+├── by-pr/                 # PR/Issue deep analysis
+│   ├── index.md
+│   └── {issue}/           # Grouped by issue number
 │
-├── jeps/                  # JEP 详细分析 (21 files)
-│   └── jep-5xx.md
+├── contributors/          # Organization stats
+│   ├── orgs/              # Organization pages
+│   └── stats/             # Statistics (PRs-based)
 │
-├── guides/                # 通用指南
-│   ├── learning-path.md   # 学习路径
-│   └── ...
-│
-└── modules/               # 模块/组件分析
-    └── ...
+├── jeps/                  # JEP analysis (21 files)
+├── guides/                # General guides
+└── modules/               # Module analysis
 ```
 
-## 3. 文档组织原则
+### Version Coverage Priority
 
-### 多版本视角
-
-文档应支持从不同 JDK 版本的用户视角浏览：
-
-1. **按版本** (by-version/)
-   - 用户从当前使用的版本切入
-   - 看到该版本的特性、问题、迁移指南
-   - 支持版本间对比
-
-2. **按主题** (by-topic/)
-   - 架构师和技术负责人视角
-   - 跨版本追踪某个技术演进
-   - 时间线形式展示变化
-
-3. **按贡献者** (by-contributor/)
-   - 了解特定贡献者的工作
-   - 按组织、地区浏览
-   - 追踪专业领域
-
-### 版本覆盖策略
-
-| 版本 | 优先级 | 内容 |
-|------|--------|------|
-| JDK 8 | 中 | 迁移指南、关键特性 |
-| JDK 11 | 高 | LTS 主流版本，完整文档 |
-| JDK 17 | 高 | LTS 主流版本，完整文档 |
-| JDK 21 | 高 | 当前 LTS，重点内容 |
-| JDK 26 | 最高 | 已发布 (GA 2026-03-17)，详细追踪 |
-
-## 4. Documentation Standards
-
-### Version Documents (by-version/{jdkxx}/)
-
-每个版本目录应包含：
-
-```markdown
-{version}/
-├── index.md           # 版本概览
-├── new-since-{prev}.md # 相比上一版本的新特性
-├── breaking-changes.md # 破坏性变更
-├── known-issues.md     # 已知问题
-├── performance.md      # 性能改进
-└── migration/          # 迁移指南
-    ├── from-{prev}.md  # 从上一版本升级
-    └── to-{next}.md    # 升级到下一版本
-```
-
-### Topic Documents (by-topic/{topic}/)
-
-每个主题目录应包含：
-
-```markdown
-{topic}/
-├── index.md           # 主题概述
-├── timeline.md        # 时间线 (必需)
-└── {version}.md       # 各版本详细说明
-```
-
-时间线格式：
-```markdown
-## 5. {Topic} 演进时间线
-
-| 版本 | 主要变化 | 影响 |
-|------|----------|------|
-| JDK 8 | ... | ... |
-| JDK 11 | ... | ... |
-```
-
-### Contributor Documents
-
-见 [Contribution Statistics Principles](#contribution-statistics-principles)
-
-### PR Documents (by-pr/{issue}/{number}.md)
-
-使用统一模板：
-```markdown
-# JDK-XXXXXXX: 简短标题
-
-> **Issue**: [链接] | **Author**: 名字 | **Impact**: ⭐⭐⭐⭐
-
-## 6. 一眼看懂
-## 7. 背景
-## 8. 问题分析
-## 9. 解决方案
-## 10. 性能对比
-## 11. 风险评估
-## 12. 相关 PR
-```
-
-### Document Structure Standards
-
-**所有长文档（超过 200 行）必须使用章节编号**，便于讨论和引用。
-
-#### 章节编号规则
-
-1. **主章节**: 使用数字编号 (1, 2, 3...)
-2. **子章节**: 使用 x.y 格式 (1.1, 1.2, 2.1...)
-3. **孙章节**: 使用 x.y.z 格式 (1.1.1, 1.1.2...)
-
-#### 必须包含目录
-
-长文档开头必须包含目录：
-
-```markdown
-## 目录
-
-1. [章节一](#1-章节一)
-2. [章节二](#2-章节二)
-3. [章节三](#3-章节三)
-   - [3.1 子章节](#31-子章节)
-   - [3.2 子章节](#32-子章节)
-```
-
-#### 章节标题格式
-
-```markdown
-## 13. 1. 章节标题
-
-内容...
-
-### 1.1 子章节标题
-
-内容...
-
-#### 1.1.1 孙章节标题
-
-内容...
-```
-
-#### 引用示例
-
-在讨论中引用章节：
-- "参见第 3.2 节 JIT 优化相关贡献"
-- "详见第 6.5 节 ClassFile API 优化"
-- "参考第 4.1 节核心技术手段"
-
-#### 适用文档类型
-
-| 文档类型 | 是否需要编号 | 说明 |
-|----------|-------------|------|
-| 贡献者档案 (profiles/*.md) | ✅ 必须 | 便于引用特定贡献领域 |
-| PR 分析 (by-pr/*/*.md) | ❌ 不需要 | 使用固定模板 |
-| 主题文档 (by-topic/*/*.md) | ✅ 推荐 | 长文档需要编号 |
-| JEP 分析 (jeps/*/*.md) | ❌ 不需要 | 使用固定模板 |
-| 版本文档 (by-version/*/*.md) | ✅ 推荐 | 长文档需要编号 |
-| 指南文档 (guides/*.md) | ⚠️ 视情况 | 超过 200 行需要 |
-
-#### 示例：贡献者档案结构
-
-```markdown
-# 贡献者名称
-
-## 目录
-
-1. [职业时间线](#1-职业时间线)
-2. [概要](#2-概要)
-3. [技术贡献](#3-技术贡献)
-4. [优化方法论](#4-优化方法论)
-5. [协作网络](#5-协作网络)
-6. [PR 分类列表](#6-pr-分类列表)
-7. [受益场景](#7-受益场景)
-8. [附录](#8-附录)
+| Version | Priority | Content Focus |
+|---------|----------|---------------|
+| JDK 26 | ⭐⭐⭐⭐⭐ | GA 2026-03-17, detailed tracking |
+| JDK 21 | ⭐⭐⭐⭐ | Current LTS, key content |
+| JDK 17 | ⭐⭐⭐⭐ | LTS, complete docs |
+| JDK 11 | ⭐⭐⭐⭐ | LTS, complete docs |
+| JDK 8 | ⭐⭐ | Migration guide, key features |
 
 ---
 
-## 14. 1. 职业时间线
+## 2. Documentation Standards
 
-...
+### Section Numbering Format
 
-## 15. 2. 概要
+**All long documents (>200 lines) MUST have:**
+1. Section numbers: `1`, `1.1`, `1.1.1`
+2. Table of Contents after title
+3. Consistent heading levels (max 4 levels)
 
-### 2.1 基本信息
+**Example:**
+```markdown
+# Title
 
-...
+## Table of Contents
+1. [Overview](#1-overview)
+2. [Details](#2-details)
+   1. [Subsection](#21-subsection)
 
-## 16. 3. 技术贡献
+---
 
-### 3.1 核心贡献领域
+## 1. Overview
+Content here...
 
-...
-
-### 3.2 JIT 优化相关贡献
-
-...
+## 2. Details
+### 2.1 Subsection
+Content here...
 ```
 
-## 17. Research Methodology
+### PR Document Template
 
-### Research Quality Levels
+```markdown
+# JDK-XXXXXXX: Short Title
 
-Define completion levels to ensure consistent research depth across all documentation.
+> **Issue**: [link] | **Author**: [Name](profile.md) | **Impact**: ⭐⭐⭐⭐
 
-| Level | Name | PR Document Requirements | Topic Document Requirements | Use Case |
-|-------|------|--------------------------|------------------------------|----------|
-| **L1** | Summary | Title + link + one-sentence description | Timeline overview | Bulk P4 PR processing |
-| **L2** | Brief | Overview + key changes | Version comparison table | P3 PRs, minor features |
-| **L3** | Standard | Full template structure | Technical details + examples | P2 PRs, important features |
-| **L4** | Deep | Principle analysis + benchmarks + design decisions | Multi-version evolution + source analysis | P1 PRs, JEPs, core features |
+## Overview
+One-sentence description
 
-### Standard Research Process
+## Background
+Problem context
 
+## Analysis
+Technical details
+
+## Solution
+Changes made
+
+## Performance
+Benchmarks if applicable
+
+## Related PRs
+Links to related work
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                     JDK Feature/PR Research Process              │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  1. Information Gathering                                        │
-│     ├─ JBS Issue reading                                        │
-│     ├─ GitHub PR description and discussion                     │
-│     ├─ Mailing list discussion (if applicable)                  │
-│     └─ Related JEP/JSR documents                                │
-│         ↓                                                       │
-│  2. Code Analysis                                               │
-│     ├─ Locate changed files                                     │
-│     ├─ Understand technical details                             │
-│     └─ Identify impact scope                                    │
-│         ↓                                                       │
-│  3. Context Building                                            │
-│     ├─ Related Issue/PR links                                   │
-│     ├─ Historical evolution                                     │
-│     └─ Contributor background                                   │
-│         ↓                                                       │
-│  4. Documentation                                               │
-│     ├─ Write following template structure                       │
-│     ├─ Code examples                                            │
-│     └─ Visualizations (charts/timelines)                        │
-│         ↓                                                       │
-│  5. Quality Check                                               │
-│     └─ Verify against review checklist                          │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
+
+### Link Format
+
+| Type | Format | Example |
+|------|--------|---------|
+| **Profile** | Local link | `[Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)` |
+| **Organization** | Local link | `[Oracle](/contributors/orgs/oracle.md)` |
+| **PR Analysis** | Local link | `[JDK-8336856](/by-pr/8336/8336856.md)` |
+| **JEP** | Local link | `[JEP 506](/jeps/concurrency/jep-506.md)` |
+| **External** | Full URL | `[GitHub](https://github.com/openjdk/jdk)` |
+
+---
+
+## 3. Research Methodology
 
 ### Data Source Priority
 
-| Priority | Data Source | Reliability | Purpose |
-|----------|-------------|-------------|---------|
-| **P0** | JBS Issue | Official | Problem definition, review status |
-| **P0** | GitHub PR | Official | Change content, discussion |
-| **P1** | Mailing Lists | Authoritative | Design decision background |
-| **P1** | JEP/JSR Docs | Official | Specification definition |
-| **P1** | OpenJDK Census | Official | Contributor group membership, organization verification |
-| **P2** | Source Code | Factual | Implementation details |
-| **P3** | Blogs/Talks | Reference | Explanation and context |
+| Priority | Source | Use Case |
+|----------|--------|----------|
+| **P0** | JBS Issue | Problem definition, status |
+| **P0** | GitHub PR | Changes, discussion |
+| **P1** | Mailing Lists | Design decisions |
+| **P1** | JEP/JSR Docs | Specifications |
+| **P2** | Source Code | Implementation details |
+| **P3** | Blogs/Talks | Context (auxiliary only) |
 
-**Key Principles**:
-- All conclusions must be supported by P0-P2 sources
-- P3 sources are for auxiliary explanation only, never as primary evidence
-- Always preserve original links when citing
-- **Census Usage**: Use OpenJDK Census for verifying group membership and organization affiliation, NOT for contribution statistics (use GitHub Integrated PRs instead)
+**Key Principle**: All conclusions must be supported by P0-P2 sources
 
-### AI-Assisted Research Prompt Templates
+### Research Quality Levels
 
-#### Template 1: PR Initial Analysis
+| Level | PR Documents | Topic Documents | Use Case |
+|-------|-------------|-----------------|----------|
+| **L1** | Title + link + 1 sentence | Timeline overview | Bulk P4 processing |
+| **L2** | Overview + key changes | Version comparison | P3 PRs, minor features |
+| **L3** | Full template structure | Technical details + examples | P2 PRs, important features |
+| **L4** | Principle analysis + benchmarks | Multi-version evolution | P1 PRs, JEPs, core features |
 
+---
+
+## 4. Contribution Statistics
+
+### ⚠️ CRITICAL: Use GitHub Integrated PRs ONLY
+
+**Why NOT git commits?**
 ```
-You are a JDK internal implementation expert. Please analyze the following PR:
-
-**PR Information:**
-- Title: {title}
-- Description: {body}
-- Author: {author}
-- Changed files: {files}
-
-Please provide:
-1. **One-line overview** (under 30 characters)
-2. **Technical category**: [GC/Compiler/Runtime/CoreLibs/Network/Security/Other]
-3. **Impact assessment**: [Performance/Compatibility/Feature/Refactor]
-4. **Key change points** (3-5 items)
-5. **Related Issues/JEPs** (if any)
+❌ OpenJDK Committers use @openjdk.org email for commits
+❌ Git commits by company email is inaccurate
+❌ Many contributions are missed when filtering by company email
+✅ GitHub PRs accurately reflect actual contributions
 ```
 
-#### Template 2: Deep Technical Analysis
+### How to Query PRs
 
-```
-Perform deep technical analysis based on the following information:
-
-**Source code changes:**
-```diff
-{diff}
-```
-
-**PR discussion:**
-{discussion}
-
-Please analyze:
-1. **Technical principle**: What underlying problem does this change solve?
-2. **Design trade-offs**: Why was this approach chosen? What are the alternatives?
-3. **Potential risks**: What problems could this introduce? How are they mitigated?
-4. **Use cases**: What scenarios benefit from this change?
-```
-
-#### Template 3: Topic Evolution Analysis
-
-```
-Analyze the evolution of {topic} in JDK:
-
-**Known version information:**
-{version_info}
-
-Please generate:
-1. **Evolution timeline**: List key changes by version
-2. **Technical turning points**: Important design decisions
-3. **Version migration advice**: Considerations when upgrading from older versions
-4. **Future direction**: Related unfinished/discussed JEPs
-```
-
-### Documentation Review Checklist
-
-Verify the following before marking documentation as complete:
-
-#### Content Completeness
-- [ ] Clear overview (一眼看懂/概述 section)
-- [ ] All key data has source links
-- [ ] Code examples are runnable or explained
-- [ ] Technical terms have explanations or links
-
-#### Structure Consistency
-- [ ] Follows corresponding template structure
-- [ ] Heading levels are reasonable (max 4 levels)
-- [ ] Tables have header descriptions
-- [ ] Code blocks have language tags
-
-#### Quality Standards
-- [ ] No "TODO"/"待补充" placeholders
-- [ ] External links are accessible
-- [ ] Internal relative paths are correct
-- [ ] Proper Chinese-English mixing (technical terms kept in English)
-
-#### Type-Specific Checks
-
-**PR Document Additional Checks:**
-- [ ] Issue link is correct
-- [ ] PR link is correct
-- [ ] Author information is accurate
-- [ ] Impact assessment has supporting evidence
-
-**Topic Document Additional Checks:**
-- [ ] Has timeline.md
-- [ ] Version coverage is continuous
-- [ ] Key JEPs are linked
-
-**Contributor Document Additional Checks:**
-- [ ] PR statistics use GitHub Integrated PRs
-- [ ] Statistics data has source links
-- [ ] Representative works have JBS links
-
-### Error Pattern Recognition
-
-Common issues and detection methods:
-
-| Issue Type | Manifestation | Detection Method |
-|------------|---------------|------------------|
-| Data source error | Using git commit for contribution stats | Check for `git log` results |
-| Broken links | JBS links return 404 | Periodic external link check |
-| Version misattribution | Feature attributed to wrong version | Cross-verify JEP and version |
-| Over-interpretation | Conclusions without data support | Check key statements for citations |
-| Template inconsistency | Structure deviates from standard | Compare against template |
-| **Wrong local path** | `contributors/organizations/` should be `contributors/orgs/` | Verify actual directory structure with `ls` |
-
-### Local Link Verification Rules
-
-**CRITICAL: Always verify local link paths against actual directory structure.**
-
-When adding or checking local links:
-
-1. **Verify directory structure**:
-   ```bash
-   # Check actual directory names
-   ls -la contributors/
-   # Output shows: orgs/ (NOT organizations/)
-   ```
-
-2. **Common path patterns in this project**:
-   - Contributor profiles: `by-contributor/profiles/{username}.md`
-   - Organizations: `contributors/orgs/{orgname}.md` (⚠️ NOT `organizations/`)
-   - Topic pages: `by-topic/{category}/{topic}.md`
-   - PR analysis: `by-pr/{issue-id}/{pr-number}.md`
-
-3. **Before committing link changes**:
-   - Use `Glob` or `ls` to verify target file exists
-   - For bulk link updates, verify the path pattern first
-   - Check all similar links in the same file
-
-**Example of missed detection (2026-03)**:
-- `talks/index.md` had 100+ links using `contributors/organizations/`
-- Actual directory is `contributors/orgs/`
-- Only detected after user reported broken link
-- **Lesson**: When checking one type of link, check all similar patterns in the file
-
-### Organization Link Priority
-
-**CRITICAL: Always prefer local organization links over external URLs.**
-
-When linking to organizations (Oracle, Alibaba, SAP, Red Hat, Amazon, Google, etc.):
-
-1. **Priority order for organization links**:
-   - **First**: Local organization page `/contributors/orgs/{orgname}.md`
-   - **Second**: External website URL (only if no local page exists)
-
-2. **Available local organization pages**:
-   | Organization | Local Link |
-   |--------------|------------|
-   | Oracle | `/contributors/orgs/oracle.md` |
-   | Alibaba | `/contributors/orgs/alibaba.md` |
-   | SAP | `/contributors/orgs/sap.md` |
-   | Red Hat | `/contributors/orgs/redhat.md` |
-   | Amazon | `/contributors/orgs/amazon.md` |
-   | Google | `/contributors/orgs/google.md` |
-   | IBM | `/contributors/orgs/ibm.md` |
-   | Tencent | `/contributors/orgs/tencent.md` |
-   | ByteDance | `/contributors/orgs/bytedance.md` |
-   | ISCAS PLCT | `/contributors/orgs/iscas-plct.md` |
-   | Loongson | `/contributors/orgs/loongson.md` |
-
-3. **When to use external links**:
-   - Organization has no local page (e.g., Arm, NTT DATA, University of Washington)
-   - Linking to specific resources (downloads, documentation, blogs)
-   - Linking to JDK distribution pages
-
-4. **Examples**:
-   ```markdown
-   # ✅ Correct - local link
-   [Oracle](/contributors/orgs/oracle.md)
-
-   # ❌ Wrong - external link when local page exists
-   [Oracle](https://www.oracle.com/java/)
-
-   # ✅ Correct - external link for specific resource
-   [Oracle JDK Downloads](https://www.oracle.com/java/technologies/downloads/)
-
-   # ✅ Correct - external link when no local page exists
-   [Arm](https://www.arm.com/)
-   ```
-
-5. **Before adding organization links**:
-   - Check if local page exists: `ls contributors/orgs/`
-   - Use local link if available
-   - Only use external URL for specific resources or when no local page exists
-
-### Contributor Link Priority
-
-**CRITICAL: Always prefer local contributor profile links over plain text names or external URLs.**
-
-When documenting PR authors, reviewers, or any contributor references:
-
-1. **Priority order for contributor links**:
-   - **First**: Local profile page `/by-contributor/profiles/{username}.md`
-   - **Second**: GitHub profile URL (only if no local page exists)
-   - **Third**: Plain text name (only if no GitHub username available)
-
-2. **Standard format for PR documents**:
-   ```markdown
-   # Author field
-   > **Author**: [Full Name](/by-contributor/profiles/{username}.md) (@github_handle)
-
-   # Reviewers field
-   > **Reviewers**: [Full Name](/by-contributor/profiles/{username}.md) (@github_handle), ...
-
-   # In table format
-   | **Author** | [Full Name](/by-contributor/profiles/{username}.md) |
-   ```
-
-3. **Common contributors with local pages**:
-   | Contributor | Local Link | GitHub Handle |
-   |-------------|------------|---------------|
-   | Shaojin Wen | `/by-contributor/profiles/shaojin-wen.md` | @wenshao |
-   | Daniel Fuchs | `/by-contributor/profiles/daniel-fuchs.md` | @dfuchs |
-   | Claes Redestad | `/by-contributor/profiles/claes-redestad.md` | @cl4es |
-   | Chen Liang | `/by-contributor/profiles/chen-liang.md` | @liach |
-   | Joe Darcy | `/by-contributor/profiles/joe-darcy.md` | | 
-   | Roger Riggs | `/by-contributor/profiles/roger-riggs.md` | @RogerRiggs |
-   | Erik Österlund | `/by-contributor/profiles/erik-osterlund.md` | |
-   | Adam Sotona | `/by-contributor/profiles/adam-sotona.md` | @asotona |
-
-4. **Contributors without local pages** (use GitHub URL or plain text):
-   - Raffaello Giulietti (@rgiulietti)
-   - Stephen Colebourne (@jodastephen)
-
-5. **Examples**:
-   ```markdown
-   # ✅ Correct - local link with GitHub handle
-   > **Author**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) (@wenshao)
-
-   # ✅ Correct - local link without GitHub handle
-   > **Author**: [Erik Österlund](/by-contributor/profiles/erik-osterlund.md)
-
-   # ✅ Correct - no local page, use GitHub URL
-   > **Reviewer**: Raffaello Giulietti (@rgiulietti)
-
-   # ❌ Wrong - plain text when local page exists
-   > **Author**: Shaojin Wen (@wenshao)
-
-   # ❌ Wrong - external GitHub URL when local page exists
-   > **Author**: [Shaojin Wen](https://github.com/wenshao)
-   ```
-
-6. **Before adding contributor links**:
-   - Check if local page exists: `ls by-contributor/profiles/`
-   - Use local link if available
-   - Include GitHub handle in parentheses if known
-   - Keep consistent format across all PR documents
-
-### Research Collaboration Guidelines
-
-When multiple Agents collaborate:
-
-1. **Task Assignment Principles**
-   - Assign by component/topic to avoid duplication
-   - Priority: P1 > P2 > P3 > P4
-   - Related PRs should be handled by the same Agent
-
-2. **Progress Synchronization**
-   - Update index.md upon completion
-   - Add cross-references in related documents
-   - Research log (optional)
-
-3. **Quality Assurance**
-   - P1/P2 documents require cross-validation
-   - Major updates require notifying related document maintainers
-
-## 18. Contribution Statistics Principles
-
-**IMPORTANT: Use GitHub Integrated PRs as the ONLY metric for contribution statistics.**
-
-**Why NOT use git commits?**
-- OpenJDK Committers use `@openjdk.org` email for commits
-- Git commits by company email domain is inaccurate
-- Many contributions are missed when filtering by company email
-- GitHub PRs accurately reflect actual contributions
-
-### PRs 统计方法
-
-**1. Web 界面查询 (推荐)**
-
-访问 GitHub PR 搜索页面：
+**Method 1: Web Interface (Recommended)**
 ```
 https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Aintegrated+is%3Aclosed
 ```
 
-示例：
-- wenshao 的 Integrated PRs: https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Awenshao+label%3Aintegrated+is%3Aclosed
-- shipilev 的 Integrated PRs: https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ashipilev+label%3Aintegrated+is%3Aclosed
-
-**2. GitHub CLI 查询**
-
+**Method 2: GitHub CLI**
 ```bash
-# 获取所有 Integrated PRs 列表
+# Get all integrated PRs
 gh pr list --repo openjdk/jdk --limit 300 \
   --search "author:{username} state:closed label:integrated" \
-  --json number,title,closedAt,labels \
-  --jq '.[] | "\(.number)|\(.title)|\(.closedAt)"'
+  --json number,title,closedAt
 
-# 统计总数
+# Count total
 gh pr list --repo openjdk/jdk --limit 1000 \
   --search "author:{username} state:closed label:integrated" \
   --json number --jq 'length'
 ```
 
-**3. GitHub API 查询**
-
-```bash
-# REST API
-curl "https://api.github.com/search/issues?q=repo:openjdk/jdk+author:{username}+type:pr+label:integrated&per_page=100"
-
-# 返回字段说明
-# - number: PR 编号
-# - title: PR 标题
-# - closed_at: 合入时间 (用于时间线统计)
-# - labels: 包含 "integrated" 标签
-```
-
-**4. 统计维度**
-
-| 维度 | 说明 | 示例 |
-|------|------|------|
-| 总数 | Integrated PRs 总数 | 97 |
-| 年度趋势 | 按年份/季度分组 | 2023: 20, 2024: 63 |
-| 组件分布 | 按 label 分类 | core-libs, security |
-| 影响类型 | 性能优化/重构/Bug修复 | 从标题推断 |
-
-**5. 贡献者页面应包含**
+### Statistics Format
 
 ```markdown
-### 关键指标
+### Key Metrics
 
-| 指标 | 值 |
-|------|-----|
+| Metric | Value |
+|--------|-------|
 | **Integrated PRs** | {count} |
-| **代码变更** | +xxx / -xxx |
-| **主要领域** | xxx |
-| **平均合入时间** | x.x 天 |
+| **Code Changes** | +xxx / -xxx |
+| **Main Focus** | xxx |
+| **Avg Merge Time** | x.x days |
 
-> **统计来源**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+is%3Aclosed+label%3Aintegrated)
-
-### Integrated PRs 统计
-
-**年度趋势**
-**按组件分布**
-**最近 10 个 Integrated PRs**
+> **Source**: [GitHub Integrated PRs](link)
 ```
 
-**Timeline Statistics:**
-- Use PR merge date (`closed_at` field), NOT commit date
-- Group by year for timeline visualization
+### Top Contributors (by PRs)
 
-**Do NOT include:**
-- Git commit counts
-- Contributors without GitHub PRs
-- Commit-based timelines
-
-### Contributor PR Verification
-
-**To verify all PRs are documented for a contributor:**
-
-1. **Get all integrated PRs from GitHub:**
-   ```bash
-   gh pr list --repo openjdk/jdk --limit 300 \
-     --search "author:{username} state:closed label:integrated" \
-     --json number,title --jq '.[] | "\(.number) \(.title)"'
-   ```
-
-   Or use the web interface:
-   ```
-   https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+is%3Aclosed+label%3Aintegrated+
-   ```
-
-2. **Compare with documented PRs:**
-   - Extract Issue numbers from contributor page
-   - Identify missing PRs
-   - Categorize and add to appropriate section
-
-3. **Update statistics:**
-   - Recalculate category distribution
-   - Update total PR count
-   - Adjust percentages accordingly
-
-## 19. Output Language
-
-Prefer responding in **English** for normal assistant messages and explanations.
-
-Keep technical artifacts unchanged:
-- Code blocks, CLI commands, file paths
-- Stack traces, logs, JSON keys
-- Identifiers and exact quoted text
-
-## 20. Link Verification Rule
-
-**CRITICAL: All local links must be verified BEFORE committing changes.**
-
-### Pre-Commit Link Verification Process
-
-**When adding or modifying local links in markdown files:**
-
-1. **Extract all local links from the file**:
-   ```bash
-   # Extract markdown links
-   grep -oE '\]\([^)]+\.md\)' path/to/file.md | sort -u
-   ```
-
-2. **Verify each target file exists**:
-   ```bash
-   # Check if linked files exist
-   for link in $(grep -oE '\]\(../../[^)]+\.md\)' file.md | sed 's/\](//;s/)//'); do
-     target=$(realpath -m "$(dirname file.md)/$link")
-     if [ ! -f "$target" ]; then
-       echo "BROKEN: $link -> $target"
-     fi
-   done
-   ```
-
-3. **Common link patterns in this project**:
-   | From | To | Pattern |
-   |------|-----|---------|
-   | `contributors/orgs/*.md` | `by-contributor/profiles/*.md` | `../../by-contributor/profiles/{name}.md` |
-   | `by-contributor/profiles/*.md` | `contributors/orgs/*.md` | `/contributors/orgs/{org}.md` |
-   | `by-version/jdk26/*.md` | `by-pr/*.md` | `../../by-pr/{issue}/{pr}.md` |
-   | `anywhere` | `jeps/*.md` | `/jeps/{category}/jep-{num}.md` |
-
-4. **Required verification steps**:
-   - [ ] All `../../` relative paths resolved correctly
-   - [ ] All `/absolute` paths point to existing files
-   - [ ] Profile links use correct filenames (lowercase, hyphens)
-   - [ ] Organization links use `orgs/` NOT `organizations/`
-
-### Post-Push Verification
-
-After pushing changes with links, verify via GitHub raw URL:
-1. `https://raw.githubusercontent.com/wenshao/jdk_internal/main/{path/to/file}.md`
-2. Only after successful verification can the task be marked as complete
-
-### Common Link Errors
-
-| Error | Wrong | Correct |
-|-------|-------|---------|
-| Wrong directory | `contributors/organizations/` | `contributors/orgs/` |
-| Case sensitivity | `Thomas-Schatzl.md` | `thomas-schatzl.md` |
-| Missing subdirectory | `by-pr/8336856.md` | `by-pr/8336/8336856.md` |
-| Wrong relative depth | `../profiles/` | `../../by-contributor/profiles/` |
+| Rank | Contributor | PRs | Organization | Focus |
+|------|-------------|-----|--------------|-------|
+| 1 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 803+ | Amazon | GC, JMH |
+| 2 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 200+ | Oracle | C2 Compiler |
+| 3 | [Phil Race](/by-contributor/profiles/phil-race.md) | 200+ | Oracle | Graphics |
+| 4 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 150+ | Oracle | Core Libs |
+| 5 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 97 | Alibaba | Core Libs |
 
 ---
 
-## 21. Pre-Commit Content Verification
+## 5. Quality Checklist
 
-**CRITICAL: All content must be verified BEFORE committing changes.**
+### Before Committing
 
-### Verification Checklist
-
-#### 1. Local Links Verification ✅
-
+**Link Verification** ✅
 ```bash
 # Extract and verify all local links
-grep -oE '\]\([^)]+\.md\)' path/to/file.md | while read link; do
-  # Extract path from markdown link
+grep -oE '\]\([^)]+\.md\)' file.md | while read link; do
   path=$(echo "$link" | sed "s/](//;s/)//")
-  # Resolve relative path
   if [[ "$path" == ../* ]]; then
-    target="$(dirname path/to/file.md)/$path"
-    if [ ! -f "$target" ]; then
-      echo "BROKEN: $path"
-    fi
+    target="$(dirname file.md)/$path"
+    [ ! -f "$target" ] && echo "BROKEN: $path"
   fi
 done
 ```
 
-**Required checks:**
-- [ ] All `../../` relative paths resolved correctly
-- [ ] All `/absolute` paths point to existing files
+**Common Link Errors** ❌
+| Error | Wrong | Correct |
+|-------|-------|---------|
+| Wrong directory | `contributors/organizations/` | `contributors/orgs/` |
+| Case sensitivity | `Thomas-Schatzl.md` | `thomas-schatzl.md` |
+| Missing subdir | `by-pr/8336856.md` | `by-pr/8336/8336856.md` |
+
+**Content Verification** ✅
+- [ ] All local links verified with `ls` or `glob`
 - [ ] Profile links use correct filenames (lowercase, hyphens)
 - [ ] Organization links use `orgs/` NOT `organizations/`
+- [ ] Statistics use GitHub PRs (NOT git commits)
+- [ ] JEP/Issue links are correct
+- [ ] Technical details verified against source
 
-#### 2. Contributor Attribution Verification ✅
+**Structure Verification** ✅
+- [ ] Follows template structure
+- [ ] Section numbers consistent (1, 1.1, 1.1.1)
+- [ ] Tables have headers
+- [ ] Code blocks have language tags
+- [ ] No TODO/待补充 placeholders
 
-**Before documenting contributors:**
+---
 
-| Check | Method | Source |
-|-------|--------|--------|
-| Organization | Check LinkedIn, GitHub bio, OpenJDK census | [OpenJDK Census](https://openjdk.org/census) |
-| PR Count | GitHub PR search with `label:integrated` | GitHub PR Search |
-| Role (Committer/Reviewer) | OpenJDK CFV mailing list | [OpenJDK Mailing Lists](https://mail.openjdk.org/) |
-| Career History | LinkedIn profile | LinkedIn |
+## 6. Common Mistakes
 
-**Common attribution errors:**
-- [ ] Contributor listed under wrong organization
-- [ ] Using git commits instead of GitHub PRs for statistics
-- [ ] Outdated organization (contributor changed jobs)
+### ❌ WRONG vs ✅ CORRECT
 
-**Example verification:**
-```bash
-# Verify contributor's current organization
-# 1. Check GitHub profile
-gh api users/{username} --jq '.company, .bio'
-
-# 2. Check OpenJDK census for email domain
-# https://openjdk.org/census#{username}
-
-# 3. Verify PR count
-gh pr list --repo openjdk/jdk --limit 1000 \
-  --search "author:{username} state:closed label:integrated" \
-  --json number --jq 'length'
+**1. Contribution Statistics**
+```markdown
+❌ Based on git commits: 1,487 commits
+✅ Based on Integrated PRs: 200+ PRs
 ```
 
-#### 3. JEP/Issue Reference Verification ✅
-
-**For each JEP or Issue mentioned:**
-
-| Check | Method |
-|-------|--------|
-| JEP exists | Access `https://openjdk.org/jeps/{number}` |
-| Issue exists | Access `https://bugs.openjdk.org/browse/JDK-{number}` |
-| Version correct | Cross-reference JEP target release |
-| Lead/Owner correct | Check JEP "Owner" field |
-
-**Common errors:**
-- [ ] JEP number typo
-- [ ] Wrong JDK version attribution
-- [ ] JEP Lead attributed to wrong organization
-
-#### 4. Technical Details Verification ✅
-
-**For code examples and technical claims:**
-
-| Check | Method |
-|-------|--------|
-| Code compiles | Test in appropriate JDK version |
-| API exists | Check JDK API documentation |
-| Performance claims | Verify with JMH results or PR discussion |
-| File paths correct | Check against `../jdk` repository |
-
-**Code example verification:**
-```bash
-# Verify file exists in JDK source
-ls ../jdk/src/java.base/share/classes/java/lang/{ClassName}.java
-
-# Verify method signature
-grep -n "public static.*methodName" ../jdk/src/java.base/share/classes/java/lang/{ClassName}.java
+**2. Organization Attribution**
+```markdown
+❌ Aleksey Shipilev - AWS (outdated)
+✅ Aleksey Shipilev - Amazon (current)
 ```
 
-#### 5. Date and Version Verification ✅
+**3. Link Format**
+```markdown
+❌ [Shaojin Wen](https://github.com/wenshao)  # External when local exists
+✅ [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)  # Local
+```
 
-| Check | Method |
-|-------|--------|
-| JDK GA dates | [OpenJDK Releases](https://openjdk.org/projects/jdk/) |
-| JEP delivery versions | JEP status page |
-| PR merge dates | GitHub PR `closed_at` field |
+**4. JDK Version**
+```markdown
+❌ JDK 25 is LTS
+✅ JDK 25 is Feature version (JDK 21/26 are LTS)
+```
 
-**Version mapping:**
-| JDK Version | GA Date | LTS |
-|-------------|---------|-----|
-| JDK 8 | 2014-03 | ✅ |
-| JDK 11 | 2018-09 | ✅ |
-| JDK 17 | 2021-09 | ✅ |
-| JDK 21 | 2023-09 | ✅ |
-| JDK 26 | 2026-03 | ❌ |
+**5. JEP Attribution**
+```markdown
+❌ JEP 514/515/519 belong to JDK 26
+✅ JEP 514/515/519 belong to JDK 25
+```
 
-#### 6. External Links Verification ✅
+---
 
-**For each external URL:**
+## Quick Reference
+
+### Essential Commands
 
 ```bash
-# Check if URL is accessible
-curl -s -o /dev/null -w "%{http_code}" "{url}"
-# Should return 200, not 404 or 403
+# Verify file exists
+ls /path/to/file.md
+
+# Find contributor profile
+ls by-contributor/profiles/{name}.md
+
+# Check PR directory
+ls by-pr/{issue-number}/
+
+# Verify JEP exists
+ls jeps/{category}/jep-{number}.md
+
+# Count PRs for contributor
+gh pr list --repo openjdk/jdk --search "author:{username} label:integrated" --json number --jq 'length'
 ```
 
-**Common external link issues:**
-- [ ] JBS issue links returning 404
-- [ ] GitHub PR links outdated
-- [ ] Blog post links broken
+### Important URLs
 
-#### 7. Statistics Verification ✅
+| Resource | URL |
+|----------|-----|
+| **JDK Repo** | https://github.com/openjdk/jdk |
+| **JBS Issues** | https://bugs.openjdk.org |
+| **OpenJDK Census** | https://openjdk.org/census |
+| **JEP Index** | https://openjdk.org/jeps |
+| **PR Search** | https://github.com/openjdk/jdk/pulls |
 
-**For all numerical claims:**
+### File Patterns
 
-| Statistic | Verification Method |
-|-----------|---------------------|
-| PR counts | GitHub PR search `label:integrated` |
-| Code lines | `git diff --stat` |
-| Performance % | JMH benchmark results in PR |
-| Ranking | Cross-check with OpenJDK Census |
+| Pattern | Example |
+|---------|---------|
+| **Profile** | `by-contributor/profiles/shaojin-wen.md` |
+| **Organization** | `contributors/orgs/oracle.md` |
+| **PR Analysis** | `by-pr/8336/8336856.md` |
+| **JEP** | `jeps/concurrency/jep-506.md` |
+| **Topic** | `by-topic/core/gc/timeline.md` |
 
-**Example:**
-```bash
-# Verify PR count
-gh pr list --repo openjdk/jdk --limit 1000 \
-  --search "author:{username} state:closed label:integrated" \
-  --json number --jq 'length'
+---
 
-# Should match documented count
-```
+## Recent Updates
 
-### Verification Commands Summary
+### 2026-03-21
+- ✅ Added Jaroslav Bachorik (DataDog, JFR tools, 6 PRs)
+- ✅ Fixed all stats to use GitHub Integrated PRs
+- ✅ Corrected JDK 25 as Feature version (not LTS)
+- ✅ Updated contributor rankings by PRs
 
-```bash
-# 1. Check local links
-find . -name "*.md" -exec grep -l "\.\./" {} \; | head -5
+### Key Changes
+| Document | Change |
+|----------|--------|
+| `by-version/index.md` | Fixed JDK 25 LTS error |
+| `contributors/stats/*` | Changed from commits to PRs |
+| `by-contributor/index.md` | Added Jaroslav Bachorik |
+| `by-topic/core/performance/` | Added JEP table, fixed links |
 
-# 2. Verify contributor organization
-gh api users/{username} --jq '.company'
+---
 
-# 3. Verify PR count
-gh pr list --repo openjdk/jdk --limit 1000 \
-  --search "author:{username} state:closed label:integrated" \
-  --json number --jq 'length'
-
-# 4. Check external links
-curl -s -o /dev/null -w "%{http_code}" "https://openjdk.org/jeps/{number}"
-
-# 5. Verify file exists in JDK
-ls ../jdk/src/java.base/share/classes/java/lang/String.java
-```
-
-### Post-Commit Verification
-
-After pushing, verify via GitHub raw URL:
-```
-https://raw.githubusercontent.com/wenshao/jdk_internal/main/{path/to/file}.md
-```
-
-Only after **all** verifications pass can the task be marked as complete.
+**Remember**: 
+1. ✅ Always verify links before committing
+2. ✅ Use GitHub PRs for statistics
+3. ✅ Follow template structures
+4. ✅ Keep technical terms in English
