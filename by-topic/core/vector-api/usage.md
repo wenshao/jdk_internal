@@ -16,7 +16,7 @@
 
 ---
 
-## 基础使用
+## 1. 基础使用
 
 ### 环境配置
 
@@ -94,7 +94,7 @@ System.out.println("字节: " + preferred.vectorByteSize());  // 例如: 32
 
 ---
 
-## 常用操作
+## 2. 常用操作
 
 ### 数组处理模式
 
@@ -215,7 +215,7 @@ void conditionalAdd(float[] a, float[] b, float[] c, float threshold) {
 
 ---
 
-## 高级特性
+## 3. 高级特性
 
 ### 向量重排 (Shuffle)
 
@@ -339,7 +339,7 @@ void shuffleWithMemorySegment(MemorySegment segment) {
 
 ---
 
-## 性能优化
+## 4. 性能优化
 
 ### 1. 选择合适的 Species
 
@@ -441,7 +441,7 @@ void benchmark(float[] a, float[] b) {
 
 ---
 
-## 常见问题
+## 5. 常见问题
 
 ### Q: 为什么向量版本有时更慢?
 
@@ -530,7 +530,7 @@ IntStream.range(0, chunks).parallel().forEach(chunk -> {
 
 ---
 
-## 完整示例: 矩阵乘法
+## 6. 完整示例: 矩阵乘法
 
 ```java
 import jdk.incubator.vector.*;
@@ -589,7 +589,7 @@ public class MatrixMultiply {
 
 ---
 
-## 更多示例
+## 7. 更多示例
 
 ### 图像处理: 亮度调整
 

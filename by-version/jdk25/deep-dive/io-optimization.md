@@ -8,8 +8,21 @@
 [← 返回 JDK 25](../)
 
 ---
+## 目录
 
-## 一眼看懂
+1. [一眼看懂](#1-一眼看懂)
+2. [问题背景](#2-问题背景)
+3. [优化方案](#3-优化方案)
+4. [性能提升](#4-性能提升)
+5. [实际应用场景](#5-实际应用场景)
+6. [技术细节](#6-技术细节)
+7. [相关 PR](#7-相关-pr)
+8. [更多信息](#8-更多信息)
+
+---
+
+
+## 1. 一眼看懂
 
 | 维度 | 内容 |
 |------|------|
@@ -20,7 +33,7 @@
 
 ---
 
-## 问题背景
+## 2. 问题背景
 
 ### Modified UTF-8
 
@@ -51,7 +64,7 @@ while (count < utflen) {
 
 ---
 
-## 优化方案
+## 3. 优化方案
 
 ### readUTF 优化 (JDK-8340232)
 
@@ -80,7 +93,7 @@ class ModifiedUtf {
 
 ---
 
-## 性能提升
+## 4. 性能提升
 
 | 操作 | 优化前 | 优化后 | 提升 |
 |------|--------|--------|------|
@@ -91,7 +104,7 @@ class ModifiedUtf {
 
 ---
 
-## 实际应用场景
+## 5. 实际应用场景
 
 ### Java 序列化
 
@@ -111,7 +124,7 @@ RemoteInterface stub = (RemoteInterface) Naming.lookup("rmi://host/service");
 
 ---
 
-## 技术细节
+## 6. 技术细节
 
 ### JLA (JavaLangAccess)
 
@@ -125,7 +138,7 @@ RemoteInterface stub = (RemoteInterface) Naming.lookup("rmi://host/service");
 
 ---
 
-## 相关 PR
+## 7. 相关 PR
 
 | PR | Issue | 标题 | 提升 |
 |----|-------|------|------|
@@ -134,7 +147,7 @@ RemoteInterface stub = (RemoteInterface) Naming.lookup("rmi://host/service");
 
 ---
 
-## 更多信息
+## 8. 更多信息
 
 - [writeUTF PR 分析](../../by-pr/8339/8339699.md)
 - [readUTF PR 分析](../../by-pr/8340/8340232.md)

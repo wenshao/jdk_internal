@@ -3,8 +3,20 @@
 > Java 模式匹配特性完整指南
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [instanceof 模式匹配](#2-instanceof-模式匹配)
+3. [switch 模式匹配](#3-switch-模式匹配)
+4. [Record Patterns](#4-record-patterns)
+5. [原始类型模式 (JDK 26)](#5-原始类型模式-jdk-26)
+6. [最佳实践](#6-最佳实践)
+7. [相关资源](#7-相关资源)
+
+---
+
+
+## 1. 概述
 
 模式匹配是 Java 的现代特性，简化了类型检查和提取的逻辑。
 
@@ -20,7 +32,7 @@
 
 ---
 
-## instanceof 模式匹配
+## 2. instanceof 模式匹配
 
 ### 传统写法
 
@@ -49,7 +61,7 @@ if (obj instanceof String s && s.length() > 5) {
 
 ---
 
-## switch 模式匹配
+## 3. switch 模式匹配
 
 ### 基本语法
 
@@ -75,7 +87,7 @@ switch (obj) {
 
 ---
 
-## Record Patterns
+## 4. Record Patterns
 
 ### 匹配 Record 组件
 
@@ -106,7 +118,7 @@ if (obj instanceof Box(Point(int x, int y))) {
 
 ---
 
-## 原始类型模式 (JDK 26)
+## 5. 原始类型模式 (JDK 26)
 
 ### instanceof 支持原始类型
 
@@ -129,7 +141,7 @@ switch (value) {
 
 ---
 
-## 最佳实践
+## 6. 最佳实践
 
 ### 1. 优先使用模式匹配
 
@@ -166,7 +178,7 @@ if (obj instanceof Point(int x, int y)) {
 
 ---
 
-## 相关资源
+## 7. 相关资源
 
 - [JEP 394: Pattern Matching for instanceof](https://openjdk.org/jeps/394)
 - [JEP 441: Pattern Matching for switch](https://openjdk.org/jeps/441)

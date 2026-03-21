@@ -6,7 +6,7 @@
 
 ---
 
-## 快速概览
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 1.1 ── JDK 5 ── JDK 8 ── JDK 21
@@ -43,7 +43,7 @@ Date      Calendar JSR 310  java.time 性能优化
 
 ---
 
-## 为什么需要 java.time
+## 2. 为什么需要 java.time
 
 ### 旧 API 的问题
 
@@ -107,7 +107,7 @@ String formatted = LocalDate.now().format(formatter);
 
 ---
 
-## 核心类型
+## 3. 核心类型
 
 ### 类型层次
 
@@ -140,7 +140,7 @@ java.time (核心包)
 
 ---
 
-## LocalDate/LocalTime/LocalDateTime
+## 4. LocalDate/LocalTime/LocalDateTime
 
 ### LocalDate - 日期
 
@@ -295,7 +295,7 @@ LocalTime time = dt.toLocalTime();
 
 ---
 
-## ZonedDateTime/OffsetDateTime
+## 5. ZonedDateTime/OffsetDateTime
 
 ### 时区基础
 
@@ -391,7 +391,7 @@ OffsetDateTime odt = OffsetDateTime.now(ZoneOffset.of("+08:00"));
 
 ---
 
-## Instant/Duration/Period
+## 6. Instant/Duration/Period
 
 ### Instant - 时间戳
 
@@ -494,7 +494,7 @@ LocalDate future = date.plus(Period.of(1, 2, 3));  // 2027-05-23
 
 ---
 
-## DateTimeFormatter
+## 7. DateTimeFormatter
 
 ### 格式化日期时间
 
@@ -565,7 +565,7 @@ LocalDateTime parsedDT = LocalDateTime.parse("2026-03-20 09:30:45",
 
 ---
 
-## 时区处理
+## 8. 时区处理
 
 ### 时区转换
 
@@ -643,7 +643,7 @@ ZoneOffset offset = ZoneOffset.ofTotalSeconds(28800);  // UTC+8
 
 ---
 
-## 性能优化实战
+## 9. 性能优化实战
 
 ### toString 优化 (JDK-8337832)
 
@@ -745,7 +745,7 @@ public class DateTimeBenchmarks {
 
 ---
 
-## 最佳实践
+## 10. 最佳实践
 
 ### 类型选择
 
@@ -836,7 +836,7 @@ if (date1.compareTo(date2) < 0) {  // ❌ 不清晰
 
 ---
 
-## 核心贡献者
+## 11. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -858,7 +858,7 @@ if (date1.compareTo(date2) < 0) {  // ❌ 不清晰
 
 ---
 
-## 相关链接
+## 12. 相关链接
 
 ### 内部文档
 

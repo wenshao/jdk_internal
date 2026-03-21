@@ -3,8 +3,27 @@
 Java XML 和 JSON 处理从 JDK 1.0 到 JDK 26 的完整演进历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [XML 处理](#2-xml-处理)
+3. [JDK 4 - DOM 和 SAX](#3-jdk-4---dom-和-sax)
+4. [JDK 6 - StAX (JSR 173)](#4-jdk-6---stax-jsr-173)
+5. [JAXB (XML 绑定)](#5-jaxb-xml-绑定)
+6. [JSON 处理](#6-json-处理)
+7. [JSON-P (javax.json)](#7-json-p-javaxjson)
+8. [Jackson](#8-jackson)
+9. [Gson](#9-gson)
+10. [JDK 21+ - JSON API 更新](#10-jdk-21---json-api-更新)
+11. [XML vs JSON](#11-xml-vs-json)
+12. [选择建议](#12-选择建议)
+13. [时间线总结](#13-时间线总结)
+14. [相关链接](#14-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 4 ──── JDK 6 ──── JDK 9 ──── JDK 11 ──── JDK 21 ──── JDK 26
@@ -15,7 +34,7 @@ No XML        DOM/SAX     StAX       JAXB      JSON API   JSON-P     Structured
 
 ---
 
-## XML 处理
+## 2. XML 处理
 
 ### XML 处理模型对比
 
@@ -52,7 +71,7 @@ No XML        DOM/SAX     StAX       JAXB      JSON API   JSON-P     Structured
 
 ---
 
-## JDK 4 - DOM 和 SAX
+## 3. JDK 4 - DOM 和 SAX
 
 ### DOM 解析
 
@@ -161,7 +180,7 @@ parser.parse("input.xml", handler);
 
 ---
 
-## JDK 6 - StAX (JSR 173)
+## 4. JDK 6 - StAX (JSR 173)
 
 ### XMLStreamWriter
 
@@ -270,7 +289,7 @@ while (eventReader.hasNext()) {
 
 ---
 
-## JAXB (XML 绑定)
+## 5. JAXB (XML 绑定)
 
 ### JAXB 注解
 
@@ -331,7 +350,7 @@ Book parsedBook = (Book) unmarshaller.unmarshal(new File("book.xml"));
 
 ---
 
-## JSON 处理
+## 6. JSON 处理
 
 ### JSON 处理模型
 
@@ -365,7 +384,7 @@ Book parsedBook = (Book) unmarshaller.unmarshal(new File("book.xml"));
 
 ---
 
-## JSON-P (javax.json)
+## 7. JSON-P (javax.json)
 
 ### 对象模型 API
 
@@ -458,7 +477,7 @@ while (parser.hasNext()) {
 
 ---
 
-## Jackson
+## 8. Jackson
 
 ### ObjectMapper
 
@@ -543,7 +562,7 @@ Map<String, Object> parsedMap = mapper.readValue(json,
 
 ---
 
-## Gson
+## 9. Gson
 
 ### 基础使用
 
@@ -601,7 +620,7 @@ public class User {
 
 ---
 
-## JDK 21+ - JSON API 更新
+## 10. JDK 21+ - JSON API 更新
 
 ### JSON-P 2.0
 
@@ -630,7 +649,7 @@ JsonObject merged = Json.createMergePatch(mergePatch)
 
 ---
 
-## XML vs JSON
+## 11. XML vs JSON
 
 | 特性 | XML | JSON |
 |------|-----|------|
@@ -645,7 +664,7 @@ JsonObject merged = Json.createMergePatch(mergePatch)
 
 ---
 
-## 选择建议
+## 12. 选择建议
 
 ### XML 处理
 
@@ -667,7 +686,7 @@ JsonObject merged = Json.createMergePatch(mergePatch)
 
 ---
 
-## 时间线总结
+## 13. 时间线总结
 
 | 版本 | 特性 | 说明 |
 |------|------|------|
@@ -682,7 +701,7 @@ JsonObject merged = Json.createMergePatch(mergePatch)
 
 ---
 
-## 相关链接
+## 14. 相关链接
 
 - [JAXP](https://docs.oracle.com/javase/8/docs/api/javax/xml/parsers/package-summary.html)
 - [JSON-P](https://eclipse-ee4j.github.io/jsonp/)

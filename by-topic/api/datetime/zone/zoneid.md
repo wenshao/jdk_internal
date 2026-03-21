@@ -3,8 +3,29 @@
 > java.time.ZoneId 的完整实现分析
 
 ---
+## 目录
 
-## 类声明
+1. [类声明](#1-类声明)
+2. [类型层次结构](#2-类型层次结构)
+3. [字段定义](#3-字段定义)
+4. [工厂方法](#4-工厂方法)
+5. [ZoneRegion 内部实现](#5-zoneregion-内部实现)
+6. [抽象方法](#6-抽象方法)
+7. [实例方法](#7-实例方法)
+8. [序列化机制](#8-序列化机制)
+9. [时区 ID 类型](#9-时区-id-类型)
+10. [可用时区 ID](#10-可用时区-id)
+11. [线程安全](#11-线程安全)
+12. [性能特性](#12-性能特性)
+13. [与旧 API 对比](#13-与旧-api-对比)
+14. [常见使用场景](#14-常见使用场景)
+15. [最佳实践](#15-最佳实践)
+16. [相关文档](#16-相关文档)
+
+---
+
+
+## 1. 类声明
 
 ```java
 @jdk.internal.ValueBased
@@ -22,7 +43,7 @@ public abstract sealed class ZoneId implements Serializable
 
 ---
 
-## 类型层次结构
+## 2. 类型层次结构
 
 ```
                     ZoneId (abstract sealed)
@@ -52,7 +73,7 @@ public abstract sealed class ZoneId implements Serializable
 
 ---
 
-## 字段定义
+## 3. 字段定义
 
 ### SHORT_IDS - 短时区名称映射
 
@@ -102,7 +123,7 @@ public static final Map<String, String> SHORT_IDS = Map.ofEntries(
 
 ---
 
-## 工厂方法
+## 4. 工厂方法
 
 ### systemDefault() - 获取系统默认时区
 
@@ -195,7 +216,7 @@ public static ZoneId ofOffset(String prefix, ZoneOffset offset) {
 
 ---
 
-## ZoneRegion 内部实现
+## 5. ZoneRegion 内部实现
 
 ### 字段存储
 
@@ -283,7 +304,7 @@ public ZoneRules getRules() {
 
 ---
 
-## 抽象方法
+## 6. 抽象方法
 
 ### getId() - 获取时区 ID
 
@@ -316,7 +337,7 @@ abstract ZoneOffset getOffset(long epochSecond);
 
 ---
 
-## 实例方法
+## 7. 实例方法
 
 ### normalized() - 规范化
 
@@ -384,7 +405,7 @@ stream.map(ZoneId::from)
 
 ---
 
-## 序列化机制
+## 8. 序列化机制
 
 ### ZoneId 序列化
 
@@ -433,7 +454,7 @@ unknown.getRules();        // 抛出 ZoneRulesException
 
 ---
 
-## 时区 ID 类型
+## 9. 时区 ID 类型
 
 ### 类型 1: 固定偏移 (ZoneOffset)
 
@@ -472,7 +493,7 @@ Australia/Sydney
 
 ---
 
-## 可用时区 ID
+## 10. 可用时区 ID
 
 ```java
 public static Set<String> getAvailableZoneIds() {
@@ -499,7 +520,7 @@ ZoneId.getAvailableZoneIds().stream()
 
 ---
 
-## 线程安全
+## 11. 线程安全
 
 ### ZoneId 线程安全保证
 
@@ -520,7 +541,7 @@ public String getDisplayName(...) { ... }
 
 ---
 
-## 性能特性
+## 12. 性能特性
 
 ### 规则缓存
 
@@ -554,7 +575,7 @@ ZoneId.of("CTT", ZoneId.SHORT_IDS);  // Asia/Shanghai
 
 ---
 
-## 与旧 API 对比
+## 13. 与旧 API 对比
 
 ### java.util.TimeZone vs ZoneId
 
@@ -582,7 +603,7 @@ ZoneOffset offset = rules.getOffset(Instant.now());
 
 ---
 
-## 常见使用场景
+## 14. 常见使用场景
 
 ### 获取系统时区
 
@@ -630,7 +651,7 @@ ZonedDateTime now = ZonedDateTime.now(zone);
 
 ---
 
-## 最佳实践
+## 15. 最佳实践
 
 ### ✅ 推荐
 
@@ -662,7 +683,7 @@ for (int i = 0; i < 1000; i++) {
 
 ---
 
-## 相关文档
+## 16. 相关文档
 
 - [ZoneOffset 实现](zoneoffset.md)
 - [ZoneRules 实现](zonerules.md)

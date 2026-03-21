@@ -5,8 +5,24 @@
 [← 返回 GC](../)
 
 ---
+## 目录
 
-## 选择 GC
+1. [选择 GC](#1-选择-gc)
+2. [通用 GC 参数](#2-通用-gc-参数)
+3. [Serial GC 参数](#3-serial-gc-参数)
+4. [Parallel GC 参数](#4-parallel-gc-参数)
+5. [G1 GC 参数](#5-g1-gc-参数)
+6. [ZGC 参数](#6-zgc-参数)
+7. [Shenandoah GC 参数](#7-shenandoah-gc-参数)
+8. [诊断参数](#8-诊断参数)
+9. [实验性参数](#9-实验性参数)
+10. [快速参考](#10-快速参考)
+11. [相关链接](#11-相关链接)
+
+---
+
+
+## 1. 选择 GC
 
 ### GC 选择器
 
@@ -39,7 +55,7 @@ java -XX:+PrintCommandLineFlags -version | grep -E 'Use.*GC'
 
 ---
 
-## 通用 GC 参数
+## 2. 通用 GC 参数
 
 ### 堆大小
 
@@ -108,7 +124,7 @@ java -XX:+PrintCommandLineFlags -version | grep -E 'Use.*GC'
 
 ---
 
-## Serial GC 参数
+## 3. Serial GC 参数
 
 ```bash
 # 基础
@@ -124,7 +140,7 @@ java -XX:+PrintCommandLineFlags -version | grep -E 'Use.*GC'
 
 ---
 
-## Parallel GC 参数
+## 4. Parallel GC 参数
 
 ### 基础配置
 
@@ -164,7 +180,7 @@ java -XX:+PrintCommandLineFlags -version | grep -E 'Use.*GC'
 
 ---
 
-## G1 GC 参数
+## 5. G1 GC 参数
 
 ### 基础配置
 
@@ -208,7 +224,7 @@ java -XX:+PrintCommandLineFlags -version | grep -E 'Use.*GC'
 
 ---
 
-## ZGC 参数
+## 6. ZGC 参数
 
 ### 基础配置
 
@@ -249,7 +265,7 @@ java -XX:+PrintCommandLineFlags -version | grep -E 'Use.*GC'
 
 ---
 
-## Shenandoah GC 参数
+## 7. Shenandoah GC 参数
 
 ### 基础配置
 
@@ -294,7 +310,7 @@ java -XX:+PrintCommandLineFlags -version | grep -E 'Use.*GC'
 
 ---
 
-## 诊断参数
+## 8. 诊断参数
 
 ### GC 日志
 
@@ -335,7 +351,7 @@ java -XX:+PrintCommandLineFlags -version | grep -E 'Use.*GC'
 
 ---
 
-## 实验性参数
+## 9. 实验性参数
 
 ### 启用诊断选项
 
@@ -361,7 +377,7 @@ java -XX:+PrintCommandLineFlags -version | grep -E 'Use.*GC'
 
 ---
 
-## 快速参考
+## 10. 快速参考
 
 ### 选择 GC 决策树
 
@@ -398,7 +414,7 @@ java -XX:+PrintCommandLineFlags -version | grep -E 'Use.*GC'
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 - [G1 GC 详解](g1-gc.md) - G1 专用参数
 - [ZGC 详解](zgc.md) - ZGC 专用参数

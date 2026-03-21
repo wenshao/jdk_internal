@@ -3,8 +3,29 @@
 > java.time.ZoneOffset 的完整实现分析
 
 ---
+## 目录
 
-## 类声明
+1. [类声明](#1-类声明)
+2. [字段存储](#2-字段存储)
+3. [常量定义](#3-常量定义)
+4. [缓存机制](#4-缓存机制)
+5. [工厂方法](#5-工厂方法)
+6. [ID 构建算法](#6-id-构建算法)
+7. [字段访问方法](#7-字段访问方法)
+8. [TemporalAccessor 实现](#8-temporalaccessor-实现)
+9. [TemporalAdjuster 实现](#9-temporaladjuster-实现)
+10. [比较](#10-比较)
+11. [序列化机制](#11-序列化机制)
+12. [性能特性](#12-性能特性)
+13. [使用示例](#13-使用示例)
+14. [与 ZoneId 关系](#14-与-zoneid-关系)
+15. [常见偏移速查表](#15-常见偏移速查表)
+16. [相关文档](#16-相关文档)
+
+---
+
+
+## 1. 类声明
 
 ```java
 @jdk.internal.ValueBased
@@ -21,7 +42,7 @@ public final class ZoneOffset
 
 ---
 
-## 字段存储
+## 2. 字段存储
 
 ```java
 /**
@@ -53,7 +74,7 @@ private transient ZoneRules rules;
 
 ---
 
-## 常量定义
+## 3. 常量定义
 
 ```java
 /**
@@ -86,7 +107,7 @@ public static final ZoneOffset MAX = ZoneOffset.ofTotalSeconds(MAX_SECONDS);   /
 
 ---
 
-## 缓存机制
+## 4. 缓存机制
 
 ### QUARTER_CACHE - 15分钟增量缓存
 
@@ -122,7 +143,7 @@ private static final ConcurrentMap<String, ZoneOffset> ID_CACHE = new Concurrent
 
 ---
 
-## 工厂方法
+## 5. 工厂方法
 
 ### of(String) - 从字符串解析
 
@@ -249,7 +270,7 @@ public static ZoneOffset ofTotalSeconds(int totalSeconds) {
 
 ---
 
-## ID 构建算法
+## 6. ID 构建算法
 
 ### buildId() - 生成标准化 ID
 
@@ -288,7 +309,7 @@ private static String buildId(int totalSeconds) {
 
 ---
 
-## 字段访问方法
+## 7. 字段访问方法
 
 ```java
 /**
@@ -325,7 +346,7 @@ public ZoneRules getRules() {
 
 ---
 
-## TemporalAccessor 实现
+## 8. TemporalAccessor 实现
 
 ### isSupported()
 
@@ -367,7 +388,7 @@ public long getLong(TemporalField field) {
 
 ---
 
-## TemporalAdjuster 实现
+## 9. TemporalAdjuster 实现
 
 ```java
 @Override
@@ -386,7 +407,7 @@ ZonedDateTime utc = ZoneOffset.UTC.adjustInto(now);
 
 ---
 
-## 比较
+## 10. 比较
 
 ### compareTo()
 
@@ -427,7 +448,7 @@ public int hashCode() {
 
 ---
 
-## 序列化机制
+## 11. 序列化机制
 
 ### 压缩存储
 
@@ -459,7 +480,7 @@ static ZoneOffset readExternal(DataInput in) throws IOException {
 
 ---
 
-## 性能特性
+## 12. 性能特性
 
 ### 缓存命中率
 
@@ -494,7 +515,7 @@ ZoneOffset o3 = ZoneOffset.ofHoursMinutes(8, 0);
 
 ---
 
-## 使用示例
+## 13. 使用示例
 
 ### 创建偏移
 
@@ -549,7 +570,7 @@ try {
 
 ---
 
-## 与 ZoneId 关系
+## 14. 与 ZoneId 关系
 
 ```java
 ZoneId zone1 = ZoneId.of("Z");           // 返回 ZoneOffset
@@ -563,7 +584,7 @@ ZoneOffset offset = (ZoneOffset) zone.normalized();  // Z
 
 ---
 
-## 常见偏移速查表
+## 15. 常见偏移速查表
 
 | 地区 | 偏移 | 代码 |
 |------|------|------|
@@ -580,7 +601,7 @@ ZoneOffset offset = (ZoneOffset) zone.normalized();  // Z
 
 ---
 
-## 相关文档
+## 16. 相关文档
 
 - [ZoneId 实现](zoneid.md)
 - [ZoneRules 实现](zonerules.md)

@@ -1,9 +1,9 @@
-## Agent Context
+## 1. Agent Context
 
 - `../jdk` is the JDK source code repository
 - This project analyzes JDK issues, pull requests, and source code to create documentation that is easy for both humans and AI to read
 
-## Project Structure
+## 2. Project Structure
 
 ```
 jdk_internal/
@@ -54,7 +54,7 @@ jdk_internal/
     └── ...
 ```
 
-## 文档组织原则
+## 3. 文档组织原则
 
 ### 多版本视角
 
@@ -85,7 +85,7 @@ jdk_internal/
 | JDK 21 | 高 | 当前 LTS，重点内容 |
 | JDK 26 | 最高 | 已发布 (GA 2026-03-17)，详细追踪 |
 
-## Documentation Standards
+## 4. Documentation Standards
 
 ### Version Documents (by-version/{jdkxx}/)
 
@@ -116,7 +116,7 @@ jdk_internal/
 
 时间线格式：
 ```markdown
-## {Topic} 演进时间线
+## 5. {Topic} 演进时间线
 
 | 版本 | 主要变化 | 影响 |
 |------|----------|------|
@@ -136,13 +136,13 @@ jdk_internal/
 
 > **Issue**: [链接] | **Author**: 名字 | **Impact**: ⭐⭐⭐⭐
 
-## 一眼看懂
-## 背景
-## 问题分析
-## 解决方案
-## 性能对比
-## 风险评估
-## 相关 PR
+## 6. 一眼看懂
+## 7. 背景
+## 8. 问题分析
+## 9. 解决方案
+## 10. 性能对比
+## 11. 风险评估
+## 12. 相关 PR
 ```
 
 ### Document Structure Standards
@@ -172,7 +172,7 @@ jdk_internal/
 #### 章节标题格式
 
 ```markdown
-## 1. 章节标题
+## 13. 1. 章节标题
 
 内容...
 
@@ -221,17 +221,17 @@ jdk_internal/
 
 ---
 
-## 1. 职业时间线
+## 14. 1. 职业时间线
 
 ...
 
-## 2. 概要
+## 15. 2. 概要
 
 ### 2.1 基本信息
 
 ...
 
-## 3. 技术贡献
+## 16. 3. 技术贡献
 
 ### 3.1 核心贡献领域
 
@@ -242,7 +242,7 @@ jdk_internal/
 ...
 ```
 
-## Research Methodology
+## 17. Research Methodology
 
 ### Research Quality Levels
 
@@ -577,7 +577,7 @@ When multiple Agents collaborate:
    - P1/P2 documents require cross-validation
    - Major updates require notifying related document maintainers
 
-## Contribution Statistics Principles
+## 18. Contribution Statistics Principles
 
 **IMPORTANT: Use GitHub Integrated PRs as the ONLY metric for contribution statistics.**
 
@@ -693,7 +693,7 @@ curl "https://api.github.com/search/issues?q=repo:openjdk/jdk+author:{username}+
    - Update total PR count
    - Adjust percentages accordingly
 
-## Output Language
+## 19. Output Language
 
 Prefer responding in **English** for normal assistant messages and explanations.
 
@@ -702,7 +702,7 @@ Keep technical artifacts unchanged:
 - Stack traces, logs, JSON keys
 - Identifiers and exact quoted text
 
-## Link Verification Rule
+## 20. Link Verification Rule
 
 **CRITICAL: All local links must be verified BEFORE committing changes.**
 
@@ -758,7 +758,7 @@ After pushing changes with links, verify via GitHub raw URL:
 
 ---
 
-## Pre-Commit Content Verification
+## 21. Pre-Commit Content Verification
 
 **CRITICAL: All content must be verified BEFORE committing changes.**
 

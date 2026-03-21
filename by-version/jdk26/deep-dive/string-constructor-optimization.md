@@ -8,8 +8,22 @@
 [← 返回 JDK 26](../)
 
 ---
+## 目录
 
-## 一眼看懂
+1. [一眼看懂](#1-一眼看懂)
+2. [问题背景](#2-问题背景)
+3. [优化方案](#3-优化方案)
+4. [性能提升](#4-性能提升)
+5. [实际应用场景](#5-实际应用场景)
+6. [技术细节](#6-技术细节)
+7. [相关优化](#7-相关优化)
+8. [贡献者](#8-贡献者)
+9. [更多信息](#9-更多信息)
+
+---
+
+
+## 1. 一眼看懂
 
 | 维度 | 内容 |
 |------|------|
@@ -20,7 +34,7 @@
 
 ---
 
-## 问题背景
+## 2. 问题背景
 
 ### JIT 内联阈值
 
@@ -47,7 +61,7 @@ Charset.defaultCharset()
 
 ---
 
-## 优化方案
+## 3. 优化方案
 
 ### 拆分前 vs 拆分后
 
@@ -87,7 +101,7 @@ private static String create(byte[] value, int coder) {
 
 ---
 
-## 性能提升
+## 4. 性能提升
 
 | 场景 | 优化前 | 优化后 | 提升 |
 |------|--------|--------|------|
@@ -97,7 +111,7 @@ private static String create(byte[] value, int coder) {
 
 ---
 
-## 实际应用场景
+## 5. 实际应用场景
 
 ### 1. JSON 反序列化
 
@@ -124,7 +138,7 @@ String content = Files.readString(path, StandardCharsets.UTF_8);
 
 ---
 
-## 技术细节
+## 6. 技术细节
 
 ### 为什么是 325 bytes？
 
@@ -144,7 +158,7 @@ product(intx, FreqInlineSize, 325,
 
 ---
 
-## 相关优化
+## 7. 相关优化
 
 同一作者 (Shaojin Wen) 的其他 String 优化：
 
@@ -156,7 +170,7 @@ product(intx, FreqInlineSize, 325,
 
 ---
 
-## 贡献者
+## 8. 贡献者
 
 **作者**: [Shaojin Wen (温绍锦)](/by-contributor/profiles/shaojin-wen.md)
 - **组织**: [Alibaba](/contributors/orgs/alibaba.md)
@@ -169,7 +183,7 @@ product(intx, FreqInlineSize, 325,
 
 ---
 
-## 更多信息
+## 9. 更多信息
 
 - [完整 PR 分析](/by-pr/8357/8357289.md) - 包含设计决策、代码审查要点
 - [贡献者档案](/by-contributor/profiles/shaojin-wen.md) - Shaojin Wen

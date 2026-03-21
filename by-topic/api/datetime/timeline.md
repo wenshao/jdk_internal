@@ -3,8 +3,24 @@
 Java 日期时间 API 从 JDK 1.0 到 JDK 26 的完整演进历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [旧 API 问题](#2-旧-api-问题)
+3. [JDK 8 - java.time (JSR 310)](#3-jdk-8---javatime-jsr-310)
+4. [JDK 8-21 - 持续改进](#4-jdk-8-21---持续改进)
+5. [JDK 16 - Timeline Format](#5-jdk-16---timeline-format)
+6. [JDK 21 - 传统日期包废弃](#6-jdk-21---传统日期包废弃)
+7. [JDK 22-24 - 性能优化](#7-jdk-22-24---性能优化)
+8. [日期时间选择指南](#8-日期时间选择指南)
+9. [最佳实践](#9-最佳实践)
+10. [时间线总结](#10-时间线总结)
+11. [相关链接](#11-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 1.1 ──── JDK 5 ──── JDK 8 ──── JDK 16 ──── JDK 21 ──── JDK 26
@@ -15,7 +31,7 @@ Date          Calendar      Scanner     java.time   Timeline    传统日期    
 
 ---
 
-## 旧 API 问题
+## 2. 旧 API 问题
 
 ### Date 和 Calendar 的缺陷
 
@@ -52,7 +68,7 @@ Date date = sdf.parse("2024-03-20");
 
 ---
 
-## JDK 8 - java.time (JSR 310)
+## 3. JDK 8 - java.time (JSR 310)
 
 ### 核心类
 
@@ -354,7 +370,7 @@ LocalDate nextWorkDayDate = date.with(nextWorkDay);
 
 ---
 
-## JDK 8-21 - 持续改进
+## 4. JDK 8-21 - 持续改进
 
 ### Clock (JDK 8)
 
@@ -429,7 +445,7 @@ Date toDate = Date.from(ldt.atZone(ZoneId.systemDefault()).toInstant());
 
 ---
 
-## JDK 16 - Timeline Format
+## 5. JDK 16 - Timeline Format
 
 ### Timeline Format
 
@@ -443,7 +459,7 @@ String formatted = now.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
 
 ---
 
-## JDK 21 - 传统日期包废弃
+## 6. JDK 21 - 传统日期包废弃
 
 ### java.util.Date 废弃
 
@@ -460,7 +476,7 @@ LocalDate.now();
 
 ---
 
-## JDK 22-24 - 性能优化
+## 7. JDK 22-24 - 性能优化
 
 ### JDK 22 - ISO 日期格式修复 (JDK-8317742)
 
@@ -660,7 +676,7 @@ int value = switch (fieldName) {
 
 ---
 
-## 日期时间选择指南
+## 8. 日期时间选择指南
 
 ### 类选择
 
@@ -684,7 +700,7 @@ int value = switch (fieldName) {
 
 ---
 
-## 最佳实践
+## 9. 最佳实践
 
 ### 使用新 API
 
@@ -721,7 +737,7 @@ int month = 2;  // 容易出错 (3月应该是 2 还是 3?)
 
 ---
 
-## 时间线总结
+## 10. 时间线总结
 
 | 版本 | 特性 | 说明 |
 |------|------|------|
@@ -733,7 +749,7 @@ int month = 2;  // 容易出错 (3月应该是 2 还是 3?)
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 - [java.time 包](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/package-summary.html)
 - [JSR 310: Date and Time API](https://jcp.org/en/jsr/detail?id=310)

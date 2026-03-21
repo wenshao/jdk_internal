@@ -3,8 +3,24 @@
 Java 类加载器从 JDK 1.0 到 JDK 26 的完整演进历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [类加载器层次](#2-类加载器层次)
+3. [JDK 1.2 - ClassLoader](#3-jdk-12---classloader)
+4. [JDK 5 - 线程上下文类加载器](#4-jdk-5---线程上下文类加载器)
+5. [JDK 6 - Instrumentation](#5-jdk-6---instrumentation)
+6. [JDK 7 - ServiceLoader](#6-jdk-7---serviceloader)
+7. [JDK 9+ - 模块类加载](#7-jdk-9---模块类加载)
+8. [JDK 17+ - 封装类加载](#8-jdk-17---封装类加载)
+9. [类加载问题排查](#9-类加载问题排查)
+10. [时间线总结](#10-时间线总结)
+11. [相关链接](#11-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 1.2 ──── JDK 5 ──── JDK 6 ──── JDK 7 ──── JDK 9 ──── JDK 17 ──── JDK 26
@@ -16,7 +32,7 @@ Extension    类加载器     处理器     Loader      类加载      加载
 
 ---
 
-## 类加载器层次
+## 2. 类加载器层次
 
 ### 双亲委派模型
 
@@ -78,7 +94,7 @@ Extension    类加载器     处理器     Loader      类加载      加载
 
 ---
 
-## JDK 1.2 - ClassLoader
+## 3. JDK 1.2 - ClassLoader
 
 ### 自定义类加载器
 
@@ -158,7 +174,7 @@ public class MyClassLoader extends ClassLoader {
 
 ---
 
-## JDK 5 - 线程上下文类加载器
+## 4. JDK 5 - 线程上下文类加载器
 
 ### ContextClassLoader
 
@@ -181,7 +197,7 @@ for (Driver driver : drivers) {
 
 ---
 
-## JDK 6 - Instrumentation
+## 5. JDK 6 - Instrumentation
 
 ### ClassFileTransformer
 
@@ -220,7 +236,7 @@ public class MyAgent {
 
 ---
 
-## JDK 7 - ServiceLoader
+## 6. JDK 7 - ServiceLoader
 
 ### SPI 机制
 
@@ -254,7 +270,7 @@ for (UserService service : services) {
 
 ---
 
-## JDK 9+ - 模块类加载
+## 7. JDK 9+ - 模块类加载
 
 ### 模块类加载
 
@@ -279,7 +295,7 @@ System.out.println(module.getName());  // java.base
 
 ---
 
-## JDK 17+ - 封装类加载
+## 8. JDK 17+ - 封装类加载
 
 ### 强封装
 
@@ -297,7 +313,7 @@ Class<?> unsafeClass = Class.forName("sun.misc.Unsafe");
 
 ---
 
-## 类加载问题排查
+## 9. 类加载问题排查
 
 ### ClassNotFoundException
 
@@ -351,7 +367,7 @@ MyClass obj2 = (MyClass) clazz2.newInstance();  // ClassCastException!
 
 ---
 
-## 时间线总结
+## 10. 时间线总结
 
 | 版本 | 特性 | 说明 |
 |------|------|------|
@@ -366,7 +382,7 @@ MyClass obj2 = (MyClass) clazz2.newInstance();  // ClassCastException!
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 - [ClassLoader](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/ClassLoader.html)
 - [ServiceLoader](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ServiceLoader.html)

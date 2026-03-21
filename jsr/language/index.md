@@ -3,8 +3,17 @@
 > Java 语言规范相关 JSR
 
 ---
+## 目录
 
-## 概览
+1. [概览](#1-概览)
+2. [孵化项目](#2-孵化项目)
+3. [详解](#3-详解)
+4. [相关链接](#4-相关链接)
+
+---
+
+
+## 1. 概览
 
 | JSR | 标题 | JDK | 状态 | 说明 |
 |-----|------|-----|------|------|
@@ -18,7 +27,7 @@
 
 ---
 
-## 孵化项目
+## 2. 孵化项目
 
 ### Project Valhalla (值类型)
 
@@ -34,7 +43,7 @@ value record Point(int x, int y) { }
 
 ---
 
-## 详解
+## 3. 详解
 
 - [JSR 335: Lambda Expressions](jsr-335.md) ⭐
 
@@ -46,7 +55,7 @@ value record Point(int x, int y) { }
 
 ---
 
-## 相关链接
+## 4. 相关链接
 
 - [JCP JSR 列表](https://jcp.org/en/jsr/all)
 - [OpenJDK JEPs](https://openjdk.org/jeps/)

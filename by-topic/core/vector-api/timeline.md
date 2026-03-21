@@ -5,8 +5,20 @@
 [← 返回 Vector API](./)
 
 ---
+## 目录
 
-## 演进概览
+1. [演进概览](#1-演进概览)
+2. [版本详情](#2-版本详情)
+3. [各版本 API 对比](#3-各版本-api-对比)
+4. [平台支持演进](#4-平台支持演进)
+5. [性能演进](#5-性能演进)
+6. [未来方向](#6-未来方向)
+7. [相关 JEP](#7-相关-jep)
+
+---
+
+
+## 1. 演进概览
 
 ```
 JDK 16 (2021-03) ── JEP 338 ── First Incubator
@@ -41,7 +53,7 @@ JDK 27 (2026-09) ──────────── 开发中
 
 ---
 
-## 版本详情
+## 2. 版本详情
 
 ### JDK 16: JEP 338 (First Incubator)
 
@@ -233,7 +245,7 @@ boolean hasAVX512 = features.hasFeature("avx512f");
 
 ---
 
-## 各版本 API 对比
+## 3. 各版本 API 对比
 
 ### 创建向量
 
@@ -278,7 +290,7 @@ FloatVector sqrt = a.lanewise(VectorOperators.SQRT);
 
 ---
 
-## 平台支持演进
+## 4. 平台支持演进
 
 | 平台 | JDK 16 | JDK 17 | JDK 18 | JDK 19 | JDK 20 | JDK 21 | JDK 22-26 |
 |------|--------|--------|--------|--------|--------|--------|-----------|
@@ -294,7 +306,7 @@ FloatVector sqrt = a.lanewise(VectorOperators.SQRT);
 
 ---
 
-## 性能演进
+## 5. 性能演进
 
 ### 基准测试: 向量加法 (1M 元素)
 
@@ -311,7 +323,7 @@ FloatVector sqrt = a.lanewise(VectorOperators.SQRT);
 
 ---
 
-## 未来方向
+## 6. 未来方向
 
 ### 短期 (JDK 24-25)
 
@@ -333,7 +345,7 @@ FloatVector sqrt = a.lanewise(VectorOperators.SQRT);
 
 ---
 
-## 相关 JEP
+## 7. 相关 JEP
 
 | JEP | 版本 | 标题 |
 |-----|------|------|

@@ -3,8 +3,30 @@
 > java.time.Instant 的完整实现分析
 
 ---
+## 目录
 
-## 类声明
+1. [类声明](#1-类声明)
+2. [字段存储](#2-字段存储)
+3. [常量定义](#3-常量定义)
+4. [Java 时间标度](#4-java-时间标度)
+5. [工厂方法](#5-工厂方法)
+6. [核心方法](#6-核心方法)
+7. [时间计算](#7-时间计算)
+8. [JDK 26 新增: plusSaturating()](#8-jdk-26-新增-plussaturating)
+9. [比较方法](#9-比较方法)
+10. [until() - 时间差计算](#10-until---时间差计算)
+11. [转换方法](#11-转换方法)
+12. [序列化机制](#12-序列化机制)
+13. [使用示例](#13-使用示例)
+14. [性能特性](#14-性能特性)
+15. [常见陷阱](#15-常见陷阱)
+16. [与其他类的关系](#16-与其他类的关系)
+17. [相关文档](#17-相关文档)
+
+---
+
+
+## 1. 类声明
 
 ```java
 @jdk.internal.ValueBased
@@ -20,7 +42,7 @@ public final class Instant
 
 ---
 
-## 字段存储
+## 2. 字段存储
 
 ### 两字段组合
 
@@ -48,7 +70,7 @@ private final int nanos;
 
 ---
 
-## 常量定义
+## 3. 常量定义
 
 ### MIN / MAX / EPOCH
 
@@ -94,7 +116,7 @@ public static final Instant MAX = Instant.ofEpochSecond(MAX_SECOND, 999_999_999)
 
 ---
 
-## Java 时间标度
+## 4. Java 时间标度
 
 ### 时间标度定义
 
@@ -142,7 +164,7 @@ Java Time-Scale (UTC-SLS):
 
 ---
 
-## 工厂方法
+## 5. 工厂方法
 
 ### now() - 当前时间
 
@@ -226,7 +248,7 @@ public static Instant parse(final CharSequence text) {
 
 ---
 
-## 核心方法
+## 6. 核心方法
 
 ### getEpochSecond() / getNano()
 
@@ -269,7 +291,7 @@ result = 0 + (-500) = -500 ✓
 
 ---
 
-## 时间计算
+## 7. 时间计算
 
 ### plusSeconds() / plusMillis() / plusNanos()
 
@@ -343,7 +365,7 @@ instant.truncatedTo(ChronoUnit.MILLIS);  // 2024-03-20T14:35:42.123Z
 
 ---
 
-## JDK 26 新增: plusSaturating()
+## 8. JDK 26 新增: plusSaturating()
 
 ```java
 /**
@@ -372,7 +394,7 @@ Instant deadline = Instant.now().plusSaturating(Duration.ofDays(Long.MAX_VALUE))
 
 ---
 
-## 比较方法
+## 9. 比较方法
 
 ### compareTo()
 
@@ -422,7 +444,7 @@ public int hashCode() {
 
 ---
 
-## until() - 时间差计算
+## 10. until() - 时间差计算
 
 ```java
 @Override
@@ -470,7 +492,7 @@ Duration duration = start.until(end);
 
 ---
 
-## 转换方法
+## 11. 转换方法
 
 ### atOffset() - 转换为 OffsetDateTime
 
@@ -490,7 +512,7 @@ public ZonedDateTime atZone(ZoneId zone) {
 
 ---
 
-## 序列化机制
+## 12. 序列化机制
 
 ### writeReplace()
 
@@ -530,7 +552,7 @@ out.writeInt(nanos);    // 4 字节
 
 ---
 
-## 使用示例
+## 13. 使用示例
 
 ### 创建
 
@@ -599,7 +621,7 @@ Duration duration = start.until(end);  // PT2H30M
 
 ---
 
-## 性能特性
+## 14. 性能特性
 
 ### 快路优化
 
@@ -635,7 +657,7 @@ private Instant plus(long secondsToAdd, long nanosToAdd) {
 
 ---
 
-## 常见陷阱
+## 15. 常见陷阱
 
 ### 1. 忽略时区
 
@@ -673,7 +695,7 @@ i1.toEpochMilli() == i2.toEpochMilli();  // true (都截断到毫秒)
 
 ---
 
-## 与其他类的关系
+## 16. 与其他类的关系
 
 ```
 Instant (时间线上的点)
@@ -698,7 +720,7 @@ Instant (时间线上的点)
 
 ---
 
-## 相关文档
+## 17. 相关文档
 
 - [OffsetDateTime 实现](../offsetdatetime/index.md)
 - [ZonedDateTime 实现](../zonedatetime/index.md)

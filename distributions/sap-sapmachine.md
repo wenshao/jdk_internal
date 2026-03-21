@@ -5,8 +5,19 @@
 [← 返回发行版](../distributions/)
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [特点](#2-特点)
+3. [版本支持](#3-版本支持)
+4. [安装](#4-安装)
+5. [适用场景](#5-适用场景)
+6. [相关链接](#6-相关链接)
+
+---
+
+
+## 1. 概述
 
 SAPMachine 是 SAP 提供的 OpenJDK 发行版，针对 SAP 应用和 SAP 环境优化。
 
@@ -20,7 +31,7 @@ SAPMachine 是 SAP 提供的 OpenJDK 发行版，针对 SAP 应用和 SAP 环境
 
 ---
 
-## 特点
+## 2. 特点
 
 - ✅ **SAP 优化**: 针对 SAP 应用优化
 - ✅ **长期支持**: 与 SAP 产品版本同步
@@ -28,7 +39,7 @@ SAPMachine 是 SAP 提供的 OpenJDK 发行版，针对 SAP 应用和 SAP 环境
 
 ---
 
-## 版本支持
+## 3. 版本支持
 
 | 版本 | 支持截止 |
 |------|----------|
@@ -39,7 +50,7 @@ SAPMachine 是 SAP 提供的 OpenJDK 发行版，针对 SAP 应用和 SAP 环境
 
 ---
 
-## 安装
+## 4. 安装
 
 ```bash
 # SDKMAN
@@ -51,7 +62,7 @@ docker pull ghcr.io/sapmachine/sapmachine:21
 
 ---
 
-## 适用场景
+## 5. 适用场景
 
 | 场景 | 理由 |
 |------|------|
@@ -60,7 +71,7 @@ docker pull ghcr.io/sapmachine/sapmachine:21
 
 ---
 
-## 相关链接
+## 6. 相关链接
 
 - [SAPMachine 官网](https://sap.github.io/SapMachine/)
 - [SAPMachine GitHub](https://github.com/SAP/SapMachine)

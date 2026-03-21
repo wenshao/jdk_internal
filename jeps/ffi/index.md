@@ -3,8 +3,19 @@
 > Foreign Function & Memory API 相关 JEP
 
 ---
+## 目录
 
-## 概览
+1. [概览](#1-概览)
+2. [Foreign Function & Memory API (JEP 454)](#2-foreign-function--memory-api-jep-454)
+3. [Prepare to Restrict JNI (JEP 472)](#3-prepare-to-restrict-jni-jep-472)
+4. [FFM vs JNI 对比](#4-ffm-vs-jni-对比)
+5. [迁移指南](#5-迁移指南)
+6. [相关链接](#6-相关链接)
+
+---
+
+
+## 1. 概览
 
 | JEP | 标题 | 版本 | 状态 |
 |-----|------|------|------|
@@ -13,7 +24,7 @@
 
 ---
 
-## Foreign Function & Memory API (JEP 454)
+## 2. Foreign Function & Memory API (JEP 454)
 
 ### 演进历程
 
@@ -65,7 +76,7 @@ try (Arena arena = Arena.ofConfined()) {
 
 ---
 
-## Prepare to Restrict JNI (JEP 472)
+## 3. Prepare to Restrict JNI (JEP 472)
 
 ### 背景
 
@@ -86,7 +97,7 @@ System.loadLibrary("mylib");  // Warning: JNI is deprecated
 
 ---
 
-## FFM vs JNI 对比
+## 4. FFM vs JNI 对比
 
 | 特性 | JNI | FFM API |
 |------|-----|---------|
@@ -98,7 +109,7 @@ System.loadLibrary("mylib");  // Warning: JNI is deprecated
 
 ---
 
-## 迁移指南
+## 5. 迁移指南
 
 ### 从 JNI 迁移到 FFM
 
@@ -133,7 +144,7 @@ public class NativeLib {
 
 ---
 
-## 相关链接
+## 6. 相关链接
 
 - [JEP 454: Foreign Function & Memory API](https://openjdk.org/jeps/454)
 - [JEP 472: Prepare to Restrict JNI](https://openjdk.org/jeps/472)

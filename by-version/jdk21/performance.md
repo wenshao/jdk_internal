@@ -3,8 +3,25 @@
 > **基准环境**: x86_64 Linux, 16 cores, 64GB RAM | **对比基准**: JDK 17u
 
 ---
+## 目录
 
-## 性能概览: 革命性提升
+1. [性能概览: 革命性提升](#1-性能概览-革命性提升)
+2. [Virtual Threads 性能深度分析](#2-virtual-threads-性能深度分析)
+3. [垃圾收集器性能](#3-垃圾收集器性能)
+4. [语言特性性能优化](#4-语言特性性能优化)
+5. [向量 API 性能 (孵化器 - JEP 448)](#5-向量-api-性能-孵化器---jep-448)
+6. [启动性能优化](#6-启动性能优化)
+7. [容器环境性能优化](#7-容器环境性能优化)
+8. [监控和诊断性能](#8-监控和诊断性能)
+9. [应用特定性能调优](#9-应用特定性能调优)
+10. [性能基准测试方法论](#10-性能基准测试方法论)
+11. [性能问题排查指南](#11-性能问题排查指南)
+12. [资源](#12-资源)
+
+---
+
+
+## 1. 性能概览: 革命性提升
 
 ### Virtual Threads 带来的数量级改进
 
@@ -31,7 +48,7 @@
 
 ---
 
-## Virtual Threads 性能深度分析
+## 2. Virtual Threads 性能深度分析
 
 ### 性能对比: Virtual Threads vs Platform Threads
 
@@ -206,7 +223,7 @@ private static final ScopedValue<Context> CURRENT_CONTEXT = ScopedValue.newInsta
 
 ---
 
-## 垃圾收集器性能
+## 3. 垃圾收集器性能
 
 ### 分代 ZGC (Generational ZGC) - JEP 439 ⭐⭐
 
@@ -287,7 +304,7 @@ private static final ScopedValue<Context> CURRENT_CONTEXT = ScopedValue.newInsta
 
 ---
 
-## 语言特性性能优化
+## 4. 语言特性性能优化
 
 ### Record Patterns 性能优势
 
@@ -333,7 +350,7 @@ if (obj instanceof Point(int x, int y) && x > 0 && y > 0) {
 
 ---
 
-## 向量 API 性能 (孵化器 - JEP 448)
+## 5. 向量 API 性能 (孵化器 - JEP 448)
 
 ### SIMD 向量化计算性能
 
@@ -399,7 +416,7 @@ java --add-modules jdk.incubator.vector VectorExample
 
 ---
 
-## 启动性能优化
+## 6. 启动性能优化
 
 ### 类数据共享 (CDS) 增强
 
@@ -461,7 +478,7 @@ native-image -jar app.jar --enable-url-protocols=http
 
 ---
 
-## 容器环境性能优化
+## 7. 容器环境性能优化
 
 ### 容器感知优化增强
 
@@ -534,7 +551,7 @@ spec:
 
 ---
 
-## 监控和诊断性能
+## 8. 监控和诊断性能
 
 ### Java Flight Recorder (JFR) 增强
 
@@ -609,7 +626,7 @@ jvm_memory_bytes_used{area="heap"}
 
 ---
 
-## 应用特定性能调优
+## 9. 应用特定性能调优
 
 ### Web 应用服务器优化
 
@@ -677,7 +694,7 @@ java -XX:+UseZGC \
 
 ---
 
-## 性能基准测试方法论
+## 10. 性能基准测试方法论
 
 ### 推荐基准测试工具
 
@@ -765,7 +782,7 @@ jobs:
 
 ---
 
-## 性能问题排查指南
+## 11. 性能问题排查指南
 
 ### 常见性能问题诊断
 
@@ -831,7 +848,7 @@ jobs:
 
 ---
 
-## 资源
+## 12. 资源
 
 ### 性能文档
 - [JDK 21 性能调优指南](https://docs.oracle.com/en/java/javase/21/troubleshoot/)

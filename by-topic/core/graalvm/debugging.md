@@ -5,8 +5,23 @@
 [← 返回 GraalVM 首页](./) | [← 返回源码解读](source-code.md)
 
 ---
+## 目录
 
-## 调试工具总览
+1. [调试工具总览](#1-调试工具总览)
+2. [IGV (Ideal Graph Visualizer)](#2-igv-ideal-graph-visualizer)
+3. [Graal 编译器日志](#3-graal-编译器日志)
+4. [Async Profiler](#4-async-profiler)
+5. [JFR (Java Flight Recorder)](#5-jfr-java-flight-recorder)
+6. [Native Image 调试](#6-native-image-调试)
+7. [jcmd 诊断命令](#7-jcmd-诊断命令)
+8. [故障排查流程](#8-故障排查流程)
+9. [调试配置模板](#9-调试配置模板)
+10. [相关链接](#10-相关链接)
+
+---
+
+
+## 1. 调试工具总览
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -38,7 +53,7 @@
 
 ---
 
-## IGV (Ideal Graph Visualizer)
+## 2. IGV (Ideal Graph Visualizer)
 
 ### 什么是 IGV?
 
@@ -146,7 +161,7 @@ java \
 
 ---
 
-## Graal 编译器日志
+## 3. Graal 编译器日志
 
 ### 启用编译日志
 
@@ -209,7 +224,7 @@ java \
 
 ---
 
-## Async Profiler
+## 4. Async Profiler
 
 ### 安装 Async Profiler
 
@@ -262,7 +277,7 @@ sdk install async-profiler
 
 ---
 
-## JFR (Java Flight Recorder)
+## 5. JFR (Java Flight Recorder)
 
 ### 启用 JFR
 
@@ -313,7 +328,7 @@ jfr print recording.jfr
 
 ---
 
-## Native Image 调试
+## 6. Native Image 调试
 
 ### 构建时调试
 
@@ -385,7 +400,7 @@ gdb ./app core
 
 ---
 
-## jcmd 诊断命令
+## 7. jcmd 诊断命令
 
 ### 查看 Graal 编译统计
 
@@ -425,7 +440,7 @@ jcmd <pid> Thread.print -j
 
 ---
 
-## 故障排查流程
+## 8. 故障排查流程
 
 ### 性能问题排查
 
@@ -495,7 +510,7 @@ java -Dgraal.Dump=:2 -jar app.jar
 
 ---
 
-## 调试配置模板
+## 9. 调试配置模板
 
 ### 开发环境
 
@@ -539,7 +554,7 @@ java \
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 ### 工具下载
 - [IGV](https://github.com/graalvm/igv)

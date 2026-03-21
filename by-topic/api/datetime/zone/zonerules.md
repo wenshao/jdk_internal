@@ -3,8 +3,26 @@
 > java.time.zone.ZoneRules 的完整实现分析
 
 ---
+## 目录
 
-## 类声明
+1. [类声明](#1-类声明)
+2. [字段存储](#2-字段存储)
+3. [常量定义](#3-常量定义)
+4. [工厂方法](#4-工厂方法)
+5. [核心方法](#5-核心方法)
+6. [夏令时检测](#6-夏令时检测)
+7. [转换查询](#7-转换查询)
+8. [内部辅助方法](#8-内部辅助方法)
+9. [序列化机制](#9-序列化机制)
+10. [性能特性](#10-性能特性)
+11. [使用示例](#11-使用示例)
+12. [Gap 和 Overlap 详解](#12-gap-和-overlap-详解)
+13. [相关文档](#13-相关文档)
+
+---
+
+
+## 1. 类声明
 
 ```java
 public final class ZoneRules implements Serializable {
@@ -17,7 +35,7 @@ public final class ZoneRules implements Serializable {
 
 ---
 
-## 字段存储
+## 2. 字段存储
 
 ```java
 /**
@@ -67,7 +85,7 @@ private final transient ConcurrentMap<Integer, ZoneOffsetTransition[]> lastRules
 
 ---
 
-## 常量定义
+## 3. 常量定义
 
 ```java
 /**
@@ -92,7 +110,7 @@ private static final long DAYS_0000_TO_1970 = (DAYS_PER_CYCLE * 5L) - (30L * 365
 
 ---
 
-## 工厂方法
+## 4. 工厂方法
 
 ### of(ZoneOffset) - 固定偏移规则
 
@@ -146,7 +164,7 @@ public static ZoneRules of(ZoneOffset baseStandardOffset,
 
 ---
 
-## 核心方法
+## 5. 核心方法
 
 ### isFixedOffset() - 检查是否固定偏移
 
@@ -255,7 +273,7 @@ public ZoneOffsetTransition getTransition(LocalDateTime localDateTime) {
 
 ---
 
-## 夏令时检测
+## 6. 夏令时检测
 
 ### getDaylightSavings() - 获取夏令时量
 
@@ -284,7 +302,7 @@ public boolean isDaylightSavings(Instant instant) {
 
 ---
 
-## 转换查询
+## 7. 转换查询
 
 ### nextTransition() - 下一个转换
 
@@ -373,7 +391,7 @@ public ZoneOffsetTransition previousTransition(Instant instant) {
 
 ---
 
-## 内部辅助方法
+## 8. 内部辅助方法
 
 ### findTransitionArray() - 查找年份转换
 
@@ -439,7 +457,7 @@ private int findYear(long epochSecond, ZoneOffset offset) {
 
 ---
 
-## 序列化机制
+## 9. 序列化机制
 
 ### writeExternal() - 压缩存储
 
@@ -492,7 +510,7 @@ static ZoneRules readExternal(DataInput in) throws IOException, ClassNotFoundExc
 
 ---
 
-## 性能特性
+## 10. 性能特性
 
 ### 二分查找
 
@@ -515,7 +533,7 @@ private final transient ConcurrentMap<Integer, ZoneOffsetTransition[]> lastRules
 
 ---
 
-## 使用示例
+## 11. 使用示例
 
 ### 检查夏令时
 
@@ -565,7 +583,7 @@ if (validOffsets.size() > 1) {
 
 ---
 
-## Gap 和 Overlap 详解
+## 12. Gap 和 Overlap 详解
 
 ### Gap (春季夏令时开始)
 
@@ -593,7 +611,7 @@ if (validOffsets.size() > 1) {
 
 ---
 
-## 相关文档
+## 13. 相关文档
 
 - [ZoneId 实现](zoneid.md)
 - [ZoneOffset 实现](zoneoffset.md)

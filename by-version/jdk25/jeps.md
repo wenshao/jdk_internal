@@ -3,8 +3,18 @@
 > JDK 25 包含的所有 JEP (JDK Enhancement Proposals) 详细列表
 
 ---
+## 目录
 
-## 语言特性
+1. [语言特性](#1-语言特性)
+2. [性能](#2-性能)
+3. [并发](#3-并发)
+4. [安全](#4-安全)
+5. [JEP 完整列表](#5-jep-完整列表)
+
+---
+
+
+## 1. 语言特性
 
 ### JEP 430: String Templates (正式版)
 
@@ -145,7 +155,7 @@ MethodHandle strlen = linker.downcallHandle(
 
 ---
 
-## 性能
+## 2. 性能
 
 ### JEP 468: Generational ZGC
 
@@ -191,7 +201,7 @@ C2 编译器使用内存屏障优化，提升吞吐量。
 
 ---
 
-## 并发
+## 3. 并发
 
 ### JEP 462: Structured Concurrency (第五次预览)
 
@@ -262,7 +272,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 安全
+## 4. 安全
 
 ### JEP 452: Key Encapsulation Mechanism API
 
@@ -299,7 +309,7 @@ SecretKey sharedKey = dec.decapsulate(ciphertext);
 
 ---
 
-## JEP 完整列表
+## 5. JEP 完整列表
 
 | JEP | 标题 | 状态 |
 |-----|------|------|

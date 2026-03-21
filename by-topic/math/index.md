@@ -6,7 +6,7 @@
 
 ---
 
-## 快速概览
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 5 ── JDK 8 ── JDK 17 ── JDK 21
@@ -42,7 +42,7 @@ Math     StrictMath  Random  增强   随机数
 
 ---
 
-## Math 类
+## 2. Math 类
 
 ### 基础函数
 
@@ -115,7 +115,7 @@ double cbrt = Math.cbrt(27);       // 3.0 (立方根，JDK 8+)
 
 ---
 
-## StrictMath 类
+## 3. StrictMath 类
 
 **JDK 5 引入**
 
@@ -145,7 +145,7 @@ StrictMath.pow(x, y);
 
 ---
 
-## BigDecimal
+## 4. BigDecimal
 
 ### 基础使用
 
@@ -300,7 +300,7 @@ BigDecimal interest = FinancialCalculation.calculateInterest(principal, rate, 12
 
 ---
 
-## BigInteger
+## 5. BigInteger
 
 ### 基础使用
 
@@ -367,7 +367,7 @@ BigInteger nextPrime = a.nextProbablePrime();
 
 ---
 
-## Random 随机数
+## 6. Random 随机数
 
 ### Random 类
 
@@ -427,7 +427,7 @@ random.ints(0, 100).limit(10).forEach(System.out::println);
 
 ---
 
-## RandomGenerator (JDK 17+)
+## 7. RandomGenerator (JDK 17+)
 
 **JEP 356: Enhanced Random Number Generator**
 
@@ -474,7 +474,7 @@ long r = random.nextLong(0, 1000000);
 
 ---
 
-## 最佳实践
+## 8. 最佳实践
 
 ### BigDecimal 使用
 
@@ -574,7 +574,7 @@ random.ints(0, 100).parallel().forEach(...);
 
 ---
 
-## 核心贡献者
+## 9. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -598,7 +598,7 @@ random.ints(0, 100).parallel().forEach(...);
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 ### 内部文档
 

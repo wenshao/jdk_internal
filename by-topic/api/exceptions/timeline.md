@@ -3,8 +3,21 @@
 Java 异常处理从 JDK 1.0 到 JDK 26 的完整演进历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [异常层次结构](#2-异常层次结构)
+3. [时间线详情](#3-时间线详情)
+4. [常见异常类型](#4-常见异常类型)
+5. [异常处理最佳实践](#5-异常处理最佳实践)
+6. [异常处理模式](#6-异常处理模式)
+7. [相关 JEP](#7-相关-jep)
+8. [相关链接](#8-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 5 ──── JDK 6 ──── JDK 7 ──── JDK 9 ──── JDK 16 ──── JDK 21 ──── JDK 26
@@ -16,7 +29,7 @@ throws       自定义异常
 
 ---
 
-## 异常层次结构
+## 2. 异常层次结构
 
 ```java
                     Throwable
@@ -38,7 +51,7 @@ throws       自定义异常
 
 ---
 
-## 时间线详情
+## 3. 时间线详情
 
 ### JDK 1.0 (1996) - 基础异常处理
 
@@ -336,7 +349,7 @@ String message = switch (e) {
 
 ---
 
-## 常见异常类型
+## 4. 常见异常类型
 
 ### 运行时异常
 
@@ -402,7 +415,7 @@ Integer i = (Integer) obj;  // 类型转换错误
 
 ---
 
-## 异常处理最佳实践
+## 5. 异常处理最佳实践
 
 ### finally vs try-with-resources
 
@@ -515,7 +528,7 @@ try {
 
 ---
 
-## 异常处理模式
+## 6. 异常处理模式
 
 ### Template Method 模式
 
@@ -610,7 +623,7 @@ public sealed interface Result<T> {
 
 ---
 
-## 相关 JEP
+## 7. 相关 JEP
 
 | JEP | 标题 | 版本 | 说明 |
 |-----|------|------|------|
@@ -620,7 +633,7 @@ public sealed interface Result<T> {
 
 ---
 
-## 相关链接
+## 8. 相关链接
 
 - [The Java Tutorials: Exceptions](https://docs.oracle.com/javase/tutorial/essential/exceptions/)
 - [Effective Java: Exceptions](https://www.oreilly.com/library/view/effective-java/9780134686097/)

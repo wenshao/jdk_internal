@@ -3,8 +3,20 @@
 > Java 语言特性相关 JEP 汇总 (JDK 8-26)
 
 ---
+## 目录
 
-## 概览
+1. [概览](#1-概览)
+2. [字符串处理](#2-字符串处理)
+3. [模式匹配](#3-模式匹配)
+4. [String Templates](#4-string-templates)
+5. [Pattern Matching](#5-pattern-matching)
+6. [Implicit Classes (隐式类)](#6-implicit-classes-隐式类)
+7. [相关链接](#7-相关链接)
+
+---
+
+
+## 1. 概览
 
 ```
 JDK 9 ───── JDK 15 ───── JDK 21 ───── JDK 22 ───── JDK 23 ───── JDK 26
@@ -16,7 +28,7 @@ Strings    Blocks    Templates  Variables  Classes     Patterns
 
 ---
 
-## 字符串处理
+## 2. 字符串处理
 
 ### Compact Strings (JDK 9)
 
@@ -52,9 +64,9 @@ Strings    Blocks    Templates  Variables  Classes     Patterns
 
 ---
 
-## 模式匹配
+## 3. 模式匹配
 
-## String Templates
+## 4. String Templates
 
 ### 演进历程
 
@@ -91,7 +103,7 @@ String result = STR."\{x} + \{y} = \{x + y}";  // "10 + 20 = 30"
 **详见**：[String Templates 分析](string-templates.md) | [JEP 430](jep-430.md) | [JEP 459](jep-459.md) | [JEP 471](jep-471.md)
 ---
 
-## Pattern Matching
+## 5. Pattern Matching
 
 ### 演进历程
 
@@ -132,7 +144,7 @@ if (obj instanceof Point(int x, int y)) {
 **详见**：[Pattern Matching 分析](pattern-matching.md) | [JEP 456](jep-456.md) | [JEP 507](jep-507.md) | [JEP 530](jep-530.md)
 ---
 
-## Implicit Classes (隐式类)
+## 6. Implicit Classes (隐式类)
 
 ### 演进历程
 | 版本 | JEP | 状态 | 说明 |
@@ -161,7 +173,7 @@ void main() {
 **详见**：[Implicit Classes 分析](implicit-classes.md) | [JEP 445](jep-445.md) | [JEP 463](jep-463.md) | [JEP 477](jep-477.md) | [JEP 512](jep-512.md)
 ---
 
-## 相关链接
+## 7. 相关链接
 
 - [语言特性演进时间线](/by-topic/language/)
 - [Java Language Updates](https://openjdk.org/projects/jdk/)

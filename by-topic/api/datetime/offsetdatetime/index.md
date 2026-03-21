@@ -3,8 +3,29 @@
 > java.time.OffsetDateTime 的完整实现分析
 
 ---
+## 目录
 
-## 类声明
+1. [类声明](#1-类声明)
+2. [字段存储](#2-字段存储)
+3. [常量定义](#3-常量定义)
+4. [工厂方法](#4-工厂方法)
+5. [核心方法](#5-核心方法)
+6. [比较方法](#6-比较方法)
+7. [转换方法](#7-转换方法)
+8. [Temporal 实现](#8-temporal-实现)
+9. [时间计算](#9-时间计算)
+10. [序列化机制](#10-序列化机制)
+11. [使用示例](#11-使用示例)
+12. [与 ZonedDateTime 区别](#12-与-zoneddatetime-区别)
+13. [数据库存储建议](#13-数据库存储建议)
+14. [性能特性](#14-性能特性)
+15. [常见陷阱](#15-常见陷阱)
+16. [相关文档](#16-相关文档)
+
+---
+
+
+## 1. 类声明
 
 ```java
 @jdk.internal.ValueBased
@@ -20,7 +41,7 @@ public final class OffsetDateTime
 
 ---
 
-## 字段存储
+## 2. 字段存储
 
 ### 两字段组合
 
@@ -47,7 +68,7 @@ private final ZoneOffset offset;
 
 ---
 
-## 常量定义
+## 3. 常量定义
 
 ### MIN / MAX
 
@@ -88,7 +109,7 @@ public static final OffsetDateTime MAX = LocalDateTime.MAX.atOffset(ZoneOffset.M
 
 ---
 
-## 工厂方法
+## 4. 工厂方法
 
 ### now() - 当前时间
 
@@ -177,7 +198,7 @@ public static OffsetDateTime from(TemporalAccessor temporal) {
 
 ---
 
-## 核心方法
+## 5. 核心方法
 
 ### 偏移变更方法
 
@@ -228,7 +249,7 @@ OffsetDateTime changed = odt.withOffsetSameInstant(ZoneOffset.ofHours(9));
 
 ---
 
-## 比较方法
+## 6. 比较方法
 
 ### compareTo() - 自然顺序
 
@@ -329,7 +350,7 @@ beijing.equals(tokyo);    // false - 本地时间和偏移都不同
 
 ---
 
-## 转换方法
+## 7. 转换方法
 
 ### atZoneSameInstant() - 转换为 ZonedDateTime (保留瞬间)
 
@@ -375,7 +396,7 @@ public long toEpochSecond() {
 
 ---
 
-## Temporal 实现
+## 8. Temporal 实现
 
 ### isSupported()
 
@@ -440,7 +461,7 @@ public OffsetDateTime with(TemporalField field, long newValue) {
 
 ---
 
-## 时间计算
+## 9. 时间计算
 
 ### plus() / minus()
 
@@ -475,7 +496,7 @@ OffsetDateTime plus1Hour = odt.plusHours(1);
 
 ---
 
-## 序列化机制
+## 10. 序列化机制
 
 ### writeReplace()
 
@@ -510,7 +531,7 @@ static OffsetDateTime readExternal(ObjectInput in) throws IOException, ClassNotF
 
 ---
 
-## 使用示例
+## 11. 使用示例
 
 ### 创建
 
@@ -586,7 +607,7 @@ LocalDateTime ldt = odt.toLocalDateTime();
 
 ---
 
-## 与 ZonedDateTime 区别
+## 12. 与 ZonedDateTime 区别
 
 | 特性 | OffsetDateTime | ZonedDateTime |
 |------|----------------|---------------|
@@ -603,7 +624,7 @@ LocalDateTime ldt = odt.toLocalDateTime();
 
 ---
 
-## 数据库存储建议
+## 13. 数据库存储建议
 
 ### 为什么 OffsetDateTime 更适合数据库？
 
@@ -623,7 +644,7 @@ preparedStatement.setObject(1, OffsetDateTime.now());
 
 ---
 
-## 性能特性
+## 14. 性能特性
 
 ### 对象复用
 
@@ -648,7 +669,7 @@ private OffsetDateTime with(LocalDateTime dateTime, ZoneOffset offset) {
 
 ---
 
-## 常见陷阱
+## 15. 常见陷阱
 
 ### 1. 混淆 equals 和 isEqual
 
@@ -694,7 +715,7 @@ comparator.compare(odt1, odt2);  // 按瞬间比较
 
 ---
 
-## 相关文档
+## 16. 相关文档
 
 - [ZonedDateTime 实现](../zonedatetime/index.md)
 - [ZoneOffset 实现](../zone/zoneoffset.md)

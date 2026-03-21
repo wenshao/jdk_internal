@@ -3,8 +3,22 @@
 容器是现代云原生应用部署的核心方式，JDK 提供了完善的容器支持。
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [资源感知](#2-资源感知)
+3. [Docker 最佳实践](#3-docker-最佳实践)
+4. [Kubernetes 部署](#4-kubernetes-部署)
+5. [镜像优化](#5-镜像优化)
+6. [监控和诊断](#6-监控和诊断)
+7. [常见问题](#7-常见问题)
+8. [最佳实践清单](#8-最佳实践清单)
+9. [相关链接](#9-相关链接)
+
+---
+
+
+## 1. 概述
 
 ### 支持的容器技术
 
@@ -46,7 +60,7 @@ JDK 26 ──── 容器优化增强
 
 ---
 
-## 资源感知
+## 2. 资源感知
 
 ### CPU 感知
 
@@ -134,7 +148,7 @@ memory.limit_in_bytes  读取 cgroup  限制 * 百分比
 
 ---
 
-## Docker 最佳实践
+## 3. Docker 最佳实践
 
 ### Dockerfile 优化
 
@@ -232,7 +246,7 @@ docker run -d \
 
 ---
 
-## Kubernetes 部署
+## 4. Kubernetes 部署
 
 ### Deployment 配置
 
@@ -470,7 +484,7 @@ spec:
 
 ---
 
-## 镜像优化
+## 5. 镜像优化
 
 ### 镜像大小优化
 
@@ -531,7 +545,7 @@ ENTRYPOINT ["java", "-XX:SharedArchiveFile=/opt/java/.cache/app.jsa", "-jar", "a
 
 ---
 
-## 监控和诊断
+## 6. 监控和诊断
 
 ### Prometheus 指标
 
@@ -613,7 +627,7 @@ jmc recording.jfr
 
 ---
 
-## 常见问题
+## 7. 常见问题
 
 ### 问题 1: 内存检测不准确
 
@@ -671,7 +685,7 @@ startupProbe:
 
 ---
 
-## 最佳实践清单
+## 8. 最佳实践清单
 
 ### Docker
 
@@ -701,7 +715,7 @@ startupProbe:
 
 ---
 
-## 相关链接
+## 9. 相关链接
 
 - [Docker 最佳实践](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 - [Kubernetes 文档](https://kubernetes.io/docs/)

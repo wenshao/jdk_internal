@@ -5,8 +5,20 @@
 [← 返回 GraalVM 首页](./) | [← 返回架构详解](architecture.md)
 
 ---
+## 目录
 
-## 源码结构
+1. [源码结构](#1-源码结构)
+2. [核心类解读](#2-核心类解读)
+3. [Native Image 源码解读](#3-native-image-源码解读)
+4. [Truffle 源码解读](#4-truffle-源码解读)
+5. [调试工具使用](#5-调试工具使用)
+6. [关键算法](#6-关键算法)
+7. [相关链接](#7-相关链接)
+
+---
+
+
+## 1. 源码结构
 
 ### Graal 编译器源码
 
@@ -65,7 +77,7 @@ jdk.vm.ci/
 
 ---
 
-## 核心类解读
+## 2. 核心类解读
 
 ### 1. GraalCompiler - 编译器入口
 
@@ -304,7 +316,7 @@ enum EscapeState {
 
 ---
 
-## Native Image 源码解读
+## 3. Native Image 源码解读
 
 ### 静态分析流程
 
@@ -395,7 +407,7 @@ public class HeapSnapshotSerializer {
 
 ---
 
-## Truffle 源码解读
+## 4. Truffle 源码解读
 
 ### AST 节点特化
 
@@ -502,7 +514,7 @@ public class PartialEvaluator {
 
 ---
 
-## 调试工具使用
+## 5. 调试工具使用
 
 ### IGV (Ideal Graph Visualizer)
 
@@ -543,7 +555,7 @@ java -Dgraal.TuneInlinerExploration=1 \
 
 ---
 
-## 关键算法
+## 6. 关键算法
 
 ### 1. 图模式匹配
 
@@ -603,7 +615,7 @@ public class LinearScanAllocator {
 
 ---
 
-## 相关链接
+## 7. 相关链接
 
 ### 源码仓库
 - [Graal GitHub](https://github.com/oracle/graal)

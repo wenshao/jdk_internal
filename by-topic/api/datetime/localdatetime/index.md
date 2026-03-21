@@ -3,8 +3,29 @@
 > java.time.LocalDateTime 的完整实现分析
 
 ---
+## 目录
 
-## 类声明
+1. [类声明](#1-类声明)
+2. [字段存储](#2-字段存储)
+3. [常量定义](#3-常量定义)
+4. [工厂方法](#4-工厂方法)
+5. [核心方法](#5-核心方法)
+6. [时间调整](#6-时间调整)
+7. [时间计算](#7-时间计算)
+8. [until() - 时间差计算](#8-until---时间差计算)
+9. [比较方法](#9-比较方法)
+10. [转换方法](#10-转换方法)
+11. [序列化机制](#11-序列化机制)
+12. [性能特性](#12-性能特性)
+13. [使用示例](#13-使用示例)
+14. [与其他类的关系](#14-与其他类的关系)
+15. [常见陷阱](#15-常见陷阱)
+16. [相关文档](#16-相关文档)
+
+---
+
+
+## 1. 类声明
 
 ```java
 @jdk.internal.ValueBased
@@ -31,7 +52,7 @@ implements Temporal, TemporalAdjuster, ChronoLocalDateTime, Serializable {
 
 ---
 
-## 字段存储
+## 2. 字段存储
 
 ### 两字段组合
 
@@ -64,7 +85,7 @@ public int getHour() {
 
 ---
 
-## 常量定义
+## 3. 常量定义
 
 ### MIN / MAX
 
@@ -94,7 +115,7 @@ public static final LocalDateTime MAX = LocalDateTime.of(LocalDate.MAX, LocalTim
 
 ---
 
-## 工厂方法
+## 4. 工厂方法
 
 ### now() - 当前时间
 
@@ -241,7 +262,7 @@ public static LocalDateTime parse(CharSequence text, DateTimeFormatter formatter
 
 ---
 
-## 核心方法
+## 5. 核心方法
 
 ### toLocalDate() / toLocalTime()
 
@@ -303,7 +324,7 @@ public int getNano() {
 
 ---
 
-## 时间调整
+## 6. 时间调整
 
 ### with() - 通用调整
 
@@ -405,7 +426,7 @@ private LocalDateTime with(LocalDate newDate, LocalTime newTime) {
 
 ---
 
-## 时间计算
+## 7. 时间计算
 
 ### plus() - 通用加法
 
@@ -555,7 +576,7 @@ public LocalDateTime minus(long amountToSubtract, TemporalUnit unit) {
 
 ---
 
-## until() - 时间差计算
+## 8. until() - 时间差计算
 
 ```java
 @Override
@@ -638,7 +659,7 @@ HOURS:
 
 ---
 
-## 比较方法
+## 9. 比较方法
 
 ### compareTo()
 
@@ -711,7 +732,7 @@ public int hashCode() {
 
 ---
 
-## 转换方法
+## 10. 转换方法
 
 ### atOffset() - 转换为 OffsetDateTime
 
@@ -736,7 +757,7 @@ public ZonedDateTime atZone(ZoneId zone) {
 
 ---
 
-## 序列化机制
+## 11. 序列化机制
 
 ### writeReplace()
 
@@ -786,7 +807,7 @@ out.writeInt(time.nano);
 
 ---
 
-## 性能特性
+## 12. 性能特性
 
 ### 类型检查优化
 
@@ -834,7 +855,7 @@ public int hashCode() {
 
 ---
 
-## 使用示例
+## 13. 使用示例
 
 ### 创建
 
@@ -920,7 +941,7 @@ long days = start.until(end, ChronoUnit.DAYS);  // 0
 
 ---
 
-## 与其他类的关系
+## 14. 与其他类的关系
 
 ```
 LocalDateTime (本地日期时间)
@@ -949,7 +970,7 @@ LocalDateTime (本地日期时间)
 
 ---
 
-## 常见陷阱
+## 15. 常见陷阱
 
 ### 1. 没有时区信息
 
@@ -1000,7 +1021,7 @@ LocalDateTime dt = LocalDateTime.of(2024, Month.MARCH, 20, 14, 0);
 
 ---
 
-## 相关文档
+## 16. 相关文档
 
 - [LocalDate 实现](../localdate/index.md)
 - [LocalTime 实现](../localtime/index.md)

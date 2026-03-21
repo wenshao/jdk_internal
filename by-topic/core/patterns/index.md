@@ -6,7 +6,7 @@
 
 ---
 
-## 快速概览
+## 1. 快速概览
 
 ```
 JDK 14 ── JDK 16 ── JDK 17 ── JDK 19 ── JDK 21 ── JDK 22 ── JDK 23 ── JDK 24
@@ -62,7 +62,7 @@ of       模式正式    模式    模式    正式版   模式    模式预览 
 
 ---
 
-## 类型模式
+## 2. 类型模式
 
 ### instanceof 类型模式 (JDK 16+)
 
@@ -109,7 +109,7 @@ if (obj instanceof List<?> list &&
 
 ---
 
-## 未命名模式和变量
+## 3. 未命名模式和变量
 
 ### JEP 456: 未命名变量和模式 (Java 22+)
 
@@ -255,7 +255,7 @@ public boolean isEqual(Box<?> box1, Box<?> box2) {
 
 ---
 
-## Switch 模式
+## 4. Switch 模式
 
 ### Switch 表达式基础
 
@@ -348,7 +348,7 @@ public String detailedDescribe(Object obj) {
 
 ---
 
-## Record 模式
+## 5. Record 模式
 
 ### Record 解构
 
@@ -407,7 +407,7 @@ if (obj instanceof Pair(String name, var value)) {
 
 ---
 
-## 守卫条件
+## 6. 守卫条件
 
 ### when 守卫
 
@@ -467,7 +467,7 @@ public String test(int value) {
 
 ---
 
-## 解构模式
+## 7. 解构模式
 
 ### 嵌套解构
 
@@ -542,7 +542,7 @@ public record IntArray(int a, int b, int c) {
 
 ---
 
-## 原始类型模式
+## 8. 原始类型模式
 
 ### JEP 455/488: 原始类型模式 (Java 23+ 预览)
 
@@ -651,7 +651,7 @@ public String classify(Object obj) {
 
 ---
 
-## 最佳实践
+## 9. 最佳实践
 
 ### 模式匹配原则
 
@@ -774,7 +774,7 @@ private void describeCompany(Company c) {
 
 ---
 
-## 重要 PR 分析
+## 10. 重要 PR 分析
 
 ### 编译器优化
 
@@ -804,7 +804,7 @@ points.stream()
 
 ---
 
-## 模式匹配性能最佳实践
+## 11. 模式匹配性能最佳实践
 
 ### 模式匹配性能对比
 
@@ -897,7 +897,7 @@ public String describeBad(Object obj) {
 
 ---
 
-## 核心贡献者
+## 12. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -920,7 +920,7 @@ public String describeBad(Object obj) {
 
 ---
 
-## 相关链接
+## 13. 相关链接
 
 ### 内部文档
 

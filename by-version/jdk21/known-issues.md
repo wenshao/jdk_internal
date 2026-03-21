@@ -3,8 +3,24 @@
 > **更新日期**: 2026-03-20 | **数据来源**: JBS Issues, Release Notes, OpenJDK Bug Database
 
 ---
+## 目录
 
-## 严重性定义
+1. [严重性定义](#1-严重性定义)
+2. [P1 - 严重问题](#2-p1---严重问题)
+3. [P2 - 高优先级问题](#3-p2---高优先级问题)
+4. [P3 - 中优先级问题](#4-p3---中优先级问题)
+5. [P4 - 低优先级问题](#5-p4---低优先级问题)
+6. [安全相关问题](#6-安全相关问题)
+7. [平台特定问题](#7-平台特定问题)
+8. [规避措施和工作区](#8-规避措施和工作区)
+9. [更新和补丁策略](#9-更新和补丁策略)
+10. [报告新问题](#10-报告新问题)
+11. [资源链接](#11-资源链接)
+
+---
+
+
+## 1. 严重性定义
 
 | 等级 | 影响 | 建议 |
 |------|------|------|
@@ -15,7 +31,7 @@
 
 ---
 
-## P1 - 严重问题
+## 2. P1 - 严重问题
 
 ### 1. JDK-8308378: Virtual Threads 死锁风险 (内存回收场景)
 
@@ -176,7 +192,7 @@ if (obj instanceof Box<String>(var value)) {
 
 ---
 
-## P2 - 高优先级问题
+## 3. P2 - 高优先级问题
 
 ### 4. JDK-8308381: Virtual Threads 与 synchronized 的性能回归
 
@@ -407,7 +423,7 @@ String result = STR."Hello, \{name}. You are \{age} years old.";
 
 ---
 
-## P3 - 中优先级问题
+## 4. P3 - 中优先级问题
 
 ### 8. JDK-8308385: Virtual Threads 调试支持不完整
 
@@ -555,7 +571,7 @@ java -XX:+PrintFlagsFinal | grep -i container
 
 ---
 
-## P4 - 低优先级问题
+## 5. P4 - 低优先级问题
 
 ### 11. JDK-8308388: Record Patterns 的错误消息不清晰
 
@@ -638,7 +654,7 @@ find $JAVA_HOME -name "*Test*.java" | xargs grep -l "SequencedCollection"
 
 ---
 
-## 安全相关问题
+## 6. 安全相关问题
 
 ### 14. JDK-8308391: 动态代理加载的安全限制
 
@@ -686,7 +702,7 @@ params.setApplicationProtocols(new String[] {"http/1.1"});
 
 ---
 
-## 平台特定问题
+## 7. 平台特定问题
 
 ### 16. JDK-8308393: macOS 上 Virtual Threads 的性能差异
 
@@ -761,7 +777,7 @@ EventQueue.invokeLater(() -> {
 
 ---
 
-## 规避措施和工作区
+## 8. 规避措施和工作区
 
 ### 通用建议
 
@@ -830,7 +846,7 @@ EventQueue.invokeLater(() -> {
 
 ---
 
-## 更新和补丁策略
+## 9. 更新和补丁策略
 
 ### Oracle JDK 21 更新
 
@@ -857,7 +873,7 @@ EventQueue.invokeLater(() -> {
 
 ---
 
-## 报告新问题
+## 10. 报告新问题
 
 ### 报告渠道
 
@@ -886,7 +902,7 @@ EventQueue.invokeLater(() -> {
 
 ---
 
-## 资源链接
+## 11. 资源链接
 
 ### 官方资源
 - [JDK 21 发布说明](https://www.oracle.com/java/technologies/javase/21all-relnotes.html)

@@ -3,8 +3,23 @@
 > **影响评估**: 中高 | **主要风险**: Virtual Threads 兼容性, 安全策略变更, 平台支持调整
 
 ---
+## 目录
 
-## Virtual Threads 相关变更
+1. [Virtual Threads 相关变更](#1-virtual-threads-相关变更)
+2. [安全策略变更](#2-安全策略变更)
+3. [API 废弃和移除](#3-api-废弃和移除)
+4. [行为变更](#4-行为变更)
+5. [第三方库兼容性问题](#5-第三方库兼容性问题)
+6. [工具和命令行变更](#6-工具和命令行变更)
+7. [平台特定变更](#7-平台特定变更)
+8. [迁移检查和验证](#8-迁移检查和验证)
+9. [紧急修复方案](#9-紧急修复方案)
+10. [资源和文档](#10-资源和文档)
+
+---
+
+
+## 1. Virtual Threads 相关变更
 
 ### 1. 线程模型根本性变化
 
@@ -183,7 +198,7 @@ public void process() {
 
 ---
 
-## 安全策略变更
+## 2. 安全策略变更
 
 ### 4. 准备禁止动态加载代理 (JEP 451)
 
@@ -270,7 +285,7 @@ java --add-opens java.base/jdk.internal.misc=ALL-UNNAMED \
 
 ---
 
-## API 废弃和移除
+## 3. API 废弃和移除
 
 ### 6. 废弃 Windows 32位 x86 端口 (JEP 449)
 
@@ -353,7 +368,7 @@ Unrecognized VM option 'UseConcMarkSweepGC'
 
 ---
 
-## 行为变更
+## 4. 行为变更
 
 ### 8. 默认 TLS 配置增强
 
@@ -476,7 +491,7 @@ java -jar tzupdater.jar -l https://www.iana.org/time-zones
 
 ---
 
-## 第三方库兼容性问题
+## 5. 第三方库兼容性问题
 
 ### 11. 常见库的 Virtual Threads 兼容性
 
@@ -560,7 +575,7 @@ if (Thread.currentThread().isVirtual()) {
 
 ---
 
-## 工具和命令行变更
+## 6. 工具和命令行变更
 
 ### 13. 已移除的命令行工具
 
@@ -627,7 +642,7 @@ jstat -gcutil <pid>  # 包含虚拟线程相关信息
 
 ---
 
-## 平台特定变更
+## 7. 平台特定变更
 
 ### 16. macOS 渲染管道
 
@@ -692,7 +707,7 @@ java -version
 
 ---
 
-## 迁移检查和验证
+## 8. 迁移检查和验证
 
 ### 兼容性测试清单
 
@@ -773,7 +788,7 @@ java -XX:StartFlightRecording=duration=60s,filename=perf.jfr -jar app.jar
 
 ---
 
-## 紧急修复方案
+## 9. 紧急修复方案
 
 ### 遇到 Virtual Threads 问题
 
@@ -818,7 +833,7 @@ java -Djdk.tls.client.protocols=TLSv1,TLSv1.1,TLSv1.2,TLSv1.3 \
 
 ---
 
-## 资源和文档
+## 10. 资源和文档
 
 ### 官方迁移指南
 - [JDK 21 迁移指南](https://docs.oracle.com/en/java/javase/21/migrate/)

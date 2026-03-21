@@ -3,8 +3,20 @@
 > JDK 21-26 工具相关 JEP 汇总
 
 ---
+## 目录
 
-## 概览
+1. [概览](#1-概览)
+2. [Markdown Documentation Comments (JEP 467)](#2-markdown-documentation-comments-jep-467)
+3. [Class-File API (JEP 466, 484)](#3-class-file-api-jep-466-484)
+4. [Module Import Declarations (JEP 511)](#4-module-import-declarations-jep-511)
+5. [Compact Source Files (JEP 512)](#5-compact-source-files-jep-512)
+6. [Lazy Constants (JEP 526)](#6-lazy-constants-jep-526)
+7. [相关链接](#7-相关链接)
+
+---
+
+
+## 1. 概览
 
 | JEP | 标题 | JDK | 状态 | 说明 |
 |-----|------|-----|------|------|
@@ -18,7 +30,7 @@
 
 ---
 
-## Markdown Documentation Comments (JEP 467)
+## 2. Markdown Documentation Comments (JEP 467)
 
 ### 核心特性
 
@@ -43,7 +55,7 @@ public int calculate(int a, int b) {
 
 ---
 
-## Class-File API (JEP 466, 484)
+## 3. Class-File API (JEP 466, 484)
 
 ### 演进历程
 
@@ -67,7 +79,7 @@ for (FieldModel field : model.fields()) {
 
 ---
 
-## Module Import Declarations (JEP 511)
+## 4. Module Import Declarations (JEP 511)
 
 ### 核心特性
 
@@ -87,7 +99,7 @@ module com.example.myapp {
 
 ---
 
-## Compact Source Files (JEP 512)
+## 5. Compact Source Files (JEP 512)
 
 ### 核心特性
 
@@ -99,7 +111,7 @@ module com.example.myapp {
 
 ---
 
-## Lazy Constants (JEP 526)
+## 6. Lazy Constants (JEP 526)
 
 ### 核心特性
 
@@ -121,7 +133,7 @@ private static String loadConfig() {
 
 ---
 
-## 相关链接
+## 7. 相关链接
 
 - [JEP 467: Markdown Documentation Comments](https://openjdk.org/jeps/467)
 - [JEP 484: Class-File API](https://openjdk.org/jeps/484)

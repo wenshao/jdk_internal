@@ -3,8 +3,22 @@
 Windows 是企业环境中 Java 应用部署的重要平台。
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [安装与部署](#2-安装与部署)
+3. [服务集成](#3-服务集成)
+4. [注册表集成](#4-注册表集成)
+5. [性能调优](#5-性能调优)
+6. [常见问题](#6-常见问题)
+7. [监控和诊断](#7-监控和诊断)
+8. [最佳实践](#8-最佳实践)
+9. [相关链接](#9-相关链接)
+
+---
+
+
+## 1. 概述
 
 ### 支持的架构
 
@@ -40,7 +54,7 @@ JDK 26 ──── 移除 x86 (32位) 支持
 
 ---
 
-## 安装与部署
+## 2. 安装与部署
 
 ### 安装方式
 
@@ -123,7 +137,7 @@ jpackage --name MyApp \
 
 ---
 
-## 服务集成
+## 3. 服务集成
 
 ### Windows 服务配置
 
@@ -206,7 +220,7 @@ myapp.exe uninstall
 
 ---
 
-## 注册表集成
+## 4. 注册表集成
 
 ### Java Preferences API
 
@@ -267,7 +281,7 @@ public class DirectRegistry {
 
 ---
 
-## 性能调优
+## 5. 性能调优
 
 ### 内存优化
 
@@ -329,7 +343,7 @@ fsutil behavior set disablelastaccess 1
 
 ---
 
-## 常见问题
+## 6. 常见问题
 
 ### 问题 1: 控制台编码问题
 
@@ -389,7 +403,7 @@ New-NetFirewallRule -DisplayName "Java Application" `
 
 ---
 
-## 监控和诊断
+## 7. 监控和诊断
 
 ### 系统监控
 
@@ -440,7 +454,7 @@ jcmd <pid> JFR.start duration=60s filename=recording.jfr
 
 ---
 
-## 最佳实践
+## 8. 最佳实践
 
 ### 生产部署清单
 
@@ -470,7 +484,7 @@ jcmd <pid> JFR.start duration=60s filename=recording.jfr
 
 ---
 
-## 相关链接
+## 9. 相关链接
 
 - [jpackage 文档](https://docs.oracle.com/en/java/javase/21/jpackage/)
 - [Windows 服务最佳实践](https://docs.microsoft.com/en-us/windows/win32/services/services)

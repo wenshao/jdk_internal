@@ -3,14 +3,29 @@
 > JDK 25 正式特性 - JEP 468
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [背景与动机](#2-背景与动机)
+3. [核心设计](#3-核心设计)
+4. [GC 周期](#4-gc-周期)
+5. [记忆集 (Remembered Set)](#5-记忆集-remembered-set)
+6. [性能数据](#6-性能数据)
+7. [使用指南](#7-使用指南)
+8. [监控与诊断](#8-监控与诊断)
+9. [最佳实践](#9-最佳实践)
+10. [相关链接](#10-相关链接)
+
+---
+
+
+## 1. 概述
 
 Generational ZGC（分代 ZGC）将 Java 堆分为年轻代和老年代，大幅降低 GC 开销，提升大内存场景性能。
 
 ---
 
-## 背景与动机
+## 2. 背景与动机
 
 ### ZGC 演进
 
@@ -41,7 +56,7 @@ Generational ZGC（分代 ZGC）将 Java 堆分为年轻代和老年代，大幅
 
 ---
 
-## 核心设计
+## 3. 核心设计
 
 ### 分代假设
 
@@ -66,7 +81,7 @@ src/hotspot/share/gc/z/
 
 ---
 
-## GC 周期
+## 4. GC 周期
 
 ### 年轻代 GC
 
@@ -94,7 +109,7 @@ src/hotspot/share/gc/z/
 
 ---
 
-## 记忆集 (Remembered Set)
+## 5. 记忆集 (Remembered Set)
 
 ### 跨代引用跟踪
 
@@ -128,7 +143,7 @@ void oop_store(oop* field, oop value) {
 
 ---
 
-## 性能数据
+## 6. 性能数据
 
 ### GC 开销对比
 
@@ -148,7 +163,7 @@ Benchmark: SpecJBB
 
 ---
 
-## 使用指南
+## 7. 使用指南
 
 ### 启用分代 ZGC
 
@@ -175,7 +190,7 @@ java -XX:+UseZGC -XX:-ZGenerational MyApp
 
 ---
 
-## 监控与诊断
+## 8. 监控与诊断
 
 ### GC 日志
 
@@ -206,7 +221,7 @@ System.out.println("Time: " + gc.getCollectionTime() + "ms");
 
 ---
 
-## 最佳实践
+## 9. 最佳实践
 
 ### 适用场景
 
@@ -238,7 +253,7 @@ java -XX:+UseZGC -XX:+ZGenerational -Xmx64g \
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 - [JEP 468: Generational ZGC](https://openjdk.org/jeps/468)
 - [ZGC 官方文档](https://openjdk.org/projects/jdk/25/docs/specs/man/gc-zgc.html)

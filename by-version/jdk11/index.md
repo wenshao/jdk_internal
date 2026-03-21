@@ -6,8 +6,18 @@
 [![LTS](https://img.shields.io/badge/LTS-2028--purple.svg)](https://www.oracle.com/java/technologies/java-se-support.html)
 
 ---
+## 目录
 
-## 版本概览
+1. [版本概览](#1-版本概览)
+2. [GC 状态](#2-gc-状态)
+3. [迁移指南](#3-迁移指南)
+4. [关键 JEP](#4-关键-jep)
+5. [相关链接](#5-相关链接)
+
+---
+
+
+## 1. 版本概览
 
 JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 
@@ -30,7 +40,7 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 
 ---
 
-## GC 状态
+## 2. GC 状态
 
 | GC | 状态 | 说明 |
 |----|------|------|
@@ -41,7 +51,7 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 
 ---
 
-## 迁移指南
+## 3. 迁移指南
 
 ### 从 JDK 8 升级
 
@@ -62,7 +72,7 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 
 ---
 
-## 关键 JEP
+## 4. 关键 JEP
 
 | JEP | 标题 | 说明 |
 |-----|------|------|
@@ -86,7 +96,7 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 
 ---
 
-## 相关链接
+## 5. 相关链接
 
 - [JDK 11 发布说明](https://openjdk.org/projects/jdk/11/)
 - [从 JDK 8 迁移](https://docs.oracle.com/en/java/javase/11/migrate/)

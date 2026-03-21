@@ -3,8 +3,24 @@
 > **对比版本**: JDK 17u (LTS 2021) → JDK 21u (LTS 2023) | **时间跨度**: 2 年 | **变革性版本**: ⭐⭐⭐
 
 ---
+## 目录
 
-## 革命性特性: Virtual Threads (JEP 444) ⭐⭐⭐
+1. [革命性特性: Virtual Threads (JEP 444) ⭐⭐⭐](#1-革命性特性-virtual-threads-jep-444-)
+2. [语言特性增强](#2-语言特性增强)
+3. [预览特性](#3-预览特性)
+4. [性能与垃圾收集](#4-性能与垃圾收集)
+5. [API 增强](#5-api-增强)
+6. [弃用和移除](#6-弃用和移除)
+7. [性能基准测试](#7-性能基准测试)
+8. [迁移建议](#8-迁移建议)
+9. [工具和生态系统](#9-工具和生态系统)
+10. [资源](#10-资源)
+11. [总结](#11-总结)
+
+---
+
+
+## 1. 革命性特性: Virtual Threads (JEP 444) ⭐⭐⭐
 
 ### 什么是 Virtual Threads？
 
@@ -113,7 +129,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 语言特性增强
+## 2. 语言特性增强
 
 ### 1. Record Patterns 正式版 (JEP 440) ⭐
 
@@ -262,7 +278,7 @@ Map.Entry<String, Integer> firstEntry = map.firstEntry();  // a=1
 
 ---
 
-## 预览特性
+## 3. 预览特性
 
 ### 4. String Templates (JEP 430) 🔍
 
@@ -441,7 +457,7 @@ void main() {
 
 ---
 
-## 性能与垃圾收集
+## 4. 性能与垃圾收集
 
 ### 9. Generational ZGC (JEP 439) ⭐⭐
 
@@ -493,7 +509,7 @@ void main() {
 
 ---
 
-## API 增强
+## 5. API 增强
 
 ### 11. Key Encapsulation Mechanism API (JEP 452)
 
@@ -537,7 +553,7 @@ byte[] decryptedKey = decR.decapsulate(ciphertext);
 
 ---
 
-## 弃用和移除
+## 6. 弃用和移除
 
 ### 13. 废弃 Windows 32位 x86 端口 (JEP 449)
 
@@ -576,7 +592,7 @@ void vectorComputation(float[] a, float[] b, float[] c) {
 
 ---
 
-## 性能基准测试
+## 7. 性能基准测试
 
 ### 宏观性能对比
 
@@ -633,7 +649,7 @@ public class VirtualThreadsBenchmark {
 
 ---
 
-## 迁移建议
+## 8. 迁移建议
 
 ### 优先级矩阵
 
@@ -691,7 +707,7 @@ public class VirtualThreadsBenchmark {
 
 ---
 
-## 工具和生态系统
+## 9. 工具和生态系统
 
 ### 构建工具支持
 
@@ -734,7 +750,7 @@ jcmd <pid> JFR.start duration=60s filename=recording.jfr settings=profile
 
 ---
 
-## 资源
+## 10. 资源
 
 ### 学习资源
 - [Virtual Threads 深度指南](https://openjdk.org/jeps/444)
@@ -753,7 +769,7 @@ jcmd <pid> JFR.start duration=60s filename=recording.jfr settings=profile
 
 ---
 
-## 总结
+## 11. 总结
 
 JDK 21 是 Java 历史上最具变革性的版本之一，**Virtual Threads** 重新定义了 Java 并发编程模型，为高并发应用带来数量级的性能提升。结合**分代 ZGC**、**Record Patterns** 等特性，JDK 21 为现代云原生应用提供了强大的基础。
 

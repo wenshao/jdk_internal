@@ -3,8 +3,22 @@
 Java 注解从 JDK 5 到 JDK 26 的演进，包括注解处理器、编译期元编程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [时间线详情](#2-时间线详情)
+3. [注解处理器实战](#3-注解处理器实战)
+4. [编译期元编程](#4-编译期元编程)
+5. [常用注解处理器框架](#5-常用注解处理器框架)
+6. [最佳实践](#6-最佳实践)
+7. [贡献者](#7-贡献者)
+8. [相关 JEP](#8-相关-jep)
+9. [相关链接](#9-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 5 ──── JDK 6 ──── JDK 7 ──── JDK 8 ──── JDK 16 ──── JDK 17 ──── JDK 21 ──── JDK 26
@@ -15,7 +29,7 @@ JDK 5 ──── JDK 6 ──── JDK 7 ──── JDK 8 ──── JDK 
 
 ---
 
-## 时间线详情
+## 2. 时间线详情
 
 ### JDK 5 (2004) - 注解引入 (JSR 175)
 
@@ -325,7 +339,7 @@ public @interface Visibility {
 
 ---
 
-## 注解处理器实战
+## 3. 注解处理器实战
 
 ### Lombok 风格注解
 
@@ -447,7 +461,7 @@ public class PersonBuilder {
 
 ---
 
-## 编译期元编程
+## 4. 编译期元编程
 
 ### 符号 API
 
@@ -518,7 +532,7 @@ try (Writer writer = resourceFile.openWriter()) {
 
 ---
 
-## 常用注解处理器框架
+## 5. 常用注解处理器框架
 
 ### AutoValue
 
@@ -578,7 +592,7 @@ public interface AppComponent {
 
 ---
 
-## 最佳实践
+## 6. 最佳实践
 
 ### 注解设计
 
@@ -627,7 +641,7 @@ processingEnv.getMessager().printMessage(
 
 ---
 
-## 贡献者
+## 7. 贡献者
 
 ### JSR 规范负责人
 
@@ -686,7 +700,7 @@ processingEnv.getMessager().printMessage(
 
 ---
 
-## 相关 JEP
+## 8. 相关 JEP
 
 | JEP | 标题 | 版本 | 说明 |
 |-----|------|------|------|
@@ -696,7 +710,7 @@ processingEnv.getMessager().printMessage(
 
 ---
 
-## 相关链接
+## 9. 相关链接
 
 - [Annotation Processing Tool](https://docs.oracle.com/en/java/javase/21/docs/specs/man/javac.html)
 - [Package javax.annotation.processing](https://docs.oracle.com/en/java/javase/21/docs/api/java.compiler/javax/annotation/processing/package-summary.html)

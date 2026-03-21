@@ -5,8 +5,25 @@
 [← 返回 Panama](./)
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [Arena 类型](#2-arena-类型)
+3. [内存分配策略](#3-内存分配策略)
+4. [生命周期管理](#4-生命周期管理)
+5. [与其他 API 对比](#5-与其他-api-对比)
+6. [性能分析](#6-性能分析)
+7. [最佳实践](#7-最佳实践)
+8. [常见陷阱](#8-常见陷阱)
+9. [高级主题](#9-高级主题)
+10. [VM 参数与诊断](#10-vm-参数与诊断)
+11. [历史演进](#11-历史演进)
+12. [参考资料](#12-参考资料)
+
+---
+
+
+## 1. 概述
 
 ### Arena 是什么
 
@@ -39,7 +56,7 @@
 
 ---
 
-## Arena 类型
+## 2. Arena 类型
 
 ### 三种 Arena
 
@@ -173,7 +190,7 @@ Auto Arena GC 集成:
 
 ---
 
-## 内存分配策略
+## 3. 内存分配策略
 
 ### 分配器层次结构
 
@@ -272,7 +289,7 @@ aligned_offset = (100 + 63) & ~63
 
 ---
 
-## 生命周期管理
+## 4. 生命周期管理
 
 ### 作用域层次
 
@@ -372,7 +389,7 @@ try (Arena arena = Arena.ofShared()) {
 
 ---
 
-## 与其他 API 对比
+## 5. 与其他 API 对比
 
 ### vs ByteBuffer
 
@@ -451,7 +468,7 @@ try (Arena arena = Arena.ofConfined()) {
 
 ---
 
-## 性能分析
+## 6. 性能分析
 
 ### 分配性能
 
@@ -523,7 +540,7 @@ static int useArena() {
 
 ---
 
-## 最佳实践
+## 7. 最佳实践
 
 ### 1. 选择合适的 Arena 类型
 
@@ -637,7 +654,7 @@ try (Arena arena = Arena.ofConfined()) {
 
 ---
 
-## 常见陷阱
+## 8. 常见陷阱
 
 ### 1. 跨线程访问 Confined Segment
 
@@ -741,7 +758,7 @@ MemorySegment s2 = arena2.allocate(100);
 
 ---
 
-## 高级主题
+## 9. 高级主题
 
 ### 自定义 Allocator
 
@@ -816,7 +833,7 @@ class MemoryManager {
 
 ---
 
-## VM 参数与诊断
+## 10. VM 参数与诊断
 
 ### 相关 VM 参数
 
@@ -878,7 +895,7 @@ try (Arena arena = Arena.ofConfined()) {
 
 ---
 
-## 历史演进
+## 11. 历史演进
 
 | 版本 | 变更 |
 |------|------|
@@ -890,7 +907,7 @@ try (Arena arena = Arena.ofConfined()) {
 
 ---
 
-## 参考资料
+## 12. 参考资料
 
 - [JEP 454: Foreign Function & Memory API](https://openjdk.org/jeps/454)
 - [JEP 389: Foreign Linker API](https://openjdk.org/jeps/389)

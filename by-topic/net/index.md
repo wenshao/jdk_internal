@@ -6,7 +6,7 @@
 
 ---
 
-## 快速概览
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 1.4 ── JDK 5 ── JDK 7 ── JDK 11 ── JDK 21
@@ -41,7 +41,7 @@ ServerSocket (JSR51)  HttpURLConnection  Client  Threads
 
 ---
 
-## TCP 网络编程
+## 2. TCP 网络编程
 
 ### Socket 客户端
 
@@ -112,7 +112,7 @@ serverSocket.setReceiveBufferSize(8192); // 接收缓冲区
 
 ---
 
-## HTTP 编程
+## 3. HTTP 编程
 
 ### HttpURLConnection (JDK 1.1+)
 
@@ -188,7 +188,7 @@ String decoded = URLDecoder.decode(encoded, "UTF-8");
 
 ---
 
-## HTTP Client (JDK 11+)
+## 4. HTTP Client (JDK 11+)
 
 **JEP 321: HTTP Client**
 
@@ -331,7 +331,7 @@ ws.sendClose(WebSocket.NORMAL_CLOSURE, "Goodbye", true);
 
 ---
 
-## NIO 网络编程
+## 5. NIO 网络编程
 
 **JDK 1.4 (JSR 51)**
 
@@ -404,7 +404,7 @@ while (buffer.hasRemaining()) {
 
 ---
 
-## 最佳实践
+## 6. 最佳实践
 
 ### 超时设置
 
@@ -470,7 +470,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 核心贡献者
+## 7. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -487,7 +487,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 相关链接
+## 8. 相关链接
 
 ### 内部文档
 

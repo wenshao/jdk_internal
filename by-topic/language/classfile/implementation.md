@@ -3,8 +3,21 @@
 > API 设计、源码结构、性能优化细节
 
 ---
+## 目录
 
-## 架构设计
+1. [架构设计](#1-架构设计)
+2. [核心组件实现](#2-核心组件实现)
+3. [常量池实现](#3-常量池实现)
+4. [指令集实现](#4-指令集实现)
+5. [性能优化](#5-性能优化)
+6. [字节码验证](#6-字节码验证)
+7. [与 ASM 的迁移](#7-与-asm-的迁移)
+8. [相关资源](#8-相关资源)
+
+---
+
+
+## 1. 架构设计
 
 ### 三层模型
 
@@ -44,7 +57,7 @@
 
 ---
 
-## 核心组件实现
+## 2. 核心组件实现
 
 ### ClassFile 接口
 
@@ -192,7 +205,7 @@ final class CodeBuilderImpl implements CodeBuilder {
 
 ---
 
-## 常量池实现
+## 3. 常量池实现
 
 ### SplitConstantPool
 
@@ -241,7 +254,7 @@ final class SplitConstantPool {
 
 ---
 
-## 指令集实现
+## 4. 指令集实现
 
 ### 指令分类
 
@@ -324,7 +337,7 @@ public sealed interface InvokeInstruction extends Instruction
 
 ---
 
-## 性能优化
+## 5. 性能优化
 
 ### 1. 常量池共享
 
@@ -400,7 +413,7 @@ final class BufWriter {
 
 ---
 
-## 字节码验证
+## 6. 字节码验证
 
 ### Verifier 实现
 
@@ -443,7 +456,7 @@ final class Verifier {
 
 ---
 
-## 与 ASM 的迁移
+## 7. 与 ASM 的迁移
 
 ### API 映射
 
@@ -499,7 +512,7 @@ byte[] transformed = ClassFile.of().transformClass(
 
 ---
 
-## 相关资源
+## 8. 相关资源
 
 - [JEP 484: Class-File API](https://openjdk.org/jeps/484)
 - [OpenJDK 源码: java.lang.classfile](https://github.com/openjdk/jdk/tree/master/src/java.base/share/classes/java/lang/classfile)

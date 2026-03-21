@@ -3,8 +3,25 @@
 > java.time.ZonedDateTime 的完整实现分析
 
 ---
+## 目录
 
-## 类声明
+1. [类声明](#1-类声明)
+2. [字段存储](#2-字段存储)
+3. [工厂方法](#3-工厂方法)
+4. [核心方法](#4-核心方法)
+5. [时间计算](#5-时间计算)
+6. [方法引用优化](#6-方法引用优化)
+7. [序列化机制](#7-序列化机制)
+8. [性能特性](#8-性能特性)
+9. [Gap 和 Overlap 详解](#9-gap-和-overlap-详解)
+10. [使用示例](#10-使用示例)
+11. [与 OffsetDateTime 区别](#11-与-offsetdatetime-区别)
+12. [相关文档](#12-相关文档)
+
+---
+
+
+## 1. 类声明
 
 ```java
 @jdk.internal.ValueBased
@@ -36,7 +53,7 @@ public final class ZonedDateTime
 
 ---
 
-## 字段存储
+## 2. 字段存储
 
 ### 三字段组合
 
@@ -79,7 +96,7 @@ ZonedDateTime after = before.plusHours(1);
 
 ---
 
-## 工厂方法
+## 3. 工厂方法
 
 ### now() - 当前时间
 
@@ -176,7 +193,7 @@ private static ZonedDateTime create(long epochSecond, int nanoOfSecond, ZoneId z
 
 ---
 
-## 核心方法
+## 4. 核心方法
 
 ### getZone() / getOffset()
 
@@ -239,7 +256,7 @@ ZonedDateTime tokyo = shanghai.withZoneSameLocal(ZoneId.of("Asia/Tokyo"));
 
 ---
 
-## 时间计算
+## 5. 时间计算
 
 ### plusHours() - 加小时
 
@@ -287,7 +304,7 @@ private ZonedDateTime plusWithOverflow(LocalDateTime newDateTime, long hours, lo
 
 ---
 
-## 方法引用优化
+## 6. 方法引用优化
 
 ### from() - 静态工厂
 
@@ -316,7 +333,7 @@ public static ZonedDateTime from(TemporalAccessor temporal) {
 
 ---
 
-## 序列化机制
+## 7. 序列化机制
 
 ### writeReplace()
 
@@ -345,7 +362,7 @@ out.writeUTF(zone.getId());
 
 ---
 
-## 性能特性
+## 8. 性能特性
 
 ### 对象复用
 
@@ -373,7 +390,7 @@ public ZonedDateTime withZoneSameLocal(ZoneId newZone) {
 
 ---
 
-## Gap 和 Overlap 详解
+## 9. Gap 和 Overlap 详解
 
 ### Gap (春季夏令时开始)
 
@@ -428,7 +445,7 @@ ZonedDateTime overlap2 = ZonedDateTime.ofLocal(
 
 ---
 
-## 使用示例
+## 10. 使用示例
 
 ### 创建
 
@@ -505,7 +522,7 @@ ZonedDateTime back = instant.atZone(ZoneId.of("America/New_York"));
 
 ---
 
-## 与 OffsetDateTime 区别
+## 11. 与 OffsetDateTime 区别
 
 | 特性 | ZonedDateTime | OffsetDateTime |
 |------|---------------|----------------|
@@ -520,7 +537,7 @@ ZonedDateTime back = instant.atZone(ZoneId.of("America/New_York"));
 
 ---
 
-## 相关文档
+## 12. 相关文档
 
 - [ZoneId 实现](../zone/zoneid.md)
 - [ZoneOffset 实现](../zone/zoneoffset.md)

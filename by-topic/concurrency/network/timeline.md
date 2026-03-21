@@ -3,8 +3,25 @@
 Java 网络编程从 JDK 1.0 到 JDK 26 的完整演进历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [JDK 1.0 - 基础网络](#2-jdk-10---基础网络)
+3. [JDK 1.1 - URL 和 URLConnection](#3-jdk-11---url-和-urlconnection)
+4. [JDK 5 - URLHandler](#4-jdk-5---urlhandler)
+5. [JDK 7 - NIO.2 异步 I/O](#5-jdk-7---nio2-异步-io)
+6. [JDK 9 - HTTP/2 支持](#6-jdk-9---http2-支持)
+7. [JDK 11+ - HTTP Client](#7-jdk-11---http-client)
+8. [JDK 18 - Unix Domain Sockets](#8-jdk-18---unix-domain-sockets)
+9. [网络协议支持](#9-网络协议支持)
+10. [网络编程最佳实践](#10-网络编程最佳实践)
+11. [时间线总结](#11-时间线总结)
+12. [相关链接](#12-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 1.1 ──── JDK 5 ──── JDK 7 ──── JDK 9 ──── JDK 11 ──── JDK 18 ──── JDK 26
@@ -15,7 +32,7 @@ ServerSocket  Handler     Selector   I/O         (ALPN)    (QUIC)   Domain  (Uni
 
 ---
 
-## JDK 1.0 - 基础网络
+## 2. JDK 1.0 - 基础网络
 
 ### Socket 客户端
 
@@ -94,7 +111,7 @@ String received = new String(receivePacket.getData(), 0, receivePacket.getLength
 
 ---
 
-## JDK 1.1 - URL 和 URLConnection
+## 3. JDK 1.1 - URL 和 URLConnection
 
 ### URL 类
 
@@ -146,7 +163,7 @@ if (responseCode == HttpURLConnection.HTTP_OK) {
 
 ---
 
-## JDK 5 - URLHandler
+## 4. JDK 5 - URLHandler
 
 ### 自定义协议处理器
 
@@ -193,7 +210,7 @@ String content = url.openConnection().getContent().toString();
 
 ---
 
-## JDK 7 - NIO.2 异步 I/O
+## 5. JDK 7 - NIO.2 异步 I/O
 
 ### AsynchronousSocketChannel
 
@@ -254,7 +271,7 @@ server.accept(null, new CompletionHandler<AsynchronousSocketChannel, Void>() {
 
 ---
 
-## JDK 9 - HTTP/2 支持
+## 6. JDK 9 - HTTP/2 支持
 
 ### HTTP/2 Client
 
@@ -273,7 +290,7 @@ client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
 
 ---
 
-## JDK 11+ - HTTP Client
+## 7. JDK 11+ - HTTP Client
 
 ### 标准化 HTTP Client
 
@@ -296,7 +313,7 @@ HttpResponse<String> response = client.send(request,
 
 ---
 
-## JDK 18 - Unix Domain Sockets
+## 8. JDK 18 - Unix Domain Sockets
 
 ### Unix Socket 支持
 
@@ -323,7 +340,7 @@ int bytesRead = channel.read(buffer);
 
 ---
 
-## 网络协议支持
+## 9. 网络协议支持
 
 ### 协议支持
 
@@ -339,7 +356,7 @@ int bytesRead = channel.read(buffer);
 
 ---
 
-## 网络编程最佳实践
+## 10. 网络编程最佳实践
 
 ### 超时设置
 
@@ -380,7 +397,7 @@ try {
 
 ---
 
-## 时间线总结
+## 11. 时间线总结
 
 | 版本 | 特性 | 说明 |
 |------|------|------|
@@ -396,7 +413,7 @@ try {
 
 ---
 
-## 相关链接
+## 12. 相关链接
 
 - [Networking Tutorial](https://docs.oracle.com/javase/tutorial/networking/)
 - [Socket](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/net/Socket.html)

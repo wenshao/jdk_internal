@@ -3,8 +3,23 @@
 macOS 是 Apple 设备开发的重要平台，支持 Intel 和 Apple Silicon 架构。
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [Apple Silicon 支持](#2-apple-silicon-支持)
+3. [Metal 渲染管道](#3-metal-渲染管道)
+4. [公证要求](#4-公证要求)
+5. [安装与部署](#5-安装与部署)
+6. [性能调优](#6-性能调优)
+7. [常见问题](#7-常见问题)
+8. [监控和诊断](#8-监控和诊断)
+9. [最佳实践](#9-最佳实践)
+10. [相关链接](#10-相关链接)
+
+---
+
+
+## 1. 概述
 
 ### 支持的架构
 
@@ -39,7 +54,7 @@ JDK 26 ──── Apple Silicon 性能优化
 
 ---
 
-## Apple Silicon 支持
+## 2. Apple Silicon 支持
 
 ### 架构对比
 
@@ -98,7 +113,7 @@ lipo -create -output libuniversal.dylib \
 
 ---
 
-## Metal 渲染管道
+## 3. Metal 渲染管道
 
 ### 概述
 
@@ -173,7 +188,7 @@ system_profiler SPDisplaysDataType
 
 ---
 
-## 公证要求
+## 4. 公证要求
 
 ### 概述
 
@@ -239,7 +254,7 @@ xattr -cr MyApp.app
 
 ---
 
-## 安装与部署
+## 5. 安装与部署
 
 ### 安装方式
 
@@ -311,7 +326,7 @@ jpackage --name MyApp \
 
 ---
 
-## 性能调优
+## 6. 性能调优
 
 ### Apple Silicon 优化
 
@@ -354,7 +369,7 @@ java -Xshare:on -XX:SharedArchiveFile=app.jsa -jar app.jar
 
 ---
 
-## 常见问题
+## 7. 常见问题
 
 ### 问题 1: 沙箱文件访问
 
@@ -401,7 +416,7 @@ Path configPath = Path.of(home, ".myapp", "config.properties");
 
 ---
 
-## 监控和诊断
+## 8. 监控和诊断
 
 ### 系统监控
 
@@ -435,7 +450,7 @@ jcmd <pid> JFR.start duration=60s filename=recording.jfr
 
 ---
 
-## 最佳实践
+## 9. 最佳实践
 
 ### 开发环境
 
@@ -468,7 +483,7 @@ jcmd <pid> JFR.start duration=60s filename=recording.jfr
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 - [Apple Silicon 迁移指南](https://developer.apple.com/documentation/apple_silicon)
 - [Metal 文档](https://developer.apple.com/metal/)

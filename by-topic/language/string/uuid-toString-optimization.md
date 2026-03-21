@@ -4,7 +4,7 @@
 
 ---
 
-## TL;DR 快速概览
+## 1. TL;DR 快速概览
 
 > 💡 **1 分钟了解核心要点**
 
@@ -70,7 +70,7 @@ private static long hex8(long i) {
 
 ---
 
-## 背景
+## 2. 背景
 
 `java.util.UUID#toString()` 是一个高频调用的方法，用于将 128 位的 UUID 转换为标准字符串表示格式：
 
@@ -82,7 +82,7 @@ private static long hex8(long i) {
 
 ---
 
-## 优化历史时间线
+## 3. 优化历史时间线
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -114,7 +114,7 @@ private static long hex8(long i) {
 
 ---
 
-## 早期优化 (2016-2020)
+## 4. 早期优化 (2016-2020)
 
 ### 2016: Compact Strings 适配
 
@@ -158,7 +158,7 @@ if (name.length() == 36) {
 
 ---
 
-## 核心优化 (2024-2025)
+## 5. 核心优化 (2024-2025)
 
 ### 原始实现：查表法
 
@@ -263,7 +263,7 @@ public String toString() {
 
 ---
 
-## 算法原理
+## 6. 算法原理
 
 ### ASCII 十六进制字符规律
 
@@ -324,7 +324,7 @@ public static long expand(long i, long mask) {
 
 ---
 
-## 性能对比
+## 7. 性能对比
 
 ### 基准测试结果 (JMH)
 
@@ -354,7 +354,7 @@ public static long expand(long i, long mask) {
 
 ---
 
-## 贡献者
+## 8. 贡献者
 
 ### 主要贡献者
 
@@ -375,7 +375,7 @@ public static long expand(long i, long mask) {
 
 ---
 
-## 参考资料
+## 9. 参考资料
 
 ### 相关 Issue 和 PR
 

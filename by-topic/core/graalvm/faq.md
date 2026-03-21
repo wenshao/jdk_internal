@@ -17,7 +17,7 @@
 
 ---
 
-## 基础问题
+## 1. 基础问题
 
 ### Q1: GraalVM 是什么？
 
@@ -64,7 +64,7 @@ java -version
 
 ---
 
-## 性能相关
+## 2. 性能相关
 
 ### Q6: GraalVM 比 HotSpot 快多少？
 
@@ -117,7 +117,7 @@ java -version
 
 ---
 
-## Native Image
+## 3. Native Image
 
 ### Q10: Native Image 的原理是什么？
 
@@ -211,7 +211,7 @@ native-image --pgo -jar app.jar
 
 ---
 
-## 多语言支持
+## 4. 多语言支持
 
 ### Q16: GraalVM 支持哪些语言？
 
@@ -257,7 +257,7 @@ try (Context context = Context.create()) {
 
 ---
 
-## 故障排查
+## 5. 故障排查
 
 ### Q19: 如何启用 Graal JIT 日志？
 
@@ -327,7 +327,7 @@ native-image --debug-attach -jar app.jar
 
 ---
 
-## 最佳实践
+## 6. 最佳实践
 
 ### Q24: 生产环境应该使用哪个版本？
 
@@ -421,7 +421,7 @@ jobs:
 
 ---
 
-## 相关资源
+## 7. 相关资源
 
 ### 官方文档
 - [GraalVM 官网](https://www.graalvm.org/)

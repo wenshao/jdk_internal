@@ -5,8 +5,25 @@
 [← 返回 Panama](./)
 
 ---
+## 目录
 
-## 2014: 项目启动
+1. [2014: 项目启动](#1-2014-项目启动)
+2. [2015-2018: 早期原型](#2-2015-2018-早期原型)
+3. [2019: JDK 14 - Foreign Memory 孵化](#3-2019-jdk-14---foreign-memory-孵化)
+4. [2020: JDK 15 - Linker API](#4-2020-jdk-15---linker-api)
+5. [2021: JDK 16 - 内存 API 改进](#5-2021-jdk-16---内存-api-改进)
+6. [2022: JDK 17-19 - FFI 整合](#6-2022-jdk-17-19---ffi-整合)
+7. [2023: JDK 19-20 - 预览版本](#7-2023-jdk-19-20---预览版本)
+8. [2024: JDK 22 - 正式发布](#8-2024-jdk-22---正式发布)
+9. [API 演进历史](#9-api-演进历史)
+10. [时间线总览](#10-时间线总览)
+11. [里程碑总结](#11-里程碑总结)
+12. [相关项目](#12-相关项目)
+
+---
+
+
+## 1. 2014: 项目启动
 
 ### 项目宣布
 
@@ -20,7 +37,7 @@
 
 ---
 
-## 2015-2018: 早期原型
+## 2. 2015-2018: 早期原型
 
 ### 原型开发
 
@@ -41,7 +58,7 @@
 
 ---
 
-## 2019: JDK 14 - Foreign Memory 孵化
+## 3. 2019: JDK 14 - Foreign Memory 孵化
 
 ### JEP 370: Foreign Memory Access API (Incubator)
 
@@ -62,7 +79,7 @@ try (MemorySession session = MemorySession.openConfined()) {
 
 ---
 
-## 2020: JDK 15 - Linker API
+## 4. 2020: JDK 15 - Linker API
 
 ### JEP 389: Foreign Linker API (Incubator)
 
@@ -90,7 +107,7 @@ MethodHandle strlen = linker.downcallHandle(
 
 ---
 
-## 2021: JDK 16 - 内存 API 改进
+## 5. 2021: JDK 16 - 内存 API 改进
 
 ### JEP 387: Foreign Memory Access API (Second Incubator)
 
@@ -107,7 +124,7 @@ MethodHandle strlen = linker.downcallHandle(
 
 ---
 
-## 2022: JDK 17-19 - FFI 整合
+## 6. 2022: JDK 17-19 - FFI 整合
 
 ### JEP 412: Foreign Function & Memory API (Incubator)
 
@@ -124,7 +141,7 @@ MethodHandle strlen = linker.downcallHandle(
 
 ---
 
-## 2023: JDK 19-20 - 预览版本
+## 7. 2023: JDK 19-20 - 预览版本
 
 ### JEP 424: Foreign Function & Memory API (Preview)
 
@@ -153,7 +170,7 @@ MethodHandle strlen = linker.downcallHandle(...);
 
 ---
 
-## 2024: JDK 22 - 正式发布
+## 8. 2024: JDK 22 - 正式发布
 
 ### JEP 454: Foreign Function & Memory API
 
@@ -169,7 +186,7 @@ MethodHandle strlen = linker.downcallHandle(...);
 
 ---
 
-## API 演进历史
+## 9. API 演进历史
 
 ### MemorySegment
 
@@ -192,7 +209,7 @@ MethodHandle strlen = linker.downcallHandle(...);
 
 ---
 
-## 时间线总览
+## 10. 时间线总览
 
 ```
 2014 ── 2019 ── 2020 ── 2021 ── 2023 ── 2024
@@ -204,7 +221,7 @@ MethodHandle strlen = linker.downcallHandle(...);
 
 ---
 
-## 里程碑总结
+## 11. 里程碑总结
 
 | 里程碑 | 版本 | 影响 |
 |--------|------|------|
@@ -216,7 +233,7 @@ MethodHandle strlen = linker.downcallHandle(...);
 
 ---
 
-## 相关项目
+## 12. 相关项目
 
 | 项目 | 关系 |
 |------|------|

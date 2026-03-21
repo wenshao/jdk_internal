@@ -6,7 +6,7 @@
 
 ---
 
-## 快速概览
+## 1. 快速概览
 
 ```
 JDK 1.4 ── JDK 5 ── JDK 6 ── JDK 9 ── JDK 11 ── JDK 23 ── JDK 24 ── JDK 26
@@ -47,7 +47,7 @@ DOM/SAX   JAXB    StAX    模块化  JSON-P  JSON-P  JSON.B   JSON.B   JSON
 
 ---
 
-## XML 解析
+## 2. XML 解析
 
 ### DOM 解析
 
@@ -201,7 +201,7 @@ writer.close();
 
 ---
 
-## JAXB (XML 绑定)
+## 3. JAXB (XML 绑定)
 
 > **注意**: JDK 11 后 JAXB 已移除，需要额外依赖
 
@@ -299,7 +299,7 @@ UserList list = (UserList) unmarshaller.unmarshal(new File("users.xml"));
 
 ---
 
-## JSON-P (JSON 处理)
+## 4. JSON-P (JSON 处理)
 
 **JDK 11+ (JEP 353)**
 
@@ -390,7 +390,7 @@ generator.close();
 
 ---
 
-## JSON.B (JSON 绑定)
+## 5. JSON.B (JSON 绑定)
 
 **JDK 23+ (JEP 471)**
 
@@ -453,7 +453,7 @@ Jsonb jsonb = JsonbBuilder.create(config);
 
 ---
 
-## JSON 转义 (JDK 26+)
+## 6. JSON 转义 (JDK 26+)
 
 ### JEP 489: JSON 转义
 
@@ -470,7 +470,7 @@ String escaped = JsonEscaper.escape(input);
 
 ---
 
-## 性能对比
+## 7. 性能对比
 
 | API | 内存占用 | 速度 | 适用场景 |
 |-----|---------|------|----------|
@@ -482,7 +482,7 @@ String escaped = JsonEscaper.escape(input);
 
 ---
 
-## 最佳实践
+## 8. 最佳实践
 
 ### 选择合适的解析器
 
@@ -532,7 +532,7 @@ factory.setFeature("http://xml.org/sax/features/external-general-entities", fals
 
 ---
 
-## 核心贡献者
+## 9. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -557,7 +557,7 @@ factory.setFeature("http://xml.org/sax/features/external-general-entities", fals
 
 ---
 
-## Git 提交历史
+## 10. Git 提交历史
 
 > 基于 OpenJDK master 分支分析
 
@@ -572,7 +572,7 @@ git log --oneline -- src/java.json/share/classes/javax/json/
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 ### 内部文档
 

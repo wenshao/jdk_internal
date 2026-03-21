@@ -3,14 +3,28 @@
 > JDK 25 正式特性 - JEP 430
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [核心概念](#2-核心概念)
+3. [实现原理](#3-实现原理)
+4. [使用示例](#4-使用示例)
+5. [自定义模板处理器](#5-自定义模板处理器)
+6. [性能特性](#6-性能特性)
+7. [安全特性](#7-安全特性)
+8. [最佳实践](#8-最佳实践)
+9. [相关链接](#9-相关链接)
+
+---
+
+
+## 1. 概述
 
 String Templates（字符串模板）是 JDK 25 正式引入的特性，提供了一种安全、易读的字符串插值方式。
 
 ---
 
-## 核心概念
+## 2. 核心概念
 
 ### 模板表达式
 
@@ -31,7 +45,7 @@ String message = STR."Hello, \{name}!";
 
 ---
 
-## 实现原理
+## 3. 实现原理
 
 ### 编译时转换
 
@@ -54,7 +68,7 @@ public interface StringProcessor {
 
 ---
 
-## 使用示例
+## 4. 使用示例
 
 ### 基础用法
 
@@ -107,7 +121,7 @@ String table = FMT."""
 
 ---
 
-## 自定义模板处理器
+## 5. 自定义模板处理器
 
 ```java
 // SQL 安全处理器 (防止 SQL 注入)
@@ -131,7 +145,7 @@ String query = SQL."SELECT * FROM users WHERE name = '\{name}'";
 
 ---
 
-## 性能特性
+## 6. 性能特性
 
 ### 与字符串拼接对比
 
@@ -155,7 +169,7 @@ String s = STR."A\{x}B\{y}C";
 
 ---
 
-## 安全特性
+## 7. 安全特性
 
 ### 自动转义
 
@@ -177,7 +191,7 @@ String query = SQL."SELECT * FROM users WHERE name = '\{name}'";
 
 ---
 
-## 最佳实践
+## 8. 最佳实践
 
 ### 推荐用法
 
@@ -207,7 +221,7 @@ String s = STR."Result: \{result}";
 
 ---
 
-## 相关链接
+## 9. 相关链接
 
 - [JEP 430: String Templates](https://openjdk.org/jeps/430)
 - [Javadoc: java.lang.string.template](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/template/package-summary.html)

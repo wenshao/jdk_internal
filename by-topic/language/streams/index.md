@@ -6,7 +6,7 @@
 
 ---
 
-## TL;DR 快速概览
+## 1. TL;DR 快速概览
 
 > 💡 **1 分钟掌握 Stream API**
 
@@ -64,7 +64,7 @@ int sum = numbers.stream()
 
 ---
 
-## 快速概览
+## 2. 快速概览
 
 ```
 JDK 1.0 ── JDK 5 ── JDK 8 ── JDK 9 ── JDK 16 ── JDK 21
@@ -101,7 +101,7 @@ JDK 1.0 ── JDK 5 ── JDK 8 ── JDK 9 ── JDK 16 ── JDK 21
 
 ---
 
-## Stream 基础
+## 3. Stream 基础
 
 ### Stream 特性
 
@@ -175,7 +175,7 @@ List<Integer> result = numbers.stream()
 
 ---
 
-## 中间操作
+## 4. 中间操作
 
 ### filter 和 map
 
@@ -262,7 +262,7 @@ Stream.of(1, 2, 3, 4, 5, 1, 2)
 
 ---
 
-## 终端操作
+## 5. 终端操作
 
 ### 遍历与查找
 
@@ -382,7 +382,7 @@ Map<Boolean, List<String>> partitioned = Stream.of("a", "bb", "ccc", "dd")
 
 ---
 
-## Collectors
+## 6. Collectors
 
 ### 分组与分区
 
@@ -497,7 +497,7 @@ class CustomCollector {
 
 ---
 
-## 并行流
+## 7. 并行流
 
 ### 创建并行流
 
@@ -616,7 +616,7 @@ public class ParallelPerformance {
 
 ---
 
-## 原始类型流
+## 8. 原始类型流
 
 ### 原始类型流类型
 
@@ -706,7 +706,7 @@ IntStream.iterate(0, n -> n < 20, n -> n + 2)
 
 ---
 
-## Gatherers (JDK 21+)
+## 9. Gatherers (JDK 21+)
 
 **JEP 461: Gatherers (Preview)**
 
@@ -826,7 +826,7 @@ public class BatchGatherer {
 
 ---
 
-## 最佳实践
+## 10. 最佳实践
 
 ### 性能优化
 
@@ -899,7 +899,7 @@ list.stream()
 
 ---
 
-## Stream 实现深入
+## 11. Stream 实现深入
 
 ### Spliterator 接口
 
@@ -1029,7 +1029,7 @@ for (x in list) {
 // 循环优化减少不必要的边界检查
 ```
 
-## 性能优化实战
+## 12. 性能优化实战
 
 ### 基于 JDK PR 的优化洞察
 
@@ -1133,7 +1133,7 @@ public class StreamBenchmarks {
 
 ---
 
-## 重要 PR 分析
+## 13. 重要 PR 分析
 
 ### Lambda 生成优化
 
@@ -1191,7 +1191,7 @@ list.stream()
 
 ---
 
-## 核心贡献者
+## 14. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -1213,7 +1213,7 @@ list.stream()
 
 ---
 
-## 相关链接
+## 15. 相关链接
 
 ### 内部文档
 

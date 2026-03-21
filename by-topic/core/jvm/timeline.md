@@ -3,8 +3,22 @@
 JVM 参数、调优工具和监控技术从 JDK 1.0 到 JDK 26 的演进。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [JVM 参数分类](#2-jvm-参数分类)
+3. [JDK 版本演进](#3-jdk-版本演进)
+4. [监控工具演进](#4-监控工具演进)
+5. [常用调优参数](#5-常用调优参数)
+6. [性能分析](#6-性能分析)
+7. [OOM 诊断](#7-oom-诊断)
+8. [最佳实践](#8-最佳实践)
+9. [相关链接](#9-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 5 ──── JDK 6 ──── JDK 7 ──── JDK 8 ──── JDK 11 ──── JDK 17 ──── JDK 21 ──── JDK 26
@@ -16,7 +30,7 @@ JDK 1.0 ──── JDK 5 ──── JDK 6 ──── JDK 7 ──── JD
 
 ---
 
-## JVM 参数分类
+## 2. JVM 参数分类
 
 ### 标准参数 (-)
 
@@ -55,7 +69,7 @@ java -XX:MaxHeapFreeRatio=75
 
 ---
 
-## JDK 版本演进
+## 3. JDK 版本演进
 
 ### JDK 1.0-1.4 - 基础参数
 
@@ -437,7 +451,7 @@ java -XX:FlightRecorderOptions=disk=true,maxsize=1g,dumponexit=true ...
 
 ---
 
-## 监控工具演进
+## 4. 监控工具演进
 
 ### 命令行工具
 
@@ -461,7 +475,7 @@ java -XX:FlightRecorderOptions=disk=true,maxsize=1g,dumponexit=true ...
 
 ---
 
-## 常用调优参数
+## 5. 常用调优参数
 
 ### 堆内存配置
 
@@ -521,7 +535,7 @@ java -XX:FlightRecorderOptions=disk=true,maxsize=1g,dumponexit=true ...
 
 ---
 
-## 性能分析
+## 6. 性能分析
 
 ### JFR 录制
 
@@ -566,7 +580,7 @@ jhat -port 7000 heap.hprof
 
 ---
 
-## OOM 诊断
+## 7. OOM 诊断
 
 ### 常见 OOM 类型
 
@@ -603,7 +617,7 @@ jhat -port 7000 heap.hprof
 
 ---
 
-## 最佳实践
+## 8. 最佳实践
 
 ### 生产环境参数
 
@@ -642,7 +656,7 @@ java -Xms8g -Xmx8g \
 
 ---
 
-## 相关链接
+## 9. 相关链接
 
 - [HotSpot VM Options](https://docs.oracle.com/en/java/javase/21/vm/options/)
 - [Java Mission Control](https://docs.oracle.com/en/java/javase/21/docs/specs/man/jmc.html)

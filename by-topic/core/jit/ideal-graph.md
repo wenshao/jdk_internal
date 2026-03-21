@@ -6,8 +6,24 @@
 [← 返回 JIT 编译](../)
 
 ---
+## 目录
 
-## 一眼看懂
+1. [一眼看懂](#1-一眼看懂)
+2. [Ideal Graph 概述](#2-ideal-graph-概述)
+3. [图结构](#3-图结构)
+4. [核心节点类型](#4-核心节点类型)
+5. [图变换过程](#5-图变换过程)
+6. [IGV (Ideal Graph Visualizer)](#6-igv-ideal-graph-visualizer)
+7. [Ideal Graph 优化示例](#7-ideal-graph-优化示例)
+8. [节点哈希和比较](#8-节点哈希和比较)
+9. [常见 Ideal Graph 模式](#9-常见-ideal-graph-模式)
+10. [调试和诊断](#10-调试和诊断)
+11. [相关链接](#11-相关链接)
+
+---
+
+
+## 1. 一眼看懂
 
 | 维度 | 内容 |
 |------|------|
@@ -20,7 +36,7 @@
 
 ---
 
-## Ideal Graph 概述
+## 2. Ideal Graph 概述
 
 ### 为什么需要 Ideal Graph？
 
@@ -50,7 +66,7 @@
 
 ---
 
-## 图结构
+## 3. 图结构
 
 ### 节点 (Node) 结构
 
@@ -122,7 +138,7 @@ public int add(int a, int b) {
 
 ---
 
-## 核心节点类型
+## 4. 核心节点类型
 
 ### 数据节点
 
@@ -194,7 +210,7 @@ PhiNode(RegionNode)  // 数据流合并
 
 ---
 
-## 图变换过程
+## 5. 图变换过程
 
 ### Phase 对图的影响
 
@@ -249,7 +265,7 @@ AddNode(a, a)  // 2 * a
 
 ---
 
-## IGV (Ideal Graph Visualizer)
+## 6. IGV (Ideal Graph Visualizer)
 
 ### 启动 IGV
 
@@ -296,7 +312,7 @@ java -XX:+UnlockDiagnosticVMOptions \
 
 ---
 
-## Ideal Graph 优化示例
+## 7. Ideal Graph 优化示例
 
 ### 常量折叠
 
@@ -380,7 +396,7 @@ return → AddINode(ConI(1), ConI(2)) → ConI(3)
 
 ---
 
-## 节点哈希和比较
+## 8. 节点哈希和比较
 
 ### GVN 中的节点相等性
 
@@ -421,7 +437,7 @@ bool Node::cmp(Node* n) {
 
 ---
 
-## 常见 Ideal Graph 模式
+## 9. 常见 Ideal Graph 模式
 
 ### 模式 1: 冗余加载消除
 
@@ -477,7 +493,7 @@ AddINode(temp, 1) ──► b
 
 ---
 
-## 调试和诊断
+## 10. 调试和诊断
 
 ### 打印 Ideal Graph
 
@@ -507,7 +523,7 @@ AddINode(temp, 1) ──► b
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 ### 本地文档
 

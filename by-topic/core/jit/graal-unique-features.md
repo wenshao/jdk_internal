@@ -7,8 +7,30 @@
 [← 返回 JIT 编译](../)
 
 ---
+## 目录
 
-## 结论先行
+1. [结论先行](#1-结论先行)
+2. [一、部分转义分析 (Partial Escape Analysis)](#2-一部分转义分析-partial-escape-analysis)
+3. [二、推测性优化 (Speculative Optimization)](#3-二推测性优化-speculative-optimization)
+4. [三、LoopPredication (循环预测)](#4-三looppredication-循环预测)
+5. [四、Truffle 语言实现框架](#5-四truffle-语言实现框架)
+6. [五、Native Image AOT 编译](#6-五native-image-aot-编译)
+7. [六、SPACK 内联策略](#7-六spack-内联策略)
+8. [七、高级数组优化](#8-七高级数组优化)
+9. [八、Polyglot API](#9-八polyglot-api)
+10. [九、高级控制流优化](#10-九高级控制流优化)
+11. [十、高级内存优化](#11-十高级内存优化)
+12. [十一、迭代部分转义分析](#12-十一迭代部分转义分析)
+13. [十二、高级类型分析](#13-十二高级类型分析)
+14. [完整对比表](#14-完整对比表)
+15. [配置选项参考](#15-配置选项参考)
+16. [实际应用建议](#16-实际应用建议)
+17. [相关链接](#17-相关链接)
+
+---
+
+
+## 1. 结论先行
 
 | 类别 | C2 | Graal | 说明 |
 |------|----|-------|------|
@@ -27,7 +49,7 @@
 
 ---
 
-## 一、部分转义分析 (Partial Escape Analysis)
+## 2. 一、部分转义分析 (Partial Escape Analysis)
 
 ### C2 的局限
 
@@ -112,7 +134,7 @@ if (flag) {
 
 ---
 
-## 二、推测性优化 (Speculative Optimization)
+## 3. 二、推测性优化 (Speculative Optimization)
 
 ### 推测性优化原理
 
@@ -189,7 +211,7 @@ SpeculativeGuardMovement:
 
 ---
 
-## 三、LoopPredication (循环预测)
+## 4. 三、LoopPredication (循环预测)
 
 ### 什么是 LoopPredication？
 
@@ -245,7 +267,7 @@ if (array.length > 0) {  // 一次性检查
 
 ---
 
-## 四、Truffle 语言实现框架
+## 5. 四、Truffle 语言实现框架
 
 ### 什么是 Truffle？
 
@@ -359,7 +381,7 @@ class PropertyReadNode {
 
 ---
 
-## 五、Native Image AOT 编译
+## 6. 五、Native Image AOT 编译
 
 ### 什么是 Native Image？
 
@@ -466,7 +488,7 @@ Closed World Assumption:
 
 ---
 
-## 六、SPACK 内联策略
+## 7. 六、SPACK 内联策略
 
 ### 什么是 SPACK？
 
@@ -527,7 +549,7 @@ void caller() {
 
 ---
 
-## 七、高级数组优化
+## 8. 七、高级数组优化
 
 ### 数组内联 (Array Inlining)
 
@@ -581,7 +603,7 @@ _mm512_storeu_ps(result, out);
 
 ---
 
-## 八、Polyglot API
+## 9. 八、Polyglot API
 
 ### 多语言互操作
 
@@ -621,7 +643,7 @@ GraalVM Polyglot:
 
 ---
 
-## 九、高级控制流优化
+## 10. 九、高级控制流优化
 
 ### 条件去虚拟化
 
@@ -669,7 +691,7 @@ String getType(int code) {
 
 ---
 
-## 十、高级内存优化
+## 11. 十、高级内存优化
 
 ### 虚拟对象 (Virtual Objects)
 
@@ -722,7 +744,7 @@ for (int i = 0; i < 100; i++) {
 
 ---
 
-## 十一、迭代部分转义分析
+## 12. 十一、迭代部分转义分析
 
 ### 多轮优化
 
@@ -749,7 +771,7 @@ for (int i = 0; i < 100; i++) {
 
 ---
 
-## 十二、高级类型分析
+## 13. 十二、高级类型分析
 
 ### 精确类型分析
 
@@ -777,7 +799,7 @@ Object obj = list.get(0);
 
 ---
 
-## 完整对比表
+## 14. 完整对比表
 
 | 特性类别 | C2 | Graal | 差异 |
 |----------|----|-------|------|
@@ -796,7 +818,7 @@ Object obj = list.get(0);
 
 ---
 
-## 配置选项参考
+## 15. 配置选项参考
 
 ### Native Image 优化选项
 
@@ -824,7 +846,7 @@ Object obj = list.get(0);
 
 ---
 
-## 实际应用建议
+## 16. 实际应用建议
 
 ### 何时使用 Graal 独有特性
 
@@ -856,7 +878,7 @@ Object obj = list.get(0);
 
 ---
 
-## 相关链接
+## 17. 相关链接
 
 ### 外部资源
 

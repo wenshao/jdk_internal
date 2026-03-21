@@ -3,8 +3,22 @@
 > Class File API 从内部工具到正式 API 的完整演进历程
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [版本演进](#2-版本演进)
+3. [关键 Bug 与 PR](#3-关键-bug-与-pr)
+4. [邮件列表讨论节选](#4-邮件列表讨论节选)
+5. [使用场景](#5-使用场景)
+6. [迁移指南](#6-迁移指南)
+7. [性能数据](#7-性能数据)
+8. [相关 JEP](#8-相关-jep)
+9. [相关链接](#9-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 21 ───────── JDK 22 ───────── JDK 23 ───────── JDK 24 ───────── JDK 26
@@ -16,7 +30,7 @@ JDK 21 ───────── JDK 22 ───────── JDK 23 ─
 
 ---
 
-## 版本演进
+## 2. 版本演进
 
 ### JDK 21 (2023) - 内部工具阶段
 
@@ -153,7 +167,7 @@ byte[] transformed = ClassFile.of().transformClass(
 
 ---
 
-## 关键 Bug 与 PR
+## 3. 关键 Bug 与 PR
 
 ### JDK-8294982: Implementation of Classfile API
 
@@ -187,7 +201,7 @@ byte[] transformed = ClassFile.of().transformClass(
 
 ---
 
-## 邮件列表讨论节选
+## 4. 邮件列表讨论节选
 
 ### 2022-06: 原始讨论
 
@@ -217,7 +231,7 @@ byte[] transformed = ClassFile.of().transformClass(
 
 ---
 
-## 使用场景
+## 5. 使用场景
 
 ### 1. 注解处理器
 
@@ -328,7 +342,7 @@ byte[] proxyClass = ClassFile.of().build(proxyDesc, cb -> {
 
 ---
 
-## 迁移指南
+## 6. 迁移指南
 
 ### 从 ASM 迁移
 
@@ -387,7 +401,7 @@ byte[] transformed = ClassFile.of().transformClass(
 
 ---
 
-## 性能数据
+## 7. 性能数据
 
 ### JMH 基准测试 (JDK 24)
 
@@ -409,7 +423,7 @@ byte[] transformed = ClassFile.of().transformClass(
 
 ---
 
-## 相关 JEP
+## 8. 相关 JEP
 
 | JEP | 标题 | 版本 | 状态 |
 |-----|------|------|------|
@@ -419,7 +433,7 @@ byte[] transformed = ClassFile.of().transformClass(
 
 ---
 
-## 相关链接
+## 9. 相关链接
 
 - [java.lang.classfile 包文档](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/classfile/package-summary.html)
 - [OpenJDK 源码](https://github.com/openjdk/jdk/tree/master/src/java.base/share/classes/java/lang/classfile)

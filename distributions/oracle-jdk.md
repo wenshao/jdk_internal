@@ -5,8 +5,22 @@
 [← 返回发行版](../distributions/)
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [许可证](#2-许可证)
+3. [版本支持](#3-版本支持)
+4. [特性](#4-特性)
+5. [安装](#5-安装)
+6. [性能](#6-性能)
+7. [适用场景](#7-适用场景)
+8. [迁移](#8-迁移)
+9. [相关链接](#9-相关链接)
+
+---
+
+
+## 1. 概述
 
 Oracle JDK 是 Oracle 公司官方维护的 Java Development Kit，基于 OpenJDK 构建，提供商业支持和额外功能。
 
@@ -21,7 +35,7 @@ Oracle JDK 是 Oracle 公司官方维护的 Java Development Kit，基于 OpenJD
 
 ---
 
-## 许可证
+## 2. 许可证
 
 ### NFTC (No-Fee Terms and Conditions) - JDK 17+
 
@@ -53,7 +67,7 @@ Oracle JDK 是 Oracle 公司官方维护的 Java Development Kit，基于 OpenJD
 
 ---
 
-## 版本支持
+## 3. 版本支持
 
 ### LTS 支持周期
 
@@ -74,7 +88,7 @@ Oracle JDK 是 Oracle 公司官方维护的 Java Development Kit，基于 OpenJD
 
 ---
 
-## 特性
+## 4. 特性
 
 ### 与 OpenJDK 的区别
 
@@ -95,7 +109,7 @@ Oracle JDK 是 Oracle 公司官方维护的 Java Development Kit，基于 OpenJD
 
 ---
 
-## 安装
+## 5. 安装
 
 ### 下载
 
@@ -134,7 +148,7 @@ RUN dnf install -y java-21-openjdk-devel
 
 ---
 
-## 性能
+## 6. 性能
 
 ### 与其他发行版对比
 
@@ -149,7 +163,7 @@ RUN dnf install -y java-21-openjdk-devel
 
 ---
 
-## 适用场景
+## 7. 适用场景
 
 ### 推荐使用
 
@@ -172,7 +186,7 @@ RUN dnf install -y java-21-openjdk-devel
 
 ---
 
-## 迁移
+## 8. 迁移
 
 ### 从 Oracle JDK 迁移到其他发行版
 
@@ -210,7 +224,7 @@ java -version
 
 ---
 
-## 相关链接
+## 9. 相关链接
 
 ### 官方资源
 

@@ -5,8 +5,26 @@
 [← 返回 CPU 架构](./)
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [版本历史](#2-版本历史)
+3. [平台支持](#3-平台支持)
+4. [核心特性](#4-核心特性)
+5. [汇编模板](#5-汇编模板)
+6. [JVM 参数](#6-jvm-参数)
+7. [贡献者](#7-贡献者)
+8. [构建 AArch64 JDK](#8-构建-aarch64-jdk)
+9. [性能特性](#9-性能特性)
+10. [已知问题](#10-已知问题)
+11. [相关 JEP](#11-相关-jep)
+12. [相关链接](#12-相关链接)
+13. [相关主题](#13-相关主题)
+
+---
+
+
+## 1. 概述
 
 AArch64 是 ARM 64位架构，广泛用于移动设备、云服务器和 Apple Silicon Mac。OpenJDK 从 JDK 9 开始支持 AArch64。
 
@@ -29,7 +47,7 @@ AArch64 是 ARM 64位架构，广泛用于移动设备、云服务器和 Apple S
 
 ---
 
-## 版本历史
+## 2. 版本历史
 
 | 版本 | JEP | 平台 | 说明 |
 |------|-----|------|------|
@@ -41,7 +59,7 @@ AArch64 是 ARM 64位架构，广泛用于移动设备、云服务器和 Apple S
 
 ---
 
-## 平台支持
+## 3. 平台支持
 
 ### Linux/AArch64 (JDK 9+)
 
@@ -79,7 +97,7 @@ Windows ARM 设备：
 
 ---
 
-## 核心特性
+## 4. 核心特性
 
 ### NEON 向量
 
@@ -129,7 +147,7 @@ fadd z0.s, p0/m, z1.s, z2.s
 
 ---
 
-## 汇编模板
+## 5. 汇编模板
 
 ### 基本指令
 
@@ -182,7 +200,7 @@ void g1_write_barrier_post(Register store_addr,
 
 ---
 
-## JVM 参数
+## 6. JVM 参数
 
 ### AArch64 特定参数
 
@@ -224,7 +242,7 @@ java -XX:+PrintFlagsFinal -version | grep -i aarch64
 
 ---
 
-## 贡献者
+## 7. 贡献者
 
 ### 核心贡献者
 
@@ -248,7 +266,7 @@ java -XX:+PrintFlagsFinal -version | grep -i aarch64
 
 ---
 
-## 构建 AArch64 JDK
+## 8. 构建 AArch64 JDK
 
 ### Linux/AArch64
 
@@ -289,7 +307,7 @@ make images
 
 ---
 
-## 性能特性
+## 9. 性能特性
 
 ### AWS Graviton 优化
 
@@ -316,7 +334,7 @@ java -XX:+UseZGC \
 
 ---
 
-## 已知问题
+## 10. 已知问题
 
 ### macOS/AArch64
 
@@ -335,7 +353,7 @@ java -XX:+UseZGC \
 
 ---
 
-## 相关 JEP
+## 11. 相关 JEP
 
 | JEP | 版本 | 标题 |
 |-----|------|------|
@@ -345,7 +363,7 @@ java -XX:+UseZGC \
 
 ---
 
-## 相关链接
+## 12. 相关链接
 
 - [ARM Developer](https://developer.arm.com/)
 - [OpenJDK AArch64 Port](https://openjdk.org/projects/aarch64-port/)
@@ -354,7 +372,7 @@ java -XX:+UseZGC \
 
 ---
 
-## 相关主题
+## 13. 相关主题
 
 - [CPU 架构](./) - 其他架构支持
 - [JIT 编译](../jit/) - 架构特定的编译优化

@@ -6,7 +6,7 @@
 
 ---
 
-## 快速概览
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 1.4 ── JDK 6 ── JDK 7 ── JDK 11 ── JDK 21
@@ -45,7 +45,7 @@ JCE      JCE    TLS1.2  TLS1.3  更新    TLS1.4
 
 ---
 
-## JCE 框架
+## 2. JCE 框架
 
 **Java Cryptography Extension**
 
@@ -80,7 +80,7 @@ Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding", "SunJCE");
 
 ---
 
-## 消息摘要
+## 3. 消息摘要
 
 ### MessageDigest
 
@@ -121,7 +121,7 @@ private static String bytesToHex(byte[] bytes) {
 
 ---
 
-## 对称加密
+## 4. 对称加密
 
 ### Cipher (AES)
 
@@ -186,7 +186,7 @@ byte[] tag = cipher.getIV();  // 初始化向量
 
 ---
 
-## 非对称加密
+## 5. 非对称加密
 
 ### KeyPair 生成
 
@@ -254,7 +254,7 @@ byte[] encryptedKey = rsaCipher.doFinal(sessionKey.getEncoded());
 
 ---
 
-## 数字签名
+## 6. 数字签名
 
 ### 签名
 
@@ -299,7 +299,7 @@ System.out.println("Signature valid: " + valid);
 
 ---
 
-## 密钥管理
+## 7. 密钥管理
 
 ### KeyStore
 
@@ -350,7 +350,7 @@ SecretKey desKey = desKeyGen.generateKey();
 
 ---
 
-## SSL/TLS
+## 8. SSL/TLS
 
 ### SSLContext
 
@@ -431,7 +431,7 @@ config.setNeedClientAuth(false);  // 不需要客户端证书
 
 ---
 
-## 最佳实践
+## 9. 最佳实践
 
 ### 算法选择
 
@@ -480,7 +480,7 @@ strong.nextBytes(iv);
 
 ---
 
-## 核心贡献者
+## 10. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -497,7 +497,7 @@ strong.nextBytes(iv);
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 ### 内部文档
 

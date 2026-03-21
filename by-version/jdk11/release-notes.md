@@ -6,14 +6,29 @@
 [![License](https://img.shields.io/badge/License-GPLv2--with--Classpath--Exception-blue)](https://openjdk.org/projects/jdk/11/)
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [语言特性](#2-语言特性)
+3. [核心库](#3-核心库)
+4. [工具](#4-工具)
+5. [移除](#5-移除)
+6. [JEP 汇总](#6-jep-汇总)
+7. [相比 JDK 8 的新特性](#7-相比-jdk-8-的新特性)
+8. [升级建议](#8-升级建议)
+9. [性能改进](#9-性能改进)
+10. [相关链接](#10-相关链接)
+
+---
+
+
+## 1. 概述
 
 JDK 11 是第一个在 6 个月发布周期下的 LTS 版本，引入了 **HTTP Client** 正式版、**var** 局部变量类型推断、**Flight Recorder** 等重要特性。
 
 ---
 
-## 语言特性
+## 2. 语言特性
 
 ### JEP 323: Local-Variable Syntax for Lambda Parameters ⭐
 
@@ -53,7 +68,7 @@ public class Outer {
 
 ---
 
-## 核心库
+## 3. 核心库
 
 ### JEP 321: HTTP Client (正式版) ⭐⭐
 
@@ -182,7 +197,7 @@ SSLContext sslContext = SSLContext.getInstance("TLSv1.3");
 
 ---
 
-## 工具
+## 4. 工具
 
 ### JEP 330: Launch Single-File Source-Code Programs ⭐
 
@@ -212,7 +227,7 @@ void main() {
 
 ---
 
-## 移除
+## 5. 移除
 
 ### JEP 335: Deprecate the Nashorn JavaScript Engine
 
@@ -228,7 +243,7 @@ void main() {
 
 ---
 
-## JEP 汇总
+## 6. JEP 汇总
 
 | 类别 | JEP | 标题 | 状态 |
 |------|-----|------|------|
@@ -249,7 +264,7 @@ void main() {
 
 ---
 
-## 相比 JDK 8 的新特性
+## 7. 相比 JDK 8 的新特性
 
 ### 新增正式特性
 
@@ -270,7 +285,7 @@ void main() {
 
 ---
 
-## 升级建议
+## 8. 升级建议
 
 ### 从 JDK 8 升级
 
@@ -301,7 +316,7 @@ java -version
 
 ---
 
-## 性能改进
+## 9. 性能改进
 
 | 领域 | 改进 |
 |------|------|
@@ -312,7 +327,7 @@ java -version
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 - [OpenJDK JDK 11 项目页面](https://openjdk.org/projects/jdk/11/)
 - [JDK 11 JEP 列表](https://openjdk.org/projects/jdk/11/spec/)

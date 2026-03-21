@@ -17,7 +17,7 @@
 
 ---
 
-## 为什么 Vector API 孵化这么慢？
+## 1. 为什么 Vector API 孵化这么慢？
 
 Vector API 从 JDK 16 (2021) 开始孵化，至今已 6+ 个版本仍未毕业。
 
@@ -167,7 +167,7 @@ float c = a + b;  // 结果可能因平台而异
 
 ---
 
-## 为什么 Valhalla 进度缓慢？
+## 2. 为什么 Valhalla 进度缓慢？
 
 Valhalla 是 OpenJDK 历史上最复杂的项目之一，已开发 10+ 年。
 
@@ -342,7 +342,7 @@ INVOKEINTERFACE java/util/List.add (I)Z
 
 ---
 
-## Float16 深度分析
+## 3. Float16 深度分析
 
 ### 为什么需要 Float16？
 
@@ -468,7 +468,7 @@ Google 推出的 Brain Float16:
 
 ---
 
-## 项目依赖关系图
+## 4. 项目依赖关系图
 
 OpenJDK 重大项目之间存在复杂的技术依赖：
 
@@ -549,7 +549,7 @@ FloatVector.fromMemorySegment(species, segment, 0, ByteOrder.nativeOrder());
 
 ---
 
-## 技术挑战与权衡
+## 5. 技术挑战与权衡
 
 ### 1. 向后兼容性 vs 创新
 
@@ -629,7 +629,7 @@ FloatVector.SPECIES_128  // x86-64: ✅ | AArch64: ✅
 
 ---
 
-## 性能优化的代价
+## 6. 性能优化的代价
 
 ### 1. 复杂度增加
 
@@ -671,7 +671,7 @@ FloatVector.SPECIES_128  // x86-64: ✅ | AArch64: ✅
 
 ---
 
-## 总结
+## 7. 总结
 
 ### 为什么这么慢？
 
@@ -696,7 +696,7 @@ FloatVector.SPECIES_128  // x86-64: ✅ | AArch64: ✅
 
 ---
 
-## 历史决策分析
+## 8. 历史决策分析
 
 ### 设计决策回顾
 
@@ -786,7 +786,7 @@ ArrayList$I extends AbstractList$I { ... }
 
 ---
 
-## 与其它语言的对比
+## 9. 与其它语言的对比
 
 ### 值类型对比
 
@@ -859,7 +859,7 @@ Point[] arr = new Point[100];  // 连续内存 (Valhalla 后)
 
 ---
 
-## 关键 PR 深度分析
+## 10. 关键 PR 深度分析
 
 ### Vector API 关键 PR
 
@@ -878,7 +878,7 @@ Point[] arr = new Point[100];  // 连续内存 (Valhalla 后)
 
 ---
 
-## 社区反馈与争议
+## 11. 社区反馈与争议
 
 ### Vector API 争议
 
@@ -911,7 +911,7 @@ Point[] arr = new Point[100];  // 连续内存 (Valhalla 后)
 
 ---
 
-## Float16 与 AI/ML 战略
+## 12. Float16 与 AI/ML 战略
 
 ### Java 在 AI/ML 中的定位
 
@@ -951,7 +951,7 @@ Point[] arr = new Point[100];  // 连续内存 (Valhalla 后)
 
 ---
 
-## 未来路线图
+## 13. 未来路线图
 
 ### Vector API 路线图
 
@@ -996,7 +996,7 @@ Point[] arr = new Point[100];  // 连续内存 (Valhalla 后)
 
 ---
 
-## 深度技术资源
+## 14. 深度技术资源
 
 ### 设计文档
 
@@ -1040,7 +1040,7 @@ Valhalla:
 
 ---
 
-## Intel 贡献深度分析
+## 15. Intel 贡献深度分析
 
 ### 为什么 Intel 是最大外部贡献者？
 
@@ -1100,7 +1100,7 @@ Valhalla:
 
 ---
 
-## ARM 生态系统贡献
+## 16. ARM 生态系统贡献
 
 ### ARM 公司贡献
 
@@ -1121,7 +1121,7 @@ Vector API 在 Apple M1/M2/M3 上的支持:
 
 ---
 
-## 参与度趋势分析
+## 17. 参与度趋势分析
 
 ### 年度提交分布
 

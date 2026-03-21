@@ -3,8 +3,21 @@
 > JPMS (Java Platform Module System) 完整指南
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [模块基础](#2-模块基础)
+3. [模块类型](#3-模块类型)
+4. [常用命令](#4-常用命令)
+5. [模块化 JDK](#5-模块化-jdk)
+6. [迁移到模块系统](#6-迁移到模块系统)
+7. [JDK 25+ 新特性](#7-jdk-25-新特性)
+8. [相关资源](#8-相关资源)
+
+---
+
+
+## 1. 概述
 
 Java 模块系统 (JPMS) 在 Java 9 引入，提供：
 
@@ -14,7 +27,7 @@ Java 模块系统 (JPMS) 在 Java 9 引入，提供：
 
 ---
 
-## 模块基础
+## 2. 模块基础
 
 ### module-info.java
 
@@ -48,7 +61,7 @@ module com.example.myapp {
 
 ---
 
-## 模块类型
+## 3. 模块类型
 
 ### 1. 命名模块
 
@@ -64,7 +77,7 @@ module com.example.myapp {
 
 ---
 
-## 常用命令
+## 4. 常用命令
 
 ### 编译模块
 
@@ -93,7 +106,7 @@ jdeps --module-path out -s myapp.jar
 
 ---
 
-## 模块化 JDK
+## 5. 模块化 JDK
 
 ### 常用 JDK 模块
 
@@ -114,7 +127,7 @@ jlink --add-modules java.base,java.sql --output custom-jre
 
 ---
 
-## 迁移到模块系统
+## 6. 迁移到模块系统
 
 ### 迁移步骤
 
@@ -133,7 +146,7 @@ jlink --add-modules java.base,java.sql --output custom-jre
 
 ---
 
-## JDK 25+ 新特性
+## 7. JDK 25+ 新特性
 
 ### JEP 511: Module Import Declarations
 
@@ -147,7 +160,7 @@ Connection conn = DriverManager.getConnection(url);
 
 ---
 
-## 相关资源
+## 8. 相关资源
 
 - [JEP 261: Module System](https://openjdk.org/jeps/261)
 - [模块化 JDK 文档](https://docs.oracle.com/en/java/javase/21/docs/api/)

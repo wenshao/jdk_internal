@@ -3,8 +3,23 @@
 Java 序列化从 JDK 1.0 到 JDK 26 的完整演进历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [JDK 1.0 - Java Serializable](#2-jdk-10---java-serializable)
+3. [JDK 5 - 枚举序列化](#3-jdk-5---枚举序列化)
+4. [JDK 7 - Externalizable](#4-jdk-7---externalizable)
+5. [JDK 8 - Record 序列化](#5-jdk-8---record-序列化)
+6. [第三方库](#6-第三方库)
+7. [安全性](#7-安全性)
+8. [最佳实践](#8-最佳实践)
+9. [时间线总结](#9-时间线总结)
+10. [相关链接](#10-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 5 ──── JDK 6 ──── JDK 7 ──── JDK 8 ──── JDK 17 ──── JDK 26
@@ -15,7 +30,7 @@ Serializable  序列化       库         配置         序列化     序列化
 
 ---
 
-## JDK 1.0 - Java Serializable
+## 2. JDK 1.0 - Java Serializable
 
 ### 基础序列化
 
@@ -74,7 +89,7 @@ private static final long serialVersionUID = 123456789L;
 
 ---
 
-## JDK 5 - 枚举序列化
+## 3. JDK 5 - 枚举序列化
 
 ### Enum 序列化
 
@@ -96,7 +111,7 @@ Status status = (Status) ois.readObject();
 
 ---
 
-## JDK 7 - Externalizable
+## 4. JDK 7 - Externalizable
 
 ### Externalizable
 
@@ -155,7 +170,7 @@ public class Person implements Serializable {
 
 ---
 
-## JDK 8 - Record 序列化
+## 5. JDK 8 - Record 序列化
 
 ### Record 序列化
 
@@ -180,7 +195,7 @@ Person deserialized = (Person) ois.readObject();
 
 ---
 
-## 第三方库
+## 6. 第三方库
 
 ### JSON 序列化
 
@@ -220,7 +235,7 @@ Person person = unmarshaller.unmarshal(new File("person.xml"));
 
 ---
 
-## 安全性
+## 7. 安全性
 
 ### 反序列化漏洞
 
@@ -245,7 +260,7 @@ ois.setObjectInputFilter(filter);
 
 ---
 
-## 最佳实践
+## 8. 最佳实践
 
 ### serialVersionUID
 
@@ -272,7 +287,7 @@ private transient Connection connection;
 
 ---
 
-## 时间线总结
+## 9. 时间线总结
 
 | 版本 | 特性 | 说明 |
 |------|------|------|
@@ -285,7 +300,7 @@ private transient Connection connection;
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 - [Serializable](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/Serializable.html)
 - [ObjectInputFilter](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/ObjectInputFilter.html)

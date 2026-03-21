@@ -5,8 +5,20 @@
 [← 返回发行版](../distributions/)
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [特点](#2-特点)
+3. [版本支持](#3-版本支持)
+4. [安装](#4-安装)
+5. [性能](#5-性能)
+6. [适用场景](#6-适用场景)
+7. [相关链接](#7-相关链接)
+
+---
+
+
+## 1. 概述
 
 Eclipse Temurin (原 AdoptOpenJDK) 是 Eclipse Foundation 旗下的 Adoptium 项目提供的免费 OpenJDK 发行版。
 
@@ -22,7 +34,7 @@ Eclipse Temurin (原 AdoptOpenJDK) 是 Eclipse Foundation 旗下的 Adoptium 项
 
 ---
 
-## 特点
+## 2. 特点
 
 ### 核心特性
 
@@ -43,7 +55,7 @@ Eclipse Temurin (原 AdoptOpenJDK) 是 Eclipse Foundation 旗下的 Adoptium 项
 
 ---
 
-## 版本支持
+## 3. 版本支持
 
 ### 支持周期
 
@@ -64,7 +76,7 @@ Eclipse Temurin (原 AdoptOpenJDK) 是 Eclipse Foundation 旗下的 Adoptium 项
 
 ---
 
-## 安装
+## 4. 安装
 
 ### SDKMAN
 
@@ -133,7 +145,7 @@ java -version
 
 ---
 
-## 性能
+## 5. 性能
 
 ### 基准测试
 
@@ -155,7 +167,7 @@ java -version
 
 ---
 
-## 适用场景
+## 6. 适用场景
 
 ### 推荐使用
 
@@ -177,7 +189,7 @@ java -version
 
 ---
 
-## 相关链接
+## 7. 相关链接
 
 ### 官方资源
 

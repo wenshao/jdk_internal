@@ -6,7 +6,7 @@
 
 ---
 
-## TL;DR 快速概览
+## 1. TL;DR 快速概览
 
 > 💡 **1 分钟掌握 Record**
 
@@ -73,7 +73,7 @@ String format = switch (shape) {
 
 ---
 
-## 快速概览
+## 2. 快速概览
 
 ```
 JDK 1.0 ── JDK 8 ── JDK 11 ── JDK 14 ── JDK 15 ── JDK 16 ── JDK 21
@@ -107,7 +107,7 @@ JDK 1.0 ── JDK 8 ── JDK 11 ── JDK 14 ── JDK 15 ── JDK 16 ─
 
 ---
 
-## Record 基础
+## 3. Record 基础
 
 ### 定义 Record
 
@@ -195,7 +195,7 @@ public record Point(int x, int y) { }
 
 ---
 
-## Record 成员
+## 4. Record 成员
 
 ### 添加方法
 
@@ -282,7 +282,7 @@ System.out.println(person);  // Person[name=John Doe, address=Address[...]]
 
 ---
 
-## Compact Constructor
+## 5. Compact Constructor
 
 ### 紧凑构造器
 
@@ -352,7 +352,7 @@ System.out.println(cart.items());  // [Apple, Banana]
 
 ---
 
-## Record 与继承
+## 6. Record 与继承
 
 ### Record 不能继承
 
@@ -415,7 +415,7 @@ public record Box(double width, double height, double depth)
 
 ---
 
-## Record 模式匹配
+## 7. Record 模式匹配
 
 ### instanceof 模式匹配
 
@@ -486,7 +486,7 @@ if (obj instanceof Person(String name, Person.Address(String city, String street
 
 ---
 
-## 最佳实践
+## 8. 最佳实践
 
 ### 何时使用 Record
 
@@ -594,7 +594,7 @@ public record ComplexRecord(int a, int b, int c, int d) {
 
 ---
 
-## 重要 PR 分析
+## 9. 重要 PR 分析
 
 ### Record 性能优化
 
@@ -635,7 +635,7 @@ points.stream()
 
 ---
 
-## Record 性能最佳实践
+## 10. Record 性能最佳实践
 
 ### Record vs Class 性能对比
 
@@ -778,7 +778,7 @@ employees.stream()
 
 ---
 
-## 核心贡献者
+## 11. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -801,7 +801,7 @@ employees.stream()
 
 ---
 
-## 相关链接
+## 12. 相关链接
 
 ### 内部文档
 

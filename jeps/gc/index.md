@@ -3,8 +3,21 @@
 > JDK 21-26 垃圾收集器相关 JEP 汇总
 
 ---
+## 目录
 
-## 概览
+1. [概览](#1-概览)
+2. [ZGC (Z Garbage Collector)](#2-zgc-z-garbage-collector)
+3. [G1 GC](#3-g1-gc)
+4. [Shenandoah GC](#4-shenandoah-gc)
+5. [性能对比](#5-性能对比)
+6. [选择指南](#6-选择指南)
+7. [VM 参数参考](#7-vm-参数参考)
+8. [相关链接](#8-相关链接)
+
+---
+
+
+## 1. 概览
 
 ```
 JDK 21 ───── JDK 22 ───── JDK 23 ───── JDK 24 ───── JDK 25 ───── JDK 26
@@ -15,7 +28,7 @@ Gen ZGC     Region      Gen ZGC     移除非Gen    Gen Sheno.   G1 吞吐
 
 ---
 
-## ZGC (Z Garbage Collector)
+## 2. ZGC (Z Garbage Collector)
 
 ### 演进历程
 
@@ -47,7 +60,7 @@ Gen ZGC     Region      Gen ZGC     移除非Gen    Gen Sheno.   G1 吞吐
 
 ---
 
-## G1 GC
+## 3. G1 GC
 
 ### 演进历程
 
@@ -71,7 +84,7 @@ Gen ZGC     Region      Gen ZGC     移除非Gen    Gen Sheno.   G1 吞吐
 
 ---
 
-## Shenandoah GC
+## 4. Shenandoah GC
 
 ### 演进历程
 
@@ -96,7 +109,7 @@ Gen ZGC     Region      Gen ZGC     移除非Gen    Gen Sheno.   G1 吞吐
 
 ---
 
-## 性能对比
+## 5. 性能对比
 
 ### 延迟对比 (99th percentile)
 
@@ -118,7 +131,7 @@ Gen ZGC     Region      Gen ZGC     移除非Gen    Gen Sheno.   G1 吞吐
 
 ---
 
-## 选择指南
+## 6. 选择指南
 
 | 场景 | 推荐 GC | 原因 |
 |------|---------|------|
@@ -130,7 +143,7 @@ Gen ZGC     Region      Gen ZGC     移除非Gen    Gen Sheno.   G1 吞吐
 
 ---
 
-## VM 参数参考
+## 7. VM 参数参考
 
 ### G1 GC
 ```bash
@@ -155,7 +168,7 @@ Gen ZGC     Region      Gen ZGC     移除非Gen    Gen Sheno.   G1 吞吐
 
 ---
 
-## 相关链接
+## 8. 相关链接
 
 - [OpenJDK: ZGC](https://wiki.openjdk.org/display/zgc)
 - [OpenJDK: Shenandoah](https://wiki.openjdk.org/display/shenandoah/Main)

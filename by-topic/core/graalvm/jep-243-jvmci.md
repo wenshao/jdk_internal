@@ -5,8 +5,22 @@
 [← 返回 GraalVM 首页](./) | [← 返回架构详解](architecture.md)
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [JVMCI 核心接口](#2-jvmci-核心接口)
+3. [JVMCI 工作流程](#3-jvmci-工作流程)
+4. [JVMCI 安全模型](#4-jvmci-安全模型)
+5. [JVMCI 性能开销](#5-jvmci-性能开销)
+6. [JVMCI 调试技术](#6-jvmci-调试技术)
+7. [JVMCI 与 HotSpot 集成](#7-jvmci-与-hotspot-集成)
+8. [JVMCI 限制](#8-jvmci-限制)
+9. [相关链接](#9-相关链接)
+
+---
+
+
+## 1. 概述
 
 JVMCI (JVM Compiler Interface) 是 **JEP 243** 定义的接口，允许 Java 编写的编译器集成到 HotSpot JVM。
 
@@ -54,7 +68,7 @@ JVMCI 架构:
 
 ---
 
-## JVMCI 核心接口
+## 2. JVMCI 核心接口
 
 ### 1. 编译请求接口
 
@@ -169,7 +183,7 @@ public interface CodeInstallationProvider {
 
 ---
 
-## JVMCI 工作流程
+## 3. JVMCI 工作流程
 
 ### 编译请求处理流程
 
@@ -263,7 +277,7 @@ void JVMCIRuntime::install_code(
 
 ---
 
-## JVMCI 安全模型
+## 4. JVMCI 安全模型
 
 ### 访问控制
 
@@ -324,7 +338,7 @@ java -jar app.jar
 
 ---
 
-## JVMCI 性能开销
+## 5. JVMCI 性能开销
 
 ### 调用开销分析
 
@@ -367,7 +381,7 @@ JVMCI 编译调用:
 
 ---
 
-## JVMCI 调试技术
+## 6. JVMCI 调试技术
 
 ### 启用调试日志
 
@@ -408,7 +422,7 @@ async-profiler start -e cpu -d 30 -f profile.html <pid>
 
 ---
 
-## JVMCI 与 HotSpot 集成
+## 7. JVMCI 与 HotSpot 集成
 
 ### 数据结构映射
 
@@ -450,7 +464,7 @@ public class HotSpotVMConfig {
 
 ---
 
-## JVMCI 限制
+## 8. JVMCI 限制
 
 ### 不支持的特性
 
@@ -478,7 +492,7 @@ public class HotSpotVMConfig {
 
 ---
 
-## 相关链接
+## 9. 相关链接
 
 ### 官方文档
 - [JEP 243](https://openjdk.org/jeps/243)

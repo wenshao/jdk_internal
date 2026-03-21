@@ -3,8 +3,25 @@
 从 HttpURLConnection 到 HTTP/3 的演进历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [HTTP 协议演进](#2-http-协议演进)
+3. [JDK 1.0 - HttpURLConnection](#3-jdk-10---httpurlconnection)
+4. [JDK 9 - HTTP Client (孵化器) - JEP 110](#4-jdk-9---http-client-孵化器---jep-110)
+5. [JDK 11 - HTTP Client (标准) - JEP 321](#5-jdk-11---http-client-标准---jep-321)
+6. [HTTP/2 支持](#6-http2-支持)
+7. [HTTP/3 (JDK 26, JEP 517)](#7-http3-jdk-26-jep-517)
+8. [性能对比](#8-性能对比)
+9. [最佳实践](#9-最佳实践)
+10. [故障排查](#10-故障排查)
+11. [时间线总结](#11-时间线总结)
+12. [相关链接](#12-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 9 ──── JDK 11 ──── JDK 16 ──── JDK 22 ──── JDK 26
@@ -16,7 +33,7 @@ Connection    (孵化器)      (标准)        支持          连接复用     
 
 ---
 
-## HTTP 协议演进
+## 2. HTTP 协议演进
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -52,7 +69,7 @@ Connection    (孵化器)      (标准)        支持          连接复用     
 
 ---
 
-## JDK 1.0 - HttpURLConnection
+## 3. JDK 1.0 - HttpURLConnection
 
 ### 架构
 
@@ -164,7 +181,7 @@ if (status == HttpURLConnection.HTTP_MOVED_TEMP
 
 ---
 
-## JDK 9 - HTTP Client (孵化器) - JEP 110
+## 4. JDK 9 - HTTP Client (孵化器) - JEP 110
 
 ### 模块声明
 
@@ -192,7 +209,7 @@ HttpResponse<String> response = client.send(request,
 
 ---
 
-## JDK 11 - HTTP Client (标准) - JEP 321
+## 5. JDK 11 - HTTP Client (标准) - JEP 321
 
 ### 架构
 
@@ -363,7 +380,7 @@ List<String> results = futures.stream()
 
 ---
 
-## HTTP/2 支持
+## 6. HTTP/2 支持
 
 ### HTTP/2 特性
 
@@ -413,7 +430,7 @@ response.pushPromises().forEach(promise -> {
 
 ---
 
-## HTTP/3 (JDK 26, JEP 517)
+## 7. HTTP/3 (JDK 26, JEP 517)
 
 ### QUIC 协议栈
 
@@ -507,7 +524,7 @@ enum Http3FrameType {
 
 ---
 
-## 性能对比
+## 8. 性能对比
 
 ### 连接建立时间
 
@@ -556,7 +573,7 @@ HTTP/3 (QUIC):
 
 ---
 
-## 最佳实践
+## 9. 最佳实践
 
 ### 1. 重用 HttpClient 实例
 
@@ -616,7 +633,7 @@ response.body()
 
 ---
 
-## 故障排查
+## 10. 故障排查
 
 ### HTTP/3 不可用
 
@@ -650,7 +667,7 @@ client.shutdownNow();     // 立即关闭
 
 ---
 
-## 时间线总结
+## 11. 时间线总结
 
 | 版本 | 特性 | JEP | 状态 |
 |------|------|-----|------|
@@ -665,7 +682,7 @@ client.shutdownNow();     // 立即关闭
 
 ---
 
-## 相关链接
+## 12. 相关链接
 
 - [HTTP Client 文档](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html)
 - [JEP 321: HTTP Client](https://openjdk.org/jeps/321)

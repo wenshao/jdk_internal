@@ -3,8 +3,20 @@
 > OpenJDK 历史贡献数据 (JDK 8 - JDK 26)
 
 ---
+## 目录
 
-## 数据来源与统计方法
+1. [数据来源与统计方法](#1-数据来源与统计方法)
+2. [总体统计](#2-总体统计)
+3. [年度贡献趋势](#3-年度贡献趋势)
+4. [组织贡献分布](#4-组织贡献分布)
+5. [领域贡献分布](#5-领域贡献分布)
+6. [数据说明](#6-数据说明)
+7. [相关页面](#7-相关页面)
+
+---
+
+
+## 1. 数据来源与统计方法
 
 ### 主要指标：GitHub Integrated PRs
 
@@ -35,7 +47,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author:{username}+label%3Aintegra
 
 ---
 
-## 总体统计
+## 2. 总体统计
 
 | 指标 | 数值 |
 |------|------|
@@ -47,7 +59,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author:{username}+label%3Aintegra
 
 ---
 
-## 年度贡献趋势
+## 3. 年度贡献趋势
 
 | 年份 | Commits | JDK 版本 | 里程碑 |
 |------|---------|----------|--------|
@@ -74,7 +86,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author:{username}+label%3Aintegra
 
 ---
 
-## 组织贡献分布
+## 4. 组织贡献分布
 
 | 组织 | Commits | 占比 | 主要贡献者 |
 |------|---------|------|-----------|
@@ -88,7 +100,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author:{username}+label%3Aintegra
 
 ---
 
-## 领域贡献分布
+## 5. 领域贡献分布
 
 | 领域 | 主要贡献者数 | 代表性贡献者 |
 |------|-------------|--------------|
@@ -103,7 +115,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author:{username}+label%3Aintegra
 
 ---
 
-## 数据说明
+## 6. 数据说明
 
 ### 统计方法
 
@@ -132,7 +144,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author:{username}+label%3Aintegra
 
 ---
 
-## 相关页面
+## 7. 相关页面
 
 - [Top 50 贡献者](top50.md)
 - [中国贡献者](/by-contributor/profiles/chinese-contributors.md)

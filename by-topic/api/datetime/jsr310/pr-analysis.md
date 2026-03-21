@@ -3,8 +3,27 @@
 > java.time API 的实现历史和关键 PR
 
 ---
+## 目录
 
-## JSR 310: Date and Time API
+1. [JSR 310: Date and Time API](#1-jsr-310-date-and-time-api)
+2. [设计目标](#2-设计目标)
+3. [背景历史](#3-背景历史)
+4. [核心设计决策](#4-核心设计决策)
+5. [关键 Issue 和 PR](#5-关键-issue-和-pr)
+6. [与 Joda-Time 的差异](#6-与-joda-time-的差异)
+7. [ThreeTen-Extra 扩展](#7-threeten-extra-扩展)
+8. [社区反馈](#8-社区反馈)
+9. [源码位置](#9-源码位置)
+10. [性能特性](#10-性能特性)
+11. [贡献者](#11-贡献者)
+12. [相关资源](#12-相关资源)
+13. [时间线](#13-时间线)
+14. [与 JDK 21 的变化](#14-与-jdk-21-的变化)
+
+---
+
+
+## 1. JSR 310: Date and Time API
 
 **JSR**: [JSR 310: Date and Time API](https://jcp.org/en/jsr/detail?id=310)
 **集成版本**: JDK 8 (2014)
@@ -12,7 +31,7 @@
 
 ---
 
-## 设计目标
+## 2. 设计目标
 
 JSR 310 的主要目标是为 Java 提供一个现代化的日期时间 API：
 
@@ -23,7 +42,7 @@ JSR 310 的主要目标是为 Java 提供一个现代化的日期时间 API：
 
 ---
 
-## 背景历史
+## 3. 背景历史
 
 ### Joda-Time 时代
 
@@ -66,7 +85,7 @@ DateTimeFormatter formatter = DateTimeFormat.forPattern("yyyy-MM-dd");
 
 ---
 
-## 核心设计决策
+## 4. 核心设计决策
 
 ### 1. 不可变性
 
@@ -114,7 +133,7 @@ public enum DayOfWeek {
 
 ---
 
-## 关键 Issue 和 PR
+## 5. 关键 Issue 和 PR
 
 ### JDK-8046707: 性能优化
 
@@ -165,7 +184,7 @@ if (!isValid) {
 
 ---
 
-## 与 Joda-Time 的差异
+## 6. 与 Joda-Time 的差异
 
 ### API 差异
 
@@ -192,7 +211,7 @@ String formatted = formatter.format(dateTime);
 
 ---
 
-## ThreeTen-Extra 扩展
+## 7. ThreeTen-Extra 扩展
 
 **项目**: [ThreeTen-Extra](https://www.threeten.org/threeten-extra/)
 
@@ -218,7 +237,7 @@ String formatted = formatter.format(dateTime);
 
 ---
 
-## 社区反馈
+## 8. 社区反馈
 
 ### StackOverflow 讨论
 
@@ -247,7 +266,7 @@ String formatted = formatter.format(dateTime);
 
 ---
 
-## 源码位置
+## 9. 源码位置
 
 | 文件 | 路径 |
 |------|------|
@@ -264,7 +283,7 @@ String formatted = formatter.format(dateTime);
 
 ---
 
-## 性能特性
+## 10. 性能特性
 
 ### 解析性能
 
@@ -305,7 +324,7 @@ public String formatCustom() {
 
 ---
 
-## 贡献者
+## 11. 贡献者
 
 | 贡献者 | 角色 | 说明 |
 |--------|------|------|
@@ -316,7 +335,7 @@ public String formatCustom() {
 
 ---
 
-## 相关资源
+## 12. 相关资源
 
 ### 官方文档
 - [JSR 310: Date and Time API](https://jcp.org/en/jsr/detail?id=310)
@@ -334,7 +353,7 @@ public String formatCustom() {
 
 ---
 
-## 时间线
+## 13. 时间线
 
 | 日期 | 事件 |
 |------|------|
@@ -350,7 +369,7 @@ public String formatCustom() {
 
 ---
 
-## 与 JDK 21 的变化
+## 14. 与 JDK 21 的变化
 
 ### Date/Calendar 废弃
 

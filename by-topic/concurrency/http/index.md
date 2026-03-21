@@ -5,8 +5,28 @@
 [← 返回并发网络](../)
 
 ---
+## 目录
 
-## 快速概览
+1. [快速概览](#1-快速概览)
+2. [核心贡献者](#2-核心贡献者)
+3. [HttpURLConnection (旧 API)](#3-httpurlconnection-旧-api)
+4. [HttpClient (JDK 11+)](#4-httpclient-jdk-11)
+5. [HTTP/2 支持](#5-http2-支持)
+6. [WebSocket 支持](#6-websocket-支持)
+7. [HTTP/3 (JDK 26+)](#7-http3-jdk-26)
+8. [配置选项](#8-配置选项)
+9. [Body Handler 和 Publisher](#9-body-handler-和-publisher)
+10. [性能优化](#10-性能优化)
+11. [错误处理](#11-错误处理)
+12. [对比其他客户端](#12-对比其他客户端)
+13. [重要 PR 分析](#13-重要-pr-分析)
+14. [性能优化最佳实践](#14-性能优化最佳实践)
+15. [相关链接](#15-相关链接)
+
+---
+
+
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 5 ── JDK 9 ── JDK 11 ── JDK 16 ── JDK 21 ── JDK 22 ── JDK 26
@@ -38,7 +58,7 @@ Connection URLConn Client  Client   支持      支持    优化    (预览)
 
 ---
 
-## 核心贡献者
+## 2. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -57,7 +77,7 @@ Connection URLConn Client  Client   支持      支持    优化    (预览)
 
 ---
 
-## HttpURLConnection (旧 API)
+## 3. HttpURLConnection (旧 API)
 
 ### 基础用法
 
@@ -103,7 +123,7 @@ try (OutputStream os = conn.getOutputStream()) {
 
 ---
 
-## HttpClient (JDK 11+)
+## 4. HttpClient (JDK 11+)
 
 ### JEP 321: HTTP Client
 
@@ -189,7 +209,7 @@ response.body().forEach(System.out::println);
 
 ---
 
-## HTTP/2 支持
+## 5. HTTP/2 支持
 
 ### 多路复用
 
@@ -241,7 +261,7 @@ response.pushPromises().forEach(pushPromise -> {
 
 ---
 
-## WebSocket 支持
+## 6. WebSocket 支持
 
 ### 基础用法
 
@@ -286,7 +306,7 @@ ws.sendClose(NORMAL_CLOSURE, "Goodbye");
 
 ---
 
-## HTTP/3 (JDK 26+)
+## 7. HTTP/3 (JDK 26+)
 
 ### JEP 517: HTTP/3 Client
 
@@ -316,7 +336,7 @@ HttpResponse<String> response = client.send(request,
 
 ---
 
-## 配置选项
+## 8. 配置选项
 
 ### 超时设置
 
@@ -367,7 +387,7 @@ HttpClient client = HttpClient.newBuilder()
 
 ---
 
-## Body Handler 和 Publisher
+## 9. Body Handler 和 Publisher
 
 ### Body Handlers
 
@@ -423,7 +443,7 @@ HttpRequest.BodyPublishers.ofByteArray(
 
 ---
 
-## 性能优化
+## 10. 性能优化
 
 ### 连接复用
 
@@ -467,7 +487,7 @@ CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
 
 ---
 
-## 错误处理
+## 11. 错误处理
 
 ### 超时异常
 
@@ -500,7 +520,7 @@ if (response.statusCode() >= 400) {
 
 ---
 
-## 对比其他客户端
+## 12. 对比其他客户端
 
 ### 与 OkHttp 对比
 
@@ -533,7 +553,7 @@ HttpResponse<String> response = client.send(request,
 
 ---
 
-## 重要 PR 分析
+## 13. 重要 PR 分析
 
 ### HTTP/3 实现
 
@@ -617,7 +637,7 @@ WebSocket ws = client.newWebSocketBuilder()
 
 ---
 
-## 性能优化最佳实践
+## 14. 性能优化最佳实践
 
 ### 连接池管理
 
@@ -671,7 +691,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 相关链接
+## 15. 相关链接
 
 ### 本地文档
 

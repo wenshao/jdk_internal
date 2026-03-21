@@ -5,8 +5,23 @@
 [← 返回 JIT 编译](../)
 
 ---
+## 目录
 
-## 编译日志
+1. [编译日志](#1-编译日志)
+2. [Ideal Graph Visualizer (IGV)](#2-ideal-graph-visualizer-igv)
+3. [jcmd 诊断](#3-jcmd-诊断)
+4. [jhsdb (JDK 9+)](#4-jhsdb-jdk-9)
+5. [JFR (Java Flight Recorder)](#5-jfr-java-flight-recorder)
+6. [Perf / perf-map (Linux)](#6-perf--perf-map-linux)
+7. [常见诊断场景](#7-常见诊断场景)
+8. [调试技巧](#8-调试技巧)
+9. [性能分析](#9-性能分析)
+10. [相关链接](#10-相关链接)
+
+---
+
+
+## 1. 编译日志
 
 ### PrintCompilation
 
@@ -50,7 +65,7 @@
 
 ---
 
-## Ideal Graph Visualizer (IGV)
+## 2. Ideal Graph Visualizer (IGV)
 
 ### 导出 IR
 
@@ -78,7 +93,7 @@
 
 ---
 
-## jcmd 诊断
+## 3. jcmd 诊断
 
 ### 编译队列
 
@@ -109,7 +124,7 @@ jcmd <pid> Compiler.directives_add
 
 ---
 
-## jhsdb (JDK 9+)
+## 4. jhsdb (JDK 9+)
 
 ### 基本使用
 
@@ -161,7 +176,7 @@ hsdb> quit
 
 ---
 
-## JFR (Java Flight Recorder)
+## 5. JFR (Java Flight Recorder)
 
 ### JIT 相关事件
 
@@ -205,7 +220,7 @@ jfr summary jit.jfr
 
 ---
 
-## Perf / perf-map (Linux)
+## 6. Perf / perf-map (Linux)
 
 ### 火焰图
 
@@ -227,7 +242,7 @@ jcmd <pid> VM.perfmap_print > /tmp/perf-<pid>.map
 
 ---
 
-## 常见诊断场景
+## 7. 常见诊断场景
 
 ### 场景 1: 方法未编译
 
@@ -325,7 +340,7 @@ cat hs_err_pid.log | grep "Current CompileTask"
 
 ---
 
-## 调试技巧
+## 8. 调试技巧
 
 ### 条件编译
 
@@ -357,7 +372,7 @@ cat hs_err_pid.log | grep "Current CompileTask"
 
 ---
 
-## 性能分析
+## 9. 性能分析
 
 ### 编译时间分析
 
@@ -391,7 +406,7 @@ cat hs_err_pid.log | grep "Current CompileTask"
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 - [VM 参数](vm-parameters.md) - 诊断参数配置
 - [C2 优化阶段](c2-phases.md) - 诊断特定阶段

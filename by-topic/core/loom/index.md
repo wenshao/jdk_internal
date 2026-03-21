@@ -5,8 +5,25 @@
 [← 返回核心平台](../)
 
 ---
+## 目录
 
-## TL;DR
+1. [TL;DR](#1-tldr)
+2. [项目概述](#2-项目概述)
+3. [虚拟线程](#3-虚拟线程)
+4. [工作原理](#4-工作原理)
+5. [结构化并发 (JEP 453)](#5-结构化并发-jep-453)
+6. [性能特性](#6-性能特性)
+7. [时间线](#7-时间线)
+8. [核心贡献者](#8-核心贡献者)
+9. [迁移指南](#9-迁移指南)
+10. [监控与调试](#10-监控与调试)
+11. [最佳实践](#11-最佳实践)
+12. [参考资料](#12-参考资料)
+
+---
+
+
+## 1. TL;DR
 
 **Project Loom** 是 OpenJDK 的并发项目，提供：
 - **虚拟线程** - 轻量级线程，由 JVM 管理
@@ -17,7 +34,7 @@
 
 ---
 
-## 项目概述
+## 2. 项目概述
 
 ### 解决的问题
 
@@ -50,7 +67,7 @@
 
 ---
 
-## 虚拟线程
+## 3. 虚拟线程
 
 ### 基本用法
 
@@ -102,7 +119,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 工作原理
+## 4. 工作原理
 
 ### Carrier Thread 模型
 
@@ -147,7 +164,7 @@ class ContinuationExample {
 
 ---
 
-## 结构化并发 (JEP 453)
+## 5. 结构化并发 (JEP 453)
 
 ### 基本概念
 
@@ -187,7 +204,7 @@ try (var scope = new StructuredTaskScope.SuccessOnSuccess<Object>()) {
 
 ---
 
-## 性能特性
+## 6. 性能特性
 
 ### 阻塞无开销
 
@@ -224,7 +241,7 @@ try {
 
 ---
 
-## 时间线
+## 7. 时间线
 
 | 年份 | 版本 | 里程碑 |
 |------|------|--------|
@@ -242,7 +259,7 @@ try {
 
 ---
 
-## 核心贡献者
+## 8. 核心贡献者
 
 | 贡献者 | 组织 | 主要贡献 |
 |--------|------|----------|
@@ -252,7 +269,7 @@ try {
 
 ---
 
-## 迁移指南
+## 9. 迁移指南
 
 ### 从线程池迁移
 
@@ -305,7 +322,7 @@ public Response handle(Request req) {
 
 ---
 
-## 监控与调试
+## 10. 监控与调试
 
 ### JFR 事件
 
@@ -343,7 +360,7 @@ long vthreadCount = Thread.getAllStackTraces().keySet().stream()
 
 ---
 
-## 最佳实践
+## 11. 最佳实践
 
 ### DO
 
@@ -376,7 +393,7 @@ synchronized (lock) {
 
 ---
 
-## 参考资料
+## 12. 参考资料
 
 - [Project Loom Official Page](https://openjdk.org/projects/loom/)
 - [JEP 444: Virtual Threads](https://openjdk.org/jeps/444)

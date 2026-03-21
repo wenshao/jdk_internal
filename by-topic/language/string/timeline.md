@@ -3,8 +3,18 @@
 > Java String 从 JDK 1.0 到 JDK 26 的完整演进历程
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [版本演进](#2-版本演进)
+3. [性能汇总](#3-性能汇总)
+4. [相关 JEP](#4-相关-jep)
+5. [更多文档](#5-更多文档)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 5 ──── JDK 6u32 ──── JDK 9 ──── JDK 11 ──── JDK 15 ──── JDK 21 ──── JDK 24 ──── JDK 26
@@ -17,7 +27,7 @@ JDK 1.0 ──── JDK 5 ──── JDK 6u32 ──── JDK 9 ────
 
 ---
 
-## 版本演进
+## 2. 版本演进
 
 ### JDK 1.0 (1996)
 
@@ -170,7 +180,7 @@ String message = STR."Hello \{name}, you have \{count} messages.";
 
 ---
 
-## 性能汇总
+## 3. 性能汇总
 
 | 版本 | 特性 | 内存 | 启动 | 运行时 |
 |------|------|------|------|--------|
@@ -183,7 +193,7 @@ String message = STR."Hello \{name}, you have \{count} messages.";
 
 ---
 
-## 相关 JEP
+## 4. 相关 JEP
 
 | JEP | 标题 | 版本 |
 |-----|------|------|
@@ -195,7 +205,7 @@ String message = STR."Hello \{name}, you have \{count} messages.";
 
 ---
 
-## 更多文档
+## 5. 更多文档
 
 - [内部实现](implementation.md) - Compact Strings、StringLatin1、StringUTF16
 - [性能优化](optimization.md) - String Deduplication、VM 调优、最佳实践

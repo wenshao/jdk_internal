@@ -5,8 +5,25 @@
 [← 返回并发网络](../)
 
 ---
+## 目录
 
-## 快速概览
+1. [快速概览](#1-快速概览)
+2. [核心贡献者](#2-核心贡献者)
+3. [传统 Socket (BIO)](#3-传统-socket-bio)
+4. [NIO (JDK 1.4+)](#4-nio-jdk-14)
+5. [NIO.2 (JDK 7+)](#5-nio2-jdk-7)
+6. [Unix Domain Socket (JDK 16+)](#6-unix-domain-socket-jdk-16)
+7. [Virtual Threads (JDK 21+)](#7-virtual-threads-jdk-21)
+8. [Sockets API 现代化 (JDK 24+)](#8-sockets-api-现代化-jdk-24)
+9. [性能优化](#9-性能优化)
+10. [重要 PR 分析](#10-重要-pr-分析)
+11. [网络编程最佳实践](#11-网络编程最佳实践)
+12. [相关链接](#12-相关链接)
+
+---
+
+
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 1.4 ── JDK 7 ── JDK 11 ── JDK 16 ── JDK 18 ── JDK 21 ── JDK 26
@@ -31,7 +48,7 @@ ServerSocket Channel  Async  Client Domain  Concurrency Threads  (预览)
 
 ---
 
-## 核心贡献者
+## 2. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -50,7 +67,7 @@ ServerSocket Channel  Async  Client Domain  Concurrency Threads  (预览)
 
 ---
 
-## 传统 Socket (BIO)
+## 3. 传统 Socket (BIO)
 
 ### TCP Socket
 
@@ -112,7 +129,7 @@ try (DatagramSocket socket = new DatagramSocket()) {
 
 ---
 
-## NIO (JDK 1.4+)
+## 4. NIO (JDK 1.4+)
 
 ### 核心组件
 
@@ -260,7 +277,7 @@ while (true) {
 
 ---
 
-## NIO.2 (JDK 7+)
+## 5. NIO.2 (JDK 7+)
 
 ### Path 和 Files
 
@@ -370,7 +387,7 @@ client.read(buffer, null, new CompletionHandler<Integer, Void>() {
 
 ---
 
-## Unix Domain Socket (JDK 16+)
+## 6. Unix Domain Socket (JDK 16+)
 
 ### JEP 380: Unix Domain Sockets
 
@@ -411,7 +428,7 @@ client.read(buffer);
 
 ---
 
-## Virtual Threads (JDK 21+)
+## 7. Virtual Threads (JDK 21+)
 
 ### 传统线程问题
 
@@ -465,7 +482,7 @@ vThread.start();
 
 ---
 
-## Sockets API 现代化 (JDK 24+)
+## 8. Sockets API 现代化 (JDK 24+)
 
 ### JEP 521: Structured Concurrency
 
@@ -484,7 +501,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## 性能优化
+## 9. 性能优化
 
 ### NIO vs BIO
 
@@ -524,7 +541,7 @@ Selector[] selectors = new Selector[Runtime.getRuntime().availableProcessors()];
 
 ---
 
-## 重要 PR 分析
+## 10. 重要 PR 分析
 
 ### NIO 性能优化
 
@@ -576,7 +593,7 @@ ZoneOffset value = cache.getOpaque(key);
 
 ---
 
-## 网络编程最佳实践
+## 11. 网络编程最佳实践
 
 ### I/O 模型选择
 
@@ -641,7 +658,7 @@ channel.connect(UnixDomainSocketAddress.of(new File("/tmp/my.sock")));
 
 ---
 
-## 相关链接
+## 12. 相关链接
 
 ### 本地文档
 

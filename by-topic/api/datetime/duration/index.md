@@ -3,8 +3,30 @@
 > java.time.Duration 的完整实现分析
 
 ---
+## 目录
 
-## 类声明
+1. [类声明](#1-类声明)
+2. [字段存储](#2-字段存储)
+3. [常量定义](#3-常量定义)
+4. [工厂方法](#4-工厂方法)
+5. [核心方法](#5-核心方法)
+6. [时间计算](#6-时间计算)
+7. [转换方法](#7-转换方法)
+8. [部分提取 (JDK 9+)](#8-部分提取-jdk-9)
+9. [截断操作](#9-截断操作)
+10. [TemporalAmount 实现](#10-temporalamount-实现)
+11. [比较](#11-比较)
+12. [序列化机制](#12-序列化机制)
+13. [toString() - ISO-8601 输出](#13-tostring---iso-8601-输出)
+14. [性能特性](#14-性能特性)
+15. [使用示例](#15-使用示例)
+16. [与 Period 对比](#16-与-period-对比)
+17. [相关文档](#17-相关文档)
+
+---
+
+
+## 1. 类声明
 
 ```java
 @jdk.internal.ValueBased
@@ -25,7 +47,7 @@ public final class Duration
 
 ---
 
-## 字段存储
+## 2. 字段存储
 
 ### 两字段组合
 
@@ -64,7 +86,7 @@ private final int nanos;
 
 ---
 
-## 常量定义
+## 3. 常量定义
 
 ### 预定义常量
 
@@ -96,7 +118,7 @@ public static final Duration MAX = new Duration(Long.MAX_VALUE, 999_999_999);
 
 ---
 
-## 工厂方法
+## 4. 工厂方法
 
 ### ofDays() / ofHours() / ofMinutes() / ofSeconds()
 
@@ -237,7 +259,7 @@ Duration d = Duration.between(Instant.now().minusSeconds(60), Instant.now());  /
 
 ---
 
-## 核心方法
+## 5. 核心方法
 
 ### get() / getUnits()
 
@@ -293,7 +315,7 @@ public int getNano() {
 
 ---
 
-## 时间计算
+## 6. 时间计算
 
 ### plus() - 加法
 
@@ -394,7 +416,7 @@ public Duration abs() {
 
 ---
 
-## 转换方法
+## 7. 转换方法
 
 ### toDays() / toHours() / toMinutes() / toSeconds()
 
@@ -452,7 +474,7 @@ public long toNanos() {
 
 ---
 
-## 部分提取 (JDK 9+)
+## 8. 部分提取 (JDK 9+)
 
 ### to*Part() 方法
 
@@ -495,7 +517,7 @@ Duration d = Duration.ofHours(26).plusMinutes(15).plusSeconds(30);
 
 ---
 
-## 截断操作
+## 9. 截断操作
 
 ### truncatedTo()
 
@@ -532,7 +554,7 @@ d.truncatedTo(ChronoUnit.MINUTES);  // PT2H45M
 
 ---
 
-## TemporalAmount 实现
+## 10. TemporalAmount 实现
 
 ### addTo() / subtractFrom()
 
@@ -569,7 +591,7 @@ LocalTime result = d.addTo(time);  // 12:30
 
 ---
 
-## 比较
+## 11. 比较
 
 ### compareTo()
 
@@ -607,7 +629,7 @@ public int hashCode() {
 
 ---
 
-## 序列化机制
+## 12. 序列化机制
 
 ### writeExternal() / readExternal()
 
@@ -628,7 +650,7 @@ static Duration readExternal(DataInput in) throws IOException {
 
 ---
 
-## toString() - ISO-8601 输出
+## 13. toString() - ISO-8601 输出
 
 ```java
 @Override
@@ -675,7 +697,7 @@ public String toString() {
 
 ---
 
-## 性能特性
+## 14. 性能特性
 
 ### 对象复用
 
@@ -700,7 +722,7 @@ return create(Math.multiplyExact(days, SECONDS_PER_DAY), 0);
 
 ---
 
-## 使用示例
+## 15. 使用示例
 
 ### 创建
 
@@ -815,7 +837,7 @@ System.out.println(d);  // PT26H15M30S
 
 ---
 
-## 与 Period 对比
+## 16. 与 Period 对比
 
 | 特性 | Duration | Period |
 |------|----------|--------|
@@ -839,7 +861,7 @@ Period p = Period.of(2, 3, 4);  // 2年3月4天
 
 ---
 
-## 相关文档
+## 17. 相关文档
 
 - [Period 实现](../period/index.md)
 - [Instant 实现](../instant/index.md)

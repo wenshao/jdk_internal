@@ -2,13 +2,29 @@
 
 > 基于 openjdk/jdk 仓库标签 `jdk-26+26` 分析
 
-## 概述
+## 1. 概述
 
 JDK 26 包含 **23 个 JEP**（JDK Enhancement Proposals），涵盖语言特性、API、性能优化、垃圾回收等多个领域。
 
 ---
+## 目录
 
-## 语言特性
+1. [概述](#1-概述)
+2. [语言特性](#2-语言特性)
+3. [核心库](#3-核心库)
+4. [并发与多线程](#4-并发与多线程)
+5. [性能与监控](#5-性能与监控)
+6. [垃圾回收](#6-垃圾回收)
+7. [网络](#7-网络)
+8. [安全](#8-安全)
+9. [移除与清理](#9-移除与清理)
+10. [快速导航](#10-快速导航)
+11. [相关链接](#11-相关链接)
+
+---
+
+
+## 2. 语言特性
 
 ### [JEP 511: Module Import Declarations](/jeps/language/jep-511.md) ⭐
 
@@ -65,7 +81,7 @@ private static lazy ExpensiveObject CACHE = new ExpensiveObject();
 
 ---
 
-## 核心库
+## 3. 核心库
 
 ### [JEP 502: Stable Values (Preview)](/jeps/performance/jep-502.md) ⭐
 
@@ -109,7 +125,7 @@ SecretKey key = kdf.deriveKey("HKDF-SHA256", params);
 
 ---
 
-## 并发与多线程
+## 4. 并发与多线程
 
 ### [JEP 525: Structured Concurrency](/jeps/concurrency/jep-525.md)
 
@@ -128,7 +144,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## 性能与监控
+## 5. 性能与监控
 
 ### [JEP 509: JFR CPU-Time Profiling](/jeps/jfr/jep-509.md)
 
@@ -172,7 +188,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## 垃圾回收
+## 6. 垃圾回收
 
 ### [JEP 521: Generational Shenandoah](/jeps/gc/jep-521.md)
 
@@ -188,7 +204,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## 网络
+## 7. 网络
 
 ### [JEP 517: HTTP/3 for the HTTP Client API](/jeps/network/jep-517.md) ⭐
 
@@ -203,7 +219,7 @@ HttpClient client = HttpClient.newBuilder()
 
 ---
 
-## 安全
+## 8. 安全
 
 ### [JEP 470: PEM Encodings](/jeps/security/jep-470.md)
 
@@ -224,7 +240,7 @@ String pem = encoder.encode(privateKey);
 
 ---
 
-## 移除与清理
+## 9. 移除与清理
 
 ### [JEP 503: Remove the 32-bit x86 Port](/jeps/performance/jep-503.md)
 
@@ -247,7 +263,7 @@ String pem = encoder.encode(privateKey);
 
 ---
 
-## 快速导航
+## 10. 快速导航
 
 | 类别 | JEP 数量 | 亮点 |
 |------|----------|------|
@@ -262,7 +278,7 @@ String pem = encoder.encode(privateKey);
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 - [OpenJDK JDK 26 项目页面](https://openjdk.org/projects/jdk/26/)
 - [JDK 26 JEP 列表](https://openjdk.org/projects/jdk/26/spec/)

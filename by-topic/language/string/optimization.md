@@ -3,8 +3,21 @@
 > String Deduplication、VM 调优、最佳实践
 
 ---
+## 目录
 
-## TL;DR 快速概览
+1. [TL;DR 快速概览](#1-tldr-快速概览)
+2. [String Deduplication (JEP 192)](#2-string-deduplication-jep-192)
+3. [字符串拼接优化](#3-字符串拼接优化)
+4. [VM 参数汇总](#4-vm-参数汇总)
+5. [性能对比](#5-性能对比)
+6. [最佳实践](#6-最佳实践)
+7. [贡献者](#7-贡献者)
+8. [相关资源](#8-相关资源)
+
+---
+
+
+## 1. TL;DR 快速概览
 
 > 💡 **1 分钟了解 String 性能优化**
 
@@ -49,7 +62,7 @@ for (String s : list) sb.append(s);
 
 ---
 
-## String Deduplication (JEP 192)
+## 2. String Deduplication (JEP 192)
 
 ### 工作原理
 
@@ -96,7 +109,7 @@ String s2 = "Hello";  // value@0x1000 (共享)
 
 ---
 
-## 字符串拼接优化
+## 3. 字符串拼接优化
 
 ### JDK 9+ invokedynamic
 
@@ -149,7 +162,7 @@ for (String s : list) {
 
 ---
 
-## VM 参数汇总
+## 4. VM 参数汇总
 
 ### Compact Strings
 
@@ -175,7 +188,7 @@ for (String s : list) {
 
 ---
 
-## 性能对比
+## 5. 性能对比
 
 | 版本 | 特性 | 内存 | 启动 | 运行时 |
 |------|------|------|------|--------|
@@ -188,7 +201,7 @@ for (String s : list) {
 
 ---
 
-## 最佳实践
+## 6. 最佳实践
 
 ### 字符串比较
 
@@ -236,7 +249,7 @@ str.trim();     // 仅 ASCII
 
 ---
 
-## 贡献者
+## 7. 贡献者
 
 ### String 拼接优化演进
 
@@ -269,7 +282,7 @@ str.trim();     // 仅 ASCII
 
 ---
 
-## 相关资源
+## 8. 相关资源
 
 - [JEP 192: String Deduplication](https://openjdk.org/jeps/192)
 - [JDK-8336856: 隐藏类拼接策略](https://bugs.openjdk.org/browse/JDK-8336856)

@@ -6,8 +6,18 @@
 [![LTS](https://img.shields.io/badge/LTS-2029--purple.svg)](https://www.oracle.com/java/technologies/java-se-support.html)
 
 ---
+## 目录
 
-## 版本概览
+1. [版本概览](#1-版本概览)
+2. [GC 状态](#2-gc-状态)
+3. [迁移指南](#3-迁移指南)
+4. [关键 JEP（自 JDK 11 以来集成）](#4-关键-jep自-jdk-11-以来集成)
+5. [相关链接](#5-相关链接)
+
+---
+
+
+## 1. 版本概览
 
 JDK 17 是继 JDK 11 之后的 LTS 版本，包含多项重要新特性：
 
@@ -24,7 +34,7 @@ JDK 17 是继 JDK 11 之后的 LTS 版本，包含多项重要新特性：
 
 ---
 
-## GC 状态
+## 2. GC 状态
 
 | GC | 状态 | 说明 |
 |----|------|------|
@@ -34,7 +44,7 @@ JDK 17 是继 JDK 11 之后的 LTS 版本，包含多项重要新特性：
 
 ---
 
-## 迁移指南
+## 3. 迁移指南
 
 ### 从 JDK 11 升级
 
@@ -54,7 +64,7 @@ JDK 17 是继 JDK 11 之后的 LTS 版本，包含多项重要新特性：
 
 ---
 
-## 关键 JEP（自 JDK 11 以来集成）
+## 4. 关键 JEP（自 JDK 11 以来集成）
 
 ### 语言特性
 
@@ -166,7 +176,7 @@ JDK 17 是继 JDK 11 之后的 LTS 版本，包含多项重要新特性：
 
 ---
 
-## 相关链接
+## 5. 相关链接
 
 - [JDK 17 发布说明](https://openjdk.org/projects/jdk/17/)
 - [JDK 17 新特性](https://openjdk.org/projects/jdk/17/features)

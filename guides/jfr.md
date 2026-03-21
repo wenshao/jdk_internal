@@ -3,8 +3,19 @@
 > Java Flight Recorder 是 JDK 内置的低开销性能分析工具
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [快速开始](#2-快速开始)
+3. [常用配置](#3-常用配置)
+4. [关键事件类型](#4-关键事件类型)
+5. [JDK 25+ 新特性](#5-jdk-25-新特性)
+6. [相关资源](#6-相关资源)
+
+---
+
+
+## 1. 概述
 
 JFR 是 Java 平台的诊断和性能分析工具，具有以下特点：
 
@@ -15,7 +26,7 @@ JFR 是 Java 平台的诊断和性能分析工具，具有以下特点：
 
 ---
 
-## 快速开始
+## 2. 快速开始
 
 ### 启动 JFR 录制
 
@@ -39,7 +50,7 @@ jmc recording.jfr
 
 ---
 
-## 常用配置
+## 3. 常用配置
 
 ### 预设配置
 
@@ -71,7 +82,7 @@ event.commit();
 
 ---
 
-## 关键事件类型
+## 4. 关键事件类型
 
 ### 内存事件
 
@@ -94,7 +105,7 @@ event.commit();
 
 ---
 
-## JDK 25+ 新特性
+## 5. JDK 25+ 新特性
 
 ### JEP 509: CPU-Time Profiling
 
@@ -107,7 +118,7 @@ jcmd <pid> JFR.start settings=cpu-profiling
 
 ---
 
-## 相关资源
+## 6. 相关资源
 
 - [JDK Mission Control](https://www.oracle.com/java/technologies/jdk-mission-control.html)
 - [JFR 配置参考](https://docs.oracle.com/en/java/javase/21/jfapi/)

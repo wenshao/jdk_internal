@@ -6,14 +6,29 @@
 [![License](https://img.shields.io/badge/License-GPLv2--with--Classpath--Exception-blue)](https://openjdk.org/projects/jdk8/)
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [语言特性](#2-语言特性)
+3. [核心库](#3-核心库)
+4. [安全](#4-安全)
+5. [JVM 改进](#5-jvm-改进)
+6. [其他特性](#6-其他特性)
+7. [特性汇总](#7-特性汇总)
+8. [升级建议](#8-升级建议)
+9. [性能改进](#9-性能改进)
+10. [相关链接](#10-相关链接)
+
+---
+
+
+## 1. 概述
 
 JDK 8 是 Java 历史上最重要的版本之一，引入了 **Lambda 表达式**、**Stream API**、**Date/Time API** 等革命性特性，彻底改变了 Java 编程风格。
 
 ---
 
-## 语言特性
+## 2. 语言特性
 
 ### Lambda 表达式 (JSR 335) ⭐⭐⭐
 
@@ -103,7 +118,7 @@ void runTask() { }
 
 ---
 
-## 核心库
+## 3. 核心库
 
 ### Stream API (JSR 335) ⭐⭐⭐
 
@@ -260,7 +275,7 @@ CompletableFuture<String> handled = future
 
 ---
 
-## 安全
+## 4. 安全
 
 ### Nashorn JavaScript Engine
 
@@ -284,7 +299,7 @@ Number result = (Number) invocable.invokeFunction("add", 1, 2);
 
 ---
 
-## JVM 改进
+## 5. JVM 改进
 
 ### PermGen 移除
 
@@ -323,7 +338,7 @@ java -XX:+UseG1GC MyApp
 
 ---
 
-## 其他特性
+## 6. 其他特性
 
 ### String.join()
 
@@ -360,7 +375,7 @@ for (Parameter param : params) {
 
 ---
 
-## 特性汇总
+## 7. 特性汇总
 
 | 类别 | 特性 | 说明 |
 |------|------|------|
@@ -379,7 +394,7 @@ for (Parameter param : params) {
 
 ---
 
-## 升级建议
+## 8. 升级建议
 
 ### 从 JDK 7 升级
 
@@ -423,7 +438,7 @@ List<String> filtered = list.stream()
 
 ---
 
-## 性能改进
+## 9. 性能改进
 
 | 领域 | 改进 |
 |------|------|
@@ -434,7 +449,7 @@ List<String> filtered = list.stream()
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 - [OpenJDK JDK 8 项目页面](https://openjdk.org/projects/jdk8/)
 - [Java SE 8 文档](https://docs.oracle.com/javase/8/docs/)

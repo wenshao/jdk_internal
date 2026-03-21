@@ -16,7 +16,7 @@
 
 ---
 
-## 特性概述
+## 1. 特性概述
 
 ### 问题
 
@@ -60,7 +60,7 @@ String result = switch (obj) {
 
 ---
 
-## 语言设计
+## 2. 语言设计
 
 ### instanceof 模式匹配
 
@@ -106,7 +106,7 @@ switch (value) {
 
 ---
 
-## 编译器实现
+## 3. 编译器实现
 
 ### 核心文件列表
 
@@ -180,7 +180,7 @@ JCStatement translatePrimitivePattern(JCIf tree) {
 
 ---
 
-## 运行时支持
+## 4. 运行时支持
 
 ### SwitchBootstraps
 
@@ -272,7 +272,7 @@ public boolean isExactConvertible(Type from, Type to) {
 
 ---
 
-## 字节码生成
+## 5. 字节码生成
 
 ### instanceof 字节码
 
@@ -327,7 +327,7 @@ TABLESWITCH              // 分发到对应 case
 
 ---
 
-## 预览历史
+## 6. 预览历史
 
 ```
 JEP 455  (JDK 23) - Primitive Types in Patterns (Preview)
@@ -345,7 +345,7 @@ JEP 530  (JDK 26) - Primitive Types in Patterns (Fourth Preview)
 
 ---
 
-## 类型匹配规则
+## 7. 类型匹配规则
 
 ### 允许的转换
 
@@ -389,7 +389,7 @@ switch (value) {
 
 ---
 
-## 性能考虑
+## 8. 性能考虑
 
 ### 编译时优化
 
@@ -413,7 +413,7 @@ if (obj instanceof int i) {
 
 ---
 
-## 最佳实践
+## 9. 最佳实践
 
 ### 1. 使用原始类型模式
 
@@ -460,7 +460,7 @@ switch (value) {
 
 ---
 
-## 总结
+## 10. 总结
 
 JEP 530 (第四次预览) 带来的原始类型模式匹配：
 
@@ -471,7 +471,7 @@ JEP 530 (第四次预览) 带来的原始类型模式匹配：
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 - [JEP 530 官方文档](https://openjdk.org/jeps/530)
 - [Commit: 99135d2e05b](https://github.com/openjdk/jdk/commit/99135d2e05b)

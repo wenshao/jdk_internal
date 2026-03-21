@@ -7,8 +7,27 @@
 [← 返回 JIT 编译](../)
 
 ---
+## 目录
 
-## 结论先行
+1. [结论先行](#1-结论先行)
+2. [一眼看懂](#2-一眼看懂)
+3. [MergeStore/MergeLoad 对比](#3-mergestoremergeload-对比)
+4. [部分转逃分析 (Partial Escape Analysis)](#4-部分转逃分析-partial-escape-analysis)
+5. [死存储消除 (Dead Store Elimination)](#5-死存储消除-dead-store-elimination)
+6. [数组消除优化](#6-数组消除优化)
+7. [条件消除 (Conditional Elimination)](#7-条件消除-conditional-elimination)
+8. [循环优化对比](#8-循环优化对比)
+9. [GraalVM 独有优化](#9-graalvm-独有优化)
+10. [Native Image 特有优化](#10-native-image-特有优化)
+11. [性能实测对比](#11-性能实测对比)
+12. [实际应用建议](#12-实际应用建议)
+13. [总结](#13-总结)
+14. [相关链接](#14-相关链接)
+
+---
+
+
+## 1. 结论先行
 
 | 优化特性 | C2 | Graal | 胜者 |
 |----------|----|-------|------|
@@ -23,7 +42,7 @@
 
 ---
 
-## 一眼看懂
+## 2. 一眼看懂
 
 ### C2 vs Graal 优化能力对比
 
@@ -49,7 +68,7 @@ Graal 能做的，C2 不一定能做
 
 ---
 
-## MergeStore/MergeLoad 对比
+## 3. MergeStore/MergeLoad 对比
 
 ### C2 MergeStore (JDK 21+)
 
@@ -114,7 +133,7 @@ movdqu [buf], xmm0
 
 ---
 
-## 部分转逃分析 (Partial Escape Analysis)
+## 4. 部分转逃分析 (Partial Escape Analysis)
 
 ### C2 逃逸分析
 
@@ -187,7 +206,7 @@ if (x > 100) {
 
 ---
 
-## 死存储消除 (Dead Store Elimination)
+## 5. 死存储消除 (Dead Store Elimination)
 
 ### C2 DSE
 
@@ -243,7 +262,7 @@ buf[0] = 'c';  // 最终值
 
 ---
 
-## 数组消除优化
+## 6. 数组消除优化
 
 ### C2 标量替换
 
@@ -296,7 +315,7 @@ public int process() {
 
 ---
 
-## 条件消除 (Conditional Elimination)
+## 7. 条件消除 (Conditional Elimination)
 
 ### C2 条件消除
 
@@ -352,7 +371,7 @@ if (obj instanceof ArrayList) {
 
 ---
 
-## 循环优化对比
+## 8. 循环优化对比
 
 ### C2 循环优化
 
@@ -415,7 +434,7 @@ _mm256_storeu_ps(result, out);
 
 ---
 
-## GraalVM 独有优化
+## 9. GraalVM 独有优化
 
 ### 1. 迭代部分转逃分析
 
@@ -468,7 +487,7 @@ return sb.toString();
 
 ---
 
-## Native Image 特有优化
+## 10. Native Image 特有优化
 
 ### AOT 优化优势
 
@@ -496,7 +515,7 @@ Native Image (AOT):
 
 ---
 
-## 性能实测对比
+## 11. 性能实测对比
 
 ### Renaissance Benchmark
 
@@ -549,7 +568,7 @@ public int process(int x) {
 
 ---
 
-## 实际应用建议
+## 12. 实际应用建议
 
 ### 何时利用 Graal 优势
 
@@ -614,7 +633,7 @@ native-image -H:+TruffleIterativePartialEscape \
 
 ---
 
-## 总结
+## 13. 总结
 
 ### Graal 优势领域
 
@@ -641,7 +660,7 @@ native-image -H:+TruffleIterativePartialEscape \
 
 ---
 
-## 相关链接
+## 14. 相关链接
 
 ### 本地文档
 

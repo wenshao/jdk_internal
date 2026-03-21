@@ -5,8 +5,23 @@
 [← 返回组织索引](../../by-contributor/index.md)
 
 ---
+## 目录
 
-## 概览
+1. [概览](#1-概览)
+2. [贡献者](#2-贡献者)
+3. [主要领域](#3-主要领域)
+4. [影响的模块](#4-影响的模块)
+5. [贡献时间线](#5-贡献时间线)
+6. [JEP 贡献](#6-jep-贡献)
+7. [Amazon Corretto](#7-amazon-corretto)
+8. [相关 PR 分析文档](#8-相关-pr-分析文档)
+9. [数据来源](#9-数据来源)
+10. [相关链接](#10-相关链接)
+
+---
+
+
+## 1. 概览
 
 Amazon 通过 Corretto 团队参与 OpenJDK 开发，专注于 Shenandoah GC、AArch64 架构优化和编译器改进。
 
@@ -22,7 +37,7 @@ Amazon 通过 Corretto 团队参与 OpenJDK 开发，专注于 Shenandoah GC、A
 
 ---
 
-## 贡献者
+## 2. 贡献者
 
 | 排名 | 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
 |------|--------|--------|-----|------|----------|------|
@@ -37,7 +52,7 @@ Amazon 通过 Corretto 团队参与 OpenJDK 开发，专注于 Shenandoah GC、A
 
 ---
 
-## 主要领域
+## 3. 主要领域
 
 ### Shenandoah GC (William Kemper)
 
@@ -61,7 +76,7 @@ William Kemper 是 **JEP 521: Generational Shenandoah** 的主要实现者：
 
 ---
 
-## 影响的模块
+## 4. 影响的模块
 
 | 模块 | 文件数 | 说明 |
 |------|--------|------|
@@ -72,7 +87,7 @@ William Kemper 是 **JEP 521: Generational Shenandoah** 的主要实现者：
 
 ---
 
-## 贡献时间线
+## 5. 贡献时间线
 
 ```
 2020: ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 3 PRs
@@ -87,7 +102,7 @@ William Kemper 是 **JEP 521: Generational Shenandoah** 的主要实现者：
 
 ---
 
-## JEP 贡献
+## 6. JEP 贡献
 
 | JEP | 标题 | 主导者 | 状态 |
 |-----|-------|--------|------|
@@ -95,7 +110,7 @@ William Kemper 是 **JEP 521: Generational Shenandoah** 的主要实现者：
 
 ---
 
-## Amazon Corretto
+## 7. Amazon Corretto
 
 Amazon 维护自己的 JDK 发行版 Corretto：
 
@@ -114,7 +129,7 @@ Amazon 维护自己的 JDK 发行版 Corretto：
 
 ---
 
-## 相关 PR 分析文档
+## 8. 相关 PR 分析文档
 
 ### Shenandoah GC (William Kemper)
 
@@ -131,14 +146,14 @@ Amazon 维护自己的 JDK 发行版 Corretto：
 
 ---
 
-## 数据来源
+## 9. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
 - **统计时间**: 2026-03-21
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 - [Amazon Corretto](https://aws.amazon.com/corretto/)
 - [Corretto GitHub](https://github.com/corretto)

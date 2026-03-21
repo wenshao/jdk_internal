@@ -3,8 +3,26 @@
 Java 内存管理从 JDK 1.0 到 JDK 26 的完整演进历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [内存结构](#2-内存结构)
+3. [JDK 5 - 内存管理改进](#3-jdk-5---内存管理改进)
+4. [JDK 6 - Compressed Oops](#4-jdk-6---compressed-oops)
+5. [JDK 8 - 内存优化](#5-jdk-8---内存优化)
+6. [JDK 11+ - ZGC 内存管理](#6-jdk-11---zgc-内存管理)
+7. [JDK 17+ - 分代 ZGC](#7-jdk-17---分代-zgc)
+8. [JDK 22+ - Foreign Memory Access](#8-jdk-22---foreign-memory-access)
+9. [内存泄漏排查](#9-内存泄漏排查)
+10. [内存调优](#10-内存调优)
+11. [最佳实践](#11-最佳实践)
+12. [时间线总结](#12-时间线总结)
+13. [相关链接](#13-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 5 ──── JDK 6 ──── JDK 8 ──── JDK 11 ──── JDK 17 ──── JDK 26
@@ -15,7 +33,7 @@ JDK 1.0 ──── JDK 5 ──── JDK 6 ──── JDK 8 ──── JD
 
 ---
 
-## 内存结构
+## 2. 内存结构
 
 ### JVM 内存布局
 
@@ -61,7 +79,7 @@ JDK 1.0 ──── JDK 5 ──── JDK 6 ──── JDK 8 ──── JD
 
 ---
 
-## JDK 5 - 内存管理改进
+## 3. JDK 5 - 内存管理改进
 
 ### WeakReference 等
 
@@ -107,7 +125,7 @@ Map<Object, String> map = new WeakHashMap<>();
 
 ---
 
-## JDK 6 - Compressed Oops
+## 4. JDK 6 - Compressed Oops
 
 ### 压缩普通对象指针
 
@@ -151,7 +169,7 @@ Map<Object, String> map = new WeakHashMap<>();
 
 ---
 
-## JDK 8 - 内存优化
+## 5. JDK 8 - 内存优化
 
 ### String Dedup
 
@@ -184,7 +202,7 @@ Map<Object, String> map = new WeakHashMap<>();
 
 ---
 
-## JDK 11+ - ZGC 内存管理
+## 6. JDK 11+ - ZGC 内存管理
 
 ### ZGC 内存模型
 
@@ -235,7 +253,7 @@ Map<Object, String> map = new WeakHashMap<>();
 
 ---
 
-## JDK 17+ - 分代 ZGC
+## 7. JDK 17+ - 分代 ZGC
 
 ### 分代内存布局
 
@@ -275,7 +293,7 @@ Map<Object, String> map = new WeakHashMap<>();
 
 ---
 
-## JDK 22+ - Foreign Memory Access
+## 8. JDK 22+ - Foreign Memory Access
 
 ### MemorySegment
 
@@ -324,7 +342,7 @@ MemorySegment segment = arena.allocate(1024);
 
 ---
 
-## 内存泄漏排查
+## 9. 内存泄漏排查
 
 ### 常见原因
 
@@ -369,7 +387,7 @@ jhat -port 7000 heap.hprof
 
 ---
 
-## 内存调优
+## 10. 内存调优
 
 ### 堆大小配置
 
@@ -403,7 +421,7 @@ jhat -port 7000 heap.hprof
 
 ---
 
-## 最佳实践
+## 11. 最佳实践
 
 ### 避免内存泄漏
 
@@ -440,7 +458,7 @@ for (int i = 0; i < 1000; i++) {
 
 ---
 
-## 时间线总结
+## 12. 时间线总结
 
 | 版本 | 特性 | 说明 |
 |------|------|------|
@@ -454,7 +472,7 @@ for (int i = 0; i < 1000; i++) {
 
 ---
 
-## 相关链接
+## 13. 相关链接
 
 - [Memory Management](https://docs.oracle.com/en/java/javase/21/gctuning/)
 - [ZGC](https://openjdk.org/jeps/439)

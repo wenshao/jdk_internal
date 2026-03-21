@@ -6,7 +6,7 @@
 
 ---
 
-## 一眼看懂
+## 1. 一眼看懂
 
 | 优化技术 | 性能提升 | 适用场景 |
 |----------|----------|----------|
@@ -26,7 +26,7 @@
 
 ---
 
-## Graal JIT 编译器优化
+## 2. Graal JIT 编译器优化
 
 ### 核心优势
 
@@ -168,7 +168,7 @@ for (int i = 0; i < array.length; i++) {
 
 ---
 
-## Native Image 优化
+## 3. Native Image 优化
 
 ### AOT 编译优势
 
@@ -287,7 +287,7 @@ public class Config {
 
 ---
 
-## Truffle 框架优化
+## 4. Truffle 框架优化
 
 ### Truffle 优化原理
 
@@ -394,7 +394,7 @@ class Point { int x, y; }
 
 ---
 
-## 性能对比数据
+## 5. 性能对比数据
 
 ### 启动时间
 
@@ -446,7 +446,7 @@ Hello World:
 
 ---
 
-## 优化实践指南
+## 6. 优化实践指南
 
 ### 1. 选择正确的模式
 
@@ -564,7 +564,7 @@ native-image \
 
 ---
 
-## 相关资源
+## 7. 相关资源
 
 ### 官方文档
 - [GraalVM 性能指南](https://www.graalvm.org/latest/reference-manual/performance/)

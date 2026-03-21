@@ -5,8 +5,23 @@
 [← 返回核心平台](../)
 
 ---
+## 目录
 
-## 快速概览
+1. [快速概览](#1-快速概览)
+2. [核心贡献者](#2-核心贡献者)
+3. [JVM 参数](#3-jvm-参数)
+4. [诊断工具](#4-诊断工具)
+5. [JFR (Java Flight Recorder)](#5-jfr-java-flight-recorder)
+6. [JMX 监控](#6-jmx-监控)
+7. [常见问题诊断](#7-常见问题诊断)
+8. [性能调优](#8-性能调优)
+9. [hsdb (HotSpot Debugger)](#9-hsdb-hotspot-debugger)
+10. [相关链接](#10-相关链接)
+
+---
+
+
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 7 ── JDK 8 ── JDK 11 ── JDK 17 ── JDK 21 ── JDK 26
@@ -32,7 +47,7 @@ JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 7 ── JDK 8 ── JDK 11 ──
 
 ---
 
-## 核心贡献者
+## 2. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -54,7 +69,7 @@ JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 7 ── JDK 8 ── JDK 11 ──
 
 ---
 
-## JVM 参数
+## 3. JVM 参数
 
 ### 内存参数
 
@@ -150,7 +165,7 @@ JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 7 ── JDK 8 ── JDK 11 ──
 
 ---
 
-## 诊断工具
+## 4. 诊断工具
 
 ### jstat
 
@@ -255,7 +270,7 @@ jcmd <pid> VM.set_flag PrintGCDetails true
 
 ---
 
-## JFR (Java Flight Recorder)
+## 5. JFR (Java Flight Recorder)
 
 ### 启用 JFR
 
@@ -304,7 +319,7 @@ jfr summary recording.jfr
 
 ---
 
-## JMX 监控
+## 6. JMX 监控
 
 ### 启用 JMX
 
@@ -341,7 +356,7 @@ jconsole service:jmx:rmi:///jndi/rmi://<host>:9010/jmxrmi
 
 ---
 
-## 常见问题诊断
+## 7. 常见问题诊断
 
 ### 内存泄漏
 
@@ -408,7 +423,7 @@ jstack -l <pid>
 
 ---
 
-## 性能调优
+## 8. 性能调优
 
 ### 启动优化
 
@@ -451,7 +466,7 @@ java -XX:AOTMode=use -jar app.jar
 
 ---
 
-## hsdb (HotSpot Debugger)
+## 9. hsdb (HotSpot Debugger)
 
 ### 启动 hsdb
 
@@ -487,7 +502,7 @@ jhsdb clhsdb --pid <pid> --exe <java> --core <core>
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 ### 本地文档
 

@@ -3,8 +3,23 @@
 > **迁移复杂度**: 中高 | **建议时间**: 4-8 周 | **关键变革**: Virtual Threads 革命性并发模型
 
 ---
+## 目录
 
-## 迁移概览
+1. [迁移概览](#1-迁移概览)
+2. [Virtual Threads 迁移评估](#2-virtual-threads-迁移评估)
+3. [代码迁移步骤](#3-代码迁移步骤)
+4. [配置迁移](#4-配置迁移)
+5. [测试策略](#5-测试策略)
+6. [部署策略](#6-部署策略)
+7. [常见问题解决](#7-常见问题解决)
+8. [迁移后优化](#8-迁移后优化)
+9. [工具和资源](#9-工具和资源)
+10. [总结检查清单](#10-总结检查清单)
+
+---
+
+
+## 1. 迁移概览
 
 ### 为什么迁移到 JDK 21？
 
@@ -40,7 +55,7 @@ Virtual Threads 评估 (1-2 周)
 
 ---
 
-## Virtual Threads 迁移评估
+## 2. Virtual Threads 迁移评估
 
 ### 理解变革
 
@@ -109,7 +124,7 @@ public class VirtualThreadsAssessment {
 
 ---
 
-## 代码迁移步骤
+## 3. 代码迁移步骤
 
 ### 步骤 1: 构建环境更新
 
@@ -430,7 +445,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## 配置迁移
+## 4. 配置迁移
 
 ### JVM 参数更新
 
@@ -553,7 +568,7 @@ spring.datasource.hikari.connection-test-query=SELECT 1
 
 ---
 
-## 测试策略
+## 5. 测试策略
 
 ### Virtual Threads 测试
 
@@ -727,7 +742,7 @@ private native void nativeMethod();
 
 ---
 
-## 部署策略
+## 6. 部署策略
 
 ### 分阶段部署计划
 
@@ -860,7 +875,7 @@ kubectl logs deployment/app-jdk17 --tail=100
 
 ---
 
-## 常见问题解决
+## 7. 常见问题解决
 
 ### Virtual Threads 相关问题
 
@@ -952,7 +967,7 @@ if (Thread.currentThread().isVirtual()) {
 
 ---
 
-## 迁移后优化
+## 8. 迁移后优化
 
 ### 架构优化机会
 
@@ -1013,7 +1028,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 工具和资源
+## 9. 工具和资源
 
 ### 迁移工具
 
@@ -1054,7 +1069,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 总结检查清单
+## 10. 总结检查清单
 
 ### 迁移前准备
 - [ ] 环境兼容性验证完成

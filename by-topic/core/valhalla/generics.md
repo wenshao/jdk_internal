@@ -5,8 +5,26 @@
 [← 返回 Valhalla](./)
 
 ---
+## 目录
 
-## TL;DR
+1. [TL;DR](#1-tldr)
+2. [问题背景](#2-问题背景)
+3. [解决方案: Primitive Specialization](#3-解决方案-primitive-specialization)
+4. [实现策略](#4-实现策略)
+5. [类型系统变化](#5-类型系统变化)
+6. [核心库特化](#6-核心库特化)
+7. [性能影响](#7-性能影响)
+8. [特化约束](#8-特化约束)
+9. [实现状态](#9-实现状态)
+10. [当前最佳实践](#10-当前最佳实践)
+11. [示例应用](#11-示例应用)
+12. [参考资料](#12-参考资料)
+13. [相关主题](#13-相关主题)
+
+---
+
+
+## 1. TL;DR
 
 **增强泛型** (Enhanced Generics) 让 Java 泛型支持原始类型：
 
@@ -20,7 +38,7 @@ List<int> primitives = ...;  // 无装箱!
 
 ---
 
-## 问题背景
+## 2. 问题背景
 
 ### 当前限制
 
@@ -65,7 +83,7 @@ list.add(Integer.valueOf(42));
 
 ---
 
-## 解决方案: Primitive Specialization
+## 3. 解决方案: Primitive Specialization
 
 ### 基本概念
 
@@ -110,7 +128,7 @@ Point value = pointBuffer.get(0);
 
 ---
 
-## 实现策略
+## 4. 实现策略
 
 ### 特化模板
 
@@ -172,7 +190,7 @@ Valhalla 描述符:
 
 ---
 
-## 类型系统变化
+## 5. 类型系统变化
 
 ### 类型参数约束
 
@@ -239,7 +257,7 @@ Valhalla:
 
 ---
 
-## 核心库特化
+## 6. 核心库特化
 
 ### 集合框架
 
@@ -286,7 +304,7 @@ UnaryOperator<int> negate = i -> -i;
 
 ---
 
-## 性能影响
+## 7. 性能影响
 
 ### 内存对比
 
@@ -333,7 +351,7 @@ for (int i : intArray) {
 
 ---
 
-## 特化约束
+## 8. 特化约束
 
 ### 类型擦除兼容性
 
@@ -367,7 +385,7 @@ Type[] params = add.getGenericParameterTypes();
 
 ---
 
-## 实现状态
+## 9. 实现状态
 
 ### JEP 402: Unified Generics
 
@@ -389,7 +407,7 @@ Type[] params = add.getGenericParameterTypes();
 
 ---
 
-## 当前最佳实践
+## 10. 当前最佳实践
 
 ### 使用原始类型集合库
 
@@ -448,7 +466,7 @@ while (cursor.moveNext()) {
 
 ---
 
-## 示例应用
+## 11. 示例应用
 
 ### 高性能集合
 
@@ -490,7 +508,7 @@ class Matrix {
 
 ---
 
-## 参考资料
+## 12. 参考资料
 
 ### JEP 文档
 
@@ -508,7 +526,7 @@ class Matrix {
 
 ---
 
-## 相关主题
+## 13. 相关主题
 
 - [值类型详解](value-types.md)
 - [Project Amber](../amber/) - 语言特性配合

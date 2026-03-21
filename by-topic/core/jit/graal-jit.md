@@ -6,8 +6,27 @@
 [← 返回 JIT 编译](../)
 
 ---
+## 目录
 
-## 一眼看懂
+1. [一眼看懂](#1-一眼看懂)
+2. [Graal JIT 概述](#2-graal-jit-概述)
+3. [Graal vs C2](#3-graal-vs-c2)
+4. [Graal 编译流程](#4-graal-编译流程)
+5. [Graal 独特优化](#5-graal-独特优化)
+6. [使用 Graal JIT](#6-使用-graal-jit)
+7. [Truffle 框架](#7-truffle-框架)
+8. [SubstrateVM (Native Image)](#8-substratevm-native-image)
+9. [性能对比](#9-性能对比)
+10. [诊断和调试](#10-诊断和调试)
+11. [编程建议](#11-编程建议)
+12. [近期发展](#12-近期发展)
+13. [相关链接](#13-相关链接)
+14. [贡献者](#14-贡献者)
+
+---
+
+
+## 1. 一眼看懂
 
 | 维度 | 内容 |
 |------|------|
@@ -20,7 +39,7 @@
 
 ---
 
-## Graal JIT 概述
+## 2. Graal JIT 概述
 
 ### 什么是 Graal？
 
@@ -69,7 +88,7 @@ Java 代码 → JVMCI → 动态编译
 
 ---
 
-## Graal vs C2
+## 3. Graal vs C2
 
 ### 架构对比
 
@@ -96,7 +115,7 @@ Java 代码 → JVMCI → 动态编译
 
 ---
 
-## Graal 编译流程
+## 4. Graal 编译流程
 
 ### IR 结构
 
@@ -150,7 +169,7 @@ Native Code
 
 ---
 
-## Graal 独特优化
+## 5. Graal 独特优化
 
 ### 部分转义 (Partial Escape)
 
@@ -182,7 +201,7 @@ public int calculate(int x) {
 
 ---
 
-## 使用 Graal JIT
+## 6. 使用 Graal JIT
 
 ### 在 JDK 中启用
 
@@ -216,7 +235,7 @@ GraalVM Editions:
 
 ---
 
-## Truffle 框架
+## 7. Truffle 框架
 
 ### 什么是 Truffle？
 
@@ -256,7 +275,7 @@ class AddNode extends ExprNode {
 
 ---
 
-## SubstrateVM (Native Image)
+## 8. SubstrateVM (Native Image)
 
 ### AOT 编译
 
@@ -286,7 +305,7 @@ Native Executable
 
 ---
 
-## 性能对比
+## 9. 性能对比
 
 ### 微基准
 
@@ -307,7 +326,7 @@ Native Executable
 
 ---
 
-## 诊断和调试
+## 10. 诊断和调试
 
 ### Graal 特定参数
 
@@ -340,7 +359,7 @@ Native Executable
 
 ---
 
-## 编程建议
+## 11. 编程建议
 
 ### Graal 友好代码
 
@@ -383,7 +402,7 @@ public int process() {
 
 ---
 
-## 近期发展
+## 12. 近期发展
 
 ### JDK 版本支持
 
@@ -405,7 +424,7 @@ public int process() {
 
 ---
 
-## 相关链接
+## 13. 相关链接
 
 ### 本地文档
 
@@ -422,7 +441,7 @@ public int process() {
 
 ---
 
-## 贡献者
+## 14. 贡献者
 
 | 贡献者 | 领域 | 组织 |
 |--------|------|------|

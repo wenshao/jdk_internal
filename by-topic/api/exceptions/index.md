@@ -6,7 +6,7 @@
 
 ---
 
-## 快速概览
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 1.4 ── JDK 7 ── JDK 9 ── JDK 20 ── JDK 21
@@ -44,7 +44,7 @@ Throwable  getCause  resources  (JEP 259)  匹配     层次
 
 ---
 
-## 异常体系
+## 2. 异常体系
 
 ### Throwable 层次
 
@@ -98,7 +98,7 @@ Throwable  getCause  resources  (JEP 259)  匹配     层次
 
 ---
 
-## 异常处理
+## 3. 异常处理
 
 ### 基础语法
 
@@ -218,7 +218,7 @@ public void process() throws IOException, SQLException {
 
 ---
 
-## try-with-resources
+## 4. try-with-resources
 
 **JDK 7+**
 
@@ -311,7 +311,7 @@ try (Resource resource = new Resource()) {
 
 ---
 
-## 异常链
+## 5. 异常链
 
 **JDK 1.4+**
 
@@ -391,7 +391,7 @@ try {
 
 ---
 
-## StackWalker
+## 6. StackWalker
 
 **JDK 9+ (JEP 259)**
 
@@ -462,7 +462,7 @@ List<StackFrame> frames = walker.walk(s ->
 
 ---
 
-## 模式匹配异常
+## 7. 模式匹配异常
 
 **JDK 20+ 预览**
 
@@ -503,7 +503,7 @@ try {
 
 ---
 
-## 最佳实践
+## 8. 最佳实践
 
 ### 异常设计原则
 
@@ -622,7 +622,7 @@ List<StackFrame> frames = StackWalker.getInstance().walk(
 
 ---
 
-## 核心贡献者
+## 9. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -647,7 +647,7 @@ List<StackFrame> frames = StackWalker.getInstance().walk(
 
 ---
 
-## Git 提交历史
+## 10. Git 提交历史
 
 > 基于 OpenJDK master 分支分析
 
@@ -662,7 +662,7 @@ git log --oneline -- src/java.base/share/classes/java/lang/Exception.java
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 ### 内部文档
 

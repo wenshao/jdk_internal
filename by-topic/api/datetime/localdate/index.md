@@ -3,8 +3,31 @@
 > java.time.LocalDate 的完整实现分析
 
 ---
+## 目录
 
-## 类声明
+1. [类声明](#1-类声明)
+2. [字段存储](#2-字段存储)
+3. [常量定义](#3-常量定义)
+4. [工厂方法](#4-工厂方法)
+5. [核心方法](#5-核心方法)
+6. [闰年处理](#6-闰年处理)
+7. [时间计算](#7-时间计算)
+8. [until() - 时间差计算](#8-until---时间差计算)
+9. [JDK 9 新增: datesUntil()](#9-jdk-9-新增-datesuntil)
+10. [atTime() - 组合时间](#10-attime---组合时间)
+11. [比较方法](#11-比较方法)
+12. [Epoch Day 转换](#12-epoch-day-转换)
+13. [序列化机制](#13-序列化机制)
+14. [使用示例](#14-使用示例)
+15. [性能特性](#15-性能特性)
+16. [常见陷阱](#16-常见陷阱)
+17. [与其他类的关系](#17-与其他类的关系)
+18. [相关文档](#18-相关文档)
+
+---
+
+
+## 1. 类声明
 
 ```java
 @jdk.internal.ValueBased
@@ -36,7 +59,7 @@ public final class LocalDate
 
 ---
 
-## 字段存储
+## 2. 字段存储
 
 ### 三字段紧凑设计
 
@@ -60,7 +83,7 @@ private final transient byte day;   // 1 字节
 
 ---
 
-## 常量定义
+## 3. 常量定义
 
 ### MIN / MAX / EPOCH
 
@@ -111,7 +134,7 @@ static final long DAYS_0000_TO_1970 = (DAYS_PER_CYCLE * 5L) - (30L * 365L + 7L);
 
 ---
 
-## 工厂方法
+## 4. 工厂方法
 
 ### now() - 当前日期
 
@@ -268,7 +291,7 @@ public static LocalDate parse(CharSequence text, DateTimeFormatter formatter) {
 
 ---
 
-## 核心方法
+## 5. 核心方法
 
 ### getYear() / getMonth() / getDayOfMonth()
 
@@ -330,7 +353,7 @@ private int get0(TemporalField field) {
 
 ---
 
-## 闰年处理
+## 6. 闰年处理
 
 ### isLeapYear()
 
@@ -384,7 +407,7 @@ public int lengthOfYear() {
 
 ---
 
-## 时间计算
+## 7. 时间计算
 
 ### withYear() / withMonth() / withDayOfMonth()
 
@@ -492,7 +515,7 @@ public LocalDate plusDays(long daysToAdd) {
 
 ---
 
-## until() - 时间差计算
+## 8. until() - 时间差计算
 
 ### until(Temporal, TemporalUnit) → long
 
@@ -567,7 +590,7 @@ long days = start.until(end, ChronoUnit.DAYS);
 
 ---
 
-## JDK 9 新增: datesUntil()
+## 9. JDK 9 新增: datesUntil()
 
 ### datesUntil(LocalDate) - 流式日期
 
@@ -615,7 +638,7 @@ LocalDate.of(2024, 1, 31)
 
 ---
 
-## atTime() - 组合时间
+## 10. atTime() - 组合时间
 
 ### atTime(LocalTime) → LocalDateTime
 
@@ -673,7 +696,7 @@ public ZonedDateTime atStartOfDay(ZoneId zone) {
 
 ---
 
-## 比较方法
+## 11. 比较方法
 
 ### compareTo()
 
@@ -752,7 +775,7 @@ public int hashCode() {
 
 ---
 
-## Epoch Day 转换
+## 12. Epoch Day 转换
 
 ### toEpochDay()
 
@@ -801,7 +824,7 @@ public long toEpochSecond(LocalTime time, ZoneOffset offset) {
 
 ---
 
-## 序列化机制
+## 13. 序列化机制
 
 ### writeReplace()
 
@@ -846,7 +869,7 @@ out.writeByte(day);   // 1 字节
 
 ---
 
-## 使用示例
+## 14. 使用示例
 
 ### 创建
 
@@ -948,7 +971,7 @@ ZonedDateTime startOfDayInZone = date.atStartOfDay(ZoneId.of("America/New_York")
 
 ---
 
-## 性能特性
+## 15. 性能特性
 
 ### 紧凑存储
 
@@ -994,7 +1017,7 @@ public int hashCode() {
 
 ---
 
-## 常见陷阱
+## 16. 常见陷阱
 
 ### 1. 月末日期调整
 
@@ -1034,7 +1057,7 @@ LocalDate.now().plusYears(Long.MAX_VALUE);  // ArithmeticException
 
 ---
 
-## 与其他类的关系
+## 17. 与其他类的关系
 
 ```
 LocalDate (不带时间的日期)
@@ -1061,7 +1084,7 @@ LocalDate (不带时间的日期)
 
 ---
 
-## 相关文档
+## 18. 相关文档
 
 - [LocalDateTime 实现](../localdatetime/index.md)
 - [LocalTime 实现](../localtime/index.md)

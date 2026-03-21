@@ -3,8 +3,22 @@
 > **对比版本**: JDK 11u (LTS 2018) → JDK 17u (LTS 2021) | **时间跨度**: 3 年
 
 ---
+## 目录
 
-## 语言特性演进
+1. [语言特性演进](#1-语言特性演进)
+2. [核心库增强](#2-核心库增强)
+3. [性能与监控](#3-性能与监控)
+4. [工具和平台支持](#4-工具和平台支持)
+5. [移除和清理](#5-移除和清理)
+6. [性能对比](#6-性能对比)
+7. [迁移建议](#7-迁移建议)
+8. [兼容性注意事项](#8-兼容性注意事项)
+9. [资源](#9-资源)
+
+---
+
+
+## 1. 语言特性演进
 
 ### 1. Records (JEP 395) ⭐⭐
 
@@ -158,7 +172,7 @@ java --enable-preview Formatter
 
 ---
 
-## 核心库增强
+## 2. 核心库增强
 
 ### 5. Enhanced Pseudo-Random Number Generators (JEP 356) ⭐
 
@@ -264,7 +278,7 @@ java --add-modules jdk.incubator.foreign ForeignExample
 
 ---
 
-## 性能与监控
+## 3. 性能与监控
 
 ### 8. ZGC: Concurrent Thread-Stack Processing (JEP 376) ⭐
 
@@ -327,7 +341,7 @@ docker run --read-only --cap-drop=ALL myapp
 
 ---
 
-## 工具和平台支持
+## 4. 工具和平台支持
 
 ### 10. Packaging Tool (jpackage) (JEP 392) ⭐
 
@@ -402,7 +416,7 @@ java -version
 
 ---
 
-## 移除和清理
+## 5. 移除和清理
 
 ### 13. Remove RMI Activation (JEP 407) ⚠️
 
@@ -442,7 +456,7 @@ java -version
 
 ---
 
-## 性能对比
+## 6. 性能对比
 
 ### 基准测试结果 (SPECjvm2008)
 
@@ -477,7 +491,7 @@ java -version
 
 ---
 
-## 迁移建议
+## 7. 迁移建议
 
 ### 立即采用的新特性
 
@@ -533,7 +547,7 @@ java -version
 
 ---
 
-## 兼容性注意事项
+## 8. 兼容性注意事项
 
 ### 向后兼容性
 
@@ -569,7 +583,7 @@ java -version
 
 ---
 
-## 资源
+## 9. 资源
 
 ### 官方文档
 - [JDK 17 发布说明](https://www.oracle.com/java/technologies/javase/17all-relnotes.html)

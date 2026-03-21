@@ -3,8 +3,18 @@
 > JDK 21-26 安全相关 JEP 汇总
 
 ---
+## 目录
 
-## 概览
+1. [概览](#1-概览)
+2. [Key Encapsulation Mechanism API (JEP 452)](#2-key-encapsulation-mechanism-api-jep-452)
+3. [Key Derivation Function API (JEP 510)](#3-key-derivation-function-api-jep-510)
+4. [PEM Encodings (JEP 470)](#4-pem-encodings-jep-470)
+5. [相关链接](#5-相关链接)
+
+---
+
+
+## 1. 概览
 
 | JEP | 标题 | JDK | 状态 | 说明 |
 |-----|------|-----|------|------|
@@ -15,7 +25,7 @@
 
 ---
 
-## Key Encapsulation Mechanism API (JEP 452)
+## 2. Key Encapsulation Mechanism API (JEP 452)
 
 ### 核心概念
 
@@ -41,7 +51,7 @@ public class KeyStore {
 
 ---
 
-## Key Derivation Function API (JEP 510)
+## 3. Key Derivation Function API (JEP 510)
 
 ### 核心用法
 
@@ -65,13 +75,13 @@ public class KeyDerivation {
 
 ---
 
-## PEM Encodings (JEP 470)
+## 4. PEM Encodings (JEP 470)
 
 PEM 编码支持，简化证书处理。
 
 ---
 
-## 相关链接
+## 5. 相关链接
 
 - Java 安全指南 
 - [加密 API 文档](/modules/java.base/security/)

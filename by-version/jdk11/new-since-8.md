@@ -3,8 +3,24 @@
 > **覆盖版本**: JDK 9、10、11 | **对比基准**: JDK 8u401 → JDK 11.0.20
 
 ---
+## 目录
 
-## 模块系统 (JPMS) - JDK 9
+1. [模块系统 (JPMS) - JDK 9](#1-模块系统-jpms---jdk-9)
+2. [语言特性](#2-语言特性)
+3. [API 增强](#3-api-增强)
+4. [HTTP 客户端 (JEP 321) - JDK 11](#4-http-客户端-jep-321---jdk-11)
+5. [垃圾收集器增强](#5-垃圾收集器增强)
+6. [工具和诊断](#6-工具和诊断)
+7. [安全性增强](#7-安全性增强)
+8. [移除和废弃](#8-移除和废弃)
+9. [性能改进](#9-性能改进)
+10. [迁移建议](#10-迁移建议)
+11. [资源](#11-资源)
+
+---
+
+
+## 1. 模块系统 (JPMS) - JDK 9
 
 ### Java Platform Module System (JEP 261)
 
@@ -49,7 +65,7 @@ jlink --module-path $JAVA_HOME/jmods:mods --add-modules com.example.app --output
 
 ---
 
-## 语言特性
+## 2. 语言特性
 
 ### JDK 9 语言增强
 
@@ -159,7 +175,7 @@ list.stream()
 
 ---
 
-## API 增强
+## 3. API 增强
 
 ### JDK 9 集合工厂方法
 
@@ -256,7 +272,7 @@ long lineCount = text.lines().count();  // 3
 
 ---
 
-## HTTP 客户端 (JEP 321) - JDK 11
+## 4. HTTP 客户端 (JEP 321) - JDK 11
 
 ### 从实验性到标准
 
@@ -328,7 +344,7 @@ client.send(streamingRequest, HttpResponse.BodyHandlers.ofLines())
 
 ---
 
-## 垃圾收集器增强
+## 5. 垃圾收集器增强
 
 ### ZGC (JEP 333) - JDK 11
 
@@ -402,7 +418,7 @@ java -XX:+UseEpsilonGC -Xmx100m -jar short-task.jar
 
 ---
 
-## 工具和诊断
+## 6. 工具和诊断
 
 ### Java Flight Recorder (JFR) - JDK 11
 
@@ -477,7 +493,7 @@ jpackage --name MyApp --input lib --main-jar app.jar --main-class com.example.Ma
 
 ---
 
-## 安全性增强
+## 7. 安全性增强
 
 ### TLS 1.3 (JEP 332) - JDK 11
 
@@ -516,7 +532,7 @@ sslContext.init(null, null, null);
 
 ---
 
-## 移除和废弃
+## 8. 移除和废弃
 
 ### 已移除的组件
 
@@ -539,7 +555,7 @@ sslContext.init(null, null, null);
 
 ---
 
-## 性能改进
+## 9. 性能改进
 
 ### 启动性能
 
@@ -583,7 +599,7 @@ java -XX:AOTLibrary=./libApp.so -jar app.jar
 
 ---
 
-## 迁移建议
+## 10. 迁移建议
 
 ### 逐步迁移策略
 
@@ -629,7 +645,7 @@ jlink --module-path $JAVA_HOME/jmods:mods \
 
 ---
 
-## 资源
+## 11. 资源
 
 ### 官方文档
 - [JDK 11 发布说明](https://openjdk.org/projects/jdk/11/)

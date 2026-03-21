@@ -3,8 +3,21 @@
 > Compact Strings、StringLatin1、StringUTF16 详解
 
 ---
+## 目录
 
-## Compact Strings (JEP 254)
+1. [Compact Strings (JEP 254)](#1-compact-strings-jep-254)
+2. [StringLatin1](#2-stringlatin1)
+3. [StringUTF16](#3-stringutf16)
+4. [分发机制](#4-分发机制)
+5. [编码转换流程](#5-编码转换流程)
+6. [源码结构](#6-源码结构)
+7. [贡献者](#7-贡献者)
+8. [相关资源](#8-相关资源)
+
+---
+
+
+## 1. Compact Strings (JEP 254)
 
 ### 设计原理
 
@@ -53,7 +66,7 @@ UTF16  + UTF16  = UTF16
 
 ---
 
-## StringLatin1
+## 2. StringLatin1
 
 单字节编码操作类（包级私有）：
 
@@ -103,7 +116,7 @@ final class StringLatin1 {
 
 ---
 
-## StringUTF16
+## 3. StringUTF16
 
 双字节编码操作类（包级私有）：
 
@@ -146,7 +159,7 @@ final class StringUTF16 {
 
 ---
 
-## 分发机制
+## 4. 分发机制
 
 String 根据 `coder` 分发到对应实现：
 
@@ -177,7 +190,7 @@ public final class String {
 
 ---
 
-## 编码转换流程
+## 5. 编码转换流程
 
 ```java
 // 从 char[] 构造 String
@@ -210,7 +223,7 @@ String(char[] value, int off, int len, Void sig) {
 
 ---
 
-## 源码结构
+## 6. 源码结构
 
 ```
 src/java.base/share/classes/java/lang/
@@ -227,7 +240,7 @@ src/java.base/share/classes/java/lang/invoke/
 
 ---
 
-## 贡献者
+## 7. 贡献者
 
 ### JEP 254: Compact Strings
 
@@ -247,7 +260,7 @@ src/java.base/share/classes/java/lang/invoke/
 
 ---
 
-## 相关资源
+## 8. 相关资源
 
 - [JEP 254: Compact Strings](https://openjdk.org/jeps/254)
 - [OpenJDK String 源码](https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/lang/String.java)

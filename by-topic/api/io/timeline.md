@@ -3,8 +3,25 @@
 Java I/O 从 JDK 1.0 到 JDK 26 的完整演进历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [I/O 体系结构](#2-io-体系结构)
+3. [JDK 1.0 - 传统 I/O](#3-jdk-10---传统-io)
+4. [JDK 1.4 - NIO (New I/O)](#4-jdk-14---nio-new-io)
+5. [JDK 5 - Scanner 和 Formatter](#5-jdk-5---scanner-和-formatter)
+6. [JDK 7 - NIO.2 (JSR 203)](#6-jdk-7---nio2-jsr-203)
+7. [JDK 11 - Files 改进](#7-jdk-11---files-改进)
+8. [JDK 21+ - Foreign Memory Access](#8-jdk-21---foreign-memory-access)
+9. [I/O 选择指南](#9-io-选择指南)
+10. [最佳实践](#10-最佳实践)
+11. [时间线总结](#11-时间线总结)
+12. [相关链接](#12-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 1.4 ──── JDK 5 ──── JDK 7 ──── JDK 11 ──── JDK 21 ──── JDK 26
@@ -18,7 +35,7 @@ Stream        (New I/O)    Formatter   (JSR 203)  API         Access      Segmen
 
 ---
 
-## I/O 体系结构
+## 2. I/O 体系结构
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -59,7 +76,7 @@ Stream        (New I/O)    Formatter   (JSR 203)  API         Access      Segmen
 
 ---
 
-## JDK 1.0 - 传统 I/O
+## 3. JDK 1.0 - 传统 I/O
 
 ### InputStream/OutputStream
 
@@ -123,7 +140,7 @@ try (DataInputStream dis = new DataInputStream(
 
 ---
 
-## JDK 1.4 - NIO (New I/O)
+## 4. JDK 1.4 - NIO (New I/O)
 
 ### Buffer
 
@@ -242,7 +259,7 @@ while (true) {
 
 ---
 
-## JDK 5 - Scanner 和 Formatter
+## 5. JDK 5 - Scanner 和 Formatter
 
 ### Scanner
 
@@ -290,7 +307,7 @@ String result = String.format("x = %d, y = %d", 10, 20);
 
 ---
 
-## JDK 7 - NIO.2 (JSR 203)
+## 6. JDK 7 - NIO.2 (JSR 203)
 
 ### Path 和 Paths
 
@@ -427,7 +444,7 @@ try (AsynchronousFileChannel channel = AsynchronousFileChannel.open(
 
 ---
 
-## JDK 11 - Files 改进
+## 7. JDK 11 - Files 改进
 
 ### 新增方法
 
@@ -448,7 +465,7 @@ Path path = Files.createString(Path.of("test.txt"), "content");
 
 ---
 
-## JDK 21+ - Foreign Memory Access
+## 8. JDK 21+ - Foreign Memory Access
 
 ### MemorySegment
 
@@ -512,7 +529,7 @@ MemorySegment segment = arena.allocate(1024);
 
 ---
 
-## I/O 选择指南
+## 9. I/O 选择指南
 
 ### 场景选择
 
@@ -536,7 +553,7 @@ MemorySegment segment = arena.allocate(1024);
 
 ---
 
-## 最佳实践
+## 10. 最佳实践
 
 ### 使用 try-with-resources
 
@@ -588,7 +605,7 @@ try (BufferedReader br = new BufferedReader(new FileReader(file))) {
 
 ---
 
-## 时间线总结
+## 11. 时间线总结
 
 | 版本 | 特性 | 说明 |
 |------|------|------|
@@ -602,7 +619,7 @@ try (BufferedReader br = new BufferedReader(new FileReader(file))) {
 
 ---
 
-## 相关链接
+## 12. 相关链接
 
 - [I/O Streams](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/package-summary.html)
 - [NIO](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/package-summary.html)

@@ -3,8 +3,22 @@
 > **影响评估**: 高 - 由于模块系统和API移除，需要代码修改和依赖调整
 
 ---
+## 目录
 
-## 模块系统相关破坏性变更
+1. [模块系统相关破坏性变更](#1-模块系统相关破坏性变更)
+2. [API 移除和废弃](#2-api-移除和废弃)
+3. [工具和命令行变更](#3-工具和命令行变更)
+4. [安全相关破坏性变更](#4-安全相关破坏性变更)
+5. [构建和部署破坏性变更](#5-构建和部署破坏性变更)
+6. [第三方库兼容性问题](#6-第三方库兼容性问题)
+7. [迁移检查清单](#7-迁移检查清单)
+8. [紧急修复选项](#8-紧急修复选项)
+9. [资源](#9-资源)
+
+---
+
+
+## 1. 模块系统相关破坏性变更
 
 ### 1. Java EE 和 CORBA 模块移除 (JEP 320)
 
@@ -74,7 +88,7 @@ module my.app {
 
 ---
 
-## API 移除和废弃
+## 2. API 移除和废弃
 
 ### 4. Nashorn JavaScript 引擎废弃 (JEP 335)
 
@@ -129,7 +143,7 @@ VarHandle handles = MethodHandles.arrayElementVarHandle(byte[].class);
 
 ---
 
-## 工具和命令行变更
+## 3. 工具和命令行变更
 
 ### 8. JavaFX 分离
 
@@ -182,7 +196,7 @@ OpenJDK 64-Bit Server VM (build 11.0.13+8, mixed mode)
 
 ---
 
-## 安全相关破坏性变更
+## 4. 安全相关破坏性变更
 
 ### 11. TLS 1.0 和 1.1 默认禁用
 
@@ -220,7 +234,7 @@ javax.net.ssl.SSLHandshakeException: No appropriate protocol
 
 ---
 
-## 构建和部署破坏性变更
+## 5. 构建和部署破坏性变更
 
 ### 14. 类文件版本变更
 
@@ -273,7 +287,7 @@ jcmd <pid> GC.metaspace
 
 ---
 
-## 第三方库兼容性问题
+## 6. 第三方库兼容性问题
 
 ### 17. 常见库的 JDK 11 兼容性
 
@@ -309,7 +323,7 @@ java.io.InvalidClassException: filter status: REJECTED
 
 ---
 
-## 迁移检查清单
+## 7. 迁移检查清单
 
 ### 必须检查的项目
 
@@ -347,7 +361,7 @@ java.io.InvalidClassException: filter status: REJECTED
 
 ---
 
-## 紧急修复选项
+## 8. 紧急修复选项
 
 ### 如果遇到模块问题
 
@@ -391,7 +405,7 @@ java -XX:+UseG1GC \
 
 ---
 
-## 资源
+## 9. 资源
 
 ### 诊断工具
 

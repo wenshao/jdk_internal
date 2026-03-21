@@ -20,7 +20,7 @@
 
 ---
 
-## 架构概览
+## 1. 架构概览
 
 ### 分层架构
 
@@ -89,7 +89,7 @@ java.net.http                          java.base
 
 ---
 
-## QUIC 协议实现
+## 2. QUIC 协议实现
 
 ### QUIC 版本支持
 
@@ -184,7 +184,7 @@ public interface QuicPacket {
 
 ---
 
-## HTTP/3 层实现
+## 3. HTTP/3 层实现
 
 ### HTTP/3 帧类型
 
@@ -266,7 +266,7 @@ abstract class Http3Stream {
 
 ---
 
-## TLS 1.3 集成
+## 4. TLS 1.3 集成
 
 ### 加密级别
 
@@ -349,7 +349,7 @@ public class QuicTransportParameters {
 
 ---
 
-## 拥塞控制
+## 5. 拥塞控制
 
 ### CUBIC 拥塞控制器
 
@@ -465,7 +465,7 @@ public class QuicRttEstimator {
 
 ---
 
-## 源码文件结构
+## 6. 源码文件结构
 
 ### 完整文件列表
 
@@ -568,7 +568,7 @@ src/java.net.http/share/classes/jdk/internal/net/http/quic/
 
 ---
 
-## 关键类分析
+## 7. 关键类分析
 
 ### QuicConnectionImpl - QUIC 连接核心
 
@@ -650,7 +650,7 @@ Handshake Keys = TLS-13 Handshake
 
 ---
 
-## 性能优化
+## 8. 性能优化
 
 ### 1. 零拷贝设计
 
@@ -692,7 +692,7 @@ private final ThreadLocal<ByteBuffer> packetBuffer =
 
 ---
 
-## 与 RFC 对应关系
+## 9. 与 RFC 对应关系
 
 ### RFC 9000 - QUIC 核心协议
 
@@ -726,7 +726,7 @@ private final ThreadLocal<ByteBuffer> packetBuffer =
 
 ---
 
-## 总结
+## 10. 总结
 
 JDK 26 的 HTTP/3 实现是一个完整的、生产就绪的 HTTP/3 和 QUIC 协议栈：
 
@@ -739,7 +739,7 @@ JDK 26 的 HTTP/3 实现是一个完整的、生产就绪的 HTTP/3 和 QUIC 协
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 - [JEP 517 官方文档](https://openjdk.org/jeps/517)
 - [RFC 9000: QUIC](https://www.rfc-editor.org/rfc/rfc9000)

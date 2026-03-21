@@ -6,7 +6,7 @@
 
 ---
 
-## 快速概览
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 1.4 ── JDK 9 ── JDK 11 ── 2002 ── 2006 ── 2014 ── JDK 9
@@ -43,7 +43,7 @@ PrintStream  java.util.  桥接    门面   原生    SLF4J
 
 ---
 
-## java.util.logging (JUL)
+## 2. java.util.logging (JUL)
 
 **JDK 1.4 引入**
 
@@ -123,7 +123,7 @@ java -Djava.util.logging.config.file=logging.properties MyClass
 
 ---
 
-## System.Logger
+## 3. System.Logger
 
 **JDK 9 引入 (JEP 264)**
 
@@ -177,7 +177,7 @@ com.example.MyLoggerFinder
 
 ---
 
-## SLF4J + Logback
+## 4. SLF4J + Logback
 
 ### SLF4J 门面
 
@@ -243,7 +243,7 @@ logger.error("错误: {}", error, exception);
 
 ---
 
-## Log4j 2.x
+## 5. Log4j 2.x
 
 ### 配置
 
@@ -293,7 +293,7 @@ logger.throwing(exception);
 
 ---
 
-## 日志桥接
+## 6. 日志桥接
 
 ### JUL to SLF4J
 
@@ -353,7 +353,7 @@ java.util.logging.Logger.getLogger("").setLevel(java.util.logging.Level.ALL);
 
 ---
 
-## 最佳实践
+## 7. 最佳实践
 
 ### 日志级别
 
@@ -416,7 +416,7 @@ try {
 
 ---
 
-## 核心贡献者
+## 8. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -440,7 +440,7 @@ try {
 
 ---
 
-## Git 提交历史
+## 9. Git 提交历史
 
 > 基于 OpenJDK master 分支分析
 
@@ -454,7 +454,7 @@ git log --oneline -- src/java.base/share/classes/java/util/logging/
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 ### 内部文档
 

@@ -6,7 +6,7 @@
 
 ---
 
-## 快速概览
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 1.4 ── JDK 7 ── JDK 11 ── JDK 21
@@ -29,7 +29,7 @@ File     Selector WatchService  List
 
 ---
 
-## OpenJDK 项目
+## 2. OpenJDK 项目
 
 ### [Project Panama](../core/panama/)
 
@@ -57,7 +57,7 @@ File     Selector WatchService  List
 
 ---
 
-## NIO 核心
+## 3. NIO 核心
 
 ### 三大组件
 
@@ -91,7 +91,7 @@ File     Selector WatchService  List
 
 ---
 
-## Buffer 详解
+## 4. Buffer 详解
 
 ### Buffer 层次
 
@@ -168,7 +168,7 @@ longView.put(1000L);
 
 ---
 
-## Channel 详解
+## 5. Channel 详解
 
 ### Channel 类型
 
@@ -273,7 +273,7 @@ int bytesRead = client.read(buffer);
 
 ---
 
-## Selector 多路复用
+## 6. Selector 多路复用
 
 ### Selector 工作原理
 
@@ -381,7 +381,7 @@ Object data = key.attachment();
 
 ---
 
-## NIO.2 文件 API
+## 7. NIO.2 文件 API
 
 **JDK 7 (JSR 203)**
 
@@ -513,7 +513,7 @@ Files.walk(Paths.get("."))
 
 ---
 
-## 最佳实践
+## 8. 最佳实践
 
 ### 直接缓冲 vs 堆内缓冲
 
@@ -559,7 +559,7 @@ int optimalSize = 8192;  // 根据系统调整
 
 ---
 
-## 核心贡献者
+## 9. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -583,7 +583,7 @@ int optimalSize = 8192;  // 根据系统调整
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 ### 内部文档
 

@@ -6,7 +6,7 @@
 
 ---
 
-## TL;DR 快速概览
+## 1. TL;DR 快速概览
 
 > 💡 **1 分钟掌握 String 关键特性**
 
@@ -49,7 +49,7 @@ for (String s : list) { s = s + item; }  // 性能差
 
 ---
 
-## 快速概览
+## 2. 快速概览
 
 ```
 JDK 1.0 ── JDK 5 ── JDK 7u6 ── JDK 9 ── JDK 11 ── JDK 15 ── JDK 21 ── JDK 24 ── JDK 25 ── JDK 26
@@ -85,7 +85,7 @@ JDK 1.0 ── JDK 5 ── JDK 7u6 ── JDK 9 ── JDK 11 ── JDK 15 ─
 
 ---
 
-## 字符串 API
+## 3. 字符串 API
 
 ### 基础操作
 
@@ -156,7 +156,7 @@ String formatted = "Hello %s, age %d".formatted("Alice", 25);
 
 ---
 
-## 内部实现
+## 4. 内部实现
 
 ### Compact Strings (JDK 9)
 
@@ -235,7 +235,7 @@ String result = a + b + c;
 
 ---
 
-## 性能优化
+## 5. 性能优化
 
 ### String Deduplication
 
@@ -424,9 +424,9 @@ ByteArrayLittleEndian.setInt(buf, charPos << 1, inflated);
 
 ---
 
-## 性能基准测试
+## 6. 性能基准测试
 
-## 版本演进
+## 7. 版本演进
 
 ### JDK 1.0 - String 诞生
 
@@ -547,7 +547,7 @@ String repeated = "abc".repeat(1000);
 
 ---
 
-## 最新增强
+## 8. 最新增强
 
 ### JDK 25: StringBuilder Unsafe 优化
 
@@ -579,7 +579,7 @@ String repeated = "abc".repeat(1000);
 
 ---
 
-## 文档导航
+## 9. 文档导航
 
 ### [时间线](timeline.md)
 
@@ -601,7 +601,7 @@ String Deduplication、VM 调优参数、最佳实践。
 
 ---
 
-## VM 参数
+## 10. VM 参数
 
 ### Compact Strings
 
@@ -641,7 +641,7 @@ String Deduplication、VM 调优参数、最佳实践。
 
 ---
 
-## 内部详情
+## 11. 内部详情
 
 ### 源码结构
 
@@ -689,7 +689,7 @@ src/hotspot/share/gc/
 
 ---
 
-## 相关链接
+## 12. 相关链接
 
 ### 本地文档
 
@@ -728,7 +728,7 @@ src/hotspot/share/gc/
 
 ---
 
-## 核心贡献者
+## 13. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20

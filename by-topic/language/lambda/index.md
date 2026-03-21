@@ -6,7 +6,7 @@
 
 ---
 
-## TL;DR 快速概览
+## 1. TL;DR 快速概览
 
 > 💡 **1 分钟掌握 Lambda**
 
@@ -74,7 +74,7 @@ button.addActionListener(e -> System.out.println("Clicked"));
 
 ---
 
-## 快速概览
+## 2. 快速概览
 
 ```
 JDK 1.0 ── JDK 5 ── JDK 7 ── JDK 8 ── JDK 9 ── JDK 11 ── JDK 16 ── JDK 21 ── JDK 22
@@ -113,7 +113,7 @@ JDK 1.0 ── JDK 5 ── JDK 7 ── JDK 8 ── JDK 9 ── JDK 11 ──
 
 ---
 
-## Lambda 表达式
+## 3. Lambda 表达式
 
 ### 基础语法
 
@@ -253,7 +253,7 @@ SerializableRunnable r = (SerializableRunnable & Runnable) () -> {};
 
 ---
 
-## 编译实现: invokedynamic
+## 4. 编译实现: invokedynamic
 
 ### invokedynamic 指令详解
 
@@ -319,7 +319,7 @@ Function<String, Integer> f = (Function<String, Integer>) site.getTarget();
 
 ---
 
-## 字节码分析
+## 5. 字节码分析
 
 ### Lambda 字节码结构
 
@@ -407,7 +407,7 @@ java -Djdk.internal.lambda.disableEagerInitialization=true \
 
 ---
 
-## 性能优化实战
+## 6. 性能优化实战
 
 ### 重要 PR 分析
 
@@ -549,7 +549,7 @@ Runnable[] runnables = { () -> System.out.println("A"),
 
 ---
 
-## 函数式接口
+## 7. 函数式接口
 
 ### 内置函数式接口
 
@@ -650,7 +650,7 @@ public interface Valid {
 
 ---
 
-## 方法引用
+## 8. 方法引用
 
 ### 方法引用类型
 
@@ -731,7 +731,7 @@ String concatenated = names.stream()
 
 ---
 
-## 闭包与变量捕获
+## 9. 闭包与变量捕获
 
 ### 变量捕获规则
 
@@ -817,7 +817,7 @@ try (ObjectInputStream in = new ObjectInputStream(new FileInputStream("lambda.se
 
 ---
 
-## Stream API
+## 10. Stream API
 
 ### Stream 创建
 
@@ -1092,7 +1092,7 @@ System.out.println("Count: " + stats.getCount());
 
 ---
 
-## 最佳实践
+## 11. 最佳实践
 
 ### Lambda 最佳实践
 
@@ -1226,7 +1226,7 @@ list.stream()
 
 ---
 
-## 核心贡献者
+## 12. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -1252,7 +1252,7 @@ list.stream()
 
 ---
 
-## 相关链接
+## 13. 相关链接
 
 ### 内部文档
 

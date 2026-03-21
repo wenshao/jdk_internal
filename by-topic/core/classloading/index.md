@@ -5,8 +5,27 @@
 [← 返回核心平台](../)
 
 ---
+## 目录
 
-## 快速概览
+1. [快速概览](#1-快速概览)
+2. [核心贡献者](#2-核心贡献者)
+3. [类加载过程](#3-类加载过程)
+4. [双亲委派模型](#4-双亲委派模型)
+5. [内置类加载器](#5-内置类加载器)
+6. [线程上下文类加载器 (TCCL)](#6-线程上下文类加载器-tccl)
+7. [元空间 (Metaspace)](#7-元空间-metaspace)
+8. [模块化类加载 (JDK 9+)](#8-模块化类加载-jdk-9)
+9. [自定义类加载器](#9-自定义类加载器)
+10. [类加载器泄漏](#10-类加载器泄漏)
+11. [CDS (Class Data Sharing)](#11-cds-class-data-sharing)
+12. [重要 PR 分析](#12-重要-pr-分析)
+13. [类加载最佳实践](#13-类加载最佳实践)
+14. [相关链接](#14-相关链接)
+
+---
+
+
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 2 ── JDK 6 ── JDK 8 ── JDK 9 ── JDK 17 ── JDK 21 ── JDK 26
@@ -30,7 +49,7 @@ JDK 1.0 ── JDK 2 ── JDK 6 ── JDK 8 ── JDK 9 ── JDK 17 ──
 
 ---
 
-## 核心贡献者
+## 2. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -49,7 +68,7 @@ JDK 1.0 ── JDK 2 ── JDK 6 ── JDK 8 ── JDK 9 ── JDK 17 ──
 
 ---
 
-## 类加载过程
+## 3. 类加载过程
 
 ### 加载阶段
 
@@ -110,7 +129,7 @@ JDK 1.0 ── JDK 2 ── JDK 6 ── JDK 8 ── JDK 9 ── JDK 17 ──
 
 ---
 
-## 双亲委派模型
+## 4. 双亲委派模型
 
 ### 原理
 
@@ -176,7 +195,7 @@ public class CustomClassLoader extends ClassLoader {
 
 ---
 
-## 内置类加载器
+## 5. 内置类加载器
 
 ### Bootstrap ClassLoader
 
@@ -225,7 +244,7 @@ ClassLoader appLoader = ClassLoader.getSystemClassLoader();
 
 ---
 
-## 线程上下文类加载器 (TCCL)
+## 6. 线程上下文类加载器 (TCCL)
 
 ### 用途
 
@@ -267,7 +286,7 @@ public static Driver getService(Iterator<Driver> drivers) {
 
 ---
 
-## 元空间 (Metaspace)
+## 7. 元空间 (Metaspace)
 
 ### JDK 8 变化
 
@@ -300,7 +319,7 @@ public static Driver getService(Iterator<Driver> drivers) {
 
 ---
 
-## 模块化类加载 (JDK 9+)
+## 8. 模块化类加载 (JDK 9+)
 
 ### JEP 220: 模块化系统
 
@@ -351,7 +370,7 @@ ModuleLayer.boot().addOpens(
 
 ---
 
-## 自定义类加载器
+## 9. 自定义类加载器
 
 ### 热部署
 
@@ -409,7 +428,7 @@ public class DecryptClassLoader extends ClassLoader {
 
 ---
 
-## 类加载器泄漏
+## 10. 类加载器泄漏
 
 ### 常见原因
 
@@ -455,7 +474,7 @@ private static final Map<String, Object> CACHE =
 
 ---
 
-## CDS (Class Data Sharing)
+## 11. CDS (Class Data Sharing)
 
 ### 原理
 
@@ -509,7 +528,7 @@ java -XX:AOTMode=use -jar app.jar
 
 ---
 
-## 重要 PR 分析
+## 12. 重要 PR 分析
 
 ### 启动性能优化
 
@@ -578,7 +597,7 @@ static {
 
 ---
 
-## 类加载最佳实践
+## 13. 类加载最佳实践
 
 ### 避免类加载泄漏
 
@@ -649,7 +668,7 @@ ModuleLayer.boot().addOpens(
 
 ---
 
-## 相关链接
+## 14. 相关链接
 
 ### 本地文档
 

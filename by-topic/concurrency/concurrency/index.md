@@ -6,7 +6,7 @@
 
 ---
 
-## 快速概览
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 5 ── JDK 7 ── JDK 8 ── JDK 19 ── JDK 21 ── JDK 23 ── JDK 25 ── JDK 26
@@ -46,7 +46,7 @@ Runnable  Future   Pool    Parallel Thread  Concurrency Values Constants Values
 
 ---
 
-## 基础 API
+## 2. 基础 API
 
 ### Thread 和 Runnable
 
@@ -126,7 +126,7 @@ thread.interrupt();
 
 ---
 
-## Executor 框架
+## 3. Executor 框架
 
 **JDK 5 引入 (JSR-166)**
 
@@ -224,7 +224,7 @@ long sum = pool.invoke(new SumTask(array, 0, array.length));
 
 ---
 
-## 并发工具
+## 4. 并发工具
 
 ### CompletableFuture
 
@@ -340,7 +340,7 @@ for (int i = 0; i < 100; i++) {
 
 ---
 
-## Virtual Threads
+## 5. Virtual Threads
 
 **JDK 19 预览, JDK 21 正式 (JEP 444)**
 
@@ -461,7 +461,7 @@ try {
 
 ---
 
-## Structured Concurrency
+## 6. Structured Concurrency
 
 **JDK 19-20 孵化器, JDK 21 预览 (JEP 453), JDK 23 第二次预览 (JEP 462)**
 
@@ -506,7 +506,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnSuccess<String>()) {
 
 ---
 
-## Scoped Values
+## 7. Scoped Values
 
 **JDK 20 预览, JDK 21 第二次预览 (JEP 446), JDK 26 正式 (JEP 506)**
 
@@ -581,7 +581,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 最新增强
+## 8. 最新增强
 
 ### JDK 25: Lazy Constants
 
@@ -615,7 +615,7 @@ public Logger getLogger() {
 
 ---
 
-## 重要 PR 分析
+## 9. 重要 PR 分析
 
 ### 并发集合优化
 
@@ -709,7 +709,7 @@ long result = expanded + 0x3030303030303030L;
 
 ---
 
-## 并发性能最佳实践
+## 10. 并发性能最佳实践
 
 ### 并发集合选择
 
@@ -781,7 +781,7 @@ try {
 
 ---
 
-## 核心贡献者
+## 11. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -808,7 +808,7 @@ try {
 
 ---
 
-## Git 提交历史
+## 12. Git 提交历史
 
 > 基于 OpenJDK master 分支分析
 
@@ -830,7 +830,7 @@ git log --oneline -- src/java.base/share/classes/java/util/concurrent/
 
 ---
 
-## 相关链接
+## 13. 相关链接
 
 ### 内部文档
 

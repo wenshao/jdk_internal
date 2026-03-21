@@ -3,8 +3,25 @@
 > java.time.format.DateTimeFormatter 的完整实现分析
 
 ---
+## 目录
 
-## 类声明
+1. [类声明](#1-类声明)
+2. [预定义格式化器](#2-预定义格式化器)
+3. [模式字母表](#3-模式字母表)
+4. [创建格式化器](#4-创建格式化器)
+5. [格式化方法](#5-格式化方法)
+6. [解析方法](#6-解析方法)
+7. [ResolverStyle 解析风格](#7-resolverstyle-解析风格)
+8. [性能特性](#8-性能特性)
+9. [线程安全保证](#9-线程安全保证)
+10. [与 SimpleDateFormat 对比](#10-与-simpledateformat-对比)
+11. [扩展功能](#11-扩展功能)
+12. [相关文档](#12-相关文档)
+
+---
+
+
+## 1. 类声明
 
 ```java
 public final class DateTimeFormatter {
@@ -52,7 +69,7 @@ public final class DateTimeFormatter {
 
 ---
 
-## 预定义格式化器
+## 2. 预定义格式化器
 
 ### ISO 格式化器
 
@@ -129,7 +146,7 @@ static {
 
 ---
 
-## 模式字母表
+## 3. 模式字母表
 
 ### 日期模式
 
@@ -170,7 +187,7 @@ static {
 
 ---
 
-## 创建格式化器
+## 4. 创建格式化器
 
 ### ofPattern() - 从模式字符串
 
@@ -221,7 +238,7 @@ public static DateTimeFormatter ofLocalizedTime(FormatStyle timeStyle) {
 
 ---
 
-## 格式化方法
+## 5. 格式化方法
 
 ```java
 public String format(TemporalAccessor temporal) {
@@ -248,7 +265,7 @@ public void formatTo(TemporalAccessor temporal, Appendable appendable) {
 
 ---
 
-## 解析方法
+## 6. 解析方法
 
 ```java
 public TemporalAccessor parse(CharSequence text) {
@@ -292,7 +309,7 @@ private TemporalAccessor parseResolved0(CharSequence text, TemporalQuery<?> quer
 
 ---
 
-## ResolverStyle 解析风格
+## 7. ResolverStyle 解析风格
 
 ### STRICT (严格)
 
@@ -319,7 +336,7 @@ public static enum ResolverStyle {
 
 ---
 
-## 性能特性
+## 8. 性能特性
 
 ### 缓存建议
 
@@ -350,7 +367,7 @@ for (int i = 0; i < 1000; i++) {
 
 ---
 
-## 线程安全保证
+## 9. 线程安全保证
 
 ```java
 // 所有字段都是 final
@@ -380,7 +397,7 @@ public DateTimeFormatter withLocale(Locale locale) {
 
 ---
 
-## 与 SimpleDateFormat 对比
+## 10. 与 SimpleDateFormat 对比
 
 ### SimpleDateFormat 问题
 
@@ -408,7 +425,7 @@ FORMATTER.format(date);
 
 ---
 
-## 扩展功能
+## 11. 扩展功能
 
 ### 自定义模式
 
@@ -438,7 +455,7 @@ DateTimeFormatter german =
 
 ---
 
-## 相关文档
+## 12. 相关文档
 
 - [LocalDate 实现](../localdate/index.md)
 - [LocalTime 实现](../localtime/index.md)

@@ -6,7 +6,7 @@
 
 ---
 
-## 快速概览
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 1.1 ── JDK 1.4 ── JDK 7 ── JDK 11 ── JDK 21
@@ -31,7 +31,7 @@ Stream   Writer    Buffer  Path    增强    线程
 
 ---
 
-## 核心贡献者
+## 2. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -49,7 +49,7 @@ Stream   Writer    Buffer  Path    增强    线程
 
 ---
 
-## Stream IO (JDK 1.0)
+## 3. Stream IO (JDK 1.0)
 
 ### InputStream/OutputStream
 
@@ -111,7 +111,7 @@ try (BufferedReader br = new BufferedReader(new FileReader("input.txt"));
 
 ---
 
-## NIO Buffer (JDK 1.4)
+## 4. NIO Buffer (JDK 1.4)
 
 ### ByteBuffer
 
@@ -182,7 +182,7 @@ ByteBuffer direct = ByteBuffer.allocateDirect(1024);
 
 ---
 
-## NIO Channel (JDK 1.4)
+## 5. NIO Channel (JDK 1.4)
 
 ### FileChannel
 
@@ -221,7 +221,7 @@ try (FileChannel src = FileChannel.open(Paths.get("src.txt"),
 
 ---
 
-## NIO.2 (JDK 7+)
+## 6. NIO.2 (JDK 7+)
 
 ### Path 和 Files
 
@@ -317,7 +317,7 @@ System.out.println("Permissions: " + posixAttrs.permissions());
 
 ---
 
-## Files 增强 (JDK 11+)
+## 7. Files 增强 (JDK 11+)
 
 ### 便捷方法
 
@@ -341,7 +341,7 @@ Files.writeString(Paths.get("new.txt"), "content",
 
 ---
 
-## 虚拟线程 IO (JDK 21+)
+## 8. 虚拟线程 IO (JDK 21+)
 
 ### 阻塞 IO 不阻塞平台线程
 
@@ -360,7 +360,7 @@ try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 性能优化
+## 9. 性能优化
 
 ### Buffer 池化
 
@@ -411,7 +411,7 @@ try (FileChannel channel = FileChannel.open(Paths.get("large.dat"),
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 ### 本地文档
 

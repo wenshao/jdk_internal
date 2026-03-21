@@ -5,8 +5,26 @@
 [← 返回语言特性](../)
 
 ---
+## 目录
 
-## 快速概览
+1. [快速概览](#1-快速概览)
+2. [核心贡献者](#2-核心贡献者)
+3. [内置注解](#3-内置注解)
+4. [自定义注解](#4-自定义注解)
+5. [注解处理器 (JSR 269)](#5-注解处理器-jsr-269)
+6. [可重复注解 (JDK 8+)](#6-可重复注解-jdk-8)
+7. [类型注解 (JSR 308)](#7-类型注解-jsr-308)
+8. [注解模式匹配 (JDK 21+)](#8-注解模式匹配-jdk-21)
+9. [常用注解](#9-常用注解)
+10. [注解反射](#10-注解反射)
+11. [重要 PR 分析](#11-重要-pr-分析)
+12. [注解性能最佳实践](#12-注解性能最佳实践)
+13. [相关链接](#13-相关链接)
+
+---
+
+
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 7 ── JDK 8 ── JDK 16 ── JDK 21 ── JDK 23
@@ -34,7 +52,7 @@ Javadoc   注解    注解    可重复    类型    Record   注解    注解
 
 ---
 
-## 核心贡献者
+## 2. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -53,7 +71,7 @@ Javadoc   注解    注解    可重复    类型    Record   注解    注解
 
 ---
 
-## 内置注解
+## 3. 内置注解
 
 ### java.lang 注解
 
@@ -91,7 +109,7 @@ myMethod((@NonNull String) str);
 
 ---
 
-## 自定义注解
+## 4. 自定义注解
 
 ### 声明注解
 
@@ -136,7 +154,7 @@ public @interface MyAnnotation {
 
 ---
 
-## 注解处理器 (JSR 269)
+## 5. 注解处理器 (JSR 269)
 
 ### 创建处理器
 
@@ -184,7 +202,7 @@ javac -processor com.example.MyProcessor \
 
 ---
 
-## 可重复注解 (JDK 8+)
+## 6. 可重复注解 (JDK 8+)
 
 ### @Repeatable
 
@@ -224,7 +242,7 @@ Role[] rolesArray = User.class.getAnnotationsByType(Role.class);
 
 ---
 
-## 类型注解 (JSR 308)
+## 7. 类型注解 (JSR 308)
 
 ### 类型注解用途
 
@@ -268,7 +286,7 @@ javac -processor org.checkerframework.checker.nullness.NullnessChecker \
 
 ---
 
-## 注解模式匹配 (JDK 21+)
+## 8. 注解模式匹配 (JDK 21+)
 
 ### JEP 441: Pattern Matching
 
@@ -295,7 +313,7 @@ if (obj instanceof Circle(double radius)) {
 
 ---
 
-## 常用注解
+## 9. 常用注解
 
 ### Lombok 风格注解
 
@@ -335,7 +353,7 @@ if (obj instanceof Circle(double radius)) {
 
 ---
 
-## 注解反射
+## 10. 注解反射
 
 ### 读取注解
 
@@ -388,7 +406,7 @@ public class AnnotationProcessor {
 
 ---
 
-## 重要 PR 分析
+## 11. 重要 PR 分析
 
 ### 注解处理器性能优化
 
@@ -435,7 +453,7 @@ buf.writeU1U2U4(u1Value, u2Value, u4Value);
 
 ---
 
-## 注解性能最佳实践
+## 12. 注解性能最佳实践
 
 ### Retention 策略选择
 
@@ -474,7 +492,7 @@ public boolean process(Set<? extends TypeElement> annotations,
 
 ---
 
-## 相关链接
+## 13. 相关链接
 
 ### 本地文档
 

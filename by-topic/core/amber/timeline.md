@@ -5,8 +5,26 @@ Java 语言特性演进完整历史。
 [← 返回 Amber](./)
 
 ---
+## 目录
 
-## 2017: 项目启动
+1. [2017: 项目启动](#1-2017-项目启动)
+2. [2018: JDK 10 - var 关键字](#2-2018-jdk-10---var-关键字)
+3. [2019: JDK 14 - Switch 表达式](#3-2019-jdk-14---switch-表达式)
+4. [2020: JDK 14-15 - instanceof 模式](#4-2020-jdk-14-15---instanceof-模式)
+5. [2021: JDK 16-17 - Records 和 Sealed](#5-2021-jdk-16-17---records-和-sealed)
+6. [2022-2023: Record Patterns](#6-2022-2023-record-patterns)
+7. [2023: JDK 21 - Amber 大版本](#7-2023-jdk-21---amber-大版本)
+8. [2024: JDK 22 - 构造器改进](#8-2024-jdk-22---构造器改进)
+9. [2024: String Templates 撤回](#9-2024-string-templates-撤回)
+10. [2025: JDK 26 - Primitive Patterns](#10-2025-jdk-26---primitive-patterns)
+11. [未来计划](#11-未来计划)
+12. [时间线总览](#12-时间线总览)
+13. [里程碑总结](#13-里程碑总结)
+
+---
+
+
+## 1. 2017: 项目启动
 
 ### 项目宣布
 
@@ -20,7 +38,7 @@ Java 语言特性演进完整历史。
 
 ---
 
-## 2018: JDK 10 - var 关键字
+## 2. 2018: JDK 10 - var 关键字
 
 ### JEP 286: Local-Variable Type Inference
 
@@ -42,7 +60,7 @@ var map = new HashMap<String, Integer>();
 
 ---
 
-## 2019: JDK 14 - Switch 表达式
+## 3. 2019: JDK 14 - Switch 表达式
 
 ### JEP 361: Switch Expressions (正式)
 
@@ -71,7 +89,7 @@ int result = switch (day) {
 
 ---
 
-## 2020: JDK 14-15 - instanceof 模式
+## 4. 2020: JDK 14-15 - instanceof 模式
 
 ### JEP 305: Pattern Matching for instanceof
 
@@ -108,7 +126,7 @@ String html = """
 
 ---
 
-## 2021: JDK 16-17 - Records 和 Sealed
+## 5. 2021: JDK 16-17 - Records 和 Sealed
 
 ### JEP 395: Records (正式)
 
@@ -136,7 +154,7 @@ public sealed interface Shape
 
 ---
 
-## 2022-2023: Record Patterns
+## 6. 2022-2023: Record Patterns
 
 ### JEP 405: Record Patterns (预览)
 
@@ -157,7 +175,7 @@ if (obj instanceof Point(int x, int y)) {
 
 ---
 
-## 2023: JDK 21 - Amber 大版本
+## 7. 2023: JDK 21 - Amber 大版本
 
 ### JEP 441: Pattern Matching for switch (正式)
 
@@ -195,7 +213,7 @@ stream.map(_ -> "constant")
 
 ---
 
-## 2024: JDK 22 - 构造器改进
+## 8. 2024: JDK 22 - 构造器改进
 
 ### JEP 448: Flexible Constructor Bodies
 
@@ -222,7 +240,7 @@ public class Sub extends Super {
 
 ---
 
-## 2024: String Templates 撤回
+## 9. 2024: String Templates 撤回
 
 ### JEP 430: String Templates (预览后撤回)
 
@@ -238,7 +256,7 @@ String message = STR."Hello, \{name}!";
 
 ---
 
-## 2025: JDK 26 - Primitive Patterns
+## 10. 2025: JDK 26 - Primitive Patterns
 
 ### JEP 455: Primitive Patterns
 
@@ -256,7 +274,7 @@ switch (value) {
 
 ---
 
-## 未来计划
+## 11. 未来计划
 
 ### 阶段性进行中的 JEP
 
@@ -267,7 +285,7 @@ switch (value) {
 
 ---
 
-## 时间线总览
+## 12. 时间线总览
 
 ```
 2017 ── 2018 ── 2020 ── 2021 ── 2023 ── 2025 ── 2026
@@ -280,7 +298,7 @@ switch (value) {
 
 ---
 
-## 里程碑总结
+## 13. 里程碑总结
 
 | 版本 | 主要特性 | 影响 |
 |------|----------|------|

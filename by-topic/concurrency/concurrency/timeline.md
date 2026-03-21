@@ -3,8 +3,28 @@
 从 Thread 到 Virtual Thread 的演进历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [并发编程模型演进](#2-并发编程模型演进)
+3. [Thread 基础](#3-thread-基础)
+4. [Executor 框架 (JDK 5, JSR-166)](#4-executor-框架-jdk-5-jsr-166)
+5. [Fork/Join 框架 (JDK 7, JSR-166y)](#5-forkjoin-框架-jdk-7-jsr-166y)
+6. [CompletableFuture (JDK 8, JEP 107)](#6-completablefuture-jdk-8-jep-107)
+7. [Flow API (JDK 9, JEP 266)](#7-flow-api-jdk-9-jep-266)
+8. [虚拟线程 (Virtual Threads)](#8-虚拟线程-virtual-threads)
+9. [Scoped Values](#9-scoped-values)
+10. [Structured Concurrency](#10-structured-concurrency)
+11. [并发工具选择指南](#11-并发工具选择指南)
+12. [性能对比](#12-性能对比)
+13. [最佳实践](#13-最佳实践)
+14. [时间线总结](#14-时间线总结)
+15. [相关链接](#15-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 5 ───── JDK 7 ───── JDK 8 ───── JDK 9 ───── JDK 19 ───── JDK 21 ───── JDK 26
@@ -17,7 +37,7 @@ Executor       Fork/Join      CompletableFuture  Reactive      Virtual       Str
 
 ---
 
-## 并发编程模型演进
+## 2. 并发编程模型演进
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -48,7 +68,7 @@ Executor       Fork/Join      CompletableFuture  Reactive      Virtual       Str
 
 ---
 
-## Thread 基础
+## 3. Thread 基础
 
 ### JDK 1.0 - Thread 类引入
 
@@ -95,7 +115,7 @@ CURRENT_USER.remove();
 
 ---
 
-## Executor 框架 (JDK 5, JSR-166)
+## 4. Executor 框架 (JDK 5, JSR-166)
 
 ### 基础用法
 
@@ -175,7 +195,7 @@ ThreadPoolExecutor executor = new ThreadPoolExecutor(
 
 ---
 
-## Fork/Join 框架 (JDK 7, JSR-166y)
+## 5. Fork/Join 框架 (JDK 7, JSR-166y)
 
 ### 工作窃取 (Work Stealing)
 
@@ -243,7 +263,7 @@ System.out.println(ForkJoinPool.getCommonPoolParallelism());
 
 ---
 
-## CompletableFuture (JDK 8, JEP 107)
+## 6. CompletableFuture (JDK 8, JEP 107)
 
 ### 基础用法
 
@@ -304,7 +324,7 @@ CompletableFuture.supplyAsync(() -> task(), executor)
 
 ---
 
-## Flow API (JDK 9, JEP 266)
+## 7. Flow API (JDK 9, JEP 266)
 
 ### 响应式流
 
@@ -380,7 +400,7 @@ class TransformProcessor<T, R> extends SubmissionPublisher<R>
 
 ---
 
-## 虚拟线程 (Virtual Threads)
+## 8. 虚拟线程 (Virtual Threads)
 
 ### 演进历程
 
@@ -505,7 +525,7 @@ System.out.println("Carrier thread: " + Thread.currentThread().toString());
 
 ---
 
-## Scoped Values
+## 9. Scoped Values
 
 ### 演进历程
 
@@ -607,7 +627,7 @@ ScopedValue.where(USER, user).run(() -> process());
 
 ---
 
-## Structured Concurrency
+## 10. Structured Concurrency
 
 ### 演进历程
 
@@ -799,7 +819,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## 并发工具选择指南
+## 11. 并发工具选择指南
 
 ### 场景 vs 工具
 
@@ -842,7 +862,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## 性能对比
+## 12. 性能对比
 
 ### 线程类型性能
 
@@ -866,7 +886,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## 最佳实践
+## 13. 最佳实践
 
 ### 1. 使用虚拟线程处理 I/O
 
@@ -919,7 +939,7 @@ ForkJoinPool.commonPool().submit(() -> {
 
 ---
 
-## 时间线总结
+## 14. 时间线总结
 
 | 版本 | 特性 | JEP | 影响 |
 |------|------|-----|------|
@@ -938,7 +958,7 @@ ForkJoinPool.commonPool().submit(() -> {
 
 ---
 
-## 相关链接
+## 15. 相关链接
 
 - [虚拟线程文档](https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html)
 - [JEP 444: Virtual Threads](https://openjdk.org/jeps/444)

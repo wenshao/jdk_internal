@@ -3,8 +3,24 @@
 Java 国际化 (i18n) 从 JDK 1.0 到 JDK 26 的完整演进历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [Locale](#2-locale)
+3. [ResourceBundle](#3-resourcebundle)
+4. [JDK 5 - Formatter](#4-jdk-5---formatter)
+5. [JDK 6 - Unicode 增强](#5-jdk-6---unicode-增强)
+6. [JDK 8+ - CLDR](#6-jdk-8---cldr)
+7. [JDK 13+ - Unicode 增强](#7-jdk-13---unicode-增强)
+8. [JDK 18+ - Unicode Extensions](#8-jdk-18---unicode-extensions)
+9. [最佳实践](#9-最佳实践)
+10. [时间线总结](#10-时间线总结)
+11. [相关链接](#11-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 5 ──── JDK 6 ──── JDK 8 ──── JDK 13 ──── JDK 18 ──── JDK 26
@@ -16,7 +32,7 @@ Bundle                                    Data       (EAI/EAO)
 
 ---
 
-## Locale
+## 2. Locale
 
 ### 基础使用
 
@@ -67,7 +83,7 @@ String displayCountry = locale.getDisplayCountry(locale);    // China
 
 ---
 
-## ResourceBundle
+## 3. ResourceBundle
 
 ### 基础使用
 
@@ -142,7 +158,7 @@ ResourceBundle bundle = ResourceBundle.getBundle(
 
 ---
 
-## JDK 5 - Formatter
+## 4. JDK 5 - Formatter
 
 ### 数字格式化
 
@@ -207,7 +223,7 @@ String patternCN = "你好 {0}，您有 {1} 条消息。";
 
 ---
 
-## JDK 6 - Unicode 增强
+## 5. JDK 6 - Unicode 增强
 
 ### Unicode 支持
 
@@ -251,7 +267,7 @@ boolean equals = nfc.equals(nfd);  // true
 
 ---
 
-## JDK 8+ - CLDR
+## 6. JDK 8+ - CLDR
 
 ### CLDR (Unicode Common Locale Data Repository)
 
@@ -272,7 +288,7 @@ String[] shortWeekdays = dfs.getShortWeekdays();  // [周日, 周一, ...]
 
 ---
 
-## JDK 13+ - Unicode 增强
+## 7. JDK 13+ - Unicode 增强
 
 ### Unicode 13
 
@@ -292,7 +308,7 @@ if (Character.isUnicodeIdentifierStart(c)) {
 
 ---
 
-## JDK 18+ - Unicode Extensions
+## 8. JDK 18+ - Unicode Extensions
 
 ### Unicode 扩展
 
@@ -313,7 +329,7 @@ if (Character.isIdeograph(c)) {
 
 ---
 
-## 最佳实践
+## 9. 最佳实践
 
 ### 资源文件管理
 
@@ -344,7 +360,7 @@ try (InputStream is = getClass().getResourceAsStream("/messages_zh_CN.properties
 
 ---
 
-## 时间线总结
+## 10. 时间线总结
 
 | 版本 | 特性 | 说明 |
 |------|------|------|
@@ -358,7 +374,7 @@ try (InputStream is = getClass().getResourceAsStream("/messages_zh_CN.properties
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 - [Locale](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Locale.html)
 - [ResourceBundle](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ResourceBundle.html)

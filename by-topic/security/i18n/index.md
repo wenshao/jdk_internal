@@ -5,8 +5,24 @@
 [← 返回安全](../)
 
 ---
+## 目录
 
-## 快速概览
+1. [快速概览](#1-快速概览)
+2. [核心贡献者](#2-核心贡献者)
+3. [Locale](#3-locale)
+4. [ResourceBundle](#4-resourcebundle)
+5. [字符编码](#5-字符编码)
+6. [格式化](#6-格式化)
+7. [Unicode 支持](#7-unicode-支持)
+8. [ICU4J 集成](#8-icu4j-集成)
+9. [Bidi (双向文本)](#9-bidi-双向文本)
+10. [最佳实践](#10-最佳实践)
+11. [相关链接](#11-相关链接)
+
+---
+
+
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 1.1 ── JDK 5 ── JDK 6 ── JDK 8 ── JDK 17 ── JDK 21 ── JDK 24
@@ -33,7 +49,7 @@ Locale   ResourceBundle Unicode Formatter Locale ICU4J   Unicode  Bidi
 
 ---
 
-## 核心贡献者
+## 2. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -52,7 +68,7 @@ Locale   ResourceBundle Unicode Formatter Locale ICU4J   Unicode  Bidi
 
 ---
 
-## Locale
+## 3. Locale
 
 ### 创建 Locale
 
@@ -100,7 +116,7 @@ Locale.setDefault(Locale.Category.FORMAT, Locale.GERMANY);
 
 ---
 
-## ResourceBundle
+## 4. ResourceBundle
 
 ### 属性文件资源
 
@@ -161,7 +177,7 @@ try {
 
 ---
 
-## 字符编码
+## 5. 字符编码
 
 ### 编码转换
 
@@ -204,7 +220,7 @@ Files.write(Paths.get("gbk.txt"),
 
 ---
 
-## 格式化
+## 6. 格式化
 
 ### 数字格式化
 
@@ -271,7 +287,7 @@ DateFormat dtf = DateFormat.getDateTimeInstance(
 
 ---
 
-## Unicode 支持
+## 7. Unicode 支持
 
 ### Unicode 版本
 
@@ -321,7 +337,7 @@ emoji.matches(".*\\p{So}.*");  // Symbol Other
 
 ---
 
-## ICU4J 集成
+## 8. ICU4J 集成
 
 ### CLDR 数据
 
@@ -351,7 +367,7 @@ int end = bi.next();
 
 ---
 
-## Bidi (双向文本)
+## 9. Bidi (双向文本)
 
 ### 文本方向
 
@@ -387,7 +403,7 @@ layout.draw(graphics, x, y);
 
 ---
 
-## 最佳实践
+## 10. 最佳实践
 
 ### 1. 使用 UTF-8
 
@@ -423,7 +439,7 @@ String.toUpperCase(Locale.ENGLISH);  // 而非 toUpperCase()
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 ### 本地文档
 

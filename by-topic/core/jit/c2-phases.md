@@ -5,8 +5,28 @@
 [← 返回 JIT 编译](../)
 
 ---
+## 目录
 
-## TL;DR 快速概览
+1. [TL;DR 快速概览](#1-tldr-快速概览)
+2. [完整编译流程](#2-完整编译流程)
+3. [Phase 1: Parse Phase](#3-phase-1-parse-phase)
+4. [Phase 2: PhaseIterGVN (Iterative GVN)](#4-phase-2-phaseitergvn-iterative-gvn)
+5. [Phase 3: PhaseIdealLoop (循环优化)](#5-phase-3-phaseidealloop-循环优化)
+6. [Phase 4: PhaseCCP (Conditional Constant Propagation)](#6-phase-4-phaseccp-conditional-constant-propagation)
+7. [Phase 5: PhaseStringOpts](#7-phase-5-phasestringopts)
+8. [Phase 6: PhaseEliminateNullChecks](#8-phase-6-phaseeliminatenullchecks)
+9. [Phase 7 & 8: PhaseEscapeAnalysis & ScalarReplace](#9-phase-7--8-phaseescapeanalysis--scalarreplace)
+10. [Phase 9: PhaseMacroExpand](#10-phase-9-phasemacroexpand)
+11. [Phase 10: PhaseIterGVN (最终)](#11-phase-10-phaseitergvn-最终)
+12. [Phase 11: PhaseVector (SuperWord)](#12-phase-11-phasevector-superword)
+13. [Phase 12-15: 代码生成阶段](#13-phase-12-15-代码生成阶段)
+14. [优化阶段顺序图](#14-优化阶段顺序图)
+15. [相关链接](#15-相关链接)
+
+---
+
+
+## 1. TL;DR 快速概览
 
 > 💡 **1 分钟了解 C2 编译阶段**
 
@@ -45,7 +65,7 @@ Parse  PhaseIterGVN  Loop  Peephole
 
 ---
 
-## 完整编译流程
+## 2. 完整编译流程
 
 ```
 1. Parse Phase              解析字节码 → 控制流图
@@ -67,7 +87,7 @@ Parse  PhaseIterGVN  Loop  Peephole
 
 ---
 
-## Phase 1: Parse Phase
+## 3. Phase 1: Parse Phase
 
 **作用**: 将字节码解析为 Ideal Graph
 
@@ -84,7 +104,7 @@ Parse  PhaseIterGVN  Loop  Peephole
 
 ---
 
-## Phase 2: PhaseIterGVN (Iterative GVN)
+## 4. Phase 2: PhaseIterGVN (Iterative GVN)
 
 **作用**: 全局值编号，识别和消除冗余计算
 
@@ -110,7 +130,7 @@ c = a * 2      c = a * 2
 
 ---
 
-## Phase 3: PhaseIdealLoop (循环优化)
+## 5. Phase 3: PhaseIdealLoop (循环优化)
 
 **作用**: 循环结构分析和优化 (执行 3+ 轮)
 
@@ -168,7 +188,7 @@ for (i=0;i<4;)  a[0]; a[1];
 
 ---
 
-## Phase 4: PhaseCCP (Conditional Constant Propagation)
+## 6. Phase 4: PhaseCCP (Conditional Constant Propagation)
 
 **作用**: 条件常量传播
 
@@ -187,7 +207,7 @@ if (x > 5 && x < 10) {  if (false) {
 
 ---
 
-## Phase 5: PhaseStringOpts
+## 7. Phase 5: PhaseStringOpts
 
 **作用**: 字符串操作优化
 
@@ -198,7 +218,7 @@ if (x > 5 && x < 10) {  if (false) {
 
 ---
 
-## Phase 6: PhaseEliminateNullChecks
+## 8. Phase 6: PhaseEliminateNullChecks
 
 **作用**: 空值检查消除
 
@@ -209,7 +229,7 @@ if (x > 5 && x < 10) {  if (false) {
 
 ---
 
-## Phase 7 & 8: PhaseEscapeAnalysis & ScalarReplace
+## 9. Phase 7 & 8: PhaseEscapeAnalysis & ScalarReplace
 
 **作用**: 逃逸分析和标量替换
 
@@ -249,7 +269,7 @@ int p_y = 2;
 
 ---
 
-## Phase 9: PhaseMacroExpand
+## 10. Phase 9: PhaseMacroExpand
 
 **作用**: 宏节点扩展
 
@@ -261,7 +281,7 @@ int p_y = 2;
 
 ---
 
-## Phase 10: PhaseIterGVN (最终)
+## 11. Phase 10: PhaseIterGVN (最终)
 
 **作用**: 最终优化遍历
 
@@ -272,7 +292,7 @@ int p_y = 2;
 
 ---
 
-## Phase 11: PhaseVector (SuperWord)
+## 12. Phase 11: PhaseVector (SuperWord)
 
 **作用**: SIMD 向量化优化
 
@@ -313,7 +333,7 @@ for (int i = 0; i < 1024; i += 16) {
 
 ---
 
-## Phase 12-15: 代码生成阶段
+## 13. Phase 12-15: 代码生成阶段
 
 ### Phase 12: PhaseCFG
 **作用**: 构建控制流图
@@ -336,7 +356,7 @@ for (int i = 0; i < 1024; i += 16) {
 
 ---
 
-## 优化阶段顺序图
+## 14. 优化阶段顺序图
 
 ```
 Parse
@@ -381,7 +401,7 @@ PhaseCFG ──► PhaseChaitin ──► PhaseBlockLayout ──► Output
 
 ---
 
-## 相关链接
+## 15. 相关链接
 
 ### 本地文档
 

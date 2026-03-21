@@ -5,8 +5,25 @@
 [← 返回 JIT 编译](../)
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [JIT 编译基础概念](#2-jit-编译基础概念)
+3. [JDK 1.0 - JDK 1.2: 纯解释时代](#3-jdk-10---jdk-12-纯解释时代)
+4. [JDK 1.2 - JDK 1.3: JIT 萌芽](#4-jdk-12---jdk-13-jit-萌芽)
+5. [JDK 5 - JDK 6: 编译器分离与优化](#5-jdk-5---jdk-6-编译器分离与优化)
+6. [JDK 7 - JDK 8: 编译器增强](#6-jdk-7---jdk-8-编译器增强)
+7. [JDK 9 - JDK 10: 模块化与 Graal](#7-jdk-9---jdk-10-模块化与-graal)
+8. [JDK 11 - JDK 16: Graal JIT 与优化](#8-jdk-11---jdk-16-graal-jit-与优化)
+9. [JDK 17 - JDK 20: 长期支持版本优化](#9-jdk-17---jdk-20-长期支持版本优化)
+10. [JDK 21 - JDK 26: 现代编译器](#10-jdk-21---jdk-26-现代编译器)
+11. [编译器对比](#11-编译器对比)
+12. [相关链接](#12-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ─── JDK 1.3 ─── JDK 5 ─── JDK 6 ─── JDK 9 ─── JDK 17 ─── JDK 21 ─── JDK 23 ─── JDK 26
@@ -18,7 +35,7 @@ JDK 1.0 ─── JDK 1.3 ─── JDK 5 ─── JDK 6 ─── JDK 9 ──
 
 ---
 
-## JIT 编译基础概念
+## 2. JIT 编译基础概念
 
 ### 编译器分层
 
@@ -61,7 +78,7 @@ JDK 1.0 ─── JDK 1.3 ─── JDK 5 ─── JDK 6 ─── JDK 9 ──
 
 ---
 
-## JDK 1.0 - JDK 1.2: 纯解释时代
+## 3. JDK 1.0 - JDK 1.2: 纯解释时代
 
 ### JDK 1.0 (1996)
 
@@ -83,7 +100,7 @@ JDK 1.0 ─── JDK 1.3 ─── JDK 5 ─── JDK 6 ─── JDK 9 ──
 
 ---
 
-## JDK 1.2 - JDK 1.3: JIT 萌芽
+## 4. JDK 1.2 - JDK 1.3: JIT 萌芽
 
 ### JDK 1.2 (1998)
 
@@ -121,7 +138,7 @@ JDK 1.0 ─── JDK 1.3 ─── JDK 5 ─── JDK 6 ─── JDK 9 ──
 
 ---
 
-## JDK 5 - JDK 6: 编译器分离与优化
+## 5. JDK 5 - JDK 6: 编译器分离与优化
 
 ### JDK 5 (2004) - Tiger
 
@@ -162,7 +179,7 @@ Level 0 → Level 1 → Level 2 → Level 3 → Level 4
 
 ---
 
-## JDK 7 - JDK 8: 编译器增强
+## 6. JDK 7 - JDK 8: 编译器增强
 
 ### JDK 7 (2011)
 
@@ -192,7 +209,7 @@ list.forEach(s -> System.out.println(s));
 
 ---
 
-## JDK 9 - JDK 10: 模块化与 Graal
+## 7. JDK 9 - JDK 10: 模块化与 Graal
 
 ### JDK 9 (2017)
 
@@ -211,7 +228,7 @@ list.forEach(s -> System.out.println(s));
 
 ---
 
-## JDK 11 - JDK 16: Graal JIT 与优化
+## 8. JDK 11 - JDK 16: Graal JIT 与优化
 
 ### JDK 11 (2018)
 
@@ -240,7 +257,7 @@ list.forEach(s -> System.out.println(s));
 
 ---
 
-## JDK 17 - JDK 20: 长期支持版本优化
+## 9. JDK 17 - JDK 20: 长期支持版本优化
 
 ### JDK 17 (2021) - LTS
 
@@ -268,7 +285,7 @@ if (obj instanceof String s) {
 
 ---
 
-## JDK 21 - JDK 26: 现代编译器
+## 10. JDK 21 - JDK 26: 现代编译器
 
 ### JDK 21 (2023) - LTS
 
@@ -318,7 +335,7 @@ if (obj instanceof Point(int x, int y)) {
 
 ---
 
-## 编译器对比
+## 11. 编译器对比
 
 | 编译器 | 版本 | 启动时间 | 峰值性能 | 适用场景 |
 |--------|------|----------|----------|----------|
@@ -329,7 +346,7 @@ if (obj instanceof Point(int x, int y)) {
 
 ---
 
-## 相关链接
+## 12. 相关链接
 
 ### 本地文档
 

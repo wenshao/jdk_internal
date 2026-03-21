@@ -3,8 +3,32 @@
 > java.time API 完整指南
 
 ---
+## 目录
 
-## 核心类
+1. [核心类](#1-核心类)
+2. [LocalDate - 日期](#2-localdate---日期)
+3. [LocalTime - 时间](#3-localtime---时间)
+4. [LocalDateTime - 日期时间](#4-localdatetime---日期时间)
+5. [Instant - 时间戳](#5-instant---时间戳)
+6. [ZonedDateTime - 带时区日期时间](#6-zoneddatetime---带时区日期时间)
+7. [ZoneId - 时区](#7-zoneid---时区)
+8. [Duration - 时间段](#8-duration---时间段)
+9. [Period - 日期段](#9-period---日期段)
+10. [DateTimeFormatter - 格式化](#10-datetimeformatter---格式化)
+11. [旧 API vs 新 API](#11-旧-api-vs-新-api)
+12. [线程安全](#12-线程安全)
+13. [ThreeTen-Extra 扩展](#13-threeten-extra-扩展)
+14. [API 废弃](#14-api-废弃)
+15. [内部实现](#15-内部实现)
+16. [性能优化技术](#16-性能优化技术)
+17. [VM 诊断参数](#17-vm-诊断参数)
+18. [源码位置](#18-源码位置)
+19. [相关文档](#19-相关文档)
+
+---
+
+
+## 1. 核心类
 
 ### 类层次结构
 
@@ -42,7 +66,7 @@ java.time.temporal
 
 ---
 
-## LocalDate - 日期
+## 2. LocalDate - 日期
 
 ### 创建
 
@@ -154,7 +178,7 @@ int cmp = date1.compareTo(date2);  // -1
 
 ---
 
-## LocalTime - 时间
+## 3. LocalTime - 时间
 
 ### 创建
 
@@ -200,7 +224,7 @@ LocalTime halfDay = LocalTime.of(12, 0);  // 12:00
 
 ---
 
-## LocalDateTime - 日期时间
+## 4. LocalDateTime - 日期时间
 
 ### 创建
 
@@ -242,7 +266,7 @@ LocalDateTime fromInstant = LocalDateTime.ofInstant(instant,
 
 ---
 
-## Instant - 时间戳
+## 5. Instant - 时间戳
 
 ### 创建
 
@@ -276,7 +300,7 @@ LocalDateTime ldt = LocalDateTime.ofInstant(instant,
 
 ---
 
-## ZonedDateTime - 带时区日期时间
+## 6. ZonedDateTime - 带时区日期时间
 
 ### 创建
 
@@ -325,7 +349,7 @@ int offsetHours = offset.getTotalSeconds() / 3600;  // 8
 
 ---
 
-## ZoneId - 时区
+## 7. ZoneId - 时区
 
 ### 常用时区
 
@@ -351,7 +375,7 @@ Set<String> availableZoneIds = ZoneId.getAvailableZoneIds();
 
 ---
 
-## Duration - 时间段
+## 8. Duration - 时间段
 
 ### 创建
 
@@ -405,7 +429,7 @@ Duration abs = duration.negated().abs();
 
 ---
 
-## Period - 日期段
+## 9. Period - 日期段
 
 ### 创建
 
@@ -467,7 +491,7 @@ System.out.printf("%d岁%d个月%n",
 
 ---
 
-## DateTimeFormatter - 格式化
+## 10. DateTimeFormatter - 格式化
 
 ### 预定义格式化器
 
@@ -526,7 +550,7 @@ String germanDate = LocalDate.now().format(german);  // 20. März 2026
 
 ---
 
-## 旧 API vs 新 API
+## 11. 旧 API vs 新 API
 
 ### 旧 API 问题
 
@@ -562,7 +586,7 @@ LocalDateTime dateTime = LocalDateTime.now(); // 日期时间
 
 ---
 
-## 线程安全
+## 12. 线程安全
 
 ### SimpleDateFormat 问题
 
@@ -590,7 +614,7 @@ LocalDate date = LocalDate.parse("2024-03-20", FORMATTER);
 
 ---
 
-## ThreeTen-Extra 扩展
+## 13. ThreeTen-Extra 扩展
 
 **项目**: [ThreeTen-Extra](https://www.threeten.org/threeten-extra/)
 
@@ -616,7 +640,7 @@ Quarter quarter = Quarter.Q1;  // 第一季度
 
 ---
 
-## API 废弃
+## 14. API 废弃
 
 ### JDK 21 废弃
 
@@ -645,7 +669,7 @@ public class Date extends Object implements java.io.Serializable, Cloneable, Com
 
 ---
 
-## 内部实现
+## 15. 内部实现
 
 ### 内存布局
 
@@ -752,7 +776,7 @@ final class DateTimePrintContext {
 
 ---
 
-## 性能优化技术
+## 16. 性能优化技术
 
 ### 1. 查找表替代除法
 
@@ -807,7 +831,7 @@ String str = date.toString();
 
 ---
 
-## VM 诊断参数
+## 17. VM 诊断参数
 
 ### JIT 编译诊断
 
@@ -830,7 +854,7 @@ String str = date.toString();
 
 ---
 
-## 源码位置
+## 18. 源码位置
 
 ### 核心类
 
@@ -855,7 +879,7 @@ String str = date.toString();
 
 ---
 
-## 相关文档
+## 19. 相关文档
 
 - [完整时间线](timeline.md)
 - [JSR 310 PR 分析](jsr310/pr-analysis.md)

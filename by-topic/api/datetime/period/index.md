@@ -3,8 +3,29 @@
 > java.time.Period 的完整实现分析
 
 ---
+## 目录
 
-## 类声明
+1. [类声明](#1-类声明)
+2. [字段存储](#2-字段存储)
+3. [常量定义](#3-常量定义)
+4. [工厂方法](#4-工厂方法)
+5. [核心方法](#5-核心方法)
+6. [时间计算](#6-时间计算)
+7. [归一化](#7-归一化)
+8. [TemporalAmount 实现](#8-temporalamount-实现)
+9. [比较](#9-比较)
+10. [序列化机制](#10-序列化机制)
+11. [toString() - ISO-8601 输出](#11-tostring---iso-8601-输出)
+12. [使用示例](#12-使用示例)
+13. [与 Duration 对比](#13-与-duration-对比)
+14. [归一化策略](#14-归一化策略)
+15. [常见陷阱](#15-常见陷阱)
+16. [相关文档](#16-相关文档)
+
+---
+
+
+## 1. 类声明
 
 ```java
 @jdk.internal.ValueBased
@@ -24,7 +45,7 @@ public final class Period
 
 ---
 
-## 字段存储
+## 2. 字段存储
 
 ### 三字段组合
 
@@ -65,7 +86,7 @@ private final int days;
 
 ---
 
-## 常量定义
+## 3. 常量定义
 
 ### 预定义常量
 
@@ -80,7 +101,7 @@ public static final Period ZERO = new Period(0, 0, 0);
 
 ---
 
-## 工厂方法
+## 4. 工厂方法
 
 ### ofYears() / ofMonths() / ofDays() / ofWeeks()
 
@@ -195,7 +216,7 @@ Period p = Period.between(start, end);
 
 ---
 
-## 核心方法
+## 5. 核心方法
 
 ### get() / getUnits()
 
@@ -251,7 +272,7 @@ public int getDays() {
 
 ---
 
-## 时间计算
+## 6. 时间计算
 
 ### plus() - 加法
 
@@ -327,7 +348,7 @@ base.negated();        // P-1Y-2M-3D
 
 ---
 
-## 归一化
+## 7. 归一化
 
 ### normalized() - 年月归一化
 
@@ -375,7 +396,7 @@ p1.toTotalMonths() == p2.toTotalMonths();  // true (都是 15)
 
 ---
 
-## TemporalAmount 实现
+## 8. TemporalAmount 实现
 
 ### addTo() / subtractFrom()
 
@@ -415,7 +436,7 @@ date.plus(p);  // 2025-02-28 (正确处理月末)
 
 ---
 
-## 比较
+## 9. 比较
 
 ### equals() / hashCode()
 
@@ -446,7 +467,7 @@ Period.of(1, 3, 0).equals(Period.of(0, 15, 0));  // false
 
 ---
 
-## 序列化机制
+## 10. 序列化机制
 
 ### writeExternal() / readExternal()
 
@@ -469,7 +490,7 @@ static Period readExternal(DataInput in) throws IOException {
 
 ---
 
-## toString() - ISO-8601 输出
+## 11. toString() - ISO-8601 输出
 
 ```java
 @Override
@@ -508,7 +529,7 @@ public String toString() {
 
 ---
 
-## 使用示例
+## 12. 使用示例
 
 ### 创建
 
@@ -616,7 +637,7 @@ Period normalized = p.normalized();
 
 ---
 
-## 与 Duration 对比
+## 13. 与 Duration 对比
 
 | 特性 | Period | Duration |
 |------|--------|----------|
@@ -664,7 +685,7 @@ Duration delay = Duration.ofSeconds(10);
 
 ---
 
-## 归一化策略
+## 14. 归一化策略
 
 ### 为什么不自动归一化？
 
@@ -710,7 +731,7 @@ public static long toTotalDaysEstimate(Period period) {
 
 ---
 
-## 常见陷阱
+## 15. 常见陷阱
 
 ### 1. 不自动归一化
 
@@ -744,7 +765,7 @@ Period p = Period.of(1, -2, 3);
 
 ---
 
-## 相关文档
+## 16. 相关文档
 
 - [Duration 实现](../duration/index.md)
 - [LocalDate 实现](../localdate/index.md)

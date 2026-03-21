@@ -5,8 +5,24 @@
 [← 返回并发网络](../)
 
 ---
+## 目录
 
-## 快速概览
+1. [快速概览](#1-快速概览)
+2. [核心贡献者](#2-核心贡献者)
+3. [Serializable 接口](#3-serializable-接口)
+4. [自定义序列化](#4-自定义序列化)
+5. [Externalizable 接口](#5-externalizable-接口)
+6. [序列化过滤器 (JDK 9+)](#6-序列化过滤器-jdk-9)
+7. [Record 序列化 (JDK 17+)](#7-record-序列化-jdk-17)
+8. [序列化安全](#8-序列化安全)
+9. [替代方案](#9-替代方案)
+10. [性能优化](#10-性能优化)
+11. [相关链接](#11-相关链接)
+
+---
+
+
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 1.2 ── JDK 6 ── JDK 9 ── JDK 12 ── JDK 17 ── JDK 21 ── JDK 26
@@ -32,7 +48,7 @@ JDK 1.0 ── JDK 1.2 ── JDK 6 ── JDK 9 ── JDK 12 ── JDK 17 ─
 
 ---
 
-## 核心贡献者
+## 2. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -51,7 +67,7 @@ JDK 1.0 ── JDK 1.2 ── JDK 6 ── JDK 9 ── JDK 12 ── JDK 17 ─
 
 ---
 
-## Serializable 接口
+## 3. Serializable 接口
 
 ### 基础序列化
 
@@ -102,7 +118,7 @@ private static final long serialVersionUID = 1L;
 
 ---
 
-## 自定义序列化
+## 4. 自定义序列化
 
 ### transient 关键字
 
@@ -173,7 +189,7 @@ public class Singleton implements Serializable {
 
 ---
 
-## Externalizable 接口
+## 5. Externalizable 接口
 
 ### 完全自定义序列化
 
@@ -219,7 +235,7 @@ public class Product implements Externalizable {
 
 ---
 
-## 序列化过滤器 (JDK 9+)
+## 6. 序列化过滤器 (JDK 9+)
 
 ### JEP 290: 过滤器
 
@@ -289,7 +305,7 @@ try (ObjectInputStream ois = new ObjectInputStream(
 
 ---
 
-## Record 序列化 (JDK 17+)
+## 7. Record 序列化 (JDK 17+)
 
 ### Record 作为数据载体
 
@@ -320,7 +336,7 @@ public record Person(String name, int age) implements Serializable {
 
 ---
 
-## 序列化安全
+## 8. 序列化安全
 
 ### 反序列化漏洞
 
@@ -371,7 +387,7 @@ Set<String> allowedClasses = Set.of(
 
 ---
 
-## 替代方案
+## 9. 替代方案
 
 ### JSON 序列化
 
@@ -423,7 +439,7 @@ PersonProto.Person parsed = PersonProto.Person.parseFrom(data);
 
 ---
 
-## 性能优化
+## 10. 性能优化
 
 ### 避免序列化整个对象图
 
@@ -467,7 +483,7 @@ public class FastSerializable implements Externalizable {
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 ### 本地文档
 

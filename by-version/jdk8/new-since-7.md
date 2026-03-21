@@ -3,8 +3,23 @@
 > **对比基准**: JDK 7u80 (2015-04-14) → JDK 8u401 (2024-01-16)
 
 ---
+## 目录
 
-## 语言特性
+1. [语言特性](#1-语言特性)
+2. [API 增强](#2-api-增强)
+3. [JVM 改进](#3-jvm-改进)
+4. [工具增强](#4-工具增强)
+5. [安全性改进](#5-安全性改进)
+6. [性能提升](#6-性能提升)
+7. [废弃和移除](#7-废弃和移除)
+8. [迁移建议](#8-迁移建议)
+9. [兼容性检查](#9-兼容性检查)
+10. [资源链接](#10-资源链接)
+
+---
+
+
+## 1. 语言特性
 
 ### Lambda 表达式 (JSR 335)
 
@@ -57,7 +72,7 @@ List<@NonNull String> list;     // 泛型参数注解
 
 ---
 
-## API 增强
+## 2. API 增强
 
 ### 日期时间 API (JSR 310)
 
@@ -99,7 +114,7 @@ List<@NonNull String> list;     // 泛型参数注解
 
 ---
 
-## JVM 改进
+## 3. JVM 改进
 
 ### Metaspace 替换 PermGen
 
@@ -139,7 +154,7 @@ List<@NonNull String> list;     // 泛型参数注解
 
 ---
 
-## 工具增强
+## 4. 工具增强
 
 ### Nashorn JavaScript 引擎
 
@@ -174,7 +189,7 @@ public void scheduledMethod() { }
 
 ---
 
-## 安全性改进
+## 5. 安全性改进
 
 ### TLS 1.2 默认支持
 
@@ -196,7 +211,7 @@ public void scheduledMethod() { }
 
 ---
 
-## 性能提升
+## 6. 性能提升
 
 ### Lambda 性能优化
 
@@ -219,7 +234,7 @@ public void scheduledMethod() { }
 
 ---
 
-## 废弃和移除
+## 7. 废弃和移除
 
 ### 废弃的 API
 
@@ -239,7 +254,7 @@ public void scheduledMethod() { }
 
 ---
 
-## 迁移建议
+## 8. 迁移建议
 
 ### 代码迁移
 
@@ -277,7 +292,7 @@ public void scheduledMethod() { }
 
 ---
 
-## 兼容性检查
+## 9. 兼容性检查
 
 ### 向后兼容性
 
@@ -301,7 +316,7 @@ public void scheduledMethod() { }
 
 ---
 
-## 资源链接
+## 10. 资源链接
 
 ### 官方文档
 - [JDK 8 特性列表](https://openjdk.org/projects/jdk8/features)

@@ -3,8 +3,24 @@
 > **状态**: 🚧 开发中 | **分支**: lworld | **仓库**: openjdk/valhalla
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [历史背景](#2-历史背景)
+3. [核心概念](#3-核心概念)
+4. [源码分析](#4-源码分析)
+5. [相关 JEP](#5-相关-jep)
+6. [性能影响](#6-性能影响)
+7. [测试文件参考](#7-测试文件参考)
+8. [开发进度](#8-开发进度)
+9. [与其他 JSR 的关系](#9-与其他-jsr-的关系)
+10. [相关链接](#10-相关链接)
+11. [参考](#11-参考)
+
+---
+
+
+## 1. 概述
 
 Project Valhalla 是 OpenJDK 最重要的孵化项目之一，致力于为 Java 引入**值类型 (Value Types)**。这是 Java 语言自泛型以来最大的变革之一。
 
@@ -12,7 +28,7 @@ Project Valhalla 是 OpenJDK 最重要的孵化项目之一，致力于为 Java 
 
 ---
 
-## 历史背景
+## 2. 历史背景
 
 ### 时间线
 
@@ -38,7 +54,7 @@ Project Valhalla 是 OpenJDK 最重要的孵化项目之一，致力于为 Java 
 
 ---
 
-## 核心概念
+## 3. 核心概念
 
 ### Identity vs Value
 
@@ -95,7 +111,7 @@ class Container {
 
 ---
 
-## 源码分析
+## 4. 源码分析
 
 ### jdk.internal.value.ValueClass
 
@@ -150,7 +166,7 @@ public @interface LooselyConsistentValue { }
 
 ---
 
-## 相关 JEP
+## 5. 相关 JEP
 
 | JEP | 标题 | JDK | 状态 |
 |-----|------|-----|------|
@@ -177,7 +193,7 @@ public final class LocalDateTime { ... }
 
 ---
 
-## 性能影响
+## 6. 性能影响
 
 ### 内存布局对比
 
@@ -217,7 +233,7 @@ value record Point(int x, int y) { }  // 8 字节字段 (无头)
 
 ---
 
-## 测试文件参考
+## 7. 测试文件参考
 
 ```
 test/jdk/valhalla/valuetypes/
@@ -232,7 +248,7 @@ test/jdk/valhalla/valuetypes/
 
 ---
 
-## 开发进度
+## 8. 开发进度
 
 ### lworld 分支活跃开发
 
@@ -254,7 +270,7 @@ test/jdk/valhalla/valuetypes/
 
 ---
 
-## 与其他 JSR 的关系
+## 9. 与其他 JSR 的关系
 
 | JSR | 关系 |
 |-----|------|
@@ -264,7 +280,7 @@ test/jdk/valhalla/valuetypes/
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 - [OpenJDK Valhalla](https://openjdk.org/projects/valhalla/)
 - [JEP 401: Value Classes](https://openjdk.org/jeps/401)
@@ -273,7 +289,7 @@ test/jdk/valhalla/valuetypes/
 
 ---
 
-## 参考
+## 11. 参考
 
 - Brian Goetz, "Value Types: The Past, Present, and Future"
 - John Rose, "Value Types HotSpot Implementation"

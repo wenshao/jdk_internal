@@ -3,8 +3,25 @@
 > java.time.LocalTime 的完整实现分析
 
 ---
+## 目录
 
-## 类声明
+1. [类声明](#1-类声明)
+2. [字段存储](#2-字段存储)
+3. [缓存优化](#3-缓存优化)
+4. [工厂方法](#4-工厂方法)
+5. [字段访问方法](#5-字段访问方法)
+6. [时间计算](#6-时间计算)
+7. [时间比较](#7-时间比较)
+8. [时间调整](#8-时间调整)
+9. [截断操作](#9-截断操作)
+10. [性能特性](#10-性能特性)
+11. [与旧 API 对比](#11-与旧-api-对比)
+12. [相关文档](#12-相关文档)
+
+---
+
+
+## 1. 类声明
 
 ```java
 @jdk.internal.ValueBased
@@ -20,7 +37,7 @@ public final class LocalTime
 
 ---
 
-## 字段存储
+## 2. 字段存储
 
 ```java
 /**
@@ -58,7 +75,7 @@ private final int nano;
 
 ---
 
-## 缓存优化
+## 3. 缓存优化
 
 ### 小时缓存
 
@@ -106,7 +123,7 @@ private static LocalTime create(int hour, int minute, int second, int nanoOfSeco
 
 ---
 
-## 工厂方法
+## 4. 工厂方法
 
 ### of() - 创建时间
 
@@ -174,7 +191,7 @@ public static LocalTime ofNanoOfDay(long nanoOfDay) {
 
 ---
 
-## 字段访问方法
+## 5. 字段访问方法
 
 ```java
 public int getHour() {
@@ -200,7 +217,7 @@ public int getNano() {
 
 ---
 
-## 时间计算
+## 6. 时间计算
 
 ### plusHours() - 加小时
 
@@ -238,7 +255,7 @@ private LocalTime plusWithOverflow(long newHour, long newMinute, long newSecond)
 
 ---
 
-## 时间比较
+## 7. 时间比较
 
 ```java
 @Override
@@ -271,7 +288,7 @@ public boolean isAfter(LocalTime other) {
 
 ---
 
-## 时间调整
+## 8. 时间调整
 
 ```java
 public LocalTime withHour(int hour) {
@@ -297,7 +314,7 @@ public LocalTime withMinute(int minute) {
 
 ---
 
-## 截断操作
+## 9. 截断操作
 
 ```java
 public LocalTime truncatedTo(TemporalUnit unit) {
@@ -330,7 +347,7 @@ LocalDate truncatedHour = time.truncatedTo(ChronoUnit.HOURS);  // 12:00
 
 ---
 
-## 性能特性
+## 10. 性能特性
 
 ### 对象复用
 
@@ -356,7 +373,7 @@ LocalTime t3 = LocalTime.NOON;  // 引用 HOURS[12]
 
 ---
 
-## 与旧 API 对比
+## 11. 与旧 API 对比
 
 | 特性 | LocalTime | Date |
 |------|-----------|-----|
@@ -369,7 +386,7 @@ LocalTime t3 = LocalTime.NOON;  // 引用 HOURS[12]
 
 ---
 
-## 相关文档
+## 12. 相关文档
 
 - [LocalDate 实现](../localdate/index.md)
 - [DateTimeFormatter 实现](../formatter/index.md)

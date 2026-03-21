@@ -16,7 +16,7 @@
 
 ---
 
-## 改进概述
+## 1. 改进概述
 
 ### 主要变更
 
@@ -50,7 +50,7 @@ src/jdk.incubator.vector/share/classes/jdk/incubator/vector/
 
 ---
 
-## API 命名变更
+## 2. API 命名变更
 
 ### 重命名规则
 
@@ -104,7 +104,7 @@ public abstract class FloatVector256 extends FloatVector {
 
 ---
 
-## 新增操作
+## 3. 新增操作
 
 ### UMIN/UMAX - 无符号最小/最大
 
@@ -146,7 +146,7 @@ public static final Binary ABSD =
 
 ---
 
-## Float16 支持
+## 4. Float16 支持
 
 ### Float16 类
 
@@ -197,7 +197,7 @@ public abstract class Float16Vector extends Vector<Float> {
 
 ---
 
-## 源码分析
+## 5. 源码分析
 
 ### Vector 核心接口
 
@@ -308,7 +308,7 @@ public interface VectorSpecies<E> {
 
 ---
 
-## C2 编译器优化
+## 6. C2 编译器优化
 
 ### SuperWord 优化
 
@@ -374,7 +374,7 @@ class VM_Version_Ext {
 
 ---
 
-## 使用示例
+## 7. 使用示例
 
 ### 基本向量操作
 
@@ -426,7 +426,7 @@ FloatVector blended = va.blend(vb, mask);
 
 ---
 
-## 性能考虑
+## 8. 性能考虑
 
 ### SIMD 加速
 
@@ -445,7 +445,7 @@ FloatVector blended = va.blend(vb, mask);
 
 ---
 
-## 总结
+## 9. 总结
 
 JDK 26 的 VectorAPI 改进：
 
@@ -456,7 +456,7 @@ JDK 26 的 VectorAPI 改进：
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 - [VectorAPI 文档](https://openjdk.org/jeps/338)
 - [Commit: 8376186](https://github.com/openjdk/jdk/commit/8376186)

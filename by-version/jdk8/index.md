@@ -6,8 +6,19 @@
 [![LTS](https://img.shields.io/badge/LTS-Extended--purple.svg)](https://www.oracle.com/java/technologies/java-se-support.html)
 
 ---
+## 目录
 
-## 版本概览
+1. [版本概览](#1-版本概览)
+2. [关键 JEP](#2-关键-jep)
+3. [代码示例](#3-代码示例)
+4. [GC 状态](#4-gc-状态)
+5. [迁移指南](#5-迁移指南)
+6. [相关链接](#6-相关链接)
+
+---
+
+
+## 1. 版本概览
 
 JDK 8 是一个具有里程碑意义的版本，引入了 Lambda 表达式、Stream API 等重大特性：
 
@@ -27,7 +38,7 @@ JDK 8 是一个具有里程碑意义的版本，引入了 Lambda 表达式、Str
 
 ---
 
-## 关键 JEP
+## 2. 关键 JEP
 
 | JEP | 标题 | 说明 |
 |-----|------|------|
@@ -92,7 +103,7 @@ JDK 8 是一个具有里程碑意义的版本，引入了 Lambda 表达式、Str
 
 ---
 
-## 代码示例
+## 3. 代码示例
 
 ### Lambda 表达式
 
@@ -175,7 +186,7 @@ void meeting() { }
 
 ---
 
-## GC 状态
+## 4. GC 状态
 
 | GC | 状态 | 说明 |
 |----|------|------|
@@ -185,7 +196,7 @@ void meeting() { }
 
 ---
 
-## 迁移指南
+## 5. 迁移指南
 
 ### 从 JDK 7 升级
 
@@ -201,7 +212,7 @@ void meeting() { }
 
 ---
 
-## 相关链接
+## 6. 相关链接
 
 - [JDK 8 发布说明](https://openjdk.org/projects/jdk8/)
 - [JDK 8 文档](https://docs.oracle.com/javase/8/)

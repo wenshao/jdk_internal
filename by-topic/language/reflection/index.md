@@ -6,7 +6,7 @@
 
 ---
 
-## 快速概览
+## 1. 快速概览
 
 ```
 JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 7 ── JDK 8 ── JDK 11 ── JDK 16 ── JDK 21 ── JDK 24 ── JDK 26
@@ -48,7 +48,7 @@ API    (JSR   处理   (JSR   invokedynamic  (JEP   (JEP    (JEP    API     API
 
 ---
 
-## 反射 API
+## 2. 反射 API
 
 ### 基础反射
 
@@ -160,7 +160,7 @@ VarHandle valueHandle = MethodHandles.privateLookupIn()
 
 ---
 
-## 注解
+## 3. 注解
 
 ### 定义注解
 
@@ -273,7 +273,7 @@ public void process(@NonNull String input) {
 
 ---
 
-## MethodHandle
+## 4. MethodHandle
 
 **JDK 7 引入 (JSR 292)**
 
@@ -323,7 +323,7 @@ arrayHandle.set(array, 5, 100);
 
 ---
 
-## ClassFile API
+## 5. ClassFile API
 
 **JDK 16 预览 (JEP 395), JDK 24 正式 (JEP 484)**
 
@@ -395,7 +395,7 @@ codeBuilder.iload(1)
 
 ---
 
-## Foreign API
+## 6. Foreign API
 
 ### Foreign Memory Access
 
@@ -444,7 +444,7 @@ try (MemorySession session = MemorySession.openConfined()) {
 
 ---
 
-## 最新增强
+## 7. 最新增强
 
 ### JDK 24: Class-File API 正式版
 
@@ -475,7 +475,7 @@ byte[] bytes = cf.build(classDesc, builder -> {
 
 ---
 
-## 核心贡献者
+## 8. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -510,7 +510,7 @@ byte[] bytes = cf.build(classDesc, builder -> {
 
 ---
 
-## Git 提交历史
+## 9. Git 提交历史
 
 > 基于 OpenJDK master 分支分析
 
@@ -545,7 +545,7 @@ git log --oneline -- src/java.base/share/classes/java/lang/invoke/
 
 ---
 
-## 重要 PR 分析
+## 10. 重要 PR 分析
 
 ### Lambda 生成优化
 
@@ -606,7 +606,7 @@ invokedynamic makeConcatWithConstants(Ljava/lang/String;)Ljava/lang/String;
 
 ---
 
-## 反射性能最佳实践
+## 11. 反射性能最佳实践
 
 ### 性能对比
 
@@ -656,7 +656,7 @@ public void fast() throws Throwable {
 
 ---
 
-## 相关链接
+## 12. 相关链接
 
 ### 内部文档
 

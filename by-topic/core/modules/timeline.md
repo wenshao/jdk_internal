@@ -3,8 +3,27 @@
 Java 模块系统 (JPMS) 从 JDK 9 到 JDK 25 的完整演进历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [为什么需要模块系统](#2-为什么需要模块系统)
+3. [JDK 9 - JPMS (JEP 261)](#3-jdk-9---jpms-jep-261)
+4. [模块类型](#4-模块类型)
+5. [模块命令](#5-模块命令)
+6. [JDK 11+ - 模块增强](#6-jdk-11---模块增强)
+7. [JDK 16+ - 封装增强](#7-jdk-16---封装增强)
+8. [JDK 17+ - 遗留封装](#8-jdk-17---遗留封装)
+9. [JDK 23+ - 模块导入声明](#9-jdk-23---模块导入声明)
+10. [迁移到模块系统](#10-迁移到模块系统)
+11. [最佳实践](#11-最佳实践)
+12. [模块图分析](#12-模块图分析)
+13. [时间线总结](#13-时间线总结)
+14. [相关链接](#14-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 8 ───── JDK 9 ───── JDK 11 ───── JDK 16 ───── JDK 17 ───── JDK 23 ───── JDK 25
@@ -16,7 +35,7 @@ Classpath    JPMS         jlink        jpackage      强封装      模块导入
 
 ---
 
-## 为什么需要模块系统
+## 2. 为什么需要模块系统
 
 ### Classpath 的问题
 
@@ -50,7 +69,7 @@ Classpath    JPMS         jlink        jpackage      强封装      模块导入
 
 ---
 
-## JDK 9 - JPMS (JEP 261)
+## 3. JDK 9 - JPMS (JEP 261)
 
 ### 模块声明
 
@@ -133,7 +152,7 @@ module com.example.app {
 
 ---
 
-## 模块类型
+## 4. 模块类型
 
 ### 模块分类
 
@@ -168,7 +187,7 @@ module com.example.app {
 
 ---
 
-## 模块命令
+## 5. 模块命令
 
 ### jmod 命令
 
@@ -255,7 +274,7 @@ java --validate-modules \
 
 ---
 
-## JDK 11+ - 模块增强
+## 6. JDK 11+ - 模块增强
 
 ### 打包工具 (jlink)
 
@@ -304,7 +323,7 @@ jdeps -J-Djdk.lang.Process.launchMechanism=fork \
 
 ---
 
-## JDK 16+ - 封装增强
+## 7. JDK 16+ - 封装增强
 
 ### 强封装
 
@@ -334,7 +353,7 @@ java --add-opens=java.base/java.lang=ALL-UNNAMED \
 
 ---
 
-## JDK 17+ - 遗留封装
+## 8. JDK 17+ - 遗留封装
 
 ### 遗留访问
 
@@ -349,7 +368,7 @@ module com.example.myapp {
 
 ---
 
-## JDK 23+ - 模块导入声明
+## 9. JDK 23+ - 模块导入声明
 
 > **JEP 476** (JDK 23 预览) → **JEP 511** (JDK 25 正式)
 
@@ -406,7 +425,7 @@ public class DynamicModuleLoader {
 
 ---
 
-## 迁移到模块系统
+## 10. 迁移到模块系统
 
 ### 迁移步骤
 
@@ -449,7 +468,7 @@ java --module-path libs/legacy.jar \
 
 ---
 
-## 最佳实践
+## 11. 最佳实践
 
 ### 模块设计
 
@@ -499,7 +518,7 @@ module com.example.v1 { }  // 避免版本号
 
 ---
 
-## 模块图分析
+## 12. 模块图分析
 
 ### 循环依赖检测
 
@@ -515,7 +534,7 @@ jdeps --reverse --module-path lib \
 
 ---
 
-## 时间线总结
+## 13. 时间线总结
 
 | 版本 | 特性 | JEP |
 |------|------|-----|
@@ -533,7 +552,7 @@ jdeps --reverse --module-path lib \
 
 ---
 
-## 相关链接
+## 14. 相关链接
 
 - [JEP 200: The Modular JDK](https://openjdk.org/jeps/200)
 - [JEP 261: Module System](https://openjdk.org/jeps/261)

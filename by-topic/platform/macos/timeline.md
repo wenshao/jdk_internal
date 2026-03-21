@@ -5,8 +5,25 @@ JDK 在 macOS 平台上的演进历史。
 [← 返回 macOS 平台](./)
 
 ---
+## 目录
 
-## JDK 1.0 - 1.4: 早期支持
+1. [JDK 1.0 - 1.4: 早期支持](#1-jdk-10---14-早期支持)
+2. [JDK 5-8: Mac OS X 时代](#2-jdk-5-8-mac-os-x-时代)
+3. [JDK 8: 最后的 Apple 版本](#3-jdk-8-最后的-apple-版本)
+4. [JDK 16: Apple Silicon 预览](#4-jdk-16-apple-silicon-预览)
+5. [JDK 17: Metal 渲染管道](#5-jdk-17-metal-渲染管道)
+6. [JDK 21: Metal 优化](#6-jdk-21-metal-优化)
+7. [macOS 版本支持](#7-macos-版本支持)
+8. [Apple Silicon 演进](#8-apple-silicon-演进)
+9. [架构支持](#9-架构支持)
+10. [公证要求](#10-公证要求)
+11. [核心贡献者](#11-核心贡献者)
+12. [参考资料](#12-参考资料)
+
+---
+
+
+## 1. JDK 1.0 - 1.4: 早期支持
 
 ### JDK 1.0-1.2 (1996-1998)
 - Mac OS Classic 有限支持
@@ -18,7 +35,7 @@ JDK 在 macOS 平台上的演进历史。
 
 ---
 
-## JDK 5-8: Mac OS X 时代
+## 2. JDK 5-8: Mac OS X 时代
 
 ### JDK 5 (2004)
 - Mac OS X 10.4 (Tiger) 支持
@@ -33,7 +50,7 @@ JDK 在 macOS 平台上的演进历史。
 
 ---
 
-## JDK 8: 最后的 Apple 版本
+## 3. JDK 8: 最后的 Apple 版本
 
 ### JDK 8 (2014)
 
@@ -47,7 +64,7 @@ JDK 在 macOS 平台上的演进历史。
 
 ---
 
-## JDK 16: Apple Silicon 预览
+## 4. JDK 16: Apple Silicon 预览
 
 ### M1 芯片发布 (2020)
 
@@ -68,7 +85,7 @@ JDK 在 macOS 平台上的演进历史。
 
 ---
 
-## JDK 17: Metal 渲染管道
+## 5. JDK 17: Metal 渲染管道
 
 ### JEP 382: Metal Rendering Pipeline
 
@@ -94,7 +111,7 @@ JDK 26 ─── Metal 增强
 
 ---
 
-## JDK 21: Metal 优化
+## 6. JDK 21: Metal 优化
 
 ### 性能改进
 
@@ -106,7 +123,7 @@ JDK 26 ─── Metal 增强
 
 ---
 
-## macOS 版本支持
+## 7. macOS 版本支持
 
 ### 支持矩阵
 
@@ -121,7 +138,7 @@ JDK 26 ─── Metal 增强
 
 ---
 
-## Apple Silicon 演进
+## 8. Apple Silicon 演进
 
 ```
 M1 (2020) ─── AArch64 支持 (JDK 17)
@@ -150,7 +167,7 @@ M4 (2024) ─── 最新优化
 
 ---
 
-## 架构支持
+## 9. 架构支持
 
 ```
 JDK 1.0 ─── PowerPC (早期)
@@ -167,7 +184,7 @@ JDK 17 ─── Apple Silicon 正式版
 
 ---
 
-## 公证要求
+## 10. 公证要求
 
 ### 公证时间线
 
@@ -196,7 +213,7 @@ xcrun stapler staple MyApp.app
 
 ---
 
-## 核心贡献者
+## 11. 核心贡献者
 
 | 贡献者 | 组织 | 主要贡献 |
 |--------|------|----------|
@@ -205,7 +222,7 @@ xcrun stapler staple MyApp.app
 
 ---
 
-## 参考资料
+## 12. 参考资料
 
 - [JEP 358: Apple Silicon Support](https://openjdk.org/jeps/358)
 - [JEP 382: Metal Rendering Pipeline](https://openjdk.org/jeps/382)

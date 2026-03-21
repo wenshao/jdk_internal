@@ -3,8 +3,19 @@
 Java 语言语法从 JDK 1.0 到 JDK 26 的完整演进历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [时间线详情](#2-时间线详情)
+3. [语法对比表](#3-语法对比表)
+4. [最佳实践](#4-最佳实践)
+5. [贡献者](#5-贡献者)
+6. [相关 JEP](#6-相关-jep)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 5 ──── JDK 7 ──── JDK 8 ──── JDK 14 ──── JDK 16 ──── JDK 17 ──── JDK 21 ──── JDK 23 ──── JDK 26
@@ -18,7 +29,7 @@ JDK 1.0 ──── JDK 5 ──── JDK 7 ──── JDK 8 ──── JD
 
 ---
 
-## 时间线详情
+## 2. 时间线详情
 
 ### JDK 1.0 (1996) - 基础语法
 
@@ -761,7 +772,7 @@ String describe(Vehicle v) {
 
 ---
 
-## 语法对比表
+## 3. 语法对比表
 
 | 特性 | 引入版本 | 语法示例 |
 |------|----------|----------|
@@ -792,7 +803,7 @@ String describe(Vehicle v) {
 
 ---
 
-## 最佳实践
+## 4. 最佳实践
 
 ### 泛型
 
@@ -848,7 +859,7 @@ String result = switch (value) {
 
 ---
 
-## 贡献者
+## 5. 贡献者
 
 ### 核心 JEP 作者
 
@@ -901,7 +912,7 @@ String result = switch (value) {
 
 ---
 
-## 相关 JEP
+## 6. 相关 JEP
 
 - [Language Changes in Java SE](https://docs.oracle.com/en/java/javase/21/whatsnew/index.html)
 - [Java Language Specification](https://docs.oracle.com/javase/specs/jls/se21/html/index.html)

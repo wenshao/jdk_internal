@@ -3,8 +3,20 @@
 > JDK 21-26 并发编程相关 JEP 汇总
 
 ---
+## 目录
 
-## 概览
+1. [概览](#1-概览)
+2. [虚拟线程 (Virtual Threads)](#2-虚拟线程-virtual-threads)
+3. [结构化并发 (Structured Concurrency)](#3-结构化并发-structured-concurrency)
+4. [隐式类和实例主方法 (Implicit Classes)](#4-隐式类和实例主方法-implicit-classes)
+5. [作用域值 (Scoped Values)](#5-作用域值-scoped-values)
+6. [延迟绑定 (Lazy Constants)](#6-延迟绑定-lazy-constants)
+7. [相关链接](#7-相关链接)
+
+---
+
+
+## 1. 概览
 
 ```
 JDK 21 ───── JDK 22 ───── JDK 23 ───── JDK 24 ───── JDK 25 ───── JDK 26
@@ -16,7 +28,7 @@ Threads      Concurrency  Classes    Values     Concurrency  Values
 
 ---
 
-## 虚拟线程 (Virtual Threads)
+## 2. 虚拟线程 (Virtual Threads)
 
 ### 演进历程
 
@@ -56,7 +68,7 @@ Thread.Builder.ofVirtual().name("my-vthread").task(() -> task());
 
 ---
 
-## 结构化并发 (Structured Concurrency)
+## 3. 结构化并发 (Structured Concurrency)
 
 ### 演进历程
 
@@ -88,7 +100,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## 隐式类和实例主方法 (Implicit Classes)
+## 4. 隐式类和实例主方法 (Implicit Classes)
 
 ### 演进历程
 
@@ -124,7 +136,7 @@ void main() {
 
 ---
 
-## 作用域值 (Scoped Values)
+## 5. 作用域值 (Scoped Values)
 
 ### 演进历程
 
@@ -160,7 +172,7 @@ USER_ID.where("user123", () -> {
 
 ---
 
-## 延迟绑定 (Lazy Constants)
+## 6. 延迟绑定 (Lazy Constants)
 
 | 版本 | JEP | 状态 | 说明 |
 |------|-----|------|------|
@@ -178,7 +190,7 @@ String value = MESSAGE.get();  // 只计算一次
 
 ---
 
-## 相关链接
+## 7. 相关链接
 
 - [并发主题时间线](/by-topic/concurrency/)
 - Virtual Threads 最佳实践 

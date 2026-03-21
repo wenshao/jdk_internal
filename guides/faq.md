@@ -1,8 +1,22 @@
 # JDK 26 常见问题 (FAQ)
 
 ---
+## 目录
 
-## 一般问题
+1. [一般问题](#1-一般问题)
+2. [语言特性](#2-语言特性)
+3. [并发编程](#3-并发编程)
+4. [性能优化](#4-性能优化)
+5. [网络](#5-网络)
+6. [安全](#6-安全)
+7. [兼容性](#7-兼容性)
+8. [工具支持](#8-工具支持)
+9. [更多问题？](#9-更多问题)
+
+---
+
+
+## 1. 一般问题
 
 ### Q: JDK 26 什么时候发布？
 
@@ -25,7 +39,7 @@ JDK 26 计划于 **2026年9月** 发布（GA）。目前可通过 [jdk.java.net]
 
 ---
 
-## 语言特性
+## 2. 语言特性
 
 ### Q: `import module` 和普通 import 有什么区别？
 
@@ -95,7 +109,7 @@ counter.updateAndGet(i -> i + 1);  // 可以多次修改
 
 ---
 
-## 并发编程
+## 3. 并发编程
 
 ### Q: Structured Concurrency 什么时候正式发布？
 
@@ -141,7 +155,7 @@ CompletableFuture<String> f2 = CompletableFuture.supplyAsync(() -> task2());
 
 ---
 
-## 性能优化
+## 4. 性能优化
 
 ### Q: G1 GC 的 Claim Table 是什么？
 
@@ -202,7 +216,7 @@ java -XX:SharedArchiveFile=app.aot -cp myapp.jar MyApp
 
 ---
 
-## 网络
+## 5. 网络
 
 ### Q: HTTP/3 和 HTTP/2 有什么区别？
 
@@ -244,7 +258,7 @@ HttpClient client = HttpClient.newBuilder()
 
 ---
 
-## 安全
+## 6. 安全
 
 ### Q: 为什么 final 字段不能修改了？
 
@@ -286,7 +300,7 @@ JDK 26 内置支持:
 
 ---
 
-## 兼容性
+## 7. 兼容性
 
 ### Q: JDK 26 支持哪些平台？
 
@@ -341,7 +355,7 @@ java --enable-preview MyClass
 
 ---
 
-## 工具支持
+## 8. 工具支持
 
 ### Q: IntelliJ IDEA 支持 JDK 26 吗？
 
@@ -393,7 +407,7 @@ tasks.withType(JavaExec) {
 
 ---
 
-## 更多问题？
+## 9. 更多问题？
 
 如果你的问题没有在这里找到答案：
 

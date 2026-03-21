@@ -16,7 +16,7 @@
 
 ---
 
-## 改进概述
+## 1. 改进概述
 
 ### JEP 涉及
 
@@ -44,7 +44,7 @@ JDK 26 通过以下改进：
 
 ---
 
-## AOT 架构
+## 2. AOT 架构
 
 ### CDS + AOT 集成
 
@@ -104,7 +104,7 @@ public:
 
 ---
 
-## 元数据缓存
+## 3. 元数据缓存
 
 ### AOTMetaspace 实现
 
@@ -154,7 +154,7 @@ class AOTClassLocation {
 
 ---
 
-## 堆对象缓存
+## 4. 堆对象缓存
 
 ### AOTMappedHeapWriter
 
@@ -237,7 +237,7 @@ class AOTMappedHeapLoader : AllStatic {
 
 ---
 
-## 源码分析
+## 5. 源码分析
 
 ### 核心文件列表
 
@@ -316,7 +316,7 @@ class AOTStreamedHeap {
 
 ---
 
-## 性能影响
+## 6. 性能影响
 
 ### 启动时间
 
@@ -346,7 +346,7 @@ class AOTStreamedHeap {
 
 ---
 
-## JVM 参数
+## 7. JVM 参数
 
 ### 新增参数
 
@@ -384,7 +384,7 @@ java -XX:SharedArchiveFile=app.jsa \
 
 ---
 
-## 总结
+## 8. 总结
 
 JDK 26 的 AOT 改进 (JEP 514/515/516) 带来了：
 
@@ -395,7 +395,7 @@ JDK 26 的 AOT 改进 (JEP 514/515/516) 带来了：
 
 ---
 
-## 相关链接
+## 9. 相关链接
 
 - [JEP 514: AOT Ergonomics](https://openjdk.org/jeps/514)
 - [JEP 515: AOT Method Profiling](https://openjdk.org/jeps/515)

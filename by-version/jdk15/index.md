@@ -3,8 +3,18 @@
 > **发布日期**: 2020-09-15 | **类型**: Feature Release
 
 ---
+## 目录
 
-## 核心特性
+1. [核心特性](#1-核心特性)
+2. [关键 JEP](#2-关键-jep)
+3. [代码示例](#3-代码示例)
+4. [移除的功能](#4-移除的功能)
+5. [相关链接](#5-相关链接)
+
+---
+
+
+## 1. 核心特性
 
 JDK 15 引入了 Text Blocks（正式版）、Records（第2次预览）和 Sealed Classes（第1次预览）。
 
@@ -24,7 +34,7 @@ JDK 15 引入了 Text Blocks（正式版）、Records（第2次预览）和 Seal
 
 ---
 
-## 关键 JEP
+## 2. 关键 JEP
 
 | JEP | 标题 | 说明 |
 |-----|------|------|
@@ -45,7 +55,7 @@ JDK 15 引入了 Text Blocks（正式版）、Records（第2次预览）和 Seal
 
 ---
 
-## 代码示例
+## 3. 代码示例
 
 ### Text Blocks（正式版）
 
@@ -81,7 +91,7 @@ Class<?> hiddenClass = lookup.defineHiddenClassFile(bytes, true);
 
 ---
 
-## 移除的功能
+## 4. 移除的功能
 
 | 功能 | 替代方案 |
 |------|----------|
@@ -90,6 +100,6 @@ Class<?> hiddenClass = lookup.defineHiddenClassFile(bytes, true);
 
 ---
 
-## 相关链接
+## 5. 相关链接
 
 - [发布说明](https://openjdk.org/projects/jdk/15/)

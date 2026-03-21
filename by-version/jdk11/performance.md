@@ -3,8 +3,24 @@
 > **基准测试环境**: x86_64 Linux, 16 cores, 64GB RAM | **对比基准**: JDK 8u401
 
 ---
+## 目录
 
-## 性能概览
+1. [性能概览](#1-性能概览)
+2. [JVM 运行时性能优化](#2-jvm-运行时性能优化)
+3. [垃圾收集器性能](#3-垃圾收集器性能)
+4. [新 API 性能优化](#4-新-api-性能优化)
+5. [并发性能优化](#5-并发性能优化)
+6. [I/O 和网络性能](#6-io-和网络性能)
+7. [监控和诊断性能](#7-监控和诊断性能)
+8. [性能调优指南](#8-性能调优指南)
+9. [性能基准测试](#9-性能基准测试)
+10. [性能问题排查](#10-性能问题排查)
+11. [资源](#11-资源)
+
+---
+
+
+## 1. 性能概览
 
 ### 总体性能提升
 
@@ -31,7 +47,7 @@
 
 ---
 
-## JVM 运行时性能优化
+## 2. JVM 运行时性能优化
 
 ### 1. 字符串压缩和内存优化
 
@@ -119,7 +135,7 @@ Level 4: C2 (深度优化)
 
 ---
 
-## 垃圾收集器性能
+## 3. 垃圾收集器性能
 
 ### 4. G1 GC 性能改进
 
@@ -213,7 +229,7 @@ Level 4: C2 (深度优化)
 
 ---
 
-## 新 API 性能优化
+## 4. 新 API 性能优化
 
 ### 7. HTTP Client 性能
 
@@ -304,7 +320,7 @@ input.lines()
 
 ---
 
-## 并发性能优化
+## 5. 并发性能优化
 
 ### 10. CompletableFuture 性能改进
 
@@ -362,7 +378,7 @@ var data = getData();    // 可读性下降
 
 ---
 
-## I/O 和网络性能
+## 6. I/O 和网络性能
 
 ### 12. TLS 1.3 性能优势
 
@@ -430,7 +446,7 @@ try (Stream<String> lines = Files.lines(path, StandardCharsets.UTF_8)) {
 
 ---
 
-## 监控和诊断性能
+## 7. 监控和诊断性能
 
 ### 14. Java Flight Recorder (JFR) 性能
 
@@ -481,7 +497,7 @@ java -XX:StartFlightRecording=maxsize=100m,maxage=24h,disk=true -jar app.jar
 
 ---
 
-## 性能调优指南
+## 8. 性能调优指南
 
 ### 通用调优建议
 
@@ -605,7 +621,7 @@ jcmd <pid> VM.native_memory summary
 
 ---
 
-## 性能基准测试
+## 9. 性能基准测试
 
 ### 推荐基准测试套件
 
@@ -658,7 +674,7 @@ java -jar benchmarks.jar -prof gc -prof stack
 
 ---
 
-## 性能问题排查
+## 10. 性能问题排查
 
 ### 常见性能问题
 
@@ -706,7 +722,7 @@ java -agentlib:asyncProfiler=start,event=cpu,file=profile.html -jar app.jar
 
 ---
 
-## 资源
+## 11. 资源
 
 ### 性能文档
 - [JDK 11 性能调优指南](https://docs.oracle.com/en/java/javase/11/troubleshoot/)

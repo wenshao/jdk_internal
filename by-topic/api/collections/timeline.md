@@ -3,8 +3,28 @@
 Java 集合框架从 JDK 1.0 到 JDK 26 的完整演进历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [集合框架体系](#2-集合框架体系)
+3. [JDK 1.0 - 原始集合](#3-jdk-10---原始集合)
+4. [JDK 1.2 - Collections Framework](#4-jdk-12---collections-framework)
+5. [JDK 5 - Generics 和增强](#5-jdk-5---generics-和增强)
+6. [JDK 6 - Navigable 和 Blocking](#6-jdk-6---navigable-和-blocking)
+7. [JDK 8 - Stream API](#7-jdk-8---stream-api)
+8. [JDK 9 - 不可变集合和 List.of](#8-jdk-9---不可变集合和-listof)
+9. [JDK 10-17 - 持续改进](#9-jdk-10-17---持续改进)
+10. [JDK 21 - Stream Gatherers](#10-jdk-21---stream-gatherers)
+11. [JDK 21+ - 链式元素方法](#11-jdk-21---链式元素方法)
+12. [集合选择指南](#12-集合选择指南)
+13. [性能优化建议](#13-性能优化建议)
+14. [时间线总结](#14-时间线总结)
+15. [相关链接](#15-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 1.2 ──── JDK 5 ──── JDK 6 ──── JDK 8 ──── JDK 16 ──── JDK 21 ──── JDK 26
@@ -18,7 +38,7 @@ Hashtable     Framework    (泛型)      接口        API         Foreign     G
 
 ---
 
-## 集合框架体系
+## 2. 集合框架体系
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -46,7 +66,7 @@ Hashtable     Framework    (泛型)      接口        API         Foreign     G
 
 ---
 
-## JDK 1.0 - 原始集合
+## 3. JDK 1.0 - 原始集合
 
 ### Vector 和 Hashtable
 
@@ -71,7 +91,7 @@ Integer value = table.get("one");
 
 ---
 
-## JDK 1.2 - Collections Framework
+## 4. JDK 1.2 - Collections Framework
 
 ### 核心接口
 
@@ -157,7 +177,7 @@ List<String> syncList = Collections.synchronizedList(new ArrayList<>());
 
 ---
 
-## JDK 5 - Generics 和增强
+## 5. JDK 5 - Generics 和增强
 
 ### 泛型
 
@@ -246,7 +266,7 @@ Map<String, Integer> snapshot = map.snapshot();
 
 ---
 
-## JDK 6 - Navigable 和 Blocking
+## 6. JDK 6 - Navigable 和 Blocking
 
 ### NavigableSet 和 NavigableMap
 
@@ -313,7 +333,7 @@ class DelayedTask implements Delayed {
 
 ---
 
-## JDK 8 - Stream API
+## 7. JDK 8 - Stream API
 
 ### Stream 基础
 
@@ -411,7 +431,7 @@ map.replaceAll((k, v) -> v * 2);     // 批量替换
 
 ---
 
-## JDK 9 - 不可变集合和 List.of
+## 8. JDK 9 - 不可变集合和 List.of
 
 ### 不可变集合工厂方法
 
@@ -461,7 +481,7 @@ Set<String> set = Set.of("A", "B", "C");
 
 ---
 
-## JDK 10-17 - 持续改进
+## 9. JDK 10-17 - 持续改进
 
 ### List.copyOf (JDK 10)
 
@@ -498,7 +518,7 @@ original.add("E");  // 也可以
 
 ---
 
-## JDK 21 - Stream Gatherers
+## 10. JDK 21 - Stream Gatherers
 
 ### Gatherers (预览)
 
@@ -527,7 +547,7 @@ List<Integer> scan = Stream.of(1, 2, 3, 4)
 
 ---
 
-## JDK 21+ - 链式元素方法
+## 11. JDK 21+ - 链式元素方法
 
 ### 链式添加方法
 
@@ -547,7 +567,7 @@ map.put("A", 1)
 
 ---
 
-## 集合选择指南
+## 12. 集合选择指南
 
 ### List 选择
 
@@ -590,7 +610,7 @@ map.put("A", 1)
 
 ---
 
-## 性能优化建议
+## 13. 性能优化建议
 
 ### 初始化容量
 
@@ -651,7 +671,7 @@ list.removeIf(s -> s.equals("target"));
 
 ---
 
-## 时间线总结
+## 14. 时间线总结
 
 | 版本 | 特性 | 说明 |
 |------|------|------|
@@ -667,7 +687,7 @@ list.removeIf(s -> s.equals("target"));
 
 ---
 
-## 相关链接
+## 15. 相关链接
 
 - [Collection Interface](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Collection.html)
 - [Stream API](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/package-summary.html)

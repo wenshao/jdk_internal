@@ -6,7 +6,7 @@
 
 ---
 
-## TL;DR 快速概览
+## 1. TL;DR 快速概览
 
 > 💡 **1 分钟掌握 Enum**
 
@@ -60,7 +60,7 @@ EnumMap<Status, String> map = new EnumMap<>(Status.class);
 
 ---
 
-## 快速概览
+## 2. 快速概览
 
 ```
 JDK 1.0 ── JDK 4 ── JDK 5 ── JDK 7 ── JDK 12 ── JDK 21
@@ -96,7 +96,7 @@ JDK 1.0 ── JDK 4 ── JDK 5 ── JDK 7 ── JDK 12 ── JDK 21
 
 ---
 
-## Enum 基础
+## 3. Enum 基础
 
 ### 定义枚举
 
@@ -227,7 +227,7 @@ public enum Color implements Describable {
 
 ---
 
-## 枚举方法
+## 4. 枚举方法
 
 ### 内置方法
 
@@ -293,7 +293,7 @@ List<String> names = Arrays.stream(Day.values())
 
 ---
 
-## 枚举集合
+## 5. 枚举集合
 
 ### EnumSet
 
@@ -382,7 +382,7 @@ Map<Day, String> hashMap = new HashMap<>();
 
 ---
 
-## 枚举与 Switch
+## 6. 枚举与 Switch
 
 ### 传统 Switch
 
@@ -462,7 +462,7 @@ public double area(Shape shape) {
 
 ---
 
-## 枚举实现深入
+## 7. 枚举实现深入
 
 ### 枚举的编译原理
 
@@ -592,7 +592,7 @@ public enum Operation {
 
 ---
 
-## 性能优化实战
+## 8. 性能优化实战
 
 ### 消除匿名内部类 (JDK-8349400)
 
@@ -720,7 +720,7 @@ class Status {
 
 ---
 
-## 枚举最佳实践
+## 9. 枚举最佳实践
 
 ### 单例模式
 
@@ -945,7 +945,7 @@ public enum HttpHeader {
 
 ---
 
-## 核心贡献者
+## 10. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -967,7 +967,7 @@ public enum HttpHeader {
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 ### 内部文档
 

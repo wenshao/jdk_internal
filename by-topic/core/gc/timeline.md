@@ -3,8 +3,25 @@
 跨版本追踪垃圾收集器的发展历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [GC 基础概念](#2-gc-基础概念)
+3. [G1 GC](#3-g1-gc)
+4. [ZGC (低延迟 GC)](#4-zgc-低延迟-gc)
+5. [Shenandoah](#5-shenandoah)
+6. [ParallelGC](#6-parallelgc)
+7. [GC 选择决策树](#7-gc-选择决策树)
+8. [GC 选择建议](#8-gc-选择建议)
+9. [GC 性能对比](#9-gc-性能对比)
+10. [GC 问题排查](#10-gc-问题排查)
+11. [贡献者](#11-贡献者)
+12. [相关链接](#12-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 8 ───── JDK 11 ───── JDK 15 ───── JDK 17 ───── JDK 21 ───── JDK 26
@@ -18,7 +35,7 @@ CMS 废弃        Shenandoah     Windows       JEP 379       JEP 439       JEP 5
 
 ---
 
-## GC 基础概念
+## 2. GC 基础概念
 
 ### 垃圾收集算法分类
 
@@ -53,7 +70,7 @@ CMS 废弃        Shenandoah     Windows       JEP 379       JEP 439       JEP 5
 
 ---
 
-## G1 GC
+## 3. G1 GC
 
 ### 架构原理
 
@@ -214,7 +231,7 @@ HeapSize = 32GB → RegionSize = 32GB / 2048 = 16MB
 
 ---
 
-## ZGC (低延迟 GC)
+## 4. ZGC (低延迟 GC)
 
 ### 架构原理
 
@@ -384,7 +401,7 @@ Object load_barrier(Object obj) {
 
 ---
 
-## Shenandoah
+## 5. Shenandoah
 
 ### 架构原理
 
@@ -467,7 +484,7 @@ Object load_barrier(Object obj) {
 
 ---
 
-## ParallelGC
+## 6. ParallelGC
 
 ### 架构原理
 
@@ -517,7 +534,7 @@ Object load_barrier(Object obj) {
 
 ---
 
-## GC 选择决策树
+## 7. GC 选择决策树
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -553,7 +570,7 @@ Object load_barrier(Object obj) {
 
 ---
 
-## GC 选择建议
+## 8. GC 选择建议
 
 | 场景 | 推荐版本 | 推荐 GC | 理由 |
 |------|----------|---------|------|
@@ -569,7 +586,7 @@ Object load_barrier(Object obj) {
 
 ---
 
-## GC 性能对比
+## 9. GC 性能对比
 
 | GC | Pause 时间 | 吞吐量 | 堆大小限制 | 并发比例 | 适用场景 |
 |----|-----------|--------|-----------|----------|----------|
@@ -581,7 +598,7 @@ Object load_barrier(Object obj) {
 
 ---
 
-## GC 问题排查
+## 10. GC 问题排查
 
 ### 常见 GC 问题
 
@@ -624,7 +641,7 @@ jcmd <pid> GC.run_finalization
 
 ---
 
-## 贡献者
+## 11. 贡献者
 
 ### GC 团队核心成员
 
@@ -682,7 +699,7 @@ jcmd <pid> GC.run_finalization
 
 ---
 
-## 相关链接
+## 12. 相关链接
 
 - [JEP 522: G1 GC Throughput](https://openjdk.org/jeps/522)
 - [JEP 439: Generational ZGC](https://openjdk.org/jeps/439)

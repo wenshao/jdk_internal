@@ -6,7 +6,7 @@
 
 ---
 
-## TL;DR 快速概览
+## 1. TL;DR 快速概览
 
 > 💡 **1 分钟掌握泛型要点**
 
@@ -65,7 +65,7 @@ List<String>[] array = (List<String>[]) new List[10];
 
 ---
 
-## 快速概览
+## 2. 快速概览
 
 ```
 JDK 1.0 ── JDK 4 ── JDK 5 ── JDK 7 ── JDK 8 ── JDK 17
@@ -101,7 +101,7 @@ JDK 1.0 ── JDK 4 ── JDK 5 ── JDK 7 ── JDK 8 ── JDK 17
 
 ---
 
-## 泛型基础
+## 3. 泛型基础
 
 ### 为什么需要泛型
 
@@ -180,7 +180,7 @@ public class CompletableFuture<T> { ... }
 
 ---
 
-## 泛型类与接口
+## 4. 泛型类与接口
 
 ### 泛型类
 
@@ -283,7 +283,7 @@ public interface Consumer<T> {
 
 ---
 
-## 泛型方法
+## 5. 泛型方法
 
 ### 泛型方法语法
 
@@ -345,7 +345,7 @@ public class Example<T> {
 
 ---
 
-## 通配符
+## 6. 通配符
 
 ### 上界通配符 (? extends T)
 
@@ -449,7 +449,7 @@ public class Stack<E> {
 
 ---
 
-## 类型擦除
+## 7. 类型擦除
 
 ### 擦除机制
 
@@ -561,7 +561,7 @@ public class Box<T> {
 
 ---
 
-## 泛型约束
+## 8. 泛型约束
 
 ### 类型约束
 
@@ -617,7 +617,7 @@ List<? super Integer> integers = new ArrayList<Number>();  // 逆变
 
 ---
 
-## 泛型实现深入
+## 9. 泛型实现深入
 
 ### 类型擦除机制
 
@@ -762,7 +762,7 @@ if (list instanceof List<?>) { }       // OK
 
 ---
 
-## 性能优化实战
+## 10. 性能优化实战
 
 ### 避免装箱拆箱
 
@@ -862,7 +862,7 @@ Map<String, List<Integer>> map = new HashMap<>();
 
 ---
 
-## 最佳实践
+## 11. 最佳实践
 
 ### 命名规范
 
@@ -957,7 +957,7 @@ public class ArrayList<E> implements List<E> {
 
 ---
 
-## 重要 PR 分析
+## 12. 重要 PR 分析
 
 ### Lambda 生成优化
 
@@ -987,7 +987,7 @@ names.stream()
 
 ---
 
-## 核心贡献者
+## 13. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -1010,7 +1010,7 @@ names.stream()
 
 ---
 
-## 相关链接
+## 14. 相关链接
 
 ### 内部文档
 

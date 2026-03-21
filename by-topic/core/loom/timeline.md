@@ -5,8 +5,26 @@
 [← 返回 Loom](./)
 
 ---
+## 目录
 
-## 2017: 项目启动
+1. [2017: 项目启动](#1-2017-项目启动)
+2. [2018: Continuations 原型](#2-2018-continuations-原型)
+3. [2019: JDK 13-14 - 早期孵化](#3-2019-jdk-13-14---早期孵化)
+4. [2020: JDK 14 - 孵化器](#4-2020-jdk-14---孵化器)
+5. [2021: JDK 15-16 - 继续孵化](#5-2021-jdk-15-16---继续孵化)
+6. [2022: JDK 17-18 - 预览版本](#6-2022-jdk-17-18---预览版本)
+7. [2023: JDK 21 - 正式发布](#7-2023-jdk-21---正式发布)
+8. [2024-2025: 结构化并发演进](#8-2024-2025-结构化并发演进)
+9. [API 演进历史](#9-api-演进历史)
+10. [时间线总览](#10-时间线总览)
+11. [里程碑总结](#11-里程碑总结)
+12. [性能演进](#12-性能演进)
+13. [相关项目](#13-相关项目)
+
+---
+
+
+## 1. 2017: 项目启动
 
 ### 项目宣布
 
@@ -20,7 +38,7 @@
 
 ---
 
-## 2018: Continuations 原型
+## 2. 2018: Continuations 原型
 
 ### 核心机制实现
 
@@ -39,7 +57,7 @@ class Continuation {
 
 ---
 
-## 2019: JDK 13-14 - 早期孵化
+## 3. 2019: JDK 13-14 - 早期孵化
 
 ### JEP Draft: Virtual Threads
 
@@ -57,7 +75,7 @@ class Continuation {
 
 ---
 
-## 2020: JDK 14 - 孵化器
+## 4. 2020: JDK 14 - 孵化器
 
 ### 虚拟线程孵化器
 
@@ -74,7 +92,7 @@ Fiber f = Fiber.schedule(() -> {
 
 ---
 
-## 2021: JDK 15-16 - 继续孵化
+## 5. 2021: JDK 15-16 - 继续孵化
 
 ### API 重命名
 
@@ -101,7 +119,7 @@ vThread.start();
 
 ---
 
-## 2022: JDK 17-18 - 预览版本
+## 6. 2022: JDK 17-18 - 预览版本
 
 ### JEP 425: Virtual Threads (Preview)
 
@@ -131,7 +149,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 2023: JDK 21 - 正式发布
+## 7. 2023: JDK 21 - 正式发布
 
 ### JEP 444: Virtual Threads
 
@@ -172,7 +190,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## 2024-2025: 结构化并发演进
+## 8. 2024-2025: 结构化并发演进
 
 ### JEP 453: Structured Concurrency (Preview)
 
@@ -189,7 +207,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## API 演进历史
+## 9. API 演进历史
 
 ### Thread API
 
@@ -209,7 +227,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## 时间线总览
+## 10. 时间线总览
 
 ```
 2017 ── 2019 ── 2020 ── 2022 ── 2023 ── 2025
@@ -222,7 +240,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## 里程碑总结
+## 11. 里程碑总结
 
 | 里程碑 | 版本 | 影响 |
 |--------|------|------|
@@ -234,7 +252,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## 性能演进
+## 12. 性能演进
 
 | 版本 | 启动开销 | 阻塞开销 | 最大线程数 |
 |------|----------|----------|------------|
@@ -244,7 +262,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## 相关项目
+## 13. 相关项目
 
 | 项目 | 关系 |
 |------|------|

@@ -6,14 +6,30 @@
 [![License](https://img.shields.io/badge/License-GPLv2--with--Classpath--Exception-blue)](https://openjdk.org/projects/jdk/25/)
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [语言特性](#2-语言特性)
+3. [核心库](#3-核心库)
+4. [并发与多线程](#4-并发与多线程)
+5. [性能与监控](#5-性能与监控)
+6. [安全](#6-安全)
+7. [移除与清理](#7-移除与清理)
+8. [JEP 汇总](#8-jep-汇总)
+9. [相比 JDK 21 的变化](#9-相比-jdk-21-的变化)
+10. [升级建议](#10-升级建议)
+11. [相关链接](#11-相关链接)
+
+---
+
+
+## 1. 概述
 
 JDK 25 是继 JDK 21 之后的下一个 LTS 版本，包含大量语言增强、性能优化和 API 改进。
 
 ---
 
-## 语言特性
+## 2. 语言特性
 
 ### JEP 430: String Templates (正式版) ⭐
 
@@ -94,7 +110,7 @@ void main() {
 
 ---
 
-## 核心库
+## 3. 核心库
 
 ### JEP 404: Generational Shenandoah (正式版) ⭐
 
@@ -135,7 +151,7 @@ ScopedValue.where(CURRENT_USER, user).run(() -> {
 
 ---
 
-## 并发与多线程
+## 4. 并发与多线程
 
 ### JEP 444: Virtual Threads (正式版) ⭐⭐⭐
 
@@ -176,7 +192,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ---
 
-## 性能与监控
+## 5. 性能与监控
 
 ### JEP 439: Generational ZGC (正式版) ⭐⭐
 
@@ -207,7 +223,7 @@ java -XX:+UseZGC -XX:+ZGenerational MyApp
 
 ---
 
-## 安全
+## 6. 安全
 
 ### JEP 451: Prepare to Disallow the Dynamic Loading of Agents
 
@@ -216,7 +232,7 @@ java -XX:+UseZGC -XX:+ZGenerational MyApp
 
 ---
 
-## 移除与清理
+## 7. 移除与清理
 
 ### JEP 411: Deprecate the Security Manager for Removal
 
@@ -225,7 +241,7 @@ java -XX:+UseZGC -XX:+ZGenerational MyApp
 
 ---
 
-## JEP 汇总
+## 8. JEP 汇总
 
 ### 语言特性
 
@@ -258,7 +274,7 @@ java -XX:+UseZGC -XX:+ZGenerational MyApp
 
 ---
 
-## 相比 JDK 21 的变化
+## 9. 相比 JDK 21 的变化
 
 ### 新增正式特性
 
@@ -280,7 +296,7 @@ java -XX:+UseZGC -XX:+ZGenerational MyApp
 
 ---
 
-## 升级建议
+## 10. 升级建议
 
 ### 从 JDK 21 升级
 
@@ -303,7 +319,7 @@ java -version
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 - [OpenJDK JDK 25 项目页面](https://openjdk.org/projects/jdk/25/)
 - [JDK 25 JEP 列表](https://openjdk.org/projects/jdk/25/spec/)

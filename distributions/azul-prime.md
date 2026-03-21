@@ -5,8 +5,19 @@
 [← 返回发行版](../distributions/)
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [C4 GC](#2-c4-gc)
+3. [性能](#3-性能)
+4. [安装](#4-安装)
+5. [定价](#5-定价)
+6. [相关链接](#6-相关链接)
+
+---
+
+
+## 1. 概述
 
 Azul Platform Prime (前身为 Azul Zing) 是 Azul Systems 提供的高性能 JDK 发行版，以 C4 低延迟垃圾回收器著称。
 
@@ -20,7 +31,7 @@ Azul Platform Prime (前身为 Azul Zing) 是 Azul Systems 提供的高性能 JD
 
 ---
 
-## C4 GC
+## 2. C4 GC
 
 ### 特性
 
@@ -44,7 +55,7 @@ C4 (Continuously Concurrent Compacting Collector) 是 Azul 独有的垃圾回收
 
 ---
 
-## 性能
+## 3. 性能
 
 ### 基准测试
 
@@ -63,7 +74,7 @@ C4 (Continuously Concurrent Compacting Collector) 是 Azul 独有的垃圾回收
 
 ---
 
-## 安装
+## 4. 安装
 
 Azul Platform Prime 需要商业订阅。
 
@@ -85,7 +96,7 @@ java -version
 
 ---
 
-## 定价
+## 5. 定价
 
 ### Azul Platform Prime
 
@@ -101,7 +112,7 @@ java -version
 
 ---
 
-## 相关链接
+## 6. 相关链接
 
 - [Azul Platform Prime](https://www.azul.com/products/azul-platform-prime/)
 - [C4 GC 白皮书](https://www.azul.com/products/azul-platform-prime/c4-garbage-collector/)

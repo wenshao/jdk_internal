@@ -3,8 +3,28 @@
 Java 反射和元数据从 JDK 1.0 到 JDK 26 的完整演进历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [反射体系结构](#2-反射体系结构)
+3. [JDK 1.0 - 反射 API](#3-jdk-10---反射-api)
+4. [JDK 5 - Annotations (JSR 175)](#4-jdk-5---annotations-jsr-175)
+5. [JDK 6 - Pluggable Annotation Processing](#5-jdk-6---pluggable-annotation-processing)
+6. [JDK 7 - MethodHandle (JSR 292)](#6-jdk-7---methodhandle-jsr-292)
+7. [JDK 8 - Lambda 和 invokedynamic](#7-jdk-8---lambda-和-invokedynamic)
+8. [JDK 8 - 反射增强](#8-jdk-8---反射增强)
+9. [JDK 11 - Constable 和 ConstantDesc](#9-jdk-11---constable-和-constantdesc)
+10. [JDK 16 - ClassFile API](#10-jdk-16---classfile-api)
+11. [JDK 26 - Mirror API](#11-jdk-26---mirror-api)
+12. [反射性能优化](#12-反射性能优化)
+13. [反射选择指南](#13-反射选择指南)
+14. [时间线总结](#14-时间线总结)
+15. [相关链接](#15-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 5 ──── JDK 6 ──── JDK 7 ──── JDK 8 ──── JDK 11 ──── JDK 16 ──── JDK 26
@@ -16,7 +36,7 @@ API           (JSR 175)   Annotation  (JSR 292)  (Invoke-    Constant   API     
 
 ---
 
-## 反射体系结构
+## 2. 反射体系结构
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -43,7 +63,7 @@ API           (JSR 175)   Annotation  (JSR 292)  (Invoke-    Constant   API     
 
 ---
 
-## JDK 1.0 - 反射 API
+## 3. JDK 1.0 - 反射 API
 
 ### 获取 Class 对象
 
@@ -195,7 +215,7 @@ int[][] matrix = (int[][]) Array.newInstance(int.class, 3, 4);
 
 ---
 
-## JDK 5 - Annotations (JSR 175)
+## 4. JDK 5 - Annotations (JSR 175)
 
 ### 定义注解
 
@@ -270,7 +290,7 @@ Annotation[] annotations = clazz.getAnnotations();
 
 ---
 
-## JDK 6 - Pluggable Annotation Processing
+## 5. JDK 6 - Pluggable Annotation Processing
 
 ### 注解处理器
 
@@ -303,7 +323,7 @@ public class MyProcessor extends AbstractProcessor {
 
 ---
 
-## JDK 7 - MethodHandle (JSR 292)
+## 6. JDK 7 - MethodHandle (JSR 292)
 
 ### MethodHandle 基础
 
@@ -378,7 +398,7 @@ public class CallSiteExample {
 
 ---
 
-## JDK 8 - Lambda 和 invokedynamic
+## 7. JDK 8 - Lambda 和 invokedynamic
 
 ### Lambda 实现
 
@@ -437,7 +457,7 @@ public class LambdaMetafactoryExample {
 
 ---
 
-## JDK 8 - 反射增强
+## 8. JDK 8 - 反射增强
 
 ### Parameter 反射
 
@@ -465,7 +485,7 @@ public class ParameterExample {
 
 ---
 
-## JDK 11 - Constable 和 ConstantDesc
+## 9. JDK 11 - Constable 和 ConstantDesc
 
 ### Constable 接口
 
@@ -505,7 +525,7 @@ public interface ConstantDesc {
 
 ---
 
-## JDK 16 - ClassFile API
+## 10. JDK 16 - ClassFile API
 
 ### ClassFile API (预览)
 
@@ -533,7 +553,7 @@ for (MethodModel method : classModel.methods()) {
 
 ---
 
-## JDK 26 - Mirror API
+## 11. JDK 26 - Mirror API
 
 ### Mirror API (反射现代化)
 
@@ -559,7 +579,7 @@ MethodHandle handle = MethodHandles.lookup()
 
 ---
 
-## 反射性能优化
+## 12. 反射性能优化
 
 ### 缓存反射对象
 
@@ -634,7 +654,7 @@ public class MethodHandleBenchmark {
 
 ---
 
-## 反射选择指南
+## 13. 反射选择指南
 
 | 场景 | 推荐 | 说明 |
 |------|------|------|
@@ -646,7 +666,7 @@ public class MethodHandleBenchmark {
 
 ---
 
-## 时间线总结
+## 14. 时间线总结
 
 | 版本 | 特性 | 说明 |
 |------|------|------|
@@ -662,7 +682,7 @@ public class MethodHandleBenchmark {
 
 ---
 
-## 相关链接
+## 15. 相关链接
 
 - [Reflection Tutorial](https://docs.oracle.com/javase/tutorial/reflect/)
 - [MethodHandle (JSR 292)](https://docs.oracle.com/javase/8/docs/api/java/lang/invoke/package-summary.html)

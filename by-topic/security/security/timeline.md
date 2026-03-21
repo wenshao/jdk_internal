@@ -3,8 +3,24 @@
 加密、TLS、后量子密码的发展历程。
 
 ---
+## 目录
 
-## 时间线概览
+1. [时间线概览](#1-时间线概览)
+2. [密码学基础](#2-密码学基础)
+3. [TLS/SSL 演进](#3-tlsssl-演进)
+4. [加密算法演进](#4-加密算法演进)
+5. [后量子密码](#5-后量子密码)
+6. [KDF API (JEP 510)](#6-kdf-api-jep-510)
+7. [PEM 格式支持 (JEP 470)](#7-pem-格式支持-jep-470)
+8. [安全配置建议](#8-安全配置建议)
+9. [完整示例](#9-完整示例)
+10. [时间线总结](#10-时间线总结)
+11. [相关链接](#11-相关链接)
+
+---
+
+
+## 1. 时间线概览
 
 ```
 JDK 8 ───── JDK 11 ───── JDK 15 ───── JDK 17 ───── JDK 21 ───── JDK 26
@@ -18,7 +34,7 @@ TLS 1.2        TLS 1.3       禁用弱算法     KMAC          ML-DSA        KDF
 
 ---
 
-## 密码学基础
+## 2. 密码学基础
 
 ### 对称加密 vs 非对称加密
 
@@ -56,7 +72,7 @@ TLS 1.2        TLS 1.3       禁用弱算法     KMAC          ML-DSA        KDF
 
 ---
 
-## TLS/SSL 演进
+## 3. TLS/SSL 演进
 
 ### TLS 协议版本
 
@@ -169,7 +185,7 @@ jdk.tls.disabledAlgorithms=\
 
 ---
 
-## 加密算法演进
+## 4. 加密算法演进
 
 ### JDK 8 - 基础加密
 
@@ -380,7 +396,7 @@ public class KMACExample {
 
 ---
 
-## 后量子密码
+## 5. 后量子密码
 
 ### 背景
 
@@ -509,7 +525,7 @@ public class MLKEMExample {
 
 ---
 
-## KDF API (JEP 510)
+## 6. KDF API (JEP 510)
 
 ### 演进历程
 
@@ -636,7 +652,7 @@ public class KDFExample {
 
 ---
 
-## PEM 格式支持 (JEP 470)
+## 7. PEM 格式支持 (JEP 470)
 
 ### PEM 格式示例
 
@@ -711,7 +727,7 @@ public class PEMExample {
 
 ---
 
-## 安全配置建议
+## 8. 安全配置建议
 
 ### java.security 配置
 
@@ -769,7 +785,7 @@ Random random = new Random();  // 不适合安全用途
 
 ---
 
-## 完整示例
+## 9. 完整示例
 
 ### 安全 HTTP 客户端
 
@@ -879,7 +895,7 @@ public class PostQuantumCrypto {
 
 ---
 
-## 时间线总结
+## 10. 时间线总结
 
 | 版本 | 特性 | JEP | 说明 |
 |------|------|-----|------|
@@ -902,7 +918,7 @@ public class PostQuantumCrypto {
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 - [JEP 332: TLS 1.3](https://openjdk.org/jeps/332)
 - [JEP 329: ChaCha20-Poly1305](https://openjdk.org/jeps/329)

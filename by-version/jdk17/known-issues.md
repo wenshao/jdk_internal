@@ -3,8 +3,24 @@
 > **更新日期**: 2026-03-20 | **数据来源**: JBS Issues, Release Notes, OpenJDK Bug Database
 
 ---
+## 目录
 
-## 严重性定义
+1. [严重性定义](#1-严重性定义)
+2. [P1 - 严重问题](#2-p1---严重问题)
+3. [P2 - 高优先级问题](#3-p2---高优先级问题)
+4. [P3 - 中优先级问题](#4-p3---中优先级问题)
+5. [P4 - 低优先级问题](#5-p4---低优先级问题)
+6. [安全相关问题](#6-安全相关问题)
+7. [平台特定问题](#7-平台特定问题)
+8. [规避措施和工作区](#8-规避措施和工作区)
+9. [更新和补丁策略](#9-更新和补丁策略)
+10. [报告新问题](#10-报告新问题)
+11. [资源链接](#11-资源链接)
+
+---
+
+
+## 1. 严重性定义
 
 | 等级 | 影响 | 建议 |
 |------|------|------|
@@ -15,7 +31,7 @@
 
 ---
 
-## P1 - 严重问题
+## 2. P1 - 严重问题
 
 ### 1. JDK-8277132: Record 序列化与自定义 readObject/writeObject 冲突
 
@@ -118,7 +134,7 @@ switch (obj) {
 
 ---
 
-## P2 - 高优先级问题
+## 3. P2 - 高优先级问题
 
 ### 4. JDK-8277133: Sealed Classes 与模块系统的兼容性问题
 
@@ -261,7 +277,7 @@ RandomGenerator rng = RandomGenerator.of("L32X64MixRandom");
 
 ---
 
-## P3 - 中优先级问题
+## 4. P3 - 中优先级问题
 
 ### 8. JDK-8278969: jpackage 生成的安装包签名问题
 
@@ -395,7 +411,7 @@ java -Xshare:on -XX:SharedArchiveFile=app.jsa -jar app.jar
 
 ---
 
-## P4 - 低优先级问题
+## 5. P4 - 低优先级问题
 
 ### 12. JDK-8281184: Record 的 toString() 格式不一致
 
@@ -474,7 +490,7 @@ if (obj instanceof String s) {
 
 ---
 
-## 安全相关问题
+## 6. 安全相关问题
 
 ### 15. JDK-8281185: TLS 1.3 0-RTT 安全风险
 
@@ -517,7 +533,7 @@ ObjectInputFilter filter = ObjectInputFilter.rejectFilter(
 
 ---
 
-## 平台特定问题
+## 7. 平台特定问题
 
 ### 17. JDK-8278972: Windows 控制台编码问题
 
@@ -592,7 +608,7 @@ chcp 65001  # 设置控制台代码页为 UTF-8
 
 ---
 
-## 规避措施和工作区
+## 8. 规避措施和工作区
 
 ### 通用建议
 
@@ -646,7 +662,7 @@ java -Xshare:on -XX:SharedArchiveFile=app.jsa -jar app.jar
 
 ---
 
-## 更新和补丁策略
+## 9. 更新和补丁策略
 
 ### Oracle JDK 17 更新
 
@@ -673,7 +689,7 @@ java -Xshare:on -XX:SharedArchiveFile=app.jsa -jar app.jar
 
 ---
 
-## 报告新问题
+## 10. 报告新问题
 
 ### 报告渠道
 
@@ -701,7 +717,7 @@ java -Xshare:on -XX:SharedArchiveFile=app.jsa -jar app.jar
 
 ---
 
-## 资源链接
+## 11. 资源链接
 
 ### 官方资源
 - [JDK 17 发布说明](https://www.oracle.com/java/technologies/javase/17all-relnotes.html)

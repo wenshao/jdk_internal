@@ -6,14 +6,30 @@
 [![License](https://img.shields.io/badge/License-GPLv2--with--Classpath--Exception-blue)](https://openjdk.org/projects/jdk/17/)
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [语言特性](#2-语言特性)
+3. [核心库](#3-核心库)
+4. [性能与监控](#4-性能与监控)
+5. [安全](#5-安全)
+6. [移除与清理](#6-移除与清理)
+7. [工具](#7-工具)
+8. [JEP 汇总](#8-jep-汇总)
+9. [相比 JDK 11 的新特性](#9-相比-jdk-11-的新特性)
+10. [升级建议](#10-升级建议)
+11. [相关链接](#11-相关链接)
+
+---
+
+
+## 1. 概述
 
 JDK 17 是一个重要的 LTS 版本，引入了 **Records** 和 **Sealed Classes** 正式版，以及 **Pattern Matching for instanceof** 正式版。这些特性显著提升了 Java 的表达能力和类型安全性。
 
 ---
 
-## 语言特性
+## 2. 语言特性
 
 ### JEP 409: Sealed Classes (正式版) ⭐⭐
 
@@ -131,7 +147,7 @@ static String formatter(Object obj) {
 
 ---
 
-## 核心库
+## 3. 核心库
 
 ### JEP 306: Restore Always-Strict Floating-Point Semantics
 
@@ -163,7 +179,7 @@ ois.setObjectInputFilter(filter);
 
 ---
 
-## 性能与监控
+## 4. 性能与监控
 
 ### JEP 376: ZGC: Concurrent Thread-Stack Processing
 
@@ -179,7 +195,7 @@ ois.setObjectInputFilter(filter);
 
 ---
 
-## 安全
+## 5. 安全
 
 ### JEP 412: Foreign Function & Memory API (孵化器)
 
@@ -200,7 +216,7 @@ MethodHandle strlen = linker.downcallHandle(
 
 ---
 
-## 移除与清理
+## 6. 移除与清理
 
 ### JEP 398: Deprecate the Applet API for Removal
 
@@ -223,7 +239,7 @@ MethodHandle strlen = linker.downcallHandle(
 
 ---
 
-## 工具
+## 7. 工具
 
 ### JEP 383: macOS/AArch64 Port
 
@@ -268,7 +284,7 @@ RandomGeneratorFactory.all()
 
 ---
 
-## JEP 汇总
+## 8. JEP 汇总
 
 | 类别 | JEP | 标题 | 状态 |
 |------|-----|------|------|
@@ -293,7 +309,7 @@ RandomGeneratorFactory.all()
 
 ---
 
-## 相比 JDK 11 的新特性
+## 9. 相比 JDK 11 的新特性
 
 ### 新增正式特性
 
@@ -315,7 +331,7 @@ RandomGeneratorFactory.all()
 
 ---
 
-## 升级建议
+## 10. 升级建议
 
 ### 从 JDK 11 升级
 
@@ -346,7 +362,7 @@ java -version
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 - [OpenJDK JDK 17 项目页面](https://openjdk.org/projects/jdk/17/)
 - [JDK 17 JEP 列表](https://openjdk.org/projects/jdk/17/spec/)

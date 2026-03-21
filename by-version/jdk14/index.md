@@ -3,8 +3,17 @@
 > **发布日期**: 2020-03-17 | **类型**: Feature Release
 
 ---
+## 目录
 
-## 核心特性
+1. [核心特性](#1-核心特性)
+2. [关键 JEP](#2-关键-jep)
+3. [代码示例](#3-代码示例)
+4. [相关链接](#4-相关链接)
+
+---
+
+
+## 1. 核心特性
 
 JDK 14 引入了 Records（第1次预览）、Pattern Matching for instanceof（第1次预览）和 Helpful NPE。
 
@@ -26,7 +35,7 @@ JDK 14 引入了 Records（第1次预览）、Pattern Matching for instanceof（
 
 ---
 
-## 关键 JEP
+## 2. 关键 JEP
 
 | JEP | 标题 | 说明 |
 |-----|------|------|
@@ -49,7 +58,7 @@ JDK 14 引入了 Records（第1次预览）、Pattern Matching for instanceof（
 
 ---
 
-## 代码示例
+## 3. 代码示例
 
 ### Records（第1次预览）
 
@@ -103,6 +112,6 @@ name.length();  // 清晰的错误信息
 
 ---
 
-## 相关链接
+## 4. 相关链接
 
 - [发布说明](https://openjdk.org/projects/jdk/14/)

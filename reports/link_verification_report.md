@@ -1,12 +1,12 @@
 # 链接验证报告
 
-## 统计
+## 1. 统计
 - 检查的文件: 706
 - 找到的链接: 16040
 - 检查的链接: 16040
 - 损坏的链接: 5667
 
-## 损坏链接详情
+## 2. 损坏链接详情
 
 ### jsr/language/valhalla-value-types.md:272
 - **链接**: [本地仓库](../valhalla/)
@@ -327,8 +327,31 @@
 - **链接**: [Reviewer](htt...
 
 ---
+## 目录
 
-## Changes
+1. [统计](#1-统计)
+2. [损坏链接详情](#2-损坏链接详情)
+3. [Changes](#3-changes)
+4. [Related Issues](#4-related-issues)
+5. [Changes](#5-changes)
+6. [Related Issues](#6-related-issues)
+7. [Changes](#7-changes)
+8. [Related Issues](#8-related-issues)
+9. [Changes](#9-changes)
+10. [Related Issues](#10-related-issues)
+11. [Changes](#11-changes)
+12. [Related Issues](#12-related-issues)
+13. [Changes](#13-changes)
+14. [Related Issues](#14-related-issues)
+15. [Changes](#15-changes)
+16. [Related Issues](#16-related-issues)
+17. [链接类型统计](#17-链接类型统计)
+18. [建议](#18-建议)
+
+---
+
+
+## 3. Changes
 
 | 指标 | 值 |
 |------|-----|
@@ -339,7 +362,7 @@
 
 ---
 
-## Related Issues
+## 4. Related Issues
 
 - **JBS**: [JDK-8357081](https://bugs.openjdk.org/browse/JDK-8357081)
 - **原因**: 本地文件不存在
@@ -410,7 +433,7 @@
 
 ---
 
-## Changes
+## 5. Changes
 
 | 指标 | 值 |
 |------|-----|
@@ -421,7 +444,7 @@
 
 ---
 
-## Related Issues
+## 6. Related Issues
 
 - **JBS**: [JDK-8357081](https://bugs.openjdk.org/browse/JDK-8357081)
 - **原因**: 本地文件不存在
@@ -8832,7 +8855,7 @@
 
 ---
 
-## Changes
+## 7. Changes
 
 | 指标 | 值 |
 |------|-----|
@@ -8843,7 +8866,7 @@
 
 ---
 
-## Related Issues
+## 8. Related Issues
 
 - **JBS**: [JDK-8357081](https://bugs.openjdk.org/browse/JDK-8357081)
 - **原因**: 本地文件不存在
@@ -16329,7 +16352,7 @@
 
 ---
 
-## Changes
+## 9. Changes
 
 | 指标 | 值 |
 |------|-----|
@@ -16340,7 +16363,7 @@
 
 ---
 
-## Related Issues
+## 10. Related Issues
 
 - **JBS**: [JDK-8357081](https://bugs.openjdk.org/browse/JDK-8357081)
 - **原因**: 本地文件不存在
@@ -20356,7 +20379,7 @@
 
 ---
 
-## Changes
+## 11. Changes
 
 | 指标 | 值 |
 |------|-----|
@@ -20367,7 +20390,7 @@
 
 ---
 
-## Related Issues
+## 12. Related Issues
 
 - **JBS**: [JDK-8357081](https://bugs.openjdk.org/browse/JDK-8357081)
 - **原因**: 本地文件不存在
@@ -24383,7 +24406,7 @@
 
 ---
 
-## Changes
+## 13. Changes
 
 | 指标 | 值 |
 |------|-----|
@@ -24394,7 +24417,7 @@
 
 ---
 
-## Related Issues
+## 14. Related Issues
 
 - **JBS**: [JDK-8357081](https://bugs.openjdk.org/browse/JDK-8357081)
 - **原因**: 本地文件不存在
@@ -28415,7 +28438,7 @@
 
 ---
 
-## Changes
+## 15. Changes
 
 | 指标 | 值 |
 |------|-----|
@@ -28426,7 +28449,7 @@
 
 ---
 
-## Related Issues
+## 16. Related Issues
 
 - **JBS**: [JDK-8357081](https://bugs.openjdk.org/browse/JDK-8357081)
 - **原因**: 本地文件不存在
@@ -28463,13 +28486,13 @@
 - **类型**: 本地链接
 
 
-## 链接类型统计
+## 17. 链接类型统计
 - 本地链接: 9399
 - GitHub原始URL: 0
 - 外部链接: 6337
 - 锚点链接: 304
 
-## 建议
+## 18. 建议
 1. 修复损坏的本地链接
 2. 验证GitHub原始URL是否有效
 3. 定期运行此脚本以确保链接健康

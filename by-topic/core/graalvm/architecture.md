@@ -5,8 +5,22 @@
 [← 返回 GraalVM 首页](./) | [← 返回性能优化](performance.md)
 
 ---
+## 目录
 
-## 整体架构
+1. [整体架构](#1-整体架构)
+2. [核心组件](#2-核心组件)
+3. [2. JVMCI 接口层](#3-2-jvmci-接口层)
+4. [3. Native Image 架构](#4-3-native-image-架构)
+5. [4. Truffle 框架架构](#5-4-truffle-框架架构)
+6. [5. 优化 pipeline](#6-5-优化-pipeline)
+7. [6. 去优化机制](#7-6-去优化机制)
+8. [7. 内存模型](#8-7-内存模型)
+9. [相关链接](#9-相关链接)
+
+---
+
+
+## 1. 整体架构
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -62,7 +76,7 @@
 
 ---
 
-## 核心组件
+## 2. 核心组件
 
 ### 1. Graal 编译器架构
 
@@ -176,7 +190,7 @@ Sea of Nodes (图结构):
 
 ---
 
-## 2. JVMCI 接口层
+## 3. 2. JVMCI 接口层
 
 JVMCI (JEP 243) 是 Graal 与 HotSpot 的桥梁。
 
@@ -238,7 +252,7 @@ public interface CodeInstallationProvider {
 
 ---
 
-## 3. Native Image 架构
+## 4. 3. Native Image 架构
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -308,7 +322,7 @@ Native Image (闭世界):
 
 ---
 
-## 4. Truffle 框架架构
+## 5. 4. Truffle 框架架构
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -380,7 +394,7 @@ public class AddNode extends ExpressionNode {
 
 ---
 
-## 5. 优化 pipeline
+## 6. 5. 优化 pipeline
 
 ### Graal JIT 优化阶段
 
@@ -463,7 +477,7 @@ return rcx
 
 ---
 
-## 6. 去优化机制
+## 7. 6. 去优化机制
 
 当优化假设失效时，Graal 支持**去优化** (Deoptimization)。
 
@@ -509,7 +523,7 @@ return rcx
 
 ---
 
-## 7. 内存模型
+## 8. 7. 内存模型
 
 ### GraalVM 内存布局
 
@@ -546,7 +560,7 @@ return rcx
 
 ---
 
-## 相关链接
+## 9. 相关链接
 
 ### 官方文档
 - [GraalVM Architecture](https://www.graalvm.org/latest/docs/)

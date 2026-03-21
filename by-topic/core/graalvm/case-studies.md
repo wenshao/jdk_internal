@@ -16,7 +16,7 @@
 
 ---
 
-## 微服务迁移
+## 1. 微服务迁移
 
 ### 案例 1: Spring Boot 微服务迁移到 Native Image
 
@@ -120,7 +120,7 @@ jobs:
 
 ---
 
-## Serverless 优化
+## 2. Serverless 优化
 
 ### 案例 3: AWS Lambda 函数优化
 
@@ -206,7 +206,7 @@ native-image \
 
 ---
 
-## CLI 工具加速
+## 3. CLI 工具加速
 
 ### 案例 5: Maven 插件 Native 化
 
@@ -235,7 +235,7 @@ $ mvn myplugin:generate
 
 ---
 
-## 多语言应用
+## 4. 多语言应用
 
 ### 案例 6: Polyglot 数据分析平台
 
@@ -301,7 +301,7 @@ public class DataAnalysis {
 
 ---
 
-## 性能优化实践
+## 5. 性能优化实践
 
 ### 案例 7: 电商平台性能优化
 
@@ -406,7 +406,7 @@ native-image \
 
 ---
 
-## 迁移 checklist
+## 6. 迁移 checklist
 
 ### 微服务迁移清单
 
@@ -444,7 +444,7 @@ native-image \
 
 ---
 
-## 相关链接
+## 7. 相关链接
 
 ### 官方案例
 - [GraalVM Success Stories](https://www.graalvm.org/success-stories/)

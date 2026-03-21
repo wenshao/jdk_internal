@@ -3,8 +3,18 @@
 > JDK Flight Recorder 相关 JEP 汇总
 
 ---
+## 目录
 
-## 概览
+1. [概览](#1-概览)
+2. [JFR CPU-Time Profiling (JEP 509)](#2-jfr-cpu-time-profiling-jep-509)
+3. [JFR Cooperative Sampling (JEP 518)](#3-jfr-cooperative-sampling-jep-518)
+4. [JFR Method Timing & Tracing (JEP 520)](#4-jfr-method-timing--tracing-jep-520)
+5. [相关链接](#5-相关链接)
+
+---
+
+
+## 1. 概览
 
 | JEP | 标题 | JDK | 状态 | 说明 |
 |-----|------|-----|------|------|
@@ -14,7 +24,7 @@
 
 ---
 
-## JFR CPU-Time Profiling (JEP 509)
+## 2. JFR CPU-Time Profiling (JEP 509)
 
 ### 核心特性
 
@@ -33,7 +43,7 @@ jcmd <pid> JFR.start \
 
 ---
 
-## JFR Cooperative Sampling (JEP 518)
+## 3. JFR Cooperative Sampling (JEP 518)
 
 ### 核心改进
 
@@ -45,7 +55,7 @@ jcmd <pid> JFR.start \
 
 ---
 
-## JFR Method Timing & Tracing (JEP 520)
+## 4. JFR Method Timing & Tracing (JEP 520)
 
 ### 核心功能
 
@@ -57,7 +67,7 @@ jcmd <pid> JFR.start \
 
 ---
 
-## 相关链接
+## 5. 相关链接
 
 - JFR 指南 
 - [JDK Mission Control](https://www.oracle.com/java/technologies/jdk-mission-control.html)

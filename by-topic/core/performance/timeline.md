@@ -4,7 +4,7 @@ Java 性能优化从 JDK 1.0 到 JDK 26 的完整演进历程。
 
 ---
 
-## 时间线概览
+## 1. 时间线概览
 
 ```
 JDK 1.0 ──── JDK 5 ──── JDK 6 ──── JDK 7 ──── JDK 8 ──── JDK 17 ──── JDK 21 ──── JDK 25 ──── JDK 26
@@ -36,7 +36,7 @@ JDK 1.0 ──── JDK 5 ──── JDK 6 ──── JDK 7 ──── JD
 
 ---
 
-## JVM 执行引擎
+## 2. JVM 执行引擎
 
 ### 解释器 vs JIT 编译器
 
@@ -128,7 +128,7 @@ JDK 7+ 引入分层编译，结合 C1 和 C2 的优势：
 
 ---
 
-## JIT 编译优化
+## 3. JIT 编译优化
 
 ### 方法内联
 
@@ -249,7 +249,7 @@ public class LockElimination {
 
 ---
 
-## 版本演进
+## 4. 版本演进
 
 ### JDK 1.0-1.2: 解释器时代
 
@@ -525,7 +525,7 @@ java -XX:StartFlightRecording=jdk.MethodTiming#enabled=true ...
 
 ---
 
-## 性能工具演进
+## 5. 性能工具演进
 
 ### JFR (Java Flight Recorder)
 
@@ -587,7 +587,7 @@ profiler.sh -d 30 -e alloc <pid>
 
 ---
 
-## Git 提交历史
+## 6. Git 提交历史
 
 > 基于 OpenJDK master 分支分析
 
@@ -654,7 +654,7 @@ git log --oneline -- src/hotspot/share/opto/
 
 ---
 
-## 性能最佳实践
+## 7. 性能最佳实践
 
 ### 对象创建
 
@@ -721,7 +721,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 性能对比
+## 8. 性能对比
 
 ### JDK 版本性能
 
@@ -746,7 +746,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 时间线总结
+## 9. 时间线总结
 
 | 版本 | 特性 | 说明 |
 |------|------|------|
@@ -764,7 +764,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 ### 官方文档
 

@@ -3,14 +3,24 @@
 > JDK Enhancement Proposals - JDK 增强提案索引
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [按主题浏览](#2-按主题浏览)
+3. [JSR 与 JEP](#3-jsr-与-jep)
+4. [按版本浏览](#4-按版本浏览)
+5. [相关链接](#5-相关链接)
+
+---
+
+
+## 1. 概述
 
 JEP (JDK Enhancement Proposals) 是 Java 平台新特性的设计和规范文档。本目录包含 JDK 21-26 相关的重要 JEP 分析文档，**按主题分类组织**。
 
 ---
 
-## 按主题浏览
+## 2. 按主题浏览
 
 ### 并发编程
 
@@ -111,7 +121,7 @@ JEP (JDK Enhancement Proposals) 是 Java 平台新特性的设计和规范文档
 
 ---
 
-## JSR 与 JEP
+## 3. JSR 与 JEP
 
 许多重要特性同时有 JSR (规范) 和 JEP (实现)：
 
@@ -126,7 +136,7 @@ JEP (JDK Enhancement Proposals) 是 Java 平台新特性的设计和规范文档
 
 ---
 
-## 按版本浏览
+## 4. 按版本浏览
 
 - [JDK 21 JEPs](by-version/jdk21.md)
 - [JDK 22 JEPs](by-version/jdk22.md)
@@ -137,7 +147,7 @@ JEP (JDK Enhancement Proposals) 是 Java 平台新特性的设计和规范文档
 
 ---
 
-## 相关链接
+## 5. 相关链接
 
 - [OpenJDK JEP Index](https://openjdk.org/jeps/)
 - [JSR 索引](/jsr/)

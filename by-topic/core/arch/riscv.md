@@ -6,7 +6,7 @@
 
 ---
 
-## 概述
+## 1. 概述
 
 RISC-V 是一个开源的指令集架构 (ISA)，OpenJDK 从 JDK 19 开始正式支持 RISC-V 64位平台。
 
@@ -44,7 +44,7 @@ RISC-V 是一个开源的指令集架构 (ISA)，OpenJDK 从 JDK 19 开始正式
 
 ---
 
-## 版本演进
+## 2. 版本演进
 
 ### 时间线
 
@@ -61,7 +61,7 @@ RISC-V 是一个开源的指令集架构 (ISA)，OpenJDK 从 JDK 19 开始正式
 
 ---
 
-## 指令集扩展
+## 3. 指令集扩展
 
 ### 基础扩展
 
@@ -118,7 +118,7 @@ src/hotspot/
 
 ---
 
-## 代码示例
+## 4. 代码示例
 
 ### 扩展检测
 
@@ -171,7 +171,7 @@ instruct vAndNot(vReg dst, vReg src1, vReg src2) %{
 
 ---
 
-## JVM 参数
+## 5. JVM 参数
 
 ### RISC-V 特定参数
 
@@ -204,7 +204,7 @@ java -XX:+PrintFlagsFinal -version | grep -i riscv
 
 ---
 
-## 贡献者
+## 6. 贡献者
 
 ### 核心贡献者
 
@@ -226,7 +226,7 @@ java -XX:+PrintFlagsFinal -version | grep -i riscv
 
 ---
 
-## 构建 RISC-V JDK
+## 7. 构建 RISC-V JDK
 
 ### 前置条件
 
@@ -270,7 +270,7 @@ qemu-riscv64-static -L /usr/riscv64-linux-gnu \
 
 ---
 
-## 硬件支持
+## 8. 硬件支持
 
 ### 开发板
 
@@ -291,7 +291,7 @@ qemu-riscv64-static -L /usr/riscv64-linux-gnu \
 
 ---
 
-## 相关 JEP
+## 9. 相关 JEP
 
 | JEP | 版本 | 标题 |
 |-----|------|------|
@@ -300,7 +300,7 @@ qemu-riscv64-static -L /usr/riscv64-linux-gnu \
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 - [RISC-V International](https://riscv.org/)
 - [OpenJDK RISC-V Port 项目](https://openjdk.org/projects/riscv-port/)
@@ -309,7 +309,7 @@ qemu-riscv64-static -L /usr/riscv64-linux-gnu \
 
 ---
 
-## 相关主题
+## 11. 相关主题
 
 - [CPU 架构](./) - 其他架构支持
 - [JIT 编译](../jit/) - 架构特定的编译优化

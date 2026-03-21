@@ -5,8 +5,27 @@
 [← 返回 Vector API](./)
 
 ---
+## 目录
 
-## 版本总览
+1. [版本总览](#1-版本总览)
+2. [JDK 16: JEP 338 (First Incubator)](#2-jdk-16-jep-338-first-incubator)
+3. [JDK 17: JEP 414 (Second Incubator)](#3-jdk-17-jep-414-second-incubator)
+4. [JDK 18: JEP 417 (Third Incubator)](#4-jdk-18-jep-417-third-incubator)
+5. [JDK 19: JEP 426 (Fourth Incubator)](#5-jdk-19-jep-426-fourth-incubator)
+6. [JDK 20: JEP 438 (Fifth Incubator)](#6-jdk-20-jep-438-fifth-incubator)
+7. [JDK 21: JEP 448 (Sixth Incubator)](#7-jdk-21-jep-448-sixth-incubator)
+8. [JDK 22 (2024-03) - Seventh Incubator](#8-jdk-22-2024-03---seventh-incubator)
+9. [JDK 23 (2024-09) - Eighth Incubator](#9-jdk-23-2024-09---eighth-incubator)
+10. [JDK 24 (2025-03) - Ninth Incubator](#10-jdk-24-2025-03---ninth-incubator)
+11. [JDK 25 (2025-09)](#11-jdk-25-2025-09)
+12. [JDK 26 (2026-03-17) - GA 已发布](#12-jdk-26-2026-03-17---ga-已发布)
+13. [为什么孵化这么慢？](#13-为什么孵化这么慢)
+14. [总结](#14-总结)
+
+---
+
+
+## 1. 版本总览
 
 | 版本 | JEP | 提交数 | 主要变更 |
 |------|-----|--------|----------|
@@ -24,7 +43,7 @@
 
 ---
 
-## JDK 16: JEP 338 (First Incubator)
+## 2. JDK 16: JEP 338 (First Incubator)
 
 **发布**: 2021-03-16
 
@@ -70,7 +89,7 @@ vc.intoArray(c, 0);
 
 ---
 
-## JDK 17: JEP 414 (Second Incubator)
+## 3. JDK 17: JEP 414 (Second Incubator)
 
 **发布**: 2021-09-14
 
@@ -123,7 +142,7 @@ boolean[] valid = shuffle.laneIsValid();  // 新增
 
 ---
 
-## JDK 18: JEP 417 (Third Incubator)
+## 4. JDK 18: JEP 417 (Third Incubator)
 
 **发布**: 2022-03-22
 
@@ -169,7 +188,7 @@ LongVector lv = iv.convertShape(I2L, LongVector.SPECIES_256, 0); // zero-extend
 
 ---
 
-## JDK 19: JEP 426 (Fourth Incubator)
+## 5. JDK 19: JEP 426 (Fourth Incubator)
 
 **发布**: 2022-09-20
 
@@ -224,7 +243,7 @@ int first = va.reduceLanes(VectorOperators.FIRST_NONZERO);
 
 ---
 
-## JDK 20: JEP 438 (Fifth Incubator)
+## 6. JDK 20: JEP 438 (Fifth Incubator)
 
 **发布**: 2023-03-21
 
@@ -255,7 +274,7 @@ IntVector v = IntVector.fromArray(species, array, 0, indexes, 0);
 
 ---
 
-## JDK 21: JEP 448 (Sixth Incubator)
+## 7. JDK 21: JEP 448 (Sixth Incubator)
 
 **发布**: 2023-09-19
 
@@ -301,7 +320,7 @@ FloatVector cos = va.lanewise(VectorOperators.COS);
 
 ---
 
-## JDK 22 (2024-03) - Seventh Incubator
+## 8. JDK 22 (2024-03) - Seventh Incubator
 
 **继续孵化**
 
@@ -333,7 +352,7 @@ IntVector selected = a.selectFrom(b);  // 新增
 
 ---
 
-## JDK 23 (2024-09) - Eighth Incubator
+## 9. JDK 23 (2024-09) - Eighth Incubator
 
 **继续孵化**
 
@@ -365,7 +384,7 @@ IntVector result = v.rearrange(shuffle);  // 索引自动 wrap
 
 ---
 
-## JDK 24 (2025-03) - Ninth Incubator
+## 10. JDK 24 (2025-03) - Ninth Incubator
 
 **继续孵化**
 
@@ -405,7 +424,7 @@ int unsignedMax = max.reduceLanes(VectorOperators.UMAX);
 
 ---
 
-## JDK 25 (2025-09)
+## 11. JDK 25 (2025-09)
 
 **继续孵化**
 
@@ -437,7 +456,7 @@ VectorShape shape = VectorShape.largestShapeFor(int.class);
 
 ---
 
-## JDK 26 (2026-03-17) - GA 已发布
+## 12. JDK 26 (2026-03-17) - GA 已发布
 
 **继续孵化**
 
@@ -462,7 +481,7 @@ VectorShape shape = VectorShape.largestShapeFor(int.class);
 
 ---
 
-## 为什么孵化这么慢？
+## 13. 为什么孵化这么慢？
 
 ### 技术挑战
 
@@ -496,7 +515,7 @@ Vector API 需要满足以下条件才能毕业：
 
 ---
 
-## 总结
+## 14. 总结
 
 ### 每个版本的主要贡献
 

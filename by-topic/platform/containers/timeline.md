@@ -5,8 +5,25 @@ JDK 容器支持的完整演进历史。
 [← 返回容器环境](./)
 
 ---
+## 目录
 
-## JDK 8: 无容器感知
+1. [JDK 8: 无容器感知](#1-jdk-8-无容器感知)
+2. [JDK 10: 容器感知 (JEP 307)](#2-jdk-10-容器感知-jep-307)
+3. [JDK 11: 改进容器检测](#3-jdk-11-改进容器检测)
+4. [JDK 14: cgroup v2 初步支持](#4-jdk-14-cgroup-v2-初步支持)
+5. [JDK 17: cgroup v2 改进](#5-jdk-17-cgroup-v2-改进)
+6. [JDK 21: cgroup v2 完整支持](#6-jdk-21-cgroup-v2-完整支持)
+7. [JDK 26: 容器优化增强](#7-jdk-26-容器优化增强)
+8. [容器技术时间线](#8-容器技术时间线)
+9. [JVM 参数演进](#9-jvm-参数演进)
+10. [基础镜像演进](#10-基础镜像演进)
+11. [核心贡献者](#11-核心贡献者)
+12. [参考资料](#12-参考资料)
+
+---
+
+
+## 1. JDK 8: 无容器感知
 
 ### 问题背景
 
@@ -27,7 +44,7 @@ docker run -m 512m openjdk:8 java -Xmx4g
 
 ---
 
-## JDK 10: 容器感知 (JEP 307)
+## 2. JDK 10: 容器感知 (JEP 307)
 
 ### JEP 307: Container Awareness
 
@@ -49,7 +66,7 @@ docker run -m 512m openjdk:8 java -Xmx4g
 
 ---
 
-## JDK 11: 改进容器检测
+## 3. JDK 11: 改进容器检测
 
 ### 修复和改进
 
@@ -64,7 +81,7 @@ docker run -m 512m openjdk:8 java -Xmx4g
 
 ---
 
-## JDK 14: cgroup v2 初步支持
+## 4. JDK 14: cgroup v2 初步支持
 
 ### cgroup v2 引入
 
@@ -83,7 +100,7 @@ docker run -m 512m openjdk:8 java -Xmx4g
 
 ---
 
-## JDK 17: cgroup v2 改进
+## 5. JDK 17: cgroup v2 改进
 
 ### JEP Draft: 改进支持
 
@@ -98,7 +115,7 @@ docker run -m 512m openjdk:8 java -Xmx4g
 
 ---
 
-## JDK 21: cgroup v2 完整支持
+## 6. JDK 21: cgroup v2 完整支持
 
 ### 完整支持
 
@@ -123,7 +140,7 @@ bool UseContainerSupport = true
 
 ---
 
-## JDK 26: 容器优化增强
+## 7. JDK 26: 容器优化增强
 
 ### 性能优化
 
@@ -138,7 +155,7 @@ bool UseContainerSupport = true
 
 ---
 
-## 容器技术时间线
+## 8. 容器技术时间线
 
 ### Docker
 
@@ -178,7 +195,7 @@ bool UseContainerSupport = true
 
 ---
 
-## JVM 参数演进
+## 9. JVM 参数演进
 
 ### 内存参数
 
@@ -204,7 +221,7 @@ JDK 17 ─── 改进 CPU 检测
 
 ---
 
-## 基础镜像演进
+## 10. 基础镜像演进
 
 ### OpenJDK 镜像
 
@@ -217,7 +234,7 @@ JDK 17 ─── 改进 CPU 检测
 
 ---
 
-## 核心贡献者
+## 11. 核心贡献者
 
 | 贡献者 | 组织 | 主要贡献 |
 |--------|------|----------|
@@ -227,7 +244,7 @@ JDK 17 ─── 改进 CPU 检测
 
 ---
 
-## 参考资料
+## 12. 参考资料
 
 - [JEP 307: Container Awareness](https://openjdk.org/jeps/307)
 - [Docker 文档](https://docs.docker.com/)

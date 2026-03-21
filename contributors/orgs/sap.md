@@ -5,8 +5,22 @@
 [← 返回组织索引](../../by-contributor/index.md)
 
 ---
+## 目录
 
-## 概览
+1. [概览](#1-概览)
+2. [Top 贡献者](#2-top-贡献者)
+3. [影响的模块](#3-影响的模块)
+4. [主要领域](#4-主要领域)
+5. [关键贡献](#5-关键贡献)
+6. [SAP JVM (SapMachine)](#6-sap-jvm-sapmachine)
+7. [贡献时间线](#7-贡献时间线)
+8. [数据来源](#8-数据来源)
+9. [相关链接](#9-相关链接)
+
+---
+
+
+## 1. 概览
 
 SAP 是 OpenJDK 的长期贡献者，专注于 PowerPC (PPC) 移植、AIX 平台支持和 HotSpot 调试能力。
 
@@ -22,7 +36,7 @@ SAP 是 OpenJDK 的长期贡献者，专注于 PowerPC (PPC) 移植、AIX 平台
 
 ---
 
-## Top 贡献者
+## 2. Top 贡献者
 
 | 排名 | 贡献者 | GitHub | PRs | 角色 | 领域 | 档案 |
 |------|--------|--------|-----|------|------|------|
@@ -36,7 +50,7 @@ SAP 是 OpenJDK 的长期贡献者，专注于 PowerPC (PPC) 移植、AIX 平台
 
 ---
 
-## 影响的模块
+## 3. 影响的模块
 
 | 模块 | 文件数 | 说明 |
 |------|--------|------|
@@ -50,7 +64,7 @@ SAP 是 OpenJDK 的长期贡献者，专注于 PowerPC (PPC) 移植、AIX 平台
 
 ---
 
-## 主要领域
+## 4. 主要领域
 
 ### PowerPC (PPC) 移植
 
@@ -80,7 +94,7 @@ SAP 主导 PowerPC 架构的 OpenJDK 移植：
 
 ---
 
-## 关键贡献
+## 5. 关键贡献
 
 ### 构建系统 (Matthias Baesken, Erik Joelsson)
 
@@ -105,7 +119,7 @@ SAP 主导 PowerPC 架构的 OpenJDK 移植：
 
 ---
 
-## SAP JVM (SapMachine)
+## 6. SAP JVM (SapMachine)
 
 SAP 维护自己的 JVM 发行版 SapMachine：
 
@@ -126,7 +140,7 @@ SAP 维护自己的 JVM 发行版 SapMachine：
 
 ---
 
-## 贡献时间线
+## 7. 贡献时间线
 
 ```
 2010: ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10 PRs
@@ -142,14 +156,14 @@ SAP 维护自己的 JVM 发行版 SapMachine：
 
 ---
 
-## 数据来源
+## 8. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
 - **统计时间**: 2026-03-21
 
 ---
 
-## 相关链接
+## 9. 相关链接
 
 - [SAP SapMachine](https://sap.github.io/SapMachine/)
 - [SAP GitHub](https://github.com/SAP/SapMachine)
