@@ -154,9 +154,6 @@ exports com.example.api;
 exports com.example.internal to
     com.example.test,
     com.example.debug;
-
-// 模块导出 (JDK 21+)
-exports com.example.api;
 ```
 
 ### opens
@@ -184,6 +181,93 @@ uses com.example.spi.Provider;
 provides com.example.spi.Provider
     with com.example.impl.ProviderImpl;
 ```
+
+---
+
+## 模块导入声明 (JDK 23+)
+
+> **JEP 476** (JDK 23 预览) → **JEP 511** (JDK 25 正式)
+
+### 基本语法
+
+```java
+// 以前需要多个 import
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.Set;
+import java.io.IOException;
+import java.nio.file.Path;
+// ... 可能需要几十个 import
+
+// 现在只需一行
+import module java.base;
+
+public class Example {
+    public static void main(String... args) {
+        List<String> list = new ArrayList<>();  // 直接使用
+        Map<String, Integer> map = Map.of();    // 直接使用
+        Path path = Path.of("/tmp");            // 直接使用
+    }
+}
+```
+
+### 多模块导入
+
+```java
+import module java.base;
+import module java.sql;
+import module java.logging;
+
+public class DatabaseApp {
+    private static final Logger logger = Logger.getLogger("DB");
+    // Logger 来自 java.logging
+    // Connection 来自 java.sql
+}
+```
+
+### 与普通 import 混用
+
+```java
+import module java.base;
+import java.sql.Date;  // 明确指定解决歧义
+
+public class DateExample {
+    Date sqlDate;              // java.sql.Date (显式导入)
+    java.util.Date utilDate;   // java.util.Date (来自模块导入)
+}
+```
+
+### JShell 默认脚本
+
+JDK 25+ 起默认启动脚本简化：
+
+```java
+// 旧版 DEFAULT.jsh (需要多个 import)
+import java.io.*;
+import java.math.*;
+import java.net.*;
+import java.nio.file.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.prefs.*;
+import java.util.regex.*;
+import java.util.stream.*;
+
+// 新版 DEFAULT.jsh (JDK 25+)
+import module java.base;
+```
+
+### 使用场景
+
+| 场景 | 推荐度 | 说明 |
+|------|--------|------|
+| 新项目 | ✅ 推荐 | 大幅简化代码 |
+| 教学场景 | ✅ 推荐 | 降低入门门槛 |
+| JShell 脚本 | ✅ 推荐 | 快速原型开发 |
+| 库开发 | ⚠️ 谨慎 | 考虑用户 JDK 版本 |
+| 已有项目 | 可选 | 无需强制迁移 |
 
 ---
 
@@ -281,9 +365,9 @@ jlink --module-path $JAVA_HOME/jmods \
 
 ---
 
-## jpackage (JDK 16+)
+## jpackage (JDK 14+)
 
-### JEP 343/392/384/394: 打包工具
+### 打包工具 (JEP 343 → JEP 384 → JEP 392)
 
 ```bash
 # 创建应用包
@@ -318,26 +402,23 @@ jpackage \
 
 ---
 
-## 强封装 (JDK 17+)
+## 强封装 (JDK 16+)
 
-### JEP 403/396/407/411: 强封装
+### JEP 396 (JDK 16) / JEP 403 (JDK 17): 强封装
 
 ```bash
-# 启动时访问内部 API (JDK 16-)
-java --add-opens java.base/java.lang=ALL-UNNAMED \
-    -cp myapp.jar Main
-
-# JDK 17+ 需要额外选项
-java --add-opens=java.base/java.lang=ALL-UNNAMED \
-    --add-exports=java.base/sun.security.x509=ALL-UNNAMED \
-    -cp myapp.jar Main
-
-# 移除非法访问警告 (JDK 16-)
+# JDK 9-15: 允许非法访问 (默认警告)
 java --illegal-access=permit \
     -cp myapp.jar Main
 
-# JDK 17+ 默认拒绝
-java --illegal-access=deny \
+# JDK 16: 默认强封装，但可绕过
+java --add-opens java.base/java.lang=ALL-UNNAMED \
+    -cp myapp.jar Main
+
+# JDK 17+: 完全强封装，--illegal-access 选项已移除
+# 必须显式使用 --add-opens 和 --add-exports
+java --add-opens=java.base/java.lang=ALL-UNNAMED \
+    --add-exports=java.base/sun.security.x509=ALL-UNNAMED \
     -cp myapp.jar Main
 ```
 
@@ -443,8 +524,12 @@ Automatic-Module-Name: com.example.mylib
 ### 自定义模块层
 
 ```java
-import java.lang.module.*;
-import java.lang.reflect.*;
+import java.lang.module.Configuration;
+import java.lang.module.ModuleFinder;
+import java.lang.module.ModuleReference;
+import java.lang.reflect.Method;
+import java.nio.file.Paths;
+import java.util.Set;
 
 public class LayerExample {
     public static void main(String[] args) throws Exception {
@@ -453,7 +538,8 @@ public class LayerExample {
 
         // 配置新模块
         Configuration config = bootLayer.configuration()
-            .resolve(ModuleFinder.of(),
+            .resolve(
+                ModuleFinder.of(),
                 ModuleFinder.of(Paths.get("mods")),
                 Set.of("com.example.dynamic"));
 
@@ -462,8 +548,8 @@ public class LayerExample {
             config, ClassLoader.getSystemClassLoader());
 
         // 加载类
-        Class<?> clazz = Class.forName(
-            layer, "com.example.dynamic.Main");
+        Class<?> clazz = layer.findLoader("com.example.dynamic")
+            .loadClass("com.example.dynamic.Main");
         Method main = clazz.getMethod("main", String[].class);
         main.invoke(null, (Object) new String[0]);
     }
@@ -484,10 +570,14 @@ public class LayerExample {
 **JEP 文档:**
 - [JEP 200: The Modular JDK](https://openjdk.org/jeps/200)
 - [JEP 261: Module System](https://openjdk.org/jeps/261)
+- [JEP 260: Encapsulate Most Internal APIs](https://openjdk.org/jeps/260)
 - [JEP 282: jlink](https://openjdk.org/jeps/282)
-- [JEP 343/392/384/394: jpackage](https://openjdk.org/jeps/343)
-- [JEP 403: Strong Encapsulation](https://openjdk.org/jeps/403)
-- [JEP 467: Module Import Declarations](https://openjdk.org/jeps/467)
+- [JEP 343: Packaging Tool (Incubator)](https://openjdk.org/jeps/343)
+- [JEP 392: Packaging Tool](https://openjdk.org/jeps/392)
+- [JEP 396: Strongly Encapsulate JDK Internals by Default](https://openjdk.org/jeps/396)
+- [JEP 403: Strongly Encapsulate JDK Internals](https://openjdk.org/jeps/403)
+- [JEP 476: Module Import Declarations (Preview)](https://openjdk.org/jeps/476)
+- [JEP 511: Module Import Declarations](https://openjdk.org/jeps/511)
 
 **技术文档:**
 - [JPMS Guide](https://openjdk.org/projects/jigsaw/)

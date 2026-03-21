@@ -1,16 +1,17 @@
 # 模块系统演进时间线
 
-Java 模块系统 (JPMS) 从 JDK 9 到 JDK 26 的完整演进历程。
+Java 模块系统 (JPMS) 从 JDK 9 到 JDK 25 的完整演进历程。
 
 ---
 
 ## 时间线概览
 
 ```
-JDK 8 ───── JDK 9 ───── JDK 11 ───── JDK 16 ───── JDK 17 ───── JDK 21 ───── JDK 26
+JDK 8 ───── JDK 9 ───── JDK 11 ───── JDK 16 ───── JDK 17 ───── JDK 23 ───── JDK 25
  │             │             │             │             │             │             │
-Classpath    JPMS         模块化       增强         封装         动态模块     模块图
-             (JEP 261)    JAR          强化         遗留         验证         分析
+Classpath    JPMS         jlink        jpackage      强封装      模块导入     模块导入
+             (JEP 261)    定制         正式版       (JEP 403)    预览         正式
+                          运行                                   (JEP 476)   (JEP 511)
 ```
 
 ---
@@ -348,14 +349,36 @@ module com.example.myapp {
 
 ---
 
-## JDK 21+ - 动态模块
+## JDK 23+ - 模块导入声明
+
+> **JEP 476** (JDK 23 预览) → **JEP 511** (JDK 25 正式)
+
+### 基本用法
+
+```java
+// 以前需要多个 import
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.io.IOException;
+
+// 现在只需一行
+import module java.base;
+
+public class Example {
+    public static void main(String... args) {
+        List<String> list = new ArrayList<>();
+        Map<String, Integer> map = Map.of();
+    }
+}
+```
 
 ### 动态模块加载
 
 ```java
 import java.lang.module.*;
 
-// 动态配置模块层
+// 动态配置模块层 (JDK 9+)
 public class DynamicModuleLoader {
 
     public static void loadModuleFromJar(Path jarPath) throws Exception {
@@ -365,14 +388,12 @@ public class DynamicModuleLoader {
         ModuleFinder finder = ModuleFinder.of(jarPath);
 
         // 模块配置
-        ModuleConfiguration config = ModuleLayer.boot()
-            .configuration()
-            .requires(finder.findAll());
+        Configuration config = bootLayer.configuration()
+            .resolve(finder, ModuleFinder.of(), Set.of("com.example.plugin"));
 
         // 新模块层
         ModuleLayer layer = bootLayer.defineModulesWithOneLoader(
             config,
-            finder,
             ClassLoader.getSystemClassLoader()
         );
 
@@ -498,15 +519,30 @@ jdeps --reverse --module-path lib \
 
 | 版本 | 特性 | JEP |
 |------|------|-----|
-| JDK 9 | **JPMS** | JEP 261 |
-| JDK 11 | jlink 定制运行时 | - |
-| JDK 16 | 强封装 | - |
-| JDK 17 | 遗留封装 | - |
-| JDK 21 | 动态模块加载 | - |
+| JDK 9 | **JPMS** | JEP 200, 261 |
+| JDK 9 | jlink | JEP 282 |
+| JDK 9 | 内部 API 封装 | JEP 260 |
+| JDK 14 | jpackage (孵化) | JEP 343 |
+| JDK 15 | jpackage (孵化) | JEP 384 |
+| JDK 16 | jpackage 正式 | JEP 392 |
+| JDK 16 | 强封装默认 | JEP 396 |
+| JDK 17 | 完全强封装 | JEP 403 |
+| JDK 23 | 模块导入声明 (预览) | JEP 476 |
+| JDK 24 | 模块导入声明 (二次预览) | JEP 476 |
+| JDK 25 | 模块导入声明 (正式) | JEP 511 |
 
 ---
 
 ## 相关链接
 
+- [JEP 200: The Modular JDK](https://openjdk.org/jeps/200)
 - [JEP 261: Module System](https://openjdk.org/jeps/261)
+- [JEP 260: Encapsulate Most Internal APIs](https://openjdk.org/jeps/260)
+- [JEP 282: jlink](https://openjdk.org/jeps/282)
+- [JEP 343: Packaging Tool (Incubator)](https://openjdk.org/jeps/343)
+- [JEP 392: Packaging Tool](https://openjdk.org/jeps/392)
+- [JEP 396: Strongly Encapsulate JDK Internals by Default](https://openjdk.org/jeps/396)
+- [JEP 403: Strongly Encapsulate JDK Internals](https://openjdk.org/jeps/403)
+- [JEP 476: Module Import Declarations (Preview)](https://openjdk.org/jeps/476)
+- [JEP 511: Module Import Declarations](https://openjdk.org/jeps/511)
 - [jlink Tool](https://docs.oracle.com/en/java/javase/21/docs/specs/man/jlink.html)
