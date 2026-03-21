@@ -1,6 +1,6 @@
 # Vector API (SIMD 向量化)
 
-> **状态**: 🥚 Incubator | **模块**: jdk.incubator.vector | **JEP**: 338, 414, 417, 426, 438, 448, 508, 529
+> **状态**: 🥚 Incubator | **模块**: jdk.incubator.vector | **JEP**: 338, 414, 417, 426, 438, 448, 460, 469, 489, 508, 529
 
 [← 返回核心](..) | [时间线](timeline.md) | [使用指南](usage.md) | [平台支持](platform.md) | [贡献者](contributors.md) | [各版本详情](versions.md)
 
@@ -316,7 +316,7 @@ short bits = Float16.float16ToRawShortBits(value);
 **可能的路线图**:
 ```
 Float32 (现有) ─────────────────────────────────────►
-Float16 (JDK 21+) ──────────────────────────────────►
+Float16 (JDK 24+) ──────────────────────────────────►
 BFloat16 (未来?) ───────────────────────────────────►
 Float8 (未计划) ──────────────────────────────────────►
 ```
@@ -540,7 +540,7 @@ st1w     z0.d, p0/zr, [x0, x1]
 **应用场景**:
 1. **数据预处理**: 特征归一化、数据增强
 2. **小批量推理**: 矩阵向量乘法 (MLP 层)
-3. **Float16 支持** (JDK 21+): 节省内存带宽
+3. **Float16 支持** (JDK 24+): 节省内存带宽
 ### Q: C2 编译器如何处理 Vector API？
 **答案**: 通过 intrinsic 和机器码生成。
 **编译流程**: 见 [C2 编译器内部](#c2-编译器内部)
@@ -597,6 +597,9 @@ java VectorAdd
 - [JEP 426](/jeps/language/jep-426.md)
 - [JEP 438](/jeps/language/jep-438.md)
 - [JEP 448](/jeps/tools/jep-448.md)
+- [JEP 460](/jeps/language/jep-460.md)
+- [JEP 469](/jeps/language/jep-469.md)
+- [JEP 489](/jeps/language/jep-489.md)
 - [JEP 508](/jeps/concurrency/jep-508.md)
 - [JEP 529](/jeps/language/jep-529.md)
 - [JEP 401](/jeps/language/jep-401.md)
@@ -617,22 +620,23 @@ java VectorAdd
 | JDK 18 | 417 | 🥚 Third Incubator |
 | JDK 19 | 426 | 🥚 Fourth Incubator |
 | JDK 20 | 438 | 🥚 Fifth Incubator |
-| JDK 21 | 448 | 🥚 Sixth Incubator + Float16 |
-| JDK 22 | - | 🥚 Seventh Incubator |
-| JDK 23 | - | 🥚 Eighth Incubator |
-| JDK 24 | - | 🥚 Ninth Incubator |
-| JDK 25 | 508 | 🥚 Tenth Incubator |
-| **JDK 26** | 529 | 🥚 **Eleventh Incubator (GA 2026-03-17)** |
+| JDK 21 | 448 | 🥚 Sixth Incubator |
+| JDK 22 | 460 | 🥚 Seventh Incubator |
+| JDK 23 | 469 | 🥚 Eighth Incubator |
+| JDK 24 | 489 | 🥚 Ninth Incubator + Float16 |
+| JDK 25 | 508 | 🥚 Tenth Incubator + FFM 迁移, VectorShuffle + MemorySegment, Float16 自动向量化 |
+| **JDK 26** | 529 | 🥚 **Eleventh Incubator (GA 2026-03-17)** - 无实质性 API 变更 |
 | JDK 27 | - | 🔄 开发中 |
 > **注意**: Vector API 在 JDK 26 GA 中仍然是 Incubator 状态
 > 已孵化 **5 年** (JDK 16-26)，跨越 **11 个版本**，是 OpenJDK 历史上孵化时间最长的 API 之一
-### JDK 26 重要更新
+### JDK 25 重要更新 (JEP 508)
 | 特性 | JBS | 描述 |
 |------|-----|------|
 | **FFM API 集成** | [8353786](https://bugs.openjdk.org/browse/JDK-8353786) | 迁移数学库支持到 FFM API |
 | **VectorShuffle + MemorySegments** | [8351993](https://bugs.openjdk.org/browse/JDK-8351993) | 与 MemorySegments 交互 |
-| **UMIN/UMAX 归约** | [8362279](https://bugs.openjdk.org/browse/JDK-8362279) | 无符号最小/最大归约 |
-| **VectorShape 公开** | [8356634](https://bugs.openjdk.org/browse/JDK-8356634) | `largestShapeFor()` 公开 |
+| **Float16 自动向量化** | - | x64 CPU 上 Float16 运算自动向量化 |
+
+> **注意**: JDK 26 (JEP 529) 相比 JDK 25 无实质性 API 或实现变更
 ---
 ## 16. 为什么孵化这么慢？
 Vector API 已孵化 5 年跨越 11 个版本 (JDK 16-26)，主要原因：
@@ -670,11 +674,14 @@ JDK 20 (2023-03) ── JEP 438 ── Fifth Incubator
     │                               ├── 间接加载
     │                               └── Shuffle 增强
 JDK 21 (2023-09) ── JEP 448 ── Sixth Incubator
+    │
+JDK 22 (2024-03) ── JEP 460 ── Seventh Incubator
+    │
+JDK 23 (2024-09) ── JEP 469 ── Eighth Incubator
+    │
+JDK 24 (2025-03) ── JEP 489 ── Ninth Incubator
     │                               ├── Float16 支持
-    │                               └── CPUFeatures API
-JDK 22-24 (2024-25) ── 继续孵化
-    │                               ├── 性能优化
-    │                               └── UMIN/UMAX
+    │                               └── selectFrom/rearrange 改进
 JDK 25 (2025-09) ── JEP 508 ── Tenth Incubator
     │                               └── FFM 迁移开始
 JDK 26 (2026-03-17) ── JEP 529 ── Eleventh Incubator (GA)

@@ -119,7 +119,7 @@
 | 人物 | 角色 | 立场 | 现状 |
 |------|------|------|------|
 | **Doug Simon** | GraalVM 负责人 | 推动 Graal  adoption | ✅ 活跃 |
-| **Thomas Wuerthinger** | Truffle 创始人 | 多语言愿景 | ⚠️ 减少参与 |
+| **Thomas Wuerthinger** | GraalVM 创始人, Senior Research Director | 多语言愿景 | ⚠️ 减少日常参与 |
 | **Vladimir Kozlov** | HotSpot 负责人 | 保守稳健 | ✅ 活跃 |
 | **John Rose** | JVM 架构师 | JVMCI 推动者 | ✅ 活跃 |
 
@@ -128,7 +128,7 @@
 | 时间 | 事件 | 影响 |
 |------|------|------|
 | **2018** | Oracle 收购 Graal 团队剩余成员 | 完全 Oracle 控制 |
-| **2020** | Thomas Wuerthinger 减少日常参与 | 战略顾问角色 |
+| **2020** | Thomas Wuerthinger 减少日常开发 | 仍为 Senior Research Director |
 | **2021** | JDK 17 移除 Graal | 团队士气受挫 |
 | **2023** | Oracle 裁员 | Graal 团队 -30% |
 | **2024** | 团队重组，聚焦 Native Image | 方向调整 |
@@ -156,45 +156,46 @@
 
 ## 4. 许可争议
 
-### CE vs EE 功能拆分 (2020)
+### CE vs EE 功能差异 (2020-2023)
 
-**GraalVM 20.0 发布**:
+**GraalVM CE vs EE** (2020 时期):
 
-| 功能 | Community Edition | Enterprise Edition | 争议等级 |
+| 功能 | Community Edition | Enterprise Edition | 差异 |
 |------|-------------------|-------------------|----------|
-| Graal JIT | ✅ 完整 | ✅ + 优化 | 🟢 低 |
-| Native Image | ✅ 完整 | ✅ + 优化 | 🟢 低 |
-| GraalJS | ✅ | ✅ + Node.js 兼容 | 🟡 中 |
-| GraalPython | ❌ | ✅ | 🔴 高 |
-| TruffleRuby | ❌ | ✅ | 🔴 高 |
-| FastR | ❌ | ✅ | 🔴 高 |
-| Sulong (LLVM) | ❌ | ✅ | 🔴 高 |
+| Graal JIT | ✅ 完整 | ✅ + 额外优化 (PGO, G1 for NI) | 🟢 低 |
+| Native Image | ✅ 完整 | ✅ + 额外优化 | 🟢 低 |
+| GraalJS | ✅ (installable) | ✅ + 额外优化 | 🟡 中 |
+| GraalPython | ✅ (installable, 实验性) | ✅ + 额外优化 | 🟡 中 |
+| TruffleRuby | ✅ (installable, 实验性) | ✅ + 额外优化 | 🟡 中 |
+| FastR | ✅ (installable, 实验性) | ✅ + 额外优化 | 🟡 中 |
+| Sulong (LLVM) | ✅ (installable) | ✅ + 额外优化 | 🟢 低 |
 
-**社区反弹** (GitHub Issue #2341, 2020):
+**注**: Python/Ruby/R/LLVM 均可在 CE 中通过 `gu install` 安装使用，但 EE 包含额外的性能优化。
 
-> *"Moving Python/Ruby/R to EE breaks our open-source project. This feels like bait-and-switch."*
-> — 500+ 点赞
+**2023 年 6 月: CE/EE 合并为 "Oracle GraalVM"**:
+- GraalVM Enterprise Edition 停产
+- 新的 "Oracle GraalVM" 在 GFTC 许可下免费使用 (包括生产环境)
+- 原 EE 的性能优化 (如 PGO、G1 for Native Image) 现免费可用
+- CE 继续以 GPLv2+CE 许可开源发布
 
-**Oracle 回应**:
-> *"Enterprise features require dedicated support. CE focuses on core Java + Native Image. EE funds ongoing Truffle language development."*
+### GFTC 许可 (2023 年后)
 
-### GFTC 许可争议
+**Oracle GraalVM (GFTC 许可)**:
 
-**GraalVM Enterprise License**:
+| 条款 | 内容 | 说明 |
+|------|------|------|
+| **免费使用** | ✅ 允许生产使用 | 包括商业环境 |
+| **技术支持** | ❌ 不含支持 | 需付费购买 Java SE 订阅 |
+| **更新** | ✅ 季度更新 | 同 Oracle JDK 周期 |
+| **再分发** | ⚠️ 受限 | 不可商业捆绑分发 |
 
-| 条款 | 内容 | 争议点 |
-|------|------|--------|
-| **免费使用** | ✅ 允许生产使用 | 类似 Oracle JDK |
-| **技术支持** | ❌ 不含支持 | 需付费购买 |
-| **更新** | ✅ 季度更新 | 同 Oracle JDK |
-| **再分发** | ⚠️ 受限 | 不可商业捆绑 |
-
-**与 OpenJDK 对比**:
+**与 OpenJDK 和 CE 对比**:
 ```
-OpenJDK (GPLv2+CE):        GraalVM CE (GPLv2+CE):     GraalVM EE (GFTC):
-• 所有用途免费             • 所有用途免费             • 有限制的免费
-• 社区支持                 • 社区支持                 • 仅付费支持
+OpenJDK (GPLv2+CE):        GraalVM CE (GPLv2+CE):     Oracle GraalVM (GFTC):
+• 所有用途免费             • 所有用途免费             • 所有用途免费
+• 社区支持                 • 社区支持                 • 付费支持可选
 • 无限分发                 • 无限分发                 • 不可商业捆绑
+• 无额外优化               • 无额外优化               • 包含全部优化 (PGO 等)
 ```
 
 ---
@@ -205,8 +206,8 @@ OpenJDK (GPLv2+CE):        GraalVM CE (GPLv2+CE):     GraalVM EE (GFTC):
 
 | 版本 | 时间 | 关键特性 | 确定性 |
 |------|------|----------|--------|
-| **GraalVM 25** | 2025 Q2 | JDK 24 基线 | ✅ 已确认 |
-| **GraalVM 26** | 2026 Q1 | JDK 26 AOT 集成 | ⚠️ 计划中 |
+| **GraalVM 25** | 2025-09-16 | JDK 25 基线 | ✅ 已发布 |
+| **GraalVM 26** | 2026 | JDK 26 AOT 集成 | ⚠️ 计划中 |
 | **GraalVM 27+** | 2026+ | Vector API, Valhalla | 🔵 推测 |
 
 ### 开放问题
@@ -223,9 +224,9 @@ OpenJDK (GPLv2+CE):        GraalVM CE (GPLv2+CE):     GraalVM EE (GFTC):
 - 2023 裁员引发担忧
 - Native Image 云原生聚焦显示持续投资
 
-**4. CE/EE 拆分会持续吗？**
-- 当前模式稳定
-- 社区接受 CE 用于 Java 工作负载
+**4. CE/EE 拆分已结束**
+- 2023 年 6 月 CE/EE 合并为 Oracle GraalVM (GFTC)
+- CE 继续以 GPLv2+CE 开源提供
 
 ### 竞争格局
 

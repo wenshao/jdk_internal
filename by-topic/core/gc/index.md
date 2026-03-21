@@ -526,7 +526,7 @@ java -XX:+UseShenandoahGC -jar app.jar
 │  Oracle (70%+)                                                  │
 │  ├── G1 GC 主导维护 (Thomas Schatzl, Albert Yang)              │
 │  ├── ZGC 创始团队 (Per Lidén, Erik Österlund, Stefan Karlsson) │
-│  └── Shenandoah 共同维护 (Zhengyu Gu)                          │
+│  └── Shenandoah 共同维护 (Stefan Karlsson)                     │
 │                                                                 │
 │  Amazon (10%+)                                                  │
 │  ├── Aleksey Shipilev: Shenandoah 维护者 (ex-Red Hat)           │
@@ -597,7 +597,7 @@ Amazon:   ██████                  10%
 
 | 公司 | 贡献者 | PRs | 主要 JEP | 核心文件 |
 |------|--------|-----|----------|----------|
-| **Amazon** | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 324+ | JEP 379 | `shenandoahHeap.cpp` |
+| **Amazon** | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 324+ | - | `shenandoahHeap.cpp` |
 | **Datadog** | [Zhengyu Gu](/by-contributor/profiles/zhengyu-gu.md) | 217+ | - | `shenandoahMark.cpp` |
 | **Amazon** | [William Kemper](/by-contributor/profiles/william-kemper.md) | 112+ | JEP 521 | `shenandoahGenerationalHeap.cpp` |
 | **Datadog** | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | 163+ | JEP 519 | `shenandoahBarrierSet.cpp` |
@@ -2006,7 +2006,7 @@ class ShenandoahHeap {
 │  ├── 战略目标：提供 Oracle JDK 替代方案，推动开源生态           │
 │  ├── 主导 GC: Shenandoah GC (低延迟替代方案)                   │
 │  ├── 投入规模：10+ GC 工程师 (与 Oracle 合作)                   │
-│  ├── 研发基地：捷克 (Roman Kennke)                              │
+│  ├── 研发基地：欧洲 (核心人员已转至 Amazon/Datadog)              │
 │  └── 商业化：RHEL 订阅支持，OpenJDK 贡献                        │
 │                                                                 │
 │  Amazon (云服务商)                                              │
@@ -2100,7 +2100,7 @@ GC 技术代际演进图
 第四代 (2023-至今): 分代超低延迟
 ┌────────────────────────────────────────────────────────────────┐
 │ JDK 21-26: 分代 ZGC, 分代 Shenandoah                            │
-│ 特点：结合分代收集和低延迟，吞吐量提升 15-20%                   │
+│ 特点：结合分代收集和低延迟，在特定工作负载下吞吐量提升 10-20%    │
 │ 趋势：NUMA 优化，硬件感知，云原生优化                           │
 └────────────────────────────────────────────────────────────────┘
 ```
@@ -2236,12 +2236,12 @@ GC 技术代际演进图
 | **2013** | JDK 7u4 改进版 | 设计启动 (Per Lidén) | - |
 | **2017** | JDK 9 成为默认 GC | - | - |
 | **2018** | JDK 11 持续优化 | JDK 11 实验性发布 | 设计启动 (Red Hat) |
-| **2019** | JDK 12 可中断 Mixed GC | JDK 14 实验性改进 | JDK 15 生产就绪 |
-| **2020** | JDK 15 持续改进 | JDK 15 正式发布 | - |
-| **2021** | JDK 17 Region 固定 | JDK 17 线程栈扫描 | JDK 21 分代预览 |
-| **2023** | JDK 21 持续优化 | JDK 21 分代正式发布 | - |
-| **2024** | JDK 23 分代默认 (JEP 474) | JDK 24 移除非分代 (JEP 490) | JDK 24 分代实验 (JEP 404) |
-| **2025** | JDK 25 持续优化 | JDK 24 仅分代模式 | JDK 25 分代生产就绪 (JEP 521) |
+| **2019** | JDK 12 可中断 Mixed GC | JDK 12 持续改进 | JDK 12 实验性引入 (JEP 189) |
+| **2020** | JDK 15 持续改进 | JDK 15 正式发布 | JDK 15 生产就绪 (JEP 379) |
+| **2021** | JDK 17 Region 固定 | JDK 17 线程栈扫描 | - |
+| **2023** | JDK 21 持续优化 | JDK 21 分代正式发布 | JDK 21 分代预研 |
+| **2024** | JDK 23 持续优化 | JDK 23 分代默认 (JEP 474), JDK 24 移除非分代 (JEP 490) | JDK 24 分代实验 (JEP 404) |
+| **2025** | JDK 25 持续优化 | JDK 25 持续优化 | JDK 25 分代生产就绪 (JEP 521) |
 | **2026** | JDK 26 JEP 522 吞吐优化 | JDK 26 NUMA 优化 | JDK 26 云场景优化 |
 
 ### 核心专利布局
@@ -2560,7 +2560,7 @@ Oracle GC 团队评估：
 ```
 
 **结果**：
-- 分代 ZGC 吞吐量提升 15-20%
+- 分代 ZGC 吞吐量在特定工作负载下提升 10-15%
 - 停顿时间保持 <10ms
 - 用户接受度高于预期
 
@@ -2577,15 +2577,15 @@ Oracle GC 团队评估：
 - 与 Oracle ZGC 形成竞争
 - 推动低延迟 GC 技术创新
 
-加入 Oracle 后 (2023-至今)：
+加入 Amazon 后 (2023-至今)：
 - 继续 Shenandoah 维护
-- 促进 ZGC/Shenandoah 技术交流
+- Amazon Corretto GC 优化
 - 主导 JEP 503 (移除 32 位 x86)
 
 行业影响：
-- 减少派系斗争，促进合作
-- Shenandoah 在 Oracle 内部获得更好支持
-- 用户受益于技术融合
+- 技术延续性：核心维护者保持活跃
+- Shenandoah 在 Amazon Corretto 中获得更多投入
+- 用户受益于云场景优化
 ```
 
 #### William Kemper：Red Hat → Amazon
@@ -3965,7 +3965,7 @@ env.java.opts.taskmanager: -Xmx4g -Xms4g
 - 写屏障从 50 条指令减少到 12 条
 
 **CMS (Concurrent Mark Sweep)**
-- JDK 6 引入的并发标记清除收集器
+- JDK 1.4.1 引入的并发标记清除收集器
 - JDK 9 弃用，JDK 14 移除
 - 被 G1 GC 取代
 
@@ -4044,7 +4044,7 @@ env.java.opts.taskmanager: -Xmx4g -Xms4g
 **Mark Word (标记字)**
 - 对象头的一部分
 - 存储锁状态、GC 年龄、hashCode 等
-- JDK 26 紧凑对象头优化
+- JDK 25 紧凑对象头优化 (JEP 519)
 
 **Mixed GC (混合 GC)**
 - G1 GC 回收年轻代 + 部分老年代
@@ -4178,7 +4178,7 @@ env.java.opts.taskmanager: -Xmx4g -Xms4g
 | **JEP 522** | G1 GC Throughput | [JEP 522](/jeps/gc/jep-522.md) |
 | **JEP 521** | Generational Shenandoah | [JEP 521](/jeps/gc/jep-521.md) |
 | **JEP 519** | Compact Object Headers | [JEP 519](/jeps/gc/jep-519.md) |
-| **JEP 474** | Generational ZGC Improvements | [JEP 474](/jeps/gc/jep-474.md) |
+| **JEP 474** | ZGC: Generational Mode by Default | [JEP 474](/jeps/gc/jep-474.md) |
 | **JEP 439** | Generational ZGC | [JEP 439](/jeps/gc/jep-439.md) |
 
 ---
@@ -4384,7 +4384,7 @@ git log --oneline -- src/hotspot/share/gc/shenandoah/
 - [JEP 519](/jeps/gc/jep-519.md) - Roman Kennke (Datadog)
 - [JEP 439](/jeps/gc/jep-439.md) - Stefan Karlsson (Oracle)
 - [JEP 474](/jeps/gc/jep-474.md) - Stefan Karlsson (Oracle)
-- [JEP 379](/jeps/gc/jep-379.md) - Aleksey Shipilev (Amazon)
+- [JEP 379](/jeps/gc/jep-379.md) - Roman Kennke (Red Hat, 现 Datadog)
 - [JEP 333](/jeps/gc/jep-333.md) - Per Lidén (Oracle)
 
 **贡献者档案**:

@@ -35,13 +35,11 @@
 | AOT 编译 | 有限 (CDS) | Native Image |
 | 多语言 | 不支持 | Truffle 支持 |
 | 启动时间 | 秒级 | 毫秒级 (NI) |
-| 许可证 | GPLv2+CE | GPLv2+CE / GFTC |
+| 许可证 | GPLv2+CE | CE: GPLv2+CE / Oracle: GFTC |
 
 ### Q3: GraalVM 是免费的吗？
 
-**A**: 是的，GraalVM Community Edition (CE) 是免费的，基于 GPLv2+CE 许可证。
-
-Enterprise Edition (EE) 需要付费，包含额外功能和支持。
+**A**: 是的。自 2023 年 6 月起，原 Enterprise Edition 已合并为 "Oracle GraalVM"，在 GFTC 许可下免费使用 (包括生产环境)。GraalVM Community Edition (CE) 基于 GPLv2+CE 许可证，也是免费的。
 
 ### Q4: 如何安装 GraalVM？
 
@@ -56,11 +54,11 @@ java -version
 
 ### Q5: GraalVM 支持哪些 JDK 版本？
 
-| GraalVM 版本 | JDK 基线 | 支持周期 |
-|--------------|----------|----------|
-| GraalVM 22 | JDK 17 | 至 2029 |
-| GraalVM 24 | JDK 21 | 至 2031 |
-| GraalVM 25 | JDK 24 | 至 2027 |
+| GraalVM 版本 | JDK 基线 | 说明 |
+|--------------|----------|------|
+| GraalVM for JDK 17 | JDK 17 | LTS |
+| GraalVM for JDK 21 | JDK 21 | LTS |
+| GraalVM 25 | JDK 25 | 2025-09-16 发布, LTS |
 
 ---
 
@@ -215,15 +213,17 @@ native-image --pgo -jar app.jar
 
 ### Q16: GraalVM 支持哪些语言？
 
-| 语言 | Community | Enterprise | 状态 |
-|------|-----------|------------|------|
-| **Java** | ✅ | ✅ | 生产就绪 |
-| **JavaScript** | ✅ | ✅ | 生产就绪 |
-| **Python** | ❌ | ✅ | 实验性 |
-| **Ruby** | ❌ | ✅ | 实验性 |
-| **R** | ❌ | ✅ | 实验性 |
-| **LLVM** | ❌ | ✅ | 实验性 |
-| **WebAssembly** | ✅ | ✅ | 实验性 |
+| 语言 | CE / Oracle GraalVM | 状态 |
+|------|---------------------|------|
+| **Java** | ✅ | 生产就绪 |
+| **JavaScript** (GraalJS) | ✅ | 生产就绪 |
+| **Python** (GraalPy) | ✅ | 实验性 → 稳定化中 |
+| **Ruby** (TruffleRuby) | ✅ | 实验性 → 稳定化中 |
+| **R** (FastR) | ✅ | 实验性 (维护减少) |
+| **LLVM** (Sulong) | ✅ | 实验性 |
+| **WebAssembly** | ✅ | 实验性 |
+
+**注**: 自 2023 年 6 月起 CE 和 EE 已合并，所有语言均可免费使用。
 
 ### Q17: 如何在 Java 中运行 Python 代码？
 
@@ -346,9 +346,9 @@ native-image --debug-attach -jar app.jar
 
 | JDK 版本 | 推荐 GraalVM |
 |----------|--------------|
-| JDK 17 | GraalVM 22.x |
-| JDK 21 | GraalVM 24.x |
-| JDK 24 | GraalVM 25.x |
+| JDK 17 | GraalVM for JDK 17 |
+| JDK 21 | GraalVM for JDK 21 |
+| JDK 25 | GraalVM 25 |
 
 ### Q26: 如何在 Docker 中使用 GraalVM？
 

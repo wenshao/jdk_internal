@@ -59,7 +59,7 @@ Java 语言特性演进项目：让 Java 更简洁、更安全、更易表达。
 | **Sealed Classes** | JDK 17 | JEP 409 |
 | **Pattern Matching for switch** | JDK 21 | JEP 441 |
 | **Record Patterns** | JDK 21 | JEP 440 |
-| **Unnamed Patterns & Variables** | JDK 21 | JEP 443 |
+| **Unnamed Patterns & Variables** | JDK 22 | JEP 456 |
 | **Implicit Classes** | JDK 25 | JEP 512 |
 | **Module Import Declarations** | JDK 25 | JEP 511 |
 | **Flexible Constructor Bodies** | JDK 25 | JEP 513 |
@@ -203,6 +203,7 @@ public non-sealed class Square implements Shape {
     // non-sealed 允许继续扩展
     private final double side;
     public Square(double side) { this.side = side; }
+    public double side() { return side; }
     public double area() { return side * side; }
 }
 
@@ -211,7 +212,7 @@ String describe(Shape s) {
     return switch (s) {
         case Circle c    -> "Circle with radius " + c.radius();
         case Rectangle r -> "Rectangle " + r.width() + "x" + r.height();
-        case Square sq   -> "Square with side " + sq.side;
+        case Square sq   -> "Square with side " + sq.side();
         // 如果缺少某个 case，编译器会报错
     };
 }
@@ -243,7 +244,7 @@ String query = """
     """;
 
 // 文本块缩进和格式化
-// \s 保留尾部空格，\< 取消换行
+// \s 保留尾部空格，\ 取消换行
 String text = """
     Line 1\s\s
     Line 2 \
@@ -306,7 +307,7 @@ int numLetters = switch (day) {
 };
 ```
 
-### 7. Unnamed Patterns & Variables (JEP 443)
+### 7. Unnamed Patterns & Variables (JEP 456)
 
 ```java
 // 使用 _ 忽略不关心的值
@@ -333,16 +334,16 @@ try {
     logger.error("Failed");
 }
 
-// for-each 中忽略键
-for (var (_, value) : map.entrySet()) {
-    System.out.println(value);
+// try-with-resources 中忽略资源变量
+try (var _ = ScopedContext.open()) {
+    doWork();
 }
 ```
 
-### 8. Implicit Classes & Instance Main Methods (JEP 477)
+### 8. Compact Source Files & Instance Main Methods (JEP 512)
 
 ```java
-// 单文件程序无需类声明 (JDK 23 预览)
+// 单文件程序无需类声明 (JDK 25 正式)
 // HelloWorld.java
 void main() {
     System.out.println("Hello, World!");
@@ -422,9 +423,9 @@ String formatted = switch (value) {
 // 结合守卫语法
 String checkRange(Object obj) {
     return switch (obj) {
-        case int i && i > 0  -> "positive int";
-        case int i && i < 0  -> "negative int";
-        case int i           -> "zero";
+        case int i when i > 0  -> "positive int";
+        case int i when i < 0  -> "negative int";
+        case int i             -> "zero";
         default              -> "not an int";
     };
 }
@@ -445,7 +446,7 @@ if (num instanceof Integer i) {
 |------|------|--------|
 | **2017** | - | Project Amber 启动 |
 | **2018** | JDK 10 | Local-Variable Type Inference (var) |
-| **2019** | JDK 14 | Switch Expressions (正式, JEP 361) |
+| **2020** | JDK 14 | Switch Expressions (正式, JEP 361) |
 | **2020** | JDK 14 | instanceof Pattern Matching (预览) |
 | **2020** | JDK 15 | Text Blocks (正式) |
 | **2021** | JDK 16 | Records (正式) |
@@ -453,12 +454,13 @@ if (num instanceof Integer i) {
 | **2021** | JDK 17 | Sealed Classes (正式) |
 | **2023** | JDK 21 | Record Patterns (正式) |
 | **2023** | JDK 21 | Pattern Matching for switch (正式) |
-| **2023** | JDK 21 | Unnamed Patterns & Variables (正式) |
+| **2023** | JDK 21 | Unnamed Patterns & Variables (预览, JEP 443) |
 | **2023** | JDK 21 | String Templates (第一预览) |
+| **2024** | JDK 22 | Unnamed Patterns & Variables (正式, JEP 456) |
 | **2024** | JDK 22 | Implicit Classes (第二预览) |
 | **2024** | JDK 22 | Flexible Constructor Bodies (第一预览) |
 | **2024** | JDK 22 | String Templates (第二预览) |
-| **2024** | JDK 23 | Implicit Classes (预览) |
+| **2024** | JDK 23 | Implicit Classes (第三预览, JEP 477) |
 | **2024** | JDK 23 | Primitive Patterns (第一预览) |
 | **2024** | JDK 23 | String Templates **撤回** |
 | **2024** | JDK 23 | Flexible Constructor Bodies (第二预览) |
@@ -479,7 +481,7 @@ if (num instanceof Integer i) {
 | 贡献者 | 组织 | 角色 |
 |--------|------|------|
 | [Brian Goetz](/by-contributor/profiles/brian-goetz.md) | Oracle | 语言架构师，项目领导人 |
-| [Gavin Bierman](/by-contributor/profiles/gavin-bierman.md) | Oracle | Records, Sealed Classes |
+| [Gavin Bierman](/by-contributor/profiles/gavin-bierman.md) | Oracle | JLS 编辑，Records, Sealed Classes |
 | [Jan Lahoda](/by-contributor/profiles/jan-lahoda.md) | Oracle | javac, 模式匹配实现 |
 | Jim Laskey | Oracle | Text Blocks, String Templates |
 | Alex Buckley | Oracle | JLS 规范维护 |
@@ -564,7 +566,7 @@ Record (Amber) + Inline Class (Valhalla)
 | 字符串连接 `"\n" +` | Text Blocks `"""..."""` |
 | 转义字符 `\"` 难以阅读 | 直接使用引号 |
 | SQL/JSON 需要外部文件 | 内联多行字符串 |
-| `\s` 保留空格 | `\<` 取消换行 |
+| `\s` 保留空格 | `\` 取消换行 |
 
 ---
 
@@ -582,7 +584,7 @@ Record (Amber) + Inline Class (Valhalla)
 
 | 特性 | JEP | 撤回时间 | 原因 |
 |------|-----|----------|------|
-| **String Templates** | 430 → 459 → 465 | 2024年3月 | 安全性顾虑，设计需重新评估 |
+| **String Templates** | 430 → 459 → 465 | 2024年6月 | 安全性顾虑，设计需重新评估 |
 
 **String Templates 撤回详情**：
 - JDK 21: 第一预览 (JEP 430)
@@ -613,7 +615,7 @@ Record (Amber) + Inline Class (Valhalla)
 - [JEP 441](/jeps/language/jep-441.md)
 - [JEP 440](/jeps/language/jep-440.md)
 - [JEP 409: Sealed Classes](https://openjdk.org/jeps/409)
-- [JEP 443: Unnamed Patterns & Variables](https://openjdk.org/jeps/443)
+- [JEP 456: Unnamed Variables & Patterns](https://openjdk.org/jeps/456)
 
 ### 预览中 / 撤回的 JEP
 - [JEP 447: Statements before super (Preview)](https://openjdk.org/jeps/447)

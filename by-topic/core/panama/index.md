@@ -250,7 +250,7 @@ jextract -t com.example.bindings \
 import com.example.bindings.stdio.*;
 ```
 
-**注意**: jextract 不属于正式 JDK 发行版，作为独立工具以 [EA 构建](https://jdk.java.net/jextract/) 形式发布。当前 EA 构建基于 JDK 25，支持 C 头文件解析；C++ 支持尚在计划中。
+**注意**: jextract 不属于正式 JDK 发行版，作为独立工具以 [EA 构建](https://jdk.java.net/jextract/) 形式发布。EA 构建跟踪最新 JDK（master 分支始终对应最新版本），支持 C 头文件解析；C++ 支持尚在计划中。
 
 ---
 
@@ -311,9 +311,10 @@ struct Layout {
     char name[32];
 }
 
-// Java 中定义
+// Java 中定义 (注意: structLayout 不会自动插入对齐填充)
 MemoryLayout personLayout = MemoryLayout.structLayout(
     ValueLayout.JAVA_INT.withName("id"),
+    MemoryLayout.paddingLayout(4),                           // 4 字节填充 (对齐 double)
     ValueLayout.JAVA_DOUBLE.withName("value"),
     MemoryLayout.sequenceLayout(32, ValueLayout.JAVA_BYTE).withName("name")
 );
@@ -544,7 +545,7 @@ try (Arena arena = Arena.ofConfined()) {
 → [Arena 详解](arena.md) - 内存生命周期管理器
 
 **内容**:
-- 三种 Arena 类型的详细对比
+- 四种 Arena 类型的详细对比
 - SegmentedAllocator 分配策略
 - 生命周期管理与作用域
 - 与 ByteBuffer/Unsafe/JNI 的对比
@@ -576,9 +577,10 @@ try (Arena arena = Arena.ofConfined()) {
 
 | Arena | 生命周期 | 使用场景 |
 |-------|----------|----------|
-| **Arena.ofConfined()** | 单线程 | 高性能，单线程访问 |
-| **Arena.ofShared()** | 多线程 | 需要多线程访问 |
-| **Arena.ofAuto()** | 自动释放 | 简单场景 |
+| **Arena.ofConfined()** | 手动关闭，单线程 | 高性能，单线程访问 |
+| **Arena.ofShared()** | 手动关闭，多线程 | 需要多线程访问 |
+| **Arena.ofAuto()** | GC 自动释放 | 简单场景 |
+| **Arena.global()** | 无界 (不可关闭) | 全局常量、永久存活的段 |
 
 ```java
 // Confined Arena - 单线程

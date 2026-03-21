@@ -52,14 +52,14 @@
 │       │                                                         │
 │       ▼                                                         │
 │  ┌─────────────────────────────────────────────────────────┐   │
-│  │  Ideal Graph (HIR) - 高级中间表示                        │   │
-│  │  • 控制流图 (CFG)                                        │   │
-│  │  • 数据流分析                                            │   │
+│  │  Ideal Graph (Sea of Nodes) - 中间表示                   │   │
+│  │  • 程序依赖图 (无显式基本块)                              │   │
+│  │  • 节点浮动，语义由边决定                                  │   │
 │  └─────────────────────────────────────────────────────────┘   │
 │       │                                                         │
 │       ▼                                                         │
 │  ┌─────────────────────────────────────────────────────────┐   │
-│  │  优化阶段 (Optimizations)                                │   │
+│  │  优化阶段 (Optimizations on Ideal)                       │   │
 │  │  • 局部优化 (Local Optimization)                         │   │
 │  │  • 全局优化 (Global Optimization)                        │   │
 │  │  • 循环优化 (Loop Optimization)                          │   │
@@ -67,9 +67,9 @@
 │       │                                                         │
 │       ▼                                                         │
 │  ┌─────────────────────────────────────────────────────────┐   │
-│  │  Low Level IR (LIR) - 低级中间表示                       │   │
+│  │  MachNode IR - 机器特定 IR                                │   │
+│  │  • 指令选择 (Ideal → MachNode)                            │   │
 │  │  • 接近机器码                                            │   │
-│  │  • 指令选择                                              │   │
 │  └─────────────────────────────────────────────────────────┘   │
 │       │                                                         │
 │       ▼                                                         │
@@ -135,13 +135,13 @@
 
 ### 1. 中间表示 (IR)
 
-#### C2: Ideal Graph (分层 IR)
+#### C2: Ideal Graph (Sea of Nodes)
 
 ```
-C2 使用多层 IR:
-字节码 → HIR → LIR → 机器码
+C2 使用 Sea of Nodes IR (称为 "Ideal"):
+字节码 → Ideal (Sea of Nodes) → MachNode IR → 机器码
 
-HIR (High Level IR):
+Ideal Graph:
 ┌─────────────────────────────────────┐
 │  MethodStart                        │
 │       │                             │
@@ -157,8 +157,8 @@ HIR (High Level IR):
 └─────────────────────────────────────┘
 
 特点:
-• 控制流和数据流分离
-• 优化需要跨多层 IR
+• C2 也使用 Sea of Nodes (由 Cliff Click 首创)
+• 节点在"海洋"中浮动，语义由边决定
 • C++ 实现，难以扩展
 ```
 
@@ -256,7 +256,7 @@ GC 暂停时间:
 
 ```
 C2 内联启发式:
-├─ 最大内联深度：9 层
+├─ 最大内联深度：15 层 (MaxInlineLevel，JDK 14+ 从 9 提高到 15)
 ├─ 内联大小阈值：35 字节码
 ├─ 频率分析：基于调用计数器
 └─ 多态内联：最多 2 个目标
@@ -296,10 +296,10 @@ public int level2(int x) { return level3(x); }
 public int level3(int x) { return level4(x); }
 public int level4(int x) { return x * 2 + 1; }
 
-C2 编译后:
-• 内联 3 层 (level1 → level2 → level3)
-• level4 未内联 (达到深度限制)
-• 剩余虚调用
+C2 编译后 (MaxInlineLevel=15):
+• 通常可内联全部 4 层
+• 但在更深调用链中可能受限
+• 大方法可能因 FreqInlineSize 被拒绝
 
 Graal 编译后:
 • 内联全部 4 层

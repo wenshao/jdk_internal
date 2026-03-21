@@ -92,7 +92,7 @@ GraalVM **社区版**，免费开源版本。
 ## 5. E
 
 ### EE (Enterprise Edition)
-GraalVM **企业版**，付费版本，包含额外功能和支持。
+GraalVM **企业版** (已于 2023 年 6 月停产)。原 EE 功能已合并到免费的 Oracle GraalVM (GFTC 许可) 中。
 
 ### Escape Analysis
 **逃逸分析**。分析对象的作用范围，判断是否可以标量替换。
@@ -138,7 +138,7 @@ Oracle Labs 开发的高性能 JDK 发行版。
 - Truffle 框架
 
 ### GFTC (GraalVM Free Terms and Conditions)
-GraalVM 企业版的许可协议。
+Oracle GraalVM 的许可协议。自 2023 年 6 月起，原 Enterprise Edition 合并为 Oracle GraalVM，在 GFTC 下免费使用 (包括生产环境)。
 
 ---
 
@@ -149,13 +149,8 @@ Oracle JDK 和 OpenJDK 的默认 JVM 实现。
 
 **组件**:
 - C1 编译器
-- C2 编译器
+- C2 编译器 (使用 Sea of Nodes "Ideal" IR)
 - GC (G1, ZGC, Shenandoah)
-
-### HIR (High Level IR)
-C2 编译器的**高级中间表示**。
-
-对比：[LIR](#lir)
 
 ---
 
@@ -320,9 +315,9 @@ return x + y;
 | **AOT** | Ahead-Of-Time | 提前编译 |
 | **AST** | Abstract Syntax Tree | 抽象语法树 |
 | **CE** | Community Edition | 社区版 |
-| **EE** | Enterprise Edition | 企业版 |
+| **EE** | Enterprise Edition | 企业版 (2023 年后合并为 Oracle GraalVM) |
 | **GC** | Garbage Collection | 垃圾回收 |
-| **HIR** | High Level IR | 高级 IR |
+| **GFTC** | GraalVM Free Terms and Conditions | GraalVM 免费许可条款 |
 | **IR** | Intermediate Representation | 中间表示 |
 | **JIT** | Just-In-Time | 即时编译 |
 | **JNI** | Java Native Interface | Java 本地接口 |
