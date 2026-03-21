@@ -117,12 +117,11 @@ class MyClass {
 ### 结构化并发 (第五次预览)
 
 ```java
-try (var scope = new StructuredTaskScope<Object>()) {
+try (var scope = StructuredTaskScope.open()) {
     Subtask<String> user = scope.fork(() -> fetchUser(id));
     Subtask<List<Order>> orders = scope.fork(() -> fetchOrders(id));
 
     scope.join();  // 等待所有子任务完成
-    scope.throwIfFailed();  // 如果有失败则抛出异常
 
     return new Response(user.get(), orders.get());
 }

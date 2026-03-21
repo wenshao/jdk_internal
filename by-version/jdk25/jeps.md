@@ -73,12 +73,11 @@ void main(String[] args) {
 结构化并发简化并发任务管理。
 
 ```java
-try (var scope = new StructuredTaskScope<Object>()) {
+try (var scope = StructuredTaskScope.open()) {
     Subtask<String> user = scope.fork(() -> fetchUser(id));
     Subtask<List<Order>> orders = scope.fork(() -> fetchOrders(id));
 
     scope.join();
-    scope.throwIfFailed();
 
     return new Response(user.get(), orders.get());
 }
