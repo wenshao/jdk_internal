@@ -5,8 +5,21 @@
 > Lambda、Stream、Virtual Threads 的设计者
 
 ---
+## 目录
 
-## 概要
+1. [概要](#1-概要)
+2. [职业时间线](#2-职业时间线)
+3. [技术影响力](#3-技术影响力)
+4. [代表性工作](#4-代表性工作)
+5. [设计哲学](#5-设计哲学)
+6. [演讲与写作](#6-演讲与写作)
+7. [外部资源](#7-外部资源)
+8. [相关链接](#8-相关链接)
+
+---
+
+
+## 1. 概要
 
 Brian Goetz 是 Oracle 的 Java Language Architect，是 Java 语言演进的核心设计者。自 JDK 5 以来，他主导了众多关键语言特性的设计，包括泛型、Lambda 表达式、Stream API、以及最新的 Virtual Threads（Project Loom）。
 
@@ -28,7 +41,7 @@ Brian Goetz 是 Oracle 的 Java Language Architect，是 Java 语言演进的核
 
 ---
 
-## 职业时间线
+## 2. 职业时间线
 
 | 年份 | 事件 | 详情 |
 |------|------|------|
@@ -42,7 +55,7 @@ Brian Goetz 是 Oracle 的 Java Language Architect，是 Java 语言演进的核
 
 ---
 
-## 技术影响力
+## 3. 技术影响力
 
 ### 最重要的贡献
 
@@ -56,7 +69,7 @@ Brian Goetz 是 Oracle 的 Java Language Architect，是 Java 语言演进的核
 
 ---
 
-## 代表性工作
+## 4. 代表性工作
 
 ### 1. Lambda 表达式与 Stream API (JSR 335)
 
@@ -135,7 +148,7 @@ String formatted = switch (obj) {
 
 ---
 
-## 设计哲学
+## 5. 设计哲学
 
 ### 渐进式演进
 
@@ -162,7 +175,7 @@ Brian Goetz 强调语言的渐进式演进，而非革命性变化。
 
 ---
 
-## 演讲与写作
+## 6. 演讲与写作
 
 ### 重要演讲
 
@@ -182,7 +195,7 @@ Brian Goetz 强调语言的渐进式演进，而非革命性变化。
 
 ---
 
-## 外部资源
+## 7. 外部资源
 
 | 类型 | 链接 |
 |------|------|
@@ -196,7 +209,7 @@ Brian Goetz 强调语言的渐进式演进，而非革命性变化。
 
 ---
 
-## 相关链接
+## 8. 相关链接
 
 - [JEP 导航](https://openjdk.org/jeps/0) - 查看所有 JEP
 - [JSR 导航](https://jcp.org/en/jsr/platform) - 查看 Java 规范请求

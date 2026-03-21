@@ -7,14 +7,27 @@
 > **JEP Draft**: JEP draft: Make Shenandoah's generational mode the default
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [Basic Information](#2-basic-information)
+3. [Contribution Overview](#3-contribution-overview)
+4. [Complete PR List](#4-complete-pr-list)
+5. [Key Contributions](#5-key-contributions)
+6. [Development Style](#6-development-style)
+7. [Related Links](#7-related-links)
+8. [外部资源](#8-外部资源)
+
+---
+
+
+## 1. 概述
 
 William Kemper 是 Amazon 的 SDE III（软件开发工程师 III），专注于 Shenandoah 垃圾回收器的分代模式开发。他是 JEP 521 (Generational Shenandoah) 的主要实现者，并在 JEP draft 中提出了将 Shenandoah 的分代模式设为默认值。他曾在 Red Hat 工作，现在负责 Amazon Corretto 中 Shenandoah GC 的维护和改进。
 
 ---
 
-## Basic Information
+## 2. Basic Information
 
 | Attribute | Value |
 |-----------|-------|
@@ -34,7 +47,7 @@ William Kemper 是 Amazon 的 SDE III（软件开发工程师 III），专注于
 
 > **数据来源**: [GitHub](https://github.com/earthling-amzn), [JEP draft](https://openjdk.org/jeps/8379682), [LinkedIn](https://www.getprog.ai/profile/71722661)
 
-## Contribution Overview
+## 3. Contribution Overview
 
 ### By Category
 
@@ -53,7 +66,7 @@ William Kemper 是 Amazon 的 SDE III（软件开发工程师 III），专注于
 - **Memory Management**: Region pinning, promotion tracking
 - **Concurrent Collection**: Degenerated cycle handling, evacuation
 
-## Complete PR List
+## 4. Complete PR List
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
@@ -120,7 +133,7 @@ William Kemper 是 Amazon 的 SDE III（软件开发工程师 III），专注于
 
 > **JBS Link**: https://bugs.openjdk.org/browse/JDK-[Issue Number]
 
-## Key Contributions
+## 5. Key Contributions
 
 ### 1. JEP 521: Generational Shenandoah (JDK-8354078)
 
@@ -251,7 +264,7 @@ void ShenandoahDegeneratedGC::finish() {
 }
 ```
 
-## Development Style
+## 6. Development Style
 
 ### Code Quality Focus
 
@@ -274,7 +287,7 @@ void ShenandoahDegeneratedGC::finish() {
 - Memory pressure testing
 - Platform-specific testing
 
-## Related Links
+## 7. Related Links
 
 - **GitHub**: [earthling-amzn](https://github.com/earthling-amzn)
 - **OpenJDK**: [wkemper](https://openjdk.org/people/wkemper)
@@ -285,7 +298,7 @@ void ShenandoahDegeneratedGC::finish() {
 
 ---
 
-## 外部资源
+## 8. 外部资源
 
 ### JEP Draft
 

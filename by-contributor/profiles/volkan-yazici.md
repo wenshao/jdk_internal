@@ -8,14 +8,31 @@
 > **Organization**: Oracle
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [Basic Information](#2-basic-information)
+3. [职业历程](#3-职业历程)
+4. [Apache 软件基金会贡献](#4-apache-软件基金会贡献)
+5. [研究领域](#5-研究领域)
+6. [Contribution Overview](#6-contribution-overview)
+7. [Complete PR List](#7-complete-pr-list)
+8. [Key Contributions](#8-key-contributions)
+9. [Development Style](#9-development-style)
+10. [Related Links](#10-related-links)
+11. [协作网络](#11-协作网络)
+12. [Technical Notes](#12-technical-notes)
+
+---
+
+
+## 1. 概述
 
 Volkan Yazıcı 是 Oracle 的 Java 核心库开发者，专注于 HttpClient API 和网络基础设施。他是 Apache 软件基金会的 Logging Services PMC 成员，负责 Log4j、Log4cxx 和 Log4net 项目。在加入 Oracle 之前，曾在荷兰电商公司 bol.com 工作。
 
 ---
 
-## Basic Information
+## 2. Basic Information
 
 | Field | Value |
 |-------|-------|
@@ -36,7 +53,7 @@ Volkan Yazıcı 是 Oracle 的 Java 核心库开发者，专注于 HttpClient AP
 
 ---
 
-## 职业历程
+## 3. 职业历程
 
 | 时间 | 事件 | 详情 |
 |------|------|------|
@@ -47,7 +64,7 @@ Volkan Yazıcı 是 Oracle 的 Java 核心库开发者，专注于 HttpClient AP
 
 ---
 
-## Apache 软件基金会贡献
+## 4. Apache 软件基金会贡献
 
 Volkan 是 Apache 软件基金会 Logging Services 项目的 PMC 成员：
 
@@ -59,7 +76,7 @@ Volkan 是 Apache 软件基金会 Logging Services 项目的 PMC 成员：
 
 ---
 
-## 研究领域
+## 5. 研究领域
 
 | 领域 | 说明 |
 |------|------|
@@ -71,7 +88,7 @@ Volkan 是 Apache 软件基金会 Logging Services 项目的 PMC 成员：
 
 ---
 
-## Contribution Overview
+## 6. Contribution Overview
 
 Volkan Yazıcı is a key contributor to the Java HttpClient API and networking infrastructure. His work in JDK 26 focuses on enhancing HttpClient functionality, improving API usability, and cleaning up legacy code.
 
@@ -85,7 +102,7 @@ Volkan Yazıcı is a key contributor to the Java HttpClient API and networking i
 | Testing | 5 | Test improvements and fixes |
 | Documentation | 4 | Documentation enhancements |
 
-## Complete PR List
+## 7. Complete PR List
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
@@ -139,7 +156,7 @@ Volkan Yazıcı is a key contributor to the Java HttpClient API and networking i
 | JDK-8368528 | HttpClient.Builder.connectTimeout should accept arbitrarily large values | [JBS](https://bugs.openjdk.org/browse/JDK-8368528) |
 | JDK-8371133 | Clarify the purpose of "src/jdk.compiler/share/classes/com/sun/tools/javac/resources/ct.properties" | [JBS](https://bugs.openjdk.org/browse/JDK-8371133) |
 
-## Key Contributions
+## 8. Key Contributions
 
 ### 1. BodyPublishers.ofFileChannel (JDK-8329829)
 
@@ -210,7 +227,7 @@ Removed Solaris-specific SDP (Sockets Direct Protocol) support as part of platfo
 
 Deprecated the `setPerformancePreferences` method which was rarely used and had implementation limitations.
 
-## Development Style
+## 9. Development Style
 
 ### API Design Philosophy
 
@@ -238,7 +255,7 @@ Typical commit structure:
 3. **Async Programming**: CompletableFuture-based APIs
 4. **Security**: Connection security and validation
 
-## Related Links
+## 10. Related Links
 
 - **GitHub**: [https://github.com/vy](https://github.com/vy)
 - **Twitter/X**: [https://x.com/yazicivo](https://x.com/yazicivo)
@@ -249,7 +266,7 @@ Typical commit structure:
 
 ---
 
-## 协作网络
+## 11. 协作网络
 
 Volkan Yazıcı 与其他核心开发者紧密合作：
 
@@ -265,7 +282,7 @@ Volkan Yazıcı 与其他核心开发者紧密合作：
 > **最后更新**: 2026-03-20
 > **更新内容**: 补充 GitHub (@vy)、Twitter (@yazicivo)、LinkedIn、个人网站、Apache PMC 成员身份、教育背景、bol.com 工作经历
 
-## Technical Notes
+## 12. Technical Notes
 
 ### HttpClient Architecture
 

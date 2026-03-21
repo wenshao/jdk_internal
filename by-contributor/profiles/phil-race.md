@@ -6,14 +6,28 @@
 > **OpenJDK Governing Board Member**
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [Basic Information](#2-basic-information)
+3. [职业时间线](#3-职业时间线)
+4. [Contribution Overview](#4-contribution-overview)
+5. [Complete PR List](#5-complete-pr-list)
+6. [Key Contributions](#6-key-contributions)
+7. [Development Style](#7-development-style)
+8. [Related Links](#8-related-links)
+9. [外部资源](#9-外部资源)
+
+---
+
+
+## 1. 概述
 
 Phil Race 是 Oracle 的 Consulting Member of Technical Staff，OpenJDK Client Libraries 团队负责人，负责核心 Swing、Java 2D 和 AWT API。他是 OpenJDK Governing Board 成员（Oracle 代表），在 Java 2D 图形、打印、Swing GUI 组件和桌面应用开发方面做出重要贡献。他在 2D 计算机图形行业有丰富经验，并在 FOSDEM 2024 和 JavaOne 2026 等会议上担任演讲者和程序委员会成员。截至 2026 年 3 月，他已有 **303 个 Integrated PRs**，主导了 AppContext 移除和 finalize() 方法清理等重大重构工作。
 
 ---
 
-## Basic Information
+## 2. Basic Information
 
 | Field | Value |
 |-------|-------|
@@ -28,7 +42,7 @@ Phil Race 是 Oracle 的 Consulting Member of Technical Staff，OpenJDK Client L
 
 > **数据来源**: [FOSDEM 2024](https://archive.fosdem.org/2024/schedule/speaker/BD3NMJ/), [OpenJDK Governing Board](https://openjdk.org/poll/gb/2024/), [GitHub](https://github.com/prrace), [Client Libraries Group CFV](https://mail.openjdk.org/pipermail/gb-discuss/2021-June/000358.html)
 
-## 职业时间线
+## 3. 职业时间线
 
 | 时间 | 事件 | 详情 |
 |------|------|------|
@@ -56,7 +70,7 @@ Phil Race 是 Oracle 的 Consulting Member of Technical Staff，OpenJDK Client L
 
 > **观察**: 最近工作集中在 **AppContext 移除** 和 **Client 库测试修复**
 
-## Contribution Overview
+## 4. Contribution Overview
 
 ### By Category
 
@@ -76,7 +90,7 @@ Phil Race 是 Oracle 的 Consulting Member of Technical Staff，OpenJDK Client L
 - **Swing** - GUI components
 - **Desktop APIs** - java.desktop module
 
-## Complete PR List
+## 5. Complete PR List
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
@@ -152,7 +166,7 @@ Phil Race 是 Oracle 的 Consulting Member of Technical Staff，OpenJDK Client L
 | JDK-8344146 | Remove temporary font file tracking code | [Link]([需要补充 PR 链接]) |
 | JDK-8346829 | Problem list com/sun/jdi/ReattachStressTest.java & ProcessAttachTest.java on Linux | [Link]([需要补充 PR 链接]) |
 
-## Key Contributions
+## 6. Key Contributions
 
 ### 1. JEP 504 - Remove the Applet API
 
@@ -272,7 +286,7 @@ public BufferedImage filter(BufferedImage src, BufferedImage dest) {
 }
 ```
 
-## Development Style
+## 7. Development Style
 
 ### Code Characteristics
 - **API modernization**: Focus on removing deprecated APIs
@@ -292,7 +306,7 @@ public BufferedImage filter(BufferedImage src, BufferedImage dest) {
 - Focuses on backward compatibility
 - Ensures proper documentation
 
-## Related Links
+## 8. Related Links
 
 - **GitHub**: [prrace](https://github.com/prrace)
 - **OpenJDK Census**: [prr](https://openjdk.org/census#prr)
@@ -302,7 +316,7 @@ public BufferedImage filter(BufferedImage src, BufferedImage dest) {
 
 ---
 
-## 外部资源
+## 9. 外部资源
 
 ### 演讲与会议
 

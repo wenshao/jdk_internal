@@ -6,14 +6,27 @@
 > **Role**: Java Compiler Architect, Project Panama Lead
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [主要 JEP 贡献](#3-主要-jep-贡献)
+4. [核心技术贡献](#4-核心技术贡献)
+5. [职业经历](#5-职业经历)
+6. [社区活动](#6-社区活动)
+7. [技术专长](#7-技术专长)
+8. [相关链接](#8-相关链接)
+
+---
+
+
+## 1. 概述
 
 Maurizio Cimadamore 是 Oracle 的 **Java 编译器架构师** 和 **Project Panama 的技术负责人**。他是 Java 编译器 (javac) 的关键贡献者，主导了 Lambda 表达式在 javac 中的实现，并正在领导 Project Panama，重新定义 Java 与本地代码和内存的互操作。
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -30,7 +43,7 @@ Maurizio Cimadamore 是 Oracle 的 **Java 编译器架构师** 和 **Project Pan
 
 ---
 
-## 主要 JEP 贡献
+## 3. 主要 JEP 贡献
 
 ### Project Panama 系列
 
@@ -99,7 +112,7 @@ Maurizio Cimadamore 是 Oracle 的 **Java 编译器架构师** 和 **Project Pan
 
 ---
 
-## 核心技术贡献
+## 4. 核心技术贡献
 
 ### 1. Lambda 表达式实现
 
@@ -150,7 +163,7 @@ try (Arena arena = Arena.ofConfined()) {
 
 ---
 
-## 职业经历
+## 5. 职业经历
 
 ### Sun Microsystems → Oracle
 
@@ -166,7 +179,7 @@ try (Arena arena = Arena.ofConfined()) {
 
 ---
 
-## 社区活动
+## 6. 社区活动
 
 ### 邮件列表
 
@@ -186,7 +199,7 @@ try (Arena arena = Arena.ofConfined()) {
 
 ---
 
-## 技术专长
+## 7. 技术专长
 
 ### 编译器技术
 
@@ -202,7 +215,7 @@ try (Arena arena = Arena.ofConfined()) {
 
 ---
 
-## 相关链接
+## 8. 相关链接
 
 ### 官方资料
 - [Inside.java - mcimadamore](https://inside.java/u/mcimadamore/)

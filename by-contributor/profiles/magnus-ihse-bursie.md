@@ -1,8 +1,20 @@
+## 目录
+
+1. [Basic Information](#1-basic-information)
+2. [Contribution Overview](#2-contribution-overview)
+3. [Complete PR List](#3-complete-pr-list)
+4. [Key Contributions](#4-key-contributions)
+5. [Development Style](#5-development-style)
+6. [Related Links](#6-related-links)
+7. [Technical Notes](#7-technical-notes)
+
+---
+
 # Magnus Ihse Bursie
 
 > OpenJDK 构建系统主要维护者
 
-## Basic Information
+## 1. Basic Information
 
 | Field | Value |
 |-------|-------|
@@ -20,7 +32,7 @@
 
 > **数据来源**: [GitHub](https://github.com/magicus), [LinkedIn](https://se.linkedin.com/in/ihsebursie), [Leyden CFV](https://mail.openjdk.org/archives/list/leyden-dev@openjdk.org/thread/SMPLFXZZWMZ5OMFV5IL5KFYSPSM6EDI2/)
 
-## Contribution Overview
+## 2. Contribution Overview
 
 Magnus Ihse Bursie is the primary maintainer of the JDK build system. His work in JDK 26 represents a massive effort to modernize the build infrastructure, improve UTF-8 support, enable static builds, and enhance developer experience.
 
@@ -35,7 +47,7 @@ Magnus Ihse Bursie is the primary maintainer of the JDK build system. His work i
 | Testing | 8 | Test infrastructure enhancements |
 | Cleanup | 18 | Code cleanup and maintenance |
 
-## Complete PR List
+## 3. Complete PR List
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
@@ -147,7 +159,7 @@ Magnus Ihse Bursie is the primary maintainer of the JDK build system. His work i
 | JDK-8368468 | Split out everything but configure results from spec.gmk | [JBS](https://bugs.openjdk.org/browse/JDK-8368468) |
 | JDK-8368674 | Incremental builds keep rebuilding interim jmod | [JBS](https://bugs.openjdk.org/browse/JDK-8368674) |
 
-## Key Contributions
+## 4. Key Contributions
 
 ### 1. UTF-8 Source Code Migration (JDK-8301971, JDK-8338973)
 
@@ -223,7 +235,7 @@ Enabled additional security features in debug builds:
 | JDK-8347825 | Make IDEA ide support use proper build system mechanisms |
 | JDK-8311227 | Add .editorconfig |
 
-## Development Style
+## 5. Development Style
 
 ### Build System Philosophy
 
@@ -252,13 +264,13 @@ Typical commit structure:
 3. **Cross-Compilation**: DevKit creation and toolchain management
 4. **Platform-Specific Code**: Windows, macOS, Linux build differences
 
-## Related Links
+## 6. Related Links
 
 - [OpenJDK Profile](https://openjdk.org/census#ihse)
 - [JBS Issues by Magnus Ihse Bursie](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20ihse)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=ihse@openjdk.org)
 
-## Technical Notes
+## 7. Technical Notes
 
 ### Build System Architecture
 

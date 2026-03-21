@@ -3,8 +3,23 @@
 > HotSpot VM 核心架构师，JVM 运行时专家
 
 ---
+## 目录
 
-## Basic Information
+1. [Basic Information](#1-basic-information)
+2. [Technical Impact](#2-technical-impact)
+3. [Technical Expertise](#3-technical-expertise)
+4. [Representative Work](#4-representative-work)
+5. [External Resources](#5-external-resources)
+6. [Contribution Overview](#6-contribution-overview)
+7. [Complete PR List](#7-complete-pr-list)
+8. [Key Contributions](#8-key-contributions)
+9. [Development Style](#9-development-style)
+10. [Related Links](#10-related-links)
+
+---
+
+
+## 1. Basic Information
 
 | Field | Value |
 |-------|-------|
@@ -23,7 +38,7 @@
 
 ---
 
-## Technical Impact
+## 2. Technical Impact
 
 | Metric | Value |
 |--------|-------|
@@ -41,13 +56,13 @@
 
 ---
 
-## Technical Expertise
+## 3. Technical Expertise
 
 `HotSpot VM` `Metaspace` `Class Loading` `Object Monitor` `JVM TI` `Runtime`
 
 ---
 
-## Representative Work
+## 4. Representative Work
 
 ### 1. HotSpot VM Core Architect
 Long-time HotSpot VM contributor and architect, shaping JVM internals.
@@ -66,7 +81,7 @@ Extensive code cleanup, removing deprecated code and modernizing codebase.
 
 ---
 
-## External Resources
+## 5. External Resources
 
 | Type | Link |
 |------|------|
@@ -75,7 +90,7 @@ Extensive code cleanup, removing deprecated code and modernizing codebase.
 
 ---
 
-## Contribution Overview
+## 6. Contribution Overview
 
 ### By Category
 
@@ -94,7 +109,7 @@ Extensive code cleanup, removing deprecated code and modernizing codebase.
 - **Object Monitor** - Synchronization primitives
 - **JVM TI** - JVM Tool Interface
 
-## Complete PR List
+## 7. Complete PR List
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
@@ -167,7 +182,7 @@ Extensive code cleanup, removing deprecated code and modernizing codebase.
 | JDK-8346040 | Zero interpreter build on Linux Aarch64 is broken | [Link]([需要补充 PR 链接]) |
 | JDK-8340212 | -Xshare:off -XX:CompressedClassSpaceBaseAddress=... crashes on macos-aarch64 | [Link]([需要补充 PR 链接]) |
 
-## Key Contributions
+## 8. Key Contributions
 
 ### 1. Making Class Methods Non-Native
 
@@ -267,7 +282,7 @@ if (HAS_PENDING_EXCEPTION) {
 }
 ```
 
-## Development Style
+## 9. Development Style
 
 ### Code Characteristics
 - **Encapsulation advocate**: Removes friend classes, adds proper accessors
@@ -287,7 +302,7 @@ if (HAS_PENDING_EXCEPTION) {
 - Focuses on correctness and maintainability
 - Ensures proper error handling
 
-## Related Links
+## 10. Related Links
 
 - [OpenJDK Profile](https://openjdk.org/census#coleenp)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20coleenp)

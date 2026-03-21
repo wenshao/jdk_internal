@@ -6,14 +6,27 @@
 > **Location**: Malden, MA (推测)
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [Basic Information](#2-basic-information)
+3. [Contribution Overview](#3-contribution-overview)
+4. [Complete PR List](#4-complete-pr-list)
+5. [Key Contributions](#5-key-contributions)
+6. [Development Style](#6-development-style)
+7. [Related Links](#7-related-links)
+8. [Career Timeline](#8-career-timeline)
+
+---
+
+
+## 1. 概述
 
 Kim Barrett 是 Oracle 的资深 Java 开发者，专注于 HotSpot 运行时、原子操作和 C++ 现代化。他拥有超过 25 年的软件设计和实现经验，主导了 HotSpot 的 C++17 迁移、Atomic<T> 模板实现，以及 HotSpot Style Guide 的现代化工作。
 
 ---
 
-## Basic Information
+## 2. Basic Information
 
 | Field | Value |
 |-------|-------|
@@ -29,7 +42,7 @@ Kim Barrett 是 Oracle 的资深 Java 开发者，专注于 HotSpot 运行时、
 
 > **数据来源**: [LinkedIn](https://www.linkedin.com/in/kim-barrett-7b19a97), [OpenJDK Census](https://openjdk.org/census#kbarrett), [CFV Committer](https://mail.openjdk.org/pipermail/jdk9-dev/2015-March/001994.html)
 
-## Contribution Overview
+## 3. Contribution Overview
 
 ### By Category
 
@@ -50,7 +63,7 @@ Kim Barrett 是 Oracle 的资深 Java 开发者，专注于 HotSpot 运行时、
 - **Memory Safety** - Cleaner implementation, allocation wrappers
 - **Cross-Platform Compatibility** - Compiler warnings, undefined behavior fixes
 
-## Complete PR List
+## 4. Complete PR List
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
@@ -120,7 +133,7 @@ Kim Barrett 是 Oracle 的资深 Java 开发者，专注于 HotSpot 运行时、
 | JDK-8345589 | Simplify Windows definition of strtok_r | [JBS](https://bugs.openjdk.org/browse/JDK-8345589) |
 | JDK-8345159 | RISCV: Fix -Wzero-as-null-pointer-constant warning in emit_static_call_stub | [JBS](https://bugs.openjdk.org/browse/JDK-8345159) |
 
-## Key Contributions
+## 5. Key Contributions
 
 ### 1. Atomic<T> Template Implementation
 
@@ -224,7 +237,7 @@ Cleaner cleaner = Cleaner.create();
 cleaner.register(object, cleanupAction);
 ```
 
-## Development Style
+## 6. Development Style
 
 ### Code Characteristics
 - **Type safety focus**: Strong preference for type-safe templates over macros
@@ -244,7 +257,7 @@ cleaner.register(object, cleanupAction);
 - Focuses on correctness of lock-free code
 - Ensures cross-platform compatibility
 
-## Related Links
+## 7. Related Links
 
 - [OpenJDK Profile](https://openjdk.org/census#kbarrett)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20kbarrett)
@@ -254,7 +267,7 @@ cleaner.register(object, cleanupAction);
 
 ---
 
-## Career Timeline
+## 8. Career Timeline
 
 | Year | Event | Details |
 |------|-------|---------|

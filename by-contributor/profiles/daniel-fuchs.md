@@ -6,14 +6,31 @@
 > **Organization**: Oracle
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [职业历程](#3-职业历程)
+4. [研究领域](#4-研究领域)
+5. [贡献概览](#5-贡献概览)
+6. [PR 列表](#6-pr-列表)
+7. [关键贡献详解](#7-关键贡献详解)
+8. [开发风格](#8-开发风格)
+9. [协作者](#9-协作者)
+10. [相关链接](#10-相关链接)
+11. [外部资源](#11-外部资源)
+12. [协作网络](#12-协作网络)
+
+---
+
+
+## 1. 概述
 
 Daniel Fuchs 是 Oracle Dublin 团队的 Consulting Member of Technical Staff，Java Core Libraries Networking 团队负责人。自 2012 年起在 Oracle 工作，专注于 Java 网络栈开发，包括 JMX、HttpClient 和 HTTP/3 实现。他是 JEP 517 (HTTP/3) 的主导者，在 OpenJDK 社区有近 400 项贡献。
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -51,7 +68,7 @@ Daniel Fuchs 是 Oracle Dublin 团队的 Consulting Member of Technical Staff，
 
 ---
 
-## 职业历程
+## 3. 职业历程
 
 | 时间 | 事件 | 详情 |
 |------|------|------|
@@ -68,7 +85,7 @@ Daniel Fuchs 是 Oracle Dublin 团队的 Consulting Member of Technical Staff，
 
 ---
 
-## 研究领域
+## 4. 研究领域
 
 | 领域 | 说明 |
 |------|------|
@@ -80,7 +97,7 @@ Daniel Fuchs 是 Oracle Dublin 团队的 Consulting Member of Technical Staff，
 
 ---
 
-## 贡献概览
+## 5. 贡献概览
 
 ### 按类别统计
 
@@ -99,7 +116,7 @@ Daniel Fuchs 是 Oracle Dublin 团队的 Consulting Member of Technical Staff，
 
 ---
 
-## PR 列表
+## 6. PR 列表
 
 ### JEP 517: HTTP/3 实现
 
@@ -145,7 +162,7 @@ Daniel Fuchs 是 Oracle Dublin 团队的 Consulting Member of Technical Staff，
 
 ---
 
-## 关键贡献详解
+## 7. 关键贡献详解
 
 ### 1. JEP 517: HTTP/3 实现
 
@@ -244,7 +261,7 @@ int window = getWindowSize() - unprocessed - inFlight;
 
 ---
 
-## 开发风格
+## 8. 开发风格
 
 Daniel 的贡献特点:
 
@@ -255,7 +272,7 @@ Daniel 的贡献特点:
 
 ---
 
-## 协作者
+## 9. 协作者
 
 JEP 517 的主要协作者:
 
@@ -269,7 +286,7 @@ JEP 517 的主要协作者:
 
 ---
 
-## 相关链接
+## 10. 相关链接
 
 - **GitHub**: [https://github.com/dfuchs](https://github.com/dfuchs)
 - **LinkedIn**: [https://www.linkedin.com/in/danielfuchs/](https://www.linkedin.com/in/danielfuchs/)
@@ -279,7 +296,7 @@ JEP 517 的主要协作者:
 
 ---
 
-## 外部资源
+## 11. 外部资源
 
 ### 媒体与访谈
 
@@ -309,7 +326,7 @@ JEP 517 的主要协作者:
 
 ---
 
-## 协作网络
+## 12. 协作网络
 
 Daniel Fuchs 与其他核心开发者紧密合作：
 

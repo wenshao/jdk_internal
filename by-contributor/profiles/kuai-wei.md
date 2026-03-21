@@ -3,8 +3,21 @@
 > 阿里巴巴 C2 编译器专家，Dragonwell JDK 贡献者
 
 ---
+## 目录
 
-## 基本信息
+1. [基本信息](#1-基本信息)
+2. [职业背景](#2-职业背景)
+3. [OpenJDK 贡献](#3-openjdk-贡献)
+4. [关键贡献详解](#4-关键贡献详解)
+5. [Dragonwell JDK 贡献](#5-dragonwell-jdk-贡献)
+6. [开发风格](#6-开发风格)
+7. [外部资源](#7-外部资源)
+8. [相关链接](#8-相关链接)
+
+---
+
+
+## 1. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -23,7 +36,7 @@
 
 ---
 
-## 职业背景
+## 2. 职业背景
 
 ### 阿里巴巴 Dragonwell JDK
 
@@ -43,7 +56,7 @@ Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一，Dragonwel
 
 ---
 
-## OpenJDK 贡献
+## 3. OpenJDK 贡献
 
 ### 重要 Issue/PR
 
@@ -68,7 +81,7 @@ Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一，Dragonwel
 
 ---
 
-## 关键贡献详解
+## 4. 关键贡献详解
 
 ### 1. JDK-8325821: Release Barrier 实现 (REDO)
 
@@ -158,7 +171,7 @@ fi
 
 ---
 
-## Dragonwell JDK 贡献
+## 5. Dragonwell JDK 贡献
 
 Kuai Wei 在阿里巴巴的 Dragonwell JDK 项目中发挥重要作用：
 
@@ -179,7 +192,7 @@ Kuai Wei 在阿里巴巴的 Dragonwell JDK 项目中发挥重要作用：
 
 ---
 
-## 开发风格
+## 6. 开发风格
 
 Kuai Wei 的贡献特点:
 
@@ -191,7 +204,7 @@ Kuai Wei 的贡献特点:
 
 ---
 
-## 外部资源
+## 7. 外部资源
 
 | 类型 | 链接 |
 |------|------|
@@ -203,7 +216,7 @@ Kuai Wei 的贡献特点:
 
 ---
 
-## 相关链接
+## 8. 相关链接
 
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=kuaiwei)
 - [OpenJDK PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akuaiwei+is%3Aclosed+label%3Aintegrated)

@@ -1,6 +1,17 @@
+## 目录
+
+1. [Basic Information](#1-basic-information)
+2. [Contribution Overview](#2-contribution-overview)
+3. [Complete PR List](#3-complete-pr-list)
+4. [Key Contributions](#4-key-contributions)
+5. [Development Style](#5-development-style)
+6. [Related Links](#6-related-links)
+
+---
+
 # Hamlin Li
 
-## Basic Information
+## 1. Basic Information
 
 | Field | Value |
 |-------|-------|
@@ -21,7 +32,7 @@
 
 > **Data as of**: 2026-03-19
 
-## Contribution Overview
+## 2. Contribution Overview
 
 ### By Category
 
@@ -40,7 +51,7 @@
 - **Conditional Moves** - CMove optimizations for RISC-V
 - **CRC32 Intrinsics** - Carry-less multiplication implementation
 
-## Complete PR List
+## 3. Complete PR List
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
@@ -114,7 +125,7 @@
 | JDK-8345669 | RISC-V: fix client build failure due to AlignVector after JDK-8343827 | [JBS](https://bugs.openjdk.org/browse/JDK-8345669) |
 | JDK-8339910 | RISC-V: crc32 intrinsic with carry-less multiplication | [JBS](https://bugs.openjdk.org/browse/JDK-8339910) |
 
-## Key Contributions
+## 4. Key Contributions
 
 ### 1. RISC-V CPU Feature Bitmap Implementation
 
@@ -221,7 +232,7 @@ bool VTransform::transform_unsigned_compare(Node* n) {
 }
 ```
 
-## Development Style
+## 5. Development Style
 
 ### Code Characteristics
 - **Architecture-focused**: Deep understanding of RISC-V instruction set
@@ -240,7 +251,7 @@ bool VTransform::transform_unsigned_compare(Node* n) {
 - Focuses on correctness of assembly code generation
 - Ensures proper feature dependency chains
 
-## Related Links
+## 6. Related Links
 
 - [OpenJDK Profile](https://openjdk.org/census#mli)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20mli)

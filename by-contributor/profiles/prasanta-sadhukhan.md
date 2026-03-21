@@ -1,6 +1,17 @@
+## 目录
+
+1. [Basic Information](#1-basic-information)
+2. [Contribution Overview](#2-contribution-overview)
+3. [Complete PR List](#3-complete-pr-list)
+4. [Key Contributions](#4-key-contributions)
+5. [Development Style](#5-development-style)
+6. [Related Links](#6-related-links)
+
+---
+
 # Prasanta Sadhukhan
 
-## Basic Information
+## 1. Basic Information
 
 | Attribute | Value |
 |-----------|-------|
@@ -19,7 +30,7 @@
 
 > **数据来源**: [GitHub](https://github.com/prsadhuk), [LinkedIn](https://in.linkedin.com/in/prasantasadhukhan), [OpenJDK](https://openjdk.org/census#psadhukhan), [CFV OpenJFX Committer](https://mail.openjdk.org/pipermail/openjfx-dev/2017-September/020857.html), [CFV Client Libraries Group Member](https://mail.openjdk.org/pipermail/client-libs-dev/2021-September/000502.html)
 
-## Contribution Overview
+## 2. Contribution Overview
 
 ### By Category
 
@@ -39,7 +50,7 @@
 - **Graphics**: BufferedImage, copyArea, rendering
 - **Cross-Platform Testing**: macOS, Windows, Linux compatibility
 
-## Complete PR List
+## 3. Complete PR List
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
@@ -108,7 +119,7 @@
 
 > **JBS Link**: https://bugs.openjdk.org/browse/JDK-[Issue Number]
 
-## Key Contributions
+## 4. Key Contributions
 
 ### 1. JSplitPane Component Orientation Fix (JDK-8365886)
 
@@ -205,7 +216,7 @@ public void applyComponentOrientation(ComponentOrientation o) {
 }
 ```
 
-## Development Style
+## 5. Development Style
 
 ### Code Quality Focus
 
@@ -227,7 +238,7 @@ public void applyComponentOrientation(ComponentOrientation o) {
 - Includes both bug fixes and test improvements
 - Focuses on UI component behavior consistency
 
-## Related Links
+## 6. Related Links
 
 - [OpenJDK Profile](https://openjdk.org/people/psadhukhan)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=psadhukhan)

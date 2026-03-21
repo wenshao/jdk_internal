@@ -7,14 +7,27 @@
 > **Education**: Saint Petersburg State University
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [Basic Information](#2-basic-information)
+3. [职业时间线](#3-职业时间线)
+4. [Contribution Overview](#4-contribution-overview)
+5. [Complete PR List](#5-complete-pr-list)
+6. [Key Contributions](#6-key-contributions)
+7. [Development Style](#7-development-style)
+8. [Related Links](#8-related-links)
+
+---
+
+
+## 1. 概述
 
 Leonid Mesnik 是 Oracle 的 Principal Member of Technical Staff，专注于 HotSpot JVM 质量保证、故障排查和 JVMTI (JVM Tool Interface) 开发。他拥有 12+ 年的经验，毕业于圣彼得堡国立大学，是 JDK Reviewer（2021 年 9 月通过投票），在 JVMTI 事件处理、线程生命周期管理和 JFR 测试改进方面做出重要贡献。
 
 ---
 
-## Basic Information
+## 2. Basic Information
 
 | Attribute | Value |
 |-----------|-------|
@@ -34,7 +47,7 @@ Leonid Mesnik 是 Oracle 的 Principal Member of Technical Staff，专注于 Hot
 
 > **数据来源**: [LinkedIn](https://www.linkedin.com/in/lmesnik), [GitHub](https://github.com/lmesnik), [CFV JDK Committer 2018](https://mail.openjdk.org/pipermail/jdk-dev/2018-August/001735.html), [CFV JDK Reviewer 2021](https://mail.openjdk.org/pipermail/jdk-dev/2021-September/006033.html)
 
-## 职业时间线
+## 3. 职业时间线
 
 | 时间 | 事件 | 详情 |
 |------|------|------|
@@ -44,7 +57,7 @@ Leonid Mesnik 是 Oracle 的 Principal Member of Technical Staff，专注于 Hot
 | **2021-09** | JDK Reviewer 提名 | 基于 Loom 和 JDK 贡献 |
 | **2021-09-25** | 成为 JDK Reviewer | 投票通过 |
 
-## Contribution Overview
+## 4. Contribution Overview
 
 ### By Category
 
@@ -64,7 +77,7 @@ Leonid Mesnik 是 Oracle 的 Principal Member of Technical Staff，专注于 Hot
 - **Thread Management**: Thread state, synchronization
 - **Test Library**: BuildTestLib, test utilities
 
-## Complete PR List
+## 5. Complete PR List
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
@@ -124,7 +137,7 @@ Leonid Mesnik 是 Oracle 的 Principal Member of Technical Staff，专注于 Hot
 
 > **JBS Link**: https://bugs.openjdk.org/browse/JDK-[Issue Number]
 
-## Key Contributions
+## 6. Key Contributions
 
 ### 1. JVMTI Stress Testing Mode (JDK-8364973)
 
@@ -252,7 +265,7 @@ void Universe::before_exit() {
 }
 ```
 
-## Development Style
+## 7. Development Style
 
 ### Code Quality Focus
 
@@ -275,7 +288,7 @@ void Universe::before_exit() {
 - Preview feature testing
 - Cross-platform testing
 
-## Related Links
+## 8. Related Links
 
 - [OpenJDK Profile](https://openjdk.org/people/lmesnik)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=lmesnik)

@@ -6,12 +6,24 @@
 > **Integrated PRs**: 515
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [Basic Information](#2-basic-information)
+3. [Contribution Overview](#3-contribution-overview)
+4. [Complete PR List](#4-complete-pr-list)
+5. [Key Contributions](#5-key-contributions)
+6. [Development Style](#6-development-style)
+7. [Related Links](#7-related-links)
+
+---
+
+
+## 1. 概述
 
 Matthias Baesken 是 SAP JVM 团队的核心成员，OpenJDK Member 和 JDK-Updates Reviewer。他是 SapMachine (SAP 的 OpenJDK 发行版) 的活跃贡献者，专注于构建系统、跨平台支持和静态分析工具。他的工作涵盖 AIX、Linux (ppc64/ppc64le/aarch64)、Windows 和 macOS 等多个平台，为 JDK 的跨平台兼容性和构建质量做出重要贡献。截至 2026 年 3 月，他已有 **515 个 Integrated PRs**。
 
-## Basic Information
+## 2. Basic Information
 
 | Field | Value |
 |-------|-------|
@@ -44,7 +56,7 @@ Matthias Baesken 是 SAP JVM 团队的核心成员，OpenJDK Member 和 JDK-Upda
 
 > **观察**: 最近工作集中在 **AIX 平台支持**、**linktime-gc 优化** 和 **构建系统改进**
 
-## Contribution Overview
+## 3. Contribution Overview
 
 ### By Category
 
@@ -65,7 +77,7 @@ Matthias Baesken 是 SAP JVM 团队的核心成员，OpenJDK Member 和 JDK-Upda
 - **Windows** - Microsoft Windows
 - **macOS** - Apple macOS
 
-## Complete PR List
+## 4. Complete PR List
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
@@ -163,7 +175,7 @@ Matthias Baesken 是 SAP JVM 团队的核心成员，OpenJDK Member 和 JDK-Upda
 | JDK-8350202 | Tune for Power10 CPUs on Linux ppc64le | [Link]([需要补充 PR 链接]) |
 | JDK-8350094 | Linux gcc 13.2.0 build fails | [Link]([需要补充 PR 链接]) |
 
-## Key Contributions
+## 5. Key Contributions
 
 ### 1. Link Time Optimization (LTO) Support
 
@@ -220,7 +232,7 @@ Maintained and improved AIX platform support:
 - Resolved build issues
 - Updated native code for AIX-specific APIs
 
-## Development Style
+## 6. Development Style
 
 ### Code Characteristics
 - **Platform-aware**: Deep understanding of multiple operating systems
@@ -240,7 +252,7 @@ Maintained and improved AIX platform support:
 - Focuses on cross-platform compatibility
 - Ensures changes don't break less-common platforms
 
-## Related Links
+## 7. Related Links
 
 - [OpenJDK Profile](https://openjdk.org/census#mbaesken)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20mbaesken)
