@@ -45,12 +45,22 @@
 
 ## 2. 贡献者
 
+### 核心贡献者
+
 | 贡献者 | Profile | PRs | 角色 | 主要领域 |
 |--------|---------|-----|------|----------|
 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | Committer | 核心库优化 |
 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | Author | C2 编译器 |
 | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | [@linade](https://github.com/linade) | 8 | Author | G1 GC, AArch64 |
 | [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | Author | ZGC |
+
+### 前员工贡献
+
+| 贡献者 | 时期 | PRs | 当前状态 | 主要领域 |
+|--------|------|-----|----------|----------|
+| [Sendaoyan Yan](../../by-contributor/profiles/sendaoyan.md) | 2022-2025 | 201 | Independent/Other | 编译器测试，GC 测试 |
+
+> **注**: 前员工的历史贡献 (202+ PRs) 仍归属于 Alibaba，因为这是在职期间的工作成果。
 
 ---
 
@@ -218,17 +228,35 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 ## 5. 版本贡献统计
 
+### 核心贡献者
+
 | 版本 | PRs | 主要贡献者 | 主要领域 |
 |------|-----|-----------|----------|
 | **JDK 24** | 8 | Shaojin Wen | 核心库性能优化 |
 | **JDK 23** | 93 | Shaojin Wen (89), Kuai Wei (4), Yude Lin (3) | ClassFile API, String, C2 |
-| **JDK 21/22** | 10 | Shaojin Wen (8), Yude Lin (2) | 数字格式化, GC 监控 |
+| **JDK 21/22** | 10 | Shaojin Wen (8), Yude Lin (2) | 数字格式化，GC 监控 |
 | **JDK 17/11** | 6 | Yude Lin (3), Xiaowei Lu (3) | ZGC, Shenandoah |
-| **总计** | **117** | **4 位贡献者** | - |
+| **小计** | **117** | **4 位核心贡献者** | - |
 
-> **注**: 部分 PR 可能跨版本合入，统计基于主要目标版本
+### 测试贡献 (Sendaoyan Yan)
 
----
+| 年份 | PRs | 主要领域 |
+|------|-----|----------|
+| **2026** | 24 | GC 测试，稳定性修复 |
+| **2025** | 95 | JFR 测试，编译器测试 |
+| **2024** | 82 | 测试框架，代码质量 |
+| **2022** | 1 | 早期贡献 |
+| **小计** | **202** | 测试稳定性 |
+
+### 总计
+
+| 类别 | PRs | 占比 |
+|------|-----|------|
+| 核心贡献者 | 117 | 37% |
+| 测试贡献 | 202 | 63% |
+| **总计** | **319** | 100% |
+
+> **注**: 部分 PR 可能跨版本合入，统计基于主要目标版本。Sendaoyan Yan 202+ PRs 为 2022-2025 年在职期间贡献，归属于 Alibaba。
 
 ## 6. 贡献时间线
 

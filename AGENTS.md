@@ -397,6 +397,39 @@ done
 
 **Note**: Always add verification date to organization info.
 
+### Former Employee Contributions
+
+**Important**: When a contributor leaves an organization, their historical contributions remain attributed to the original organization.
+
+**Example: Sendaoyan Yan**
+```
+GitHub: @sendaoYan
+Total PRs: 202
+- 2022: 1 PR (early contribution)
+- 2024: 82 PRs (Alibaba period)
+- 2025: 95 PRs (Alibaba period)
+- 2026: 24 PRs (current, independent/other)
+
+Attribution:
+- Historical PRs (2022-2025): Attributed to Alibaba
+- Current PRs (2026+): Attributed to current organization or independent
+```
+
+**Documentation practice**:
+```markdown
+### Former Employees
+
+| Contributor | Period | PRs | Current Status |
+|-------------|--------|-----|----------------|
+| Sendaoyan Yan | 2022-2025 | 201 | Independent/Other |
+```
+
+**Why this matters**:
+- PRs are timestamped and cannot be re-attributed
+- Historical work was done while employed at the organization
+- Organization provided resources and support for the contribution
+- Accurate historical record of organizational contributions
+
 ---
 
 ## 4. Quick Reference
