@@ -49,9 +49,9 @@ Ron Pressler 是 Oracle Java Platform Group 的 Consulting Member of Technical S
 | **2014** | JVMLS 演讲 | 在 JVM Language Summit 展示 Quasar 轻量级线程技术 |
 | **~2017** | 加入 Oracle | 受 Brian Goetz 邀请加入 Java Platform Group |
 | **2018** | Project Loom 启动 | 作为技术负责人主导 Loom 项目开发 |
-| **2019 (JDK 19)** | Virtual Threads 首次预览 | JEP 425: Virtual Threads (Preview) |
-| **2021 (JDK 21)** | Virtual Threads 正式发布 | JEP 444: Virtual Threads 成为正式特性 |
-| **2023-至今** | 持续完善 Loom 生态 | 推进 Structured Concurrency 和 Scoped Values 走向正式化 |
+| **2022 (JDK 19)** | Virtual Threads 首次预览 | JEP 425: Virtual Threads (Preview) |
+| **2023 (JDK 21)** | Virtual Threads 正式发布 | JEP 444: Virtual Threads 成为正式特性 |
+| **2024-至今** | 持续完善 Loom 生态 | 推进 Structured Concurrency 和 Scoped Values 走向正式化 |
 
 ---
 
@@ -103,8 +103,6 @@ Project Loom 是 Java 平台自 Lambda 以来最重要的并发模型变革。Ro
 
 ### 从 Quasar 到 Loom 的思想传承
 
-Ron Pressler 的技术理念贯穿了从 Quasar 到 Loom 的演进：
-
 | 理念 | Quasar (库层面) | Project Loom (平台层面) |
 |------|----------------|----------------------|
 | 轻量级线程 | Fibers（字节码增强） | Virtual Threads（JVM 原生支持） |
@@ -120,27 +118,16 @@ Ron Pressler 的技术理念贯穿了从 Quasar 到 Loom 的演进：
 
 ---
 
-## 6. Quasar 与 Parallel Universe
+## 5. Quasar 与 Parallel Universe
 
-### Quasar
+**Quasar** 是 Ron 在 Parallel Universe (Y Combinator 孵化) 期间开发的开源 JVM 轻量级线程库，通过 Java Agent 字节码增强将 `@Suspendable` 方法转换为 Continuation，在 ForkJoinPool 上运行数百万用户态 Fibers。**Comsat** 则为 Servlet、JAX-RS、JDBC 等标准 API 提供 Fiber 感知实现，并额外提供 Web Actors API 支持 WebSocket 和服务器推送。
 
-Quasar 是 Ron Pressler 在 Parallel Universe 期间开发的开源 JVM 轻量级线程库：
-
-- **核心机制**: 通过 Java Agent 进行字节码增强，将标记为 `@Suspendable` 的方法转换为 Continuation
-- **Fibers**: 运行在 ForkJoinPool 上的用户态线程，可创建数百万个
-- **GitHub**: [puniverse/quasar](https://github.com/puniverse/quasar)
-
-### Comsat
-
-Comsat 为标准 Java API（Servlet、JAX-RS、JDBC 等）提供基于 Fiber 的实现：
-
-- 不引入新 API，而是对现有标准 API 提供 Fiber 感知的实现
-- 额外提供 Web Actors API，支持 WebSocket 和服务器推送
-- **GitHub**: [puniverse/comsat](https://github.com/puniverse/comsat)
+- Quasar: [puniverse/quasar](https://github.com/puniverse/quasar)
+- Comsat: [puniverse/comsat](https://github.com/puniverse/comsat)
 
 ---
 
-## 7. 演讲与社区
+## 6. 演讲与社区
 
 ### 重要演讲
 
@@ -153,17 +140,11 @@ Comsat 为标准 Java API（Servlet、JAX-RS、JDBC 等）提供基于 Fiber 的
 | Virtual Threads | Joker 2020 | 虚拟线程设计与实现 |
 | Project Loom | Code Mesh 2020 | Loom 技术深度解析 |
 
-### Inside.java 文章
-
-Ron Pressler 在 Oracle 官方技术博客 Inside.java 持续发表关于 Project Loom 的技术文章和更新。
-
-### State of Loom 文档
-
-Ron 撰写了 "State of Loom" 系列技术文档，详细阐述了 Loom 的设计理念、技术架构和实现进展。
+Ron 还在 [Inside.java](https://inside.java/u/RonPressler/) 持续发表 Loom 相关技术文章，并撰写了 [State of Loom](https://cr.openjdk.org/~rpressler/loom/loom/sol1_part2.html) 系列文档阐述设计理念与实现进展。
 
 ---
 
-## 8. 外部资源
+## 7. 外部资源
 
 | 类型 | 链接 |
 |------|------|
