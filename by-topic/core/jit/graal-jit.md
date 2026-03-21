@@ -437,7 +437,7 @@ public int process() {
 - [GraalVM Homepage](https://www.graalvm.org/)
 - [Graal Compiler GitHub](https://github.com/oracle/graal)
 - [Truffle Framework](https://www.graalvm.org/latest/reference-manual/truffle/)
-- [JVMCI Specification](https://openjdk.org/jeps/243)
+- [JVMCI Specification](/jeps/performance/jep-243.md)
 
 ---
 

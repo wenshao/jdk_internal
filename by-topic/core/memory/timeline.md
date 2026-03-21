@@ -475,4 +475,4 @@ for (int i = 0; i < 1000; i++) {
 ## 13. 相关链接
 
 - [Memory Management](https://docs.oracle.com/en/java/javase/21/gctuning/)
-- [ZGC](https://openjdk.org/jeps/439)
+- [ZGC](/jeps/gc/jep-439.md)
