@@ -386,7 +386,7 @@ IBM       15      20      30      40      45
 | **贡献特点** | 企业级平台支持 |
 | **代表工作** | s390x 向量指令 |
 | **Semeru** | IBM Z 优化 |
-| **代表贡献者** | [Amit Kumar](../../by-contributor/profiles/amit-kumar.md), [Thomas Stuefe](../../by-contributor/profiles/thomas-stuefe.md) |
+| **代表贡献者** | [Amit Kumar](../../by-contributor/profiles/amit-kumar.md) |
 
 ### ISCAS PLCT
 
@@ -419,7 +419,7 @@ IBM       15      20      30      40      45
 
 | 贡献者 | 原组织 | 现组织 | 说明 |
 |--------|--------|--------|------|
-| [Thomas Stuefe](../../by-contributor/profiles/thomas-stuefe.md) | SAP → Amazon → IBM | IBM | SapMachine 创始人 |
+| [Thomas Stuefe](../../by-contributor/profiles/thomas-stuefe.md) | SAP → Red Hat | Red Hat | SapMachine 创始人 |
 | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | Oracle → Red Hat → AWS | Amazon | Shenandoah 创始人 |
 | [William Kemper](../../by-contributor/profiles/william-kemper.md) | Red Hat | Amazon | Shenandoah 维护者 |
 

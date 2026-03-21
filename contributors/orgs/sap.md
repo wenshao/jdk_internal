@@ -135,7 +135,7 @@ SAP 维护自己的 JVM 发行版 SapMachine：
 - 企业级监控
 - SapMachine Vitals (OS 和 JVM 统计)
 
-**创始人**: Thomas Stuefe (现为 IBM 员工)
+**创始人**: Thomas Stuefe (现为 Red Hat 员工)
 
 ---
 
