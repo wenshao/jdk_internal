@@ -33,8 +33,8 @@
 | 14 | [William Kemper](/by-contributor/profiles/william-kemper.md) | 50+ | Shenandoah GC | Amazon | [详情](/by-contributor/profiles/william-kemper.md) |
 | 15 | [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | 50+ | HTTP/JMX | Oracle | [详情](/by-contributor/profiles/daniel-fuchs.md) |
 | 16 | [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | 50+ | JFR | Oracle | [详情](/by-contributor/profiles/erik-gahlin.md) |
-| 17 | [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | 50+ | AArch64 | Amazon | [详情](/by-contributor/profiles/andrew-dinn.md) |
-| 18 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | HotSpot, CDS | SAP | [详情](/by-contributor/profiles/thomas-stuefe.md) |
+| 17 | [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | 50+ | AArch64 | Red Hat | [详情](/by-contributor/profiles/andrew-dinn.md) |
+| 18 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | HotSpot, CDS | IBM | [详情](/by-contributor/profiles/thomas-stuefe.md) |
 | 19 | [Amit Kumar](/by-contributor/profiles/amit-kumar.md) | 50+ | s390x, Compiler | IBM | [详情](/by-contributor/profiles/amit-kumar.md) |
 | 20 | [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | RISC-V | ISCAS PLCT | [详情](/by-contributor/profiles/fei-yang.md) |
 
@@ -58,17 +58,17 @@
 
 [Phil Race](/by-contributor/profiles/phil-race.md), [Claes Redestad](/by-contributor/profiles/claes-redestad.md), [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md)...
 
-### Amazon (3 人)
+### Amazon (2 人)
 
-[Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md), [William Kemper](/by-contributor/profiles/william-kemper.md), [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md)
+[Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md), [William Kemper](/by-contributor/profiles/william-kemper.md)
 
-### SAP (1 人)
+### Red Hat (1 人)
 
-[Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md)
+[Andrew Dinn](/by-contributor/profiles/andrew-dinn.md)
 
-### IBM (1 人)
+### IBM (2 人)
 
-[Amit Kumar](/by-contributor/profiles/amit-kumar.md)
+[Amit Kumar](/by-contributor/profiles/amit-kumar.md), [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md)
 
 ### Alibaba (1 人)
 
@@ -105,24 +105,6 @@
 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 150+ | 字符串，启动优化 |
 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 97 | 核心库性能 |
 | [Brian Burkhalter](/by-contributor/profiles/brian-burkhalter.md) | 100+ | NIO |
-
-### 其他领域
-
-- **构建系统**: [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md)
-- **并发**: [David Holmes](/by-contributor/profiles/david-holmes.md)
-- **JFR**: [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md)
-- **AOT/CDS**: [Ioi Lam](/by-contributor/profiles/ioi-lam.md)
-- **RISC-V**: [Fei Yang](/by-contributor/profiles/fei-yang.md)
-
-Aleksey Shipilev, Thomas Schatzl, Albert Mingkun Yang, Stefan Karlsson, Kim Barrett, Zhengyu Gu, Jesper Wilhelmsson...
-
-### 编译器专家 (5 人)
-
-Vladimir Kozlov, Roland Westrelin, Tobias Hartmann
-
-### 核心库专家 (4 人)
-
-[Claes Redestad](/by-contributor/profiles/claes-redestad.md), [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md), [Brian Burkhalter](/by-contributor/profiles/brian-burkhalter.md)
 
 ### 其他领域
 

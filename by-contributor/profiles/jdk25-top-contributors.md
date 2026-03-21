@@ -62,7 +62,7 @@ JDK 25 had **~400 unique contributors** making Integrated PRs during its develop
 | 29 | [Fei Yang](fei-yang.md) | ISCAS PLCT | 20+ | RISC-V | [详情](fei-yang.md) |
 | 30 | [Hamlin Li](hamlin-li.md) | Oracle | 18+ | RISC-V | [详情](hamlin-li.md) |
 | 31 | [Anjian Wen](anjian-wen.md) | ByteDance | 15+ | RISC-V | [详情](anjian-wen.md) |
-| 32 | [Roman Kennke](roman-kennke.md) | Oracle | 15+ | Compact Headers | [详情](roman-kennke.md) |
+| 32 | [Roman Kennke](roman-kennke.md) | Red Hat | 15+ | Compact Headers | [详情](roman-kennke.md) |
 | 33 | [Johannes Bechberger](johannes-bechberger.md) | SAP | 15+ | JFR | [详情](johannes-bechberger.md) |
 | 34 | [Per Minborg](per-minborg.md) | Oracle | 12+ | Core Libs | [详情](per-minborg.md) |
 | 35 | [Jatin Bhateja](jatin-bhateja.md) | Intel | 12+ | Vector API | [详情](jatin-bhateja.md) |

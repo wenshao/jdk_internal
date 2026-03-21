@@ -29,8 +29,8 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 1,320 | Red Hat |
-| [William Kemper](/by-contributor/profiles/william-kemper.md) | 34 | Red Hat |
+| [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 1,320 | Amazon |
+| [William Kemper](/by-contributor/profiles/william-kemper.md) | 34 | Amazon |
 
 ### G1 GC
 
@@ -185,7 +185,7 @@
 |--------|---------|------|
 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 1,209 | Oracle |
 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 720 | Oracle |
-| Thomas Stuefe | 548 | SAP |
+| Thomas Stuefe | 548 | IBM |
 | Chris Plummer | 437 | Oracle |
 
 ---

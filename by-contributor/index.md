@@ -84,8 +84,6 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 贡献者 | 主要领域 | 查看 | Topic |
 |--------|----------|------|-------|
 | [Shaojin Wen (温绍锦)](/by-contributor/profiles/shaojin-wen.md) | 核心库优化 | [详情](/by-contributor/profiles/shaojin-wen.md) | [→](/by-topic/core/performance/) |
-| [Fei Yang](/by-contributor/profiles/fei-yang.md) | RISC-V | [详情](/by-contributor/profiles/fei-yang.md) | [→](/by-topic/platform/) |
-| [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) | GC | [详情](/by-contributor/profiles/albert-mingkun-yang.md) | [→](/by-topic/core/gc/) |
 
 [→ Alibaba 全部贡献者](/contributors/orgs/alibaba.md)
 
@@ -93,7 +91,6 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 | 贡献者 | 主要领域 | 查看 | Topic |
 |--------|----------|------|-------|
-| [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | AArch64 | [详情](/by-contributor/profiles/andrew-dinn.md) | [→](/by-topic/platform/) |
 | [Nick Gasson](/by-contributor/profiles/nick-gasson.md) | AArch64 | [详情](/by-contributor/profiles/nick-gasson.md) | [→](/by-topic/platform/) |
 | [David Beaumont](/by-contributor/profiles/david-beaumont.md) | 编译器 | [详情](/by-contributor/profiles/david-beaumont.md) | [→](/by-topic/core/jit/) |
 

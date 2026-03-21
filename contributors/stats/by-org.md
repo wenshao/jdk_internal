@@ -96,7 +96,6 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 
 | 贡献者 | Integrated PRs | 领域 |
 |--------|----------------|------|
-| [William Kemper](/by-contributor/profiles/william-kemper.md) | 50+ | Shenandoah GC |
 | [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | 50+ | AArch64 |
 
 **主要贡献领域**：
@@ -114,7 +113,6 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 | 贡献者 | Integrated PRs | 领域 |
 |--------|----------------|------|
 | [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | 100+ | 构建系统 |
-| [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | HotSpot, CDS |
 | Goetz Lindenmaier | 30+ | HotSpot |
 
 **主要贡献领域**：
@@ -131,6 +129,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 | 贡献者 | Integrated PRs | 领域 |
 |--------|----------------|------|
 | [Amit Kumar](/by-contributor/profiles/amit-kumar.md) | 50+ | s390x, Compiler |
+| [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | HotSpot, CDS |
 | Mark Stoodley | 30+ | AOT |
 | Babneet Singh | 20+ | 测试 |
 
