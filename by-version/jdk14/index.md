@@ -16,6 +16,13 @@ JDK 14 引入了 Records（第1次预览）、Pattern Matching for instanceof（
 | **Switch 表达式（正式版）** | ⭐⭐⭐⭐ | JEP 361 |
 | **文本块（第2次预览）** | ⭐⭐⭐⭐ | JEP 368 |
 | **Packaging Tool** | ⭐⭐⭐ | JEP 343，打包工具 |
+| **JFR 事件流** | ⭐⭐⭐ | JEP 349 |
+| **Foreign-Memory Access API（孵化器）** | ⭐⭐⭐ | JEP 370 |
+| **非易失性映射字节缓冲区** | ⭐⭐⭐ | JEP 352 |
+| **ZGC on macOS** | ⭐⭐⭐ | JEP 364 |
+| **ZGC on Windows** | ⭐⭐⭐ | JEP 365 |
+| **移除 CMS GC** | ⭐⭐ | JEP 363 |
+| **移除 Pack200** | ⭐⭐ | JEP 367 |
 
 ---
 
@@ -32,6 +39,13 @@ JDK 14 引入了 Records（第1次预览）、Pattern Matching for instanceof（
 | [JEP 345](https://openjdk.org/jeps/345) | NUMA-Aware Memory Allocation for G1 | G1 NUMA 感知 |
 | [JEP 349](https://openjdk.org/jeps/349) | JFR Event Streaming | JFR 事件流 |
 | [JEP 370](https://openjdk.org/jeps/370) | Foreign-Memory Access API (Incubator) | 外部内存 API |
+| [JEP 352](https://openjdk.org/jeps/352) | Non-Volatile Mapped Byte Buffers | 非易失性映射字节缓冲区 |
+| [JEP 364](https://openjdk.org/jeps/364) | ZGC on macOS | ZGC macOS 支持 |
+| [JEP 365](https://openjdk.org/jeps/365) | ZGC on Windows | ZGC Windows 支持 |
+| [JEP 363](https://openjdk.org/jeps/363) | Remove the Concurrent Mark Sweep (CMS) Garbage Collector | 移除 CMS GC |
+| [JEP 367](https://openjdk.org/jeps/367) | Remove the Pack200 Tools and API | 移除 Pack200 |
+| [JEP 362](https://openjdk.org/jeps/362) | Deprecate the Solaris and SPARC Ports | 废弃 Solaris/SPARC |
+| [JEP 366](https://openjdk.org/jeps/366) | Deprecate the ParallelScavenge + SerialOld GC Combination | 废弃 PS+SerialOld |
 
 ---
 

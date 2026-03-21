@@ -28,7 +28,7 @@ JDK 12 引入了 Switch 表达式（第1次预览）和 Shenandoah GC。
 | [JEP 230](https://openjdk.org/jeps/230) | Microbenchmark Suite | 微基准测试套件 |
 | [JEP 341](https://openjdk.org/jeps/341) | Default CDS Archives | 默认 CDS 存档 |
 | [JEP 334](https://openjdk.org/jeps/334) | JVM Constants API | JVM 常量 API |
-| [JEP 340](https://openjdk.org/jeps/340) | One AOT Compiler | 移除一个 AOT 编译器 |
+| [JEP 340](https://openjdk.org/jeps/340) | One AArch64 Port, Not Two | 统一 AArch64 端口 |
 | [JEP 346](https://openjdk.org/jeps/346) | Promptly Return Unused Committed Memory | 及时归还内存 |
 
 ---

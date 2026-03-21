@@ -11,11 +11,11 @@ JDK 20 是一个相对较小的版本，主要改进预览特性。
 | 特性 | 影响 | 详情 |
 |------|------|------|
 | **Virtual Threads（第2次预览）** | ⭐⭐⭐⭐⭐ | JEP 436 |
-| **Structured Concurrency（第2次预览）** | ⭐⭐⭐⭐⭐ | JEP 437 |
+| **Structured Concurrency（第2次孵化）** | ⭐⭐⭐⭐⭐ | JEP 437 |
 | **Record Patterns（第2次预览）** | ⭐⭐⭐⭐ | JEP 432 |
 | **Pattern Matching for switch（第4次预览）** | ⭐⭐⭐⭐ | JEP 433 |
 | **Foreign Function & Memory API（第2次预览）** | ⭐⭐⭐⭐ | JEP 434 |
-| **Scoped Values（第2次预览）** | ⭐⭐⭐⭐ | JEP 446 |
+| **Scoped Values（孵化器）** | ⭐⭐⭐⭐ | JEP 429 |
 | **Vector API（第5次孵化）** | ⭐⭐⭐ | JEP 438 |
 
 ---
@@ -24,20 +24,19 @@ JDK 20 是一个相对较小的版本，主要改进预览特性。
 
 | JEP | 标题 | 说明 |
 |-----|------|------|
-| [JEP 436](https://openjdk.org/jeps/436) | Virtual Threads (Second Preview) | 虚拟线程（第2次预览） |
-| [JEP 437](https://openjdk.org/jeps/437) | Structured Concurrency (Second Preview) | 结构化并发（第2次预览） |
+| [JEP 429](https://openjdk.org/jeps/429) | Scoped Values (Incubator) | 作用域值（孵化器） |
 | [JEP 432](https://openjdk.org/jeps/432) | Record Patterns (Second Preview) | Record 模式匹配（第2次预览） |
 | [JEP 433](https://openjdk.org/jeps/433) | Pattern Matching for switch (Fourth Preview) | switch 模式匹配（第4次预览） |
 | [JEP 434](https://openjdk.org/jeps/434) | Foreign Function & Memory API (Second Preview) | FFM API（第2次预览） |
-| [JEP 446](https://openjdk.org/jeps/446) | Scoped Values (Second Preview) | 作用域值（第2次预览） |
+| [JEP 436](https://openjdk.org/jeps/436) | Virtual Threads (Second Preview) | 虚拟线程（第2次预览） |
+| [JEP 437](https://openjdk.org/jeps/437) | Structured Concurrency (Second Incubator) | 结构化并发（第2次孵化） |
 | [JEP 438](https://openjdk.org/jeps/438) | Vector API (Fifth Incubator) | Vector API（第5次孵化） |
-| [JEP 429](https://openjdk.org/jeps/429) | Scoped Values (Incubator) | 作用域值（孵化器，JDK 20） |
 
 ---
 
 ## 代码示例
 
-### Scoped Values（第2次预览）
+### Scoped Values（孵化器）
 
 ```java
 // 替代 ThreadLocal

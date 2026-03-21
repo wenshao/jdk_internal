@@ -27,7 +27,6 @@ JDK 13 引入了文本块（第1次预览）和动态 CDS 存档。
 | [JEP 351](https://openjdk.org/jeps/351) | ZGC: Uncommit Unused Memory | ZGC 释放内存 |
 | [JEP 353](https://openjdk.org/jeps/353) | Reimplement the Legacy Socket API | 重新实现 Socket API |
 | [JEP 354](https://openjdk.org/jeps/354) | Switch Expressions (Second Preview) | Switch 表达式（第2次预览） |
-| [JEP 356](https://openjdk.org/jeps/356) | Enhanced Pseudo-Random Number Generators | 增强随机数生成器 |
 
 ---
 
@@ -49,14 +48,6 @@ String json = """
       "age": 30
     }
     """;
-```
-
-### 增强随机数生成器
-
-```java
-// 新的随机数 API
-RandomGenerator generator = RandomGenerator.of("L32X64MixRandom");
-int value = generator.nextInt(100);
 ```
 
 ---

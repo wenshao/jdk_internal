@@ -21,7 +21,7 @@
 | 版本 | 发布时间 | 主要特性 |
 |------|----------|----------|
 | **JDK 26** | 2026-03-17 | HTTP/3、G1 吞吐量提升 |
-| **JDK 24** | 2025-03 | String Templates (第3次预览) |
+| **JDK 24** | 2025-03 | Primitive Types in Patterns (预览) |
 | **JDK 23** | 2024-09 | Markdown 文档注释 |
 | **JDK 22** | 2024-03 | String Templates (预览) |
 | **JDK 20** | 2023-03 | Virtual Threads (第2次预览) |
@@ -60,13 +60,13 @@
 | 模块系统 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | var | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Records | ✅ | ✅ | ✅ | ✅ | ✅ | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Text Blocks | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ |
+| Text Blocks | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ |
 | instanceof 模式匹配 | ✅ | ✅ | ✅ | ✅ | ✅ | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Virtual Threads | ✅ | ✅ | ✅ | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| String Templates | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Structured Concurrency | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ |
+| String Templates | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ |
+| Structured Concurrency | 🔍 | 🔍 | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | HTTP/3 | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Scoped Values | ✅ | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Scoped Values | ✅ | ✅ | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > ✅ 正式版 | 🔍 预览版
 
@@ -99,7 +99,7 @@
 
 #### [JDK 17](jdk17/) - LTS 2021
 - 新特性：Sealed Classes (正式版)、Records (正式版)
-- Pattern Matching for instanceof (预览)
+- Pattern Matching for instanceof (JDK 16 已正式版)
 - 强封装：JDK 内部 API 默认不可访问
 - [版本详情](jdk17/index.md) | [发布说明](jdk17/release-notes.md)
 
@@ -144,14 +144,16 @@
 - [版本详情](jdk23/index.md)
 
 #### [JDK 22](jdk22/) - 2024
-- 核心特性：String Templates (第2次预览)、Implicit Classes (第2次预览)
+- 核心特性：String Templates (第2次预览，后于 JDK 23 撤销)、Implicit Classes (第2次预览)
 - Stream Gatherers (预览)、Unnamed Variables (正式版)
+- Statements before super(...) (预览)、Class-File API (预览)
 - Structured Concurrency (第3次预览)、Scoped Values (第2次预览)
 - [版本详情](jdk22/index.md)
 
 #### [JDK 20](jdk20/) - 2023
-- 核心特性：Virtual Threads (第2次预览)、Structured Concurrency (第2次预览)
-- Scoped Values (预览)
+- 核心特性：Virtual Threads (第2次预览)、Structured Concurrency (第2次孵化)
+- Scoped Values (孵化器)、Record Patterns (第2次预览)
+- Pattern Matching for switch (第4次预览)
 - [版本详情](jdk20/index.md)
 
 #### [JDK 19](jdk19/) - 2022
