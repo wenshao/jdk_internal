@@ -27,7 +27,7 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 | **Flight Recorder（正式版）** | JEP 328，生产环境性能分析 |
 | **ZGC（实验）** | JEP 333，低延迟 GC |
 | **Nest-Based Access Control** | JEP 181，简化私有访问 |
-| **Lambda 局部变量类型推断** | JEP 323，var（保留类型名） |
+| **Lambda 局部变量类型推断** | JEP 323，Lambda 参数可用 var (JEP 323) |
 | **Epsilon GC** | JEP 318，被动 GC |
 | **动态类文件常量** | JEP 309 |
 | **单文件源程序启动** | JEP 330 |

@@ -48,7 +48,6 @@ JDK 8 是一个具有里程碑意义的版本，引入了 Lambda 表达式、Str
 | [JEP 105](https://openjdk.org/jeps/105) | DocTree API | 文档树 API |
 | [JEP 106](https://openjdk.org/jeps/106) | Add Javadoc to javax.tools | Javadoc 工具 API |
 | [JEP 107](https://openjdk.org/jeps/107) | Bulk Data Operations for Collections | 集合批量操作 |
-| [JEP 108](https://openjdk.org/jeps/108) | (Unlisted) | (未列出) |
 | [JEP 109](https://openjdk.org/jeps/109) | Enhance Core Libraries with Lambda | 核心库 Lambda 增强 |
 | [JEP 112](https://openjdk.org/jeps/112) | Charset Implementation Improvements | 字符集实现改进 |
 | [JEP 113](https://openjdk.org/jeps/113) | MS-SFU Kerberos 5 Extensions | MS-SFU Kerberos 扩展 |
@@ -77,13 +76,10 @@ JDK 8 是一个具有里程碑意义的版本，引入了 Lambda 表达式、Str
 | [JEP 142](https://openjdk.org/jeps/142) | Reduce Cache Contention on Specified Fields | 减少缓存竞争 |
 | [JEP 147](https://openjdk.org/jeps/147) | Reduce Class Metadata Footprint | 减少类元数据占用 |
 | [JEP 149](https://openjdk.org/jeps/149) | Reduce Core-Library Memory Usage | 减少核心库内存占用 |
-| [JEP 150](https://openjdk.org/jeps/150) | Date & Time API | 日期时间 API（已撤销，由 JSR 310 / JEP 126 交付） |
-| [JEP 151](https://openjdk.org/jeps/151) | (Small VM) | 小型 VM |
+| [JEP 150](https://openjdk.org/jeps/150) | Date & Time API | 日期时间 API（已撤销，由 JSR 310 交付） |
 | [JEP 153](https://openjdk.org/jeps/153) | Launch JavaFX Applications | 启动 JavaFX 应用 |
 | [JEP 155](https://openjdk.org/jeps/155) | Concurrency Updates | 并发更新 |
 | [JEP 157](https://openjdk.org/jeps/157) | G1 GC: NUMA-Aware Allocation | G1 GC NUMA 感知分配 |
-| [JEP 158](https://openjdk.org/jeps/158) | Unified JVM Logging | 统一 JVM 日志（JDK 9 交付） |
-| [JEP 159](https://openjdk.org/jeps/159) | Enhanced Class Redefinition | 增强类重定义 |
 | [JEP 160](https://openjdk.org/jeps/160) | Lambda-Form Representation for Method Handles | Lambda 形式方法句柄 |
 | [JEP 161](https://openjdk.org/jeps/161) | Compact Profiles | 紧凑配置 |
 | [JEP 162](https://openjdk.org/jeps/162) | Prepare for Modularization | 模块化准备 |

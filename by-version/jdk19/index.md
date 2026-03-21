@@ -62,7 +62,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 }
 ```
 
-### Structured Concurrency（第1次预览）
+### Structured Concurrency（第1次孵化）
 
 ```java
 try (var scope = new StructuredTaskScope<Object>()) {

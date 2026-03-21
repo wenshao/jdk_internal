@@ -130,7 +130,7 @@
 #### [JDK 26](jdk26/) - 2026-03
 - 新特性：HTTP/3 (正式版)、G1 吞吐量提升、分代 Shenandoah (正式版)
 - Primitive Types in Patterns (第4次预览)
-- Structured Concurrency (第6次预览)、Scoped Values (正式版)
+- Structured Concurrency (第6次预览)
 - [版本详情](jdk26/index.md) | [发布说明](jdk26/release-notes.md) | [JEP 汇总](jdk26/jeps.md) | [迁移指南](jdk26/migration/from-21.md)
 
 ##### JDK 26 深度分析

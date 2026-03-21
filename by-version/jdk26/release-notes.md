@@ -24,7 +24,7 @@ JDK 26 包含 **10 个 JEP**（JDK Enhancement Proposals），涵盖语言特性
 
 ## 2. 语言特性
 
-### [JEP 530: Primitive Types in Patterns](/jeps/concurrency/jep-530.md)
+### [JEP 530: Primitive Types in Patterns](/jeps/language/jep-530.md)
 
 **状态**: 第四次预览  
 **概述**: 允许在模式匹配中使用原始类型。
