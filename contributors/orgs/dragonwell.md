@@ -1,4 +1,4 @@
-# Alibaba Dragonwell JDK Team
+# Alibaba Dragonwell JDK
 
 > **Alibaba's OpenJDK Distribution** | **Shanghai/Hangzhou** | **JVM Team**
 
@@ -15,212 +15,6 @@
 | **主要领域** | JVM, JDK 发行版，性能优化 |
 
 ---
-
-## 多层网络分析
-
-### 协作网络 (Co-authorship Network)
-
-基于 Dragonwell 团队的协作关系分析：
-
-```
-                          Dragonwell 协作网络图
-                          
-                    ┌─────────────────────────────┐
-                    │    Alibaba Dragonwell        │
-                    │   Shanghai/Hangzhou JVM      │
-                    └─────────────┬───────────────┘
-                                  │
-          ┌───────────────────────┼───────────────────────┐
-          │                       │                       │
-          ▼                       ▼                       ▼
-    ┌──────────┐           ┌──────────┐           ┌──────────┐
-    │ 核心团队  │           │ 技术社区  │           │ 行业合作  │
-    │  (内部)   │           │  (外部)   │           │  (外部)   │
-    └────┬─────┘           └────┬─────┘           └────┬─────┘
-         │                      │                      │
-    ┌────┴────┐           ┌────┴────┐           ┌────┴────┐
-    │Kuai     │           │Jonathan │           │Leslie   │
-    │Wei      │           │Lu       │           │Zhai     │
-    │(13 PRs) │           │(上海)   │           │(龙芯)   │
-    │         │           │         │           │         │
-    │Sendaoyan│           │Hao Tang │           │         │
-    │Yan      │           │(ByteD.) │           │         │
-    │(测试)   │           │(杭州)   │           │         │
-    └─────────┘           └─────────┘           └─────────┘
-```
-
-#### 核心团队 (Alibaba 内部)
-
-| 贡献者 | 组织 | PRs | 主要领域 | 角色 |
-|--------|------|-----|----------|------|
-| [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | Alibaba | 13 | C2 编译器，RISC-V | C2 编译器专家 |
-| [Sendaoyan Yan](../../by-contributor/profiles/sendaoyan.md) | Alibaba | - | 编译器测试 | Compiler Tester |
-| [Long Yang](../../by-contributor/profiles/yanglong1010.md) | Alibaba | - | JVM, GC | JVM 团队 |
-
-#### 技术社区 (外部合作)
-
-| 贡献者 | 组织 | 位置 | 关系类型 |
-|--------|------|------|----------|
-| [Jonathan Lu](../../by-contributor/profiles/luchsh.md) | JVM 社区 | 上海 | 技术同行 |
-| [Hao Tang](../../by-contributor/profiles/tanghaoth90.md) | ByteDance | 杭州 | 技术同行 |
-| [shako](../../by-contributor/profiles/xhao.md) | JVM 社区 | 上海 | 技术同行 |
-| [WenjunMin](../../by-contributor/profiles/aitozi.md) | JVM 社区 | - | 技术同行 |
-
-#### 行业合作 (外部合作)
-
-| 贡献者 | 组织 | 位置 | 合作领域 |
-|--------|------|------|----------|
-| [Leslie Zhai](../../by-contributor/profiles/xiangzhai.md) | Loongson | 北京 | RISC-V/LoongArch |
-
-### 技术影响力网络
-
-```
-                    Dragonwell 技术影响力辐射图
-                    
-                         C2 编译器
-                              │
-                    ┌─────────┼─────────┐
-                    │         │         │
-                    ▼         ▼         ▼
-               IR 框架   内存屏障   RISC-V
-                    │         │         │
-                    └─────────┼─────────┘
-                              │
-                    ┌─────────┴─────────┐
-                    │                   │
-                    ▼                   ▼
-              电商优化           金融优化
-              (Dragonwell 8)    (Dragonwell 11)
-                    │                   │
-                    └─────────┬─────────┘
-                              │
-                    ┌─────────┼─────────┐
-                    │         │         │
-                    ▼         ▼         ▼
-                性能优化   GC 调优    测试框架
-```
-
-#### 技术影响力指标
-
-| 领域 | 直接影响 | 间接影响 | 影响范围 |
-|------|----------|----------|----------|
-| **C2 编译器** | 13 PRs | 电商/金融用户 | 性能优化 |
-| **RISC-V 支持** | 5+ PRs | RISC-V 服务器 | 架构移植 |
-| **内存屏障** | 3+ PRs | 所有 Dragonwell 用户 | 正确性 |
-| **编译器测试** | 测试框架 | JDK 测试 | 质量保证 |
-
-### 组织关系网络
-
-```
-                    Dragonwell 组织关系图
-                    
-                    ┌──────────────────┐
-                    │   Alibaba        │
-                    │ (Shanghai/       │
-                    │  Hangzhou)       │
-                    └────────┬─────────┘
-                             │ Dragonwell 团队
-                    ┌────────┴─────────┐
-                    │                  │
-                    ▼                  ▼
-            ┌──────────────┐   ┌──────────────┐
-            │  JVM 团队     │   │  技术社区    │
-            │              │   │              │
-            └──────┬───────┘   └──────┬───────┘
-                   │                  │
-              ┌────┴────┐        ┌────┴────┐
-              │         │        │         │
-              ▼         ▼        ▼         ▼
-         Kuai     Sendaoyan  Jonathan  Hao Tang
-         Wei      Yan        Lu        (ByteDance)
-         (C2)     (测试)     (上海)    
-```
-
-### 协作深度分析
-
-#### C2 编译器优化协作网络
-
-这是 Kuai Wei 主导的 C2 编译器优化项目：
-
-```
-        C2 编译器优化协作网络
-        
-              Kuai Wei
-              (Author)
-                   │
-              ┌────┴────┐
-              │         │
-              ▼         ▼
-        Sendaoyan  Long Yang
-        Yan        (Alibaba)
-        (测试)     (GC)
-              │
-              └────┬────┘
-                   │
-                   ▼
-         Dragonwell 8/11/21
-```
-
-| 指标 | 数值 | 说明 |
-|------|------|------|
-| 开发周期 | 2018-2026 | 持续优化 |
-| PR 数量 | 13 个 | C2 编译器 |
-| 影响范围 | Dragonwell 用户 | 电商/金融场景 |
-
-#### 与 Sendaoyan Yan 的协作
-
-| 指标 | 数值 | 说明 |
-|------|------|------|
-| 合作领域 | 编译器测试 | 质量保证 |
-| Kuai 角色 | C2 编译器专家 | 优化实现 |
-| Sendaoyan 角色 | Compiler Tester | 测试框架 |
-| 协作模式 | 实现 + 测试 | 内部协作 |
-
-**Sendaoyan Yan 背景**:
-- Alibaba Compiler Tester
-- 上海
-- 专注于编译器测试框架
-
-### 技术社区参与
-
-Dragonwell 团队积极参与技术社区活动：
-
-- **C2 编译器优化**: Kuai Wei 主导的持续优化项目
-- **学术论文**: ASE 2021 "Towards a Serverless Java Runtime"
-- **邮件列表**: 在 compiler-dev、hotspot-dev 邮件列表活跃
-- **开源贡献**: Dragonwell JDK 发行版维护
-
-### 知识传承网络
-
-```
-                    Dragonwell 知识传承
-
-        前辈层                    同辈层                    后辈层
-    ┌─────────────┐          ┌─────────────┐          ┌─────────────┐
-    │ Kuai        │          │ Sendaoyan   │          │ 新贡献者    │
-    │ Wei         │◄────────►│ Yan         │          │ (通过 PR    │
-    │ (C2 专家)   │  协作    │ (测试)      │──协作──►│  学习)      │
-    └─────────────┘          └─────────────┘          └──────┬──────┘
-                                                              │
-                                                              │
-                                                              ▼
-                    ┌─────────────────────────────────────────────────┐
-                    │         Dragonwell 团队                          │
-                    │         (知识枢纽)                               │
-                    │         - C2 编译器                             │
-                    │         - RISC-V                                │
-                    │         - 电商/金融优化                         │
-                    └─────────────────────────────────────────────────┘
-                                                              │
-                    ┌─────────────┐          ┌─────────────┐  │
-                    │ Jonathan    │          │ Long        │  │
-                    │ Lu          │◄────────►│ Yang        │◄─┘
-                    │ (上海)      │  协作    │ (GC)        │   协作
-                    └─────────────┘          └─────────────┘
-```
-
----
-
 
 ## Dragonwell JDK 版本
 
@@ -304,12 +98,14 @@ Dragonwell 团队积极参与技术社区活动：
 
 ---
 
-## OpenJDK 贡献
+## OpenJDK 上游贡献
 
-### Integrated PRs 统计
+> **注**: 详细的 OpenJDK 贡献统计请查看 [Alibaba 组织页面](alibaba.md)
 
-| 贡献者 | PRs | 主要领域 |
-|--------|-----|----------|
+### 主要贡献者
+
+| 贡献者 | OpenJDK PRs | 主要领域 |
+|--------|-------------|----------|
 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 13 | C2 IR, RISC-V, 内存屏障 |
 | [Long Yang](../../by-contributor/profiles/yanglong1010.md) | - | JVM, 核心库 |
 | [Sendaoyan Yan](../../by-contributor/profiles/sendaoyan.md) | - | 编译器测试 |
@@ -357,17 +153,15 @@ Dragonwell 团队积极参与技术社区活动：
 - [Charles Nutter](../../by-contributor/profiles/headius.md) - JRuby 创始人
 
 ### 组织
-- [Alibaba](alibaba.md) - 阿里巴巴贡献者
+- [Alibaba OpenJDK 贡献](alibaba.md) - 阿里巴巴 OpenJDK 上游贡献统计
 - [中国贡献者](../../by-contributor/profiles/chinese-contributors.md) - 中国 OpenJDK 贡献者
 
 ---
 
-**文档版本**: 1.0
+**文档版本**: 2.0
 **最后更新**: 2026-03-21
 **更新内容**:
-- 新增多层网络分析章节 (6 个小节)
-- 添加协作网络可视化图表
-- 补充技术影响力网络分析 (4 大领域)
-- 新增组织关系网络图 (Dragonwell 团队结构)
-- 添加协作深度分析 (C2 编译器优化案例)
-- 新增知识传承网络分析
+- 删除重复的社交网络分析图表
+- 简化为团队介绍和 Dragonwell 发行版信息
+- 添加指向 Alibaba OpenJDK 贡献页面的链接
+- 聚焦 Dragonwell 发行版本身
