@@ -35,13 +35,20 @@
 | **Dragonwell** | 15+ commits to dragonwell8/11/21 |
 | **内存屏障** | OpenJDK PRs: dmb.ishst+dmb.ishld for release barrier |
 | **LLVM** | Starred: llvm/llvm-project |
+| **AArch64** | OpenJDK commits: nativeInst_aarch64 cleanup |
 
-**关注领域** (从 Starred Repos 推断):
+**关注领域** (从 Starred/Forked Repos 推断):
 - Jeandle JDK (LLVM-based JIT 编译器)
-- RISC-V 架构支持
+- RISC-V 架构支持 (riscv-openjdk, riscv-port)
 - GraalVM 和 Mandrel 分发版
 - Alibaba FastFFI
 - Renaissance Benchmark Suite
+- DynamoRIO (动态插桩工具)
+
+**OpenJDK 邮件列表活动** (2021 年 3 月):
+- 参与 hotspot-compiler-dev 邮件列表讨论
+- 邮件地址：github.com+1981974+kuaiwei at openjdk.java.net
+- 讨论主题：C2 编译器优化，assert 修复
 
 ---
 
@@ -88,8 +95,32 @@
 **Jeandle JDK 项目关联**：
 - Kuai Wei 是 [Jeandle JDK](https://github.com/jeandle/jeandle-jdk) 项目的活跃贡献者
 - Jeandle 是基于 LLVM 的 Java JIT 编译器项目
-- 最近 PR: #393 (2026-03-11), #331, #224, #200, #166, #88
+- 最近 PR: #393 (2026-03-11, merged 2026-03-16)
+  - 修复 TestStackBangRbp.java 测试失败
+  - Additions: 32, Deletions: 8
+  - Merged by: jeandle-bot
 - 项目与 OpenJDK 顶级贡献者有关联（jonathan-gibbons, shipilev, prrace 等）
+
+**OpenJDK 贡献时间线**：
+| 日期 | Issue | 说明 | Reviewer |
+|------|-------|------|----------|
+| 2025-05 | JDK-8356328 | C2 IR 节点 size_of() 函数 | thartmann, chagedor |
+| 2025-04 | JDK-8355697 | Windows devkit on WSL/MSYS2 | ihse, erikj |
+| 2025-03 | JDK-8347405 | MergeStores 反向字节顺序 | Richard Reingruber |
+| 2025-02 | JDK-8350858 | IR Framework 测试失败 (Cascade Lake) | chagedor |
+| 2024-09 | JDK-8339299 | C1 内联 final 方法丢失类型 profile | lmesnik |
+| 2024-06 | JDK-8325821 | [REDO] release barrier (dmb.ishst+dmb.ishld) | shade |
+| 2024-06 | JDK-8333410 | [AArch64] 清理未使用的类 | - |
+| 2024-03 | JDK-8326983 | 未使用的操作数报告 | kvn, vlivanov |
+| 2024-02 | JDK-8326135 | 增强 adlc 报告未使用操作数 | kvn, vlivanov |
+| 2021-03 | JDK-8262837 | handle split_USE correctly | - |
+| 2020-04 | JDK-8242449 | AArch64: r27 分配 (CompressedOops 模式) | aph |
+| 2018-10 | JDK-8210853 | JIT: C2 新分配对象后屏障优化 | - |
+
+**RISC-V OpenJDK 贡献**：
+- 2021-03: JDK-8262837 handle split_USE correctly
+- 2020-04: JDK-8242449 AArch64: r27 can be allocated in CompressedOops mode
+- 2018-10: JDK-8210853 JIT: C2 doesn't skip post barrier for new allocated objects
 
 **无法证实的信息**：
 - ❌ 中文名：公开来源无确凿证据（拼音 Wei Kuai 可能对应多个中文名）
