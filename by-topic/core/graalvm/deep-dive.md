@@ -86,10 +86,13 @@
 4. 资源集中于 C2 改进
 ```
 
+**移除内容**: jdk.aot (jaotc)、jdk.internal.vm.compiler (Graal)、jdk.internal.vm.compiler.management
+**保留**: JVMCI 接口 (jdk.vm.ci)，允许外部编译器继续集成
+
 **影响**:
 - Graal 团队转向独立 GraalVM 发行版模式
 - OpenJDK 用户需单独下载 GraalVM
-- 造成 JDK 生态碎片化
+- JVMCI 保留意味着外部 Graal 仍可用作 JIT
 
 **Doug Simon 的回应** (GitHub,  paraphrased):
 > *"这验证了我们的 GraalVM CE/EE 策略。需要 Graal 的用户会使用 GraalVM。"*
@@ -242,7 +245,7 @@ OpenJDK (GPLv2+CE):        GraalVM CE (GPLv2+CE):     Oracle GraalVM (GFTC):
 │  • 内存低                     • Native Image 优势         │
 │                                                         │
 │  Azul Prime:                  Microsoft JDK:            │
-│  • Falcon JIT (C2 基础)        • C2 聚焦                  │
+│  • Falcon JIT (LLVM 基础)      • C2 聚焦                  │
 │  • 低延迟聚焦                 • Azure 集成                │
 │  • 仅商业                     • 免费使用                  │
 │                                                         │
