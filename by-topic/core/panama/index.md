@@ -68,6 +68,28 @@
 | **Linker** | 连接 Java 与原生代码的桥梁 |
 | **SymbolLookup** | 查找原生库中的符号地址 |
 | **FunctionDescriptor** | 描述函数签名和参数/返回值类型 |
+| **SymbolLookup** | 查找原生库中的符号地址 |
+| **ValueLayout** | 描述原生类型的内存布局 |
+
+### SymbolLookup 方式
+
+| 方式 | 方法 | 说明 | 示例 |
+|------|------|------|------|
+| **默认查找** | `Linker.defaultLookup()` | 查找系统标准库 | libc, libm |
+| **加载器查找** | `SymbolLookup.loaderLookup()` | 查找已加载的 JNI 库 | 通过 System.loadLibrary 加载的库 |
+| **库查找** | `SymbolLookup.lookupLibrary()` | 动态加载指定库 | 按名称加载共享库 |
+
+```java
+// 1. 系统标准库 (libc, libm 等)
+SymbolLookup stdlib = Linker.nativeLinker().defaultLookup();
+
+// 2. 已加载的 JNI 库
+System.loadLibrary("mylib");
+SymbolLookup loadedLib = SymbolLookup.loaderLookup();
+
+// 3. 动态加载库
+SymbolLookup customLib = SymbolLookup.lookupLibrary("mylib");
+```
 
 ### 基本用法 (Downcall)
 
@@ -149,28 +171,32 @@ MethodHandle printf = linker.downcallHandle(
 ### VaList (可变参数)
 
 ```java
-// 处理 C 可变参数函数 (如 printf, scanf)
+// 处理 C 可变参数函数 (如 vsprintf, vprintf)
+import java.lang.foreign.*;
+
 Linker linker = Linker.nativeLinker();
 
-// 创建 VaList
-VaList.Builder builder = VaList.make(
-    linker,
-    ValueLayout.JAVA_INT,
-    ValueLayout.JAVA_DOUBLE
-);
-builder.add(VaList.ofInt(42));
-builder.add(VaList.ofDouble(3.14));
-VaList vaList = builder.build();
+try (Arena arena = Arena.ofConfined()) {
+    // 创建 VaList - 正确语法
+    VaList vaList = VaList.make(builder -> {
+        builder.add(ValueLayout.JAVA_INT, 42);
+        builder.add(ValueLayout.JAVA_DOUBLE, 3.14);
+        builder.add(ValueLayout.JAVA_INT, 100);
+    }, arena);
 
-// 传递给原生函数
-MethodHandle myFunc = linker.downcallHandle(
-    lib.find("variadic_func").get(),
-    FunctionDescriptor.of(
-        ValueLayout.JAVA_INT,
-        ValueLayout.JAVA_INT,
-        ValueLayout.ADDRESS  // VaList as pointer
-    )
-);
+    // 使用 VaList 调用可变参数函数
+    MethodHandle vprintf = linker.downcallHandle(
+        libC.find("vprintf").get(),
+        FunctionDescriptor.of(
+            ValueLayout.JAVA_INT,      // 返回值
+            ValueLayout.ADDRESS,       // format string
+            ValueLayout.ADDRESS        // va_list
+        )
+    );
+
+    MemorySegment format = arena.allocateFrom("Values: %d, %f, %d\n");
+    vprintf.invokeExact(format, vaList);
+}
 ```
 
 ### 限制和约束
@@ -183,9 +209,39 @@ MethodHandle myFunc = linker.downcallHandle(
 | **结构体对齐** | 需手动处理结构体对齐问题 |
 | **异常处理** | 原生代码异常不会自动转换为 Java 异常 |
 
+### jextract 工具
+
+**jextract** 是 Panama 项目的辅助工具，可自动从 C 头文件生成 Java 绑定代码。
+
+```bash
+# 安装 jextract (从源码构建)
+git clone https://github.com/openjdk/panama-foreign.git
+cd panama-foreign
+./build jextract
+
+# 使用 jextract 生成绑定
+jextract -t com.example.bindings \
+        -I /usr/include \
+        /usr/include/stdio.h
+
+# 生成的代码可以直接使用
+import com.example.bindings.stdio.*;
+```
+
+**注意**: jextract 目前仍在开发中，不属于正式 JDK 发行版。
+
 ---
 
 ## Foreign Memory Access API
+
+### MemorySegment 核心
+
+| 特性 | 说明 |
+|------|------|
+| **内存区域** | 表示连续的内存区域 (堆内或堆外) |
+| **生命周期绑定** | 绑定到 Arena/Scope，自动管理 |
+| **线程安全** | Confined Arena 分配的段仅创建线程可访问 |
+| **零拷贝** | 与原生代码交互时无需复制 |
 
 ### 基本操作
 
@@ -208,6 +264,22 @@ try (Arena arena = Arena.ofConfined()) {
 ```
 
 ### 内存布局
+
+#### ValueLayout 常量
+
+| Java 类型 | ValueLayout 常量 | 位宽 | 描述 |
+|-----------|------------------|------|------|
+| boolean | `ValueLayout.JAVA_BOOLEAN` | 8 | 布尔值 |
+| byte | `ValueLayout.JAVA_BYTE` | 8 | 字节 |
+| char | `ValueLayout.JAVA_CHAR` | 16 | Unicode 字符 |
+| short | `ValueLayout.JAVA_SHORT` | 16 | 短整型 |
+| int | `ValueLayout.JAVA_INT` | 32 | 整型 |
+| long | `ValueLayout.JAVA_LONG` | 64 | 长整型 |
+| float | `ValueLayout.JAVA_FLOAT` | 32 | 单精度浮点 |
+| double | `ValueLayout.JAVA_DOUBLE` | 64 | 双精度浮点 |
+| address | `ValueLayout.ADDRESS` | 平台相关 | 内存地址 (32/64 位) |
+
+#### 结构体布局
 
 ```java
 // 定义结构体布局
@@ -313,17 +385,17 @@ for (int i = 0; i < 1_000_000; i++) {
 | 年份 | 版本 | JEP | 里程碑 |
 |------|------|-----|--------|
 | **2014** | - | - | Project Panama 启动 |
-| **2020** | JDK 14 | JEP 370 | Foreign-Memory Access API (第一孵化器) |
-| **2020** | JDK 15 | JEP 383, JEP 389 | Memory Access 第二孵化器 + Linker API 孵化 |
-| **2021** | JDK 16 | JEP 393 | Foreign-Memory Access API (第三孵化器) |
-| **2021** | JDK 17 | JEP 412 | Foreign Function & Memory API (第一孵化器，合并) |
-| **2022** | JDK 18 | JEP 419 | Foreign Function & Memory API (第二孵化器) |
-| **2022** | JDK 19 | JEP 424 | Foreign Function & Memory API (第一预览) |
-| **2023** | JDK 20 | JEP 434 | Foreign Function & Memory API (第二预览) |
-| **2023** | JDK 21 | JEP 442 | Foreign Function & Memory API (第三预览) |
-| **2024** | JDK 22 | JEP 454 | **Foreign Function & Memory API (正式)** |
-| **2024** | JDK 23 | - | API 改进和性能优化 |
-| **2025** | JDK 24 | - | 持续优化 |
+| **2020.03** | JDK 14 | JEP 370 | Foreign-Memory Access API (第一孵化器) |
+| **2020.09** | JDK 15 | JEP 383, JEP 389 | Memory Access 第二孵化器 + Linker API 孵化 |
+| **2021.03** | JDK 16 | JEP 393 | Foreign-Memory Access API (第三孵化器) |
+| **2021.09** | JDK 17 | JEP 412 | Foreign Function & Memory API (第一孵化器，合并) |
+| **2022.03** | JDK 18 | JEP 419 | Foreign Function & Memory API (第二孵化器) |
+| **2022.09** | JDK 19 | JEP 424 | Foreign Function & Memory API (第一预览) |
+| **2023.03** | JDK 20 | JEP 434 | Foreign Function & Memory API (第二预览) |
+| **2023.09** | JDK 21 | JEP 442 | Foreign Function & Memory API (第三预览) |
+| **2024.03** | JDK 22 | JEP 454 | **Foreign Function & Memory API (正式)** |
+| **2024.09** | JDK 23 | - | API 改进和性能优化 |
+| **2025.03** | JDK 24 | - | 持续优化 (预计) |
 
 → [完整时间线](timeline.md)
 
@@ -387,6 +459,56 @@ MethodHandle glClearColor = linker.downcallHandle(
 glClearColor.invokeExact(1.0f, 0.0f, 0.0f, 1.0f);
 ```
 
+### 常见使用模式
+
+#### 字符串传递
+
+```java
+// Java 字符串 → C char*
+try (Arena arena = Arena.ofConfined()) {
+    MemorySegment cStr = arena.allocateFrom("Hello");
+    myFunc.invokeExact(cStr);
+}
+
+// C char* → Java 字符串
+MemorySegment cResult = ...;
+String javaStr = cResult.getStringUtf8(0);
+```
+
+#### 数组传递
+
+```java
+// Java 数组 → C 数组
+try (Arena arena = Arena.ofConfined()) {
+    int[] javaArray = {1, 2, 3, 4, 5};
+    MemorySegment cArray = arena.allocateFrom(
+        ValueLayout.JAVA_INT,
+        javaArray
+    );
+    processArray(cArray, javaArray.length);
+}
+```
+
+#### 结构体操作
+
+```java
+// 定义并操作结构体
+MemoryLayout pointLayout = MemoryLayout.structLayout(
+    ValueLayout.JAVA_DOUBLE.withName("x"),
+    ValueLayout.JAVA_DOUBLE.withName("y")
+);
+
+try (Arena arena = Arena.ofConfined()) {
+    MemorySegment point = arena.allocate(pointLayout);
+
+    // 使用 VarHandle 访问字段
+    VarHandle xHandle = pointLayout.varHandle(
+        MemoryLayout.PathElement.groupElement("x")
+    );
+    xHandle.set(point, 0L, 3.14);
+}
+```
+
 ---
 
 ## 深入阅读
@@ -408,9 +530,9 @@ glClearColor.invokeExact(1.0f, 0.0f, 0.0f, 1.0f);
 | 概念 | 说明 | 版本 |
 |------|------|------|
 | **MemorySession** | 早期 API 中的内存会话概念 | JDK 14-19 |
-| **Arena** | 简化后的内存管理 API | JDK 19+ |
+| **Arena** | 简化后的内存管理 API | JDK 19+ (推荐) |
 
-**Arena 是 MemorySession 的简化版本**，提供了更直观的 API：
+**Arena 是 MemorySession 的简化版本**：
 
 ```java
 // 旧 API (MemorySession) - JDK 14-19
@@ -424,11 +546,7 @@ try (Arena arena = Arena.ofConfined()) {
 }
 ```
 
----
-
-## Arena 详解
-
-### Arena 类型
+### Arena 类型与生命周期
 
 | Arena | 生命周期 | 使用场景 |
 |-------|----------|----------|
@@ -436,14 +554,11 @@ try (Arena arena = Arena.ofConfined()) {
 | **Arena.ofShared()** | 多线程 | 需要多线程访问 |
 | **Arena.ofAuto()** | 自动释放 | 简单场景 |
 
-### 生命周期管理
-
 ```java
 // Confined Arena - 单线程
 try (Arena arena = Arena.ofConfined()) {
     MemorySegment segment = arena.allocate(1000);
-    // 使用 segment
-    // 离开 try 块自动释放
+    // 使用 segment，离开 try 块自动释放
 }
 
 // Shared Arena - 多线程
