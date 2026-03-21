@@ -75,6 +75,10 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 | [Brian Burkhalter](/by-contributor/profiles/brian-burkhalter.md) | 100+ | NIO/网络 |
 | [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | 50+ | HTTP/JMX |
 | [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | 50+ | JFR |
+| [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 200+ | C2 编译器 |
+| [Tobias Hartmann](/by-contributor/profiles/tobias-hartmann.md) | 150+ | JIT 编译器 |
+| [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | 100+ | C2 架构 |
+| [David Beaumont](/by-contributor/profiles/david-beaumont.md) | 20+ | 编译器 |
 
 **主要贡献领域**：
 - GC: G1, ZGC, Serial, Parallel
@@ -92,11 +96,8 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 
 | 贡献者 | Integrated PRs | 领域 |
 |--------|----------------|------|
-| [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 803+ | Shenandoah GC, JMH |
-| [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 200+ | C2 编译器 |
-| [Tobias Hartmann](/by-contributor/profiles/tobias-hartmann.md) | 150+ | JIT 编译器 |
-| [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | 100+ | C2 架构 |
 | [William Kemper](/by-contributor/profiles/william-kemper.md) | 50+ | Shenandoah GC |
+| [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | 50+ | AArch64 |
 
 **主要贡献领域**：
 - Shenandoah GC (主要开发者)
@@ -146,9 +147,8 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 
 | 贡献者 | Integrated PRs | 领域 |
 |--------|----------------|------|
-| [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | 50+ | AArch64 |
+| [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 803+ | Shenandoah GC, JMH |
 | [Nick Gasson](/by-contributor/profiles/nick-gasson.md) | 30+ | AArch64 |
-| [David Beaumont](/by-contributor/profiles/david-beaumont.md) | 20+ | 编译器 |
 | [William Kemper](/by-contributor/profiles/william-kemper.md) | 50+ | Shenandoah |
 
 **主要贡献领域**：

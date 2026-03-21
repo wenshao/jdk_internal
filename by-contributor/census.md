@@ -88,7 +88,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | 贡献者 | 组织 | Census | 档案 |
 |--------|------|--------|------|
 | [Magnus Ihse Bursie](profiles/magnus-ihse-bursie.md) | Oracle | [@ihse](https://openjdk.org/census#ihse) | [详情](profiles/magnus-ihse-bursie.md) |
-| [Matthias Baesken](profiles/matthias-baesken.md) | Oracle | [@mbaesken](https://openjdk.org/census#mbaesken) | [详情](profiles/matthias-baesken.md) |
+| [Matthias Baesken](profiles/matthias-baesken.md) | SAP | [@mbaesken](https://openjdk.org/census#mbaesken) | [详情](profiles/matthias-baesken.md) |
 | [Jaikiran Pai](profiles/jaikiran-pai.md) | Oracle | [@jaikiran](https://openjdk.org/census#jaikiran) | [详情](profiles/jaikiran-pai.md) |
 
 ### 安全 (Security) - 5 位
@@ -133,8 +133,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | [Axel Boldt-Christmas](profiles/axel-boldt-christmas.md) | SAP | [@aboldtc](https://openjdk.org/census#aboldtc) | ZGC | [详情](profiles/axel-boldt-christmas.md) |
 | [Johannes Bechberger](profiles/johannes-bechberger.md) | SAP | [@jbechberger](https://openjdk.org/census#jbechberger) | JFR | [详情](profiles/johannes-bechberger.md) |
 | [Yasumasa Suenaga](profiles/yasumasa-suenaga.md) | NTT DATA | [@suenaga](https://openjdk.org/census#suenaga) | Serviceability | [详情](profiles/yasumasa-suenaga.md) |
-| [Fei Yang](profiles/fei-yang.md) | Alibaba | [@fyang](https://openjdk.org/census#fyang) | RISC-V | [详情](profiles/fei-yang.md) |
-| [Shaojin Wen](profiles/shaojin-wen.md) | Alibaba | [@swen](https://openjdk.org/census#swen) | 核心库 | [详情](profiles/shaojin-wen.md) |
+| [Fei Yang](profiles/fei-yang.md) | ISCAS PLCT Lab | [@fyang](https://openjdk.org/census#fyang) | RISC-V | [详情](profiles/fei-yang.md) |
 | [Anjian Wen](profiles/anjian-wen.md) | ByteDance | [@awen](https://openjdk.org/census#awen) | RISC-V | [详情](profiles/anjian-wen.md) |
 | [Damon Nguyen](profiles/damon-nguyen.md) | Oracle | [@dnguyen](https://openjdk.org/census#dnguyen) | Desktop | [详情](profiles/damon-nguyen.md) |
 | [Francesco Andreuzzi](profiles/francesco-andreuzzi.md) | Oracle | [@fandreuzzi](https://openjdk.org/census#fandreuzzi) | 测试 | [详情](profiles/francesco-andreuzzi.md) |
@@ -221,14 +220,14 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | 桌面与 UI | 2 | 1 | 3 |
 | JFR | 1 | 1 | 2 |
 | AOT | 1 | 0 | 1 |
-| RISC-V | 0 | 5 | 5 |
+| RISC-V | 0 | 4 | 4 |
 | 测试 | 0 | 2 | 2 |
-| **总计** | **42** | **12** | **54** |
+| **总计** | **42** | **11** | **53** |
 
 > **统计说明**:
 > - Roman Kennke (Red Hat) 同时是 Reviewer 和 Committer，在领域统计中计入 Committer (GC 领域)
 > - Damon Nguyen (Oracle) 是 Committer，领域是 Desktop
-> - RISC-V Committer: Andrew Haley, Fredrik Bredberg (Red Hat); Fei Yang, Shaojin Wen (Alibaba); Anjian Wen (ByteDance) = 5 位
+> - RISC-V Committer: Andrew Haley, Fredrik Bredberg (Red Hat); Fei Yang (ISCAS PLCT Lab); Anjian Wen (ByteDance) = 4 位
 > - 测试 Committer: Francesco Andreuzzi, Manuel Hässig (Oracle) = 2 位
 > - Chen Liang (Oracle) 是编译器 Reviewer，ClassFile API 核心开发者
 > - Claes Redestad (Oracle) 从核心库移至编译器 Reviewer
