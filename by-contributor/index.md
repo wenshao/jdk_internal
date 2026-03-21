@@ -327,7 +327,9 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 JDK 26 (2025-06 to 2026-03) 期间的主要贡献者，基于 GitHub Integrated PRs 统计。
 
-### Top 50 贡献者
+### Top 100 贡献者
+
+#### 1-50 名
 
 | 排名 | 贡献者 | 组织 | PRs | 领域 | 档案 |
 |------|--------|------|-----|------|------|
@@ -381,6 +383,61 @@ JDK 26 (2025-06 to 2026-03) 期间的主要贡献者，基于 GitHub Integrated 
 | 48 | [Anthony Scarpino](/by-contributor/profiles/anthony-scarpino.md) | [Oracle](/contributors/orgs/oracle.md) | 14 | Security | [详情](/by-contributor/profiles/anthony-scarpino.md) |
 | 49 | [Erik Österlund](/by-contributor/profiles/erik-osterlund.md) | [Oracle](/contributors/orgs/oracle.md) | 13 | AOT | [详情](/by-contributor/profiles/erik-osterlund.md) |
 | 50 | [Hai-May Chao](/by-contributor/profiles/hai-may-chao.md) | [Oracle](/contributors/orgs/oracle.md) | 12 | Security | [详情](/by-contributor/profiles/hai-may-chao.md) |
+
+#### 51-100 名
+
+| 排名 | 贡献者 | 组织 | PRs | 领域 | 档案 |
+|------|--------|------|-----|------|------|
+| 51 | [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md) | [Oracle](/contributors/orgs/oracle.md) | 12 | Build | [详情](/by-contributor/profiles/magnus-ihse-bursie.md) |
+| 52 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | [Alibaba](/contributors/orgs/alibaba.md) | 11 | 核心库 | [详情](/by-contributor/profiles/shaojin-wen.md) |
+| 53 | [Stuart Marks](/by-contributor/profiles/stuart-marks.md) | [Oracle](/contributors/orgs/oracle.md) | 11 | Core Libraries | [详情](/by-contributor/profiles/stuart-marks.md) |
+| 54 | [Yude Lin](/by-contributor/profiles/yude-lin.md) | [Alibaba](/contributors/orgs/alibaba.md) | 10 | 编译器 | [详情](/by-contributor/profiles/yude-lin.md) |
+| 55 | [Xiaowei Lu](/by-contributor/profiles/xiaowei-lu.md) | [Alibaba](/contributors/orgs/alibaba.md) | 10 | GC | [详情](/by-contributor/profiles/xiaowei-lu.md) |
+| 56 | [Tongbao Zhang](/by-contributor/profiles/tongbao-zhang.md) | [Alibaba](/contributors/orgs/alibaba.md) | 9 | 测试 | [详情](/by-contributor/profiles/tongbao-zhang.md) |
+| 57 | [Kuai Wei](/by-contributor/profiles/kuai-wei.md) | [Alibaba](/contributors/orgs/alibaba.md) | 9 | 编译器 | [详情](/by-contributor/profiles/kuai-wei.md) |
+| 58 | [Fei Yang](/by-contributor/profiles/fei-yang.md) | [Alibaba](/contributors/orgs/alibaba.md) | 9 | C2 编译器 | [详情](/by-contributor/profiles/fei-yang.md) |
+| 59 | [Han GQ](/by-contributor/profiles/han-gq.md) | [Alibaba](/contributors/orgs/alibaba.md) | 8 | 核心库 | [详情](/by-contributor/profiles/han-gq.md) |
+| 60 | [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | [Alibaba](/contributors/orgs/alibaba.md) | 8 | 安全 | [详情](/by-contributor/profiles/anjian-wen.md) |
+| 61 | [Doug Simon](/by-contributor/profiles/doug-simon.md) | [Oracle Labs](/contributors/orgs/oracle.md) | 8 | Graal | [详情](/by-contributor/profiles/doug-simon.md) |
+| 62 | [Christian Hagedorn](/by-contributor/profiles/christian-hagedorn.md) | [Oracle Labs](/contributors/orgs/oracle.md) | 7 | Graal | [详情](/by-contributor/profiles/christian-hagedorn.md) |
+| 63 | [Oleg Pekhovskiy](/by-contributor/profiles/oleg-pekhovskiy.md) | Independent | 7 | Testing | [详情](/by-contributor/profiles/oleg-pekhovskiy.md) |
+| 64 | [Rahul Bhosale](/by-contributor/profiles/rahul-bhosale.md) | [Oracle](/contributors/orgs/oracle.md) | 7 | Networking | [详情](/by-contributor/profiles/rahul-bhosale.md) |
+| 65 | [Sergey Tsypanov](/by-contributor/profiles/sergey-tsypanov.md) | Independent | 6 | Security | [详情](/by-contributor/profiles/sergey-tsypanov.md) |
+| 66 | [Pavel Rappo](/by-contributor/profiles/pavel-rappo.md) | Independent | 6 | Core Libraries | [详情](/by-contributor/profiles/pavel-rappo.md) |
+| 67 | [Lance Andersen](/by-contributor/profiles/lance-andersen.md) | [Oracle](/contributors/orgs/oracle.md) | 6 | JDBC | [详情](/by-contributor/profiles/lance-andersen.md) |
+| 68 | [Joe Darcy](/by-contributor/profiles/joe-darcy.md) | [Oracle](/contributors/orgs/oracle.md) | 6 | Core Libraries | [详情](/by-contributor/profiles/joe-darcy.md) |
+| 69 | [Roger Riggs](/by-contributor/profiles/roger-riggs.md) | [Oracle](/contributors/orgs/oracle.md) | 6 | Serialization | [详情](/by-contributor/profiles/roger-riggs.md) |
+| 70 | [Peter Levart](/by-contributor/profiles/peter-levart.md) | Independent | 5 | Core Libraries | [详情](/by-contributor/profiles/peter-levart.md) |
+| 71 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | [Oracle](/contributors/orgs/oracle.md) | 5 | Core Libraries | [详情](/by-contributor/profiles/claes-redestad.md) |
+| 72 | [Ulf Adams](/by-contributor/profiles/ulf-adams.md) | [Google](/contributors/orgs/google.md) | 5 | Build | [详情](/by-contributor/profiles/ulf-adams.md) |
+| 73 | [Martin Buchholz](/by-contributor/profiles/martin-buchholz.md) | [Google](/contributors/orgs/google.md) | 5 | Concurrency | [详情](/by-contributor/profiles/martin-buchholz.md) |
+| 74 | [Ivan Gerasimov](/by-contributor/profiles/ivan-gerasimov.md) | [Oracle](/contributors/orgs/oracle.md) | 5 | Desktop | [详情](/by-contributor/profiles/ivan-gerasimov.md) |
+| 75 | [Alexandr Scherbatiy](/by-contributor/profiles/alexandr-sherbatiy.md) | [Oracle](/contributors/orgs/oracle.md) | 5 | Desktop | [详情](/by-contributor/profiles/alexandr-sherbatiy.md) |
+| 76 | [Semyon Sadetsky](/by-contributor/profiles/semyon-sadetsky.md) | [Oracle](/contributors/orgs/oracle.md) | 5 | Desktop | [详情](/by-contributor/profiles/semyon-sadetsky.md) |
+| 77 | [Pankaj Bansal](/by-contributor/profiles/pankaj-bansal.md) | [Arm](/contributors/orgs/) | 4 | Build | [详情](/by-contributor/profiles/pankaj-bansal.md) |
+| 78 | [Bhavesh Patel](/by-contributor/profiles/bhavesh-patel.md) | [Oracle](/contributors/orgs/oracle.md) | 4 | GC | [详情](/by-contributor/profiles/bhavesh-patel.md) |
+| 79 | [Poonam Bajaj](/by-contributor/profiles/poonam-bajaj.md) | [Oracle](/contributors/orgs/oracle.md) | 4 | Testing | [详情](/by-contributor/profiles/poonam-bajaj.md) |
+| 80 | [Amit Kumar](/by-contributor/profiles/amit-kumar.md) | [Oracle](/contributors/orgs/oracle.md) | 4 | Testing | [详情](/by-contributor/profiles/amit-kumar.md) |
+| 81 | [Ravi Reddy](/by-contributor/profiles/ravi-reddy.md) | [Oracle](/contributors/orgs/oracle.md) | 4 | GC | [详情](/by-contributor/profiles/ravi-reddy.md) |
+| 82 | [Jonathan Gibbons](/by-contributor/profiles/jonathan-gibbons.md) | [Oracle](/contributors/orgs/oracle.md) | 4 | javac | [详情](/by-contributor/profiles/jonathan-gibbons.md) |
+| 83 | [Liam Miller-Cushon](/by-contributor/profiles/liam-miller-cushon.md) | [Google](/contributors/orgs/google.md) | 4 | javac | [详情](/by-contributor/profiles/liam-miller-cushon.md) |
+| 84 | [Michael Ernst](/by-contributor/profiles/michael-ernst.md) | [University of Washington](/contributors/orgs/) | 4 | javac | [详情](/by-contributor/profiles/michael-ernst.md) |
+| 85 | [Srikanth Adayapalam](/by-contributor/profiles/srikanth-adayapalam.md) | [Oracle](/contributors/orgs/oracle.md) | 4 | javac | [详情](/by-contributor/profiles/srikanth-adayapalam.md) |
+| 86 | [Vicente Romero](/by-contributor/profiles/vicente-romero.md) | [Oracle](/contributors/orgs/oracle.md) | 4 | javac | [详情](/by-contributor/profiles/vicente-romero.md) |
+| 87 | [Eric Bruneton](/by-contributor/profiles/eric-bruneton.md) | Independent | 3 | ASM | [详情](/by-contributor/profiles/eric-bruneton.md) |
+| 88 | [Remi Forax](/by-contributor/profiles/remi-forax.md) | Independent | 3 | Core Libraries | [详情](/by-contributor/profiles/remi-forax.md) |
+| 89 | [John Rose](/by-contributor/profiles/john-rose.md) | [Oracle](/contributors/orgs/oracle.md) | 3 | HotSpot | [详情](/by-contributor/profiles/john-rose.md) |
+| 90 | [Charles Nutter](/by-contributor/profiles/charles-nutter.md) | Independent | 3 | InvokeDynamic | [详情](/by-contributor/profiles/charles-nutter.md) |
+| 91 | [Chris Thalinger](/by-contributor/profiles/chris-thalinger.md) | [Oracle](/contributors/orgs/oracle.md) | 3 | Graal | [详情](/by-contributor/profiles/chris-thalinger.md) |
+| 92 | [Gilles Duboscq](/by-contributor/profiles/gilles-duboscq.md) | [Oracle Labs](/contributors/orgs/oracle.md) | 3 | Graal | [详情](/by-contributor/profiles/gilles-duboscq.md) |
+| 93 | [Tom Rodriguez](/by-contributor/profiles/tom-rodriguez.md) | [Oracle Labs](/contributors/orgs/oracle.md) | 3 | Graal | [详情](/by-contributor/profiles/tom-rodriguez.md) |
+| 94 | [Dean Long](/by-contributor/profiles/dean-long.md) | [Oracle](/contributors/orgs/oracle.md) | 3 | HotSpot | [详情](/by-contributor/profiles/dean-long.md) |
+| 95 | [Mikael Vidstedt](/by-contributor/profiles/mikael-vidstedt.md) | [Oracle](/contributors/orgs/oracle.md) | 3 | HotSpot | [详情](/by-contributor/profiles/mikael-vidstedt.md) |
+| 96 | [Harold Seigel](/by-contributor/profiles/harold-seigel.md) | [Oracle](/contributors/orgs/oracle.md) | 3 | Security | [详情](/by-contributor/profiles/harold-seigel.md) |
+| 97 | [Valerie Peng](/by-contributor/profiles/valerie-peng.md) | [Oracle](/contributors/orgs/oracle.md) | 3 | Security | [详情](/by-contributor/profiles/valerie-peng.md) |
+| 98 | [Sean Mullan](/by-contributor/profiles/sean-mullan.md) | [Oracle](/contributors/orgs/oracle.md) | 3 | Security | [详情](/by-contributor/profiles/sean-mullan.md) |
+| 99 | [Xuelei Fan](/by-contributor/profiles/xuelei-fan.md) | [Oracle](/contributors/orgs/oracle.md) | 3 | Security | [详情](/by-contributor/profiles/xuelei-fan.md) |
+| 100 | [Weibing Xiao](/by-contributor/profiles/weibing-xiao.md) | Independent | 3 | Testing | [详情](/by-contributor/profiles/weibing-xiao.md) |
 
 ### 中国贡献者 (JDK 26)
 
