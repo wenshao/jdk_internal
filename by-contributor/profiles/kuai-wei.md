@@ -1,4 +1,4 @@
-# Kuai Wei (魏快)
+# Kuai Wei
 
 > **Alibaba C2 Compiler Expert** | **Dragonwell JDK Contributor** | **RISC-V, ZGC**
 
@@ -8,10 +8,10 @@
 
 | 属性 | 值 |
 |------|-----|
-| **姓名** | Kuai Wei (魏快) |
+| **姓名** | Kuai Wei |
 | **GitHub** | [@kuaiwei](https://github.com/kuaiwei) |
 | **公司** | [@alibaba](https://github.com/alibaba) |
-| **邮箱** | kuaiwei.kw@alibaba-inc.com |
+| **邮箱前缀** | kuaiwei.kw@alibaba-inc.com |
 | **OpenJDK Role** | Author, Committer |
 | **Integrated PRs** | 13 |
 | **主要领域** | C2 Compiler, IR Optimization, RISC-V, ZGC |
@@ -152,7 +152,7 @@ Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一。Dragonwel
 **Dragonwell 主要维护者**:
 - **GoeLin** (林珑): 1,200+ commits (Dragonwell 11/21)
 - **wangweij** (王卫建): 600+ commits
-- **Kuai Wei** (魏快): 15+ commits (JIT 优化，backport)
+- **Kuai Wei**: 15+ commits (JIT 优化，backport)
 
 ### Dragonwell 贡献详情
 
