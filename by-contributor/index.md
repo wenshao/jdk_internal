@@ -493,6 +493,7 @@ JDK 26 (2025-06 to 2026-03) 期间的主要贡献者，基于 GitHub Integrated 
 | Claes Redestad | [HexFormat 优化](/by-pr/8335/8335802.md) |
 | Chen Liang | [反射 API 性能优化](/by-pr/8371/8371953.md) |
 | Roger Riggs | [StringBuilder 健壮性](/by-pr/8351/8351443.md) |
+| [Raffaello Giulietti](/by-contributor/profiles/raffaello-giulietti.md) | [Independent](https://openjdk.org/census#rsgiulie) | [核心库，数学库](/by-topic/core/) | [详情](/by-contributor/profiles/raffaello-giulietti.md) | [→](/by-topic/core/) |
 
 ### 编译器优化
 
