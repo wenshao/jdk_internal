@@ -53,15 +53,15 @@ echo ""
 # 4. 贡献者组织一致性检查
 echo "=== 4. 贡献者组织一致性 ==="
 # Shipilev should be Amazon everywhere
-shipilev_wrong=$(grep -r "Shipilev.*Oracle\|Shipilev.*Red Hat" --include="*.md" 2>/dev/null | grep -v "formerly\|previously\|ex-\|历史\|曾" | wc -l)
+shipilev_wrong=$(grep -r "Shipilev.*Oracle\|Shipilev.*Red Hat" --include="*.md" 2>/dev/null | grep -v "formerly\|previously\|ex-\|历史\|曾\|当时\|时期\|at the time\|Oracle →\|Oracle->\|Oracle ->\|Career path\|reports/\|→.*Amazon\|->.*Amazon" | wc -l)
 echo "  Aleksey Shipilev (应为 Amazon): 错误引用 $shipilev_wrong 处"
 
 # Kennke should be Datadog
-kennke_wrong=$(grep -r "Kennke.*Red Hat\|Kennke.*Oracle" --include="*.md" 2>/dev/null | grep -v "formerly\|previously\|ex-\|历史\|曾\|started\|创始" | wc -l)
+kennke_wrong=$(grep -r "Kennke.*Red Hat\|Kennke.*Oracle" --include="*.md" 2>/dev/null | grep -v "formerly\|previously\|ex-\|历史\|曾\|started\|创始\|当时\|时期\|at the time\|Red Hat →\|前 Red Hat\|前Red Hat\|Career path\|Red Hat 期间\|现已加入\|reports/\|→.*Datadog\|->.*Datadog\|Datadog.*Shenandoah\|人才流动" | wc -l)
 echo "  Roman Kennke (应为 Datadog): 错误引用 $kennke_wrong 处"
 
 # Stuefe should be Red Hat
-stuefe_wrong=$(grep -r "Stuefe.*SAP\|Stuefe.*IBM\|Stuefe.*Oracle" --include="*.md" 2>/dev/null | grep -v "formerly\|previously\|ex-\|历史\|曾\|founder" | wc -l)
+stuefe_wrong=$(grep -r "Stuefe.*SAP\|Stuefe.*IBM\|Stuefe.*Oracle" --include="*.md" 2>/dev/null | grep -v "formerly\|previously\|ex-\|历史\|曾\|founder\|当时\|时期\|SAP →\|SAP->\|转至\|reports/\|→.*Red Hat\|->.*Red Hat\|属于.*Red Hat" | wc -l)
 echo "  Thomas Stuefe (应为 Red Hat): 错误引用 $stuefe_wrong 处"
 echo ""
 

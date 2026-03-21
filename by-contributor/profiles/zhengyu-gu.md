@@ -166,7 +166,7 @@ Zhengyu Gu 与以下 GC 专家紧密合作：
 |--------|------|----------|
 | **Aleksey Shipilev** | Amazon (AWS) | Shenandoah GC |
 | **William Kemper** | Amazon | 分代 Shenandoah |
-| **Roman Kennke** | Independent | Shenandoah GC |
+| **Roman Kennke** | Datadog | Shenandoah GC |
 | **Thomas Schatzl** | Oracle | GC 技术交流 |
 | **Per Lidén** | Oracle | ZGC/Shenandoah 技术对比 |
 

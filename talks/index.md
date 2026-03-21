@@ -244,7 +244,7 @@
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/roman-kennke.md)
 - [Shenandoah GC](../by-topic/core/gc/)
-- [组织: Red Hat](../contributors/orgs/redhat.md)
+- [组织: Datadog](../contributors/orgs/)
 
 ---
 

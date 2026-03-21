@@ -119,7 +119,7 @@ JDK 8 (2014) → JDK 11 (2018) → JDK 17 (2021) → JDK 21 (2023) → JDK 25 (2
 | 组织 | 贡献者数 | 主要领域 | 代表贡献者 |
 |------|----------|----------|------------|
 | **[Oracle](contributors/orgs/oracle.md)** | 18 | JVM, 编译器, 核心库 | Mark Reinhold, Brian Goetz, Magnus Ihse Bursie, Thomas Schatzl |
-| **[Red Hat](contributors/orgs/redhat.md)** | 12 | GC, 性能, 平台 | Roman Kennke, Andrew Dinn |
+| **[Red Hat](contributors/orgs/redhat.md)** | 12 | GC, 性能, 平台 | Andrew Dinn |
 | **[Alibaba](contributors/orgs/alibaba.md)** | 6 | 核心库, 性能 | Shaojin Wen |
 | **[Amazon](contributors/orgs/amazon.md)** | 8 | 网络, 安全, 工具 | Aleksey Shipilev, Jason Greene |
 | **[Microsoft](contributors/orgs/microsoft.md)** | 6 | Windows, 性能, 测试 | |
@@ -138,8 +138,10 @@ gantt
     Brian Goetz       :2024-01, 8M
     
     section Red Hat
-    Roman Kennke      :2024-06, 6M
     Andrew Dinn       :2023-03, 18M
+
+    section Datadog
+    Roman Kennke      :2024-06, 6M
 
     section Amazon
     Aleksey Shipilev  :2023-03, 18M

@@ -57,7 +57,7 @@ JDK 11 was the first Long-Term Support (LTS) release after the new six-month rel
 | Contributor | Organization | Focus |
 |-------------|--------------|-------|
 | [Aleksey Shipilev](./aleksey-shipilev.md) | Amazon | Performance, Epsilon GC |
-| [Roman Kennke](./roman-kennke.md) | Red Hat | Shenandoah GC |
+| [Roman Kennke](./roman-kennke.md) | Red Hat (当时) | Shenandoah GC |
 | [Per Liden](./per-liden.md) | Oracle | ZGC |
 | [Stefan Karlsson](./stefan-karlsson.md) | Oracle | ZGC |
 

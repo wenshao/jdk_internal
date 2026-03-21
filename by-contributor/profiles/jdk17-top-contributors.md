@@ -56,7 +56,7 @@ JDK 17 is the second Long-Term Support (LTS) release under the new six-month rel
 |-------------|--------------|-------|
 | [Per Liden](./per-liden.md) | Oracle | ZGC Lead |
 | [Stefan Karlsson](./stefan-karlsson.md) | Oracle | ZGC |
-| [Roman Kennke](./roman-kennke.md) | Red Hat | Shenandoah GC |
+| [Roman Kennke](./roman-kennke.md) | Red Hat (当时) | Shenandoah GC |
 | [Aleksey Shipilev](./aleksey-shipilev.md) | Amazon | Shenandoah, Performance |
 
 ### macOS/AArch64 Port

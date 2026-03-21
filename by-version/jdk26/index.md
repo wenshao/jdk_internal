@@ -374,8 +374,13 @@ java -XX:AOTCache=app.aot -XX:AOTConfiguration=app.aotconf MyApp
 
 | 贡献者 | 专长 | 详细资料 |
 |--------|------|----------|
-| [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | Shenandoah GC | → |
 | [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | JIT 编译 | → |
+
+### Datadog 贡献者
+
+| 贡献者 | 专长 | 详细资料 |
+|--------|------|----------|
+| [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | Shenandoah GC | → |
 
 ---
 
@@ -432,10 +437,15 @@ java -XX:AOTCache=app.aot -XX:AOTConfiguration=app.aotconf MyApp
 - 代表: Shaojin Wen (11), Yude Lin (10), Xiaowei Lu (10), Tongbao Zhang (9)
 - 主要领域: JIT 优化、字符串处理、GC、测试
 
-#### Red Hat (1.8%)
-- **69 提交**，3 位贡献者
-- 代表: Roman Kennke (30), Andrew Haley (20)
-- 主要领域: Shenandoah GC、RISC-V 架构
+#### Red Hat (1.0%)
+- **39 提交**，2 位贡献者
+- 代表: Andrew Haley (20)
+- 主要领域: RISC-V 架构
+
+#### Datadog
+- **30 提交**，1 位贡献者
+- 代表: Roman Kennke (30)
+- 主要领域: Shenandoah GC
 
 #### SAP (1.9%)
 - **73 提交**，2 位贡献者

@@ -92,7 +92,7 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 |--------|------|------|--------|------|
 | Claes Redestad | 2022-03 | OpenJDK Member | Daniel Fuchs | Performance |
 
-> **注**: Roman Kennke (Compact Headers) 是 Red Hat 员工，不是 Oracle，已从列表中移除
+> **注**: Roman Kennke (Compact Headers) 当时是 Red Hat 员工（现 Datadog），不是 Oracle，已从列表中移除
 
 > **角色说明**:
 > - **Reviewer**: 有权批准变更集的资深贡献者 ([详情](https://openjdk.org/bylaws))

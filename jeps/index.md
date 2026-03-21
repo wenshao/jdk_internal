@@ -59,9 +59,9 @@ JEP (JDK Enhancement Proposals) 是 Java 平台新特性的设计和规范文档
 | [JEP 430](language/jep-430.md) | String Templates | 21 | ⚠️ 撤回 | [→](language/jep-430.md) |
 | [JEP 507](language/jep-507.md) | Primitive Types in Patterns (3rd) | 25 | 🔍 预览 | [→](language/jep-507.md) |
 | [JEP 530](language/jep-530.md) | Primitive Types in Patterns (4th) | 26 | 🔍 预览 | [→](language/jep-530.md) |
-| [JEP 458](language/jep-458.md) | Vector API (1st) | 23 | 🔍 预览 | [→](language/jep-458.md) |
+| JEP 458 | Vector API (1st) | 23 | 🔍 预览 | - |
 | [JEP 529](language/jep-529.md) | Vector API (11th Incubator) | 26 | 🥚 孵化 | [→](language/jep-529.md) |
-| [JEP 449](language/jep-449.md) | Snippet Tagging | 23 | 🔍 预览 | [→](language/jep-449.md) |
+| [JEP 449](tools/jep-449.md) | Snippet Tagging | 23 | 🔍 预览 | [→](tools/jep-449.md) |
 
 ### 外部函数 (FFI)
 
@@ -95,7 +95,7 @@ JEP (JDK Enhancement Proposals) 是 Java 平台新特性的设计和规范文档
 | [JEP 466](tools/jep-466.md) | Class-File API (2nd) | 23 | 🔍 预览 | [→](tools/jep-466.md) |
 | [JEP 484](tools/jep-484.md) | Class-File API | 24 | ✅ 正式 | [→](tools/jep-484.md) |
 | [JEP 511](tools/jep-511.md) | Module Import Declarations | 25 | ✅ 正式 | [→](tools/jep-511.md) |
-| [JEP 512](tools/jep-512.md) | Compact Source Files | 25 | ✅ 正式 | [→](tools/jep-512.md) |
+| [JEP 512](language/jep-512.md) | Compact Source Files | 25 | ✅ 正式 | [→](language/jep-512.md) |
 | [JEP 526](tools/jep-526.md) | Lazy Constants | 26 | 🔍 预览 | [→](tools/jep-526.md) |
 
 ### 性能优化
@@ -140,12 +140,12 @@ JEP (JDK Enhancement Proposals) 是 Java 平台新特性的设计和规范文档
 
 ## 4. 按版本浏览
 
-- [JDK 21 JEPs](by-version/jdk21.md)
-- [JDK 22 JEPs](by-version/jdk22.md)
-- [JDK 23 JEPs](by-version/jdk23.md)
-- [JDK 24 JEPs](by-version/jdk24.md)
-- [JDK 25 JEPs](by-version/jdk25.md)
-- [JDK 26 JEPs](by-version/jdk26.md)
+- [JDK 21](../by-version/jdk21/)
+- [JDK 22](../by-version/jdk22/)
+- [JDK 23](../by-version/jdk23/)
+- [JDK 24](../by-version/jdk24/)
+- [JDK 25](../by-version/jdk25/)
+- [JDK 26](../by-version/jdk26/)
 
 ---
 

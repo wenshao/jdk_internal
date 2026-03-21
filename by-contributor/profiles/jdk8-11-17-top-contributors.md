@@ -73,7 +73,7 @@
 | 7 | Stuart Marks | Oracle | Streams |
 | 8 | Maurizio Cimadamore | Oracle | Lambda |
 | 9 | John Rose | Oracle | Lambda, InvokeDynamic |
-| 10 | Aleksey Shipilev | Red Hat | GC, Performance |
+| 10 | Aleksey Shipilev | Red Hat (当时；现 Amazon) | GC, Performance |
 
 **Key Features**: Lambda Expressions, Stream API, Date/Time API, Nashorn
 

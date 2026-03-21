@@ -4384,7 +4384,7 @@ git log --oneline -- src/hotspot/share/gc/shenandoah/
 - [JEP 519](/jeps/gc/jep-519.md) - Roman Kennke (Datadog)
 - [JEP 439](/jeps/gc/jep-439.md) - Stefan Karlsson (Oracle)
 - [JEP 474](/jeps/gc/jep-474.md) - Stefan Karlsson (Oracle)
-- [JEP 379](/jeps/gc/jep-379.md) - Roman Kennke (Red Hat, 现 Datadog)
+- [JEP 379](/jeps/gc/jep-379.md) - Roman Kennke (Red Hat (当时), 现 Datadog)
 - [JEP 333](/jeps/gc/jep-333.md) - Per Lidén (Oracle)
 
 **贡献者档案**:
