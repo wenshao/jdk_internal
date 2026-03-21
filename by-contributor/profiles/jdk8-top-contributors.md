@@ -55,7 +55,7 @@ JDK 8 has been maintained by a dedicated community over its 10+ year lifespan.
 
 | Contributor | Organization | Focus | Since |
 |-------------|--------------|-------|-------|
-| [Volker Simonis](./matthias-baesken.md) | SAP | Build, x86_64 | 2010 |
+| Volker Simonis | SAP | Build, x86_64 | 2010 |
 | [Magnus Ihse Bursie](./magnus-ihse-bursie.md) | Oracle | Build System | 2012 |
 | [David Holmes](./david-holmes.md) | Oracle | Threading, Runtime | 2000 |
 | [Coleen Phillimore](./coleen-phillimore.md) | Oracle | HotSpot | 2005 |
@@ -75,11 +75,11 @@ JDK 8 was primarily developed by Sun Microsystems (acquired by Oracle in 2010).
 
 | Contributor | Focus | Notes |
 |-------------|-------|-------|
-| Brian Goetz | Lambda Project Lead | JSR-335 Spec Lead |
+| [Brian Goetz](./brian-goetz.md) | Lambda Project Lead | JSR-335 Spec Lead |
 | Paul Sandoz | Streams API | JSR-335 Expert |
 | [David Holmes](./david-holmes.md) | Threading | JSR-166 |
-| [Mike Duigou](./magnus-ihse-bursie.md) | Collections | Lambda integration |
-| [Henry Jen](./magnus-ihse-bursie.md) | Core Libraries | I18n |
+| Mike Duigou | Collections | Lambda integration |
+| Henry Jen | Core Libraries | I18n |
 
 ### Red Hat
 
@@ -96,30 +96,30 @@ Contributed AArch64 port and ongoing maintenance.
 
 Long-term contributors to JDK 8 updates.
 
-| Contributor | Focus | 档案 |
-|-------------|-------|------|
-| Volker Simonis | Build, x86_64 | - |
-| [Matthias Baesken](./matthias-baesken.md) | Build, Ports | [详情](./matthias-baesken.md) |
-| Goetz Lindenmaier | HotSpot | - |
+| Contributor | Focus |
+|-------------|-------|
+| Volker Simonis | Build, x86_64 |
+| [Matthias Baesken](./matthias-baesken.md) | Build, Ports |
+| [Goetz Lindenmaier](./goetz-lindenmaier.md) | HotSpot |
 
 ### Amazon (Corretto)
 
 Maintains Amazon Corretto 8 distribution.
 
-| Contributor | Focus | 档案 |
-|-------------|-------|------|
-| Andrew Dinn | AArch64 | 详情  |
-| Nick Gasson | AArch64 | 详情  |
-| David Beaumont | Compiler | 详情  |
+| Contributor | Focus |
+|-------------|-------|
+| Andrew Dinn | AArch64 |
+| Nick Gasson | AArch64 |
+| David Beaumont | Compiler |
 
 ### Alibaba (Dragonwell)
 
 Maintains Dragonwell 8 distribution for China market.
 
-| Contributor | Focus | 档案 |
-|-------------|-------|------|
-| [Shaojin Wen](./shaojin-wen.md) | Core Libraries | [详情](./shaojin-wen.md) |
-| [Liang Chen](./chen-liang.md) | ClassFile | [详情](./chen-liang.md) |
+| Contributor | Focus |
+|-------------|-------|
+| [Shaojin Wen](./shaojin-wen.md) | Core Libraries |
+| [Liang Chen](./chen-liang.md) | ClassFile |
 
 ### Azul Systems (Zulu)
 
@@ -140,12 +140,9 @@ Long-term OpenJDK contributor with Zulu distribution.
 |-----|-------|---------|
 | JEP 126 | Lambda Expressions | Brian Goetz |
 | JEP 104 | Nashorn JavaScript Engine | Sundararajan Athijegannathan |
-| JEP 150 | Date-Time API | Stephen Colebourne |
+| JSR-310 | Date-Time API | Stephen Colebourne |
 | JEP 122 | Remove Permanent Generation | Jon Masamitsu |
 | JEP 160 | Lambda Form | John Rose |
-| JEP 161 | Compact Strings | Aleksey Shipilev |
-| JEP 178 | Statically-Linked JNI | - |
-| JEP 180 | Treat Lazy Fields As Final | Alex Buckley |
 
 ### JSR Specifications
 
@@ -173,7 +170,7 @@ The **jdk8u** project maintains OpenJDK 8 with security updates and bug fixes.
 
 - **Security Updates**: Quarterly (CPU)
 - **Bug Fixes**: Ongoing
-- **Ports**: AArch64, ARM, RISC-V, x86-64
+- **Ports**: AArch64, ARM, x86-64
 
 ---
 
