@@ -474,6 +474,8 @@ G1 GC 吞吐量改进，详见 [GC 演进](../gc/)。
 | [Markus Grönlund](/by-contributor/profiles/markus-gronlund.md) | Oracle | JFR 事件系统, JEP 518 Owner |
 | Jaroslav Bachorik | Oracle | JFR 工具 |
 
+> 注：Jaroslav Bachorik 暂无详细 profile，待补充。
+
 ---
 
 ## 7. 性能最佳实践
