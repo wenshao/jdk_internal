@@ -31,7 +31,7 @@ JDK 25 是继 JDK 21 之后的下一个 LTS 版本，包含大量语言增强、
 
 ## 2. 语言特性
 
-### JEP 455: Primitive Types in Patterns (第三次预览)
+### JEP 507: Primitive Types in Patterns (第三次预览)
 
 **状态**: 第三次预览
 **概述**: 允许在模式匹配中使用原始类型。
@@ -106,7 +106,7 @@ java -XX:+UseShenandoahGC -XX:ShenandoahGCMode=generational MyApp
 **概述**: Scoped Values 正式版，提供比 ThreadLocal 更好的替代方案。
 
 ```java
-private static final ScopedValue<User> CURRENT_USER = ScopedValue.create();
+private static final ScopedValue<User> CURRENT_USER = ScopedValue.newInstance();
 
 ScopedValue.where(CURRENT_USER, user).run(() -> {
     // 在此作用域内可访问 CURRENT_USER.get()
@@ -125,13 +125,13 @@ ScopedValue.where(CURRENT_USER, user).run(() -> {
 
 ```java
 try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
-    Future<String> user = scope.fork(() -> fetchUser());
-    Future<List<Order>> orders = scope.fork(() -> fetchOrders());
+    Subtask<String> user = scope.fork(() -> fetchUser());
+    Subtask<List<Order>> orders = scope.fork(() -> fetchOrders());
 
     scope.join();
     scope.throwIfFailed();
 
-    return new Response(user.resultNow(), orders.resultNow());
+    return new Response(user.get(), orders.get());
 }
 ```
 
@@ -141,21 +141,9 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ## 6. 安全
 
-### JEP 451: Prepare to Disallow the Dynamic Loading of Agents
-
-**状态**: 正式发布
-**概述**: 准备禁止动态加载代理，增强安全性。
-
 ---
 
 ## 7. 移除与清理
-
-### JEP 411: Deprecate the Security Manager for Removal
-
-**状态**: 继续废弃
-**概述**: Security Manager 继续废弃，计划在未来的版本中移除。
-
----
 
 ## 8. JEP 汇总
 
@@ -163,7 +151,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 | JEP | 标题 | 状态 |
 |-----|------|------|
-| JEP 455 | Primitive Types in Patterns | 🔍 预览 |
+| JEP 507 | Primitive Types in Patterns | 🔍 预览 |
 | JEP 512 | Compact Source Files | ✅ 正式 |
 | JEP 513 | Flexible Constructor Bodies | ✅ 正式 |
 

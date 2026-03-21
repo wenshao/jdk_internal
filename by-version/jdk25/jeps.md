@@ -6,10 +6,8 @@
 ## 目录
 
 1. [语言特性](#1-语言特性)
-2. [性能](#2-性能)
-3. [并发](#3-并发)
-4. [安全](#4-安全)
-5. [JEP 完整列表](#5-jep-完整列表)
+2. [并发](#2-并发)
+3. [JEP 完整列表](#3-jep-完整列表)
 
 ---
 
@@ -42,9 +40,9 @@ if (obj instanceof int i) {
 
 ---
 
-### JEP 512: Compact Source Files (第四次预览)
+### JEP 512: Compact Source Files (正式版)
 
-**状态**: 🔍 Preview
+**状态**: ✅ Final
 
 简化单文件程序的编写，无需显式类声明。
 
@@ -111,28 +109,13 @@ ScopedValue.where(USER, "alice")
 
 ---
 
-## 4. 安全
-
-### JEP 451: Prepare to Restrict Dynamic Loading of Agents
-
-**状态**: ⚠️ Deprecated
-
-准备限制代理的动态加载，提升安全性。
-
-**影响**: 使用 `javaagent` 的应用需要评估
-
----
-
-## 5. JEP 完整列表
+## 3. JEP 完整列表
 
 | JEP | 标题 | 状态 |
 |-----|------|------|
-| 448 | JVM Code Heap Segmentation | ✅ |
-| 449 | Barrier-Based C2 Compilation | ✅ |
-| 451 | Prepare to Restrict Dynamic Loading | ⚠️ |
 | 505 | Structured Concurrency | 🔍 |
 | 506 | Scoped Values | ✅ |
 | 507 | Primitive Types in Patterns | 🔍 |
-| 512 | Compact Source Files | 🔍 |
+| 512 | Compact Source Files | ✅ |
 
 > 图例: ✅ Final | 🔍 Preview | ⚠️ Deprecated

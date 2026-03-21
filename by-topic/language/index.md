@@ -96,7 +96,7 @@ Java 语言特性演进项目。
 | JDK 7 | MethodHandle (JSR 292) | JSR 292 |
 | JDK 8 | Lambda invokedynamic, Parameter 反射 | - |
 | JDK 11 | Constable/ConstantDesc | - |
-| JDK 16 | ClassFile API | JEP 395 |
+| JDK 16 | Records | JEP 395 |
 | JDK 22 | Class-File API (预览) | JEP 459 |
 | JDK 24 | Class-File API (正式) | JEP 484 |
 | JDK 26 | Mirror API | - |
