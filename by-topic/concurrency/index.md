@@ -22,11 +22,12 @@
 ## 1. 演进概览
 
 ```
-JDK 1.0 ─── JDK 5 ─── JDK 7 ─── JDK 11 ─── JDK 19 ─── JDK 21 ─── JDK 26
-   │           │           │            │            │            │           │
- Thread     Executor    NIO       HTTP Client  Virtual     分代 ZGC    HTTP/3
- Runnable   ForkJoin    AJS       CompletableFuture  Thread    Structured  QUIC
- Locks      Future      Async      (正式)       (正式)     Concurrency
+JDK 1.0 ── JDK 5 ── JDK 7 ── JDK 11 ── JDK 19 ── JDK 21 ── JDK 24 ── JDK 25 ── JDK 26
+   │          │          │          │          │          │          │          │          │
+ Thread    Executor   NIO     HTTP Client Virtual    分代 ZGC   解除      Scoped    Structured
+ Runnable  ForkJoin   AJS     Completable Thread     Structured  Pin 限制  Values   Concurrency
+ Locks     Future     Async   Future(正式) (正式)    Concurrency JEP 491  (正式)    (正式)
+                                                     预览                 JEP 506   JEP 507
 ```
 
 ### 版本里程碑
@@ -38,8 +39,10 @@ JDK 1.0 ─── JDK 5 ─── JDK 7 ─── JDK 11 ─── JDK 19 ──
 | **JDK 8** | 函数式并发 | CompletableFuture、Parallel Stream |
 | **JDK 11** | HTTP 标准化 | HTTP Client 正式版 |
 | **JDK 19** | 虚拟线程预览 | Virtual Threads (预览) |
-| **JDK 21** | 并发革命 | Virtual Threads (正式)、Scoped Values |
-| **JDK 26** | 网络升级 | HTTP/3 (预览) |
+| **JDK 21** | 并发革命 | Virtual Threads (正式)、Scoped Values (预览) |
+| **JDK 24** | Pin 问题修复 | 虚拟线程不再 Pin (JEP 491)、Structured Concurrency 第四次预览 (JEP 499) |
+| **JDK 25** | 值类型正式化 | Scoped Values 正式版 (JEP 506)、Structured Concurrency 第五次预览 (JEP 505)、Stable Values 预览 (JEP 502) |
+| **JDK 26** | 并发正式化 | Structured Concurrency 正式版 (JEP 507)、HTTP/3 预览 (JEP 517) |
 
 ---
 
