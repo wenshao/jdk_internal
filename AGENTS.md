@@ -349,6 +349,56 @@ When adding or checking local links:
 - Only detected after user reported broken link
 - **Lesson**: When checking one type of link, check all similar patterns in the file
 
+### Organization Link Priority
+
+**CRITICAL: Always prefer local organization links over external URLs.**
+
+When linking to organizations (Oracle, Alibaba, SAP, Red Hat, Amazon, Google, etc.):
+
+1. **Priority order for organization links**:
+   - **First**: Local organization page `/contributors/orgs/{orgname}.md`
+   - **Second**: External website URL (only if no local page exists)
+
+2. **Available local organization pages**:
+   | Organization | Local Link |
+   |--------------|------------|
+   | Oracle | `/contributors/orgs/oracle.md` |
+   | Alibaba | `/contributors/orgs/alibaba.md` |
+   | SAP | `/contributors/orgs/sap.md` |
+   | Red Hat | `/contributors/orgs/redhat.md` |
+   | Amazon | `/contributors/orgs/amazon.md` |
+   | Google | `/contributors/orgs/google.md` |
+   | IBM | `/contributors/orgs/ibm.md` |
+   | Tencent | `/contributors/orgs/tencent.md` |
+   | ByteDance | `/contributors/orgs/bytedance.md` |
+   | ISCAS PLCT | `/contributors/orgs/iscas-plct.md` |
+   | Loongson | `/contributors/orgs/loongson.md` |
+
+3. **When to use external links**:
+   - Organization has no local page (e.g., Arm, NTT DATA, University of Washington)
+   - Linking to specific resources (downloads, documentation, blogs)
+   - Linking to JDK distribution pages
+
+4. **Examples**:
+   ```markdown
+   # ✅ Correct - local link
+   [Oracle](/contributors/orgs/oracle.md)
+
+   # ❌ Wrong - external link when local page exists
+   [Oracle](https://www.oracle.com/java/)
+
+   # ✅ Correct - external link for specific resource
+   [Oracle JDK Downloads](https://www.oracle.com/java/technologies/downloads/)
+
+   # ✅ Correct - external link when no local page exists
+   [Arm](https://www.arm.com/)
+   ```
+
+5. **Before adding organization links**:
+   - Check if local page exists: `ls contributors/orgs/`
+   - Use local link if available
+   - Only use external URL for specific resources or when no local page exists
+
 ### Research Collaboration Guidelines
 
 When multiple Agents collaborate:
