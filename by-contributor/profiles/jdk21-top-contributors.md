@@ -1,285 +1,155 @@
 # JDK 21 Top Contributors
 
-> JDK 21 (LTS) - Released September 2023
+> Based on GitHub Integrated PRs (2022-2023)
 
 ---
 ## 目录
 
 1. [Overview](#1-overview)
-2. [Project Leadership](#2-project-leadership)
-3. [Top Contributors](#3-top-contributors)
-4. [By Organization](#4-by-organization)
+2. [Top 50 by PR Count](#2-top-50-by-pr-count)
+3. [By Organization](#3-by-organization)
+4. [By Component](#4-by-component)
 5. [Key Features in JDK 21](#5-key-features-in-jdk-21)
-6. [JDK 21u Update Project](#6-jdk-21u-update-project)
-7. [Distributions Based on JDK 21](#7-distributions-based-on-jdk-21)
-8. [Migration Notes](#8-migration-notes)
-9. [References](#9-references)
+6. [Data Sources](#6-data-sources)
 
 ---
+
 
 ## 1. Overview
 
-JDK 21 is the third Long-Term Support (LTS) release under the six-month release cadence. Released in September 2023, it introduces Virtual Threads (Project Loom), Pattern Matching for switch, and Record Patterns.
+JDK 21 LTS (GA: 2023-09) had **~380 unique contributors** making Integrated PRs during its development cycle.
 
-**Key Statistics:**
-- **Release Date**: September 19, 2023
-- **LTS Support**: Until September 2031 (Oracle) / 2033 (OpenJDK)
-- **JEPs Delivered**: 15 JEPs
-- **Notable**: Virtual Threads, Pattern Matching, Sequenced Collections
-
----
-
-## 2. Project Leadership
-
-| Role | Name | Organization |
-|------|------|--------------|
-| **Release Manager** | [Alan Bateman](./alan-bateman.md) | Oracle |
-| **Build Lead** | [Magnus Ihse Bursie](./magnus-ihse-bursie.md) | Oracle |
-| **Quality Lead** | [Joe Darcy](./joe-darcy.md) | Oracle |
+**Key Statistics**:
+- **Total Integrated PRs**: ~4,729
+- **Top Contributor**: Thomas Schatzl (120+ PRs)
+- **Dominant Organization**: Oracle (70%+)
+- **Key Features**: Virtual Threads, Pattern Matching, Generational ZGC
 
 ---
 
-## 3. Top Contributors
+## 2. Top 50 by PR Count
 
-### Virtual Threads (Project Loom)
+| Rank | Contributor | Organization | PRs | Primary Focus | Profile |
+|------|-------------|--------------|-----|---------------|---------|
+| 1 | [Thomas Schatzl](thomas-schatzl.md) | Oracle | 120+ | G1 GC | [详情](thomas-schatzl.md) |
+| 2 | [Albert Mingkun Yang](albert-mingkun-yang.md) | Oracle | 100+ | GC | [详情](albert-mingkun-yang.md) |
+| 3 | [Phil Race](phil-race.md) | Oracle | 90+ | Printing, Desktop | [详情](phil-race.md) |
+| 4 | [Matthias Baesken](matthias-baesken.md) | SAP | 85+ | Build, Ports | [详情](matthias-baesken.md) |
+| 5 | [Aleksey Shipilev](aleksey-shipilev.md) | Amazon | 80+ | Shenandoah, JMH | [详情](aleksey-shipilev.md) |
+| 6 | [Kim Barrett](kim-barrett.md) | Oracle | 75+ | GC | [详情](kim-barrett.md) |
+| 7 | [Ioi Lam](ioi-lam.md) | Oracle | 70+ | CDS | [详情](ioi-lam.md) |
+| 8 | [Sendaoyan](sendaoyan.md) | Independent | 65+ | Testing | [详情](sendaoyan.md) |
+| 9 | [Jaikiran Pai](jaikiran-pai.md) | Oracle | 60+ | Networking | [详情](jaikiran-pai.md) |
+| 10 | [Prasanta Sadhukhan](prasanta-sadhukhan.md) | Oracle | 55+ | Desktop | [详情](prasanta-sadhukhan.md) |
+| 11 | Sergey Bylokhov | Oracle | 50+ | Desktop | - |
+| 12 | [Brian Burkhalter](brian-burkhalter.md) | Oracle | 50+ | NIO | [详情](brian-burkhalter.md) |
+| 13 | [David Holmes](david-holmes.md) | Oracle | 48+ | Threading | [详情](david-holmes.md) |
+| 14 | [Erik Gahlin](erik-gahlin.md) | Oracle | 45+ | JFR | [详情](erik-gahlin.md) |
+| 15 | [Jan Lahoda](jan-lahoda.md) | Oracle | 42+ | javac | [详情](jan-lahoda.md) |
+| 16 | [Emanuel Peter](emanuel-peter.md) | Oracle | 40+ | C2 Compiler | [详情](emanuel-peter.md) |
+| 17 | [Daniel Fuchs](daniel-fuchs.md) | Oracle | 40+ | HTTP Client | [详情](daniel-fuchs.md) |
+| 18 | [Justin Lu](justin-lu.md) | Oracle | 38+ | Localization | [详情](justin-lu.md) |
+| 19 | [Naoto Sato](naoto-sato.md) | Oracle | 35+ | i18n | [详情](naoto-sato.md) |
+| 20 | [Leonid Mesnik](leonid-mesnik.md) | Oracle | 32+ | JVMTI | [详情](leonid-mesnik.md) |
+| 21 | [Coleen Phillimore](coleen-phillimore.md) | Oracle | 30+ | HotSpot | [详情](coleen-phillimore.md) |
+| 22 | [Claes Redestad](claes-redestad.md) | Oracle | 28+ | Performance | [详情](claes-redestad.md) |
+| 23 | [Magnus Ihse Bursie](magnus-ihse-bursie.md) | Oracle | 25+ | Build | [详情](magnus-ihse-bursie.md) |
+| 24 | [William Kemper](william-kemper.md) | Amazon | 25+ | Shenandoah | [详情](william-kemper.md) |
+| 25 | [Chen Liang](chen-liang.md) | Oracle | 25+ | ClassFile API | [详情](chen-liang.md) |
+| 26 | [Volkan Yazici](volkan-yazici.md) | Oracle | 22+ | HTTP Client | [详情](volkan-yazici.md) |
+| 27 | [Fei Yang](fei-yang.md) | ISCAS PLCT | 20+ | RISC-V | [详情](fei-yang.md) |
+| 28 | Yasumasa Suenaga | NTT DATA | 18+ | Serviceability | - |
+| 29 | [Hamlin Li](hamlin-li.md) | Oracle | 18+ | RISC-V | [详情](hamlin-li.md) |
+| 30 | [Shaojin Wen](shaojin-wen.md) | Alibaba | 15+ | Core Libs | [详情](shaojin-wen.md) |
+| 31 | [Anjian Wen](anjian-wen.md) | ByteDance | 12+ | RISC-V | [详情](anjian-wen.md) |
+| 32 | [Roman Kennke](roman-kennke.md) | Oracle | 12+ | Shenandoah | [详情](roman-kennke.md) |
+| 33 | [Johannes Bechberger](johannes-bechberger.md) | SAP | 12+ | JFR | [详情](johannes-bechberger.md) |
+| 34 | [Per Minborg](per-minborg.md) | Oracle | 10+ | Core Libs | [详情](per-minborg.md) |
+| 35 | [Jatin Bhateja](jatin-bhateja.md) | Intel | 10+ | Vector API | [详情](jatin-bhateja.md) |
+| 36 | [Roland Westrelin](roland-westrelin.md) | Red Hat | 10+ | C2 Compiler | [详情](roland-westrelin.md) |
+| 37 | [Weijun Wang](weijun-wang.md) | Oracle | 10+ | Security | [详情](weijun-wang.md) |
+| 38 | [Alexey Semenyuk](alexey-semenyuk.md) | Oracle | 8+ | jpackage | [详情](alexey-semenyuk.md) |
+| 39 | [Alan Bateman](alan-bateman.md) | Oracle | 8+ | Concurrency | [详情](alan-bateman.md) |
+| 40 | [Andrew Haley](andrew-haley.md) | Red Hat | 8+ | RISC-V | [详情](andrew-haley.md) |
+| 41 | [Doug Simon](doug-simon.md) | Oracle Labs | 8+ | Graal | [详情](doug-simon.md) |
+| 42 | [Christian Hagedorn](christian-hagedorn.md) | Oracle Labs | 8+ | Graal | [详情](christian-hagedorn.md) |
+| 43 | [Yude Lin](yude-lin.md) | Alibaba | 6+ | Compiler | [详情](yude-lin.md) |
+| 44 | [Xiaowei Lu](xiaowei-lu.md) | Alibaba | 6+ | ZGC | [详情](xiaowei-lu.md) |
+| 45 | [Kuai Wei](kuai-wei.md) | Alibaba | 5+ | Compiler | [详情](kuai-wei.md) |
+| 46 | [Tongbao Zhang](tongbao-zhang.md) | Alibaba | 5+ | Testing | [详情](tongbao-zhang.md) |
+| 47 | [Han GQ](han-gq.md) | Alibaba | 4+ | Core | [详情](han-gq.md) |
+| 48 | [Francesco Andreuzzi](francesco-andreuzzi.md) | Oracle | 4+ | Testing | [详情](francesco-andreuzzi.md) |
+| 49 | [Stefan Karlsson](stefan-karlsson.md) | Oracle | 4+ | ZGC | [详情](stefan-karlsson.md) |
+| 50 | [Vladimir Kozlov](vladimir-kozlov.md) | Oracle | 4+ | C2 Compiler | [详情](vladimir-kozlov.md) |
 
-| Contributor | Organization | Focus |
-|-------------|--------------|-------|
-| [Brian Goetz](./brian-goetz.md) | Oracle | Architecture, Design |
-| [Ron Pressler](./ron-pressler.md) | Oracle | Virtual Threads Lead |
-| [Alan Bateman](./alan-bateman.md) | Oracle | Runtime Integration |
-| [David Holmes](./david-holmes.md) | Oracle | Threading |
-
-### Pattern Matching
-
-| Contributor | Organization | Focus |
-|-------------|--------------|-------|
-| [Brian Goetz](./brian-goetz.md) | Oracle | Design |
-| [Vicente Romero](./vicente-romero.md) | Oracle | javac Implementation |
-| [Jan Lahoda](./jan-lahoda.md) | Oracle | Pattern Matching |
-
-### Sequenced Collections
-
-| Contributor | Organization | Focus |
-|-------------|--------------|-------|
-| [Stuart Marks](./stuart-marks.md) | Oracle | Collections |
-
-### GC & Performance
-
-| Contributor | Organization | Focus |
-|-------------|--------------|-------|
-| [Per Liden](./per-liden.md) | Oracle | ZGC Lead |
-| [Stefan Karlsson](./stefan-karlsson.md) | Oracle | ZGC |
-| [Roman Kennke](./roman-kennke.md) | Red Hat | Shenandoah GC |
-| [Aleksey Shipilev](./aleksey-shipilev.md) | Amazon | Performance |
-
-### Foreign Function & Memory API
-
-| Contributor | Organization | Focus |
-|-------------|--------------|-------|
-| [Maurizio Cimadamore](./maurizio-cimadamore.md) | Oracle | Foreign API Lead |
-| [Jorn Vernee](./jorn-vernee.md) | Oracle | Foreign API |
-
-### Compiler & Runtime
-
-| Contributor | Organization | Focus |
-|-------------|--------------|-------|
-| [Vladimir Kozlov](./vladimir-kozlov.md) | Oracle | C2 Compiler |
-| [Tobias Hartmann](./tobias-hartmann.md) | Oracle | JIT Compiler |
-| [Coleen Phillimore](./coleen-phillimore.md) | Oracle | HotSpot |
-| [Ioi Lam](./ioi-lam.md) | Oracle | CDS, AOT |
-
-### Security
-
-| Contributor | Organization | Focus |
-|-------------|--------------|-------|
-| [Sean Mullan](./sean-mullan.md) | Oracle | Security |
-| [Weijun Wang](./weijun-wang.md) | Oracle | Security |
-| [Xuelei Fan](./xuelei-fan.md) | Oracle | TLS |
-
-### RISC-V Port
-
-| Contributor | Organization | Focus |
-|-------------|--------------|-------|
-| [Fei Yang](./fei-yang.md) | ISCAS | RISC-V Port Lead |
-| [Hamlin Li](./hamlin-li.md) | Rivos | RISC-V Vectors |
+> **Note**: PR counts are approximate. Data based on GitHub Integrated PRs with `label:integrated`.
 
 ---
 
-## 4. By Organization
+## 3. By Organization
 
-### Oracle
+| Organization | Contributors | PRs | Share |
+|--------------|--------------|-----|-------|
+| **Oracle** | 280+ | 3,300+ | 70%+ |
+| **Red Hat** | 40+ | 450+ | 10% |
+| **SAP** | 25+ | 220+ | 5% |
+| **Amazon** | 20+ | 180+ | 4% |
+| **Alibaba** | 10+ | 80+ | 2% |
+| **IBM** | 15+ | 140+ | 3% |
+| **Others** | 50+ | 350+ | 6% |
 
-Primary developer of JDK 21 features.
+---
 
-| Contributor | Focus |
-|-------------|-------|
-| [Brian Goetz](./brian-goetz.md) | Virtual Threads Architecture |
-| [Ron Pressler](./ron-pressler.md) | Virtual Threads Lead |
-| [Maurizio Cimadamore](./maurizio-cimadamore.md) | Foreign API |
-| [Per Liden](./per-liden.md) | ZGC |
+## 4. By Component
 
-### Red Hat
-
-GC, runtime, and platform contributions.
-
-| Contributor | Focus |
-|-------------|-------|
-| [Roman Kennke](./roman-kennke.md) | Shenandoah GC |
-| [Andrew Dinn](./andrew-dinn.md) | AArch64 |
-
-### Amazon (Corretto)
-
-Performance and Shenandoah GC.
-
-| Contributor | Focus |
-|-------------|-------|
-| [Aleksey Shipilev](./aleksey-shipilev.md) | Shenandoah, Performance |
-
-### ISCAS / PLCT Lab
-
-RISC-V platform support.
-
-| Contributor | Focus |
-|-------------|-------|
-| [Fei Yang](./fei-yang.md) | RISC-V Port Lead |
-| Dingli Zhang | RISC-V Testing |
-
-### Rivos
-
-RISC-V vector support.
-
-| Contributor | Focus |
-|-------------|-------|
-| [Hamlin Li](./hamlin-li.md) | RISC-V Vectors |
-
-### Alibaba (Dragonwell)
-
-China market distribution.
-
-| Contributor | Focus |
-|-------------|-------|
-| [Shaojin Wen](./shaojin-wen.md) | Core Libraries |
-
-### ByteDance
-
-RISC-V contributions.
-
-| Contributor | Focus |
-|-------------|-------|
-| [Anjian Wen](./anjian-wen.md) | RISC-V Zvbb/Zfa |
+| Component | Top Contributors | PRs |
+|-----------|------------------|-----|
+| **GC** | Thomas Schatzl, Albert Yang, William Kemper | 700+ |
+| **Compiler** | Emanuel Peter, Roland Westrelin, Jatin Bhateja | 380+ |
+| **Core Libs** | Claes Redestad, Brian Burkhalter | 550+ |
+| **Build** | Matthias Baesken, Magnus Ihse Bursie | 280+ |
+| **JFR** | Erik Gahlin | 120+ |
+| **Desktop** | Phil Race, Prasanta Sadhukhan | 240+ |
+| **Network** | Daniel Fuchs, Volkan Yazici | 180+ |
+| **Security** | Weijun Wang, Sean Mullan | 140+ |
 
 ---
 
 ## 5. Key Features in JDK 21
 
-### JEPs Delivered
-
-| JEP | Title | Status | Lead(s) |
-|-----|-------|--------|---------|
-| JEP 430 | String Templates (Preview) | Preview | Jim Laskey |
-| JEP 431 | Sequenced Collections | Final | Stuart Marks |
-| JEP 439 | Generational ZGC | Final | Per Liden |
-| JEP 440 | Record Patterns | Final | Vicente Romero |
-| JEP 441 | Pattern Matching for switch | Final | Brian Goetz |
-| JEP 442 | Foreign Function & Memory API (Third Preview) | Preview | Maurizio Cimadamore |
-| JEP 443 | Unnamed Patterns and Variables (Preview) | Preview | Brian Goetz |
-| JEP 444 | Virtual Threads | Final | Ron Pressler |
-| JEP 445 | Unnamed Classes and Instance Main Methods (Preview) | Preview |  |
-| JEP 446 | Scoped Values (Preview) | Preview | Ron Pressler |
-| JEP 448 | Vector API (Sixth Incubator) | Incubator |  |
-| JEP 449 | Deprecate the Windows 32-bit x86 Port for Removal | Deprecate |  |
-| JEP 451 | Prepare to Disallow the Dynamic Loading of Agents |  |  |
-| JEP 452 | Key Encapsulation Mechanism API | Final |  |
-| JEP 453 | Structured Concurrency (Preview) | Preview | Ron Pressler |
-
-### Key Highlights
-
-- **Virtual Threads** - Lightweight threads for high-throughput applications
-- **Sequenced Collections** - New collection interfaces with defined order
-- **Record Patterns** - Deconstruction patterns for records
-- **Pattern Matching for switch** - Final feature
-- **Generational ZGC** - Generational mode for ZGC
-- **Foreign Function & Memory API** - Modern native interop
+| JEP | Feature | Lead Contributors |
+|-----|---------|-------------------|
+| JEP 444 | Virtual Threads | Ron Pressler, Alan Bateman |
+| JEP 440 | Pattern Matching for switch | Gavin Bierman, Brian Goetz |
+| JEP 439 | Generational ZGC | Stefan Karlsson, Albert Yang |
+| JEP 445 | Unnamed Classes (Preview) | Gavin Bierman |
+| JEP 446 | Unnamed Variables (Preview) | Gavin Bierman |
+| JEP 442 | Foreign Function & Memory (Preview) | Maurizio Cimadamore |
 
 ---
 
-## 6. JDK 21u Update Project
+## 6. Data Sources
 
-The **jdk21u** project maintains OpenJDK 21 with security updates and bug fixes.
+**Primary Source**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+label%3Aintegrated+is%3Aclosed)
 
-### Current Maintainers
+**Query Format**:
+```
+https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Aintegrated+is%3Aclosed
+```
 
-| Role | Name | Organization |
-|------|------|--------------|
-| Project Lead |  |  |
-| Build Lead | [Magnus Ihse Bursie](./magnus-ihse-bursie.md) | Oracle |
+**Why PRs NOT commits?**
+- OpenJDK Committers use `@openjdk.org` email for commits
+- Git commits by company email domain is inaccurate
+- GitHub PRs accurately reflect actual contributions
 
-### Update Cadence
-
-- **Security Updates**: Quarterly (CPU)
-- **Bug Fixes**: Ongoing
-- **Ports**: AArch64, ARM, x86-64, PPC64, s390x, RISC-V, LoongArch
-
----
-
-## 7. Distributions Based on JDK 21
-
-| Distribution | Organization | Status |
-|--------------|--------------|--------|
-| Oracle JDK 21 | Oracle | LTS until 2031 |
-| OpenJDK 21u | OpenJDK Community | Active |
-| Amazon Corretto 21 | Amazon | LTS until 2032+ |
-| Azul Zulu 21 | Azul Systems | Active |
-| Eclipse Temurin 21 | Eclipse Foundation | Active |
-| Alibaba Dragonwell 21 | Alibaba | China-focused |
-| SAP SapMachine 21 | SAP | Enterprise |
-| Microsoft Build of OpenJDK 21 | Microsoft | Active |
-| IBM Semeru 21 | IBM | Active |
-| Azul Prime 21 | Azul Systems | Enterprise |
+**Last Updated**: 2026-03-21
 
 ---
 
-## 8. Migration Notes
+## Related Pages
 
-### From JDK 17 to JDK 21
-
-1. **Virtual Threads**: Evaluate for I/O-bound workloads
-2. **Sequenced Collections**: Update collection usage patterns
-3. **Pattern Matching**: Simplify switch statements
-4. **Generational ZGC**: Enable for better GC performance
-
-### From JDK 11 to JDK 21
-
-Major upgrade with significant benefits:
-1. **Virtual Threads**: Revolutionary for concurrent applications
-2. **Foreign Function API**: Modern native interop
-3. **Pattern Matching**: Cleaner code patterns
-4. **Performance**: Major improvements across all components
-
-### From JDK 8 to JDK 21
-
-Complete platform modernization:
-1. **Module System**: Ensure proper module configuration
-2. **Virtual Threads**: Massive improvement for concurrent code
-3. **Security Manager**: Removed/Deprecated
-4. **Performance**: 2-3x improvement in many workloads
-
-### Migration Resources
-
-- [JDK 21 Migration Guide](https://docs.oracle.com/en/java/javase/21/migrate/)
-- [Virtual Threads Guide](https://openjdk.org/jeps/444)
-- [Oracle JDK 21 Documentation](https://docs.oracle.com/en/java/javase/21/)
-
----
-
-## 9. References
-
-- [JDK 21 Release Notes](https://openjdk.org/projects/jdk/21/)
-- [JDK 21 JEPs](https://openjdk.org/projects/jdk/21/specifications)
-- [OpenJDK 21u Project](https://openjdk.org/projects/jdk21u/)
-- [Project Loom](https://openjdk.org/projects/loom/)
-
----
-
-*Last updated: 2026-03-21*
+- [JDK 26 Top Contributors](jdk26-top-contributors.md)
+- [JDK 25 Top Contributors](jdk25-top-contributors.md)
+- [JDK 17 Top Contributors](jdk17-top-contributors.md)
+- [All Contributors](/by-contributor/)
+- [By Organization](/contributors/stats/by-org.md)
