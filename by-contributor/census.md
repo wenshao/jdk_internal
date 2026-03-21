@@ -47,7 +47,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | [Ioi Lam](profiles/ioi-lam.md) | Oracle | [@iklam](https://openjdk.org/census#iklam) | [详情](profiles/ioi-lam.md) |
 | [Erik Gahlin](profiles/erik-gahlin.md) | Oracle | [@egahlin](https://openjdk.org/census#egahlin) | [详情](profiles/erik-gahlin.md) |
 
-### 编译器 (Compiler) - 7 位
+### 编译器 (Compiler) - 8 位
 
 | 贡献者 | 组织 | Census | 档案 |
 |--------|------|--------|------|
@@ -58,6 +58,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | [Roland Westrelin](profiles/rooland-westrelin.md) | Oracle | [@roland](https://openjdk.org/census#roland) | [详情](profiles/rooland-westrelin.md) |
 | [Hamlin Li](profiles/hamlin-li.md) | Oracle | [@hli](https://openjdk.org/census#hli) | [详情](profiles/hamlin-li.md) |
 | [Jatin Bhateja](profiles/jatin-bhateja.md) | Oracle | [@jbhateja](https://openjdk.org/census#jbhateja) | [详情](profiles/jatin-bhateja.md) |
+| [Claes Redestad](profiles/claes-redestad.md) | Oracle | [@redestad](https://openjdk.org/census#redestad) | [详情](profiles/claes-redestad.md) |
 
 ### 并发与运行时 (Concurrency & Runtime) - 4 位
 
@@ -68,7 +69,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | [Coleen Phillimore](profiles/coleen-phillimore.md) | Oracle | [@coleenp](https://openjdk.org/census#coleenp) | [详情](profiles/coleen-phillimore.md) |
 | [Leonid Mesnik](profiles/leonid-mesnik.md) | Oracle | [@lmesnik](https://openjdk.org/census#lmesnik) | [详情](profiles/leonid-mesnik.md) |
 
-### 核心库 (Core Libraries) - 10 位
+### 核心库 (Core Libraries) - 9 位
 
 | 贡献者 | 组织 | Census | 档案 |
 |--------|------|--------|------|
@@ -79,7 +80,6 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | [Daniel Fuchs](profiles/daniel-fuchs.md) | Oracle | [@dfuch](https://openjdk.org/census#dfuch) | [详情](profiles/daniel-fuchs.md) |
 | [Volkan Yazici](profiles/volkan-yazici.md) | Oracle | [@vyazici](https://openjdk.org/census#vyazici) | [详情](profiles/volkan-yazici.md) |
 | [Joe Darcy](profiles/joe-darcy.md) | Oracle | [@darcy](https://openjdk.org/census#darcy) | [详情](profiles/joe-darcy.md) |
-| [Claes Redestad](profiles/claes-redestad.md) | Oracle | [@redestad](https://openjdk.org/census#redestad) | [详情](profiles/claes-redestad.md) |
 | [Stuart Marks](profiles/stuart-marks.md) | Oracle | [@smarks](https://openjdk.org/census#smarks) | [详情](profiles/stuart-marks.md) |
 | [Per Minborg](profiles/per-minborg.md) | Oracle | [@pminborg](https://openjdk.org/census#pminborg) | [详情](profiles/per-minborg.md) |
 
@@ -148,14 +148,14 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 ### Oracle
 
-**Reviewer**: 38 位 | **Committer**: 3 位
+**Reviewer**: 39 位 | **Committer**: 3 位
 
 | 角色 | 人数 | 代表贡献者 |
 |------|------|------------|
-| Reviewer | 38 | [Thomas Schatzl](profiles/thomas-schatzl.md), [Jan Lahoda](profiles/jan-lahoda.md), [David Holmes](profiles/david-holmes.md) |
+| Reviewer | 39 | [Thomas Schatzl](profiles/thomas-schatzl.md), [Jan Lahoda](profiles/jan-lahoda.md), [David Holmes](profiles/david-holmes.md), [Chen Liang](profiles/chen-liang.md) |
 | Committer | 3 | [Damon Nguyen](profiles/damon-nguyen.md), [Francesco Andreuzzi](profiles/francesco-andreuzzi.md), [Manuel Hässig](profiles/manuel-haessig.md) |
 
-> **Reviewer 分布**: GC(5) + 编译器 (7) + 并发 (4) + 核心库 (10) + 构建 (3) + 安全 (5) + 桌面 (2) + JFR(1) + AOT(1) = 38 位
+> **Reviewer 分布**: GC(5) + 编译器 (8) + 并发 (4) + 核心库 (9) + 构建 (3) + 安全 (5) + 桌面 (2) + JFR(1) + AOT(1) + Redestad(1) = 39 位
 
 ### Amazon
 
@@ -213,9 +213,9 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | 领域 | Reviewer | Committer | 总计 |
 |------|----------|-----------|------|
 | GC (垃圾收集器) | 8 | 1 | 9 |
-| 编译器 | 7 | 0 | 7 |
+| 编译器 | 8 | 0 | 8 |
 | 并发与运行时 | 4 | 0 | 4 |
-| 核心库 | 10 | 2 | 12 |
+| 核心库 | 9 | 2 | 11 |
 | 构建系统与工具 | 3 | 0 | 3 |
 | 安全 | 5 | 0 | 5 |
 | 桌面与 UI | 2 | 1 | 3 |
@@ -223,13 +223,15 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | AOT | 1 | 0 | 1 |
 | RISC-V | 0 | 5 | 5 |
 | 测试 | 0 | 2 | 2 |
-| **总计** | **41** | **12** | **53** |
+| **总计** | **42** | **12** | **54** |
 
 > **统计说明**:
 > - Roman Kennke (Red Hat) 同时是 Reviewer 和 Committer，在领域统计中计入 Committer (GC 领域)
 > - Damon Nguyen (Oracle) 是 Committer，领域是 Desktop
 > - RISC-V Committer: Andrew Haley, Fredrik Bredberg (Red Hat); Fei Yang, Shaojin Wen (Alibaba); Anjian Wen (ByteDance) = 5 位
 > - 测试 Committer: Francesco Andreuzzi, Manuel Hässig (Oracle) = 2 位
+> - Chen Liang (Oracle) 是编译器 Reviewer，ClassFile API 核心开发者
+> - Claes Redestad (Oracle) 从核心库移至编译器 Reviewer
 
 ---
 
