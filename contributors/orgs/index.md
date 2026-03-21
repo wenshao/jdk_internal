@@ -33,9 +33,9 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | [Red Hat](redhat.md) | 200+ | Shenandoah GC, AArch64, Leyden | Red Hat OpenJDK |
 | [IBM](ibm.md) | 113+ | s390x, JVM | Semeru |
 | [Intel](intel.md) | 15+ | Vector API, x86_64 | - |
-| [ARM](arm.md) | 4+ | Build, AArch64 | - |
+| [ARM](arm.md) | 50+ | AArch64, Build | - |
 | [Microsoft](microsoft.md) | 待核实 | Azure 优化，Build | - |
-| [ISCAS PLCT](iscas-plct.md) | 100+ | RISC-V | - |
+| [ISCAS PLCT](iscas-plct.md) | 20+ | RISC-V | - |
 | [ByteDance](bytedance.md) | 25 | RISC-V 向量 | - |
 | [Tencent](tencent.md) | 10+ | G1 GC, 容器 | Kona |
 | [Loongson](loongson.md) | 30+ | LoongArch | Loongson JDK |
@@ -52,7 +52,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | 组织 | G1 GC | ZGC | Shenandoah | 代表贡献者 |
 |------|-------|-----|------------|------------|
 | **Oracle** | ✅ 核心 | ✅ 核心 | - | [Thomas Schatzl](../../by-contributor/profiles/thomas-schatzl.md), [Stefan Karlsson](../../by-contributor/profiles/stefan-karlsson.md) |
-| **Red Hat** | - | - | ✅ 创始 | [Roman Kennke](../../by-contributor/profiles/roman-kennke.md) |
+| **Red Hat** | - | - | ✅ 创始 (历史) | [Andrew Dinn](../../by-contributor/profiles/andrew-dinn.md) |
 | **Amazon** | - | - | ✅ 维护 | [William Kemper](../../by-contributor/profiles/william-kemper.md), [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) |
 | **Alibaba** | ✅ | ✅ | - | [Yude Lin](../../by-contributor/profiles/yude-lin.md), [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) |
 | **Tencent** | ✅ | - | - | [Tongbao Zhang](../../by-contributor/profiles/tongbao-zhang.md) |
@@ -292,7 +292,7 @@ IBM       15      20      30      40      45
 |-----|------|----------|------|------|
 | [JEP 189](../../jeps/gc/jep-189.md) | Shenandoah GC (Incubator) | Red Hat | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | JDK 12 |
 | [JEP 379](../../jeps/gc/jep-379.md) | Shenandoah GC (Standard) | Red Hat | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | JDK 15 |
-| [JEP 519](../../jeps/gc/jep-519.md) | Compact Object Headers | Red Hat | [Roman Kennke](../../by-contributor/profiles/roman-kennke.md) | JDK 25 |
+| [JEP 519](../../jeps/gc/jep-519.md) | Compact Object Headers | Red Hat (开始) / Datadog (现) | [Roman Kennke](../../by-contributor/profiles/roman-kennke.md) | JDK 25 |
 | [JEP 521](../../jeps/gc/jep-521.md) | Generational Shenandoah | Amazon | [William Kemper](../../by-contributor/profiles/william-kemper.md) | JDK 26 |
 | [JEP 439](../../jeps/gc/jep-439.md) | Generational ZGC | Oracle | - | JDK 21 |
 
@@ -362,7 +362,7 @@ IBM       15      20      30      40      45
 | **贡献特点** | 架构优化，启动性能 |
 | **代表工作** | AArch64 移植, JEP 519 Compact Object Headers |
 | **特点** | JBoss Byteman 项目 |
-| **代表贡献者** | [Roman Kennke](../../by-contributor/profiles/roman-kennke.md), [Andrew Dinn](../../by-contributor/profiles/andrew-dinn.md) |
+| **代表贡献者** | [Andrew Dinn](../../by-contributor/profiles/andrew-dinn.md), [Thomas Stuefe](../../by-contributor/profiles/thomas-stuefe.md), [Andrew Haley](../../by-contributor/profiles/andrew-haley.md) |
 
 ### SAP
 
@@ -374,7 +374,7 @@ IBM       15      20      30      40      45
 | **贡献特点** | 跨平台构建，企业级诊断 |
 | **代表工作** | PPC64LE 移植, SapMachine Vitals |
 | **特点** | 最多构建系统贡献 |
-| **代表贡献者** | [Matthias Baesken](../../by-contributor/profiles/matthias-baesken.md), [Goetz Lindenmaier](../../by-contributor/profiles/goetz-lindenmaier.md), [Erik Joelsson](../../by-contributor/profiles/erik-joelsson.md) |
+| **代表贡献者** | [Matthias Baesken](../../by-contributor/profiles/matthias-baesken.md), [Goetz Lindenmaier](../../by-contributor/profiles/goetz-lindenmaier.md) |
 
 ### IBM
 
@@ -398,7 +398,7 @@ IBM       15      20      30      40      45
 | **贡献特点** | 向量指令支持 |
 | **代表工作** | JEP 422 RISC-V Port, RISC-V 向量指令 |
 | **特点** | 中国科学院软件所 |
-| **代表贡献者** | [Fei Yang](../../by-contributor/profiles/fei-yang.md) |
+| **代表贡献者** | Yadong Wang |
 
 ### ByteDance
 
@@ -422,6 +422,7 @@ IBM       15      20      30      40      45
 | [Thomas Stuefe](../../by-contributor/profiles/thomas-stuefe.md) | SAP → Red Hat | Red Hat | SapMachine 创始人 |
 | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | Oracle → Red Hat → AWS | Amazon | Shenandoah 创始人 |
 | [William Kemper](../../by-contributor/profiles/william-kemper.md) | Red Hat | Amazon | Shenandoah 维护者 |
+| [Roman Kennke](../../by-contributor/profiles/roman-kennke.md) | Red Hat | **Datadog** | Shenandoah GC, JEP 519 |
 
 ---
 
@@ -432,7 +433,7 @@ IBM       15      20      30      40      45
 | 组织 | PRs | 主要领域 | 发行版 |
 |------|-----|----------|--------|
 | [Alibaba](alibaba.md) | 121 | 核心库, GC | Dragonwell |
-| [ISCAS PLCT](iscas-plct.md) | 100+ | RISC-V | - |
+| [ISCAS PLCT](iscas-plct.md) | 20+ | RISC-V | - |
 | [Loongson](loongson.md) | 30+ | LoongArch | Loongson JDK |
 | [ByteDance](bytedance.md) | 25 | RISC-V 向量 | - |
 | [Tencent](tencent.md) | 10+ | G1 GC, 容器 | Kona |
@@ -453,7 +454,7 @@ IBM       15      20      30      40      45
 | [Amazon](amazon.md) | 138+ | GC | Corretto |
 | [IBM](ibm.md) | 113+ | s390x | Semeru |
 | [Intel](intel.md) | 15+ | Vector API, x86_64 | - |
-| [ARM](arm.md) | 4+ | Build, AArch64 | - |
+| [ARM](arm.md) | 50+ | AArch64, Build | - |
 | [Microsoft](microsoft.md) | 待核实 | Azure 优化，Build | - |
 
 ---

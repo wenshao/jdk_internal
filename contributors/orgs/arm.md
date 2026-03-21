@@ -38,9 +38,10 @@ ARM Ltd. 通过构建系统和 AArch64 架构支持参与 OpenJDK 开发。
 
 | 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
 |--------|--------|-----|------|----------|------|
+| Nick Gasson | [@nick-arm](https://github.com/nick-arm) | 45+ | Reviewer | AArch64 | [详情](../../by-contributor/profiles/nick-gasson.md) |
 | [Pankaj Bansal](../../by-contributor/profiles/pankaj-bansal.md) | [@pankaj-bansal-arm](https://github.com/pankaj-bansal-arm) | 4+ | Author | Build System, AArch64 | [详情](../../by-contributor/profiles/pankaj-bansal.md) |
 
-**小计**: 4+ PRs
+**小计**: 50+ PRs
 
 ---
 
@@ -81,6 +82,7 @@ ARM Ltd. 通过构建系统和 AArch64 架构支持参与 OpenJDK 开发。
 
 | 贡献者 | 组织 | PRs | 主要领域 | 角色 |
 |--------|------|-----|----------|------|
+| [Nick Gasson](../../by-contributor/profiles/nick-gasson.md) | Arm | 45+ | AArch64 | Reviewer |
 | [Pankaj Bansal](../../by-contributor/profiles/pankaj-bansal.md) | ARM | 4+ | Build System, AArch64 | Author |
 
 #### 技术协作圈 (外部合作)
@@ -88,7 +90,7 @@ ARM Ltd. 通过构建系统和 AArch64 架构支持参与 OpenJDK 开发。
 | 贡献者 | 组织 | 合作领域 | 关系类型 |
 |--------|------|----------|----------|
 | [Andrew Dinn](../../by-contributor/profiles/andrew-dinn.md) | Red Hat | AArch64 | 技术同行 |
-| [Nick Gasson](../../by-contributor/profiles/nick-gasson.md) | Arm | AArch64 | 核心成员 |
+| [Nick Gasson](../../by-contributor/profiles/nick-gasson.md) | Arm (内部) | AArch64 | 核心成员 |
 | [Magnus Ihse Bursie](../../by-contributor/profiles/magnus-ihse-bursie.md) | Oracle | Build System | 技术同行 |
 
 ### 3.2 技术影响力网络
