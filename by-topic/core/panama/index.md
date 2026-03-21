@@ -86,7 +86,6 @@
 | **Linker** | 连接 Java 与原生代码的桥梁 |
 | **SymbolLookup** | 查找原生库中的符号地址 |
 | **FunctionDescriptor** | 描述函数签名和参数/返回值类型 |
-| **SymbolLookup** | 查找原生库中的符号地址 |
 | **ValueLayout** | 描述原生类型的内存布局 |
 
 ### SymbolLookup 方式

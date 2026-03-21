@@ -188,12 +188,21 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 ### Alibaba
 
-**Reviewer**: 0 位 | **Committer**: 2 位
+**Reviewer**: 0 位 | **Committer**: 1 位
 
 | 角色 | 人数 | 代表贡献者 |
 |------|------|------------|
 | Reviewer | 0 | - |
-| Committer | 2 | [Fei Yang](profiles/fei-yang.md), [Shaojin Wen](profiles/shaojin-wen.md) |
+| Committer | 1 | [Shaojin Wen](profiles/shaojin-wen.md) |
+
+### ISCAS PLCT Lab
+
+**Reviewer**: 0 位 | **Committer**: 1 位
+
+| 角色 | 人数 | 代表贡献者 |
+|------|------|------------|
+| Reviewer | 0 | - |
+| Committer | 1 | [Fei Yang](profiles/fei-yang.md) |
 
 ### 其他组织
 

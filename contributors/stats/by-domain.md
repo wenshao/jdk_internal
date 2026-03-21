@@ -61,7 +61,7 @@
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
 | Vladimir Kozlov | 942 | Oracle |
-| Roland Westrelin | 676 | Red Hat |
+| Roland Westrelin | 676 | Oracle |
 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 42 | Oracle |
 
 ### Graal
@@ -71,7 +71,7 @@
 | Tobias Hartmann | 563 | Oracle |
 | Tom Rodriguez | 460 | Oracle |
 | Vladimir Ivanov | 448 | Oracle |
-| Christian Thalinger | 335 | Oracle |
+| Christian Thalinger | 335 | Twitter/X (formerly Oracle) |
 
 ### C1 编译器
 
