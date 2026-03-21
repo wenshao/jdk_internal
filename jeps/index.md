@@ -28,11 +28,10 @@ JEP (JDK Enhancement Proposals) 是 Java 平台新特性的设计和规范文档
 |-----|------|-----|------|------|
 | [JEP 444](concurrency/jep-444.md) | Virtual Threads | 21 | ✅ 正式 | [→](concurrency/jep-444.md) |
 | [JEP 462](concurrency/jep-462.md) | Structured Concurrency (2nd) | 22 | 🔍 预览 | [→](concurrency/jep-462.md) |
-| [JEP 505](concurrency/jep-505.md) | Structured Concurrency (5th) | 25 | 🔍 鐄览 | [→](concurrency/jep-505.md) |
+| [JEP 505](concurrency/jep-505.md) | Structured Concurrency (5th) | 25 | 🔍 预览 | [→](concurrency/jep-505.md) |
 | [JEP 525](concurrency/jep-525.md) | Structured Concurrency (6th) | 26 | 🔍 预览 | [→](concurrency/jep-525.md) |
-| [JEP 446](concurrency/jep-446.md) | Scoped Values | 25 | ✅ 正式 | [→](concurrency/jep-446.md) |
+| [JEP 446](concurrency/jep-446.md) | Scoped Value (Preview) | 21 | 🔍 预览 | [→](concurrency/jep-446.md) |
 | [JEP 506](concurrency/jep-506.md) | Scoped Values | 25 | ✅ 正式 | [→](concurrency/jep-506.md) |
-| [JEP 526](tools/jep-526.md) | Lazy Constants | 26 | 🔍 预览 | [→](tools/jep-526.md) |
 | [JEP 491](concurrency/jep-491.md) | Synchronization without Blocking | 25 | ✅ 正式 | [→](concurrency/jep-491.md) |
 
 ### 垃圾收集 (GC)
@@ -95,6 +94,7 @@ JEP (JDK Enhancement Proposals) 是 Java 平台新特性的设计和规范文档
 | [JEP 484](tools/jep-484.md) | Class-File API | 24 | ✅ 正式 | [→](tools/jep-484.md) |
 | [JEP 511](tools/jep-511.md) | Module Import Declarations | 25 | ✅ 正式 | [→](tools/jep-511.md) |
 | [JEP 512](tools/jep-512.md) | Compact Source Files | 25 | ✅ 正式 | [→](tools/jep-512.md) |
+| [JEP 526](tools/jep-526.md) | Lazy Constants | 26 | 🔍 预览 | [→](tools/jep-526.md) |
 
 ### 性能优化
 
@@ -109,7 +109,7 @@ JEP (JDK Enhancement Proposals) 是 Java 平台新特性的设计和规范文档
 
 | JEP | 标题 | JDK | 状态 | 文档 |
 |-----|------|-----|------|------|
-| [JEP 517](network/jep-517.md) | HTTP/3 for HTTP Client | 26 | 🔍 预览 | [→](network/jep-517.md) |
+| [JEP 517](network/jep-517.md) | HTTP/3 for HTTP Client | 26 | ✅ 正式 | [→](network/jep-517.md) |
 
 ### 已移除特性
 
