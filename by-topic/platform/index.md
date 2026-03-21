@@ -89,7 +89,7 @@ JDK 的 Linux 容器感知能力经历了多个版本的逐步完善：
 ```
 JDK 8  ──── 无容器感知: 直接读取宿主机 /proc，导致资源检测错误
           │
-JDK 10 ──── 容器感知引入 (JEP 307)
+JDK 10 ──── 容器感知引入 (JDK-8146115)
           │   - 自动检测 CPU/内存限制
           │   - 引入 -XX:+UseContainerSupport 标志
           │   - 读取 cgroup v1 信息
@@ -650,7 +650,7 @@ env:
 - [容器部署指南](containers/)
 - [JEP 391: macOS/AArch64 Port](https://openjdk.org/jeps/391)
 - [JEP 382: New macOS Rendering Pipeline](https://openjdk.org/jeps/382)
-- [JEP 307: Container Awareness](https://openjdk.org/jeps/307)
+- [JEP 307: Parallel Full GC for G1](https://openjdk.org/jeps/307)
 - [JEP 392: Packaging Tool](https://openjdk.org/jeps/392)
 - [JEP 503: Remove the 32-bit x86 Port](https://openjdk.org/jeps/503)
 - [OpenJDK Supported Build Platforms](https://wiki.openjdk.org/display/Build/Supported+Build+Platforms)

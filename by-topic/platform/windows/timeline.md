@@ -191,6 +191,7 @@ JDK 17 ─── 注册表性能优化
 
 - [JEP 343](/jeps/tools/jep-343.md)
 - [JEP 449](/jeps/tools/jep-449.md)
+- [JEP 479](/jeps/tools/jep-479.md)
 - [Windows 服务最佳实践](https://docs.microsoft.com/en-us/windows/win32/services/)
 
 → [返回 Windows 平台](./)
