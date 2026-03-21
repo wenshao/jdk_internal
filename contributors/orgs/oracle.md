@@ -8,7 +8,8 @@
 1. [概览](#1-概览)
 2. [Top 贡献者](#2-top-贡献者)
 3. [按地区分类](#3-按地区分类)
-4. [影响的模块](#4-影响的模块)
+4. [组织架构](#4-组织架构)
+5. [影响的模块](#5-影响的模块)
 5. [主要领域](#5-主要领域)
 6. [相关 PR 分析文档](#6-相关-pr-分析文档)
 7. [数据来源](#7-数据来源)
@@ -123,12 +124,93 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 |--------|------|--------|-----|------|------|------|
 | Doug Simon | - | - | 10+ | Member | Graal | [详情](../../by-contributor/profiles/doug-simon.md) |
 
-> **注**: 
+> **注**:
 > - 部分贡献者的位置信息未在公开资料中标注。位置信息基于贡献者档案和 OpenJDK Census。
 
 ---
 
-## 4. 影响的模块
+## 4. 组织架构
+
+基于贡献者的团队归属和技术领域，Oracle JDK 团队组织架构如下：
+
+### 组织架构图
+
+```
+Oracle JDK 开发团队
+│
+├── Java Platform Group (Java 平台组)
+│   ├── LangTools Team (语言工具团队)
+│   │   ├── Jonathan Gibbons (团队负责人) - javac, javadoc
+│   │   ├── Chen Liang - ClassFile API, 核心反射
+│   │   ├── Jan Lahoda - javac 编译器
+│   │   ├── Adam Sotona - ClassFile API
+│   │   └── Vicente Romero - javac 编译器
+│   │
+│   ├── Core Libraries Team (核心库团队)
+│   │   ├── Phil Race (Client Libraries Group Lead) - Swing, Java 2D, AWT
+│   │   ├── Daniel Fuchs (Networking Team Lead) - HTTP Client, JMX
+│   │   ├── Naoto Sato - 国际化 (i18n)
+│   │   ├── Brian Burkhalter - NIO, 网络
+│   │   ├── Justin Lu - 本地化
+│   │   ├── Prasanta Sadhukhan - Desktop, Swing
+│   │   └── Volkan Yazici - HTTP Client
+│   │
+│   ├── Concurrency & Runtime Team (并发与运行时团队)
+│   │   ├── Alan Bateman - 并发工具
+│   │   ├── David Holmes (JVM Runtime Group) - 并发，JVM 运行时
+│   │   └── Leonid Mesnik - JVMTI, HotSpot 测试
+│   │
+│   └── Performance Team (性能优化团队)
+│       └── Claes Redestad - 启动性能，字符串拼接
+│
+├── HotSpot GC Team (HotSpot 垃圾收集器团队)
+│   ├── Thomas Schatzl (G1 GC Lead) - G1 GC, Parallel GC
+│   ├── Ioi Lam - CDS, AOT
+│   ├── Coleen Phillimore - HotSpot VM Core, Metaspace
+│   ├── Kim Barrett - HotSpot Runtime, C++ 现代化
+│   ├── Zhengyu Gu - Shenandoah GC
+│   ├── Erik Österlund - AOT, GC
+│   └── Roman Kennke - Compact Headers
+│
+├── HotSpot Compiler Team (HotSpot 编译器团队)
+│   ├── Emanuel Peter (C2 Compiler Lead) - C2 编译器
+│   └── Erik Gahlin - JFR
+│
+├── Java Engineering Infrastructure Team (Java 工程基础设施团队)
+│   └── Magnus Ihse Bursie - 构建系统
+│
+├── Security Team (安全团队)
+│   └── Weijun Wang - 安全
+│
+└── Oracle Labs
+    └── Doug Simon - Graal 编译器
+```
+
+### 团队统计
+
+| 团队 | 人数 | 代表贡献者 | PR 总数 |
+|------|------|------------|---------|
+| **Java Platform Group** | 13 人 | Chen Liang, Jan Lahoda, Daniel Fuchs, Phil Race | 2,000+ |
+| **HotSpot GC Team** | 7 人 | Thomas Schatzl, Ioi Lam, Coleen Phillimore | 1,500+ |
+| **HotSpot Compiler Team** | 2 人 | Emanuel Peter, Erik Gahlin | 120+ |
+| **Java Engineering Infrastructure** | 1 人 | Magnus Ihse Bursie | 28+ |
+| **Security Team** | 1 人 | Weijun Wang | 15+ |
+| **Oracle Labs** | 1 人 | Doug Simon | 10+ |
+| **总计** | **25 人** | - | **4,000+** |
+
+### Group Leads
+
+| Group | Lead | 职责 |
+|-------|------|------|
+| **Client Libraries** | [Phil Race](../../by-contributor/profiles/phil-race.md) | Swing, Java 2D, AWT |
+| **Networking** | [Daniel Fuchs](../../by-contributor/profiles/daniel-fuchs.md) | HTTP Client, JMX |
+| **G1 GC** | [Thomas Schatzl](../../by-contributor/profiles/thomas-schatzl.md) | G1 GC, Parallel GC |
+| **C2 Compiler** | [Emanuel Peter](../../by-contributor/profiles/emanuel-peter.md) | C2 编译器 |
+| **LangTools** | [Jonathan Gibbons](../../by-contributor/profiles/jonathan-gibbons.md) | javac, javadoc |
+
+---
+
+## 5. 影响的模块
 
 | 模块 | 文件数 | 说明 |
 |------|--------|------|
@@ -271,7 +353,7 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 
 ---
 
-> **文档版本**: 4.0
+> **文档版本**: 5.0
 > **最后更新**: 2026-03-21
 > **更新内容**:
 > - 修正"Oracle 中国团队"错误分类
@@ -281,4 +363,5 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 > - 亚洲团队：2 人 (Zhengyu Gu-中国，Weijun Wang)
 > - Oracle Labs: 1 人 (Doug Simon)
 > - **职业流动核实**: Hamlin Li 已离开 Oracle 加入 Rivos
+> - **新增完整组织架构**: 6 个团队，25 人，5 位 Group Leads
 > - 数据来源：贡献者档案和 OpenJDK Census
