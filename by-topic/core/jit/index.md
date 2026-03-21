@@ -46,8 +46,8 @@ JDK 1.0 ── JDK 1.3 ── JDK 7 ── JDK 9 ── JDK 10 ── JDK 17 ─
 | **JDK 17** | JIT 优化 | 编译器改进 | [近期改进](recent-changes.md) |
 | **JDK 21** | String Templates, Record Patterns | 模式匹配优化 | [近期改进](recent-changes.md) |
 | **JDK 23** | JIT 性能 | 编译吞吐量提升 | [近期改进](recent-changes.md) |
-| **JDK 25** | C2 常量折叠修复 | 表达式优化回归修复, MergeStores 独立 pass, String::hashCode 常量折叠 | [近期改进](recent-changes.md) |
-| **JDK 26** | C2 扩展编译, SuperWord 成本模型 | 支持大参数方法编译, 智能向量化 | [SuperWord 向量化](superword.md) |
+| **JDK 25** | AOT Method Profiling, C2 常量折叠修复 | JEP 515 AOT 方法 Profiling (启动加速 15-25%), 表达式优化回归修复, MergeStores 独立 pass, String::hashCode 常量折叠 | [近期改进](recent-changes.md) |
+| **JDK 26** | C2 扩展编译, Lazy Constants | 支持大参数方法编译, Lazy Constants (Second Preview, JIT 常量折叠), 自动向量化扩展 | [SuperWord 向量化](superword.md) |
 
 ---
 
@@ -151,16 +151,18 @@ Level 4: C2 (深度优化)
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 72 | Oracle | C1/C2 编译器 |
+| 1 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 72 | Oracle | HotSpot 运行时 (涉及编译器源文件) † |
 | 2 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 68 | Amazon | JIT 编译器 |
-| 3 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 62 | Oracle | 编译器, 运行时 |
-| 4 | Stefan Karlsson | 31 | Oracle | 编译器, GC |
-| 5 | [Doug Simon](/by-contributor/profiles/doug-simon.md) | 29 | Oracle | JIT 编译器 |
-| 6 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 24 | Oracle | 并发, 编译器 |
-| 7 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 24 | Oracle | 编译器优化 |
-| 8 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 22 | Red Hat | 编译器 |
-| 9 | [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | 20 | Oracle | JIT 编译器 |
+| 3 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 62 | Oracle | CDS/AOT (涉及编译器源文件) † |
+| 4 | Stefan Karlsson | 31 | Oracle | GC/运行时 (涉及编译器源文件) † |
+| 5 | [Doug Simon](/by-contributor/profiles/doug-simon.md) | 29 | Oracle | JVMCI/Graal JIT |
+| 6 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 24 | Oracle | HotSpot 运行时/并发 (涉及编译器源文件) † |
+| 7 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 24 | Oracle | 启动性能/编译器优化 |
+| 8 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 22 | Red Hat | Metaspace/运行时 (涉及编译器源文件) † |
+| 9 | [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | 20 | Oracle | C2 架构师, JIT 编译器 |
 | 10 | [Igor Veresov](/by-contributor/profiles/igor-veresov.md) | 17 | Oracle | JIT 编译器 |
+
+> † 标注的贡献者主要工作领域并非 JIT 编译器本身，但因跨模块重构、共享代码维护等原因在编译器源文件中有较多提交。
 
 ### C2 专项贡献者
 
@@ -295,8 +297,8 @@ Level 4: C2 (深度优化)
 
 - [版本时间线](timeline.md) - JDK 1.0 到 JDK 26
 - [近期改进](recent-changes.md) - 2024-2026 更新
-  - **JDK 25**: 修复 `(a | 3) | 6` 常量折叠回归 (特定场景 10,000x 提升); MergeStores 优化拆分为独立 pass (解决与 range check smearing 冲突); `String::hashCode` 可常量折叠 (常量键 Map 查找约 8x 提升); 无限循环块频率计算修复
-  - **JDK 26**: C2 支持编译大参数方法 (此前回退至 C1/解释器); 更快 JVM 启动; 扩展 C2 编译覆盖范围
+  - **JDK 25**: JEP 515 AOT 方法 Profiling (训练运行的 profile 数据缓存, 启动加速 15-25%); 修复 `(a | 3) | 6` 常量折叠回归 (特定场景 10,000x 提升); MergeStores 优化拆分为独立 pass (解决与 range check smearing 冲突); `String::hashCode` 可常量折叠 (常量键 Map 查找约 8x 提升); 无限循环块频率计算修复
+  - **JDK 26**: C2 支持编译大参数方法 (此前回退至 C1/解释器); Lazy Constants (Second Preview, JIT 可对延迟初始化值做常量折叠); 更快 JVM 启动; 扩展 C2 编译覆盖范围; 自动向量化模式扩展
 - [C2 迭代速度分析](c2-pace-analysis.md) - C2是否"迭代慢"？事实核查
 - [C2 活跃度时间线](c2-activity-timeline.md) - 按月度展示PR、新功能、活跃度
 - [分层编译历史](tiered-compilation.md#分层编译的历史) - JDK 6 引入
@@ -314,7 +316,8 @@ Level 4: C2 (深度优化)
 
 # 调整编译阈值
 -XX:CompileThreshold=10000         # C2 阈值
--XX:FreqInlineSize=325             # 热方法内联阈值
+-XX:FreqInlineSize=325             # 热方法内联阈值 (仅频繁执行的方法)
+-XX:MaxInlineSize=35               # 冷方法内联阈值 (不论调用频率)
 
 # 代码缓存
 -XX:ReservedCodeCacheSize=256m
@@ -382,7 +385,7 @@ src/hotspot/share/
 | **值编号** | `c1_ValueMap.cpp` | `gvn.cpp` (全局值编号) |
 | **寄存器分配** | `c1_LinearScan.cpp` (线性扫描) | `chaitin.cpp` (图着色) |
 | **代码生成** | `c1_CodeGenerator.cpp` | `output.cpp` (LIR → 机器码) |
-| **循环优化** | ❌ 无 | `loopopts.cpp` (完整) |
+| **循环优化** | ⚠️ 基础 (`c1_Optimizer.cpp`) | `loopopts.cpp` (完整) |
 | **逃逸分析** | ❌ 无 | `escape.cpp` |
 | **向量化** | ❌ 无 | `superword.cpp` |
 
@@ -601,7 +604,7 @@ static void putCharsAt(byte[] val, int index, int c1, int c2, int c3, int c4) {
 
 这个 PR 展示了方法大小对 JIT 内联的影响：
 
-**问题**: `DateTimePrintContext.adjust` 方法字节码大小 382 > 325 字节，导致 C2 无法内联
+**问题**: `DateTimePrintContext.adjust` 方法字节码大小 382 > 325 字节 (FreqInlineSize，热方法阈值)，导致 C2 无法内联
 
 **解决方案**: 将 382 字节的单一方法拆分为三个方法
 
@@ -620,7 +623,7 @@ static void putCharsAt(byte[] val, int index, int c1, int c2, int c3, int c4) {
 | Aliyun Yitian 710 | formatInstants (HH:mm:ss) | +9.89% |
 
 **关键启示**:
-- C2 热方法内联阈值约 325 字节
+- C2 热方法内联阈值约 325 字节 (FreqInlineSize; 冷方法阈值为 35 字节 MaxInlineSize)
 - 方法拆分可以让热路径被内联
 - 冷热代码分离可以提升整体性能
 
