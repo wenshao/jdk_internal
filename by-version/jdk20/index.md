@@ -13,9 +13,10 @@ JDK 20 是一个相对较小的版本，主要改进预览特性。
 | **Virtual Threads（第2次预览）** | ⭐⭐⭐⭐⭐ | JEP 436 |
 | **Structured Concurrency（第2次预览）** | ⭐⭐⭐⭐⭐ | JEP 437 |
 | **Record Patterns（第2次预览）** | ⭐⭐⭐⭐ | JEP 432 |
-| **Pattern Matching for switch（第5次预览）** | ⭐⭐⭐⭐ | JEP 433 |
+| **Pattern Matching for switch（第4次预览）** | ⭐⭐⭐⭐ | JEP 433 |
 | **Foreign Function & Memory API（第2次预览）** | ⭐⭐⭐⭐ | JEP 434 |
-| **Scoped Values（预览）** | ⭐⭐⭐⭐ | JEP 446 |
+| **Scoped Values（第2次预览）** | ⭐⭐⭐⭐ | JEP 446 |
+| **Vector API（第5次孵化）** | ⭐⭐⭐ | JEP 438 |
 
 ---
 
@@ -28,15 +29,15 @@ JDK 20 是一个相对较小的版本，主要改进预览特性。
 | [JEP 432](https://openjdk.org/jeps/432) | Record Patterns (Second Preview) | Record 模式匹配（第2次预览） |
 | [JEP 433](https://openjdk.org/jeps/433) | Pattern Matching for switch (Fourth Preview) | switch 模式匹配（第4次预览） |
 | [JEP 434](https://openjdk.org/jeps/434) | Foreign Function & Memory API (Second Preview) | FFM API（第2次预览） |
-| [JEP 446](https://openjdk.org/jeps/446) | Scoped Values (Preview) | 作用域值 |
+| [JEP 446](https://openjdk.org/jeps/446) | Scoped Values (Second Preview) | 作用域值（第2次预览） |
 | [JEP 438](https://openjdk.org/jeps/438) | Vector API (Fifth Incubator) | Vector API（第5次孵化） |
-| [JEP 429](https://openjdk.org/jeps/429) | Scoped Values (Incubator) | 作用域值（孵化器） |
+| [JEP 429](https://openjdk.org/jeps/429) | Scoped Values (Incubator) | 作用域值（孵化器，JDK 20） |
 
 ---
 
 ## 代码示例
 
-### Scoped Values（预览）
+### Scoped Values（第2次预览）
 
 ```java
 // 替代 ThreadLocal
@@ -46,6 +47,18 @@ ScopedValue.where(USER, "alice")
     .run(() -> {
         System.out.println(USER.get()); // "alice"
     });
+```
+
+### Record Patterns（第2次预览）
+
+```java
+record Point(int x, int y) { }
+record Rectangle(Point topLeft, Point bottomRight) { }
+
+// JDK 20 (第2次预览)
+if (obj instanceof Rectangle(Point(int x1, int y1), Point(int x2, int y2))) {
+    System.out.println("Rectangle from (" + x1 + "," + y1 + ") to (" + x2 + "," + y2 + ")");
+}
 ```
 
 ---

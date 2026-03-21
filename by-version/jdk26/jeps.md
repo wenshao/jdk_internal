@@ -35,6 +35,7 @@
 | JEP | 标题 | 状态 | 文档 |
 |-----|------|------|------|
 | JEP 525 | Structured Concurrency (Sixth Preview) | 预览 (第6次) | [详情](https://openjdk.org/jeps/525) |
+| **Scoped Values (Final)** | 正式 | 作用域值 | [详情](https://openjdk.org/jeps/506) |
 
 ### 安全
 
@@ -66,11 +67,17 @@
 
 | JEP | 标题 | 目标版本 |
 |-----|------|----------|
+| JEP 503 | Remove the 32-bit x86 Port | JDK 25 |
+| JEP 505 | Structured Concurrency (Fifth Preview) | JDK 25 |
+| JEP 506 | Scoped Values | JDK 25 |
+| JEP 507 | Primitive Types in Patterns (Third Preview) | JDK 25 |
+| JEP 510 | Key Derivation Function API | JDK 25 |
 | JEP 511 | Module Import Declarations | JDK 25 |
 | JEP 512 | Compact Source Files and Instance Main Methods | JDK 25 |
+| JEP 513 | Flexible Constructor Bodies | JDK 25 |
 | JEP 519 | Compact Object Headers | JDK 25 |
+| JEP 520 | JFR Method Timing & Tracing | JDK 25 |
 | JEP 521 | Generational Shenandoah | JDK 25 |
-| JEP 510 | Key Derivation Function API | JDK 25 |
 
 ---
 

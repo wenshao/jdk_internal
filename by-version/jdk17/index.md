@@ -9,16 +9,17 @@
 
 ## 版本概览
 
-JDK 17 是最新的 LTS 版本，包含多项重要新特性：
+JDK 17 是继 JDK 11 之后的 LTS 版本，包含多项重要新特性：
 
 | 特性 | 状态 | 说明 |
 |------|------|------|
-| **Sealed Classes** | 正式 | 密封类 |
-| **Pattern Matching** | 预览 | instanceof 模式匹配 |
-| **Records** | 正式 | 记录类 |
-| **Text Blocks** | 正式 | 文本块 |
-| **Foreign Function Interface** | 正式 | Java 原生互连 |
-| **Virtual Threads** | 实验性 | 虚拟线程（孵化） |
+| **Sealed Classes** | 正式 (JEP 409) | 密封类 |
+| **Records** | 正式 (JEP 395) | 记录类 |
+| **Text Blocks** | 正式 (JEP 378) | 文本块 |
+| **Pattern Matching for instanceof** | 预览 (JEP 394) | instanceof 模式匹配 |
+| **Foreign Function & Memory API** | 孵化 (JEP 412) | Java 原生互连 |
+| **Vector API** | 孵化 (JEP 417) | 向量 API |
+| **Context-Specific Deserialization Filters** | 正式 (JEP 415) | 反序列化过滤 |
 
 ---
 
@@ -27,8 +28,8 @@ JDK 17 是最新的 LTS 版本，包含多项重要新特性：
 | GC | 状态 | 说明 |
 |----|------|------|
 | **G1 GC** | 默认 | 持续优化 |
-| **ZGC** | 正式 | 生产可用 |
-| **Shenandoah** | 正式 | 生产可用 |
+| **ZGC** | 实验 (JEP 333) | 低延迟 GC，JDK 15 正式 |
+| **Shenandoah** | 实验 | 低延迟 GC |
 
 ---
 
@@ -36,14 +37,18 @@ JDK 17 是最新的 LTS 版本，包含多项重要新特性：
 
 ### 从 JDK 11 升级
 
-**破坏性变更**:
+**重要变更**:
+- **Sealed Classes 正式版**：限制继承的类
+- **Records 正式版**：不可变数据类
+- **Text Blocks 正式版**：多行字符串
+- **强封装**：JDK 内部 API 默认不可访问
 - `Security Manager` 部分功能弃用
 - `rmiregistry` 工具移除
 
 **推荐配置**:
 ```bash
--XX:+UseZGC             # 尝试 ZGC
--XX:+ZGenerational      # JDK 21+ 特性
+-XX:+UseZGC             # 尝试 ZGC (实验)
+-XX:+ZGenerational      # 需要 JDK 21+
 ```
 
 ---

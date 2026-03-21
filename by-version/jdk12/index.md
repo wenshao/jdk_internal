@@ -6,12 +6,12 @@
 
 ## 核心特性
 
-JDK 12 引入了 Switch 表达式（预览）和 Shenandoah GC。
+JDK 12 引入了 Switch 表达式（第1次预览）和 Shenandoah GC。
 
 | 特性 | 影响 | 详情 |
 |------|------|------|
-| **Switch 表达式** | ⭐⭐⭐⭐⭐ | JEP 325/354，简化条件逻辑 |
-| **Shenandoah GC** | ⭐⭐⭐⭐ | JEP 189，低延迟 GC |
+| **Switch 表达式（第1次预览）** | ⭐⭐⭐⭐⭐ | JEP 325，简化条件逻辑 |
+| **Shenandoah GC（实验）** | ⭐⭐⭐⭐ | JEP 189，低延迟 GC |
 | **G1 可中断 Mixed GC** | ⭐⭐⭐ | JEP 344 |
 | **微基准测试套件** | ⭐⭐⭐ | JEP 230 |
 | **默认 CDS 存档** | ⭐⭐ | JEP 341 |
@@ -35,7 +35,7 @@ JDK 12 引入了 Switch 表达式（预览）和 Shenandoah GC。
 
 ## 代码示例
 
-### Switch 表达式（预览）
+### Switch 表达式（第1次预览）
 
 ```java
 // 之前
@@ -48,7 +48,7 @@ switch (day) {
     // ...
 }
 
-// JDK 12 (预览)
+// JDK 12 (第1次预览)
 switch (day) {
     case MONDAY, FRIDAY, SUNDAY -> System.out.println("Weekend");
     case TUESDAY, WEDNESDAY, THURSDAY -> System.out.println("Weekday");

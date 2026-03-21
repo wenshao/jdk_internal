@@ -13,12 +13,13 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 
 | 特性 | 说明 |
 |------|------|
-| **HTTP Client** | 新的 HTTP 客户端 API |
-| **ZGC** | 实验性低延迟 GC |
-| **Flight Recorder** | 生产环境性能分析 |
+| **HTTP Client（正式版）** | 新的 HTTP 客户端 API |
+| **ZGC（实验）** | 低延迟 GC |
+| **Flight Recorder（正式版）** | 生产环境性能分析 |
 | **Nest-Based Access Control** | 简化私有访问 |
-| **Var 语法** | Lambda 局部变量类型推断 |
+| **Lambda 局部变量类型推断** | var 关键字 |
 | **Epsilon GC** | 被动 GC，用于性能测试 |
+| **动态类文件常量** | JEP 309 |
 
 ---
 
@@ -27,8 +28,9 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 | GC | 状态 | 说明 |
 |----|------|------|
 | **G1 GC** | 默认 | 均衡性能和延迟 |
-| **ZGC** | 实验性 | Linux/macOS，低延迟 |
-| **Shenandoah** | 实验性 | 低延迟 GC |
+| **ZGC** | 实验 (JEP 333) | Linux，低延迟 |
+| **Shenandoah** | 实验 | 低延迟 GC |
+| **Epsilon GC** | 正式 (JEP 318) | 被动 GC |
 
 ---
 
@@ -37,6 +39,9 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 ### 从 JDK 8 升级
 
 **重要变更**:
+- **HTTP Client 正式版**：替代 HttpURLConnection
+- **Flight Recorder 正式版**：生产环境性能分析
+- **var 关键字支持 Lambda**：局部变量类型推断扩展
 - `java.util.logging` 从默认 JDK 中移除
 - `JavaFX` 从 JDK 中分离
 - `Pack200` 工具移除
@@ -45,6 +50,7 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 ```bash
 -XX:+UseG1GC           # G1 仍然是默认
 -XX:MaxGCPauseMillis=200  # 目标暂停时间
+-XX:+UseZGC            # 尝试 ZGC (实验)
 ```
 
 ---

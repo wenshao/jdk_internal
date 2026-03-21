@@ -6,17 +6,18 @@
 
 ## 核心特性
 
-JDK 15 引入了 Text Blocks（正式版）、Records（第2次预览）和 Sealed Classes（预览）。
+JDK 15 引入了 Text Blocks（正式版）、Records（第2次预览）和 Sealed Classes（第1次预览）。
 
 | 特性 | 影响 | 详情 |
 |------|------|------|
-| **Text Blocks** | ⭐⭐⭐⭐⭐ | JEP 378，正式版 |
-| **Records** | ⭐⭐⭐⭐⭐ | JEP 384，第2次预览 |
-| **Sealed Classes** | ⭐⭐⭐⭐ | JEP 360，预览 |
-| **Pattern Matching for instanceof** | ⭐⭐⭐⭐ | JEP 375，第2次预览 |
+| **Text Blocks（正式版）** | ⭐⭐⭐⭐⭐ | JEP 378，多行字符串 |
+| **Records（第2次预览）** | ⭐⭐⭐⭐⭐ | JEP 384，不可变数据类 |
+| **Sealed Classes（第1次预览）** | ⭐⭐⭐⭐ | JEP 360，密封类 |
+| **Pattern Matching for instanceof（第2次预览）** | ⭐⭐⭐⭐ | JEP 375 |
 | **Hidden Classes** | ⭐⭐⭐ | JEP 371 |
-| **ZGC 正式版** | ⭐⭐⭐⭐ | JEP 379 |
-| **Shenandoah 正式版** | ⭐⭐⭐⭐ | JEP 379 |
+| **ZGC（正式版）** | ⭐⭐⭐⭐ | JEP 377，低延迟 GC |
+| **Shenandoah（正式版）** | ⭐⭐⭐⭐ | JEP 379 |
+| **Foreign-Memory Access API（第2次孵化）** | ⭐⭐⭐ | JEP 383 |
 
 ---
 
@@ -26,7 +27,7 @@ JDK 15 引入了 Text Blocks（正式版）、Records（第2次预览）和 Seal
 |-----|------|------|
 | [JEP 378](https://openjdk.org/jeps/378) | Text Blocks | 文本块（正式版） |
 | [JEP 384](https://openjdk.org/jeps/384) | Records (Second Preview) | Records（第2次预览） |
-| [JEP 360](https://openjdk.org/jeps/360) | Sealed Classes (Preview) | 密封类 |
+| [JEP 360](https://openjdk.org/jeps/360) | Sealed Classes (Preview) | 密封类（第1次预览） |
 | [JEP 375](https://openjdk.org/jeps/375) | Pattern Matching for instanceof (Second Preview) | instanceof 模式匹配（第2次预览） |
 | [JEP 371](https://openjdk.org/jeps/371) | Hidden Classes | 隐藏类 |
 | [JEP 372](https://openjdk.org/jeps/372) | Remove the Nashorn JavaScript Engine | 移除 Nashorn |
@@ -50,10 +51,10 @@ String json = """
     """;
 ```
 
-### Sealed Classes（预览）
+### Sealed Classes（第1次预览）
 
 ```java
-// JDK 15 (预览)
+// JDK 15 (第1次预览)
 public sealed interface Shape
     permits Circle, Rectangle, Triangle {
 }

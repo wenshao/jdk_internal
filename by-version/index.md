@@ -43,10 +43,12 @@
 
 | 版本 | 默认 GC | 可选 GC |
 |------|---------|---------|
-| JDK 25-26 | G1 | 分代 ZGC(默认), 分代 Shenandoah |
-| JDK 21-24 | G1 | 分代 ZGC, 分代 Shenandoah |
-| JDK 17-20 | G1 | 分代 ZGC(21+), 分代 Shenandoah |
-| JDK 11-16 | G1 | ZGC(11+), Shenandoah(15+) |
+| JDK 25-26 | G1 | 分代 ZGC, 分代 Shenandoah |
+| JDK 21-24 | G1 | 分代 ZGC(默认分代模式), 分代 Shenandoah |
+| JDK 23 | G1 | 分代 ZGC(默认分代模式), 分代 Shenandoah |
+| JDK 17-22 | G1 | 分代 ZGC(21+), 分代 Shenandoah |
+| JDK 15-20 | G1 | ZGC, Shenandoah |
+| JDK 11-14 | G1 | ZGC(实验), Shenandoah(实验) |
 | JDK 9-10 | G1 | ZGC(实验) |
 | JDK 8 | ParallelGC | G1, CMS |
 
@@ -61,9 +63,10 @@
 | Text Blocks | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ |
 | instanceof 模式匹配 | ✅ | ✅ | ✅ | ✅ | ✅ | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Virtual Threads | ✅ | ✅ | ✅ | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| String Templates | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Structured Concurrency | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| String Templates | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Structured Concurrency | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ |
 | HTTP/3 | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Scoped Values | ✅ | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > ✅ 正式版 | 🔍 预览版
 
@@ -74,23 +77,29 @@
 ### LTS 版本
 
 #### [JDK 25](jdk25/) - LTS 2025
-- 新特性：String Templates、Generational ZGC、Virtual Threads (正式版)
+- 新特性：Scoped Values (正式版)、Flexible Constructor Bodies (正式版)
+- Compact Object Headers (正式版)、JFR Method Timing (正式版)
+- String Templates (已撤销，重新设计中)
 - Structured Concurrency (第5次预览)
 - [版本详情](jdk25/index.md) | [发布说明](jdk25/release-notes.md) | [JEP 汇总](jdk25/jeps.md) | [迁移指南](jdk25/migration/from-21.md)
 
 ##### JDK 25 深度分析
 | 主题 | 链接 |
 |------|------|
-| String Templates | [深度分析](jdk25/deep-dive/string-templates.md) |
-| 分代 ZGC | [深度分析](jdk25/deep-dive/generational-zgc.md) |
+| Scoped Values | [深度分析](/deep-dive/jep-506-implementation.md) |
+| Flexible Constructor Bodies | [深度分析](/jeps/language/jep-513.md) |
+| Compact Object Headers | [深度分析](/jeps/gc/jep-519.md) |
 
 #### [JDK 21](jdk21/) - LTS 2023
-- 新特性：Virtual Threads、Scoped Values、Structured Concurrency
-- Pattern Matching 最终版
+- 新特性：Virtual Threads (正式版)、Pattern Matching for switch (正式版)
+- Generational ZGC (正式版)、Generational Shenandoah (正式版)
+- Record Patterns (预览)、String Templates (预览，后撤销)
+- Scoped Values (预览)、Structured Concurrency (预览)
 - [版本详情](jdk21/index.md) | [发布说明](jdk21/release-notes.md)
 
 #### [JDK 17](jdk17/) - LTS 2021
-- 新特性：Records、Pattern Matching、Sealed Classes
+- 新特性：Sealed Classes (正式版)、Records (正式版)
+- Pattern Matching for instanceof (预览)
 - 强封装：JDK 内部 API 默认不可访问
 - [版本详情](jdk17/index.md) | [发布说明](jdk17/release-notes.md)
 
@@ -107,32 +116,37 @@
 ### Feature 版本
 
 #### [JDK 26](jdk26/) - 2026-03
-- 新特性：HTTP/3、G1 吞吐量提升、分代 Shenandoah、Compact Object Headers
+- 新特性：HTTP/3 (正式版)、G1 吞吐量提升、分代 Shenandoah (正式版)
+- Primitive Types in Patterns (第4次预览)
+- Structured Concurrency (第6次预览)、Scoped Values (正式版)
 - [版本详情](jdk26/index.md) | [发布说明](jdk26/release-notes.md) | [JEP 汇总](jdk26/jeps.md) | [迁移指南](jdk26/migration/from-21.md)
 
 ##### JDK 26 深度分析
 | 主题 | 链接 |
 |------|------|
 | HTTP/3 实现 | [深度分析](jdk26/deep-dive/http3-implementation.md) |
-| 结构化并发 | 深度分析 |
+| 结构化并发 | [深度分析](jdk26/deep-dive/structured-concurrency.md) |
 | 原始类型模式匹配 | [深度分析](jdk26/deep-dive/primitive-pattern-matching.md) |
 | Vector API 改进 | [深度分析](jdk26/deep-dive/vectorapi-improvements.md) |
 | G1 GC 吞吐量优化 | [深度分析](jdk26/deep-dive/g1-gc-throughput.md) |
 | AOT 改进 | [深度分析](jdk26/deep-dive/aot-improvements.md) |
 
 #### [JDK 24](jdk24/) - 2025
-- 核心特性：String Templates (第3次预览)、Implicit Classes (第4次预览)
-- Structured Concurrency (第4次预览)
+- 核心特性：Primitive Types in Patterns (第2次预览)
+- Implicit Classes (第4次预览，更名为 Simple Source Files)
+- Structured Concurrency (第4次预览)、Scoped Values (第4次预览)
 - [版本详情](jdk24/index.md)
 
 #### [JDK 23](jdk23/) - 2024
-- 核心特性：Module Import Declarations (预览)、Markdown 文档注释
-- Flexible Constructors
+- 核心特性：Primitive Types in Patterns (第1次预览)、Module Import Declarations (预览)
+- Markdown 文档注释、Flexible Constructors (预览)
+- ZGC 默认分代模式
 - [版本详情](jdk23/index.md)
 
 #### [JDK 22](jdk22/) - 2024
-- 核心特性：String Templates (预览)、Implicit Classes (预览)
-- Stream Gatherers (预览)
+- 核心特性：String Templates (第2次预览)、Implicit Classes (第2次预览)
+- Stream Gatherers (预览)、Unnamed Variables (正式版)
+- Structured Concurrency (第3次预览)、Scoped Values (第2次预览)
 - [版本详情](jdk22/index.md)
 
 #### [JDK 20](jdk20/) - 2023
