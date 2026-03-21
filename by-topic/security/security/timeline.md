@@ -920,9 +920,9 @@ public class PostQuantumCrypto {
 
 ## 11. 相关链接
 
-- [JEP 332: TLS 1.3](https://openjdk.org/jeps/332)
-- [JEP 329: ChaCha20-Poly1305](https://openjdk.org/jeps/329)
-- [JEP 370: KMAC & SHA-3](https://openjdk.org/jeps/370)
+- [JEP 332](/jeps/security/jep-332.md)
+- [JEP 329](/jeps/security/jep-329.md)
+- [JEP 370](/jeps/ffi/jep-370.md)
 - [JEP 518](/jeps/jfr/jep-518.md)
 - [JEP 510](/jeps/security/jep-510.md)
 - [JEP 470](/jeps/security/jep-470.md)

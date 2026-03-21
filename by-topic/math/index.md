@@ -609,7 +609,7 @@ random.ints(0, 100).parallel().forEach(...);
 
 - [BigDecimal 规范](https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html)
 - [BigInteger 规范](https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html)
-- [JEP 356: Enhanced Random Number Generator](https://openjdk.org/jeps/356)
+- [JEP 356](/jeps/math/jep-356.md)
 - [StrictMath 文档](https://docs.oracle.com/javase/8/docs/api/java/lang/StrictMath.html)
 
 ---
