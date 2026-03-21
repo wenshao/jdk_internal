@@ -44,7 +44,6 @@
 | JEP | 标题 | 状态 | 文档 |
 |-----|------|------|------|
 | JEP 525 | Structured Concurrency (Sixth Preview) | 预览 (第6次) | [详情](https://openjdk.org/jeps/525) |
-| **Scoped Values (Final)** | 正式 | 作用域值 | [详情](https://openjdk.org/jeps/506) |
 
 ### 安全
 

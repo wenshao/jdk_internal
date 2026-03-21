@@ -45,7 +45,7 @@ public interface StringProcessor {
 
 ---
 
-### JEP 455: Primitive Types in Patterns (第三次预览)
+### JEP 507: Primitive Types in Patterns (第三次预览)
 
 **状态**: 🔍 Preview
 
@@ -67,7 +67,7 @@ if (obj instanceof int i) {
 }
 ```
 
-**相关**: [JEP 文档](https://openjdk.org/jeps/455)
+**相关**: [JEP 文档](https://openjdk.org/jeps/507)
 
 ---
 
@@ -320,7 +320,7 @@ SecretKey sharedKey = dec.decapsulate(ciphertext);
 | 451 | Prepare to Restrict Dynamic Loading | ⚠️ |
 | 452 | Key Encapsulation Mechanism API | ✅ |
 | 454 | Foreign Function & Memory API | ✅ |
-| 455 | Primitive Types in Patterns | 🔍 |
+| 507 | Primitive Types in Patterns | 🔍 |
 | 462 | Structured Concurrency | 🔍 |
 | 466 | Class-File API | 🔍 |
 | 467 | Scoped Values | 🔍 |
