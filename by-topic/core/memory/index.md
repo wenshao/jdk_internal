@@ -9,10 +9,10 @@
 ## 1. 快速概览
 
 ```
-JDK 1.0 ── JDK 6u23 ── JDK 7 ── JDK 8 ── JDK 11 ── JDK 17 ── JDK 21 ── JDK 24
-   │         │        │        │        │        │        │        │
-堆/栈    Compressed  默认启用  元空间  ZGC    分代    AOT缓存
-PermGen   Oops     Oops   字符串  低延迟  ZGC    紧凑对象头
+JDK 1.0 ── JDK 6u23 ── JDK 7 ── JDK 8 ── JDK 11 ── JDK 17 ── JDK 21 ── JDK 24 ── JDK 25
+   │         │        │        │        │        │        │        │        │
+堆/栈    Compressed  默认启用  元空间  ZGC    分代    AOT缓存  紧凑对象头
+PermGen   Oops     Oops   字符串  低延迟  ZGC   JEP483   JEP519正式
 ```
 
 ### 核心演进
@@ -274,7 +274,7 @@ ByteBuffer heapBuffer = ByteBuffer.allocate(1024 * 1024);
 │                  对象内存布局                           │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│  普通对象 (JDK 24+ 紧凑对象头):                        │
+│  普通对象 (JDK 25 JEP 519 紧凑对象头, 需 -XX:+UseCompactObjectHeaders): │
 │  ┌───────────────────────────────────────────┐         │
 │  │  Mark Word (8 bytes, 含类信息)            │         │
 │  │  ├── 锁状态                               │         │

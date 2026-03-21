@@ -752,7 +752,7 @@ private void processUncommon() {
 - [C2 优化阶段](c2-phases.md) - 15 个编译阶段详解
 - [VM 参数](vm-parameters.md) - 完整参数参考
 - [诊断工具](diagnostics.md) - 调试和性能分析
-- [近期改进](recent-changes.md) - 2024-2025 更新
+- [近期改进](recent-changes.md) - 2024-2026 更新
 - [版本时间线](timeline.md) - JDK 1.0 到 JDK 26
 
 ### 相关主题

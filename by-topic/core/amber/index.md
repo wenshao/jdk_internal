@@ -60,10 +60,11 @@ Java 语言特性演进项目：让 Java 更简洁、更安全、更易表达。
 | **Pattern Matching for switch** | JDK 21 | JEP 441 |
 | **Record Patterns** | JDK 21 | JEP 440 |
 | **Unnamed Patterns & Variables** | JDK 21 | JEP 443 |
-| **Implicit Classes** | JDK 23 | JEP 477 |
+| **Implicit Classes** | JDK 25 | JEP 512 |
+| **Module Import Declarations** | JDK 25 | JEP 511 |
 | **Flexible Constructor Bodies** | JDK 25 | JEP 513 |
 | **String Templates** | (已撤回) | JEP 430 → 459 → 465 |
-| **Primitive Patterns** | JDK 23+ (预览) | JEP 455 → 488 → 507 → 530 |
+| **Primitive Patterns** | JDK 26 (4th Preview) | JEP 455 → 488 → 507 → 530 |
 
 ---
 
@@ -463,9 +464,11 @@ if (num instanceof Integer i) {
 | **2024** | JDK 23 | Flexible Constructor Bodies (第二预览) |
 | **2025** | JDK 24 | Flexible Constructor Bodies (第三预览) |
 | **2025** | JDK 24 | Primitive Patterns (第二预览) |
-| **2025** | JDK 25 | Flexible Constructor Bodies (正式) |
-| **2025** | JDK 25 | Primitive Patterns (第三预览) |
-| **2026** | JDK 26 | Primitive Patterns (第四预览) |
+| **2025** | JDK 25 | Flexible Constructor Bodies (正式, JEP 513) |
+| **2025** | JDK 25 | Implicit Classes (正式, JEP 512) |
+| **2025** | JDK 25 | Module Import Declarations (正式, JEP 511) |
+| **2025** | JDK 25 | Primitive Patterns (第三预览, JEP 507) |
+| **2026** | JDK 26 | Primitive Patterns (第四预览, JEP 530) |
 
 → [完整时间线](timeline.md)
 
@@ -571,7 +574,8 @@ Record (Amber) + Inline Class (Valhalla)
 
 | 特性 | JEP | 正式版本 | 说明 |
 |------|-----|----------|------|
-| **Implicit Classes** | JEP 477 | JDK 25 | 简化 Java 入门语法 |
+| **Compact Source Files & Instance Main** | JEP 512 | JDK 25 | 简化 Java 入门语法 |
+| **Module Import Declarations** | JEP 511 | JDK 25 | 简洁导入模块导出包 |
 | **Flexible Constructor Bodies** | JEP 513 | JDK 25 | 构造器中可在 super() 前执行语句 |
 
 ### 已撤回特性

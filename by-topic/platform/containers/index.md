@@ -499,10 +499,13 @@ spec:
 
 | 基础镜像 | 大小 | 说明 |
 |----------|------|------|
-| `eclipse-temurin:21-jdk` | ~450MB | 完整 JDK |
-| `eclipse-temurin:21-jre` | ~250MB | JRE |
-| `eclipse-temurin:21-jre-alpine` | ~100MB | Alpine JRE |
+| `eclipse-temurin:25-jdk` | ~450MB | 完整 JDK (LTS) |
+| `eclipse-temurin:25-jre` | ~250MB | JRE (LTS) |
+| `eclipse-temurin:25-jre-alpine` | ~100MB | Alpine JRE (LTS) |
+| `eclipse-temurin:21-jre-alpine` | ~100MB | Alpine JRE (上一 LTS) |
 | `gcr.io/distroless/java21` | ~150MB | Distroless |
+
+> **注意**: Oracle 提供基于 Oracle Linux 的容器镜像，覆盖 JDK 26、25、21、17、11、8 版本。JDK 25 为当前 LTS，推荐新项目使用。
 
 **Alpine 优化**:
 ```dockerfile

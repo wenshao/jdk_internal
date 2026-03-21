@@ -118,6 +118,11 @@ Native Image 使用**静态分析**在构建时将 Java 字节码编译为原生
 - 不支持运行时类加载
 - 反射/代理/资源需显式配置
 
+**GraalVM 25 Native Image 新增优化** (2025-09):
+- **WP-SCCP** (Whole-Program Sparse Conditional Constant Propagation) 默认启用，分析全调用图传播常量，消除死代码分支
+- **XGBoost 静态剖析器**: 基于机器学习推断方法调用频率，自动分类热/冷代码，减少二进制体积
+- **高级混淆** (实验性, Oracle GraalVM): 重命名原生镜像中的符号，增强逆向工程防护
+
 **性能特征**:
 | 指标 | JVM | Native Image | 提升 |
 |------|-----|--------------|------|
