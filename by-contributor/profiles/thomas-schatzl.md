@@ -8,13 +8,31 @@
 
 ---
 
-## 概述
+## 目录
+
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [技术影响力](#3-技术影响力)
+4. [技术特长](#4-技术特长)
+5. [代表性工作](#5-代表性工作)
+6. [外部资源](#6-外部资源)
+7. [教育背景](#7-教育背景)
+8. [职业时间线](#8-职业时间线)
+9. [贡献概览](#9-贡献概览)
+10. [PR 列表](#10-pr-列表)
+11. [关键贡献详解](#11-关键贡献详解)
+12. [开发风格](#12-开发风格)
+13. [相关链接](#13-相关链接)
+
+---
+
+## 1. 概述
 
 Thomas Schatzl 是 Oracle HotSpot GC 团队核心成员，G1 (Garbage First) GC 的主要维护者和优化者。自 2012 年起参与 OpenJDK 开发，专注于垃圾回收器领域超过 12 年。他主导了 JEP 522 (G1 GC 吞吐量改进)，并在个人博客上撰写了大量关于 G1 GC 和 Parallel GC 的技术文章。截至 2026 年 3 月，他已有 **546 个 Integrated PRs**，是 GC 领域最高产的贡献者之一。
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -37,7 +55,7 @@ Thomas Schatzl 是 Oracle HotSpot GC 团队核心成员，G1 (Garbage First) GC 
 
 ---
 
-## 技术影响力
+## 3. 技术影响力
 
 | 指标 | 值 |
 |------|-----|
@@ -73,13 +91,13 @@ Thomas Schatzl 是 Oracle HotSpot GC 团队核心成员，G1 (Garbage First) GC 
 
 ---
 
-## 技术特长
+## 4. 技术特长
 
 `G1 GC` `GC 优化` `内存管理` `性能调优` `并发标记`
 
 ---
 
-## 代表性工作
+## 5. 代表性工作
 
 ### 1. JEP 522: G1 GC Throughput Improvement
 **Issue**: [JDK-8379781](https://bugs.openjdk.org/browse/JDK-8379781)
@@ -100,7 +118,7 @@ GC 接口的现代化和代码清理。
 
 ---
 
-## 外部资源
+## 6. 外部资源
 
 ### 个人博客
 
@@ -126,7 +144,7 @@ Thomas 在 [tschatzl.github.io](https://tschatzl.github.io/) 撰写关于 OpenJD
 
 ---
 
-## 教育背景
+## 7. 教育背景
 
 | 属性 | 值 |
 |------|-----|
@@ -137,7 +155,7 @@ Thomas 在 [tschatzl.github.io](https://tschatzl.github.io/) 撰写关于 OpenJD
 
 ---
 
-## 职业时间线
+## 8. 职业时间线
 
 | 年份 | 事件 | 详情 |
 |------|------|------|
@@ -149,7 +167,7 @@ Thomas 在 [tschatzl.github.io](https://tschatzl.github.io/) 撰写关于 OpenJD
 
 ---
 
-## 贡献概览
+## 9. 贡献概览
 
 ### 按类别统计
 
@@ -168,7 +186,7 @@ Thomas 在 [tschatzl.github.io](https://tschatzl.github.io/) 撰写关于 OpenJD
 
 ---
 
-## PR 列表
+## 10. PR 列表
 
 ### JEP 522: G1 GC Throughput Improvement
 
@@ -223,7 +241,7 @@ Thomas 在 [tschatzl.github.io](https://tschatzl.github.io/) 撰写关于 OpenJD
 
 ---
 
-## 关键贡献详解
+## 11. 关键贡献详解
 
 ### 1. JEP 522: G1 GC Throughput Improvement
 
@@ -313,7 +331,7 @@ double occupancy = (used_bytes - humongous_bytes) / capacity;
 
 ---
 
-## 开发风格
+## 12. 开发风格
 
 Thomas 的贡献特点:
 
@@ -324,7 +342,7 @@ Thomas 的贡献特点:
 
 ---
 
-## 相关链接
+## 13. 相关链接
 
 - [JKU Staff Profile](https://ssw.jku.at/General/Staff/TS/)
 - [OpenJDK Changesets](https://hg.openjdk.org/jdk/jdk/user?user=tschatzl)

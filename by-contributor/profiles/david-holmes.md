@@ -6,13 +6,32 @@
 
 ---
 
-## 概述
+## 目录
+
+1. [概述](#1-概述)
+2. [Basic Information](#2-basic-information)
+3. [Technical Impact](#3-technical-impact)
+4. [Technical Expertise](#4-technical-expertise)
+5. [Books and Publications](#5-books-and-publications)
+6. [Career Timeline](#6-career-timeline)
+7. [Representative Work](#7-representative-work)
+8. [Presentations and Talks](#8-presentations-and-talks)
+9. [External Resources](#9-external-resources)
+10. [Contribution Overview](#10-contribution-overview)
+11. [Complete PR List](#11-complete-pr-list)
+12. [Key Contributions](#12-key-contributions)
+13. [Development Style](#13-development-style)
+14. [Related Links](#14-related-links)
+
+---
+
+## 1. 概述
 
 David Holmes 是 Oracle 的 JVM 运行时专家，专注于线程、并发和信号处理。他是经典著作《Java Concurrency in Practice》和《The Java Programming Language (4th Edition)》的合著者之一。在加入 Oracle 之前，他曾担任 DLTeCH Pty Ltd 的总监和首席科学家，位于澳大利亚布里斯班，专注于并发和实时 Java 技术。他于 1999 年在麦考瑞大学（Macquarie University）获得博士学位，研究面向对象系统中的同步问题。
 
 ---
 
-## Basic Information
+## 2. Basic Information
 
 | Field | Value |
 |-------|-------|
@@ -52,7 +71,7 @@ David Holmes 是 Oracle 的 JVM 运行时专家，专注于线程、并发和信
 
 ---
 
-## Technical Impact
+## 3. Technical Impact
 
 | Metric | Value |
 |--------|-------|
@@ -70,13 +89,13 @@ David Holmes 是 Oracle 的 JVM 运行时专家，专注于线程、并发和信
 
 ---
 
-## Technical Expertise
+## 4. Technical Expertise
 
 `Threading` `Concurrency` `Signal Handling` `JNI` `JVM Runtime` `Error Reporting` `Memory Model` `OrderAccess`
 
 ---
 
-## Books and Publications
+## 5. Books and Publications
 
 ### Java Concurrency in Practice (2006)
 
@@ -114,7 +133,7 @@ David Holmes 是 Oracle 的 JVM 运行时专家，专注于线程、并发和信
 
 ---
 
-## Career Timeline
+## 6. Career Timeline
 
 | Year | Event | Details |
 |------|-------|---------|
@@ -129,7 +148,7 @@ David Holmes 是 Oracle 的 JVM 运行时专家，专注于线程、并发和信
 
 ---
 
-## Representative Work
+## 7. Representative Work
 
 ### 1. Thread Management Expert
 Expert in Java threads, virtual threads, and carrier threads implementation.
@@ -148,7 +167,7 @@ VM startup and thread creation improvements.
 
 ---
 
-## Presentations and Talks
+## 8. Presentations and Talks
 
 | Year | Title | Event/Context | Link |
 |------|-------|---------------|------|
@@ -168,7 +187,7 @@ A comprehensive presentation on memory models, acquire/release semantics, fences
 
 ---
 
-## External Resources
+## 9. External Resources
 
 | Type | Link |
 |------|------|
@@ -179,7 +198,7 @@ A comprehensive presentation on memory models, acquire/release semantics, fences
 
 ---
 
-## Contribution Overview
+## 10. Contribution Overview
 
 ### By Category
 
@@ -200,7 +219,7 @@ A comprehensive presentation on memory models, acquire/release semantics, fences
 - **Error Reporting** - hs_err file generation, crash diagnostics
 - **JVM Initialization** - VM startup, thread creation
 
-## Complete PR List
+## 11. Complete PR List
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
@@ -271,7 +290,7 @@ A comprehensive presentation on memory models, acquire/release semantics, fences
 | JDK-8345629 | Remove expired flags in JDK 25 | [JBS](https://bugs.openjdk.org/browse/JDK-8345629) |
 | JDK-8345628 | [BACKOUT] JDK-8287122 Use gcc12 -ftrivial-auto-var-init=pattern in debug builds | [JBS](https://bugs.openjdk.org/browse/JDK-8345628) |
 
-## Key Contributions
+## 12. Key Contributions
 
 ### 1. Semaphore Safety in Signal Handling
 
@@ -377,7 +396,7 @@ void VMError::report_and_die() {
 }
 ```
 
-## Development Style
+## 13. Development Style
 
 ### Code Characteristics
 - **Safety-first approach**: Focuses on thread safety and proper synchronization
@@ -397,7 +416,7 @@ void VMError::report_and_die() {
 - Focuses on correctness of threading code
 - Ensures proper error handling and diagnostics
 
-## Related Links
+## 14. Related Links
 
 - [OpenJDK Profile](https://openjdk.org/census#dholmes)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20dholmes)

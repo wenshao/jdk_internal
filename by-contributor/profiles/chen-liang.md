@@ -4,7 +4,23 @@
 
 ---
 
-## 基本信息
+## 目录
+
+1. [基本信息](#1-基本信息)
+2. [职业里程碑](#2-职业里程碑)
+3. [贡献时间线](#3-贡献时间线)
+4. [重要贡献](#4-重要贡献)
+5. [PR 深度分析](#5-pr-深度分析)
+6. [Project Valhalla 贡献](#6-project-valhalla-贡献)
+7. [技术特长](#7-技术特长)
+8. [兴趣领域](#8-兴趣领域)
+9. [开发风格](#9-开发风格)
+10. [数据来源](#10-数据来源)
+11. [相关链接](#11-相关链接)
+
+---
+
+## 1. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -47,7 +63,7 @@
 
 ---
 
-## 职业里程碑
+## 2. 职业里程碑
 
 | 日期 | 事件 | 详情 |
 |------|------|------|
@@ -62,7 +78,7 @@
 
 ---
 
-## 贡献时间线
+## 3. 贡献时间线
 
 ```
 2021: ░░░░░░░░░░░░░░░░░░░░  4 PRs
@@ -77,7 +93,7 @@
 
 ---
 
-## 重要贡献
+## 4. 重要贡献
 
 ### JDK-8352748: 移除 com.sun.tools.classfile（Author）
 
@@ -142,7 +158,7 @@
 
 ---
 
-## PR 深度分析
+## 5. PR 深度分析
 
 ### ClassFile API (28+ PRs)
 
@@ -928,7 +944,7 @@ void testMethod() {
 
 ---
 
-## Project Valhalla 贡献
+## 6. Project Valhalla 贡献
 
 Chen Liang 是 **Project Valhalla 的顶级贡献者**，在项目中排名 **#1**。
 
@@ -975,11 +991,13 @@ Chen Liang 是 **Project Valhalla 的顶级贡献者**，在项目中排名 **#1
 
 ---
 
-## 技术特长
+## 7. 技术特长
 
 `ClassFile API` `核心反射` `Method Handles` `常量池` `Valhalla` `API 设计`
 
-## 兴趣领域
+---
+
+## 8. 兴趣领域
 
 根据 GitHub 仓库和社交媒体关联，Chen Liang 对以下领域感兴趣：
 
@@ -998,7 +1016,7 @@ Chen Liang 是 **Project Valhalla 的顶级贡献者**，在项目中排名 **#1
 
 ---
 
-## 开发风格
+## 9. 开发风格
 
 Chen Liang 的贡献特点:
 
@@ -1061,7 +1079,7 @@ Chen Liang 的贡献特点:
 
 ---
 
-## 数据来源
+## 10. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:liach type:pr label:integrated`
 - **统计时间**: 2026-03-20
@@ -1084,7 +1102,7 @@ Chen Liang 的贡献特点:
 > - 更新协作者列表
 > - 添加更多数据来源链接
 
-## 相关链接
+## 11. 相关链接
 
 - [OpenJDK Census](https://openjdk.org/census#liach)
 - [GitHub Profile](https://github.com/liach)

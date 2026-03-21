@@ -7,7 +7,23 @@
 
 ---
 
-## 概述
+## 目录
+
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [职业经历](#3-职业经历)
+4. [主要 JEP 贡献](#4-主要-jep-贡献)
+5. [核心技术贡献](#5-核心技术贡献)
+6. [近期动态 (2024-2025)](#6-近期动态-2024-2025)
+7. [社区贡献与演讲](#7-社区贡献与演讲)
+8. [贡献统计](#8-贡献统计)
+9. [开发风格](#9-开发风格)
+10. [主要 Bug 修复精选](#10-主要-bug-修复精选)
+11. [相关链接](#11-相关链接)
+
+---
+
+## 1. 概述
 
 Naoto Sato 是 Oracle Java Platform Group 的**首席技术工程师 (Principal Member of Technical Staff)**，专注于 JDK 核心库的**国际化 (i18n)** 和**本地化** 功能。他是 Java UTF-8 标准化的重要推动者，作为 **6 个 JEP 的负责人**，彻底改变了 Java 的字符编码和本地化处理方式。
 
@@ -21,7 +37,7 @@ Naoto Sato 是 Oracle Java Platform Group 的**首席技术工程师 (Principal 
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -39,7 +55,7 @@ Naoto Sato 是 Oracle Java Platform Group 的**首席技术工程师 (Principal 
 
 ---
 
-## 职业经历
+## 3. 职业经历
 
 ### Sun Microsystems (2000-2010)
 
@@ -68,7 +84,7 @@ Naoto Sato 是 Oracle Java Platform Group 的**首席技术工程师 (Principal 
 
 ---
 
-## 主要 JEP 贡献
+## 4. 主要 JEP 贡献
 
 ### JEP draft 8344154: Convenience Methods for JSON Documents (进行中)
 
@@ -178,7 +194,7 @@ Locale.filter(range, locales); // 匹配 ja-JP
 
 ---
 
-## 核心技术贡献
+## 5. 核心技术贡献
 
 ### 1. CompactNumberFormat 实现 (JDK 11)
 
@@ -348,7 +364,7 @@ Collator collator = Collator.getInstance(locale);
 
 ---
 
-## 近期动态 (2024-2025)
+## 6. 近期动态 (2024-2025)
 
 ### 2025 年工作
 
@@ -380,7 +396,7 @@ Collator collator = Collator.getInstance(locale);
 
 ---
 
-## 社区贡献与演讲
+## 7. 社区贡献与演讲
 
 ### Unicode Conference 演讲
 
@@ -409,7 +425,7 @@ Naoto Sato 是 International Unicode Conference (IUC) 的常驻演讲者：
 
 ---
 
-## 贡献统计
+## 8. 贡献统计
 
 ### OpenJDK PR 统计
 
@@ -432,7 +448,7 @@ Naoto Sato 是 International Unicode Conference (IUC) 的常驻演讲者：
 
 ---
 
-## 开发风格
+## 9. 开发风格
 
 ### 代码质量关注点
 
@@ -457,7 +473,7 @@ Naoto Sato 是 International Unicode Conference (IUC) 的常驻演讲者：
 
 ---
 
-## 主要 Bug 修复精选
+## 10. 主要 Bug 修复精选
 
 | Issue | 标题 | 影响 |
 |-------|------|------|
@@ -477,7 +493,7 @@ Naoto Sato 是 International Unicode Conference (IUC) 的常驻演讲者：
 
 ---
 
-## 相关链接
+## 11. 相关链接
 
 ### 官方资料
 - [OpenJDK Profile](https://openjdk.org/people/naoto)
