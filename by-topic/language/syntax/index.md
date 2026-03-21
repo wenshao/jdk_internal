@@ -62,12 +62,12 @@ int result = switch (day) {
 ## 2. 快速概览
 
 ```
-JDK 1.0 ── JDK 5 ── JDK 8 ── JDK 14 ── JDK 16 ── JDK 17 ── JDK 21 ── JDK 23 ── JDK 26
+JDK 1.0 ── JDK 5 ── JDK 8 ── JDK 14 ── JDK 16 ── JDK 17 ── JDK 21 ── JDK 22 ── JDK 26
    │         │        │        │        │        │        │        │        │
-基础语法  泛型    Lambda   Records  Sealed   模式匹配  Switch   原始类型  模块导入
-类/接口  枚举    Stream   Pattern  Classes  for      Guards   Patterns  (JEP 511)
-        变长    Optional  Matching  (JEP     instanceof  (JEP    (JEP 530) 紧凑源文件
-        参数    方法引用            409)    (JEP 394/  305)              (JEP 512)
+基础语法  泛型    Lambda   Records  Sealed   模式匹配  Switch   未命名    模块导入
+类/接口  枚举    Stream   Pattern  Classes  for      Pattern  模式      (JEP 511)
+        变长    Optional  Matching  (JEP     instanceof Matching (JEP 456) 紧凑源文件
+        参数    方法引用            409)    (JEP 394/  (JEP 441)          (JEP 512)
                                             441)
 ```
 
@@ -88,7 +88,7 @@ JDK 1.0 ── JDK 5 ── JDK 8 ── JDK 14 ── JDK 16 ── JDK 17 ─�
 | **JDK 17** | Sealed Classes (正式) | JEP 409 | 控制继承 |
 | **JDK 21** | 模式匹配 for switch | JEP 441 | switch 表达式 |
 | **JDK 21** | Record Patterns | JEP 440 | 记录解构 |
-| **JDK 23** | Switch Guards | JEP 456 | 守卫子句 |
+| **JDK 22** | Unnamed Patterns and Variables | JEP 456 | 未命名模式 |
 | **JDK 26** | 原始类型模式 | JEP 530 | primitive patterns |
 | **JDK 26** | 模块导入 | JEP 511 | import module |
 | **JDK 26** | 紧凑源文件 | JEP 512 | 简化入门 |
@@ -609,19 +609,22 @@ switch (value) {
 
 ## 10. 最新增强
 
-### JDK 23: Switch Guards
+### JDK 22: Unnamed Patterns and Variables
 
-**JEP 456: Unnamed Patterns and Variables (Preview)**
+**JEP 456: Unnamed Patterns and Variables**
 
 ```java
-// 守卫子句 - when 关键字
-String result = switch (obj) {
-    case String s when s.length() > 5 -> "Long string";
-    case String s -> "Short string";
-    case Integer i when i > 0 -> "Positive integer";
-    case Integer i -> "Non-positive integer";
+// 未命名变量 - _ 占位符
+switch (obj) {
+    case String _ -> "It's a string";
+    case Integer _ -> "It's an integer";
     default -> "Unknown";
 };
+
+// 未命名模式变量
+if (obj instanceof Point(int x, _)) {
+    System.out.println("x = " + x);
+}
 ```
 
 ### JDK 26: 模块导入

@@ -66,32 +66,7 @@ void main(String[] args) {
 
 ---
 
-## 2. 性能
-
-### JEP 448: JVM Code Heap Segmentation
-
-**状态**: ✅ Final
-
-JVM 代码堆分段，优化启动时间和内存占用。
-
-**改进**:
-- 更快的方法查找
-- 更低的代码缓存占用
-- 更好的 JIT 编译器性能
-
----
-
-### JEP 449: Barrier-Based C2 Compilation
-
-**状态**: ✅ Final
-
-C2 编译器使用内存屏障优化，提升吞吐量。
-
-**改进**: 3-5% 吞吐量提升
-
----
-
-## 3. 并发
+## 2. 并发
 
 ### JEP 505: Structured Concurrency (第五次预览)
 
