@@ -399,6 +399,69 @@ When linking to organizations (Oracle, Alibaba, SAP, Red Hat, Amazon, Google, et
    - Use local link if available
    - Only use external URL for specific resources or when no local page exists
 
+### Contributor Link Priority
+
+**CRITICAL: Always prefer local contributor profile links over plain text names or external URLs.**
+
+When documenting PR authors, reviewers, or any contributor references:
+
+1. **Priority order for contributor links**:
+   - **First**: Local profile page `/by-contributor/profiles/{username}.md`
+   - **Second**: GitHub profile URL (only if no local page exists)
+   - **Third**: Plain text name (only if no GitHub username available)
+
+2. **Standard format for PR documents**:
+   ```markdown
+   # Author field
+   > **Author**: [Full Name](/by-contributor/profiles/{username}.md) (@github_handle)
+
+   # Reviewers field
+   > **Reviewers**: [Full Name](/by-contributor/profiles/{username}.md) (@github_handle), ...
+
+   # In table format
+   | **Author** | [Full Name](/by-contributor/profiles/{username}.md) |
+   ```
+
+3. **Common contributors with local pages**:
+   | Contributor | Local Link | GitHub Handle |
+   |-------------|------------|---------------|
+   | Shaojin Wen | `/by-contributor/profiles/shaojin-wen.md` | @wenshao |
+   | Daniel Fuchs | `/by-contributor/profiles/daniel-fuchs.md` | @dfuchs |
+   | Claes Redestad | `/by-contributor/profiles/claes-redestad.md` | @cl4es |
+   | Chen Liang | `/by-contributor/profiles/chen-liang.md` | @liach |
+   | Joe Darcy | `/by-contributor/profiles/joe-darcy.md` | | 
+   | Roger Riggs | `/by-contributor/profiles/roger-riggs.md` | @RogerRiggs |
+   | Erik Österlund | `/by-contributor/profiles/erik-osterlund.md` | |
+   | Adam Sotona | `/by-contributor/profiles/adam-sotona.md` | @asotona |
+
+4. **Contributors without local pages** (use GitHub URL or plain text):
+   - Raffaello Giulietti (@rgiulietti)
+   - Stephen Colebourne (@jodastephen)
+
+5. **Examples**:
+   ```markdown
+   # ✅ Correct - local link with GitHub handle
+   > **Author**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) (@wenshao)
+
+   # ✅ Correct - local link without GitHub handle
+   > **Author**: [Erik Österlund](/by-contributor/profiles/erik-osterlund.md)
+
+   # ✅ Correct - no local page, use GitHub URL
+   > **Reviewer**: Raffaello Giulietti (@rgiulietti)
+
+   # ❌ Wrong - plain text when local page exists
+   > **Author**: Shaojin Wen (@wenshao)
+
+   # ❌ Wrong - external GitHub URL when local page exists
+   > **Author**: [Shaojin Wen](https://github.com/wenshao)
+   ```
+
+6. **Before adding contributor links**:
+   - Check if local page exists: `ls by-contributor/profiles/`
+   - Use local link if available
+   - Include GitHub handle in parentheses if known
+   - Keep consistent format across all PR documents
+
 ### Research Collaboration Guidelines
 
 When multiple Agents collaborate:
