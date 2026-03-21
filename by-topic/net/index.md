@@ -500,7 +500,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 - [JSR 51: New I/O APIs](https://jcp.org/en/jsr/detail?id=51)
 - [JSR 203: More New I/O APIs](https://jcp.org/en/jsr/detail?id=203)
-- [JEP 321: HTTP Client](https://openjdk.org/jeps/321)
+- [JEP 321](/jeps/network/jep-321.md)
 - [Java Networking Tutorial](https://docs.oracle.com/javase/tutorial/networking/)
 - [WebSocket RFC](https://tools.ietf.org/html/rfc6455)
 

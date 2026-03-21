@@ -418,8 +418,8 @@ Point[] points = new Point[1000];  // 扁平化存储
 ## 15. 参考资料
 
 - [Project Valhalla Wiki](https://openjdk.org/projects/valhalla/)
-- [JEP 401: Primitive Classes](https://openjdk.org/jeps/401)
-- [JEP 402: Unified Generics](https://openjdk.org/jeps/402)
+- [JEP 401](/jeps/language/jep-401.md)
+- [JEP 402](/jeps/language/jep-402.md)
 - [Value Types: Reviving Java's Original Ideal](https://cr.openjdk.org/~jrose/papers/valhalla/valhalla-2014-slides.pdf)
 
 → [值类型详解](value-types.md) | [泛型特化详解](generics.md) | [开发活动分析](development.md)

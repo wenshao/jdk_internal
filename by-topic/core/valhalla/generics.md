@@ -512,7 +512,7 @@ class Matrix {
 
 ### JEP 文档
 
-- [JEP 402: Unified Generics](https://openjdk.org/jeps/402)
+- [JEP 402](/jeps/language/jep-402.md)
 - [JEP 218: Generics over Primitive Types](https://openjdk.org/jeps/218)
 
 ### 技术论文

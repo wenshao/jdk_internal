@@ -347,7 +347,7 @@ make test TEST="jtreg:test/hotspot/jtreg/compiler/valhalla"
 - [Valhalla GitHub](https://github.com/openjdk/valhalla)
 - [lworld 分支](https://github.com/openjdk/valhalla/tree/lworld)
 - [PR 列表](https://github.com/openjdk/valhalla/pulls?q=is%3Apr+is%3Aclosed+label%3Aintegrated)
-- [JEP 401: Primitive Classes](https://openjdk.org/jeps/401)
+- [JEP 401](/jeps/language/jep-401.md)
 
 ### 本地文档
 

@@ -522,8 +522,8 @@ PR 创建
 
 - [Valhalla GitHub](https://github.com/openjdk/valhalla)
 - [Valhalla PR 列表](https://github.com/openjdk/valhalla/pulls)
-- [JEP 401: Primitive Classes](https://openjdk.org/jeps/401)
-- [JEP 402: Unified Generics](https://openjdk.org/jeps/402)
+- [JEP 401](/jeps/language/jep-401.md)
+- [JEP 402](/jeps/language/jep-402.md)
 - [Valhalla 邮件列表](https://mail.openjdk.org/pipermail/valhalla-spec-observers/)
 
 ### 本地文档

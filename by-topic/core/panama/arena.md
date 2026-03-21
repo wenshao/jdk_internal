@@ -910,7 +910,7 @@ try (Arena arena = Arena.ofConfined()) {
 ## 12. 参考资料
 
 - [JEP 454](/jeps/ffi/jep-454.md)
-- [JEP 389: Foreign Linker API](https://openjdk.org/jeps/389)
+- [JEP 389](/jeps/ffi/jep-389.md)
 - [JEP 393: Foreign Memory Access API](https://openjdk.org/jeps/393)
 - [Panama Project](https://openjdk.org/projects/panama/)
 - [MemorySession Javadoc](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/foreign/MemorySession.html)

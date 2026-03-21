@@ -455,7 +455,7 @@ String value = map.get(1);  // 无装箱
 
 ### JEP 文档
 
-- [JEP 401: Primitive Classes](https://openjdk.org/jeps/401)
+- [JEP 401](/jeps/language/jep-401.md)
 - [JEP 390: Warnings for Value-Based Classes](https://openjdk.org/jeps/390)
 
 ### 技术论文

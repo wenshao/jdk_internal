@@ -585,7 +585,7 @@ java -XX:+EnableValhalla --enable-preview Main
 ### 官方资源
 
 - [Valhalla GitHub](https://github.com/openjdk/valhalla)
-- [JEP 401: Primitive Classes](https://openjdk.org/jeps/401)
+- [JEP 401](/jeps/language/jep-401.md)
 - [Valhalla Wiki](https://wiki.openjdk.org/display/valhalla)
 
 ### 本地文档
