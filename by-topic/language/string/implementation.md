@@ -246,7 +246,7 @@ src/java.base/share/classes/java/lang/invoke/
 
 | 贡献者 | 角色 | 说明 |
 |--------|------|------|
-| **Aleksey Shipilev** | JEP Author | Red Hat，设计并主导 Compact Strings |
+| **Aleksey Shipilev** | JEP Author | Oracle (JEP 254 Author)，设计并主导 Compact Strings |
 | **Vladimir Kozlov** | 实现 | Oracle，负责 aarch64 架构支持 (JDK-8156943) |
 | **Stuart Marks** | Review | Oracle，API 设计审查 |
 

@@ -272,7 +272,7 @@ java --enable-preview MyApp
 | Christian Hagedorn | Oracle | C2 JIT 编译器 |
 | Stefan Karlsson | Oracle | GC、数组 |
 | Vladimir Kozlov | Oracle | C2 编译器优化 |
-| [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | Red Hat | JIT 编译、Shenandoah |
+| [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | Datadog | JIT 编译、Shenandoah |
 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | Oracle | 类加载、SA |
 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | Amazon | 内存管理、测试 |
 

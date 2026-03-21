@@ -354,7 +354,7 @@ JVM 参数、调优工具和监控技术从 JDK 1.0 到 JDK 26 的演进。
 | 5 | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | 235 | Oracle | C++ 现代化 |
 | 6 | Stefan Karlsson | 229 | Oracle | 分代 ZGC (JEP 439) |
 | 7 | Per Lidén | 198 | Oracle | ZGC 创始人 |
-| 8 | Roman Kennke | 163 | Red Hat | Shenandoah GC |
+| 8 | Roman Kennke | 163 | Datadog | Shenandoah GC |
 | 9 | William Kemper | 112 | Amazon | 分代 Shenandoah (JEP 521) |
 
 ### JVM/性能团队 (按 Git 提交数)

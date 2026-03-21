@@ -336,7 +336,7 @@ JDK 8 引入的函数式编程特性。
 
 | 贡献者 | 公司 | 主要贡献 |
 |--------|------|----------|
-| **Aleksey Shipilev** | [Red Hat](/contributors/orgs/redhat.md) | JEP 254 (Compact Strings) |
+| **Aleksey Shipilev** | Oracle (JEP 254 时期) | JEP 254 (Compact Strings) |
 | **Shaojin Wen** (温绍锦) | [Alibaba](/contributors/orgs/alibaba.md) | JDK-8336856 (+40% 启动), 25+ PR |
 | **Claes Redestad** | [Oracle](/contributors/orgs/oracle.md) | String 压缩、字节码优化 |
 

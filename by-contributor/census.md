@@ -159,7 +159,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 | 角色 | 人数 | 代表贡献者 | 前组织 |
 |------|------|------------|--------|
-| Reviewer | 2 | [Aleksey Shipilev](profiles/aleksey-shipilev.md) (2023-), [William Kemper](profiles/william-kemper.md) | Red Hat |
+| Reviewer | 2 | [Aleksey Shipilev](profiles/aleksey-shipilev.md) (2023-), [William Kemper](profiles/william-kemper.md) | Amazon (formerly Red Hat) |
 | Committer | 0 | - | - |
 
 > **跳槽说明**:

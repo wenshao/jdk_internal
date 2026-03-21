@@ -62,7 +62,7 @@ JDK 21 LTS (GA: 2023-09) had **~380 unique contributors** making Integrated PRs 
 | 29 | [Hamlin Li](hamlin-li.md) | Oracle | 18+ | RISC-V | [详情](hamlin-li.md) |
 | 30 | [Shaojin Wen](shaojin-wen.md) | Alibaba | 15+ | Core Libs | [详情](shaojin-wen.md) |
 | 31 | [Anjian Wen](anjian-wen.md) | ByteDance | 12+ | RISC-V | [详情](anjian-wen.md) |
-| 32 | [Roman Kennke](roman-kennke.md) | Oracle | 12+ | Shenandoah | [详情](roman-kennke.md) |
+| 32 | [Roman Kennke](roman-kennke.md) | Datadog | 12+ | Shenandoah | [详情](roman-kennke.md) |
 | 33 | [Johannes Bechberger](johannes-bechberger.md) | SAP | 12+ | JFR | [详情](johannes-bechberger.md) |
 | 34 | [Per Minborg](per-minborg.md) | Oracle | 10+ | Core Libs | [详情](per-minborg.md) |
 | 35 | [Jatin Bhateja](jatin-bhateja.md) | Intel | 10+ | Vector API | [详情](jatin-bhateja.md) |
