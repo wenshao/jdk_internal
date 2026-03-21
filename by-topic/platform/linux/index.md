@@ -369,12 +369,12 @@ sysctl -w net.ipv4.tcp_fin_timeout=30
 
 ### io_uring 支持
 
-**io_uring (实验性，尚未正式支持)**:
-```bash
-# 启用 io_uring (实验性)
--Djdk.io.useIOUring=true
+**io_uring (尚未正式支持)**:
 
-# 检查内核支持
+OpenJDK 目前没有内置 io_uring 支持。社区有第三方库（如 JUring）通过 Panama FFM API 提供 io_uring 绑定，但 JDK 本身尚无官方 io_uring 集成。
+
+```bash
+# 检查内核是否支持 io_uring (Linux 5.1+)
 uname -r  # 需要 5.1+
 ```
 

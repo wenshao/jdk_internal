@@ -63,7 +63,7 @@
 
 ### JEP 450/519: Compact Object Headers (Project Lilliput)
 
-Led the implementation of compact object headers, first as JEP 450 (Experimental) in JDK 24, then finalized as JEP 519 in JDK 25. This is the first integrated feature from Project Lilliput:
+Led the implementation of compact object headers, first as JEP 450 (Experimental) in JDK 24, then finalized as JEP 519 in JDK 25 (LTS). This is the first integrated capability from Project Lilliput:
 
 - Reduced object header size from 12 bytes to 8 bytes
 - SPECjbb2015: 22% less heap space, 8% less CPU time

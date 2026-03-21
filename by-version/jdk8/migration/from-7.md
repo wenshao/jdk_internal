@@ -436,7 +436,6 @@ java.lang.OutOfMemoryError: Metaspace
 
 # 解决方案
 -XX:MaxMetaspaceSize=512m
--XX:+UseMetaspace
 ```
 
 2. **类加载器问题**:

@@ -773,7 +773,6 @@ jcmd <pid> GC.metaspace
 # 调整 Metaspace
 -XX:MetaspaceSize=128m
 -XX:MaxMetaspaceSize=256m
--XX:+UseMetaspace
 ```
 
 ### 安全连接问题

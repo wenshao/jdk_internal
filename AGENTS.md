@@ -298,10 +298,10 @@ done
 
 **4. JDK Version**
 ```markdown
-❌ JDK 25 is Feature version
+❌ WRONG: "JDK 25 is non-LTS"
 ✅ JDK 25 IS LTS (September 2025, next LTS after JDK 21)
-❌ JDK 26 is LTS
-✅ JDK 26 is Feature version (March 2026)
+❌ WRONG: "JDK 26 is LTS"
+✅ JDK 26 is non-LTS (March 2026)
 ```
 
 **5. JEP Attribution**
@@ -599,7 +599,7 @@ gh pr list --repo openjdk/jdk --search "author:{username} label:integrated" --js
 - ✅ 修复 ~80 处贡献者组织归属错误（通过网络搜索验证 15+ 个重大错误）
 - ✅ 修复 ~50 处 Preview/Final 状态混淆
 - ✅ 移除 ~40 处虚构的 API/JVM flag/JEP
-- ✅ 修正 JDK 25 为 LTS（之前错标为 Feature）
+- ✅ 修正 JDK 25 为 LTS（之前错标为非 LTS）
 
 **贡献者档案增强**:
 - ✅ 新建 27 个 profile（Mark Reinhold, Ron Pressler, Mandy Chung, Glavo 等）
@@ -630,7 +630,7 @@ gh pr list --repo openjdk/jdk --search "author:{username} label:integrated" --js
 **Other Updates**:
 - ✅ Added Jaroslav Bachorik (DataDog, JFR tools, 6 PRs)
 - ✅ Fixed all stats to use GitHub Integrated PRs
-- ✅ Corrected JDK 25 as Feature version (not LTS)
+- ✅ Corrected JDK 25 as LTS version
 - ✅ Updated contributor rankings by PRs
 - ✅ Added job change tracking guidelines
 
@@ -650,7 +650,7 @@ gh pr list --repo openjdk/jdk --search "author:{username} label:integrated" --js
 3. ✅ Follow template structures
 4. ✅ Keep technical terms in English, descriptions in Chinese
 5. ✅ Verify contributor organization info via web search (job changes are common)
-6. ✅ JDK 25 is LTS, JDK 26 is Feature — 不要搞混
+6. ✅ JDK 25 is LTS (2025-09), JDK 26 is non-LTS (2026-03) — 不要搞混
 7. ✅ 性能声明必须加限定词（"特定工作负载下"）或标注来源
 8. ✅ OpenJDK 2020 年才迁移到 GitHub，之前的 "PR 数量" 都是虚构的
 9. ✅ "替代 X" vs "X 的替代方案" — 如果 X 未被废弃，用后者

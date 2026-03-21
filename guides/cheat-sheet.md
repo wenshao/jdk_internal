@@ -153,7 +153,7 @@ PrivateKey key = decoder.decode(pem, PrivateKey.class);
 # Shenandoah 分代模式
 -XX:+UseShenandoahGC
 -XX:ShenandoahGCMode=generational
-# 注意: -XX:ShenandoahYoungGenerationSize 不是有效的 JVM 参数
+# 分代模式自动管理年轻代大小，无需额外 JVM 参数
 
 # ZGC (JDK 21+ 已支持分代)
 -XX:+UseZGC

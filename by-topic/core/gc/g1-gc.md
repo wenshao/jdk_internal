@@ -137,12 +137,9 @@ Eden 满时触发，采用多线程并行复制存活对象。
 -XX:G1HeapRegionSize=16m         # Region 大小 (1-32MB，必须是 2 的幂)
 ```
 
-### 6.2 JEP 522 相关配置 (JDK 26+)
-```bash
--XX:+G1UseClaimTable            # 启用认领表 (默认开启)
--XX:G1ClaimTableSize=0          # 认领表大小 (0 为自动调整)
--XX:G1RSetUpdateBatchSize=16    # RSet 批量更新阈值
-```
+### 6.2 JEP 522 相关 (JDK 26+)
+
+JEP 522 优化默认启用，无需 JVM 参数。
 
 ### 6.3 进阶调优
 - **解决晋升失败**: 若 Full GC 频繁，尝试调低 `-XX:InitiatingHeapOccupancyPercent=40` 以更早启动并发标记。

@@ -423,31 +423,20 @@ ret
 
 ## 8. JVM 参数配置
 
-### 新增参数
+### 说明
 
-```bash
-# 启用 Claim Table (默认启用)
--XX:+G1UseClaimTable
-
-# 禁用 Claim Table
--XX:-G1UseClaimTable
-
-# Claim Table 大小 (内部使用)
--XX:G1ClaimTableSize=N
-```
+JEP 522 优化默认启用，无需 JVM 参数。
 
 ### 推荐配置
 
 ```bash
 # 高吞吐场景
 -XX:+UseG1GC
--XX:+G1UseClaimTable
 -XX:G1HeapRegionSize=32m
 -XX:G1ConcRefinementThreads=8
 
 # 低延迟场景
 -XX:+UseG1GC
--XX:+G1UseClaimTable
 -XX:MaxGCPauseMillis=200
 -XX:G1MixedGCCountTarget=8
 ```

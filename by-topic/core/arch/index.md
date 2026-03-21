@@ -277,7 +277,7 @@ JDK 21 ──── JDK 23 ──── JDK 24 ───────────
 - 维护 32 位回退代码的成本超过收益
 - 移除后，仅可通过架构无关的 Zero 端口在 32 位 x86 上运行 Java（性能较低）
 
-**实现者**: Aleksey Shipilev (Red Hat) -- [PR #23906](https://github.com/openjdk/jdk/pull/23906)
+**实现者**: Aleksey Shipilev (Amazon) -- [PR #23906](https://github.com/openjdk/jdk/pull/23906)
 
 ---
 
@@ -469,7 +469,7 @@ java -XX:+PrintFlagsFinal -version 2>&1 | grep -i riscv
 
 | 贡献者 | 组织 | 主要贡献 |
 |--------|------|----------|
-| Aleksey Shipilev | Red Hat | JEP 503 实现 (32-bit x86 移除) |
+| Aleksey Shipilev | Amazon | JEP 503 实现 (32-bit x86 移除) |
 | Magnus Ihse Bursie | Oracle | 构建系统清理 |
 
 ---

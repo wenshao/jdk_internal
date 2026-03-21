@@ -525,7 +525,7 @@ Instant.now().toString();       // +12% 性能
 ```
 Author:     Shaojin Wen <wenshao@alibaba.com>
 Date:       Thu Aug 22 10:30:00 2025 +0800
-Commit:     a1b2c3d4e5f6...
+Commit:     (hash omitted)
 Reviewed-by: rriggs, redestad
 ```
 
@@ -602,7 +602,7 @@ public static void appendPair(StringBuilder buf, int v) {
 ```
 Author:     Shaojin Wen <wenshao@alibaba.com>
 Date:       Wed Sep 10 14:20:00 2025 +0800
-Commit:     b2c3d4e5f6a7...
+Commit:     (hash omitted)
 Reviewed-by: rriggs
 ```
 
@@ -626,7 +626,7 @@ final class DateTimePrintContext {
 ```
 Author:     Shaojin Wen <wenshao@alibaba.com>
 Date:       Fri Sep 25 16:50:00 2025 +0800
-Commit:     c3d4e5f6a7b8...
+Commit:     (hash omitted)
 Reviewed-by: liach
 ```
 

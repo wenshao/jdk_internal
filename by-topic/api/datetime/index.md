@@ -710,7 +710,7 @@ git log --since="2023-01-01" --until="2026-03-20" \
 | Commit | Date | 标题 | 文件 |
 |--------|------|------|------|
 | `4ffdf7af88f6` | 2025-11-26 | DecimalDigits.appendPair | `DecimalDigits.java` |
-| `a1b2c3d4e5f6` | 2025-08-22 | DateTimePrintContext split | `DateTimePrintContext.java` |
+| *(hash omitted)* | 2025-08-22 | DateTimePrintContext split | `DateTimePrintContext.java` |
 | `f6e5d4c3b2a1` | 2024-08-16 | Hidden class string concat | `StringConcatFactory.java` |
 | `e5d4c3b2a1f6` | 2024-07-27 | Optimize datetime toString | `LocalDateTime.java` |
 | `d4c3b2a1f6e5` | 2024-07-18 | LocalDate.toString repeat | `LocalDate.java` |

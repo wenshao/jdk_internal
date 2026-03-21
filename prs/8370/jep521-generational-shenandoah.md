@@ -357,8 +357,7 @@ GC 暂停时间分布:
 -XX:+UseShenandoahGC
 -XX:ShenandoahGCMode=generational
 
-# 年轻代大小
--XX:ShenandoahYoungGenerationSize=25%   # 堆的 25%
+# 分代模式自动管理年轻代大小，无需额外 JVM 参数
 
 # 晋升阈值
 -XX:TenuringThreshold=15
@@ -373,7 +372,6 @@ GC 暂停时间分布:
 # 分代 Shenandoah 推荐配置
 java -XX:+UseShenandoahGC \
      -XX:ShenandoahGCMode=generational \
-     -XX:ShenandoahYoungGenerationSize=25% \
      -XX:TenuringThreshold=15 \
      -XX:ConcGCThreads=4 \
      -XX:ParallelGCThreads=16 \

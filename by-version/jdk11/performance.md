@@ -509,7 +509,6 @@ java -XX:StartFlightRecording=maxsize=100m,maxage=24h,disk=true -jar app.jar
 # Metaspace 优化
 -XX:MetaspaceSize=256m
 -XX:MaxMetaspaceSize=512m
--XX:+UseMetaspace  # 启用优化
 
 # 直接内存
 -XX:MaxDirectMemorySize=1g

@@ -199,8 +199,7 @@ public:
 -XX:+UseShenandoahGC
 -XX:ShenandoahGCMode=generational
 
-# 年轻代大小
--XX:ShenandoahYoungGenerationSize=25%
+# 分代模式自动管理年轻代大小，无需额外 JVM 参数
 
 # 晋升阈值
 -XX:TenuringThreshold=15
@@ -304,8 +303,8 @@ class ZRelocate {
 ```bash
 # G1 GC (通用)
 -XX:+UseG1GC
--XX:+G1UseClaimTable
 -XX:MaxGCPauseMillis=200
+# JEP 522 优化默认启用，无需 JVM 参数
 
 # Shenandoah (低延迟)
 -XX:+UseShenandoahGC

@@ -318,29 +318,18 @@ GC 暂停时间            120ms      95ms       -20.8%
 
 ### 7.1 新增 JVM 参数
 
-```bash
-# 启用 Claim Table (默认启用)
--XX:+G1UseClaimTable
-
-# Claim Table 大小 (0 = 自动)
--XX:G1ClaimTableSize=0
-
-# 批量处理阈值
--XX:G1RSetUpdateBatchSize=16
-```
+JEP 522 优化默认启用，无需 JVM 参数。
 
 ### 7.2 推荐配置
 
 ```bash
 # 高吞吐场景
 -XX:+UseG1GC
--XX:+G1UseClaimTable
 -XX:G1HeapRegionSize=32m
 -XX:G1ConcRefinementThreads=8
 
 # 低延迟场景
 -XX:+UseG1GC
--XX:+G1UseClaimTable
 -XX:MaxGCPauseMillis=100
 ```
 

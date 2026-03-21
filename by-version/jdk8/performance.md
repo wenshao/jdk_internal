@@ -66,7 +66,7 @@
 # 优化 Metaspace 性能
 -XX:MetaspaceSize=256m          # 初始大小
 -XX:MaxMetaspaceSize=512m       # 最大大小
--XX:+UseMetaspace               # 启用优化 (默认)
+# Metaspace 在 JDK 8 中默认启用，无需额外 JVM 参数
 ```
 
 ### 2. G1 垃圾收集器优化

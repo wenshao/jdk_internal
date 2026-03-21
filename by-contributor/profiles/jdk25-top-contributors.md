@@ -9,7 +9,7 @@
 2. [Top 50 by PR Count](#2-top-50-by-pr-count)
 3. [By Organization](#3-by-organization)
 4. [By Component](#4-by-component)
-5. [Key Features in JDK 25](#5-key-features-in-jdk-25)
+5. [Key JEPs in JDK 25](#5-key-jeps-in-jdk-25)
 6. [Data Sources](#6-data-sources)
 
 ---
@@ -115,9 +115,9 @@ JDK 25 had **~400 unique contributors** making Integrated PRs during its develop
 
 ---
 
-## 5. Key Features in JDK 25
+## 5. Key JEPs in JDK 25
 
-| JEP | Feature | Lead Contributors |
+| JEP | Title | Lead Contributors |
 |-----|---------|-------------------|
 | JEP 519 | Compact Object Headers | Roman Kennke, Stefan Karlsson |
 | JEP 509 | JFR CPU-Time Profiling | Erik Gahlin, Markus Grönlund |
