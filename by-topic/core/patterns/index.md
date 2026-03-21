@@ -930,23 +930,23 @@ public String describeBad(Object obj) {
 ### 外部资源
 
 #### 核心 JEP
-- [JEP 305: Pattern Matching for instanceof (Preview)](https://openjdk.org/jeps/305)
-- [JEP 375: Pattern Matching for instanceof (Second Preview)](https://openjdk.org/jeps/375)
+- [JEP 305](/jeps/language/jep-305.md)
+- [JEP 375](/jeps/language/jep-375.md)
 - [JEP 394](/jeps/language/jep-394.md)
-- [JEP 406: Pattern Matching for switch (Preview)](https://openjdk.org/jeps/406)
-- [JEP 420: Pattern Matching for switch (Second Preview)](https://openjdk.org/jeps/420)
-- [JEP 427: Pattern Matching for switch (Third Preview)](https://openjdk.org/jeps/427)
-- [JEP 433: Pattern Matching for switch (Fourth Preview)](https://openjdk.org/jeps/433)
+- [JEP 406](/jeps/language/jep-406.md)
+- [JEP 420](/jeps/language/jep-420.md)
+- [JEP 427](/jeps/language/jep-427.md)
+- [JEP 433](/jeps/language/jep-433.md)
 - [JEP 441](/jeps/language/jep-441.md)
-- [JEP 405: Record Patterns (Preview)](https://openjdk.org/jeps/405)
-- [JEP 432: Record Patterns (Second Preview)](https://openjdk.org/jeps/432)
+- [JEP 405](/jeps/language/jep-405.md)
+- [JEP 432](/jeps/language/jep-432.md)
 - [JEP 440](/jeps/language/jep-440.md)
 
 #### 扩展 JEP
-- [JEP 443: Unnamed Patterns and Variables (Preview)](https://openjdk.org/jeps/443)
+- [JEP 443](/jeps/language/jep-443.md)
 - [JEP 456](/jeps/language/jep-456.md)
 - [JEP 455](/jeps/tools/jep-455.md)
-- [JEP 488: Primitive Types in Patterns, instanceof, and switch (Second Preview)](https://openjdk.org/jeps/488)
+- [JEP 488](/jeps/language/jep-488.md)
 
 #### 规范文档
 - [Pattern Matching (JLS 14)](https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.30)
