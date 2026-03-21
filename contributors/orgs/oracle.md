@@ -33,6 +33,8 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 
 ## 2. Top 贡献者
 
+### JDK 26 Top Oracle 贡献者
+
 | 排名 | 贡献者 | GitHub | PRs | 角色 | 领域 | 档案 |
 |------|--------|--------|-----|------|------|------|
 | 1 | Thomas Schatzl | [@tschatzl](https://github.com/tschatzl) | 546 | Reviewer | G1 GC | [详情](../../by-contributor/profiles/thomas-schatzl.md) |
@@ -50,8 +52,22 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 | 13 | Erik Gahlin | - | 70+ | Reviewer | JFR | [详情](../../by-contributor/profiles/erik-gahlin.md) |
 | 14 | Brian Burkhalter | - | 60+ | Committer | 网络 | [详情](../../by-contributor/profiles/brian-burkhalter.md) |
 | 15 | Emanuel Peter | - | 50+ | Reviewer | C2 编译器 | [详情](../../by-contributor/profiles/emanuel-peter.md) |
+| 16 | Phil Race | - | 120+ | Reviewer | Client Libraries | [详情](../../by-contributor/profiles/phil-race.md) |
+| 17 | Prasanta Sadhukhan | - | 65+ | Reviewer | Desktop | [详情](../../by-contributor/profiles/prasanta-sadhukhan.md) |
+| 18 | Volkan Yazici | - | 40+ | Committer | HTTP Client | [详情](../../by-contributor/profiles/volkan-yazici.md) |
+| 19 | Justin Lu | - | 40+ | Committer | Localization | [详情](../../by-contributor/profiles/justin-lu.md) |
+| 20 | Leonid Mesnik | - | 35+ | Reviewer | JVMTI | [详情](../../by-contributor/profiles/leonid-mesnik.md) |
+| 21 | Claes Redestad | - | 30+ | Reviewer | Performance | [详情](../../by-contributor/profiles/claes-redestad.md) |
+| 22 | Magnus Ihse Bursie | - | 28+ | Reviewer | Build | [详情](../../by-contributor/profiles/magnus-ihse-bursie.md) |
+| 23 | Hamlin Li | - | 20+ | Committer | RISC-V | [详情](../../by-contributor/profiles/hamlin-li.md) |
+| 24 | Roman Kennke | - | 18+ | Reviewer | Compact Headers | [详情](../../by-contributor/profiles/roman-kennke.md) |
+| 25 | Per Minborg | - | 15+ | Member | Core Libs | [详情](../../by-contributor/profiles/per-minborg.md) |
+| 26 | Weijun Wang | - | 15+ | Reviewer | Security | [详情](../../by-contributor/profiles/weijun-wang.md) |
+| 27 | Alan Bateman | - | 12+ | Reviewer | Concurrency | [详情](../../by-contributor/profiles/alan-bateman.md) |
+| 28 | Erik Österlund | - | 12+ | Reviewer | AOT, GC | [详情](../../by-contributor/profiles/erik-osterlund.md) |
+| 29 | Doug Simon | - | 10+ | Member | Graal | [详情](../../by-contributor/profiles/doug-simon.md) |
 
-**小计**: 4,000+ PRs (以上 15 人)
+**小计**: 4,000+ PRs (以上 29 人)
 
 > **角色说明**:
 > - **Reviewer**: 有权批准变更集的资深贡献者 ([详情](https://openjdk.org/bylaws))
@@ -201,7 +217,8 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 ## 7. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
-- **统计时间**: 2026-03-19
+- **统计时间**: 2026-03-21
+- **数据来源**: [JDK 26 Top Contributors](../../by-contributor/profiles/jdk26-top-contributors.md)
 
 ---
 
@@ -210,3 +227,13 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 - [Oracle Java](https://www.oracle.com/java/)
 - [Oracle OpenJDK](https://openjdk.org/groups/hotspot/)
 - [Oracle GitHub](https://github.com/oracle)
+
+---
+
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-21
+> **更新内容**:
+> - 扩展 Top 贡献者列表从 15 人到 29 人
+> - 添加 JDK 26 Top Oracle 贡献者子章节
+> - 添加 14 位新贡献者 (Phil Race, Prasanta Sadhukhan, Volkan Yazici, Justin Lu, Leonid Mesnik, Claes Redestad, Magnus Ihse Bursie, Hamlin Li, Roman Kennke, Per Minborg, Weijun Wang, Alan Bateman, Erik Österlund, Doug Simon)
+> - 更新 PR 统计数据来源说明
