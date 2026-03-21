@@ -333,8 +333,9 @@ IBM       15      20      30      40      45
 | **专注领域** | java.lang, java.util, java.time |
 | **贡献特点** | 性能优化导向，实际场景驱动 |
 | **代表工作** | Integer/Long toString, ClassFile API, 字符串拼接 |
-| **Dragonwell** | 电商场景优化 |
+| **Dragonwell** | [电商场景优化](dragonwell.md) |
 | **代表贡献者** | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md), [Kuai Wei](../../by-contributor/profiles/kuai-wei.md), [Yude Lin](../../by-contributor/profiles/yude-lin.md) |
+| **团队详情** | [Alibaba 组织页面](alibaba.md) |
 
 ### Amazon
 

@@ -57,8 +57,8 @@
 |------|-----------|---------|
 | 通用生产 | **Eclipse Temurin** | 免费社区标准，多平台支持 |
 | AWS 云 | **Amazon Corretto** | AWS 优化，免费长期支持 |
-| 阿里云 | **Alibaba Dragonwell** | 阿里云优化，JWarmUp |
-| 腾讯云 | **Tencent Kona** | 腾讯云优化，容器优化 |
+| 阿里云 | **[Alibaba Dragonwell](../contributors/orgs/dragonwell.md)** | 阿里云优化，JWarmUp |
+| 腾讯云 | **[Tencent Kona](../contributors/orgs/tencent.md)** | 腾讯云优化，容器优化 |
 | Azure | **Microsoft Build** | Windows 优化，Azure 集成 |
 | 低延迟交易 | **Azul Platform Prime** | C4 GC，pause < 1ms |
 | 内存受限 | **IBM Semeru** | OpenJ9，内存占用 -40% |
@@ -84,8 +84,8 @@
 
 | 需求 | 推荐发行版 |
 |------|-----------|
-| 龙芯 CPU | **Loongson JDK** |
-| 国产通用 | **Dragonwell** / **Kona** |
+| 龙芯 CPU | **[Loongson JDK](../contributors/orgs/loongson.md)** |
+| 国产通用 | **[Dragonwell](../contributors/orgs/dragonwell.md)** / **[Kona](../contributors/orgs/tencent.md)** |
 
 ---
 
@@ -171,7 +171,8 @@ winget install EclipseAdoptium.Temurin.21.JDK
 - [Azul Prime](../distributions/azul-prime.md) - C4 GC 低延迟版
 - [Eclipse Temurin](../distributions/eclipse-temurin.md) - Eclipse 社区版
 - [Amazon Corretto](../distributions/amazon-corretto.md) - AWS 优化版
-- [Alibaba Dragonwell](../distributions/alibaba-dragonwell.md) - 阿里云优化版
+- [Alibaba Dragonwell](../contributors/orgs/dragonwell.md) - 阿里云优化版
+- [Alibaba 组织](../contributors/orgs/alibaba.md) - 阿里巴巴贡献者详情
 - [Tencent Kona](../distributions/tencent-kona.md) - 腾讯云优化版
 - [BellSoft Liberica](../distributions/bellsoft-liberica.md) - 多平台版
 - [IBM Semeru](../distributions/ibm-semeru.md) - OpenJ9 低内存版

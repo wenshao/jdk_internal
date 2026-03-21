@@ -112,17 +112,17 @@ JDK 8 (2014) → JDK 11 (2018) → JDK 17 (2021) → JDK 21 (2023) → JDK 25 (2
 | **组织覆盖** | 15+ |
 | **Top 5 组织** | Oracle, Red Hat, Amazon, Microsoft, SAP |
 | **平均 PR 数** | 97 |
-| **最高产贡献者** | Shaojin Wen (Alibaba) |
+| **最高产贡献者** | [Shaojin Wen](by-contributor/profiles/shaojin-wen.md) ([Alibaba](contributors/orgs/alibaba.md)) |
 
 ### 组织分布
 
 | 组织 | 贡献者数 | 主要领域 | 代表贡献者 |
 |------|----------|----------|------------|
-| **Oracle** | 18 | JVM, 编译器, 核心库 | Mark Reinhold, Brian Goetz |
-| **Red Hat** | 12 | GC, 性能, 平台 | Aleksey Shipilev, Roman Kennke |
-| **Amazon** | 8 | 网络, 安全, 工具 | Shaojin Wen, Jason Greene |
-| **Microsoft** | 6 | Windows, 性能, 测试 | Magnus Ihse Bursie |
-| **SAP** | 5 | GC, 编译器, 测试 | Thomas Schatzl |
+| **[Oracle](contributors/orgs/oracle.md)** | 18 | JVM, 编译器, 核心库 | Mark Reinhold, Brian Goetz |
+| **[Red Hat](contributors/orgs/redhat.md)** | 12 | GC, 性能, 平台 | Aleksey Shipilev, Roman Kennke |
+| **[Amazon](contributors/orgs/amazon.md)** | 8 | 网络, 安全, 工具 | Shaojin Wen, Jason Greene |
+| **[Microsoft](contributors/orgs/microsoft.md)** | 6 | Windows, 性能, 测试 | Magnus Ihse Bursie |
+| **[SAP](contributors/orgs/sap.md)** | 5 | GC, 编译器, 测试 | Thomas Schatzl |
 
 ### 活跃度趋势
 
