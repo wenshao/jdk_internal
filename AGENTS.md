@@ -1,7 +1,7 @@
 # AGENTS.md - AI Assistant Guide
 
 > **Purpose**: Help AI assistants understand this project and contribute effectively
-> **Last Updated**: 2026-03-21
+> **Last Updated**: 2026-03-22
 
 ---
 
@@ -298,8 +298,10 @@ done
 
 **4. JDK Version**
 ```markdown
-❌ JDK 25 is LTS
-✅ JDK 25 is Feature version (JDK 21/26 are LTS)
+❌ JDK 25 is Feature version
+✅ JDK 25 IS LTS (September 2025, next LTS after JDK 21)
+❌ JDK 26 is LTS
+✅ JDK 26 is Feature version (March 2026)
 ```
 
 **5. JEP Attribution**
@@ -308,14 +310,127 @@ done
 ✅ JEP 514/515/519 belong to JDK 25
 ```
 
-**6. Contributor Job Changes**
+**6. Contributor Job Changes (verified 2026-03-22)**
 ```markdown
-❌ Aleksey Shipilev - Red Hat (outdated, left in 2020)
-✅ Aleksey Shipilev - Amazon (current, since 2020)
-
-❌ Thomas Wuerthinger - Oracle (outdated, left in 2019)
-✅ Thomas Wuerthinger - Independent/GraalVM Labs (current)
+✅ Aleksey Shipilev - Amazon (since 2023, previously Red Hat 2016-2023, Oracle 2012-2016)
+✅ Roman Kennke - Datadog (previously Amazon, Red Hat)
+✅ Thomas Stuefe - Red Hat (previously SAP)
+✅ William Kemper - Amazon (previously Red Hat)
+✅ Fei Yang - Huawei (NOT ISCAS PLCT Lab)
+✅ Nick Gasson - Arm (NOT Amazon)
+✅ Axel Boldt-Christmas - Oracle (NOT SAP)
+✅ Jatin Bhateja - Intel (NOT Oracle)
+✅ Roland Westrelin - Red Hat (NOT Oracle)
+✅ Zhengyu Gu - Datadog (previously Red Hat, Oracle)
+✅ Xuelei Fan - Salesforce (previously Oracle)
+✅ Hamlin Li - Rivos (previously Oracle)
+✅ Quan Anh Mai - Shopee (NOT Independent)
+✅ Chris Thalinger - Twitter/X (previously Oracle)
+✅ Volker Simonis - AWS (previously SAP)
+✅ Thomas Wuerthinger - Oracle Labs VP (NOT "Independent")
+✅ Eric Fang - NVIDIA (NOT Oracle)
 ```
+
+---
+
+## 7. 系统性审查方法论 (2026-03-22 沉淀)
+
+> 本节总结了对仓库进行 20+ 轮审查、修复 750+ 处错误的经验方法。
+
+### 7.1 多轮审查策略
+
+**核心原则**: 每轮聚焦不同角度，逐步收敛错误数量。
+
+| 轮次 | 聚焦方向 | 预期发现 |
+|------|---------|---------|
+| 第 1-3 轮 | 事实性错误（JEP 号、版本、API 名称） | 100+ 处/轮 |
+| 第 4-6 轮 | 跨文件一致性（同一事实在不同文件中的表述） | 30-50 处/轮 |
+| 第 7-10 轮 | 贡献者组织归属（通过网络搜索验证） | 10-20 处/轮 |
+| 第 11-15 轮 | 表述严谨性（"替代"→"替代方案"、性能声明加限定词） | 5-15 处/轮 |
+| 第 16-20 轮 | 残留清扫（每轮 < 10 处时趋于收敛） | 3-6 处/轮 |
+
+**停止条件**: 连续 2 轮发现 < 5 处新错误。
+
+### 7.2 高频错误模式 (Top 10)
+
+| 排名 | 错误模式 | 发现数 | 检测方法 |
+|------|---------|--------|---------|
+| 1 | **JEP 号张冠李戴** | ~150 | 逐个核对 openjdk.org/jeps/{number} |
+| 2 | **贡献者组织归属错** | ~80 | 网络搜索 GitHub profile + LinkedIn |
+| 3 | **Preview/Final 状态混淆** | ~50 | 对照 JEP 标题中的 (Preview)/(Final) |
+| 4 | **虚构的 API/JVM flag** | ~40 | 搜索 JDK 源码验证方法名/flag 存在性 |
+| 5 | **版本归属错误** | ~30 | 对照 openjdk.org/projects/jdk/{version} |
+| 6 | **不严谨表述** | ~30 | "替代 X" 改为 "X 的替代方案"（X 未被废弃时） |
+| 7 | **性能数据夸大/无来源** | ~25 | 要求标注 benchmark 来源或加"特定工作负载下" |
+| 8 | **代码示例编译错误** | ~20 | 审查变量名、方法签名、返回类型 |
+| 9 | **年份/日期错误** | ~15 | 对照 JDK 发布日期表 |
+| 10 | **虚构 pre-GitHub PR 数据** | ~10 | OpenJDK 2020 年迁移 GitHub，之前无 PR |
+
+### 7.3 贡献者组织验证工作流
+
+```
+Step 1: 检查 GitHub profile (company 字段)
+  └─ github.com/{username}
+
+Step 2: 搜索 OpenJDK CFV (Call for Votes) 邮件
+  └─ mail.openjdk.org 搜索 "CFV {name}"
+
+Step 3: 检查 OpenJDK Census
+  └─ openjdk.org/census
+
+Step 4: 搜索 LinkedIn / Inside.java
+  └─ 交叉验证当前职位
+
+Step 5: 检查近期 PR 的邮箱域名
+  └─ @oracle.com / @redhat.com / @amazon.com 等
+```
+
+**关键发现**: GitHub company 字段最可靠，但可能滞后 6-12 个月。CFV 邮件提供最准确的历史组织信息。
+
+### 7.4 Topic 文档质量评估标准
+
+| 评级 | 标准 | 操作 |
+|------|------|------|
+| **OK** | JEP 号正确、版本正确、无虚构内容、结构清晰 | 无需修改 |
+| **Enhance** | 基本正确但内容薄/缺少最新版本/有个别错误 | 补充 JDK 25-26 内容、修复错误 |
+| **Rewrite** | 包含虚构内容（虚构 JEP/API/flag）或大量事实错误 | 重写，基于网络搜索验证 |
+
+**常见需要重写的信号**:
+- 出现不存在的 JEP 号（如 JEP 826、JEP 370 用于 KMAC）
+- 出现不存在的 JVM flag（如 `-XX:+G1UseClaimTable`）
+- 出现不存在的 API 方法（如 `readln()`、`lookupLibrary()`）
+- pre-GitHub (2020 前) 的 "PR 数量" 数据
+- 代码示例使用 Java 保留字作为变量名（如 `default`）
+
+### 7.5 JDK 版本关键事实速查 (2026-03-22)
+
+| JDK | 类型 | GA 日期 | 关键特性 |
+|-----|------|---------|---------|
+| 8 | LTS | 2014-03 | Lambda, Stream, java.time |
+| 11 | LTS | 2018-09 | HTTP Client, var in lambda, ZGC (实验) |
+| 17 | LTS | 2021-09 | Sealed Classes, Records (已 final), ZGC/Shenandoah (生产) |
+| 21 | LTS | 2023-09 | Virtual Threads (final), Pattern Switch (final), Gen ZGC (非默认) |
+| 25 | **LTS** | 2025-09 | Scoped Values (final), JEP 519 COH (实验), JEP 521 Gen Shenandoah (实验) |
+| 26 | Feature | 2026-03 | HTTP/3 (final), G1 JEP 522, AOT JEP 516, Value Classes JEP 401 (preview) |
+
+### 7.6 并行审查策略
+
+使用多个 Agent 并行工作可以大幅加速审查：
+
+```
+推荐并行方案:
+├── Agent 1: by-version 文件审查
+├── Agent 2: by-topic 文件审查
+├── Agent 3: 贡献者 profile 审查
+└── Agent 4: 跨文件一致性检查
+
+每个 Agent 完成后立即提交，不等待其他 Agent。
+```
+
+**注意事项**:
+- 不同 Agent 不能修改同一个文件
+- 审查 Agent 和修复 Agent 分开运行
+- 每轮修复后再启动新一轮审查
 
 ---
 
@@ -477,6 +592,31 @@ gh pr list --repo openjdk/jdk --search "author:{username} label:integrated" --js
 
 ## 5. Recent Updates
 
+### 2026-03-22 (Major Overhaul)
+
+**系统性审查 (20+ 轮, 750+ 处修复)**:
+- ✅ 修复 ~150 处 JEP 号张冠李戴
+- ✅ 修复 ~80 处贡献者组织归属错误（通过网络搜索验证 15+ 个重大错误）
+- ✅ 修复 ~50 处 Preview/Final 状态混淆
+- ✅ 移除 ~40 处虚构的 API/JVM flag/JEP
+- ✅ 修正 JDK 25 为 LTS（之前错标为 Feature）
+
+**贡献者档案增强**:
+- ✅ 新建 27 个 profile（Mark Reinhold, Ron Pressler, Mandy Chung, Glavo 等）
+- ✅ 通过网络搜索增强 ~120 个 profile
+- ✅ 发现并修正 15+ 个组织归属重大错误
+- ✅ 总 profile 数: 170
+
+**Topic 重写/增强**:
+- ✅ 重写 8 个 topic（security, concurrency, arch, platform, language, net 等）
+- ✅ 增强 25+ 个 topic
+- ✅ 新建 3 个 JEP 分析（JEP 506/516/522）
+
+**Distributions 修复**:
+- ✅ GraalVM CE/EE 合并反映
+- ✅ Oracle 定价模型更新到 2023+ Universal Subscription
+- ✅ 修正 non-LTS 支持期
+
 ### 2026-03-21
 
 **Kuai Wei Deep Investigation**:
@@ -506,8 +646,13 @@ gh pr list --repo openjdk/jdk --search "author:{username} label:integrated" --js
 
 **Remember**:
 1. ✅ Always verify links before committing
-2. ✅ Use GitHub PRs for statistics
+2. ✅ Use GitHub PRs for statistics (NOT git commits)
 3. ✅ Follow template structures
-4. ✅ Keep technical terms in English
-5. ✅ Verify contributor organization info regularly (job changes are common)
+4. ✅ Keep technical terms in English, descriptions in Chinese
+5. ✅ Verify contributor organization info via web search (job changes are common)
+6. ✅ JDK 25 is LTS, JDK 26 is Feature — 不要搞混
+7. ✅ 性能声明必须加限定词（"特定工作负载下"）或标注来源
+8. ✅ OpenJDK 2020 年才迁移到 GitHub，之前的 "PR 数量" 都是虚构的
+9. ✅ "替代 X" vs "X 的替代方案" — 如果 X 未被废弃，用后者
+10. ✅ 每轮修复后立即 git commit + push，不要积攒
 6. ✅ Document organization history with verification dates
