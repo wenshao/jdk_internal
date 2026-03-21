@@ -1,6 +1,6 @@
 # Leslie Zhai (xiangzhai)
 
-> **Loongson** | **Beijing** | **RISC-V/LoongArch**
+> **Loongson** | **Beijing** | **LoongArch/MIPS JVM Porting**
 
 ---
 
@@ -9,10 +9,13 @@
 | 属性 | 值 |
 |------|-----|
 | **GitHub** | [@xiangzhai](https://github.com/xiangzhai) |
-| **姓名** | Leslie Zhai |
+| **OpenJDK** | [lzhai](https://db.openjdk.org/people) |
+| **姓名** | Leslie Zhai (翟翔) |
+| **邮箱** | zhaixiang@loongson.cn |
 | **位置** | Beijing, China |
 | **组织** | [Loongson](../../contributors/orgs/loongson.md) |
-| **主要领域** | RISC-V, LoongArch |
+| **角色** | JDK 8 Updates Project Author |
+| **主要领域** | LoongArch, MIPS, JVM Porting |
 | **Bio** | Good Morning Cat |
 
 ---
@@ -32,9 +35,11 @@
 
 ## 技术方向
 
-基于社交网络和 GitHub 活动推断：
-- **RISC-V/LoongArch**: 龙芯架构支持
-- **JVM 移植**: 与阿里巴巴 JVM 团队有联系，可能参与龙芯 JVM 移植工作
+基于 OpenJDK 贡献记录和 GitHub 活动：
+- **LoongArch/MIPS JVM Porting**: 龙芯架构 OpenJDK 移植 (JDK 8u Author)
+- **dotnet CoreCLR Porting**: MIPS64 CoreCLR 移植
+- **LLVM**: DragonEgg 迁移到 GCC 8.0 和 LLVM 6.0
+- **KDE**: KDE 开源社区开发者
 
 ---
 
@@ -53,4 +58,4 @@
 
 ---
 
-**最后更新**: 2026-03-21
+**最后更新**: 2026-03-22

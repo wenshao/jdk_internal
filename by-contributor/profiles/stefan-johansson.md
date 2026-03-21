@@ -21,7 +21,7 @@
 
 ## 1. 概述
 
-Stefan Johansson 是 Oracle HotSpot GC 团队的成员，专注于 **G1 GC** 的开发和优化。他在 G1 GC 的并发标记、Mixed GC 和性能优化方面有持续的技术贡献。
+Stefan Johansson 是 Oracle HotSpot GC 团队的成员，专注于 **G1 GC** 和 **ZGC** 的开发和优化。他于 2013 年加入 GC 团队，此前有 7 年 JRockit Virtual Edition 工作经验。他在 G1 GC 的并发标记、Mixed GC 和性能优化方面有持续的技术贡献。他维护一个关于 GC、OpenJDK 和 Java 的技术博客，也是 FOSDEM 和 Devoxx 的演讲者。
 
 ---
 
@@ -32,13 +32,18 @@ Stefan Johansson 是 Oracle HotSpot GC 团队的成员，专注于 **G1 GC** 的
 | **姓名** | Stefan Johansson |
 | **当前组织** | Oracle (HotSpot GC Team) |
 | **位置** | 瑞典 |
+| **GitHub** | [@kstefanj](https://github.com/kstefanj) |
 | **OpenJDK** | [@sjohansson](https://openjdk.org/census#sjohansson) |
+| **Blog** | [kstefanj.github.io](https://kstefanj.github.io/) |
+| **LinkedIn** | [kstefanj](https://www.linkedin.com/in/kstefanj/) |
+| **Inside.java** | [StefanJohansson](https://inside.java/u/StefanJohansson/) |
 | **角色** | JDK Committer |
-| **PRs** | [50+ integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Asjohansson+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | G1 GC, Memory Management |
-| **活跃时间** | 2015 - 至今 |
+| **PRs** | [50+ integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akstefanj+is%3Aclosed+label%3Aintegrated) |
+| **主要领域** | G1 GC, ZGC, Memory Management |
+| **活跃时间** | 2013 - 至今 |
+| **前经历** | JRockit Virtual Edition |
 
-> **数据来源**: [OpenJDK Census](https://openjdk.org/census#sjohansson)
+> **数据来源**: [Blog](https://kstefanj.github.io/whoami/), [GitHub](https://github.com/kstefanj), [OpenJDK Census](https://openjdk.org/census#sjohansson)
 
 ---
 
@@ -73,6 +78,7 @@ Stefan Johansson 是 Oracle HotSpot GC 团队的成员，专注于 **G1 GC** 的
 | GC | PRs | 主要贡献 |
 |----|-----|----------|
 | **G1 GC** | 45+ | Mixed GC、并发标记、性能优化 |
+| **ZGC** | 10+ | ZGC 相关开发和优化 |
 | **GC Shared** | 10+ | 共享代码优化 |
 
 ### 年度贡献趋势

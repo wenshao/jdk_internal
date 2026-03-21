@@ -19,6 +19,7 @@
 |------|-----|
 | **姓名** | Yibo Yan (颜一波) |
 | **邮箱** | yibo.yl@alibaba-inc.com |
+| **GitHub** | [@YiboYan](https://github.com/YiboYan) |
 | **当前组织** | [Alibaba](../../contributors/orgs/alibaba.md) |
 | **角色** | Author |
 | **Commits** | 2 |

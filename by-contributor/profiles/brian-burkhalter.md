@@ -19,7 +19,7 @@
 |------|-----|
 | **姓名** | Brian Burkhalter |
 | **当前组织** | [Oracle](../../contributors/orgs/oracle.md) |
-| **角色** | JDK Committer |
+| **角色** | OpenJDK Member, JDK Reviewer |
 | **PRs** | 60+ |
 | **主要领域** | NIO, 网络, 图形/打印 |
 

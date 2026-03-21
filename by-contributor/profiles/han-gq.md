@@ -1,6 +1,6 @@
-# han gq
+# Han Guanqiang (han gq)
 
-> JDK 26 编译器优化贡献者，麒麟软件，2 个 commits
+> JDK 26 编译器优化贡献者，麒麟软件 (KylinSoft)，2 个 commits
 
 ---
 ## 目录
@@ -19,7 +19,7 @@
 
 | 属性 | 值 |
 |------|-----|
-| **姓名** | han gq |
+| **姓名** | Han Guanqiang (韩冠强) |
 | **当前组织** | 麒麟软件 (KylinSoft) |
 | **GitHub** | [@hanguanqiang](https://github.com/hanguanqiang) |
 | **OpenJDK** | Author |

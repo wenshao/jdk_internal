@@ -19,11 +19,13 @@
 | **Email** | weijun.wang@oracle.com |
 | **GitHub** | [@wangweij](https://github.com/wangweij) |
 | **OpenJDK** | [@weijun](https://openjdk.org/census#weijun) |
+| **Title** | Principal Member of Technical Staff |
+| **Former Organization** | Sun Microsystems |
 | **Role** | Committer, Reviewer |
-| **Primary Areas** | Security, Cryptography, PKI, TLS |
+| **Primary Areas** | Security, Cryptography, PKI, TLS, Post-Quantum Crypto |
 | **Active Since** | 2009+ |
 
-> **数据来源**: [OpenJDK Census](https://openjdk.org/census#weijun), [CFV Vote 2022-03](https://mail.openjdk.org/pipermail/members/2022-March/001633.html)
+> **数据来源**: [OpenJDK Census](https://openjdk.org/census#weijun), [GitHub](https://github.com/wangweij), [OpenJDK Wiki](https://wiki.openjdk.org/display/~weijun)
 
 ## 2. Contribution Overview
 
@@ -40,6 +42,7 @@
 - **Cryptography**: Crypto algorithms and providers
 - **PKI**: Public key infrastructure
 - **TLS**: SSL/TLS implementation
+- **Post-Quantum Cryptography**: ML-KEM, ML-DSA implementations
 
 ## 3. Key Contributions
 
@@ -60,14 +63,23 @@ Works on cryptographic features:
 - Provider architecture
 - Key management
 - Digital signatures
+- **ML-KEM / ML-DSA**: Post-quantum cryptographic algorithm key encoding updates
+- **SHAKE128/SHAKE256**: MessageDigest algorithm implementations
+- **HSS/LMS**: Public key encoding updates
+- **DRBG**: JEP 273 SecureRandom implementations
+- **XML Signature**: Apache Santuario integration updates
 
 ## 4. Development Style
 
 - Security-conscious approach
-- Focuses on correctness and compliance
-- Long-term security maintainer
+- Focuses on correctness and compliance with IETF/NIST standards
+- Long-term security maintainer (Sun Microsystems -> Oracle)
+- Active contributor to IETF security standards (datatracker.ietf.org)
 
 ## 5. Related Links
 
 - [OpenJDK Profile](https://openjdk.org/census#weijun)
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=weijun)
+- [OpenJDK Wiki](https://wiki.openjdk.org/display/~weijun)
+- [GitHub Profile](https://github.com/wangweij)
+- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=wangweij)
+- [IETF Profile](https://datatracker.ietf.org/person/weijun.wang@oracle.com)

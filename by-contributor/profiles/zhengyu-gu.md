@@ -1,9 +1,9 @@
 # Zhengyu Gu
 
 > **GitHub**: [@zhengyu-gu](https://github.com/zhengyu-gu)
-> **Organization**: Oracle (HotSpot GC Team)
+> **Organization**: Datadog (formerly Red Hat, Oracle/Sun Microsystems)
 > **Role**: Shenandoah GC Core Developer
-> **Location**: China
+> **Location**: Canada
 
 ---
 ## 目录
@@ -24,7 +24,7 @@
 
 ## 1. 概述
 
-Zhengyu Gu 是 Oracle HotSpot GC 团队的核心成员，专注于 **Shenandoah GC** 的开发和优化。他是 Shenandoah GC 项目的主要贡献者之一，在并发标记、并发疏散和分代模式方面有深入的技术贡献。
+Zhengyu Gu 是 Shenandoah GC 项目的核心贡献者之一，曾在 Red Hat 担任 Principal Software Engineer，专注于 Shenandoah GC 的开发和优化。此前曾在 Oracle/Sun Microsystems 工作。目前在 Datadog 从事持续性能分析工作。他在并发标记、并发疏散和分代模式方面有深入的技术贡献。
 
 ---
 
@@ -33,8 +33,8 @@ Zhengyu Gu 是 Oracle HotSpot GC 团队的核心成员，专注于 **Shenandoah 
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Zhengyu Gu |
-| **当前组织** | Oracle (HotSpot GC Team) |
-| **位置** | 中国 |
+| **当前组织** | Datadog (formerly Red Hat) |
+| **位置** | 加拿大 |
 | **GitHub** | [@zhengyu-gu](https://github.com/zhengyu-gu) |
 | **OpenJDK** | [@zgu](https://openjdk.org/census#zgu) |
 | **角色** | JDK Committer, JDK Reviewer |
@@ -164,9 +164,9 @@ Zhengyu Gu 与以下 GC 专家紧密合作：
 
 | 合作者 | 组织 | 合作项目 |
 |--------|------|----------|
-| **Aleksey Shipilev** | Oracle | Shenandoah GC |
+| **Aleksey Shipilev** | Amazon (AWS) | Shenandoah GC |
 | **William Kemper** | Amazon | 分代 Shenandoah |
-| **Roman Kennke** | Red Hat | Shenandoah GC |
+| **Roman Kennke** | Independent | Shenandoah GC |
 | **Thomas Schatzl** | Oracle | GC 技术交流 |
 | **Per Lidén** | Oracle | ZGC/Shenandoah 技术对比 |
 

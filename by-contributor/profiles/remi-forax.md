@@ -1,7 +1,7 @@
 # Remi Forax
 
-> **Organization**: Independent
-> **Role**: Java Core Libraries Contributor
+> **Organization**: Universite Gustave Eiffel (Assistant Professor)
+> **Role**: Java Language Researcher, OpenJDK Member, Java Champion
 > **Blog**: [forax.fr](https://forax.fr/)
 
 ---
@@ -19,7 +19,7 @@
 
 ## 1. 概述
 
-Remi Forax 是独立贡献者，专注于 Java **核心库**和 **语言特性**研究。他是法国巴黎东大学的教授，对 Java 模式匹配、记录类和向量 API 有重要贡献。
+Remi Forax 是 **Universite Gustave Eiffel** (原 Universite Paris-Est Marne-la-Vallee) 的助理教授 (maitre de conferences)，同时也是 **Java Champion** 和 **OpenJDK Member**。他是 ASM 字节码库的主要贡献者，对 invokedynamic、lambda、模块化、模式匹配 (Project Amber) 和值类型 (Project Valhalla) 有重要贡献。他是 Devoxx 和 FOSDEM 的常客演讲者。
 
 ---
 
@@ -28,9 +28,9 @@ Remi Forax 是独立贡献者，专注于 Java **核心库**和 **语言特性**
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Remi Forax |
-| **当前组织** | Independent / Université Paris-Est |
-| **职位** | Professor / Java Researcher |
-| **专长** | Pattern Matching, Records, Vector API |
+| **当前组织** | Universite Gustave Eiffel (原 Universite Paris-Est Marne-la-Vallee) |
+| **职位** | Assistant Professor (Maitre de conferences) / Java Champion |
+| **专长** | invokedynamic, Pattern Matching, Records, Valhalla, ASM bytecode |
 | **博客** | [forax.fr](https://forax.fr/) |
 | **GitHub** | [forax](https://github.com/forax) |
 | **JDK 26 贡献** | 3 commits (Core Libraries) |
@@ -81,6 +81,12 @@ Remi Forax 对 Java 模式匹配有重要贡献：
 - **Programming Languages**: 编程语言研究
 - **Virtual Machines**: 虚拟机实现
 - **Type Systems**: 类型系统
+- **ASM Bytecode Framework**: ASM 项目主要贡献者
+
+### OpenJDK 项目参与
+
+- **Project Amber**: Record, Sealed Types, Pattern Matching
+- **Project Valhalla**: Value Types, Specialized Generics
 
 ---
 
@@ -89,10 +95,15 @@ Remi Forax 对 Java 模式匹配有重要贡献：
 ### 官方资料
 - [Blog: forax.fr](https://forax.fr/)
 - [GitHub: forax](https://github.com/forax)
+- [FOSDEM 2025](https://fosdem.org/2025/schedule/speaker/remi_forax/)
+- [Devoxx France 2025](https://www.devoxx.fr/en/agenda-2025/speaker/remi-forax/)
+- [Java Champion Announcement](https://blogs.oracle.com/java/remi-forax)
+- [ResearchGate](https://www.researchgate.net/scientific-contributions/Remi-Forax-69584714)
 
 ---
 
 **Sources**:
 - [Blog: forax.fr](https://forax.fr/)
 - [GitHub: forax](https://github.com/forax)
+- [FOSDEM 2025](https://fosdem.org/2025/schedule/speaker/remi_forax/)
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)

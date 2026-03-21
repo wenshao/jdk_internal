@@ -1,7 +1,7 @@
-# Poonam Bajaj
+# Poonam Bajaj Parhar
 
-> **Organization**: Oracle
-> **Role**: Testing Developer
+> **Organization**: Oracle (JVM Sustaining Engineering)
+> **Role**: Consulting Member of Technical Staff
 
 ---
 ## 目录
@@ -16,7 +16,7 @@
 
 ## 1. 概述
 
-Poonam Bajaj 是 Oracle 的 **测试开发工程师**，专注于 OpenJDK 测试框架和测试用例开发。她在 JDK 26 中以 4 次提交贡献于测试基础设施。
+Poonam Bajaj Parhar 是 Oracle JVM Sustaining Engineering 组的 **Consulting Member of Technical Staff**，拥有超过 18 年的 JVM 经验（始于 Sun Microsystems）。她专注于 HotSpot JVM 故障排查、Serviceability Agent 和 GC 调试。她也是 "Java Performance Companion" 一书的合著者。
 
 ---
 
@@ -24,32 +24,36 @@ Poonam Bajaj 是 Oracle 的 **测试开发工程师**，专注于 OpenJDK 测试
 
 | 属性 | 值 |
 |------|-----|
-| **姓名** | Poonam Bajaj |
-| **当前组织** | Oracle (Java Platform Group) |
-| **专长** | Testing, JTreg, Quality Assurance |
+| **姓名** | Poonam Bajaj Parhar |
+| **当前组织** | Oracle (JVM Sustaining Engineering) |
+| **专长** | HotSpot JVM, Serviceability Agent, GC Troubleshooting |
 | **JDK 26 贡献** | 4 commits (Testing) |
 
 ---
 
 ## 3. 主要贡献
 
-### 1. 测试框架
+### 1. HotSpot JVM Serviceability
 
-Poonam Bajaj 贡献于 OpenJDK 测试：
-- **JTreg**: 测试框架
-- **Test Cases**: 测试用例开发
-- **Automation**: 测试自动化
+Poonam Bajaj Parhar 在 JVM 可服务性方面贡献包括：
+- **Serviceability Agent**: SA 调试工具 Bug 修复和增强
+- **GC Troubleshooting**: 垃圾回收问题诊断
+- **JVM Diagnostics**: JVM 故障排查和诊断
+
+### 2. 出版物
+
+- 合著 "Java Performance Companion" (G1 GC 和 HotSpot VM Serviceability Agent 深入解析)
 
 ---
 
 ## 4. 技术专长
 
-### 测试
+### JVM Sustaining
 
-- **JTreg**: JDK 测试框架
-- **Unit Tests**: 单元测试
-- **Integration Tests**: 集成测试
-- **Performance Tests**: 性能测试
+- **HotSpot JVM**: JVM 故障排查和修复
+- **Serviceability Agent**: SA 调试工具
+- **GC Debugging**: 垃圾回收问题诊断
+- **Performance Analysis**: 性能分析和调优
 
 ---
 

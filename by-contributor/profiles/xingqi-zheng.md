@@ -1,6 +1,6 @@
 # Xingqi Zheng (MaxXSoft)
 
-> **RISC-V 架构专家，Shenandoah GC 贡献者**
+> **Alibaba Cloud 编译器开发者，RISC-V 架构专家**
 
 ---
 ## 目录
@@ -20,9 +20,10 @@
 | **姓名** | Xingqi Zheng (郑兴琪) |
 | **GitHub** | [@MaxXSoft](https://github.com/MaxXSoft) |
 | **邮箱** | xingqizheng.xqz@alibaba-inc.com |
-| **当前组织** | [Alibaba](../../contributors/orgs/alibaba.md) |
-| **角色** | Author |
+| **当前组织** | [Alibaba Cloud](../../contributors/orgs/alibaba.md) |
+| **角色** | Compiler Developer, Author |
 | **Commits** | 2 |
+| **兴趣** | Programming Languages, Compilers, Computer Architecture |
 | **主要领域** | RISC-V, Shenandoah GC, 原子操作 |
 | **活跃时间** | 2024 |
 

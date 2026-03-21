@@ -27,8 +27,11 @@ Valerie Peng 是 Oracle 的 **安全模块负责人**，专注于 Java 加密服
 |------|-----|
 | **姓名** | Valerie Peng |
 | **当前组织** | Oracle (Java Platform Group) |
+| **位置** | Santa Clara, CA |
 | **职位** | Security Lead |
-| **专长** | Cryptography, Security, PKI |
+| **GitHub** | [@valeriepeng](https://github.com/valeriepeng) |
+| **OpenJDK** | [Inside.java Profile](https://inside.java/u/ValeriePeng/) |
+| **专长** | Cryptography, Security, PKI, PKCS |
 | **JDK 26 贡献** | 3 commits (Security) |
 
 ---
@@ -41,12 +44,18 @@ Valerie Peng 负责 Java 加密服务：
 - **javax.crypto**: 加密 API
 - **Cipher**: 密码算法
 - **Signature**: 数字签名
+- **SHA-3**: SHA-3 哈希算法实现 (FIPS PUB 202)
+- **HMAC**: SHA-3 based HMAC 算法支持
+- **RSASSA-PSS**: PKCS#1 v2.2 支持
+- **HKDF**: 基于 KDF API 的 HKDF 实现重构
+- **EncryptedPrivateKeyInfo**: PKCS#8 实现
 
 ### 2. 安全框架
 
 - **java.security**: 安全基础类
 - **Key Management**: 密钥管理
-- **Provider**: 安全提供者接口
+- **Provider**: 安全提供者接口 (SunJCE, SunPKCS11)
+- **PBE**: 密码基于加密方案
 
 ---
 
@@ -70,4 +79,6 @@ Valerie Peng 负责 Java 加密服务：
 ---
 
 **Sources**:
+- [GitHub: valeriepeng](https://github.com/valeriepeng)
+- [Inside.java Profile](https://inside.java/u/ValeriePeng/)
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)

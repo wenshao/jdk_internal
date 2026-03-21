@@ -1,6 +1,6 @@
 # Sanhong Li
 
-> **Alibaba JVM Team** | **ASE 2021 Author**
+> **Chief JVM Architect, Alibaba Cloud** | **Dragonwell JDK Lead** | **ASE 2021 Author**
 
 ---
 
@@ -10,8 +10,10 @@
 |------|-----|
 | **GitHub** | [@sanhong](https://github.com/sanhong), [@alijvm](https://github.com/alijvm) |
 | **姓名** | Sanhong Li |
-| **主要领域** | Serverless Java, JVM |
+| **职位** | Chief JVM Architect, Alibaba Cloud |
+| **主要领域** | Dragonwell JDK, Serverless Java, JVM, RISC-V Porting |
 | **论文** | ASE 2021 "Towards a Serverless Java Runtime" |
+| **经历** | Intel R&D Lab (2004), IBM J9VM (2010), Alibaba JVM Lead (2014-至今) |
 
 ---
 
@@ -48,4 +50,4 @@
 
 ---
 
-**最后更新**: 2026-03-21
+**最后更新**: 2026-03-22

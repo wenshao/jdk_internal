@@ -1,7 +1,8 @@
 # Gilles Duboscq
 
-> **Organization**: Oracle Labs
-> **Role**: GraalVM Researcher
+> **Organization**: Oracle Labs (Switzerland)
+> **Role**: Senior Research Manager
+> **LinkedIn**: [gillesduboscq](https://www.linkedin.com/in/gillesduboscq/)
 
 ---
 ## 目录
@@ -18,7 +19,7 @@
 
 ## 1. 概述
 
-Gilles Duboscq 是 Oracle Labs 的 **GraalVM 研究员**，专注于编译器优化和语言实现框架。他是 Truffle 和 Graal 项目的核心贡献者。
+Gilles Duboscq 是 Oracle Labs Switzerland 的 **Senior Research Manager**，专注于编译器优化和语言实现框架。他是 Truffle 和 Graal 项目的核心贡献者，研究兴趣包括虚拟机、编译器和投机优化。拥有 Johannes Kepler University Linz 的计算机科学博士学位。
 
 ---
 
@@ -27,11 +28,15 @@ Gilles Duboscq 是 Oracle Labs 的 **GraalVM 研究员**，专注于编译器优
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Gilles Duboscq |
-| **活跃时间** | 2012–Present (13+ 年) |
-| **当前组织** | Oracle Labs |
-| **专长** | Graal, Truffle, Compiler Optimization |
+| **活跃时间** | 2011–Present (14+ 年) |
+| **当前组织** | Oracle Labs (Switzerland) |
+| **职位** | Senior Research Manager |
+| **位置** | Zurich, Switzerland |
+| **学历** | PhD, Computer Science, Johannes Kepler University Linz |
+| **LinkedIn** | [gillesduboscq](https://www.linkedin.com/in/gillesduboscq/) |
+| **Google Scholar** | [Gilles Duboscq](https://scholar.google.com/citations?user=xob78x8AAAAJ) |
+| **专长** | Graal, Truffle, Compiler Optimization, Speculative Optimizations |
 | **JDK 26 贡献** | 3 commits (Graal) |
-| **活跃状态** | ✅ 活跃 |
 
 ---
 
@@ -39,9 +44,9 @@ Gilles Duboscq 是 Oracle Labs 的 **GraalVM 研究员**，专注于编译器优
 
 | 时间 | 事件 | 组织 | 备注 |
 |------|------|------|------|
-| **2012–2016** | 博士研究，Truffle 框架开发 | Oracle Labs / University | 博士论文 |
-| **2016–2020** | GraalVM 核心开发 | Oracle Labs | Truffle/Graal |
-| **2020–Present** | 编译器优化研究 | Oracle Labs | 持续开发 |
+| **2011–2014** | 博士研究，Graal 编译器开发 | Oracle Labs / JKU Linz | PhD in Computer Science |
+| **2014–2020** | GraalVM 核心开发 | Oracle Labs Switzerland | Truffle/Graal |
+| **2020–Present** | Senior Research Manager | Oracle Labs Switzerland | 持续开发 |
 
 ---
 
@@ -82,3 +87,6 @@ Gilles Duboscq 是 **Truffle** 语言实现框架的核心开发者：
 
 **Sources**:
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
+- [Oracle Labs Researcher Page](https://labs.oracle.com/pls/apex/f?p=94065:11:755879856493:2096)
+- [LinkedIn](https://www.linkedin.com/in/gillesduboscq/)
+- [ResearchGate](https://www.researchgate.net/profile/Gilles-Duboscq)

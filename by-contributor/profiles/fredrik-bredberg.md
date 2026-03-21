@@ -1,8 +1,9 @@
 # Fredrik Bredberg
 
-> **Organization**: Red Hat
+> **Organization**: Oracle
 > **Role**: JVM Runtime Engineer
-> **GitHub**: [fbredberg](https://github.com/fbredberg)
+> **GitHub**: [@fbredber](https://github.com/fbredber)
+> **Location**: Stockholm, Sweden
 
 ---
 ## 目录
@@ -20,7 +21,7 @@
 
 ## 1. 概述
 
-Fredrik Bredberg 是 Red Hat 的 **JVM 运行时工程师**，专注于 HotSpot VM 的 **同步机制**和 **运行时系统**。他是 **ObjectMonitor** 同步原语的主要开发者，对 JVM 的锁实现和性能优化做出了重要贡献。
+Fredrik Bredberg 是 Oracle 的 **JVM 运行时工程师**，专注于 HotSpot VM 的 **同步机制**和 **运行时系统**。他是 **ObjectMonitor** 同步原语的主要开发者，参与了 JEP 491 (Synchronize Virtual Threads without Pinning) 的审查，对 JVM 的锁实现和性能优化做出了重要贡献。
 
 ---
 
@@ -29,10 +30,11 @@ Fredrik Bredberg 是 Red Hat 的 **JVM 运行时工程师**，专注于 HotSpot 
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Fredrik Bredberg |
-| **当前组织** | Red Hat |
+| **当前组织** | Oracle |
 | **职位** | JVM Runtime Engineer |
+| **位置** | Stockholm, Sweden |
 | **专长** | Synchronization, ObjectMonitor, HotSpot Runtime |
-| **GitHub** | [fbredberg](https://github.com/fbredberg) |
+| **GitHub** | [@fbredber](https://github.com/fbredber) |
 | **JDK 26 贡献** | 19 commits (Monitors) |
 
 ---
@@ -42,15 +44,17 @@ Fredrik Bredberg 是 Red Hat 的 **JVM 运行时工程师**，专注于 HotSpot 
 ### 1. ObjectMonitor 同步优化
 
 Fredrik Bredberg 是 HotSpot **ObjectMonitor** 的主要贡献者：
-- **JDK-8320318**: ObjectMonitor 同步机制改进
-- **Lock Implementation**: 锁实现优化
-- **Performance**: 同步性能提升
+- **JDK-8343840**: 重写 ObjectMonitor 链表，合并 EntryList 和 cxq 为统一列表
+- **JDK-8332506**: 修复 ObjectSynchronizer::is_async_deflation_needed() 中的 SIGFPE
+- **JDK-8329351**: 添加递归 Java 监视器压力测试
+- **JEP 491**: 参与 Synchronize Virtual Threads without Pinning 审查
 
 ### 2. HotSpot Runtime
 
 - **Synchronization**: JVM 同步机制
+- **LockingMode Cleanup**: 移除和清理过时的锁模式代码
 - **Monitors**: 对象监视器
-- **Locks**: 锁实现
+- **Virtual Thread Synchronization**: 虚拟线程同步支持
 
 ---
 

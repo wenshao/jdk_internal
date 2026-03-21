@@ -2,8 +2,8 @@
 
 > **Organization**: SAP (SapMachine Team)
 > **Role**: Java Runtime Engineer, JFR Developer
-> **Twitter**: [@JohannesG1](https://twitter.com/JohannesG1)
-> **Blog**: [johannesg1.github.io](https://johannesg1.github.io/)
+> **Mastodon**: [@parttimenerd](https://mastodon.social/@parttimenerd)
+> **Blog**: [mostlynerdless.de](https://mostlynerdless.de/)
 
 ---
 ## 目录
@@ -33,9 +33,9 @@ Johannes Bechberger 是 SAP **SapMachine 团队** 的 Java 运行时工程师，
 | **当前组织** | SAP (SapMachine Team) |
 | **职位** | Java Runtime Engineer |
 | **专长** | JFR, Performance Analysis, Tooling |
-| **Twitter** | [@JohannesG1](https://twitter.com/JohannesG1) |
-| **博客** | [johannesg1.github.io](https://johannesg1.github.io/) |
-| **GitHub** | [johannesg1](https://github.com/johannesg1) |
+| **Mastodon** | [@parttimenerd](https://mastodon.social/@parttimenerd) |
+| **博客** | [mostlynerdless.de](https://mostlynerdless.de/) |
+| **GitHub** | [parttimenerd](https://github.com/parttimenerd) |
 | **JDK 26 贡献** | 21 commits (JFR) |
 
 ---
@@ -125,9 +125,9 @@ Johannes Bechberger 在其博客上分享关于：
 - [JEP 509: JFR CPU-Time Profiling](https://openjdk.org/jeps/509)
 
 ### 社交媒体
-- [Twitter: @JohannesG1](https://twitter.com/JohannesG1)
-- [GitHub: johannesg1](https://github.com/johannesg1)
-- [Blog: johannesg1.github.io](https://johannesg1.github.io/)
+- [Mastodon: @parttimenerd](https://mastodon.social/@parttimenerd)
+- [GitHub: parttimenerd](https://github.com/parttimenerd)
+- [Blog: mostlynerdless.de](https://johannesg1.github.io/)
 
 ### SAP SapMachine
 - [SapMachine GitHub](https://github.com/SAP/SapMachine)
@@ -137,7 +137,7 @@ Johannes Bechberger 在其博客上分享关于：
 
 **Sources**:
 - [JEP 509: JFR CPU-Time Profiling](https://openjdk.org/jeps/509)
-- [Twitter: @JohannesG1](https://twitter.com/JohannesG1)
-- [GitHub: johannesg1](https://github.com/johannesg1)
+- [Mastodon: @parttimenerd](https://mastodon.social/@parttimenerd)
+- [GitHub: parttimenerd](https://github.com/parttimenerd)
 - [SapMachine](https://sapmachine.io/)
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)

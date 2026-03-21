@@ -18,7 +18,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Tongbao Zhang |
-| **当前组织** | 腾讯 (Tencent) |
+| **当前组织** | 腾讯 (Tencent) - Kona JDK Team |
 | **GitHub** | [@tbzhang](https://github.com/tbzhang) |
 | **OpenJDK** | Author |
 | **PRs** | [5 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Atbzhang+is%3Aclosed+label%3Aintegrated) |

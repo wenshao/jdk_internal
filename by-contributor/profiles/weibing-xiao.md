@@ -1,7 +1,8 @@
 # Weibing Xiao
 
 > **Organization**: Independent
-> **Role**: Testing Contributor
+> **Role**: Test Development Engineer
+> **Location**: Shanghai, China
 
 ---
 ## 目录
@@ -25,8 +26,10 @@ Weibing Xiao 是独立贡献者，专注于 OpenJDK **测试**框架和测试用
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Weibing Xiao |
+| **GitHub** | [@weibing-bab](https://github.com/weibing-bab) |
+| **位置** | Shanghai, China |
 | **当前组织** | Independent |
-| **专长** | Testing, JTreg |
+| **专长** | Test Automation, Core Libraries, Security |
 | **JDK 26 贡献** | 3 commits (Testing) |
 
 ---
@@ -35,20 +38,20 @@ Weibing Xiao 是独立贡献者，专注于 OpenJDK **测试**框架和测试用
 
 ### 1. 测试框架
 
-Weibing Xiao 贡献于 OpenJDK 测试：
-- **JTreg**: 测试框架
-- **Test Cases**: 测试用例
-- **Quality Assurance**: 质量保证
+Weibing Xiao 贡献于 OpenJDK 多个领域：
+- **Core Libraries**: jar 工具 man page 更新 (JDK-8331077)
+- **Security**: SSL/TLS 调试信息，SASL GSSAPI 修复
+- **Test Automation**: 测试框架和质量保证
 
 ---
 
 ## 4. 技术专长
 
-### 测试
+### 测试与核心库
 
-- **JTreg**: JDK 测试框架
-- **Unit Tests**: 单元测试
-- **Integration Tests**: 集成测试
+- **Core Libraries**: jar 工具文档
+- **Security**: SSL/TLS, SASL GSSAPI
+- **Test Automation**: 测试框架和 CI/CD
 
 ---
 

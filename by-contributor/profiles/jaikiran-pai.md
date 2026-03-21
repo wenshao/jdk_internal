@@ -28,6 +28,7 @@
 | **JDK 26 Commits** | 67 (排名 #10) |
 | **主要领域** | 网络, HTTP Client, 构建, Core Libraries |
 | **活跃时间** | 2022 - 至今 |
+| **Networking Group** | Member (voted in by peers) |
 
 > **数据来源**: [OpenJDK Census](https://openjdk.org/census#jpai), [GitHub](https://github.com/jaikiran)
 

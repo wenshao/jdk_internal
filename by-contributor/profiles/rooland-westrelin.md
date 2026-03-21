@@ -61,11 +61,15 @@ Worked on various compiler infrastructure projects:
 
 ## 4. Development Style
 
+- Principal Software Engineer at Red Hat
 - Deep expertise in compiler theory and implementation
 - Focuses on complex optimization problems
 - Long-term contributor to HotSpot
+- Author of multiple Red Hat Developer articles on JIT compilation
 
 ## 5. Related Links
 
 - [OpenJDK Profile](https://openjdk.org/census#roland)
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=roland)
+- [GitHub Profile](https://github.com/rwestrel)
+- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=rwestrel)
+- [Red Hat Developer Articles](https://developers.redhat.com/author/roland-westrelin)
