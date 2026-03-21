@@ -31,7 +31,7 @@
 
 | 版本 | 发布时间 | 主要特性 |
 |------|----------|----------|
-| **JDK 26** | 2026-03-17 | HTTP/3、G1 吞吐量提升、Scoped Values (正式版) |
+| **JDK 26** | 2026-03-17 | HTTP/3、G1 吞吐量提升、Stable Values (预览) |
 | **JDK 24** | 2025-03 | Primitive Types in Patterns (预览) |
 | **JDK 23** | 2024-09 | Markdown 文档注释 |
 | **JDK 22** | 2024-03 | String Templates (预览，后撤销) |
