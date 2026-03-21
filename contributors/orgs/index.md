@@ -11,15 +11,16 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | 组织 | Integrated PRs | 主要领域 | JDK 发行版 |
 |------|----------------|----------|------------|
 | [Oracle](oracle.md) | 4,000+ | 全领域 | Oracle JDK |
-| [SAP](sap.md) | 700+ | PPC, AIX, 构建 | SapMachine |
+| [SAP](sap.md) | 734+ | PPC, AIX, 构建 | SapMachine |
 | [Alibaba](alibaba.md) | 121 | 核心库, C2, GC | Dragonwell |
-| [Amazon](amazon.md) | 160+ | Shenandoah GC, AArch64 | Corretto |
-| [Red Hat](redhat.md) | 200+ | Shenandoah GC, AArch64 | Red Hat OpenJDK |
-| [IBM](ibm.md) | 120+ | s390x, JVM | Semeru |
+| [Amazon](amazon.md) | 138+ | Shenandoah GC, AArch64 | Corretto |
+| [Red Hat](redhat.md) | 200+ | Shenandoah GC, AArch64, Leyden | Red Hat OpenJDK |
+| [IBM](ibm.md) | 113+ | s390x, JVM | Semeru |
 | [ISCAS PLCT](iscas-plct.md) | 100+ | RISC-V | - |
 | [ByteDance](bytedance.md) | 25 | RISC-V 向量 | - |
 | [Tencent](tencent.md) | 10+ | G1 GC, 容器 | Kona |
 | [Loongson](loongson.md) | 30+ | LoongArch | Loongson JDK |
+| [Google](google.md) | 需核实 | - | - |
 
 > **统计时间**: 2026-03-21 | **统计方法**: GitHub Integrated PRs
 
@@ -32,8 +33,8 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | 组织 | G1 GC | ZGC | Shenandoah | 代表贡献者 |
 |------|-------|-----|------------|------------|
 | **Oracle** | ✅ 核心 | ✅ 核心 | - | Thomas Schatzl, Stefan Karlsson |
-| **Red Hat** | - | - | ✅ 创始 | Roman Kennke, Andrew Dinn |
-| **Amazon** | - | - | ✅ 维护 | William Kemper |
+| **Red Hat** | - | - | ✅ 创始 | Roman Kennke |
+| **Amazon** | - | - | ✅ 维护 | William Kemper, Aleksey Shipilev |
 | **Alibaba** | ✅ | ✅ | - | Yude Lin, Xiaowei Lu |
 | **Tencent** | ✅ | - | - | Tongbao Zhang |
 
@@ -44,6 +45,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | **Oracle** | ✅ 核心 | ✅ 核心 | ✅ | Emanuel Peter, Vladimir Kozlov |
 | **Alibaba** | ✅ | - | - | Kuai Wei |
 | **IBM** | ✅ (s390x) | - | - | Amit Kumar |
+| **Amazon** | ✅ | - | - | Aleksey Shipilev |
 
 ### 架构移植
 
@@ -71,30 +73,39 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 
 ### JDK 26 (GA 2026-03-17)
 
-| 组织 | 主要贡献 | 关键 PR | JEP |
-|------|----------|---------|-----|
-| **Oracle** | GC 优化, 编译器改进 | 多个 | JEP 519, JEP 521 |
-| **Alibaba** | 核心库优化 | 8370503, 8370013 | - |
-| **Amazon** | Generational Shenandoah | 8354078 | JEP 521 |
-| **ISCAS PLCT** | RISC-V 向量指令 | 8355667 | - |
-| **ByteDance** | RISC-V Zvbb/Zfa | 8329887 | - |
+| 组织 | 主要贡献 | 关键 PR/JEP |
+|------|----------|-------------|
+| **Oracle** | GC 优化, 编译器改进 | 多个 |
+| **Alibaba** | 核心库优化 | 8370503, 8370013 |
+| **Amazon** | Generational Shenandoah | [JEP 521](https://openjdk.org/jeps/521) |
+| **Red Hat** | Compact Object Headers | [JEP 519](https://openjdk.org/jeps/519) |
+| **ISCAS PLCT** | RISC-V 向量指令 | 8355667 |
+| **ByteDance** | RISC-V Zvbb/Zfa | 8329887, 8349632 |
 
 ### JDK 25 (2024-2025)
 
 | 组织 | 主要贡献 | 关键 PR |
 |------|----------|---------|
-| **Oracle** | Compact Object Headers, Valhalla | 多个 |
+| **Oracle** | Valhalla 预览, GC 改进 | 多个 |
 | **Alibaba** | ClassFile API 优化 | 8342336, 8341906 |
 | **Amazon** | Shenandoah 改进 | 多个 |
 | **Red Hat** | Leyden 贡献 | 多个 |
 
 ### JDK 21 (LTS, 2023-09)
 
-| 组织 | 主要贡献 | 关键 PR |
-|------|----------|---------|
-| **Oracle** | Virtual Threads, Pattern Matching | 多个 |
+| 组织 | 主要贡献 | 关键 PR/JEP |
+|------|----------|-------------|
+| **Oracle** | Virtual Threads, Pattern Matching | [JEP 444](https://openjdk.org/jeps/444) |
 | **Alibaba** | Integer/Long toString 优化 | 8310929, 8310502 |
-| **Red Hat** | Scoped Values | JEP 446 |
+| **Red Hat** | Scoped Values | [JEP 446](https://openjdk.org/jeps/446) |
+| **SAP** | 构建系统改进 | 多个 |
+
+### JDK 19 (2022-09)
+
+| 组织 | 主要贡献 | 关键 JEP |
+|------|----------|----------|
+| **Oracle** | Virtual Threads (Preview) | [JEP 425](https://openjdk.org/jeps/425) |
+| **ISCAS PLCT** | Linux/RISC-V Port | [JEP 422](https://openjdk.org/jeps/422) |
 
 ### JDK 17 (LTS, 2021-09)
 
@@ -104,21 +115,41 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | **Alibaba** | ZGC, Shenandoah 早期贡献 | 8272138 |
 | **SAP** | PPC 移植完善 | 多个 |
 
+### JDK 15 (2020-09)
+
+| 组织 | 主要贡献 | 关键 JEP |
+|------|----------|----------|
+| **Oracle** | Text Blocks, ZGC | 多个 |
+| **Red Hat** | Shenandoah GC (Standard) | [JEP 379](https://openjdk.org/jeps/379) |
+
+### JDK 12 (2019-03)
+
+| 组织 | 主要贡献 | 关键 JEP |
+|------|----------|----------|
+| **Oracle** | Switch Expressions | [JEP 325](https://openjdk.org/jeps/325) |
+| **Red Hat** | Shenandoah GC (Incubator) | [JEP 189](https://openjdk.org/jeps/189) |
+
 ### JDK 11 (LTS, 2018-09)
 
-| 组织 | 主要贡献 | 关键 PR |
-|------|----------|---------|
-| **Oracle** | HTTP Client, Epsilon GC | 多个 |
-| **Red Hat** | Shenandoah (Incubator) | JEP 189 |
-| **SAP** | PPC64LE 移植 | 多个 |
+| 组织 | 主要贡献 | 关键 JEP |
+|------|----------|----------|
+| **Oracle** | HTTP Client, Epsilon GC | [JEP 321](https://openjdk.org/jeps/321) |
+| **SAP** | PPC64LE 移植 | - |
+
+### JDK 9 (2017-09)
+
+| 组织 | 主要贡献 | 关键 JEP |
+|------|----------|----------|
+| **Oracle** | Module System, JShell | [JEP 261](https://openjdk.org/jeps/261) |
+| **Red Hat** | AArch64 Port | [JEP 237](https://openjdk.org/jeps/237) |
 
 ### JDK 8 (LTS, 2014-03)
 
-| 组织 | 主要贡献 | 关键 PR |
-|------|----------|---------|
-| **Oracle** | Lambdas, Streams | - |
-| **Red Hat** | AArch64 移植早期工作 | - |
-| **IBM** | s390x 移植 | - |
+| 组织 | 主要贡献 |
+|------|----------|
+| **Oracle** | Lambdas, Streams, Date/Time API |
+| **Red Hat** | AArch64 移植早期工作 |
+| **IBM** | s390x 移植 |
 
 ---
 
@@ -129,21 +160,22 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 ```
          2021    2022    2023    2024    2025
 Oracle   800+    850+    900+    950+   1000+
-SAP      100+    120+    150+    180+    200+
+SAP      150+    180+    200+    250+    280+
 Alibaba    7      2       8      68      35
-Amazon    10      15      20      40      75
+Amazon    30      40      50      60      90
 Red Hat   30      35      40      45      50
 IBM       15      20      30      40      45
 ```
 
 ### 中国企业贡献增长
 
-| 组织 | 2023 | 2024 | 2025 | 增长率 |
-|------|------|------|------|--------|
-| **Alibaba** | 8 | 68 | 35 | +337% |
-| **ByteDance** | 0 | 0 | 24 | - |
-| **ISCAS PLCT** | 15 | 50 | 35 | +133% |
-| **Tencent** | 2 | 4 | 4 | +100% |
+| 组织 | 2023 | 2024 | 2025 | 增长趋势 |
+|------|------|------|------|----------|
+| **Alibaba** | 8 | 68 | 35 | ↑ 高峰后稳定 |
+| **ByteDance** | 0 | 0 | 24 | ↑ 新兴 |
+| **ISCAS PLCT** | 15 | 50 | 35 | ↑ 持续贡献 |
+| **Tencent** | 2 | 4 | 4 | → 稳定 |
+| **Loongson** | 5 | 10 | 15 | ↑ 增长 |
 
 ---
 
@@ -166,28 +198,28 @@ IBM       15      20      30      40      45
 
 ### GC 相关 JEP
 
-| JEP | 标题 | 主导组织 | 版本 |
-|-----|------|----------|------|
-| JEP 189 | Shenandoah GC (Incubator) | Red Hat | JDK 12 |
-| JEP 379 | Shenandoah GC (Standard) | Red Hat | JDK 15 |
-| JEP 521 | Generational Shenandoah | Amazon | JDK 26 |
-| JEP 519 | Compact Object Headers | Oracle/Red Hat | JDK 24 |
+| JEP | 标题 | 主导组织 | Lead | 版本 |
+|-----|------|----------|------|------|
+| [JEP 189](https://openjdk.org/jeps/189) | Shenandoah GC (Incubator) | Red Hat | Aleksey Shipilev | JDK 12 |
+| [JEP 379](https://openjdk.org/jeps/379) | Shenandoah GC (Standard) | Red Hat | Aleksey Shipilev | JDK 15 |
+| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Red Hat | Roman Kennke | JDK 25 |
+| [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | Amazon | William Kemper | JDK 26 |
+| [JEP 439](https://openjdk.org/jeps/439) | Generational ZGC | Oracle | - | JDK 21 |
 
 ### 架构移植 JEP
 
+| JEP | 标题 | 主导组织 | Lead | 版本 |
+|-----|------|----------|------|------|
+| [JEP 237](https://openjdk.org/jeps/237) | AArch64 Port | Red Hat | Andrew Haley | JDK 9 |
+| [JEP 422](https://openjdk.org/jeps/422) | Linux/RISC-V Port | ISCAS PLCT | Fei Yang | JDK 19 |
+
+### 语言与运行时 JEP
+
 | JEP | 标题 | 主导组织 | 版本 |
 |-----|------|----------|------|
-| JEP 237 | AArch64 Port | Red Hat | JDK 9 |
-| JEP 422 | RISC-V Port | ISCAS PLCT | JDK 19 |
-| JEP 386 | Alpine Linux Port | Oracle | JDK 16 |
-
-### 语言特性 JEP
-
-| JEP | 标题 | 主导组织 | 版本 |
-|-----|------|----------|------|
-| JEP 439 | Generational ZGC | Oracle | JDK 21 |
-| JEP 444 | Virtual Threads | Oracle | JDK 21 |
-| JEP 455 | Primitive Types in Patterns | Oracle | JDK 23 |
+| [JEP 444](https://openjdk.org/jeps/444) | Virtual Threads | Oracle | JDK 21 |
+| [JEP 446](https://openjdk.org/jeps/446) | Scoped Values | Red Hat | JDK 21 |
+| [JEP 455](https://openjdk.org/jeps/455) | Primitive Types in Patterns | Oracle | JDK 23 |
 
 ---
 
@@ -197,72 +229,96 @@ IBM       15      20      30      40      45
 
 > OpenJDK 主要维护者
 
-- **覆盖范围**: 全领域
-- **PR 占比**: ~70%
-- **核心项目**: GC, 编译器, 核心库, 语言特性
-- **特点**: 拥有最多 Reviewer 和 Committer
+| 属性 | 值 |
+|------|-----|
+| **覆盖范围** | 全领域 |
+| **PR 占比** | ~70% |
+| **核心项目** | GC, 编译器, 核心库, 语言特性 |
+| **特点** | 拥有最多 Reviewer 和 Committer |
+| **代表贡献者** | Thomas Schatzl, Claes Redestad, Emanuel Peter |
 
 ### Alibaba
 
 > 核心库性能优化专家
 
-- **专注领域**: java.lang, java.util, java.time
-- **贡献特点**: 性能优化导向，实际场景驱动
-- **代表工作**: Integer/Long toString, ClassFile API, 字符串拼接
-- **Dragonwell**: 电商场景优化
+| 属性 | 值 |
+|------|-----|
+| **专注领域** | java.lang, java.util, java.time |
+| **贡献特点** | 性能优化导向，实际场景驱动 |
+| **代表工作** | Integer/Long toString, ClassFile API, 字符串拼接 |
+| **Dragonwell** | 电商场景优化 |
+| **代表贡献者** | Shaojin Wen, Kuai Wei, Yude Lin |
 
 ### Amazon
 
 > Shenandoah GC 维护者
 
-- **专注领域**: Shenandoah GC, AArch64
-- **贡献特点**: GC 深度优化
-- **代表工作**: JEP 521 Generational Shenandoah
-- **Corretto**: AWS 云优化
+| 属性 | 值 |
+|------|-----|
+| **专注领域** | Shenandoah GC, AArch64 |
+| **贡献特点** | GC 深度优化 |
+| **代表工作** | JEP 521 Generational Shenandoah |
+| **Corretto** | AWS 云优化 |
+| **代表贡献者** | William Kemper, Aleksey Shipilev, Nick Gasson |
 
 ### Red Hat
 
 > AArch64 和 Leyden 贡献者
 
-- **专注领域**: Shenandoah GC, AArch64, Project Leyden
-- **贡献特点**: 架构优化，启动性能
-- **代表工作**: AArch64 移植，SVE 支持
-- **特点**: JBoss Byteman 项目
+| 属性 | 值 |
+|------|-----|
+| **专注领域** | Shenandoah GC, AArch64, Project Leyden |
+| **贡献特点** | 架构优化，启动性能 |
+| **代表工作** | AArch64 移植, JEP 519 Compact Object Headers |
+| **特点** | JBoss Byteman 项目 |
+| **代表贡献者** | Roman Kennke, Andrew Dinn |
 
 ### SAP
 
 > PPC 和企业诊断专家
 
-- **专注领域**: PPC 移植, AIX 平台, 构建系统
-- **贡献特点**: 跨平台构建，企业级诊断
-- **代表工作**: PPC64LE 移植, SapMachine Vitals
-- **特点**: 最多构建系统贡献
+| 属性 | 值 |
+|------|-----|
+| **专注领域** | PPC 移植, AIX 平台, 构建系统 |
+| **贡献特点** | 跨平台构建，企业级诊断 |
+| **代表工作** | PPC64LE 移植, SapMachine Vitals |
+| **特点** | 最多构建系统贡献 |
+| **代表贡献者** | Matthias Baesken, Goetz Lindenmaier, Erik Joelsson |
 
 ### IBM
 
 > s390x 和企业级 JVM
 
-- **专注领域**: s390x 架构, HotSpot
-- **贡献特点**: 企业级平台支持
-- **代表工作**: s390x 向量指令
-- **Semeru**: IBM Z 优化
+| 属性 | 值 |
+|------|-----|
+| **专注领域** | s390x 架构, HotSpot |
+| **贡献特点** | 企业级平台支持 |
+| **代表工作** | s390x 向量指令 |
+| **Semeru** | IBM Z 优化 |
+| **代表贡献者** | Amit Kumar, Thomas Stuefe |
 
 ### ISCAS PLCT
 
 > RISC-V 核心贡献者
 
-- **专注领域**: RISC-V 架构移植
-- **贡献特点**: 向量指令支持
-- **代表工作**: RISC-V 向量 Min/Max, 扩展检测
-- **特点**: 中国科学院软件所
+| 属性 | 值 |
+|------|-----|
+| **专注领域** | RISC-V 架构移植 |
+| **贡献特点** | 向量指令支持 |
+| **代表工作** | JEP 422 RISC-V Port, RISC-V 向量指令 |
+| **特点** | 中国科学院软件所 |
+| **代表贡献者** | Fei Yang |
 
 ### ByteDance
 
 > RISC-V 向量指令专家
 
-- **专注领域**: RISC-V 向量扩展 (Zvbb, Zfa)
-- **贡献特点**: 新指令支持
-- **代表工作**: Zvbb Vector And-Not, Zfa 浮点指令
+| 属性 | 值 |
+|------|-----|
+| **专注领域** | RISC-V 向量扩展 (Zvbb, Zfa) |
+| **贡献特点** | 新指令支持 |
+| **代表工作** | Zvbb Vector And-Not, Zfa 浮点指令 |
+| **代表贡献者** | Anjian Wen |
 
 ---
 
@@ -273,8 +329,38 @@ IBM       15      20      30      40      45
 | 贡献者 | 原组织 | 现组织 | 说明 |
 |--------|--------|--------|------|
 | Thomas Stuefe | SAP → Amazon → IBM | IBM | SapMachine 创始人 |
-| Aleksey Shipilev | Red Hat | AWS | Shenandoah 创始人 |
-| William Kemper | Red Hat | Amazon | Shenandoah 维护 |
+| Aleksey Shipilev | Oracle → Red Hat → AWS | Amazon | Shenandoah 创始人 |
+| William Kemper | Red Hat | Amazon | Shenandoah 维护者 |
+
+---
+
+## 地区分布
+
+### 中国企业
+
+| 组织 | PRs | 主要领域 | 发行版 |
+|------|-----|----------|--------|
+| Alibaba | 121 | 核心库, GC | Dragonwell |
+| ISCAS PLCT | 100+ | RISC-V | - |
+| Loongson | 30+ | LoongArch | Loongson JDK |
+| ByteDance | 25 | RISC-V 向量 | - |
+| Tencent | 10+ | G1 GC, 容器 | Kona |
+
+### 欧洲企业
+
+| 组织 | PRs | 主要领域 | 发行版 |
+|------|-----|----------|--------|
+| SAP | 734+ | PPC, 构建 | SapMachine |
+| Red Hat | 200+ | GC, AArch64 | Red Hat OpenJDK |
+| Oracle (欧洲团队) | - | - | - |
+
+### 美国企业
+
+| 组织 | PRs | 主要领域 | 发行版 |
+|------|-----|----------|--------|
+| Oracle | 4000+ | 全领域 | Oracle JDK |
+| Amazon | 138+ | GC | Corretto |
+| IBM | 113+ | s390x | Semeru |
 
 ---
 
