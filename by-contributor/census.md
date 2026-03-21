@@ -52,7 +52,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | [Emanuel Peter](profiles/emanuel-peter.md) | Oracle | [@epeter](https://openjdk.org/census#epeter) | [详情](profiles/emanuel-peter.md) |
 | [Jan Lahoda](profiles/jan-lahoda.md) | Oracle | [@lahoda](https://openjdk.org/census#lahoda) | [详情](profiles/jan-lahoda.md) |
 | [Chen Liang](profiles/chen-liang.md) | Oracle | [@liach](https://openjdk.org/census#liach) | [详情](profiles/chen-liang.md) |
-| [Roland Westrelin](profiles/rooland-westrelin.md) | Oracle | [@roland](https://openjdk.org/census#roland) | [详情](profiles/rooland-westrelin.md) |
+| [Roland Westrelin](profiles/rooland-westrelin.md) | Red Hat | [@roland](https://openjdk.org/census#roland) | [详情](profiles/rooland-westrelin.md) |
 | [Hamlin Li](profiles/hamlin-li.md) | Oracle | [@hli](https://openjdk.org/census#hli) | [详情](profiles/hamlin-li.md) |
 | [Jatin Bhateja](profiles/jatin-bhateja.md) | Intel | [@jbhateja](https://openjdk.org/census#jbhateja) | [详情](profiles/jatin-bhateja.md) |
 | [Claes Redestad](profiles/claes-redestad.md) | Oracle | [@redestad](https://openjdk.org/census#redestad) | [详情](profiles/claes-redestad.md) |

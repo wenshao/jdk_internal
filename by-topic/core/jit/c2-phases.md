@@ -419,7 +419,7 @@ PhaseCFG ──► PhaseChaitin ──► PhaseBlockLayout ──► Output
 | [Johannes Graham](/by-contributor/profiles/johannes-graham.md) | C2 编译器优化、常量折叠 | Oracle |
 | [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | C2 编译器创始人 | Oracle |
 | [Christian Hagedorn](/by-contributor/profiles/christian-hagedorn.md) | C2 优化、GVN | Oracle |
-| [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | C2 循环优化 | Oracle |
+| [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | C2 循环优化 | Red Hat |
 | [John Rose](/by-contributor/profiles/john-rose.md) | invokedynamic、JIT | Oracle |
 
 ### 外部资源

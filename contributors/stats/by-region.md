@@ -118,7 +118,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 | [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) | 70+ | Oracle 中国 | G1 GC |
 | [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | Huawei | RISC-V |
 | Weijun Wang | 50+ | Oracle 中国 | 安全/工具 |
-| Zhengyu Gu | 30+ | Oracle 中国 | G1 GC |
+| Zhengyu Gu | 30+ | Datadog | G1 GC |
 | Naoto Sato | 20+ | Oracle 中国 | 国际化 |
 | Xue-Lei Andrew Fan | 20+ | Oracle 中国 | 安全 |
 

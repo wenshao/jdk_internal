@@ -166,7 +166,7 @@ Level 4: C2 (深度优化)
 | 排名 | 贡献者 | 主要贡献 | 组织 |
 |------|--------|----------|------|
 | 1 | [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | C2 架构师 | Oracle |
-| 2 | [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | C2 优化 (JDK-8325495) | Oracle |
+| 2 | [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | C2 优化 (JDK-8325495) | Red Hat |
 | 3 | [John Rose](/by-contributor/profiles/john-rose.md) | invokedynamic, JIT | Oracle |
 | 4 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | SuperWord 向量化, C2 博客作者 | Oracle |
 | 5 | [Christian Hagedorn](/by-contributor/profiles/christian-hagedorn.md) | C2 优化, GVN | Oracle |

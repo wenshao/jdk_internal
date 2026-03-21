@@ -446,7 +446,7 @@ public int process() {
 | 贡献者 | 领域 | 组织 |
 |--------|------|------|
 | [Doug Simon](/by-contributor/profiles/doug-simon.md) | Graal 架构师 | Oracle |
-| [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | JIT 编译器 | Oracle |
+| [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | JIT 编译器 | Red Hat |
 | [Thomas Wuerthinger](/by-contributor/profiles/thomas-wuerthinger.md) | Truffle 框架 | Oracle |
 | [Christian Wimmer](/by-contributor/profiles/christian-wimmer.md) | Graal 编译器 | Oracle |
 | [Lukas Stadler](/by-contributor/profiles/lukas-stadler.md) | JIT 优化 | Oracle |

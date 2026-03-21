@@ -135,7 +135,7 @@ for (int i = 0; i < unknown; i++) {
 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | Oracle | MergeStore 初始实现 (JDK-8318446) |
 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) (温绍锦) | Alibaba | StringBuilder 优化, 性能测试 |
 | [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | Oracle | C2 编译器团队负责人, 技术指导 |
-| [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | Oracle | C2 编译器团队, 循环优化 |
+| [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | Red Hat | C2 编译器团队, 循环优化 |
 
 ### Emanuel Peter
 

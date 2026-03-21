@@ -38,7 +38,7 @@
 |--------|---------|------|
 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 1,113 | Oracle |
 | [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) | 747 | Oracle |
-| Zhengyu Gu | 582 | Oracle |
+| Zhengyu Gu | 582 | Datadog |
 
 ### ZGC
 
@@ -61,7 +61,7 @@
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
 | Vladimir Kozlov | 942 | Oracle |
-| Roland Westrelin | 676 | Oracle |
+| Roland Westrelin | 676 | Red Hat |
 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 42 | Oracle |
 
 ### Graal

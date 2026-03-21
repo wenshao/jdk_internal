@@ -474,7 +474,7 @@ void vectorAdd(float[] a, float[] b, float[] c) {
 |--------|------|------|
 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | SuperWord 向量化、成本模型 | Oracle |
 | [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | C2 架构师 | Oracle |
-| [Jatin Bhateja](/by-contributor/profiles/jatin-bhateja.md) | Vector API | Oracle |
+| [Jatin Bhateja](/by-contributor/profiles/jatin-bhateja.md) | Vector API | Intel |
 
 ---
 

@@ -580,7 +580,7 @@ for (int i = 0; i < list.size(); i++) {
 
 | 贡献者 | 领域 | 组织 |
 |--------|------|------|
-| [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | C2 循环优化 | Oracle |
+| [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | C2 循环优化 | Red Hat |
 | [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | C2 架构师 | Oracle |
 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | SuperWord 向量化 | Oracle |
 

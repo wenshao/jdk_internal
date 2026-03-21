@@ -141,7 +141,6 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 
 | 贡献者 | 位置 | GitHub | PRs | 角色 | 领域 | 档案 |
 |--------|------|--------|-----|------|------|------|
-| Zhengyu Gu | China | - | 30+ | Committer | G1 GC | [详情](../../by-contributor/profiles/zhengyu-gu.md) |
 | Weijun Wang | China | - | 15+ | Reviewer | Security | [详情](../../by-contributor/profiles/weijun-wang.md) |
 | Sergey Bylokhov | Russia/USA | [@mrserb](https://github.com/mrserb) | 273 | Reviewer | AWT/2D | [详情](../../by-contributor/profiles/sergey-bylokhov.md) |
 | Alexey Semenyuk | Russia | [@alexeysemenyukoracle](https://github.com/alexeysemenyukoracle) | 233 | Committer | AOT | [详情](../../by-contributor/profiles/alexey-semenyuk.md) |
@@ -157,6 +156,7 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 | 贡献者 | 原 Oracle 团队 | 现状 | PRs | 领域 | 档案 |
 |--------|----------------|------|-----|------|------|
 | Hamlin Li | RISC-V | **Rivos** | 20+ | RISC-V | [详情](../../by-contributor/profiles/hamlin-li.md) |
+| Zhengyu Gu | HotSpot GC | **Datadog** | 30+ | G1 GC, Shenandoah | [详情](../../by-contributor/profiles/zhengyu-gu.md) |
 
 > **注**:
 > - 位置信息基于贡献者档案、LinkedIn 和 OpenJDK Census
@@ -211,8 +211,7 @@ Oracle JDK 开发团队
 │
 ├── HotSpot GC Team (HotSpot 垃圾收集器团队)
 │   ├── Thomas Schatzl (G1 GC Lead) - G1 GC, Parallel GC, JEP 522
-│   ├── Erik Österlund - AOT, GC
-│   └── Zhengyu Gu - G1 GC
+│   └── Erik Österlund - AOT, GC
 │
 ├── HotSpot Compiler Team (HotSpot 编译器团队)
 │   ├── Emanuel Peter (C2 Compiler Lead) - SuperWord, 向量化
@@ -236,7 +235,7 @@ Oracle JDK 开发团队
 |------|------|------------|---------|
 | **Java Platform Group** | 19 人 | Chen Liang, Jan Lahoda, Daniel Fuchs, Phil Race | 2,800+ |
 | **HotSpot Runtime Team** | 3 人 | Ioi Lam, Coleen Phillimore, Kim Barrett | 1,183+ |
-| **HotSpot GC Team** | 3 人 | Thomas Schatzl, Erik Österlund, Zhengyu Gu | 588+ |
+| **HotSpot GC Team** | 2 人 | Thomas Schatzl, Erik Österlund | 588+ |
 | **HotSpot Compiler Team** | 4 人 | Emanuel Peter, Christian Hagedorn, Erik Gahlin, Alexey Semenyuk | 790+ |
 | **Java Engineering Infrastructure** | 1 人 | Magnus Ihse Bursie | 28+ |
 | **Security Team** | 1 人 | Weijun Wang | 15+ |
@@ -286,7 +285,6 @@ Oracle JDK 开发团队
 |------|--------|-----|------|
 | G1 GC | Thomas Schatzl | JEP 522 | [详情](../../by-contributor/profiles/thomas-schatzl.md) |
 | G1 GC | Albert Mingkun Yang | - | [详情](../../by-contributor/profiles/albert-mingkun-yang.md) |
-| G1 GC | Zhengyu Gu | - | [详情](../../by-contributor/profiles/zhengyu-gu.md) |
 | 并发 GC | Kim Barrett | - | [详情](../../by-contributor/profiles/kim-barrett.md) |
 
 ### 编译器
@@ -510,7 +508,7 @@ Oracle 贡献者担任以下 Group 的 Lead：
 > - 改为"按地区分类"，准确标注贡献者位置
 > - 美国团队：13 人 (包括 Naoto Sato, Chen Liang 等)
 > - 欧洲团队：7 人 (Thomas Schatzl-德国，Claes Redestad-瑞典等)
-> - 亚洲团队：2 人 (Zhengyu Gu-中国，Weijun Wang)
+> - 亚洲团队：1 人 (Weijun Wang)
 > - Oracle Labs: 1 人 (Doug Simon)
 > - **职业流动核实**: Hamlin Li 已离开 Oracle 加入 Rivos
 > - **新增完整组织架构**: 6 个团队，33 人，5 位 Group Leads

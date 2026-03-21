@@ -366,9 +366,9 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | [Jan Lahoda](/by-contributor/profiles/jan-lahoda.md) | Oracle | javac | [@lahoda](https://openjdk.org/census#lahoda) | [详情](/by-contributor/profiles/jan-lahoda.md) |
 | [Chen Liang](/by-contributor/profiles/chen-liang.md) | Oracle | ClassFile API | [@liach](https://openjdk.org/census#liach) | [详情](/by-contributor/profiles/chen-liang.md) |
 | [Alexey Semenyuk](/by-contributor/profiles/alexey-semenyuk.md) | Oracle | AOT | [@ase menyuk](https://openjdk.org/census#asemenyuk) | [详情](/by-contributor/profiles/alexey-semenyuk.md) |
-| [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | Oracle | C2 编译器 | [@roland](https://openjdk.org/census#roland) | [详情](/by-contributor/profiles/rooland-westrelin.md) |
+| [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | Red Hat | C2 编译器 | [@roland](https://openjdk.org/census#roland) | [详情](/by-contributor/profiles/rooland-westrelin.md) |
 | [Hamlin Li](/by-contributor/profiles/hamlin-li.md) | Oracle | C2 编译器 | [@hli](https://openjdk.org/census#hli) | [详情](/by-contributor/profiles/hamlin-li.md) |
-| [Jatin Bhateja](/by-contributor/profiles/jatin-bhateja.md) | Oracle | Vector API | [@jbhateja](https://openjdk.org/census#jbhateja) | [详情](/by-contributor/profiles/jatin-bhateja.md) |
+| [Jatin Bhateja](/by-contributor/profiles/jatin-bhateja.md) | Intel | Vector API | [@jbhateja](https://openjdk.org/census#jbhateja) | [详情](/by-contributor/profiles/jatin-bhateja.md) |
 
 #### 并发与运行时 (Concurrency & Runtime)
 
@@ -504,10 +504,10 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 35 | [Francesco Andreuzzi](/by-contributor/profiles/francesco-andreuzzi.md) | [Oracle](/contributors/orgs/oracle.md) | 60+ | 测试 | [详情](/by-contributor/profiles/francesco-andreuzzi.md) |
 | 36 | [Johannes Bechberger](/by-contributor/profiles/johannes-bechberger.md) | [SAP](/contributors/orgs/sap.md) | 50+ | JFR | [详情](/by-contributor/profiles/johannes-bechberger.md) |
 | 37 | [Weijun Wang](/by-contributor/profiles/weijun-wang.md) | [Oracle](/contributors/orgs/oracle.md) | 50+ | 安全 | [详情](/by-contributor/profiles/weijun-wang.md) |
-| 38 | [Jatin Bhateja](/by-contributor/profiles/jatin-bhateja.md) | [Oracle](/contributors/orgs/oracle.md) | 50+ | Vector API | [详情](/by-contributor/profiles/jatin-bhateja.md) |
+| 38 | [Jatin Bhateja](/by-contributor/profiles/jatin-bhateja.md) | [Intel](/contributors/orgs/intel.md) | 50+ | Vector API | [详情](/by-contributor/profiles/jatin-bhateja.md) |
 | 39 | [Hamlin Li](/by-contributor/profiles/hamlin-li.md) | [Oracle](/contributors/orgs/oracle.md) | 50+ | C2 编译器 | [详情](/by-contributor/profiles/hamlin-li.md) |
 | 40 | [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | [ByteDance](/contributors/orgs/bytedance.md) | 25 | RISC-V | [详情](/by-contributor/profiles/anjian-wen.md) |
-| 41 | [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | [Oracle](/contributors/orgs/oracle.md) | 40+ | C2 编译器 | [详情](/by-contributor/profiles/rooland-westrelin.md) |
+| 41 | [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | [Red Hat](/contributors/orgs/red-hat.md) | 40+ | C2 编译器 | [详情](/by-contributor/profiles/rooland-westrelin.md) |
 | 42 | [Alan Bateman](/by-contributor/profiles/alan-bateman.md) | [Oracle](/contributors/orgs/oracle.md) | 40+ | 并发 | [详情](/by-contributor/profiles/alan-bateman.md) |
 | 43 | [Per Minborg](/by-contributor/profiles/per-minborg.md) | [Oracle](/contributors/orgs/oracle.md) | 40+ | Core Libraries | [详情](/by-contributor/profiles/per-minborg.md) |
 | 44 | [Markus Grönlund](/by-contributor/profiles/markus-gronlund.md) | [Oracle](/contributors/orgs/oracle.md) | 40+ | JFR | [详情](/by-contributor/profiles/markus-gronlund.md) |

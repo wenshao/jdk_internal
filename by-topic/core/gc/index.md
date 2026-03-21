@@ -449,7 +449,7 @@ java -XX:+UseShenandoahGC -jar app.jar
 | 1 | Albert Mingkun Yang | 681 | Oracle | G1 GC, 内存管理 |
 | 2 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 674 | Oracle | G1 GC 维护者 |
 | 3 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 324 | Amazon | Shenandoah GC |
-| 4 | [Zhengyu Gu](/by-contributor/profiles/zhengyu-gu.md) | 252 | Oracle | Shenandoah 核心开发者 |
+| 4 | [Zhengyu Gu](/by-contributor/profiles/zhengyu-gu.md) | 252 | Datadog | Shenandoah 核心开发者 |
 | 5 | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | 235 | Oracle | C++ 现代化 |
 | 6 | [Stefan Karlsson](/by-contributor/profiles/stefan-karlsson.md) | 229 | Oracle | 分代 ZGC (JEP 439) |
 | 7 | [Per Lidén](/by-contributor/profiles/per-liden.md) | 198 | Oracle | ZGC 创始人 |
@@ -483,7 +483,7 @@ java -XX:+UseShenandoahGC -jar app.jar
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
 | 1 | Aleksey Shipilev | 272 | Amazon | Shenandoah 维护者 |
-| 2 | [Zhengyu Gu](/by-contributor/profiles/zhengyu-gu.md) | 217 | Oracle | Shenandoah 核心开发者 |
+| 2 | [Zhengyu Gu](/by-contributor/profiles/zhengyu-gu.md) | 217 | Datadog | Shenandoah 核心开发者 |
 | 3 | [William Kemper](/by-contributor/profiles/william-kemper.md) | 109 | Amazon | 分代 Shenandoah (JEP 521) |
 | 4 | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | 107 | Datadog | Shenandoah 架构 |
 | 5 | Stefan Karlsson | 44 | Oracle | 并发支持 |
@@ -576,7 +576,7 @@ Amazon:   ██████                  10%
 | 公司 | 贡献者 | PRs | 主要 JEP | 核心文件 |
 |------|--------|-----|----------|----------|
 | **Amazon** | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 324+ | JEP 379 | `shenandoahHeap.cpp` |
-| **Oracle** | [Zhengyu Gu](/by-contributor/profiles/zhengyu-gu.md) | 217+ | - | `shenandoahMark.cpp` |
+| **Datadog** | [Zhengyu Gu](/by-contributor/profiles/zhengyu-gu.md) | 217+ | - | `shenandoahMark.cpp` |
 | **Amazon** | [William Kemper](/by-contributor/profiles/william-kemper.md) | 112+ | JEP 521 | `shenandoahGenerationalHeap.cpp` |
 | **Datadog** | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | 163+ | JEP 519 | `shenandoahBarrierSet.cpp` |
 
@@ -4365,7 +4365,7 @@ git log --oneline -- src/hotspot/share/gc/shenandoah/
 - [Roman Kennke](/by-contributor/profiles/roman-kennke.md) - Shenandoah Core (Datadog) - 163+ PRs
 - [Stefan Karlsson](/by-contributor/profiles/stefan-karlsson.md) - ZGC Lead (Oracle) - 229+ PRs
 - [Per Lidén](/by-contributor/profiles/per-liden.md) - ZGC Founder (Oracle) - 198+ PRs
-- [Zhengyu Gu](/by-contributor/profiles/zhengyu-gu.md) - Shenandoah Core (Oracle) - 250+ PRs
+- [Zhengyu Gu](/by-contributor/profiles/zhengyu-gu.md) - Shenandoah Core (Datadog) - 250+ PRs
 - [Erik Österlund](/by-contributor/profiles/erik-osterlund.md) - ZGC Core (Oracle) - 96+ PRs
 - [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) - G1 GC (Oracle) - 200+ PRs
 - [Kim Barrett](/by-contributor/profiles/kim-barrett.md) - G1 GC (Oracle) - 129+ PRs
