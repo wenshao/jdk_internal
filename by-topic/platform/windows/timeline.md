@@ -9,10 +9,10 @@ JDK 在 Windows 平台上的演进历史。
 
 1. [JDK 1.0 - 1.4: 基础支持](#1-jdk-10---14-基础支持)
 2. [JDK 5-8: 现代支持](#2-jdk-5-8-现代支持)
-3. [JDK 14: jpackage 正式版](#3-jdk-14-jpackage-正式版)
+3. [JDK 14-16: jpackage](#3-jdk-14-16-jpackage)
 4. [JDK 17: 安装程序改进](#4-jdk-17-安装程序改进)
 5. [JDK 21: 废弃 32 位](#5-jdk-21-废弃-32-位)
-6. [JDK 26: 移除 32 位支持](#6-jdk-26-移除-32-位支持)
+6. [JDK 24: 移除 32 位支持](#6-jdk-24-移除-32-位支持)
 7. [Windows 版本支持](#7-windows-版本支持)
 8. [架构演进](#8-架构演进)
 9. [特性时间线](#9-特性时间线)
@@ -54,15 +54,15 @@ JDK 在 Windows 平台上的演进历史。
 
 ---
 
-## 3. JDK 14: jpackage 正式版
+## 3. JDK 14-16: jpackage
 
 ### JEP 343: Packaging Tool
 
 | 版本 | 日期 | 状态 |
 |------|------|------|
-| JDK 14 | 2020-03 | jpackage 孵化器 |
-| JDK 15 | 2020-09 | jpackage 第二孵化器 |
-| JDK 16 | 2021-03 | jpackage 正式版 |
+| JDK 14 | 2020-03 | jpackage 孵化器 (JEP 343) |
+| JDK 15 | 2020-09 | jpackage 第二孵化器 (JEP 343) |
+| JDK 16 | 2021-03 | jpackage 正式版 (JEP 392) |
 
 **支持的包类型**:
 - `msi`: Windows Installer

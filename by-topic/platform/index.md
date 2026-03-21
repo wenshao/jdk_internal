@@ -130,7 +130,6 @@ JDK 26 ──── AOT 类加载与链接 (JEP 483)，容器启动优化
 | **内存使用检测** | memory.usage_in_bytes | memory.current | JDK 10 / JDK 14 |
 | **CPU 配额检测** | cpu.cfs_quota_us + cpu.cfs_period_us | cpu.max | JDK 10 / JDK 17 |
 | **CPU 使用统计** | cpuacct.usage | cpu.stat | JDK 11 / JDK 21 |
-| **IO 限制检测** | 不支持 | io.max | JDK 26+ |
 | **完整支持** | JDK 8+ | JDK 21+ | -- |
 
 ### io_uring 状态
@@ -400,7 +399,8 @@ java -XX:AOTCache=app.aot -jar app.jar
 
 | JEP | 版本 | 标题 | 说明 |
 |-----|------|------|------|
-| JEP 307 | JDK 10 | Parallel Full GC for G1 / Container Awareness | 容器资源感知 |
+| JEP 307 | JDK 10 | Parallel Full GC for G1 | G1 Full GC 并行化 |
+| JDK-8146115 | JDK 10 | Container Awareness | 容器资源感知 (UseContainerSupport) |
 | JEP 450 | JDK 24 | Compact Object Headers (Experimental) | 紧凑对象头实验版 |
 | JEP 519 | JDK 25 | Compact Object Headers | 紧凑对象头正式版 |
 | JEP 483 | JDK 26 | AOT Class Loading & Linking | AOT 类加载，容器启动优化 |

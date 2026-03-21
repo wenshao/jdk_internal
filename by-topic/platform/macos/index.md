@@ -49,7 +49,7 @@ JDK 17 ──── Apple Silicon 正式支持 (JEP 391)
           │
 JDK 21 ──── Metal 渲染优化
           │
-JDK 26 ──── Apple Silicon 性能优化
+JDK 25 ──── JEP 519 Compact Object Headers (实验性)
 ```
 
 ---
@@ -127,7 +127,7 @@ JDK 17 ──── Metal 渲染管道正式版 (JEP 382)
 JDK 21 ──── Metal 性能优化
           │   内存泄漏修复
           │
-JDK 26 ──── Metal 增强
+JDK 25 ──── Metal 增强
 ```
 
 ### 配置选项

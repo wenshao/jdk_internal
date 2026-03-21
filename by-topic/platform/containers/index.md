@@ -35,7 +35,7 @@
 JDK 8  ──── 无容器感知
           │   需要手动配置资源
           │
-JDK 10 ──── 容器感知 (JEP 307)
+JDK 10 ──── 容器感知 (JDK-8146115)
           │   - 自动检测 CPU/内存限制
           │   - -XX:+UseContainerSupport
           │
@@ -137,7 +137,7 @@ memory.limit_in_bytes  读取 cgroup  限制 * 百分比
 | **JDK 支持** | JDK 8+ | JDK 21+ 完整 |
 | **内存检测** | ✅ | ✅ |
 | **CPU 检测** | ✅ | ✅ |
-| **IO 检测** | ❌ | ✅ (JDK 26+) |
+| **IO 检测** | ❌ | ❌ |
 
 **cgroup v1 路径**:
 ```

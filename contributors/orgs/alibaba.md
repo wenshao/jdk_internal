@@ -33,9 +33,9 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 145 (核心) + 202 (测试) = 347 |
-| **Git Commits (次要)** | 4 (2 位次要贡献者) |
-| **贡献者数** | 9 (4 核心 + 1 测试 + 2 次要 + 2 PR贡献者) |
+| **Integrated PRs** | 139 (核心+PR贡献者) + 202 (测试) = 341 |
+| **Git Commits (次要)** | 2 (1 位次要贡献者) |
+| **贡献者数** | 8 (4 核心 + 2 PR贡献者 + 1 次要 + 1 测试) |
 | **活跃时间** | 2021 - 至今 |
 | **主要领域** | 核心库、C2 编译器、AArch64、ZGC、RISC-V |
 | **Dragonwell** | [Alibaba Dragonwell](https://github.com/dragonwell-project/dragonwell8), [Dragonwell Team](dragonwell.md) |
@@ -298,10 +298,10 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 | **JDK 26** | 8 | Shaojin Wen (8) | 核心库性能优化 |
 | **JDK 25** | 20 | Shaojin Wen (18), Kuai Wei (2) | ClassFile API, String, C2 |
 | **JDK 24** | 8 | Shaojin Wen (6), Kuai Wei (2) | 核心库性能优化 |
-| **JDK 23** | 93 | Shaojin Wen (89), Kuai Wei (4), Yude Lin (3) | ClassFile API, String, C2 |
+| **JDK 23** | 44 | Shaojin Wen (34), Kuai Wei (7), Yude Lin (3) | ClassFile API, String, C2 |
 | **JDK 21/22** | 10 | Shaojin Wen (8), Yude Lin (2) | 数字格式化，GC 监控 |
 | **JDK 17/11** | 6 | Yude Lin (3), Xiaowei Lu (3) | ZGC, Shenandoah |
-| **小计** | **145** | **4 位核心贡献者** | - |
+| **小计** | **121** | **4 位核心贡献者** | - |
 
 > **注**: 部分 PR 可能跨版本合入，统计基于主要目标版本。
 
@@ -319,11 +319,11 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 | 类别 | PRs | 占比 |
 |------|-----|------|
-| 核心贡献者 | 145 | 42% |
-| 测试贡献 | 202 | 58% |
-| **总计** | **347** | 100% |
+| 核心+PR贡献者 | 139 | 41% |
+| 测试贡献 | 202 | 59% |
+| **总计** | **341** | 100% |
 
-> **注**: 部分 PR 可能跨版本合入，统计基于主要目标版本。SendaoYan 202 PRs 为 2022-2026 年贡献，归属于 Alibaba。
+> **注**: 部分 PR 可能跨版本合入，统计基于主要目标版本。SendaoYan 202 PRs 为 2022-2026 年贡献，归属于 Alibaba。核心贡献者 121 PRs + 其他 PR 贡献者 18 PRs (Max Xing: 16, Lingjun Cao: 2) = 139 PRs。
 
 ## 6. 贡献时间线
 
@@ -336,7 +336,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 2026: ██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 25 PRs
 ```
 
-> **总计**: 347 PRs (2021-2026)
+> **总计**: 341 PRs (2021-2026)
 
 ---
 
@@ -642,18 +642,18 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 - [Kuai Wei 贡献者档案](../../by-contributor/profiles/kuai-wei.md) - C2 编译器专家
 - [Yude Lin 贡献者档案](../../by-contributor/profiles/yude-lin.md) - G1 GC 专家
 - [Xiaowei Lu 贡献者档案](../../by-contributor/profiles/xiaowei-lu.md) - ZGC 专家
-- [Max Xing 贡献者档案](../../by-contributor/profiles/max-xing.md) - RISC-V 专家
+- [Max Xing 贡献者档案](../../by-contributor/profiles/max-xing.md) - RISC-V, C2 编译器, HotSpot
 - [Yibo Yan 贡献者档案](../../by-contributor/profiles/yibo-yan.md) - CPU Load/内存专家
 - [Lingjun Cao 贡献者档案](../../by-contributor/profiles/lingjun-cao.md) - DecimalFormat 专家
 - [中国贡献者索引](../../by-contributor/profiles/chinese-contributors.md)
 
 ---
 
-> **文档版本**: 3.0
-> **最后更新**: 2026-03-21
+> **文档版本**: 3.1
+> **最后更新**: 2026-03-22
 > **更新内容**:
 > - 修正 Max Xing (@MaxXSoft) 贡献者名称和 PR 数 (16 PRs，非 2 commits)
 > - 修正 SendaoYan PR 数 (202 PRs，非 100)
 > - 修正 JDK 版本 GA 日期
 > - 移除 JDK 23 中重复的 JDK 25 条目
-> - 更新贡献者数 (4 核心 + 2 PR贡献者 + 2 次要 + 1 测试)
+> - 更新贡献者数 (4 核心 + 2 PR贡献者 + 1 次要 + 1 测试)

@@ -76,12 +76,12 @@ JDK 在 macOS 平台上的演进历史。
 2021-09 ─── JDK 17 (AArch64 正式版)
 ```
 
-### JEP 358: Apple Silicon Support
+### JEP 391: macOS/AArch64 Port
 
 | 版本 | 日期 | 状态 |
 |------|------|------|
 | JDK 16 | 2021-03 | AArch64 预览 |
-| JDK 17 | 2021-09 | AArch64 正式版 |
+| JDK 17 | 2021-09 | AArch64 正式版 (JEP 391) |
 
 ---
 
@@ -90,15 +90,11 @@ JDK 在 macOS 平台上的演进历史。
 ### JEP 382: Metal Rendering Pipeline
 
 ```
-JDK 14 ─── Metal 渲染管道孵化
-   │
-JDK 16 ─── Metal 第二孵化器
-   │
-JDK 17 ─── Metal 正式版 (JEP 382)
+JDK 17 ─── Metal 渲染管道正式版 (JEP 382)
    │
 JDK 21 ─── Metal 性能优化
    │
-JDK 26 ─── Metal 增强
+JDK 25 ─── Metal 增强
 ```
 
 ### Metal vs OpenGL
@@ -119,7 +115,7 @@ JDK 26 ─── Metal 增强
 |------|------|------|
 | JDK 17.0.11 | 2023-05 | 修复 Metal 内存泄漏 |
 | JDK 21 | 2023-09 | Metal 性能优化 |
-| JDK 26 | 2025 | Metal 增强 |
+| JDK 25 | 2025-09 | Metal 增强 |
 
 ---
 
@@ -224,7 +220,7 @@ xcrun stapler staple MyApp.app
 
 ## 12. 参考资料
 
-- [JEP 358](/jeps/platform/jep-358.md)
+- [JEP 391](/jeps/platform/jep-391.md)
 - [JEP 382](/jeps/client/jep-382.md)
 - [Apple 开发者文档](https://developer.apple.com/macos/)
 

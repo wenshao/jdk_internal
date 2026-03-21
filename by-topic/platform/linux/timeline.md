@@ -13,7 +13,7 @@ JDK 在 Linux 平台上的演进历史。
 4. [JDK 10: 容器感知](#4-jdk-10-容器感知)
 5. [JDK 14-17: cgroup v2 支持](#5-jdk-14-17-cgroup-v2-支持)
 6. [JDK 17: AArch64 成熟](#6-jdk-17-aarch64-成熟)
-7. [JDK 21: io_uring 支持](#7-jdk-21-io_uring-支持)
+7. [JDK 25: 新特性](#7-jdk-25-新特性)
 8. [架构支持时间线](#8-架构支持时间线)
 9. [发行版支持](#9-发行版支持)
 10. [核心贡献者](#10-核心贡献者)
@@ -75,7 +75,7 @@ JDK 在 Linux 平台上的演进历史。
 | JDK 14 | 2020-03 | cgroup v2 初步支持 |
 | JDK 17 | 2021-09 | cgroup v2 改进 |
 | JDK 21 | 2023-09 | cgroup v2 完整支持 |
-| JDK 26 | 2025 | 容器优化增强 |
+| JDK 25 | 2025-09 | 容器优化增强 |
 
 **关键参数**:
 ```bash
@@ -93,9 +93,9 @@ JDK 在 Linux 平台上的演进历史。
 ```
 2016 ─── Linux 内核 4.5: cgroup v2 合并
    │
-2018 ─── RHEL 8: 默认使用 cgroup v2
+2019 ─── RHEL 8: 默认使用 cgroup v1
    │
-2020 ─── Ubuntu 21.04: 默认使用 cgroup v2
+2021 ─── Ubuntu 21.04: 默认使用 cgroup v2 (2021-04)
    │
 2020 ─── JDK 14: cgroup v2 初步支持
    │
@@ -111,7 +111,7 @@ JDK 在 Linux 平台上的演进历史。
 | **JDK 支持** | JDK 8+ | JDK 21+ 完整 |
 | **内存检测** | ✅ | ✅ |
 | **CPU 检测** | ✅ | ✅ |
-| **IO 检测** | ❌ | ✅ (JDK 26+) |
+| **IO 检测** | ❌ | ✅ |
 
 ---
 
@@ -134,24 +134,24 @@ JDK 在 Linux 平台上的演进历史。
 
 ---
 
-## 7. JDK 21: io_uring 支持
+## 7. JDK 25: 新特性
 
-### JEP Draft: io_uring (2023)
+### JEP 519: Compact Object Headers (实验性)
 
-**io_uring 时间线**:
-```
-2019 ─── Linux 内核 5.1: io_uring 引入
-   │
-2020 ─── Linux 内核 5.7: 稳定 API
-   │
-2023 ─── JDK 21: io_uring 实验性支持
-   │
-2025 ─── JDK 26+: io_uring 正式支持
-```
+对象头从 96-128 位压缩至 64 位，减少堆内存占用约 10-20%。
 
-**启用 io_uring**:
 ```bash
--Djdk.io.useIOUring=true
+# 启用 Compact Object Headers (实验性)
+-XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders
+```
+
+### JEP 521: Generational Shenandoah (实验性)
+
+Shenandoah GC 引入分代模式，提升吞吐量和内存回收效率。
+
+```bash
+# 启用 Generational Shenandoah
+-XX:+UnlockExperimentalVMOptions -XX:+UseShenandoahGC -XX:ShenandoahGCMode=generational
 ```
 
 ---
