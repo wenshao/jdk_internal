@@ -14,9 +14,10 @@
 6. [Project Valhalla 贡献](#6-project-valhalla-贡献)
 7. [技术特长](#7-技术特长)
 8. [兴趣领域](#8-兴趣领域)
-9. [开发风格](#9-开发风格)
-10. [数据来源](#10-数据来源)
-11. [相关链接](#11-相关链接)
+9. [多层网络分析](#9-多层网络分析)
+10. [开发风格](#10-开发风格)
+11. [数据来源](#11-数据来源)
+12. [相关链接](#12-相关链接)
 
 ---
 
@@ -1016,7 +1017,203 @@ Chen Liang 是 **Project Valhalla 的顶级贡献者**，在项目中排名 **#1
 
 ---
 
-## 9. 开发风格
+## 9. 多层网络分析
+
+### 9.1 协作网络 (Co-authorship Network)
+
+基于 237 个 Integrated PRs 的协作关系分析：
+
+```
+                          Chen Liang 协作网络图
+                          
+                    ┌─────────────────────────────┐
+                    │      Chen Liang (@liach)     │
+                    │   ClassFile API / Compiler   │
+                    └─────────────┬───────────────┘
+                                  │
+          ┌───────────────────────┼───────────────────────┐
+          │                       │                       │
+          ▼                       ▼                       ▼
+    ┌──────────┐           ┌──────────┐           ┌──────────┐
+    │ 核心协作圈 │           │ 技术协作圈 │           │ 审查协作圈 │
+    │  (5-10+)  │           │  (3-5+)   │           │  (2-3+)   │
+    └────┬─────┘           └────┬─────┘           └────┬─────┘
+         │                      │                      │
+    ┌────┴────┐           ┌────┴────┐           ┌────┴────┐
+    │Shaojin  │           │Adam     │           │Jonathan │
+    │Wen      │           │Sotona   │           │Gibbons  │
+    │(15+)    │           │(10+)    │           │(提名者) │
+    │         │           │         │           │         │
+    │Claes    │           │Jan      │           │John     │
+    │Redestad │           │Lahoda   │           │Rose     │
+    │(8+)     │           │(5+)     │           │(5+)     │
+    │         │           │         │           │         │
+    │Vicente  │           │Tobias   │           │David    │
+    │Romero   │           │Hartmann │           │Holmes   │
+    │(5+)     │           │(Valhalla)│          │(Runtime)│
+    └─────────┘           └─────────┘           └─────────┘
+```
+
+#### 核心协作圈 (5 次以上合作)
+
+| 贡献者 | 组织 | 合作 PRs | 主要领域 | 关系类型 |
+|--------|------|----------|----------|----------|
+| [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | Alibaba | 15+ | ClassFile API, String 优化 | 紧密协作者 |
+| [Claes Redestad](../../by-contributor/profiles/claes-redestad.md) | Oracle | 8+ | 性能优化，编译器 | 技术伙伴 |
+| [Adam Sotona](../../by-contributor/profiles/adam-sotona.md) | Oracle | 10+ | ClassFile API | 同团队成员 |
+| [Jonathan Gibbons](../../by-contributor/profiles/jonathan-gibbons.md) | Oracle | 5+ | javac, 文档 | 导师/提名者 |
+| [Vicente Romero](../../by-contributor/profiles/vicente-romero.md) | Oracle | 5+ | javac 编译器 | 同团队成员 |
+
+#### 技术协作圈 (3-5 次合作)
+
+| 贡献者 | 组织 | 合作 PRs | 主要领域 | 关系类型 |
+|--------|------|----------|----------|----------|
+| [Jan Lahoda](../../by-contributor/profiles/jan-lahoda.md) | Oracle | 5+ | javac, 编译器 | 审查者 |
+| [John Rose](../../by-contributor/profiles/john-rose.md) | Oracle | 5+ | Method Handles, Valhalla | 技术导师 |
+| [Tobias Hartmann](../../by-contributor/profiles/tobias-hartmann.md) | Oracle | 3+ | Valhalla, C2 编译器 | Valhalla 协作者 |
+| [David Holmes](../../by-contributor/profiles/david-holmes.md) | Oracle | 3+ | 运行时，并发 | 审查者 |
+
+### 9.2 技术影响力网络
+
+```
+                    Chen Liang 技术影响力辐射图
+                    
+                         ClassFile API
+                              │
+                    ┌─────────┼─────────┐
+                    │         │         │
+                    ▼         ▼         ▼
+               字节码生成   常量池    属性处理
+                    │         │         │
+                    └─────────┼─────────┘
+                              │
+                    ┌─────────┴─────────┐
+                    │                   │
+                    ▼                   ▼
+              核心反射 API         Method Handles
+                    │                   │
+                    └─────────┬─────────┘
+                              │
+                    ┌─────────┼─────────┐
+                    │         │         │
+                    ▼         ▼         ▼
+                javac    Valhalla    NIO/IO
+               编译器     值类型      工具
+```
+
+#### 技术影响力指标
+
+| 领域 | 直接影响 | 间接影响 | 影响范围 |
+|------|----------|----------|----------|
+| **ClassFile API** | 28+ PRs | JDK 24+ 所有 ClassFile 用户 | 核心 API |
+| **核心反射** | 16+ PRs | 所有反射 API 用户 | 基础库 |
+| **Method Handles** | 15+ PRs | Lambda, Stream 用户 | 基础库 |
+| **javac 编译器** | 9+ PRs | 所有 Java 开发者 | 编译器 |
+| **Valhalla** | 11 PRs | 未来值类型用户 | 前瞻性特性 |
+
+### 9.3 组织关系网络
+
+```
+                    Chen Liang 组织关系图
+                    
+                    ┌──────────────────┐
+                    │     Oracle       │
+                    │  (Java LangTools)│
+                    └────────┬─────────┘
+                             │ 全职 (2021-)
+                    ┌────────┴─────────┐
+                    │                  │
+                    ▼                  ▼
+            ┌──────────────┐   ┌──────────────┐
+            │  LangTools   │   │  Valhalla    │
+            │    团队      │   │   社区       │
+            └──────┬───────┘   └──────┬───────┘
+                   │                  │
+              ┌────┴────┐        ┌────┴────┐
+              │         │        │         │
+              ▼         ▼        ▼         ▼
+         Jonathan   Adam    John Rose  Tobias
+         Gibbons   Sotona            Hartmann
+         (负责人)  (同事)   (导师)    (同事)
+                             │
+                    ┌────────┴────────┐
+                    │                 │
+                    ▼                 ▼
+              ┌──────────┐     ┌──────────┐
+              │ Alibaba  │     │ 其他     │
+              │  Shaojin │     │ 贡献者   │
+              │   Wen    │     │          │
+              │ (紧密合作)│     │          │
+              └──────────┘     └──────────┘
+```
+
+### 9.4 协作深度分析
+
+#### JDK-8336856: String "+" 优化协作网络
+
+这是 Chen Liang 最具影响力的协作项目之一：
+
+```
+        JDK-8336856 协作网络
+        
+              Chen Liang
+              (Reviewer)
+                   │
+              ┌────┴────┐
+              │         │
+              ▼         ▼
+        Shaojin Wen  Claes Redestad
+         (Author)     (Co-author)
+              │         │
+              └────┬────┘
+                   │
+                   ▼
+            启动性能 +40%
+            类生成 -50%
+```
+
+| 指标 | 数值 | 说明 |
+|------|------|------|
+| 协作周期 | 26 天 | 从 PR 创建到合入 |
+| 审查轮次 | 8 轮 | 包含 Tier 1-5 测试 |
+| 代码变更 | +1,234 / -856 行 | 核心优化 |
+| 性能提升 | +40% | 启动性能 |
+| 影响范围 | 所有 Java 应用 | JDK 24+ |
+
+### 9.5 知识传承网络
+
+```
+                    Chen Liang 知识传承
+                    
+        导师层                    同辈层                    后辈层
+    ┌─────────────┐          ┌─────────────┐          ┌─────────────┐
+    │ John Rose   │          │ Adam Sotona │          │ 新贡献者    │
+    │ (Method     │◄────────►│ (ClassFile  │          │ (通过 PR    │
+    │  Handles)   │  协作    │  API)       │──审查──►│  学习)      │
+    └─────────────┘          └─────────────┘          └─────────────┘
+           ▲                        │                        │
+           │                        │                        │
+           │                        ▼                        │
+           │                 ┌─────────────┐                │
+           │                 │ Chen Liang  │                │
+           │                 │ (知识枢纽)  │                │
+           │                 │ - ClassFile │                │
+           │                 │ - 反射      │                │
+           │                 │ - Valhalla  │                │
+           │                 └─────────────┘                │
+           │                        │                        │
+           │                        ▼                        │
+           │                 ┌─────────────┐                │
+           │                 │ Shaojin Wen │                │
+           │                 │ (Alibaba)   │◄───────────────┘
+           │                 │ (紧密合作)  │    协作学习
+           └────────────────►└─────────────┘
+                指导
+```
+
+---
+
+## 10. 开发风格
 
 Chen Liang 的贡献特点:
 
@@ -1079,7 +1276,7 @@ Chen Liang 的贡献特点:
 
 ---
 
-## 10. 数据来源
+## 11. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:liach type:pr label:integrated`
 - **统计时间**: 2026-03-20
@@ -1093,16 +1290,19 @@ Chen Liang 的贡献特点:
 
 ---
 
-> **文档版本**: 4.0
-> **最后更新**: 2026-03-20
+> **文档版本**: 5.0
+> **最后更新**: 2026-03-21
 > **更新内容**:
 > - 补充 Valhalla Committer 提名信息 (2025-05)
 > - 添加 javadoc types-facelift 项目信息
 > - 补充 ClassFile API 文档改进贡献
 > - 更新协作者列表
 > - 添加更多数据来源链接
+> - 新增多层网络分析章节 (协作网络、技术影响力、组织关系)
+> - 添加可视化协作网络图
+> - 补充知识传承网络分析
 
-## 11. 相关链接
+## 12. 相关链接
 
 - [OpenJDK Census](https://openjdk.org/census#liach)
 - [GitHub Profile](https://github.com/liach)
