@@ -68,10 +68,10 @@ List<String>[] array = (List<String>[]) new List[10];
 ## 2. 快速概览
 
 ```
-JDK 1.0 ── JDK 4 ── JDK 5 ── JDK 7 ── JDK 8 ── JDK 17
+JDK 1.0 ── JDK 4 ── JDK 5 ── JDK 7 ── JDK 8 ── JDK 10
    │        │        │        │        │        │
-集合    JSR 14   Generics  Diamond  类型    Var
-使用    预览      (JSR201)  操作符   注解    增强
+集合    JSR 14   Generics  Diamond  类型    var
+使用    预览      (JSR201)  操作符   注解    推断
 ```
 
 ### 核心演进
@@ -82,8 +82,8 @@ JDK 1.0 ── JDK 4 ── JDK 5 ── JDK 7 ── JDK 8 ── JDK 17
 | **JDK 5** | 泛型方法 | - | 方法级泛型 |
 | **JDK 5** | 通配符 | - | ? extends/super |
 | **JDK 7** | Diamond 操作符 | - | 类型推断 |
-| **JDK 8** | 类型注解 | - | @TypeUse |
-| **JDK 17** | Var 语义增强 | - | 隐式类型 |
+| **JDK 8** | 类型注解 | JSR 308 | @TypeUse |
+| **JDK 10** | 局部变量类型推断 | JEP 286 | var 关键字 |
 
 ---
 
