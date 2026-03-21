@@ -42,7 +42,6 @@ Sergey Bylokhov (GitHub: mrserb) 是 Oracle 的 **桌面/AWT 技术负责人**�
 | PR # | Issue | 标题 | 日期 |
 |------|-------|------|------|
 | #30231 | 8379952 | Revert JDK-8365711: Restore protected visibility of menuBarHeight and hotTrackingOn | Mar 18, 2026 |
-| #30100 | 8379364 | Shenandoah: Remove duplicate semicolons in GenShen code | Mar 10, 2026 |
 | #29975 | 8378885 | Add missing @Override annotations in "javax.print.attribute.standard" package part 2 | Mar 12, 2026 |
 | #29927 | 8378727 | [macOS] Missing dispatch_release for semaphores in CDesktopPeer | Mar 18, 2026 |
 | #29886 | 8378201 | [OGL] glXMakeContextCurrent() drops the buffers of the unbound drawable | Mar 10, 2026 |

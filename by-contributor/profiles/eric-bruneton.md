@@ -1,6 +1,6 @@
 # Eric Bruneton
 
-> **Organization**: Independent
+> **Organization**: INRIA
 > **Role**: ASM Framework Contributor
 
 ---

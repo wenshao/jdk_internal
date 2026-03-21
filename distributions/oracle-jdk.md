@@ -56,23 +56,33 @@ Oracle JDK 是 Oracle 公司官方维护的 Java Development Kit，基于 OpenJD
 - 嵌入硬件或软件产品分发
 - 需要 Oracle 官方技术支持
 
-### Oracle Java SE Subscription
+### Oracle Java SE Universal Subscription (2023 年起)
 
-| 计划 | 价格 (每员工/年) | 适用场景 |
-|------|-----------------|----------|
-| **Java SE** | $150 | 标准版，包含 JDK 8, 11, 17, 21 |
-| **Java SE Desktop** | $50 | 仅桌面应用 |
-| **Java SE Advanced** | $300 | 包含 JRockit Mission Control |
-| **Java SE Advanced Desktop** | $100 | 桌面高级版 |
+2023 年起，Oracle 采用按员工数量计费的 **Java SE Universal Subscription** 定价模式：
 
-> ⚠️ **注意**: 上述价格为 2023 年之前的旧定价模型。2023 年起，Oracle 改为按员工数量计费的 **Java SE Universal Subscription** 定价模式。此外，"Java SE Advanced" 中的 JRockit Mission Control 已被 Java Mission Control (JMC) 取代。
+| 计划 | 价格 | 计费方式 |
+|------|------|----------|
+| **Java SE Universal Subscription** | $15/员工/月 | 按企业全部员工数量计费 |
+
+> ⚠️ **注意**: 按企业**全部员工数量**计费（不仅是 Java 开发者），最低 300 员工起购。
 
 **订阅包含**:
-- ✅ 安全更新 (JDK 8, 11 _extended support_)
+- ✅ 安全更新 (JDK 8, 11 extended support)
 - ✅ 性能优化
 - ✅ Bug 修复
 - ✅ 24/7 技术支持
 - ✅ 合规性保障
+- ✅ Oracle GraalVM 使用权
+- ✅ Java Management Service
+
+### 历史定价 (2023 年之前)
+
+> 以下为 2023 年之前的旧定价模型，仅供参考。
+
+| 计划 | 价格 | 适用场景 |
+|------|------|----------|
+| **Java SE Subscription** | $25/处理器/月 或 $2.50/NUP/月 | 服务器端 |
+| **Java SE Desktop Subscription** | $2.50/用户/月 | 仅桌面应用 |
 
 ---
 
