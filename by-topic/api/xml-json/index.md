@@ -583,9 +583,9 @@ git log --oneline -- src/java.json/share/classes/javax/json/
 
 ### 外部资源
 
-- [JEP 353: JSON Processing API](https://openjdk.org/jeps/353)
-- [JEP 471: JSON.B (JSON Binding)](https://openjdk.org/jeps/471)
-- [JEP 489: JSON Escaping](https://openjdk.org/jeps/489)
+- [JEP 353](/jeps/api/jep-353.md)
+- [JEP 471](/jeps/api/jep-471.md)
+- [JEP 489](/jeps/api/jep-489.md)
 - [JSR 173: StAX](https://jcp.org/en/jsr/detail?id=173)
 - [JSR 222: JAXB](https://jcp.org/en/jsr/detail?id=222)
 - [Jakarta JSON Processing](https://jakarta.ee/specifications/jsonp/)
@@ -604,9 +604,9 @@ git log --oneline -- src/java.json/share/classes/javax/json/
 **最后更新**: 2026-03-20
 
 **Sources**:
-- [JEP 353: JSON Processing API](https://openjdk.org/jeps/353)
-- [JEP 471: JSON.B (JSON Binding)](https://openjdk.org/jeps/471)
-- [JEP 489: JSON Escaping](https://openjdk.org/jeps/489)
+- [JEP 353](/jeps/api/jep-353.md)
+- [JEP 471](/jeps/api/jep-471.md)
+- [JEP 489](/jeps/api/jep-489.md)
 - [JSR 173: StAX](https://jcp.org/en/jsr/detail?id=173)
 - [Jakarta JSON Processing](https://jakarta.ee/specifications/jsonp/)
 - [Jakarta JSON Binding](https://jakarta.ee/specifications/jsonb/)

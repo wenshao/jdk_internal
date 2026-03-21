@@ -466,7 +466,7 @@ git log --oneline -- src/java.base/share/classes/java/util/logging/
 - [SLF4J 官方文档](https://www.slf4j.org/)
 - [Logback 官方文档](https://logback.qos.ch/)
 - [Log4j 2.x 官方文档](https://logging.apache.org/log4j/2.x/)
-- [JEP 264: Platform Logging API](https://openjdk.org/jeps/264)
+- [JEP 264](/jeps/api/jep-264.md)
 - [SLF4J Legacy (JUL to SLF4J)](https://www.slf4j.org/legacy.html)
 
 ### 桥接文档
@@ -480,7 +480,7 @@ git log --oneline -- src/java.base/share/classes/java/util/logging/
 **最后更新**: 2026-03-20
 
 **Sources**:
-- [JEP 264: Platform Logging API](https://openjdk.org/jeps/264)
+- [JEP 264](/jeps/api/jep-264.md)
 - [SLF4J 官方文档](https://www.slf4j.org/)
 - [Logback 官方文档](https://logback.qos.ch/)
 - [Log4j 2.x 官方文档](https://logging.apache.org/log4j/2.x/)
