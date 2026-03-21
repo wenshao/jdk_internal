@@ -599,7 +599,7 @@ gh pr list --repo openjdk/jdk --search "author:{username} label:integrated" --js
 - ✅ 修复 ~80 处贡献者组织归属错误（通过网络搜索验证 15+ 个重大错误）
 - ✅ 修复 ~50 处 Preview/Final 状态混淆
 - ✅ 移除 ~40 处虚构的 API/JVM flag/JEP
-- ✅ 修正 JDK 25 为 LTS（之前错标为非 LTS）
+- ✅ 修正 JDK 25 版本类型为 LTS
 
 **贡献者档案增强**:
 - ✅ 新建 27 个 profile（Mark Reinhold, Ron Pressler, Mandy Chung, Glavo 等）

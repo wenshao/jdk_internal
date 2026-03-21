@@ -149,7 +149,7 @@
 
 **JEP 422: Linux/RISC-V Port (Co-author)**:
 - 作为 JEP 422 实现的 [co-author](https://github.com/openjdk/jdk/commit/5905b02c0e2643ae8d097562f181953f6c88fc89)（commit 5905b02, 2022-03-24）
-- 与 Huawei (Fei Yang 等)、Alibaba (Xiaolin Zheng)、Red Hat (Aleksey Shipilev)、Oracle (Magnus Ihse Bursie) 共同完成
+- 与 Huawei (Fei Yang 等)、Alibaba (Xiaolin Zheng)、Aleksey Shipilev (formerly Red Hat, now Amazon)、Oracle (Magnus Ihse Bursie) 共同完成
 - 为 riscv-port-jdk11u 提交 backport PR
 
 **早期 OpenJDK 贡献 (Bug Database)**：
