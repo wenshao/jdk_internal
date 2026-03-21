@@ -161,12 +161,12 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 | 角色 | 人数 | 代表贡献者 | 前组织 |
 |------|------|------------|--------|
-| Reviewer | 2 | Aleksey Shipilev (2023-), William Kemper | Red Hat |
+| Reviewer | 2 | [Aleksey Shipilev](profiles/aleksey-shipilev.md) (2023-), [William Kemper](profiles/william-kemper.md) | Red Hat |
 | Committer | 0 | - | - |
 
-> **跳槽说明**: 
-> - Aleksey Shipilev: Oracle (2012-2016) → Red Hat (2016-2023) → Amazon (2023-)
-> - William Kemper: Red Hat → Amazon
+> **跳槽说明**:
+> - **Aleksey Shipilev**: Oracle (2012-2016) → Red Hat (2016-2023) → **Amazon** (2023-)
+> - **William Kemper**: Red Hat → **Amazon**
 
 ### Red Hat
 
@@ -174,8 +174,8 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 | 角色 | 人数 | 代表贡献者 |
 |------|------|------------|
-| Reviewer | 1 | Roman Kennke |
-| Committer | 2 | Andrew Haley, Fredrik Bredberg |
+| Reviewer | 1 | [Roman Kennke](profiles/roman-kennke.md) |
+| Committer | 2 | [Andrew Haley](profiles/andrew-haley.md), [Fredrik Bredberg](profiles/fredrik-bredberg.md) |
 
 ### SAP
 
@@ -184,7 +184,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | 角色 | 人数 | 代表贡献者 |
 |------|------|------------|
 | Reviewer | 0 | - |
-| Committer | 2 | Axel Boldt-Christmas, Johannes Bechberger |
+| Committer | 2 | [Axel Boldt-Christmas](profiles/axel-boldt-christmas.md), [Johannes Bechberger](profiles/johannes-bechberger.md) |
 
 ### Alibaba
 
@@ -193,14 +193,14 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | 角色 | 人数 | 代表贡献者 |
 |------|------|------------|
 | Reviewer | 0 | - |
-| Committer | 2 | Fei Yang, Shaojin Wen |
+| Committer | 2 | [Fei Yang](profiles/fei-yang.md), [Shaojin Wen](profiles/shaojin-wen.md) |
 
 ### 其他组织
 
 | 组织 | Reviewer | Committer | 代表贡献者 |
 |------|----------|-----------|------------|
-| ByteDance | 0 | 1 | Anjian Wen |
-| NTT DATA | 0 | 1 | Yasumasa Suenaga |
+| ByteDance | 0 | 1 | [Anjian Wen](profiles/anjian-wen.md) |
+| NTT DATA | 0 | 1 | [Yasumasa Suenaga](profiles/yasumasa-suenaga.md) |
 
 ---
 
