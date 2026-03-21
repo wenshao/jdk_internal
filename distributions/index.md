@@ -55,8 +55,8 @@ OpenJDK 是 Java 的官方参考实现，各大厂商和组织基于 OpenJDK 构
 
 | 发行版 | 组织 | 商业支持 | 许可证 | 推荐场景 |
 |--------|------|----------|--------|----------|
-| **[Oracle JDK](oracle-jdk.md)** | Oracle | ✅ | OTNLA/GPLv2 | 企业生产，官方支持 |
-| **[GraalVM](graalvm.md)** | Oracle Labs | ✅ | GPLv2/GFTC | 云原生，Native Image |
+| **[Oracle JDK](oracle-jdk.md)** | Oracle | ✅ | NFTC (17+免费) | 企业生产，官方支持 |
+| **[GraalVM](graalvm.md)** | Oracle Labs | ✅ | GFTC (社区免费) | 云原生，Native Image |
 | **[Zulu](azul-zulu.md)** | Azul | ✅ | GPLv2+CPEx | 企业生产，低延迟 |
 | **[Prime](azul-prime.md)** | Azul | ✅ | 商业 | 低延迟 (C4 GC) |
 | **[Temurin](eclipse-temurin.md)** | Eclipse | ❌ | GPLv2+CPEx | 开发，CI/CD |
@@ -64,10 +64,10 @@ OpenJDK 是 Java 的官方参考实现，各大厂商和组织基于 OpenJDK 构
 | **[Dragonwell](alibaba-dragonwell.md)** | 阿里巴巴 | ✅ | GPLv2+CPEx | 阿里云环境 |
 | **[Kona](tencent-kona.md)** | 腾讯 | ❌ | GPLv2+CPEx | 腾讯云环境 |
 | **[Liberica](bellsoft-liberica.md)** | BellSoft | ✅ | GPLv2+CPEx | 嵌入式，多平台 |
-| **[Semeru](ibm-semeru.md)** | IBM | ✅ | GPLv2+CPEx | 内存敏感 (OpenJ9) |
+| **[Semeru](ibm-semeru.md)** | IBM | ✅ | GPLv2+CPEx | 内存敏感 (Eclipse OpenJ9) |
 | **[SAPMachine](sap-sapmachine.md)** | SAP | ✅ | GPLv2+CPEx | SAP 环境 |
-| **[Microsoft Build](microsoft-openjdk.md)** | Microsoft | ✅ | GPLv2+CPEx | Azure 环境 |
-| **[Loongson](loongson-jdk.md)** | 龙中 | ❌ | GPLv2+CPEx | 信创环境 (LoongArch) |
+| **[Microsoft Build](microsoft-openjdk.md)** | Microsoft | ✅ (Azure) | GPLv2+CPEx | Azure/Windows 环境 |
+| **[Loongson](loongson-jdk.md)** | 龙芯 | ❌ | GPLv2+CPEx | 信创环境 (LoongArch) |
 
 ### 按特性分类
 
@@ -76,17 +76,21 @@ OpenJDK 是 Java 的官方参考实现，各大厂商和组织基于 OpenJDK 构
 - Amazon Corretto
 - Tencent Kona
 - Loongson JDK
+- Oracle JDK 17+ (NFTC 许可)
+- GraalVM Community Edition
+- Microsoft Build of OpenJDK
+- Alibaba Dragonwell Standard Edition
 
 #### 商业支持可用
-- Oracle JDK
+- Oracle JDK (Java SE Subscription)
 - Azul Zulu Enterprise
 - Azul Platform Prime
 - GraalVM Enterprise
-- Alibaba Dragonwell
+- Alibaba Dragonwell Extended Edition
 - BellSoft Liberica
 - IBM Semeru
 - SAPMachine
-- Microsoft Build of OpenJDK
+- Microsoft (Azure 支持)
 
 #### 特殊功能
 - **Native Image**: GraalVM, Liberica Native Image Kit
@@ -176,18 +180,20 @@ OpenJDK 是 Java 的官方参考实现，各大厂商和组织基于 OpenJDK 构
 
 ## 按平台选择
 
-| 平台 | 推荐发行版 |
-|------|------------|
-| **Linux x64** | 任意 |
-| **Linux ARM64** | Zulu, Liberica, Temurin, Corretto |
-| **Linux LoongArch64** | Loongson JDK |
-| **Linux RISC-V** | Liberica |
-| **Linux Alpine** | Liberica, Zulu (musl) |
-| **Windows** | Zulu, Liberica, Microsoft Build |
-| **Windows ARM** | Microsoft Build |
-| **macOS x64** | Zulu, Liberica, Temurin |
-| **macOS ARM64** | Zulu, Liberica, Temurin |
-| **AIX** | Temurin, IBM Semeru |
+| 平台 | 推荐发行版 | 备注 |
+|------|------------|------|
+| **Linux x64** | 任意 | 所有发行版支持 |
+| **Linux ARM64** | Zulu, Liberica, Temurin, Corretto, Dragonwell | AWS Graviton, Ampere |
+| **Linux LoongArch64** | Loongson JDK | 国产龙芯 CPU |
+| **Linux RISC-V64** | Temurin, Liberica | 实验性支持 |
+| **Linux Alpine (musl)** | Liberica, Zulu | 静态链接 |
+| **Windows x64** | Zulu, Liberica, Microsoft Build, Temurin | |
+| **Windows ARM64** | Microsoft Build, Liberica | Snapdragon X Elite |
+| **macOS x64** | Zulu, Liberica, Temurin | Intel Mac |
+| **macOS ARM64** | Zulu, Liberica, Temurin | Apple Silicon |
+| **AIX (ppc64)** | IBM Semeru, Temurin | IBM Power Systems |
+| **Linux s390x** | IBM Semeru | IBM Z Mainframe |
+| **Linux ppc64le** | IBM Semeru, Temurin | PowerPC LE |
 
 ---
 
@@ -196,21 +202,27 @@ OpenJDK 是 Java 的官方参考实现，各大厂商和组织基于 OpenJDK 构
 ### GPLv2 + Classpath Exception (CPEx)
 - **含义**: 可以自由使用，包括商业用途
 - **义务**: 修改源码需要公开
-- **适用**: 大多数开源发行版
+- **适用**: 大多数开源发行版 (Temurin, Corretto, Zulu, Liberica, Kona, Dragonwell Standard, Microsoft Build)
+
+### NFTC (No-Fee Terms and Conditions)
+- **含义**: 免费用于生产环境
+- **适用**: Oracle JDK 17+, GraalVM Community
 
 ### OTNLA (Oracle Technology Network License Agreement)
 - **含义**: 个人免费，商业付费
-- **义务**: 商业使用需要订阅
-- **适用**: Oracle JDK
+- **义务**: 商业使用需要 Java SE Subscription
+- **适用**: Oracle JDK 8, 11 (旧版本)
 
 ### GFTC (GraalVM Free Terms and Conditions)
 - **含义**: 生产环境免费
 - **限制**: 不包含商业支持
-- **适用**: GraalVM Community
+- **适用**: GraalVM Community Edition
 
 ---
 
 ## 性能对比
+
+> ⚠️ **注意**: 以下数据为近似值，实际性能因应用场景而异
 
 ### 启动时间 (Hello World)
 
@@ -220,9 +232,10 @@ OpenJDK 是 Java 的官方参考实现，各大厂商和组织基于 OpenJDK 构
 | Eclipse Temurin | HotSpot | ~100ms |
 | Amazon Corretto | HotSpot | ~100ms |
 | Azul Zulu | HotSpot | ~100ms |
+| Alibaba Dragonwell | HotSpot | ~95ms |
 | GraalVM | Graal JIT | ~120ms |
-| GraalVM Native | - | ~5ms |
-| IBM Semeru | OpenJ9 | ~60ms |
+| GraalVM Native | AOT | ~5ms |
+| IBM Semeru | Eclipse OpenJ9 | ~60ms |
 
 ### 内存占用 (空闲应用)
 
@@ -232,9 +245,10 @@ OpenJDK 是 Java 的官方参考实现，各大厂商和组织基于 OpenJDK 构
 | Eclipse Temurin | HotSpot | ~35MB |
 | Amazon Corretto | HotSpot | ~35MB |
 | Azul Zulu | HotSpot | ~35MB |
+| Alibaba Dragonwell | HotSpot | ~33MB |
 | GraalVM | Graal JIT | ~45MB |
-| GraalVM Native | - | ~5MB |
-| IBM Semeru | OpenJ9 | ~20MB |
+| GraalVM Native | AOT | ~5MB |
+| IBM Semeru | Eclipse OpenJ9 | ~20MB |
 
 ### 吞吐量 (SPECjbb2015)
 
@@ -244,8 +258,9 @@ OpenJDK 是 Java 的官方参考实现，各大厂商和组织基于 OpenJDK 构
 | Eclipse Temurin | 100% |
 | Amazon Corretto | 100% |
 | Azul Zulu | 100% |
+| Alibaba Dragonwell | 100-105% |
 | Azul Platform Prime | 110-130% (C4 GC) |
-| IBM Semeru | 90-95% (OpenJ9) |
+| IBM Semeru | 90-95% (Eclipse OpenJ9) |
 
 ---
 
@@ -253,19 +268,21 @@ OpenJDK 是 Java 的官方参考实现，各大厂商和组织基于 OpenJDK 构
 
 ### LTS 版本支持截止
 
-| 发行版 | JDK 8 | JDK 11 | JDK 17 | JDK 21 |
-|--------|-------|--------|--------|--------|
-| **Oracle JDK** | 2030-12 | 2026-01 | 2029-10 | 2031-10 |
-| **Temurin** | 2026-05 | 2027-10 | 2029-10 | 2031-10 |
-| **Corretto** | 2026-05 | 2027-09 | 2029-09 | 2032-04 |
-| **Zulu** | 2030-12 | 2027-10 | 2029-10 | 2031-10 |
-| **Dragonwell** | 2029-07 | 2027-10 | 2029-10 | 2031-10 |
-| **Kona** | 2025-04 | 2027-10 | 2029-10 | 2031-10 |
-| **Liberica** | 2026-05 | 2027-10 | 2029-10 | 2031-10 |
-| **Semeru** | 2026-09 | 2027-10 | 2029-10 | 2031-10 |
-| **SAPMachine** | 2030-12 | 2027-10 | 2029-10 | 2031-10 |
-| **Microsoft Build** | 2026-05 | 2027-10 | 2029-10 | 2031-10 |
-| **Loongson** | 2026-05 | 2027-10 | 2029-10 | 2031-10 |
+| 发行版 | JDK 8 | JDK 11 | JDK 17 | JDK 21 | JDK 26 |
+|----------|-------|--------|--------|--------|--------|
+| **Oracle JDK** | 2030-12 | 2026-01 | 2029-10 | 2031-10 | 2029-10 |
+| **Temurin** | 2026-05 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |
+| **Corretto** | 2026-05 | 2027-09 | 2029-09 | 2032-04 | 2032-09 |
+| **Zulu** | 2030-12 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |
+| **Dragonwell** | 2029-07 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |
+| **Kona** | 2025-04 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |
+| **Liberica** | 2026-05 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |
+| **Semeru** | 2026-09 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |
+| **SAPMachine** | 2030-12 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |
+| **Microsoft Build** | 2026-05 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |
+| **Loongson** | 2026-05 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |
+
+> ⚠️ **注意**: KDK 26 支持截止日期因厂商而异，需以厂商确认
 
 ---
 

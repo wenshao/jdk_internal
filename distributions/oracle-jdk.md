@@ -23,11 +23,18 @@ Oracle JDK 是 Oracle 公司官方维护的 Java Development Kit，基于 OpenJD
 
 ## 许可证
 
-### Oracle Technology Network License Agreement (OTNLA)
+### NFTC (No-Fee Terms and Conditions) - JDK 17+
+
+自 JDK 17 起，Oracle JDK 使用 NFTC 许可证：
+- **个人使用**: 免费
+- **商业使用**: 免费
+- **生产使用**: 免费
+- **分发**: 允许
+
+### OTNLA (Oracle Technology Network License Agreement) - JDK 8, 11
 
 - **个人使用**: 免费
 - **商业使用**: 需要 Oracle Java SE Subscription
-- **分发**: 允许分发 (自 JDK 17+)
 - **生产使用**: 需要 Subscription
 
 ### Oracle Java SE Subscription
