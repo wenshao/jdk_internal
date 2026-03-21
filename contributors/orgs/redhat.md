@@ -301,9 +301,9 @@ Red Hat 参与 Project Leyden (改善 Java 启动时间):
 |-----|-------|--------|------|
 | JEP 189 | Shenandoah GC (Incubator) | Aleksey Shipilev | JDK 12 |
 | JEP 379 | Shenandoah GC (Standard) | Aleksey Shipilev | JDK 15 |
-| JEP 418 | Internet-Address Resolution SPI | Andrew Dinn | JDK 18 |
+| JEP 418 | Internet-Address Resolution SPI | Daniel Fuchs (Oracle) | JDK 18 |
 | JEP 464 | Scoped Values (Second Preview) | - | JDK 21 |
-| JEP 519 | Compact Object Headers | Roman Kennke | JDK 24 |
+| JEP 519 | Compact Object Headers | Roman Kennke | JDK 25 |
 | JEP 521 | Generational Shenandoah | William Kemper (Amazon) | JDK 25 |
 
 ---

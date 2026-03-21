@@ -151,7 +151,6 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 | 贡献者 | 位置 | GitHub | PRs | 角色 | 领域 | 档案 |
 |--------|------|--------|-----|------|------|------|
 | Doug Simon | - | - | 10+ | Member | Graal | [详情](../../by-contributor/profiles/doug-simon.md) |
-| Christian Hagedorn | - | - | 10+ | Member | HotSpot Compiler/C2 | [详情](../../by-contributor/profiles/christian-hagedorn.md) |
 
 ### 已离职贡献者
 

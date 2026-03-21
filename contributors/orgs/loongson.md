@@ -44,7 +44,7 @@
 
 **小计**: 30+ PRs
 
-> **注**: Fei Yang (@RealFYang / @merykitty) 是 **ISCAS PLCT 实验室** 贡献者，专注于 RISC-V，不属于龙芯。
+> **注**: Fei Yang (@RealFYang) 是 **ISCAS PLCT 实验室** 贡献者，专注于 RISC-V，不属于龙芯。@merykitty 是 Quan Anh Mai (独立贡献者)，不是 Fei Yang 的别名。
 
 ---
 

@@ -42,10 +42,11 @@ Amazon 通过 Corretto 团队参与 OpenJDK 开发，专注于 Shenandoah GC、A
 
 | 排名 | 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
 |------|--------|--------|-----|------|----------|------|
-| 1 | William Kemper | [@earthling-amzn](https://github.com/earthling-amzn) | 123 | Reviewer | Shenandoah GC | [详情](../../by-contributor/profiles/william-kemper.md) |
-| 2 | Nick Gasson | [@benty-amzn](https://github.com/benty-amzn) | 15 | Reviewer | AArch64 | [详情](../../by-contributor/profiles/nick-gasson.md) |
+| 1 | Aleksey Shipilev | [@shipilev](https://github.com/shipilev) | 803+ | Reviewer | Shenandoah GC | [详情](../../by-contributor/profiles/aleksey-shipilev.md) |
+| 2 | William Kemper | [@earthling-amzn](https://github.com/earthling-amzn) | 123 | Reviewer | Shenandoah GC | [详情](../../by-contributor/profiles/william-kemper.md) |
+| 3 | Nick Gasson | [@benty-amzn](https://github.com/benty-amzn) | 15 | Reviewer | AArch64 | [详情](../../by-contributor/profiles/nick-gasson.md) |
 
-**小计**: 138 PRs
+**小计**: 941+ PRs
 
 > **注**: 
 > - Andrew Dinn (@adinn) 是 **Red Hat** 员工，不属于 Amazon

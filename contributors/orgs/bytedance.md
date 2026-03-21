@@ -85,7 +85,7 @@
 
 | 贡献者 | 组织 | 合作领域 | 关系类型 |
 |--------|------|----------|----------|
-| [Fei Yang](../../by-contributor/profiles/fei-yang.md) | Alibaba | RISC-V | 技术同行 |
+| [Fei Yang](../../by-contributor/profiles/fei-yang.md) | ISCAS PLCT Lab | RISC-V | 技术同行 |
 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | Alibaba | 性能优化 | 技术同行 |
 | [Andrew Haley](../../by-contributor/profiles/andrew-haley.md) | Red Hat | RISC-V | 审查者 |
 
@@ -170,7 +170,7 @@
               │         │
               ▼         ▼
         Fei Yang   Andrew Haley
-        (Alibaba)  (Red Hat)
+        (ISCAS PLCT)  (Red Hat)
         (技术同行)  (审查者)
               │
               └────┬────┘
@@ -191,12 +191,12 @@
 | 指标 | 数值 | 说明 |
 |------|------|------|
 | 合作领域 | RISC-V | 向量指令支持 |
-| Fei 角色 | Alibaba RISC-V 专家 | 技术同行 |
+| Fei 角色 | ISCAS PLCT Lab RISC-V 专家 | 技术同行 |
 | Anjian 角色 | ByteDance RISC-V 开发者 | 向量指令实现 |
 | 协作模式 | 技术同行交流 | 跨公司协作 |
 
 **Fei Yang 背景**:
-- Alibaba RISC-V 专家
+- ISCAS PLCT Lab RISC-V 专家
 - OpenJDK Committer
 - GitHub: [@RealFeiYang](https://github.com/RealFeiYang)
 - 100+ integrated PRs
@@ -232,7 +232,7 @@
         前辈层                    同辈层                    后辈层
     ┌─────────────┐          ┌─────────────┐          ┌─────────────┐
     │ Andrew      │          │ Fei Yang    │          │ 新贡献者    │
-    │ Haley       │◄────────►│ (Alibaba)   │          │ (通过 PR    │
+    │ Haley       │◄────────►│ (ISCAS PLCT)   │          │ (通过 PR    │
     │ (Red Hat)   │  审查    │             │──交流──►│  学习)      │
     └─────────────┘          └─────────────┘          └──────┬──────┘
                                                               │
