@@ -464,7 +464,7 @@ G1 GC 吞吐量改进，详见 [GC 演进](../gc/)。
 | 1 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 68 | Oracle | CDS, AOT |
 | 2 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 150+ | Oracle | 字符串, 启动优化 |
 | 3 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 97 | Alibaba | 核心库性能优化 |
-| 4 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | Oracle | CDS, 归档 |
+| 4 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | Red Hat | CDS, 归档 |
 
 ### JFR 贡献者
 

@@ -59,7 +59,7 @@ JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 7 ── JDK 8 ── JDK 11 ──
 | 1 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 317 | Oracle | 类加载, 运行时核心 |
 | 2 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 215 | Oracle | CDS, AOT, 运行时 |
 | 3 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 174 | Oracle | 并发, 线程, 规范 |
-| 4 | Thomas Stuefe | 163 | Oracle | 内存, 跨平台 |
+| 4 | Thomas Stuefe | 163 | Red Hat | 内存, 跨平台 |
 | 5 | Stefan Karlsson | 149 | Oracle | 并发 GC |
 | 6 | Kim Barrett | 113 | Oracle | C++ 现代化 |
 | 7 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 112 | Amazon | 性能基准 |

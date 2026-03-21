@@ -183,7 +183,7 @@ JDK 17 ─── 注册表性能优化
 | 贡献者 | 组织 | 主要贡献 |
 |--------|------|----------|
 | [Andrew Leonard](/by-contributor/profiles/andrew-leonard.md) | Oracle | Windows 构建 |
-| [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | Oracle | 跨平台支持 |
+| [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | Red Hat | 跨平台支持 |
 
 ---
 
