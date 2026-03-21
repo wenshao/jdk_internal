@@ -7,7 +7,7 @@
 
 1. [概览](#1-概览)
 2. [Top 贡献者](#2-top-贡献者)
-3. [Oracle 中国团队](#3-oracle-中国团队)
+3. [按地区分类](#3-按地区分类)
 4. [影响的模块](#4-影响的模块)
 5. [主要领域](#5-主要领域)
 6. [相关 PR 分析文档](#6-相关-pr-分析文档)
@@ -76,14 +76,53 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 
 ---
 
-## 3. Oracle 中国团队
+## 3. 按地区分类的 Oracle 贡献者
 
-| 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
-|--------|--------|-----|------|----------|------|
-| Naoto Sato | [@naotoj](https://github.com/naotoj) | 273 | Reviewer | 国际化 | [详情](../../by-contributor/profiles/naoto-sato.md) |
-| Chen Liang | [@liach](https://github.com/liach) | 237 | Committer | ClassFile API | [详情](../../by-contributor/profiles/chen-liang.md) |
+### 美国团队
 
-**小计**: 510 PRs
+| 贡献者 | 位置 | GitHub | PRs | 角色 | 领域 | 档案 |
+|--------|------|--------|-----|------|------|------|
+| Ioi Lam | 加州 | [@iklam](https://github.com/iklam) | 431 | Reviewer | CDS/AOT | [详情](../../by-contributor/profiles/ioi-lam.md) |
+| Coleen Phillimore | - | [@coleenp](https://github.com/coleenp) | 400 | Reviewer | HotSpot | [详情](../../by-contributor/profiles/coleen-phillimore.md) |
+| Naoto Sato | 加州 San Jose | [@naotoj](https://github.com/naotoj) | 273 | Reviewer | 国际化 | [详情](../../by-contributor/profiles/naoto-sato.md) |
+| Chen Liang | 德州奥斯汀 | [@liach](https://github.com/liach) | 237 | Committer | ClassFile API | [详情](../../by-contributor/profiles/chen-liang.md) |
+| Jan Lahoda | - | [@lahodaj](https://github.com/lahodaj) | 324 | Reviewer | javac | [详情](../../by-contributor/profiles/jan-lahoda.md) |
+| Daniel Fuchs | - | [@dfuch](https://github.com/dfuch) | 192 | Committer | JMX | [详情](../../by-contributor/profiles/daniel-fuchs.md) |
+| David Holmes | - | - | 80+ | Reviewer | 并发 | [详情](../../by-contributor/profiles/david-holmes.md) |
+| Brian Burkhalter | - | - | 60+ | Committer | 网络 | [详情](../../by-contributor/profiles/brian-burkhalter.md) |
+| Justin Lu | - | - | 40+ | Committer | Localization | [详情](../../by-contributor/profiles/justin-lu.md) |
+| Leonid Mesnik | - | - | 35+ | Reviewer | JVMTI | [详情](../../by-contributor/profiles/leonid-mesnik.md) |
+| Claes Redestad | 瑞典 | - | 30+ | Reviewer | Performance | [详情](../../by-contributor/profiles/claes-redestad.md) |
+| Per Minborg | - | - | 15+ | Member | Core Libs | [详情](../../by-contributor/profiles/per-minborg.md) |
+| Alan Bateman | - | - | 12+ | Reviewer | Concurrency | [详情](../../by-contributor/profiles/alan-bateman.md) |
+
+### 欧洲团队
+
+| 贡献者 | 位置 | GitHub | PRs | 角色 | 领域 | 档案 |
+|--------|------|--------|-----|------|------|------|
+| Thomas Schatzl | 德国 | [@tschatzl](https://github.com/tschatzl) | 546 | Reviewer | G1 GC | [详情](../../by-contributor/profiles/thomas-schatzl.md) |
+| Kim Barrett | - | - | 100+ | Reviewer | GC, C++ | [详情](../../by-contributor/profiles/kim-barrett.md) |
+| Erik Gahlin | 瑞典 | - | 70+ | Reviewer | JFR | [详情](../../by-contributor/profiles/erik-gahlin.md) |
+| Emanuel Peter | - | - | 50+ | Reviewer | C2 编译器 | [详情](../../by-contributor/profiles/emanuel-peter.md) |
+| Magnus Ihse Bursie | 瑞典 | - | 28+ | Reviewer | Build | [详情](../../by-contributor/profiles/magnus-ihse-bursie.md) |
+| Roman Kennke | 德国 | - | 18+ | Reviewer | Compact Headers | [详情](../../by-contributor/profiles/roman-kennke.md) |
+| Erik Österlund | 瑞典 | - | 12+ | Reviewer | AOT, GC | [详情](../../by-contributor/profiles/erik-osterlund.md) |
+
+### 亚洲团队
+
+| 贡献者 | 位置 | GitHub | PRs | 角色 | 领域 | 档案 |
+|--------|------|--------|-----|------|------|------|
+| Zhengyu Gu | 中国 | - | 30+ | Committer | G1 GC | [详情](../../by-contributor/profiles/zhengyu-gu.md) |
+| Hamlin Li | 中国 | - | 20+ | Committer | RISC-V | [详情](../../by-contributor/profiles/hamlin-li.md) |
+| Weijun Wang | - | - | 15+ | Reviewer | Security | [详情](../../by-contributor/profiles/weijun-wang.md) |
+
+### Oracle Labs
+
+| 贡献者 | 位置 | GitHub | PRs | 角色 | 领域 | 档案 |
+|--------|------|--------|-----|------|------|------|
+| Doug Simon | - | - | 10+ | Member | Graal | [详情](../../by-contributor/profiles/doug-simon.md) |
+
+> **注**: 部分贡献者的位置信息未在公开资料中标注。位置信息基于贡献者档案和 OpenJDK Census。
 
 ---
 
@@ -230,10 +269,13 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 
 ---
 
-> **文档版本**: 2.0
+> **文档版本**: 3.0
 > **最后更新**: 2026-03-21
 > **更新内容**:
-> - 扩展 Top 贡献者列表从 15 人到 29 人
-> - 添加 JDK 26 Top Oracle 贡献者子章节
-> - 添加 14 位新贡献者 (Phil Race, Prasanta Sadhukhan, Volkan Yazici, Justin Lu, Leonid Mesnik, Claes Redestad, Magnus Ihse Bursie, Hamlin Li, Roman Kennke, Per Minborg, Weijun Wang, Alan Bateman, Erik Österlund, Doug Simon)
-> - 更新 PR 统计数据来源说明
+> - 修正"Oracle 中国团队"错误分类
+> - 改为"按地区分类"，准确标注贡献者位置
+> - 美国团队：13 人 (包括 Naoto Sato, Chen Liang 等)
+> - 欧洲团队：7 人 (Thomas Schatzl-德国，Claes Redestad-瑞典等)
+> - 亚洲团队：3 人 (Zhengyu Gu-中国，Hamlin Li-中国，Weijun Wang)
+> - Oracle Labs: 1 人 (Doug Simon)
+> - 数据来源：贡献者档案和 OpenJDK Census
