@@ -55,7 +55,7 @@
 | **OpenJDK Census** | Kuai Wei | - | - | ✅ 记录在案 |
 | **Dragonwell Commits** | Kuai Wei | kuaiwei.kw@alibaba-inc.com | Alibaba | ✅ 已验证 |
 | **Dragonwell Commits** | Kuai Wei | wei.kuai@gmail.com | - | ✅ 个人邮箱 |
-| **ASE 2021 论文** | Wei Kuai | - | Alibaba | ✅ 合著者 |
+| **ASE 2021 论文** | Wei Kuai | - | Alibaba Group | ✅ 合著者 |
 
 **学术论文**：
 - **ASE 2021**: "Towards a Serverless Java Runtime"
@@ -69,9 +69,31 @@
 - [Java ArrayList.toArray](https://gist.github.com/kuaiwei/7109343) - Java 问题记录
 - [X Window client access](https://gist.github.com/kuaiwei/5001706) - Linux 系统笔记
 
+**社交网络分析** (基于 GitHub 关注关系):
+
+| 关联类型 | 用户 | 信息 | 推断 |
+|----------|------|------|------|
+| **论文合著者** | sanhong | Sanhong Li | ASE 2021 论文合著者，互相关注 |
+| **阿里巴巴同事** | JoshuaZhuwj | Joshua Zhu, @Alibaba, 上海 | 互相关注 |
+| **阿里巴巴同事** | sendaoYan | Sendaoyan Yan, 上海, compiler tester | Kuai Wei 的 follower |
+| **社区联系** | luchsh | Jonathan Lu, 上海 | 互相关注 |
+| **龙芯联系** | xiangzhai | Leslie Zhai, @loongson, 北京 | Kuai Wei 的 follower |
+| **JDK 社区** | headius | Charles Nutter (JRuby 创始人) | Kuai Wei 关注 |
+
+**地理位置推断**：
+- 多个互相关注者位于**上海**（Joshua Zhu, Jonathan Lu, Sendaoyan Yan）
+- 阿里巴巴在上海有大型研发团队
+- **推断**: Kuai Wei 可能工作于**阿里巴巴上海团队**
+
+**Jeandle JDK 项目关联**：
+- Kuai Wei 是 [Jeandle JDK](https://github.com/jeandle/jeandle-jdk) 项目的活跃贡献者
+- Jeandle 是基于 LLVM 的 Java JIT 编译器项目
+- 最近 PR: #393 (2026-03-11), #331, #224, #200, #166, #88
+- 项目与 OpenJDK 顶级贡献者有关联（jonathan-gibbons, shipilev, prrace 等）
+
 **无法证实的信息**：
 - ❌ 中文名：公开来源无确凿证据（拼音 Wei Kuai 可能对应多个中文名）
-- ❌ 教育背景：无公开信息（论文未标注学校，仅标注 Alibaba Group）
+- ❌ 教育背景：论文仅标注 Alibaba Group，无学校信息
 - ❌ 具体职位：仅知为 Alibaba 贡献者
 - ❌ 专利：Google Patents 无公开记录
 
