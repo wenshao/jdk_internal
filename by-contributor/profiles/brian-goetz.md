@@ -30,11 +30,12 @@ Brian Goetz 是 Oracle 的 Java Language Architect，是 Java 语言演进的核
 | **姓名** | Brian Goetz |
 | **组织** | [Oracle](/contributors/orgs/oracle.md) |
 | **角色** | Java Language Architect |
-| **教育背景** | Carnegie Mellon University (计算机科学硕士, 1990) [未经验证] |
+| **教育背景** | 数学学位 (当时许多学校尚无计算机科学专业) [未经验证] |
 | **位置** | Williston, Vermont, 美国 |
 | **主要领域** | 语言设计、并发编程、内存模型 |
 | **知名著作** | 《Java Concurrency in Practice》(2006) |
 | **文章数量** | 75+ 篇技术文章 |
+| **GitHub** | [@briangoetz](https://github.com/briangoetz) (312 followers, 3 repos) |
 | **活跃时间** | 1986 - 至今 (20+ 年软件开发经验) |
 
 > **数据来源**: [ÜberConf](https://uberconf.com/conference/speaker/brian_goetz), [LinkedIn](https://www.linkedin.com/in/briangoetz), [UberConf Blog](https://uberconf.com/blog/brian_goetz/2006/09/farewell_quiotix_hello_sun_)
@@ -45,7 +46,7 @@ Brian Goetz 是 Oracle 的 Java Language Architect，是 Java 语言演进的核
 
 | 年份 | 事件 | 详情 |
 |------|------|------|
-| **1990** | 硕士学位 | Carnegie Mellon University 计算机科学 |
+| **~1986** | 数学学位 | 学校当时尚无计算机科学专业 |
 | **~1990-2006** | Quiotix | 软件顾问 (Software Consultant) |
 | **2006-09** | 加入 Sun Microsystems | Sr. Staff Engineer |
 | **2006-2010** | Sun 时期 | JavaFX Script 编译器架构师、Java Warehouse 架构师 |
@@ -199,6 +200,7 @@ Brian Goetz 强调语言的渐进式演进，而非革命性变化。
 
 | 类型 | 链接 |
 |------|------|
+| **GitHub** | [@briangoetz](https://github.com/briangoetz) |
 | **Twitter** | [@BrianGoetz](https://twitter.com/BrianGoetz) |
 | **LinkedIn** | [Brian Goetz](https://www.linkedin.com/in/briangoetz) |
 | **OpenJDK Email** | brian.goetz@oracle.com |

@@ -12,13 +12,14 @@
 | **GitHub** | [@kuaiwei](https://github.com/kuaiwei) |
 | **组织** | [Alibaba](../../contributors/orgs/alibaba.md) |
 | **邮箱** | kuaiwei.kw@alibaba-inc.com, wei.kuai@gmail.com |
-| **OpenJDK Census** | ✅ [记录在案](https://openjdk.org/census) |
+| **OpenJDK Census** | ✅ [Author, JDK Project](https://openjdk.org/census) (username: `kwei`) |
 | **Integrated PRs** | 13 |
 | **Dragonwell Commits** | 15+ |
+| **GitHub 统计** | 19 public repos, 15 followers, 8 following |
 | **主要领域** | C2 Compiler, IR Optimization, RISC-V, ZGC |
 | **活跃时间** | 2021 - 至今 |
 
-> **统计来源**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akuaiwei+label%3Aintegrated+is%3Aclosed), [OpenJDK Census](https://openjdk.org/census)
+> **统计来源**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akuaiwei+label%3Aintegrated+is%3Aclosed), [OpenJDK Census](https://openjdk.org/census#kwei)
 
 ---
 
@@ -44,6 +45,9 @@
 - Alibaba FastFFI
 - Renaissance Benchmark Suite
 - DynamoRIO (动态插桩工具)
+
+**会议演讲**:
+- **JWarmUp**: 与 Xiaoming Gu 合作演讲 "Speed JVM Performance with JWarmUp"，展示了使用 JWarmUp 加速大型 Java 应用及 AppAOT 加速小型应用的统一方案
 
 **OpenJDK 邮件列表活动** (2021 年 3 月):
 - 参与 hotspot-compiler-dev 邮件列表讨论
@@ -134,7 +138,12 @@
 | 2020-04 | JDK-8242449 | AArch64: r27 分配 (CompressedOops 模式) | aph |
 | 2018-10 | JDK-8210853 | JIT: C2 新分配对象后屏障优化 | - |
 
-**RISC-V OpenJDK 贡献**：
+**JEP 422: Linux/RISC-V Port (Co-author)**:
+- 作为 JEP 422 实现的 [co-author](https://github.com/openjdk/jdk/commit/5905b02c0e2643ae8d097562f181953f6c88fc89)（commit 5905b02, 2022-03-24）
+- 与 Huawei (Fei Yang 等)、Alibaba (Xiaolin Zheng)、Red Hat (Aleksey Shipilev)、Oracle (Magnus Ihse Bursie) 共同完成
+- 为 riscv-port-jdk11u 提交 backport PR
+
+**早期 OpenJDK 贡献 (Bug Database)**：
 - 2021-03: JDK-8262837 handle split_USE correctly
 - 2020-04: JDK-8242449 AArch64: r27 can be allocated in CompressedOops mode
 - 2018-10: JDK-8210853 JIT: C2 doesn't skip post barrier for new allocated objects
@@ -196,9 +205,10 @@
 
 | 年份 | PRs | 主要工作 |
 |------|-----|----------|
-| 2021 | 1 | C2 编译器基础 |
-| 2024 | 10 | 内存屏障，IR 优化，开发工具 |
-| 2025 | 2 | C2 IR 完善 |
+| 2021 | 1 | C2 编译器基础 (split_USE) |
+| 2024 | 7 | 内存屏障 (dmb)，adlc 增强，DTrace，AArch64 清理，C1 类型分析 |
+| 2025 | 4 | MergeStores 优化，IR Framework 测试，WSL devkit，C2 IR size_of |
+| 2026 | 1 | 编译器代码清理 (PhaseOutput) |
 
 ---
 

@@ -2,8 +2,11 @@
 
 > **Inside.java**: [JohnRose](https://inside.java/u/JohnRose/)
 > **OpenJDK**: [jrose](https://openjdk.org/census#jrose)
+> **GitHub**: [rose00](https://github.com/rose00)
+> **X (Twitter)**: [@JohnRose00](https://x.com/JohnRose00)
+> **Oracle Blog**: [blogs.oracle.com/jrose](https://blogs.oracle.com/jrose/)
 > **Organization**: [Oracle](../../contributors/orgs/oracle.md) (Java Platform Group)
-> **Role**: JVM Architect | Senior Staff Engineer
+> **Role**: Senior Architect, Java Virtual Machine
 
 ---
 ## 目录
@@ -23,7 +26,9 @@
 
 ## 1. 概述
 
-John Rose (OpenJDK 用户名：**jrose**) 是 Oracle 的 **JVM 架构师**，自 1995 年起开始从事 Java 技术工作。他是 JVM 动态语言支持的奠基人，主导了 **invokedynamic** 字节码指令和 **method handles** 的设计与实现，使 Java 平台能够高效支持动态语言。
+John Rose (OpenJDK 用户名：**jrose**) 是 Oracle 的 **JVM 高级架构师 (Senior Architect)**，自 1995 年起在 Sun Microsystems（后归入 Oracle）从事 Java 技术工作，涵盖从硬件架构、代码生成器到库和编程语言等广泛领域。在加入 Sun 之前，他曾在 Thinking Machines Corporation 与 Guy Steele、Stephen Wolfram 共同发明了 C* 并行编程语言。
+
+他是 JVM 动态语言支持的奠基人，主导了 **invokedynamic** 字节码指令 (JSR 292) 和 **method handles** 的设计与实现，使 Java 平台能够高效支持动态语言。他还是多个重大 OpenJDK 项目的 Lead/Guide，包括 **Da Vinci Machine**、**Project Panama**、**Project Valhalla**、**Project Metropolis** 和 **Project Leyden**。
 
 他的工作为 Lambda 表达式、Stream API、以及现代 JVM 上的动态语言（如 JRuby、Jython、Nashorn）奠定了技术基础。
 
@@ -36,12 +41,15 @@ John Rose (OpenJDK 用户名：**jrose**) 是 Oracle 的 **JVM 架构师**，自
 | **姓名** | John Rose |
 | **OpenJDK 用户名** | jrose |
 | **当前组织** | [Oracle](../../contributors/orgs/oracle.md) (Java Platform Group) |
-| **职位** | Senior JVM Architect / Staff Engineer |
+| **职位** | Senior Architect, Java Virtual Machine |
 | **位置** | San Jose, California, USA |
 | **工作时间** | 1995 - 至今 (30+ years) |
+| **早期经历** | Thinking Machines Corporation (C* 并行语言, ~1987) |
 | **专长领域** | JVM architecture, invokedynamic, method handles, bytecode, Vector API, AOT compilation |
 | **邮件** | john.rose@oracle.com (前身为 sun.com) |
-| **GitHub** | Not publicly active (主要通过 OpenJDK Mercurial/Git 贡献) |
+| **GitHub** | [rose00](https://github.com/rose00) (Oracle org member; valhalla, panama-foreign, panama-vector 等仓库) |
+| **X (Twitter)** | [@JohnRose00](https://x.com/JohnRose00) |
+| **Oracle Blog** | [blogs.oracle.com/jrose](https://blogs.oracle.com/jrose/) |
 
 ---
 
@@ -83,6 +91,17 @@ John Rose (OpenJDK 用户名：**jrose**) 是 Oracle 的 **JVM 架构师**，自
 | **文档** | [JEP 514](/jeps/performance/jep-514.md) |
 
 **影响**: 改进 AOT 编译的命令行体验，启动时间提升 30-40%。
+
+### JEP 515: Ahead-of-Time Method Profiling (JDK 25)
+
+| 属性 | 值 |
+|------|-----|
+| **角色** | Co-Author (与 Igor Veresov) |
+| **状态** | Closed / Delivered |
+| **发布版本** | JDK 25 |
+| **文档** | [JEP 515](https://openjdk.org/jeps/515) |
+
+**影响**: 将方法执行配置文件从前一次运行保存到 AOT 缓存中，使 HotSpot JVM 启动时即可获取配置数据，显著改善应用热身时间。
 
 ### JSR 292: invokedynamic (JDK 7)
 
@@ -162,11 +181,24 @@ String result = (String) mh.invokeExact("hello");  // "HELLO"
 - 消除对象头开销
 - 支持泛型特化
 
-### 7. AOT 编译 (JDK 23-25)
+### 7. AOT 编译与 Project Leyden (JDK 23-25)
 
 - JEP 514: AOT Command-Line Ergonomics
+- JEP 515: Ahead-of-Time Method Profiling (与 Igor Veresov 合作)
 - 改进 AOT 编译体验
 - 启动时间提升 30-40%
+- 与 Mark Reinhold 在 JVMLS 2023 共同展示 Project Leyden 原型
+
+### 8. 早期历史贡献
+
+在 JVM/Java 架构之外，John Rose 还有大量早期贡献：
+- **HotSpot 初始移植**: 完成 HotSpot VM 到 SPARC 架构的首次移植
+- **sun.misc.Unsafe API**: 设计并实现了 Unsafe API，被大量高性能框架广泛使用
+- **Java 内部类 (Inner Classes)**: 参与设计 Java 1.1 的内部类机制
+- **Pack200 压缩算法**: 设计了 JAR 归档文件的高效压缩格式 (JSR 200)
+- **Profile-driven JIT 优化**: 基于运行时配置的 JIT 编译优化
+- **C* 并行语言**: 在 Thinking Machines Corporation 与 Guy Steele、Stephen Wolfram 共同发明 (1987)
+- **动态语言实现**: Common Lisp、Scheme ("esh")、C++ 动态绑定
 
 ---
 
@@ -180,6 +212,22 @@ String result = (String) mh.invokeExact("hello");  // "HELLO"
 | [Vladimir Kozlov](../../by-contributor/profiles/vladimir-kozlov.md) | Oracle | Vector API | 联合作者 |
 | Guy Steele | Oracle | Valhalla, Value Types | 技术合作 |
 | [Chen Liang](../../by-contributor/profiles/chen-liang.md) | Oracle | ClassFile API, Method Handles | 技术导师 |
+| [Mark Reinhold](../../by-contributor/profiles/mark-reinhold.md) | Oracle | Project Leyden, JDK Architecture | 架构合作 |
+| Igor Veresov | Oracle | AOT Method Profiling (JEP 515) | 联合作者 |
+
+### OpenJDK 社区角色
+
+| 项目/组 | 角色 |
+|---------|------|
+| **Da Vinci Machine Project** | Lead |
+| **Project Panama** | Lead/Guide |
+| **Project Valhalla** | Lead/Guide |
+| **Project Metropolis** | Lead/Guide |
+| **Compiler Group** | Member |
+| **HotSpot Group** | Member |
+| **Amber Project** | Reviewer |
+| **Graal Project** | Committer |
+| **Galahad Project** | Committer |
 
 ### 协作模式
 
@@ -190,7 +238,11 @@ John Rose (jrose)
     │
     ├─ Vladimir Kozlov ─ Vector API
     │
-    ├─ Guy Steele ────── Value Types
+    ├─ Guy Steele ────── Value Types, C*
+    │
+    ├─ Mark Reinhold ─── Project Leyden
+    │
+    ├─ Igor Veresov ──── AOT Method Profiling
     │
     └─ Chen Liang ────── ClassFile API
 ```
@@ -208,7 +260,11 @@ John Rose (jrose)
 
 ### 技术演讲
 
+- **Inside.java Podcast Episode 42** (2025-12): "From Sumatra to Panama, from Babylon to Valhalla" — 讨论特性设计、技术债务、Rice 定理与静态/动态检查的关系
+- **JVMLS 2023**: 与 Mark Reinhold 共同展示 Project Leyden 原型，Spring Boot 应用启动时间缩短 50-80%
+- **Devoxx/Conference Talk**: "Your next JVM: Panama, Valhalla, Metropolis" — 阐述 JVM 未来架构方向
 - **Jfokus 2011**: "Method Handles and invokedynamic"
+- **JVMLS 2008**: JVM Language Summit 初始演讲，发表 Da Vinci Machine 愿景
 - **JavaOne 多次演讲**: JVM 内部机制、动态语言支持
 
 ---
@@ -239,8 +295,9 @@ John Rose (jrose)
 | **Stream API** | JDK 8 | 依赖 Lambda 和方法引用 |
 | **动态语言支持** | JDK 7+ | JRuby, Jython, Nashorn |
 | **Vector API** | JDK 16-21 | 与 Vladimir Kozlov 合作 |
-| **AOT 编译** | JDK 23-25 | JEP 514 |
+| **AOT 编译 (Leyden)** | JDK 24-25 | JEP 514, JEP 515 |
 | **Value Types** | 开发中 | Project Valhalla |
+| **Foreign Function & Memory** | JDK 16-22 | Project Panama |
 
 ### 社区影响
 
@@ -255,27 +312,40 @@ John Rose (jrose)
 ### 官方资料
 - [Inside.java Profile](https://inside.java/u/JohnRose/)
 - [OpenJDK Census: jrose](https://openjdk.org/census#jrose)
+- [GitHub: rose00](https://github.com/rose00)
+- [Oracle Blog](https://blogs.oracle.com/jrose/)
+- [X (Twitter): @JohnRose00](https://x.com/JohnRose00)
 
 ### JEP 文档
 - [JEP 160: Lambda-Form Representation](/jeps/language/jep-160.md)
 - [JEP 309: Dynamic Class-File Constants](/jeps/language/jep-309.md)
 - [JEP 514: AOT Command-Line Ergonomics](/jeps/performance/jep-514.md)
+- [JEP 515: Ahead-of-Time Method Profiling](https://openjdk.org/jeps/515)
 
 ### 技术文档
 - [Method handles and invokedynamic - OpenJDK Wiki](https://wiki.openjdk.org/spaces/HotSpot/pages/11829269/Method+handles+and+invokedynamic)
 - [Token Codes: IR for Liftable Lambdas](https://cr.openjdk.org/~jrose/panama/token-codes.html)
 - [Value Types for Java](https://cr.openjdk.org/~jrose/values/values-0.html)
+- [Project Metropolis Proposal](https://cr.openjdk.org/~jrose/metropolis/Metropolis-Proposal.html)
 
 ### 论文
 - [Bytecodes meet Combinators: invokedynamic on the JVM (ACM)](https://dl.acm.org/doi/10.1145/1711506.1711508) (可能需要机构访问)
+
+### 演讲录音/播客
+- [Inside.java Podcast Ep. 42: From Sumatra to Panama, from Babylon to Valhalla](https://inside.java/2025/12/10/podcast-042/)
 
 ---
 
 **Sources**:
 - [Inside.java - JohnRose](https://inside.java/u/JohnRose/)
 - [OpenJDK Census: jrose](https://openjdk.org/census#jrose)
+- [GitHub: rose00](https://github.com/rose00)
+- [Oracle Blog: jrose](https://blogs.oracle.com/jrose/)
 - [JEP 160](/jeps/language/jep-160.md)
 - [JEP 309](/jeps/language/jep-309.md)
 - [JEP 514](/jeps/performance/jep-514.md)
+- [JEP 515](https://openjdk.org/jeps/515)
 - [ACM Paper - invokedynamic](https://dl.acm.org/doi/10.1145/1711506.1711508)
 - [OpenJDK Wiki - Method handles and invokedynamic](https://wiki.openjdk.org/spaces/HotSpot/pages/11829269/Method+handles+and+invokedynamic)
+- [Da Vinci Machine - Wikipedia](https://en.wikipedia.org/wiki/Da_Vinci_Machine)
+- [Inside.java Podcast Ep. 42](https://inside.java/2025/12/10/podcast-042/)

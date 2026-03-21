@@ -1,5 +1,5 @@
-# Erik Ö Österlund
-> **ZGC 栐 AA, A2, AOT 样条样对象缓存核心开发者**
+# Erik Österlund
+> **ZGC 核心开发者, AOT 对象缓存, 《The Z Garbage Collector: In JDK 25》作者**
 
 ---
 ## 目录
@@ -19,14 +19,18 @@
 |------|-----|
 | **姓名** | Erik Österlund |
 | **当前组织** | [Oracle](../../contributors/orgs/oracle.md) |
+| **职位** | Consulting Member of Technical Staff, Java Platform Group |
 | **位置** | Sweden |
 | **OpenJDK** | [@eosterlund](https://openjdk.org/census#eosterlund) |
+| **Mastodon** | [@eosterlund_fisk](https://mastodon.social/@eosterlund_fisk) |
 | **角色** | JDK Reviewer |
+| **教育背景** | BSc, MSc, PhD - Linnaeus University, Sweden (PhD 2019, 垃圾收集方向) |
 | **PRs** | 96+ (累计) |
 | **JDK 26 Commits** | 12 |
 | **主要领域** | ZGC, AOT, 并发, 内存管理 |
 | **主导 JEP** | JEP 516: AOT Object Caching |
-| **活跃时间** | 2017 - 至今 |
+| **著作** | 《The Z Garbage Collector: In JDK 25》(CRC Press) |
+| **活跃时间** | 2016 - 至今 |
 
 > **数据来源**: [OpenJDK Census](https://openjdk.org/census#eosterlund), [ZGC Timeline](../by-topic/core/gc/timeline.md)
 
@@ -34,15 +38,19 @@
 
 ## 2. 职业背景
 
-Erik Österlund 是 **ZGC (Z Garbage Collector)** 的创始成员之一**， 与 Per Lidén 和 Stefan Karlsson 一起设计了 ZGC。后来专注于 AOT 和内存管理优化。
+Erik Österlund 在 Linnaeus University 完成了 BSc、MSc 和 PhD 学位，研究方向均为垃圾收集。2012 年在北京的内存管理会议上结识了 Oracle 的 Jesper Wilhelmsson，随后获得研究实习机会。2016 年正式加入 Oracle，开始参与 ZGC 开发，成为 **ZGC (Z Garbage Collector)** 的核心开发者之一，与 Per Lidén 和 Stefan Karlsson 一起设计了 ZGC。2019 年完成博士答辩（论文: "Going beyond on-the-fly garbage collection and improving self-adaption with enhanced interfaces"）。后来专注于 AOT 和内存管理优化。2024 年出版专著《The Z Garbage Collector: In JDK 25》。
 
 ### 职业时间线
 | 时间 | 事件 | 详情 |
 |------|------|------|
+| **2012** | 内存管理会议 (北京) | 结识 Oracle 的 Jesper Wilhelmsson |
+| **2016** | 加入 Oracle | HotSpot GC 团队，开始参与 ZGC 开发 |
 | **2018** | ZGC 引入 | JEP 333 实验性特性 (与 Per Lidén, Stefan Karlsson 合作) |
-| **2018+** | Oracle HotSpot | HotSpot GC 团队 |
+| **2019** | PhD 答辩 | Linnaeus University, 垃圾收集方向 |
+| **2020** | PLDI 2020 论文 | "Improving Program Locality in the GC using Hotness" |
+| **2024** | 出版专著 | 《The Z Garbage Collector: In JDK 25》(CRC Press) |
 | **2024** | JEP 516 Lead | AOT Object Caching 主导者 |
-| **JDK 26** | 12 commits | AOT 齀名排名第 16 |
+| **JDK 26** | 12 commits | AOT 相关贡献 |
 
 ---
 

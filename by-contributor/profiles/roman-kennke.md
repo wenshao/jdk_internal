@@ -1,6 +1,6 @@
 # Roman Kennke
 
-> Red Hat Principal Software Engineer | JEP 519 Lead | Shenandoah GC Contributor
+> Datadog JVM Engineer | JEP 519 Lead | Shenandoah GC Project Lead | Project Lilliput Lead | Java Champion
 
 ---
 ## 目录
@@ -19,15 +19,14 @@
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Roman Kennke |
-| **Current Organization** | Red Hat |
-| **Position** | Principal Software Engineer |
-| **Location** | Germany |
+| **Current Organization** | Datadog |
+| **Previous Organizations** | Amazon (Principal Engineer) -> Red Hat (Principal Software Engineer) |
+| **Location** | Zurich, Switzerland |
 | **GitHub** | [@rkennke](https://github.com/rkennke) |
-| **Email** | rkennke@redhat.com |
 | **OpenJDK** | [@rkennke](https://openjdk.org/census#rkennke) |
-| **Role** | JDK Committer, JDK Reviewer |
-| **Primary Areas** | Shenandoah GC, Compact Object Headers, AArch64 |
-| **Active Since** | 2018+ |
+| **Role** | JDK Committer, JDK Reviewer, Java Champion |
+| **Primary Areas** | Shenandoah GC, Compact Object Headers, Project Lilliput, AArch64 |
+| **Active Since** | 2004+ (GNU Classpath), OpenJDK since 2007+ |
 
 > **数据来源**: [GitHub](https://github.com/rkennke), [OpenJDK Census](https://openjdk.org/census#rkennke), [JEP 519](https://openjdk.org/jeps/519)
 
