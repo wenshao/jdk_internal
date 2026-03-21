@@ -1,18 +1,22 @@
 # Raffaello Giulietti
 
-> **核心库专家** | **数学库** | **独立贡献者**
+> **Organization**: Oracle (since April 2022)
+> **Role**: Core Libraries Group Member, JDK Committer
+> **Focus**: Numerics, Floating-Point, Formatting
 
 ---
 
 ## 个人简介
 
-**Raffaello Giulietti** 是 Java 核心库的活跃贡献者，专注于数学库和字符串转换算法的优化。他在 `java.math` 和 `FloatingDecimal` 相关领域有深入贡献。
+**Raffaello Giulietti** 是 Oracle 核心库团队的成员（自2022年4月加入），专注于数学库和字符串转换算法的优化。他在 `java.math` 和 `FloatingDecimal` 相关领域有深入贡献，同时也涉及正则表达式和随机数生成等领域。2024年2月，经 Brian Burkhalter 提名，以14票赞成、0票否决通过投票，成为 Core Libraries Group Member。
 
 | 项目 | 信息 |
 |------|------|
 | **GitHub** | [@rgiulietti](https://github.com/rgiulietti) |
+| **Organization** | Oracle (Core Libraries Team, since April 2022) |
+| **OpenJDK Role** | Core Libraries Group Member (Feb 2024), JDK Committer |
 | **所在地** | 意大利 |
-| **主要贡献** | 核心库、数学库、字符串转换 |
+| **主要贡献** | 核心库：numerics, formatting, regular expressions, random number generation |
 | **Integrated PRs** | 75 |
 
 ---
@@ -22,7 +26,7 @@
 | 指标 | 值 |
 |------|-----|
 | **Integrated PRs** | 75 |
-| **主要领域** | java.math, FloatingDecimal, 字符串转换 |
+| **主要领域** | java.math, FloatingDecimal, formatting, regex, random |
 | **平均合入时间** | 7-14 天 |
 | **代码变更** | +50,000 / -30,000 (估计) |
 

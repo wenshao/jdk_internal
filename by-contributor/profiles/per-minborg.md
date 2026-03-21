@@ -1,6 +1,11 @@
 # Per Minborg (Per-Åke Minborg)
 
-> Java 核心库开发者，JEP 526 主导者，Speedment 创始人
+> **GitHub**: [@pminborg](https://github.com/pminborg)
+> **OpenJDK**: [@pminborg](https://openjdk.org/census#pminborg)
+> **Organization**: Oracle (Consulting Member of Technical Staff)
+> **Inside.java**: [Per-Ake Minborg](https://inside.java/u/Per-AkeMinborg/)
+>
+> Java 核心库开发者，JEP 502/526 (Lazy Constants) 主导者，Speedment 创始人
 
 ---
 ## 目录
@@ -92,7 +97,8 @@
 
 | JEP | 标题 | 角色 | 状态 |
 |-----|------|------|------|
-| [JEP 526](https://openjdk.org/jeps/526) | Lazy Constants | Lead | JDK 26 |
+| [JEP 502](https://openjdk.org/jeps/502) | Lazy Constants (First Preview) | Lead | JDK 25 |
+| [JEP 526](https://openjdk.org/jeps/526) | Lazy Constants (Second Preview) | Lead | JDK 26 |
 | JEP Draft 8312611 | Computed Constants | Co-author | Draft |
 
 ### 技术领域
@@ -151,13 +157,15 @@ Java Stream ORM 工具包和运行时，可以直接从数据库模式生成代�
 
 ## 5. 关键贡献
 
-### JEP 526: Lazy Constants
+### JEP 502/526: Lazy Constants
 
-主导 JDK 26 中的惰性常量实现：
+主导 Lazy Constants 特性，首次在 JDK 25 预览 (JEP 502)，JDK 26 第二次预览 (JEP 526)：
 
+- **LazyConstant API**: 通过 Supplier 惰性初始化值，最多成功执行一次
+- **@Stable 集成**: 赋值后的字段标记为 @Stable，启用常量折叠
 - **启动性能**: 改善启动时间
 - **内存占用**: 减少内存占用
-- **延迟初始化**: 推迟初始化优化
+- **Inside.java Podcast**: [Episode 49 "LazyConstants in JDK 26"](https://inside.java/2026/03/06/podcast-049/)
 
 ### Project Panama: Foreign Function & Memory API
 

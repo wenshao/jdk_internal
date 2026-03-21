@@ -51,8 +51,9 @@ Tobias Hartmann 是 Oracle 的 **软件开发经理** 和 **编译器工程师**
 
 - **职位**: Software Development Manager, Compiler Engineer
 - **部门**: Java Platform Group, HotSpot Compiler Team
-- **成为 JDK Committer**: 2014年7月 (JDK 9)
-- **OpenJDK Members Group**: 2022年入选
+- **成为 JDK Committer**: [2014年7月 (JDK 9)](https://mail.openjdk.org/pipermail/jdk9-dev/2014-July/001077.html)
+- **成为 hotspot Group Member**: [2016年6月](http://mail.openjdk.java.net/pipermail/hotspot-dev/2016-June/023445.html)
+- **贡献数**: 130+ changes (截至2016), 563+ commits (截至2026)
 
 ### 教育背景
 
@@ -73,16 +74,17 @@ Tobias Hartmann 是 Oracle 的 **软件开发经理** 和 **编译器工程师**
 - **JDK-8254129**: 引入 IR (Intermediate Representation) 测试框架
 - 支持在 JTreg 编译器测试中使用正则表达式匹配 IR
 
-### 3. ZGC 相关工作
+### 3. Project Valhalla
 
-虽然主要专长是编译器技术，但也参与了 ZGC (Z Garbage Collector) 相关工作：
-- 审查 ZGC 补丁
-- 与 GC 团队协作
+参与 Value Types for Java 的编译器支持工作，在 openjdk/valhalla 仓库贡献多个 PR:
+- C2 编译器对 inline types 的标量替换优化
+- Value type 的编译和优化支持
 
 ### 4. 重要 Bug 修复
 
 - **JDK-8295210**: IR framework 不应白名单 -XX:-UseTLAB
 - **JDK-8236136**: 使用 CompilationMode 的测试修复
+- **JDK-8347006**: LoadRangeNode 在 arraycopy intrinsic 中浮动到数组守卫之上
 - 多个编译器稳定性改进
 
 ---
@@ -110,9 +112,10 @@ Tobias Hartmann 是 Oracle 的 **软件开发经理** 和 **编译器工程师**
 
 Tobias 在多个会议和大学发表技术演讲：
 
-- **"The Java HotSpot VM Under the Hood"** (ETH Zürich, 2016-2020)
-- **"Debugging the Java HotSpot VM"** (2020)
-- ETH Zürich 编译器设计客座讲座
+- **"The Java HotSpot VM Under the Hood"** ([ETH Zürich, 2016-2020](https://cr.openjdk.org/~thartmann/talks/))
+- **"Debugging the Java HotSpot VM"** ([2020](https://cr.openjdk.org/~thartmann/talks/))
+- **"Compiler Design Guest Talk"** ([ETH Zürich, 2017-2018](https://cr.openjdk.org/~thartmann/talks/2018-Compiler-Design-Guest-Talk.pdf))
+- ETH Zürich 编译器设计客座讲座 (多年)
 
 ---
 
@@ -150,8 +153,20 @@ Tobias 在多个会议和大学发表技术演讲：
 
 ---
 
+**文档版本**: 2.0
+**最后更新**: 2026-03-22
+**更新内容**:
+- 修正 GitHub handle: @TobiHartmann (非 @thartmann)
+- 添加 GitHub 统计: 563+ commits, 166 integrated PRs, 51 followers
+- 添加 hotspot Group Member (2016-06)
+- 添加 Project Valhalla 贡献
+- 添加 Twitter/X handle
+- 添加演讲链接 (cr.openjdk.org)
+
 **Sources**:
 - [LinkedIn - Tobias Hartmann](https://ch.linkedin.com/in/tobihartmann)
 - [OpenJDK Census - thartmann](https://openjdk.org/census#thartmann)
 - [CFV: New JDK 9 Committer](https://mail.openjdk.org/pipermail/jdk9-dev/2014-July/001077.html)
+- [CFV: New hotspot Group Member](http://mail.openjdk.java.net/pipermail/hotspot-dev/2016-June/023445.html)
 - [ACM Paper - Efficient code management](https://dl.acm.org/doi/10.1145/2684907)
+- [GitHub](https://github.com/TobiHartmann)

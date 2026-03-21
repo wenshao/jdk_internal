@@ -1,9 +1,10 @@
 # Chris Hegarty
 
 > **GitHub**: [@ChrisHegarty](https://github.com/ChrisHegarty)
+> **OpenJDK**: [@chegar](https://openjdk.org/census#chegar)
 > **Twitter/X**: [@chegar999](https://x.com/chegar999)
 > **LinkedIn**: [Chris Hegarty](https://ie.linkedin.com/in/chegar999)
-> **Organization**: Elastic (前 Oracle)
+> **Organization**: Elastic (former Oracle Java Platform Group)
 > **Location**: Dublin, Ireland
 
 ---
@@ -88,6 +89,14 @@ HttpResponse<String> response = client.send(
 - Encapsulating JDK Internals
 - 模块系统设计
 
+### Panama Vector API (Apache Lucene)
+
+在 Elastic 工作期间，Chris 将 OpenJDK Panama Vector API 集成到 Apache Lucene 中：
+- 使用 Java 21 Project Panama Vector API 实现 VectorUtilProvider ([PR #12363](https://github.com/apache/lucene/pull/12363))
+- 集成 Incubating Panama Vector API ([PR #12311](https://github.com/apache/lucene/pull/12311))
+- 更新 Vectorization Provider 以支持 JDK 23 ([PR #13678](https://github.com/apache/lucene/pull/13678))
+- 为 OpenJDK panama-foreign 项目贡献 NIO channel 和 MemorySegment 改进
+
 ---
 
 ## 5. OpenJDK 提名活动
@@ -121,9 +130,14 @@ Chris Hegarty 在 Java 社区的影响力：
 | **Twitter/X** | [@chegar999](https://x.com/chegar999) |
 | **LinkedIn** | [chegar999](https://ie.linkedin.com/in/chegar999) |
 | **OpenJDK Census** | [chegar](https://openjdk.org/census#chegar) |
+| **Elasticsearch Labs** | [Author Page](https://www.elastic.co/search-labs/author/chris-hegarty) |
 
 ---
 
-> **文档版本**: 1.0
-> **最后更新**: 2026-03-20
-> **创建原因**: 补充 OpenJDK Reviewer 和 HTTP Client API 主要开发者档案
+> **文档版本**: 1.1
+> **最后更新**: 2026-03-22
+> **更新内容**:
+> - 添加 OpenJDK census 链接到 header
+> - 添加 Panama Vector API / Apache Lucene 集成贡献
+> - 添加 Elasticsearch Labs 作者页链接
+> - 修正 Organization 描述

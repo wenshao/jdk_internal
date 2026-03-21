@@ -93,7 +93,7 @@
 
 ## 5. 技术特长
 
-`HotSpot` `内存管理` `诊断工具` `测试框架` `JVMTI` `内部API` `堆外内存`
+`HotSpot` `Metaspace` `内存管理` `诊断工具` `Compact Object Headers` `AIX` `SapMachine`
 
 ---
 

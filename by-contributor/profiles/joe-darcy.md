@@ -1,8 +1,10 @@
 # Joe Darcy
 
+> **GitHub**: [@jddarcy](https://github.com/jddarcy)
 > **OpenJDK**: [@darcy](https://openjdk.org/census#darcy)
-> **Organization**: Oracle
+> **Organization**: Oracle (Member of Technical Staff, Java Platform Group)
 > **LinkedIn**: [jddarcy](https://www.linkedin.com/in/jddarcy)
+> **Inside.java**: [JoeDarcy](https://inside.java/u/JoeDarcy/)
 > **Education**: Stanford University (HCP Master's)
 
 ---
@@ -19,9 +21,9 @@
 
 ## 1. 概述
 
-Joe Darcy 是 Oracle 的杰出工程师，长期担任 JDK 核心库的技术负责人。他对 JDK 的贡献涵盖数学库、常量折叠、注解处理等多个领域。他在 Java 平台上工作超过 20 年，包括核心库、数值计算和 Project Coin。
+Joe Darcy 是 Oracle 的长期 JDK 开发者，在 Java 平台上工作超过 20 年 (Sun Microsystems -> Oracle)。他被称为 "Java Floating-Point Czar"，负责 Java 数值计算，同时领导 Compatibility and Specification Review (CSR) 工作组，负责审查 JDK 所有接口变更、新 API、命令行选项等，每年审查数百项变更。他的贡献涵盖核心库、数值计算、Project Coin、基础设施迁移等多个领域。
 
-> **数据来源**: [LinkedIn](https://www.linkedin.com/in/jddarcy)
+> **数据来源**: [Inside.java](https://inside.java/u/JoeDarcy/), [GitHub](https://github.com/jddarcy), [Oracle Blog](https://blogs.oracle.com/authors/joe-darcy)
 
 ---
 
@@ -30,14 +32,44 @@ Joe Darcy 是 Oracle 的杰出工程师，长期担任 JDK 核心库的技术负
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Joseph D. Darcy (Joe Darcy) |
-| **当前组织** | Oracle |
+| **当前组织** | Oracle (Java Platform Group) |
+| **GitHub** | [@jddarcy](https://github.com/jddarcy) |
+| **OpenJDK** | [@darcy](https://openjdk.org/census#darcy) |
+| **角色** | JDK Reviewer, CSR Lead |
 | **教育** | Stanford University (HCP Master's program) |
-| **专长** | Math Libraries, FDLIBM, Constant Folding, Numerics, Project Coin |
+| **专长** | Math Libraries, FDLIBM, Numerics, Project Coin, CSR, 基础设施 |
+| **称号** | "Java Floating-Point Czar" |
+| **Commits (openjdk/jdk)** | 1,194+ |
+| **PRs (integrated)** | 351 |
 | **工作经验** | Sun Microsystems → Oracle (20+ years) |
+| **Inside.java** | [JoeDarcy](https://inside.java/u/JoeDarcy/) |
+| **Oracle Blog** | [Joe Darcy](https://blogs.oracle.com/authors/joe-darcy) |
 
 ---
 
 ## 3. 主要贡献
+
+### JEP 贡献 (Owner/Author)
+
+| JEP | 标题 | JDK 版本 |
+|-----|------|----------|
+| JEP 213 | Milling Project Coin | JDK 9 |
+| JEP 212 | Resolve Lint and Doclint Warnings | JDK 9 |
+| JEP 211 | Elide Deprecation Warnings on Import Statements | JDK 9 |
+| JEP 296 | Consolidate the JDK Forest into a Single Repository | JDK 10 |
+| JEP 306 | Restore Always-Strict Floating-Point Semantics | JDK 17 |
+| JEP 357 | Migrate from Mercurial to Git | JDK 16 |
+| JEP 369 | Migrate to GitHub | JDK 16 |
+
+### Project Coin (JSR 334)
+
+Joe Darcy 领导的 Project Coin 为 JDK 7 引入了多项小型语言改进:
+- Strings in switch
+- 二进制字面量和下划线分隔
+- Multi-catch 和更精确的 rethrow
+- Diamond 语法 (`<>`)
+- try-with-resources
+- @SafeVarargs
 
 ### JDK 26 (2025-2026)
 
@@ -49,9 +81,10 @@ Joe Darcy 是 Oracle 的杰出工程师，长期担任 JDK 核心库的技术负
 
 | 领域 | 说明 |
 |------|------|
-| **数学库** | FDLIBM、Math 库优化 |
-| **常量折叠** | 编译时常量表达式求值 |
-| **JVM 注解** | @Stable、@Contended 等内部注解 |
+| **数值计算** | FDLIBM、Math 库优化、strictfp 语义 |
+| **CSR Lead** | Compatibility and Specification Review 工作组负责人 |
+| **基础设施** | JDK 仓库合并、Git/GitHub 迁移 |
+| **语言改进** | Project Coin (JDK 7), Milling Project Coin (JDK 9) |
 
 ---
 
@@ -85,11 +118,24 @@ Joe Darcy 是 Oracle 的杰出工程师，长期担任 JDK 核心库的技术负
 
 ### 链接
 
+- **GitHub**: [@jddarcy](https://github.com/jddarcy)
 - **OpenJDK Census**: [darcy](https://openjdk.org/census#darcy)
+- **Inside.java**: [JoeDarcy](https://inside.java/u/JoeDarcy/)
+- **Oracle Blog**: [Joe Darcy](https://blogs.oracle.com/authors/joe-darcy)
+- **LinkedIn**: [jddarcy](https://www.linkedin.com/in/jddarcy)
+- **ResearchGate**: [Joseph Darcy](https://www.researchgate.net/profile/Joseph-Darcy)
+- **Blog Archive**: [BlogsSunComArchive](https://github.com/jddarcy/BlogsSunComArchive)
 - **JDK-8362376 Thread**: [Mail Archive](https://mail.openjdk.org/archives/list/jdk-changes@openjdk.org/thread/6W4JAMJLVD4AVRUTCOWAYDLBI5I5PTFH/)
 
 ---
 
-> **文档版本**: 1.0
-> **最后更新**: 2026-03-20
-> **创建原因**: JDK-8362376 PR 分析
+> **文档版本**: 2.0
+> **最后更新**: 2026-03-22
+> **更新内容**:
+> - 修正描述: "Java Floating-Point Czar", 非"杰出工程师"
+> - 添加 CSR Lead 角色 (Compatibility and Specification Review)
+> - 添加完整 JEP 贡献列表 (7 个 JEP)
+> - 添加 Project Coin (JSR 334) 详细功能列表
+> - 添加 GitHub 统计: 1,194+ commits, 351 integrated PRs
+> - 添加 Inside.java, Oracle Blog, ResearchGate 链接
+> - 添加 GitHub handle @jddarcy
