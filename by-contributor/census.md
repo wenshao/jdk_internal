@@ -152,8 +152,8 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 | 角色 | 人数 | 代表贡献者 |
 |------|------|------------|
-| Reviewer | 35 | Thomas Schatzl, Jan Lahoda, David Holmes |
-| Committer | 3 | Damon Nguyen, Francesco Andreuzzi, Manuel Hässig |
+| Reviewer | 35 | [Thomas Schatzl](profiles/thomas-schatzl.md), [Jan Lahoda](profiles/jan-lahoda.md), [David Holmes](profiles/david-holmes.md) |
+| Committer | 3 | [Damon Nguyen](profiles/damon-nguyen.md), [Francesco Andreuzzi](profiles/francesco-andreuzzi.md), [Manuel Hässig](profiles/manuel-haessig.md) |
 
 ### Amazon
 
