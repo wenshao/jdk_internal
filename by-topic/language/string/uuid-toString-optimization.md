@@ -214,7 +214,7 @@ private static long hex8(long i) {
 ### 循环展开优化
 
 **提交**: [adb50724](https://github.com/openjdk/jdk/commit/adb50724a65)
-**作者**: [Kieran Farrell](../../by-contributor/profiles/)
+**作者**: Kieran Farrell
 **时间**: 2025-06-27
 
 小优化，减少循环开销：
@@ -370,8 +370,8 @@ public static long expand(long i, long mask) {
 
 ### 审查者
 
-- [Ron Pressler](../../by-contributor/profiles/) - JDK-8353741 审查
-- [Roger Riggs](../../by-contributor/profiles/) - 多次 PR 审查
+- Ron Pressler - JDK-8353741 审查
+- [Roger Riggs](../../by-contributor/profiles/roger-riggs.md) - 多次 PR 审查
 
 ---
 
@@ -416,4 +416,4 @@ ebadfaeb2e1 - 8196334: Optimize UUID#fromString
 **贡献者档案**:
 - [Shaojin Wen (温绍锦)](../../by-contributor/profiles/shaojin-wen.md)
 - [Claes Redestad](../../by-contributor/profiles/claes-redestad.md)
-- [Kieran Farrell](../../by-contributor/profiles/)
+- Kieran Farrell

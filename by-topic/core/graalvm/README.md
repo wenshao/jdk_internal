@@ -198,7 +198,7 @@ graalvm/
 ### 相关主题
 - [JIT 编译](../jit/)
 - [性能优化](../performance/)
-- [JEP 243: JVMCI](../../../jeps/compiler/jep-243.md)
+- [JEP 243](../../jeps/performance/jep-243.md)
 
 ---
 
