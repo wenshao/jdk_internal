@@ -33,12 +33,12 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 145 (核心) + 100 (测试) = 245 |
-| **Git Commits (次要)** | 6 (3 位次要贡献者) |
-| **贡献者数** | 8 (4 核心 + 1 测试 + 3 次要) |
+| **Integrated PRs** | 145 (核心) + 202 (测试) = 347 |
+| **Git Commits (次要)** | 4 (2 位次要贡献者) |
+| **贡献者数** | 9 (4 核心 + 1 测试 + 2 次要 + 2 PR贡献者) |
 | **活跃时间** | 2021 - 至今 |
 | **主要领域** | 核心库、C2 编译器、AArch64、ZGC、RISC-V |
-| **Dragonwell** | [Alibaba Dragonwell](https://github.com/alibaba/dragonwell8), [Dragonwell Team](dragonwell.md) |
+| **Dragonwell** | [Alibaba Dragonwell](https://github.com/dragonwell-project/dragonwell8), [Dragonwell Team](dragonwell.md) |
 
 > **统计说明**: 
 > - 核心/测试贡献者使用 GitHub Integrated PRs 统计
@@ -57,24 +57,29 @@
 | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | [@linade](https://github.com/linade) | 8 | Author | G1 GC, AArch64 |
 | [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | Author | ZGC |
 
+### 其他 PR 贡献者
+
+| 贡献者 | Profile | PRs | 角色 | 主要领域 |
+|--------|---------|-----|------|----------|
+| [Max Xing](../../by-contributor/profiles/max-xing.md) | [@MaxXSoft](https://github.com/MaxXSoft) | 16 | Author | RISC-V, C2 编译器, HotSpot |
+| [Lingjun Cao](../../by-contributor/profiles/lingjun-cao.md) | [@lingjun-cg](https://github.com/lingjun-cg) | 2 | Author | DecimalFormat 性能 |
+
 ### 次要贡献者
 
 > **说明**: 以下贡献者通过 git commit (使用 @alibaba-inc.com 邮箱) 贡献，未通过 GitHub PR 提交。
 
 | 贡献者 | Profile | Commits | 主要领域 |
 |--------|---------|---------|----------|
-| [Xingqi Zheng](../../by-contributor/profiles/xingqi-zheng.md) | [@MaxXSoft](https://github.com/MaxXSoft) | 2 | RISC-V, Shenandoah GC |
 | [Yibo Yan](../../by-contributor/profiles/yibo-yan.md) | - | 2 | CPU Load, 内存优化 |
-| [Lingjun Cao](../../by-contributor/profiles/lingjun-cao.md) | - | 2 | DecimalFormat 性能 |
 
 ### 前员工贡献
 
 | 贡献者 | 时期 | PRs | 当前状态 | 主要领域 |
 |--------|------|-----|----------|----------|
-| [Sendaoyan Yan](../../by-contributor/profiles/sendaoyan.md) | 2022-2026 | 100 | Independent/Other | 编译器测试，GC 测试 |
+| [SendaoYan](../../by-contributor/profiles/sendaoyan.md) | 2022-2026 | 202 | Independent/Other | 编译器测试，GC 测试 |
 
-> **注**: 
-> - 前员工的历史贡献 (202+ PRs) 仍归属于 Alibaba，因为这是在职期间的工作成果
+> **注**:
+> - 前员工的历史贡献 (202 PRs) 仍归属于 Alibaba，因为这是在职期间的工作成果
 > - 次要贡献者通过 git commit 统计，邮箱为 `@alibaba-inc.com`
 
 ---
@@ -141,7 +146,7 @@ JDK 25 继续了核心库性能优化的工作。
 
 **JDK 25 统计**: 20 PRs (Shaojin Wen: 18, Kuai Wei: 2)
 
-### JDK 24 (GA 2024-09)
+### JDK 24 (GA 2025-03)
 
 JDK 24 是阿里巴巴开始活跃贡献的版本。
 
@@ -162,41 +167,21 @@ JDK 24 是阿里巴巴开始活跃贡献的版本。
 
 | Issue | 标题 | 贡献者 | 类型 | 日期 |
 |-------|------|--------|------|------|
-| 8326936 | RISC-V: Shenandoah GC 原子操作修复 | [Xingqi Zheng](../../by-contributor/profiles/xingqi-zheng.md) | 正确性修复 | 2024-03-05 |
-| 8324280 | RISC-V: VM_Version::parse_satp_mode 修复 | [Xingqi Zheng](../../by-contributor/profiles/xingqi-zheng.md) | 正确性修复 | 2024-01-25 |
+| 8326936 | RISC-V: Shenandoah GC 原子操作修复 | [Max Xing](../../by-contributor/profiles/max-xing.md) | 正确性修复 | 2024-03-05 |
+| 8324280 | RISC-V: VM_Version::parse_satp_mode 修复 | [Max Xing](../../by-contributor/profiles/max-xing.md) | 正确性修复 | 2024-01-25 |
 | 8326446 | Apple M1 CPU Load 修复 | [Yibo Yan](../../by-contributor/profiles/yibo-yan.md) | 正确性修复 | 2024-03-08 |
 | 8319876 | VM_ThreadDump 内存优化 | [Yibo Yan](../../by-contributor/profiles/yibo-yan.md) | 内存优化 | 2023-11-17 |
 | 8333396 | java.text.Format 内部使用 StringBuilder | [Lingjun Cao](../../by-contributor/profiles/lingjun-cao.md) | 性能优化 | 2024-07-22 |
-| 8333462 | DecimalFormat 构造函数性能回归 | [Lingjun Cao](../../by-contributor/profiles/lingjun-cao.md) | 性能优化 | 2024-06-05 |
+| 8333462 | DecimalFormat 构造函数性能回归 | [Lingjun Cao](../../by-contributor/profiles/lingjun-cao.md) | 性能优化 | 2024-06-04 |
 
-**JDK 24 次要贡献统计**: 6 commits (Xingqi Zheng: 2, Yibo Yan: 2, Lingjun Cao: 2)
+**JDK 24 次要贡献统计**: 6 commits/PRs (Max Xing: 2, Yibo Yan: 2, Lingjun Cao: 2)
 
-### JDK 23
+### JDK 23 (GA 2024-09)
 
 JDK 23 是阿里巴巴贡献最活跃的版本，包含大量性能优化。
 
 | Issue | 标题 | 贡献者 | 类型 | 影响 |
 |-------|------|--------|------|------|
-| 8357913 | BigInteger 和 BigDecimal 添加 @Stable | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +3% |
-| 8357690 | CharacterData 添加 @Stable 和 final | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +2% |
-| 8357685 | String.indexOf/lastIndexOf 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +5% |
-| 8357289 | String 构造函数拆分为更小的方法 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +2% |
-| 8357063 | DecimalDigits 方法前置条件文档 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 文档改进 | - |
-| 8356605 | JRSUIControl.hashCode 使用 Long.hashCode | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码简化 | - |
-| 8356328 | C2 IR 节点 size_of() 函数 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 正确性修复 | - |
-| 8356036 | FileKey.hashCode 使用 Long.hashCode | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码简化 | - |
-| 8356021 | Locale.hashCode 使用 Double::hashCode | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | NaN 处理 | - |
-| 8355300 | BitSieve 添加 final | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +2% |
-| 8355240 | 移除 StringUTF16 未使用的 Import | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码清理 | - |
-| 8355177 | StringBuilder 空构造优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +5% |
-| 8353741 | HexFormat toUpper/toLower 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | - |
-| 8351565 | String.concat 微优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +3% |
-| 8351443 | InlineHiddenClassStrategy 实现 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 架构改进 | +5% |
-| 8349400 | 消除嵌套类提升启动速度 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +5% |
-| 8348898 | 移除未使用的 OctalDigits | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码清理 | -130 行 |
-| 8348880 | ZoneOffset.QUARTER_CACHE 使用 AtomicReferenceArray | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 内存优化 | -85% |
-| 8348870 | ByteOrder.toString 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | - |
-| 8347405 | MergeStores 反向字节顺序 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 正确性修复 | - |
 | 8344168 | Unsafe base offset 从 int 改为 long | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 溢出修复 | - |
 | 8343984 | Unsafe 地址溢出修复 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 安全修复 | - |
 | 8343962 | ArraysSupport.arrayToString 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +3% |
@@ -264,7 +249,9 @@ JDK 23 是阿里巴巴贡献最活跃的版本，包含大量性能优化。
 | 8326135 | ADLC 报告未使用的操作数 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 工具改进 | - |
 | 8323122 | AArch64 itable stub 大小估算 | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | 正确性修复 | - |
 
-**JDK 23 统计**: 93 PRs (Shaojin Wen: 89, Kuai Wei: 4, Yude Lin: 3)
+**JDK 23 统计**: 34 PRs (Shaojin Wen: 34) + Kuai Wei: 7, Yude Lin: 3 (包含跨版本 PR)
+
+> **注**: JDK 23 周期为 2024-03 至 2024-09-17 GA。部分 835xxxx 系列 PR 之前错误归入此版本，已移至 JDK 25。
 
 ### JDK 21 / JDK 22
 
@@ -318,23 +305,25 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 > **注**: 部分 PR 可能跨版本合入，统计基于主要目标版本。
 
-### 测试贡献 (Sendaoyan Yan)
+### 测试贡献 (SendaoYan)
 
 | 年份 | PRs | 主要领域 |
 |------|-----|----------|
 | **2026** | 24 | GC 测试，稳定性修复 |
-| **2025** | 76 | JFR 测试，编译器测试 |
-| **小计** | **100** | 测试稳定性 |
+| **2025** | 95 | JFR 测试，编译器测试 |
+| **2024** | 82 | 编译器测试，GC 测试 |
+| **2022** | 1 | 初始贡献 |
+| **小计** | **202** | 测试稳定性 |
 
 ### 总计
 
 | 类别 | PRs | 占比 |
 |------|-----|------|
-| 核心贡献者 | 145 | 59% |
-| 测试贡献 | 100 | 41% |
-| **总计** | **245** | 100% |
+| 核心贡献者 | 145 | 42% |
+| 测试贡献 | 202 | 58% |
+| **总计** | **347** | 100% |
 
-> **注**: 部分 PR 可能跨版本合入，统计基于主要目标版本。Sendaoyan Yan 100 PRs 为 2022-2026 年贡献，归属于 Alibaba。
+> **注**: 部分 PR 可能跨版本合入，统计基于主要目标版本。SendaoYan 202 PRs 为 2022-2026 年贡献，归属于 Alibaba。
 
 ## 6. 贡献时间线
 
@@ -347,7 +336,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 2026: ██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 25 PRs
 ```
 
-> **总计**: 245 PRs (2021-2026)
+> **总计**: 347 PRs (2021-2026)
 
 ---
 
@@ -603,7 +592,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 - [Sanhong Li](../../by-contributor/profiles/sanhong.md) - ASE 2021 论文作者，JVM 团队
 - [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) - C2 编译器专家
 - [Long Yang](../../by-contributor/profiles/yanglong1010.md) - JVM 团队，杭州
-- [Sendaoyan Yan](../../by-contributor/profiles/sendaoyan.md) - 编译器测试工程师
+- [SendaoYan](../../by-contributor/profiles/sendaoyan.md) - 编译器测试工程师
 - [Joshua Zhu](../../by-contributor/profiles/joshua-zhu.md) - 上海团队
 
 **外部链接**:
@@ -642,7 +631,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 ### 外部资源
 
-- [Alibaba Dragonwell](https://github.com/alibaba/dragonwell8)
+- [Alibaba Dragonwell](https://github.com/dragonwell-project/dragonwell8)
 - [Dragonwell 文档](https://dragonwell-jdk.io/)
 - [阿里云 Java](https://www.aliyun.com/product/dragonwell)
 - [OpenJDK Census - swen](https://openjdk.org/census#swen)
@@ -653,7 +642,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 - [Kuai Wei 贡献者档案](../../by-contributor/profiles/kuai-wei.md) - C2 编译器专家
 - [Yude Lin 贡献者档案](../../by-contributor/profiles/yude-lin.md) - G1 GC 专家
 - [Xiaowei Lu 贡献者档案](../../by-contributor/profiles/xiaowei-lu.md) - ZGC 专家
-- [Xingqi Zheng 贡献者档案](../../by-contributor/profiles/xingqi-zheng.md) - RISC-V 专家
+- [Max Xing 贡献者档案](../../by-contributor/profiles/max-xing.md) - RISC-V 专家
 - [Yibo Yan 贡献者档案](../../by-contributor/profiles/yibo-yan.md) - CPU Load/内存专家
 - [Lingjun Cao 贡献者档案](../../by-contributor/profiles/lingjun-cao.md) - DecimalFormat 专家
 - [中国贡献者索引](../../by-contributor/profiles/chinese-contributors.md)
@@ -663,6 +652,8 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 > **文档版本**: 3.0
 > **最后更新**: 2026-03-21
 > **更新内容**:
-> - 添加次要贡献者 (Xingqi Zheng, Yibo Yan, Lingjun Cao)
-> - 添加 RISC-V 和 DecimalFormat 技术领域
-> - 更新贡献者数 (5 核心 + 3 次要 + 1 测试)
+> - 修正 Max Xing (@MaxXSoft) 贡献者名称和 PR 数 (16 PRs，非 2 commits)
+> - 修正 SendaoYan PR 数 (202 PRs，非 100)
+> - 修正 JDK 版本 GA 日期
+> - 移除 JDK 23 中重复的 JDK 25 条目
+> - 更新贡献者数 (4 核心 + 2 PR贡献者 + 2 次要 + 1 测试)
