@@ -1,72 +1,59 @@
 # Lance Andersen
 
-> **Organization**: Oracle
-> **Role**: JDBC Lead
+> **Organization**: [Oracle](../../contributors/orgs/oracle.md)
 
 ---
 ## 目录
 
-1. [概述](#1-概述)
-2. [基本信息](#2-基本信息)
-3. [核心技术贡献](#3-核心技术贡献)
-4. [技术专长](#4-技术专长)
+1. [基本信息](#1-基本信息)
+2. [职业背景](#2-职业背景)
+3. [技术影响力](#3-技术影响力)
+4. [主要贡献](#4-主要贡献)
 5. [相关链接](#5-相关链接)
 
 ---
 
 
-## 1. 概述
-
-Lance Andersen 是 Oracle 的 **JDBC (Java Database Connectivity)** 技术负责人，专注于 Java 数据库连接和 SQL 相关功能。他在 JDK 26 中以 6 次提交贡献于 JDBC 模块。
-
----
-
-## 2. 基本信息
+## 1. 基本信息
 
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Lance Andersen |
-| **当前组织** | Oracle (Java Platform Group) |
-| **职位** | JDBC Specification Lead |
-| **专长** | JDBC, SQL, Database Connectivity |
-| **JDK 26 贡献** | 6 commits (JDBC) |
+| **当前组织** | [Oracle](../../contributors/orgs/oracle.md) |
+| **角色** | JDK Reviewer |
+| **PRs** | 50+ |
+| **主要领域** | JDBC, SQL |
 
 ---
 
-## 3. 核心技术贡献
+## 2. 职业背景
 
-### 1. JDBC
-
-Lance Andersen 负责 Java 数据库连接：
-- **JDBC API**: java.sql 包
-- **RowSet**: 行集支持
-- **DataSource**: 数据源实现
-
-### 2. SQL 支持
-
-- **SQL Syntax**: SQL 语法支持
-- **Transactions**: 事务管理
-- **Connection Pooling**: 连接池
+Lance Andersen 是 JDBC 规范的维护者，专注于数据库连接和 SQL 相关 API。
 
 ---
 
-## 4. 技术专长
+## 3. 技术影响力
 
-### 数据库连接
+| 指标 | 值 |
+|------|-----|
+| **PRs** | 50+ |
+| **主要贡献** | JDBC |
 
-- **JDBC**: Java 数据库连接
-- **SQL**: 结构化查询语言
-- **RowSet**: 行集 API
+---
+
+## 4. 主要贡献
+
+### JDBC
+- JDBC 规范维护
+- 数据库连接改进
 
 ---
 
 ## 5. 相关链接
 
-### 官方资料
-- [JDBC Specification](https://www.oracle.com/java/technologies/jdbc/)
-- [JSR 221: JDBC 4.0](https://jcp.org/en/jsr/detail?id=221)
+- [JDBC](https://docs.oracle.com/javase/tutorial/jdbc/)
 
 ---
 
-**Sources**:
-- [JDK 26 Top Contributors](./jdk26-top-contributors.md)
+> **文档版本**: 1.0
+> **最后更新**: 2026-03-21

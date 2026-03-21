@@ -1,6 +1,6 @@
 # Oracle
 
-> OpenJDK 主要贡献者
+> OpenJDK 主要维护者和最大贡献者
 
 ---
 ## 目录
@@ -10,68 +10,87 @@
 3. [按地区分类](#3-按地区分类)
 4. [组织架构](#4-组织架构)
 5. [影响的模块](#5-影响的模块)
-6. [主要领域](#6-主要领域)
+6. [主要领域与 JEP 贡献](#6-主要领域与-jep-贡献)
 7. [相关 PR 分析文档](#7-相关-pr-分析文档)
-8. [数据来源](#8-数据来源)
-9. [相关链接](#9-相关链接)
+8. [OpenJDK 治理参与](#8-openjdk-治理参与)
+9. [数据来源](#9-数据来源)
+10. [相关链接](#10-相关链接)
 
 ---
 
 
 ## 1. 概览
 
-Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun Microsystems 以来，一直主导 JDK 的开发。
+Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun Microsystems 以来，一直主导 JDK 的开发。Oracle 贡献者遍布美国、欧洲和亚洲，涵盖 HotSpot、Core Libraries、LangTools、Security 等所有核心领域。
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 4,000+ |
-| **贡献者数** | 500+ |
+| **Integrated PRs (JDK 26)** | 4,200+ |
+| **贡献者数** | 320+ |
 | **主要领域** | 全领域 |
+| **JDK 26 份额** | 70%+ |
+| **OpenJDK Governing Board** | Oracle 代表 |
 
 > **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。OpenJDK Committer 使用 `@openjdk.org` 邮箱提交代码，因此 git commits 按邮箱统计不准确。
+
+### 历史背景
+
+| 时间 | 事件 |
+|------|------|
+| **1995** | Sun Microsystems 发布 Java |
+| **2006** | OpenJDK 项目启动 |
+| **2010** | Oracle 收购 Sun Microsystems |
+| **2017** | JDK 9 发布，新的 6 个月发布周期 |
+| **2021-至今** | LTS 版本 (JDK 17, JDK 21, JDK 26) |
 
 ---
 
 ## 2. Top 贡献者
 
-### JDK 26 Top Oracle 贡献者
+### JDK 26 Top Oracle 贡献者 (按 PR 数量排序)
 
 | 排名 | 贡献者 | GitHub | PRs | 角色 | 领域 | 团队 | 档案 |
 |------|--------|--------|-----|------|------|------|------|
 | 1 | Thomas Schatzl | [@tschatzl](https://github.com/tschatzl) | 546 | Reviewer | G1 GC | HotSpot GC | [详情](../../by-contributor/profiles/thomas-schatzl.md) |
 | 2 | Ioi Lam | [@iklam](https://github.com/iklam) | 431 | Reviewer | CDS/AOT | HotSpot GC | [详情](../../by-contributor/profiles/ioi-lam.md) |
 | 3 | Coleen Phillimore | [@coleenp](https://github.com/coleenp) | 400 | Reviewer | HotSpot | HotSpot GC | [详情](../../by-contributor/profiles/coleen-phillimore.md) |
-| 4 | Albert Mingkun Yang | - | 744 | Committer | G1 GC, ZGC | HotSpot GC | [详情](../../by-contributor/profiles/albert-mingkun-yang.md) |
-| 5 | Naoto Sato | [@naotoj](https://github.com/naotoj) | 273 | Reviewer | 国际化 | Core Libraries | [详情](../../by-contributor/profiles/naoto-sato.md) |
-| 6 | Sergey Bylokhov | [@mrserb](https://github.com/mrserb) | 273 | Reviewer | AWT/2D | Core Libraries | [详情](../../by-contributor/profiles/sergey-bylokhov.md) |
-| 7 | Chen Liang | [@liach](https://github.com/liach) | 237 | Committer | ClassFile API | LangTools | [详情](../../by-contributor/profiles/chen-liang.md) |
-| 8 | Alexey Semenyuk | [@alexeysemenyukoracle](https://github.com/alexeysemenyukoracle) | 233 | Committer | AOT | HotSpot Compiler | [详情](../../by-contributor/profiles/alexey-semenyuk.md) |
-| 9 | Jan Lahoda | [@lahodaj](https://github.com/lahodaj) | 324 | Reviewer | javac | LangTools | [详情](../../by-contributor/profiles/jan-lahoda.md) |
-| 10 | Jaikiran Pai | [@jaikiran](https://github.com/jaikiran) | 322 | Reviewer | 构建 | Core Libraries | [详情](../../by-contributor/profiles/jaikiran-pai.md) |
-| 11 | Daniel Fuchs | [@dfuch](https://github.com/dfuch) | 192 | Committer | JMX | Core Libraries | [详情](../../by-contributor/profiles/daniel-fuchs.md) |
-| 12 | Kim Barrett | - | 100+ | Reviewer | GC, C++ | HotSpot GC | [详情](../../by-contributor/profiles/kim-barrett.md) |
-| 13 | David Holmes | - | 80+ | Reviewer | 并发 | Concurrency & Runtime | [详情](../../by-contributor/profiles/david-holmes.md) |
-| 14 | Erik Gahlin | - | 70+ | Reviewer | JFR | HotSpot Compiler | [详情](../../by-contributor/profiles/erik-gahlin.md) |
-| 15 | Brian Burkhalter | - | 60+ | Committer | 网络 | Core Libraries | [详情](../../by-contributor/profiles/brian-burkhalter.md) |
-| 16 | Emanuel Peter | - | 50+ | Reviewer | C2 编译器 | HotSpot Compiler | [详情](../../by-contributor/profiles/emanuel-peter.md) |
-| 17 | Phil Race | - | 120+ | Reviewer | Client Libraries | Core Libraries | [详情](../../by-contributor/profiles/phil-race.md) |
-| 18 | Prasanta Sadhukhan | - | 65+ | Reviewer | Desktop | Core Libraries | [详情](../../by-contributor/profiles/prasanta-sadhukhan.md) |
-| 19 | Volkan Yazici | - | 40+ | Committer | HTTP Client | Core Libraries | [详情](../../by-contributor/profiles/volkan-yazici.md) |
-| 20 | Justin Lu | - | 40+ | Committer | Localization | Core Libraries | [详情](../../by-contributor/profiles/justin-lu.md) |
-| 21 | Leonid Mesnik | - | 35+ | Reviewer | JVMTI | Concurrency & Runtime | [详情](../../by-contributor/profiles/leonid-mesnik.md) |
-| 22 | Claes Redestad | - | 30+ | Reviewer | Performance | Java Platform | [详情](../../by-contributor/profiles/claes-redestad.md) |
-| 23 | Magnus Ihse Bursie | - | 28+ | Reviewer | Build | Infrastructure | [详情](../../by-contributor/profiles/magnus-ihse-bursie.md) |
-| 24 | Hamlin Li | - | 20+ | Committer | RISC-V | **已离职 (Rivos)** | [详情](../../by-contributor/profiles/hamlin-li.md) |
-| 25 | Per Minborg | - | 15+ | Member | Core Libs | Core Libraries | [详情](../../by-contributor/profiles/per-minborg.md) |
-| 26 | Weijun Wang | - | 15+ | Reviewer | Security | Security | [详情](../../by-contributor/profiles/weijun-wang.md) |
-| 27 | Alan Bateman | - | 12+ | Reviewer | Concurrency | Concurrency & Runtime | [详情](../../by-contributor/profiles/alan-bateman.md) |
-| 28 | Erik Österlund | - | 12+ | Reviewer | AOT, GC | HotSpot GC | [详情](../../by-contributor/profiles/erik-osterlund.md) |
-| 29 | Doug Simon | - | 10+ | Member | Graal | Oracle Labs | [详情](../../by-contributor/profiles/doug-simon.md) |
-| 30 | Adam Sotona | [@asotona](https://github.com/asotona) | 30+ | Committer | ClassFile API | LangTools | [详情](../../by-contributor/profiles/adam-sotona.md) |
-| 31 | Jonathan Gibbons | - | 100+ | Reviewer | javac, javadoc | LangTools | [详情](../../by-contributor/profiles/jonathan-gibbons.md) |
-| 32 | Vicente Romero | - | 50+ | Reviewer | javac | LangTools | [详情](../../by-contributor/profiles/vicente-romero.md) |
+| 4 | Phil Race | [@prrace](https://github.com/prrace) | 303 | Reviewer | Client Libraries | Core Libraries | [详情](../../by-contributor/profiles/phil-race.md) |
+| 5 | Erik Gahlin | [@egahlin](https://github.com/egahlin) | 322 | Reviewer | JFR | HotSpot Runtime | [详情](../../by-contributor/profiles/erik-gahlin.md) |
+| 6 | Kim Barrett | [@kimbarrett](https://github.com/kimbarrett) | 352 | Reviewer | Atomic, C++ | HotSpot Runtime | [详情](../../by-contributor/profiles/kim-barrett.md) |
+| 7 | Emanuel Peter | [@eme64](https://github.com/eme64) | 226 | Reviewer | C2 编译器 | HotSpot Compiler | [详情](../../by-contributor/profiles/emanuel-peter.md) |
+| 8 | Jan Lahoda | [@lahodaj](https://github.com/lahodaj) | 324 | Reviewer | javac | LangTools | [详情](../../by-contributor/profiles/jan-lahoda.md) |
+| 9 | Jaikiran Pai | [@jaikiran](https://github.com/jaikiran) | 322 | Reviewer | 构建 | Core Libraries | [详情](../../by-contributor/profiles/jaikiran-pai.md) |
+| 10 | Daniel Fuchs | [@dfuchs](https://github.com/dfuchs) | 192+ | Reviewer | HTTP/3, JMX | Core Libraries | [详情](../../by-contributor/profiles/daniel-fuchs.md) |
+| 11 | Naoto Sato | [@naotoj](https://github.com/naotoj) | 273 | Reviewer | 国际化 | Core Libraries | [详情](../../by-contributor/profiles/naoto-sato.md) |
+| 12 | Sergey Bylokhov | [@mrserb](https://github.com/mrserb) | 273 | Reviewer | AWT/2D | Core Libraries | [详情](../../by-contributor/profiles/sergey-bylokhov.md) |
+| 13 | Chen Liang | [@liach](https://github.com/liach) | 237 | Reviewer | ClassFile API | LangTools | [详情](../../by-contributor/profiles/chen-liang.md) |
+| 14 | Alexey Semenyuk | [@alexeysemenyukoracle](https://github.com/alexeysemenyukoracle) | 233 | Committer | AOT | HotSpot Compiler | [详情](../../by-contributor/profiles/alexey-semenyuk.md) |
+| 15 | David Holmes | - | 80+ | Reviewer | 并发 | Concurrency & Runtime | [详情](../../by-contributor/profiles/david-holmes.md) |
+| 16 | Brian Burkhalter | - | 60+ | Committer | 网络 | Core Libraries | [详情](../../by-contributor/profiles/brian-burkhalter.md) |
+| 17 | Prasanta Sadhukhan | - | 65+ | Reviewer | Desktop | Core Libraries | [详情](../../by-contributor/profiles/prasanta-sadhukhan.md) |
+| 18 | Volkan Yazici | - | 40+ | Committer | HTTP Client | Core Libraries | [详情](../../by-contributor/profiles/volkan-yazici.md) |
+| 19 | Justin Lu | - | 40+ | Committer | Localization | Core Libraries | [详情](../../by-contributor/profiles/justin-lu.md) |
+| 20 | Leonid Mesnik | - | 35+ | Reviewer | JVMTI | Concurrency & Runtime | [详情](../../by-contributor/profiles/leonid-mesnik.md) |
+| 21 | Claes Redestad | [@redestad](https://github.com/redestad) | 30+ | Reviewer | Performance | Java Platform | [详情](../../by-contributor/profiles/claes-redestad.md) |
+| 22 | Magnus Ihse Bursie | - | 28+ | Reviewer | Build | Infrastructure | [详情](../../by-contributor/profiles/magnus-ihse-bursie.md) |
+| 23 | Hamlin Li | - | 20+ | Committer | RISC-V | **已离职 (Rivos)** | [详情](../../by-contributor/profiles/hamlin-li.md) |
+| 24 | Per Minborg | - | 15+ | Member | Core Libs | Core Libraries | [详情](../../by-contributor/profiles/per-minborg.md) |
+| 25 | Weijun Wang | - | 15+ | Reviewer | Security | Security | [详情](../../by-contributor/profiles/weijun-wang.md) |
+| 26 | Alan Bateman | - | 12+ | Reviewer | Concurrency | Concurrency & Runtime | [详情](../../by-contributor/profiles/alan-bateman.md) |
+| 27 | Erik Österlund | - | 12+ | Reviewer | AOT, GC | HotSpot GC | [详情](../../by-contributor/profiles/erik-osterlund.md) |
+| 28 | Doug Simon | - | 10+ | Member | Graal | Oracle Labs | [详情](../../by-contributor/profiles/doug-simon.md) |
+| 29 | Adam Sotona | [@asotona](https://github.com/asotona) | 30+ | Committer | ClassFile API | LangTools | [详情](../../by-contributor/profiles/adam-sotona.md) |
+| 30 | Jonathan Gibbons | - | 100+ | Reviewer | javac, javadoc | LangTools | [详情](../../by-contributor/profiles/jonathan-gibbons.md) |
+| 31 | Vicente Romero | - | 50+ | Reviewer | javac | LangTools | [详情](../../by-contributor/profiles/vicente-romero.md) |
+| 32 | Lance Andersen | - | 50+ | Reviewer | JDBC | Core Libraries | [详情](../../by-contributor/profiles/lance-andersen.md) |
 
-**小计**: 4,000+ PRs (以上 32 人，含 1 位已离职)
+**小计**: 4,200+ PRs (以上 32 人，含 1 位已离职)
+
+### 新晋 Committer/Reviewer
+
+| 贡献者 | 时间 | 角色 | 提名人 | 领域 |
+|--------|------|------|--------|------|
+| Claes Redestad | 2022-03 | OpenJDK Member | Daniel Fuchs | Performance |
 
 > **注**: Roman Kennke (Compact Headers) 是 Red Hat 员工，不是 Oracle，已从列表中移除
 
@@ -79,6 +98,7 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 > - **Reviewer**: 有权批准变更集的资深贡献者 ([详情](https://openjdk.org/bylaws))
 > - **Committer**: 有直接推送权限的贡献者 ([详情](https://openjdk.org/guide/))
 > - **Author**: 可以创建和提交更改的贡献者 ([详情](https://dev.java/contribute/openjdk/))
+> - **Member**: OpenJDK 成员组，参与治理和投票
 
 ---
 
@@ -88,49 +108,61 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 
 | 贡献者 | 位置 | GitHub | PRs | 角色 | 领域 | 档案 |
 |--------|------|--------|-----|------|------|------|
-| Ioi Lam | 加州 | [@iklam](https://github.com/iklam) | 431 | Reviewer | CDS/AOT | [详情](../../by-contributor/profiles/ioi-lam.md) |
-| Coleen Phillimore | - | [@coleenp](https://github.com/coleenp) | 400 | Reviewer | HotSpot | [详情](../../by-contributor/profiles/coleen-phillimore.md) |
-| Naoto Sato | 加州 San Jose | [@naotoj](https://github.com/naotoj) | 273 | Reviewer | 国际化 | [详情](../../by-contributor/profiles/naoto-sato.md) |
-| Chen Liang | 德州奥斯汀 | [@liach](https://github.com/liach) | 237 | Committer | ClassFile API | [详情](../../by-contributor/profiles/chen-liang.md) |
-| Jan Lahoda | - | [@lahodaj](https://github.com/lahodaj) | 324 | Reviewer | javac | [详情](../../by-contributor/profiles/jan-lahoda.md) |
-| Daniel Fuchs | - | [@dfuch](https://github.com/dfuch) | 192 | Committer | JMX | [详情](../../by-contributor/profiles/daniel-fuchs.md) |
-| David Holmes | - | - | 80+ | Reviewer | 并发 | [详情](../../by-contributor/profiles/david-holmes.md) |
-| Brian Burkhalter | - | - | 60+ | Committer | 网络 | [详情](../../by-contributor/profiles/brian-burkhalter.md) |
-| Justin Lu | - | - | 40+ | Committer | Localization | [详情](../../by-contributor/profiles/justin-lu.md) |
-| Leonid Mesnik | - | - | 35+ | Reviewer | JVMTI | [详情](../../by-contributor/profiles/leonid-mesnik.md) |
-| Claes Redestad | 瑞典 | - | 30+ | Reviewer | Performance | [详情](../../by-contributor/profiles/claes-redestad.md) |
-| Per Minborg | - | - | 15+ | Member | Core Libs | [详情](../../by-contributor/profiles/per-minborg.md) |
-| Alan Bateman | - | - | 12+ | Reviewer | Concurrency | [详情](../../by-contributor/profiles/alan-bateman.md) |
+| Ioi Lam | Mountain View, CA | [@iklam](https://github.com/iklam) | 431 | Reviewer | CDS/AOT | [详情](../../by-contributor/profiles/ioi-lam.md) |
+| Coleen Phillimore | Acton, MA | [@coleenp](https://github.com/coleenp) | 400 | Reviewer | HotSpot | [详情](../../by-contributor/profiles/coleen-phillimore.md) |
+| Kim Barrett | Malden, MA | [@kimbarrett](https://github.com/kimbarrett) | 352 | Reviewer | Atomic, C++ | [详情](../../by-contributor/profiles/kim-barrett.md) |
+| Naoto Sato | San Jose, CA | [@naotoj](https://github.com/naotoj) | 273 | Reviewer | 国际化 | [详情](../../by-contributor/profiles/naoto-sato.md) |
+| Chen Liang | Austin, TX | [@liach](https://github.com/liach) | 237 | Reviewer | ClassFile API | [详情](../../by-contributor/profiles/chen-liang.md) |
+| Jan Lahoda | Czechia (USA) | [@lahodaj](https://github.com/lahodaj) | 324 | Reviewer | javac | [详情](../../by-contributor/profiles/jan-lahoda.md) |
+| Phil Race | USA | [@prrace](https://github.com/prrace) | 303 | Reviewer | Client Libs | [详情](../../by-contributor/profiles/phil-race.md) |
+| Jonathan Gibbons | USA | - | 100+ | Reviewer | javac/javadoc | [详情](../../by-contributor/profiles/jonathan-gibbons.md) |
+| David Holmes | USA | - | 80+ | Reviewer | 并发 | [详情](../../by-contributor/profiles/david-holmes.md) |
+| Brian Burkhalter | USA | - | 60+ | Committer | 网络 | [详情](../../by-contributor/profiles/brian-burkhalter.md) |
+| Justin Lu | USA | - | 40+ | Committer | Localization | [详情](../../by-contributor/profiles/justin-lu.md) |
+| Leonid Mesnik | USA | - | 35+ | Reviewer | JVMTI | [详情](../../by-contributor/profiles/leonid-mesnik.md) |
+| Per Minborg | USA | - | 15+ | Member | Core Libs | [详情](../../by-contributor/profiles/per-minborg.md) |
+| Alan Bateman | USA | - | 12+ | Reviewer | Concurrency | [详情](../../by-contributor/profiles/alan-bateman.md) |
+| Lance Andersen | USA | - | 50+ | Reviewer | JDBC | [详情](../../by-contributor/profiles/lance-andersen.md) |
+| Vicente Romero | USA | - | 50+ | Reviewer | javac | [详情](../../by-contributor/profiles/vicente-romero.md) |
 
 ### 欧洲团队
 
 | 贡献者 | 位置 | GitHub | PRs | 角色 | 领域 | 档案 |
 |--------|------|--------|-----|------|------|------|
-| Thomas Schatzl | 德国 | [@tschatzl](https://github.com/tschatzl) | 546 | Reviewer | G1 GC | [详情](../../by-contributor/profiles/thomas-schatzl.md) |
-| Kim Barrett | - | - | 100+ | Reviewer | GC, C++ | [详情](../../by-contributor/profiles/kim-barrett.md) |
-| Erik Gahlin | 瑞典 | - | 70+ | Reviewer | JFR | [详情](../../by-contributor/profiles/erik-gahlin.md) |
-| Emanuel Peter | - | - | 50+ | Reviewer | C2 编译器 | [详情](../../by-contributor/profiles/emanuel-peter.md) |
-| Magnus Ihse Bursie | 瑞典 | - | 28+ | Reviewer | Build | [详情](../../by-contributor/profiles/magnus-ihse-bursie.md) |
-| Roman Kennke | 德国 | - | 18+ | Reviewer | Compact Headers | [详情](../../by-contributor/profiles/roman-kennke.md) |
-| Erik Österlund | 瑞典 | - | 12+ | Reviewer | AOT, GC | [详情](../../by-contributor/profiles/erik-osterlund.md) |
+| Thomas Schatzl | Germany | [@tschatzl](https://github.com/tschatzl) | 546 | Reviewer | G1 GC | [详情](../../by-contributor/profiles/thomas-schatzl.md) |
+| Erik Gahlin | Sweden | [@egahlin](https://github.com/egahlin) | 322 | Reviewer | JFR | [详情](../../by-contributor/profiles/erik-gahlin.md) |
+| Emanuel Peter | Zürich, Switzerland | [@eme64](https://github.com/eme64) | 226 | Reviewer | C2 编译器 | [详情](../../by-contributor/profiles/emanuel-peter.md) |
+| Claes Redestad | Stockholm, Sweden | [@redestad](https://github.com/redestad) | 30+ | Reviewer | Performance | [详情](../../by-contributor/profiles/claes-redestad.md) |
+| Magnus Ihse Bursie | Sweden | - | 28+ | Reviewer | Build | [详情](../../by-contributor/profiles/magnus-ihse-bursie.md) |
+| Erik Österlund | Sweden | - | 12+ | Reviewer | AOT, GC | [详情](../../by-contributor/profiles/erik-osterlund.md) |
+| Daniel Fuchs | Dublin, Ireland | [@dfuchs](https://github.com/dfuchs) | 192+ | Reviewer | HTTP/3, JMX | [详情](../../by-contributor/profiles/daniel-fuchs.md) |
 
 ### 亚洲团队
 
 | 贡献者 | 位置 | GitHub | PRs | 角色 | 领域 | 档案 |
 |--------|------|--------|-----|------|------|------|
-| Zhengyu Gu | 中国 | - | 30+ | Committer | G1 GC | [详情](../../by-contributor/profiles/zhengyu-gu.md) |
-| Weijun Wang | - | - | 15+ | Reviewer | Security | [详情](../../by-contributor/profiles/weijun-wang.md) |
-
-> **注**: Hamlin Li 曾在 Oracle 工作 (RISC-V 贡献)，现已加入 **Rivos**，不计入当前 Oracle 团队
+| Zhengyu Gu | China | - | 30+ | Committer | G1 GC | [详情](../../by-contributor/profiles/zhengyu-gu.md) |
+| Weijun Wang | China | - | 15+ | Reviewer | Security | [详情](../../by-contributor/profiles/weijun-wang.md) |
+| Sergey Bylokhov | Russia/USA | [@mrserb](https://github.com/mrserb) | 273 | Reviewer | AWT/2D | [详情](../../by-contributor/profiles/sergey-bylokhov.md) |
+| Alexey Semenyuk | Russia | [@alexeysemenyukoracle](https://github.com/alexeysemenyukoracle) | 233 | Committer | AOT | [详情](../../by-contributor/profiles/alexey-semenyuk.md) |
 
 ### Oracle Labs
 
 | 贡献者 | 位置 | GitHub | PRs | 角色 | 领域 | 档案 |
 |--------|------|--------|-----|------|------|------|
 | Doug Simon | - | - | 10+ | Member | Graal | [详情](../../by-contributor/profiles/doug-simon.md) |
+| Christian Hagedorn | - | - | 10+ | Member | Graal | [详情](../../by-contributor/profiles/christian-hagedorn.md) |
+
+### 已离职贡献者
+
+| 贡献者 | 原 Oracle 团队 | 现状 | PRs | 领域 | 档案 |
+|--------|----------------|------|-----|------|------|
+| Hamlin Li | RISC-V | **Rivos** | 20+ | RISC-V | [详情](../../by-contributor/profiles/hamlin-li.md) |
 
 > **注**:
-> - 部分贡献者的位置信息未在公开资料中标注。位置信息基于贡献者档案和 OpenJDK Census。
+> - 位置信息基于贡献者档案、LinkedIn 和 OpenJDK Census
+> - 部分贡献者可能已迁移到其他地区或离职
+> - 历史贡献仍归属 Oracle 时期
 
 ---
 
@@ -144,16 +176,17 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 Oracle JDK 开发团队
 │
 ├── Java Platform Group (Java 平台组)
+│   │
 │   ├── LangTools Team (语言工具团队)
 │   │   ├── Jonathan Gibbons (团队负责人) - javac, javadoc
 │   │   ├── Chen Liang - ClassFile API, 核心反射
-│   │   ├── Jan Lahoda - javac 编译器
+│   │   ├── Jan Lahoda - javac 编译器, JEP 511/512
 │   │   ├── Adam Sotona - ClassFile API
 │   │   └── Vicente Romero - javac 编译器
 │   │
 │   ├── Core Libraries Team (核心库团队)
 │   │   ├── Phil Race (Client Libraries Group Lead) - Swing, Java 2D, AWT
-│   │   ├── Daniel Fuchs (Networking Team Lead) - HTTP Client, JMX
+│   │   ├── Daniel Fuchs (Networking Team Lead) - HTTP Client, JMX, HTTP/3
 │   │   ├── Naoto Sato - 国际化 (i18n)
 │   │   ├── Brian Burkhalter - NIO, 网络
 │   │   ├── Justin Lu - 本地化
@@ -161,6 +194,7 @@ Oracle JDK 开发团队
 │   │   ├── Volkan Yazici - HTTP Client
 │   │   ├── Sergey Bylokhov - AWT/2D
 │   │   ├── Jaikiran Pai - 构建
+│   │   ├── Lance Andersen - JDBC
 │   │   └── Per Minborg - Core Libs
 │   │
 │   ├── Concurrency & Runtime Team (并发与运行时团队)
@@ -169,19 +203,19 @@ Oracle JDK 开发团队
 │   │   └── Leonid Mesnik - JVMTI, HotSpot 测试
 │   │
 │   └── Performance Team (性能优化团队)
-│       └── Claes Redestad - 启动性能，字符串拼接
+│       └── Claes Redestad - 启动性能，字符串拼接，JEP 254
 │
 ├── HotSpot GC Team (HotSpot 垃圾收集器团队)
-│   ├── Thomas Schatzl (G1 GC Lead) - G1 GC, Parallel GC
-│   ├── Ioi Lam - CDS, AOT
+│   ├── Thomas Schatzl (G1 GC Lead) - G1 GC, Parallel GC, JEP 522
+│   ├── Ioi Lam - CDS, AOT, JEP 514
 │   ├── Coleen Phillimore - HotSpot VM Core, Metaspace
 │   ├── Kim Barrett - HotSpot Runtime, C++ 现代化
 │   ├── Erik Österlund - AOT, GC
-│   └── Albert Mingkun Yang - G1 GC
+│   └── Zhengyu Gu - G1 GC
 │
 ├── HotSpot Compiler Team (HotSpot 编译器团队)
-│   ├── Emanuel Peter (C2 Compiler Lead) - C2 编译器
-│   ├── Erik Gahlin - JFR
+│   ├── Emanuel Peter (C2 Compiler Lead) - SuperWord, 向量化
+│   ├── Erik Gahlin - JFR, JEP 520
 │   └── Alexey Semenyuk - AOT, jpackage
 │
 ├── Java Engineering Infrastructure Team (Java 工程基础设施团队)
@@ -191,32 +225,36 @@ Oracle JDK 开发团队
 │   └── Weijun Wang - 安全
 │
 └── Oracle Labs
-    └── Doug Simon - Graal 编译器
+    ├── Doug Simon - Graal 编译器
+    └── Christian Hagedorn - Graal
 ```
 
 ### 团队统计
 
 | 团队 | 人数 | 代表贡献者 | PR 总数 |
 |------|------|------------|---------|
-| **Java Platform Group** | 19 人 | Chen Liang, Jan Lahoda, Daniel Fuchs, Phil Race, Sergey Bylokhov, Jaikiran Pai, Per Minborg, Adam Sotona, Jonathan Gibbons, Vicente Romero | 2,780+ |
-| **HotSpot GC Team** | 8 人 | Thomas Schatzl, Ioi Lam, Coleen Phillimore, Albert Mingkun Yang | 2,350+ |
-| **HotSpot Compiler Team** | 3 人 | Emanuel Peter, Erik Gahlin, Alexey Semenyuk | 150+ |
+| **Java Platform Group** | 19 人 | Chen Liang, Jan Lahoda, Daniel Fuchs, Phil Race | 2,800+ |
+| **HotSpot GC Team** | 6 人 | Thomas Schatzl, Ioi Lam, Coleen Phillimore, Kim Barrett | 2,100+ |
+| **HotSpot Compiler Team** | 3 人 | Emanuel Peter, Erik Gahlin, Alexey Semenyuk | 780+ |
 | **Java Engineering Infrastructure** | 1 人 | Magnus Ihse Bursie | 28+ |
 | **Security Team** | 1 人 | Weijun Wang | 15+ |
-| **Oracle Labs** | 1 人 | Doug Simon | 10+ |
-| **总计** | **33 人** | - | **5,300+** |
+| **Oracle Labs** | 2 人 | Doug Simon, Christian Hagedorn | 20+ |
+| **总计** | **32 人** | - | **5,700+** |
 
-> **注**: 当前 Oracle 团队 32 人 + 已离职 (Hamlin Li) 1 人 = Top 贡献者列表 33 人
+> **注**: 当前 Oracle 团队 31 人 + 已离职 (Hamlin Li) 1 人 = Top 贡献者列表 32 人
 
 ### Group Leads
 
-| Group | Lead | 职责 |
-|-------|------|------|
-| **Client Libraries** | [Phil Race](../../by-contributor/profiles/phil-race.md) | Swing, Java 2D, AWT |
-| **Networking** | [Daniel Fuchs](../../by-contributor/profiles/daniel-fuchs.md) | HTTP Client, JMX |
-| **G1 GC** | [Thomas Schatzl](../../by-contributor/profiles/thomas-schatzl.md) | G1 GC, Parallel GC |
-| **C2 Compiler** | [Emanuel Peter](../../by-contributor/profiles/emanuel-peter.md) | C2 编译器 |
-| **LangTools** | [Jonathan Gibbons](../../by-contributor/profiles/jonathan-gibbons.md) | javac, javadoc |
+| Group | Lead | 职责 | JEP 贡献 |
+|-------|------|------|----------|
+| **Client Libraries** | [Phil Race](../../by-contributor/profiles/phil-race.md) | Swing, Java 2D, AWT | JEP 504 |
+| **Networking** | [Daniel Fuchs](../../by-contributor/profiles/daniel-fuchs.md) | HTTP Client, JMX | JEP 517 |
+| **G1 GC** | [Thomas Schatzl](../../by-contributor/profiles/thomas-schatzl.md) | G1 GC, Parallel GC | JEP 522 |
+| **C2 Compiler** | [Emanuel Peter](../../by-contributor/profiles/emanuel-peter.md) | SuperWord 向量化 | - |
+| **LangTools** | [Jonathan Gibbons](../../by-contributor/profiles/jonathan-gibbons.md) | javac, javadoc | - |
+| **Performance** | [Claes Redestad](../../by-contributor/profiles/claes-redestad.md) | 启动性能 | JEP 254 |
+| **JFR** | [Erik Gahlin](../../by-contributor/profiles/erik-gahlin.md) | Flight Recorder | JEP 520 |
+| **CDS/AOT** | [Ioi Lam](../../by-contributor/profiles/ioi-lam.md) | Class Data Sharing | JEP 514 |
 
 ---
 
@@ -238,72 +276,112 @@ Oracle JDK 开发团队
 
 ---
 
-## 5. 主要领域
+## 6. 主要领域与 JEP 贡献
 
 ### GC (垃圾收集)
 
-| 领域 | 贡献者 | 档案 |
-|------|--------|------|
-| G1 GC | Thomas Schatzl | [详情](../../by-contributor/profiles/thomas-schatzl.md) |
-| G1 GC | Albert Mingkun Yang | [详情](../../by-contributor/profiles/albert-mingkun-yang.md) |
-| G1 GC | Zhengyu Gu | [详情](../../by-contributor/profiles/zhengyu-gu.md) |
-| 并发 GC | Kim Barrett | [详情](../../by-contributor/profiles/kim-barrett.md) |
+| 领域 | 贡献者 | JEP | 档案 |
+|------|--------|-----|------|
+| G1 GC | Thomas Schatzl | JEP 522 | [详情](../../by-contributor/profiles/thomas-schatzl.md) |
+| G1 GC | Albert Mingkun Yang | - | [详情](../../by-contributor/profiles/albert-mingkun-yang.md) |
+| G1 GC | Zhengyu Gu | - | [详情](../../by-contributor/profiles/zhengyu-gu.md) |
+| 并发 GC | Kim Barrett | - | [详情](../../by-contributor/profiles/kim-barrett.md) |
 
 ### 编译器
 
-| 领域 | 贡献者 | 档案 |
-|------|--------|------|
-| C2 编译器 | Emanuel Peter | [详情](../../by-contributor/profiles/emanuel-peter.md) |
+| 领域 | 贡献者 | JEP | 档案 |
+|------|--------|-----|------|
+| C2 编译器 | Emanuel Peter | - | [详情](../../by-contributor/profiles/emanuel-peter.md) |
+| SuperWord 向量化 | Emanuel Peter | - | [详情](../../by-contributor/profiles/emanuel-peter.md) |
 
 ### 核心库与性能
 
-| 领域 | 贡献者 | 档案 |
-|------|--------|------|
-| 启动性能 | Claes Redestad | [详情](../../by-contributor/profiles/claes-redestad.md) |
+| 领域 | 贡献者 | JEP | 档案 |
+|------|--------|-----|------|
+| 启动性能 | Claes Redestad | JEP 254, JEP 280 | [详情](../../by-contributor/profiles/claes-redestad.md) |
+| ClassFile API | Chen Liang | JEP 459, 466, 484 | [详情](../../by-contributor/profiles/chen-liang.md) |
 
 ### 语言特性
 
-| 领域 | 贡献者 | 档案 |
-|------|--------|------|
-| javac | Jan Lahoda | [详情](../../by-contributor/profiles/jan-lahoda.md) |
+| 领域 | 贡献者 | JEP | 档案 |
+|------|--------|-----|------|
+| javac | Jan Lahoda | JEP 511, JEP 512 | [详情](../../by-contributor/profiles/jan-lahoda.md) |
+| javadoc | Jonathan Gibbons | - | [详情](../../by-contributor/profiles/jonathan-gibbons.md) |
 
 ### 构建系统
 
-| 领域 | 贡献者 | 档案 |
-|------|--------|------|
-| 构建系统 | Magnus Ihse Bursie | [详情](../../by-contributor/profiles/magnus-ihse-bursie.md) |
+| 领域 | 贡献者 | JEP | 档案 |
+|------|--------|-----|------|
+| 构建系统 | Magnus Ihse Bursie | - | [详情](../../by-contributor/profiles/magnus-ihse-bursie.md) |
 
 ### 桌面/客户端
 
-| 领域 | 贡献者 | 档案 |
-|------|--------|------|
-| Client Libraries | Phil Race | [详情](../../by-contributor/profiles/phil-race.md) |
-| Swing/AWT | Prasanta Sadhukhan | [详情](../../by-contributor/profiles/prasanta-sadhukhan.md) |
-| 图形/打印 | Brian Burkhalter | [详情](../../by-contributor/profiles/brian-burkhalter.md) |
+| 领域 | 贡献者 | JEP | 档案 |
+|------|--------|-----|------|
+| Client Libraries | Phil Race | JEP 504 | [详情](../../by-contributor/profiles/phil-race.md) |
+| Swing/AWT | Prasanta Sadhukhan | - | [详情](../../by-contributor/profiles/prasanta-sadhukhan.md) |
+| 图形/打印 | Brian Burkhalter | - | [详情](../../by-contributor/profiles/brian-burkhalter.md) |
+
+### 网络与 HTTP
+
+| 领域 | 贡献者 | JEP | 档案 |
+|------|--------|-----|------|
+| HTTP/3 | Daniel Fuchs | JEP 517 | [详情](../../by-contributor/profiles/daniel-fuchs.md) |
+| HTTP Client | Volkan Yazici | - | [详情](../../by-contributor/profiles/volkan-yazici.md) |
 
 ### 并发与运行时
 
-| 领域 | 贡献者 | 档案 |
-|------|--------|------|
-| 并发 | David Holmes | [详情](../../by-contributor/profiles/david-holmes.md) |
+| 领域 | 贡献者 | JEP | 档案 |
+|------|--------|-----|------|
+| 并发 | David Holmes | - | [详情](../../by-contributor/profiles/david-holmes.md) |
+| Atomic<T> | Kim Barrett | - | [详情](../../by-contributor/profiles/kim-barrett.md) |
 
 ### 工具与监控
 
-| 领域 | 贡献者 | 档案 |
-|------|--------|------|
-| JFR | Erik Gahlin | [详情](../../by-contributor/profiles/erik-gahlin.md) |
-| JVMTI | Leonid Mesnik | [详情](../../by-contributor/profiles/leonid-mesnik.md) |
+| 领域 | 贡献者 | JEP | 档案 |
+|------|--------|-----|------|
+| JFR | Erik Gahlin | JEP 520, JEP 349 | [详情](../../by-contributor/profiles/erik-gahlin.md) |
+| JVMTI | Leonid Mesnik | - | [详情](../../by-contributor/profiles/leonid-mesnik.md) |
 
 ### 国际化
 
-| 领域 | 贡献者 | 档案 |
-|------|--------|------|
-| i18n | Naoto Sato | [详情](../../by-contributor/profiles/naoto-sato.md) |
-| 本地化 | Justin Lu | [详情](../../by-contributor/profiles/justin-lu.md) |
+| 领域 | 贡献者 | JEP | 档案 |
+|------|--------|-----|------|
+| i18n | Naoto Sato | - | [详情](../../by-contributor/profiles/naoto-sato.md) |
+| 本地化 | Justin Lu | - | [详情](../../by-contributor/profiles/justin-lu.md) |
+
+### AOT 与 CDS
+
+| 领域 | 贡献者 | JEP | 档案 |
+|------|--------|-----|------|
+| AOT/CDS | Ioi Lam | JEP 514 | [详情](../../by-contributor/profiles/ioi-lam.md) |
+| AOT | Alexey Semenyuk | - | [详情](../../by-contributor/profiles/alexey-semenyuk.md) |
 
 ---
 
-## 6. 相关 PR 分析文档
+## 7. Oracle 主导的 JEP (JDK 24-26)
+
+| JEP | 标题 | Lead | 团队 | 版本 |
+|-----|------|------|------|------|
+| [JEP 517](https://openjdk.org/jeps/517) | HTTP/3 for HTTP Client | Daniel Fuchs | Core Libraries | JDK 26 |
+| [JEP 514](https://openjdk.org/jeps/514) | AOT Command Line Ergonomics | Ioi Lam | HotSpot GC | JDK 26 |
+| [JEP 520](https://openjdk.org/jeps/520) | JFR Method Timing and Tracing | Erik Gahlin | HotSpot Runtime | JDK 26 |
+| [JEP 511](https://openjdk.org/jeps/511) | Module Import Declarations | Jan Lahoda | LangTools | JDK 26 |
+| [JEP 512](https://openjdk.org/jeps/512) | Compact Source Files | Jan Lahoda | LangTools | JDK 26 |
+| [JEP 522](https://openjdk.org/jeps/522) | G1 GC Throughput Improvement | Thomas Schatzl | HotSpot GC | JDK 26 |
+| [JEP 504](https://openjdk.org/jeps/504) | Remove Applet API | Phil Race | Client Libraries | JDK 26 |
+
+### 历史 JEP 贡献 (JDK 9-21)
+
+| JEP | 标题 | Lead | 版本 |
+|-----|------|------|------|
+| [JEP 254](https://openjdk.org/jeps/254) | Compact Strings | Claes Redestad | JDK 9 |
+| [JEP 280](https://openjdk.org/jeps/280) | Indify String Concatenation | Claes Redestad | JDK 9 |
+| [JEP 349](https://openjdk.org/jeps/349) | JFR Event Streaming | Erik Gahlin | JDK 14 |
+
+---
+
+## 8. 相关 PR 分析文档
 
 ### ClassFile API (Chen Liang)
 
@@ -347,7 +425,7 @@ Oracle JDK 开发团队
 
 ---
 
-## 7. 贡献时间线
+## 8. 贡献时间线
 
 ```
 2010: ███████████████████████████████████████████████████████████░░ 800+ PRs
@@ -366,7 +444,7 @@ Oracle JDK 开发团队
 2023: ███████████████████████████████████████████████████████████░ 900+ PRs
 2024: ███████████████████████████████████████████████████████████░ 950+ PRs
 2025: ███████████████████████████████████████████████████████████░ 1000+ PRs
-2026: ████████████████████████████████████████████████░░░░░░░░░░░ 500+ PRs
+2026: ████████████████████████████████████████████░░░░░░░░░░░ 500+ PRs
 ```
 
 > **总计**: 12,000+ PRs (2010-2026)
@@ -375,7 +453,38 @@ Oracle JDK 开发团队
 
 ---
 
-## 8. 数据来源
+## 9. OpenJDK 治理参与
+
+### OpenJDK Governing Board 成员
+
+Oracle 在 OpenJDK Governing Board 中有代表席位：
+
+| 代表 | 角色 | 任期 |
+|------|------|------|
+| Phil Race | At-Large Member | 多届当选 |
+
+### Group Leads
+
+Oracle 贡献者担任以下 Group 的 Lead：
+
+| Group | Lead | 职责 |
+|-------|------|------|
+| Client Libraries | Phil Race | Swing, Java 2D, AWT |
+| Core Libraries | Stuart Marks (Chair) | 核心库 |
+| HotSpot | - | JVM 运行时 |
+
+### 新晋 Committer/Reviewer 提名
+
+| 贡献者 | 时间 | 角色 | 提名人 | 领域 |
+|--------|------|------|--------|------|
+| Claes Redestad | 2022-03 | OpenJDK Member | Daniel Fuchs | Performance |
+| Coleen Phillimore | 2024-07 | Valhalla Committer | - | Valhalla |
+| Emanuel Peter | 2022-05 | JDK Committer | Tobias Hartmann | C2 Compiler |
+| Emanuel Peter | 2023-05 | JDK Reviewer | Andrew Dinn | C2 Compiler |
+
+---
+
+## 10. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
 - **统计时间**: 2026-03-21
@@ -413,3 +522,20 @@ Oracle JDK 开发团队
 > - **新增**: Vicente Romero (javac 编译器)
 > - **新增**: Albert Mingkun Yang (JDK 26 最活跃，744 PRs)
 > - 数据来源：贡献者档案和 OpenJDK Census
+
+---
+
+> **文档版本**: 11.0
+> **最后更新**: 2026-03-21
+> **本次更新**:
+> - **新增**: 历史背景 (Sun → Oracle 时间线)
+> - **更新**: PR 数量更准确 (基于个人档案)
+> - **新增**: Group Leads 添加 JEP 贡献列
+> - **新增**: JEP 贡献章节 (JDK 24-26, JDK 9-21)
+> - **新增**: OpenJDK 治理参与章节
+> - **新增**: 新晋 Committer/Reviewer 提名表
+> - **更新**: 地理位置更准确 (基于 LinkedIn/个人档案)
+> - **新增**: 已离职贡献者单独列表
+> - **修复**: 章节编号统一 (1-11)
+> - **新增**: Oracle Labs 贡献者 (Christian Hagedorn)
+> - **更新**: 团队统计数据更准确

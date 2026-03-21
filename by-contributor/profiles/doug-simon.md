@@ -1,95 +1,59 @@
 # Doug Simon
 
-> **Oracle Labs**: GraalVM 技术负责人  
-> **活跃时间**: 2012–至今 (14 年+)  
-> **状态**: ✅ 活跃
-
-[← 返回贡献者索引](../)
+> **Organization**: [Oracle Labs](../../contributors/orgs/oracle.md)
 
 ---
 ## 目录
 
-1. [快速概览](#1-快速概览)
-2. [职业时间线](#2-职业时间线)
-3. [核心贡献](#3-核心贡献)
-4. [技术愿景](#4-技术愿景)
-5. [合作关系](#5-合作关系)
-6. [相关链接](#6-相关链接)
+1. [基本信息](#1-基本信息)
+2. [职业背景](#2-职业背景)
+3. [技术影响力](#3-技术影响力)
+4. [主要贡献](#4-主要贡献)
+5. [相关链接](#5-相关链接)
 
 ---
 
 
-## 1. 快速概览
+## 1. 基本信息
 
 | 属性 | 值 |
 |------|-----|
-| **组织** | Oracle Labs |
-| **角色** | GraalVM Lead |
-| **专长** | Graal 编译器、Truffle、多语言运行时 |
-| **GitHub** | [@doug-simon](https://github.com/doug-simon) |
-| **JDK 26 贡献** | 8 commits |
+| **姓名** | Doug Simon |
+| **当前组织** | [Oracle Labs](../../contributors/orgs/oracle.md) |
+| **角色** | OpenJDK Member |
+| **PRs** | 10+ |
+| **主要领域** | Graal, JIT 编译器 |
 
 ---
 
-## 2. 职业时间线
+## 2. 职业背景
 
-| 时间 | 事件 | 备注 |
-|------|------|------|
-| **2012–2017** | Graal 项目创始人 | 从研究到生产 |
-| **2014–2017** | JEP 243 (JVMCI) 主要作者 | 推动 Java 编译器集成 |
-| **2017–至今** | GraalVM 技术负责人 | CE/EE 发布 |
-| **2021–2023** | Native Image 重点开发 | 云原生转型 |
-| **2023–至今** | 团队缩减后继续领导 | 核心 Graal 开发 |
+Doug Simon 是 Oracle Labs 的资深工程师，Graal 编译器的核心开发者之一。
 
 ---
 
-## 3. 核心贡献
+## 3. 技术影响力
 
-### Graal 编译器
-- 基于 Java 的高性能 JIT 编译器
-- 可替代 HotSpot C2 编译器
-- 通过 JVMCI (JEP 243) 集成到 HotSpot
-
-### GraalVM
-- Polyglot 多语言运行时
-- Native Image AOT 编译
-- 社区版/企业版架构
-
-### Truffle 框架
-- AST 解释器框架
-- 自动优化动态语言
-- 支持 JavaScript、Python、Ruby 等
+| 指标 | 值 |
+|------|-----|
+| **PRs** | 10+ |
+| **主要贡献** | Graal 编译器 |
 
 ---
 
-## 4. 技术愿景
+## 4. 主要贡献
 
-> *"一个虚拟机运行所有语言"*
-
-Doug Simon 领导的 GraalVM 团队致力于构建统一的多语言运行时，通过 Truffle 框架简化语言实现，通过 Graal 编译器自动优化语言性能。
-
----
-
-## 5. 合作关系
-
-与以下开发者紧密合作：
-
-| 贡献者 | 角色 |
-|--------|------|
-| Thomas Wuerthinger | Truffle 创始人 |
-| Christian Wimmer | Graal 编译器优化 |
-| Gilles Duboscq | Truffle/Graal 开发 |
-| Tom Rodriguez | HotSpot 集成 |
+### Graal
+- Graal JIT 编译器核心开发
+- GraalVM 贡献
 
 ---
 
-## 6. 相关链接
+## 5. 相关链接
 
-- [GitHub: doug-simon](https://github.com/doug-simon)
-- [GraalVM 官网](https://www.graalvm.org/)
-- [Oracle Labs](https://labs.oracle.com/)
+- [Graal](https://www.graalvm.org/)
 
 ---
 
-**来源**: GitHub, JDK 26 贡献者统计  
-**最后更新**: 2026-03-21
+> **文档版本**: 1.0
+> **最后更新**: 2026-03-21
