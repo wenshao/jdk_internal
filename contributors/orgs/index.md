@@ -76,9 +76,9 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | 组织 | 主要贡献 | 关键 PR/JEP |
 |------|----------|-------------|
 | **Oracle** | GC 优化, 编译器改进 | 多个 |
-| **Alibaba** | 核心库优化 | 8370503, 8370013 |
-| **Amazon** | Generational Shenandoah | [JEP 521](https://openjdk.org/jeps/521) |
-| **Red Hat** | Compact Object Headers | [JEP 519](https://openjdk.org/jeps/519) |
+| **Alibaba** | 核心库优化 | [8370503](../../by-pr/8370/8370503.md), [8370013](../../by-pr/8370/8370013.md) |
+| **Amazon** | Generational Shenandoah | [JEP 521](../../jeps/gc/jep-521.md) |
+| **Red Hat** | Compact Object Headers | [JEP 519](../../jeps/gc/jep-519.md) |
 | **ISCAS PLCT** | RISC-V 向量指令 | 8355667 |
 | **ByteDance** | RISC-V Zvbb/Zfa | 8329887, 8349632 |
 
@@ -87,7 +87,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | 组织 | 主要贡献 | 关键 PR |
 |------|----------|---------|
 | **Oracle** | Valhalla 预览, GC 改进 | 多个 |
-| **Alibaba** | ClassFile API 优化 | 8342336, 8341906 |
+| **Alibaba** | ClassFile API 优化 | [8342336](../../by-pr/8342/8342336.md), [8341906](../../by-pr/8341/8341906.md) |
 | **Amazon** | Shenandoah 改进 | 多个 |
 | **Red Hat** | Leyden 贡献 | 多个 |
 
@@ -95,9 +95,9 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 
 | 组织 | 主要贡献 | 关键 PR/JEP |
 |------|----------|-------------|
-| **Oracle** | Virtual Threads, Pattern Matching | [JEP 444](https://openjdk.org/jeps/444) |
-| **Alibaba** | Integer/Long toString 优化 | 8310929, 8310502 |
-| **Red Hat** | Scoped Values | [JEP 446](https://openjdk.org/jeps/446) |
+| **Oracle** | Virtual Threads, Pattern Matching | [JEP 444](../../jeps/concurrency/jep-444.md) |
+| **Alibaba** | Integer/Long toString 优化 | [8310929](../../by-pr/8310/8310929.md), [8310502](../../by-pr/8310/8310502.md) |
+| **Red Hat** | Scoped Values | [JEP 446](../../jeps/concurrency/jep-446.md) |
 | **SAP** | 构建系统改进 | 多个 |
 
 ### JDK 19 (2022-09)
@@ -202,9 +202,9 @@ IBM       15      20      30      40      45
 |-----|------|----------|------|------|
 | [JEP 189](https://openjdk.org/jeps/189) | Shenandoah GC (Incubator) | Red Hat | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | JDK 12 |
 | [JEP 379](https://openjdk.org/jeps/379) | Shenandoah GC (Standard) | Red Hat | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | JDK 15 |
-| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Red Hat | [Roman Kennke](../../by-contributor/profiles/roman-kennke.md) | JDK 25 |
-| [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | Amazon | [William Kemper](../../by-contributor/profiles/william-kemper.md) | JDK 26 |
-| [JEP 439](https://openjdk.org/jeps/439) | Generational ZGC | Oracle | - | JDK 21 |
+| [JEP 519](../../jeps/gc/jep-519.md) | Compact Object Headers | Red Hat | [Roman Kennke](../../by-contributor/profiles/roman-kennke.md) | JDK 25 |
+| [JEP 521](../../jeps/gc/jep-521.md) | Generational Shenandoah | Amazon | [William Kemper](../../by-contributor/profiles/william-kemper.md) | JDK 26 |
+| [JEP 439](../../jeps/gc/jep-439.md) | Generational ZGC | Oracle | - | JDK 21 |
 
 ### 架构移植 JEP
 
@@ -217,9 +217,9 @@ IBM       15      20      30      40      45
 
 | JEP | 标题 | 主导组织 | 版本 |
 |-----|------|----------|------|
-| [JEP 444](https://openjdk.org/jeps/444) | Virtual Threads | Oracle | JDK 21 |
-| [JEP 446](https://openjdk.org/jeps/446) | Scoped Values | Red Hat | JDK 21 |
-| [JEP 455](https://openjdk.org/jeps/455) | Primitive Types in Patterns | Oracle | JDK 23 |
+| [JEP 444](../../jeps/concurrency/jep-444.md) | Virtual Threads | Oracle | JDK 21 |
+| [JEP 446](../../jeps/concurrency/jep-446.md) | Scoped Values | Red Hat | JDK 21 |
+| [JEP 455](../../jeps/tools/jep-455.md) | Primitive Types in Patterns | Oracle | JDK 23 |
 
 ---
 

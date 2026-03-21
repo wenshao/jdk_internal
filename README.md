@@ -2,7 +2,7 @@
 
 > 分析 OpenJDK 源码、Issue、PR，沉淀便于人类和 AI 阅读的文档
 
-> **🎉 最新动态**: 28 个主题文档增强完成，新增 PR 性能分析系列 (Lambda +15-20%, 元空间 -82%)
+> **🎉 最新动态**: 新增 JDK 26 GA 分析，覆盖 JDK 8-26 全版本文档
 
 ---
 
@@ -99,9 +99,7 @@ jdk_internal/
 ├── by-version/            # 按版本浏览
 │   ├── index.md           # 版本概览和对比
 │   ├── jdk8/              # JDK 8 (LTS 2014)
-│   ├── jdk11/             # JDK 11 (LTS 2018)
-│   ├── jdk17/             # JDK 17 (LTS 2021)
-│   ├── jdk21/             # JDK 21 (LTS 2023)
+│   ├── jdk9-24/           # JDK 9-24 (中间版本)
 │   ├── jdk25/             # JDK 25 (LTS 2025)
 │   └── jdk26/             # JDK 26 (Feature 2026-03)
 │
@@ -117,7 +115,12 @@ jdk_internal/
 │   │   ├── generics/      # 泛型系统 (类型参数/通配符)
 │   │   ├── records/       # Record 类型 (不可变数据)
 │   │   ├── enums/         # 枚举类型 (switch 表达式)
-│   │   └── modules/       # 模块系统 (JPMS/jlink)
+│   │   ├── modules/       # 模块系统 (JPMS/jlink)
+│   │   ├── amber/         # Project Amber (语言特性)
+│   │   ├── loom/          # Project Loom (虚拟线程)
+│   │   ├── panama/        # Project Panama (Foreign Function)
+│   │   ├── valhalla/      # Project Valhalla (值类型)
+│   │   └── vector-api/    # Vector API
 │   ├── language/          # 语言特性
 │   │   ├── syntax/        # 语法演进 (泛型/Lambda/Record)
 │   │   ├── lambda/        # Lambda 表达式 (函数式编程)
@@ -129,11 +132,21 @@ jdk_internal/
 │   ├── api/               # API 框架
 │   │   ├── collections/   # 集合框架
 │   │   ├── io/            # I/O 处理
-│   │   └── datetime/      # 日期时间 (JSR 310)
+│   │   ├── datetime/      # 日期时间 (JSR 310)
+│   │   ├── jdbc/          # JDBC
+│   │   ├── logging/       # 日志 API
+│   │   └── xml-json/      # XML/JSON 处理
 │   ├── concurrency/       # 并发网络
 │   │   ├── concurrency/   # 并发编程 (Thread/VirtualThread)
 │   │   ├── http/          # HTTP 客户端 (HTTP/3)
-│   │   └── network/       # 网络编程 (NIO/Unix Socket)
+│   │   ├── network/       # 网络编程 (NIO/Unix Socket)
+│   │   └── serialization/ # 序列化
+│   ├── crypto/            # 加密
+│   ├── math/              # 数学 API
+│   ├── net/               # 网络基础
+│   ├── nio/               # NIO
+│   ├── platform/          # 平台特性
+│   ├── datetime/          # 日期时间 (顶级)
 │   └── security/          # 安全国际化
 │       ├── security/      # 安全特性 (TLS/加密)
 │       └── i18n/          # 国际化
@@ -150,7 +163,15 @@ jdk_internal/
 │   ├── index.md           # JEP 索引
 │   ├── language/          # 语言相关 JEP
 │   ├── core/              # 核心平台 JEP
-│   └── concurrency/       # 并发相关 JEP
+│   ├── concurrency/       # 并发相关 JEP
+│   ├── gc/                # GC 相关 JEP
+│   ├── security/          # 安全相关 JEP
+│   ├── network/           # 网络相关 JEP
+│   ├── performance/       # 性能相关 JEP
+│   ├── ffi/               # Foreign Function JEP
+│   ├── jfr/               # JFR 相关 JEP
+│   ├── tools/             # 工具相关 JEP
+│   └── removed/           # 已移除特性 JEP
 │
 ├── jsr/                   # JSR (Java Specification Requests)
 │   ├── index.md           # JSR 索引
@@ -162,9 +183,12 @@ jdk_internal/
 │   ├── learning-path.md   # 学习路径
 │   ├── migration-guide.md # 迁移指南
 │   ├── faq.md             # 常见问题
-│   └── cheat-sheet.md     # 速查表
+│   ├── cheat-sheet.md     # 速查表
+│   └── jdk-distributions.md # JDK 发行版
 │
 ├── contributors/          # 贡献者统计
+│   ├── orgs/              # 组织页面
+│   └── stats/             # 统计数据
 ├── modules/               # 模块/组件分析
 ├── scripts/               # 数据获取脚本
 └── talks/                 # 技术演讲 (JVMLS 等)
@@ -203,6 +227,7 @@ jdk_internal/
 
 | 日期 | 更新内容 |
 |------|----------|
+| 2026-03-21 | 📊 统计更新: 733 文档 / 17,505 链接，完善目录结构文档 |
 | 2026-03-20 | ✨ **重大更新**: 28 个主题文档增强，新增 4215+ 行 PR 分析和最佳实践 |
 | 2026-03-20 | ✨ 新增 Lambda/Stream/Enum/Generics/Patterns/Records 深度分析 |
 | 2026-03-20 | ✨ 新增 JIT 编译、内存管理、性能优化专题 |
@@ -218,6 +243,6 @@ jdk_internal/
 
 > **项目状态**: 持续更新中
 >
-> **最后更新**: 2026-03-20
+> **最后更新**: 2026-03-21
 >
-> **文档统计**: 537 个文档文件 | 8,337 个链接 | 覆盖 JDK 8/11/17/21/25/26
+> **文档统计**: 733 个文档文件 | 17,505 个链接 | 覆盖 JDK 8/11/17/21/25/26
