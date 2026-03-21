@@ -144,6 +144,8 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 ## 4. 按组织统计
 
+> **注意**: 组织归属基于贡献者的**当前雇主**。部分贡献者可能在其职业生涯中为多个组织工作。
+
 ### Oracle
 
 **Reviewer**: 35 位 | **Committer**: 3 位
@@ -157,10 +159,14 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 **Reviewer**: 2 位 | **Committer**: 0 位
 
-| 角色 | 人数 | 代表贡献者 |
-|------|------|------------|
-| Reviewer | 2 | Aleksey Shipilev, William Kemper |
-| Committer | 0 | - |
+| 角色 | 人数 | 代表贡献者 | 前组织 |
+|------|------|------------|--------|
+| Reviewer | 2 | Aleksey Shipilev (2023-), William Kemper | Red Hat |
+| Committer | 0 | - | - |
+
+> **跳槽说明**: 
+> - Aleksey Shipilev: Oracle (2012-2016) → Red Hat (2016-2023) → Amazon (2023-)
+> - William Kemper: Red Hat → Amazon
 
 ### Red Hat
 
