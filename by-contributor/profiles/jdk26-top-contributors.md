@@ -194,13 +194,18 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 | [Justin Lu](./justin-lu.md) | 43 | Localization | [详情](./justin-lu.md) |
 | + 80+ more | - | - | - |
 
-### [Red Hat](/contributors/orgs/redhat.md) (~8% of commits)
+### [Amazon](/contributors/orgs/amazon.md) (~5% of commits)
 
 | Contributor | Commits | Focus | 档案 |
 |-------------|---------|-------|------|
-| [Aleksey Shipilev](./aleksey-shipilev.md) | 80 | Shenandoah | [详情](./aleksey-shipilev.md) |
+| [Aleksey Shipilev](./aleksey-shipilev.md) | 80 | Shenandoah, Performance | [详情](./aleksey-shipilev.md) |
+| [William Kemper](./william-kemper.md) | 43 | Shenandoah GC | [详情](./william-kemper.md) |
+
+### [Red Hat](/contributors/orgs/redhat.md) (~3% of commits)
+
+| Contributor | Commits | Focus | 档案 |
+|-------------|---------|-------|------|
 | [Kim Barrett](./kim-barrett.md) | 76 | GC | [详情](./kim-barrett.md) |
-| [William Kemper](./william-kemper.md) | 43 | Shenandoah | [详情](./william-kemper.md) |
 | [Roman Kennke](./roman-kennke.md) | 30 | Compact Headers | [详情](./roman-kennke.md) |
 | [Andrew Haley](./andrew-haley.md) | 20 | RISC-V | [详情](./andrew-haley.md) |
 | [Fredrik Bredberg](./fredrik-bredberg.md) | 19 | Monitors | [详情](./fredrik-bredberg.md) |
@@ -276,7 +281,8 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 | Organization | Contributors | Commits | % |
 |--------------|--------------|---------|---|
 | [Oracle](/contributors/orgs/oracle.md) | 75+ | ~2,950 | ~75% |
-| [Red Hat](/contributors/orgs/redhat.md) | 6 | ~320 | ~8% |
+| [Amazon](/contributors/orgs/amazon.md) | 2 | ~123 | ~3% |
+| [Red Hat](/contributors/orgs/redhat.md) | 4 | ~145 | ~4% |
 | [Independent](#) | 12+ | ~150 | ~4% |
 | [Alibaba](/contributors/orgs/alibaba.md) | 8 | ~74 | ~2% |
 | [SAP](/contributors/orgs/sap.md) | 2 | ~73 | ~2% |
@@ -374,7 +380,6 @@ For detailed contributor profiles, see:
 - [Phil Race](./phil-race.md) - Client Libraries Lead
 - [Matthias Baesken](./matthias-baesken.md) - Build System (515 PRs)
 - [Alexey Semenyuk](./alexey-semenyuk.md) - AOT (233 PRs)
-- [Aleksey Shipilev](./aleksey-shipilev.md) - Shenandoah GC (803 PRs)
 - [Ioi Lam](./ioi-lam.md) - CDS/AOT (431 PRs)
 - [Kim Barrett](./kim-barrett.md) - C++ Modernization
 - [SendaoYan](./sendaoyan.md) - Testing (202 PRs)
@@ -390,7 +395,6 @@ For detailed contributor profiles, see:
 - [Daniel Fuchs](./daniel-fuchs.md) - HTTP/3 (192 PRs)
 - [Volkan Yazici](./volkan-yazici.md) - HTTP Client
 - [Justin Lu](./justin-lu.md) - Localization
-- [William Kemper](./william-kemper.md) - Shenandoah GC
 - [Naoto Sato](./naoto-sato.md) - i18n (273 PRs)
 - [Leonid Mesnik](./leonid-mesnik.md) - JVMTI
 - [Coleen Phillimore](./coleen-phillimore.md) - HotSpot (400 PRs)
@@ -404,11 +408,13 @@ For detailed contributor profiles, see:
 - [Per Minborg](./per-minborg.md) - Core Libraries (JEP 526)
 - [Weijun Wang](./weijun-wang.md) - Security
 
+### Amazon Contributors
+- [Aleksey Shipilev](./aleksey-shipilev.md) - Shenandoah GC, Performance (803 PRs)
+- [William Kemper](./william-kemper.md) - Shenandoah GC (JEP 521 Lead)
+
 ### Red Hat Contributors
-- [Aleksey Shipilev](./aleksey-shipilev.md) - Shenandoah GC (803 PRs)
 - [Kim Barrett](./kim-barrett.md) - GC
-- [William Kemper](./william-kemper.md) - Shenandoah GC
-- [Roman Kennke](./roman-kennke.md) - Compact Object Headers (JEP 519)
+- [Roman Kennke](./roman-kennke.md) - Compact Object Headers (JEP 519 Lead)
 
 ### Alibaba Contributors
 - [Shaojin Wen](./shaojin-wen.md) - Core Libraries (97 PRs)
