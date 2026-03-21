@@ -45,12 +45,12 @@
 
 ## 2. 贡献者
 
-| 贡献者 | GitHub | PRs | 角色 | 主要领域 |
-|--------|--------|-----|------|----------|
-| [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 97 | Committer | 核心库优化 |
-| [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 13 | Author | C2 编译器 |
-| [Yude Lin](../../by-contributor/profiles/yude-lin.md) | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | 8 | Author | G1 GC, AArch64 |
-| [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | 3 | Author | ZGC |
+| 贡献者 | Profile | PRs | 角色 | 主要领域 |
+|--------|---------|-----|------|----------|
+| [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | Committer | 核心库优化 |
+| [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | Author | C2 编译器 |
+| [Yude Lin](../../by-contributor/profiles/yude-lin.md) | [@linade](https://github.com/linade) | 8 | Author | G1 GC, AArch64 |
+| [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | Author | ZGC |
 
 ---
 
@@ -365,7 +365,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 | PR | 标题 | 说明 | 分析文档 |
 |----|------|------|----------|
-| JDK-8356328 | C2 IR 节点 size_of() 函数 | 正确性修复 | [详情](../../by-pr/8356/8356328.md) |
+| JDK-8356328 | C2 IR 节点 size_of() 函数 | 正确性修复 | - |
 | JDK-8347405 | MergeStores 反向字节顺序 | 正确性修复 | - |
 
 ### GC (Yude Lin, Xiaowei Lu)
@@ -413,7 +413,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 **解决方案**: 为缺失节点添加正确的 `size_of()` 实现
 
-→ [完整分析](../../by-pr/8356/8356328.md) | [C2 编译器](../../by-topic/core/jit/c2-phases.md)
+→ [C2 编译器](../../by-topic/core/jit/c2-phases.md) | [Kuai Wei 贡献者档案](../../by-contributor/profiles/kuai-wei.md)
 
 ---
 
