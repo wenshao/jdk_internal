@@ -12,18 +12,8 @@
 
 | 状态 | 说明 | 代表贡献者 |
 |------|------|------------|
-| ✅ **活跃** | 2025-2026 有提交 | Doug Simon, Thomas Schatzl, Phil Race |
+| ✅ **活跃** | 2025-2026 有提交 | Thomas Schatzl, Phil Race, Aleksey Shipilev |
 | ⚠️ **减少参与** | 2022 年后减少 | Thomas Wuerthinger |
-
-### GraalVM 团队
-
-| 贡献者 | 活跃时间 | 状态 | 档案 |
-|--------|----------|------|------|
-| Doug Simon | 2012–至今 | ✅ | [详情](profiles/doug-simon.md) |
-| Thomas Wuerthinger | 2010–至今 | ⚠️ | [详情](profiles/thomas-wuerthinger.md) |
-| Christian Wimmer | 2011–至今 | ✅ | [详情](profiles/christian-wimmer.md) |
-| Gilles Duboscq | 2012–至今 | ✅ | [详情](profiles/gilles-duboscq.md) |
-| Tom Rodriguez | 2010–至今 | ✅ | [详情](profiles/tom-rodriguez.md) |
 
 ---
 
@@ -399,3 +389,21 @@ JDK 26 的前身版本。
 **统计原则**: 使用 GitHub Integrated PRs 作为唯一指标
 
 详见 [贡献者统计原则](/AGENTS.md#contribution-statistics-principles)
+
+---
+
+## 相关项目
+
+### GraalVM 团队
+
+GraalVM 是一个独立的 JDK 发行版，与 OpenJDK 有密切关系但属于不同项目。
+
+| 贡献者 | 活跃时间 | 状态 | 档案 |
+|--------|----------|------|------|
+| Doug Simon | 2012–至今 | ✅ | [详情](/by-contributor/profiles/doug-simon.md) |
+| Thomas Wuerthinger | 2010–至今 | ⚠️ | [详情](/by-contributor/profiles/thomas-wuerthinger.md) |
+| Christian Wimmer | 2011–至今 | ✅ | [详情](/by-contributor/profiles/christian-wimmer.md) |
+| Gilles Duboscq | 2012–至今 | ✅ | [详情](/by-contributor/profiles/gilles-duboscq.md) |
+| Tom Rodriguez | 2010–至今 | ✅ | [详情](/by-contributor/profiles/tom-rodriguez.md) |
+
+> **注**: GraalVM 贡献者主要贡献到 GraalVM 项目，部分也会贡献到 OpenJDK 上游。
