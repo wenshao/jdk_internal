@@ -55,10 +55,12 @@ JEP (JDK Enhancement Proposals) 是 Java 平台新特性的设计和规范文档
 | [JEP 456](language/jep-456.md) | Unnamed Variables & Patterns | 22 | ✅ 正式 | [→](language/jep-456.md) |
 | [JEP 463](language/jep-463.md) | Implicit Classes & Instance Main (2nd) | 22 | 🔍 预览 | [→](language/jep-463.md) |
 | [JEP 477](language/jep-477.md) | Implicit Classes & Instance Main (3rd) | 23 | ✅ 正式 | [→](language/jep-477.md) |
+| [JEP 513](language/jep-513.md) | Flexible Constructor Bodies | 25 | ✅ 正式 | [→](language/jep-513.md) |
 | [JEP 430](language/jep-430.md) | String Templates | 21 | ⚠️ 撤回 | [→](language/jep-430.md) |
 | [JEP 507](language/jep-507.md) | Primitive Types in Patterns (3rd) | 25 | 🔍 预览 | [→](language/jep-507.md) |
 | [JEP 530](language/jep-530.md) | Primitive Types in Patterns (4th) | 26 | 🔍 预览 | [→](language/jep-530.md) |
 | [JEP 458](language/jep-458.md) | Vector API (1st) | 23 | 🔍 预览 | [→](language/jep-458.md) |
+| [JEP 529](language/jep-529.md) | Vector API (11th Incubator) | 26 | 🥚 孵化 | [→](language/jep-529.md) |
 | [JEP 449](language/jep-449.md) | Snippet Tagging | 23 | 🔍 预览 | [→](language/jep-449.md) |
 
 ### 外部函数 (FFI)

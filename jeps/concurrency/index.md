@@ -10,8 +10,7 @@
 3. [结构化并发 (Structured Concurrency)](#3-结构化并发-structured-concurrency)
 4. [隐式类和实例主方法 (Implicit Classes)](#4-隐式类和实例主方法-implicit-classes)
 5. [作用域值 (Scoped Values)](#5-作用域值-scoped-values)
-6. [延迟绑定 (Lazy Constants)](#6-延迟绑定-lazy-constants)
-7. [相关链接](#7-相关链接)
+6. [相关链接](#6-相关链接)
 
 ---
 
@@ -172,25 +171,7 @@ USER_ID.where("user123", () -> {
 
 ---
 
-## 6. 延迟绑定 (Lazy Constants)
-
-| 版本 | JEP | 状态 | 说明 |
-|------|-----|------|------|
-| JDK 25 | 508 | 🔧 孵化 | 延迟绑定 |
-
-### 核心概念
-
-```java
-// 延迟绑定常量
-static final Lazy<String> MESSAGE = Lazy.of(() -> expensiveComputation());
-
-// 首次访问时计算
-String value = MESSAGE.get();  // 只计算一次
-```
-
----
-
-## 7. 相关链接
+## 6. 相关链接
 
 - [并发主题时间线](/by-topic/concurrency/)
 - Virtual Threads 最佳实践 
