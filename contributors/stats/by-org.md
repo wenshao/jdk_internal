@@ -4,6 +4,17 @@
 
 ---
 
+## 数据来源说明
+
+| 来源 | 用途 | 说明 |
+|------|------|------|
+| **GitHub Integrated PRs** | 主要统计指标 | ⭐ 推荐 |
+| [OpenJDK Census](https://openjdk.org/census) | 验证组织归属 | 参考来源 |
+
+> ⚠️ **注意**: 下方历史数据基于 Git commits，存在邮箱归属偏差。新版统计建议使用 GitHub PRs。
+
+---
+
 ## 组织贡献总览
 
 | 排名 | 组织 | Commits | 占比 | 贡献者数 | 主要领域 |
@@ -209,6 +220,27 @@
 ---
 
 ## 数据说明
+
+### 统计方法
+
+| 指标 | 说明 | 推荐度 |
+|------|------|--------|
+| **GitHub Integrated PRs** | 已合入的 PR 数量 | ⭐⭐⭐ 推荐 |
+| Git Commits | 历史数据，仅供参考 | ⚠️ 有偏差 |
+
+**为什么推荐 PRs**：
+- OpenJDK Committer 使用 `@openjdk.org` 邮箱提交，无法通过邮箱判断公司
+- GitHub PR 直接关联贡献者账号，组织归属更准确
+- 详见 [AGENTS.md - Contribution Statistics Principles](/AGENTS.md#contribution-statistics-principles)
+
+### 参考来源
+
+| 来源 | URL | 用途 |
+|------|-----|------|
+| OpenJDK Census | https://openjdk.org/census | 官方统计，验证组织归属 |
+| GitHub PR Search | https://github.com/openjdk/jdk/pulls | PR 统计查询 |
+
+### 历史数据说明
 
 - **统计依据**: Git commits (非 PRs)
 - **邮箱域名**: 按提交邮箱域名归属组织

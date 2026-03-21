@@ -4,6 +4,37 @@
 
 ---
 
+## 数据来源与统计方法
+
+### 主要指标：GitHub Integrated PRs
+
+**推荐使用 GitHub Integrated PRs 作为统计指标**，原因：
+
+| 问题 | Git Commits | GitHub PRs |
+|------|-------------|------------|
+| 邮箱归属 | OpenJDK Committer 使用 `@openjdk.org` 邮箱，无法反映实际公司 | GitHub 账号关联真实组织 |
+| 合并提交 | 大量合并提交干扰统计 | PR 粒度更清晰 |
+| 贡献遗漏 | 过滤公司邮箱会遗漏大量贡献 | 准确反映实际贡献 |
+
+**查询方式**：
+```
+https://github.com/openjdk/jdk/pulls?q=is%3Apr+author:{username}+label%3Aintegrated+is%3Aclosed
+```
+
+### 参考来源：OpenJDK Census
+
+[OpenJDK Census](https://openjdk.org/census) 是官方统计页面，包含：
+
+| 数据 | 说明 | 用途 |
+|------|------|------|
+| Groups | 项目组成员 | 验证领域归属 |
+| People | 贡献者 commit 排名 | 参考对比 |
+| Organizations | 按邮箱域名归类 | 验证组织归属 |
+
+> ⚠️ **注意**: Census 使用 commit 统计，存在邮箱归属问题。建议作为参考而非主要指标。
+
+---
+
 ## 总体统计
 
 | 指标 | 数值 |
@@ -76,15 +107,27 @@
 
 ### 统计方法
 
-- **数据来源**: OpenJDK git 仓库 `upstream_master` 分支
-- **统计指标**: Git commits (非 PRs 或 Issues)
-- **同一人合并**: 基于邮箱域名规则合并同一贡献者的多个邮箱
-- **Bot 排除**: J. Duke 和 Lana Steuck 为自动化账号，不计入排名
+| 指标 | 说明 | 推荐度 |
+|------|------|--------|
+| **GitHub Integrated PRs** | 已合入的 PR 数量 | ⭐⭐⭐ 推荐 |
+| Git Commits | 历史数据，仅供参考 | ⚠️ 有偏差 |
+
+**为什么推荐 PRs**：
+- OpenJDK Committer 使用 `@openjdk.org` 邮箱提交，无法通过邮箱判断公司
+- GitHub PR 直接关联贡献者账号，组织归属更准确
+- 详见 [AGENTS.md - Contribution Statistics Principles](/AGENTS.md#contribution-statistics-principles)
+
+### 参考来源
+
+| 来源 | URL | 用途 |
+|------|-----|------|
+| OpenJDK Census | https://openjdk.org/census | 官方统计，验证组织归属 |
+| GitHub PR Search | https://github.com/openjdk/jdk/pulls | PR 统计查询 |
 
 ### 数据更新
 
 - **更新频率**: 每个 JDK 版本发布后更新
-- **上次更新**: 2026-03-20
+- **上次更新**: 2026-03-21
 - **数据验证**: `scripts/contributor_stats.py`
 
 ---

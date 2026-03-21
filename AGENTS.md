@@ -200,6 +200,7 @@ Define completion levels to ensure consistent research depth across all document
 | **P0** | GitHub PR | Official | Change content, discussion |
 | **P1** | Mailing Lists | Authoritative | Design decision background |
 | **P1** | JEP/JSR Docs | Official | Specification definition |
+| **P1** | OpenJDK Census | Official | Contributor group membership, organization verification |
 | **P2** | Source Code | Factual | Implementation details |
 | **P3** | Blogs/Talks | Reference | Explanation and context |
 
@@ -207,6 +208,7 @@ Define completion levels to ensure consistent research depth across all document
 - All conclusions must be supported by P0-P2 sources
 - P3 sources are for auxiliary explanation only, never as primary evidence
 - Always preserve original links when citing
+- **Census Usage**: Use OpenJDK Census for verifying group membership and organization affiliation, NOT for contribution statistics (use GitHub Integrated PRs instead)
 
 ### AI-Assisted Research Prompt Templates
 
