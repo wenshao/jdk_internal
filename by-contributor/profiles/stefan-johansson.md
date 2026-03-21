@@ -98,7 +98,7 @@ Stefan Johansson 是 Oracle HotSpot GC 团队的成员，专注于 **G1 GC** 和
 
 ## 5. 技术专长
 
-`G1 GC` `并发标记` `Mixed GC` `性能优化` `HotSpot`
+`G1 GC` `ZGC` `并发标记` `Mixed GC` `性能优化` `HotSpot`
 
 ---
 
@@ -130,11 +130,17 @@ Stefan Johansson 与以下 GC 专家紧密合作：
 
 | 类型 | 链接 |
 |------|------|
+| **Blog** | [kstefanj.github.io](https://kstefanj.github.io/) |
+| **GitHub** | [@kstefanj](https://github.com/kstefanj) |
+| **Inside.java** | [StefanJohansson](https://inside.java/u/StefanJohansson/) |
 | **OpenJDK Census** | [sjohansson](https://openjdk.org/census#sjohansson) |
+| **FOSDEM 2025** | [Speaker Profile](https://fosdem.org/2025/schedule/speaker/stefan_johansson/) |
+| **Devoxx Belgium 2024** | [Speaker Profile](https://devoxx.be/speaker/stefan-johansson/) |
+| **P99 CONF** | [G1: To Infinity and Beyond](https://www.p99conf.io/session/g1-to-infinity-and-beyond/) |
 | **G1 GC Wiki** | [OpenJDK G1](https://wiki.openjdk.org/display/g1/Main) |
 
 ---
 
-> **文档版本**: 1.0
-> **最后更新**: 2026-03-21
-> **状态**: 初稿
+> **文档版本**: 1.1
+> **最后更新**: 2026-03-22
+> **更新内容**: 添加 GitHub (kstefanj)、Blog、ZGC 工作、演讲信息

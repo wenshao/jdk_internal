@@ -32,7 +32,7 @@
 | **主要领域** | AOT, CDS, 启动优化, Project Leyden |
 | **主导 JEP** | JEP 514: Ahead-of-Time Command Line Ergonomics |
 | **活跃时间** | 2013 - 至今 |
-| **语言能力** | 英语 (Native), 中文 (Native), 日语 (Professional) |
+| **代表仓库** | [github.com/iklam](https://github.com/iklam) (jdk, valhalla, tools) |
 
 > **数据来源**: [LinkedIn](https://www.linkedin.com/in/ioi-lam-3b07731), [CFV HSX Committer](https://mail.openjdk.org/pipermail/hotspot-dev/2013-April/009124.html), [JVMLS Leyden](https://inside.java/2024/08/25/jvmls-leyden/)
 

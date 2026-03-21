@@ -2,6 +2,9 @@
 
 > **Organization**: Oracle
 > **Role**: Security Lead
+> **LinkedIn**: [izick](https://www.linkedin.com/in/izick/)
+> **OpenJDK**: [@ascarpino](https://openjdk.org/census#ascarpino)
+> **Inside.java**: [AnthonyScarpino](https://inside.java/u/AnthonyScarpino/)
 
 ---
 ## 目录
@@ -30,7 +33,10 @@ Anthony Scarpino 是 Oracle 的 **安全模块负责人**，专注于 Java 加�
 | **姓名** | Anthony Scarpino |
 | **当前组织** | Oracle (Java Platform Group) |
 | **职位** | Principal Member of Technical Staff |
-| **专长** | Security, Cryptography, PKI |
+| **OpenJDK** | [@ascarpino](https://openjdk.org/census#ascarpino) |
+| **角色** | Reviewer, Committer |
+| **LinkedIn** | [izick](https://www.linkedin.com/in/izick/) |
+| **专长** | Security, Cryptography, PKI, PEM Encodings |
 | **JDK 26 贡献** | 14 commits (Security) |
 
 ---

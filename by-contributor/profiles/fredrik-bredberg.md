@@ -96,22 +96,23 @@ Fredrik Bredberg 是 HotSpot **ObjectMonitor** 的主要贡献者：
 ## 6. 合作关系
 
 与以下 HotSpot 开发者合作：
-- **Roman Kennke**: Red Hat OpenJDK
-- **Andrew Haley**: Red Hat Java Platform Lead
+- **Coleen Phillimore**: Oracle HotSpot Runtime Lead
+- **David Holmes**: Oracle HotSpot Runtime Developer
 
 ---
 
 ## 7. 相关链接
 
 ### 官方资料
-- [GitHub: fbredberg](https://github.com/fbredberg)
-- [Red Hat OpenJDK](https://www.redhat.com/en/technologies/linux-platforms/openjdk)
+- [GitHub: fbredber](https://github.com/fbredber)
 
 ### JDK Bug System
-- [JDK-8320318: ObjectMonitor improvements](https://bugs.openjdk.org/browse/JDK-8320318)
+- [JDK-8343840: Rewrite the ObjectMonitor lists](https://bugs.openjdk.org/browse/JDK-8343840)
+- [JDK-8332506: SIGFPE in ObjectSynchronizer](https://bugs.openjdk.org/browse/JDK-8332506)
 
 ---
 
 **Sources**:
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
-- [JDK-8320318: ObjectMonitor improvements](https://bugs.openjdk.org/browse/JDK-8320318)
+- [GitHub: fbredber](https://github.com/fbredber)
+- [JEP 491: Synchronize Virtual Threads without Pinning](https://openjdk.org/jeps/491)

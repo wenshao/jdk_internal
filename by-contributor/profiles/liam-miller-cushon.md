@@ -1,7 +1,8 @@
 # Liam Miller-Cushon
 
+> **GitHub**: [@cushon](https://github.com/cushon)
 > **Organization**: Google
-> **Role**: javac Developer
+> **Role**: Software Engineer, javac and Error Prone Developer
 
 ---
 ## 目录
@@ -18,7 +19,7 @@
 
 ## 1. 概述
 
-Liam Miller-Cushon 是 Google 的 **javac 编译器开发者**，专注于 Java 编译器改进和错误诊断。他在 JDK 26 中以 4 次提交贡献于 javac 相关功能。
+Liam Miller-Cushon 是 Google 的 **软件工程师**，专注于 Java 编译器改进、静态分析和编程语言研究。他是 Google **Error Prone** 静态分析工具的核心开发者和 **google-java-format** 的贡献者，并在 JDK 26 中以 4 次提交贡献于 javac 相关功能。
 
 ---
 
@@ -28,7 +29,8 @@ Liam Miller-Cushon 是 Google 的 **javac 编译器开发者**，专注于 Java 
 |------|-----|
 | **姓名** | Liam Miller-Cushon |
 | **当前组织** | Google |
-| **专长** | javac, Compiler Error Messages |
+| **GitHub** | [@cushon](https://github.com/cushon) |
+| **专长** | javac, Error Prone, Static Analysis, Compiler Diagnostics |
 | **JDK 26 贡献** | 4 commits (javac) |
 
 ---
@@ -42,10 +44,11 @@ Liam Miller-Cushon 贡献于 javac：
 - **Diagnostics**: 编译诊断
 - **Type Checking**: 类型检查
 
-### 2. Google 内部工具
+### 2. Error Prone 和开发者工具
 
-- **javac**: Google 内部 javac 优化
-- **Build Tools**: Java 构建工具
+- **Error Prone**: Google 开源的 Java 静态分析工具，基于 javac 编译器构建
+- **google-java-format**: Java 代码格式化工具
+- **Turbine**: Java 编译工具
 
 ---
 
@@ -54,8 +57,10 @@ Liam Miller-Cushon 贡献于 javac：
 ### 编译器技术
 
 - **javac**: Java 编译器
+- **Static Analysis**: 静态分析 (Error Prone)
 - **Error Reporting**: 错误报告
 - **Type Inference**: 类型推断
+- **Annotation Processing**: 注解处理
 
 ---
 
@@ -70,9 +75,13 @@ Liam Miller-Cushon 贡献于 javac：
 ## 6. 相关链接
 
 ### Google
-- [Google Open Source Java](https://opensource.google/projects/java)
+- [Error Prone](https://github.com/google/error-prone)
+- [google-java-format](https://github.com/google/google-java-format)
+- [GitHub: cushon](https://github.com/cushon)
 
 ---
 
 **Sources**:
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
+- [GitHub: cushon](https://github.com/cushon)
+- [Error Prone](https://github.com/google/error-prone)
