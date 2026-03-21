@@ -67,8 +67,11 @@ AArch64 是 ARM 64位架构，广泛用于移动设备、云服务器和 Apple S
 
 | 服务器 | CPU | 状态 |
 |--------|-----|------|
-| **AWS Graviton** | Graviton2/3 | ✅ 完全支持 |
+| **AWS Graviton 2** | Neoverse N1 | ✅ 完全支持 |
+| **AWS Graviton 3** | Neoverse V1 | ✅ 完全支持 |
+| **AWS Graviton 4** | Neoverse V2 | ✅ 完全支持 (SVE2) |
 | **Ampere Altra** | Neoverse N1 | ✅ 完全支持 |
+| **Ampere Altra Max** | Neoverse N2 | ✅ 完全支持 |
 | **Oracle Cloud** | Ampere A1 | ✅ 完全支持 |
 | **华为鲲鹏** | Kunpeng 920 | ✅ 完全支持 |
 | **飞腾** | FT-2000 | ✅ 完全支持 |

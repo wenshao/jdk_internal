@@ -124,6 +124,38 @@ ARM 64位架构，广泛用于移动设备、云服务器和 Apple Silicon。
 
 ---
 
+### PPC64/PPC64LE
+
+IBM PowerPC 64位架构，主要用于 IBM Power Systems 和 AIX。
+
+| 属性 | 值 |
+|------|-----|
+| **引入版本** | JDK 9 (PPC64), JDK 11 (PPC64LE) |
+| **状态** | ✅ 维护模式 |
+| **主要贡献者** | IBM |
+
+**主要平台**:
+- IBM Power Systems (AIX/Linux)
+- OpenPOWER 服务器
+
+---
+
+### s390x
+
+IBM System z 大型机架构，主要用于企业级后端系统。
+
+| 属性 | 值 |
+|------|-----|
+| **引入版本** | JDK 9 |
+| **状态** | ✅ 维护模式 |
+| **主要贡献者** | IBM |
+
+**主要平台**:
+- IBM Z Mainframe (Linux on System z)
+- 银行/金融系统
+
+---
+
 ## 4. 按版本演进
 
 ### x86/x64
@@ -160,7 +192,23 @@ ARM 64位架构，广泛用于移动设备、云服务器和 Apple Silicon。
 |------|------|
 | JDK 21 | 初始移植 |
 | JDK 22 | 稳定性改进 |
-| JDK 24 | 完善支持 |
+| JDK 24 | LSX/LASX 向量支持 |
+| JDK 26 | 紧凑对象头支持 |
+
+### PPC64/PPC64LE
+
+| 版本 | 变化 |
+|------|------|
+| JDK 9 | PPC64 支持 (AIX/Linux) |
+| JDK 11 | PPC64LE 支持 (Little Endian) |
+| JDK 17+ | 持续维护 |
+
+### s390x
+
+| 版本 | 变化 |
+|------|------|
+| JDK 9 | s390x 支持 (Linux on System z) |
+| JDK 17+ | 持续维护 |
 
 ---
 

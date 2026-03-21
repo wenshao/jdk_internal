@@ -312,7 +312,8 @@ qemu-riscv64-static -L /usr/riscv64-linux-gnu \
 | JEP | 版本 | 标题 |
 |-----|------|------|
 | JEP 422 | JDK 19 | Linux/RISC-V Port |
-| JEP 439 | JDK 20 | Generational ZGC (包含 RISC-V) |
+| JEP 439 | JDK 20 | Generational ZGC (所有平台) |
+| JEP 413 | JDK 19 | Vector API (Incubator) - 包含 RISC-V 向量 |
 
 ---
 
