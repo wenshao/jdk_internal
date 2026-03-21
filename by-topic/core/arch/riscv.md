@@ -274,13 +274,16 @@ qemu-riscv64-static -L /usr/riscv64-linux-gnu \
 
 ### 开发板
 
-| 开发板 | CPU | 状态 |
-|--------|-----|------|
-| **SiFive HiFive Unmatched** | SiFive U74 | ✅ 支持 |
-| **BeagleV** | JH7100 | ✅ 支持 |
-| **VisionFive 2** | JH7110 | ✅ 支持 |
-| **Milk-V Duo** | C906 | ✅ 支持 |
-| **Banana Pi BPI-F3** | SpacemiT K1 | ✅ 支持 |
+| 开发板 | CPU | 核心 | 状态 |
+|--------|-----|------|------|
+| **SiFive HiFive Unmatched** | SiFive U74 | 4核 | ✅ 支持 |
+| **SiFive HiFive Premier P550** | SiFive P550 | 8核 | ✅ 支持 |
+| **BeagleV** | JH7100 | 2核 | ✅ 支持 |
+| **VisionFive 2** | JH7110 | 4核 | ✅ 支持 |
+| **Milk-V Duo** | C906 | 1核 | ✅ 支持 |
+| **Milk-V Pioneer** | SG2042 | 64核 | ✅ 支持 |
+| **Banana Pi BPI-F3** | SpacemiT K1 | 8核 | ✅ 支持 |
+| **LicheePi 4A** | TH1520 | 4核 | ✅ 支持 |
 
 ### 云服务
 
@@ -288,6 +291,19 @@ qemu-riscv64-static -L /usr/riscv64-linux-gnu \
 |----------|------|------|
 | **阿里云** | RISC-V ECS | ✅ 可用 |
 | **华为云** | RISC-V 实例 | ✅ 可用 |
+
+### RISC-V CPU 架构
+
+| CPU | 厂商 | 架构 | 向量支持 |
+|-----|------|------|----------|
+| **SiFive P550** | SiFive | RV64GC | V |
+| **SiFive U74** | SiFive | RV64GC | - |
+| **SG2042** | 算能 | RV64GC | V |
+| **C920** | 平头哥 | RV64GCV | V |
+| **TH1520** | 平头哥 | RV64GCV | V |
+| **XuanTie C910** | 平头哥 | RV64GC | V |
+| **SpacemiT K1** | SpacemiT | RV64GC | V |
+| **T-Head C906** | 平头哥 | RV64GC | V |
 
 ---
 

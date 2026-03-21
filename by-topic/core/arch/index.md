@@ -46,12 +46,12 @@ OpenJDK 支持多种 CPU 架构，从最初的 x86/x64 扩展到 ARM、RISC-V、
 | 架构 | 位数 | 引入版本 | 状态 | 主要贡献者 |
 |------|------|----------|------|------------|
 | **x86_64** | 64-bit | JDK 5 | ✅ 主流 | Oracle |
-| **x86_32** | 32-bit | JDK 1.0 | ⚠️ JDK 26 移除 | Oracle |
+| **x86_32** | 32-bit | JDK 1.0 | ⚠️ JDK 26 移除 (JEP 503) | Oracle |
 | **AArch64** | 64-bit | JDK 9 | ✅ 主流 | Oracle, Red Hat, Arm |
 | **ARM32** | 32-bit | JDK 9 | ⚠️ JDK 26 移除 | Arm |
 | **RISC-V** | 64-bit | JDK 19 | ✅ 活跃 | ISCAS, 阿里巴巴, 字节跳动 |
 | **LoongArch** | 64-bit | JDK 21 | ✅ 活跃 | 龙芯 |
-| **PPC64** | 64-bit | JDK 9 | ✅ 维护 | IBM |
+| **PPC64/PPC64LE** | 64-bit | JDK 9/11 | ✅ 维护 | IBM |
 | **s390x** | 64-bit | JDK 9 | ✅ 维护 | IBM |
 
 ---

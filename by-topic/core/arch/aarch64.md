@@ -79,11 +79,12 @@ Apple Silicon 支持：
 
 | 设备 | 芯片 | 状态 |
 |------|------|------|
-| **MacBook Pro** | M1/M2/M3 | ✅ 原生支持 |
-| **MacBook Air** | M1/M2/M3 | ✅ 原生支持 |
-| **Mac mini** | M1/M2 | ✅ 原生支持 |
+| **MacBook Pro** | M1/M2/M3/M4 | ✅ 原生支持 |
+| **MacBook Air** | M1/M2/M3/M4 | ✅ 原生支持 |
+| **Mac mini** | M1/M2/M4 | ✅ 原生支持 |
 | **Mac Studio** | M1/M2 Ultra | ✅ 原生支持 |
-| **iMac** | M1/M3 | ✅ 原生支持 |
+| **iMac** | M1/M3/M4 | ✅ 原生支持 |
+| **iPad Pro** | M1/M2/M4 | ⚠️ 间接 (iOS) |
 
 ### Windows/AArch64 (JDK 18+)
 
@@ -93,7 +94,10 @@ Windows ARM 设备：
 |------|-----|------|
 | **Surface Pro X** | SQ1/SQ2 | ✅ 支持 |
 | **Surface Pro 9** | SQ3 | ✅ 支持 |
+| **Surface Pro 11** | Snapdragon X Elite | ✅ 支持 |
 | **ThinkPad X13s** | Snapdragon 8cx | ✅ 支持 |
+| **Dell XPS 13** | Snapdragon X Elite | ✅ 支持 |
+| **Samsung Galaxy Book4 Edge** | Snapdragon X Elite | ✅ 支持 |
 
 ---
 
@@ -132,6 +136,21 @@ fadd z0.s, p0/m, z1.s, z2.s
 | JDK 17 | 实验性 |
 | JDK 21 | 部分支持 |
 | JDK 26 | 增强支持 |
+
+### SVE2 (Scalable Vector Extension 2)
+
+SVE2 是 SVE 的扩展，增加了更多指令：
+
+| 特性 | 说明 | JDK 支持 |
+|------|------|----------|
+| **整数分解** | 向量分解指令 | JDK 24+ |
+| **矩阵乘法** | 向量矩阵指令 | JDK 25+ |
+| **加密** | 向量加密指令 | JDK 26+ |
+
+**支持硬件**:
+- Apple M4 (SVE2)
+- Arm Neoverse V2/V3
+- AWS Graviton 4
 
 ### PAC/BTI
 
