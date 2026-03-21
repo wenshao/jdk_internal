@@ -591,15 +591,15 @@ java VectorAdd
 - [贡献者](contributors.md) - 贡献者分析
 
 ### 官方资源
-- [JEP 338: Vector API (Incubator)](https://openjdk.org/jeps/338)
-- [JEP 414: Vector API (Second Incubator)](https://openjdk.org/jeps/414)
-- [JEP 417: Vector API (Third Incubator)](https://openjdk.org/jeps/417)
-- [JEP 426: Vector API (Fourth Incubator)](https://openjdk.org/jeps/426)
-- [JEP 438: Vector API (Fifth Incubator)](https://openjdk.org/jeps/438)
+- [JEP 338](/jeps/language/jep-338.md)
+- [JEP 414](/jeps/language/jep-414.md)
+- [JEP 417](/jeps/language/jep-417.md)
+- [JEP 426](/jeps/language/jep-426.md)
+- [JEP 438](/jeps/language/jep-438.md)
 - [JEP 448](/jeps/tools/jep-448.md)
 - [JEP 508](/jeps/concurrency/jep-508.md)
 - [JEP 529](/jeps/language/jep-529.md)
-- [JEP 401: Value Classes and Objects (Valhalla)](https://openjdk.org/jeps/401)
+- [JEP 401](/jeps/language/jep-401.md)
 
 ### 相关项目
 - [Project Valhalla](https://openjdk.org/projects/valhalla/) - 值类型与值对象

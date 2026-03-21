@@ -668,7 +668,7 @@ channel.connect(UnixDomainSocketAddress.of(new File("/tmp/my.sock")));
 ### 外部参考
 
 **JEP 文档:**
-- [JEP 380: Unix Domain Sockets](https://openjdk.org/jeps/380)
+- [JEP 380](/jeps/network/jep-380.md)
 - [JEP 426: Virtual Threads](https://openjdk.org/jeps/426)
 - [JEP 521](/jeps/gc/jep-521.md)
 

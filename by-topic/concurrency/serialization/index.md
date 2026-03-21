@@ -493,7 +493,7 @@ public class FastSerializable implements Externalizable {
 ### 外部参考
 
 **JEP 文档:**
-- [JEP 290: Filter Incoming Serialization Data](https://openjdk.org/jeps/290)
+- [JEP 290](/jeps/security/jep-290.md)
 
 **安全文档:**
 - [OWASP Deserialization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html)

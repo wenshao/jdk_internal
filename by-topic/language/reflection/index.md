@@ -669,8 +669,8 @@ public void fast() throws Throwable {
 
 - [JEP 395](/jeps/language/jep-395.md)
 - [JEP 484](/jeps/tools/jep-484.md)
-- [JEP 370: Foreign Memory Access (Experimental)](https://openjdk.org/jeps/370)
-- [JEP 389: Foreign Linker API (Experimental)](https://openjdk.org/jeps/389)
+- [JEP 370](/jeps/ffi/jep-370.md)
+- [JEP 389](/jeps/ffi/jep-389.md)
 - [JEP 454](/jeps/ffi/jep-454.md)
 - [JSR 292: Supporting Dynamically Typed Languages](https://jcp.org/en/jsr/detail?id=292)
 - [JSR 308: Annotations on Java Types](https://jcp.org/en/jsr/detail?id=308)
