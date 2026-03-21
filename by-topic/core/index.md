@@ -53,7 +53,7 @@ JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 11 ─── JDK 17 ──
 | JDK 11 | ZGC 引入 (实验性) | JEP 333 |
 | JDK 15 | ZGC 生产可用 | JEP 377 |
 | JDK 17 | 并发线程栈扫描 | JEP 379 |
-| JDK 21 | **分代 ZGC** (JEP 439)、分代 Shenandoah (JEP 429) | JEP 439, JEP 429 |
+| JDK 21 | **分代 ZGC** (JEP 439) | JEP 439 |
 | JDK 23 | ZGC 分代改进 | JEP 474 |
 | JDK 26 | G1 吞吐量提升 (JEP 522)、ZGC NUMA | JEP 522 |
 
@@ -241,7 +241,7 @@ OpenJDK 支持的 CPU 架构演进。
 | 架构 | 引入版本 | 状态 | 说明 |
 |------|----------|------|------|
 | **x86_64** | JDK 5 | ✅ 主流 | Intel/AMD 64位 |
-| **x86_32** | JDK 1.0 | ⚠️ JDK 26 移除 | 32位 x86 |
+| **x86_32** | JDK 1.0 | ⚠️ JDK 25 移除 | 32位 x86 |
 | **AArch64** | JDK 9 | ✅ 主流 | ARM 64位, Apple Silicon |
 | **RISC-V** | JDK 19 | ✅ 活跃 | 开源指令集 |
 | **LoongArch** | JDK 21 | ✅ 活跃 | 龙芯架构 |

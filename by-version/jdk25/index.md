@@ -230,7 +230,7 @@ void main(String[] args) {
 
 | JEP | 标题 | 状态 | 描述 | 深度分析 |
 |-----|------|------|------|----------|
-| JEP 521 | Generational Shenandoah | ✅ 正式 | 分代 Shenandoah | → |
+| JEP 521 | Generational Shenandoah (Experimental) | ⚠️ 实验 | 分代 Shenandoah | → |
 
 > 图例: ✅ 正式发布 | 🔍 预览特性 (需要 `--enable-preview`) | 🚀 性能提升 | ⚠️ 废弃/移除 | ⚠️ 实验性
 

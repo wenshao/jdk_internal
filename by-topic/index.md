@@ -238,7 +238,7 @@ Valhalla (值类型) ┘
 | Record Patterns | JDK 19 | 2 | JDK 21 | JEP 405, JEP 432, JEP 440 |
 | String Templates | JDK 21 | 2+ | JDK 26+ | JEP 430, JEP 459 |
 | Flexible Constructor Bodies | JDK 22 | 3 | JDK 25 | JEP 447, JEP 482, JEP 513 |
-| Primitive Types in Patterns | JDK 23 | 2+ | JDK 26 | JEP 455, JEP 488 |
+| Primitive Types in Patterns | JDK 23 | 2+ | 未定 | JEP 455, JEP 488 |
 | Implicit Classes | JDK 21 | 3 | JDK 25 | JEP 443, JEP 463, JEP 512 |
 | Class File API | JDK 22 | 2 | JDK 24 | JEP 457, JEP 466, JEP 484 |
 
@@ -258,7 +258,7 @@ Valhalla (值类型) ┘
 | ZGC | JDK 11 | 生产 | JEP 333 |
 | Shenandoah | JDK 12 | 生产 | JEP 379 |
 | Generational ZGC | JDK 21 | 生产 | JEP 439 |
-| Generational Shenandoah | JDK 25 | 生产 | JEP 521 |
+| Generational Shenandoah | JDK 25 | 实验性 | JEP 521 |
 | G1 Throughput Improvement | JDK 26 | 生产 | JEP 522 |
 
 ### 安全特性
@@ -270,7 +270,7 @@ Valhalla (值类型) ┘
 | KMAC | JDK 17 | 生产 | - |
 | ML-DSA (后量子) | JDK 26 | 生产 | JEP 518 |
 | ML-KEM (后量子) | JDK 26 | 生产 | - |
-| KDF API | JDK 22 | 预览→正式JDK26 | JEP 495, 508, 510 |
+| KDF API | JDK 22 | 预览→正式JDK25 | JEP 495, 508, 510 |
 | PEM Encodings | JDK 26 | 预览 | JEP 470 |
 
 ### API 特性
@@ -278,7 +278,7 @@ Valhalla (值类型) ┘
 | 特性 | 首发版本 | 状态 | JEP |
 |------|----------|------|-----|
 | HTTP Client | JDK 11 | 生产 | JEP 321 |
-| HTTP/3 | JDK 26 | 预览 | JEP 517 |
+| HTTP/3 | JDK 26 | 正式 | JEP 517 |
 | Foreign Function & Memory API | JDK 22 | 生产 | JEP 454 |
 | Vector API | JDK 16 | 孵化中 | JEP 338, 417, 426, 448, 469 |
 | Stream API | JDK 8 | 生产 | JEP 107 |
