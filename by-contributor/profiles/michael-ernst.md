@@ -5,14 +5,26 @@
 > **Website**: [cs.washington.edu](https://www.cs.washington.edu/people/faculty/mernst)
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [核心技术贡献](#3-核心技术贡献)
+4. [学术贡献](#4-学术贡献)
+5. [技术专长](#5-技术专长)
+6. [教育贡献](#6-教育贡献)
+7. [相关链接](#7-相关链接)
+
+---
+
+
+## 1. 概述
 
 Michael Ernst 是华盛顿大学的计算机科学教授，专注于 **编程语言**和 **软件工程**研究。他是 **类型注解 (Type Annotations)** (JSR 308) 的领导者，对 Java 类型系统和 javac 编译器有重要学术贡献。
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -25,7 +37,7 @@ Michael Ernst 是华盛顿大学的计算机科学教授，专注于 **编程语
 
 ---
 
-## 核心技术贡献
+## 3. 核心技术贡献
 
 ### 1. JSR 308: Type Annotations
 
@@ -52,7 +64,7 @@ List<@NonNull String> strings = new ArrayList<>();
 
 ---
 
-## 学术贡献
+## 4. 学术贡献
 
 ### 研究领域
 
@@ -71,7 +83,7 @@ List<@NonNull String> strings = new ArrayList<>();
 
 ---
 
-## 技术专长
+## 5. 技术专长
 
 ### 类型系统
 
@@ -87,7 +99,7 @@ List<@NonNull String> strings = new ArrayList<>();
 
 ---
 
-## 教育贡献
+## 6. 教育贡献
 
 ### 教学
 
@@ -100,7 +112,7 @@ List<@NonNull String> strings = new ArrayList<>();
 
 ---
 
-## 相关链接
+## 7. 相关链接
 
 ### 官方资料
 - [University of Washington Profile](https://www.cs.washington.edu/people/faculty/mernst)

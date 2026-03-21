@@ -3,8 +3,18 @@
 > Red Hat Principal Software Engineer | JEP 519 Lead | Shenandoah GC Contributor
 
 ---
+## 目录
 
-## Basic Information
+1. [Basic Information](#1-basic-information)
+2. [JEP Leadership](#2-jep-leadership)
+3. [Contribution Overview](#3-contribution-overview)
+4. [Key Contributions](#4-key-contributions)
+5. [External Resources](#5-external-resources)
+
+---
+
+
+## 1. Basic Information
 
 | Attribute | Value |
 |-----------|-------|
@@ -23,7 +33,7 @@
 
 ---
 
-## JEP Leadership
+## 2. JEP Leadership
 
 | JEP | Title | Role | Status | Target |
 |-----|------|------|--------|--------|
@@ -32,7 +42,7 @@
 
 ---
 
-## Contribution Overview
+## 3. Contribution Overview
 
 ### JDK 26 Contributions
 
@@ -49,7 +59,7 @@
 - **Memory Layout**: Object memory optimization
 - **HotSpot**: JVM runtime improvements
 
-## Key Contributions
+## 4. Key Contributions
 
 ### JEP 519: Compact Object Headers
 
@@ -80,7 +90,7 @@ Contributions to AArch64 platform support:
 
 ---
 
-## External Resources
+## 5. External Resources
 
 | Type | Link |
 |------|------|

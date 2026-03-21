@@ -4,14 +4,25 @@
 > **Role**: HotSpot Compiler Expert
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [职业时间线](#3-职业时间线)
+4. [核心技术贡献](#4-核心技术贡献)
+5. [技术专长](#5-技术专长)
+6. [相关链接](#6-相关链接)
+
+---
+
+
+## 1. 概述
 
 Tom Rodriguez 是 Oracle Labs 的 **HotSpot 编译器专家**，专注于 C2 JIT 编译器和 Graal 集成。他是 HotSpot 编译器团队的资深成员。
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -25,7 +36,7 @@ Tom Rodriguez 是 Oracle Labs 的 **HotSpot 编译器专家**，专注于 C2 JIT
 
 ---
 
-## 职业时间线
+## 3. 职业时间线
 
 | 时间 | 事件 | 组织 | 备注 |
 |------|------|------|------|
@@ -36,7 +47,7 @@ Tom Rodriguez 是 Oracle Labs 的 **HotSpot 编译器专家**，专注于 C2 JIT
 
 ---
 
-## 核心技术贡献
+## 4. 核心技术贡献
 
 ### 1. C2 JIT Compiler
 
@@ -52,7 +63,7 @@ Tom Rodriguez 是 **C2** (Server Compiler) 的核心开发者：
 
 ---
 
-## 技术专长
+## 5. 技术专长
 
 ### 编译器技术
 
@@ -62,7 +73,7 @@ Tom Rodriguez 是 **C2** (Server Compiler) 的核心开发者：
 
 ---
 
-## 相关链接
+## 6. 相关链接
 
 ### 官方资料
 - [OpenJDK Census - never](https://openjdk.org/census#never)

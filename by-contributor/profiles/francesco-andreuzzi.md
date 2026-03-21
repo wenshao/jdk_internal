@@ -1,6 +1,16 @@
+## 目录
+
+1. [Basic Information](#1-basic-information)
+2. [Contribution Overview](#2-contribution-overview)
+3. [Key Contributions](#3-key-contributions)
+4. [Development Style](#4-development-style)
+5. [Related Links](#5-related-links)
+
+---
+
 # Francesco Andreuzzi
 
-## Basic Information
+## 1. Basic Information
 
 | Attribute | Value |
 |-----------|-------|
@@ -15,7 +25,7 @@
 
 > **数据来源**: [GitHub](https://github.com/francoandreuzzi), [OpenJDK Census](https://openjdk.org/census)
 
-## Contribution Overview
+## 2. Contribution Overview
 
 ### JDK 26 Contributions
 
@@ -32,7 +42,7 @@
 - **Test Automation**: Automated testing enhancements
 - **Quality Assurance**: Test coverage improvements
 
-## Key Contributions
+## 3. Key Contributions
 
 ### Testing Infrastructure
 
@@ -52,13 +62,13 @@ Focused on making the test suite more reliable:
 - Platform-specific test handling
 - Headless/headful test support
 
-## Development Style
+## 4. Development Style
 
 - Focuses on test infrastructure and reliability
 - Collaborates with QA teams
 - Addresses test stability issues proactively
 
-## Related Links
+## 5. Related Links
 
 - [OpenJDK Profile](https://openjdk.org/census#francoandreuzzi)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=francoandreuzzi)

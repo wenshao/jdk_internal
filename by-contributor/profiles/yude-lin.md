@@ -3,8 +3,18 @@
 > G1 GC 和 AArch64 贡献者，阿里巴巴
 
 ---
+## 目录
 
-## 基本信息
+1. [基本信息](#1-基本信息)
+2. [PR 列表](#2-pr-列表)
+3. [关键贡献](#3-关键贡献)
+4. [数据来源](#4-数据来源)
+5. [相关链接](#5-相关链接)
+
+---
+
+
+## 1. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -17,7 +27,7 @@
 
 ---
 
-## PR 列表
+## 2. PR 列表
 
 | Issue | 标题 | 合入时间 |
 |-------|------|----------|
@@ -32,7 +42,7 @@
 
 ---
 
-## 关键贡献
+## 3. 关键贡献
 
 ### G1 GC 监控增强 (JDK-8297247)
 
@@ -64,14 +74,14 @@ static int itable_stub_size = 0x60;  // 增加估算大小
 
 ---
 
-## 数据来源
+## 4. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:linade type:pr label:integrated`
 - **统计时间**: 2026-03-19
 
 ---
 
-## 相关链接
+## 5. 相关链接
 
 - [GitHub Profile](https://github.com/linade)
 - [OpenJDK PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Alinade)

@@ -1,6 +1,16 @@
+## 目录
+
+1. [Basic Information](#1-basic-information)
+2. [Contribution Overview](#2-contribution-overview)
+3. [Key Contributions](#3-key-contributions)
+4. [Development Style](#4-development-style)
+5. [Related Links](#5-related-links)
+
+---
+
 # Weijun Wang
 
-## Basic Information
+## 1. Basic Information
 
 | Attribute | Value |
 |-----------|-------|
@@ -15,7 +25,7 @@
 
 > **数据来源**: [OpenJDK Census](https://openjdk.org/census#weijun), [CFV Vote 2022-03](https://mail.openjdk.org/pipermail/members/2022-March/001633.html)
 
-## Contribution Overview
+## 2. Contribution Overview
 
 ### JDK 26 Contributions
 
@@ -31,7 +41,7 @@
 - **PKI**: Public key infrastructure
 - **TLS**: SSL/TLS implementation
 
-## Key Contributions
+## 3. Key Contributions
 
 ### Security Framework
 
@@ -51,13 +61,13 @@ Works on cryptographic features:
 - Key management
 - Digital signatures
 
-## Development Style
+## 4. Development Style
 
 - Security-conscious approach
 - Focuses on correctness and compliance
 - Long-term security maintainer
 
-## Related Links
+## 5. Related Links
 
 - [OpenJDK Profile](https://openjdk.org/census#weijun)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=weijun)

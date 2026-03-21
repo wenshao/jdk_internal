@@ -6,14 +6,26 @@
 > **Blog**: [johannesg1.github.io](https://johannesg1.github.io/)
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [主要 JEP 贡献](#3-主要-jep-贡献)
+4. [核心技术贡献](#4-核心技术贡献)
+5. [技术专长](#5-技术专长)
+6. [博客和技术分享](#6-博客和技术分享)
+7. [相关链接](#7-相关链接)
+
+---
+
+
+## 1. 概述
 
 Johannes Bechberger 是 SAP **SapMachine 团队** 的 Java 运行时工程师，专注于 **Java Flight Recorder (JFR)** 和性能分析工具。他是 **JEP 509 (JFR CPU-Time Profiling)** 的作者，对 JDK 的可观测性做出了重要贡献。
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -28,7 +40,7 @@ Johannes Bechberger 是 SAP **SapMachine 团队** 的 Java 运行时工程师，
 
 ---
 
-## 主要 JEP 贡献
+## 3. 主要 JEP 贡献
 
 ### JEP 509: JFR CPU-Time Profiling
 
@@ -45,7 +57,7 @@ Johannes Bechberger 是 SAP **SapMachine 团队** 的 Java 运行时工程师，
 
 ---
 
-## 核心技术贡献
+## 4. 核心技术贡献
 
 ### 1. Java Flight Recorder (JFR)
 
@@ -75,7 +87,7 @@ Johannes Bechberger 是 JFR 的活跃贡献者：
 
 ---
 
-## 技术专长
+## 5. 技术专长
 
 ### JFR (Java Flight Recorder)
 
@@ -91,7 +103,7 @@ Johannes Bechberger 是 JFR 的活跃贡献者：
 
 ---
 
-## 博客和技术分享
+## 6. 博客和技术分享
 
 ### 技术文章
 
@@ -107,7 +119,7 @@ Johannes Bechberger 在其博客上分享关于：
 
 ---
 
-## 相关链接
+## 7. 相关链接
 
 ### JEP 文档
 - [JEP 509: JFR CPU-Time Profiling](https://openjdk.org/jeps/509)

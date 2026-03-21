@@ -5,14 +5,26 @@
 > **GitHub**: [fbredberg](https://github.com/fbredberg)
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [主要贡献](#3-主要贡献)
+4. [核心技术贡献](#4-核心技术贡献)
+5. [技术专长](#5-技术专长)
+6. [合作关系](#6-合作关系)
+7. [相关链接](#7-相关链接)
+
+---
+
+
+## 1. 概述
 
 Fredrik Bredberg 是 Red Hat 的 **JVM 运行时工程师**，专注于 HotSpot VM 的 **同步机制**和 **运行时系统**。他是 **ObjectMonitor** 同步原语的主要开发者，对 JVM 的锁实现和性能优化做出了重要贡献。
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -25,7 +37,7 @@ Fredrik Bredberg 是 Red Hat 的 **JVM 运行时工程师**，专注于 HotSpot 
 
 ---
 
-## 主要贡献
+## 3. 主要贡献
 
 ### 1. ObjectMonitor 同步优化
 
@@ -42,7 +54,7 @@ Fredrik Bredberg 是 HotSpot **ObjectMonitor** 的主要贡献者：
 
 ---
 
-## 核心技术贡献
+## 4. 核心技术贡献
 
 ### ObjectMonitor 优化
 
@@ -60,7 +72,7 @@ Fredrik Bredberg 是 HotSpot **ObjectMonitor** 的主要贡献者：
 
 ---
 
-## 技术专长
+## 5. 技术专长
 
 ### JVM 同步
 
@@ -77,7 +89,7 @@ Fredrik Bredberg 是 HotSpot **ObjectMonitor** 的主要贡献者：
 
 ---
 
-## 合作关系
+## 6. 合作关系
 
 与以下 HotSpot 开发者合作：
 - **Roman Kennke**: Red Hat OpenJDK
@@ -85,7 +97,7 @@ Fredrik Bredberg 是 HotSpot **ObjectMonitor** 的主要贡献者：
 
 ---
 
-## 相关链接
+## 7. 相关链接
 
 ### 官方资料
 - [GitHub: fbredberg](https://github.com/fbredberg)

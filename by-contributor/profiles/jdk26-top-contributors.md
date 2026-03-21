@@ -3,14 +3,28 @@
 > Based on 3,936 commits from 2025-06 to 2026-03
 
 ---
+## 目录
 
-## Overview
+1. [Overview](#1-overview)
+2. [Top 100 by Commit Count](#2-top-100-by-commit-count)
+3. [Top 10 by Code Changes](#3-top-10-by-code-changes)
+4. [JEP Lead Contributors](#4-jep-lead-contributors)
+5. [By Organization](#5-by-organization)
+6. [By Component](#6-by-component)
+7. [Rising Stars](#7-rising-stars)
+8. [Notable First-Time Contributors](#8-notable-first-time-contributors)
+9. [Detailed Profiles](#9-detailed-profiles)
+
+---
+
+
+## 1. Overview
 
 JDK 26 had **~380 unique contributors** making commits during its development cycle. Below are the top contributors ranked by commit count.
 
 ---
 
-## Top 100 by Commit Count
+## 2. Top 100 by Commit Count
 
 | Rank | Contributor | Organization | Commits | Primary Focus |
 |------|-------------|--------------|---------|---------------|
@@ -117,7 +131,7 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 ---
 
-## Top 10 by Code Changes
+## 3. Top 10 by Code Changes
 
 | Rank | Contributor | Additions | Deletions | Total Changes | 档案 |
 |------|-------------|-----------|-----------|---------------|------|
@@ -134,7 +148,7 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 ---
 
-## JEP Lead Contributors
+## 4. JEP Lead Contributors
 
 | JEP | Title | Lead(s) | 档案 |
 |-----|-------|---------|------|
@@ -153,7 +167,7 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 ---
 
-## By Organization
+## 5. By Organization
 
 ### [Oracle](/contributors/orgs/oracle.md) (~75% of commits)
 
@@ -274,7 +288,7 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 ---
 
-## By Component
+## 6. By Component
 
 ### GC (745 commits)
 
@@ -331,7 +345,7 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 ---
 
-## Rising Stars
+## 7. Rising Stars
 
 Contributors with significant growth in JDK 26:
 
@@ -342,7 +356,7 @@ Contributors with significant growth in JDK 26:
 
 ---
 
-## Notable First-Time Contributors
+## 8. Notable First-Time Contributors
 
 - **[Anton Seoane Ampudia](./anton-seoane-ampudia.md)**: 32-bit x86 removal cleanup
 - **[Quan Anh Mai](./quan-anh-mai.md)**: Type system improvements
@@ -350,7 +364,7 @@ Contributors with significant growth in JDK 26:
 
 ---
 
-## Detailed Profiles
+## 9. Detailed Profiles
 
 For detailed contributor profiles, see:
 

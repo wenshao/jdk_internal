@@ -7,14 +7,25 @@
 > **Location**: Japan
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [职业历程](#3-职业历程)
+4. [研究领域](#4-研究领域)
+5. [外部资源](#5-外部资源)
+6. [技术影响力](#6-技术影响力)
+
+---
+
+
+## 1. 概述
 
 Yasumasa Suenaga 是 NTT DATA 的 Technical Lead，OpenJDK Reviewer 和 IcedTea Committer。他活跃于 OpenJDK 社区，专注于 JDK Flight Recorder (JFR)、HotSpot JVM 内部、服务性和性能监控，以及 jpackage 工具开发。他维护 55+ 个公开代码仓库，并在 Twitter 和 SlideShare 上分享关于 OpenJDK 开发、Bug 修复和技术挑战的见解。
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -38,7 +49,7 @@ Yasumasa Suenaga 是 NTT DATA 的 Technical Lead，OpenJDK Reviewer 和 IcedTea 
 
 ---
 
-## 职业历程
+## 3. 职业历程
 
 | 时间 | 事件 | 详情 |
 |------|------|------|
@@ -49,7 +60,7 @@ Yasumasa Suenaga 是 NTT DATA 的 Technical Lead，OpenJDK Reviewer 和 IcedTea 
 
 ---
 
-## 研究领域
+## 4. 研究领域
 
 | 领域 | 说明 |
 |------|------|
@@ -61,7 +72,7 @@ Yasumasa Suenaga 是 NTT DATA 的 Technical Lead，OpenJDK Reviewer 和 IcedTea 
 
 ---
 
-## 外部资源
+## 5. 外部资源
 
 ### 技术分享
 
@@ -77,7 +88,7 @@ Yasumasa 在 SlideShare 上分享关于 Java 监控、数据库性能和 JVM 主
 
 ---
 
-## 技术影响力
+## 6. 技术影响力
 
 Yasumasa Suenaga 是日本 Java 社区的活跃成员：
 - 定期在 Twitter 上分享 OpenJDK 开发见解

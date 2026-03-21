@@ -1,6 +1,16 @@
+## 目录
+
+1. [Basic Information](#1-basic-information)
+2. [Contribution Overview](#2-contribution-overview)
+3. [Key Contributions](#3-key-contributions)
+4. [Development Style](#4-development-style)
+5. [Related Links](#5-related-links)
+
+---
+
 # Jatin Bhateja
 
-## Basic Information
+## 1. Basic Information
 
 | Attribute | Value |
 |-----------|-------|
@@ -14,7 +24,7 @@
 
 > **数据来源**: [OpenJDK Census](https://openjdk.org/census)
 
-## Contribution Overview
+## 2. Contribution Overview
 
 ### JDK 26 Contributions
 
@@ -31,7 +41,7 @@
 - **Performance**: Low-level performance enhancements
 - **AArch64**: ARM architecture optimizations
 
-## Key Contributions
+## 3. Key Contributions
 
 ### Vector API
 
@@ -50,13 +60,13 @@ Worked on various compiler optimization projects:
 - Loop optimizations
 - Auto-vectorization improvements
 
-## Development Style
+## 4. Development Style
 
 - Focuses on performance-critical code paths
 - Works on low-level JVM optimizations
 - Collaborates with compiler and GC teams
 
-## Related Links
+## 5. Related Links
 
 - [OpenJDK Profile](https://openjdk.org/census#jbhateja)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=jbhateja)

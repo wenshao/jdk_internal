@@ -4,14 +4,24 @@
 > **Role**: GraalVM Developer
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [核心技术贡献](#3-核心技术贡献)
+4. [技术专长](#4-技术专长)
+5. [合作关系](#5-合作关系)
+
+---
+
+
+## 1. 概述
 
 Chris Thalinger 是 Oracle 的 **GraalVM 开发者**，专注于 Graal 编译器和 HotSpot JIT 集成。
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -22,7 +32,7 @@ Chris Thalinger 是 Oracle 的 **GraalVM 开发者**，专注于 Graal 编译器
 
 ---
 
-## 核心技术贡献
+## 3. 核心技术贡献
 
 ### 1. Graal Compiler
 
@@ -38,7 +48,7 @@ Chris Thalinger 是 Graal 编译器的核心开发者：
 
 ---
 
-## 技术专长
+## 4. 技术专长
 
 ### 编译器技术
 
@@ -48,7 +58,7 @@ Chris Thalinger 是 Graal 编译器的核心开发者：
 
 ---
 
-## 合作关系
+## 5. 合作关系
 
 与以下 GraalVM 开发者合作：
 - **Doug Simon**: GraalVM Lead

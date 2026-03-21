@@ -3,14 +3,30 @@
 > JDK 8 (LTS) - OpenJDK 8u Updates Contributors
 
 ---
+## 目录
 
-## Overview
+1. [Overview](#1-overview)
+2. [Project Leadership](#2-project-leadership)
+3. [Historical Top Contributors (2014-2024)](#3-historical-top-contributors-2014-2024)
+4. [By Organization](#4-by-organization)
+5. [Key Features in JDK 8](#5-key-features-in-jdk-8)
+6. [JDK 8u Update Project](#6-jdk-8u-update-project)
+7. [Legacy Contributors](#7-legacy-contributors)
+8. [Distributions Based on JDK 8](#8-distributions-based-on-jdk-8)
+9. [Migration Notes](#9-migration-notes)
+10. [Detailed Profiles](#10-detailed-profiles)
+11. [References](#11-references)
+
+---
+
+
+## 1. Overview
 
 JDK 8 was released in March 2014 and remains one of the most widely used Java versions. The OpenJDK 8u project continues to receive updates through the **Adoptium** (formerly AdoptOpenJDK), **Amazon Corretto**, **Azul Zulu**, **Oracle JDK**, and other distributions.
 
 ---
 
-## Project Leadership
+## 2. Project Leadership
 
 | Role | Name | Organization |
 |------|------|--------------|
@@ -20,7 +36,7 @@ JDK 8 was released in March 2014 and remains one of the most widely used Java ve
 
 ---
 
-## Historical Top Contributors (2014-2024)
+## 3. Historical Top Contributors (2014-2024)
 
 JDK 8 has been maintained by a dedicated community over its 10+ year lifespan.
 
@@ -51,7 +67,7 @@ JDK 8 has been maintained by a dedicated community over its 10+ year lifespan.
 
 ---
 
-## By Organization
+## 4. By Organization
 
 ### Oracle
 
@@ -116,7 +132,7 @@ Long-term OpenJDK contributor with Zulu distribution.
 
 ---
 
-## Key Features in JDK 8
+## 5. Key Features in JDK 8
 
 ### JEPs Delivered
 
@@ -141,7 +157,7 @@ Long-term OpenJDK contributor with Zulu distribution.
 
 ---
 
-## JDK 8u Update Project
+## 6. JDK 8u Update Project
 
 The **jdk8u** project maintains OpenJDK 8 with security updates and bug fixes.
 
@@ -161,7 +177,7 @@ The **jdk8u** project maintains OpenJDK 8 with security updates and bug fixes.
 
 ---
 
-## Legacy Contributors
+## 7. Legacy Contributors
 
 Many contributors who worked on JDK 8 have since moved to other projects or retired:
 
@@ -176,7 +192,7 @@ Many contributors who worked on JDK 8 have since moved to other projects or reti
 
 ---
 
-## Distributions Based on JDK 8
+## 8. Distributions Based on JDK 8
 
 | Distribution | Organization | Status |
 |--------------|--------------|--------|
@@ -192,7 +208,7 @@ Many contributors who worked on JDK 8 have since moved to other projects or reti
 
 ---
 
-## Migration Notes
+## 9. Migration Notes
 
 ### From JDK 8 to JDK 11/17/21
 
@@ -210,7 +226,7 @@ Organizations still on JDK 8 should consider:
 
 ---
 
-## Detailed Profiles
+## 10. Detailed Profiles
 
 For detailed contributor profiles, see:
 
@@ -235,7 +251,7 @@ For detailed contributor profiles, see:
 
 ---
 
-## References
+## 11. References
 
 - [JDK 8 Release Notes](https://openjdk.org/projects/jdk8/)
 - [OpenJDK 8u Project](https://openjdk.org/projects/jdk8u/)

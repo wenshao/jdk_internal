@@ -3,14 +3,26 @@
 > Based on commits from 2024-03 to 2025-03
 
 ---
+## 目录
 
-## Overview
+1. [Overview](#1-overview)
+2. [Top 50 by Commit Count](#2-top-50-by-commit-count)
+3. [By Organization](#3-by-organization)
+4. [JEP Lead Contributors](#4-jep-lead-contributors)
+5. [By Component](#5-by-component)
+6. [Key Features in JDK 25](#6-key-features-in-jdk-25)
+7. [Detailed Profiles](#7-detailed-profiles)
+
+---
+
+
+## 1. Overview
 
 JDK 25 had **~350 unique contributors** making commits during its development cycle. This was a pivotal release leading into JDK 26.
 
 ---
 
-## Top 50 by Commit Count
+## 2. Top 50 by Commit Count
 
 | Rank | Contributor | Organization | Commits | Primary Focus | 档案 |
 |------|-------------|--------------|---------|---------------|------|
@@ -67,7 +79,7 @@ JDK 25 had **~350 unique contributors** making commits during its development cy
 
 ---
 
-## By Organization
+## 3. By Organization
 
 ### Oracle (~72% of commits)
 
@@ -142,7 +154,7 @@ JDK 25 had **~350 unique contributors** making commits during its development cy
 
 ---
 
-## JEP Lead Contributors
+## 4. JEP Lead Contributors
 
 | JEP | Title | Lead(s) | 档案 |
 |-----|-------|---------|------|
@@ -156,7 +168,7 @@ JDK 25 had **~350 unique contributors** making commits during its development cy
 
 ---
 
-## By Component
+## 5. By Component
 
 ### GC (680 commits)
 
@@ -188,7 +200,7 @@ JDK 25 had **~350 unique contributors** making commits during its development cy
 
 ---
 
-## Key Features in JDK 25
+## 6. Key Features in JDK 25
 
 ### JEPs Delivered
 
@@ -203,7 +215,7 @@ JDK 25 had **~350 unique contributors** making commits during its development cy
 
 ---
 
-## Detailed Profiles
+## 7. Detailed Profiles
 
 For detailed contributor profiles, see:
 

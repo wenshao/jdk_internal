@@ -3,8 +3,19 @@
 > JDK 26 RISC-V 向量指令专家，字节跳动，12 个 commits
 
 ---
+## 目录
 
-## 基本信息
+1. [基本信息](#1-基本信息)
+2. [贡献概览](#2-贡献概览)
+3. [PR 列表](#3-pr-列表)
+4. [关键贡献详解](#4-关键贡献详解)
+5. [开发风格](#5-开发风格)
+6. [相关链接](#6-相关链接)
+
+---
+
+
+## 1. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -20,7 +31,7 @@
 
 ---
 
-## 贡献概览
+## 2. 贡献概览
 
 ### 按类别统计
 
@@ -38,7 +49,7 @@
 
 ---
 
-## PR 列表
+## 3. PR 列表
 
 ### RISC-V Zvbb 向量指令
 
@@ -69,7 +80,7 @@
 
 ---
 
-## 关键贡献详解
+## 4. 关键贡献详解
 
 ### 1. RISC-V Zvbb 向量 And-Not 指令 (JDK-8329887)
 
@@ -142,7 +153,7 @@ void LIR_Assembler::emit_setmem(CodeBuffer* cb, LIR_Opr src, LIR_Opr cnt, LIR_Op
 
 ---
 
-## 开发风格
+## 5. 开发风格
 
 Anjian-Wen 的贡献特点:
 
@@ -153,7 +164,7 @@ Anjian-Wen 的贡献特点:
 
 ---
 
-## 相关链接
+## 6. 相关链接
 
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=Anjian-Wen)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20Anjian-Wen)

@@ -6,14 +6,26 @@
 > **Role**: HotSpot C2 Compiler Lead
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [主要 JEP 贡献](#3-主要-jep-贡献)
+4. [核心技术贡献](#4-核心技术贡献)
+5. [开发活动](#5-开发活动)
+6. [技术专长](#6-技术专长)
+7. [相关链接](#7-相关链接)
+
+---
+
+
+## 1. 概述
 
 Vladimir Kozlov (OpenJDK 用户名: **kvn**) 是 Oracle 的资深工程师，**HotSpot C2 (Server Compiler) JIT 编译器的技术负责人**。他在 OpenJDK 社区活跃超过 20 年，是 JVM 编译器优化和向量指令支持的关键贡献者。
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -31,7 +43,7 @@ Vladimir Kozlov (OpenJDK 用户名: **kvn**) 是 Oracle 的资深工程师，**H
 
 ---
 
-## 主要 JEP 贡献
+## 3. 主要 JEP 贡献
 
 ### JEP 414: Vector API (Second Incubator)
 
@@ -57,7 +69,7 @@ Vladimir Kozlov (OpenJDK 用户名: **kvn**) 是 Oracle 的资深工程师，**H
 
 ---
 
-## 核心技术贡献
+## 4. 核心技术贡献
 
 ### 1. C2 循环优化
 
@@ -91,7 +103,7 @@ Vladimir 是 C2 编译器循环优化领域的权威：
 
 ---
 
-## 开发活动
+## 5. 开发活动
 
 ### 邮件列表活跃度
 
@@ -110,7 +122,7 @@ Vladimir 是 C2 编译器循环优化领域的权威：
 
 ---
 
-## 技术专长
+## 6. 技术专长
 
 ### C2 编译器架构
 
@@ -125,7 +137,7 @@ Vladimir 是 C2 编译器循环优化领域的权威：
 
 ---
 
-## 相关链接
+## 7. 相关链接
 
 ### 官方资料
 - [OpenJDK Census - kvn](https://openjdk.org/census#kvn)

@@ -5,14 +5,25 @@
 > **Location**: Sweden
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [主要贡献](#3-主要贡献)
+4. [技术专长](#4-技术专长)
+5. [合作关系](#5-合作关系)
+6. [相关链接](#6-相关链接)
+
+---
+
+
+## 1. 概述
 
 Joel Sikström 是 Oracle 的 **ZGC (Z Garbage Collector)** 开发者，与 Stefan Karlsson 和 Per Liden 同为 ZGC 团队核心成员。他在 JDK 26 中以 44 次提交贡献于 ZGC 的开发和优化。
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -25,7 +36,7 @@ Joel Sikström 是 Oracle 的 **ZGC (Z Garbage Collector)** 开发者，与 Stef
 
 ---
 
-## 主要贡献
+## 3. 主要贡献
 
 ### 1. ZGC 开发
 
@@ -42,7 +53,7 @@ Joel Sikström 是 **ZGC** 的核心贡献者：
 
 ---
 
-## 技术专长
+## 4. 技术专长
 
 ### ZGC (Z Garbage Collector)
 
@@ -53,7 +64,7 @@ Joel Sikström 是 **ZGC** 的核心贡献者：
 
 ---
 
-## 合作关系
+## 5. 合作关系
 
 与以下 ZGC 开发者密切合作：
 - **Stefan Karlsson**: ZGC Lead (JEP 439 Author)
@@ -62,7 +73,7 @@ Joel Sikström 是 **ZGC** 的核心贡献者：
 
 ---
 
-## 相关链接
+## 6. 相关链接
 
 ### ZGC Resources
 - [JEP 439: Generational ZGC](https://openjdk.org/jeps/439)

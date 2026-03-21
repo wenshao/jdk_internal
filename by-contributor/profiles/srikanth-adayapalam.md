@@ -4,14 +4,24 @@
 > **Role**: javac Developer
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [核心技术贡献](#3-核心技术贡献)
+4. [技术专长](#4-技术专长)
+5. [合作关系](#5-合作关系)
+
+---
+
+
+## 1. 概述
 
 Srikanth Adayapalam 是 Oracle 的 **javac 编译器开发者**，专注于 Java 编译器实现和语言特性支持。他在 JDK 26 中以 4 次提交贡献于 javac 相关功能。
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -22,7 +32,7 @@ Srikanth Adayapalam 是 Oracle 的 **javac 编译器开发者**，专注于 Java
 
 ---
 
-## 核心技术贡献
+## 3. 核心技术贡献
 
 ### 1. javac 编译器
 
@@ -33,7 +43,7 @@ Srikanth Adayapalam 贡献于 javac：
 
 ---
 
-## 技术专长
+## 4. 技术专长
 
 ### 编译器技术
 
@@ -43,7 +53,7 @@ Srikanth Adayapalam 贡献于 javac：
 
 ---
 
-## 合作关系
+## 5. 合作关系
 
 与以下开发者合作：
 - **Jonathan Gibbons**: javac Lead

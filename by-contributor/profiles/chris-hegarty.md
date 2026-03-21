@@ -7,8 +7,20 @@
 > **Location**: Dublin, Ireland
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [职业历程](#3-职业历程)
+4. [主要贡献](#4-主要贡献)
+5. [OpenJDK 提名活动](#5-openjdk-提名活动)
+6. [技术影响力](#6-技术影响力)
+7. [外部资源](#7-外部资源)
+
+---
+
+
+## 1. 概述
 
 Chris Hegarty 是 Elastic 的 Principal Software Engineer，前 Oracle Java Platform Group Networking Lead。他是 OpenJDK Committer 和 Reviewer，Apache Lucene PMC Chair。他在 Java 核心库开发方面做出重要贡献，特别是 Java 11 HTTP Client API 和 Java 9 Platform Module System (JPMS/Project Jigsaw) 的实现。
 
@@ -16,7 +28,7 @@ Chris Hegarty 是 Elastic 的 Principal Software Engineer，前 Oracle Java Plat
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -34,7 +46,7 @@ Chris Hegarty 是 Elastic 的 Principal Software Engineer，前 Oracle Java Plat
 
 ---
 
-## 职业历程
+## 3. 职业历程
 
 | 时间 | 事件 | 详情 |
 |------|------|------|
@@ -46,7 +58,7 @@ Chris Hegarty 是 Elastic 的 Principal Software Engineer，前 Oracle Java Plat
 
 ---
 
-## 主要贡献
+## 4. 主要贡献
 
 ### Java 11 HTTP Client API
 
@@ -78,7 +90,7 @@ HttpResponse<String> response = client.send(
 
 ---
 
-## OpenJDK 提名活动
+## 5. OpenJDK 提名活动
 
 Chris Hegarty 作为 OpenJDK Reviewer，提名了多位开发者：
 
@@ -90,7 +102,7 @@ Chris Hegarty 作为 OpenJDK Reviewer，提名了多位开发者：
 
 ---
 
-## 技术影响力
+## 6. 技术影响力
 
 Chris Hegarty 在 Java 社区的影响力：
 
@@ -101,7 +113,7 @@ Chris Hegarty 在 Java 社区的影响力：
 
 ---
 
-## 外部资源
+## 7. 外部资源
 
 | 平台 | 链接 |
 |------|------|

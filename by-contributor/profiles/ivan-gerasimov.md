@@ -4,14 +4,24 @@
 > **Role**: Desktop Developer
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [主要贡献](#3-主要贡献)
+4. [技术专长](#4-技术专长)
+5. [合作关系](#5-合作关系)
+
+---
+
+
+## 1. 概述
 
 Ivan Gerasimov 是 Oracle 的 **桌面应用开发者**，专注于 Java AWT/Swing 桌面图形用户界面。他在 JDK 26 中以 5 次提交贡献于桌面功能。
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -22,7 +32,7 @@ Ivan Gerasimov 是 Oracle 的 **桌面应用开发者**，专注于 Java AWT/Swi
 
 ---
 
-## 主要贡献
+## 3. 主要贡献
 
 ### 1. Desktop/AWT
 
@@ -33,7 +43,7 @@ Ivan Gerasimov 贡献于 Java 桌面功能：
 
 ---
 
-## 技术专长
+## 4. 技术专长
 
 ### Desktop
 
@@ -43,7 +53,7 @@ Ivan Gerasimov 贡献于 Java 桌面功能：
 
 ---
 
-## 合作关系
+## 5. 合作关系
 
 与以下 Desktop 开发者合作：
 - **Phil Race**: Client Libraries Lead

@@ -4,14 +4,24 @@
 > **Role**: JFR Developer
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [主要贡献](#3-主要贡献)
+4. [技术专长](#4-技术专长)
+5. [合作关系](#5-合作关系)
+
+---
+
+
+## 1. 概述
 
 Markus Grönlund 是 Oracle 的 **Java Flight Recorder (JFR)** 开发者，与 Erik Gahlin 同为 JFR 团队核心成员。他在 JDK 26 中以 17 次提交贡献于 JFR 功能的改进。
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -22,7 +32,7 @@ Markus Grönlund 是 Oracle 的 **Java Flight Recorder (JFR)** 开发者，与 E
 
 ---
 
-## 主要贡献
+## 3. 主要贡献
 
 ### 1. Java Flight Recorder
 
@@ -33,7 +43,7 @@ Markus Grönlund 是 **JFR** 的核心贡献者：
 
 ---
 
-## 技术专长
+## 4. 技术专长
 
 ### JFR
 
@@ -43,7 +53,7 @@ Markus Grönlund 是 **JFR** 的核心贡献者：
 
 ---
 
-## 合作关系
+## 5. 合作关系
 
 与以下 JFR 开发者合作：
 - **Erik Gahlin**: JFR Lead (57 commits)

@@ -4,14 +4,24 @@
 > **Role**: JDBC Lead
 
 ---
+## 目录
 
-## 概述
+1. [概述](#1-概述)
+2. [基本信息](#2-基本信息)
+3. [核心技术贡献](#3-核心技术贡献)
+4. [技术专长](#4-技术专长)
+5. [相关链接](#5-相关链接)
+
+---
+
+
+## 1. 概述
 
 Lance Andersen 是 Oracle 的 **JDBC (Java Database Connectivity)** 技术负责人，专注于 Java 数据库连接和 SQL 相关功能。他在 JDK 26 中以 6 次提交贡献于 JDBC 模块。
 
 ---
 
-## 基本信息
+## 2. 基本信息
 
 | 属性 | 值 |
 |------|-----|
@@ -23,7 +33,7 @@ Lance Andersen 是 Oracle 的 **JDBC (Java Database Connectivity)** 技术负责
 
 ---
 
-## 核心技术贡献
+## 3. 核心技术贡献
 
 ### 1. JDBC
 
@@ -40,7 +50,7 @@ Lance Andersen 负责 Java 数据库连接：
 
 ---
 
-## 技术专长
+## 4. 技术专长
 
 ### 数据库连接
 
@@ -50,7 +60,7 @@ Lance Andersen 负责 Java 数据库连接：
 
 ---
 
-## 相关链接
+## 5. 相关链接
 
 ### 官方资料
 - [JDBC Specification](https://www.oracle.com/java/technologies/jdbc/)
