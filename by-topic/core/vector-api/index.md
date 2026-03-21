@@ -4,7 +4,7 @@
 
 [← 返回核心](..) | [时间线](timeline.md) | [使用指南](usage.md) | [平台支持](platform.md) | [贡献者](contributors.md) | [各版本详情](versions.md)
 
-> **注意**: 研究者常见问题已整合到本文档中，> **已删除**: ~~research-faq.md~~ (内容已整合到主文档)
+> **注意**: 研究者常见问题已整合到本文档中。**已删除**: ~~research-faq.md~~ (内容已整合到主文档)
 
 ---
 
@@ -17,20 +17,18 @@
 5. [支持的操作](#支持的操作)
 6. [性能考量](#性能考量)
 7. [与 Valhalla 的协同](#与-valhalla-的协同)
-8. [运行要求](#运行要求)
-9. **AI/ML 浮点格式** (新增)
-10. [C2 编译器内部](#新增)
-11. [性能基准测试](#新增)
-12. [Valhalla/Babylon 集成](#新增)
-13. [研究者常见问题](#整合)
+8. [AI/ML 浮点格式](#aiml-浮点格式)
+9. [C2 编译器内部](#c2-编译器内部)
+10. [性能基准测试](#性能基准测试)
+11. [Valhalla/Babylon 集成](#valhallababylon-集成)
+12. [研究者常见问题](#研究者常见问题)
+13. [运行要求](#运行要求)
 14. [版本状态](#版本状态)
-15. [相关链接](#相关链接)
-16. [源码位置](#源码位置)
-17. [版本状态](#版本状态)
-18. [JDK 26 重要更新](#jdk-26-重要更新)
-19. [为什么孵化这么慢](#为什么孵化这么慢)
-20. [JEP 路线图](#jep-路线图)
-21. [相关链接](#相关链接)
+15. [JDK 26 重要更新](#jdk-26-重要更新)
+16. [为什么孵化这么慢](#为什么孵化这么慢)
+17. [JEP 路线图](#jep-路线图)
+18. [相关链接](#相关链接)
+19. [源码位置](#源码位置)
 ---
 
 ## 一眼看懂
@@ -79,7 +77,7 @@ Vector API 提供了一种在 Java 中编写可移植 SIMD (Single Instruction M
 | long | LongVector | 64, 128, 256, 512, Max |
 | float | FloatVector | 64, 128, 256, 512, Max |
 | double | DoubleVector | 64, 128, 256, 512, Max |
-| **float16** | Float16Vector (Float16 存储) | 64, 128, 256, 512, Max |
+| **float16** | Float16 (标量值类) | N/A (JDK 24+ 支持) |
 
 ---
 
@@ -269,7 +267,7 @@ FloatVector vy = FloatVector.fromArray(species, points.yArray(), 0);
 - 扁平化数组 → 连续内存 → 高效向量加载
 - 无对象头开销 → 更好的缓存利用
 - 值类型内联 → 减少间接访问
-**当前状态**: Valhalla 仍在开发中，预计 JDK 27+ 可用
+**当前状态**: Valhalla (JEP 401) 已在 JDK 26 提供 Early Access 构建，目标 2026 下半年合并到主 JDK
 ---
 ## AI/ML 浮点格式
 ### 格式对比
@@ -289,9 +287,9 @@ Float16 value = Float16.valueOf(3.14159);
 // 转换
 float f = value.floatValue();
 short bits = Float16.float16ToRawShortBits(value);
-// 向量操作
-Float16Vector v = Float16Vector.fromArray(species, array, 0);
 ```
+**注意**: Float16 向量操作 (Float16Vector) 尚未实现，计划在 Project Valhalla 完成后添加。
+
 **Float16 特点**:
 - 位宽: 16-bit (1 符号位, 5 指数位, 10 尾数位)
 - 范围: ±65504, 精度约 3-4 位小数
@@ -450,9 +448,9 @@ st1w     z0.d, p0/zr, [x0, x1]
 │                                                              │
 └──────────────────────────────────────────────────────────────┘
 ```
-**当前状态**: Valhalla 预览中 (JDK 22+)，Vector API 集成待定
+**当前状态**: Valhalla (JEP 401) 已在 JDK 26 提供 Early Access，Vector API 集成待定
 ### 与 Babylon GPU Offload
-**Project Babylon** 计划将 Vector API 操作卸载到 GPU:
+**Project Babylon** 通过 HAT (Heterogeneous Accelerator Toolkit) 将 Vector API 操作卸载到 GPU:
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                    未来: GPU Offload 架构                     │
@@ -475,8 +473,8 @@ st1w     z0.d, p0/zr, [x0, x1]
 | 功能 | 版本 | 状态 |
 |------|------|------|
 | Vector API CPU | JDK 16+ | ✅ 可用 |
-| Valhalla 值类型 | JDK 24+ (预览) | 🔄 预览 |
-| Babylon GPU Offload | JDK 26+ (实验) | 🔄 开发中 |
+| Valhalla 值类型 (JEP 401) | JDK 26+ (Early Access) | 🔄 预览 |
+| Babylon HAT GPU Offload | 实验阶段 | 🔄 开发中 |
 | 完整集成 | JDK 28+ | 📅 计划中 |
 ---
 ## 研究者常见问题
@@ -568,10 +566,10 @@ javac --add-modules jdk.incubator.vector VectorAdd.java
 ```
 ### 运行
 ```bash
-# JDK 16-23 (incubator)
-java --add-modules jdk.incubator.vector --enable-preview VectorAdd
-# JDK 24+ (可能不再是 incubator)
+# JDK 16-26 (incubator)
 java --add-modules jdk.incubator.vector VectorAdd
+# JDK 27+ (可能不再是 incubator)
+java VectorAdd
 ```
 ### JVM 参数
 ```bash
@@ -601,6 +599,11 @@ java --add-modules jdk.incubator.vector VectorAdd
 - [JEP 448: Vector API (Sixth Incubator)](https://openjdk.org/jeps/448)
 - [JEP 508: Vector API (Tenth Incubator)](https://openjdk.org/jeps/508)
 - [JEP 529: Vector API (Eleventh Incubator)](https://openjdk.org/jeps/529)
+- [JEP 401: Value Classes and Objects (Valhalla)](https://openjdk.org/jeps/401)
+
+### 相关项目
+- [Project Valhalla](https://openjdk.org/projects/valhalla/) - 值类型与值对象
+- [Project Babylon](https://openjdk.org/projects/babylon/) - GPU 加速与异构计算
 
 ### 源码位置
 - JDK 源码: `src/jdk.incubator.vector/share/classes/jdk/incubator/vector/`
@@ -619,10 +622,10 @@ java --add-modules jdk.incubator.vector VectorAdd
 | JDK 23 | - | 🥚 Eighth Incubator |
 | JDK 24 | - | 🥚 Ninth Incubator |
 | JDK 25 | 508 | 🥚 Tenth Incubator |
-| **JDK 26** | 529 | 🥚 **Eleventh Incubator (GA 2026-03)** |
+| **JDK 26** | 529 | 🥚 **Eleventh Incubator (GA 2026-03-17)** |
 | JDK 27 | - | 🔄 开发中 |
 > **注意**: Vector API 在 JDK 26 GA 中仍然是 Incubator 状态
-> 已孵化 **10+ 年** (JDK 16-26)，是 OpenJDK 历史上孵化时间最长的 API 之一
+> 已孵化 **5 年** (JDK 16-26)，跨越 **11 个版本**，是 OpenJDK 历史上孵化时间最长的 API 之一
 ### JDK 26 重要更新
 | 特性 | JBS | 描述 |
 |------|-----|------|
@@ -632,7 +635,7 @@ java --add-modules jdk.incubator.vector VectorAdd
 | **VectorShape 公开** | [8356634](https://bugs.openjdk.org/browse/JDK-8356634) | `largestShapeFor()` 公开 |
 ---
 ## 为什么孵化这么慢？
-Vector API 已孵化 11 个版本 (JDK 16-26)，主要原因：
+Vector API 已孵化 5 年跨越 11 个版本 (JDK 16-26)，主要原因：
 ### 技术挑战
 | 挑战 | 描述 | 状态 |
 |------|------|------|
@@ -644,7 +647,7 @@ Vector API 已孵化 11 个版本 (JDK 16-26)，主要原因：
 ### 孵化时间对比
 | API | 孵化时间 | 版本数 |
 |-----|----------|--------|
-| **Vector API** | 10+ 年 (JDK 16-26) | 11 个版本 |
+| **Vector API** | 5 年 (JDK 16-26) | 11 个版本 |
 | Foreign Function & Memory API | 3 年 (JDK 17-22) | 5 个版本 |
 | Pattern Matching | 4 年 (JDK 16-21) | 5 个版本 |
 | Records | 2 年 (JDK 14-16) | 3 个版本 |
@@ -674,7 +677,7 @@ JDK 22-24 (2024-25) ── 继续孵化
     │                               └── UMIN/UMAX
 JDK 25 (2025-09) ── JEP 508 ── Tenth Incubator
     │                               └── FFM 迁移开始
-JDK 26 (2026-03) ── JEP 529 ── Eleventh Incubator (GA)
+JDK 26 (2026-03-17) ── JEP 529 ── Eleventh Incubator (GA)
     │                               ├── FFM 集成
     │                               └── Float16 重构
 JDK 27 (2026-09) ── 开发中

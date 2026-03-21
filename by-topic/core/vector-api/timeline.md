@@ -1,6 +1,6 @@
 # Vector API 时间线
 
-> 跨版本演进追踪 (JDK 16 - JDK 24+)
+> 跨版本演进追踪 (JDK 16 - JDK 26+)
 
 [← 返回 Vector API](./)
 
@@ -20,10 +20,10 @@ JDK 18 (2022-03) ── JEP 417 ── Third Incubator
 JDK 19 (2022-09) ── JEP 426 ── Fourth Incubator
     │                               ├── 重构 API
     │                               └── 性能优化
-JDK 20 (2023-03) ── JEP 448 ── Fifth Incubator
+JDK 20 (2023-03) ── JEP 438 ── Fifth Incubator
     │                               ├── 增强 VectorMask
     │                               └── 更多测试
-JDK 21 (2023-09) ── JEP 460 ── Sixth Incubator
+JDK 21 (2023-09) ── JEP 448 ── Sixth Incubator
     │                               ├── Float16 支持
     │                               └── 继续优化
 JDK 22 (2024-03) ──────────── 继续孵化
@@ -32,12 +32,12 @@ JDK 23 (2024-09) ──────────── 继续孵化
     │
 JDK 24 (2025-03) ──────────── 继续孵化
     │
-JDK 26 (2026-03) ──────────── GA 发布，仍为 Incubator
+JDK 26 (2026-03-17) ──────── GA 发布，仍为 Incubator
     │
 JDK 27 (2026-09) ──────────── 开发中
 ```
 
-> **重要**: Vector API 在 JDK 26 GA 中仍然是 Incubator 状态，已孵化 **10 年**
+> **重要**: Vector API 在 JDK 26 GA 中仍然是 Incubator 状态，已孵化 **5 年跨越 11 个版本**
 
 ---
 
@@ -167,12 +167,12 @@ IntVector.fromArray(species, array, 0, indexes, 0);  // 间接加载
 **API 变更**:
 ```java
 // Float16 支持
-Float16Consts c = Float16Consts.PI;
-float16 value = ...;  // 半精度浮点
+Float16 value = Float16.valueOf(3.14159f);
+float f = value.floatValue();
 
 // CPU 特性检测
 CPUFeatures features = CPUFeatures.getCPUFeatures();
-boolean hasAVX512 = features.hasFeature(CPUFeatures.Feature.AVX512F);
+boolean hasAVX512 = features.hasFeature("avx512f");
 ```
 
 ---
@@ -210,7 +210,7 @@ boolean hasAVX512 = features.hasFeature(CPUFeatures.Feature.AVX512F);
 
 ---
 
-### JDK 26 (2026-03) - GA 已发布
+### JDK 26 (2026-03-17) - GA 已发布
 
 **继续孵化**
 
@@ -280,16 +280,17 @@ FloatVector sqrt = a.lanewise(VectorOperators.SQRT);
 
 ## 平台支持演进
 
-| 平台 | JDK 16 | JDK 17 | JDK 18 | JDK 19 | JDK 20 | JDK 21 |
-|------|--------|--------|--------|--------|--------|--------|
-| x86-64 SSE | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| x86-64 AVX | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| x86-64 AVX2 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| x86-64 AVX-512 | 🔄 | 🔄 | ✅ | ✅ | ✅ | ✅ |
-| AArch64 NEON | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| ARM SVE | ❌ | 🔄 | 🔄 | ✅ | ✅ | ✅ |
-| ARM SVE2 | ❌ | ❌ | ❌ | ❌ | 🔄 | ✅ |
-| RISC-V V | ❌ | ❌ | ❌ | 🔄 | 🔄 | ✅ |
+| 平台 | JDK 16 | JDK 17 | JDK 18 | JDK 19 | JDK 20 | JDK 21 | JDK 22-26 |
+|------|--------|--------|--------|--------|--------|--------|-----------|
+| x86-64 SSE | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| x86-64 AVX | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| x86-64 AVX2 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| x86-64 AVX-512 | 🔄 | 🔄 | ✅ | ✅ | ✅ | ✅ | ✅ |
+| AArch64 NEON | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| ARM SVE | ❌ | 🔄 | 🔄 | ✅ | ✅ | ✅ | ✅ |
+| ARM SVE2 | ❌ | ❌ | ❌ | ❌ | 🔄 | ✅ | ✅ |
+| RISC-V V | ❌ | ❌ | ❌ | 🔄 | 🔄 | ✅ | ✅ |
+| LoongArch LSX | ❌ | ❌ | ❌ | ❌ | ❌ | 🔄 | ✅ |
 
 ---
 

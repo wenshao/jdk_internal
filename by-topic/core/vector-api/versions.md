@@ -14,8 +14,8 @@
 | JDK 17 | 414 | ~21 | Second Incubator - 增强优化 |
 | JDK 18 | 417 | ~12 | Third Incubator - API 重构 |
 | JDK 19 | 426 | ~15 | Fourth Incubator - Mask 增强 |
-| JDK 20 | 448 | ~10 | Fifth Incubator - 继续优化 |
-| JDK 21 | 460 | ~20 | Sixth Incubator - Float16 |
+| JDK 20 | 438 | ~10 | Fifth Incubator - 继续优化 |
+| JDK 21 | 448 | ~20 | Sixth Incubator - Float16 |
 | JDK 22 | - | ~15 | 继续孵化 - Bug 修复 |
 | JDK 23 | - | ~20 | 继续孵化 - 性能优化 |
 | JDK 24 | - | ~15 | 继续孵化 - UMIN/UMAX |
@@ -224,7 +224,7 @@ int first = va.reduceLanes(VectorOperators.FIRST_NONZERO);
 
 ---
 
-## JDK 20: JEP 448 (Fifth Incubator)
+## JDK 20: JEP 438 (Fifth Incubator)
 
 **发布**: 2023-03-21
 
@@ -255,7 +255,7 @@ IntVector v = IntVector.fromArray(species, array, 0, indexes, 0);
 
 ---
 
-## JDK 21: JEP 460 (Sixth Incubator)
+## JDK 21: JEP 448 (Sixth Incubator)
 
 **发布**: 2023-09-19
 
@@ -263,7 +263,7 @@ IntVector v = IntVector.fromArray(species, array, 0, indexes, 0);
 
 **Float16 支持**:
 - 新增 `Float16` 类 (半精度浮点)
-- `Float16Consts` 常量
+- `Float16.valueOf()` 静态工厂方法
 - Float16 数学运算支持
 
 **API 增强**:
@@ -437,7 +437,7 @@ VectorShape shape = VectorShape.largestShapeFor(int.class);
 
 ---
 
-## JDK 26 (2026-03) - GA 已发布
+## JDK 26 (2026-03-17) - GA 已发布
 
 **继续孵化**
 
@@ -478,7 +478,7 @@ VectorShape shape = VectorShape.largestShapeFor(int.class);
 
 | API | 孵化时间 | 版本数 |
 |-----|----------|--------|
-| **Vector API** | 10+ 年 (JDK 16-26) | 11 个版本 |
+| **Vector API** | 5 年 (JDK 16-26) | 11 个版本 |
 | Foreign Function & Memory API | 3 年 (JDK 17-22) | 5 个版本 |
 | Pattern Matching | 4 年 (JDK 16-21) | 5 个版本 |
 | Records | 2 年 (JDK 14-16) | 3 个版本 |

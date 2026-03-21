@@ -44,7 +44,7 @@
 javac --add-modules jdk.incubator.vector --release 21 VectorDemo.java
 
 # 运行
-java --add-modules jdk.incubator.vector --enable-preview VectorDemo
+java --add-modules jdk.incubator.vector VectorDemo
 ```
 
 ### 第一个向量程序
@@ -647,4 +647,4 @@ void toUpperCase(byte[] ascii) {
 
 ---
 
-> **最后更新**: 2026-03-20
+> **最后更新**: 2026-03-21
