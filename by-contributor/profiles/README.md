@@ -44,7 +44,7 @@
 
 | 排名 | 贡献者 | PRs | 组织 | 领域 |
 |------|--------|-----|------|------|
-| 1 | Aleksey Shipilev | 803 | Oracle | Shenandoah GC |
+| 1 | Aleksey Shipilev | 803 | Amazon | Shenandoah GC |
 | 2 | Albert Mingkun Yang | 744 | Oracle | GC |
 | 3 | Thomas Schatzl | 546 | Oracle | G1 GC |
 | 4 | Ioi Lam | 431 | Oracle | CDS/AOT |

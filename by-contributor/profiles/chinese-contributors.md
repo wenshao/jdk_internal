@@ -26,7 +26,7 @@
 
 ## 2. Oracle 中国团队
 
-> 统计在 [Oracle](orgs/oracle.md) 组织中
+> 统计在 [Oracle](../../contributors/orgs/oracle.md) 组织中
 
 | 排名 | 贡献者 | GitHub | PRs | 主要领域 |
 |------|--------|--------|-----|----------|
@@ -45,7 +45,7 @@
 
 ### 阿里巴巴
 
-👉 [查看完整详情](orgs/alibaba.md)
+👉 [查看完整详情](../../contributors/orgs/alibaba.md)
 
 | 贡献者 | GitHub | PRs | 主要领域 |
 |--------|--------|-----|----------|
@@ -66,7 +66,7 @@
 
 ### 字节跳动
 
-👉 [查看完整详情](orgs/bytedance.md)
+👉 [查看完整详情](../../contributors/orgs/bytedance.md)
 
 | 贡献者 | GitHub | PRs | 主要领域 |
 |--------|--------|-----|----------|
@@ -83,7 +83,7 @@
 
 ### 龙芯
 
-👉 [查看完整详情](orgs/loongson.md)
+👉 [查看完整详情](../../contributors/orgs/loongson.md)
 
 **关键贡献**:
 - LoongArch Zero VM 支持
@@ -93,7 +93,7 @@
 
 ### 腾讯
 
-👉 [查看完整详情](orgs/tencent.md)
+👉 [查看完整详情](../../contributors/orgs/tencent.md)
 
 **关键贡献**:
 - G1 压缩指针边界修复
@@ -147,12 +147,12 @@
 
 | 组织 | PRs | 详情 |
 |------|-----|------|
-| Oracle 中国团队 | 1,643 | [详情](orgs/oracle.md) |
-| 阿里巴巴 | 121 | [详情](orgs/alibaba.md) |
+| Oracle 中国团队 | 1,643 | [详情](../../contributors/orgs/oracle.md) |
+| 阿里巴巴 | 121 | [详情](../../contributors/orgs/alibaba.md) |
 | ISCAS | 53 | - |
-| 字节跳动 | 25 | [详情](orgs/bytedance.md) |
-| 龙芯 | 50+ | [详情](orgs/loongson.md) |
-| 腾讯 | 40+ | [详情](orgs/tencent.md) |
+| 字节跳动 | 25 | [详情](../../contributors/orgs/bytedance.md) |
+| 龙芯 | 50+ | [详情](../../contributors/orgs/loongson.md) |
+| 腾讯 | 40+ | [详情](../../contributors/orgs/tencent.md) |
 
 ---
 
