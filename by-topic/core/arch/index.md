@@ -260,7 +260,7 @@ java -XX:+PrintFlagsFinal -version | grep -i riscv
 | 贡献者 | 组织 | 主要贡献 |
 |--------|------|----------|
 | Andrew Dinn | Red Hat | AArch64 移植 |
-| Nick Gasson | Amazon | AArch64 优化 |
+| Nick Gasson | Arm | AArch64 优化 |
 | David Holmes | Oracle | AArch64 运行时 |
 
 ### LoongArch 团队

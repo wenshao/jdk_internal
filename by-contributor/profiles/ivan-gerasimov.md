@@ -1,7 +1,7 @@
 # Ivan Gerasimov
 
 > **Organization**: Oracle
-> **Role**: Desktop Developer
+> **Role**: Core Libraries Developer
 
 ---
 ## 目录
@@ -17,7 +17,7 @@
 
 ## 1. 概述
 
-Ivan Gerasimov 是 Oracle 的 **桌面应用开发者**，专注于 Java AWT/Swing 桌面图形用户界面。他在 JDK 26 中以 5 次提交贡献于桌面功能。
+Ivan Gerasimov 是 Oracle 的 **核心库开发者**，专注于 Java 核心库 (java.util.regex, java.nio, ProcessBuilder 等)。他是 OpenJDK core-libs 组的长期贡献者，用户名 igerasim。
 
 ---
 
@@ -27,40 +27,45 @@ Ivan Gerasimov 是 Oracle 的 **桌面应用开发者**，专注于 Java AWT/Swi
 |------|-----|
 | **姓名** | Ivan Gerasimov |
 | **当前组织** | Oracle (Java Platform Group) |
-| **专长** | AWT, Swing, Desktop |
-| **JDK 26 贡献** | 5 commits (Desktop) |
+| **OpenJDK** | [@igerasim](https://openjdk.org/census#igerasim) |
+| **GitHub** | [@igerasim](https://github.com/igerasim) |
+| **专长** | Core Libraries, java.util.regex, java.nio |
+| **JDK 26 贡献** | 5 commits |
 
 ---
 
 ## 3. 主要贡献
 
-### 1. Desktop/AWT
+### 1. Core Libraries
 
-Ivan Gerasimov 贡献于 Java 桌面功能：
-- **AWT**: Abstract Window Toolkit
-- **Swing**: 轻量级 GUI 框架
-- **Desktop Integration**: 桌面集成
+Ivan Gerasimov 贡献于 Java 核心库：
+- **java.util.regex**: 正则表达式引擎维护和 bug 修复
+- **java.nio**: NIO 文件和通道相关改进
+- **ProcessBuilder**: 进程管理 (包括 Windows 平台 inheritIO 修复)
+- **java.lang**: 核心语言类优化
 
 ---
 
 ## 4. 技术专长
 
-### Desktop
+### 核心库
 
-- **AWT**: 重型 GUI 组件
-- **Swing**: 轻量级 GUI 组件
-- **2D Graphics**: 2D 图形
+- **Regex**: 正则表达式引擎 (Pattern, Matcher)
+- **NIO**: 非阻塞 I/O
+- **Process API**: 进程管理
+- **String/CharSequence**: 字符串处理
 
 ---
 
 ## 5. 合作关系
 
-与以下 Desktop 开发者合作：
-- **Phil Race**: Client Libraries Lead
-- **Prasanta Sadhukhan**: Swing/AWT Developer
-- **Sergey Bylokhov**: AWT/2D Developer
+与以下 Core Libraries 开发者合作：
+- **Roger Riggs**: Core Libraries
+- **Brian Burkhalter**: NIO Developer
+- **Stuart Marks**: Core Libraries
 
 ---
 
 **Sources**:
+- [OpenJDK Census](https://openjdk.org/census#igerasim)
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)

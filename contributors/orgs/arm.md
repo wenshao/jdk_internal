@@ -88,7 +88,7 @@ ARM Ltd. 通过构建系统和 AArch64 架构支持参与 OpenJDK 开发。
 | 贡献者 | 组织 | 合作领域 | 关系类型 |
 |--------|------|----------|----------|
 | [Andrew Dinn](../../by-contributor/profiles/andrew-dinn.md) | Red Hat | AArch64 | 技术同行 |
-| [Nick Gasson](../../by-contributor/profiles/nick-gasson.md) | Amazon | AArch64 | 技术同行 |
+| [Nick Gasson](../../by-contributor/profiles/nick-gasson.md) | Arm | AArch64 | 核心成员 |
 | [Magnus Ihse Bursie](../../by-contributor/profiles/magnus-ihse-bursie.md) | Oracle | Build System | 技术同行 |
 
 ### 3.2 技术影响力网络

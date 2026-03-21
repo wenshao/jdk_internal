@@ -350,7 +350,7 @@ IBM       15      20      30      40      45
 | **贡献特点** | GC 深度优化 |
 | **代表工作** | JEP 521 Generational Shenandoah |
 | **Corretto** | AWS 云优化 |
-| **代表贡献者** | [William Kemper](../../by-contributor/profiles/william-kemper.md), [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md), [Nick Gasson](../../by-contributor/profiles/nick-gasson.md) |
+| **代表贡献者** | [William Kemper](../../by-contributor/profiles/william-kemper.md), [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) |
 
 ### Red Hat
 

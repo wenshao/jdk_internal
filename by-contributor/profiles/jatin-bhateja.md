@@ -15,11 +15,11 @@
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Jatin Bhateja |
-| **Current Organization** | Oracle |
-| **Email** | jatin.bhateja@oracle.com |
+| **Current Organization** | Intel |
+| **Email** | jatin.bhateja@intel.com |
 | **OpenJDK** | [@jbhateja](https://openjdk.org/census#jbhateja) |
-| **Role** | Committer |
-| **Primary Areas** | Vector API, SIMD, Compiler Optimizations |
+| **Role** | Committer, HotSpot Compiler Group Reviewer |
+| **Primary Areas** | Vector API, SIMD, Compiler Optimizations, Intel Platform Enablement |
 | **Active Since** | 2019+ |
 
 > **数据来源**: [OpenJDK Census](https://openjdk.org/census)

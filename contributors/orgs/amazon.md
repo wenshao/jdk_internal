@@ -68,12 +68,9 @@ William Kemper 是 **JEP 521: Generational Shenandoah** 的主要实现者：
 | 8264851 | Shenandoah: Rework control loop mechanics | 架构改进 |
 | 8350898 | Shenandoah: Eliminate final roots safepoint | 性能优化 |
 
-### AArch64 优化 (Nick Gasson)
+### ~~AArch64 优化 (Nick Gasson)~~ -- 已修正: Nick Gasson 属于 Arm，非 Amazon
 
-| Issue | 标题 | 说明 |
-|-------|------|------|
-| 8293100 | AArch64 C2 编译器后端优化 | 性能优化 |
-| 8319254 | 向量指令自动向量化改进 | 性能优化 |
+> **注**: Nick Gasson 已确认为 **Arm** 员工 (GitHub: @nick-arm)，不属于 Amazon。相关贡献请参见 [Arm 组织页面](arm.md)。
 | 8330456 | 特定微架构优化 | 性能优化 |
 
 ---
@@ -116,7 +113,7 @@ William Kemper 是 **JEP 521: Generational Shenandoah** 的主要实现者：
 | 贡献者 | 组织 | PRs | 主要领域 | 角色 |
 |--------|------|-----|----------|------|
 | [William Kemper](../../by-contributor/profiles/william-kemper.md) | Amazon | 123 | Shenandoah GC | Reviewer, JEP 521 Owner |
-| [Nick Gasson](../../by-contributor/profiles/nick-gasson.md) | Amazon | 15 | AArch64, C2 编译器 | Reviewer |
+| ~~[Nick Gasson](../../by-contributor/profiles/nick-gasson.md)~~ | ~~Amazon~~ | ~~15~~ | ~~AArch64, C2 编译器~~ | **已修正: 属于 Arm** |
 
 #### 技术协作圈 (外部合作)
 
@@ -356,11 +353,9 @@ Amazon 维护自己的 JDK 发行版 Corretto：
 | JDK-8354078 | Implement JEP 521: Generational Shenandoah | [详情](../../by-pr/8354/8354078.md) |
 | JDK-8370039 | GenShen: SATB barrier improvements | [详情](../../by-pr/8370/8370039.md) |
 
-### AArch64 (Nick Gasson)
+### ~~AArch64 (Nick Gasson)~~ -- 已修正: Nick Gasson 属于 Arm
 
-| PR | 标题 | 分析文档 |
-|----|------|----------|
-| JDK-8293100 | AArch64 C2 backend optimization | - |
+> **注**: Nick Gasson 已确认为 **Arm** 员工，不属于 Amazon。
 
 ---
 

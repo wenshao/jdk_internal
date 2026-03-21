@@ -214,7 +214,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 | 贡献者 | Integrated PRs | 组织 | 地区 |
 |--------|----------------|------|------|
 | [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | 50+ | Red Hat | 英国 |
-| [Nick Gasson](/by-contributor/profiles/nick-gasson.md) | 30+ | Amazon | 欧洲 |
+| [Nick Gasson](/by-contributor/profiles/nick-gasson.md) | 30+ | Arm | 欧洲 |
 
 ---
 

@@ -147,7 +147,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 | 贡献者 | Integrated PRs | 领域 |
 |--------|----------------|------|
 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 803+ | Shenandoah GC, JMH |
-| [Nick Gasson](/by-contributor/profiles/nick-gasson.md) | 30+ | AArch64 |
+| ~~[Nick Gasson](/by-contributor/profiles/nick-gasson.md)~~ | ~~30+~~ | **已修正: 属于 Arm，非 Amazon** |
 | [William Kemper](/by-contributor/profiles/william-kemper.md) | 50+ | Shenandoah |
 
 **主要贡献领域**：

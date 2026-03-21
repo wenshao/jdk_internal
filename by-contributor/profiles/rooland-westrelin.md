@@ -15,10 +15,10 @@
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Roland Westrelin |
-| **Current Organization** | Oracle |
-| **Email** | roland.westrelin@oracle.com |
+| **Current Organization** | Red Hat |
+| **Email** | rwestrel@redhat.com |
 | **OpenJDK** | [@roland](https://openjdk.org/census#roland) |
-| **Role** | Committer, Reviewer |
+| **Role** | OpenJDK Member, Committer, Reviewer |
 | **Primary Areas** | C2 Compiler, JIT Optimizations |
 | **Active Since** | 2008+ |
 
