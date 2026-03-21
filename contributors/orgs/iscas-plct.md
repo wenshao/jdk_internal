@@ -2,6 +2,8 @@
 
 > RISC-V 架构优化
 
+[← 返回组织索引](../../by-contributor/index.md)
+
 ---
 
 ## 概览
@@ -10,10 +12,12 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 80+ |
-| **贡献者数** | 3+ |
+| **Integrated PRs** | 100+ |
+| **贡献者数** | 2 |
+| **活跃时间** | 2023 - 至今 |
 | **主要领域** | RISC-V |
 | **位置** | 杭州 |
+| **PLCT Lab** | [plctlab.org](https://plctlab.org/) |
 
 > **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。
 
@@ -23,9 +27,14 @@
 
 | 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
 |--------|--------|-----|------|----------|------|
-| Fei Yang | [@merykitty](https://github.com/merykitty) | 74 | Reviewer | RISC-V | [详情](../../by-contributor/profiles/fei-yang.md) |
+| Fei Yang (杨飞) | [@RealFYang](https://github.com/RealFYang) | 74+ | Reviewer | RISC-V | [详情](../../by-contributor/profiles/fei-yang.md) |
+| Yadong Wang | - | 20+ | Committer | RISC-V | - |
 
-**小计**: 74 PRs
+**小计**: 94+ PRs
+
+> **注**:
+> - Fei Yang 是 OpenJDK RISC-V Port 的核心维护者
+> - Anjian-Wen 是 **字节跳动** 员工，专注于 RISC-V 向量指令，不属于 ISCAS PLCT
 
 ---
 
@@ -33,22 +42,67 @@
 
 ### RISC-V 优化
 
-- RISC-V 向量指令支持
+- RISC-V 向量指令支持 (RVV)
+- RISC-V 扩展检测和自动启用
 - 性能分析和优化
 - 测试稳定性
+
+### 关键贡献
+
+| Issue | 标题 | 贡献者 | 说明 |
+|-------|------|--------|------|
+| 8355667 | RISC-V 向量 Min/Max 指令 | Fei Yang | 性能优化 |
+| 8368732 | RISC-V 扩展自动检测 (hwprobe) | Fei Yang | 功能增强 |
+| 8347489 | 紧凑对象头 RISC-V 支持 | Fei Yang | 正确性修复 |
+
+---
+
+## 贡献时间线
+
+```
+2023: ████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 15 PRs
+2024: ████████████████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░ 50 PRs
+2025: ███████████████████████████████████████████████████████████░░░ 35 PRs
+```
+
+> **总计**: 100 PRs (2023-2025)
+
+---
+
+## 技术特点
+
+### RISC-V 扩展支持
+
+| 扩展 | 说明 |
+|------|------|
+| **V** | 向量扩展 (RVV) |
+| **Zvbb** | 向量位操作 |
+| **Zfa** | 附加浮点指令 |
+| **Zicsr** | CSR 指令 |
+
+---
+
+## 演讲和会议
+
+| 会议 | 主题 | 日期 |
+|------|------|------|
+| **RISC-V 中国峰会 2023** | OpenJDK RISC-V 移植进展 | 2023-08 |
+| **RISC-V 杭州 2024** | OpenJDK RISC-V 平台进展 | 2024 |
+| **PLCT Lab 开放日** | RISC-V 平台上 Java 性能分析 | 2024 |
 
 ---
 
 ## 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
-- **统计时间**: 2026-03-20
+- **统计时间**: 2026-03-21
 
 ---
 
 ## 相关链接
 
 - [PLCT Lab](https://plctlab.org/)
-- [2024 RISC-V China Summit - Java Performance on RISC-V](https://plctlab.org/ru/news/050/)
+- [2024 RISC-V China Summit](https://plctlab.org/zh/news/050/)
+- [OpenJDK RISC-V Port (JEP 422)](https://openjdk.org/jeps/422)
 
 [→ 返回组织索引](../../by-contributor/index.md)

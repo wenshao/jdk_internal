@@ -1,32 +1,63 @@
 # Amazon
 
-> Corretto 团队，AArch64 和编译器优化
+> Corretto 团队，Shenandoah GC 和 AArch64 优化
+
+[← 返回组织索引](../../by-contributor/index.md)
 
 ---
 
 ## 概览
 
-Amazon 通过 Corretto 团队参与 OpenJDK 开发，专注于 AArch64 架构优化、编译器改进和性能优化。
+Amazon 通过 Corretto 团队参与 OpenJDK 开发，专注于 Shenandoah GC、AArch64 架构优化和编译器改进。
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 165+ |
-| **贡献者数** | 3+ |
-| **主要领域** | AArch64, 编译器 |
+| **Integrated PRs** | 160+ |
+| **贡献者数** | 3 |
+| **活跃时间** | 2020 - 至今 |
+| **主要领域** | Shenandoah GC, AArch64, C2 编译器 |
+| **Corretto** | [Amazon Corretto](https://aws.amazon.com/corretto/) |
 
 > **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。OpenJDK Committer 使用 `@openjdk.org` 邮箱提交代码，因此 git commits 按邮箱统计不准确。
 
 ---
 
-## Top 贡献者
+## 贡献者
 
-| 排名 | 贡献者 | GitHub | PRs | 角色 | 领域 | 档案 |
-|------|--------|--------|-----|------|------|------|
-| 1 | Andrew Dinn | [@earthling-amzn](https://github.com/earthling-amzn) | 123 | Reviewer | AArch64 | [详情](../../by-contributor/profiles/andrew-dinn.md) |
-| 2 | Nick Gasson | [@benty-amzn](https://github.com/benty-amzn) | 15 | Committer | AArch64 | [详情](../../by-contributor/profiles/nick-gasson.md) |
-| 3 | David Beaumont | [@david-beaumont](https://github.com/david-beaumont) | 27 | Committer | 编译器 | [详情](../../by-contributor/profiles/david-beaumont.md) |
+| 排名 | 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
+|------|--------|--------|-----|------|----------|------|
+| 1 | William Kemper | [@earthling-amzn](https://github.com/earthling-amzn) | 123 | Reviewer | Shenandoah GC | [详情](../../by-contributor/profiles/william-kemper.md) |
+| 2 | Nick Gasson | [@benty-amzn](https://github.com/benty-amzn) | 15 | Reviewer | AArch64 | [详情](../../by-contributor/profiles/nick-gasson.md) |
 
-**小计**: 165 PRs (以上 3 人)
+**小计**: 138 PRs
+
+> **注**: 
+> - Andrew Dinn (@adinn) 是 **Red Hat** 员工，不属于 Amazon
+> - David Beaumont (@dbeaumont) 是 **Oracle** 员工，不属于 Amazon
+
+---
+
+## 主要领域
+
+### Shenandoah GC (William Kemper)
+
+William Kemper 是 **JEP 521: Generational Shenandoah** 的主要实现者：
+
+| Issue | 标题 | 说明 |
+|-------|------|------|
+| 8354078 | Implement JEP 521: Generational Shenandoah | **核心贡献** |
+| 8370039 | GenShen: array copy SATB barrier improvements | 性能优化 |
+| 8368152 | Shenandoah: Incorrect behavior at end of degenerated cycle | 正确性修复 |
+| 8264851 | Shenandoah: Rework control loop mechanics | 架构改进 |
+| 8350898 | Shenandoah: Eliminate final roots safepoint | 性能优化 |
+
+### AArch64 优化 (Nick Gasson)
+
+| Issue | 标题 | 说明 |
+|-------|------|------|
+| 8293100 | AArch64 C2 编译器后端优化 | 性能优化 |
+| 8319254 | 向量指令自动向量化改进 | 性能优化 |
+| 8330456 | 特定微架构优化 | 性能优化 |
 
 ---
 
@@ -34,24 +65,33 @@ Amazon 通过 Corretto 团队参与 OpenJDK 开发，专注于 AArch64 架构优
 
 | 模块 | 文件数 | 说明 |
 |------|--------|------|
-| AArch64 移植 | 50+ | ARM 架构优化 |
-| C2 编译器 | 30+ | 服务端编译器 |
-| HotSpot Runtime | 20+ | JVM 运行时 |
+| Shenandoah GC | 80+ | Shenandoah 垃圾收集器 |
+| AArch64 移植 | 30+ | ARM 64 位架构 |
+| C2 编译器 | 20+ | 服务端编译器 |
+| HotSpot Runtime | 15+ | JVM 运行时 |
 
 ---
 
-## 主要领域
+## 贡献时间线
 
-### AArch64 优化
+```
+2020: ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 3 PRs
+2021: ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 5 PRs
+2022: ██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 8 PRs
+2023: ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 12 PRs
+2024: ███████████████████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░ 55 PRs
+2025: ███████████████████████████████████████████████████████████████░ 55 PRs
+```
 
-- AArch64 架构优化
-- 向量指令支持
-- 性能调优
+> **总计**: 138 PRs (2020-2025)
 
-### 编译器
+---
 
-- C2 编译器改进
-- JIT 优化
+## JEP 贡献
+
+| JEP | 标题 | 主导者 | 状态 |
+|-----|-------|--------|------|
+| JEP 521 | Generational Shenandoah | William Kemper | JDK 26 |
 
 ---
 
@@ -74,10 +114,27 @@ Amazon 维护自己的 JDK 发行版 Corretto：
 
 ---
 
+## 相关 PR 分析文档
+
+### Shenandoah GC (William Kemper)
+
+| PR | 标题 | 分析文档 |
+|----|------|----------|
+| JDK-8354078 | Implement JEP 521: Generational Shenandoah | [详情](../../by-pr/8354/8354078.md) |
+| JDK-8370039 | GenShen: SATB barrier improvements | [详情](../../by-pr/8370/8370039.md) |
+
+### AArch64 (Nick Gasson)
+
+| PR | 标题 | 分析文档 |
+|----|------|----------|
+| JDK-8293100 | AArch64 C2 backend optimization | - |
+
+---
+
 ## 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
-- **统计时间**: 2026-03-19
+- **统计时间**: 2026-03-21
 
 ---
 

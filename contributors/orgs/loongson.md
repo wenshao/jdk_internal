@@ -2,6 +2,8 @@
 
 > LoongArch 架构移植
 
+[← 返回组织索引](../../by-contributor/index.md)
+
 ---
 
 ## 概览
@@ -12,7 +14,9 @@
 |------|-----|
 | **Integrated PRs** | 30+ |
 | **贡献者数** | 3+ |
+| **活跃时间** | 2021 - 至今 |
 | **主要领域** | LoongArch |
+| **Loongson JDK** | [龙芯 JDK](https://github.com/loongson/jdk) |
 
 > **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。
 
@@ -27,7 +31,7 @@
 
 **小计**: 30+ PRs
 
-> **注**: Fei Yang (@merykitty) 是 ISCAS PLCT 实验室贡献者，专注于 RISC-V，不属于 Loongson。
+> **注**: Fei Yang (@RealFYang / @merykitty) 是 **ISCAS PLCT 实验室** 贡献者，专注于 RISC-V，不属于龙芯。
 
 ---
 
@@ -46,6 +50,21 @@
 
 ---
 
+## 关键贡献
+
+### LoongArch 架构支持
+
+龙芯贡献了 LoongArch 架构的 OpenJDK 移植，包括：
+
+| 领域 | 说明 |
+|------|------|
+| Zero VM | 解释器模式移植 |
+| 模板解释器 | LoongArch 模板解释器 |
+| C1 编译器 | 客户端编译器后端 |
+| C2 编译器 | 服务端编译器后端 |
+
+---
+
 ## Loongson JDK
 
 龙芯维护自己的 JDK 发行版：
@@ -57,12 +76,26 @@
 | 特点 | LoongArch 原生支持 |
 | 许可 | GPLv2 |
 
+**版本**: Loongson JDK 8 / 11 / 17 / 21
+
+---
+
+## 技术特点
+
+### LoongArch 指令集
+
+龙芯的贡献完全聚焦于 LoongArch 架构：
+
+- **LoongArch**: 龙芯自主指令集架构
+- **LASX**: 256 位向量扩展
+- **LSX**: 128 位向量扩展
+
 ---
 
 ## 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
-- **统计时间**: 2026-03-20
+- **统计时间**: 2026-03-21
 
 ---
 
@@ -70,5 +103,6 @@
 
 - [龙芯 JDK](https://github.com/loongson/jdk)
 - [龙芯中科](https://www.loongson.cn/)
+- [LoongArch 指令集](https://loongson.github.io/LoongArch-Documentation/README-CN.html)
 
 [→ 返回组织索引](../../by-contributor/index.md)
