@@ -271,7 +271,7 @@ Valhalla (值类型) ┘
 | ML-DSA (后量子) | JDK 26 | 生产 | JEP 518 |
 | ML-KEM (后量子) | JDK 26 | 生产 | - |
 | KDF API | JDK 22 | 预览→正式JDK25 | JEP 495, 508, 510 |
-| PEM Encodings | JDK 26 | 预览 | JEP 470 |
+| PEM Encodings | JDK 25 | 预览 | JEP 470, JEP 524 |
 
 ### API 特性
 
@@ -315,7 +315,7 @@ Valhalla (值类型) ┘
       │                │             │                 │
       ▼                ▼             ▼                 ▼
   JDK 21+          JDK 17+       JDK 21+           JDK 26+
-  (推荐 25 LTS)    (稳定)        (分代ZGC)         (预览)
+  (推荐 25 LTS)    (稳定)        (分代ZGC)         (正式)
 ```
 
 ---

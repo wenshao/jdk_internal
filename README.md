@@ -50,7 +50,7 @@
 | 主题 | 版本范围 | 查看 | 亮点 |
 |------|----------|------|------|
 | **并发编程** | 8 → 26 | [Thread → VirtualThread](by-topic/concurrency/concurrency/) | 虚拟线程 (JDK 21) |
-| **HTTP 客户端** | 11+ | [HttpURLConnection → HTTP/3](by-topic/concurrency/http/) | HTTP/3 预览 (JDK 26) |
+| **HTTP 客户端** | 11+ | [HttpURLConnection → HTTP/3](by-topic/concurrency/http/) | HTTP/3 正式版 (JDK 26) |
 | **网络编程** | 8 → 26 | [Socket/NIO/Unix Domain](by-topic/concurrency/network/) | 异步 I/O |
 | **日期时间** | 8+ | [JSR 310/LocalDate/ZonedDateTime](by-topic/datetime/) | 不可变 API |
 
