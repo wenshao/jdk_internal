@@ -490,11 +490,11 @@ b9e7ca1 8379344: Compact the Unicode/CLDR version tables
 
 ### 外部资源
 
-- [JEP 107: Stream API](https://openjdk.org/jeps/107)
-- [JEP 461: Stream Gatherers (Preview)](https://openjdk.org/jeps/461)
+- [JEP 107](/jeps/language/jep-107.md)
+- [JEP 461](/jeps/language/jep-461.md)
 - [JEP 473: Stream Gatherers (Second Preview)](https://openjdk.org/jeps/473)
 - [JEP 485](/jeps/tools/jep-485.md)
-- [JEP 431: Sequenced Collections](https://openjdk.org/jeps/431)
+- [JEP 431](/jeps/language/jep-431.md)
 - [SequencedCollection JavaDoc](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SequencedCollection.html)
 - [Gatherers JavaDoc](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/stream/Gatherers.html)
 
@@ -511,9 +511,9 @@ git log --oneline -- src/java.base/share/classes/java/util/stream/
 **最后更新**: 2026-03-20
 
 **Sources**:
-- [JEP 107: Stream API](https://openjdk.org/jeps/107)
-- [JEP 431: Sequenced Collections](https://openjdk.org/jeps/431)
-- [JEP 461: Stream Gatherers (Preview)](https://openjdk.org/jeps/461)
+- [JEP 107](/jeps/language/jep-107.md)
+- [JEP 431](/jeps/language/jep-431.md)
+- [JEP 461](/jeps/language/jep-461.md)
 - [JEP 485](/jeps/tools/jep-485.md)
 - [Stream Gatherers in Practice](https://softwaremill.com/stream-gatherers-in-practice-part-1/)
 - [Gatherers Tutorial](https://codewiz.info/blog/stream-gatherers/)

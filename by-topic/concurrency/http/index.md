@@ -701,7 +701,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 ### 外部参考
 
 **JEP 文档:**
-- [JEP 321: HTTP Client](https://openjdk.org/jeps/321) - 标准化
+- [JEP 321](/jeps/network/jep-321.md) - 标准化
 - [JEP 517](/jeps/network/jep-517.md) - HTTP/3 预览
 
 **RFC 文档:**

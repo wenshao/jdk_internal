@@ -685,7 +685,7 @@ client.shutdownNow();     // 立即关闭
 ## 12. 相关链接
 
 - [HTTP Client 文档](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html)
-- [JEP 321: HTTP Client](https://openjdk.org/jeps/321)
+- [JEP 321](/jeps/network/jep-321.md)
 - [JEP 517](/jeps/network/jep-517.md)
 - [RFC 9114: HTTP/3](https://www.rfc-editor.org/rfc/rfc9114)
 - [RFC 9000: QUIC](https://www.rfc-editor.org/rfc/rfc9000)
