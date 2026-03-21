@@ -31,7 +31,7 @@ JDK 8 was released in March 2014 and remains one of the most widely used Java ve
 | Role | Name | Organization |
 |------|------|--------------|
 | **Project Lead** | Andrew Haley | Red Hat |
-| **Release Manager** | Volker Simonis | SAP |
+| **Release Manager** | Volker Simonis | SAP (currently AWS) |
 | **Build Lead** | Magnus Ihse Bursie | Oracle |
 
 ---
@@ -55,7 +55,7 @@ JDK 8 has been maintained by a dedicated community over its 10+ year lifespan.
 
 | Contributor | Organization | Focus | Since |
 |-------------|--------------|-------|-------|
-| Volker Simonis | SAP | Build, x86_64 | 2010 |
+| Volker Simonis | SAP (currently AWS) | Build, x86_64 | 2010 |
 | [Magnus Ihse Bursie](./magnus-ihse-bursie.md) | Oracle | Build System | 2012 |
 | [David Holmes](./david-holmes.md) | Oracle | Threading, Runtime | 2000 |
 | [Coleen Phillimore](./coleen-phillimore.md) | Oracle | HotSpot | 2005 |
