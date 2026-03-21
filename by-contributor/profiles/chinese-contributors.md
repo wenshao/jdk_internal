@@ -30,12 +30,12 @@
 
 | 排名 | 贡献者 | GitHub | PRs | 主要领域 |
 |------|--------|--------|-----|----------|
-| 1 | Albert Mingkun Yang | [@albertnetymk](https://github.com/albertnetymk) | 744 | GC |
-| 2 | Naoto Sato | [@naotoj](https://github.com/naotoj) | 273 | 国际化 |
-| 3 | [Chen Liang](chen-liang.md) | [@liach](https://github.com/liach) | 237 | ClassFile API |
-| 4 | Sendao Yan | [@sendaoYan](https://github.com/sendaoYan) | 202 | 测试稳定性 |
-| 5 | Yasumasa Suenaga | [@YaSuenag](https://github.com/YaSuenag) | 113 | HotSpot |
-| 6 | [Hamlin Li](hamlin-li.md) | [@merykitty](https://github.com/merykitty) | 74 | RISC-V |
+| 1 | Albert Mingkun Yang | [Albert Mingkun Yang](albert-mingkun-yang.md) | 744 | GC |
+| 2 | Naoto Sato | [Naoto Sato](naoto-sato.md) | 273 | 国际化 |
+| 3 | [Chen Liang](chen-liang.md) | [Chen Liang](chen-liang.md) | 237 | ClassFile API |
+| 4 | Sendao Yan | [Sendaoyan Yan](sendaoyan.md) | 202 | 测试稳定性 |
+| 5 | Yasumasa Suenaga | [Yasumasa Suenaga](yasumasa-suenaga.md) | 113 | HotSpot |
+| 6 | [Hamlin Li](hamlin-li.md) | [Hamlin Li](hamlin-li.md) | 74 | RISC-V |
 
 **小计**: 1,643 PRs
 
@@ -50,10 +50,10 @@
 
 | 贡献者 | GitHub | PRs | 主要领域 |
 |--------|--------|-----|----------|
-| [Shaojin Wen](shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | 核心库优化 |
-| [Kuai Wei](kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | C2 编译器 |
-| [Yude Lin](yude-lin.md) | [@linade](https://github.com/linade) | 8 | G1 GC, AArch64 |
-| [Xiaowei Lu](xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | ZGC |
+| [Shaojin Wen](shaojin-wen.md) | [Shaojin Wen](shaojin-wen.md) | 97 | 核心库优化 |
+| [Kuai Wei](kuai-wei.md) | [Kuai Wei](kuai-wei.md) | 13 | C2 编译器 |
+| [Yude Lin](yude-lin.md) | [Yude Lin](yude-lin.md) | 8 | G1 GC, AArch64 |
+| [Xiaowei Lu](xiaowei-lu.md) | [Xiaowei Lu](xiaowei-lu.md) | 3 | ZGC |
 
 **小计**: 121 PRs
 
@@ -77,7 +77,7 @@
 
 | 贡献者 | GitHub | PRs | 主要领域 |
 |--------|--------|-----|----------|
-| [Anjian Wen](anjian-wen.md) | [@Anjian-Wen](https://github.com/Anjian-Wen) | 25 | RISC-V 向量指令 |
+| [Anjian Wen](anjian-wen.md) | [Anjian Wen](anjian-wen.md) | 25 | RISC-V 向量指令 |
 
 **小计**: 25 PRs
 
@@ -112,7 +112,7 @@
 
 | 贡献者 | GitHub | PRs | 主要领域 |
 |--------|--------|-----|----------|
-| Dingli Zhang | [@DingliZhang](https://github.com/DingliZhang) | 53 | RISC-V |
+| Dingli Zhang | [Dingli Zhang](dingli-zhang.md) | 53 | RISC-V |
 
 ---
 

@@ -47,10 +47,10 @@
 
 | 贡献者 | GitHub | PRs | 角色 | 主要领域 |
 |--------|--------|-----|------|----------|
-| [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | Committer | 核心库优化 |
-| [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | Author | C2 编译器 |
-| [Yude Lin](../../by-contributor/profiles/yude-lin.md) | [@linade](https://github.com/linade) | 8 | Author | G1 GC, AArch64 |
-| [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | Author | ZGC |
+| [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 97 | Committer | 核心库优化 |
+| [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 13 | Author | C2 编译器 |
+| [Yude Lin](../../by-contributor/profiles/yude-lin.md) | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | 8 | Author | G1 GC, AArch64 |
+| [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | 3 | Author | ZGC |
 
 ---
 
