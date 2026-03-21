@@ -34,12 +34,15 @@
 | 指标 | 值 |
 |------|-----|
 | **Integrated PRs** | 145 (核心) + 100 (测试) = 245 |
-| **贡献者数** | 5 (4 核心 + 1 测试) |
+| **Git Commits (次要)** | 6 (3 位次要贡献者) |
+| **贡献者数** | 8 (4 核心 + 1 测试 + 3 次要) |
 | **活跃时间** | 2021 - 至今 |
-| **主要领域** | 核心库、C2 编译器、AArch64、ZGC |
+| **主要领域** | 核心库、C2 编译器、AArch64、ZGC、RISC-V |
 | **Dragonwell** | [Alibaba Dragonwell](https://github.com/alibaba/dragonwell8), [Dragonwell Team](dragonwell.md) |
 
-> **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。查询方式：`repo:openjdk/jdk author:xxx type:pr label:integrated`
+> **统计说明**: 
+> - 核心/测试贡献者使用 GitHub Integrated PRs 统计
+> - 次要贡献者使用 git commit 邮箱 (`@alibaba-inc.com`) 统计
 
 ---
 
@@ -54,13 +57,25 @@
 | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | [@linade](https://github.com/linade) | 8 | Author | G1 GC, AArch64 |
 | [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | Author | ZGC |
 
+### 次要贡献者
+
+> **说明**: 以下贡献者通过 git commit (使用 @alibaba-inc.com 邮箱) 贡献，未通过 GitHub PR 提交。
+
+| 贡献者 | Profile | Commits | 主要领域 |
+|--------|---------|---------|----------|
+| [Xingqi Zheng](../../by-contributor/profiles/xingqi-zheng.md) | [@MaxXSoft](https://github.com/MaxXSoft) | 2 | RISC-V, Shenandoah GC |
+| [Yibo Yan](../../by-contributor/profiles/yibo-yan.md) | - | 2 | CPU Load, 内存优化 |
+| [Lingjun Cao](../../by-contributor/profiles/lingjun-cao.md) | - | 2 | DecimalFormat 性能 |
+
 ### 前员工贡献
 
 | 贡献者 | 时期 | PRs | 当前状态 | 主要领域 |
 |--------|------|-----|----------|----------|
 | [Sendaoyan Yan](../../by-contributor/profiles/sendaoyan.md) | 2022-2026 | 100 | Independent/Other | 编译器测试，GC 测试 |
 
-> **注**: 前员工的历史贡献 (202+ PRs) 仍归属于 Alibaba，因为这是在职期间的工作成果。
+> **注**: 
+> - 前员工的历史贡献 (202+ PRs) 仍归属于 Alibaba，因为这是在职期间的工作成果
+> - 次要贡献者通过 git commit 统计，邮箱为 `@alibaba-inc.com`
 
 ---
 
@@ -73,6 +88,8 @@
 | **G1 GC** | 1 | 3 | [G1 GC](../../by-topic/core/gc/g1-gc.md) |
 | **ZGC** | 1 | 2 | [ZGC](../../by-topic/core/gc/zgc.md) |
 | **AArch64** | 1 | 2 | [AArch64](../../by-topic/core/arch/aarch64.md) |
+| **RISC-V** | 1 | 2 | [RISC-V](../../by-topic/core/arch/riscv.md) |
+| **DecimalFormat** | 1 | 2 | 性能优化 |
 
 ---
 
@@ -140,6 +157,19 @@ JDK 24 是阿里巴巴开始活跃贡献的版本。
 | 8334431 | C2 IR Graph 将 MemBarAcquire 放入循环 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 正确性修复 | - |
 
 **JDK 24 统计**: 8 PRs (Shaojin Wen: 6, Kuai Wei: 2)
+
+#### 次要贡献者 (Git Commits)
+
+| Issue | 标题 | 贡献者 | 类型 | 日期 |
+|-------|------|--------|------|------|
+| 8326936 | RISC-V: Shenandoah GC 原子操作修复 | [Xingqi Zheng](../../by-contributor/profiles/xingqi-zheng.md) | 正确性修复 | 2024-03-05 |
+| 8324280 | RISC-V: VM_Version::parse_satp_mode 修复 | [Xingqi Zheng](../../by-contributor/profiles/xingqi-zheng.md) | 正确性修复 | 2024-01-25 |
+| 8326446 | Apple M1 CPU Load 修复 | [Yibo Yan](../../by-contributor/profiles/yibo-yan.md) | 正确性修复 | 2024-03-08 |
+| 8319876 | VM_ThreadDump 内存优化 | [Yibo Yan](../../by-contributor/profiles/yibo-yan.md) | 内存优化 | 2023-11-17 |
+| 8333396 | java.text.Format 内部使用 StringBuilder | [Lingjun Cao](../../by-contributor/profiles/lingjun-cao.md) | 性能优化 | 2024-07-22 |
+| 8333462 | DecimalFormat 构造函数性能回归 | [Lingjun Cao](../../by-contributor/profiles/lingjun-cao.md) | 性能优化 | 2024-06-05 |
+
+**JDK 24 次要贡献统计**: 6 commits (Xingqi Zheng: 2, Yibo Yan: 2, Lingjun Cao: 2)
 
 ### JDK 23
 
@@ -623,4 +653,16 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 - [Kuai Wei 贡献者档案](../../by-contributor/profiles/kuai-wei.md) - C2 编译器专家
 - [Yude Lin 贡献者档案](../../by-contributor/profiles/yude-lin.md) - G1 GC 专家
 - [Xiaowei Lu 贡献者档案](../../by-contributor/profiles/xiaowei-lu.md) - ZGC 专家
-- [中囯贡献者索引](../../by-contributor/profiles/chinese-contributors.md)
+- [Xingqi Zheng 贡献者档案](../../by-contributor/profiles/xingqi-zheng.md) - RISC-V 专家
+- [Yibo Yan 贡献者档案](../../by-contributor/profiles/yibo-yan.md) - CPU Load/内存专家
+- [Lingjun Cao 贡献者档案](../../by-contributor/profiles/lingjun-cao.md) - DecimalFormat 专家
+- [中国贡献者索引](../../by-contributor/profiles/chinese-contributors.md)
+
+---
+
+> **文档版本**: 3.0
+> **最后更新**: 2026-03-21
+> **更新内容**:
+> - 添加次要贡献者 (Xingqi Zheng, Yibo Yan, Lingjun Cao)
+> - 添加 RISC-V 和 DecimalFormat 技术领域
+> - 更新贡献者数 (5 核心 + 3 次要 + 1 测试)
