@@ -18,12 +18,14 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Lingjun Cao (曹令军) |
+| **GitHub** | [@lingjun-cg](https://github.com/lingjun-cg) |
 | **邮箱** | lingjun.cg@alibaba-inc.com |
 | **当前组织** | [Alibaba](../../contributors/orgs/alibaba.md) |
 | **角色** | Author |
-| **Commits** | 2 |
-| **主要领域** | DecimalFormat, 性能优化 |
+| **Commits** | 2 (mainline OpenJDK) |
+| **主要领域** | DecimalFormat, 性能优化, java.text |
 | **活跃时间** | 2024 |
+| **其他贡献** | Alibaba Dragonwell (内部 OpenJDK 发行版) |
 
 > **数据来源**: Git commits in openjdk/jdk
 
@@ -52,12 +54,13 @@
 
 **日期**: 2024-07-22
 
-**问题**: java.text.Format.* 格式化方法使用 StringBuffer，性能受限。
+**问题**: java.text.Format.* 格式化方法内部使用 StringBuffer，由于 StringBuffer 包含大量 synchronized 方法，在 JDK 15+ 移除偏向锁 (biased locking) 后，原子指令出现在热点区域，导致与 JDK 11 相比性能显著下降。
 
-**解决方案**: 内部改用 StringBuilder 替代 StringBuffer。
+**解决方案**: 内部改用 StringBuilder 替代 StringBuffer，避免不必要的同步开销。该 PR 经历了 20+ 轮 review 迭代，最终集成。
 
 ```
-影响: 格式化性能提升
+最终标题: Use StringBuilder internally for java.text.Format.* formatting
+影响: 格式化性能提升，消除热点区域中的原子指令开销
 ```
 
 ### 2. DecimalFormat 构造函数性能回归

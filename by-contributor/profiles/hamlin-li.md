@@ -17,18 +17,19 @@
 |-------|-------|
 | **Name** | Hamlin Li |
 | **Current Organization** | Rivos |
-| **GitHub** | [@luhenry](https://github.com/luhenry) |
+| **GitHub** | [@Hamlin-Li](https://github.com/Hamlin-Li) |
 | **OpenJDK** | [@mli](https://openjdk.org/census#mli) |
 | **Role** | JDK Reviewer |
-| **PRs** | [13 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aluhenry+is%3Aclosed+label%3Aintegrated) |
-| **Primary Areas** | C2 SuperWord, RISC-V Backend, Vectorization |
+| **PRs** | [integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AHamlin-Li+is%3Aclosed+label%3Aintegrated) |
+| **Total Contributions** | 130+ (across all OpenJDK history) |
+| **Primary Areas** | RISC-V Backend, C2 SuperWord, Vectorization, Core Libraries |
 
 ### Organization History
 
 | Period | Organization | Email |
 |--------|--------------|-------|
-| 2016 | Oracle | huaming.li@oracle.com |
-| 2024 - Present | Rivos | hamlin@rivosinc.com |
+| ~2016 - ~2023 | Oracle | huaming.li@oracle.com |
+| ~2024 - Present | Rivos | hamlin@rivosinc.com |
 
 > **Data as of**: 2026-03-19
 
@@ -50,6 +51,12 @@
 - **Float16 Operations** - Scalar and vector Float16 support
 - **Conditional Moves** - CMove optimizations for RISC-V
 - **CRC32 Intrinsics** - Carry-less multiplication implementation
+- **Core Libraries** (Oracle era) - Compact Strings, Stack Walking, Platform Logging, NIO, RMI
+
+### Career Notes
+- Became JDK Reviewer in March 2020 (voted in by the community)
+- At Oracle, focused on test quality, code coverage, and tracking intermittent failures in Core Libraries
+- At Rivos, shifted focus to RISC-V backend, vectorization, and compiler optimizations
 
 ## 3. Complete PR List
 
@@ -247,7 +254,7 @@ bool VTransform::transform_unsigned_compare(Node* n) {
 4. Refactor for code clarity and maintainability
 
 ### Review Style
-- Often reviewed by Dean Long (dlong), Henry Lu (luhenry), and Emanuel Peter (epeter)
+- Often reviewed by Dean Long (dlong), Ludovic Henry (luhenry, Rivos colleague), and Emanuel Peter (epeter)
 - Focuses on correctness of assembly code generation
 - Ensures proper feature dependency chains
 
@@ -255,5 +262,5 @@ bool VTransform::transform_unsigned_compare(Node* n) {
 
 - [OpenJDK Profile](https://openjdk.org/census#mli)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20mli)
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=mli)
-- [RISC-V Port Project](https://openjdk.org/projects/riscv-port-port)
+- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=Hamlin-Li)
+- [RISC-V Port Project](https://openjdk.org/projects/riscv-port/)

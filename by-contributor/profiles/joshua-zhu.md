@@ -1,6 +1,6 @@
 # Joshua Zhu
 
-> **Alibaba** | **Shanghai**
+> **Alibaba** (unverified) | **Shanghai**
 
 ---
 
@@ -11,8 +11,9 @@
 | **GitHub** | [@JoshuaZhuwj](https://github.com/JoshuaZhuwj) |
 | **姓名** | Joshua Zhu |
 | **位置** | 上海 |
-| **组织** | [Alibaba](../../contributors/orgs/alibaba.md) |
+| **组织** | [Alibaba](../../contributors/orgs/alibaba.md) (基于社交网络推断，未经公开来源验证) |
 | **主要领域** | JVM, 核心库 |
+| **备注** | 无公开 OpenJDK commits 或 PRs 记录；组织归属基于同事关系推断 |
 
 ---
 

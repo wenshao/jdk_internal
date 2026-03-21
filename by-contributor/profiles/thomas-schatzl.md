@@ -4,7 +4,7 @@
 > **Blog**: [tschatzl.github.io](https://tschatzl.github.io/)
 > **Email**: thomas.schatzl@oracle.com
 > **Organization**: Oracle
-> **Location**: Germany
+> **Location**: Austria (Linz area)
 
 ---
 
@@ -28,7 +28,7 @@
 
 ## 1. 概述
 
-Thomas Schatzl 是 Oracle HotSpot GC 团队核心成员，G1 (Garbage First) GC 的主要维护者和优化者。自 2012 年起参与 OpenJDK 开发，专注于垃圾回收器领域超过 12 年。他主导了 JEP 522 (G1 GC 吞吐量改进)，并在个人博客上撰写了大量关于 G1 GC 和 Parallel GC 的技术文章。截至 2026 年 3 月，他已有 **546 个 Integrated PRs**，是 GC 领域最高产的贡献者之一。
+Thomas Schatzl 是 Oracle HotSpot GC 团队的 **Principal Member of Technical Staff**，G1 (Garbage First) GC 的主要维护者和优化者。自 2012 年起参与 OpenJDK 开发（2013 年正式加入 HotSpot GC Team），专注于垃圾回收器领域超过 12 年。他主导了 JEP 522 (G1 GC 吞吐量改进)，并在个人博客上撰写了大量关于 G1 GC 和 Parallel GC 的技术文章。截至 2026 年 3 月，他已有 **546 个 Integrated PRs**，是 GC 领域最高产的贡献者之一。
 
 ---
 
@@ -40,7 +40,7 @@ Thomas Schatzl 是 Oracle HotSpot GC 团队核心成员，G1 (Garbage First) GC 
 | **学位** | Dipl.-Ing. (Diplom-Ingenieur, JKU) |
 | **当前组织** | Oracle |
 | **团队** | HotSpot GC Team |
-| **位置** | 德国 |
+| **位置** | 奥地利 (Linz area) |
 | **GitHub** | [@tschatzl](https://github.com/tschatzl) |
 | **Blog** | [tschatzl.github.io](https://tschatzl.github.io/) |
 | **Email** | thomas.schatzl@oracle.com |
@@ -100,7 +100,7 @@ Thomas Schatzl 是 Oracle HotSpot GC 团队核心成员，G1 (Garbage First) GC 
 ## 5. 代表性工作
 
 ### 1. JEP 522: G1 GC Throughput Improvement
-**Issue**: [JDK-8379781](https://bugs.openjdk.org/browse/JDK-8379781)
+**Issue**: [JDK-8340827](https://bugs.openjdk.org/browse/JDK-8340827)
 
 G1 GC 吞吐量改进，提升 G1 在各种工作负载下的性能。
 
@@ -140,7 +140,9 @@ Thomas 在 [tschatzl.github.io](https://tschatzl.github.io/) 撰写关于 OpenJD
 | **Blog** | [tschatzl.github.io](https://tschatzl.github.io/) |
 | **OpenJDK Census** | [tschatzl](https://openjdk.org/census#tschatzl) |
 | **Inside.java** | [ThomasSchatzl](https://inside.java/u/ThomasSchatzl/) |
-| **JKU Staff Profile** | [Thomas Schatzl](https://ssw.jku.at/General/Staff/TS/) |
+| **Oracle Blogs** | [Thomas Schatzl](https://blogs.oracle.com/authors/thomas-schatzl/) |
+| **JKU Staff Profile** | [Dipl.-Ing. Thomas Schatzl](https://ssw.jku.at/General/Staff/Schatzl/) |
+| **FOSDEM 2018** | [G1 - Never Done!](https://archive.fosdem.org/2018/schedule/speaker/thomas_schatzl/) |
 
 ---
 
@@ -159,9 +161,11 @@ Thomas 在 [tschatzl.github.io](https://tschatzl.github.io/) 撰写关于 OpenJD
 
 | 年份 | 事件 | 详情 |
 |------|------|------|
-| **~2010** | JKU 学术背景 | Johannes Kepler University 系统软件部门 |
-| **2012** | 加入 Oracle | HotSpot GC 团队 |
-| **2012-至今** | GC 专家 | 专注 G1 GC 和 Parallel GC 超过 12 年 |
+| **~2010** | JKU 学术背景 | Johannes Kepler University Linz 系统软件部门 |
+| **2012** | 开始参与 OpenJDK | GC 相关开发 |
+| **2013** | 正式加入 HotSpot GC Team | Oracle HotSpot GC 团队 |
+| **2013-至今** | GC 专家 | 专注 G1 GC 和 Parallel GC 超过 12 年 |
+| **2018** | FOSDEM 演讲 | "G1 - Never Done!" - 介绍 G1 GC 的持续优化工作 |
 | **2024-2025** | JEP 522 | 主导 G1 GC 吞吐量改进 |
 | **2025-至今** | JDK Reviewer | 持续审查和优化 GC 代码 |
 
@@ -344,7 +348,10 @@ Thomas 的贡献特点:
 
 ## 13. 相关链接
 
-- [JKU Staff Profile](https://ssw.jku.at/General/Staff/TS/)
+- [JKU Staff Profile](https://ssw.jku.at/General/Staff/Schatzl/)
+- [FOSDEM 2018 - G1 Never Done](https://archive.fosdem.org/2018/schedule/event/g1/)
+- [FOSDEM 2018 Slides (PDF)](https://archive.fosdem.org/2018/schedule/event/g1/attachments/slides/2341/export/events/attachments/g1/slides/2341/fosdem2018_schatzl_g1_never_done.pdf)
+- [Oracle Blogs](https://blogs.oracle.com/authors/thomas-schatzl/)
 - [OpenJDK Changesets](https://hg.openjdk.org/jdk/jdk/user?user=tschatzl)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=Thomas%20Schatzl)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20tschatzl)

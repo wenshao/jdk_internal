@@ -24,7 +24,8 @@
 | **GitHub** | [@Anjian-Wen](https://github.com/Anjian-Wen) |
 | **OpenJDK** | Author |
 | **PRs** | [25 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AAnjian-Wen+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | RISC-V 向量指令、Zvbb、Zfa |
+| **邮箱** | wenanjian@bytedance.com |
+| **主要领域** | RISC-V 向量指令、Zvbb、Zfa、AES 加密 |
 | **活跃时间** | 2024 - 至今 |
 
 > **数据调查时间**: 2026-03-19
@@ -37,15 +38,17 @@
 
 | 类别 | 数量 | 占比 |
 |------|------|------|
-| RISC-V 向量指令 | 8 | 67% |
-| RISC-V 浮点指令 | 2 | 17% |
-| RISC-V intrinsic | 2 | 16% |
+| RISC-V 向量指令 (Zvbb) | 5 | 主要 |
+| RISC-V 浮点指令 (Zfa) | 2 | |
+| RISC-V 数组填充/intrinsic | 5 | |
+| RISC-V AES CTR intrinsic | 1+ | 进行中 |
 
 ### 关键成就
 
-- RISC-V Zvbb 向量指令支持
-- RISC-V Zfa 浮点指令支持
-- RISC-V 数组填充优化
+- RISC-V Zvbb 向量位操作指令支持
+- RISC-V Zfa 浮点扩展指令支持 (fminm/fmaxm, 含 NaN 直接处理)
+- RISC-V 数组填充优化 (Unsafe.setMemory intrinsic)
+- RISC-V AES CTR 模式 intrinsic 实现 (使用 Zbb/Zvbb 指令)
 
 ---
 
