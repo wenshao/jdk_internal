@@ -327,7 +327,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 JDK 26 (2025-06 to 2026-03) 期间的主要贡献者，基于 GitHub Integrated PRs 统计。
 
-### Top 10 贡献者
+### Top 50 贡献者
 
 | 排名 | 贡献者 | 组织 | PRs | 领域 | 档案 |
 |------|--------|------|-----|------|------|
@@ -341,6 +341,46 @@ JDK 26 (2025-06 to 2026-03) 期间的主要贡献者，基于 GitHub Integrated 
 | 8 | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | [Oracle](/contributors/orgs/oracle.md) | 76 | GC, HotSpot | [详情](/by-contributor/profiles/kim-barrett.md) |
 | 9 | [SendaoYan](/by-contributor/profiles/sendaoyan.md) | Independent | 71 | Testing | [详情](/by-contributor/profiles/sendaoyan.md) |
 | 10 | [Jaikiran Pai](/by-contributor/profiles/jaikiran-pai.md) | [Oracle](/contributors/orgs/oracle.md) | 67 | Networking | [详情](/by-contributor/profiles/jaikiran-pai.md) |
+| 11 | [Francesco Andreuzzi](/by-contributor/profiles/francesco-andreuzzi.md) | [Oracle](/contributors/orgs/oracle.md) | 60 | Testing | [详情](/by-contributor/profiles/francesco-andreuzzi.md) |
+| 12 | [Prasanta Sadhukhan](/by-contributor/profiles/prasanta-sadhukhan.md) | [Oracle](/contributors/orgs/oracle.md) | 59 | Desktop | [详情](/by-contributor/profiles/prasanta-sadhukhan.md) |
+| 13 | [Chen Liang](/by-contributor/profiles/chen-liang.md) | [Oracle](/contributors/orgs/oracle.md) | 59 | ClassFile API | [详情](/by-contributor/profiles/chen-liang.md) |
+| 14 | [Sergey Bylokhov](/by-contributor/profiles/mrserb.md) | [Oracle](/contributors/orgs/oracle.md) | 57 | Desktop | [详情](/by-contributor/profiles/mrserb.md) |
+| 15 | [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | [Oracle](/contributors/orgs/oracle.md) | 57 | JFR | [详情](/by-contributor/profiles/erik-gahlin.md) |
+| 16 | [Brian Burkhalter](/by-contributor/profiles/brian-burkhalter.md) | [Oracle](/contributors/orgs/oracle.md) | 53 | Networking | [详情](/by-contributor/profiles/brian-burkhalter.md) |
+| 17 | [Axel Boldt-Christmas](/by-contributor/profiles/axel-boldt-christmas.md) | [SAP](/contributors/orgs/sap.md) | 52 | ZGC | [详情](/by-contributor/profiles/axel-boldt-christmas.md) |
+| 18 | [David Holmes](/by-contributor/profiles/david-holmes.md) | [Oracle](/contributors/orgs/oracle.md) | 50 | Threading | [详情](/by-contributor/profiles/david-holmes.md) |
+| 19 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | [Oracle](/contributors/orgs/oracle.md) | 49 | C2 Compiler | [详情](/by-contributor/profiles/emanuel-peter.md) |
+| 20 | [Jan Lahoda](/by-contributor/profiles/jan-lahoda.md) | [Oracle](/contributors/orgs/oracle.md) | 48 | javac | [详情](/by-contributor/profiles/jan-lahoda.md) |
+| 21 | [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | [Oracle](/contributors/orgs/oracle.md) | 47 | HTTP Client | [详情](/by-contributor/profiles/daniel-fuchs.md) |
+| 22 | [Volkan Yazici](/by-contributor/profiles/volkan-yazici.md) | [Oracle](/contributors/orgs/oracle.md) | 45 | HTTP Client | [详情](/by-contributor/profiles/volkan-yazici.md) |
+| 23 | [Joel Sikström](/by-contributor/profiles/joel-sikstrom.md) | [Oracle](/contributors/orgs/oracle.md) | 44 | ZGC | [详情](/by-contributor/profiles/joel-sikstrom.md) |
+| 24 | [Justin Lu](/by-contributor/profiles/justin-lu.md) | [Oracle](/contributors/orgs/oracle.md) | 43 | Localization | [详情](/by-contributor/profiles/justin-lu.md) |
+| 25 | [William Kemper](/by-contributor/profiles/william-kemper.md) | [Amazon](/contributors/orgs/amazon.md) | 43 | Shenandoah | [详情](/by-contributor/profiles/william-kemper.md) |
+| 26 | [Manuel Hässig](/by-contributor/profiles/manuel-haessig.md) | [Oracle](/contributors/orgs/oracle.md) | 39 | Testing | [详情](/by-contributor/profiles/manuel-haessig.md) |
+| 27 | [Naoto Sato](/by-contributor/profiles/naoto-sato.md) | [Oracle](/contributors/orgs/oracle.md) | 36 | i18n | [详情](/by-contributor/profiles/naoto-sato.md) |
+| 28 | [Leonid Mesnik](/by-contributor/profiles/leonid-mesnik.md) | [Oracle](/contributors/orgs/oracle.md) | 33 | JVMTI | [详情](/by-contributor/profiles/leonid-mesnik.md) |
+| 29 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | [Oracle](/contributors/orgs/oracle.md) | 32 | HotSpot | [详情](/by-contributor/profiles/coleen-phillimore.md) |
+| 30 | [Yasumasa Suenaga](/by-contributor/profiles/yasumasa-suenaga.md) | NTT DATA | 32 | Serviceability | [详情](/by-contributor/profiles/yasumasa-suenaga.md) |
+| 31 | [Hamlin Li](/by-contributor/profiles/hamlin-li.md) | [Oracle](/contributors/orgs/oracle.md) | 31 | C2 Compiler | [详情](/by-contributor/profiles/hamlin-li.md) |
+| 32 | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | [Red Hat](/contributors/orgs/redhat.md) | 30 | Compact Headers | [详情](/by-contributor/profiles/roman-kennke.md) |
+| 33 | [Weijun Wang](/by-contributor/profiles/weijun-wang.md) | [Oracle](/contributors/orgs/oracle.md) | 29 | Security | [详情](/by-contributor/profiles/weijun-wang.md) |
+| 34 | [Jatin Bhateja](/by-contributor/profiles/jatin-bhateja.md) | [Oracle](/contributors/orgs/oracle.md) | 28 | Vector API | [详情](/by-contributor/profiles/jatin-bhateja.md) |
+| 35 | [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | [Oracle](/contributors/orgs/oracle.md) | 27 | C2 Compiler | [详情](/by-contributor/profiles/rooland-westrelin.md) |
+| 36 | [Quan Anh Mai](/by-contributor/profiles/quan-anh-mai.md) | Independent | 26 | Type System | [详情](/by-contributor/profiles/quan-anh-mai.md) |
+| 37 | [Per Minborg](/by-contributor/profiles/per-minborg.md) | [Oracle](/contributors/orgs/oracle.md) | 25 | Core Libraries | [详情](/by-contributor/profiles/per-minborg.md) |
+| 38 | [Anton Seoane Ampudia](/by-contributor/profiles/anton-seoane-ampudia.md) | Independent | 24 | x86 Cleanup | [详情](/by-contributor/profiles/anton-seoane-ampudia.md) |
+| 39 | [Eric Fang](/by-contributor/profiles/eric-fang.md) | [Oracle](/contributors/orgs/oracle.md) | 23 | AOT | [详情](/by-contributor/profiles/eric-fang.md) |
+| 40 | [Alan Bateman](/by-contributor/profiles/alan-bateman.md) | [Oracle](/contributors/orgs/oracle.md) | 22 | Concurrency | [详情](/by-contributor/profiles/alan-bateman.md) |
+| 41 | [Johannes Bechberger](/by-contributor/profiles/johannes-bechberger.md) | [SAP](/contributors/orgs/sap.md) | 21 | JFR | [详情](/by-contributor/profiles/johannes-bechberger.md) |
+| 42 | [Andrew Haley](/by-contributor/profiles/andrew-haley.md) | [Red Hat](/contributors/orgs/redhat.md) | 20 | RISC-V | [详情](/by-contributor/profiles/andrew-haley.md) |
+| 43 | [Fredrik Bredberg](/by-contributor/profiles/fredrik-bredberg.md) | [Red Hat](/contributors/orgs/redhat.md) | 19 | Monitors | [详情](/by-contributor/profiles/fredrik-bredberg.md) |
+| 44 | [Artur Barashev](/by-contributor/profiles/artur-barashev.md) | Independent | 18 | Security | [详情](/by-contributor/profiles/artur-barashev.md) |
+| 45 | [Markus Grönlund](/by-contributor/profiles/markus-gronlund.md) | [Oracle](/contributors/orgs/oracle.md) | 17 | JFR | [详情](/by-contributor/profiles/markus-gronlund.md) |
+| 46 | [Damon Nguyen](/by-contributor/profiles/damon-nguyen.md) | [Oracle](/contributors/orgs/oracle.md) | 16 | Desktop | [详情](/by-contributor/profiles/damon-nguyen.md) |
+| 47 | [Jayathirth D V](/by-contributor/profiles/jayathirth-d-v.md) | [Oracle](/contributors/orgs/oracle.md) | 15 | ImageIO | [详情](/by-contributor/profiles/jayathirth-d-v.md) |
+| 48 | [Anthony Scarpino](/by-contributor/profiles/anthony-scarpino.md) | [Oracle](/contributors/orgs/oracle.md) | 14 | Security | [详情](/by-contributor/profiles/anthony-scarpino.md) |
+| 49 | [Erik Österlund](/by-contributor/profiles/erik-osterlund.md) | [Oracle](/contributors/orgs/oracle.md) | 13 | AOT | [详情](/by-contributor/profiles/erik-osterlund.md) |
+| 50 | [Hai-May Chao](/by-contributor/profiles/hai-may-chao.md) | [Oracle](/contributors/orgs/oracle.md) | 12 | Security | [详情](/by-contributor/profiles/hai-may-chao.md) |
 
 ### 中国贡献者 (JDK 26)
 
