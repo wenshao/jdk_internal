@@ -112,24 +112,22 @@ if (obj instanceof int i) {
     process(i);  // 无需拆箱
 }
 
-// 配合 switch 使用
+// 配合 switch 使用 (value 类型为 long)
 String result = switch (value) {
-    case int i -> "int: " + i;
+    case int i -> "int: " + i;    // 窄化匹配
     case long l -> "long: " + l;
-    case double d -> "double: " + d;
-    default -> "unknown";
+    default -> "other";
 };
 ```
 
 ### 结构化并发
 
 ```java
-try (var scope = StructuredTaskScope.open()) {
+try (var scope = StructuredTaskScope.open(Joiner.allSuccessfulOrThrow())) {
     Subtask<String> user = scope.fork(() -> fetchUser());
     Subtask<List<Order>> orders = scope.fork(() -> fetchOrders());
 
     scope.join();
-    scope.throwIfFailed();
 
     return new Response(user.get(), orders.get());
 }  // 自动关闭，取消未完成的任务
@@ -192,8 +190,8 @@ try (var scope = StructuredTaskScope.open()) {
 | 领域 | 改进 | 数据 |
 |------|------|------|
 | **G1 GC** | 吞吐量提升 | 特定工作负载下 +10-20% (减少同步) |
-| **启动时间** | AOT 对象缓存 | 显著提升 |
-| **HTTP/3** | 连接建立 | 会话恢复时 0-RTT (vs TCP+TLS 1.3 2 RTT) |
+| **启动时间** | AOT 对象缓存 | 减少类加载和对象初始化开销 |
+| **HTTP/3** | 连接建立 | 会话恢复时 0-RTT (vs TCP+TLS 1.3 新连接 2-3 RTT) |
 
 ---
 
@@ -274,12 +272,12 @@ java -Djdk.httpclient.HttpClient.log=all,headers:verbose MyApp
 
 ### 安全
 
-- **PEM 加密格式** (JEP 524)：标准化密钥和证书的 PEM 编码
+- **PEM 编码格式** (JEP 524)：标准化密钥和证书的 PEM 编码
 
 ### 语言
 
 - **原始类型模式匹配** (JEP 530)：支持 int/long/double 等原始类型
-- **延迟常量** (JEP 526)：更安全的常量初始化
+- **延迟常量** (JEP 526)：按需延迟初始化的常量
 - **严格 final 语义** (JEP 500)：禁止深度反射修改 final 字段
 
 ### 并发
@@ -326,8 +324,9 @@ java -XX:+UseG1GC MyApp
 # 2. 启用 AOT 对象缓存 (所有 GC)
 java -XX:AOTCache=app.aot MyApp
 
-# 3. 微服务优化启动时间
-java -XX:AOTCache=app.aot -XX:ArchiveClassesAtExit=app.jsa MyApp
+# 3. 微服务优化启动时间 (先录制，再使用)
+java -XX:AOTConfiguration=app.aotconf MyApp
+java -XX:AOTCache=app.aot -XX:AOTConfiguration=app.aotconf MyApp
 
 # 4. 启用 HTTP/3 (HttpClient 自动协商)
 # 无需额外参数，确保服务端支持 QUIC
