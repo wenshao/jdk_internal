@@ -26,10 +26,10 @@
 | 主题 | 版本范围 | 查看 | 亮点 |
 |------|----------|------|------|
 | **GC 演进** | 8 → 26 | [G1/ZGC/Shenandoah 时间线](by-topic/core/gc/) | 分代 ZGC, G1 +10-20% |
-| **内存管理** | 8 → 26 | [堆/栈/Metaspace/Compressed Oops](by-topic/core/memory/) | 紧凑对象头 -8-16字节 |
+| **内存管理** | 8 → 26 | [堆/栈/Metaspace/Compressed Oops](by-topic/core/memory/) | 紧凑对象头 -33% (12→8字节) |
 | **JIT 编译** | 8 → 26 | [C1/C2/Graal 分层编译](by-topic/core/jit/) | 内联优化, 逃逸分析 |
 | **类加载器** | 8 → 26 | [双亲委派/模块化/CDS](by-topic/core/classloading/) | AppCDS 启动 +20% |
-| **模式匹配** | 14 → 26 | [类型模式/Record 模式/守卫](by-topic/core/patterns/) | 性能提升 20-30% |
+| **模式匹配** | 14 → 26 | [类型模式/Record 模式/守卫](by-topic/core/patterns/) | instanceof/switch/解构 |
 | **泛型系统** | 5 → 26 | [类型参数/通配符/类型擦除](by-topic/core/generics/) | PECS 原则 |
 | **Record 类型** | 14 → 26 | [不可变数据载体/解构](by-topic/core/records/) | 字节码 -30% |
 | **模块系统** | 9+ | [JPMS/module-info/jlink](by-topic/core/modules/) | 强封装 |
@@ -38,10 +38,10 @@
 
 | 主题 | 版本范围 | 查看 | 亮点 |
 |------|----------|------|------|
-| **语法演进** | 8 → 26 | [泛型/Lambda/Record/Pattern Matching](by-topic/language/syntax/) | Enum 优化 -82% 内存 |
+| **语法演进** | 8 → 26 | [泛型/Lambda/Record/Pattern Matching](by-topic/language/syntax/) | Switch 表达式, 密封类 |
 | **Lambda** | 8 → 26 | [函数式编程/invokedynamic](by-topic/language/lambda/) | 生成优化 +15-20% |
 | **Stream API** | 8 → 26 | [函数式数据处理/并行流](by-topic/language/streams/) | Gatherers (JDK 22+) |
-| **字符串处理** | 8 → 26 | [String 优化历程](by-topic/language/string/) | Compact Strings -50% |
+| **字符串处理** | 8 → 26 | [String 优化历程](by-topic/language/string/) | Compact Strings 节省 20-30% 堆内存 |
 | **Class File API** | 22 → 26 | [标准字节码 API](by-topic/language/classfile/) | 替代 ASM |
 | **反射与元数据** | 8 → 26 | [反射/注解/MethodHandle](by-topic/language/reflection/) | 变量引用 |
 
@@ -203,7 +203,7 @@ jdk_internal/
 | PR | 影响 | 分析 |
 |----|------|------|
 | [JDK-8341755](by-pr/8341/8341755.md) | Lambda 生成 +15-20% | 参数名称缓存优化 |
-| [JDK-8349400](by-pr/8349/8349400.md) | 元空间 -82% | 消除匿名内部类 |
+| [JDK-8349400](by-pr/8349/8349400.md) | 启动速度 +5% | 消除嵌套类优化 |
 | [JDK-8339217](by-pr/8339/8339217.md) | 常量加载 +5-15% | ClassFile API 优化 |
 | [JDK-8339290](by-pr/8339/8339290.md) | UTF-8 编码 +15-30% | 批量扫描优化 |
 | [JDK-8341906](by-pr/8341/8341906.md) | 字节码写入 +28% | BufWriter 合并 |
