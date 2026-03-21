@@ -11,7 +11,7 @@
 | **GitHub** | [@yanglong1010](https://github.com/yanglong1010) |
 | **姓名** | Long Yang (杨龙) |
 | **位置** | Hangzhou, Zhejiang, China |
-| **公司** | @Alibaba |
+| **组织** | [Alibaba](../../contributors/orgs/alibaba.md) |
 | **主要领域** | JVM, 核心库 |
 
 ---

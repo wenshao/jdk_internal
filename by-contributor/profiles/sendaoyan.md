@@ -20,8 +20,8 @@
 | 关联类型 | 用户 | 推断 |
 |----------|------|------|
 | **阿里巴巴同事** | kuaiwei | Kuai Wei 的 follower |
-| **阿里巴巴同事** | JoshuaZhuwj | 上海 @Alibaba |
-| **阿里巴巴同事** | yanglong1010 | 杭州 @Alibaba |
+| **阿里巴巴同事** | JoshuaZhuwj | 上海 [Alibaba](../../contributors/orgs/alibaba.md) |
+| **阿里巴巴同事** | yanglong1010 | 杭州 [Alibaba](../../contributors/orgs/alibaba.md) |
 | **社区联系** | luchsh | Jonathan Lu, 上海 |
 | **社区联系** | tanghaoth90 | Hao Tang, ByteDance, 杭州 |
 

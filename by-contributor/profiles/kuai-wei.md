@@ -10,7 +10,7 @@
 |------|-----|
 | **姓名** | Kuai Wei |
 | **GitHub** | [@kuaiwei](https://github.com/kuaiwei) |
-| **公司** | [@alibaba](https://github.com/alibaba) |
+| **组织** | [Alibaba](../../contributors/orgs/alibaba.md) |
 | **邮箱** | kuaiwei.kw@alibaba-inc.com, wei.kuai@gmail.com |
 | **OpenJDK Census** | ✅ [记录在案](https://openjdk.org/census) |
 | **Integrated PRs** | 13 |
@@ -81,13 +81,13 @@
 | 关联类型 | 用户 | 真实姓名 | 位置 | 组织 | 推断 |
 |----------|------|----------|------|------|------|
 | **论文合著者** | [sanhong](sanhong.md) | Sanhong Li | - | - | ASE 2021 论文合著者，互相关注 |
-| **阿里巴巴同事** | [JoshuaZhuwj](joshua-zhu.md) | Joshua Zhu | 上海 | @Alibaba | 互相关注 |
+| **阿里巴巴同事** | [JoshuaZhuwj](joshua-zhu.md) | Joshua Zhu | 上海 | [Alibaba](../../contributors/orgs/alibaba.md) | 互相关注 |
 | **阿里巴巴同事** | [sendaoYan](sendaoyan.md) | Sendaoyan Yan | 上海 | - | Kuai Wei 的 follower, compiler tester |
-| **阿里巴巴同事** | [yanglong1010](yanglong1010.md) | Long Yang | 杭州 | @Alibaba | 互相关注 |
+| **阿里巴巴同事** | [yanglong1010](yanglong1010.md) | Long Yang | 杭州 | [Alibaba](../../contributors/orgs/alibaba.md) | 互相关注 |
 | **社区联系** | [luchsh](luchsh.md) | Jonathan Lu | 上海 | - | 互相关注 |
-| **社区联系** | [tanghaoth90](tanghaoth90.md) | Hao Tang | 杭州 | ByteDance | 互相关注 |
+| **社区联系** | [tanghaoth90](tanghaoth90.md) | Hao Tang | 杭州 | [ByteDance](../../contributors/orgs/bytedance.md) | 互相关注 |
 | **社区联系** | [XHao](xhao.md) | shako | 上海 | - | 互相关注 |
-| **龙芯联系** | [xiangzhai](xiangzhai.md) | Leslie Zhai | 北京 | @loongson | Kuai Wei 的 follower |
+| **龙芯联系** | [xiangzhai](xiangzhai.md) | Leslie Zhai | 北京 | [Loongson](../../contributors/orgs/loongson.md) | Kuai Wei 的 follower |
 | **JDK 社区** | [alijvm](alijvm.md) | Sanhong Li | - | - | 阿里巴巴 JVM 团队账号 |
 | **JDK 社区** | [Aitozi](aitozi.md) | WenjunMin | - | - | 互相关注 |
 | **JDK 社区** | [headius](headius.md) | Charles Nutter | - | - | Kuai Wei 关注 (JRuby 创始人) |

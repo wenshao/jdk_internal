@@ -24,7 +24,7 @@
 | **社区联系** | JoshuaZhuwj | Joshua Zhu, 上海, @Alibaba |
 | **社区联系** | tanghaoth90 | Hao Tang, ByteDance, 杭州 |
 | **社区联系** | XHao | shako, 上海 |
-| **龙芯联系** | xiangzhai | Leslie Zhai, @loongson, 北京 |
+| **龙芯联系** | xiangzhai | Leslie Zhai, [Loongson](../../contributors/orgs/loongson.md), 北京 |
 
 **地理位置**: 上海
 **技术社区**: JVM 社区

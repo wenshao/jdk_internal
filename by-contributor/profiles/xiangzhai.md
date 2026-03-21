@@ -11,7 +11,7 @@
 | **GitHub** | [@xiangzhai](https://github.com/xiangzhai) |
 | **姓名** | Leslie Zhai |
 | **位置** | Beijing, China |
-| **公司** | @loongson |
+| **组织** | [Loongson](../../contributors/orgs/loongson.md) |
 | **主要领域** | RISC-V, LoongArch |
 | **Bio** | Good Morning Cat |
 
