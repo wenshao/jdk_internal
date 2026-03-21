@@ -27,6 +27,7 @@ Chris Thalinger 是前 Oracle GraalVM 开发者，后加入 Twitter/X，专注�
 |------|-----|
 | **姓名** | Chris Thalinger |
 | **当前组织** | Twitter/X |
+| **GitHub** | [@christhalinger](https://github.com/christhalinger) |
 | **专长** | Graal, JIT Compiler, HotSpot |
 | **JDK 26 贡献** | 3 commits (Graal) |
 

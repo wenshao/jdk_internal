@@ -28,6 +28,7 @@ Alexandr Scherbatiy 是 Oracle 的 **桌面应用开发者**，专注于 Java �
 | **姓名** | Alexandr Scherbatiy |
 | **当前组织** | Oracle (Java Platform Group) |
 | **专长** | AWT, Swing, Desktop |
+| **GitHub** | [@AlexanderScherbatiy](https://github.com/AlexanderScherbatiy) |
 | **JDK 26 贡献** | 5 commits (Desktop) |
 
 ---

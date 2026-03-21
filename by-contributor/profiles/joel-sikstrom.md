@@ -31,6 +31,7 @@ Joel Sikström 是 Oracle 的 **ZGC (Z Garbage Collector)** 开发者，与 Stef
 | **当前组织** | Oracle (HotSpot GC Team) |
 | **职位** | Software Engineer |
 | **位置** | 瑞典 |
+| **GitHub** | [@joelsiks](https://github.com/joelsiks) |
 | **专长** | ZGC, Garbage Collection |
 | **JDK 26 贡献** | 44 commits (ZGC) |
 

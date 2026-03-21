@@ -32,6 +32,7 @@ Michael Ernst 是华盛顿大学的计算机科学教授，专注于 **编程语
 | **当前组织** | University of Washington |
 | **职位** | Professor of Computer Science |
 | **专长** | Type Systems, Program Analysis, Software Testing |
+| **GitHub** | [@mernst](https://github.com/mernst) |
 | **网站** | [cs.washington.edu](https://www.cs.washington.edu/people/faculty/mernst) |
 | **JDK 26 贡献** | 4 commits (javac) |
 

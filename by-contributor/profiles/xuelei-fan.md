@@ -29,6 +29,7 @@ Xuelei Fan (范学雷, also known as Xue-Lei Andrew Fan) 是一位资深 **Java 
 | **当前组织** | Salesforce |
 | **前组织** | Oracle (Java Platform Group, Java Security Team, ~7-8 年) |
 | **教育** | 清华大学 (Tsinghua University) |
+| **GitHub** | [@XueleiFan](https://github.com/XueleiFan) |
 | **OpenJDK 角色** | Reviewer |
 | **专长** | SSL/TLS, JSSE, DTLS, SNI, Security, Cryptography |
 | **JDK 26 贡献** | 3 commits (Security) |

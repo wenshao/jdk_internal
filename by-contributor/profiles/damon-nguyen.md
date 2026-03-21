@@ -29,6 +29,7 @@ Damon Nguyen 是 Oracle 的 **Desktop/AWT 开发者**，专注于 Java 桌面应
 | **当前组织** | Oracle (Java Platform Group) |
 | **专长** | AWT, Desktop, GUI |
 | **JDK 26 贡献** | 16 commits (Desktop) |
+| **GitHub** | [@DamonGuy](https://github.com/DamonGuy) |
 | **代码变更** | 21,557 lines (#7 by code changes) |
 
 ---

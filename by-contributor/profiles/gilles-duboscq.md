@@ -33,6 +33,7 @@ Gilles Duboscq 是 Oracle Labs Switzerland 的 **Senior Research Manager**，专
 | **职位** | Senior Research Manager |
 | **位置** | Zurich, Switzerland |
 | **学历** | PhD, Computer Science, Johannes Kepler University Linz |
+| **GitHub** | [@gilles-duboscq](https://github.com/gilles-duboscq) |
 | **LinkedIn** | [gillesduboscq](https://www.linkedin.com/in/gillesduboscq/) |
 | **Google Scholar** | [Gilles Duboscq](https://scholar.google.com/citations?user=xob78x8AAAAJ) |
 | **专长** | Graal, Truffle, Compiler Optimization, Speculative Optimizations |

@@ -26,6 +26,7 @@ Jayathirth D V 是 Oracle 的 **ImageIO 开发者**，专注于 Java 图像处�
 |------|-----|
 | **姓名** | Jayathirth D V |
 | **当前组织** | Oracle (Java Platform Group) |
+| **GitHub** | [@jayathirthrao](https://github.com/jayathirthrao) |
 | **专长** | ImageIO, Graphics, Image Processing |
 | **JDK 26 贡献** | 15 commits (ImageIO) |
 | **代码变更** | 12,282 lines (#9 by code changes) |

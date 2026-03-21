@@ -29,6 +29,7 @@ Hai-May Chao 是 Oracle 的 **安全开发工程师**，专注于 **TLS/SSL** �
 |------|-----|
 | **姓名** | Hai-May Chao |
 | **当前组织** | Oracle (Java Platform Group) |
+| **GitHub** | [@haimaychao](https://github.com/haimaychao) |
 | **专长** | TLS, SSL, Cryptography |
 | **JDK 26 贡献** | 12 commits (Security) |
 

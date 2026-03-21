@@ -21,6 +21,7 @@
 | **当前组织** | [Oracle](../../contributors/orgs/oracle.md) |
 | **职位** | Consulting Member of Technical Staff, Java Platform Group |
 | **位置** | Sweden |
+| **GitHub** | [@fisk](https://github.com/fisk) |
 | **OpenJDK** | [@eosterlund](https://openjdk.org/census#eosterlund) |
 | **Mastodon** | [@eosterlund_fisk](https://mastodon.social/@eosterlund_fisk) |
 | **角色** | JDK Reviewer |

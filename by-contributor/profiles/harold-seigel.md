@@ -27,6 +27,7 @@ Harold Seigel 是 Oracle 的 **HotSpot Runtime 开发工程师**，专注于 JVM
 |------|-----|
 | **姓名** | Harold Seigel |
 | **当前组织** | Oracle (Java Platform Group) |
+| **GitHub** | [@hseigel](https://github.com/hseigel) |
 | **OpenJDK** | [@hseigel](https://openjdk.org/census#hseigel) |
 | **角色** | Reviewer |
 | **专长** | Classfile Verification, Class Loading, HotSpot Runtime |
