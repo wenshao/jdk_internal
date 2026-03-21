@@ -33,6 +33,8 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | [Red Hat](redhat.md) | 200+ | Shenandoah GC, AArch64, Leyden | Red Hat OpenJDK |
 | [IBM](ibm.md) | 113+ | s390x, JVM | Semeru |
 | [Intel](intel.md) | 15+ | Vector API, x86_64 | - |
+| [ARM](arm.md) | 4+ | Build, AArch64 | - |
+| [Microsoft](microsoft.md) | 待核实 | Azure 优化，Build | - |
 | [ISCAS PLCT](iscas-plct.md) | 100+ | RISC-V | - |
 | [ByteDance](bytedance.md) | 25 | RISC-V 向量 | - |
 | [Tencent](tencent.md) | 10+ | G1 GC, 容器 | Kona |
@@ -451,6 +453,8 @@ IBM       15      20      30      40      45
 | [Amazon](amazon.md) | 138+ | GC | Corretto |
 | [IBM](ibm.md) | 113+ | s390x | Semeru |
 | [Intel](intel.md) | 15+ | Vector API, x86_64 | - |
+| [ARM](arm.md) | 4+ | Build, AArch64 | - |
+| [Microsoft](microsoft.md) | 待核实 | Azure 优化，Build | - |
 
 ---
 
