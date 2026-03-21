@@ -11,13 +11,58 @@
 | **姓名** | Kuai Wei |
 | **GitHub** | [@kuaiwei](https://github.com/kuaiwei) |
 | **公司** | [@alibaba](https://github.com/alibaba) |
-| **邮箱前缀** | kuaiwei.kw@alibaba-inc.com |
-| **OpenJDK Role** | Author, Committer |
+| **邮箱** | kuaiwei.kw@alibaba-inc.com, wei.kuai@gmail.com |
+| **OpenJDK Census** | ✅ [记录在案](https://openjdk.org/census) |
 | **Integrated PRs** | 13 |
+| **Dragonwell Commits** | 15+ |
 | **主要领域** | C2 Compiler, IR Optimization, RISC-V, ZGC |
 | **活跃时间** | 2021 - 至今 |
 
-> **统计来源**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akuaiwei+label%3Aintegrated+is%3Aclosed)
+> **统计来源**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akuaiwei+label%3Aintegrated+is%3Aclosed), [OpenJDK Census](https://openjdk.org/census)
+
+---
+
+## 技术方向
+
+**基于 GitHub 仓库和贡献分析**：
+
+| 领域 | 证据 |
+|------|------|
+| **C2 编译器** | OpenJDK 13 PRs (IR 优化，节点分析) |
+| **RISC-V** | Starred: riscv-openjdk, riscv-port, aliyun/yitian-ecs |
+| **JIT 编译器** | Starred: jeandle/jeandle-jdk (LLVM-based JIT) |
+| **GraalVM** | Starred: graalvm/mandrel, oracle/graal |
+| **Dragonwell** | 15+ commits to dragonwell8/11/21 |
+| **内存屏障** | OpenJDK PRs: dmb.ishst+dmb.ishld for release barrier |
+| **LLVM** | Starred: llvm/llvm-project |
+
+**关注领域** (从 Starred Repos 推断):
+- Jeandle JDK (LLVM-based JIT 编译器)
+- RISC-V 架构支持
+- GraalVM 和 Mandrel 分发版
+- Alibaba FastFFI
+- Renaissance Benchmark Suite
+
+---
+
+## 数据核实
+
+**多渠道交叉印证**：
+
+| 来源 | 显示名称 | 邮箱 | 组织 | 状态 |
+|------|----------|------|------|------|
+| **GitHub** | kuaiwei | - | @alibaba | ✅ 已验证 |
+| **OpenJDK Census** | Kuai Wei | - | - | ✅ 记录在案 |
+| **Dragonwell Commits** | Kuai Wei | kuaiwei.kw@alibaba-inc.com | Alibaba | ✅ 已验证 |
+| **Dragonwell Commits** | Kuai Wei | wei.kuai@gmail.com | - | ✅ 个人邮箱 |
+
+**无法证实的信息**：
+- ❌ 中文名：公开来源无确凿证据
+- ❌ 论文/专利：DBLP、Google Patents 无记录
+- ❌ 教育背景：无公开信息
+- ❌ 具体职位：仅知为 Alibaba 贡献者
+
+**注意**: 文档中不使用未经证实的中文名。
 
 ---
 
