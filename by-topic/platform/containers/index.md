@@ -53,9 +53,18 @@ JDK 21 ──── cgroup v2 完整支持
           │   - 完整的 cgroup v2 支持
           │   - 改进的容器检测
           │
+JDK 25 ──── 容器密度提升 (LTS)
+          │   - Compact Object Headers (JEP 519)
+          │   - 对象头 12→8 字节，堆使用减少 ~22%
+          │   - 更高容器部署密度
+          │   - AOT 命令行增强 (JEP 514)
+          │   - Generational Shenandoah (JEP 521)
+          │
 JDK 26 ──── 容器优化增强
+              - G1 GC 减少同步提高吞吐 (JEP 522)
+              - AOT 对象缓存支持 ZGC (JEP 516)
+              - HTTP/3 客户端 API (JEP 517)
               - 更精确的资源检测
-              - 性能优化
 ```
 
 ---

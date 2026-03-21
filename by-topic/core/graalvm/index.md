@@ -215,6 +215,8 @@ public interface CodeInstallationProvider {
 | **堆快照** | 构建时初始化对象 | 启动时间 -100-300ms |
 | **闭世界假设** | 已知所有代码 | 激进优化 |
 | **PGO** | Profile-Guided Optimization | 性能 +10-15% |
+| **WP-SCCP** | 全程序稀疏条件常量传播 (GraalVM 25 默认启用) | 二进制体积减少，死代码消除 |
+| **ML 静态剖析** | XGBoost 推断方法调用频率，分类热/冷代码 | 二进制体积减少，运行时性能保持 |
 
 ### Truffle 优化
 

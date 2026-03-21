@@ -46,7 +46,8 @@ JDK 1.0 ── JDK 1.3 ── JDK 7 ── JDK 9 ── JDK 10 ── JDK 17 ─
 | **JDK 17** | JIT 优化 | 编译器改进 | [近期改进](recent-changes.md) |
 | **JDK 21** | String Templates, Record Patterns | 模式匹配优化 | [近期改进](recent-changes.md) |
 | **JDK 23** | JIT 性能 | 编译吞吐量提升 | [近期改进](recent-changes.md) |
-| **JDK 26** | SuperWord 成本模型 | 智能向量化 | [SuperWord 向量化](superword.md) |
+| **JDK 25** | C2 常量折叠修复 | 表达式优化回归修复, MergeStores 独立 pass, String::hashCode 常量折叠 | [近期改进](recent-changes.md) |
+| **JDK 26** | C2 扩展编译, SuperWord 成本模型 | 支持大参数方法编译, 智能向量化 | [SuperWord 向量化](superword.md) |
 
 ---
 

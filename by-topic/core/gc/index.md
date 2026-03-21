@@ -67,11 +67,11 @@
 ## 2. 快速概览
 
 ```
-JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 7 ── JDK 9 ── JDK 11 ── JDK 15 ── JDK 21 ── JDK 25 ── JDK 26
-   │         │        │        │        │        │         │         │         │         │
-Serial    Parallel CMS    G1    G1默认   ZGC      ZGC     分代ZGC  分代    G1优化   紧凑
-GC        GC      (废弃)  (默认)  (实验)  (生产)  (生产)  Shenandoah 吞吐量   对象头
-                                                        (生产)
+JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 7 ── JDK 9 ── JDK 11 ── JDK 15 ── JDK 21 ── JDK 23 ── JDK 24 ── JDK 25 ── JDK 26
+   │         │        │        │        │        │         │         │         │         │         │         │
+Serial    Parallel CMS    G1     G1默认   ZGC     ZGC     分代ZGC  分代ZGC  移除非   分代      G1优化
+GC        GC      (废弃)  引入    (实验)  (生产) (生产)  引入     默认    分代ZGC  Shenandoah 吞吐量
+                         (默认)                                   (474)   (490)   (521)     (522)
 ```
 
 ### GC 算法对比
@@ -292,9 +292,9 @@ GC        GC      (废弃)  (默认)  (实验)  (生产)  (生产)  Shenandoah �
 │  └── 保持低延迟                                         │
 │                                                         │
 │  性能优势:                                             │
-│  - GC 停顿时间减少 50%                                  │
-│  - 吞吐量提升 20%                                       │
-│  - 更低的对分配压力                                     │
+│  - 停顿时间保持 0.1-0.5ms (与堆大小无关)               │
+│  - 吞吐量相比非分代 ZGC 提升约 10%                      │
+│  - 更低的分配压力和并发标记开销                         │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
 ```
@@ -450,8 +450,11 @@ java -XX:+UseShenandoahGC -jar app.jar
 |------|---------|------|
 | JDK 1.0-1.3 | Serial GC | 单核时代 |
 | JDK 5-8 | Parallel GC | 多核时代，吞吐优先 |
-| JDK 9-20 | G1 GC | 停顿时间可控 |
-| JDK 21+ | G1 GC | 继续作为默认 |
+| JDK 9-22 | G1 GC | 停顿时间可控 |
+| JDK 23 | G1 GC | 分代 ZGC 成为 ZGC 默认模式 (JEP 474) |
+| JDK 24 | G1 GC | 非分代 ZGC 移除 (JEP 490) |
+| JDK 25 | G1 GC | 分代 Shenandoah 生产就绪 (JEP 521) |
+| JDK 26 | G1 GC | G1 吞吐量改进 (JEP 522)，接近 Parallel GC |
 
 ---
 
@@ -560,7 +563,8 @@ Oracle: ████████████████████████
 | **Oracle** | [Ivan Walulya](/by-contributor/profiles/ivan-walulya.md) | 83+ | - | `g1ConcurrentRefine.cpp` |
 
 **JEP 522 核心团队**:
-- **Lead**: Thomas Schatzl (Oracle)
+- **Owner**: Ivan Walulya (Oracle)
+- **Author**: Thomas Schatzl (Oracle)
 - **Co-authors**: Amit Kumar, Martin Doerr, Carlo Refice, Fei Yang
 - **Reviewers**: iwalulya, rcastanedalo, aph, ayang
 
@@ -632,8 +636,8 @@ Thomas Schatzl (G1 GC Lead)
 └── G1 GC 实际维护者 (Claim Table 机制)
 
 Stefan Karlsson (ZGC Lead)
-├── JEP 439: Generational ZGC
-├── JEP 474: Generational ZGC Improvements
+├── JEP 439: Generational ZGC (JDK 21)
+├── JEP 474: ZGC Generational Mode by Default (JDK 23)
 ├── 229+ integrated PRs
 └── 分代 ZGC 实现者
 ```
@@ -654,21 +658,26 @@ Stefan Karlsson (ZGC Lead)
 // Author: Stefan Karlsson
 ```
 
-#### Red Hat: Shenandoah 推动者
+#### Red Hat (历史): Shenandoah 创始推动者
 
-**技术优势**:
-- Shenandoah GC 创始团队
-- 紧凑对象头技术 (JEP 519)
+**技术优势** (历史贡献):
+- Shenandoah GC 创始团队 (核心人员已转至 Amazon/Datadog)
+- 紧凑对象头技术起源 (Lilliput 项目)
 - AArch64 架构优化
 
-**核心人员**:
+**注意**: Red Hat 的 GC 核心贡献者已陆续离开:
+- William Kemper -> Amazon (继续主导 JEP 521)
+- Roman Kennke -> Amazon -> Datadog (继续主导 JEP 519)
+- Aleksey Shipilev -> Amazon (继续维护 Shenandoah)
+
+**核心人员** (现已在其他公司):
 ```
-William Kemper (GenShen Lead)
+William Kemper (现 Amazon, ex-Red Hat)
 ├── JEP 521: Generational Shenandoah
 ├── 112+ integrated PRs
 └── 从 Red Hat 加入 Amazon 后继续维护
 
-Roman Kennke (Shenandoah Core)
+Roman Kennke (现 Datadog, ex-Red Hat→Amazon)
 ├── JEP 519: Compact Object Headers
 ├── 163+ integrated PRs
 └── Brooks Pointers 技术实现
@@ -690,11 +699,12 @@ Roman Kennke (Shenandoah Core)
 // Author: Roman Kennke
 ```
 
-#### Amazon: 后起之秀
+#### Amazon: Shenandoah 核心力量
 
 **技术优势**:
+- Shenandoah GC 核心维护 (Aleksey Shipilev, William Kemper)
+- JEP 521 分代 Shenandoah 主导实现
 - Amazon Corretto 维护
-- Shenandoah GC 持续改进
 - 云原生场景优化
 
 **核心人员**:
@@ -714,18 +724,19 @@ William Kemper (SDE III)
 
 | JEP | 标题 | Lead | 公司 | 状态 |
 |-----|------|------|------|------|
-| **JEP 522** | G1 GC Throughput | Thomas Schatzl | Oracle | JDK 26 |
-| **JEP 521** | Generational Shenandoah | William Kemper | Amazon (ex-Red Hat) | JDK 25 |
-| **JEP 519** | Compact Object Headers | Roman Kennke | Red Hat | JDK 25 |
-| **JEP 474** | Generational ZGC Improvements | Stefan Karlsson | Oracle | JDK 23 |
+| **JEP 522** | G1 GC Throughput | Ivan Walulya | Oracle | JDK 26 |
+| **JEP 521** | Generational Shenandoah (Product) | William Kemper | Amazon (ex-Red Hat) | JDK 25 |
+| **JEP 519** | Compact Object Headers (Product) | Roman Kennke | Datadog (ex-Red Hat) | JDK 25 |
+| **JEP 490** | ZGC: Remove Non-Generational Mode | Per Lidén | Oracle | JDK 24 |
+| **JEP 474** | ZGC: Generational Mode by Default | Stefan Karlsson | Oracle | JDK 23 |
 | **JEP 439** | Generational ZGC | Stefan Karlsson | Oracle | JDK 21 |
-| **JEP 379** | Shenandoah GC (Standard) | Roman Kennke | Red Hat | JDK 15 |
+| **JEP 379** | Shenandoah GC (Standard) | Roman Kennke | Red Hat (当时) | JDK 15 |
 | **JEP 333** | ZGC (Experimental) | Per Lidén | Oracle | JDK 11 |
 
 **关键观察**:
-1. **Oracle 主导** 7 个主要 JEP 中的 5 个
-2. **Red Hat/Amazon** 主导 Shenandoah 相关 JEP
-3. **人才流动**: Aleksey Shipilev (Oracle→Red Hat→Amazon), William Kemper (Red Hat→Amazon), Roman Kennke (Red Hat→Amazon→Datadog)
+1. **Oracle 主导** 8 个主要 JEP 中的 5 个 (G1、ZGC 相关)
+2. **Amazon/Datadog (ex-Red Hat)** 主导 Shenandoah 和紧凑对象头相关 JEP
+3. **人才流动**: Aleksey Shipilev (Oracle->Red Hat->Amazon), William Kemper (Red Hat->Amazon), Roman Kennke (Red Hat->Amazon->Datadog)
 
 ### 源码目录版权分析
 
@@ -860,8 +871,8 @@ java -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -jar app.jar
 java -XX:+UseZGC -jar app.jar
 
 // ✅ 大内存 + 低延迟
-// 分代 ZGC (JDK 21+)
-java -XX:+UseZGC -XX:ZCollectionInterval=5 -jar app.jar
+// ZGC (JDK 24+ 自动使用分代模式，无需额外参数)
+java -XX:+UseZGC -jar app.jar
 ```
 
 ### GC 调优参数
@@ -2229,8 +2240,8 @@ GC 技术代际演进图
 | **2020** | JDK 15 持续改进 | JDK 15 正式发布 | - |
 | **2021** | JDK 17 Region 固定 | JDK 17 线程栈扫描 | JDK 21 分代预览 |
 | **2023** | JDK 21 持续优化 | JDK 21 分代正式发布 | - |
-| **2024** | JDK 23 分代默认 | JDK 23 移除非分代 | JDK 25 分代发布 |
-| **2025** | JDK 24 Late Barrier | JDK 24 仅分代模式 | JDK 25 持续优化 |
+| **2024** | JDK 23 分代默认 (JEP 474) | JDK 24 移除非分代 (JEP 490) | JDK 24 分代实验 (JEP 404) |
+| **2025** | JDK 25 持续优化 | JDK 24 仅分代模式 | JDK 25 分代生产就绪 (JEP 521) |
 | **2026** | JDK 26 JEP 522 吞吐优化 | JDK 26 NUMA 优化 | JDK 26 云场景优化 |
 
 ### 核心专利布局

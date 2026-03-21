@@ -9,11 +9,12 @@
 ## 1. 快速概览
 
 ```
-JDK 1.0 ── JDK 1.4 ── JDK 7 ── JDK 11 ── JDK 21
-   │         │        │        │        │
-JCE      JCE    TLS1.2  TLS1.3  SHA-3
-框架    可选   (完整   新密码   哈希
-              支持)   套件    算法
+JDK 1.0 ── JDK 1.4 ── JDK 7 ── JDK 11 ── JDK 21 ── JDK 24 ── JDK 25 ── JDK 26
+   │         │        │        │        │        │        │        │
+JCE      JCE    TLS1.2  TLS1.3  KEM     ML-KEM  KDF     HPKE
+框架    可选   (完整   ChaCha  API     ML-DSA  API     PEM
+              支持)   Poly    JEP452  JEP496  JEP510  JEP524
+                      1305            JEP497
 ```
 
 ### 核心演进
@@ -23,8 +24,14 @@ JCE      JCE    TLS1.2  TLS1.3  SHA-3
 | **JDK 1.0** | JCE 框架 | - | 基础加密 API |
 | **JDK 1.4** | JCE 集成 | - | JCE 成为标准部分 |
 | **JDK 7** | TLS 1.2 | - | 完整 TLS 1.2 支持 |
-| **JDK 11** | TLS 1.3 | - | 新密码套件 |
-| **JDK 21** | SHA-3 哈希 | - | SHA-3 算法支持 |
+| **JDK 11** | TLS 1.3 | JEP 332 | 新密码套件, ChaCha20-Poly1305 (JEP 329) |
+| **JDK 21** | KEM API | JEP 452 | 密钥封装机制框架 |
+| **JDK 24** | ML-KEM | JEP 496 | 后量子密钥封装 (FIPS 203) |
+| **JDK 24** | ML-DSA | JEP 497 | 后量子签名 (FIPS 204) |
+| **JDK 25** | KDF API | JEP 510 | 密钥派生函数 (HKDF) |
+| **JDK 25** | PEM 编码 (预览) | JEP 470 | 密钥/证书 PEM 格式 |
+| **JDK 26** | HPKE | - | 混合公钥加密 (RFC 9180) |
+| **JDK 26** | PEM 编码 (预览 2) | JEP 524 | PEMRecord 重命名为 PEM |
 
 ---
 
