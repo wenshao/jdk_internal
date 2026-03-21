@@ -32,20 +32,20 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 
 | 组织 | G1 GC | ZGC | Shenandoah | 代表贡献者 |
 |------|-------|-----|------------|------------|
-| **Oracle** | ✅ 核心 | ✅ 核心 | - | Thomas Schatzl, Stefan Karlsson |
-| **Red Hat** | - | - | ✅ 创始 | Roman Kennke |
-| **Amazon** | - | - | ✅ 维护 | William Kemper, Aleksey Shipilev |
-| **Alibaba** | ✅ | ✅ | - | Yude Lin, Xiaowei Lu |
-| **Tencent** | ✅ | - | - | Tongbao Zhang |
+| **Oracle** | ✅ 核心 | ✅ 核心 | - | [Thomas Schatzl](../../by-contributor/profiles/thomas-schatzl.md), [Stefan Karlsson](../../by-contributor/profiles/stefan-karlsson.md) |
+| **Red Hat** | - | - | ✅ 创始 | [Roman Kennke](../../by-contributor/profiles/roman-kennke.md) |
+| **Amazon** | - | - | ✅ 维护 | [William Kemper](../../by-contributor/profiles/william-kemper.md), [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) |
+| **Alibaba** | ✅ | ✅ | - | [Yude Lin](../../by-contributor/profiles/yude-lin.md), [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) |
+| **Tencent** | ✅ | - | - | [Tongbao Zhang](../../by-contributor/profiles/tongbao-zhang.md) |
 
 ### 编译器 (JIT)
 
 | 组织 | C2 编译器 | C1 编译器 | Graal | 代表贡献者 |
 |------|-----------|-----------|-------|------------|
-| **Oracle** | ✅ 核心 | ✅ 核心 | ✅ | Emanuel Peter, Vladimir Kozlov |
-| **Alibaba** | ✅ | - | - | Kuai Wei |
-| **IBM** | ✅ (s390x) | - | - | Amit Kumar |
-| **Amazon** | ✅ | - | - | Aleksey Shipilev |
+| **Oracle** | ✅ 核心 | ✅ 核心 | ✅ | [Emanuel Peter](../../by-contributor/profiles/emanuel-peter.md), [Vladimir Kozlov](../../by-contributor/profiles/vladimir-kozlov.md) |
+| **Alibaba** | ✅ | - | - | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) |
+| **IBM** | ✅ (s390x) | - | - | [Amit Kumar](../../by-contributor/profiles/amit-kumar.md) |
+| **Amazon** | ✅ | - | - | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) |
 
 ### 架构移植
 
@@ -64,8 +64,8 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 
 | 组织 | java.lang | java.util | java.time | 启动优化 | 代表贡献者 |
 |------|-----------|-----------|-----------|----------|------------|
-| **Oracle** | ✅ | ✅ | ✅ | ✅ | Claes Redestad, Naoto Sato |
-| **Alibaba** | ✅ 核心 | ✅ | ✅ | ✅ | Shaojin Wen |
+| **Oracle** | ✅ | ✅ | ✅ | ✅ | [Claes Redestad](../../by-contributor/profiles/claes-redestad.md), [Naoto Sato](../../by-contributor/profiles/naoto-sato.md) |
+| **Alibaba** | ✅ 核心 | ✅ | ✅ | ✅ | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) |
 
 ---
 
@@ -200,18 +200,18 @@ IBM       15      20      30      40      45
 
 | JEP | 标题 | 主导组织 | Lead | 版本 |
 |-----|------|----------|------|------|
-| [JEP 189](https://openjdk.org/jeps/189) | Shenandoah GC (Incubator) | Red Hat | Aleksey Shipilev | JDK 12 |
-| [JEP 379](https://openjdk.org/jeps/379) | Shenandoah GC (Standard) | Red Hat | Aleksey Shipilev | JDK 15 |
-| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Red Hat | Roman Kennke | JDK 25 |
-| [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | Amazon | William Kemper | JDK 26 |
+| [JEP 189](https://openjdk.org/jeps/189) | Shenandoah GC (Incubator) | Red Hat | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | JDK 12 |
+| [JEP 379](https://openjdk.org/jeps/379) | Shenandoah GC (Standard) | Red Hat | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | JDK 15 |
+| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Red Hat | [Roman Kennke](../../by-contributor/profiles/roman-kennke.md) | JDK 25 |
+| [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | Amazon | [William Kemper](../../by-contributor/profiles/william-kemper.md) | JDK 26 |
 | [JEP 439](https://openjdk.org/jeps/439) | Generational ZGC | Oracle | - | JDK 21 |
 
 ### 架构移植 JEP
 
 | JEP | 标题 | 主导组织 | Lead | 版本 |
 |-----|------|----------|------|------|
-| [JEP 237](https://openjdk.org/jeps/237) | AArch64 Port | Red Hat | Andrew Haley | JDK 9 |
-| [JEP 422](https://openjdk.org/jeps/422) | Linux/RISC-V Port | ISCAS PLCT | Fei Yang | JDK 19 |
+| [JEP 237](https://openjdk.org/jeps/237) | AArch64 Port | Red Hat | [Andrew Dinn](../../by-contributor/profiles/andrew-dinn.md) | JDK 9 |
+| [JEP 422](https://openjdk.org/jeps/422) | Linux/RISC-V Port | ISCAS PLCT | [Fei Yang](../../by-contributor/profiles/fei-yang.md) | JDK 19 |
 
 ### 语言与运行时 JEP
 
@@ -235,7 +235,7 @@ IBM       15      20      30      40      45
 | **PR 占比** | ~70% |
 | **核心项目** | GC, 编译器, 核心库, 语言特性 |
 | **特点** | 拥有最多 Reviewer 和 Committer |
-| **代表贡献者** | Thomas Schatzl, Claes Redestad, Emanuel Peter |
+| **代表贡献者** | [Thomas Schatzl](../../by-contributor/profiles/thomas-schatzl.md), [Claes Redestad](../../by-contributor/profiles/claes-redestad.md), [Emanuel Peter](../../by-contributor/profiles/emanuel-peter.md) |
 
 ### Alibaba
 
@@ -247,7 +247,7 @@ IBM       15      20      30      40      45
 | **贡献特点** | 性能优化导向，实际场景驱动 |
 | **代表工作** | Integer/Long toString, ClassFile API, 字符串拼接 |
 | **Dragonwell** | 电商场景优化 |
-| **代表贡献者** | Shaojin Wen, Kuai Wei, Yude Lin |
+| **代表贡献者** | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md), [Kuai Wei](../../by-contributor/profiles/kuai-wei.md), [Yude Lin](../../by-contributor/profiles/yude-lin.md) |
 
 ### Amazon
 
@@ -259,7 +259,7 @@ IBM       15      20      30      40      45
 | **贡献特点** | GC 深度优化 |
 | **代表工作** | JEP 521 Generational Shenandoah |
 | **Corretto** | AWS 云优化 |
-| **代表贡献者** | William Kemper, Aleksey Shipilev, Nick Gasson |
+| **代表贡献者** | [William Kemper](../../by-contributor/profiles/william-kemper.md), [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md), [Nick Gasson](../../by-contributor/profiles/nick-gasson.md) |
 
 ### Red Hat
 
@@ -271,7 +271,7 @@ IBM       15      20      30      40      45
 | **贡献特点** | 架构优化，启动性能 |
 | **代表工作** | AArch64 移植, JEP 519 Compact Object Headers |
 | **特点** | JBoss Byteman 项目 |
-| **代表贡献者** | Roman Kennke, Andrew Dinn |
+| **代表贡献者** | [Roman Kennke](../../by-contributor/profiles/roman-kennke.md), [Andrew Dinn](../../by-contributor/profiles/andrew-dinn.md) |
 
 ### SAP
 
@@ -283,7 +283,7 @@ IBM       15      20      30      40      45
 | **贡献特点** | 跨平台构建，企业级诊断 |
 | **代表工作** | PPC64LE 移植, SapMachine Vitals |
 | **特点** | 最多构建系统贡献 |
-| **代表贡献者** | Matthias Baesken, Goetz Lindenmaier, Erik Joelsson |
+| **代表贡献者** | [Matthias Baesken](../../by-contributor/profiles/matthias-baesken.md), [Goetz Lindenmaier](../../by-contributor/profiles/goetz-lindenmaier.md), [Erik Joelsson](../../by-contributor/profiles/erik-joelsson.md) |
 
 ### IBM
 
@@ -295,7 +295,7 @@ IBM       15      20      30      40      45
 | **贡献特点** | 企业级平台支持 |
 | **代表工作** | s390x 向量指令 |
 | **Semeru** | IBM Z 优化 |
-| **代表贡献者** | Amit Kumar, Thomas Stuefe |
+| **代表贡献者** | [Amit Kumar](../../by-contributor/profiles/amit-kumar.md), [Thomas Stuefe](../../by-contributor/profiles/thomas-stuefe.md) |
 
 ### ISCAS PLCT
 
@@ -307,7 +307,7 @@ IBM       15      20      30      40      45
 | **贡献特点** | 向量指令支持 |
 | **代表工作** | JEP 422 RISC-V Port, RISC-V 向量指令 |
 | **特点** | 中国科学院软件所 |
-| **代表贡献者** | Fei Yang |
+| **代表贡献者** | [Fei Yang](../../by-contributor/profiles/fei-yang.md) |
 
 ### ByteDance
 
@@ -318,7 +318,7 @@ IBM       15      20      30      40      45
 | **专注领域** | RISC-V 向量扩展 (Zvbb, Zfa) |
 | **贡献特点** | 新指令支持 |
 | **代表工作** | Zvbb Vector And-Not, Zfa 浮点指令 |
-| **代表贡献者** | Anjian Wen |
+| **代表贡献者** | [Anjian Wen](../../by-contributor/profiles/anjian-wen.md) |
 
 ---
 
@@ -328,9 +328,9 @@ IBM       15      20      30      40      45
 
 | 贡献者 | 原组织 | 现组织 | 说明 |
 |--------|--------|--------|------|
-| Thomas Stuefe | SAP → Amazon → IBM | IBM | SapMachine 创始人 |
-| Aleksey Shipilev | Oracle → Red Hat → AWS | Amazon | Shenandoah 创始人 |
-| William Kemper | Red Hat | Amazon | Shenandoah 维护者 |
+| [Thomas Stuefe](../../by-contributor/profiles/thomas-stuefe.md) | SAP → Amazon → IBM | IBM | SapMachine 创始人 |
+| [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | Oracle → Red Hat → AWS | Amazon | Shenandoah 创始人 |
+| [William Kemper](../../by-contributor/profiles/william-kemper.md) | Red Hat | Amazon | Shenandoah 维护者 |
 
 ---
 
@@ -340,27 +340,27 @@ IBM       15      20      30      40      45
 
 | 组织 | PRs | 主要领域 | 发行版 |
 |------|-----|----------|--------|
-| Alibaba | 121 | 核心库, GC | Dragonwell |
-| ISCAS PLCT | 100+ | RISC-V | - |
-| Loongson | 30+ | LoongArch | Loongson JDK |
-| ByteDance | 25 | RISC-V 向量 | - |
-| Tencent | 10+ | G1 GC, 容器 | Kona |
+| [Alibaba](alibaba.md) | 121 | 核心库, GC | Dragonwell |
+| [ISCAS PLCT](iscas-plct.md) | 100+ | RISC-V | - |
+| [Loongson](loongson.md) | 30+ | LoongArch | Loongson JDK |
+| [ByteDance](bytedance.md) | 25 | RISC-V 向量 | - |
+| [Tencent](tencent.md) | 10+ | G1 GC, 容器 | Kona |
 
 ### 欧洲企业
 
 | 组织 | PRs | 主要领域 | 发行版 |
 |------|-----|----------|--------|
-| SAP | 734+ | PPC, 构建 | SapMachine |
-| Red Hat | 200+ | GC, AArch64 | Red Hat OpenJDK |
+| [SAP](sap.md) | 734+ | PPC, 构建 | SapMachine |
+| [Red Hat](redhat.md) | 200+ | GC, AArch64 | Red Hat OpenJDK |
 | Oracle (欧洲团队) | - | - | - |
 
 ### 美国企业
 
 | 组织 | PRs | 主要领域 | 发行版 |
 |------|-----|----------|--------|
-| Oracle | 4000+ | 全领域 | Oracle JDK |
-| Amazon | 138+ | GC | Corretto |
-| IBM | 113+ | s390x | Semeru |
+| [Oracle](oracle.md) | 4000+ | 全领域 | Oracle JDK |
+| [Amazon](amazon.md) | 138+ | GC | Corretto |
+| [IBM](ibm.md) | 113+ | s390x | Semeru |
 
 ---
 
