@@ -215,8 +215,8 @@ JDK 21 ─── LoongArch (龙芯)
 
 ## 11. 参考资料
 
-- [JEP 307: Container Awareness](https://openjdk.org/jeps/307)
-- [JEP 358: Apple Silicon Support](https://openjdk.org/jeps/358)
+- [JEP 307](/jeps/platform/jep-307.md)
+- [JEP 358](/jeps/platform/jep-358.md)
 - [Linux cgroup v2 文档](https://docs.kernel.org/admin-guide/cgroup-v2.html)
 
 → [返回 Linux 平台](./)

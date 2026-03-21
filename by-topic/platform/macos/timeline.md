@@ -224,8 +224,8 @@ xcrun stapler staple MyApp.app
 
 ## 12. 参考资料
 
-- [JEP 358: Apple Silicon Support](https://openjdk.org/jeps/358)
-- [JEP 382: Metal Rendering Pipeline](https://openjdk.org/jeps/382)
+- [JEP 358](/jeps/platform/jep-358.md)
+- [JEP 382](/jeps/client/jep-382.md)
 - [Apple 开发者文档](https://developer.apple.com/macos/)
 
 → [返回 macOS 平台](./)
