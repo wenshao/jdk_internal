@@ -9,11 +9,11 @@
 ## 1. 快速概览
 
 ```
-JDK 1.0 ── JDK 1.1 ── JDK 1.4 ── JDK 7 ── JDK 11 ── JDK 21
-   │         │         │        │        │        │
-File     Reader/   NIO     NIO.2   Files   虚拟
-Stream   Writer    Buffer  Path    增强    线程
-         (字符)    Channel Watch   readFile 支持
+JDK 1.0 ── JDK 1.1 ── JDK 1.4 ── JDK 7 ── JDK 11 ── JDK 21 ── JDK 22 ── JDK 25 ── JDK 26
+   │         │         │        │        │        │        │        │        │
+File     Reader/   NIO     NIO.2   Files   虚拟    Foreign  File行为  HTTP/3
+Stream   Writer    Buffer  Path    增强    线程    Memory   对齐NIO  (JEP 517)
+         (字符)    Channel Watch   readFile 支持   (JEP 454) java.io
                   Selector Service (Lazy)
 ```
 
@@ -28,6 +28,9 @@ Stream   Writer    Buffer  Path    增强    线程
 | **JDK 7** | NIO.2 | Path, Files, WatchService | JSR 203 |
 | **JDK 11** | Files 增强 | readString, writeString | - |
 | **JDK 21** | 虚拟线程 | 阻塞 IO 不阻塞平台线程 | JEP 444 |
+| **JDK 22** | Foreign Memory | Foreign Function & Memory API 正式 | JEP 454 |
+| **JDK 25** | File 行为对齐 | java.io.File 行为与 java.nio.file 对齐 | - |
+| **JDK 26** | HTTP/3 | HTTP Client API 支持 HTTP/3 协议 | JEP 517 |
 
 ---
 
@@ -360,6 +363,53 @@ try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
+## 8a. Foreign Memory API (JDK 22+)
+
+> Foreign Function & Memory API (JEP 454) 经过 8 轮孵化与预览后在 JDK 22 正式发布。
+> 提供安全、高效的堆外内存访问，替代 `sun.misc.Unsafe` 和 JNI。
+
+```java
+import java.lang.foreign.*;
+import java.lang.foreign.MemorySegment;
+
+// 分配堆外内存
+try (Arena arena = Arena.ofConfined()) {
+    MemorySegment segment = arena.allocate(1024);
+    segment.set(ValueLayout.JAVA_INT, 0, 42);
+    int value = segment.get(ValueLayout.JAVA_INT, 0);
+}
+```
+
+---
+
+## 8b. JDK 25-26 IO 增强
+
+### java.io.File 行为对齐 (JDK 25)
+
+JDK 25 修复了 `java.io.File` 对空路径名的长期行为不一致问题，使 `canRead()`、
+`exists()`、`isDirectory()` 等方法的行为与 `java.nio.file` API 保持一致。
+
+### HTTP/3 支持 (JDK 26, JEP 517)
+
+JDK 26 为 HTTP Client API 添加 HTTP/3 协议支持。HTTP/3 基于 QUIC (UDP)
+传输，提供更快的握手、消除队头阻塞等优势。
+
+```java
+// JDK 26: HTTP/3 客户端
+var client = HttpClient.newBuilder()
+    .version(HttpClient.Version.HTTP_3)
+    .build();
+
+var request = HttpRequest.newBuilder()
+    .uri(URI.create("https://example.com"))
+    .build();
+
+var response = client.send(request,
+    HttpResponse.BodyHandlers.ofString());
+```
+
+---
+
 ## 9. 性能优化
 
 ### Buffer 池化
@@ -423,6 +473,10 @@ try (FileChannel channel = FileChannel.open(Paths.get("large.dat"),
 **JSR 文档:**
 - [JSR 51: New I/O APIs](https://jcp.org/en/jsr/detail?id=51)
 - [JSR 203: More New I/O APIs](https://jcp.org/en/jsr/detail?id=203)
+
+**JEP 文档:**
+- [JEP 454: Foreign Function & Memory API](https://openjdk.org/jeps/454)
+- [JEP 517: HTTP/3 for the HTTP Client API](https://openjdk.org/jeps/517)
 
 **技术文档:**
 - [Java NIO Tutorial](https://docs.oracle.com/javase/tutorial/essential/io/)

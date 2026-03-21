@@ -174,7 +174,9 @@ class ContinuationExample {
 | 版本 | JEP | 变化 |
 |------|-----|------|
 | JDK 21 | JEP 453 | 第一次预览 |
-| JDK 24 | JEP 480 | 第四次预览 |
+| JDK 22 | JEP 462 | 第二次预览 |
+| JDK 23 | JEP 480 | 第三次预览 |
+| JDK 24 | JEP 499 | 第四次预览 |
 | JDK 25 | JEP 505 | 第五次预览 - 重大 API 重构：构造函数改为静态工厂方法，引入 Joiner 接口 |
 | JDK 26 | JEP 525 | 第六次预览 - 新增 `Joiner.onTimeout()`，`allSuccessfulOrThrow()` 返回 List 而非 Stream |
 
@@ -234,7 +236,7 @@ synchronized (lock) { // JDK 21-23 会 Pin; JDK 24+ 不再 Pin (JEP 491)
 
 ### Pinning 问题
 
-> **JDK 24 重大改进 (JEP 491)**: `synchronized` 块内的阻塞不再固定虚拟线程到载体线程。JVM 内部重构了 monitor 实现，虚拟线程可在持有 monitor 时独立于载体线程进行挂起和恢复。仅少数边缘情况（类初始化器内阻塞、符号引用解析期间阻塞）仍会导致 pinning。
+> **JDK 24 重大改进 (JEP 491)**: `synchronized` 块内的阻塞不再固定虚拟线程到载体线程。JVM 内部重构了 monitor 实现，使用虚拟线程 ID 追踪 monitor 持有者，虚拟线程可在持有 monitor 时独立于载体线程进行挂起和恢复。仅少数边缘情况（native/VM 帧、类初始化器内阻塞）仍会导致 pinning。系统属性 `jdk.tracePinnedThreads` (JEP 444 引入) 已移除，改用 JFR 事件 `jdk.VirtualThreadPinned` 监控剩余 pinning 场景。
 
 ```java
 // JDK 21-23: ❌ 会 Pin Carrier
@@ -267,9 +269,12 @@ try {
 | **2023** | JDK 20 | 虚拟线程 (第二次预览, JEP 436) |
 | **2023** | JDK 21 | **虚拟线程 (正式, JEP 444)** |
 | **2023** | JDK 21 | 结构化并发 (第一预览, JEP 453) |
+| **2024** | JDK 22 | 结构化并发 (第二预览, JEP 462) |
 | **2024** | JDK 22 | Scoped Values (第二预览, JEP 464) |
+| **2024** | JDK 23 | 结构化并发 (第三预览, JEP 480) |
 | **2024** | JDK 23 | Scoped Values (第三预览, JEP 481) |
 | **2025** | JDK 24 | **虚拟线程不再 Pin synchronized (JEP 491)** |
+| **2025** | JDK 24 | 结构化并发 (第四预览, JEP 499) |
 | **2025** | JDK 24 | Scoped Values (第四预览, JEP 487) |
 | **2025** | JDK 25 | **Scoped Values (正式, JEP 506)** |
 | **2025** | JDK 25 | 结构化并发 (第五预览, JEP 505) - API 重构 |
@@ -329,13 +334,13 @@ public Mono<Response> handle(Request req) {
         .map(tuple -> new Response(tuple.getT1(), tuple.getT2()));
 }
 
-// 新代码: 虚拟线程
+// 新代码: 虚拟线程 + 结构化并发 (JDK 25+ API)
 public Response handle(Request req) {
-    try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+    try (var scope = StructuredTaskScope.open()) {
         var userTask = scope.fork(() -> service.getUser(req.getUserId()));
         var orderTask = scope.fork(() -> service.getOrder(req.getOrderId()));
 
-        scope.join().throwIfFailed();
+        scope.join();
         return new Response(userTask.get(), orderTask.get());
     }
 }
@@ -391,8 +396,8 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
     executor.submit(() -> handleHttpRequest());
 }
 
-// ✅ 使用结构化并发管理任务组
-try (var scope = new StructuredTaskScope<>()) {
+// ✅ 使用结构化并发管理任务组 (JDK 25+ API)
+try (var scope = StructuredTaskScope.open()) {
     // ...
 }
 ```
@@ -420,7 +425,10 @@ synchronized (lock) {
 - [JEP 444](/jeps/concurrency/jep-444.md) - 虚拟线程 (正式, JDK 21)
 - [JEP 453](/jeps/concurrency/jep-453.md) - 结构化并发 (第一预览, JDK 21)
 - [JEP 436](/jeps/concurrency/jep-436.md) - 虚拟线程 (第二预览, JDK 20)
+- [JEP 462](https://openjdk.org/jeps/462) - 结构化并发 (第二预览, JDK 22)
+- [JEP 480](https://openjdk.org/jeps/480) - 结构化并发 (第三预览, JDK 23)
 - [JEP 491](https://openjdk.org/jeps/491) - 虚拟线程不再 Pin synchronized (JDK 24)
+- [JEP 499](https://openjdk.org/jeps/499) - 结构化并发 (第四预览, JDK 24)
 - [JEP 506](https://openjdk.org/jeps/506) - Scoped Values (正式, JDK 25)
 - [JEP 505](https://openjdk.org/jeps/505) - 结构化并发 (第五预览, JDK 25)
 - [JEP 525](https://openjdk.org/jeps/525) - 结构化并发 (第六预览, JDK 26)

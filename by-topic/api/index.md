@@ -21,11 +21,12 @@
 ## 1. 演进概览
 
 ```
-JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 11 ─── JDK 21 ─── JDK 22 ─── JDK 24 ─── JDK 26
-   │           │           │            │            │            │           │
- 集合框架    泛型       Stream      HTTP Client  Sequenced   Stream     Stream
- I/O流      EnumSet/Map Optional    标准化     Collection Gatherers  增强
- Date       NIO        java.time   Collections  (JEP 431)  (JEP 485)  (最新)
+JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 11 ─── JDK 21 ─── JDK 22 ─── JDK 24 ─── JDK 25 ─── JDK 26
+   │           │           │            │            │            │           │           │
+ 集合框架    泛型       Stream      HTTP Client  Sequenced   Stream     Stream     Scoped   HTTP/3
+ I/O流      EnumSet/Map Optional    标准化     Collection Gatherers  Gatherers  Values   (JEP 517)
+ Date       NIO        java.time   Collections  (JEP 431)  (预览)    (正式)    (JEP 506)
+                                                            (JEP 461) (JEP 485)
 ```
 
 ### 版本里程碑
@@ -43,7 +44,11 @@ JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 11 ─── JDK 21 ──
 | **JDK 17** | 增强随机数 | RandomGenerator | JEP 356 |
 | **JDK 21** | 有序集合 | SequencedCollection | JEP 431 |
 | **JDK 22** | 外部内存 | Foreign Memory API 正式 | JEP 454 |
+| **JDK 22** | Stream Gatherers | Stream Gatherers (第一预览) | JEP 461 |
+| **JDK 23** | Stream Gatherers | Stream Gatherers (第二预览) | JEP 473 |
 | **JDK 24** | Stream 增强 | Stream Gatherers 正式 | JEP 485 |
+| **JDK 25** | Scoped Values | Scoped Values 正式 | JEP 506 |
+| **JDK 26** | HTTP/3 | HTTP Client 支持 HTTP/3 协议 | JEP 517 |
 
 ---
 
@@ -63,7 +68,8 @@ Java 集合框架从 JDK 1.0 到 JDK 26 的完整演进。
 | JDK 9 | List.of/Set.of/Map.of | - |
 | JDK 16 | Stream.toList() | - |
 | JDK 21 | SequencedCollection | JEP 431 |
-| JDK 22 | Stream Gatherers (预览) | JEP 461 |
+| JDK 22 | Stream Gatherers (第一预览) | JEP 461 |
+| JDK 23 | Stream Gatherers (第二预览) | JEP 473 |
 | JDK 24 | Stream Gatherers (正式) | JEP 485 |
 
 → [集合框架文档](collections/)
@@ -300,10 +306,13 @@ src/java.base/share/classes/jdk/internal/foreign/  # Foreign Memory 内部实现
 - [JEP 431: Sequenced Collections](https://openjdk.org/jeps/431)
 - [JEP 454](/jeps/ffi/jep-454.md)
 - [JEP 485](/jeps/tools/jep-485.md)
+- [JEP 473: Stream Gatherers (Second Preview)](https://openjdk.org/jeps/473)
+- [JEP 506: Scoped Values](https://openjdk.org/jeps/506)
+- [JEP 517: HTTP/3 for the HTTP Client API](https://openjdk.org/jeps/517)
 - [JSR 310: Date and Time API](https://jcp.org/en/jsr/detail?id=310)
 - [JSR 203: More New I/O APIs](https://jcp.org/en/jsr/detail?id=203)
 - [JSR 221: JDBC 4.0](https://jcp.org/en/jsr/detail?id=221)
 
 ---
 
-**最后更新**: 2026-03-20
+**最后更新**: 2026-03-22
