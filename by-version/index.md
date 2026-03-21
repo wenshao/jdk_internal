@@ -31,7 +31,7 @@
 
 | 版本 | 发布时间 | 主要特性 |
 |------|----------|----------|
-| **JDK 26** | 2026-03-17 | HTTP/3、G1 吞吐量提升、Stable Values (预览) |
+| **JDK 26** | 2026-03-17 | HTTP/3、G1 吞吐量提升、Lazy Constants (预览) |
 | **JDK 24** | 2025-03 | Primitive Types in Patterns (预览) |
 | **JDK 23** | 2024-09 | Markdown 文档注释 |
 | **JDK 22** | 2024-03 | String Templates (预览，后撤销) |
@@ -77,7 +77,7 @@
 | String Templates | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Structured Concurrency | 🔍 | 🔍 | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | HTTP/3 | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Scoped Values | ✅ | ✅ | 🔍 | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Scoped Values | ✅ | ✅ | 🔍 | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 > ✅ 正式版 | 🔍 预览版
 
@@ -89,8 +89,8 @@
 
 #### [JDK 25](jdk25/) - 2025-09
 - 新特性：Scoped Values (正式版)、Flexible Constructor Bodies (正式版)
-- Compact Object Headers (正式版)、JFR Method Timing (正式版)
-- KDF API (正式版)、PEM Encodings (正式版)
+- Compact Object Headers (实验性)、JFR Method Timing (正式版)
+- KDF API (正式版)、PEM Encodings (预览)
 - Structured Concurrency (第5次预览)、Primitive Types in Patterns (第3次预览)
 - [版本详情](jdk25/index.md) | [发布说明](jdk25/release-notes.md) | [JEP 汇总](jdk25/jeps.md) | [迁移指南](jdk25/migration/from-21.md)
 
@@ -128,7 +128,7 @@
 ### Feature 版本
 
 #### [JDK 26](jdk26/) - 2026-03
-- 新特性：HTTP/3 (正式版)、G1 吞吐量提升、分代 Shenandoah (正式版)
+- 新特性：HTTP/3 (正式版)、G1 吞吐量提升
 - Primitive Types in Patterns (第4次预览)
 - Structured Concurrency (第6次预览)
 - [版本详情](jdk26/index.md) | [发布说明](jdk26/release-notes.md) | [JEP 汇总](jdk26/jeps.md) | [迁移指南](jdk26/migration/from-21.md)

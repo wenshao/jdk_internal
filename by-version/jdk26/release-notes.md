@@ -73,7 +73,7 @@ try (var scope = StructuredTaskScope.open()) {
 ### [JEP 522: G1 GC Throughput Improvement](/jeps/gc/jep-522.md) ⭐
 
 **状态**: 正式发布  
-**概述**: 优化 G1 GC 的同步机制，提升吞吐量 10-15%。
+**概述**: 优化 G1 GC 的同步机制，提升吞吐量 10-20%。
 
 ---
 

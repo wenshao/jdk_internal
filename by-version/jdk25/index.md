@@ -217,7 +217,7 @@ void main(String[] args) {
 | JEP | 标题 | 状态 | 描述 | 深度分析 |
 |-----|------|------|------|----------|
 | [JEP 510](/jeps/security/jep-510.md) | Key Derivation Function API | ✅ 正式 | KDF API | → |
-| [JEP 470](/jeps/security/jep-470.md) | PEM Encodings | ✅ 正式 | PEM 编码 | → |
+| [JEP 470](/jeps/security/jep-470.md) | PEM Encodings | 🔍 预览 | PEM 编码 | → |
 
 ### JFR / 监控
 

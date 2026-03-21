@@ -1,6 +1,6 @@
 # JDK 25 发布说明
 
-> **版本类型**: LTS (长期支持) | **发布日期**: 2025-09-16 | **支持截止**: 2032+
+> **版本类型**: LTS (长期支持) | **发布日期**: 2025-09-16 | **支持截止**: 2033+
 
 [![OpenJDK](https://img.shields.io/badge/OpenJDK-25-orange)](https://openjdk.org/projects/jdk/25/)
 [![License](https://img.shields.io/badge/License-GPLv2--with--Classpath--Exception-blue)](https://openjdk.org/projects/jdk/25/)
@@ -124,12 +124,11 @@ ScopedValue.where(CURRENT_USER, user).run(() -> {
 **概述**: 结构化并发继续预览。
 
 ```java
-try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+try (var scope = StructuredTaskScope.open()) {
     Subtask<String> user = scope.fork(() -> fetchUser());
     Subtask<List<Order>> orders = scope.fork(() -> fetchOrders());
 
     scope.join();
-    scope.throwIfFailed();
 
     return new Response(user.get(), orders.get());
 }
