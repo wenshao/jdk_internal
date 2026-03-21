@@ -107,6 +107,77 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | **Amazon** | Shenandoah 改进 | 多个 |
 | **Red Hat** | Leyden 贡献 | 多个 |
 
+
+### JDK 24 (GA 2025-03)
+
+| 组织 | 主要贡献 | 关键 PR/JEP |
+|------|----------|-------------|
+| **Oracle** | 启动性能优化，字符串拼接改进 | 多个 |
+| **Alibaba** | String "+" 运算符优化 | [JDK-8336856](../../by-pr/8336/8336856.md) |
+| **Red Hat** | Compact Object Headers 预览 | [JEP 519](../../jeps/gc/jep-519.md) |
+| **Amazon** | Shenandoah 改进 | 多个 |
+
+### JDK 23 (2024-09)
+
+| 组织 | 主要贡献 | 关键 PR/JEP |
+|------|----------|-------------|
+| **Oracle** | Primitive Types in Patterns | [JEP 455](../../jeps/tools/jep-455.md) |
+| **Alibaba** | ClassFile API 全面优化 | [8341900](../../by-pr/8341/8341900.md), [8341906](../../by-pr/8341/8341906.md) |
+| **Amazon** | Generational Shenandoah | [JEP 521](../../jeps/gc/jep-521.md) |
+| **Red Hat** | Leyden 项目贡献 | 多个 |
+| **ISCAS PLCT** | RISC-V 向量指令 | 多个 |
+
+### JDK 22 (2024-03)
+
+| 组织 | 主要贡献 | 关键 JEP |
+|------|----------|---------|
+| **Oracle** | Class-File API, Unnamed Variables | [JEP 457](https://openjdk.org/jeps/457), [JEP 462](https://openjdk.org/jeps/462) |
+| **Alibaba** | 字符串拼接早期优化 | [8310929](../../by-pr/8310/8310929.md) |
+| **Red Hat** | AArch64 改进 | 多个 |
+
+### JDK 20 (2023-03)
+
+| 组织 | 主要贡献 | 关键 JEP |
+|------|----------|---------|
+| **Oracle** | Record Patterns, Pattern Matching for switch | [JEP 440](https://openjdk.org/jeps/440), [JEP 441](https://openjdk.org/jeps/441) |
+| **Red Hat** | Scoped Value (Incubator) | [JEP 436](https://openjdk.org/jeps/436) |
+| **ISCAS PLCT** | RISC-V 早期支持 | 多个 |
+
+### JDK 18 (2022-03)
+
+| 组织 | 主要贡献 | 关键 JEP |
+|------|----------|---------|
+| **Oracle** | Simple Web Server, Code Snippets in API Docs | [JEP 408](https://openjdk.org/jeps/408), [JEP 416](https://openjdk.org/jeps/416) |
+| **SAP** | 构建系统优化 | 多个 |
+
+### JDK 16 (2021-03)
+
+| 组织 | 主要贡献 | 关键 JEP |
+|------|----------|---------|
+| **Oracle** | Pattern Matching for instanceof, Records | [JEP 394](https://openjdk.org/jeps/394), [JEP 395](https://openjdk.org/jeps/395) |
+| **Red Hat** | AArch64 改进 | 多个 |
+
+### JDK 14 (2020-03)
+
+| 组织 | 主要贡献 | 关键 JEP |
+|------|----------|----------|
+| **Oracle** | Switch Expressions, Records (Preview) | [JEP 361](https://openjdk.org/jeps/361), [JEP 359](https://openjdk.org/jeps/359) |
+| **SAP** | PPC64LE 改进 | 多个 |
+
+### JDK 13 (2019-09)
+
+| 组织 | 主要贡献 | 关键 JEP |
+|------|----------|----------|
+| **Oracle** | Text Blocks (Preview), Dynamic CDS Archives | [JEP 355](https://openjdk.org/jeps/355), [JEP 350](https://openjdk.org/jeps/350) |
+| **Red Hat** | AArch64 改进 | 多个 |
+
+### JDK 10 (2018-03)
+
+| 组织 | 主要贡献 | 关键 JEP |
+|------|----------|---------|
+| **Oracle** | Local-Variable Type Inference (var) | [JEP 286](https://openjdk.org/jeps/286) |
+| **Red Hat** | AArch64 早期支持 | 多个 |
+
 ### JDK 21 (LTS, 2023-09)
 
 | 组织 | 主要贡献 | 关键 PR/JEP |
