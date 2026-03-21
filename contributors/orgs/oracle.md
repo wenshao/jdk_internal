@@ -36,37 +36,37 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 
 ### JDK 26 Top Oracle 贡献者
 
-| 排名 | 贡献者 | GitHub | PRs | 角色 | 领域 | 档案 |
-|------|--------|--------|-----|------|------|------|
-| 1 | Thomas Schatzl | [@tschatzl](https://github.com/tschatzl) | 546 | Reviewer | G1 GC | [详情](../../by-contributor/profiles/thomas-schatzl.md) |
-| 2 | Ioi Lam | [@iklam](https://github.com/iklam) | 431 | Reviewer | CDS/AOT | [详情](../../by-contributor/profiles/ioi-lam.md) |
-| 3 | Coleen Phillimore | [@coleenp](https://github.com/coleenp) | 400 | Reviewer | HotSpot | [详情](../../by-contributor/profiles/coleen-phillimore.md) |
-| 4 | Naoto Sato | [@naotoj](https://github.com/naotoj) | 273 | Reviewer | 国际化 | [详情](../../by-contributor/profiles/naoto-sato.md) |
-| 5 | Sergey Bylokhov | [@mrserb](https://github.com/mrserb) | 273 | Reviewer | AWT/2D | - |
-| 6 | Chen Liang | [@liach](https://github.com/liach) | 237 | Committer | ClassFile API | [详情](../../by-contributor/profiles/chen-liang.md) |
-| 7 | Alexey Semenyuk | [@alexeysemenyukoracle](https://github.com/alexeysemenyukoracle) | 233 | Committer | AOT | [详情](../../by-contributor/profiles/alexey-semenyuk.md) |
-| 8 | Jan Lahoda | [@lahodaj](https://github.com/lahodaj) | 324 | Reviewer | javac | [详情](../../by-contributor/profiles/jan-lahoda.md) |
-| 9 | Jaikiran Pai | [@jaikiran](https://github.com/jaikiran) | 322 | Reviewer | 构建 | [详情](../../by-contributor/profiles/jaikiran-pai.md) |
-| 10 | Daniel Fuchs | [@dfuch](https://github.com/dfuch) | 192 | Committer | JMX | [详情](../../by-contributor/profiles/daniel-fuchs.md) |
-| 11 | Kim Barrett | - | 100+ | Reviewer | GC, C++ | [详情](../../by-contributor/profiles/kim-barrett.md) |
-| 12 | David Holmes | - | 80+ | Reviewer | 并发 | [详情](../../by-contributor/profiles/david-holmes.md) |
-| 13 | Erik Gahlin | - | 70+ | Reviewer | JFR | [详情](../../by-contributor/profiles/erik-gahlin.md) |
-| 14 | Brian Burkhalter | - | 60+ | Committer | 网络 | [详情](../../by-contributor/profiles/brian-burkhalter.md) |
-| 15 | Emanuel Peter | - | 50+ | Reviewer | C2 编译器 | [详情](../../by-contributor/profiles/emanuel-peter.md) |
-| 16 | Phil Race | - | 120+ | Reviewer | Client Libraries | [详情](../../by-contributor/profiles/phil-race.md) |
-| 17 | Prasanta Sadhukhan | - | 65+ | Reviewer | Desktop | [详情](../../by-contributor/profiles/prasanta-sadhukhan.md) |
-| 18 | Volkan Yazici | - | 40+ | Committer | HTTP Client | [详情](../../by-contributor/profiles/volkan-yazici.md) |
-| 19 | Justin Lu | - | 40+ | Committer | Localization | [详情](../../by-contributor/profiles/justin-lu.md) |
-| 20 | Leonid Mesnik | - | 35+ | Reviewer | JVMTI | [详情](../../by-contributor/profiles/leonid-mesnik.md) |
-| 21 | Claes Redestad | - | 30+ | Reviewer | Performance | [详情](../../by-contributor/profiles/claes-redestad.md) |
-| 22 | Magnus Ihse Bursie | - | 28+ | Reviewer | Build | [详情](../../by-contributor/profiles/magnus-ihse-bursie.md) |
-| 23 | Hamlin Li | - | 20+ | Committer | RISC-V | [详情](../../by-contributor/profiles/hamlin-li.md) |
-| 24 | Roman Kennke | - | 18+ | Reviewer | Compact Headers | [详情](../../by-contributor/profiles/roman-kennke.md) |
-| 25 | Per Minborg | - | 15+ | Member | Core Libs | [详情](../../by-contributor/profiles/per-minborg.md) |
-| 26 | Weijun Wang | - | 15+ | Reviewer | Security | [详情](../../by-contributor/profiles/weijun-wang.md) |
-| 27 | Alan Bateman | - | 12+ | Reviewer | Concurrency | [详情](../../by-contributor/profiles/alan-bateman.md) |
-| 28 | Erik Österlund | - | 12+ | Reviewer | AOT, GC | [详情](../../by-contributor/profiles/erik-osterlund.md) |
-| 29 | Doug Simon | - | 10+ | Member | Graal | [详情](../../by-contributor/profiles/doug-simon.md) |
+| 排名 | 贡献者 | GitHub | PRs | 角色 | 领域 | 团队 | 档案 |
+|------|--------|--------|-----|------|------|------|------|
+| 1 | Thomas Schatzl | [@tschatzl](https://github.com/tschatzl) | 546 | Reviewer | G1 GC | HotSpot GC | [详情](../../by-contributor/profiles/thomas-schatzl.md) |
+| 2 | Ioi Lam | [@iklam](https://github.com/iklam) | 431 | Reviewer | CDS/AOT | HotSpot GC | [详情](../../by-contributor/profiles/ioi-lam.md) |
+| 3 | Coleen Phillimore | [@coleenp](https://github.com/coleenp) | 400 | Reviewer | HotSpot | HotSpot GC | [详情](../../by-contributor/profiles/coleen-phillimore.md) |
+| 4 | Naoto Sato | [@naotoj](https://github.com/naotoj) | 273 | Reviewer | 国际化 | Core Libraries | [详情](../../by-contributor/profiles/naoto-sato.md) |
+| 5 | Sergey Bylokhov | [@mrserb](https://github.com/mrserb) | 273 | Reviewer | AWT/2D | Core Libraries | [详情](../../by-contributor/profiles/sergey-bylokhov.md) |
+| 6 | Chen Liang | [@liach](https://github.com/liach) | 237 | Committer | ClassFile API | LangTools | [详情](../../by-contributor/profiles/chen-liang.md) |
+| 7 | Alexey Semenyuk | [@alexeysemenyukoracle](https://github.com/alexeysemenyukoracle) | 233 | Committer | AOT | HotSpot Compiler | [详情](../../by-contributor/profiles/alexey-semenyuk.md) |
+| 8 | Jan Lahoda | [@lahodaj](https://github.com/lahodaj) | 324 | Reviewer | javac | LangTools | [详情](../../by-contributor/profiles/jan-lahoda.md) |
+| 9 | Jaikiran Pai | [@jaikiran](https://github.com/jaikiran) | 322 | Reviewer | 构建 | Core Libraries | [详情](../../by-contributor/profiles/jaikiran-pai.md) |
+| 10 | Daniel Fuchs | [@dfuch](https://github.com/dfuch) | 192 | Committer | JMX | Core Libraries | [详情](../../by-contributor/profiles/daniel-fuchs.md) |
+| 11 | Kim Barrett | - | 100+ | Reviewer | GC, C++ | HotSpot GC | [详情](../../by-contributor/profiles/kim-barrett.md) |
+| 12 | David Holmes | - | 80+ | Reviewer | 并发 | Concurrency & Runtime | [详情](../../by-contributor/profiles/david-holmes.md) |
+| 13 | Erik Gahlin | - | 70+ | Reviewer | JFR | HotSpot Compiler | [详情](../../by-contributor/profiles/erik-gahlin.md) |
+| 14 | Brian Burkhalter | - | 60+ | Committer | 网络 | Core Libraries | [详情](../../by-contributor/profiles/brian-burkhalter.md) |
+| 15 | Emanuel Peter | - | 50+ | Reviewer | C2 编译器 | HotSpot Compiler | [详情](../../by-contributor/profiles/emanuel-peter.md) |
+| 16 | Phil Race | - | 120+ | Reviewer | Client Libraries | Core Libraries | [详情](../../by-contributor/profiles/phil-race.md) |
+| 17 | Prasanta Sadhukhan | - | 65+ | Reviewer | Desktop | Core Libraries | [详情](../../by-contributor/profiles/prasanta-sadhukhan.md) |
+| 18 | Volkan Yazici | - | 40+ | Committer | HTTP Client | Core Libraries | [详情](../../by-contributor/profiles/volkan-yazici.md) |
+| 19 | Justin Lu | - | 40+ | Committer | Localization | Core Libraries | [详情](../../by-contributor/profiles/justin-lu.md) |
+| 20 | Leonid Mesnik | - | 35+ | Reviewer | JVMTI | Concurrency & Runtime | [详情](../../by-contributor/profiles/leonid-mesnik.md) |
+| 21 | Claes Redestad | - | 30+ | Reviewer | Performance | Java Platform | [详情](../../by-contributor/profiles/claes-redestad.md) |
+| 22 | Magnus Ihse Bursie | - | 28+ | Reviewer | Build | Infrastructure | [详情](../../by-contributor/profiles/magnus-ihse-bursie.md) |
+| 23 | Hamlin Li | - | 20+ | Committer | RISC-V | **已离职 (Rivos)** | [详情](../../by-contributor/profiles/hamlin-li.md) |
+| 24 | Roman Kennke | - | 18+ | Reviewer | Compact Headers | HotSpot GC | [详情](../../by-contributor/profiles/roman-kennke.md) |
+| 25 | Per Minborg | - | 15+ | Member | Core Libs | Core Libraries | [详情](../../by-contributor/profiles/per-minborg.md) |
+| 26 | Weijun Wang | - | 15+ | Reviewer | Security | Security | [详情](../../by-contributor/profiles/weijun-wang.md) |
+| 27 | Alan Bateman | - | 12+ | Reviewer | Concurrency | Concurrency & Runtime | [详情](../../by-contributor/profiles/alan-bateman.md) |
+| 28 | Erik Österlund | - | 12+ | Reviewer | AOT, GC | HotSpot GC | [详情](../../by-contributor/profiles/erik-osterlund.md) |
+| 29 | Doug Simon | - | 10+ | Member | Graal | Oracle Labs | [详情](../../by-contributor/profiles/doug-simon.md) |
 
 **小计**: 4,000+ PRs (以上 29 人)
 
@@ -155,7 +155,8 @@ Oracle JDK 开发团队
 │   │   ├── Prasanta Sadhukhan - Desktop, Swing
 │   │   ├── Volkan Yazici - HTTP Client
 │   │   ├── Sergey Bylokhov - AWT/2D
-│   │   └── Jaikiran Pai - 构建
+│   │   ├── Jaikiran Pai - 构建
+│   │   └── Per Minborg - Core Libs
 │   │
 │   ├── Concurrency & Runtime Team (并发与运行时团队)
 │   │   ├── Alan Bateman - 并发工具
@@ -194,13 +195,15 @@ Oracle JDK 开发团队
 
 | 团队 | 人数 | 代表贡献者 | PR 总数 |
 |------|------|------------|---------|
-| **Java Platform Group** | 15 人 | Chen Liang, Jan Lahoda, Daniel Fuchs, Phil Race, Sergey Bylokhov, Jaikiran Pai | 2,500+ |
+| **Java Platform Group** | 16 人 | Chen Liang, Jan Lahoda, Daniel Fuchs, Phil Race, Sergey Bylokhov, Jaikiran Pai, Per Minborg | 2,600+ |
 | **HotSpot GC Team** | 8 人 | Thomas Schatzl, Ioi Lam, Coleen Phillimore, Albert Mingkun Yang | 1,600+ |
 | **HotSpot Compiler Team** | 3 人 | Emanuel Peter, Erik Gahlin, Alexey Semenyuk | 150+ |
 | **Java Engineering Infrastructure** | 1 人 | Magnus Ihse Bursie | 28+ |
 | **Security Team** | 1 人 | Weijun Wang | 15+ |
 | **Oracle Labs** | 1 人 | Doug Simon | 10+ |
-| **总计** | **29 人** | - | **4,000+** |
+| **总计** | **30 人** | - | **4,000+** |
+
+> **注**: 当前 Oracle 团队 29 人 + 已离职 (Hamlin Li) 1 人 = Top 贡献者列表 30 人
 
 ### Group Leads
 
@@ -357,7 +360,7 @@ Oracle JDK 开发团队
 
 ---
 
-> **文档版本**: 6.0
+> **文档版本**: 7.0
 > **最后更新**: 2026-03-21
 > **更新内容**:
 > - 修正"Oracle 中国团队"错误分类
@@ -367,8 +370,9 @@ Oracle JDK 开发团队
 > - 亚洲团队：2 人 (Zhengyu Gu-中国，Weijun Wang)
 > - Oracle Labs: 1 人 (Doug Simon)
 > - **职业流动核实**: Hamlin Li 已离开 Oracle 加入 Rivos
-> - **新增完整组织架构**: 6 个团队，29 人，5 位 Group Leads
-> - **修复**: 添加缺失贡献者 (Sergey Bylokhov, Alexey Semenyuk, Jaikiran Pai, Albert Mingkun Yang)
+> - **新增完整组织架构**: 6 个团队，30 人，5 位 Group Leads
+> - **修复**: 添加缺失贡献者 (Sergey Bylokhov, Alexey Semenyuk, Jaikiran Pai, Albert Mingkun Yang, Per Minborg)
 > - **修复**: 移除 Aleksey Shipilev (Amazon，不是 Oracle)
 > - **修复**: 修正章节编号重复问题
+> - **新增**: Top 贡献者列表添加"团队"列，所有 29 位成员都归属到组织架构
 > - 数据来源：贡献者档案和 OpenJDK Census
