@@ -148,12 +148,14 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 ### Oracle
 
-**Reviewer**: 35 位 | **Committer**: 3 位
+**Reviewer**: 38 位 | **Committer**: 3 位
 
 | 角色 | 人数 | 代表贡献者 |
 |------|------|------------|
-| Reviewer | 35 | [Thomas Schatzl](profiles/thomas-schatzl.md), [Jan Lahoda](profiles/jan-lahoda.md), [David Holmes](profiles/david-holmes.md) |
+| Reviewer | 38 | [Thomas Schatzl](profiles/thomas-schatzl.md), [Jan Lahoda](profiles/jan-lahoda.md), [David Holmes](profiles/david-holmes.md) |
 | Committer | 3 | [Damon Nguyen](profiles/damon-nguyen.md), [Francesco Andreuzzi](profiles/francesco-andreuzzi.md), [Manuel Hässig](profiles/manuel-haessig.md) |
+
+> **Reviewer 分布**: GC(5) + 编译器 (7) + 并发 (4) + 核心库 (10) + 构建 (3) + 安全 (5) + 桌面 (2) + JFR(1) + AOT(1) = 38 位
 
 ### Amazon
 
@@ -170,12 +172,14 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 ### Red Hat
 
-**Reviewer**: 1 位 | **Committer**: 2 位
+**Reviewer**: 1 位 | **Committer**: 3 位
 
 | 角色 | 人数 | 代表贡献者 |
 |------|------|------------|
-| Reviewer | 1 | [Roman Kennke](profiles/roman-kennke.md) |
-| Committer | 2 | [Andrew Haley](profiles/andrew-haley.md), [Fredrik Bredberg](profiles/fredrik-bredberg.md) |
+| Reviewer | 1 | [Roman Kennke](profiles/roman-kennke.md) (GC) |
+| Committer | 3 | [Andrew Haley](profiles/andrew-haley.md), [Fredrik Bredberg](profiles/fredrik-bredberg.md), [Roman Kennke](profiles/roman-kennke.md) |
+
+> **说明**: Roman Kennke 既是 Reviewer 也是 Committer
 
 ### SAP
 
@@ -210,15 +214,22 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 |------|----------|-----------|------|
 | GC (垃圾收集器) | 8 | 1 | 9 |
 | 编译器 | 7 | 0 | 7 |
-| 并发与运行时 | 4 | 1 | 5 |
+| 并发与运行时 | 4 | 0 | 4 |
 | 核心库 | 10 | 2 | 12 |
 | 构建系统与工具 | 3 | 0 | 3 |
 | 安全 | 5 | 0 | 5 |
 | 桌面与 UI | 2 | 1 | 3 |
 | JFR | 1 | 1 | 2 |
 | AOT | 1 | 0 | 1 |
-| RISC-V | 0 | 3 | 3 |
-| **总计** | **41** | **11** | **52** |
+| RISC-V | 0 | 5 | 5 |
+| 测试 | 0 | 2 | 2 |
+| **总计** | **41** | **12** | **53** |
+
+> **统计说明**:
+> - Roman Kennke (Red Hat) 同时是 Reviewer 和 Committer，在领域统计中计入 Committer (GC 领域)
+> - Damon Nguyen (Oracle) 是 Committer，领域是 Desktop
+> - RISC-V Committer: Andrew Haley, Fredrik Bredberg (Red Hat); Fei Yang, Shaojin Wen (Alibaba); Anjian Wen (ByteDance) = 5 位
+> - 测试 Committer: Francesco Andreuzzi, Manuel Hässig (Oracle) = 2 位
 
 ---
 
