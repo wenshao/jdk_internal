@@ -543,3 +543,184 @@ After pushing changes with links, verify via GitHub raw URL:
 | Case sensitivity | `Thomas-Schatzl.md` | `thomas-schatzl.md` |
 | Missing subdirectory | `by-pr/8336856.md` | `by-pr/8336/8336856.md` |
 | Wrong relative depth | `../profiles/` | `../../by-contributor/profiles/` |
+
+---
+
+## Pre-Commit Content Verification
+
+**CRITICAL: All content must be verified BEFORE committing changes.**
+
+### Verification Checklist
+
+#### 1. Local Links Verification ✅
+
+```bash
+# Extract and verify all local links
+grep -oE '\]\([^)]+\.md\)' path/to/file.md | while read link; do
+  # Extract path from markdown link
+  path=$(echo "$link" | sed "s/](//;s/)//")
+  # Resolve relative path
+  if [[ "$path" == ../* ]]; then
+    target="$(dirname path/to/file.md)/$path"
+    if [ ! -f "$target" ]; then
+      echo "BROKEN: $path"
+    fi
+  fi
+done
+```
+
+**Required checks:**
+- [ ] All `../../` relative paths resolved correctly
+- [ ] All `/absolute` paths point to existing files
+- [ ] Profile links use correct filenames (lowercase, hyphens)
+- [ ] Organization links use `orgs/` NOT `organizations/`
+
+#### 2. Contributor Attribution Verification ✅
+
+**Before documenting contributors:**
+
+| Check | Method | Source |
+|-------|--------|--------|
+| Organization | Check LinkedIn, GitHub bio, OpenJDK census | [OpenJDK Census](https://openjdk.org/census) |
+| PR Count | GitHub PR search with `label:integrated` | GitHub PR Search |
+| Role (Committer/Reviewer) | OpenJDK CFV mailing list | [OpenJDK Mailing Lists](https://mail.openjdk.org/) |
+| Career History | LinkedIn profile | LinkedIn |
+
+**Common attribution errors:**
+- [ ] Contributor listed under wrong organization
+- [ ] Using git commits instead of GitHub PRs for statistics
+- [ ] Outdated organization (contributor changed jobs)
+
+**Example verification:**
+```bash
+# Verify contributor's current organization
+# 1. Check GitHub profile
+gh api users/{username} --jq '.company, .bio'
+
+# 2. Check OpenJDK census for email domain
+# https://openjdk.org/census#{username}
+
+# 3. Verify PR count
+gh pr list --repo openjdk/jdk --limit 1000 \
+  --search "author:{username} state:closed label:integrated" \
+  --json number --jq 'length'
+```
+
+#### 3. JEP/Issue Reference Verification ✅
+
+**For each JEP or Issue mentioned:**
+
+| Check | Method |
+|-------|--------|
+| JEP exists | Access `https://openjdk.org/jeps/{number}` |
+| Issue exists | Access `https://bugs.openjdk.org/browse/JDK-{number}` |
+| Version correct | Cross-reference JEP target release |
+| Lead/Owner correct | Check JEP "Owner" field |
+
+**Common errors:**
+- [ ] JEP number typo
+- [ ] Wrong JDK version attribution
+- [ ] JEP Lead attributed to wrong organization
+
+#### 4. Technical Details Verification ✅
+
+**For code examples and technical claims:**
+
+| Check | Method |
+|-------|--------|
+| Code compiles | Test in appropriate JDK version |
+| API exists | Check JDK API documentation |
+| Performance claims | Verify with JMH results or PR discussion |
+| File paths correct | Check against `../jdk` repository |
+
+**Code example verification:**
+```bash
+# Verify file exists in JDK source
+ls ../jdk/src/java.base/share/classes/java/lang/{ClassName}.java
+
+# Verify method signature
+grep -n "public static.*methodName" ../jdk/src/java.base/share/classes/java/lang/{ClassName}.java
+```
+
+#### 5. Date and Version Verification ✅
+
+| Check | Method |
+|-------|--------|
+| JDK GA dates | [OpenJDK Releases](https://openjdk.org/projects/jdk/) |
+| JEP delivery versions | JEP status page |
+| PR merge dates | GitHub PR `closed_at` field |
+
+**Version mapping:**
+| JDK Version | GA Date | LTS |
+|-------------|---------|-----|
+| JDK 8 | 2014-03 | ✅ |
+| JDK 11 | 2018-09 | ✅ |
+| JDK 17 | 2021-09 | ✅ |
+| JDK 21 | 2023-09 | ✅ |
+| JDK 26 | 2026-03 | ❌ |
+
+#### 6. External Links Verification ✅
+
+**For each external URL:**
+
+```bash
+# Check if URL is accessible
+curl -s -o /dev/null -w "%{http_code}" "{url}"
+# Should return 200, not 404 or 403
+```
+
+**Common external link issues:**
+- [ ] JBS issue links returning 404
+- [ ] GitHub PR links outdated
+- [ ] Blog post links broken
+
+#### 7. Statistics Verification ✅
+
+**For all numerical claims:**
+
+| Statistic | Verification Method |
+|-----------|---------------------|
+| PR counts | GitHub PR search `label:integrated` |
+| Code lines | `git diff --stat` |
+| Performance % | JMH benchmark results in PR |
+| Ranking | Cross-check with OpenJDK Census |
+
+**Example:**
+```bash
+# Verify PR count
+gh pr list --repo openjdk/jdk --limit 1000 \
+  --search "author:{username} state:closed label:integrated" \
+  --json number --jq 'length'
+
+# Should match documented count
+```
+
+### Verification Commands Summary
+
+```bash
+# 1. Check local links
+find . -name "*.md" -exec grep -l "\.\./" {} \; | head -5
+
+# 2. Verify contributor organization
+gh api users/{username} --jq '.company'
+
+# 3. Verify PR count
+gh pr list --repo openjdk/jdk --limit 1000 \
+  --search "author:{username} state:closed label:integrated" \
+  --json number --jq 'length'
+
+# 4. Check external links
+curl -s -o /dev/null -w "%{http_code}" "https://openjdk.org/jeps/{number}"
+
+# 5. Verify file exists in JDK
+ls ../jdk/src/java.base/share/classes/java/lang/String.java
+```
+
+### Post-Commit Verification
+
+After pushing, verify via GitHub raw URL:
+```
+https://raw.githubusercontent.com/wenshao/jdk_internal/main/{path/to/file}.md
+```
+
+Only after **all** verifications pass can the task be marked as complete.
