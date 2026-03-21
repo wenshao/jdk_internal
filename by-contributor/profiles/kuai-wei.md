@@ -78,27 +78,44 @@
 
 **社交网络分析** (基于 GitHub 关注关系):
 
-| 关联类型 | 用户 | 信息 | 推断 |
-|----------|------|------|------|
-| **论文合著者** | sanhong | Sanhong Li | ASE 2021 论文合著者，互相关注 |
-| **阿里巴巴同事** | JoshuaZhuwj | Joshua Zhu, @Alibaba, 上海 | 互相关注 |
-| **阿里巴巴同事** | sendaoYan | Sendaoyan Yan, 上海, compiler tester | Kuai Wei 的 follower |
-| **社区联系** | luchsh | Jonathan Lu, 上海 | 互相关注 |
-| **龙芯联系** | xiangzhai | Leslie Zhai, @loongson, 北京 | Kuai Wei 的 follower |
-| **JDK 社区** | headius | Charles Nutter (JRuby 创始人) | Kuai Wei 关注 |
+| 关联类型 | 用户 | 真实姓名 | 位置 | 组织 | 推断 |
+|----------|------|----------|------|------|------|
+| **论文合著者** | sanhong | Sanhong Li | - | - | ASE 2021 论文合著者，互相关注 |
+| **阿里巴巴同事** | JoshuaZhuwj | Joshua Zhu | 上海 | @Alibaba | 互相关注 |
+| **阿里巴巴同事** | sendaoYan | Sendaoyan Yan | 上海 | - | Kuai Wei 的 follower, compiler tester |
+| **阿里巴巴同事** | yanglong1010 | Long Yang | 杭州 | @Alibaba | 互相关注 |
+| **社区联系** | luchsh | Jonathan Lu | 上海 | - | 互相关注 |
+| **社区联系** | tanghaoth90 | Hao Tang | 杭州 | ByteDance | 互相关注 |
+| **社区联系** | XHao | shako | 上海 | - | 互相关注 |
+| **龙芯联系** | xiangzhai | Leslie Zhai | 北京 | @loongson | Kuai Wei 的 follower |
+| **JDK 社区** | alijvm | Sanhong Li | - | - | 阿里巴巴 JVM 团队账号 |
+| **JDK 社区** | Aitozi | WenjunMin | - | - | 互相关注 |
+| **JDK 社区** | headius | Charles Nutter | - | - | Kuai Wei 关注 (JRuby 创始人) |
 
 **地理位置推断**：
-- 多个互相关注者位于**上海**（Joshua Zhu, Jonathan Lu, Sendaoyan Yan）
-- 阿里巴巴在上海有大型研发团队
-- **推断**: Kuai Wei 可能工作于**阿里巴巴上海团队**
+- 多个互相关注者位于**上海**（Joshua Zhu, Jonathan Lu, Sendaoyan Yan, shako）
+- 多个互相关注者位于**杭州**（Long Yang, Hao Tang）
+- 阿里巴巴在上海和杭州都有大型研发团队
+- **推断**: Kuai Wei 可能工作于**阿里巴巴上海/杭州团队**（JVM 方向）
+
+**技术社区关联**：
+- 与阿里巴巴 JVM 团队（alijvm）有紧密联系
+- 与龙芯（xiangzhai）有联系，可能参与 RISC-V/LoongArch 相关工作
+- 与 ByteDance（tanghaoth90）有联系，可能是行业交流
 
 **Jeandle JDK 项目关联**：
-- Kuai Wei 是 [Jeandle JDK](https://github.com/jeandle/jeandle-jdk) 项目的活跃贡献者
-- Jeandle 是基于 LLVM 的 Java JIT 编译器项目
-- 最近 PR: #393 (2026-03-11, merged 2026-03-16)
-  - 修复 TestStackBangRbp.java 测试失败
-  - Additions: 32, Deletions: 8
-  - Merged by: jeandle-bot
+- Kuai Wei 是 [Jeandle JDK](https://github.com/jeandle/jeandle-jdk) 项目的核心贡献者
+- Jeandle 是基于 LLVM 的 Java JIT 编译器项目 (422 stars, 57 forks)
+- 项目创建：2025-06-25
+- Kuai Wei 的贡献：
+  - PR #393 (2026-03-11, merged 2026-03-16): 修复 TestStackBangRbp.java 测试失败
+    - 修改文件：jeandleAbstractInterpreter.cpp, jeandleCompiledCode.cpp 等
+    - Additions: 32, Deletions: 8
+  - Commit db2d2aa (2025-12-08): Create ScopeValue for jeandle compiled code
+  - Commit 3ad757f (2025-11-17): Track java basic type in JeandleVMState
+  - Commit 038bf18 (2025-10-27): Support create new java instance
+  - Commit 19bec1d (2025-09-19): Support intrinsic implemented by native function
+  - Commit 4681197 (2025-09-11): Support inline intrinsic functions
 - 项目与 OpenJDK 顶级贡献者有关联（jonathan-gibbons, shipilev, prrace 等）
 
 **OpenJDK 贡献时间线**：
