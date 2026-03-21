@@ -554,14 +554,14 @@ jdeps --reverse --module-path lib \
 
 ## 14. 相关链接
 
-- [JEP 200: The Modular JDK](https://openjdk.org/jeps/200)
+- [JEP 200](/jeps/language/jep-200.md)
 - [JEP 261](/jeps/language/jep-261.md)
-- [JEP 260: Encapsulate Most Internal APIs](https://openjdk.org/jeps/260)
-- [JEP 282: jlink](https://openjdk.org/jeps/282)
-- [JEP 343: Packaging Tool (Incubator)](https://openjdk.org/jeps/343)
-- [JEP 392: Packaging Tool](https://openjdk.org/jeps/392)
-- [JEP 396: Strongly Encapsulate JDK Internals by Default](https://openjdk.org/jeps/396)
-- [JEP 403: Strongly Encapsulate JDK Internals](https://openjdk.org/jeps/403)
-- [JEP 476: Module Import Declarations (Preview)](https://openjdk.org/jeps/476)
+- [JEP 260](/jeps/language/jep-260.md)
+- [JEP 282](/jeps/tools/jep-282.md)
+- [JEP 343](/jeps/tools/jep-343.md)
+- [JEP 392](/jeps/tools/jep-392.md)
+- [JEP 396](/jeps/language/jep-396.md)
+- [JEP 403](/jeps/language/jep-403.md)
+- [JEP 476](/jeps/language/jep-476.md)
 - [JEP 511](/jeps/tools/jep-511.md)
 - [jlink Tool](https://docs.oracle.com/en/java/javase/21/docs/specs/man/jlink.html)
