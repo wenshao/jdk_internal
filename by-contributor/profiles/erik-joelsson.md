@@ -27,10 +27,10 @@
 | **姓名** | Erik Joelsson |
 | **当前组织** | Oracle |
 | **位置** | Stockholm, Sweden |
-| **GitHub** | [@eirbjo](https://github.com/eirbjo) |
+| **GitHub** | [@erikj79](https://github.com/erikj79) (62 followers) |
 | **Email** | erik.joelsson@oracle.com |
 | **OpenJDK** | [@erikj](https://openjdk.org/census#erikj) |
-| **角色** | build-infra Committer |
+| **角色** | build-infra Committer, Code Tools Committer, JDK Reviewer |
 | **主要领域** | 构建系统，测试框架，跨平台构建 |
 | **活跃时间** | 2011+ - 至今 |
 
@@ -57,7 +57,7 @@
 | **Commits** | 120+ |
 | **代码行数** | +45,000 / -30,000 (预估) |
 | **影响模块** | 构建系统，测试框架，平台支持 |
-| **PRs (integrated)** | 103 (来自 SAP 统计) |
+| **PRs (integrated)** | 103 |
 
 ### 影响的主要目录
 
@@ -168,7 +168,7 @@ Erik Joelsson 是 OpenJDK 构建系统和测试框架的核心贡献者，专注
 - **构建质量**：提升 OpenJDK 构建的可靠性和可重复性
 - **跨平台支持**：增强多平台构建能力
 - **开发者效率**：改进构建和测试工具链
-- **SAP SapMachine**：作为 SAP SapMachine 的构建系统维护者
+- **Code Tools**：作为 Code Tools Committer，贡献于 Mercurial 工具 (defpath, jcheck, trees)、webrev 和 Skara 项目
 
 ---
 
@@ -176,9 +176,11 @@ Erik Joelsson 是 OpenJDK 构建系统和测试框架的核心贡献者，专注
 
 | 类型 | 链接 |
 |------|------|
-| **GitHub** | [@eirbjo](https://github.com/eirbjo) |
+| **GitHub** | [@erikj79](https://github.com/erikj79) (62 followers) |
 | **OpenJDK Census** | [erikj](https://openjdk.org/census#erikj) |
+| **OpenJDK Wiki** | [erikj](https://wiki.openjdk.org/display/~erikj) |
 | **CFV: build-infra Committer** | [Nomination](https://mail.openjdk.org/archives/list/build-infra-dev@openjdk.org/message/7KVZVKLJL4GLKTHNDEQDT475DCJOPFHL/) |
+| **CFV: Code Tools Committer** | [Nomination (2018)](https://mail.openjdk.org/pipermail/code-tools-dev/2018-June/000406.html) |
 | **邮件列表** | [erikj@openjdk.org](mailto:erikj@openjdk.org) |
 
 ---
@@ -186,8 +188,7 @@ Erik Joelsson 是 OpenJDK 构建系统和测试框架的核心贡献者，专注
 ## 11. 相关链接
 
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20erikj)
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=eirbjo)
-- [SAP SapMachine](https://sap.github.io/SapMachine/)
+- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=erikj79)
 
 ---
 

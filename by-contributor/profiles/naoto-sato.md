@@ -49,7 +49,7 @@ Naoto Sato 是 Oracle Java Platform Group 的**首席技术工程师 (Principal 
 | **Twitter** | [@naotoj](https://twitter.com/naotoj) |
 | **Bluesky** | [@naotoj.bsky.social](https://bsky.app/profile/naotoj.bsky.social) |
 | **OpenJDK** | [@naoto](https://openjdk.org/census#naoto) |
-| **角色** | OpenJDK Member, JDK Reviewer, i18n Lead |
+| **角色** | OpenJDK Member, JDK Reviewer, I18n Group Lead, Core Libraries Group Member |
 | **邮件** | naoto@openjdk.org, naoto.sato@oracle.com |
 | **专长** | Unicode, Internationalization, Charset, Console, TimeZone |
 

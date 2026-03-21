@@ -36,7 +36,7 @@ Phil Race 是 Oracle 的 Consulting Member of Technical Staff，OpenJDK Client L
 | **Position** | Consulting Member of Technical Staff, Client Libraries Lead |
 | **GitHub** | [@prrace](https://github.com/prrace) |
 | **OpenJDK** | [@prr](https://openjdk.org/census#prr) |
-| **角色** | OpenJDK Member, JDK Reviewer, Client Libs Group Lead, OpenJDK Governing Board Member |
+| **角色** | OpenJDK Member, JDK Reviewer, JDK Updates Reviewer, Brisbane Reviewer, Client Libraries Group Lead, Build Group Member, CSR Group Member, OpenJDK Governing Board Member |
 | **PRs** | [303 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aprrace+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | Graphics, Printing, AWT, Swing, Desktop, AppContext Removal |
 
@@ -330,6 +330,7 @@ public BufferedImage filter(BufferedImage src, BufferedImage dest) {
 - **OpenJDK Governing Board Member** (At-Large for Oracle)
 - **多次当选**: 2023, 2024, 2025
 - **Area Lead**: Client Libraries (Swing, Java 2D, AWT, Sound)
+- **Project Lead**: Lanai (macOS Metal rendering pipeline)
 
 ---
 

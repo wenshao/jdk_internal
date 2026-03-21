@@ -1,6 +1,6 @@
 # Goetz Lindenmaier (Götz Lindenmaier)
 
-> SAP OpenJDK Lead Maintainer，IA64 JVM Port 专家
+> SAP OpenJDK Lead Maintainer, PowerPC/AIX Port 项目负责人
 
 ---
 ## 目录
@@ -28,10 +28,10 @@
 | **当前组织** | SAP |
 | **职位** | Lead Maintainer, OpenJDK at SAP |
 | **位置** | 德国 |
-| **GitHub** | [@goetzk](https://github.com/goetzk) |
+| **GitHub** | [@GoeLin](https://github.com/GoeLin) |
 | **OpenJDK** | [@goetz](https://openjdk.org/census#goetz) |
 | **角色** | JDK Reviewer (JDK 9), Lead Maintainer |
-| **主要领域** | HotSpot Runtime, GC, IA64 Port, SapMachine |
+| **主要领域** | HotSpot Runtime, GC, PowerPC/AIX Port, SapMachine |
 | **活跃时间** | 2010+ - 至今 |
 
 > **数据来源**: [JCP Executive Profile](https://jcp.org/en/press/news/ec-feature), [CFV jdk9 Reviewer](https://mail.openjdk.org/archives/list/jdk9-dev@openjdk.org/message/FCO5VSP5HGYANFJ6KFCIFEQBJFUHMRR5/), [SAP Open Source 2024](https://community.sap.com/t5/technology-blog-posts-by-sap/a-year-of-collaboration-and-innovation-sap-open-source-report-2024/ba-p/13978967)
@@ -58,7 +58,7 @@
 | **Commits** | 150+ |
 | **代码行数** | +60,000 / -40,000 (预估) |
 | **影响模块** | HotSpot Runtime, GC, Threading |
-| **PRs (integrated)** | 30+ (来自 IBM 统计) |
+| **PRs (integrated)** | 30+ |
 
 ### 影响的主要目录
 
@@ -150,8 +150,8 @@ Goetz Lindenmaier 是 HotSpot Runtime 子系统的核心维护者，专注于 JV
 | 协作者 | 合作领域 |
 |--------|----------|
 | Thomas Stuefe | HotSpot 优化 |
-| Amit Kumar | 平台特定优化 |
-| IBM JVM 团队 | Semeru 发行版集成 |
+| Volker Simonis | PowerPC/AIX 移植 |
+| Matthias Baesken | SAP JVM 团队, 构建系统 |
 
 ---
 
@@ -170,7 +170,7 @@ Goetz Lindenmaier 是 HotSpot Runtime 子系统的核心维护者，专注于 JV
 
 - **运行时稳定性**：提升 HotSpot Runtime 的稳定性和可靠性
 - **诊断能力**：增强 JVM 诊断和监控工具
-- **IBM Semeru**：作为 IBM Semeru Runtime 的核心贡献者
+- **PowerPC/AIX 移植**：与 Volker Simonis 共同推动 OpenJDK PowerPC/AIX 移植项目
 - **跨平台支持**：确保 JVM 在不同平台上的行为一致性
 
 ---
@@ -179,7 +179,7 @@ Goetz Lindenmaier 是 HotSpot Runtime 子系统的核心维护者，专注于 JV
 
 | 类型 | 链接 |
 |------|------|
-| **GitHub** | [@goetzk](https://github.com/goetzk) |
+| **GitHub** | [@GoeLin](https://github.com/GoeLin) |
 | **OpenJDK Census** | [goetz](https://openjdk.org/census#goetz) |
 | **CFV: jdk9 Reviewer** | [2017 Nomination](https://mail.openjdk.org/archives/list/jdk9-dev@openjdk.org/message/FCO5VSP5HGYANFJ6KFCIFEQBJFUHMRR5/) |
 | **SapMachine Wiki** | [Differences](https://github.com/SAP/SapMachine/wiki/Differences-between-SapMachine-and-OpenJDK) |
@@ -192,8 +192,9 @@ Goetz Lindenmaier 是 HotSpot Runtime 子系统的核心维护者，专注于 JV
 ## 11. 相关链接
 
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20goetz)
-- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=goetzk)
-- [IBM Semeru](https://developer.ibm.com/languages/java/semeru-runtimes/)
+- [GitHub Commits](https://github.com/openjdk/jdk/commits?author=GoeLin)
+- [FOSDEM 2013: Power to the People](https://archive.fosdem.org/2013/schedule/speaker/goetz_lindenmaier/)
+- [FOSDEM 2014: PowerPC/AIX Port Endgame](https://archive.fosdem.org/2014/schedule/speaker/goetz_lindenmaier/)
 
 ---
 

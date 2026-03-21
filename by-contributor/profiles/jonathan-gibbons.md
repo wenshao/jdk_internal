@@ -1,6 +1,6 @@
 # Jonathan Gibbons
 
-> **javac 编译器负责人** | Java Language Tools Architect, Oracle
+> **Java SE Language Tools Team Lead** | Principal Member of Technical Staff, Oracle
 
 ---
 ## 目录
@@ -18,7 +18,7 @@
 
 ## 1. 概述
 
-Jonathan Gibbons 是 Oracle 的 **javac 编译器负责人** 和 **Java 语言工具架构师**。他是 javac 编译器、javadoc 和其他 Java 开发工具的核心维护者，也是 Chen Liang、Adam Sotona、Vicente Romero、Jan Lahoda 等人的导师和审查者。
+Jonathan Gibbons 是 Oracle 的 **Java SE Language Tools Team Lead** (Principal Member of Technical Staff)。他负责 javac、javadoc、javap 和相关工具的开发，是 JSR 199 (Compiler API) 和 javac "Tree API" 的设计与实现者。他还创建了 JDK 回归测试工具 **jtreg** 的构建和测试基础设施，并主导了 **JEP 467** (Markdown Documentation Comments, JDK 23)。他是 Chen Liang、Adam Sotona、Vicente Romero、Jan Lahoda 等人的导师和审查者。
 
 ---
 
@@ -31,8 +31,10 @@ Jonathan Gibbons 是 Oracle 的 **javac 编译器负责人** 和 **Java 语言�
 | **位置** | 美国 |
 | **OpenJDK** | [@jjg](https://openjdk.org/census#jjg) |
 | **GitHub** | [@jonathan-gibbons](https://github.com/jonathan-gibbons) |
-| **角色** | JDK Committer, JDK Reviewer, LangTools 团队负责人 |
-| **主要领域** | javac 编译器、javadoc、Java Language Model |
+| **角色** | JDK Reviewer, Java SE Language Tools Team Lead |
+| **主要领域** | javac 编译器、javadoc、javap、jtreg、Java Language Model |
+| **主导 JEP** | JEP 467 (Markdown Documentation Comments, JDK 23) |
+| **JSR 贡献** | JSR 199 (Compiler API) 设计与实现 |
 | **活跃时间** | 2006 - 至今 |
 
 ---
@@ -71,8 +73,9 @@ Jonathan Gibbons 是 javac 编译器的技术负责人：
 
 ### 工具开发
 
-- **javadoc**: 文档工具
-- **javap**: 类文件反汇编器
+- **javadoc**: 文档工具 (JEP 467: Markdown Documentation Comments)
+- **javap**: 类文件反汇编器 (重写者)
+- **jtreg**: JDK 回归测试工具 (维护者)
 - **sjavac**: 构建时代码编译
 
 ---
@@ -364,10 +367,18 @@ Jonathan Gibbons 积极参与技术社区活动：
 
 ### 官方资料
 - [OpenJDK Census - jjg](https://openjdk.org/census#jjg)
+- [Inside.java - Jonathan Gibbons](https://inside.java/u/JonathanGibbons/)
+- [OpenJDK Wiki - jjg](https://wiki.openjdk.org/display/~jjg)
+- [LinkedIn](https://www.linkedin.com/in/jonathangibbons/)
+
+### JEP 资料
+- [JEP 467: Markdown Documentation Comments](https://openjdk.org/jeps/467)
+- [The Hitchhiker's Guide to javac](https://openjdk.org/groups/compiler/doc/hhgtjavac/index.html)
 
 ### 工具文档
 - [javac Documentation](https://docs.oracle.com/en/java/javase/21/docs/specs/man/javac.html)
 - [javadoc Documentation](https://docs.oracle.com/en/java/javase/21/docs/specs/man/javadoc.html)
+- [Source and Classfile Tools](https://openjdk.org/tools/sctools.html)
 
 ---
 

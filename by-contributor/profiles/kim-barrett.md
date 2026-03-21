@@ -2,6 +2,7 @@
 
 > **GitHub**: [@kimbarrett](https://github.com/kimbarrett)
 > **LinkedIn**: [Kim Barrett](https://www.linkedin.com/in/kim-barrett-7b19a97)
+> **Website**: [kbarrett.github.io](https://kbarrett.github.io/)
 > **Organization**: Oracle
 > **Location**: Malden, MA (推测)
 
@@ -35,7 +36,7 @@ Kim Barrett 是 Oracle 的资深 Java 开发者，专注于 HotSpot 运行时、
 | **LinkedIn** | [kim-barrett-7b19a97](https://www.linkedin.com/in/kim-barrett-7b19a97) |
 | **GitHub** | [@kimbarrett](https://github.com/kimbarrett) |
 | **OpenJDK** | [@kbarrett](https://openjdk.org/census#kbarrett) |
-| **Role** | OpenJDK Member, JDK Committer (2015-03), JDK Reviewer |
+| **Role** | OpenJDK Member, JDK Reviewer, JDK Updates Reviewer, Galahad Reviewer, Graal Committer, HotSpot Group Member |
 | **PRs** | [352+ integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akimbarrett+is%3Aclosed+label%3Aintegrated) |
 | **Primary Areas** | Concurrency, Atomic Operations, C++ Modernization, HotSpot Runtime |
 | **Experience** | 25+ years in software design and implementation |

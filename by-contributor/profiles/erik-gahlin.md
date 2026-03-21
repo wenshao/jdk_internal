@@ -36,9 +36,10 @@ Erik Gahlin 是 Oracle HotSpot Runtime 团队核心成员，JDK Flight Recorder 
 | **姓名** | Erik Gahlin |
 | **当前组织** | Oracle |
 | **团队** | HotSpot Runtime Team |
-| **GitHub** | [@egahlin](https://github.com/egahlin) |
+| **GitHub** | [@egahlin](https://github.com/egahlin) (47 followers) |
 | **Twitter/X** | [@ErikGahlin](https://x.com/ErikGahlin) |
 | **Blog** | [egahlin.github.io](https://egahlin.github.io/) |
+| **Inside.java** | [ErikGahlin](https://inside.java/u/ErikGahlin/) |
 | **OpenJDK** | [@egahlin](https://openjdk.org/census#egahlin) |
 | **角色** | JDK Reviewer |
 | **PRs** | [322 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aegahlin+is%3Aclosed+label%3Aintegrated) |

@@ -1,20 +1,22 @@
 # Jaroslav Bachorik
 
-> **JFR 专家** | **BTrace 创始人** | **DataDog**
+> **JFR/JMX 专家** | **BTrace 联合创始人** | **Datadog** (前 Oracle)
 
 ---
 
 ## 个人简介
 
-**Jaroslav Bachorik** 是 Java 性能分析和追踪领域的知名专家，目前任职于 **DataDog**。他是 **BTrace** 项目的创始人，也是 OpenJDK JFR（Java Flight Recorder）的重要贡献者。
+**Jaroslav Bachorik** 是 Java 性能分析和追踪领域的知名专家，目前任职于 **Datadog** (Staff Software Engineer)。此前他曾在 **Oracle** 的 Java Serviceability 团队工作，担任 **JMX 技术负责人**。他是 **BTrace** 项目的联合创始人和维护者，也是 OpenJDK JFR（Java Flight Recorder）和 JMX 的重要贡献者。他在 2014 年被提名为 jdk9 Reviewer，在此之前已向 jdk 仓库贡献了 81 个 changeset。
 
 | 项目 | 信息 |
 |------|------|
-| **GitHub** | [@jbachorik](https://github.com/jbachorik) |
+| **GitHub** | [@jbachorik](https://github.com/jbachorik) (34 repositories) |
 | **Twitter** | [@BachorikJ](https://twitter.com/BachorikJ) |
 | **所在地** | 捷克，布拉格 |
-| **当前组织** | DataDog |
-| **主要贡献** | JFR、BTrace、JVM 诊断工具 |
+| **当前组织** | Datadog |
+| **前组织** | Oracle (Java Serviceability Team) |
+| **OpenJDK 角色** | jdk9 Reviewer, jdk7u/jdk8/jdk8u/jdk9 Committer |
+| **主要贡献** | JFR、JMX (Technical Lead)、BTrace、JVM 诊断工具、JPDA |
 
 ---
 
@@ -23,8 +25,10 @@
 | 指标 | 值 |
 |------|-----|
 | **Integrated PRs** | 6 |
-| **主要领域** | JFR、JVM 诊断、性能分析 |
+| **OpenJDK Changesets** | 81+ (jdk repo, pre-GitHub era) |
+| **主要领域** | JFR、JMX (Tech Lead)、JVM 诊断、JPDA、性能分析 |
 | **代表作品** | BTrace (6k+ stars) |
+| **职位** | Staff Software Engineer @ Datadog |
 
 > **统计来源**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ajbachorik+label%3Aintegrated+is%3Aclosed)
 
@@ -96,17 +100,27 @@ Jaroslav 是 JFR 核心贡献者之一，专注于：
 
 ### 当前职位
 
-**DataDog** - 性能监控和可观测性平台
+**Datadog** - Staff Software Engineer，性能监控和可观测性平台
 
-- 专注于 JVM 性能分析和诊断
+- 专注于 JVM 性能分析和诊断 (dd-trace-java)
 - 将 JFR 和 BTrace 的专业知识应用于产品
+- 在 jFokus 2024 和 JavaOne 2025 等会议上发表关于 JVM 分析的演讲
+
+### 前职位
+
+**Oracle** - Java Serviceability Team
+
+- JMX 技术负责人 (Technical Lead)
+- 贡献于 JMX、JPDA (Java Platform Debugger Architecture)
+- 实现和清理大量测试用例
+- 2014 年被提名为 jdk9 Reviewer
 
 ### 开源贡献
 
 | 项目 | 角色 | 说明 |
 |------|------|------|
-| **BTrace** | 创始人/维护者 | Java 动态追踪工具 |
-| **OpenJDK** | 贡献者 | JFR 和 JVM 诊断 |
+| **BTrace** | 联合创始人/维护者 | Java 动态追踪工具 |
+| **OpenJDK** | Reviewer / Committer | JFR、JMX 和 JVM 诊断 |
 | **jvmasm** | 作者 | JVM 符号汇编 DSL |
 | **btracel** | 作者 | BTrace 单行工具 |
 
@@ -117,14 +131,19 @@ Jaroslav 是 JFR 核心贡献者之一，专注于：
 - **GitHub**: https://github.com/jbachorik
 - **BTrace**: https://github.com/btraceio/btrace
 - **Twitter**: https://twitter.com/BachorikJ
+- **LinkedIn**: https://www.linkedin.com/in/jbachorik/
+- **Foojay**: https://foojay.io/today/author/jaroslav-bachorik/
+- **CFV: jdk9 Reviewer**: http://mail.openjdk.java.net/pipermail/jdk9-dev/2014-July/000924.html
+- **Datadog Open Source**: https://opensource.datadoghq.com/projects/openjdk/
+- **JavaOne 2025**: https://speakerdeck.com/jbachorik/javaone-2025-advancing-java-profiling
 - **OpenJDK PRs**: https://github.com/openjdk/jdk/pulls?q=author%3Ajbachorik
 
 ---
 
 ## 相关文档
 
-- [Erik Gahlin](erik-gahlin.md) - JFR 架构师
-- [Markus Grönlund](markus-gronlund.md) - JFR 事件系统
+- [Erik Gahlin](erik-gahlin.md) - JFR 架构师 (Oracle)
+- [Markus Grönlund](markus-gronlund.md) - JFR 事件系统 (Oracle)
 - [性能优化](/by-topic/core/performance/) - JFR 性能分析
 
 ---

@@ -2,6 +2,7 @@
 
 > **GitHub**: [@MBaesken](https://github.com/MBaesken)
 > **Organization**: SAP (JVM Team)
+> **Location**: Walldorf, Germany
 > **Role**: OpenJDK Member, JDK-Updates Reviewer
 > **Integrated PRs**: 515
 
