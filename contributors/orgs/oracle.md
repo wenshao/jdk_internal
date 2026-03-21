@@ -52,8 +52,8 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 | 排名 | 贡献者 | GitHub | PRs | 角色 | 领域 | 团队 | 档案 |
 |------|--------|--------|-----|------|------|------|------|
 | 1 | Thomas Schatzl | [@tschatzl](https://github.com/tschatzl) | 546 | Reviewer | G1 GC | HotSpot GC | [详情](../../by-contributor/profiles/thomas-schatzl.md) |
-| 2 | Ioi Lam | [@iklam](https://github.com/iklam) | 431 | Reviewer | CDS/AOT | HotSpot GC | [详情](../../by-contributor/profiles/ioi-lam.md) |
-| 3 | Coleen Phillimore | [@coleenp](https://github.com/coleenp) | 400 | Reviewer | HotSpot | HotSpot GC | [详情](../../by-contributor/profiles/coleen-phillimore.md) |
+| 2 | Ioi Lam | [@iklam](https://github.com/iklam) | 431 | Reviewer | CDS/AOT | HotSpot Runtime/CDS | [详情](../../by-contributor/profiles/ioi-lam.md) |
+| 3 | Coleen Phillimore | [@coleenp](https://github.com/coleenp) | 400 | Reviewer | HotSpot | HotSpot Runtime | [详情](../../by-contributor/profiles/coleen-phillimore.md) |
 | 4 | Phil Race | [@prrace](https://github.com/prrace) | 303 | Reviewer | Client Libraries | Core Libraries | [详情](../../by-contributor/profiles/phil-race.md) |
 | 5 | Erik Gahlin | [@egahlin](https://github.com/egahlin) | 322 | Reviewer | JFR | HotSpot Runtime | [详情](../../by-contributor/profiles/erik-gahlin.md) |
 | 6 | Kim Barrett | [@kimbarrett](https://github.com/kimbarrett) | 352 | Reviewer | Atomic, C++ | HotSpot Runtime | [详情](../../by-contributor/profiles/kim-barrett.md) |
@@ -116,7 +116,7 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 | Jan Lahoda | Czechia (USA) | [@lahodaj](https://github.com/lahodaj) | 324 | Reviewer | javac | [详情](../../by-contributor/profiles/jan-lahoda.md) |
 | Phil Race | USA | [@prrace](https://github.com/prrace) | 303 | Reviewer | Client Libs | [详情](../../by-contributor/profiles/phil-race.md) |
 | Jonathan Gibbons | USA | - | 100+ | Reviewer | javac/javadoc | [详情](../../by-contributor/profiles/jonathan-gibbons.md) |
-| David Holmes | USA | - | 80+ | Reviewer | 并发 | [详情](../../by-contributor/profiles/david-holmes.md) |
+| David Holmes | Brisbane, Australia | - | 80+ | Reviewer | 并发 | [详情](../../by-contributor/profiles/david-holmes.md) |
 | Brian Burkhalter | USA | - | 60+ | Committer | 网络 | [详情](../../by-contributor/profiles/brian-burkhalter.md) |
 | Justin Lu | USA | - | 40+ | Committer | Localization | [详情](../../by-contributor/profiles/justin-lu.md) |
 | Leonid Mesnik | USA | - | 35+ | Reviewer | JVMTI | [详情](../../by-contributor/profiles/leonid-mesnik.md) |
@@ -151,7 +151,7 @@ Oracle 是 OpenJDK 的主要维护者和最大贡献者，自 2010 年收购 Sun
 | 贡献者 | 位置 | GitHub | PRs | 角色 | 领域 | 档案 |
 |--------|------|--------|-----|------|------|------|
 | Doug Simon | - | - | 10+ | Member | Graal | [详情](../../by-contributor/profiles/doug-simon.md) |
-| Christian Hagedorn | - | - | 10+ | Member | Graal | [详情](../../by-contributor/profiles/christian-hagedorn.md) |
+| Christian Hagedorn | - | - | 10+ | Member | HotSpot Compiler/C2 | [详情](../../by-contributor/profiles/christian-hagedorn.md) |
 
 ### 已离职贡献者
 
@@ -205,16 +205,19 @@ Oracle JDK 开发团队
 │   └── Performance Team (性能优化团队)
 │       └── Claes Redestad - 启动性能，字符串拼接，JEP 254
 │
-├── HotSpot GC Team (HotSpot 垃圾收集器团队)
-│   ├── Thomas Schatzl (G1 GC Lead) - G1 GC, Parallel GC, JEP 522
+├── HotSpot Runtime Team (HotSpot 运行时团队)
 │   ├── Ioi Lam - CDS, AOT, JEP 514
 │   ├── Coleen Phillimore - HotSpot VM Core, Metaspace
-│   ├── Kim Barrett - HotSpot Runtime, C++ 现代化
+│   └── Kim Barrett - HotSpot Runtime, C++ 现代化
+│
+├── HotSpot GC Team (HotSpot 垃圾收集器团队)
+│   ├── Thomas Schatzl (G1 GC Lead) - G1 GC, Parallel GC, JEP 522
 │   ├── Erik Österlund - AOT, GC
 │   └── Zhengyu Gu - G1 GC
 │
 ├── HotSpot Compiler Team (HotSpot 编译器团队)
 │   ├── Emanuel Peter (C2 Compiler Lead) - SuperWord, 向量化
+│   ├── Christian Hagedorn - HotSpot Compiler/C2
 │   ├── Erik Gahlin - JFR, JEP 520
 │   └── Alexey Semenyuk - AOT, jpackage
 │
@@ -225,8 +228,7 @@ Oracle JDK 开发团队
 │   └── Weijun Wang - 安全
 │
 └── Oracle Labs
-    ├── Doug Simon - Graal 编译器
-    └── Christian Hagedorn - Graal
+    └── Doug Simon - Graal 编译器
 ```
 
 ### 团队统计
@@ -234,11 +236,12 @@ Oracle JDK 开发团队
 | 团队 | 人数 | 代表贡献者 | PR 总数 |
 |------|------|------------|---------|
 | **Java Platform Group** | 19 人 | Chen Liang, Jan Lahoda, Daniel Fuchs, Phil Race | 2,800+ |
-| **HotSpot GC Team** | 6 人 | Thomas Schatzl, Ioi Lam, Coleen Phillimore, Kim Barrett | 2,100+ |
-| **HotSpot Compiler Team** | 3 人 | Emanuel Peter, Erik Gahlin, Alexey Semenyuk | 780+ |
+| **HotSpot Runtime Team** | 3 人 | Ioi Lam, Coleen Phillimore, Kim Barrett | 1,183+ |
+| **HotSpot GC Team** | 3 人 | Thomas Schatzl, Erik Österlund, Zhengyu Gu | 588+ |
+| **HotSpot Compiler Team** | 4 人 | Emanuel Peter, Christian Hagedorn, Erik Gahlin, Alexey Semenyuk | 790+ |
 | **Java Engineering Infrastructure** | 1 人 | Magnus Ihse Bursie | 28+ |
 | **Security Team** | 1 人 | Weijun Wang | 15+ |
-| **Oracle Labs** | 2 人 | Doug Simon, Christian Hagedorn | 20+ |
+| **Oracle Labs** | 1 人 | Doug Simon | 10+ |
 | **总计** | **32 人** | - | **5,700+** |
 
 > **注**: 当前 Oracle 团队 31 人 + 已离职 (Hamlin Li) 1 人 = Top 贡献者列表 32 人

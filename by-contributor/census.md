@@ -40,12 +40,10 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 |--------|------|--------|------|
 | [Aleksey Shipilev](profiles/aleksey-shipilev.md) | Amazon | [@shade](https://openjdk.org/census#shade) | [详情](profiles/aleksey-shipilev.md) |
 | [Thomas Schatzl](profiles/thomas-schatzl.md) | Oracle | [@tschatzl](https://openjdk.org/census#tschatzl) | [详情](profiles/thomas-schatzl.md) |
-| [Albert Mingkun Yang](profiles/albert-mingkun-yang.md) | Oracle | [@ayoung](https://openjdk.org/census#ayoung) | [详情](profiles/albert-mingkun-yang.md) |
+| [Albert Mingkun Yang](profiles/albert-mingkun-yang.md) | Oracle | [@ayang](https://openjdk.org/census#ayang) | [详情](profiles/albert-mingkun-yang.md) |
 | [William Kemper](profiles/william-kemper.md) | Amazon | [@wkemper](https://openjdk.org/census#wkemper) | [详情](profiles/william-kemper.md) |
 | [Roman Kennke](profiles/roman-kennke.md) | Red Hat | [@rkennke](https://openjdk.org/census#rkennke) | [详情](profiles/roman-kennke.md) |
 | [Kim Barrett](profiles/kim-barrett.md) | Oracle | [@kbarrett](https://openjdk.org/census#kbarrett) | [详情](profiles/kim-barrett.md) |
-| [Ioi Lam](profiles/ioi-lam.md) | Oracle | [@iklam](https://openjdk.org/census#iklam) | [详情](profiles/ioi-lam.md) |
-| [Erik Gahlin](profiles/erik-gahlin.md) | Oracle | [@egahlin](https://openjdk.org/census#egahlin) | [详情](profiles/erik-gahlin.md) |
 
 ### 编译器 (Compiler) - 8 位
 
@@ -54,7 +52,6 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | [Emanuel Peter](profiles/emanuel-peter.md) | Oracle | [@epeter](https://openjdk.org/census#epeter) | [详情](profiles/emanuel-peter.md) |
 | [Jan Lahoda](profiles/jan-lahoda.md) | Oracle | [@lahoda](https://openjdk.org/census#lahoda) | [详情](profiles/jan-lahoda.md) |
 | [Chen Liang](profiles/chen-liang.md) | Oracle | [@liach](https://openjdk.org/census#liach) | [详情](profiles/chen-liang.md) |
-| [Alexey Semenyuk](profiles/alexey-semenyuk.md) | Oracle | [@asemenyuk](https://openjdk.org/census#asemenyuk) | [详情](profiles/alexey-semenyuk.md) |
 | [Roland Westrelin](profiles/rooland-westrelin.md) | Oracle | [@roland](https://openjdk.org/census#roland) | [详情](profiles/rooland-westrelin.md) |
 | [Hamlin Li](profiles/hamlin-li.md) | Oracle | [@hli](https://openjdk.org/census#hli) | [详情](profiles/hamlin-li.md) |
 | [Jatin Bhateja](profiles/jatin-bhateja.md) | Oracle | [@jbhateja](https://openjdk.org/census#jbhateja) | [详情](profiles/jatin-bhateja.md) |
@@ -73,7 +70,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 | 贡献者 | 组织 | Census | 档案 |
 |--------|------|--------|------|
-| [Phil Race](profiles/phil-race.md) | Oracle | [@prace](https://openjdk.org/census#prace) | [详情](profiles/phil-race.md) |
+| [Phil Race](profiles/phil-race.md) | Oracle | [@prr](https://openjdk.org/census#prr) | [详情](profiles/phil-race.md) |
 | [Naoto Sato](profiles/naoto-sato.md) | Oracle | [@naoto](https://openjdk.org/census#naoto) | [详情](profiles/naoto-sato.md) |
 | [Justin Lu](profiles/justin-lu.md) | Oracle | [@jlu](https://openjdk.org/census#jlu) | [详情](profiles/justin-lu.md) |
 | [Brian Burkhalter](profiles/brian-burkhalter.md) | Oracle | [@bpb](https://openjdk.org/census#bpb) | [详情](profiles/brian-burkhalter.md) |
@@ -227,7 +224,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 > **统计说明**:
 > - Roman Kennke (Red Hat) 同时是 Reviewer 和 Committer，在领域统计中计入 Committer (GC 领域)
 > - Damon Nguyen (Oracle) 是 Committer，领域是 Desktop
-> - RISC-V Committer: Andrew Haley, Fredrik Bredberg (Red Hat); Fei Yang (ISCAS PLCT Lab); Anjian Wen (ByteDance) = 4 位
+> - RISC-V Committer: Andrew Haley (Red Hat); Fei Yang (ISCAS PLCT Lab); Anjian Wen (ByteDance) = 3 位
 > - 测试 Committer: Francesco Andreuzzi, Manuel Hässig (Oracle) = 2 位
 > - Chen Liang (Oracle) 是编译器 Reviewer，ClassFile API 核心开发者
 > - Claes Redestad (Oracle) 从核心库移至编译器 Reviewer

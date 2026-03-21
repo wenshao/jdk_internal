@@ -42,11 +42,10 @@ SAP 是 OpenJDK 的长期贡献者，专注于 PowerPC (PPC) 移植、AIX 平台
 |------|--------|--------|-----|------|------|------|
 | 1 | Matthias Baesken | [@MBaesken](https://github.com/MBaesken) | 515 | Reviewer | 构建系统 | [详情](../../by-contributor/profiles/matthias-baesken.md) |
 | 2 | Goetz Lindenmaier | [@goetzk](https://github.com/goetzk) | 30+ | Reviewer | HotSpot Runtime | [详情](../../by-contributor/profiles/goetz-lindenmaier.md) |
-| 3 | Erik Joelsson | [@eirbjo](https://github.com/eirbjo) | 103 | Committer | 构建系统 | [详情](../../by-contributor/profiles/erik-joelsson.md) |
-| 4 | Martin Haessig | [@mhaessig](https://github.com/mhaessig) | 57 | Committer | 测试 | [详情](../../by-contributor/profiles/martin-haessig.md) |
-| 5 | Anatoly Zelenin | [@toxaart](https://github.com/toxaart) | 29 | Committer | PPC | [详情](../../by-contributor/profiles/anatoly-zelenin.md) |
+| 3 | Martin Haessig | [@mhaessig](https://github.com/mhaessig) | 57 | Committer | 测试 | [详情](../../by-contributor/profiles/martin-haessig.md) |
+| 4 | Anatoly Zelenin | [@toxaart](https://github.com/toxaart) | 29 | Committer | PPC | [详情](../../by-contributor/profiles/anatoly-zelenin.md) |
 
-**小计**: 734+ PRs
+**小计**: 631+ PRs
 
 ---
 
@@ -96,7 +95,7 @@ SAP 主导 PowerPC 架构的 OpenJDK 移植：
 
 ## 5. 关键贡献
 
-### 构建系统 (Matthias Baesken, Erik Joelsson)
+### 构建系统 (Matthias Baesken)
 
 | Issue | 标题 | 说明 |
 |-------|------|------|

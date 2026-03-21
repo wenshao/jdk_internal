@@ -268,7 +268,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 |--------|------|----------|------|-------|
 | [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) | [Oracle](/contributors/orgs/oracle.md) | [GC](/by-topic/core/gc/) | [详情](/by-contributor/profiles/albert-mingkun-yang.md) | [→](/by-topic/core/gc/) |
 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | [Amazon](/contributors/orgs/amazon.md) | [性能优化](/by-topic/core/performance/) | [详情](/by-contributor/profiles/aleksey-shipilev.md) | [→](/by-topic/core/performance/) |
-| [Alexey Semenyuk](/by-contributor/profiles/alexey-semenyuk.md) | [Oracle](/contributors/orgs/oracle.md) | [编译器](/by-topic/core/jit/) | [详情](/by-contributor/profiles/alexey-semenyuk.md) | [→](/by-topic/core/jit/) |
+| [Alexey Semenyuk](/by-contributor/profiles/alexey-semenyuk.md) | [Oracle](/contributors/orgs/oracle.md) | [jpackage/AOT](/by-topic/platform/) | [详情](/by-contributor/profiles/alexey-semenyuk.md) | [→](/by-topic/platform/) |
 | [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | [ByteDance](/contributors/orgs/bytedance.md) | [RISC-V](/by-topic/platform/) | [详情](/by-contributor/profiles/anjian-wen.md) | [→](/by-topic/platform/) |
 | [Ben Perez](/by-contributor/profiles/ben-perez.md) | Trail of Bits | [后量子密码学](/by-topic/crypto/) | [详情](/by-contributor/profiles/ben-perez.md) | [→](/by-topic/crypto/) |
 | [Brian Burkhalter](/by-contributor/profiles/brian-burkhalter.md) | [Oracle](/contributors/orgs/oracle.md) | [图形/打印](/by-topic/api/) | [详情](/by-contributor/profiles/brian-burkhalter.md) | [→](/by-topic/api/) |
@@ -358,8 +358,6 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | [William Kemper](/by-contributor/profiles/william-kemper.md) | Amazon | Shenandoah GC | [@wkemper](https://openjdk.org/census#wkemper) | [详情](/by-contributor/profiles/william-kemper.md) |
 | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | Red Hat | Shenandoah GC, Compact Headers | [@rkennke](https://openjdk.org/census#rkennke) | [详情](/by-contributor/profiles/roman-kennke.md) |
 | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | Oracle | GC, C++ 现代化 | [@kbarrett](https://openjdk.org/census#kbarrett) | [详情](/by-contributor/profiles/kim-barrett.md) |
-| [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | Oracle | CDS/AOT | [@iklam](https://openjdk.org/census#iklam) | [详情](/by-contributor/profiles/ioi-lam.md) |
-| [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | Oracle | JFR | [@egahlin](https://openjdk.org/census#egahlin) | [详情](/by-contributor/profiles/erik-gahlin.md) |
 
 #### 编译器 (Compiler)
 
@@ -402,7 +400,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 贡献者 | 组织 | 领域 | Census | 档案 |
 |--------|------|------|--------|------|
 | [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md) | Oracle | 构建系统 | [@ihse](https://openjdk.org/census#ihse) | [详情](/by-contributor/profiles/magnus-ihse-bursie.md) |
-| [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | Oracle | Build, Ports | [@mbaesken](https://openjdk.org/census#mbaesken) | [详情](/by-contributor/profiles/matthias-baesken.md) |
+| [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | SAP | Build, Ports | [@mbaesken](https://openjdk.org/census#mbaesken) | [详情](/by-contributor/profiles/matthias-baesken.md) |
 | [Jaikiran Pai](/by-contributor/profiles/jaikiran-pai.md) | Oracle | 构建系统 | [@jaikiran](https://openjdk.org/census#jaikiran) | [详情](/by-contributor/profiles/jaikiran-pai.md) |
 
 #### 安全 (Security)
@@ -447,7 +445,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | [Axel Boldt-Christmas](/by-contributor/profiles/axel-boldt-christmas.md) | SAP | ZGC | [@aboldtc](https://openjdk.org/census#aboldtc) | [详情](/by-contributor/profiles/axel-boldt-christmas.md) |
 | [Johannes Bechberger](/by-contributor/profiles/johannes-bechberger.md) | SAP | JFR | [@jbechberger](https://openjdk.org/census#jbechberger) | [详情](/by-contributor/profiles/johannes-bechberger.md) |
 | [Yasumasa Suenaga](/by-contributor/profiles/yasumasa-suenaga.md) | NTT DATA | Serviceability | [@suenaga](https://openjdk.org/census#suenaga) | [详情](/by-contributor/profiles/yasumasa-suenaga.md) |
-| [Fei Yang](/by-contributor/profiles/fei-yang.md) | Alibaba | RISC-V | [@fyang](https://openjdk.org/census#fyang) | [详情](/by-contributor/profiles/fei-yang.md) |
+| [Fei Yang](/by-contributor/profiles/fei-yang.md) | ISCAS PLCT Lab | RISC-V | [@fyang](https://openjdk.org/census#fyang) | [详情](/by-contributor/profiles/fei-yang.md) |
 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | Alibaba | 核心库 | [@swen](https://openjdk.org/census#swen) | [详情](/by-contributor/profiles/shaojin-wen.md) |
 | [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | ByteDance | RISC-V | [@awen](https://openjdk.org/census#awen) | [详情](/by-contributor/profiles/anjian-wen.md) |
 | [Damon Nguyen](/by-contributor/profiles/damon-nguyen.md) | Oracle | Desktop | [@dnguyen](https://openjdk.org/census#dnguyen) | [详情](/by-contributor/profiles/damon-nguyen.md) |
