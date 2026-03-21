@@ -572,7 +572,7 @@ ZoneOffset value = cache.getOpaque(key);
 
 **适用场景**: 分布式追踪、会话管理
 
-→ [详细分析](/bypr/8353/8353741.md)
+→ [详细分析](/by-pr/8353/8353741.md)
 
 ---
 
