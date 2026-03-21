@@ -54,7 +54,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | [Chen Liang](profiles/chen-liang.md) | Oracle | [@liach](https://openjdk.org/census#liach) | [详情](profiles/chen-liang.md) |
 | [Roland Westrelin](profiles/rooland-westrelin.md) | Oracle | [@roland](https://openjdk.org/census#roland) | [详情](profiles/rooland-westrelin.md) |
 | [Hamlin Li](profiles/hamlin-li.md) | Oracle | [@hli](https://openjdk.org/census#hli) | [详情](profiles/hamlin-li.md) |
-| [Jatin Bhateja](profiles/jatin-bhateja.md) | Oracle | [@jbhateja](https://openjdk.org/census#jbhateja) | [详情](profiles/jatin-bhateja.md) |
+| [Jatin Bhateja](profiles/jatin-bhateja.md) | Intel | [@jbhateja](https://openjdk.org/census#jbhateja) | [详情](profiles/jatin-bhateja.md) |
 | [Claes Redestad](profiles/claes-redestad.md) | Oracle | [@redestad](https://openjdk.org/census#redestad) | [详情](profiles/claes-redestad.md) |
 
 ### 并发与运行时 (Concurrency & Runtime) - 4 位
