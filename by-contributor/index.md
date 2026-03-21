@@ -325,25 +325,61 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 ## 4. 顶级贡献者 (JDK 26)
 
-| 排名 | 贡献者 | 组织 | PRs | 领域 |
-|------|--------|------|-----|------|
-| 1 | Shaojin Wen | Alibaba | 97 | 核心库 |
-| 2 | ... | ... | ... | ... |
+JDK 26 (2025-06 to 2026-03) 期间的主要贡献者，基于 GitHub Integrated PRs 统计。
 
-→ [完整榜单](/by-contributor/profiles/jdk26-top-contributors.md)
+### Top 10 贡献者
+
+| 排名 | 贡献者 | 组织 | PRs | 领域 | 档案 |
+|------|--------|------|-----|------|------|
+| 1 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | [Oracle](/contributors/orgs/oracle.md) | 140 | G1 GC | [详情](/by-contributor/profiles/thomas-schatzl.md) |
+| 2 | [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) | [Oracle](/contributors/orgs/oracle.md) | 136 | GC | [详情](/by-contributor/profiles/albert-mingkun-yang.md) |
+| 3 | [Phil Race](/by-contributor/profiles/phil-race.md) | [Oracle](/contributors/orgs/oracle.md) | 110 | Printing, Desktop | [详情](/by-contributor/profiles/phil-race.md) |
+| 4 | [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | [Oracle](/contributors/orgs/oracle.md) | 105 | Build, Ports | [详情](/by-contributor/profiles/matthias-baesken.md) |
+| 5 | [Alexey Semenyuk](/by-contributor/profiles/alexey-semenyuk.md) | [Oracle](/contributors/orgs/oracle.md) | 85 | jpackage | [详情](/by-contributor/profiles/alexey-semenyuk.md) |
+| 6 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | [Amazon](/contributors/orgs/amazon.md) | 80 | Shenandoah, Performance | [详情](/by-contributor/profiles/aleksey-shipilev.md) |
+| 7 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | [Oracle](/contributors/orgs/oracle.md) | 76 | CDS, AOT | [详情](/by-contributor/profiles/ioi-lam.md) |
+| 8 | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | [Oracle](/contributors/orgs/oracle.md) | 76 | GC, HotSpot | [详情](/by-contributor/profiles/kim-barrett.md) |
+| 9 | [SendaoYan](/by-contributor/profiles/sendaoyan.md) | Independent | 71 | Testing | [详情](/by-contributor/profiles/sendaoyan.md) |
+| 10 | [Jaikiran Pai](/by-contributor/profiles/jaikiran-pai.md) | [Oracle](/contributors/orgs/oracle.md) | 67 | Networking | [详情](/by-contributor/profiles/jaikiran-pai.md) |
+
+### 中国贡献者 (JDK 26)
+
+| 排名 | 贡献者 | 组织 | PRs | 领域 | 档案 |
+|------|--------|------|-----|------|------|
+| 1 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | [Alibaba](/contributors/orgs/alibaba.md) | 11 | 核心库 | [详情](/by-contributor/profiles/shaojin-wen.md) |
+| 2 | [Yude Lin](/by-contributor/profiles/yude-lin.md) | [Alibaba](/contributors/orgs/alibaba.md) | 10 | 编译器 | [详情](/by-contributor/profiles/yude-lin.md) |
+| 3 | [Xiaowei Lu](/by-contributor/profiles/xiaowei-lu.md) | [Alibaba](/contributors/orgs/alibaba.md) | 10 | GC | [详情](/by-contributor/profiles/xiaowei-lu.md) |
+| 4 | [Tongbao Zhang](/by-contributor/profiles/tongbao-zhang.md) | [Alibaba](/contributors/orgs/alibaba.md) | 9 | 测试 | [详情](/by-contributor/profiles/tongbao-zhang.md) |
+| 5 | [Kuai Wei](/by-contributor/profiles/kuai-wei.md) | [Alibaba](/contributors/orgs/alibaba.md) | 9 | 编译器 | [详情](/by-contributor/profiles/kuai-wei.md) |
+| 6 | [Fei Yang](/by-contributor/profiles/fei-yang.md) | [Alibaba](/contributors/orgs/alibaba.md) | 9 | C2 编译器 | [详情](/by-contributor/profiles/fei-yang.md) |
+| 7 | [Han GQ](/by-contributor/profiles/han-gq.md) | [Alibaba](/contributors/orgs/alibaba.md) | 8 | 核心库 | [详情](/by-contributor/profiles/han-gq.md) |
+| 8 | [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | [Alibaba](/contributors/orgs/alibaba.md) | 8 | 安全 | [详情](/by-contributor/profiles/anjian-wen.md) |
+
+> **数据来源**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+is%3Aclosed+label%3Aintegrated)
+> 
+> **说明**: 
+> - 统计周期：2025-06 至 2026-03 (JDK 26 开发周期)
+> - 仅统计标记为 `integrated` 的 PR
+> - [查看完整 Top 100 榜单](/by-contributor/profiles/jdk26-top-contributors.md)
+
+→ [完整 Top 100 榜单](/by-contributor/profiles/jdk26-top-contributors.md)
 
 ---
 
 ## 5. 中国贡献者
 
-| 贡献者 | 组织 | PRs | 领域 |
-|--------|------|-----|------|
-| Shaojin Wen | Alibaba | 97 | 核心库 |
-| Fei Yang | ISCAS PLCT | 100 | RISC-V |
-| Anjian Wen | ByteDance | 25 | RISC-V |
-| Sendaoyan | Independent | 202 | 测试 |
+历史上对 OpenJDK 有重要贡献的中国开发者（累计 PRs）。
 
-→ [中国贡献者专题](/by-contributor/profiles/chinese-contributors.md)
+| 贡献者 | 组织 | 累计 PRs | 领域 | 档案 |
+|--------|------|----------|------|------|
+| [Shaojin Wen (温绍锦)](/by-contributor/profiles/shaojin-wen.md) | [Alibaba](/contributors/orgs/alibaba.md) | 97 | 核心库优化 | [详情](/by-contributor/profiles/shaojin-wen.md) |
+| [Fei Yang](/by-contributor/profiles/fei-yang.md) | [ISCAS PLCT](/contributors/orgs/iscas-plct.md) | 30 | RISC-V | [详情](/by-contributor/profiles/fei-yang.md) |
+| [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | [ByteDance](/contributors/orgs/bytedance.md) | 25 | RISC-V | [详情](/by-contributor/profiles/anjian-wen.md) |
+| [Sendaoyan](/by-contributor/profiles/sendaoyan.md) | Independent | 202 | 测试 | [详情](/by-contributor/profiles/sendaoyan.md) |
+
+> **注意**: JDK 26 周期中国贡献者数据见上方 [中国贡献者 (JDK 26)](#4-顶级贡献者-jdk-26) 部分。
+>
+> → [查看完整中国贡献者专题](/by-contributor/profiles/chinese-contributors.md)
 
 ---
 
