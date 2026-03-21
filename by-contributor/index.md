@@ -390,11 +390,11 @@ JDK 26 的前身版本。
 
 ### 其他版本
 
-| 版本 | GA 时间 | 说明 |
-|------|---------|------|
-| JDK 21 (LTS) | 2023-09 | Pattern Matching, Records, Virtual Threads |
-| JDK 17 (LTS) | 2021-09 | Sealed Classes, Foreign Function |
-| JDK 11 (LTS) | 2018-09 | HTTP Client, Local Variable Syntax |
+| 版本 | GA 时间 | 说明 | 贡献者页面 |
+|------|---------|------|------------|
+| JDK 21 (LTS) | 2023-09 | Virtual Threads, Pattern Matching, Sequenced Collections | [Top Contributors](/by-contributor/profiles/jdk21-top-contributors.md) |
+| JDK 17 (LTS) | 2021-09 | Sealed Classes, macOS/AArch64, ZGC Improvements | [Top Contributors](/by-contributor/profiles/jdk17-top-contributors.md) |
+| JDK 11 (LTS) | 2018-09 | HTTP Client, Local Variable Syntax, ZGC (Experimental) | [Top Contributors](/by-contributor/profiles/jdk11-top-contributors.md) |
 
 ---
 
