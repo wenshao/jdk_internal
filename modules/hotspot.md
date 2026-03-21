@@ -99,7 +99,7 @@ ClassFileParser::parseClassFile()
 ```
 Bootstrap ClassLoader (JAVA_HOME/lib)
     ↑
-Extension ClassLoader (JAVA_HOME/lib/ext)
+Platform ClassLoader (formerly Extension ClassLoader, renamed in JDK 9)
     ↑
 Application ClassLoader (Classpath)
 ```
@@ -146,7 +146,7 @@ SimpleThresholdPolicy::compile()
 |-----|------|------|
 | Serial | JDK 1.3+ | 单线程, 小内存 |
 | Parallel | JDK 5+ | 多线程, 吞吐量优先 |
-| CMS | JDK 6-14 | 低延迟 (已移除) |
+| CMS | JDK 1.4.2-14 | 低延迟 (已移除) |
 | G1 | JDK 7+ | 平衡延迟和吞吐量 |
 | ZGC | JDK 11+ | 低延迟 (< 10ms) |
 | Shenandoah | JDK 12+ | 低延迟 |

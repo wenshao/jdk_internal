@@ -495,9 +495,9 @@ com.example.http.Client.request()         234        234 μs     55 ms      0.5 
 
 | Commit | Issue | 描述 |
 |--------|-------|------|
-| `a1b2c3d4e5f` | JEP 520 | 方法计时核心实现 |
-| `b2c3d4e5f6a` | 8352738 | JIT 集成 |
-| `c3d4e5f6a7b` | 8365972 | 事件优化 |
+| *(hash omitted)* | JEP 520 | 方法计时核心实现 |
+| *(hash omitted)* | 8352738 | JIT 集成 |
+| *(hash omitted)* | 8365972 | 事件优化 |
 
 ---
 

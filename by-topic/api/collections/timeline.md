@@ -14,7 +14,7 @@ Java 集合框架从 JDK 1.0 到 JDK 26 的完整演进历程。
 7. [JDK 8 - Stream API](#7-jdk-8---stream-api)
 8. [JDK 9 - 不可变集合和 List.of](#8-jdk-9---不可变集合和-listof)
 9. [JDK 10-17 - 持续改进](#9-jdk-10-17---持续改进)
-10. [JDK 21 - Stream Gatherers](#10-jdk-21---stream-gatherers)
+10. [JDK 22 - Stream Gatherers](#10-jdk-21---stream-gatherers)
 11. [JDK 21+ - 链式元素方法](#11-jdk-21---链式元素方法)
 12. [集合选择指南](#12-集合选择指南)
 13. [性能优化建议](#13-性能优化建议)
@@ -518,12 +518,12 @@ original.add("E");  // 也可以
 
 ---
 
-## 10. JDK 21 - Stream Gatherers
+## 10. JDK 22 - Stream Gatherers
 
 ### Gatherers (预览)
 
 ```java
-// JDK 21 引入 Stream Gatherers (预览)
+// JDK 22 引入 Stream Gatherers (预览)
 // 允许自定义中间操作
 
 // 固定窗口
@@ -683,7 +683,7 @@ list.removeIf(s -> s.equals("target"));
 | JDK 9 | List.of/Set.of/Map.of | 不可变集合工厂 |
 | JDK 10 | List.copyOf | 不可变集合拷贝 |
 | JDK 16 | Stream.toList() | 简化收集 |
-| JDK 21 | Stream Gatherers | 自定义中间操作 |
+| JDK 22 | Stream Gatherers | 自定义中间操作 |
 
 ---
 

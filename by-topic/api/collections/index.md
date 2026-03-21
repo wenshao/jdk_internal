@@ -315,7 +315,7 @@ long sum = list.parallelStream()
     .sum();
 
 // 配置并行度
-System.setProperty("java.util.stream.parallelism", "8");
+System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "8");
 ```
 
 ---
@@ -411,7 +411,7 @@ Stream.of(1, 2, 3, 4, 5)
 
 // mapConcurrent - 并发映射
 Stream.of(1, 2, 3, 4, 5)
-    .gather(Gatherers.mapConcurrent(x -> x * 2))
+    .gather(Gatherers.mapConcurrent(4, x -> x * 2))
     .toList();
 ```
 
@@ -426,7 +426,7 @@ Stream.of(1, 2, 3, 4)
 // windowFixed - 固定窗口
 Stream.of(1, 2, 3, 4, 5)
     .gather(Gatherers.windowFixed(3))
-    .toList();  // [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
+    .toList();  // [[1, 2, 3], [4, 5]]
 
 // windowSliding - 滑动窗口
 Stream.of(1, 2, 3, 4, 5)

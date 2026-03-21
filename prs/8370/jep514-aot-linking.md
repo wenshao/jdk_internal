@@ -395,9 +395,9 @@ java -XX:+UseAOTLinking \
 
 | Commit | Issue | 描述 |
 |--------|-------|------|
-| `a1b2c3d4e5f` | JEP 514 | AOT 链接核心实现 |
-| `b2c3d4e5f6a` | 8369742 | Bootstrap 类链接 |
-| `c3d4e5f6a7b` | 8363986 | CDS 集成优化 |
+| *(hash omitted)* | JEP 514 | AOT 链接核心实现 |
+| *(hash omitted)* | 8369742 | Bootstrap 类链接 |
+| *(hash omitted)* | 8363986 | CDS 集成优化 |
 
 ---
 

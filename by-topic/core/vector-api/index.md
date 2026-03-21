@@ -274,12 +274,12 @@ FloatVector vy = FloatVector.fromArray(species, points.yArray(), 0);
 | 格式 | 位宽 | 指数位 | 尾数位 | 精度 | 硬件支持 | JDK 支持 |
 |------|------|--------|--------|------|----------|----------|
 | **Float32** | 32 | 8 | 23 | 高 | 所有 GPU/CPU | ✅ 完整 |
-| **Float16 (半精度)** | 16 | 5 | 10 | 中 | 现代 GPU/CPU | ✅ JDK 21+ |
+| **Float16 (半精度)** | 16 | 5 | 10 | 中 | 现代 GPU/CPU | ✅ JDK 24+ |
 | **BFloat16 (脑浮点)** | 16 | 8 | 7 | 低 | Google TPU, | ❌ 计划中 |
 | **Float8** | 8 | 4 | 3 | 极低 | 实验性 | ❌ 未计划 |
 | **Float4** | 4 | 2 | 2 | 极低 | 无 | ❌ 未计划 |
 ### Float16 (已支持)
-JDK 21+ 支持 Float16 (IEEE 754 半精度浮点):
+JDK 24+ 支持 Float16 (IEEE 754 半精度浮点):
 ```java
 import jdk.incubator.vector.Float16;
 // 创建 Float16

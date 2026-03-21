@@ -77,7 +77,7 @@ ExecutorService (JDK 5)
     ↓
 CompletableFuture (JDK 8)
     ↓
-StructuredTaskScope (JDK 21, Final in JDK 23)
+StructuredTaskScope (JDK 21+, Preview)
 ```
 
 ### 3.2 ThreadPoolExecutor
@@ -155,9 +155,9 @@ try (var scope = new StructuredTaskScope<String>()) {
 | 8 | 优化红黑树转换 |
 | 21+ | 支持虚拟线程友好操作 |
 
-**JDK 26 新方法**:
+**主要方法** (JDK 8+):
 ```java
-// JDK 26 新增
+// 自 JDK 8 起可用
 V computeIfAbsent(K key, Function<? super K, ? extends V> mappingFunction)
 V computeIfPresent(K key, BiFunction<? super K, ? super V, ? extends V> remappingFunction)
 ```
@@ -170,8 +170,8 @@ V computeIfPresent(K key, BiFunction<? super K, ? super V, ? extends V> remappin
 
 | 特性 | 状态 |
 |------|------|
-| StructuredTaskScope | Final (JDK 23) |
-| ScopedValue | Final (JDK 23) |
+| StructuredTaskScope | Preview |
+| ScopedValue | Preview |
 
 ### 4.2 虚拟线程集成
 

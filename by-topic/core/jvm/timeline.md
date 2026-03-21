@@ -389,7 +389,7 @@ java -XX:FlightRecorderOptions=disk=true,maxsize=1g,dumponexit=true ...
 # - 超大堆 (>100GB)
 ```
 
-### JDK 17 (2021) - ZGC 生产可用
+### JDK 15 (2020) - ZGC 生产可用
 
 #### ZGC (正式)
 

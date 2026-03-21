@@ -39,7 +39,7 @@ Erik Österlund 是 **ZGC (Z Garbage Collector)** 的创始成员之一**， 与
 ### 职业时间线
 | 时间 | 事件 | 详情 |
 |------|------|------|
-| **2017** | ZGC 引入 | JEP 333 实验性特性 (与 Per Lidén, Stefan Karlsson 合作) |
+| **2018** | ZGC 引入 | JEP 333 实验性特性 (与 Per Lidén, Stefan Karlsson 合作) |
 | **2018+** | Oracle HotSpot | HotSpot GC 团队 |
 | **2024** | JEP 516 Lead | AOT Object Caching 主导者 |
 | **JDK 26** | 12 commits | AOT 齀名排名第 16 |

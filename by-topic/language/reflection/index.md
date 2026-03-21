@@ -26,10 +26,10 @@ API    (JSR   处理   (JSR   invokedynamic  (JEP   (JEP    (JEP    API     API
 | **JDK 6** | 注解处理器 | JSR 269 | 编译期处理 |
 | **JDK 7** | MethodHandle | JSR 292 | 动态语言支持 |
 | **JDK 8** | Lambda invokedynamic | JSR 335 | 函数式编程 |
-| **JDK 11** | Foreign Memory | JEP 370 | 外部内存访问 |
-| **JDK 14** | Foreign Memory | JEP 389/393 | 内存访问 API |
-| **JDK 16** | ClassFile API | JEP 395 | Class 文件操作 |
-| **JDK 21** | Foreign Function | JEP 444 | FFI API |
+| **JDK 14** | Foreign Memory | JEP 370 | 外部内存访问 |
+| **JDK 16** | Foreign Memory | JEP 389/393 | 内存访问 API |
+| **JDK 16** | Records | JEP 395 | Record 类型 |
+| **JDK 21** | Virtual Threads | JEP 444 | 虚拟线程 |
 | **JDK 24** | Class-File API | JEP 484 | 正式版 |
 | **JDK 26** | Mirror API | - | 反射 API 增强 |
 
@@ -490,7 +490,7 @@ byte[] bytes = cf.build(classDesc, builder -> {
 | 4 | Harold Seigel | 89 | Oracle | JVM 运行时 |
 | 5 | Stefan Karlsson | 87 | Oracle | 并发 GC |
 | 6 | David Holmes | 63 | Oracle | 并发规范 |
-| 7 | Aleksey Shipilev | 61 | Oracle | 性能基准 |
+| 7 | Aleksey Shipilev | 61 | Amazon | 性能基准 |
 | 8 | Kim Barrett | 60 | Oracle | C++ 现代化 |
 | 9 | Claes Redestad | 58 | Oracle | 性能优化 |
 | 10 | Chen Liang | 47 | Oracle | ClassFile API |

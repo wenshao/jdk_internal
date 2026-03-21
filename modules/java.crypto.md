@@ -99,7 +99,7 @@ public abstract class MessageDigest {
 | SHA-256 | 256 | ✓ 推荐 |
 | SHA-384 | 384 | ✓ |
 | SHA-512 | 512 | ✓ |
-| SHA-3 | 224/256/384/512 | ✓ (JDK 16+) |
+| SHA-3 | 224/256/384/512 | ✓ (JDK 9+) |
 | MD5 | 128 | ⚠️ 不安全 |
 
 ### 2.3 Signature (数字签名)

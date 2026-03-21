@@ -83,9 +83,9 @@ JSR (Java Specification Request) 是通过 **JCP (Java Community Process)** 提�
 |-----|------|-----|------|------|
 | [JSR 335](language/jsr-335.md) ⭐ | Lambda Expressions | 8 | ✅ Final | Lambda 表达式、Stream API |
 | [JSR 308](https://jcp.org/en/jsr/detail?id=308) | Type Annotations | 8 | ✅ Final | 类型注解 |
-| [JSR 394](https://jcp.org/en/jsr/detail?id=394) | Pattern Matching for instanceof | 16 | ✅ Final | 类型模式匹配 |
-| [JSR 395](https://jcp.org/en/jsr/detail?id=395) | Records | 16 | ✅ Final | 记录类 |
-| [JSR 397](https://jcp.org/en/jsr/detail?id=397) | Sealed Classes | 17 | ✅ Final | 密封类 |
+| [JEP 394](https://openjdk.org/jeps/394) | Pattern Matching for instanceof | 16 | ✅ Final | 类型模式匹配 (注: 这是 JEP，不是 JSR) |
+| [JEP 395](https://openjdk.org/jeps/395) | Records | 16 | ✅ Final | 记录类 (注: 这是 JEP，不是 JSR) |
+| [JEP 397](https://openjdk.org/jeps/397) | Sealed Classes | 17 | ✅ Final | 密封类 (注: 这是 JEP，不是 JSR) |
 | ~~JSR 409~~ | Value Types | ❌ Withdrawn | 值类型 (已撤回，并入 Project Valhalla) |
 
 ### API 规范
@@ -95,8 +95,8 @@ JSR (Java Specification Request) 是通过 **JCP (Java Community Process)** 提�
 | [JSR 166](https://jcp.org/en/jsr/detail?id=166) | Concurrency Utilities | 5 | ✅ Final | 并发工具 |
 | [JSR 203](https://jcp.org/en/jsr/detail?id=203) | NIO.2 | 7 | ✅ Final | 新 I/O API |
 | [JSR 310](api/jsr-310.md) ⭐ | Date and Time API | 8 | ✅ Final | 日期时间 |
-| [JSR 353](https://jcp.org/en/jsr/detail?id=353) | JSON Processing | 8 | ✅ Final | JSON 处理 |
-| [JSR 366](https://jcp.org/en/jsr/detail?id=366) | HTTP Client | 11 | ✅ Final | HTTP 客户端 |
+| [JSR 353](https://jcp.org/en/jsr/detail?id=353) | JSON Processing | EE 7 | ✅ Final | JSON 处理 (注: 属于 Java EE 7，非 Java SE 8) |
+| [JSR 366](https://jcp.org/en/jsr/detail?id=366) | Java EE 8 Platform | 8 | ✅ Final | Java EE 8 平台 (注: HTTP Client 是 JEP 321，不是 JSR 366) |
 
 ### 平台规范
 

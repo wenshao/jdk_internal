@@ -333,7 +333,7 @@ java -Xmx4g -Xms4g -XX:+UseG1GC YourApp
 | JDK 版本 | 推荐 GC | 说明 |
 |----------|---------|------|
 | JDK 8 | G1 GC | 首个稳定版本 |
-| JDK 11 | ZGC | 首个生产可用 ZGC |
+| JDK 11 | ZGC | ZGC 实验性 |
 | JDK 17 | ZGC/Shenandoah | 性能改进 |
 | JDK 21+ | 分代 ZGC | 最佳性能 |
 | JDK 23+ | 分代 ZGC (默认) | 默认启用分代 |

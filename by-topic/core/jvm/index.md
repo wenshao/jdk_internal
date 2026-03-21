@@ -62,7 +62,7 @@ JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 7 ── JDK 8 ── JDK 11 ──
 | 4 | Thomas Stuefe | 163 | Oracle | 内存, 跨平台 |
 | 5 | Stefan Karlsson | 149 | Oracle | 并发 GC |
 | 6 | Kim Barrett | 113 | Oracle | C++ 现代化 |
-| 7 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 112 | Oracle | 性能基准 |
+| 7 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 112 | Amazon | 性能基准 |
 | 8 | Daniel D. Daugherty | 87 | Oracle | JVMTI, 调试 |
 | 9 | Robbin Ehn | 77 | Oracle | 并发, 锁 |
 | 10 | Calvin Cheung | 77 | Oracle | 类加载 |

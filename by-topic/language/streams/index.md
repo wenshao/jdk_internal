@@ -94,7 +94,7 @@ JDK 1.0 ── JDK 5 ── JDK 8 ── JDK 9 ── JDK 16 ── JDK 21
 - [Collectors](#collectors)
 - [并行流](#并行流)
 - [原始类型流](#原始类型流)
-- [Gatherers (JDK 21+)](#gatherers-jdk-21)
+- [Gatherers (JDK 22+)](#gatherers-jdk-21)
 - [最佳实践](#最佳实践)
 - [核心贡献者](#核心贡献者)
 - [相关链接](#相关链接)

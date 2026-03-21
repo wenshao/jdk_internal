@@ -95,7 +95,7 @@ Gavin Bierman 是 Oracle Labs UK 的 **咨询技术 staff** 和 **编程语言�
 | **角色** | Author & Owner |
 | **合作者** | Archie Cobbs |
 | **状态** | Closed / Delivered |
-| **发布版本** | JDK 22 |
+| **发布版本** | JDK 25 |
 
 ### JEP 512: Compact Source Files and Instance Main Methods
 
@@ -104,7 +104,7 @@ Gavin Bierman 是 Oracle Labs UK 的 **咨询技术 staff** 和 **编程语言�
 | **角色** | Author & Owner |
 | **合作者** | Ron Pressler, Jim Laskey |
 | **状态** | Closed / Delivered |
-| **发布版本** | JDK 22 |
+| **发布版本** | JDK 25 |
 
 ### JEP 494: Module Import Declarations (Second Preview)
 
@@ -122,7 +122,7 @@ Gavin Bierman 是 Oracle Labs UK 的 **咨询技术 staff** 和 **编程语言�
 | **角色** | Author |
 | **合作者** | Ron Pressler 等 |
 | **状态** | Closed / Delivered |
-| **发布版本** | JDK 21 (Third Preview) |
+| **发布版本** | JDK 23 (Third Preview) |
 
 ---
 

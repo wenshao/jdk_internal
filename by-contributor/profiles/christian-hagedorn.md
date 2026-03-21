@@ -1,6 +1,6 @@
 # Christian Hagedorn
 
-> **Organization**: [Oracle Labs](../../contributors/orgs/oracle.md)
+> **Organization**: [Oracle](../../contributors/orgs/oracle.md)
 
 ---
 ## 目录
@@ -18,10 +18,10 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Christian Hagedorn |
-| **当前组织** | [Oracle Labs](../../contributors/orgs/oracle.md) |
+| **当前组织** | [Oracle](../../contributors/orgs/oracle.md) |
 | **角色** | OpenJDK Member |
 | **PRs** | 10+ |
-| **主要领域** | Graal, 编译器 |
+| **主要领域** | HotSpot C2 编译器 |
 
 ---
 
@@ -30,14 +30,14 @@
 | 指标 | 值 |
 |------|-----|
 | **PRs** | 10+ |
-| **主要贡献** | Graal 编译器 |
+| **主要贡献** | HotSpot C2 编译器 |
 
 ---
 
 ## 3. 主要贡献
 
-### Graal 编译器
-- Graal JIT 编译器优化
+### HotSpot C2 编译器
+- HotSpot C2 JIT 编译器优化
 - 编译器基础设施改进
 
 ---

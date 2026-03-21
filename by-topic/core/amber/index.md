@@ -123,9 +123,9 @@ String formatted = switch (obj) {
 
 // 守卫语法 (Guards)
 String check = switch (obj) {
-    case String s && s.length() > 5 -> "Long string: " + s;
+    case String s when s.length() > 5 -> "Long string: " + s;
     case String s                    -> "Short string: " + s;
-    case Integer i && i > 0         -> "Positive int";
+    case Integer i when i > 0         -> "Positive int";
     case Integer i                   -> "Non-positive int";
     default                          -> "Unknown";
 };
@@ -341,7 +341,7 @@ for (var (_, value) : map.entrySet()) {
 ### 8. Implicit Classes & Instance Main Methods (JEP 477)
 
 ```java
-// 单文件程序无需类声明 (JDK 23 正式)
+// 单文件程序无需类声明 (JDK 23 预览)
 // HelloWorld.java
 void main() {
     System.out.println("Hello, World!");
@@ -444,7 +444,7 @@ if (num instanceof Integer i) {
 |------|------|--------|
 | **2017** | - | Project Amber 启动 |
 | **2018** | JDK 10 | Local-Variable Type Inference (var) |
-| **2019** | JDK 14 | Switch Expressions (预览) |
+| **2019** | JDK 14 | Switch Expressions (正式, JEP 361) |
 | **2020** | JDK 14 | instanceof Pattern Matching (预览) |
 | **2020** | JDK 15 | Text Blocks (正式) |
 | **2021** | JDK 16 | Records (正式) |
@@ -457,7 +457,7 @@ if (num instanceof Integer i) {
 | **2024** | JDK 22 | Implicit Classes (第二预览) |
 | **2024** | JDK 22 | Flexible Constructor Bodies (第一预览) |
 | **2024** | JDK 22 | String Templates (第二预览) |
-| **2024** | JDK 23 | Implicit Classes (正式) |
+| **2024** | JDK 23 | Implicit Classes (预览) |
 | **2024** | JDK 23 | Primitive Patterns (第一预览) |
 | **2024** | JDK 23 | String Templates **撤回** |
 | **2024** | JDK 23 | Flexible Constructor Bodies (第二预览) |
@@ -571,7 +571,7 @@ Record (Amber) + Inline Class (Valhalla)
 
 | 特性 | JEP | 正式版本 | 说明 |
 |------|-----|----------|------|
-| **Implicit Classes** | JEP 477 | JDK 23 | 简化 Java 入门语法 |
+| **Implicit Classes** | JEP 477 | JDK 25 | 简化 Java 入门语法 |
 | **Flexible Constructor Bodies** | JEP 513 | JDK 25 | 构造器中可在 super() 前执行语句 |
 
 ### 已撤回特性

@@ -110,7 +110,7 @@ Andrew Dinn 经常在各大 Java 会议发表演讲：
 | 时间段 | 角色 | 职位 |
 |--------|------|------|
 | 2017-至今 | Red Hat | Distinguished Engineer |
-| 2019-至今 | IBM OpenJDK Team | Java Platform Team Member |
+| 2019-至今 | Red Hat | Java Platform Team Member |
 
 ### 关键成就
 
@@ -157,7 +157,7 @@ Andrew Dinn 是 OpenJDK 中 AArch64 移植的核心维护者，专注于 ARM 架
 - Scalable Vector Extension (SVE) 指令集集成
 - AArch64 特定性能优化和调优
 - 跨架构兼容性保证
-- Corretto JDK 的 AArch64 优化
+
 
 ### 代码风格
 
@@ -203,7 +203,7 @@ Andrew Dinn 是 OpenJDK 中 AArch64 移植的核心维护者，专注于 ARM 架
 
 - **AArch64 生态**：推动 ARM 服务器生态的 Java 支持
 - **性能可移植性**：确保 Java 应用在不同架构间性能一致
-- **Corretto 发行版**：作为 Amazon Corretto 的核心维护者，提供企业级 ARM 支持
+
 
 ---
 

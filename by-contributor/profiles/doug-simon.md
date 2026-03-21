@@ -40,9 +40,9 @@ Doug Simon 是 Oracle Labs 的资深工程师， **Graal 编译器**的核心开
 ### 职业时间线
 | 时间 | 事件 | 详情 |
 |------|------|------|
+| **2007+** | Oracle Labs | Oracle Labs (从 Sun Labs 时代开始) |
 | **2012** | Graal 开源 | Graal 编译器在 GitHub 开源 |
 | **2018** | GraalVM 发布 | GraalVM 正式发布 |
-| **2019+** | Oracle Labs | 加入 Oracle Labs |
 | **2024+** | JDK 23 | Graal JIT 集成到 OpenJDK |
 
 | **JDK 26** | 6 commits | JVMCI, Graal 相关 |

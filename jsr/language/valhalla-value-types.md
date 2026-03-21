@@ -36,8 +36,8 @@ Project Valhalla 是 OpenJDK 最重要的孵化项目之一，致力于为 Java 
 |------|--------|------|
 | **2014** | Valhalla 项目启动 | Brian Goetz 发起 |
 | **2015** | JEP 169: Value Types | 早期探索 |
-| **2017** | JEP 325: Value Types | 第一次正式提案 |
-| **2018** | JEP 338: Value Types | 更新提案 |
+| **2017** | 早期提案 | Value Types 早期探索 (注: JEP 325 实际是 Switch Expressions，非 Value Types) |
+| **2018** | 原型开发 | Value Types 原型开发 (注: JEP 338 实际是 Vector API，非 Value Types) |
 | **2019** | JEP 390: Warnings for Value-Based Classes | 警告注解 |
 | **2020** | 原型开发 | lworld 分支活跃开发 |
 | **2021** | JEP 390 正式发布 | JDK 16 |
@@ -171,8 +171,8 @@ public @interface LooselyConsistentValue { }
 | JEP | 标题 | JDK | 状态 |
 |-----|------|-----|------|
 | JEP 169 | Value Types | - | 探索 |
-| JEP 325 | Value Types | - | 草案 |
-| JEP 338 | Value Types | - | 草案 |
+| ~~JEP 325~~ | ~~Value Types~~ | - | 误引 (JEP 325 实际是 Switch Expressions) |
+| ~~JEP 338~~ | ~~Value Types~~ | - | 误引 (JEP 338 实际是 Vector API) |
 | JEP 390 | Warnings for Value-Based Classes | 16 | ✅ 正式 |
 | JEP 401 | Value Classes (Preview) | TBD | 🚧 开发中 |
 | JEP 402 | Enhanced Value Types | TBD | 🚥 计划中 |

@@ -448,7 +448,7 @@ java -XX:+UseShenandoahGC -jar app.jar
 |------|--------|--------|------|----------|
 | 1 | Albert Mingkun Yang | 681 | Oracle | G1 GC, 内存管理 |
 | 2 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 674 | Oracle | G1 GC 维护者 |
-| 3 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 324 | Oracle | Shenandoah GC |
+| 3 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 324 | Amazon | Shenandoah GC |
 | 4 | [Zhengyu Gu](/by-contributor/profiles/zhengyu-gu.md) | 252 | Oracle | Shenandoah 核心开发者 |
 | 5 | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | 235 | Oracle | C++ 现代化 |
 | 6 | [Stefan Karlsson](/by-contributor/profiles/stefan-karlsson.md) | 229 | Oracle | 分代 ZGC (JEP 439) |
@@ -483,7 +483,7 @@ java -XX:+UseShenandoahGC -jar app.jar
 
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
-| 1 | Aleksey Shipilev | 272 | Oracle | Shenandoah 维护者 |
+| 1 | Aleksey Shipilev | 272 | Amazon | Shenandoah 维护者 |
 | 2 | [Zhengyu Gu](/by-contributor/profiles/zhengyu-gu.md) | 217 | Oracle | Shenandoah 核心开发者 |
 | 3 | [William Kemper](/by-contributor/profiles/william-kemper.md) | 109 | Amazon | 分代 Shenandoah (JEP 521) |
 | 4 | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | 107 | Red Hat | Shenandoah 架构 |
@@ -708,7 +708,7 @@ William Kemper (SDE III)
 **关键观察**:
 1. **Oracle 主导** 7 个主要 JEP 中的 5 个
 2. **Red Hat/Amazon** 主导 Shenandoah 相关 JEP
-3. **人才流动**: Aleksey Shipilev (Red Hat→Oracle), William Kemper (Red Hat→Amazon)
+3. **人才流动**: Aleksey Shipilev (Oracle→Red Hat→Amazon), William Kemper (Red Hat→Amazon)
 
 ### 源码目录版权分析
 
@@ -2540,7 +2540,7 @@ Oracle GC 团队评估：
 
 ### 五、人才流动对 GC 发展的影响
 
-#### Aleksey Shipilev：Red Hat → Oracle
+#### Aleksey Shipilev：Oracle → Red Hat → Amazon
 
 **影响分析**：
 ```
@@ -4356,12 +4356,12 @@ git log --oneline -- src/hotspot/share/gc/shenandoah/
 - [JEP 519](/jeps/gc/jep-519.md) - Roman Kennke (Red Hat)
 - [JEP 439](/jeps/gc/jep-439.md) - Stefan Karlsson (Oracle)
 - [JEP 474](/jeps/gc/jep-474.md) - Stefan Karlsson (Oracle)
-- [JEP 379](/jeps/gc/jep-379.md) - Aleksey Shipilev (Oracle)
+- [JEP 379](/jeps/gc/jep-379.md) - Aleksey Shipilev (Amazon)
 - [JEP 333](/jeps/gc/jep-333.md) - Per Lidén (Oracle)
 
 **贡献者档案**:
 - [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) - G1 GC Lead (Oracle) - 546+ PRs
-- [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) - Shenandoah Founder (Oracle) - 324+ PRs
+- [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) - Shenandoah Founder (Amazon) - 324+ PRs
 - [William Kemper](/by-contributor/profiles/william-kemper.md) - GenShen Lead (Amazon) - 112+ PRs
 - [Roman Kennke](/by-contributor/profiles/roman-kennke.md) - Shenandoah Core (Red Hat) - 163+ PRs
 - [Stefan Karlsson](/by-contributor/profiles/stefan-karlsson.md) - ZGC Lead (Oracle) - 229+ PRs

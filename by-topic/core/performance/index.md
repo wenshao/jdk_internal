@@ -190,10 +190,10 @@ JDK 7+ 引入分层编译 (Tiered Compilation)，结合 C1 和 C2 的优势：
 ```
 编译层级:
 Level 0: 解释执行
-Level 1: C1 编译 (带 profiling)
-Level 2: C1 编译 (无 profiling)
-Level 3: C2 编译 (完全优化)
-Level 4: C2 编译 (完全优化 + 高级优化)
+Level 1: C1 编译 (无 profiling)
+Level 2: C1 编译 (有限 profiling)
+Level 3: C1 编译 (完全 profiling)
+Level 4: C2 编译 (完全优化)
 ```
 
 ```java

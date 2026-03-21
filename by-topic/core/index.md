@@ -51,7 +51,7 @@ JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 11 ─── JDK 17 ──
 |------|----------|-----|
 | JDK 8 | G1 成为主流，CMS 标记废弃 | - |
 | JDK 11 | ZGC 引入 (实验性) | JEP 333 |
-| JDK 15 | ZGC 生产可用 | JEP 378 |
+| JDK 15 | ZGC 生产可用 | JEP 377 |
 | JDK 17 | 并发线程栈扫描 | JEP 379 |
 | JDK 21 | **分代 ZGC** (JEP 439)、分代 Shenandoah (JEP 429) | JEP 439, JEP 429 |
 | JDK 23 | ZGC 分代改进 | JEP 474 |
@@ -349,7 +349,7 @@ JVM 参数、调优工具和监控技术从 JDK 1.0 到 JDK 26 的演进。
 |------|--------|--------|------|----------|
 | 1 | Albert Mingkun Yang | 681 | Oracle | G1 GC, 内存管理 |
 | 2 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 674 | Oracle | G1 GC 维护者 |
-| 3 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 324 | Oracle | 性能基准, 内存 |
+| 3 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 324 | Amazon | 性能基准, 内存 |
 | 4 | Zhengyu Gu | 252 | Oracle | JVM 运行时 |
 | 5 | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | 235 | Oracle | C++ 现代化 |
 | 6 | Stefan Karlsson | 229 | Oracle | 分代 ZGC (JEP 439) |
@@ -364,7 +364,7 @@ JVM 参数、调优工具和监控技术从 JDK 1.0 到 JDK 26 的演进。
 | 1 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 333 | Oracle | 类加载, 运行时 |
 | 2 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 201 | Oracle | 并发, 线程 |
 | 3 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 167 | Oracle | CDS, AOT |
-| 4 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 123 | Oracle | 性能基准 |
+| 4 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 123 | Amazon | 性能基准 |
 | 5 | Kim Barrett | 115 | Oracle | C++ 现代化 |
 | 6 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 112 | Oracle | 内存, 跨平台 |
 | 7 | Serguei Spitsyn | 107 | Oracle | JVMTI, JFR |
