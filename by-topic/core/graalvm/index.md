@@ -336,9 +336,9 @@ jdk.vm.ci/
 2012        2017        2019        2021        2024        2025
 │           │           │           │           │           │
 ├─ Graal    ├─ GraalVM  ├─ 社区版    ├─ JDK 17   ├─ JDK 21   ├─ GraalVM 25
-│  项目       │  1.0      │  19.0      │  移除      │  基线      │  (JDK 25)
-│  (Oracle   │  (Oracle  │  (CE/EE)   │  Graal     │           │
-│   Labs)    │   Labs)   │            │            │           │
+│  项目       │  1.0      │  19.0      │  移除      │  基线      │  (2025-09)
+│  (Oracle   │  (Oracle  │  (CE/EE)   │  Graal     │  CE/EE    │   基于
+│   Labs)    │   Labs)   │            │  (JEP 410) │  合并      │   JDK 25
 └───────────────────────────────────────────────────────────────┘
 ```
 
@@ -348,9 +348,11 @@ jdk.vm.ci/
 |------|------|------|
 | **2012** | Graal 项目在 Oracle Labs 启动 | 研究原型 |
 | **2017** | JEP 243 (JVMCI) 进入 JDK 9 | Graal 可插入 HotSpot |
+| **2018** | Graal JIT 进入 JDK 10 (JEP 317) | 实验性 Java 编写的 JIT 编译器 |
 | **2019** | GraalVM 19.0 社区版发布 | 免费使用 |
-| **2020** | CE/EE 功能分拆 | Python/Ruby/R 移至企业版 |
-| **2021** | JDK 17 移除实验性 Graal | HotSpot 团队决定 |
+| **2020** | CE/EE 功能差异化 | EE 含额外优化，CE 仍可安装 Python/Ruby/R |
+| **2021** | JDK 17 移除实验性 Graal (JEP 410) | JVMCI 保留，Graal 需独立安装 |
+| **2023** | CE/EE 合并为 Oracle GraalVM | GFTC 免费许可，原 EE 优化免费可用 |
 | **2023** | Oracle 裁员 | Graal 团队 -30% |
 | **2023** | JDK 21 成为 GraalVM 基线 | LTS 对齐 |
 | **2025** | GraalVM 25 发布 (2025-09-16) | 对齐 JDK 25 LTS；WP-SCCP 默认启用；XGBoost 静态剖析器；高级混淆 (实验性) |
@@ -366,9 +368,9 @@ jdk.vm.ci/
 
 | 贡献者 | 角色 | 活跃时间 | 状态 |
 |--------|------|----------|------|
-| **Doug Simon** | GraalVM 负责人 | 2012–至今 | ✅ 活跃 |
+| **Doug Simon** | Director, Oracle Labs (Graal 编译器) | 2006–至今 | ✅ 活跃 |
 | **Thomas Wuerthinger** | GraalVM 创始人, Senior Research Director | 2010–至今 | ⚠️ 减少日常参与 |
-| **Christian Wimmer** | 编译器优化 | 2011–至今 | ✅ 活跃 |
+| **Christian Wimmer** | 编译器优化 (PhD ~2008, JKU Linz) | 2011–至今 | ✅ 活跃 |
 | **Gilles Duboscq** | Truffle/Graal | 2012–至今 | ✅ 活跃 |
 
 👉 [Doug Simon](../../../by-contributor/profiles/doug-simon.md) | [Thomas Wuerthinger](../../../by-contributor/profiles/thomas-wuerthinger.md)

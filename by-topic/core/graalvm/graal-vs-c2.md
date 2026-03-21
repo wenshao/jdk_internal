@@ -488,9 +488,11 @@ native-image -jar app.jar
 |------|------|
 | **2012** | Graal 项目在 Oracle Labs 启动 |
 | **2017** | JVMCI (JEP 243) 进入 JDK 9 |
+| **2018** | Graal JIT 作为实验性编译器进入 JDK 10 (JEP 317) |
 | **2019** | GraalVM 19.0 社区版发布 |
-| **2021** | JDK 17 移除实验性 Graal |
-| **2024** | GraalVM 24 基于 JDK 21 |
+| **2021** | JDK 17 移除实验性 Graal (JEP 410)，JVMCI 保留 |
+| **2023** | CE/EE 合并为 Oracle GraalVM (GFTC 许可) |
+| **2025** | GraalVM 25 发布 (2025-09-16)，基于 JDK 25 |
 
 ---
 

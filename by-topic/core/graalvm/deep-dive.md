@@ -76,7 +76,7 @@
 
 ### JDK 17 移除 Graal
 
-**JDK-8261929**: Remove Experimental Graal Support
+**JEP 410** (JDK-8263327): Remove the Experimental AOT and JIT Compiler
 
 **HotSpot 团队理由**:
 ```
@@ -118,7 +118,7 @@
 
 | 人物 | 角色 | 立场 | 现状 |
 |------|------|------|------|
-| **Doug Simon** | GraalVM 负责人 | 推动 Graal  adoption | ✅ 活跃 |
+| **Doug Simon** | Director, Oracle Labs | 推动 Graal 编译器开发 | ✅ 活跃 |
 | **Thomas Wuerthinger** | GraalVM 创始人, Senior Research Director | 多语言愿景 | ⚠️ 减少日常参与 |
 | **Vladimir Kozlov** | HotSpot 负责人 | 保守稳健 | ✅ 活跃 |
 | **John Rose** | JVM 架构师 | JVMCI 推动者 | ✅ 活跃 |
@@ -148,8 +148,8 @@
 
 影响:
 ├─ Native Image 开发放缓
-├─ Truffle 语言支持缩减 (JavaScript/Ruby 弃用)
-└─ 聚焦核心 Java 性能
+├─ Truffle 语言投入减少 (FastR 维护减少)
+└─ 聚焦核心 Java 性能和 Native Image
 ```
 
 ---

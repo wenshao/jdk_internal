@@ -683,14 +683,15 @@ JDK 24 (2025-03) ── JEP 489 ── Ninth Incubator
     │                               ├── Float16 支持
     │                               └── selectFrom/rearrange 改进
 JDK 25 (2025-09) ── JEP 508 ── Tenth Incubator
-    │                               └── FFM 迁移开始
+    │                               ├── FFM API 集成
+    │                               ├── VectorShuffle + MemorySegment
+    │                               └── Float16 自动向量化 (x64)
 JDK 26 (2026-03-17) ── JEP 529 ── Eleventh Incubator (GA)
-    │                               ├── FFM 集成
-    │                               └── Float16 重构
+    │                               └── 无实质性变更
 JDK 27 (2026-09) ── 开发中
     │
     ▼
 毕业? (预计 JDK 27-28)
 ```
 ---
-> **最后更新**: 2026-03-21
+> **最后更新**: 2026-03-22

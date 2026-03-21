@@ -3437,7 +3437,7 @@ numactl --cpunodebind=0 --membind=0
 
 预测：
 - G1/Shenandoah 跟进 NUMA 优化
-- 多插槽服务器性能提升 20%+
+- 多插槽服务器在特定工作负载下可能提升 20%+
 - 云厂商大规模采用
 ```
 
@@ -3933,7 +3933,7 @@ env.java.opts.taskmanager: -Xmx4g -Xms4g
 
 **Anonymous Class (匿名类)**
 - 没有名称的局部类，增加元空间负担
-- JEP 519 优化对象头时间接受影响
+- JEP 519 紧凑对象头优化间接减少元空间压力
 
 **AOT (Ahead-of-Time Compilation)**
 - 提前编译技术，在运行时之前编译代码
