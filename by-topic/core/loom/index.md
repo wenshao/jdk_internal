@@ -30,7 +30,10 @@
 - **结构化并发** (Structured Concurrency) - 作用域内并发任务管理
 - **Continuations** - 底层暂停/恢复机制
 
-**状态**: 虚拟线程已正式发布 (JDK 21)，结构化并发预览中
+**状态**:
+- **虚拟线程**: 正式发布 (JDK 21, JEP 444)；JDK 24 消除 synchronized 固定问题 (JEP 491)
+- **结构化并发**: 预览中 (JDK 26 第六次预览, JEP 525)
+- **Scoped Values**: 正式发布 (JDK 25, JEP 506)
 
 ---
 
@@ -164,38 +167,46 @@ class ContinuationExample {
 
 ---
 
-## 5. 结构化并发 (JEP 453)
+## 5. 结构化并发
 
-### 基本概念
+### API 演进
+
+| 版本 | JEP | 变化 |
+|------|-----|------|
+| JDK 21 | JEP 453 | 第一次预览 |
+| JDK 24 | JEP 480 | 第四次预览 |
+| JDK 25 | JEP 505 | 第五次预览 - 重大 API 重构：构造函数改为静态工厂方法，引入 Joiner 接口 |
+| JDK 26 | JEP 525 | 第六次预览 - 新增 `Joiner.onTimeout()`，`allSuccessfulOrThrow()` 返回 List 而非 Stream |
+
+### 基本概念 (JDK 25+ API)
 
 ```java
-// Java 21+ 预览特性
-try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
-    // 并发启动多个任务
-    Supplier<String> user = scope.fork(() -> fetchUser());
-    Supplier<Order> order = scope.fork(() -> fetchOrder());
+// JDK 25+: 使用静态工厂方法 open() 创建 scope
+try (var scope = StructuredTaskScope.open()) {
+    // 并发启动多个任务 - fork() 返回 Subtask 而非 Future
+    Subtask<String> user = scope.fork(() -> fetchUser());
+    Subtask<Order> order = scope.fork(() -> fetchOrder());
 
     // 等待所有任务完成
-    scope.join()           // 等待所有任务
-         .throwIfFailed(); // 如果有失败则抛出异常
+    scope.join();
 
-    // 组合结果
+    // 组合结果 - Subtask.get() 类似 Future.resultNow()
     return new Response(user.get(), order.get());
 
 } // scope 关闭时，未完成的任务自动取消
 ```
 
-### ShutdownOnSuccess
+### 使用 Joiner (JDK 25+)
 
 ```java
-// 返回第一个成功的结果
-try (var scope = new StructuredTaskScope.ShutdownOnSuccess<Object>()) {
+// 返回第一个成功的结果 - 使用 Joiner
+try (var scope = StructuredTaskScope.open(
+        Joiner.anySuccessfulOrThrow())) {  // JDK 26 重命名
     scope.fork(() -> fetchFromSourceA());
     scope.fork(() -> fetchFromSourceB());
     scope.fork(() -> fetchFromSourceC());
 
-    scope.join();
-    return scope.result();  // 第一个成功的结果
+    return scope.join();  // 返回第一个成功的结果
 
 } catch (InterruptedException e) {
     throw new RuntimeException(e);
@@ -216,20 +227,23 @@ Thread.sleep(1000);  // 不阻塞 Carrier Thread
 socket.read(buffer); // 不阻塞 Carrier Thread
 
 // 锁阻塞
-synchronized (lock) { // 会 Pin Carrier Thread (固定虚拟线程到载体线程)
+synchronized (lock) { // JDK 21-23 会 Pin; JDK 24+ 不再 Pin (JEP 491)
     // ...
 }
 ```
 
 ### Pinning 问题
 
+> **JDK 24 重大改进 (JEP 491)**: `synchronized` 块内的阻塞不再固定虚拟线程到载体线程。JVM 内部重构了 monitor 实现，虚拟线程可在持有 monitor 时独立于载体线程进行挂起和恢复。仅少数边缘情况（类初始化器内阻塞、符号引用解析期间阻塞）仍会导致 pinning。
+
 ```java
-// ❌ 避免: native 代码或 synchronized 块中的阻塞
+// JDK 21-23: ❌ 会 Pin Carrier
+// JDK 24+:   ✅ 不再 Pin (JEP 491)
 synchronized (lock) {
-    Thread.sleep(1000);  // Pin Carrier!
+    Thread.sleep(1000);  // JDK 24 起虚拟线程可正常挂起
 }
 
-// ✅ 推荐: 使用 ReentrantLock
+// ReentrantLock 在所有版本中均不 Pin
 ReentrantLock lock = new ReentrantLock();
 lock.lock();
 try {
@@ -252,7 +266,14 @@ try {
 | **2022** | JDK 19 | 虚拟线程 (第一次预览, JEP 425) |
 | **2023** | JDK 20 | 虚拟线程 (第二次预览, JEP 436) |
 | **2023** | JDK 21 | **虚拟线程 (正式, JEP 444)** |
-| **2023** | JDK 21 | 结构化并发 (预览, JEP 453) |
+| **2023** | JDK 21 | 结构化并发 (第一预览, JEP 453) |
+| **2024** | JDK 22 | Scoped Values (第二预览, JEP 464) |
+| **2024** | JDK 23 | Scoped Values (第三预览, JEP 481) |
+| **2025** | JDK 24 | **虚拟线程不再 Pin synchronized (JEP 491)** |
+| **2025** | JDK 24 | Scoped Values (第四预览, JEP 487) |
+| **2025** | JDK 25 | **Scoped Values (正式, JEP 506)** |
+| **2025** | JDK 25 | 结构化并发 (第五预览, JEP 505) - API 重构 |
+| **2026** | JDK 26 | 结构化并发 (第六预览, JEP 525) |
 
 
 → [完整时间线](timeline.md)
@@ -382,9 +403,9 @@ try (var scope = new StructuredTaskScope<>()) {
 // ❌ CPU 密集任务仍用 ForkJoinPool
 // 虚拟线程不会加速 CPU 密集任务
 
-// ❌ 在 synchronized 中阻塞
+// ❌ 在 synchronized 中阻塞 (JDK 21-23; JDK 24+ 已修复此问题)
 synchronized (lock) {
-    Thread.sleep(1000);  // Pin Carrier
+    Thread.sleep(1000);  // JDK 24 前会 Pin Carrier
 }
 
 // ❌ 使用 ThreadLocal 存储大量数据
@@ -396,8 +417,12 @@ synchronized (lock) {
 ## 12. 参考资料
 
 - [Project Loom Official Page](https://openjdk.org/projects/loom/)
-- [JEP 444](/jeps/concurrency/jep-444.md)
-- [JEP 453](/jeps/concurrency/jep-453.md)
-- [JEP 436](/jeps/concurrency/jep-436.md)
+- [JEP 444](/jeps/concurrency/jep-444.md) - 虚拟线程 (正式, JDK 21)
+- [JEP 453](/jeps/concurrency/jep-453.md) - 结构化并发 (第一预览, JDK 21)
+- [JEP 436](/jeps/concurrency/jep-436.md) - 虚拟线程 (第二预览, JDK 20)
+- [JEP 491](https://openjdk.org/jeps/491) - 虚拟线程不再 Pin synchronized (JDK 24)
+- [JEP 506](https://openjdk.org/jeps/506) - Scoped Values (正式, JDK 25)
+- [JEP 505](https://openjdk.org/jeps/505) - 结构化并发 (第五预览, JDK 25)
+- [JEP 525](https://openjdk.org/jeps/525) - 结构化并发 (第六预览, JDK 26)
 
 → [时间线](timeline.md) | [并发主题](../../concurrency/)

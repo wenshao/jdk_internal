@@ -23,13 +23,13 @@
 ## 1. 时间线概览
 
 ```
-JDK 8 ───── JDK 11 ───── JDK 15 ───── JDK 17 ───── JDK 21 ───── JDK 26
- │              │              │              │              │              │
-TLS 1.2        TLS 1.3       禁用弱算法     KMAC          ML-DSA        KDF API
-(默认)         (默认)        DSA 1024      SHA-3         (后量子)      (正式)
-               JEP 332                      JEP 370       JEP 518       JEP 510
-               ChaCha20
-               JEP 329
+JDK 8 ── JDK 11 ── JDK 15 ── JDK 17 ── JDK 21 ── JDK 24 ── JDK 25 ── JDK 26
+ │          │          │          │          │          │          │          │
+TLS 1.2   TLS 1.3   禁用弱    KMAC       KEM API   ML-KEM    KDF API   PEM
+(默认)    (默认)    算法     SHA-3      JEP 452   JEP 496   JEP 510   JEP 524
+          JEP 332             JEP 370              ML-DSA    PEM       HPKE
+          ChaCha20                                 JEP 497   JEP 470   JAR签名
+          JEP 329                                                      ML-DSA
 ```
 
 ---
@@ -415,9 +415,9 @@ public class KMACExample {
 └─────────────────────────────────────────────────────────┘
 ```
 
-### JDK 26 - ML-DSA (JEP 518)
+### JDK 24 - ML-DSA (JEP 497)
 
-基于 FIPS 204 (CRYSTALS-Dilithium) 的后量子签名算法。
+基于 FIPS 204 的后量子签名算法，JDK 24 交付。
 
 ```java
 import java.security.*;
@@ -482,7 +482,7 @@ public class MLDSAExample {
 | ML-DSA-65 | 3 | ~1.6 KB | ~3.3 KB | ~192-bit |
 | ML-DSA-87 | 5 | ~2.0 KB | ~4.6 KB | ~256-bit |
 
-### JDK 26 - ML-KEM (密钥封装)
+### JDK 24 - ML-KEM (JEP 496, 密钥封装)
 
 ```java
 import javax.crypto.*;
@@ -531,9 +531,8 @@ public class MLKEMExample {
 
 | 版本 | 状态 | JEP |
 |------|------|-----|
-| JDK 22 | 预览 | JEP 495 |
-| JDK 23 | 第二次预览 | JEP 508 |
-| JDK 26 | **正式** | JEP 510 |
+| JDK 24 | 预览 | JEP 478 |
+| JDK 25 | **正式** | JEP 510 |
 
 ### KDF 基础
 
@@ -652,7 +651,7 @@ public class KDFExample {
 
 ---
 
-## 7. PEM 格式支持 (JEP 470)
+## 7. PEM 格式支持 (JEP 470 / JEP 524)
 
 ### PEM 格式示例
 
@@ -678,7 +677,7 @@ import java.security.spec.*;
 import java.security.pem.*;
 import java.nio.file.*;
 
-// PEM 格式支持 (JDK 26)
+// PEM 格式支持 (JDK 25 预览 JEP 470, JDK 26 第二次预览 JEP 524)
 public class PEMExample {
 
     // 读取 PEM 格式的私钥
@@ -906,15 +905,18 @@ public class PostQuantumCrypto {
 | JDK 15 | 禁用弱签名 | - | 移除 DSA 1024 位 |
 | JDK 17 | **KMAC** | JEP 370 | SHA-3 家族 MAC |
 | JDK 17 | **SHA-3** | JEP 370 | Keccak 哈希 |
-| JDK 21 | 增强密码 | - | 更多现代算法 |
+| JDK 21 | **KEM API** | JEP 452 | 密钥封装机制 API |
 | JDK 21 | HSS/LMS | - | 后量子状态哈希签名 |
-| JDK 22 | KDF API (预览) | JEP 495 | 密钥派生函数 |
-| JDK 23 | KDF API (预览) | JEP 508 | 第二次预览 |
-| JDK 24 | 12 KDF 算法 | - | 更多 KDF 支持 |
-| JDK 26 | **ML-DSA** | JEP 518 | 后量子签名 |
-| JDK 26 | **ML-KEM** | - | 后量子密钥封装 |
-| JDK 26 | **KDF API** | JEP 510 | 密钥派生标准化 |
-| JDK 26 | **PEM 格式** | JEP 470 | 密钥格式支持 |
+| JDK 24 | **ML-KEM** | JEP 496 | 后量子密钥封装 (FIPS 203) |
+| JDK 24 | **ML-DSA** | JEP 497 | 后量子签名 (FIPS 204) |
+| JDK 24 | KDF API (预览) | JEP 478 | 密钥派生函数预览 |
+| JDK 25 | **KDF API** | JEP 510 | 密钥派生标准化 (HKDF) |
+| JDK 25 | PEM 格式 (预览) | JEP 470 | 密钥格式支持预览 |
+| JDK 25 | TLS 安全增强 | - | SHA-1 禁用于 TLS 1.2 握手签名 |
+| JDK 26 | PEM 格式 (预览 2) | JEP 524 | PEMRecord 重命名为 PEM |
+| JDK 26 | **HPKE** | - | 混合公钥加密 (RFC 9180) |
+| JDK 26 | ML-DSA JAR 签名 | - | 后量子 JAR 签名支持 |
+| JDK 27 | PQ TLS 1.3 | JEP 527 | 后量子混合密钥交换 |
 
 ---
 

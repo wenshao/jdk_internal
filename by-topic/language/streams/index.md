@@ -67,10 +67,11 @@ int sum = numbers.stream()
 ## 2. 快速概览
 
 ```
-JDK 1.0 ── JDK 5 ── JDK 8 ── JDK 9 ── JDK 16 ── JDK 21
-   │        │        │        │        │        │
-集合循环   增强 for  Stream  takeWhile  toList   gatherers
-迭代器    foreach  lambda  dropWhile  (JEP)   (JEP)
+JDK 1.0 ── JDK 5 ── JDK 8 ── JDK 9 ── JDK 16 ── JDK 22 ── JDK 23 ── JDK 24
+   │        │        │        │        │        │         │         │
+集合循环   增强 for  Stream  takeWhile  toList   Gatherers Gatherers Gatherers
+迭代器    foreach  lambda  dropWhile  (JEP)   (预览)    (二次预览) (正式)
+                                               JEP 461   JEP 473   JEP 485
 ```
 
 ### 核心演进
@@ -83,6 +84,8 @@ JDK 1.0 ── JDK 5 ── JDK 8 ── JDK 9 ── JDK 16 ── JDK 21
 | **JDK 9** | ofNullable | - | 空 Stream 处理 |
 | **JDK 16** | toList() | - | 简化收集 |
 | **JDK 22** | Gatherers (预览) | JEP 461 | 自定义中间操作 |
+| **JDK 23** | Gatherers (二次预览) | JEP 473 | 无变更再预览 |
+| **JDK 24** | Gatherers (正式) | JEP 485 | 正式版, 无变更 |
 
 ---
 
@@ -94,7 +97,7 @@ JDK 1.0 ── JDK 5 ── JDK 8 ── JDK 9 ── JDK 16 ── JDK 21
 - [Collectors](#collectors)
 - [并行流](#并行流)
 - [原始类型流](#原始类型流)
-- [Gatherers (JDK 22+)](#gatherers-jdk-22)
+- [Gatherers (JDK 24 正式)](#gatherers-jdk-24-正式)
 - [最佳实践](#最佳实践)
 - [核心贡献者](#核心贡献者)
 - [相关链接](#相关链接)
@@ -706,17 +709,20 @@ IntStream.iterate(0, n -> n < 20, n -> n + 2)
 
 ---
 
-## 9. Gatherers (JDK 22+)
+## 9. Gatherers (JDK 24 正式)
 
-**JEP 461: Gatherers (Preview)**
+**JDK 22 预览 (JEP 461) → JDK 23 二次预览 (JEP 473) → JDK 24 正式 (JEP 485)**
+
+Stream::gather(Gatherer) 是新的中间流操作, 相当于中间操作版的 Stream::collect(Collector)。
+Gatherer 可实现一对一、一对多、多对一、多对多转换, 支持短路和并行执行。
 
 ### Gatherer 基础
 
 ```java
-// Gatherer 是 JDK 22 引入的预览特性
+// Gatherer 在 JDK 24 正式发布 (JEP 485)
 // 用于自定义中间操作
 
-import java.util.stream.gather.*;
+import java.util.stream.Gatherers;
 
 // 1. 内置 Gatherer
 
@@ -1223,9 +1229,13 @@ list.stream()
 ### 外部资源
 
 - [JEP 107](/jeps/language/jep-107.md)
-- [JEP 461](/jeps/language/jep-461.md)
-- [Stream API Javadoc](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/package-summary.html)
+- [JEP 461: Stream Gatherers (Preview)](/jeps/language/jep-461.md)
+- [JEP 473: Stream Gatherers (Second Preview)](https://openjdk.org/jeps/473)
+- [JEP 485: Stream Gatherers (Final)](/jeps/tools/jep-485.md)
+- [Stream API Javadoc](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/stream/package-summary.html)
+- [Gatherers Javadoc](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/stream/Gatherers.html)
+- [Stream Gatherers Guide](https://docs.oracle.com/en/java/javase/24/core/stream-gatherers.html)
 
 ---
 
-**最后更新**: 2026-03-20
+**最后更新**: 2026-03-22

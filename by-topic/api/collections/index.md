@@ -345,10 +345,27 @@ list.removeLast();                 // [A, B, C]
 // 反转视图
 List<String> reversed = list.reversed();  // [C, B, A]
 
-// SortedSet 也支持
-SortedSet<String> set = new TreeSet<>(List.of("A", "B", "C"));
+// SequencedSet - LinkedHashSet 支持显式定位
+SequencedSet<String> set = new LinkedHashSet<>(List.of("A", "B", "C"));
 set.addFirst("Z");                 // [Z, A, B, C]
+
+// 注意: SortedSet 继承了 SequencedCollection 但不支持 addFirst/addLast
+// TreeSet 的元素顺序由比较器决定, 调用 addFirst/addLast 会抛出 UnsupportedOperationException
+// SortedSet 可使用 getFirst()/getLast()/reversed() 等只读操作
 ```
+
+### 既有类的集成
+
+JEP 431 将以下既有类纳入 Sequenced 体系 (通过默认方法, 完全向后兼容):
+
+| 既有类/接口 | 新增超接口 |
+|-------------|-----------|
+| `List` | `SequencedCollection` |
+| `Deque` | `SequencedCollection` |
+| `LinkedHashSet` | `SequencedSet` |
+| `SortedSet` | `SequencedSet` (addFirst/addLast 抛异常) |
+| `LinkedHashMap` | `SequencedMap` |
+| `SortedMap` | `SequencedMap` (putFirst/putLast 抛异常) |
 
 ### SequencedMap
 
@@ -380,7 +397,7 @@ SequencedMap<String, Integer> reversed = map.reversed();
 
 ```java
 // Gatherer - 自定义中间操作
-// JDK 22+ (预览)
+// JDK 24 正式版 (JEP 485)
 
 // 简单 Gatherer - 滑动窗口
 Gatherer<Integer, ?, List<Integer>> slidingWindow = Gatherers.of(
@@ -415,7 +432,15 @@ Stream.of(1, 2, 3, 4, 5)
     .toList();
 ```
 
-### 内置 Gatherers
+### 内置 Gatherers (5 个)
+
+| Gatherer | 类型 | 说明 |
+|----------|------|------|
+| `fold` | 多对一 | 增量聚合, 输入耗尽后输出 |
+| `scan` | 一对一 | 前缀扫描, 输出每步中间结果 |
+| `mapConcurrent` | 一对一 | 并发映射, 可限制并发数 |
+| `windowFixed` | 多对多 | 固定大小窗口分组 |
+| `windowSliding` | 多对多 | 滑动窗口分组 |
 
 ```java
 // scan - 前缀和
@@ -493,10 +518,11 @@ b9e7ca1 8379344: Compact the Unicode/CLDR version tables
 - [JEP 107](/jeps/language/jep-107.md)
 - [JEP 461](/jeps/language/jep-461.md)
 - [JEP 473: Stream Gatherers (Second Preview)](https://openjdk.org/jeps/473)
-- [JEP 485](/jeps/tools/jep-485.md)
-- [JEP 431](/jeps/language/jep-431.md)
-- [SequencedCollection JavaDoc](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/SequencedCollection.html)
+- [JEP 485: Stream Gatherers (Final)](/jeps/tools/jep-485.md)
+- [JEP 431: Sequenced Collections](/jeps/language/jep-431.md)
+- [SequencedCollection JavaDoc](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/SequencedCollection.html)
 - [Gatherers JavaDoc](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/util/stream/Gatherers.html)
+- [Stream Gatherers Guide](https://docs.oracle.com/en/java/javase/24/core/stream-gatherers.html)
 
 ### Git 仓库
 
@@ -508,7 +534,7 @@ git log --oneline -- src/java.base/share/classes/java/util/stream/
 
 ---
 
-**最后更新**: 2026-03-20
+**最后更新**: 2026-03-22
 
 **Sources**:
 - [JEP 107](/jeps/language/jep-107.md)
