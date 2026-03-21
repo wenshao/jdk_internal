@@ -584,6 +584,14 @@ java --add-modules jdk.incubator.vector VectorAdd
 ```
 ---
 ## 相关链接
+### 本地文档
+- [Project Panama / FFM API](../panama/) - 外部函数与内存 API（JDK 26 深度集成）
+- [时间线](timeline.md) - 版本演进历史
+- [使用指南](usage.md) - 详细使用示例
+- [各版本详情](versions.md) - 每个版本究竟做了什么
+- [平台支持](platform.md) - 各平台 SIMD 支持
+- [贡献者](contributors.md) - 贡献者分析
+
 ### 官方资源
 - [JEP 338: Vector API (Incubator)](https://openjdk.org/jeps/338)
 - [JEP 414: Vector API (Second Incubator)](https://openjdk.org/jeps/414)
@@ -593,12 +601,7 @@ java --add-modules jdk.incubator.vector VectorAdd
 - [JEP 448: Vector API (Sixth Incubator)](https://openjdk.org/jeps/448)
 - [JEP 508: Vector API (Tenth Incubator)](https://openjdk.org/jeps/508)
 - [JEP 529: Vector API (Eleventh Incubator)](https://openjdk.org/jeps/529)
-### 本地文档
-- [时间线](timeline.md) - 版本演进历史
-- [使用指南](usage.md) - 详细使用示例
-- [各版本详情](versions.md) - 每个版本究竟做了什么
-- [平台支持](platform.md) - 各平台 SIMD 支持
-- [贡献者](contributors.md) - 贡献者分析
+
 ### 源码位置
 - JDK 源码: `src/jdk.incubator.vector/share/classes/jdk/incubator/vector/`
 - 测试: `test/jdk/jdk/incubator/vector/`

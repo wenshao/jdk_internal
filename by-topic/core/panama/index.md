@@ -44,6 +44,11 @@
 │  │ • Symbol Lookup │  │ • MemoryLayout  │              │
 │  └─────────────────┘  └─────────────────┘              │
 │                                                          │
+│  ┌─────────────────┐                                    │
+│  │  Vector API     │  ← SIMD 向量化计算                  │
+│  │  (向量计算)      │  → [详细文档](../vector-api/)      │
+│  └─────────────────┘                                    │
+│                                                          │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -365,6 +370,15 @@ MemorySegment segment = arena.allocate(100);
 // ✅ 正确访问
 segment.get(ValueLayout.JAVA_INT, 96);  // 最后一个 int
 ```
+
+---
+
+## 相关项目
+
+### Vector API (SIMD 向量化)
+Vector API 是 Panama 项目的子项目，提供可移植的 SIMD 向量化计算能力。JDK 26 开始与 FFM API 深度集成。
+
+→ [Vector API 详细文档](../vector-api/)
 
 ---
 
