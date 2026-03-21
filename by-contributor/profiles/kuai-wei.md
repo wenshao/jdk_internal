@@ -55,14 +55,27 @@
 | **OpenJDK Census** | Kuai Wei | - | - | ✅ 记录在案 |
 | **Dragonwell Commits** | Kuai Wei | kuaiwei.kw@alibaba-inc.com | Alibaba | ✅ 已验证 |
 | **Dragonwell Commits** | Kuai Wei | wei.kuai@gmail.com | - | ✅ 个人邮箱 |
+| **ASE 2021 论文** | Wei Kuai | - | Alibaba | ✅ 合著者 |
+
+**学术论文**：
+- **ASE 2021**: "Towards a Serverless Java Runtime"
+  - 作者：Yifei Zhang, Tianxiao Gu, Xiaolin Zheng, Lei Yu, **Wei Kuai**, Sanhong Li
+  - 单位：Alibaba Group
+  - DBLP: [记录](https://dblp.org/rec/conf/kbse/0001GZYKL21)
+  - Semantic Scholar: [记录](https://www.semanticscholar.org/paper/Towards-a-Serverless-Java-Runtime-Zhang-Gu)
+
+**GitHub Gists** (技术笔记):
+- [JMH alloc with final field](https://gist.github.com/kuaiwei/f71fba40df29991c93325a8600e34c13) - 性能测试
+- [Java ArrayList.toArray](https://gist.github.com/kuaiwei/7109343) - Java 问题记录
+- [X Window client access](https://gist.github.com/kuaiwei/5001706) - Linux 系统笔记
 
 **无法证实的信息**：
-- ❌ 中文名：公开来源无确凿证据
-- ❌ 论文/专利：DBLP、Google Patents 无记录
-- ❌ 教育背景：无公开信息
+- ❌ 中文名：公开来源无确凿证据（拼音 Wei Kuai 可能对应多个中文名）
+- ❌ 教育背景：无公开信息（论文未标注学校，仅标注 Alibaba Group）
 - ❌ 具体职位：仅知为 Alibaba 贡献者
+- ❌ 专利：Google Patents 无公开记录
 
-**注意**: 文档中不使用未经证实的中文名。
+**注意**: 文档中不使用未经证实的中文名和教育背景信息。
 
 ---
 
