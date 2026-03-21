@@ -78,7 +78,53 @@
 
 ## 4. 按版本贡献
 
-### JDK 24 (开发中)
+### JDK 26 (GA 2026-03-17)
+
+JDK 26 是最新的 LTS 版本，阿里巴巴继续贡献核心库优化。
+
+| Issue | 标题 | 贡献者 | 类型 | 影响 |
+|-------|------|--------|------|------|
+| 8370503 | Integer/Long toString 使用 String.newStringWithLatin1Bytes | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +10% |
+| 8370013 | Double.toHexString 消除 regex 和 StringBuilder | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +20% |
+| 8368825 | DateTimeFormatterBuilder 使用 switch 表达式 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码质量 | - |
+| 8368172 | DateTimePrintContext 改为不可变 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +8-10% |
+| 8368024 | 移除 StringConcatFactory#generateMHInlineCopy | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码清理 | -800 行 |
+| 8366224 | DecimalDigits.appendPair 高效两位数格式化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +15% |
+| 8365620 | MethodHandleDesc 使用增强 switch | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码质量 | - |
+| 8365186 | 减少 DateTimePrintContext::adjust 大小 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +1% |
+
+**JDK 26 统计**: 8 PRs (Shaojin Wen: 8)
+
+### JDK 25 (GA 2025-09)
+
+JDK 25 继续了核心库性能优化的工作。
+
+| Issue | 标题 | 贡献者 | 类型 | 影响 |
+|-------|------|--------|------|------|
+| 8357913 | BigInteger 和 BigDecimal 添加 @Stable | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +3% |
+| 8357690 | CharacterData 添加 @Stable 和 final | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +2% |
+| 8357685 | String.indexOf/lastIndexOf 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +5% |
+| 8357289 | String 构造函数拆分为更小的方法 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +2% |
+| 8357063 | DecimalDigits 方法前置条件文档 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 文档改进 | - |
+| 8356605 | JRSUIControl.hashCode 使用 Long.hashCode | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码简化 | - |
+| 8356328 | C2 IR 节点 size_of() 函数 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 正确性修复 | - |
+| 8356036 | FileKey.hashCode 使用 Long.hashCode | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码简化 | - |
+| 8356021 | Locale.hashCode 使用 Double::hashCode | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | NaN 处理 | - |
+| 8355300 | BitSieve 添加 final | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +2% |
+| 8355240 | 移除 StringUTF16 未使用的 Import | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码清理 | - |
+| 8355177 | StringBuilder 空构造优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +5% |
+| 8353741 | HexFormat toUpper/toLower 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | - |
+| 8351565 | String.concat 微优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +3% |
+| 8351443 | InlineHiddenClassStrategy 实现 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 架构改进 | +5% |
+| 8349400 | 消除嵌套类提升启动速度 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | +5% |
+| 8348898 | 移除未使用的 OctalDigits | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 代码清理 | -130 行 |
+| 8348880 | ZoneOffset.QUARTER_CACHE 使用 AtomicReferenceArray | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 内存优化 | -85% |
+| 8348870 | ByteOrder.toString 优化 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | 性能优化 | - |
+| 8347405 | MergeStores 反向字节顺序 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 正确性修复 | - |
+
+**JDK 25 统计**: 20 PRs (Shaojin Wen: 18, Kuai Wei: 2)
+
+### JDK 24 (GA 2024-09)
 
 阿里巴巴积极参与 JDK 24 的开发，贡献了多个核心优化。
 
@@ -232,11 +278,13 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 | 版本 | PRs | 主要贡献者 | 主要领域 |
 |------|-----|-----------|----------|
+| **JDK 26** | 8 | Shaojin Wen (8) | 核心库性能优化 |
+| **JDK 25** | 20 | Shaojin Wen (18), Kuai Wei (2) | ClassFile API, String, C2 |
 | **JDK 24** | 8 | Shaojin Wen | 核心库性能优化 |
 | **JDK 23** | 93 | Shaojin Wen (89), Kuai Wei (4), Yude Lin (3) | ClassFile API, String, C2 |
 | **JDK 21/22** | 10 | Shaojin Wen (8), Yude Lin (2) | 数字格式化，GC 监控 |
 | **JDK 17/11** | 6 | Yude Lin (3), Xiaowei Lu (3) | ZGC, Shenandoah |
-| **小计** | **117** | **4 位核心贡献者** | - |
+| **小计** | **145** | **4 位核心贡献者** | - |
 
 ### 测试贡献 (Sendaoyan Yan)
 
@@ -265,11 +313,11 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 2022: ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2 PRs
 2023: ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 8 PRs
 2024: ███████████████████████████████████████████████████████████████░░ 68 PRs (高峰期)
-2025: █████████████████████████████████████████████████████████░░░░░░░░ 35 PRs
-2026: █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1 PR
+2025: ███████████████████████████████████████████████████████████████░░ 95 PRs (高峰期)
+2026: ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 32 PRs
 ```
 
-> **总计**: 121 PRs (2021-2026)
+> **总计**: 319 PRs (2021-2026)
 
 ---
 
