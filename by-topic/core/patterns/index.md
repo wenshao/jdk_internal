@@ -9,11 +9,21 @@
 ## 快速概览
 
 ```
-JDK 1.0 ── JDK 7 ── JDK 10 ── JDK 14 ── JDK 16 ── JDK 17 ── JDK 21
-   │        │        │        │        │        │        │
-instance  Switch  Var     instanceof  Switch  Record  模式匹配
-of       String  类型    模式       表达式   模式    正式版
+JDK 14 ── JDK 16 ── JDK 17 ── JDK 19 ── JDK 21 ── JDK 22 ── JDK 23 ── JDK 24
+   │        │        │        │        │        │        │        │
+instance  instanceof  Switch  Record  模式匹配  未命名  原始类型  原始类型
+of       模式正式    模式    模式    正式版   模式    模式预览  模式二次
+                   预览    预览    (三大)   正式版            预览
 ```
+
+**核心里程碑**:
+- **JDK 14**: instanceof 模式预览
+- **JDK 16**: instanceof 模式正式版
+- **JDK 17**: Switch 模式预览
+- **JDK 19**: Record 模式预览
+- **JDK 21**: Pattern Matching 完整版（instanceof + switch + record）
+- **JDK 22**: 未命名模式和变量正式版
+- **JDK 23/24**: 原始类型模式扩展（预览中）
 
 ### 核心演进
 
@@ -30,16 +40,22 @@ of       String  类型    模式       表达式   模式    正式版
 | **JDK 19** | Record 模式 | JEP 405 | 预览 |
 | **JDK 20** | Record 模式 | JEP 432 | 二次预览 |
 | **JDK 21** | Record 模式 | JEP 440 | 正式版 |
+| **JDK 21** | 未命名模式/变量 | JEP 443 | 预览 |
+| **JDK 22** | 未命名模式/变量 | JEP 456 | 正式版 |
+| **JDK 23** | 原始类型模式 | JEP 455 | 预览 |
+| **JDK 24** | 原始类型模式 | JEP 488 | 二次预览 |
 
 ---
 
 ## 目录
 
 - [类型模式](#类型模式)
+- [未命名模式和变量](#未命名模式和变量)
 - [Switch 模式](#switch-模式)
 - [Record 模式](#record-模式)
 - [守卫条件](#守卫条件)
 - [解构模式](#解构模式)
+- [原始类型模式](#原始类型模式)
 - [最佳实践](#最佳实践)
 - [核心贡献者](#核心贡献者)
 - [相关链接](#相关链接)
@@ -88,6 +104,152 @@ if (obj instanceof List<?> list &&
     list.get(0) instanceof String first &&
     first.startsWith("a")) {
     System.out.println("First element starts with 'a'");
+}
+```
+
+---
+
+## 未命名模式和变量
+
+### JEP 456: 未命名变量和模式 (Java 22+)
+
+> Java 21 预览 (JEP 443)，Java 22 正式版 (JEP 456)
+
+使用下划线 `_` 表示不需要使用的变量或模式组件。
+
+### 未命名模式变量
+
+```java
+// 传统方式：变量声明但未使用
+switch (obj) {
+    case String s -> "字符串";  // s 未使用，产生警告
+    case Integer i -> "整数";   // i 未使用，产生警告
+    default -> "其他";
+}
+
+// 使用未命名模式变量
+switch (obj) {
+    case String _  -> "字符串";  // ✅ 明确表示不使用该变量
+    case Integer _ -> "整数";    // ✅ 无警告
+    case null, default -> "其他";
+}
+```
+
+### 未命名模式（省略整个组件）
+
+```java
+// Record 模式中使用未命名模式
+record Point(int x, int y) { }
+record ColoredPoint(Point p, Color color) { }
+
+// 只需要 x 坐标，忽略 y 和 color
+if (obj instanceof ColoredPoint(Point(int x, _), _)) {
+    System.out.println("x = " + x);  // ✅ 清晰表达意图
+}
+
+// 传统方式：需要声明所有变量
+if (obj instanceof ColoredPoint(Point(int x, int y), Color c)) {
+    System.out.println("x = " + x);  // y 和 c 未使用
+}
+```
+
+### 多个模式合并
+
+```java
+// Java 21+ 允许多个模式在同一 case
+public String process(Box<? extends Ball> box) {
+    return switch (box) {
+        // 多个模式共享同一处理逻辑
+        case Box(RedBall _), Box(BlueBall _) -> "处理红球或蓝球";
+        case Box(GreenBall _) -> "处理绿球";
+        case Box(_) -> "处理其他球";
+    };
+}
+```
+
+### 未命名变量在其他场景
+
+```java
+// 1. Lambda 参数
+stream.collect(Collectors.toMap(
+    String::toUpperCase,
+    _ -> "NODATA"  // 值不重要，使用未命名参数
+));
+
+// 2. try-catch 异常参数
+try {
+    int i = Integer.parseInt(s);
+} catch (NumberFormatException _) {  // 不需要异常对象
+    System.out.println("解析失败");
+}
+
+// 3. 增强型 for 循环
+int count = 0;
+for (Order _ : orders) {  // 只需要副作用（计数）
+    count++;
+}
+
+// 4. try-with-resources
+try (var _ = ScopedContext.acquire()) {
+    // 不需要使用资源变量
+}
+```
+
+### 未命名模式的限制
+
+```java
+// ❌ 未命名模式不能作为顶层模式
+if (obj instanceof _) { }  // 编译错误
+
+// ✅ 未命名模式只能在嵌套位置使用
+if (obj instanceof Point(_, _)) { }  // 正确
+
+// ❌ 未命名变量不能被读取
+var _ = someValue;
+System.out.println(_);  // 编译错误：_ 不能被引用
+```
+
+### 未命名模式最佳实践
+
+```java
+// 1. 验证类型但不需要值
+public boolean isPositiveNumber(Object obj) {
+    return switch (obj) {
+        case Integer i when i > 0 -> true;
+        case Long l when l > 0 -> true;
+        case Double d when d > 0.0 -> true;
+        case Integer _, Long _, Double _ -> false;  // 负数或零
+        default -> false;
+    };
+}
+
+// 2. Option/Result 类型的解构
+record Success<T>(T value, String message) { }
+record Error(String code, String message) { }
+
+public String process(Object result) {
+    return switch (result) {
+        case Success(var value, _) -> "成功: " + value;  // 忽略 message
+        case Error(var code, var msg) -> "错误 " + code + ": " + msg;
+        default -> "未知结果";
+    };
+}
+
+// 3. 复杂嵌套解构
+record User(String name, Address address) { }
+record Address(String city, String street, int zip) { }
+
+// 只需要城市信息
+if (obj instanceof User(var name, Address(var city, _, _))) {
+    System.out.println(name + " 住在 " + city);
+}
+
+// 4. 使用未命名模式简化 Record 比较
+public boolean isEqual(Box<?> box1, Box<?> box2) {
+    return switch (box1) {
+        case Box(var contents1), Box(var contents2) ->
+            contents1.equals(contents2);  // 多模式匹配
+    };
 }
 ```
 
@@ -331,8 +493,8 @@ if (obj instanceof Company(String cname,
 ### 数组/List 解构
 
 ```java
-// JDK 21+ 不直接支持数组/List 模式
-// 但可以使用 Record 包装
+// JDK 21+ 不直接支持数组/List 模式解构
+// 但可以使用 Record 包装实现类似功能
 
 public record Triple(int a, int b, int c) { }
 
@@ -342,21 +504,148 @@ if (obj instanceof Triple(int a, int b, int c)) {
     System.out.println("Sum: " + (a + b + c));
 }
 
-// 自定义解构方法
-public record List<T>(T head, List<T> tail) {
-    public static <T> List<T> of(java.util.List<T> list) {
+// 自定义链表解构（避免与 java.util.List 冲突）
+public record LinkedList<T>(T head, LinkedList<T> tail) {
+    public static <T> LinkedList<T> from(java.util.List<T> list) {
         if (list.isEmpty()) {
-            throw new IllegalArgumentException("Empty list");
+            return null;
         }
-        return new List<>(list.get(0),
-            list.isEmpty() ? null : of(list.subList(1, list.size())));
+        return new LinkedList<>(list.get(0),
+            list.size() > 1 ? from(list.subList(1, list.size())) : null);
     }
 }
 
 // 使用
-List<String> list = List.of("a", "b", "c");
-if (list instanceof List(var head, var tail)) {
+java.util.List<String> input = java.util.List.of("a", "b", "c");
+LinkedList<String> list = LinkedList.from(input);
+
+if (list instanceof LinkedList(var head, var tail)) {
     System.out.println("Head: " + head);
+}
+```
+
+### 数组模式限制
+
+```java
+// ❌ 当前不支持数组模式
+int[] arr = {1, 2, 3};
+if (arr instanceof int[1, 2, 3]) { }  // 编译错误
+
+// ✅ 使用 Record 模拟
+public record IntArray(int a, int b, int c) {
+    public static IntArray from(int[] arr) {
+        if (arr.length != 3) throw new IllegalArgumentException();
+        return new IntArray(arr[0], arr[1], arr[2]);
+    }
+}
+```
+
+---
+
+## 原始类型模式
+
+### JEP 455/488: 原始类型模式 (Java 23+ 预览)
+
+> Java 23 预览 (JEP 455)，Java 24 二次预览 (JEP 488)
+
+允许在模式匹配中使用所有原始类型（int, long, double, float, short, byte, char, boolean）。
+
+### instanceof 中的原始类型模式
+
+```java
+// JDK 23 之前：instanceof 只支持引用类型
+Object obj = 42;
+if (obj instanceof Integer i) {  // 需要包装类型
+    System.out.println(i);
+}
+
+// JDK 23+：支持原始类型模式
+if (obj instanceof int i) {  // 直接使用原始类型
+    System.out.println("int: " + i);
+}
+
+// 支持所有原始类型
+Object obj = 3.14;
+if (obj instanceof double d) {
+    System.out.println("double: " + d);
+}
+
+Object obj2 = true;
+if (obj2 instanceof boolean b) {
+    System.out.println("boolean: " + b);
+}
+```
+
+### Switch 中的原始类型模式
+
+```java
+// JDK 23+：switch 支持所有原始类型
+public String describeNumber(Object obj) {
+    return switch (obj) {
+        case int i -> "整数: " + i;
+        case long l -> "长整数: " + l;
+        case double d -> "浮点数: " + d;
+        case float f -> "单精度浮点: " + f;
+        case short s -> "短整数: " + s;
+        case byte b -> "字节: " + b;
+        case char c -> "字符: " + c;
+        case boolean z -> "布尔: " + z;
+        case null -> "null";
+        default -> "其他类型";
+    };
+}
+```
+
+### 原始类型模式的特殊规则
+
+```java
+// 窄化原始类型转换
+Object obj = 42L;  // long 值
+
+// ❌ 编译错误：long 不能直接匹配 int 模式
+if (obj instanceof int i) {
+    // 42L 不匹配 int 模式（需要精确类型匹配）
+}
+
+// ✅ 需要使用精确类型或包装类型
+if (obj instanceof long l) {
+    System.out.println("long: " + l);
+}
+
+// 原始类型与包装类型的区别
+Object obj1 = 42;        // 自动装箱为 Integer
+Object obj2 = 42L;       // 自动装箱为 Long
+
+if (obj1 instanceof int i) {     // ✅ 匹配
+    System.out.println("int: " + i);
+}
+
+if (obj1 instanceof Integer i) { // ✅ 也匹配
+    System.out.println("Integer: " + i);
+}
+
+// 注意：int 模式不匹配 Long 对象
+if (obj2 instanceof int i) {     // ❌ 不匹配
+}
+if (obj2 instanceof long l) {    // ✅ 匹配
+    System.out.println("long: " + l);
+}
+```
+
+### 原始类型常量模式
+
+```java
+// JDK 23+：原始类型常量模式
+public String classify(Object obj) {
+    return switch (obj) {
+        case int i when i > 0 -> "正整数";
+        case int i when i < 0 -> "负整数";
+        case int 0 -> "零";
+        case double d when d > 0.0 -> "正浮点数";
+        case boolean true -> "真";
+        case boolean false -> "假";
+        default -> "其他";
+    };
 }
 ```
 
@@ -547,7 +836,10 @@ public String describeNew(Object obj) {
 **性能对比**:
 - 传统方式：2-3 次类型检查 + 强制转换
 - 模式匹配：1 次类型检查 + 直接解构
-- 性能提升：约 20-30%
+- 代码简洁性：显著提升（减少样板代码）
+- 性能：在热路径中 JIT 优化后相当，冷启动时可能略慢（约 5-10%）
+
+> **注意**: 模式匹配的主要优势在于代码可读性和类型安全，而非纯性能提升。JIT 编译器会对两种模式进行类似的优化。
 
 ### Sealed Types 模式匹配
 
@@ -637,16 +929,29 @@ public String describeBad(Object obj) {
 
 ### 外部资源
 
-- [JEP 305: Pattern Matching for instanceof](https://openjdk.org/jeps/305)
-- [JEP 394: Pattern Matching for instanceof](https://openjdk.org/jeps/394)
-- [JEP 406: Pattern Matching for switch](https://openjdk.org/jeps/406)
+#### 核心 JEP
+- [JEP 305: Pattern Matching for instanceof (Preview)](https://openjdk.org/jeps/305)
+- [JEP 375: Pattern Matching for instanceof (Second Preview)](https://openjdk.org/jeps/375)
+- [JEP 394: Pattern Matching for instanceof (Final)](https://openjdk.org/jeps/394)
+- [JEP 406: Pattern Matching for switch (Preview)](https://openjdk.org/jeps/406)
 - [JEP 420: Pattern Matching for switch (Second Preview)](https://openjdk.org/jeps/420)
-- [JEP 441: Pattern Matching for switch](https://openjdk.org/jeps/441)
+- [JEP 427: Pattern Matching for switch (Third Preview)](https://openjdk.org/jeps/427)
+- [JEP 433: Pattern Matching for switch (Fourth Preview)](https://openjdk.org/jeps/433)
+- [JEP 441: Pattern Matching for switch (Final)](https://openjdk.org/jeps/441)
 - [JEP 405: Record Patterns (Preview)](https://openjdk.org/jeps/405)
 - [JEP 432: Record Patterns (Second Preview)](https://openjdk.org/jeps/432)
-- [JEP 440: Record Patterns](https://openjdk.org/jeps/440)
-- [Pattern Matching (JLS)](https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.30)
+- [JEP 440: Record Patterns (Final)](https://openjdk.org/jeps/440)
+
+#### 扩展 JEP
+- [JEP 443: Unnamed Patterns and Variables (Preview)](https://openjdk.org/jeps/443)
+- [JEP 456: Unnamed Variables & Patterns (Final)](https://openjdk.org/jeps/456)
+- [JEP 455: Primitive Types in Patterns, instanceof, and switch (Preview)](https://openjdk.org/jeps/455)
+- [JEP 488: Primitive Types in Patterns, instanceof, and switch (Second Preview)](https://openjdk.org/jeps/488)
+
+#### 规范文档
+- [Pattern Matching (JLS 14)](https://docs.oracle.com/javase/specs/jls/se21/html/jls-14.html#jls-14.30)
+- [Unnamed Variables and Variables (Oracle Docs)](https://docs.oracle.com/en/java/javase/22/language/unnamed-variables-and-patterns.html)
 
 ---
 
-**最后更新**: 2026-03-20
+**最后更新**: 2026-03-21
