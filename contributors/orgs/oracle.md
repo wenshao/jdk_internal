@@ -10,10 +10,10 @@
 3. [按地区分类](#3-按地区分类)
 4. [组织架构](#4-组织架构)
 5. [影响的模块](#5-影响的模块)
-5. [主要领域](#5-主要领域)
-6. [相关 PR 分析文档](#6-相关-pr-分析文档)
-7. [数据来源](#7-数据来源)
-8. [相关链接](#8-相关链接)
+6. [主要领域](#6-主要领域)
+7. [相关 PR 分析文档](#7-相关-pr-分析文档)
+8. [数据来源](#8-数据来源)
+9. [相关链接](#9-相关链接)
 
 ---
 
@@ -153,7 +153,9 @@ Oracle JDK 开发团队
 │   │   ├── Brian Burkhalter - NIO, 网络
 │   │   ├── Justin Lu - 本地化
 │   │   ├── Prasanta Sadhukhan - Desktop, Swing
-│   │   └── Volkan Yazici - HTTP Client
+│   │   ├── Volkan Yazici - HTTP Client
+│   │   ├── Sergey Bylokhov - AWT/2D
+│   │   └── Jaikiran Pai - 构建
 │   │
 │   ├── Concurrency & Runtime Team (并发与运行时团队)
 │   │   ├── Alan Bateman - 并发工具
@@ -170,11 +172,13 @@ Oracle JDK 开发团队
 │   ├── Kim Barrett - HotSpot Runtime, C++ 现代化
 │   ├── Zhengyu Gu - Shenandoah GC
 │   ├── Erik Österlund - AOT, GC
-│   └── Roman Kennke - Compact Headers
+│   ├── Roman Kennke - Compact Headers
+│   └── Albert Mingkun Yang - G1 GC
 │
 ├── HotSpot Compiler Team (HotSpot 编译器团队)
 │   ├── Emanuel Peter (C2 Compiler Lead) - C2 编译器
-│   └── Erik Gahlin - JFR
+│   ├── Erik Gahlin - JFR
+│   └── Alexey Semenyuk - AOT, jpackage
 │
 ├── Java Engineering Infrastructure Team (Java 工程基础设施团队)
 │   └── Magnus Ihse Bursie - 构建系统
@@ -190,13 +194,13 @@ Oracle JDK 开发团队
 
 | 团队 | 人数 | 代表贡献者 | PR 总数 |
 |------|------|------------|---------|
-| **Java Platform Group** | 13 人 | Chen Liang, Jan Lahoda, Daniel Fuchs, Phil Race | 2,000+ |
-| **HotSpot GC Team** | 7 人 | Thomas Schatzl, Ioi Lam, Coleen Phillimore | 1,500+ |
-| **HotSpot Compiler Team** | 2 人 | Emanuel Peter, Erik Gahlin | 120+ |
+| **Java Platform Group** | 15 人 | Chen Liang, Jan Lahoda, Daniel Fuchs, Phil Race, Sergey Bylokhov, Jaikiran Pai | 2,500+ |
+| **HotSpot GC Team** | 8 人 | Thomas Schatzl, Ioi Lam, Coleen Phillimore, Albert Mingkun Yang | 1,600+ |
+| **HotSpot Compiler Team** | 3 人 | Emanuel Peter, Erik Gahlin, Alexey Semenyuk | 150+ |
 | **Java Engineering Infrastructure** | 1 人 | Magnus Ihse Bursie | 28+ |
 | **Security Team** | 1 人 | Weijun Wang | 15+ |
 | **Oracle Labs** | 1 人 | Doug Simon | 10+ |
-| **总计** | **25 人** | - | **4,000+** |
+| **总计** | **29 人** | - | **4,000+** |
 
 ### Group Leads
 
@@ -236,7 +240,7 @@ Oracle JDK 开发团队
 |------|--------|------|
 | G1 GC | Thomas Schatzl | [详情](../../by-contributor/profiles/thomas-schatzl.md) |
 | G1 GC | Albert Mingkun Yang | [详情](../../by-contributor/profiles/albert-mingkun-yang.md) |
-| Shenandoah GC | Aleksey Shipilev | [详情](../../by-contributor/profiles/aleksey-shipilev.md) |
+| G1 GC | Zhengyu Gu | [详情](../../by-contributor/profiles/zhengyu-gu.md) |
 | 并发 GC | Kim Barrett | [详情](../../by-contributor/profiles/kim-barrett.md) |
 
 ### 编译器
@@ -353,7 +357,7 @@ Oracle JDK 开发团队
 
 ---
 
-> **文档版本**: 5.0
+> **文档版本**: 6.0
 > **最后更新**: 2026-03-21
 > **更新内容**:
 > - 修正"Oracle 中国团队"错误分类
@@ -363,5 +367,8 @@ Oracle JDK 开发团队
 > - 亚洲团队：2 人 (Zhengyu Gu-中国，Weijun Wang)
 > - Oracle Labs: 1 人 (Doug Simon)
 > - **职业流动核实**: Hamlin Li 已离开 Oracle 加入 Rivos
-> - **新增完整组织架构**: 6 个团队，25 人，5 位 Group Leads
+> - **新增完整组织架构**: 6 个团队，29 人，5 位 Group Leads
+> - **修复**: 添加缺失贡献者 (Sergey Bylokhov, Alexey Semenyuk, Jaikiran Pai, Albert Mingkun Yang)
+> - **修复**: 移除 Aleksey Shipilev (Amazon，不是 Oracle)
+> - **修复**: 修正章节编号重复问题
 > - 数据来源：贡献者档案和 OpenJDK Census
