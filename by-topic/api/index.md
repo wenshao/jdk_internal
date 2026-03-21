@@ -93,22 +93,22 @@ java.time API 从旧 API 到现代日期时间处理的演进。
 | JDK 1.1 | Calendar | - |
 | JDK 8 | **java.time** (JSR 310) | JSR 310 |
 | JDK 16 | Timeline Format | - |
-| JDK 21 | Date/Calendar 废弃 | - |
+| JDK 21 | java.time 增强 | - |
 
 → [日期时间文档](datetime/)
 
 ### [JDBC 数据库](jdbc/)
 
-数据库连接从 JDBC 1.x 到 JDBC 4.4 的演进。
+数据库连接从 JDBC 1.x 到 JDBC 4.3 的演进。
 
 | 版本 | 主要变化 | JSR |
 |------|----------|-----|
 | JDK 1.1 | JDBC 1.x | - |
-| JDK 4 | JDBC 3.0 | JSR 114 |
-| JDK 5 | JDBC 4.0 | JSR 221 |
+| JDK 1.4 | JDBC 3.0 | JSR 54 |
+| JDK 6 | JDBC 4.0 | JSR 221 |
 | JDK 7 | JDBC 4.1 | JSR 221 |
 | JDK 11 | JDBC 4.3 | JSR 221 |
-| JDK 26 | JDBC 4.4 | JSR 221 |
+| JDK 26 | JDBC 4.3 | JSR 221 |
 
 → [JDBC 文档](jdbc/)
 
@@ -134,10 +134,9 @@ XML 和 JSON 处理从 DOM 到现代 API 的演进。
 
 | 版本 | 主要变化 | JSR |
 |------|----------|-----|
-| JDK 4 | DOM/SAX | - |
-| JDK 5 | JAXB 1.0 | JSR 31 |
+| JDK 1.4 | DOM/SAX | - |
+| JDK 6 | JAXB 2.0 | JSR 222 |
 | JDK 6 | StAX | JSR 173 |
-| JDK 7 | JSON-P 1.0 | JSR 353 |
 | JDK 9 | JAXB 标记废弃 | - |
 | JDK 11 | JSON-P 1.1 | - |
 | JDK 21 | JSON-P 2.1 | - |

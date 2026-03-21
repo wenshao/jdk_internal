@@ -216,7 +216,7 @@ JDK 26 ──── Metal 增强
 -XX:+UseContainerSupport
 -XX:MaxRAMPercentage=75.0
 -XX:InitialRAMPercentage=50.0
--XX:ActiveProcessorCount=auto
+-XX:ActiveProcessorCount=4
 
 # GC 选择
 -XX:+UseZGC -XX:+ZGenerational  # 低延迟

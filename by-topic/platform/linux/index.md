@@ -79,8 +79,7 @@ JDK 26 ──── 容器优化增强
 -XX:+UseContainerSupport
 
 # CPU 配置
--XX:ActiveProcessorCount=auto    # 自动检测
--XX:ActiveProcessorCount=4       # 手动指定
+-XX:ActiveProcessorCount=4       # 手动指定 (整数值)
 
 # 内存配置
 -XX:MaxRAMPercentage=75.0        # 使用容器内存的 75%
@@ -360,13 +359,13 @@ sysctl -w net.ipv4.tcp_fin_timeout=30
 | 系统调用 | 用途 | 优化建议 |
 |----------|------|----------|
 | **epoll** | 事件通知 | 默认使用，性能优秀 |
-| **io_uring** | 异步 I/O | JDK 21+ 支持 |
+| **io_uring** | 异步 I/O | 实验性，尚未正式支持 |
 | **futex** | 线程同步 | 默认使用 |
 | **mmap** | 内存映射 | 大文件场景 |
 
 ### io_uring 支持
 
-**JDK 21+ io_uring 支持**:
+**io_uring (实验性，尚未正式支持)**:
 ```bash
 # 启用 io_uring (实验性)
 -Djdk.io.useIOUring=true

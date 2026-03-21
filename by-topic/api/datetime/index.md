@@ -37,9 +37,9 @@
 ```
 JDK 1.0 ── JDK 1.1 ── JDK 5 ── JDK 8 ── JDK 21 ── JDK 23 ── JDK 24
    │         │        │        │        │        │        │
-Date      Calendar  Scanner java.time Date/    DateTime  Decimal
-(毫秒)    (日历)   (格式) (JSR 310) Calendar  Helper   Digits
-                                    Deprecated 优化    查找表
+Date      Calendar  Scanner java.time java.time DateTime  Decimal
+(毫秒)    (日历)   (格式) (JSR 310) 增强     Helper   Digits
+                                             优化    查找表
 ```
 
 ### 核心演进
@@ -50,7 +50,7 @@ Date      Calendar  Scanner java.time Date/    DateTime  Decimal
 | **JDK 1.1** | Calendar | 日历类, SimpleDateFormat | - |
 | **JDK 5** | Scanner | 简化输入/格式化 | - |
 | **JDK 8** | java.time | 现代日期时间 API | JSR 310 |
-| **JDK 21** | Date/Calendar Deprecated | 标记废弃 | - |
+| **JDK 21** | java.time 增强 | 日期时间 API 改进 | - |
 | **JDK 23** | DateTimeHelper | 内部格式化工具 | - |
 | **JDK 24** | DecimalDigits | 查找表优化 | - |
 
@@ -143,8 +143,8 @@ src/java.base/share/classes/jdk/internal/util/
 
 ```
 src/java.base/share/classes/java/util/
-├── Date.java                         # 旧日期类（JDK 1.0，已废弃）
-├── Calendar.java                     # 旧日历类（JDK 1.1，已废弃）
+├── Date.java                         # 旧日期类（JDK 1.0，不推荐使用）
+├── Calendar.java                     # 旧日历类（JDK 1.1，不推荐使用）
 ├── GregorianCalendar.java            # 格里高利历实现
 └── SimpleDateFormat.java             # 旧格式化器（非线程安全）
 ```
@@ -666,7 +666,7 @@ caload       // 无边界检查！
 | **java.time** | JDK 8 | 现代日期时间 API | [详情](basics.md) |
 | **JSR 310** | JDK 8 | 规范实现 | [PR 分析](jsr310/pr-analysis.md) |
 | **ThreeTen-Extra** | JDK 8+ | 扩展库 | [详情](basics.md#threeten-extra) |
-| **传统 API 废弃** | JDK 21 | Date/Calendar 废弃 | [详情](basics.md#api-废弃) |
+| **传统 API** | JDK 1.0-1.1 | Date/Calendar (不推荐，但未标记 @Deprecated) | [详情](basics.md) |
 
 ---
 

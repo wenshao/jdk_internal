@@ -9,11 +9,11 @@
 ## 1. 快速概览
 
 ```
-JDK 1.0 ── JDK 1.4 ── JDK 6 ── JDK 7 ── JDK 11 ── JDK 21
-   │         │        │        │        │        │
-JCE      JCE    TLS1.2  TLS1.3  更新    TLS1.4
-框架    可选   增强   (JSR   算法    (预览)
-        (JSR106)       262)
+JDK 1.0 ── JDK 1.4 ── JDK 7 ── JDK 11 ── JDK 21
+   │         │        │        │        │
+JCE      JCE    TLS1.2  TLS1.3  SHA-3
+框架    可选   (完整   新密码   哈希
+              支持)   套件    算法
 ```
 
 ### 核心演进
@@ -21,12 +21,10 @@ JCE      JCE    TLS1.2  TLS1.3  更新    TLS1.4
 | 版本 | 特性 | JEP | 说明 |
 |------|------|-----|------|
 | **JDK 1.0** | JCE 框架 | - | 基础加密 API |
-| **JDK 1.4** | JCE 可选 | JSR 106 | 无限制版本 |
-| **JDK 6** | TLS 1.2 | - | 增强 SSL/TLS |
-| **JDK 7** | TLS 1.2 RFC | - | 完整支持 |
+| **JDK 1.4** | JCE 集成 | - | JCE 成为标准部分 |
+| **JDK 7** | TLS 1.2 | - | 完整 TLS 1.2 支持 |
 | **JDK 11** | TLS 1.3 | - | 新密码套件 |
-| **JDK 21** | TLS 1.4 | - | 预览功能 |
-| **JDK 21** | 后量子密码 | - | SHA-3 等 |
+| **JDK 21** | SHA-3 哈希 | - | SHA-3 算法支持 |
 
 ---
 
@@ -117,7 +115,7 @@ private static String bytesToHex(byte[] bytes) {
 | SHA-256 | 256位 | ✅ 安全 | 通用 |
 | SHA-384 | 384位 | ✅ 安全 | 高安全需求 |
 | SHA-512 | 512位 | ✅ 安全 | 高安全需求 |
-| SHA-3-256 | 256位 | ✅ 安全 | 后量子准备 |
+| SHA-3-256 | 256位 | ✅ 安全 | 替代 SHA-2 选择 |
 
 ---
 
@@ -427,7 +425,6 @@ config.setNeedClientAuth(false);  // 不需要客户端证书
 | TLS 1.1 | JDK 5+ | ❌ 不安全 |
 | TLS 1.2 | JDK 7+ | ⚠️ 可接受 |
 | TLS 1.3 | JDK 11+ | ✅ 推荐 |
-| TLS 1.4 | JDK 21+ | ✅ 预览 |
 
 ---
 
@@ -490,7 +487,7 @@ strong.nextBytes(iv);
 | 排名 | 贡献者 | 提交数 | 组织 | 主要贡献 |
 |------|--------|--------|------|----------|
 | 1 | Xuelei Fan | 20+ | Oracle | 加密框架 |
-| 2 | Sean Mullan | 15+ | Oracle | JCE, JSR 106 |
+| 2 | Sean Mullan | 15+ | Oracle | JCE, 安全框架 |
 | 3 | Valerie Peng | 10+ | Oracle | JSSE |
 | 4 | Bradford Wetmore | 8+ | Oracle | TLS |
 | 5 | Weijun Wang | 5+ | Oracle | JSSE |
@@ -507,7 +504,6 @@ strong.nextBytes(iv);
 ### 外部资源
 
 - [JCE 规范](https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html)
-- [JSR 106: JCE Framework](https://jcp.org/en/jsr/detail?id=106)
 - [Java Cryptography Architecture](https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html)
 - [AES-GCM Spec](https://csrc.nist.gov/publications/detail/fips/197/2015/final)
 

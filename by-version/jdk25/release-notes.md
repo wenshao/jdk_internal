@@ -178,14 +178,12 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 | JEP | 标题 | 状态 |
 |-----|------|------|
-| JEP 444 | Virtual Threads | ✅ 正式 |
-| JEP 453 | Structured Concurrency | 🔍 预览 |
+| JEP 505 | Structured Concurrency | 🔍 预览 |
 
 ### GC
 
 | JEP | 标题 | 状态 |
 |-----|------|------|
-| JEP 439 | Generational ZGC | ✅ 正式 |
 
 ---
 
@@ -195,19 +193,17 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 | 特性 | 说明 |
 |------|------|
-| **String Templates** | 更安全的字符串拼接 |
-| **分代 ZGC** | 默认启用，显著提升性能 |
 | **分代 Shenandoah** | 降低 GC 开销 |
 | **Scoped Values** | ThreadLocal 的替代方案 |
+| **Compact Source Files** | 简化 Java 入门体验 |
+| **Flexible Constructor Bodies** | 更灵活的构造函数 |
 
 ### 继续预览的特性
 
 | 特性 | 预览次数 |
 |------|----------|
-| Structured Concurrency | 第3次 |
+| Structured Concurrency | 第5次 |
 | Primitive Types in Patterns | 第3次 |
-| Implicit Classes | 第2次 |
-| Flexible Constructor Bodies | 第3次 |
 
 ---
 
@@ -227,7 +223,6 @@ java -version
 
 | 场景 | 推荐特性 |
 |------|----------|
-| 字符串拼接 | String Templates |
 | 大内存应用 | 分代 ZGC |
 | 低延迟场景 | 分代 Shenandoah |
 | 高并发 I/O | 虚拟线程 |

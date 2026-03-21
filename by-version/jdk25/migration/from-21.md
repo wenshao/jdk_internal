@@ -57,20 +57,6 @@ java -jar yourapp.jar
 
 ## 3. 新特性采用
 
-### String Templates (推荐)
-
-**之前**:
-```java
-String name = "Alice";
-int age = 30;
-String message = "Name: " + name + ", Age: " + age;
-```
-
-**JDK 25**:
-```java
-String message = STR."Name: \{name}, Age: \{age}";
-```
-
 ### 虚拟线程 (推荐用于 I/O 密集型)
 
 **之前**:
@@ -85,14 +71,11 @@ ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
 
 ### 分代 ZGC (推荐用于大内存)
 
-**之前**:
-```bash
-java -XX:+UseZGC MyApp
-```
+**说明**: JDK 25 中分代 ZGC 已是默认模式，无需额外参数。
 
-**JDK 25**:
 ```bash
-java -XX:+UseZGC -XX:+ZGenerational MyApp
+# JDK 25 默认使用分代 ZGC
+java -XX:+UseZGC MyApp
 ```
 
 ---
@@ -128,8 +111,8 @@ java -Djava.security.manager MyApp
 # JDK 21 推荐配置
 java -XX:+UseZGC -Xmx4g MyApp
 
-# JDK 25 推荐配置
-java -XX:+UseZGC -XX:+ZGenerational -Xmx4g MyApp
+# JDK 25 推荐配置（分代模式已是默认）
+java -XX:+UseZGC -Xmx4g MyApp
 ```
 
 ---
