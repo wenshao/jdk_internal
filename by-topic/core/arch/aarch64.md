@@ -151,9 +151,11 @@ SVE2 是 SVE 的扩展，增加了更多指令：
 | **加密** | 向量加密指令 | JDK 26+ |
 
 **支持硬件**:
-- Apple M4 (SVE2)
 - Arm Neoverse V2/V3
 - AWS Graviton 4
+- Ampere One
+
+> **注意**: Apple Silicon (M1-M4) 不支持 SVE/SVE2，使用 NEON 向量指令集。
 
 ### PAC/BTI
 
