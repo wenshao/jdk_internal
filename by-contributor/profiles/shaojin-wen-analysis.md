@@ -1,7 +1,7 @@
 # Shaojin Wen (温绍锦) - JDK 26 PR 深度分析
 
 > **贡献者**: [Shaojin Wen](shaojin-wen.md)
-> **组织**: Oracle 中国
+> **组织**: Alibaba
 > **专注领域**: 核心库性能优化
 > **JDK 26 贡献**: 31 个 issues
 
