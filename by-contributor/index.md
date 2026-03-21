@@ -139,82 +139,106 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 ### 按领域
 
+> 💡 **提示**: 点击领域名称查看该技术主题的跨版本演进历程
+
 #### 核心库与性能优化
 
-| 领域 | 代表贡献者 | 查看 |
-|------|------------|------|
-| 核心库优化 | Shaojin Wen | [详情](/by-contributor/profiles/shaojin-wen.md) |
-| 启动性能 | Claes Redestad | [详情](/by-contributor/profiles/claes-redestad.md) |
-| 性能优化 | Aleksey Shipilev | [详情](/by-contributor/profiles/aleksey-shipilev.md) |
+| 领域 | 代表贡献者 | 查看 | Topic |
+|------|------------|------|-------|
+| 核心库优化 | Shaojin Wen | [详情](/by-contributor/profiles/shaojin-wen.md) | [→](/by-topic/core/performance/) |
+| 启动性能 | Claes Redestad | [详情](/by-contributor/profiles/claes-redestad.md) | [→](/by-topic/core/performance/) |
+| 性能优化 | Aleksey Shipilev | [详情](/by-contributor/profiles/aleksey-shipilev.md) | [→](/by-topic/core/performance/) |
+| JIT 编译 | - | - | [→](/by-topic/core/jit/) |
 
 #### 垃圾回收 (GC)
 
-| 领域 | 代表贡献者 | 查看 |
-|------|------------|------|
-| G1 GC | Thomas Schatzl | [详情](/by-contributor/profiles/thomas-schatzl.md) |
-| Shenandoah GC | William Kemper | [详情](/by-contributor/profiles/william-kemper.md) |
-| ZGC | Stefan Karlsson | [详情](/by-contributor/profiles/stefan-karlsson.md) |
+| 领域 | 代表贡献者 | 查看 | Topic |
+|------|------------|------|-------|
+| G1 GC | Thomas Schatzl | [详情](/by-contributor/profiles/thomas-schatzl.md) | [→](/by-topic/core/gc/) |
+| Shenandoah GC | William Kemper | [详情](/by-contributor/profiles/william-kemper.md) | [→](/by-topic/core/gc/) |
+| ZGC | Stefan Karlsson | [详情](/by-contributor/profiles/stefan-karlsson.md) | [→](/by-topic/core/gc/) |
+| 内存管理 | - | - | [→](/by-topic/core/memory/) |
 
 #### 网络与通信
 
-| 领域 | 代表贡献者 | 查看 |
-|------|------------|------|
-| HTTP/3 | Daniel Fuchs | [详情](/by-contributor/profiles/daniel-fuchs.md) |
-| HttpClient | Volkan Yazıcı | [详情](/by-contributor/profiles/volkan-yazici.md) |
+| 领域 | 代表贡献者 | 查看 | Topic |
+|------|------------|------|-------|
+| HTTP/3 | Daniel Fuchs | [详情](/by-contributor/profiles/daniel-fuchs.md) | [→](/by-topic/concurrency/http/) |
+| HttpClient | Volkan Yazıcı | [详情](/by-contributor/profiles/volkan-yazici.md) | [→](/by-topic/concurrency/http/) |
+| 网络编程 | - | - | [→](/by-topic/concurrency/network/) |
 
 #### 编译器与语言
 
-| 领域 | 代表贡献者 | 查看 |
-|------|------------|------|
-| ClassFile API | Chen Liang | [详情](/by-contributor/profiles/chen-liang.md) |
-| javac | Jan Lahoda | [详情](/by-contributor/profiles/jan-lahoda.md) |
-| C2 编译器 | Emanuel Peter | [详情](/by-contributor/profiles/emanuel-peter.md) |
-| C++ 现代化 | Kim Barrett | [详情](/by-contributor/profiles/kim-barrett.md) |
+| 领域 | 代表贡献者 | 查看 | Topic |
+|------|------------|------|-------|
+| ClassFile API | Chen Liang | [详情](/by-contributor/profiles/chen-liang.md) | [→](/by-topic/language/classfile/) |
+| javac | Jan Lahoda | [详情](/by-contributor/profiles/jan-lahoda.md) | [→](/by-topic/language/syntax/) |
+| C2 编译器 | Emanuel Peter | [详情](/by-contributor/profiles/emanuel-peter.md) | [→](/by-topic/core/jit/) |
+| C++ 现代化 | Kim Barrett | [详情](/by-contributor/profiles/kim-barrett.md) | [→](/by-topic/language/syntax/) |
+| 语言特性 | - | - | [→](/by-topic/language/) |
 
 #### 工具与监控
 
-| 领域 | 代表贡献者 | 查看 |
-|------|------------|------|
-| JFR | Erik Gahlin | [详情](/by-contributor/profiles/erik-gahlin.md) |
-| JFR 工具 | [Jaroslav Bachorik](/by-contributor/profiles/jaroslav-bachorik.md) | DataDog |
-| JVMTI | Leonid Mesnik | [详情](/by-contributor/profiles/leonid-mesnik.md) |
-| JMX | Claes Redestad | [详情](/by-contributor/profiles/claes-redestad.md) |
+| 领域 | 代表贡献者 | 查看 | Topic |
+|------|------------|------|-------|
+| JFR | Erik Gahlin | [详情](/by-contributor/profiles/erik-gahlin.md) | [→](/by-topic/core/performance/) |
+| JFR 工具 | Jaroslav Bachorik | [详情](/by-contributor/profiles/jaroslav-bachorik.md) | [→](/by-topic/core/performance/) |
+| JVMTI | Leonid Mesnik | [详情](/by-contributor/profiles/leonid-mesnik.md) | [→](/by-topic/platform/) |
+| JMX | Claes Redestad | [详情](/by-contributor/profiles/claes-redestad.md) | [→](/by-topic/platform/) |
 
 #### 国际化与客户端
 
-| 领域 | 代表贡献者 | 查看 |
-|------|------------|------|
-| i18n | Naoto Sato | [详情](/by-contributor/profiles/naoto-sato.md) |
-| 本地化 | Justin Lu | [详情](/by-contributor/profiles/justin-lu.md) |
-| Client Libraries | Phil Race | [详情](/by-contributor/profiles/phil-race.md) |
-| 图形/打印 | Brian Burkhalter | [详情](/by-contributor/profiles/brian-burkhalter.md) |
+| 领域 | 代表贡献者 | 查看 | Topic |
+|------|------------|------|-------|
+| i18n | Naoto Sato | [详情](/by-contributor/profiles/naoto-sato.md) | [→](/by-topic/security/i18n/) |
+| 本地化 | Justin Lu | [详情](/by-contributor/profiles/justin-lu.md) | [→](/by-topic/security/i18n/) |
+| Client Libraries | Phil Race | [详情](/by-contributor/profiles/phil-race.md) | [→](/by-topic/api/) |
+| 图形/打印 | Brian Burkhalter | [详情](/by-contributor/profiles/brian-burkhalter.md) | [→](/by-topic/api/) |
 
 #### 并发与运行时
 
-| 领域 | 代表贡献者 | 查看 |
-|------|------------|------|
-| 并发 | David Holmes | [详情](/by-contributor/profiles/david-holmes.md) |
-| AOT/CDS | Ioi Lam | [详情](/by-contributor/profiles/ioi-lam.md) |
+| 领域 | 代表贡献者 | 查看 | Topic |
+|------|------------|------|-------|
+| 并发 | David Holmes | [详情](/by-contributor/profiles/david-holmes.md) | [→](/by-topic/concurrency/concurrency/) |
+| 虚拟线程 | - | - | [→](/by-topic/concurrency/concurrency/) |
+| AOT/CDS | Ioi Lam | [详情](/by-contributor/profiles/ioi-lam.md) | [→](/by-topic/core/classloading/) |
+| 类加载器 | - | - | [→](/by-topic/core/classloading/) |
 
 #### 构建系统
 
-| 领域 | 代表贡献者 | 查看 |
-|------|------------|------|
-| 构建系统 | Magnus Ihse Bursie | [详情](/by-contributor/profiles/magnus-ihse-bursie.md) |
-| 跨平台 | Matthias Baesken | [详情](/by-contributor/profiles/matthias-baesken.md) |
+| 领域 | 代表贡献者 | 查看 | Topic |
+|------|------------|------|-------|
+| 构建系统 | Magnus Ihse Bursie | [详情](/by-contributor/profiles/magnus-ihse-bursie.md) | [→](/by-topic/platform/) |
+| 跨平台 | Matthias Baesken | [详情](/by-contributor/profiles/matthias-baesken.md) | [→](/by-topic/platform/) |
+| 容器支持 | - | - | [→](/by-topic/platform/containers/) |
 
 #### UI 组件
 
-| 领域 | 代表贡献者 | 查看 |
-|------|------------|------|
-| Swing/AWT | Prasanta Sadhukhan | [详情](/by-contributor/profiles/prasanta-sadhukhan.md) |
+| 领域 | 代表贡献者 | 查看 | Topic |
+|------|------------|------|-------|
+| Swing/AWT | Prasanta Sadhukhan | [详情](/by-contributor/profiles/prasanta-sadhukhan.md) | [→](/by-topic/api/) |
+
+#### 安全与加密
+
+| 领域 | 代表贡献者 | 查看 | Topic |
+|------|------------|------|-------|
+| 安全特性 | - | - | [→](/by-topic/security/security/) |
+| TLS/SSL | - | - | [→](/by-topic/security/security/) |
+| 后量子密码 | Ben Perez | [详情](/by-contributor/profiles/ben-perez.md) | [→](/by-topic/crypto/) |
+
+#### 数学与计算
+
+| 领域 | 代表贡献者 | 查看 | Topic |
+|------|------------|------|-------|
+| 数学库 | Joe Darcy | [详情](/by-contributor/profiles/joe-darcy.md) | [→](/by-topic/math/) |
+| Vector API | - | - | [→](/by-topic/language/) |
 
 #### 社区与生态
 
-| 领域 | 代表贡献者 | 查看 |
-|------|------------|------|
-| 日本社区 | Yasumasa Suenaga | [详情](/by-contributor/profiles/yasumasa-suenaga.md) |
-| 印度社区 | Jaikiran Pai | [详情](/by-contributor/profiles/jaikiran-pai.md) |
+| 领域 | 代表贡献者 | 查看 | Topic |
+|------|------------|------|-------|
+| 日本社区 | Yasumasa Suenaga | [详情](/by-contributor/profiles/yasumasa-suenaga.md) | [→](/by-topic/security/i18n/) |
+| 印度社区 | Jaikiran Pai | [详情](/by-contributor/profiles/jaikiran-pai.md) | [→](/by-topic/) |
 
 ---
 
