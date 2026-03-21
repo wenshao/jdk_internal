@@ -233,7 +233,7 @@
 | Hamlin Li | 301 | Oracle |
 | Anjian-Wen | 12 | 字节跳动 |
 | Dingli Zhang | 11 | ISCAS |
-| Fei Yang | 6 | ISCAS |
+| Fei Yang | 6 | Huawei |
 
 ---
 

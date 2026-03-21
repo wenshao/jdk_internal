@@ -301,7 +301,7 @@ IBM       15      20      30      40      45
 | JEP | 标题 | 主导组织 | Lead | 版本 |
 |-----|------|----------|------|------|
 | [JEP 237](../../jeps/ffi/jep-237.md) | AArch64 Port | Red Hat | [Andrew Dinn](../../by-contributor/profiles/andrew-dinn.md) | JDK 9 |
-| [JEP 422](../../jeps/ffi/jep-422.md) | Linux/RISC-V Port | ISCAS PLCT | [Fei Yang](../../by-contributor/profiles/fei-yang.md) | JDK 19 |
+| [JEP 422](../../jeps/ffi/jep-422.md) | Linux/RISC-V Port | Huawei | [Fei Yang](../../by-contributor/profiles/fei-yang.md) | JDK 19 |
 
 ### 语言与运行时 JEP
 

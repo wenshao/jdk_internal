@@ -42,7 +42,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | [Thomas Schatzl](profiles/thomas-schatzl.md) | Oracle | [@tschatzl](https://openjdk.org/census#tschatzl) | [详情](profiles/thomas-schatzl.md) |
 | [Albert Mingkun Yang](profiles/albert-mingkun-yang.md) | Oracle | [@ayang](https://openjdk.org/census#ayang) | [详情](profiles/albert-mingkun-yang.md) |
 | [William Kemper](profiles/william-kemper.md) | Amazon | [@wkemper](https://openjdk.org/census#wkemper) | [详情](profiles/william-kemper.md) |
-| [Roman Kennke](profiles/roman-kennke.md) | Red Hat | [@rkennke](https://openjdk.org/census#rkennke) | [详情](profiles/roman-kennke.md) |
+| [Roman Kennke](profiles/roman-kennke.md) | Datadog | [@rkennke](https://openjdk.org/census#rkennke) | [详情](profiles/roman-kennke.md) |
 | [Kim Barrett](profiles/kim-barrett.md) | Oracle | [@kbarrett](https://openjdk.org/census#kbarrett) | [详情](profiles/kim-barrett.md) |
 
 ### 编译器 (Compiler) - 8 位
@@ -130,7 +130,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | [Axel Boldt-Christmas](profiles/axel-boldt-christmas.md) | SAP | [@aboldtc](https://openjdk.org/census#aboldtc) | ZGC | [详情](profiles/axel-boldt-christmas.md) |
 | [Johannes Bechberger](profiles/johannes-bechberger.md) | SAP | [@jbechberger](https://openjdk.org/census#jbechberger) | JFR | [详情](profiles/johannes-bechberger.md) |
 | [Yasumasa Suenaga](profiles/yasumasa-suenaga.md) | NTT DATA | [@suenaga](https://openjdk.org/census#suenaga) | Serviceability | [详情](profiles/yasumasa-suenaga.md) |
-| [Fei Yang](profiles/fei-yang.md) | ISCAS PLCT Lab | [@fyang](https://openjdk.org/census#fyang) | RISC-V | [详情](profiles/fei-yang.md) |
+| [Fei Yang](profiles/fei-yang.md) | Huawei | [@fyang](https://openjdk.org/census#fyang) | RISC-V | [详情](profiles/fei-yang.md) |
 | [Anjian Wen](profiles/anjian-wen.md) | ByteDance | [@awen](https://openjdk.org/census#awen) | RISC-V | [详情](profiles/anjian-wen.md) |
 | [Damon Nguyen](profiles/damon-nguyen.md) | Oracle | [@dnguyen](https://openjdk.org/census#dnguyen) | Desktop | [详情](profiles/damon-nguyen.md) |
 | [Francesco Andreuzzi](profiles/francesco-andreuzzi.md) | Oracle | [@fandreuzzi](https://openjdk.org/census#fandreuzzi) | 测试 | [详情](profiles/francesco-andreuzzi.md) |
@@ -168,14 +168,23 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 ### Red Hat
 
-**Reviewer**: 1 位 | **Committer**: 3 位
+**Reviewer**: 0 位 | **Committer**: 2 位
+
+| 角色 | 人数 | 代表贡献者 |
+|------|------|------------|
+| Reviewer | 0 | - |
+| Committer | 2 | [Andrew Haley](profiles/andrew-haley.md), [Fredrik Bredberg](profiles/fredrik-bredberg.md) |
+
+### Datadog
+
+**Reviewer**: 1 位 | **Committer**: 1 位
 
 | 角色 | 人数 | 代表贡献者 |
 |------|------|------------|
 | Reviewer | 1 | [Roman Kennke](profiles/roman-kennke.md) (GC) |
-| Committer | 3 | [Andrew Haley](profiles/andrew-haley.md), [Fredrik Bredberg](profiles/fredrik-bredberg.md), [Roman Kennke](profiles/roman-kennke.md) |
+| Committer | 1 | [Roman Kennke](profiles/roman-kennke.md) |
 
-> **说明**: Roman Kennke 既是 Reviewer 也是 Committer
+> **说明**: Roman Kennke 既是 Reviewer 也是 Committer。Career path: Red Hat → Amazon → Datadog
 
 ### SAP
 
@@ -195,7 +204,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | Reviewer | 0 | - |
 | Committer | 1 | [Shaojin Wen](profiles/shaojin-wen.md) |
 
-### ISCAS PLCT Lab
+### 华为 (Huawei)
 
 **Reviewer**: 0 位 | **Committer**: 1 位
 
@@ -231,9 +240,9 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | **总计** | **42** | **11** | **53** |
 
 > **统计说明**:
-> - Roman Kennke (Red Hat) 同时是 Reviewer 和 Committer，在领域统计中计入 Committer (GC 领域)
+> - Roman Kennke (Datadog) 同时是 Reviewer 和 Committer，在领域统计中计入 Committer (GC 领域)
 > - Damon Nguyen (Oracle) 是 Committer，领域是 Desktop
-> - RISC-V Committer: Andrew Haley (Red Hat); Fei Yang (ISCAS PLCT Lab); Anjian Wen (ByteDance) = 3 位
+> - RISC-V Committer: Andrew Haley (Red Hat); Fei Yang (Huawei); Anjian Wen (ByteDance) = 3 位
 > - 测试 Committer: Francesco Andreuzzi, Manuel Hässig (Oracle) = 2 位
 > - Chen Liang (Oracle) 是编译器 Reviewer，ClassFile API 核心开发者
 > - Claes Redestad (Oracle) 从核心库移至编译器 Reviewer

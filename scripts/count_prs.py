@@ -29,6 +29,9 @@ CONTRIBUTORS = {
     
     # ISCAS
     'DingliZhang': ('Dingli Zhang', 'ISCAS'),
+
+    # Huawei
+    'RealFYang': ('Fei Yang', 'Huawei'),
     
     # Red Hat
     'rgiulietti': ('Raffaello Giulietti', 'Red Hat'),

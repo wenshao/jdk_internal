@@ -250,7 +250,7 @@ java -XX:+PrintFlagsFinal -version | grep -i riscv
 
 | 贡献者 | 组织 | 主要贡献 |
 |--------|------|----------|
-| [Fei Yang](/by-contributor/profiles/fei-yang.md) | ISCAS | RISC-V Port Lead |
+| [Fei Yang](/by-contributor/profiles/fei-yang.md) | Huawei | RISC-V Port Lead |
 | [Hamlin Li](/by-contributor/profiles/hamlin-li.md) | Rivos | RISC-V 向量 |
 | [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | 字节跳动 | Zvbb/Zfa 指令 |
 | Dingli Zhang | ISCAS | RISC-V 测试 |

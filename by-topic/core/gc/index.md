@@ -453,7 +453,7 @@ java -XX:+UseShenandoahGC -jar app.jar
 | 5 | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | 235 | Oracle | C++ 现代化 |
 | 6 | [Stefan Karlsson](/by-contributor/profiles/stefan-karlsson.md) | 229 | Oracle | 分代 ZGC (JEP 439) |
 | 7 | [Per Lidén](/by-contributor/profiles/per-liden.md) | 198 | Oracle | ZGC 创始人 |
-| 8 | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | 163 | Red Hat | Shenandoah 架构 |
+| 8 | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | 163 | Datadog | Shenandoah 架构 |
 | 9 | [William Kemper](/by-contributor/profiles/william-kemper.md) | 112 | Amazon | 分代 Shenandoah (JEP 521) |
 | 10 | Erik Österlund | 96 | Oracle | ZGC 核心开发者 |
 
@@ -485,7 +485,7 @@ java -XX:+UseShenandoahGC -jar app.jar
 | 1 | Aleksey Shipilev | 272 | Amazon | Shenandoah 维护者 |
 | 2 | [Zhengyu Gu](/by-contributor/profiles/zhengyu-gu.md) | 217 | Oracle | Shenandoah 核心开发者 |
 | 3 | [William Kemper](/by-contributor/profiles/william-kemper.md) | 109 | Amazon | 分代 Shenandoah (JEP 521) |
-| 4 | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | 107 | Red Hat | Shenandoah 架构 |
+| 4 | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | 107 | Datadog | Shenandoah 架构 |
 | 5 | Stefan Karlsson | 44 | Oracle | 并发支持 |
 
 ---
@@ -578,7 +578,7 @@ Amazon:   ██████                  10%
 | **Amazon** | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 324+ | JEP 379 | `shenandoahHeap.cpp` |
 | **Oracle** | [Zhengyu Gu](/by-contributor/profiles/zhengyu-gu.md) | 217+ | - | `shenandoahMark.cpp` |
 | **Amazon** | [William Kemper](/by-contributor/profiles/william-kemper.md) | 112+ | JEP 521 | `shenandoahGenerationalHeap.cpp` |
-| **Red Hat** | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | 163+ | JEP 519 | `shenandoahBarrierSet.cpp` |
+| **Datadog** | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | 163+ | JEP 519 | `shenandoahBarrierSet.cpp` |
 
 **JEP 521 核心团队**:
 - **Lead**: William Kemper (Amazon, ex-Red Hat)
@@ -586,7 +586,7 @@ Amazon:   ██████                  10%
 - **Note**: William Kemper 从 Red Hat 加入 Amazon 后继续维护 Shenandoah
 
 **JEP 519 核心团队**:
-- **Lead**: Roman Kennke (Red Hat)
+- **Lead**: Roman Kennke (Datadog, ex-Red Hat)
 - **Contributors**: Coleen Phillimore, Erik Österlund, Stefan Karlsson
 - **Reviewers**: mdoerr, coleenp, zgu
 
@@ -707,7 +707,7 @@ William Kemper (SDE III)
 **关键观察**:
 1. **Oracle 主导** 7 个主要 JEP 中的 5 个
 2. **Red Hat/Amazon** 主导 Shenandoah 相关 JEP
-3. **人才流动**: Aleksey Shipilev (Oracle→Red Hat→Amazon), William Kemper (Red Hat→Amazon)
+3. **人才流动**: Aleksey Shipilev (Oracle→Red Hat→Amazon), William Kemper (Red Hat→Amazon), Roman Kennke (Red Hat→Amazon→Datadog)
 
 ### 源码目录版权分析
 
@@ -4352,7 +4352,7 @@ git log --oneline -- src/hotspot/share/gc/shenandoah/
 **Sources**:
 - [JEP 522](/jeps/gc/jep-522.md) - Thomas Schatzl (Oracle)
 - [JEP 521](/jeps/gc/jep-521.md) - William Kemper (Amazon)
-- [JEP 519](/jeps/gc/jep-519.md) - Roman Kennke (Red Hat)
+- [JEP 519](/jeps/gc/jep-519.md) - Roman Kennke (Datadog)
 - [JEP 439](/jeps/gc/jep-439.md) - Stefan Karlsson (Oracle)
 - [JEP 474](/jeps/gc/jep-474.md) - Stefan Karlsson (Oracle)
 - [JEP 379](/jeps/gc/jep-379.md) - Aleksey Shipilev (Amazon)
@@ -4362,7 +4362,7 @@ git log --oneline -- src/hotspot/share/gc/shenandoah/
 - [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) - G1 GC Lead (Oracle) - 546+ PRs
 - [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) - Shenandoah Founder (Amazon) - 324+ PRs
 - [William Kemper](/by-contributor/profiles/william-kemper.md) - GenShen Lead (Amazon) - 112+ PRs
-- [Roman Kennke](/by-contributor/profiles/roman-kennke.md) - Shenandoah Core (Red Hat) - 163+ PRs
+- [Roman Kennke](/by-contributor/profiles/roman-kennke.md) - Shenandoah Core (Datadog) - 163+ PRs
 - [Stefan Karlsson](/by-contributor/profiles/stefan-karlsson.md) - ZGC Lead (Oracle) - 229+ PRs
 - [Per Lidén](/by-contributor/profiles/per-liden.md) - ZGC Founder (Oracle) - 198+ PRs
 - [Zhengyu Gu](/by-contributor/profiles/zhengyu-gu.md) - Shenandoah Core (Oracle) - 250+ PRs

@@ -215,6 +215,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 
 | 贡献者 | Integrated PRs | 领域 |
 |--------|----------------|------|
+| [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | RISC-V |
 | Feilong Jiang | 10+ | JIT/AOT |
 
 ### 字节跳动
@@ -231,7 +232,6 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 
 | 贡献者 | Integrated PRs | 领域 |
 |--------|----------------|------|
-| [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | RISC-V |
 | Dingli Zhang | 10+ | RISC-V |
 
 ### 龙芯

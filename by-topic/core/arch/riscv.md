@@ -210,7 +210,7 @@ java -XX:+PrintFlagsFinal -version | grep -i riscv
 
 | 贡献者 | 组织 | PRs | 主要贡献 |
 |--------|------|-----|----------|
-| [Fei Yang](/by-contributor/profiles/fei-yang.md) | ISCAS | 100+ | RISC-V Port Lead |
+| [Fei Yang](/by-contributor/profiles/fei-yang.md) | Huawei | 100+ | RISC-V Port Lead |
 | [Hamlin Li](/by-contributor/profiles/hamlin-li.md) | Rivos | 65+ | RISC-V 向量 |
 | [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | 字节跳动 | 25+ | Zvbb/Zfa 指令 |
 | Dingli Zhang | ISCAS | 50+ | RISC-V 测试 |
@@ -219,7 +219,8 @@ java -XX:+PrintFlagsFinal -version | grep -i riscv
 
 | 组织 | 贡献者 | 主要领域 |
 |------|--------|----------|
-| **ISCAS/PLCT** | Fei Yang, Dingli Zhang | Port 维护、测试 |
+| **Huawei** | Fei Yang | Port 维护 |
+| **ISCAS/PLCT** | Dingli Zhang | 测试 |
 | **Oracle** | Hamlin Li | 向量扩展 |
 | **字节跳动** | Anjian Wen | Zvbb/Zfa |
 | **阿里巴巴** | - | RISC-V 优化 |

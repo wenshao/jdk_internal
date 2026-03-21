@@ -116,7 +116,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 |--------|----------------|------|------|
 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 97 | 阿里巴巴 | 核心库/性能 |
 | [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) | 70+ | Oracle 中国 | G1 GC |
-| [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | ISCAS PLCT | RISC-V |
+| [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | Huawei | RISC-V |
 | Weijun Wang | 50+ | Oracle 中国 | 安全/工具 |
 | Zhengyu Gu | 30+ | Oracle 中国 | G1 GC |
 | Naoto Sato | 20+ | Oracle 中国 | 国际化 |
@@ -128,7 +128,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 |------|----------|----------------|----------|
 | Oracle 中国 | 15+ | 200+ | GC, 安全，国际化 |
 | 阿里巴巴 | 5+ | 100+ | 性能优化 |
-| ISCAS PLCT | 5+ | 30+ | RISC-V |
+| ISCAS | 3+ | 10+ | RISC-V |
 | 腾讯 | 3+ | 20+ | GC |
 | 华为 | 5+ | 15+ | JIT/AOT |
 | 字节跳动 | 3+ | 10+ | RISC-V |
@@ -198,7 +198,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 
 | 贡献者 | Integrated PRs | 组织 | 地区 |
 |--------|----------------|------|------|
-| [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | ISCAS PLCT | 中国 |
+| [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | Huawei | 中国 |
 | Anjian-Wen | 10+ | 字节跳动 | 中国 |
 | Dingli Zhang | 10+ | ISCAS | 中国 |
 

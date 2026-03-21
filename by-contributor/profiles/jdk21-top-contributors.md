@@ -57,7 +57,7 @@ JDK 21 LTS (GA: 2023-09) had **~380 unique contributors** making Integrated PRs 
 | 24 | [William Kemper](william-kemper.md) | Amazon | 25+ | Shenandoah | [详情](william-kemper.md) |
 | 25 | [Chen Liang](chen-liang.md) | Oracle | 25+ | ClassFile API | [详情](chen-liang.md) |
 | 26 | [Volkan Yazici](volkan-yazici.md) | Oracle | 22+ | HTTP Client | [详情](volkan-yazici.md) |
-| 27 | [Fei Yang](fei-yang.md) | ISCAS PLCT | 20+ | RISC-V | [详情](fei-yang.md) |
+| 27 | [Fei Yang](fei-yang.md) | Huawei | 20+ | RISC-V | [详情](fei-yang.md) |
 | 28 | Yasumasa Suenaga | NTT DATA | 18+ | Serviceability | - |
 | 29 | [Hamlin Li](hamlin-li.md) | Oracle | 18+ | RISC-V | [详情](hamlin-li.md) |
 | 30 | [Shaojin Wen](shaojin-wen.md) | Alibaba | 15+ | Core Libs | [详情](shaojin-wen.md) |

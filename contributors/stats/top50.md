@@ -36,7 +36,7 @@
 | 17 | [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | 50+ | AArch64 | Red Hat | [详情](/by-contributor/profiles/andrew-dinn.md) |
 | 18 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | HotSpot, CDS | IBM | [详情](/by-contributor/profiles/thomas-stuefe.md) |
 | 19 | [Amit Kumar](/by-contributor/profiles/amit-kumar.md) | 50+ | s390x, Compiler | IBM | [详情](/by-contributor/profiles/amit-kumar.md) |
-| 20 | [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | RISC-V | ISCAS PLCT | [详情](/by-contributor/profiles/fei-yang.md) |
+| 20 | [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | RISC-V | Huawei | [详情](/by-contributor/profiles/fei-yang.md) |
 
 ---
 
@@ -74,7 +74,7 @@
 
 [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
 
-### ISCAS PLCT (1 人)
+### Huawei (1 人)
 
 [Fei Yang](/by-contributor/profiles/fei-yang.md)
 
