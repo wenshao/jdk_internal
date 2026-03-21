@@ -15,16 +15,15 @@
 
 ## 1. 核心特性
 
-JDK 18 引入了 UTF-8 作为默认字符集、Simple Web Server 和 Vector API（第2次孵化）。
+JDK 18 引入了 UTF-8 作为默认字符集、Simple Web Server 和 Vector API（第3次孵化）。
 
 | 特性 | 影响 | 详情 |
 |------|------|------|
 | **UTF-8 默认字符集** | ⭐⭐⭐⭐ | JEP 400 |
 | **Simple Web Server** | ⭐⭐⭐ | JEP 408 |
-| **Vector API（第2次孵化）** | ⭐⭐⭐ | JEP 414 |
+| **Vector API（第3次孵化）** | ⭐⭐⭐ | JEP 417 |
 | **代码片段** | ⭐⭐⭐ | JEP 413 |
 | **Foreign Function & Memory API** | ⭐⭐⭐ | JEP 419，第2次孵化 |
-| **@Snippets** | ⭐⭐⭐ | JEP 413 |
 
 ---
 

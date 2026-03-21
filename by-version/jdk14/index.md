@@ -24,7 +24,7 @@ JDK 14 引入了 Records（第1次预览）、Pattern Matching for instanceof（
 | **Helpful NPE** | ⭐⭐⭐⭐ | JEP 358，更清晰的空指针异常 |
 | **Switch 表达式（正式版）** | ⭐⭐⭐⭐ | JEP 361 |
 | **文本块（第2次预览）** | ⭐⭐⭐⭐ | JEP 368 |
-| **Packaging Tool** | ⭐⭐⭐ | JEP 343，打包工具 |
+| **Packaging Tool（孵化器）** | ⭐⭐⭐ | JEP 343，打包工具 |
 | **JFR 事件流** | ⭐⭐⭐ | JEP 349 |
 | **Foreign-Memory Access API（孵化器）** | ⭐⭐⭐ | JEP 370 |
 | **非易失性映射字节缓冲区** | ⭐⭐⭐ | JEP 352 |

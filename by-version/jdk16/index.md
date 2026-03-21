@@ -44,7 +44,7 @@ JDK 16 引入了 Records（正式版）、Pattern Matching for instanceof（正�
 | [JEP 380](https://openjdk.org/jeps/380) | Unix Domain Sockets | Unix 域套接字 |
 | [JEP 390](https://openjdk.org/jeps/390) | Warnings for Value-Based Classes | 值类警告 |
 | [JEP 387](https://openjdk.org/jeps/387) | Elastic Metaspace | 弹性元空间 |
-| [JEP 393](https://openjdk.org/jeps/393) | Foreign-Memory Access API (Second Incubator) | 外部内存 API |
+| [JEP 393](https://openjdk.org/jeps/393) | Foreign-Memory Access API (Third Incubator) | 外部内存 API |
 | [JEP 392](https://openjdk.org/jeps/392) | Packaging Tool | 打包工具 |
 | [JEP 396](https://openjdk.org/jeps/396) | Strongly Encapsulate JDK Internals | 强封装 JDK 内部 |
 | [JEP 397](https://openjdk.org/jeps/397) | Sealed Classes (Second Preview) | 密封类（第2次预览） |

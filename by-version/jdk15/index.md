@@ -46,7 +46,6 @@ JDK 15 引入了 Text Blocks（正式版）、Records（第2次预览）和 Seal
 | [JEP 372](https://openjdk.org/jeps/372) | Remove the Nashorn JavaScript Engine | 移除 Nashorn |
 | [JEP 377](https://openjdk.org/jeps/377) | ZGC: A Scalable Low-Latency Garbage Collector | ZGC（正式版） |
 | [JEP 379](https://openjdk.org/jeps/379) | Shenandoah: A Low-Pause-Time Garbage Collector | Shenandoah（正式版） |
-| [JEP 391](https://openjdk.org/jeps/391) | macOS/AArch64 Port | macOS AArch64 |
 | [JEP 383](https://openjdk.org/jeps/383) | Foreign-Memory Access API (Second Incubator) | 外部内存 API |
 | [JEP 339](https://openjdk.org/jeps/339) | Edwards-Curve Digital Signature Algorithm (EdDSA) | EdDSA 签名 |
 | [JEP 373](https://openjdk.org/jeps/373) | Reimplement the Legacy DatagramSocket API | DatagramSocket 重新实现 |
@@ -86,7 +85,7 @@ public final class Triangle implements Shape { }
 ```java
 // 动态生成无法直接访问的类
 MethodHandles.Lookup lookup = MethodHandles.lookup();
-Class<?> hiddenClass = lookup.defineHiddenClassFile(bytes, true);
+Class<?> hiddenClass = lookup.defineHiddenClass(bytes, true);
 ```
 
 ---

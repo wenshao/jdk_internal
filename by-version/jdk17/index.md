@@ -54,12 +54,11 @@ JDK 17 是继 JDK 11 之后的 LTS 版本，包含多项重要新特性：
 - **Text Blocks 正式版**：多行字符串
 - **强封装**：JDK 内部 API 默认不可访问
 - `Security Manager` 部分功能弃用
-- `rmiregistry` 工具移除
+- `rmid` 工具移除（JEP 407，RMI Activation）
 
 **推荐配置**:
 ```bash
 -XX:+UseZGC             # 使用 ZGC (正式)
--XX:+ZGenerational      # 需要 JDK 21+
 ```
 
 ---

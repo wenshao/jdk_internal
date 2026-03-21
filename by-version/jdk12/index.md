@@ -52,16 +52,17 @@ switch (day) {
     case MONDAY:
     case FRIDAY:
     case SUNDAY:
-        System.out.println("Weekend");
+        System.out.println(6);
         break;
     // ...
 }
 
 // JDK 12 (第1次预览)
 switch (day) {
-    case MONDAY, FRIDAY, SUNDAY -> System.out.println("Weekend");
-    case TUESDAY, WEDNESDAY, THURSDAY -> System.out.println("Weekday");
-    case SATURDAY -> System.out.println("Weekend");
+    case MONDAY, FRIDAY, SUNDAY -> System.out.println(6);
+    case TUESDAY                -> System.out.println(7);
+    case THURSDAY, SATURDAY     -> System.out.println(8);
+    case WEDNESDAY              -> System.out.println(9);
 }
 ```
 

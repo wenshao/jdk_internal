@@ -27,7 +27,7 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 | **Flight Recorder（正式版）** | JEP 328，生产环境性能分析 |
 | **ZGC（实验）** | JEP 333，低延迟 GC |
 | **Nest-Based Access Control** | JEP 181，简化私有访问 |
-| **Lambda 局部变量类型推断** | JEP 323，var 关键字 |
+| **Lambda 局部变量类型推断** | JEP 323，var（保留类型名） |
 | **Epsilon GC** | JEP 318，被动 GC |
 | **动态类文件常量** | JEP 309 |
 | **单文件源程序启动** | JEP 330 |
@@ -47,7 +47,7 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 | **G1 GC** | 默认 | 均衡性能和延迟 |
 | **ZGC** | 实验 (JEP 333) | Linux，低延迟 |
 | **Shenandoah** | 实验 (非 mainline OpenJDK，JDK 12 起通过 JEP 189 进入主线) | 低延迟 GC |
-| **Epsilon GC** | 正式 (JEP 318) | 被动 GC |
+| **Epsilon GC** | 实验 (JEP 318) | 被动 GC |
 
 ---
 
@@ -56,7 +56,7 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 ### 从 JDK 8 升级
 
 **重要变更**:
-- **HTTP Client 正式版**：替代 HttpURLConnection
+- **HTTP Client 正式版**：HttpURLConnection 的现代替代方案
 - **Flight Recorder 正式版**：生产环境性能分析
 - **var 关键字支持 Lambda**：局部变量类型推断扩展
 - `JavaFX` 从 JDK 中分离
@@ -64,8 +64,12 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 
 **推荐配置**:
 ```bash
+# 方案一：G1 GC（默认）
 -XX:+UseG1GC           # G1 仍然是默认
 -XX:MaxGCPauseMillis=200  # 目标暂停时间
+
+# 方案二：ZGC（实验，二选一，不可与 G1 同时使用）
+-XX:+UnlockExperimentalVMOptions
 -XX:+UseZGC            # 尝试 ZGC (实验)
 ```
 
