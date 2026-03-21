@@ -52,10 +52,12 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author:{username}+label%3Aintegra
 | 指标 | 数值 |
 |------|------|
 | 总贡献者 | 2,155 |
-| 总 Commits | 85,000+ |
-| 500+ commits 贡献者 | 40 |
-| 100+ commits 贡献者 | 172 |
+| 总 Integrated PRs | 20,000+ |
+| 100+ PRs 贡献者 | 50+ |
+| 50+ PRs 贡献者 | 100+ |
 | 时间跨度 | 2007 - 2026 |
+
+> **注**: PR 数据从 2021 年开始统计 (GitHub PR 集成后)
 
 ---
 

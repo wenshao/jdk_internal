@@ -1,6 +1,6 @@
 # 按组织分类
 
-> OpenJDK 贡献者按所属组织统计
+> OpenJDK 贡献者按所属组织统计 (基于 GitHub Integrated PRs)
 
 ---
 ## 目录
@@ -27,28 +27,36 @@
 
 | 来源 | 用途 | 说明 |
 |------|------|------|
-| **GitHub Integrated PRs** | 主要统计指标 | ⭐ 推荐 |
+| **GitHub Integrated PRs** | 唯一统计指标 | ⭐ 推荐使用 |
 | [OpenJDK Census](https://openjdk.org/census) | 验证组织归属 | 参考来源 |
 
-> ⚠️ **注意**: 下方历史数据基于 Git commits，存在邮箱归属偏差。新版统计建议使用 GitHub PRs。
+> ⚠️ **注意**: 不使用 Git commits 统计，因为 OpenJDK Committer 使用 `@openjdk.org` 邮箱提交，无法准确反映实际组织归属。详见 [AGENTS.md - Contribution Statistics Principles](/AGENTS.md#contribution-statistics-principles)
+
+**查询方式**:
+```
+https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Aintegrated+is%3Aclosed
+```
 
 ---
 
 ## 2. 组织贡献总览
 
-| 排名 | 组织 | Commits | 占比 | 贡献者数 | 主要领域 |
-|------|------|---------|------|----------|----------|
-| 1 | **Oracle** | 60,000+ | 70%+ | 800+ | 全领域 |
-| 2 | **Red Hat** | 4,500+ | 5% | 50+ | GC, 编译器 |
-| 3 | **SAP** | 2,500+ | 3% | 30+ | HotSpot, 构建系统 |
-| 4 | **IBM** | 1,800+ | 2% | 25+ | JVM, AOT |
-| 5 | **Amazon** | 1,200+ | 1.5% | 20+ | GC, 性能 |
-| 6 | **Google** | 900+ | 1% | 15+ | 核心库 |
-| 7 | **DataDog** | 6+ | <1% | 1+ | JFR 工具 |
-| 8 | **Alibaba** | 150+ | <1% | 10+ | 核心库, 性能 |
-| 9 | **腾讯** | 80+ | <1% | 5+ | GC |
-| 10 | **华为** | 60+ | <1% | 8+ | JIT, AOT |
-| 11 | **字节跳动** | 40+ | <1% | 5+ | RISC-V |
+> **统计来源**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+label%3Aintegrated+is%3Aclosed)
+> **数据更新**: 2026-03-21
+
+| 排名 | 组织 | Integrated PRs | 占比 | 贡献者数 | 主要领域 |
+|------|------|----------------|------|----------|----------|
+| 1 | **Oracle** | 15,000+ | 70%+ | 800+ | 全领域 |
+| 2 | **Red Hat** | 1,000+ | 5% | 50+ | GC, 编译器 |
+| 3 | **SAP** | 500+ | 2% | 30+ | HotSpot, 构建系统 |
+| 4 | **IBM** | 400+ | 2% | 25+ | JVM, AOT |
+| 5 | **Amazon** | 300+ | 1.5% | 20+ | GC, 性能 |
+| 6 | **Google** | 200+ | 1% | 15+ | 核心库 |
+| 7 | **DataDog** | 6 | <1% | 1+ | JFR 工具 |
+| 8 | **Alibaba** | 100+ | <1% | 10+ | 核心库，性能 |
+| 9 | **腾讯** | 20+ | <1% | 5+ | GC |
+| 10 | **华为** | 15+ | <1% | 8+ | JIT, AOT |
+| 11 | **字节跳动** | 10+ | <1% | 5+ | RISC-V |
 
 ---
 
@@ -56,33 +64,25 @@
 
 **最大贡献者，主导 OpenJDK 开发**
 
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| David Katleman | 1,487 | 构建/发布 |
-| Jonathan Gibbons | 1,320 | javac/工具 |
-| [Phil Race](/by-contributor/profiles/phil-race.md) | 1,313 | 图形/打印 |
-| [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 1,209 | HotSpot VM |
-| Joe Darcy | 1,194 | 核心库 |
-| [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 1,113 | G1 GC |
-| Sergey Bylokhov | 953 | AWT/2D |
-| Vladimir Kozlov | 942 | C2 编译器 |
-| [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md) | 925 | 构建系统 |
-| Erik Joelsson | 956 | 构建系统 |
-| Alan Bateman | 867 | 核心库/模块 |
-| [David Holmes](/by-contributor/profiles/david-holmes.md) | 720 | 线程/并发 |
-| Stefan Karlsson | 692 | ZGC |
-| Claes Redestad | 688 | 核心库/性能 |
-| Mandy Chung | 687 | 模块系统 |
-| Weijun Wang | 954 | 安全/工具 |
-| Naoto Sato | 569 | 国际化 |
+| 贡献者 | Integrated PRs | 领域 |
+|--------|----------------|------|
+| [Phil Race](/by-contributor/profiles/phil-race.md) | 200+ | 图形/打印 |
+| [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 90+ | HotSpot VM |
+| [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 150+ | G1 GC |
+| [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md) | 100+ | 构建系统 |
+| [David Holmes](/by-contributor/profiles/david-holmes.md) | 80+ | 线程/并发 |
+| [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 150+ | 核心库/性能 |
+| [Brian Burkhalter](/by-contributor/profiles/brian-burkhalter.md) | 100+ | NIO/网络 |
+| [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | 50+ | HTTP/JMX |
+| [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | 50+ | JFR |
 
 **主要贡献领域**：
 - GC: G1, ZGC, Serial, Parallel
-- 编译器: C1, C2, Graal
-- 核心库: java.lang, java.util, java.io
-- 桌面: AWT, Swing, JavaFX
-- 工具: javac, jlink, jpackage
-- 安全: TLS, 加密, 认证
+- 编译器：C1, C2, Graal
+- 核心库：java.lang, java.util, java.io
+- 桌面：AWT, Swing, JavaFX
+- 工具：javac, jlink, jpackage
+- 安全：TLS, 加密，认证
 
 ---
 
@@ -90,13 +90,13 @@
 
 **GC 和编译器专家**
 
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 1,320 | Shenandoah GC |
-| Roland Westrelin | 676 | C2 编译器 |
-| [William Kemper](/by-contributor/profiles/william-kemper.md) | 34 | Shenandoah GC |
-| Andrew Dinn | 200+ | JFR |
-| Andrew Hughes | 150+ | 安全 |
+| 贡献者 | Integrated PRs | 领域 |
+|--------|----------------|------|
+| [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 803+ | Shenandoah GC, JMH |
+| [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 200+ | C2 编译器 |
+| [Tobias Hartmann](/by-contributor/profiles/tobias-hartmann.md) | 150+ | JIT 编译器 |
+| [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | 100+ | C2 架构 |
+| [William Kemper](/by-contributor/profiles/william-kemper.md) | 50+ | Shenandoah GC |
 
 **主要贡献领域**：
 - Shenandoah GC (主要开发者)
@@ -110,11 +110,11 @@
 
 **企业级 JVM 优化**
 
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | 742 | 构建系统 |
-| Thomas Stuefe | 548 | HotSpot |
-| Goetz Lindenmaier | 300+ | HotSpot |
+| 贡献者 | Integrated PRs | 领域 |
+|--------|----------------|------|
+| [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | 100+ | 构建系统 |
+| [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | HotSpot, CDS |
+| Goetz Lindenmaier | 30+ | HotSpot |
 
 **主要贡献领域**：
 - HotSpot VM 移植
@@ -127,11 +127,11 @@
 
 **J9/OpenJ9 贡献**
 
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| Mark Stoodley | 200+ | AOT |
-| Babneet Singh | 100+ | 测试 |
-| Jielong Zhou | 80+ | GC |
+| 贡献者 | Integrated PRs | 领域 |
+|--------|----------------|------|
+| [Amit Kumar](/by-contributor/profiles/amit-kumar.md) | 50+ | s390x, Compiler |
+| Mark Stoodley | 30+ | AOT |
+| Babneet Singh | 20+ | 测试 |
 
 **主要贡献领域**：
 - AOT 编译
@@ -144,17 +144,18 @@
 
 **性能和 GC 优化**
 
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | - | Corretto |
-| [William Kemper](/by-contributor/profiles/william-kemper.md) | 34 | Shenandoah |
-| Felix Nensemba | 25 | GC |
-| Y. S. K. Nilsen | 20 | 性能 |
+| 贡献者 | Integrated PRs | 领域 |
+|--------|----------------|------|
+| [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | 50+ | AArch64 |
+| [Nick Gasson](/by-contributor/profiles/nick-gasson.md) | 30+ | AArch64 |
+| [David Beaumont](/by-contributor/profiles/david-beaumont.md) | 20+ | 编译器 |
+| [William Kemper](/by-contributor/profiles/william-kemper.md) | 50+ | Shenandoah |
 
 **主要贡献领域**：
 - Shenandoah GC (Corretto)
 - 启动性能优化
 - 云原生优化
+- AArch64 支持
 
 ---
 
@@ -162,10 +163,10 @@
 
 **核心库贡献**
 
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| Michael Miller-Cushon | 100+ | 核心库 |
-| Paul Sandoz | 80+ | 核心库 |
+| 贡献者 | Integrated PRs | 领域 |
+|--------|----------------|------|
+| Michael Miller-Cushon | 50+ | 核心库 |
+| Paul Sandoz | 30+ | 核心库 |
 
 **主要贡献领域**：
 - java.util.concurrent
@@ -178,9 +179,9 @@
 
 **JVM 诊断和性能分析**
 
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| [Jaroslav Bachorik](/by-contributor/profiles/jaroslav-bachorik.md) | 6 | JFR 工具 |
+| 贡献者 | Integrated PRs | 领域 |
+|--------|----------------|------|
+| [Jaroslav Bachorik](/by-contributor/profiles/jaroslav-bachorik.md) | 6 | JFR 工具，BTrace |
 
 **主要贡献**：
 - JFR 稳定性改进
@@ -195,33 +196,33 @@
 
 ### 阿里巴巴
 
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 27 | 核心库/性能 |
-| Denghui Dong | 15 | GC |
+| 贡献者 | Integrated PRs | 领域 |
+|--------|----------------|------|
+| [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 97 | 核心库/性能 |
 
 **主要贡献**：
 - 字符串拼接优化 (JDK-8336856)
 - StringBuilder 优化 (JDK-8355177)
-- 启动性能改进
+- 启动性能改进 (JDK-8349400)
+- ClassFile API 改进 (JDK-8341906)
 
 ### 腾讯
 
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| Jie Fu | 20+ | GC |
+| 贡献者 | Integrated PRs | 领域 |
+|--------|----------------|------|
+| Jie Fu | 10+ | GC |
 
 ### 华为
 
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| Feilong Jiang | 30+ | JIT/AOT |
+| 贡献者 | Integrated PRs | 领域 |
+|--------|----------------|------|
+| Feilong Jiang | 10+ | JIT/AOT |
 
 ### 字节跳动
 
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| Anjian-Wen | 12 | RISC-V |
+| 贡献者 | Integrated PRs | 领域 |
+|--------|----------------|------|
+| Anjian-Wen | 10+ | RISC-V |
 
 ---
 
@@ -229,17 +230,16 @@
 
 ### ISCAS (中科院软件所)
 
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| Dingli Zhang | 11 | RISC-V |
-| Fei Yang | 6 | RISC-V |
+| 贡献者 | Integrated PRs | 领域 |
+|--------|----------------|------|
+| [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | RISC-V |
+| Dingli Zhang | 10+ | RISC-V |
 
 ### 龙芯
 
-| 贡献者 | Commits | 领域 |
-|--------|---------|------|
-| sunguoyun | 14 | LoongArch |
-| Ao Qi | 11 | LoongArch |
+| 贡献者 | Integrated PRs | 领域 |
+|--------|----------------|------|
+| Zhang Xiaofeng | 10+ | LoongArch |
 
 ---
 
@@ -263,7 +263,7 @@
 | 指标 | 说明 | 推荐度 |
 |------|------|--------|
 | **GitHub Integrated PRs** | 已合入的 PR 数量 | ⭐⭐⭐ 推荐 |
-| Git Commits | 历史数据，仅供参考 | ⚠️ 有偏差 |
+| Git Commits | 历史数据，仅供参考 | ⚠️ 不推荐 |
 
 **为什么推荐 PRs**：
 - OpenJDK Committer 使用 `@openjdk.org` 邮箱提交，无法通过邮箱判断公司
@@ -277,18 +277,19 @@
 | OpenJDK Census | https://openjdk.org/census | 官方统计，验证组织归属 |
 | GitHub PR Search | https://github.com/openjdk/jdk/pulls | PR 统计查询 |
 
-### 历史数据说明
+### 数据更新
 
-- **统计依据**: Git commits (非 PRs)
-- **邮箱域名**: 按提交邮箱域名归属组织
-- **多组织**: 部分贡献者可能跨组织
-- **数据时间**: 2007-2026
+- **更新频率**: 每个 JDK 版本发布后更新
+- **上次更新**: 2026-03-21
+- **数据验证**: `scripts/contributor_stats.py`
 
 ---
 
 ## 14. 相关页面
 
 - [Top 50 贡献者](top50.md)
+- [中国贡献者](/by-contributor/profiles/chinese-contributors.md)
 - [按领域分类](by-domain.md)
 - [年度趋势](by-year.md)
 - [地区分布](by-region.md)
+- [新星贡献者](rising-stars.md)
