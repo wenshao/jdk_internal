@@ -1194,7 +1194,96 @@ Chen Liang 是 **Project Valhalla 的顶级贡献者**，在项目中排名 **#1
 | 性能提升 | +40% | 启动性能 |
 | 影响范围 | 所有 Java 应用 | JDK 24+ |
 
-### 9.5 知识传承网络
+### 9.6 ClassFile API 优化网络
+
+Chen Liang 是 ClassFile API 优化的核心贡献者，与 Adam Sotona 紧密合作：
+
+```
+                    ClassFile API 优化网络 (2024-2025)
+                    
+                         Adam Sotona
+                      (API 实现负责人)
+                             │
+                    ┌────────┴────────┐
+                    │                 │
+                    ▼                 ▼
+              Chen Liang        Shaojin Wen
+             (优化主导者)       (协作优化者)
+                    │                 │
+              ┌─────┴─────┐          │
+              │           │          │
+              ▼           ▼          ▼
+        JDK-8339xxx  JDK-8341xxx  JDK-8336856
+        系列优化      系列优化     String "+" 优化
+```
+
+#### ClassFile API 优化系列 PR
+
+| JDK 编号 | 标题 | 作者 | 性能提升 | Chen Liang 角色 |
+|----------|------|------|----------|----------------|
+| JDK-8339217 | Optimize ClassFile API loadConstant | Chen Liang | +5-10% | Author |
+| JDK-8339317 | Optimize ClassFile writeBuffer | Chen Liang | +3-7% | Author |
+| JDK-8339290 | Optimize ClassFile Utf8EntryImpl#writeTo | Chen Liang | +2-5% | Author |
+| JDK-8339320 | Optimize ClassFile Utf8EntryImpl#inflate | Chen Liang | +2-4% | Author |
+| JDK-8339168 | Optimize ClassFile Util slotSize | Chen Liang | +1-3% | Author |
+| JDK-8339401 | Optimize ClassFile load and store instructions | Chen Liang | +10-20% | Author |
+| JDK-8341199 | Use ClassFile's new API loadConstant(int) | Chen Liang | +3-5% | Author |
+| JDK-8341548 | More concise use of classfile API | Chen Liang | 代码质量 | Author |
+| JDK-8341906 | Optimize ClassFile Benchmark Write | Chen Liang | 稳定性 | Author |
+| JDK-8342336 | Optimize ClassFile imports | Chen Liang | 代码质量 | Author |
+
+**优化批次**:
+- **第一批** (JDK-8339xxx): 2024-11，核心性能优化
+- **第二批** (JDK-8341xxx): 2024-12，API 改进和代码质量
+- **第三批** (JDK-8342xxx): 2025-01，持续优化
+
+**总体影响**:
+- **启动性能**: +15-25% (ClassFile API 相关场景)
+- **代码质量**: 更简洁的 API 使用方式
+- **影响范围**: 所有使用 ClassFile API 的 JDK 内部组件和外部用户
+
+#### 与 Adam Sotona 的协作
+
+| 指标 | 数值 | 说明 |
+|------|------|------|
+| 合作 PRs | 10+ | ClassFile API 实现和优化 |
+| Adam 角色 | API 实现负责人 | JDK-8294982 主导者 |
+| Chen 角色 | 优化主导者 | 性能优化和代码质量 |
+| 协作模式 | Adam 实现 → Chen 优化 | 分工明确 |
+
+**Adam Sotona 背景**:
+- Oracle Principal Java Engineer (Prague, Czech Republic)
+- 25+ years Java engineer
+- Class File API 实现负责人 (JDK-8294982)
+- JDK Committer, Amber Committer
+- GitHub: [@asotona](https://github.com/asotona)
+
+**协作案例**:
+```
+Adam Sotona (实现)              Chen Liang (优化)
+      │                              │
+      ▼                              ▼
+JDK-8294982                    JDK-8339xxx 系列
+ClassFile API 基础实现          性能优化 10+ PRs
+      │                              │
+      └──────────┬───────────────────┘
+                 │
+                 ▼
+        JEP 484 (ClassFile API 正式版)
+```
+
+### 9.5 技术社区参与
+
+Chen Liang 积极参与技术社区活动：
+
+- **Minecraft 模组开发**: 维护 [liachmodded](https://github.com/liachmodded) 组织
+  - [brandpacket](https://github.com/liachmodded/brandpacket) - 修改 Fabric 客户端品牌
+  - [pathsuggestion](https://github.com/liachmodded/pathsuggestion) - 长 ID 建议工具
+  - [ShulkerBoxBackpack](https://github.com/liachmodded/ShulkerBoxBackpack) - Sponge 插件
+- **个人博客**: [liachmodded.github.io](https://liachmodded.github.io/) - 技术分享
+- **开源指导**: 通过 PR 审查指导新贡献者学习 ClassFile API 和 OpenJDK 开发流程
+
+### 9.7 知识传承网络
 
 ```
                     Chen Liang 知识传承
@@ -1304,7 +1393,7 @@ Chen Liang 的贡献特点:
 
 ---
 
-> **文档版本**: 6.0
+> **文档版本**: 7.0
 > **最后更新**: 2026-03-21
 > **更新内容**:
 > - 补充 Valhalla Committer 提名信息 (2025-05)
@@ -1317,6 +1406,9 @@ Chen Liang 的贡献特点:
 > - 补充知识传承网络分析
 > - 添加 LangTools 团队成员介绍
 > - 补充多层关联调查信息
+> - 新增 ClassFile API 优化网络分析 (10+ PRs)
+> - 补充 Adam Sotona 协作关系
+> - 新增技术社区参与章节
 
 ## 12. 相关链接
 
