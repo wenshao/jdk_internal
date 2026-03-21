@@ -193,7 +193,7 @@ void main(String[] args) {
 | JEP 502 | Stable Values | 🔍 预览 | 稳定值 | → |
 | JEP 512 | Compact Source Files and Instance Main Methods | ✅ 正式 | 简化源文件 | → |
 | [JEP 513](/jeps/language/jep-513.md) | Flexible Constructor Bodies | ✅ 正式 | 灵活构造器 | → |
-| [JEP 503](/jeps/removed/jep-503.md) | Remove 32-bit x86 Port | ✅ 正式 | 移除 32 位 x86 | → |
+| [JEP 503](/jeps/performance/jep-503.md) | Remove 32-bit x86 Port | ✅ 正式 | 移除 32 位 x86 | → |
 
 ### 性能
 

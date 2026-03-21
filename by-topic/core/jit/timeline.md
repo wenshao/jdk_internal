@@ -361,7 +361,7 @@ if (obj instanceof Point(int x, int y)) {
 
 **JEP 文档:**
 - [JEP 243](/jeps/performance/jep-243.md)
-- [JEP 244](/jeps/performance/jep-244.md)
+- [JEP 244](https://openjdk.org/jeps/244)
 
 **技术博客:**
 - [HotSpot JIT Compiler](https://wiki.openjdk.org/display/HotSpot/)

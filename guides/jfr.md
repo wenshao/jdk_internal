@@ -121,4 +121,4 @@ jcmd <pid> JFR.start settings=cpu-profiling
 
 - [JDK Mission Control](https://www.oracle.com/java/technologies/jdk-mission-control.html)
 - [JFR 配置参考](https://docs.oracle.com/en/java/javase/21/jfapi/)
-- [性能分析最佳实践](/guides/performance.md)
+- 性能分析最佳实践

@@ -84,4 +84,4 @@ PEM 编码支持，简化证书处理。
 ## 5. 相关链接
 
 - Java 安全指南 
-- [加密 API 文档](/modules/java.base/security/)
+- [加密 API 文档](https://docs.oracle.com/en/java/javase/21/security/)

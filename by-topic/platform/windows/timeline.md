@@ -182,7 +182,7 @@ JDK 17 ─── 注册表性能优化
 
 | 贡献者 | 组织 | 主要贡献 |
 |--------|------|----------|
-| [Andrew Leonard](/by-contributor/profiles/andrew-leonard.md) | Oracle | Windows 构建 |
+| Andrew Leonard | Oracle | Windows 构建 |
 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | Red Hat | 跨平台支持 |
 
 ---
@@ -191,7 +191,7 @@ JDK 17 ─── 注册表性能优化
 
 - [JEP 343](/jeps/tools/jep-343.md)
 - [JEP 449](/jeps/tools/jep-449.md)
-- [JEP 479](/jeps/tools/jep-479.md)
+- [JEP 479](https://openjdk.org/jeps/479)
 - [Windows 服务最佳实践](https://docs.microsoft.com/en-us/windows/win32/services/)
 
 → [返回 Windows 平台](./)

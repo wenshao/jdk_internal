@@ -679,7 +679,7 @@ ModuleLayer.boot().addOpens(
 ### 外部参考
 
 **JEP 文档:**
-- [JEP 220](/jeps/language/jep-220.md)
+- [JEP 220](https://openjdk.org/jeps/220)
 - [JEP 467](/jeps/tools/jep-467.md)
 
 **技术文档:**

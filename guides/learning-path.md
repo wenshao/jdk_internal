@@ -25,7 +25,7 @@
 1. [JEP 512: Compact Source Files](/jeps/language/jep-512.md)
    └── 学习如何用最少的代码写 Java 程序
    
-2. [JEP 511: Module Import Declarations](/jeps/language/jep-511.md)
+2. [JEP 511: Module Import Declarations](/jeps/tools/jep-511.md)
    └── 学习如何简化 import 语句
    
 3. [JEP 530: Primitive Types in Patterns](/jeps/language/jep-530.md)
@@ -59,7 +59,7 @@ void main() {
 
 ```
 核心特性
-├── [JEP 511: Module Import Declarations](/jeps/language/jep-511.md)
+├── [JEP 511: Module Import Declarations](/jeps/tools/jep-511.md)
 ├── [JEP 502: Stable Values](/jeps/performance/jep-502.md)
 ├── [JEP 506: Scoped Values](/jeps/concurrency/jep-506.md)
 └── [JEP 525: Structured Concurrency](/jeps/concurrency/jep-525.md)
@@ -111,7 +111,7 @@ HttpClient client = HttpClient.newBuilder()
 架构影响评估
 ├── [JEP 500: Make Final Mean Final](/jeps/removed/jep-500.md) - 安全影响
 ├── [JEP 503: Remove 32-bit x86](/jeps/performance/jep-503.md) - 平台支持
-├── [JEP 504: Remove Applet API](/jeps/performance/jep-504.md) - 遗留系统
+├── [JEP 504: Remove Applet API](/jeps/removed/jep-504.md) - 遗留系统
 └── [迁移指南](migration-guide.md) - 升级策略
 
 性能优化

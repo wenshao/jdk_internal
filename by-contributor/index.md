@@ -46,7 +46,7 @@
 | [性能优化](/by-topic/core/performance/) | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | [性能优化](/by-topic/core/performance/timeline.md) |
 | [JFR](/by-topic/core/performance/) | [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | [JFR 演进](/by-topic/core/performance/timeline.md) |
 | [编译器](/by-topic/core/jit/) | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | [JIT 编译](/by-topic/core/jit/timeline.md) |
-| [语言特性](/by-topic/language/) | [Jan Lahoda](/by-contributor/profiles/jan-lahoda.md), [Chen Liang](/by-contributor/profiles/chen-liang.md) | [语言演进](/by-topic/language/timeline.md) |
+| [语言特性](/by-topic/language/) | [Jan Lahoda](/by-contributor/profiles/jan-lahoda.md), [Chen Liang](/by-contributor/profiles/chen-liang.md) | [语言演进](/by-topic/language/) |
 | [HTTP 客户端](/by-topic/concurrency/http/) | [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | [HTTP 客户端](/by-topic/concurrency/http/timeline.md) |
 | [国际化](/by-topic/security/i18n/) | [Naoto Sato](/by-contributor/profiles/naoto-sato.md) | [国际化](/by-topic/security/i18n/timeline.md) |
 
@@ -143,7 +143,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | [ByteDance](/contributors/orgs/bytedance.md) | [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | [详情](/by-contributor/profiles/anjian-wen.md) |
 | [DataDog](/contributors/orgs/) | [Jaroslav Bachorik](/by-contributor/profiles/jaroslav-bachorik.md), [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | [详情](/by-contributor/profiles/jaroslav-bachorik.md) |
 | [Tencent](/contributors/orgs/tencent.md) | (无主要贡献者) | - |
-| [Huawei](/contributors/orgs/huawei.md) | [Fei Yang](/by-contributor/profiles/fei-yang.md) | [详情](/by-contributor/profiles/fei-yang.md) |
+| Huawei | [Fei Yang](/by-contributor/profiles/fei-yang.md) | [详情](/by-contributor/profiles/fei-yang.md) |
 | [龙芯](/contributors/orgs/loongson.md) | Zhang Xiaofeng, Liu Xinyu | [详情](/contributors/orgs/loongson.md) |
 
 ### 按地区
@@ -284,7 +284,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 |--------|------|----------|------|-------|
 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | [Oracle](/contributors/orgs/oracle.md) | [C2 编译器](/by-topic/core/jit/) | [详情](/by-contributor/profiles/emanuel-peter.md) | [→](/by-topic/core/jit/) |
 | [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | [Oracle](/contributors/orgs/oracle.md) | [JFR](/by-topic/core/performance/) | [详情](/by-contributor/profiles/erik-gahlin.md) | [→](/by-topic/core/performance/) |
-| [Fei Yang](/by-contributor/profiles/fei-yang.md) | [Huawei](/contributors/orgs/huawei.md) | [RISC-V](/by-topic/platform/) | [详情](/by-contributor/profiles/fei-yang.md) | [→](/by-topic/platform/) |
+| [Fei Yang](/by-contributor/profiles/fei-yang.md) | Huawei | [RISC-V](/by-topic/platform/) | [详情](/by-contributor/profiles/fei-yang.md) | [→](/by-topic/platform/) |
 | Han Gq | - | - | [详情](/by-contributor/profiles/han-gq.md) | - |
 | Hamlin Li | - | - | [详情](/by-contributor/profiles/hamlin-li.md) | - |
 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | [Oracle](/contributors/orgs/oracle.md) | [AOT/CDS](/by-topic/core/classloading/) | [详情](/by-contributor/profiles/ioi-lam.md) | [→](/by-topic/core/classloading/) |
@@ -488,9 +488,9 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 19 | [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | [Oracle](/contributors/orgs/oracle.md) | 130+ | Build | [详情](/by-contributor/profiles/matthias-baesken.md) |
 | 20 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | [Oracle](/contributors/orgs/oracle.md) | 120+ | C2 编译器 | [详情](/by-contributor/profiles/emanuel-peter.md) |
 | 21 | [William Kemper](/by-contributor/profiles/william-kemper.md) | [Amazon](/contributors/orgs/amazon.md) | 123 | Shenandoah GC | [详情](/by-contributor/profiles/william-kemper.md) |
-| 22 | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | [Datadog](/contributors/orgs/datadog.md) | 100+ | Compact Object Headers | [详情](/by-contributor/profiles/roman-kennke.md) |
+| 22 | [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | Datadog | 100+ | Compact Object Headers | [详情](/by-contributor/profiles/roman-kennke.md) |
 | 23 | [Justin Lu](/by-contributor/profiles/justin-lu.md) | [Oracle](/contributors/orgs/oracle.md) | 100+ | 本地化 | [详情](/by-contributor/profiles/justin-lu.md) |
-| 24 | [Fei Yang](/by-contributor/profiles/fei-yang.md) | [Huawei](/contributors/orgs/huawei.md) | 100 | RISC-V | [详情](/by-contributor/profiles/fei-yang.md) |
+| 24 | [Fei Yang](/by-contributor/profiles/fei-yang.md) | Huawei | 100 | RISC-V | [详情](/by-contributor/profiles/fei-yang.md) |
 | 25 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | [Alibaba](/contributors/orgs/alibaba.md) | 97 | 核心库 | [详情](/by-contributor/profiles/shaojin-wen.md) |
 | 26 | [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md) | [Oracle](/contributors/orgs/oracle.md) | 90+ | Build | [详情](/by-contributor/profiles/magnus-ihse-bursie.md) |
 | 27 | [Leonid Mesnik](/by-contributor/profiles/leonid-mesnik.md) | [Oracle](/contributors/orgs/oracle.md) | 80+ | JVMTI | [详情](/by-contributor/profiles/leonid-mesnik.md) |
@@ -507,7 +507,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 38 | [Jatin Bhateja](/by-contributor/profiles/jatin-bhateja.md) | [Intel](/contributors/orgs/intel.md) | 50+ | Vector API | [详情](/by-contributor/profiles/jatin-bhateja.md) |
 | 39 | [Hamlin Li](/by-contributor/profiles/hamlin-li.md) | [Oracle](/contributors/orgs/oracle.md) | 50+ | C2 编译器 | [详情](/by-contributor/profiles/hamlin-li.md) |
 | 40 | [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | [ByteDance](/contributors/orgs/bytedance.md) | 25 | RISC-V | [详情](/by-contributor/profiles/anjian-wen.md) |
-| 41 | [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | [Red Hat](/contributors/orgs/red-hat.md) | 40+ | C2 编译器 | [详情](/by-contributor/profiles/rooland-westrelin.md) |
+| 41 | [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | [Red Hat](/contributors/orgs/redhat.md) | 40+ | C2 编译器 | [详情](/by-contributor/profiles/rooland-westrelin.md) |
 | 42 | [Alan Bateman](/by-contributor/profiles/alan-bateman.md) | [Oracle](/contributors/orgs/oracle.md) | 40+ | 并发 | [详情](/by-contributor/profiles/alan-bateman.md) |
 | 43 | [Per Minborg](/by-contributor/profiles/per-minborg.md) | [Oracle](/contributors/orgs/oracle.md) | 40+ | Core Libraries | [详情](/by-contributor/profiles/per-minborg.md) |
 | 44 | [Markus Grönlund](/by-contributor/profiles/markus-gronlund.md) | [Oracle](/contributors/orgs/oracle.md) | 40+ | JFR | [详情](/by-contributor/profiles/markus-gronlund.md) |
@@ -564,7 +564,7 @@ JDK 26 开发周期内的贡献者排名。
 | 贡献者 | 组织 | 累计 PRs | 领域 | 档案 |
 |--------|------|----------|------|------|
 | [Shaojin Wen (温绍锦)](/by-contributor/profiles/shaojin-wen.md) | [Alibaba](/contributors/orgs/alibaba.md) | 97 | 核心库优化 | [详情](/by-contributor/profiles/shaojin-wen.md) |
-| [Fei Yang](/by-contributor/profiles/fei-yang.md) | [Huawei](/contributors/orgs/huawei.md) | 30 | RISC-V | [详情](/by-contributor/profiles/fei-yang.md) |
+| [Fei Yang](/by-contributor/profiles/fei-yang.md) | Huawei | 30 | RISC-V | [详情](/by-contributor/profiles/fei-yang.md) |
 | [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | [ByteDance](/contributors/orgs/bytedance.md) | 25 | RISC-V | [详情](/by-contributor/profiles/anjian-wen.md) |
 | [Sendaoyan](/by-contributor/profiles/sendaoyan.md) | Independent | 202 | 测试 | [详情](/by-contributor/profiles/sendaoyan.md) |
 

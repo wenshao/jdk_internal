@@ -213,7 +213,7 @@ JDK 8 ───────► JDK 11 ───────► JDK 17 ───�
 | JEP 521 | Generational Shenandoah | [分析](/jeps/gc/jep-521.md) |
 | JEP 522 | G1 GC Throughput | [分析](/jeps/gc/jep-522.md) |
 | JEP 525 | Structured Concurrency (Preview) | [分析](/jeps/concurrency/jep-525.md) |
-| JEP 526 | Lazy Constants | [分析](/jeps/concurrency/jep-526.md) |
+| JEP 526 | Lazy Constants | [分析](/jeps/tools/jep-526.md) |
 | JEP 530 | Primitive Types in Patterns | [分析](/jeps/language/jep-530.md) |
 | [更多 JEP](/jeps/) | 完整列表 | → |
 

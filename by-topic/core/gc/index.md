@@ -485,7 +485,7 @@ java -XX:+UseShenandoahGC -jar app.jar
 | 1 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 600 | Oracle | G1 GC 维护者 |
 | 2 | Albert Mingkun Yang | 202 | Oracle | G1 GC, 内存管理 |
 | 3 | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | 129 | Oracle | C++ 现代化 |
-| 4 | [Ivan Walulya](/by-contributor/profiles/ivan-walulya.md) | 83 | Oracle | G1 GC |
+| 4 | Ivan Walulya | 83 | Oracle | G1 GC |
 | 5 | Stefan Karlsson | 75 | Oracle | 并发 GC |
 | 6 | [Stefan Johansson](/by-contributor/profiles/stefan-johansson.md) | 56 | Oracle | G1 GC |
 
@@ -560,7 +560,7 @@ Oracle: ████████████████████████
 | **Oracle** | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 546+ | JEP 522 | `g1CardTableClaimTable.cpp` |
 | **Oracle** | [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) | 202+ | - | `g1CollectedHeap.cpp` |
 | **Oracle** | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | 129+ | - | `g1BarrierSet.cpp` |
-| **Oracle** | [Ivan Walulya](/by-contributor/profiles/ivan-walulya.md) | 83+ | - | `g1ConcurrentRefine.cpp` |
+| **Oracle** | Ivan Walulya | 83+ | - | `g1ConcurrentRefine.cpp` |
 
 **JEP 522 核心团队**:
 - **Owner**: Ivan Walulya (Oracle)
@@ -4165,7 +4165,7 @@ env.java.opts.taskmanager: -Xmx4g -Xms4g
 | | [Erik Österlund](/by-contributor/profiles/erik-osterlund.md) (ZGC Core) |
 | | [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) (G1 GC) |
 | | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) (G1 GC) |
-| | [Ivan Walulya](/by-contributor/profiles/ivan-walulya.md) (G1 GC) |
+| | Ivan Walulya (G1 GC) |
 | | [Stefan Johansson](/by-contributor/profiles/stefan-johansson.md) (G1 GC) |
 | **组织页面** | [Oracle](/contributors/orgs/oracle.md) (70%+ GC 贡献) |
 | | [Red Hat](/contributors/orgs/redhat.md) (Shenandoah 主导) |
@@ -4398,7 +4398,7 @@ git log --oneline -- src/hotspot/share/gc/shenandoah/
 - [Erik Österlund](/by-contributor/profiles/erik-osterlund.md) - ZGC Core (Oracle) - 96+ PRs
 - [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) - G1 GC (Oracle) - 200+ PRs
 - [Kim Barrett](/by-contributor/profiles/kim-barrett.md) - G1 GC (Oracle) - 129+ PRs
-- [Ivan Walulya](/by-contributor/profiles/ivan-walulya.md) - G1 GC (Oracle) - 83+ PRs
+- Ivan Walulya - G1 GC (Oracle) - 83+ PRs
 - [Stefan Johansson](/by-contributor/profiles/stefan-johansson.md) - G1 GC (Oracle) - 56+ PRs
 
 **组织页面**:

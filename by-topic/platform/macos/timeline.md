@@ -213,14 +213,14 @@ xcrun stapler staple MyApp.app
 
 | 贡献者 | 组织 | 主要贡献 |
 |--------|------|----------|
-| [Kevin Walls](/by-contributor/profiles/kevin-walls.md) | Oracle | macOS 构建 |
+| Kevin Walls | Oracle | macOS 构建 |
 | [Goetz Lindenmaier](/by-contributor/profiles/goetz-lindenmaier.md) | Oracle | 跨平台支持 |
 
 ---
 
 ## 12. 参考资料
 
-- [JEP 391](/jeps/platform/jep-391.md)
+- [JEP 391](https://openjdk.org/jeps/391)
 - [JEP 382](/jeps/client/jep-382.md)
 - [Apple 开发者文档](https://developer.apple.com/macos/)
 

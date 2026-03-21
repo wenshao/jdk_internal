@@ -39,7 +39,7 @@ switch (value) {
 
 ---
 
-### [JEP 526: Lazy Constants](/jeps/concurrency/jep-526.md)
+### [JEP 526: Lazy Constants](/jeps/tools/jep-526.md)
 
 **状态**: 第二次预览  
 **概述**: 引入延迟初始化的常量声明。
@@ -103,7 +103,7 @@ HttpClient client = HttpClient.newBuilder()
 
 ## 7. 移除与清理
 
-### [JEP 504: Remove the Applet API](/jeps/performance/jep-504.md)
+### [JEP 504: Remove the Applet API](/jeps/removed/jep-504.md)
 
 **状态**: 正式移除  
 **概述**: 正式移除已废弃的 Applet API，包括 `java.applet` 包。

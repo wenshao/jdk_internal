@@ -26,7 +26,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Thomas Stuefe |
-| **当前组织** | [Red Hat](/contributors/orgs/red-hat.md) |
+| **当前组织** | [Red Hat](/contributors/orgs/redhat.md) |
 | **职位** | JVM Engineer |
 | **位置** | 德国 |
 | **GitHub** | [@tstuefe](https://github.com/tstuefe) |
