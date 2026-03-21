@@ -6,6 +6,15 @@
 
 ---
 
+## 快速导航
+
+| 页面 | 说明 |
+|------|------|
+| **[Java 平台变体](variants.md)** | Android、GraalVM Native Image、WebAssembly |
+| **[发行版对比](#快速对比)** | Oracle、Temurin、Corretto、Dragonwell 等 |
+
+---
+
 ## 概述
 
 OpenJDK 是 Java 的官方参考实现，各大厂商和组织基于 OpenJDK 构建了自己的 JDK 发行版。
