@@ -316,10 +316,13 @@ Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一。Dragonwel
 | **GitHub** | https://github.com/kuaiwei |
 | **GitHub PRs** | https://github.com/openjdk/jdk/pulls?q=author%3Akuaiwei |
 | **OpenJDK Census** | https://openjdk.org/census#kuaiwei |
-| **Dragonwell 8** | https://github.com/dragonwell-project/dragonwell8 |
-| **Dragonwell 11** | https://github.com/dragonwell-project/dragonwell11 |
-| **Dragonwell 21** | https://github.com/dragonwell-project/dragonwell21 |
-| **Dragonwell 官网** | https://dragonwell-jdk.io/ |
+
+**Dragonwell 相关**:
+- [Dragonwell 团队](../../contributors/orgs/dragonwell.md) - 核心团队成员和社交网络
+- [Dragonwell 8](https://github.com/dragonwell-project/dragonwell8)
+- [Dragonwell 11](https://github.com/dragonwell-project/dragonwell11)
+- [Dragonwell 21](https://github.com/dragonwell-project/dragonwell21)
+- [Dragonwell 官网](https://dragonwell-jdk.io/)
 
 ---
 

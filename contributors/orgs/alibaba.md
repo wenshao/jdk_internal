@@ -37,7 +37,7 @@
 | **贡献者数** | 4 |
 | **活跃时间** | 2021 - 至今 |
 | **主要领域** | 核心库、C2 编译器、AArch64、ZGC |
-| **Dragonwell** | [Alibaba Dragonwell](https://github.com/alibaba/dragonwell8) |
+| **Dragonwell** | [Alibaba Dragonwell](https://github.com/alibaba/dragonwell8), [Dragonwell Team](dragonwell.md) |
 
 > **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。查询方式：`repo:openjdk/jdk author:xxx type:pr label:integrated`
 
@@ -491,6 +491,21 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 | 平台 | Linux, Windows, macOS |
 
 **版本**: Dragonwell 8 / 11 / 17 / 21
+
+**团队链接**:
+- [Dragonwell 团队](dragonwell.md) - 核心团队成员和社交网络
+- [Sanhong Li](../../by-contributor/profiles/sanhong.md) - ASE 2021 论文作者，JVM 团队
+- [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) - C2 编译器专家
+- [Long Yang](../../by-contributor/profiles/yanglong1010.md) - JVM 团队，杭州
+- [Sendaoyan Yan](../../by-contributor/profiles/sendaoyan.md) - 编译器测试工程师
+- [Joshua Zhu](../../by-contributor/profiles/joshua-zhu.md) - 上海团队
+
+**外部链接**:
+- [Dragonwell 官网](https://dragonwell-jdk.io/)
+- [GitHub Org](https://github.com/dragonwell-project)
+- [Dragonwell 8](https://github.com/dragonwell-project/dragonwell8)
+- [Dragonwell 11](https://github.com/dragonwell-project/dragonwell11)
+- [Dragonwell 21](https://github.com/dragonwell-project/dragonwell21)
 
 ---
 
