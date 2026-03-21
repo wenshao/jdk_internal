@@ -38,87 +38,87 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 | 贡献者 | 组织 | Census | 档案 |
 |--------|------|--------|------|
-| Aleksey Shipilev | Amazon | [@shade](https://openjdk.org/census#shade) | [详情](profiles/aleksey-shipilev.md) |
-| Thomas Schatzl | Oracle | [@tschatzl](https://openjdk.org/census#tschatzl) | [详情](profiles/thomas-schatzl.md) |
-| Albert Mingkun Yang | Oracle | [@ayoung](https://openjdk.org/census#ayoung) | [详情](profiles/albert-mingkun-yang.md) |
-| William Kemper | Amazon | [@wkemper](https://openjdk.org/census#wkemper) | [详情](profiles/william-kemper.md) |
-| Roman Kennke | Red Hat | [@rkennke](https://openjdk.org/census#rkennke) | [详情](profiles/roman-kennke.md) |
-| Kim Barrett | Oracle | [@kbarrett](https://openjdk.org/census#kbarrett) | [详情](profiles/kim-barrett.md) |
-| Ioi Lam | Oracle | [@iklam](https://openjdk.org/census#iklam) | [详情](profiles/ioi-lam.md) |
-| Erik Gahlin | Oracle | [@egahlin](https://openjdk.org/census#egahlin) | [详情](profiles/erik-gahlin.md) |
+| [Aleksey Shipilev](profiles/aleksey-shipilev.md) | Amazon | [@shade](https://openjdk.org/census#shade) | [详情](profiles/aleksey-shipilev.md) |
+| [Thomas Schatzl](profiles/thomas-schatzl.md) | Oracle | [@tschatzl](https://openjdk.org/census#tschatzl) | [详情](profiles/thomas-schatzl.md) |
+| [Albert Mingkun Yang](profiles/albert-mingkun-yang.md) | Oracle | [@ayoung](https://openjdk.org/census#ayoung) | [详情](profiles/albert-mingkun-yang.md) |
+| [William Kemper](profiles/william-kemper.md) | Amazon | [@wkemper](https://openjdk.org/census#wkemper) | [详情](profiles/william-kemper.md) |
+| [Roman Kennke](profiles/roman-kennke.md) | Red Hat | [@rkennke](https://openjdk.org/census#rkennke) | [详情](profiles/roman-kennke.md) |
+| [Kim Barrett](profiles/kim-barrett.md) | Oracle | [@kbarrett](https://openjdk.org/census#kbarrett) | [详情](profiles/kim-barrett.md) |
+| [Ioi Lam](profiles/ioi-lam.md) | Oracle | [@iklam](https://openjdk.org/census#iklam) | [详情](profiles/ioi-lam.md) |
+| [Erik Gahlin](profiles/erik-gahlin.md) | Oracle | [@egahlin](https://openjdk.org/census#egahlin) | [详情](profiles/erik-gahlin.md) |
 
 ### 编译器 (Compiler) - 7 位
 
 | 贡献者 | 组织 | Census | 档案 |
 |--------|------|--------|------|
-| Emanuel Peter | Oracle | [@epeter](https://openjdk.org/census#epeter) | [详情](profiles/emanuel-peter.md) |
-| Jan Lahoda | Oracle | [@lahoda](https://openjdk.org/census#lahoda) | [详情](profiles/jan-lahoda.md) |
-| Chen Liang | Oracle | [@liach](https://openjdk.org/census#liach) | [详情](profiles/chen-liang.md) |
-| Alexey Semenyuk | Oracle | [@asemenyuk](https://openjdk.org/census#asemenyuk) | [详情](profiles/alexey-semenyuk.md) |
-| Roland Westrelin | Oracle | [@roland](https://openjdk.org/census#roland) | [详情](profiles/rooland-westrelin.md) |
-| Hamlin Li | Oracle | [@hli](https://openjdk.org/census#hli) | [详情](profiles/hamlin-li.md) |
-| Jatin Bhateja | Oracle | [@jbhateja](https://openjdk.org/census#jbhateja) | [详情](profiles/jatin-bhateja.md) |
+| [Emanuel Peter](profiles/emanuel-peter.md) | Oracle | [@epeter](https://openjdk.org/census#epeter) | [详情](profiles/emanuel-peter.md) |
+| [Jan Lahoda](profiles/jan-lahoda.md) | Oracle | [@lahoda](https://openjdk.org/census#lahoda) | [详情](profiles/jan-lahoda.md) |
+| [Chen Liang](profiles/chen-liang.md) | Oracle | [@liach](https://openjdk.org/census#liach) | [详情](profiles/chen-liang.md) |
+| [Alexey Semenyuk](profiles/alexey-semenyuk.md) | Oracle | [@asemenyuk](https://openjdk.org/census#asemenyuk) | [详情](profiles/alexey-semenyuk.md) |
+| [Roland Westrelin](profiles/rooland-westrelin.md) | Oracle | [@roland](https://openjdk.org/census#roland) | [详情](profiles/rooland-westrelin.md) |
+| [Hamlin Li](profiles/hamlin-li.md) | Oracle | [@hli](https://openjdk.org/census#hli) | [详情](profiles/hamlin-li.md) |
+| [Jatin Bhateja](profiles/jatin-bhateja.md) | Oracle | [@jbhateja](https://openjdk.org/census#jbhateja) | [详情](profiles/jatin-bhateja.md) |
 
 ### 并发与运行时 (Concurrency & Runtime) - 4 位
 
 | 贡献者 | 组织 | Census | 档案 |
 |--------|------|--------|------|
-| David Holmes | Oracle | [@dholmes](https://openjdk.org/census#dholmes) | [详情](profiles/david-holmes.md) |
-| Alan Bateman | Oracle | [@alanb](https://openjdk.org/census#alanb) | [详情](profiles/alan-bateman.md) |
-| Coleen Phillimore | Oracle | [@coleenp](https://openjdk.org/census#coleenp) | [详情](profiles/coleen-phillimore.md) |
-| Leonid Mesnik | Oracle | [@lmesnik](https://openjdk.org/census#lmesnik) | [详情](profiles/leonid-mesnik.md) |
+| [David Holmes](profiles/david-holmes.md) | Oracle | [@dholmes](https://openjdk.org/census#dholmes) | [详情](profiles/david-holmes.md) |
+| [Alan Bateman](profiles/alan-bateman.md) | Oracle | [@alanb](https://openjdk.org/census#alanb) | [详情](profiles/alan-bateman.md) |
+| [Coleen Phillimore](profiles/coleen-phillimore.md) | Oracle | [@coleenp](https://openjdk.org/census#coleenp) | [详情](profiles/coleen-phillimore.md) |
+| [Leonid Mesnik](profiles/leonid-mesnik.md) | Oracle | [@lmesnik](https://openjdk.org/census#lmesnik) | [详情](profiles/leonid-mesnik.md) |
 
 ### 核心库 (Core Libraries) - 10 位
 
 | 贡献者 | 组织 | Census | 档案 |
 |--------|------|--------|------|
-| Phil Race | Oracle | [@prace](https://openjdk.org/census#prace) | [详情](profiles/phil-race.md) |
-| Naoto Sato | Oracle | [@naoto](https://openjdk.org/census#naoto) | [详情](profiles/naoto-sato.md) |
-| Justin Lu | Oracle | [@jlu](https://openjdk.org/census#jlu) | [详情](profiles/justin-lu.md) |
-| Brian Burkhalter | Oracle | [@bpb](https://openjdk.org/census#bpb) | [详情](profiles/brian-burkhalter.md) |
-| Daniel Fuchs | Oracle | [@dfuch](https://openjdk.org/census#dfuch) | [详情](profiles/daniel-fuchs.md) |
-| Volkan Yazici | Oracle | [@vyazici](https://openjdk.org/census#vyazici) | [详情](profiles/volkan-yazici.md) |
-| Joe Darcy | Oracle | [@darcy](https://openjdk.org/census#darcy) | [详情](profiles/joe-darcy.md) |
-| Claes Redestad | Oracle | [@redestad](https://openjdk.org/census#redestad) | [详情](profiles/claes-redestad.md) |
-| Stuart Marks | Oracle | [@smarks](https://openjdk.org/census#smarks) | [详情](profiles/stuart-marks.md) |
-| Per Minborg | Oracle | [@pminborg](https://openjdk.org/census#pminborg) | [详情](profiles/per-minborg.md) |
+| [Phil Race](profiles/phil-race.md) | Oracle | [@prace](https://openjdk.org/census#prace) | [详情](profiles/phil-race.md) |
+| [Naoto Sato](profiles/naoto-sato.md) | Oracle | [@naoto](https://openjdk.org/census#naoto) | [详情](profiles/naoto-sato.md) |
+| [Justin Lu](profiles/justin-lu.md) | Oracle | [@jlu](https://openjdk.org/census#jlu) | [详情](profiles/justin-lu.md) |
+| [Brian Burkhalter](profiles/brian-burkhalter.md) | Oracle | [@bpb](https://openjdk.org/census#bpb) | [详情](profiles/brian-burkhalter.md) |
+| [Daniel Fuchs](profiles/daniel-fuchs.md) | Oracle | [@dfuch](https://openjdk.org/census#dfuch) | [详情](profiles/daniel-fuchs.md) |
+| [Volkan Yazici](profiles/volkan-yazici.md) | Oracle | [@vyazici](https://openjdk.org/census#vyazici) | [详情](profiles/volkan-yazici.md) |
+| [Joe Darcy](profiles/joe-darcy.md) | Oracle | [@darcy](https://openjdk.org/census#darcy) | [详情](profiles/joe-darcy.md) |
+| [Claes Redestad](profiles/claes-redestad.md) | Oracle | [@redestad](https://openjdk.org/census#redestad) | [详情](profiles/claes-redestad.md) |
+| [Stuart Marks](profiles/stuart-marks.md) | Oracle | [@smarks](https://openjdk.org/census#smarks) | [详情](profiles/stuart-marks.md) |
+| [Per Minborg](profiles/per-minborg.md) | Oracle | [@pminborg](https://openjdk.org/census#pminborg) | [详情](profiles/per-minborg.md) |
 
 ### 构建系统与工具 (Build & Tools) - 3 位
 
 | 贡献者 | 组织 | Census | 档案 |
 |--------|------|--------|------|
-| Magnus Ihse Bursie | Oracle | [@ihse](https://openjdk.org/census#ihse) | [详情](profiles/magnus-ihse-bursie.md) |
-| Matthias Baesken | Oracle | [@mbaesken](https://openjdk.org/census#mbaesken) | [详情](profiles/matthias-baesken.md) |
-| Jaikiran Pai | Oracle | [@jaikiran](https://openjdk.org/census#jaikiran) | [详情](profiles/jaikiran-pai.md) |
+| [Magnus Ihse Bursie](profiles/magnus-ihse-bursie.md) | Oracle | [@ihse](https://openjdk.org/census#ihse) | [详情](profiles/magnus-ihse-bursie.md) |
+| [Matthias Baesken](profiles/matthias-baesken.md) | Oracle | [@mbaesken](https://openjdk.org/census#mbaesken) | [详情](profiles/matthias-baesken.md) |
+| [Jaikiran Pai](profiles/jaikiran-pai.md) | Oracle | [@jaikiran](https://openjdk.org/census#jaikiran) | [详情](profiles/jaikiran-pai.md) |
 
 ### 安全 (Security) - 5 位
 
 | 贡献者 | 组织 | Census | 档案 |
 |--------|------|--------|------|
-| Weijun Wang | Oracle | [@weijun](https://openjdk.org/census#weijun) | [详情](profiles/weijun-wang.md) |
-| Anthony Scarpino | Oracle | [@ascarpino](https://openjdk.org/census#ascarpino) | [详情](profiles/anthony-scarpino.md) |
-| Hai-May Chao | Oracle | [@hmchao](https://openjdk.org/census#hmchao) | [详情](profiles/hai-may-chao.md) |
-| Sean Mullan | Oracle | [@smullan](https://openjdk.org/census#smullan) | [详情](profiles/sean-mullan.md) |
-| Xuelei Fan | Oracle | [@xuelei](https://openjdk.org/census#xuelei) | [详情](profiles/xuelei-fan.md) |
+| [Weijun Wang](profiles/weijun-wang.md) | Oracle | [@weijun](https://openjdk.org/census#weijun) | [详情](profiles/weijun-wang.md) |
+| [Anthony Scarpino](profiles/anthony-scarpino.md) | Oracle | [@ascarpino](https://openjdk.org/census#ascarpino) | [详情](profiles/anthony-scarpino.md) |
+| [Hai-May Chao](profiles/hai-may-chao.md) | Oracle | [@hmchao](https://openjdk.org/census#hmchao) | [详情](profiles/hai-may-chao.md) |
+| [Sean Mullan](profiles/sean-mullan.md) | Oracle | [@smullan](https://openjdk.org/census#smullan) | [详情](profiles/sean-mullan.md) |
+| [Xuelei Fan](profiles/xuelei-fan.md) | Oracle | [@xuelei](https://openjdk.org/census#xuelei) | [详情](profiles/xuelei-fan.md) |
 
 ### 桌面与 UI (Desktop & UI) - 2 位
 
 | 贡献者 | 组织 | Census | 档案 |
 |--------|------|--------|------|
-| Prasanta Sadhukhan | Oracle | [@psadhukhan](https://openjdk.org/census#psadhukhan) | [详情](profiles/prasanta-sadhukhan.md) |
-| Sergey Bylokhov | Oracle | [@serb](https://openjdk.org/census#serb) | [详情](profiles/mrserb.md) |
+| [Prasanta Sadhukhan](profiles/prasanta-sadhukhan.md) | Oracle | [@psadhukhan](https://openjdk.org/census#psadhukhan) | [详情](profiles/prasanta-sadhukhan.md) |
+| [Sergey Bylokhov](profiles/mrserb.md) | Oracle | [@serb](https://openjdk.org/census#serb) | [详情](profiles/mrserb.md) |
 
 ### JFR (Java Flight Recorder) - 1 位
 
 | 贡献者 | 组织 | Census | 档案 |
 |--------|------|--------|------|
-| Markus Grönlund | Oracle | [@mgronlun](https://openjdk.org/census#mgronlun) | [详情](profiles/markus-gronlund.md) |
+| [Markus Grönlund](profiles/markus-gronlund.md) | Oracle | [@mgronlun](https://openjdk.org/census#mgronlun) | [详情](profiles/markus-gronlund.md) |
 
 ### AOT (Ahead-of-Time Compilation) - 1 位
 
 | 贡献者 | 组织 | Census | 档案 |
 |--------|------|--------|------|
-| Erik Österlund | Oracle | [@eosterlund](https://openjdk.org/census#eosterlund) | [详情](profiles/erik-osterlund.md) |
+| [Erik Österlund](profiles/erik-osterlund.md) | Oracle | [@eosterlund](https://openjdk.org/census#eosterlund) | [详情](profiles/erik-osterlund.md) |
 
 ---
 
@@ -128,17 +128,17 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 | 贡献者 | 组织 | Census | 领域 | 档案 |
 |--------|------|--------|------|------|
-| Andrew Haley | Red Hat | [@aph](https://openjdk.org/census#aph) | RISC-V | [详情](profiles/andrew-haley.md) |
-| Fredrik Bredberg | Red Hat | [@fredrik](https://openjdk.org/census#fredrik) | Monitors | [详情](profiles/fredrik-bredberg.md) |
-| Axel Boldt-Christmas | SAP | [@aboldtc](https://openjdk.org/census#aboldtc) | ZGC | [详情](profiles/axel-boldt-christmas.md) |
-| Johannes Bechberger | SAP | [@jbechberger](https://openjdk.org/census#jbechberger) | JFR | [详情](profiles/johannes-bechberger.md) |
-| Yasumasa Suenaga | NTT DATA | [@suenaga](https://openjdk.org/census#suenaga) | Serviceability | [详情](profiles/yasumasa-suenaga.md) |
-| Fei Yang | Alibaba | [@fyang](https://openjdk.org/census#fyang) | RISC-V | [详情](profiles/fei-yang.md) |
-| Shaojin Wen | Alibaba | [@swen](https://openjdk.org/census#swen) | 核心库 | [详情](profiles/shaojin-wen.md) |
-| Anjian Wen | ByteDance | [@awen](https://openjdk.org/census#awen) | RISC-V | [详情](profiles/anjian-wen.md) |
-| Damon Nguyen | Oracle | [@dnguyen](https://openjdk.org/census#dnguyen) | Desktop | [详情](profiles/damon-nguyen.md) |
-| Francesco Andreuzzi | Oracle | [@fandreuzzi](https://openjdk.org/census#fandreuzzi) | 测试 | [详情](profiles/francesco-andreuzzi.md) |
-| Manuel Hässig | Oracle | [@mhaessig](https://openjdk.org/census#mhaessig) | Testing | [详情](profiles/manuel-haessig.md) |
+| [Andrew Haley](profiles/andrew-haley.md) | Red Hat | [@aph](https://openjdk.org/census#aph) | RISC-V | [详情](profiles/andrew-haley.md) |
+| [Fredrik Bredberg](profiles/fredrik-bredberg.md) | Red Hat | [@fredrik](https://openjdk.org/census#fredrik) | Monitors | [详情](profiles/fredrik-bredberg.md) |
+| [Axel Boldt-Christmas](profiles/axel-boldt-christmas.md) | SAP | [@aboldtc](https://openjdk.org/census#aboldtc) | ZGC | [详情](profiles/axel-boldt-christmas.md) |
+| [Johannes Bechberger](profiles/johannes-bechberger.md) | SAP | [@jbechberger](https://openjdk.org/census#jbechberger) | JFR | [详情](profiles/johannes-bechberger.md) |
+| [Yasumasa Suenaga](profiles/yasumasa-suenaga.md) | NTT DATA | [@suenaga](https://openjdk.org/census#suenaga) | Serviceability | [详情](profiles/yasumasa-suenaga.md) |
+| [Fei Yang](profiles/fei-yang.md) | Alibaba | [@fyang](https://openjdk.org/census#fyang) | RISC-V | [详情](profiles/fei-yang.md) |
+| [Shaojin Wen](profiles/shaojin-wen.md) | Alibaba | [@swen](https://openjdk.org/census#swen) | 核心库 | [详情](profiles/shaojin-wen.md) |
+| [Anjian Wen](profiles/anjian-wen.md) | ByteDance | [@awen](https://openjdk.org/census#awen) | RISC-V | [详情](profiles/anjian-wen.md) |
+| [Damon Nguyen](profiles/damon-nguyen.md) | Oracle | [@dnguyen](https://openjdk.org/census#dnguyen) | Desktop | [详情](profiles/damon-nguyen.md) |
+| [Francesco Andreuzzi](profiles/francesco-andreuzzi.md) | Oracle | [@fandreuzzi](https://openjdk.org/census#fandreuzzi) | 测试 | [详情](profiles/francesco-andreuzzi.md) |
+| [Manuel Hässig](profiles/manuel-haessig.md) | Oracle | [@mhaessig](https://openjdk.org/census#mhaessig) | Testing | [详情](profiles/manuel-haessig.md) |
 
 ---
 
@@ -146,11 +146,11 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 ### Oracle
 
-**Reviewer**: 37 位 | **Committer**: 3 位
+**Reviewer**: 35 位 | **Committer**: 3 位
 
 | 角色 | 人数 | 代表贡献者 |
 |------|------|------------|
-| Reviewer | 37 | Aleksey Shipilev, Thomas Schatzl, Jan Lahoda |
+| Reviewer | 35 | Thomas Schatzl, Jan Lahoda, David Holmes |
 | Committer | 3 | Damon Nguyen, Francesco Andreuzzi, Manuel Hässig |
 
 ### Amazon
@@ -164,11 +164,11 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 ### Red Hat
 
-**Reviewer**: 0 位 | **Committer**: 2 位
+**Reviewer**: 1 位 | **Committer**: 2 位
 
 | 角色 | 人数 | 代表贡献者 |
 |------|------|------------|
-| Reviewer | 0 | - |
+| Reviewer | 1 | Roman Kennke |
 | Committer | 2 | Andrew Haley, Fredrik Bredberg |
 
 ### SAP
@@ -195,7 +195,6 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 |------|----------|-----------|------------|
 | ByteDance | 0 | 1 | Anjian Wen |
 | NTT DATA | 0 | 1 | Yasumasa Suenaga |
-| Independent | 0 | 1 | SendaoYan |
 
 ---
 
@@ -230,7 +229,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 - [贡献者索引](index.md) - 贡献者总览
 - [顶级贡献者](profiles/jdk26-top-contributors.md) - JDK 26 Top 100
-- [历史累计 Top 50](index.md#4-顶级贡献者) - JDK 8-26 累计贡献
+- [历史累计 Top 50](index.md#5-顶级贡献者) - JDK 8-26 累计贡献
 - [中国贡献者](profiles/chinese-contributors.md) - 中国开发者专题
 
 ### 选举流程
@@ -253,7 +252,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 **数据来源**: [OpenJDK Census](https://openjdk.org/census) (最后同步：2026-03-21)
 
-**维护说明**: 
+**维护说明**:
 - 本页面数据来源于 OpenJDK Census
 - 如发现信息不准确，请参考 Census 更新
 - 部分贡献者的 Census 账号待补充
