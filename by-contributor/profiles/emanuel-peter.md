@@ -2,7 +2,7 @@
 
 > **GitHub**: [@eme64](https://github.com/eme64)
 > **OpenJDK**: [@epeter](https://openjdk.org/census#epeter)
-> **Location**: Zürich, Switzerland
+> **Location**: Zürich / Thun, Switzerland
 > **Organization**: Oracle (Java Platform Group)
 
 ---
@@ -55,7 +55,7 @@ Emanuel Peter 是 Oracle 的 C2 编译器工程师，专注于 SuperWord 自动�
 | **Name** | Emanuel Peter |
 | **Current Organization** | Oracle (Java Platform Group) |
 | **Position** | Compiler Engineer, HotSpot JVM Compiler Team |
-| **Location** | Zürich, Switzerland |
+| **Location** | Zürich / Thun, Switzerland |
 | **Education** | ETH Zürich |
 | **GitHub** | [@eme64](https://github.com/eme64) |
 | **LinkedIn** | [Emanuel Peter](https://ch.linkedin.com/in/emanuel-peter-4286a2207) |
@@ -80,6 +80,7 @@ Emanuel Peter 是 Oracle 的 C2 编译器工程师，专注于 SuperWord 自动�
 | **2023-05** | JDK Reviewer | Nominated by Andrew Dinn (Red Hat), CFV approved |
 | **2023-2025** | Major Contributions | VTransform refactoring, Template Framework, Cost Model |
 | **2024-2025** | Blog Series | Introduction to HotSpot JVM C2 JIT Compiler (Parts 0-4) |
+| **2025-08** | JVMLS 2025 | SuperWord NormalMapping demo presentation |
 
 ---
 
@@ -307,9 +308,8 @@ The cost model considers:
 ---
 
 > **文档版本**: 2.0
-> **最后更新**: 2026-03-20
+> **最后更新**: 2026-03-22
 > **更新内容**:
-> - 添加 CFV 提名详情 (Committer 2022-05 by Tobias Hartmann, Reviewer 2023-05 by Andrew Dinn)
-> - 添加博客文章列表 (10 篇技术文章)
-> - 添加职业时间线
-> - 添加 C2 编译器系列博客链接
+> - 修正位置为 Zürich / Thun (GitHub 验证)
+> - 添加 JVMLS 2025 演讲 (NormalMapping demo)
+> - 验证 Oracle 组织、ETH Zürich 教育背景、GitHub (@eme64) 信息

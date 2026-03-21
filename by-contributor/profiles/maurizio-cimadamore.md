@@ -241,9 +241,11 @@ try (Arena arena = Arena.ofConfined()) {
 ---
 
 **Sources**:
-- [Inside.java - mcimadamore](https://inside.java/u/mcimadamore/)
+- [Inside.java - MaurizioCimadamore](https://inside.java/u/MaurizioCimadamore/)
 - [GitHub - mcimadamore](https://github.com/mcimadamore)
+- [LinkedIn - mcimadamore](https://www.linkedin.com/in/mcimadamore/)
 - [Inside Java Podcast Episode 9](https://inside.java/2020/12/11/podcast-009/)
 - [JEP 454: FFM API](https://openjdk.org/jeps/454)
 - [JEP 394: Pattern Matching](https://openjdk.org/jeps/394)
-- [Project Lambda PDF](https://jcp.org/aboutJava/communityprocess/ec-public/materials/2011-01-1112/2011-01_JCP_EC_ProjectLambda.pdf)
+- [nipafx.dev Interview](https://nipafx.dev/maurizio-cimadamore-26h/)
+- [ResearchGate](https://www.researchgate.net/scientific-contributions/Maurizio-Cimadamore-70142914)

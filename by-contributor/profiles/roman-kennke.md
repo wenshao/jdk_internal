@@ -36,7 +36,7 @@
 
 | JEP | Title | Role | Status | Target |
 |-----|------|------|--------|--------|
-| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Lead | Final | JDK 24 |
+| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Lead | Final | JDK 25 |
 | [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | Co-contributor | Final | JDK 25 |
 
 ---

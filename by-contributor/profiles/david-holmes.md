@@ -33,7 +33,7 @@
 | **著作** | 《Java Concurrency in Practice》(共同作者), 《The Java Programming Language》(共同作者) |
 | **活跃时间** | 2000 - 至今 |
 
-> **数据来源**: [OpenJDK Census](https://openjdk.org/census#dholmes), JavaOne 演讲
+> **数据来源**: [OpenJDK Census](https://openjdk.org/census#dholmes), [GitHub](https://github.com/dholmes-ora), [Amazon Author](https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601)
 
 ---
 
@@ -130,6 +130,11 @@ David Holmes 是 JVM 运行时和并发领域的资深专家，Director of DLTeC
 
 ## 6. 演讲与著作
 
+### 著作
+
+- **《Java Concurrency in Practice》** (Addison-Wesley, 2006) - 与 Brian Goetz, Tim Peierls, Joshua Bloch, Joseph Bowbeer, Doug Lea 共同著作。Java 并发编程领域的经典参考书。
+- **《The Java Programming Language》** (4th Edition, Addison-Wesley, 2005) - 与 Ken Arnold, James Gosling 共同著作。
+
 ### JavaOne 演讲
 
 | 年份 | 主题 |
@@ -148,12 +153,14 @@ David Holmes 是 JVM 运行时和并发领域的资深专家，Director of DLTeC
 
 | 类型 | 链接 |
 |------|------|
+| **GitHub** | [@dholmes-ora](https://github.com/dholmes-ora) |
 | **OpenJDK Census** | [dholmes](https://openjdk.org/census#dholmes) |
 | **JBS Issues** | [dholmes](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20dholmes) |
+| **著作** | [Java Concurrency in Practice](https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601), [The Java Programming Language](https://www.amazon.com/Java-Programming-Language-4th/dp/0321349806) |
 | **协作者** | Coleen Phillimore, Kim Barrett, Andrew Dinn |
 
 ---
 
 > **文档版本**: 2.0
-> **最后更新**: 2026-03-21
-> **更新内容**: 添加 JDK 26 PRs、Valhalla 贡献、演讲信息
+> **最后更新**: 2026-03-22
+> **更新内容**: 修正位置 (Brisbane, Australia, 非 USA)、添加 GitHub (@dholmes-ora)、添加著作 (Java Concurrency in Practice, The Java Programming Language)、添加 DLTeCH Pty Ltd 背景、添加 RTSJ 贡献

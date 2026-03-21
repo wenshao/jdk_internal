@@ -249,6 +249,8 @@ ZGC Heap Layout:
 | **ZGC PRs** | 198+ |
 | **JEP 主导** | 4 (JEP 333, 377, 365, 439) |
 | **代码贡献** | +25,000 / -10,000 行 |
+| **ZGC Blog** | [malloc.se](https://malloc.se/) - JDK 14-18 ZGC release notes |
+| **OpenJDK 角色** | Reviewer |
 
 
 ---
