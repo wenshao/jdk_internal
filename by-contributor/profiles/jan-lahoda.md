@@ -463,8 +463,14 @@ Jan 的贡献特点:
 ## 8. 相关链接
 
 - [OpenJDK Changesets](https://hg.openjdk.org/jdk/jdk/user?user=jlahoda)
+- [GitHub: lahodaj](https://github.com/lahodaj)
+- [GitHub: jlahoda](https://github.com/jlahoda)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=Jan%20Lahoda)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20jlahoda)
+- [FOSDEM 2020 Speaker Profile](https://archive.fosdem.org/2020/schedule/speaker/jan_lahoda/)
+- [nb-javac (NetBeans Java Compiler Plugin)](https://github.com/oracle/nb-javac)
+- [JEP 511: Module Import Declarations](https://openjdk.org/jeps/511)
+- [JEP 512: Compact Source Files and Instance Main Methods](https://openjdk.org/jeps/512)
 
 ---
 

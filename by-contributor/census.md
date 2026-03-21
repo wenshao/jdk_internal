@@ -127,7 +127,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 |--------|------|--------|------|------|
 | [Andrew Haley](profiles/andrew-haley.md) | Red Hat | [@aph](https://openjdk.org/census#aph) | RISC-V | [详情](profiles/andrew-haley.md) |
 | [Fredrik Bredberg](profiles/fredrik-bredberg.md) | Red Hat | [@fredrik](https://openjdk.org/census#fredrik) | Monitors | [详情](profiles/fredrik-bredberg.md) |
-| [Axel Boldt-Christmas](profiles/axel-boldt-christmas.md) | SAP | [@aboldtc](https://openjdk.org/census#aboldtc) | ZGC | [详情](profiles/axel-boldt-christmas.md) |
+| [Axel Boldt-Christmas](profiles/axel-boldt-christmas.md) | Oracle | [@aboldtc](https://openjdk.org/census#aboldtc) | ZGC | [详情](profiles/axel-boldt-christmas.md) |
 | [Johannes Bechberger](profiles/johannes-bechberger.md) | SAP | [@jbechberger](https://openjdk.org/census#jbechberger) | JFR | [详情](profiles/johannes-bechberger.md) |
 | [Yasumasa Suenaga](profiles/yasumasa-suenaga.md) | NTT DATA | [@suenaga](https://openjdk.org/census#suenaga) | Serviceability | [详情](profiles/yasumasa-suenaga.md) |
 | [Fei Yang](profiles/fei-yang.md) | Huawei | [@fyang](https://openjdk.org/census#fyang) | RISC-V | [详情](profiles/fei-yang.md) |

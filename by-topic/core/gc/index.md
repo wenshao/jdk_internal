@@ -475,7 +475,7 @@ java -XX:+UseShenandoahGC -jar app.jar
 | 1 | [Per Lidén](/by-contributor/profiles/per-liden.md) | 202 | Oracle | ZGC 创始人 |
 | 2 | Stefan Karlsson | 116 | Oracle | 分代 ZGC (JEP 439) |
 | 3 | Erik Österlund | 56 | Oracle | ZGC 核心开发者 |
-| 4 | Axel Boldt-Christmas | 44 | SAP | ZGC |
+| 4 | Axel Boldt-Christmas | 44 | Oracle | ZGC |
 | 5 | Joel Sikström | 31 | Oracle | ZGC |
 
 ### Shenandoah GC 专项

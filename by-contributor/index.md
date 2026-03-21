@@ -441,7 +441,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 |--------|------|------|--------|------|
 | [Andrew Haley](/by-contributor/profiles/andrew-haley.md) | Red Hat | RISC-V | [@aph](https://openjdk.org/census#aph) | [详情](/by-contributor/profiles/andrew-haley.md) |
 | [Fredrik Bredberg](/by-contributor/profiles/fredrik-bredberg.md) | Red Hat | Monitors | [@fredrik](https://openjdk.org/census#fredrik) | [详情](/by-contributor/profiles/fredrik-bredberg.md) |
-| [Axel Boldt-Christmas](/by-contributor/profiles/axel-boldt-christmas.md) | SAP | ZGC | [@aboldtc](https://openjdk.org/census#aboldtc) | [详情](/by-contributor/profiles/axel-boldt-christmas.md) |
+| [Axel Boldt-Christmas](/by-contributor/profiles/axel-boldt-christmas.md) | Oracle | ZGC | [@aboldtc](https://openjdk.org/census#aboldtc) | [详情](/by-contributor/profiles/axel-boldt-christmas.md) |
 | [Johannes Bechberger](/by-contributor/profiles/johannes-bechberger.md) | SAP | JFR | [@jbechberger](https://openjdk.org/census#jbechberger) | [详情](/by-contributor/profiles/johannes-bechberger.md) |
 | [Yasumasa Suenaga](/by-contributor/profiles/yasumasa-suenaga.md) | NTT DATA | Serviceability | [@suenaga](https://openjdk.org/census#suenaga) | [详情](/by-contributor/profiles/yasumasa-suenaga.md) |
 | [Fei Yang](/by-contributor/profiles/fei-yang.md) | Huawei | RISC-V | [@fyang](https://openjdk.org/census#fyang) | [详情](/by-contributor/profiles/fei-yang.md) |
@@ -500,7 +500,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 31 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | [Oracle](/contributors/orgs/oracle.md) | 70+ | 性能优化 | [详情](/by-contributor/profiles/claes-redestad.md) |
 | 32 | [Joe Darcy](/by-contributor/profiles/joe-darcy.md) | [Oracle](/contributors/orgs/oracle.md) | 70+ | 数学库 | [详情](/by-contributor/profiles/joe-darcy.md) |
 | 33 | [Andrew Haley](/by-contributor/profiles/andrew-haley.md) | [Red Hat](/contributors/orgs/redhat.md) | 60+ | RISC-V | [详情](/by-contributor/profiles/andrew-haley.md) |
-| 34 | [Axel Boldt-Christmas](/by-contributor/profiles/axel-boldt-christmas.md) | [SAP](/contributors/orgs/sap.md) | 60+ | ZGC | [详情](/by-contributor/profiles/axel-boldt-christmas.md) |
+| 34 | [Axel Boldt-Christmas](/by-contributor/profiles/axel-boldt-christmas.md) | [Oracle](/contributors/orgs/oracle.md) | 60+ | ZGC | [详情](/by-contributor/profiles/axel-boldt-christmas.md) |
 | 35 | [Francesco Andreuzzi](/by-contributor/profiles/francesco-andreuzzi.md) | [Oracle](/contributors/orgs/oracle.md) | 60+ | 测试 | [详情](/by-contributor/profiles/francesco-andreuzzi.md) |
 | 36 | [Johannes Bechberger](/by-contributor/profiles/johannes-bechberger.md) | [SAP](/contributors/orgs/sap.md) | 50+ | JFR | [详情](/by-contributor/profiles/johannes-bechberger.md) |
 | 37 | [Weijun Wang](/by-contributor/profiles/weijun-wang.md) | [Oracle](/contributors/orgs/oracle.md) | 50+ | 安全 | [详情](/by-contributor/profiles/weijun-wang.md) |

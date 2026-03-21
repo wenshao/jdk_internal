@@ -69,7 +69,7 @@ Joel Sikström 是 **ZGC** 的核心贡献者：
 与以下 ZGC 开发者密切合作：
 - **Stefan Karlsson**: ZGC Lead (JEP 439 Author)
 - **Per Liden**: ZGC Co-lead (JEP 333 Co-author)
-- **Axel Boldt-Christmas**: SAP ZGC Developer
+- **Axel Boldt-Christmas**: Oracle ZGC Developer
 
 ---
 
