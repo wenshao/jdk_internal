@@ -375,7 +375,7 @@ public class StructuredTaskScope<T> implements AutoCloseable {
     }
 
     // fork 子任务
-    public <U extends T> Future<U> fork(Callable<? extends U> task) {
+    public <U extends T> Subtask<U> fork(Callable<? extends U> task) {
         // 子任务继承 ScopedValue
         Callable<? extends U> wrappedTask = () -> {
             Bindings prev = Thread.currentScopedValueBindings();
@@ -403,15 +403,14 @@ public Response handleRequest(User user, Request request) {
     ScopedValue.where(CURRENT_USER, user)
         .where(DB, Database.connect())
         .run(() -> {
-            try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+            try (var scope = StructuredTaskScope.open()) {
                 // 子任务自动继承 CURRENT_USER 和 DB
-                Future<Order> order = scope.fork(() -> fetchOrder(request.orderId()));
-                Future<Inventory> inventory = scope.fork(() -> checkInventory(request.itemId()));
+                Subtask<Order> order = scope.fork(() -> fetchOrder(request.orderId()));
+                Subtask<Inventory> inventory = scope.fork(() -> checkInventory(request.itemId()));
 
                 scope.join();
-                scope.throwIfFailed();
 
-                return new Response(order.resultNow(), inventory.resultNow());
+                return new Response(order.get(), inventory.get());
             }
         });
 }
