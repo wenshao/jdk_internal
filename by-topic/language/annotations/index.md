@@ -47,7 +47,6 @@ Javadoc   注解    注解    类型注解  Record   注解    注解
 | **JDK 8** | 可重复注解 | @Repeatable | - |
 | **JDK 16** | Record 支持 | @Target(RECORD_COMPONENT) | - |
 | **JDK 21** | 注解模式匹配 | for instanceof, switch | JEP 441 |
-| **JDK 23** | Class-File API | 字节码操作标准 API | JEP 466 |
 
 ---
 

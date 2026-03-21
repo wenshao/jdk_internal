@@ -442,19 +442,6 @@ public String getDayMessage(Day day) {
         default -> "未知";
     };
 }
-
-// Record 模式匹配
-record Point(int x, int y) {}
-sealed interface Shape permits Circle, Rectangle {}
-record Circle(double radius) implements Shape {}
-record Rectangle(double width, double height) implements Shape {}
-
-public double area(Shape shape) {
-    return switch (shape) {
-        case Circle(double r) -> Math.PI * r * r;
-        case Rectangle(double w, double h) -> w * h;
-    };
-}
 ```
 
 ---

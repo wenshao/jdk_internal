@@ -4,7 +4,7 @@
 
 ## 1. 概述
 
-JDK 26 包含 **23 个 JEP**（JDK Enhancement Proposals），涵盖语言特性、API、性能优化、垃圾回收等多个领域。
+JDK 26 包含 **10 个 JEP**（JDK Enhancement Proposals），涵盖语言特性、API、性能优化、垃圾回收等多个领域。
 
 ---
 ## 目录
@@ -25,35 +25,6 @@ JDK 26 包含 **23 个 JEP**（JDK Enhancement Proposals），涵盖语言特性
 
 
 ## 2. 语言特性
-
-### [JEP 511: Module Import Declarations](/jeps/language/jep-511.md) ⭐
-
-**状态**: 正式发布  
-**概述**: 允许使用 `import module <name>` 导入整个模块的所有导出包。
-
-```java
-import module java.base;  // 一行替代多个 import
-
-void main() {
-    List<String> list = new ArrayList<>();  // 直接使用
-}
-```
-
----
-
-### [JEP 512: Compact Source Files and Instance Main Methods](/jeps/language/jep-512.md) ⭐
-
-**状态**: 正式发布  
-**概述**: 进一步简化 Java 入门体验，无需显式类声明。
-
-```java
-// Hello.java - 最简形式
-void main() {
-    println("Hello, World!");
-}
-```
-
----
 
 ### [JEP 530: Primitive Types in Patterns](/jeps/concurrency/jep-530.md)
 

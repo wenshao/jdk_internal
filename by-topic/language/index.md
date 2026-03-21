@@ -97,7 +97,7 @@ Java 语言特性演进项目。
 | JDK 8 | Lambda invokedynamic, Parameter 反射 | - |
 | JDK 11 | Constable/ConstantDesc | - |
 | JDK 16 | Records | JEP 395 |
-| JDK 22 | Class-File API (预览) | JEP 459 |
+| JDK 22 | Class-File API (预览) | JEP 457 |
 | JDK 24 | Class-File API (正式) | JEP 484 |
 | JDK 26 | Mirror API | - |
 
@@ -109,7 +109,7 @@ Java 语言特性演进项目。
 
 | 版本 | 主要变化 | JEP |
 |------|----------|-----|
-| JDK 22 | Class-File API (预览) | JEP 459 |
+| JDK 22 | Class-File API (预览) | JEP 457 |
 | JDK 23 | Class-File API (第二次预览) | JEP 466 |
 | JDK 24 | Class-File API (正式) | JEP 484 |
 
@@ -185,7 +185,7 @@ Java 语言特性演进项目。
 
 | 版本 | 主要变化 | JEP |
 |------|----------|-----|
-| JDK 22 | Class-File API (预览) | JEP 459 |
+| JDK 22 | Class-File API (预览) | JEP 457 |
 | JDK 23 | Class-File API (第二次预览) | JEP 466 |
 | JDK 24 | Class-File API (正式) | JEP 484 |
 
@@ -265,13 +265,13 @@ Java 语言特性演进项目。
 - **方法引用**
 - **Stream API**
 - **CompletableFuture**
-- **invokedynamic 字符串拼接**
 - **重复注解** (@Repeatable)
 - **类型注解** (JSR 308)
 - **参数反射** (Parameter)
 
 ### JDK 9 (2017)
 
+- **invokedynamic 字符串拼接** (JEP 280)
 - **Compact Strings** (JEP 254)
 - **私有接口方法**
 - **模块化** (JPMS)
@@ -389,7 +389,7 @@ VM.latestUserDefinedLoader()  # 最新类加载器
 |------|------|
 | 语言特性 JEP (JDK 5-26) | 45+ |
 | JSR 规范 | 10+ |
-| 新增关键字 | 3 (enum, assert, var) |
+| 新增关键字 | 2 (enum, assert); var 是保留类型名 |
 | 新增运算符 | 2 (::, ->) |
 | 新增注解 | 8+ |
 
