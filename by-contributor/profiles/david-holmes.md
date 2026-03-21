@@ -1,6 +1,6 @@
 # David Holmes
 
-> **JVM 运行时专家，JSR-166 规范贡献者，并发领域权威**
+> **JVM 运行时专家，《Java Concurrency in Practice》共同作者，JSR-166 规范贡献者**
 
 ---
 ## 目录
@@ -22,13 +22,15 @@
 |------|-----|
 | **姓名** | David Holmes |
 | **当前组织** | [Oracle](../../contributors/orgs/oracle.md) |
-| **位置** | USA (Brisbane, Australia 背景) |
+| **位置** | Brisbane, Australia (UTC+10) |
+| **GitHub** | [@dholmes-ora](https://github.com/dholmes-ora) |
 | **OpenJDK** | [@dholmes](https://openjdk.org/census#dholmes) |
 | **角色** | JDK Reviewer |
 | **PRs** | 720+ (累计) |
 | **JDK 26 Commits** | 50 (排名 #18) |
 | **主要领域** | 并发, 线程管理, JVM Runtime, JVMTI, JNI |
 | **规范贡献** | JSR-166 (Concurrency Utilities) |
+| **著作** | 《Java Concurrency in Practice》(共同作者), 《The Java Programming Language》(共同作者) |
 | **活跃时间** | 2000 - 至今 |
 
 > **数据来源**: [OpenJDK Census](https://openjdk.org/census#dholmes), JavaOne 演讲
@@ -37,18 +39,27 @@
 
 ## 2. 职业背景
 
-David Holmes 是 JVM 运行时和并发领域的资深专家，自 2000 年代初就参与 Java 平台开发。他专注于：
+David Holmes 是 JVM 运行时和并发领域的资深专家，Director of DLTeCH Pty Ltd (Brisbane, Australia)，自 2000 年代初就参与 Java 平台开发。他是 JSR-166 专家组成员，也是 Real-Time Specification for Java (RTSJ) 的贡献者。他专注于：
 
 - **线程管理**: Java 线程实现、调度
 - **同步机制**: synchronized, volatile 实现
 - **JVM Runtime**: 启动、初始化、信号处理
 - **规范贡献**: JSR-166 并发工具
 
+### 著作
+
+| 书名 | 共同作者 | 出版年 |
+|------|----------|--------|
+| **Java Concurrency in Practice** | Brian Goetz, Tim Peierls, Joshua Bloch, Joseph Bowbeer, Doug Lea | 2006 |
+| **The Java Programming Language** (4th Ed) | Ken Arnold, James Gosling | 2005 |
+
 ### 职业时间线
 
 | 时间 | 事件 | 详情 |
 |------|------|------|
-| **2000+** | Java Contributor | 参与 JSR-166 规范 |
+| **2000+** | Java Contributor | 参与 JSR-166 规范; RTSJ 贡献者 |
+| **2005** | 《The Java Programming Language》 | 与 Ken Arnold, James Gosling 共同著作 (第4版) |
+| **2006** | 《Java Concurrency in Practice》 | 与 Brian Goetz, Doug Lea 等共同著作 |
 | **2010+** | Oracle HotSpot | JVM Runtime 开发 |
 | **JDK 26** | 50 commits | 并发领域排名第 1 |
 
