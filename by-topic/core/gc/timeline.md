@@ -707,4 +707,4 @@ jcmd <pid> GC.run_finalization
 - [JEP 474](/jeps/gc/jep-474.md)
 - [JEP 521](/jeps/gc/jep-521.md)
 - [JEP 379](/jeps/gc/jep-379.md)
-- [JEP 333: ZGC](https://openjdk.org/jeps/333)
+- [JEP 333](/jeps/gc/jep-333.md)

@@ -360,8 +360,8 @@ if (obj instanceof Point(int x, int y)) {
 ### 外部参考
 
 **JEP 文档:**
-- [JEP 243: JVM Compiler Interface](https://openjdk.org/jeps/243)
-- [JEP 244: Graal JIT](https://openjdk.org/jeps/244)
+- [JEP 243](/jeps/performance/jep-243.md)
+- [JEP 244](/jeps/performance/jep-244.md)
 
 **技术博客:**
 - [HotSpot JIT Compiler](https://wiki.openjdk.org/display/HotSpot/)

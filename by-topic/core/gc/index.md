@@ -3599,7 +3599,7 @@ numactl --cpunodebind=0 --membind=0
 **日志分析工具**：
 - [GCViewer](https://github.com/chewiebug/GCViewer) - 可视化分析
 - [GCEasy](https://gceasy.io/) - 在线分析
-- [JFR](https://openjdk.org/jeps/328) - JDK 内置诊断
+- [JFR](/jeps/jfr/jep-328.md) - JDK 内置诊断
 
 ---
 
@@ -4357,7 +4357,7 @@ git log --oneline -- src/hotspot/share/gc/shenandoah/
 - [JEP 439](/jeps/gc/jep-439.md) - Stefan Karlsson (Oracle)
 - [JEP 474](/jeps/gc/jep-474.md) - Stefan Karlsson (Oracle)
 - [JEP 379](/jeps/gc/jep-379.md) - Aleksey Shipilev (Oracle)
-- [JEP 333: ZGC](https://openjdk.org/jeps/333) - Per Lidén (Oracle)
+- [JEP 333](/jeps/gc/jep-333.md) - Per Lidén (Oracle)
 
 **贡献者档案**:
 - [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) - G1 GC Lead (Oracle) - 546+ PRs

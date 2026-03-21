@@ -371,7 +371,7 @@ jdk.vm.ci/
 ### 官方资源
 - [GraalVM 官网](https://www.graalvm.org/)
 - [Graal GitHub](https://github.com/oracle/graal)
-- [JEP 243](https://openjdk.org/jeps/243)
+- [JEP 243](/jeps/performance/jep-243.md)
 
 ### 技术文档
 - [架构详解](architecture.md)

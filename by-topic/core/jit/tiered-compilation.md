@@ -411,7 +411,7 @@ C2 假设: 方法总是接收 ArrayList
 
 ### 外部资源
 
-- [JEP 193: Variable Handles](https://openjdk.org/jeps/193) - 涉及分层编译
+- [JEP 193](/jeps/language/jep-193.md) - 涉及分层编译
 - [Tiered Compilation in HotSpot JVM](https://blog.joda.org/2010/06/tiered-compilation-in-hotspot-jvm.html)
 - [Understanding JIT Compilation](https://www.oracle.com/java/technologies/javase/whitepapers.html)
 

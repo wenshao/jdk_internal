@@ -495,7 +495,7 @@ public class HotSpotVMConfig {
 ## 9. 相关链接
 
 ### 官方文档
-- [JEP 243](https://openjdk.org/jeps/243)
+- [JEP 243](/jeps/performance/jep-243.md)
 - [JVMCI Specification](https://github.com/openjdk/jdk/tree/master/src/jdk.vm.ci/share/classes/jdk.vm.ci)
 
 ### 源码
