@@ -1,6 +1,6 @@
 # JDK PR Analysis Index
 
-> Last updated: 2026-03-21
+> Last updated: 2026-03-22
 
 ---
 
@@ -83,8 +83,8 @@ JDK 26 is the current non-LTS release. This document provides an index to all JD
 | 3 | Matthias Baesken | 90 | Build, Ports |
 | 4 | Phil Race | 79 | Printing, Desktop |
 | 5 | Aleksey Shipilev | 76 | Shenandoah, Performance |
-| 6 | Ioi Lam | 68 | CDS, AOT |
-| 7 | Kim Barrett | 69 | GC, HotSpot |
+| 6 | Kim Barrett | 69 | GC, HotSpot |
+| 7 | Ioi Lam | 68 | CDS, AOT |
 | 8 | Alexey Semenyuk | 67 | jpackage |
 | 9 | SendaoYan | 61 | Testing |
 | 10 | Francesco Andreuzzi | 60 | Testing |
@@ -97,8 +97,8 @@ JDK 26 is the current non-LTS release. This document provides an index to all JD
 | 17 | Emanuel Peter | 46 | C2 Compiler |
 | 18 | Axel Boldt-Christmas | 46 | ZGC |
 | 19 | Brian Burkhalter | 43 | Networking |
-| 20 | Jan Lahoda | 41 | javac |
-| 21 | Volkan Yazici | 41 | HTTP Client |
+| 20 | Volkan Yazici | 41 | HTTP Client |
+| 21 | Jan Lahoda | 41 | javac |
 | 22 | Justin Lu | 40 | Localization |
 | 23 | Joel Sikström | 40 | ZGC |
 | 24 | William Kemper | 39 | Shenandoah |
@@ -160,7 +160,7 @@ Individual PR analysis documents organized by issue prefix:
 | Directory | Description | Files |
 |-----------|-------------|-------|
 | [8298/](./8298/) | Early JDK 26 backports | 1 |
-| [8310/](./8310/) | Core library changes | 2 |
+| [8310/](./8310/) | Core library changes | 3 |
 | [8311/](./8311/) | HotSpot changes | 4 |
 | [8315/](./8315/) | Build changes | 2 |
 | [8316/](./8316/) | Compiler changes | 2 |
@@ -183,6 +183,7 @@ Individual PR analysis documents organized by issue prefix:
 | [8342/](./8342/) | Core changes | 2 |
 | [8343/](./8343/) | Core changes | 7 |
 | [8344/](./8344/) | Core changes | 2 |
+| [8346/](./8346/) | ClassFile API changes | 1 |
 | [8347/](./8347/) | Security changes | 4 |
 | [8348/](./8348/) | Core changes | 3 |
 | [8349/](./8349/) | Network changes | 6 |
@@ -216,6 +217,7 @@ Individual PR analysis documents organized by issue prefix:
 
 | Date | Change |
 |------|--------|
+| 2026-03-22 | Added 8346 directory, updated file counts, fixed contributor ranking |
 | 2026-03-21 | Updated commit count (3,439), contributor stats, JEP list |
 | 2026-03-19 | Initial JDK 26 analysis with 3,936 commits |
 | 2026-03-19 | Added JEP deep analysis, component reports |
