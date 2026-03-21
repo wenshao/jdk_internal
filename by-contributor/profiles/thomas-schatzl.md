@@ -51,7 +51,7 @@ Thomas Schatzl 是 Oracle HotSpot GC 团队的 **Principal Member of Technical S
 | **主导 JEP** | JEP 522: G1 GC Throughput Improvement |
 | **活跃时间** | 2012 - 至今 |
 
-> **数据来源**: [个人博客](https://tschatzl.github.io/), [Inside.java](https://inside.java/u/ThomasSchatzl/), [JKU Staff Profile](https://ssw.jku.at/General/Staff/TS/), [GitHub PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Atschatzl+is%3Aclosed+label%3Aintegrated)
+> **数据来源**: [个人博客](https://tschatzl.github.io/), [Inside.java](https://inside.java/u/ThomasSchatzl/), [JKU Staff Profile](https://ssw.jku.at/General/Staff/Schatzl/), [GitHub PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Atschatzl+is%3Aclosed+label%3Aintegrated)
 
 ---
 

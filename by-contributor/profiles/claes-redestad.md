@@ -1,6 +1,6 @@
 # Claes Redestad
 
-> **GitHub**: [@redestad](https://github.com/redestad)
+> **GitHub**: [@cl4es](https://github.com/cl4es)
 > **Blog**: [cl4es.github.io](https://cl4es.github.io)
 > **Location**: Stockholm, Sweden
 > **Organization**: [Oracle](../../contributors/orgs/oracle.md)

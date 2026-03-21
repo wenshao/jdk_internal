@@ -33,12 +33,15 @@ Tobias Hartmann 是 Oracle 的 **软件开发经理** 和 **编译器工程师**
 | **姓名** | Tobias Hartmann |
 | **当前组织** | Oracle (Java Platform Group) |
 | **职位** | Software Development Manager, Compiler Engineer |
-| **GitHub** | [@thartmann](https://github.com/thartmann) |
+| **GitHub** | [@TobiHartmann](https://github.com/TobiHartmann) (51 followers) |
+| **Twitter/X** | [@TobiasJava](https://twitter.com/tobiasjava) |
 | **OpenJDK** | [@thartmann](https://openjdk.org/census#thartmann) |
 | **邮件** | tobias.hartmann@oracle.com, thartmann@openjdk.org |
-| **专长** | HotSpot Compiler, JIT Compilation, Code Cache, Profile-guided Optimization |
+| **专长** | HotSpot Compiler, C2 JIT, IR Framework, Code Cache, Profile-guided Optimization |
+| **Commits (openjdk/jdk)** | 563+ (author), 762+ (committer) |
+| **PRs (integrated)** | 166 |
 | **位置** | 瑞士 Baden (Rheinfelden) |
-| **教育** | ETH Zürich 硕士 |
+| **教育** | ETH Zürich 硕士 (计算机科学) |
 
 ---
 

@@ -23,7 +23,7 @@
 
 ## 1. 概述
 
-William Kemper 是 Amazon 的 SDE III（软件开发工程师 III），专注于 Shenandoah 垃圾回收器的分代模式开发。他是 JEP 521 (Generational Shenandoah) 的主要实现者，并在 JEP draft 中提出了将 Shenandoah 的分代模式设为默认值。他曾在 Red Hat 工作，现在负责 Amazon Corretto 中 Shenandoah GC 的维护和改进。
+William Kemper 是 Amazon (AWS) 的 SDE III（软件开发工程师 III），专注于 Shenandoah 垃圾回收器的分代模式开发。他是 JEP 404 (Generational Shenandoah, Experimental) 和 JEP 521 (Generational Shenandoah, Product) 的 owner 和主要实现者。2024年1月由 Aleksey Shipilev 提名成为 JDK Committer，当时已贡献 20+ mainline changes。他在 JEP draft 中提出了将 Shenandoah 的分代模式设为默认值。
 
 ---
 
@@ -36,16 +36,15 @@ William Kemper 是 Amazon 的 SDE III（软件开发工程师 III），专注于
 | **Position** | SDE III (Software Development Engineer III) |
 | **Location** | Redwood City |
 | **Previous Organization** | Red Hat |
-| **GitHub** | [@earthling-amzn](https://github.com/earthling-amzn) (23 repositories) |
-| **LinkedIn** | [William Kemper](https://www.getprog.ai/profile/71722661) |
-| **Email** | kemperw@amazon.com |
+| **GitHub** | [@earthling-amzn](https://github.com/earthling-amzn) (25 repositories) |
 | **OpenJDK** | [@wkemper](https://openjdk.org/census#wkemper) |
-| **Role** | JDK Reviewer |
-| **PRs** | [123 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aearthling-amzn+is%3Aclosed+label%3Aintegrated) |
-| **Primary Areas** | Shenandoah GC, Generational Shenandoah (JEP 521) |
+| **Role** | JDK Committer (2024-01), Shenandoah Project Committer |
+| **PRs** | [127 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aearthling-amzn+is%3Aclosed+label%3Aintegrated) |
+| **Primary Areas** | Shenandoah GC, Generational Shenandoah (JEP 404, JEP 521) |
+| **JEP Work** | JEP 404 (Generational Shenandoah, Experimental), JEP 521 (Generational Shenandoah, Product) |
 | **JEP Draft** | JEP draft: Make Shenandoah's generational mode the default |
 
-> **数据来源**: [GitHub](https://github.com/earthling-amzn), [JEP draft](https://openjdk.org/jeps/8379682), [LinkedIn](https://www.getprog.ai/profile/71722661)
+> **数据来源**: [GitHub](https://github.com/earthling-amzn), [JEP 521](https://openjdk.org/jeps/521), [JEP draft](https://openjdk.org/jeps/8379682), [CFV Committer](https://mail.openjdk.org/pipermail/jdk-dev/2024-January/008688.html)
 
 ## 3. Contribution Overview
 
@@ -135,9 +134,9 @@ William Kemper 是 Amazon 的 SDE III（软件开发工程师 III），专注于
 
 ## 5. Key Contributions
 
-### 1. JEP 521: Generational Shenandoah (JDK-8354078)
+### 1. JEP 404 / JEP 521: Generational Shenandoah (JDK-8354078)
 
-The flagship contribution for JDK 26 - implementing generational garbage collection for Shenandoah.
+The flagship contribution - implementing generational garbage collection for Shenandoah. JEP 404 integrated as experimental in JDK 24; JEP 521 drops experimental status, making it a product feature. Extensively tested with DaCapo, SPECjbb2015, SPECjvm2008, and Heapothesys benchmarks.
 
 ```cpp
 // Core generational Shenandoah architecture
@@ -292,8 +291,10 @@ void ShenandoahDegeneratedGC::finish() {
 - **GitHub**: [earthling-amzn](https://github.com/earthling-amzn)
 - **OpenJDK**: [wkemper](https://openjdk.org/people/wkemper)
 - **JBS Issues**: [bugs.openjdk.org](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20wkemper)
-- **GitHub Commits**: [openjdk/jdk](https://github.com/openjdk/jdk/commits?author=wkemper)
-- **JEP 521**: [Generational Shenandoah](https://openjdk.org/jeps/521)
+- **GitHub Commits**: [openjdk/jdk](https://github.com/openjdk/jdk/commits?author=earthling-amzn)
+- **CFV: Committer**: [JDK Committer nomination (Jan 2024)](https://mail.openjdk.org/pipermail/jdk-dev/2024-January/008688.html)
+- **JEP 404**: [Generational Shenandoah (Experimental)](https://openjdk.org/jeps/404)
+- **JEP 521**: [Generational Shenandoah (Product)](https://openjdk.org/jeps/521)
 - **JEP Draft**: [Make Shenandoah's generational mode the default](https://openjdk.org/jeps/8379682)
 
 ---
@@ -313,6 +314,11 @@ void ShenandoahDegeneratedGC::finish() {
 
 ---
 
-> **文档版本**: 2.0
-> **最后更新**: 2026-03-20
-> **更新内容**: 补充 SDE III 职位、LinkedIn、Redwood City 位置、JEP draft、Amazon Corretto 工作背景
+> **文档版本**: 3.0
+> **最后更新**: 2026-03-22
+> **更新内容**:
+> - 修正角色: JDK Committer (非 Reviewer)，2024-01 由 Aleksey Shipilev 提名
+> - 添加 JEP 404 (Generational Shenandoah, Experimental) 信息
+> - 更新 JEP 521 说明: 从 experimental 到 product feature
+> - 更新 PRs 统计: 127 integrated
+> - 添加 CFV 和 JEP 404 链接
