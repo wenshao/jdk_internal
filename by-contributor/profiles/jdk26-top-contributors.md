@@ -1,6 +1,6 @@
 # JDK 26 Top Contributors
 
-> Based on 3,936 commits from 2025-06 to 2026-03
+> Based on GitHub Integrated PRs from 2025-06 to 2026-03
 
 ---
 ## 目录
@@ -20,7 +20,9 @@
 
 ## 1. Overview
 
-JDK 26 had **~380 unique contributors** making commits during its development cycle. Below are the top contributors ranked by commit count.
+JDK 26 had **~380 unique contributors** making PRs during its development cycle. Below are the top contributors ranked by commit count.
+
+> **数据来源**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+is%3Aclosed+label%3Aintegrated)
 
 ---
 
@@ -169,7 +171,7 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 ## 5. By Organization
 
-### [Oracle](/contributors/orgs/oracle.md) (~75% of commits)
+### [Oracle](/contributors/orgs/oracle.md) (~73% of commits)
 
 | Contributor | Commits | Focus | 档案 |
 |-------------|---------|-------|------|
@@ -178,6 +180,7 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 | [Phil Race](./phil-race.md) | 110 | Desktop | [详情](./phil-race.md) |
 | [Matthias Baesken](./matthias-baesken.md) | 105 | Build | [详情](./matthias-baesken.md) |
 | [Ioi Lam](./ioi-lam.md) | 76 | CDS/AOT | [详情](./ioi-lam.md) |
+| [Kim Barrett](./kim-barrett.md) | 76 | GC, HotSpot | [详情](./kim-barrett.md) |
 | [SendaoYan](./sendaoyan.md) | 71 | Testing | [详情](./sendaoyan.md) |
 | [Jaikiran Pai](./jaikiran-pai.md) | 67 | Networking | [详情](./jaikiran-pai.md) |
 | [Francesco Andreuzzi](./francesco-andreuzzi.md) | 60 | Testing | [详情](./francesco-andreuzzi.md) |
@@ -186,13 +189,13 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 | [Sergey Bylokhov](./mrserb.md) | 57 | Desktop | [详情](./mrserb.md) |
 | [Erik Gahlin](./erik-gahlin.md) | 57 | JFR | [详情](./erik-gahlin.md) |
 | [Brian Burkhalter](./brian-burkhalter.md) | 53 | Networking | [详情](./brian-burkhalter.md) |
-| [Joel Sikström](./joel-sikstrom.md) | 44 | ZGC | [详情](./joel-sikstrom.md) |
+| [Emanuel Peter](./emanuel-peter.md) | 49 | C2 Compiler | [详情](./emanuel-peter.md) |
 | [David Holmes](./david-holmes.md) | 50 | Threading | [详情](./david-holmes.md) |
 | [Jan Lahoda](./jan-lahoda.md) | 48 | javac | [详情](./jan-lahoda.md) |
 | [Daniel Fuchs](./daniel-fuchs.md) | 47 | HTTP Client | [详情](./daniel-fuchs.md) |
 | [Volkan Yazici](./volkan-yazici.md) | 45 | HTTP Client | [详情](./volkan-yazici.md) |
 | [Justin Lu](./justin-lu.md) | 43 | Localization | [详情](./justin-lu.md) |
-| + 80+ more | - | - | - |
+| + 75+ more | - | - | - |
 
 ### [Amazon](/contributors/orgs/amazon.md) (~5% of commits)
 
@@ -205,7 +208,6 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 | Contributor | Commits | Focus | 档案 |
 |-------------|---------|-------|------|
-| [Kim Barrett](./kim-barrett.md) | 76 | GC | [详情](./kim-barrett.md) |
 | [Roman Kennke](./roman-kennke.md) | 30 | Compact Headers | [详情](./roman-kennke.md) |
 | [Andrew Haley](./andrew-haley.md) | 20 | RISC-V | [详情](./andrew-haley.md) |
 | [Fredrik Bredberg](./fredrik-bredberg.md) | 19 | Monitors | [详情](./fredrik-bredberg.md) |
@@ -247,11 +249,10 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 | [Martin Buchholz](./martin-buchholz.md) | 5 | Concurrency | [详情](./martin-buchholz.md) |
 | [Liam Miller-Cushon](./liam-miller-cushon.md) | 4 | javac | [详情](./liam-miller-cushon.md) |
 
-### Independent (~5% of commits)
+### Independent (~4% of commits)
 
 | Contributor | Commits | Focus | 档案 |
 |-------------|---------|-------|------|
-| [Emanuel Peter](./emanuel-peter.md) | 49 | C2 Compiler | [详情](./emanuel-peter.md) |
 | [Quan Anh Mai](./quan-anh-mai.md) | 26 | Type System | [详情](./quan-anh-mai.md) |
 | [Anton Seoane Ampudia](./anton-seoane-ampudia.md) | 24 | x86 Cleanup | [详情](./anton-seoane-ampudia.md) |
 | [Artur Barashev](./artur-barashev.md) | 18 | Security | [详情](./artur-barashev.md) |
@@ -280,10 +281,10 @@ JDK 26 had **~380 unique contributors** making commits during its development cy
 
 | Organization | Contributors | Commits | % |
 |--------------|--------------|---------|---|
-| [Oracle](/contributors/orgs/oracle.md) | 75+ | ~2,950 | ~75% |
+| [Oracle](/contributors/orgs/oracle.md) | 77+ | ~2,870 | ~73% |
 | [Amazon](/contributors/orgs/amazon.md) | 2 | ~123 | ~3% |
-| [Red Hat](/contributors/orgs/redhat.md) | 4 | ~145 | ~4% |
-| [Independent](#) | 12+ | ~150 | ~4% |
+| [Red Hat](/contributors/orgs/redhat.md) | 3 | ~69 | ~2% |
+| [Independent](#) | 11+ | ~101 | ~3% |
 | [Alibaba](/contributors/orgs/alibaba.md) | 8 | ~74 | ~2% |
 | [SAP](/contributors/orgs/sap.md) | 2 | ~73 | ~2% |
 | [Oracle Labs](/contributors/orgs/oracle.md) | 4 | ~21 | ~0.5% |
@@ -413,7 +414,6 @@ For detailed contributor profiles, see:
 - [William Kemper](./william-kemper.md) - Shenandoah GC (JEP 521 Lead)
 
 ### Red Hat Contributors
-- [Kim Barrett](./kim-barrett.md) - GC
 - [Roman Kennke](./roman-kennke.md) - Compact Object Headers (JEP 519 Lead)
 
 ### Alibaba Contributors
