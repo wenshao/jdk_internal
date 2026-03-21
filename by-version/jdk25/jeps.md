@@ -16,35 +16,6 @@
 
 ## 1. 语言特性
 
-### JEP 430: String Templates (正式版)
-
-**状态**: ✅ Final
-
-字符串模板提供了一种更安全、更易读的字符串插值方式。
-
-```java
-// STR 模板处理器
-String name = "World";
-String message = STR."Hello, \{name}!";
-
-// JSON 模板
-String json = JSON."""
-    {
-        "name": "\{name}",
-        "value": \{42}
-    }
-    """;
-
-// 自定义模板处理器
-public interface StringProcessor {
-    String process(String... values) throws IllegalArgumentException;
-}
-```
-
-**相关**: [JEP 文档](https://openjdk.org/jeps/430)
-
----
-
 ### JEP 507: Primitive Types in Patterns (第三次预览)
 
 **状态**: 🔍 Preview
@@ -71,7 +42,7 @@ if (obj instanceof int i) {
 
 ---
 
-### JEP 469: Implicit Classes and Instance Main Methods (第四次预览)
+### JEP 512: Compact Source Files (第四次预览)
 
 **状态**: 🔍 Preview
 
@@ -91,39 +62,7 @@ void main(String[] args) {
 }
 ```
 
-**相关**: [JEP 文档](https://openjdk.org/jeps/469)
-
----
-
-### JEP 466: Class-File API (第二次预览)
-
-**状态**: 🔍 Preview
-
-提供解析和生成类文件的标准 API。
-
-```java
-import java.lang.classfile.*;
-
-// 读取类文件
-ClassModel classModel = ClassFile.of().parse(bytes);
-
-// 遍历方法
-for (MethodModel method : classModel.methods()) {
-    System.out.println(method.methodName());
-}
-
-// 生成类文件
-byte[] newClass = ClassFile.of().build(classModel.thisClass().asSymbol(), cb -> {
-    cb.withMethod("compute", MethodTypeDesc.of("(II)I"),
-        ClassFile.ACC_PUBLIC, mb -> {
-            mb.withCode(codeBuilder -> {
-                // 构建方法体
-            });
-        });
-});
-```
-
-**相关**: [JEP 文档](https://openjdk.org/jeps/466)
+**相关**: [JEP 文档](https://openjdk.org/jeps/512)
 
 ---
 
