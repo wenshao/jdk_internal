@@ -28,7 +28,7 @@
 JDK 21 ───── JDK 22 ───── JDK 23 ───── JDK 24 ───── JDK 26
    │             │             │             │             │
  内部工具      预览版        第二次预览      正式版        增强
- jdk.internal  JEP 459       JEP 466       JEP 484       持续优化
+ jdk.internal  JEP 457       JEP 466       JEP 484       持续优化
 ```
 
 ### 核心价值
@@ -181,9 +181,9 @@ byte[] transformed = ClassFile.of().transformClass(
 - 仅限 JDK 内部使用
 - 无预览特性标记
 
-### JDK 22 (2024) - 第一次预览 (JEP 459)
+### JDK 22 (2024) - 第一次预览 (JEP 457)
 
-**JEP 459** - Brian Goetz (Author), Adam Sotona (Owner)
+**JEP 457** - Brian Goetz (Author), Adam Sotona (Owner)
 
 **主要变化**:
 - 包名变更: `jdk.internal.classfile` → `java.lang.classfile`
@@ -338,7 +338,7 @@ ClassDesc 内部名称缓存优化：
 
 | JEP | 标题 | Author | Owner |
 |-----|------|--------|-------|
-| [JEP 459](/jeps/tools/jep-459.md) | Class-File API (First Preview) | Brian Goetz | Adam Sotona |
+| [JEP 457](/jeps/tools/jep-457.md) | Class-File API (First Preview) | Brian Goetz | Adam Sotona |
 | [JEP 466](/jeps/tools/jep-466.md) | Class-File API (Second Preview) | - | Adam Sotona |
 | [JEP 484](/jeps/tools/jep-484.md) | Class-File API (Final) | Brian Goetz | Adam Sotona |
 
@@ -362,7 +362,7 @@ ClassDesc 内部名称缓存优化：
   - Class File API 实现负责人 ([JDK-8294982](https://bugs.openjdk.org/browse/JDK-8294982))
   - 56+ 版本迭代 (v6 → v56)
   - 从 `jdk.internal.classfile` 到标准 API 的迁移主导者
-  - JEP 459/466/484 Owner
+  - JEP 457/466/484 Owner
 
 > "The Class-File API provides a standard way to parse, generate, and transform Java class files, eventually replacing ASM within the JDK."
 >
@@ -543,7 +543,7 @@ buf.writeU1U2U4(u1Value, u2Value, u4Value);
 
 - [JEP 484](/jeps/tools/jep-484.md)
 - [JEP 466](/jeps/tools/jep-466.md)
-- [JEP 459](/jeps/tools/jep-459.md)
+- [JEP 457](/jeps/tools/jep-457.md)
 - [ClassFile API Documentation](https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/classfile/package-summary.html)
 
 ### 源码与讨论

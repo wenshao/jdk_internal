@@ -9,10 +9,10 @@
 
 1. [2017: 项目启动](#1-2017-项目启动)
 2. [2018: Continuations 原型](#2-2018-continuations-原型)
-3. [2019: JDK 13-14 - 早期孵化](#3-2019-jdk-13-14---早期孵化)
-4. [2020: JDK 14 - 孵化器](#4-2020-jdk-14---孵化器)
-5. [2021: JDK 15-16 - 继续孵化](#5-2021-jdk-15-16---继续孵化)
-6. [2022: JDK 17-18 - 预览版本](#6-2022-jdk-17-18---预览版本)
+3. [2019: 早期原型 (独立 EA 构建)](#3-2019-早期原型-独立-ea-构建)
+4. [2020: 独立 EA 构建](#4-2020-独立-ea-构建)
+5. [2021: 继续开发 (独立 EA 构建)](#5-2021-继续开发-独立-ea-构建)
+6. [2022: JDK 19 - 预览版本](#6-2022-jdk-19---预览版本)
 7. [2023: JDK 21 - 正式发布](#7-2023-jdk-21---正式发布)
 8. [2024-2025: 结构化并发演进](#8-2024-2025-结构化并发演进)
 9. [API 演进历史](#9-api-演进历史)
@@ -57,7 +57,7 @@ class Continuation {
 
 ---
 
-## 3. 2019: JDK 13-14 - 早期孵化
+## 3. 2019: 早期原型 (独立 EA 构建)
 
 ### JEP Draft: Virtual Threads
 
@@ -70,16 +70,16 @@ class Continuation {
 ### 原型发布
 
 - **日期**: 2019-09
-- **里程碑**: JDK 13 包含 Loom 原型
+- **里程碑**: Loom 独立 EA 构建发布 (非 JDK 13 主线)
 - **标志**: `-XX:+EnableValhalla` (早期复用标志)
 
 ---
 
-## 4. 2020: JDK 14 - 孵化器
+## 4. 2020: 独立 EA 构建 (非 JDK 14 主线)
 
 ### 虚拟线程孵化器
 
-- **日期**: 2020-03 (JDK 14)
+- **日期**: 2020-03 (独立 Loom EA 构建，非 JDK 14 主线发布)
 - **包**: `jdk.incubator.concurrent`
 - **类**: `java.lang.Fiber` (早期命名)
 
@@ -92,7 +92,7 @@ Fiber f = Fiber.schedule(() -> {
 
 ---
 
-## 5. 2021: JDK 15-16 - 继续孵化
+## 5. 2021: 继续开发 (独立 EA 构建，非 JDK 15/16 主线)
 
 ### API 重命名
 
@@ -119,7 +119,7 @@ vThread.start();
 
 ---
 
-## 6. 2022: JDK 17-18 - 预览版本
+## 6. 2022: JDK 19 - 预览版本
 
 ### JEP 425: Virtual Threads (Preview)
 
@@ -141,7 +141,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ### JEP 436: Virtual Threads (Second Preview)
 
-- **日期**: 2022-09 (JDK 20 第二预览)
+- **日期**: 2023-03 (JDK 20 第二预览)
 - **改进**:
   - API 细节调整
   - 性能优化
@@ -192,17 +192,17 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ## 8. 2024-2025: 结构化并发演进
 
-### JEP 453: Structured Concurrency (Preview)
+### JEP 462: Structured Concurrency (Second Preview)
 
-- **日期**: 2024-03 (JDK 22 预览)
+- **日期**: 2024-03 (JDK 22 第二预览)
 - **改进**:
   - 更清晰的作用域语义
   - 更好的错误传播
   - 性能优化
 
-### JEP 464: Structured Concurrency (Second Preview)
+### JEP 480: Structured Concurrency (Third Preview)
 
-- **日期**: 2025 (JDK 23 第二预览)
+- **日期**: 2024-09 (JDK 23 第三预览)
 - **状态**: 进行中
 
 ---

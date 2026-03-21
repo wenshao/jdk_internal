@@ -82,7 +82,7 @@ JDK 1.0 ── JDK 5 ── JDK 8 ── JDK 9 ── JDK 16 ── JDK 21
 | **JDK 9** | iterate 重载 | - | 支持 Predicate |
 | **JDK 9** | ofNullable | - | 空 Stream 处理 |
 | **JDK 16** | toList() | - | 简化收集 |
-| **JDK 21** | Gatherers (预览) | JEP 461 | 自定义中间操作 |
+| **JDK 22** | Gatherers (预览) | JEP 461 | 自定义中间操作 |
 
 ---
 
@@ -149,7 +149,7 @@ try (Stream<String> lines = Files.lines(Paths.get("file.txt"))) {
     lines.forEach(System.out::println);
 }
 
-// 8. 拆分字符串 (JDK 8)
+// 8. 拆分字符串 (JDK 11)
 "hello world".lines().forEach(System.out::println);
 ```
 
@@ -395,7 +395,7 @@ List<String> words = Arrays.asList("apple", "banana", "cherry", "date", "elderbe
 // 1. 简单分组
 Map<Integer, List<String>> byLength = words.stream()
     .collect(Collectors.groupingBy(String::length));
-// {5=[apple, date], 6=[banana, cherry], 9=[elderberry]}
+// {4=[date], 5=[apple], 6=[banana, cherry], 10=[elderberry]}
 
 // 2. 分组后计数
 Map<Integer, Long> countByLength = words.stream()
@@ -403,7 +403,7 @@ Map<Integer, Long> countByLength = words.stream()
         String::length,
         Collectors.counting()
     ));
-// {5=2, 6=2, 9=1}
+// {4=1, 5=1, 6=2, 10=1}
 
 // 3. 分组后转换值
 Map<Integer, Set<String>> setByLength = words.stream()
@@ -706,14 +706,14 @@ IntStream.iterate(0, n -> n < 20, n -> n + 2)
 
 ---
 
-## 9. Gatherers (JDK 21+)
+## 9. Gatherers (JDK 22+)
 
 **JEP 461: Gatherers (Preview)**
 
 ### Gatherer 基础
 
 ```java
-// Gatherer 是 JDK 21 引入的预览特性
+// Gatherer 是 JDK 22 引入的预览特性
 // 用于自定义中间操作
 
 import java.util.stream.gather.*;

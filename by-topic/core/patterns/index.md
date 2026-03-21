@@ -268,7 +268,7 @@ public String getDayType(Day day) {
     };
 }
 
-// JDK 17+ Switch 模式匹配
+// JDK 21+ Switch 模式匹配 (JDK 17 预览, JDK 21 正式)
 public String describe(Object obj) {
     return switch (obj) {
         case String s -> "字符串: " + s;

@@ -12,7 +12,7 @@ Java 网络编程从 JDK 1.0 到 JDK 26 的完整演进历程。
 5. [JDK 7 - NIO.2 异步 I/O](#5-jdk-7---nio2-异步-io)
 6. [JDK 9 - HTTP/2 支持](#6-jdk-9---http2-支持)
 7. [JDK 11+ - HTTP Client](#7-jdk-11---http-client)
-8. [JDK 18 - Unix Domain Sockets](#8-jdk-18---unix-domain-sockets)
+8. [JDK 16 - Unix Domain Sockets](#8-jdk-16---unix-domain-sockets)
 9. [网络协议支持](#9-网络协议支持)
 10. [网络编程最佳实践](#10-网络编程最佳实践)
 11. [时间线总结](#11-时间线总结)
@@ -24,7 +24,7 @@ Java 网络编程从 JDK 1.0 到 JDK 26 的完整演进历程。
 ## 1. 时间线概览
 
 ```
-JDK 1.0 ──── JDK 1.1 ──── JDK 5 ──── JDK 7 ──── JDK 9 ──── JDK 11 ──── JDK 18 ──── JDK 26
+JDK 1.0 ──── JDK 1.1 ──── JDK 5 ──── JDK 7 ──── JDK 9 ──── JDK 11 ──── JDK 16 ──── JDK 26
  │             │           │           │           │           │           │           │
 Socket/       URL          NIO        Asynchronous HTTP/2  HTTP/3    Unix    SCTP
 ServerSocket  Handler     Selector   I/O         (ALPN)    (QUIC)   Domain  (Unix)
@@ -313,7 +313,7 @@ HttpResponse<String> response = client.send(request,
 
 ---
 
-## 8. JDK 18 - Unix Domain Sockets
+## 8. JDK 16 - Unix Domain Sockets
 
 ### Unix Socket 支持
 
@@ -322,7 +322,7 @@ import java.net.*;
 import java.io.*;
 import jdk.net.unix.*;
 
-// Unix Domain Socket (JDK 18+)
+// Unix Domain Socket (JDK 16+)
 // 仅限 Unix-like 系统
 
 // 客户端
@@ -408,7 +408,7 @@ try {
 | JDK 9 | HTTP/2 | 多路复用 |
 | JDK 11 | HTTP Client 标准化 | 新 API |
 | JDK 16 | HTTP/2 ALPN | TLS 扩展 |
-| JDK 18 | Unix Domain Socket | 本地 IPC |
+| JDK 16 | Unix Domain Socket | 本地 IPC |
 | JDK 26 | HTTP/3 | QUIC 支持 |
 
 ---

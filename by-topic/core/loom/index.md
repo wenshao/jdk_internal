@@ -189,7 +189,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 
 ```java
 // 返回第一个成功的结果
-try (var scope = new StructuredTaskScope.SuccessOnSuccess<Object>()) {
+try (var scope = new StructuredTaskScope.ShutdownOnSuccess<Object>()) {
     scope.fork(() -> fetchFromSourceA());
     scope.fork(() -> fetchFromSourceB());
     scope.fork(() -> fetchFromSourceC());
@@ -216,7 +216,7 @@ Thread.sleep(1000);  // 不阻塞 Carrier Thread
 socket.read(buffer); // 不阻塞 Carrier Thread
 
 // 锁阻塞
-synchronized (lock) { // 不阻塞 Carrier Thread
+synchronized (lock) { // 会 Pin Carrier Thread (固定虚拟线程到载体线程)
     // ...
 }
 ```
@@ -247,13 +247,13 @@ try {
 |------|------|--------|
 | **2017** | - | Project Loom 启动 |
 | **2018** | - | Continuations 原型 |
-| **2019** | JDK 13 | 虚拟线程原型 |
-| **2020** | JDK 14 | 虚拟线程 (孵化器) |
-| **2021** | JDK 15-16 | 虚拟线程 (孵化器) |
-| **2022** | JDK 17 | 虚拟线程 (预览) |
-| **2023** | JDK 19-20 | 虚拟线程 (预览) |
-| **2023** | JDK 21 | **虚拟线程 (正式)** |
-| **2024** | JDK 21 | 结构化并发 (预览) |
+| **2018-2019** | - | 虚拟线程原型 (独立 EA 构建) |
+| **2020-2021** | - | 虚拟线程开发 (独立 EA 构建) |
+| **2022** | JDK 19 | 虚拟线程 (第一次预览, JEP 425) |
+| **2023** | JDK 20 | 虚拟线程 (第二次预览, JEP 436) |
+| **2023** | JDK 21 | **虚拟线程 (正式, JEP 444)** |
+| **2023** | JDK 21 | 结构化并发 (预览, JEP 453) |
+
 
 → [完整时间线](timeline.md)
 

@@ -68,10 +68,10 @@ List<String>[] array = (List<String>[]) new List[10];
 ## 2. 快速概览
 
 ```
-JDK 1.0 ── JDK 4 ── JDK 5 ── JDK 7 ── JDK 8 ── JDK 10
+JDK 1.0 ── J2SE 1.4 ── JDK 5 ── JDK 7 ── JDK 8 ── JDK 10
    │        │        │        │        │        │
-集合    JSR 14   Generics  Diamond  类型    var
-使用    预览      (JSR201)  操作符   注解    推断
+集合    JSR 14   Generics   Diamond  类型    var
+使用    预览      (JSR 14)  操作符   注解    推断
 ```
 
 ### 核心演进

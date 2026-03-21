@@ -39,8 +39,8 @@ JDK 17 是继 JDK 11 之后的 LTS 版本，包含多项重要新特性：
 | GC | 状态 | 说明 |
 |----|------|------|
 | **G1 GC** | 默认 | 持续优化 |
-| **ZGC** | 实验 (JEP 333) | 低延迟 GC，JDK 15 正式 |
-| **Shenandoah** | 实验 | 低延迟 GC |
+| **ZGC** | 正式 (JEP 377) | 低延迟 GC，JDK 15 正式 |
+| **Shenandoah** | 正式 (JEP 379) | 低延迟 GC |
 
 ---
 
@@ -58,7 +58,7 @@ JDK 17 是继 JDK 11 之后的 LTS 版本，包含多项重要新特性：
 
 **推荐配置**:
 ```bash
--XX:+UseZGC             # 尝试 ZGC (实验)
+-XX:+UseZGC             # 使用 ZGC (正式)
 -XX:+ZGenerational      # 需要 JDK 21+
 ```
 

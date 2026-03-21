@@ -44,7 +44,7 @@ Connection URLConn Client  Client   支持      支持    优化    (预览)
 | **JDK 1.1** | HTTP/1.1 | 持久连接 | 已过时 |
 | **JDK 9** | HTTP/2 | 多路复用 (孵化) | 孵化 |
 | **JDK 11** | HTTP/2 | 标准化 | 标准 |
-| **JDK 20** | HTTP/2 | 推送支持 | 标准 |
+| **JDK 11** | HTTP/2 | 推送支持 (PushPromiseHandler) | 标准 |
 | **JDK 26** | HTTP/3 | 基于 QUIC (预览) | 预览 |
 
 ### API 演进
@@ -240,7 +240,7 @@ List<CompletableFuture<String>> futures = requests.stream()
 ### HTTP/2 推送
 
 ```java
-// 服务器推送 (JDK 20+)
+// 服务器推送 (JDK 11+, PushPromiseHandler)
 HttpClient client = HttpClient.newBuilder()
     .version(HttpClient.Version.HTTP_2)
     .build();
@@ -249,13 +249,20 @@ HttpRequest request = HttpRequest.newBuilder()
     .uri(URI.create("https://example.com/api"))
     .build();
 
-// 接收推送的额外资源
-HttpResponse<String> response = client.send(request,
-    HttpResponse.BodyHandlers.ofString());
+// PushPromiseHandler is passed to send()/sendAsync()
+ConcurrentMap<HttpRequest, CompletableFuture<HttpResponse<String>>>
+    pushPromises = new ConcurrentHashMap<>();
 
-// 检查推送的流
-response.pushPromises().forEach(pushPromise -> {
-    System.out.println("Pushed: " + pushPromise.requestedUri());
+HttpResponse.PushPromiseHandler<String> pushHandler =
+    HttpResponse.PushPromiseHandler.of(
+        HttpResponse.BodyHandlers.ofString(), pushPromises);
+
+HttpResponse<String> response = client.send(request,
+    HttpResponse.BodyHandlers.ofString(), pushHandler);
+
+// 检查推送的资源
+pushPromises.forEach((pushReq, futureResp) -> {
+    System.out.println("Pushed: " + pushReq.uri());
 });
 ```
 

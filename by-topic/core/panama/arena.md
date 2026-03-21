@@ -322,7 +322,7 @@ try (Arena outer = Arena.ofConfined()) {
 │  Arena 实现 AutoCloseable                   │
 │       │                                     │
 │       ▼                                     │
-│  Arena extends MemorySession               │
+│  Arena implements SegmentAllocator, AutoCloseable               │
 │       │                                     │
 │       ├── allocate(size)                    │
 │       ├── allocateFrom(String)             │
@@ -899,7 +899,7 @@ try (Arena arena = Arena.ofConfined()) {
 
 | 版本 | 变更 |
 |------|------|
-| **JDK 14** | MemorySession (孵化) |
+| **JDK 14** | MemorySegment.allocateNative() (孵化) |
 | **JDK 16** | Arena 概念引入 |
 | **JDK 19** | Arena API (预览) |
 | **JDK 22** | Arena 正式发布 |
@@ -913,6 +913,6 @@ try (Arena arena = Arena.ofConfined()) {
 - [JEP 389](/jeps/ffi/jep-389.md)
 - [JEP 393: Foreign Memory Access API](https://openjdk.org/jeps/393)
 - [Panama Project](https://openjdk.org/projects/panama/)
-- [MemorySession Javadoc](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/foreign/MemorySession.html)
+- [Arena Javadoc](https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/foreign/Arena.html)
 
 → [返回 Panama](./)

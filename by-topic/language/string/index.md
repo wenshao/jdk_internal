@@ -150,7 +150,7 @@ String result = """
 // 格式化字符串
 String formatted = String.format("Hello %s, age %d", "Alice", 25);
 
-// formatted() - JDK 16+
+// formatted() - JDK 15+
 String formatted = "Hello %s, age %d".formatted("Alice", 25);
 ```
 
@@ -227,10 +227,10 @@ String result = a + b + c;
 -Djava.lang.invoke.StringConcat.cacheThreshold=256
 
 # 策略:
-# - BC: StringBuilder (JDK 8 风格)
-# - HB: handleInline (少量字符串)
-# - HM: inline (中等数量)
-# - MC: mixin (大量字符串, 隐藏类)
+# - BC_SB: StringBuilder (JDK 8 风格)
+# - MH_SB_SIZED: MethodHandle sized (中等数量)
+# - MH_SB_SIZED_EXACT: MethodHandle sized exact
+# - MH_INLINE_SIZED_EXACT: MethodHandle inline sized exact
 ```
 
 ---
@@ -636,7 +636,7 @@ String Deduplication、VM 调优参数、最佳实践。
 -Djava.lang.invoke.StringConcat.cacheThreshold=256
 
 # 策略选择
--Djava.lang.invoke.StringConcat.factory=BC|HB|HM|MC
+-Djava.lang.invoke.StringConcat.factory=BC_SB|MH_SB_SIZED|MH_SB_SIZED_EXACT|MH_INLINE_SIZED_EXACT
 ```
 
 ---

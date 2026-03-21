@@ -22,7 +22,7 @@ x -> x * 2                    // 单参数，单表达式
 // 方法引用
 String::new                  // 构造器引用
 System.out::println          // 实例方法引用
-String::toUpperCase          // 静态方法引用
+String::toUpperCase          // 实例方法引用
 ArrayList::new               // 构造器引用
 ```
 
@@ -77,10 +77,10 @@ button.addActionListener(e -> System.out.println("Clicked"));
 ## 2. 快速概览
 
 ```
-JDK 1.0 ── JDK 5 ── JDK 7 ── JDK 8 ── JDK 9 ── JDK 11 ── JDK 16 ── JDK 21 ── JDK 22
-   │        │        │        │        │        │        │        │        │
-匿名类    枚举    Invokedynamic  Lambda  默认方法  @VBC类型推断  Record  模式匹配
-内部类    泛型    (JSR292)  Stream  (DefaultMethod)推断   Pattern Matching
+JDK 1.0 ── JDK 5 ── JDK 7 ── JDK 8 ──── JDK 11 ── JDK 16 ── JDK 21 ── JDK 22
+   │        │        │        │          │        │        │        │
+匿名类    枚举    Invokedynamic  Lambda    @VBC类型  Record  模式匹配
+内部类    泛型    (JSR292)  Stream    推断    Pattern Matching
 ```
 
 ### 核心演进
@@ -90,7 +90,7 @@ JDK 1.0 ── JDK 5 ── JDK 7 ── JDK 8 ── JDK 9 ── JDK 11 ──
 | **JDK 8** | Lambda | JEP 126 | 函数式编程 |
 | **JDK 8** | 方法引用 | - | 简化 Lambda |
 | **JDK 8** | Stream API | JEP 107 | 函数式操作集合 |
-| **JDK 9** | 默认方法 | - | 接口增强 |
+| **JDK 8** | 默认方法 | - | 接口增强 |
 | **JDK 11** | 局部变量类型推断 | JEP 323 | var 增强 |
 | **JDK 21** | Record 模式匹配 | JEP 440 | 解构模式 |
 | **JDK 21-23** | 模式匹配 | JEP 441 | switch/case 增强 |
@@ -192,7 +192,7 @@ public class LambdaExample {
 BootstrapMethods:
   0: #REF invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/CallSite;)Ljava/lang/invoke/CallSite;
     Method arguments:
-      #0 methodHandle invokestatic java/lang/invoke/LambdaMetafactory.metafactory(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MathType;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+      #0 methodHandle invokestatic java/lang/invoke/LambdaMetafactory.metafactory(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
       #1 ()Ljava/lang/Runnable;
       #2 run:()Ljava/lang/Runnable;
       #3 ()V
@@ -290,7 +290,7 @@ public static CallSite metafactory(MethodHandles.Lookup caller,
                                        String invokedName,
                                        MethodType invokedType,
                                        MethodType samMethodType,
-                                       MethodType implMethodType,
+                                       MethodHandle implMethod,
                                        MethodType instantiatedMethodType)
 
 // 参数说明:
@@ -298,7 +298,7 @@ public static CallSite metafactory(MethodHandles.Lookup caller,
 // 2. invokedName - 要实现的方法名 (如 "apply")
 // 3. invokedType - 调用点的类型签名
 // 4. samMethodType - 函数式接口的方法类型
-// 5. implMethodType - Lambda 体的方法类型
+// 5. implMethod - Lambda 体的实现方法句柄 (MethodHandle)
 // 6. instantiatedMethodType - 实例化时的类型签名
 
 // 示例: 手动创建 Lambda

@@ -9,25 +9,25 @@
 ## 1. 快速概览
 
 ```
-JDK 1.0 ── JDK 5 ── JDK 6 ── JDK 8 ── JDK 11 ── JDK 17 ── JDK 21 ── JDK 25 ── JDK 26
-   │         │        │        │        │        │        │        │        │
-堆/栈    Compressed  永久代  元空间  ZGC    分代    AOT    紧凑    G1优化
-PermGen   Oops    移除   字符串  低延迟  ZGC    缓存   对象头  吞吐量
+JDK 1.0 ── JDK 6u23 ── JDK 7 ── JDK 8 ── JDK 11 ── JDK 17 ── JDK 21 ── JDK 24
+   │         │        │        │        │        │        │        │
+堆/栈    Compressed  默认启用  元空间  ZGC    分代    AOT缓存
+PermGen   Oops     Oops   字符串  低延迟  ZGC    紧凑对象头
 ```
 
 ### 核心演进
 
 | 版本 | 特性 | 说明 | 内存节省 |
 |------|------|------|----------|
-| **JDK 5** | Compressed Oops | 压缩普通对象指针 | ~50% |
-| **JDK 6** | Compressed Oops 默认 | 64位默认启用 | ~50% |
+| **JDK 6u23** | Compressed Oops | 压缩普通对象指针 | ~20-30% |
+| **JDK 7** | Compressed Oops 默认 | 64位默认启用 | ~20-30% |
 | **JDK 8** | 元空间 | 移除永久代 | 动态扩展 |
 | **JDK 8u20** | String Deduplication | 字符串去重 | ~10% |
 | **JDK 11** | ZGC | 低延迟 GC | 大内存友好 |
 | **JDK 15** | ZGC 生产可用 | 正式版 | 稳定 |
 | **JDK 21** | 分代 ZGC | 降低 GC 频率 | 更高效 |
-| **JDK 25** | AOT 缓存 | 预加载类链接 | 减少运行时分配 |
-| **JDK 26** | 紧凑对象头 | 压缩对象头 | 8-16字节/对象 |
+| **JDK 24** | AOT 缓存 | 预加载类链接 | 减少运行时分配 |
+| **JDK 24** | 紧凑对象头 | 压缩对象头 | 4字节/对象 |
 
 ---
 
@@ -273,15 +273,13 @@ ByteBuffer heapBuffer = ByteBuffer.allocate(1024 * 1024);
 │                  对象内存布局                           │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│  普通对象 (JDK 26+ 紧凑对象头):                        │
+│  普通对象 (JDK 24+ 紧凑对象头):                        │
 │  ┌───────────────────────────────────────────┐         │
-│  │  Mark Word (4 bytes)                      │         │
+│  │  Mark Word (8 bytes, 含类信息)            │         │
 │  │  ├── 锁状态                               │         │
 │  │  ├── GC 标记                              │         │
-│  │  └── HashCode                             │         │
-│  ├───────────────────────────────────────────┤         │
-│  │  Class Pointer (4 bytes, compressed)      │         │
-│  │  └── 指向类元数据                         │         │
+│  │  ├── HashCode                             │         │
+│  │  └── 类指针 (合并在 Mark Word 中)         │         │
 │  ├───────────────────────────────────────────┤         │
 │  │  Fields                                  │         │
 │  │  ├── 实例数据                             │         │
@@ -290,9 +288,7 @@ ByteBuffer heapBuffer = ByteBuffer.allocate(1024 * 1024);
 │                                                         │
 │  数组对象:                                              │
 │  ┌───────────────────────────────────────────┐         │
-│  │  Mark Word (4 bytes)                      │         │
-│  ├───────────────────────────────────────────┤         │
-│  │  Class Pointer (4 bytes)                  │         │
+│  │  Mark Word (8 bytes, 含类信息)            │         │
 │  ├───────────────────────────────────────────┤         │
 │  │  Array Length (4 bytes)                   │         │
 │  ├───────────────────────────────────────────┤         │
@@ -355,7 +351,7 @@ ByteBuffer heapBuffer = ByteBuffer.allocate(1024 * 1024);
 **内存节省**:
 - 每个对象引用节省 4 字节
 - 每个对象节省 8-12 字节
-- 整体内存节省约 50%
+- 整体内存节省约 20-30%
 
 ### String Deduplication
 
@@ -369,13 +365,13 @@ ByteBuffer heapBuffer = ByteBuffer.allocate(1024 * 1024);
 **配置参数**:
 
 ```bash
-# 启用字符串去重 (默认启用)
+# 启用字符串去重 (默认未启用)
 -XX:+UseStringDeduplication
 
 # 去重阈值
 -XX:StringDeduplicationAgeThreshold=3
 
-# 仅在 G1 GC 下可用
+# 支持 G1、ZGC 和 Parallel GC (JDK 18+)
 -XX:+UseG1GC
 ```
 
@@ -431,7 +427,7 @@ PhantomReference<byte[]> phantomRef = new PhantomReference<>(new byte[1024 * 102
 
 ## 5. 最新增强
 
-### JDK 25: AOT 缓存
+### JDK 24: AOT 缓存
 
 **JEP 483: Ahead-of-Time Class Loading & Linking**
 
@@ -453,18 +449,18 @@ java -XX:AOTCacheConfiguration=aot_config.txt \
 - 减少元空间使用
 - 降低 GC 压力
 
-### JDK 26: 紧凑对象头
+### JDK 24: 紧凑对象头
 
-**JEP 519: Compact Object Headers**
+**JEP 450: Compact Object Headers**
 
 ```bash
-# 启用紧凑对象头 (默认)
+# 启用紧凑对象头 (非默认，需显式启用)
 -XX:+UseCompactObjectHeaders
 ```
 
 **内存节省**:
-- 每个对象节省 8-16 字节
-- 对象头从 12-16 字节减少到 4-8 字节
+- 每个对象节省 4 字节
+- 对象头从 12 字节减少到 8 字节
 - 提高缓存效率
 
 ---
@@ -481,10 +477,10 @@ java -XX:AOTCacheConfiguration=aot_config.txt \
 | 1 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 317 | Oracle | 类加载, 运行时 |
 | 2 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 215 | Oracle | CDS, AOT, 内存 |
 | 3 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 174 | Oracle | 并发, 线程 |
-| 4 | Thomas Stuefe | 163 | Oracle | 内存, 跨平台 |
+| 4 | Thomas Stuefe | 163 | SAP | 内存, 跨平台 |
 | 5 | Stefan Karlsson | 149 | Oracle | 并发 GC |
 | 6 | Kim Barrett | 113 | Oracle | C++ 现代化 |
-| 7 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 112 | Oracle | 性能基准 |
+| 7 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 112 | Amazon | 性能基准 |
 | 8 | Robbin Ehn | 77 | Oracle | 并发, 锁 |
 | 9 | Calvin Cheung | 77 | Oracle | 类加载 |
 | 10 | Patricio Chilano Mateo | 76 | Oracle | 运行时 |

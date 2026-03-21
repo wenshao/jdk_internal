@@ -9,11 +9,11 @@
 
 1. [2014: 项目启动](#1-2014-项目启动)
 2. [2015-2018: 早期原型](#2-2015-2018-早期原型)
-3. [2019: JDK 14 - Foreign Memory 孵化](#3-2019-jdk-14---foreign-memory-孵化)
-4. [2020: JDK 15 - Linker API](#4-2020-jdk-15---linker-api)
+3. [2020: JDK 14 - Foreign Memory 孵化](#3-2019-jdk-14---foreign-memory-孵化)
+4. [2020-2021: JDK 15-16 - Linker API](#4-2020-jdk-15---linker-api)
 5. [2021: JDK 16 - 内存 API 改进](#5-2021-jdk-16---内存-api-改进)
 6. [2022: JDK 17-19 - FFI 整合](#6-2022-jdk-17-19---ffi-整合)
-7. [2023: JDK 19-20 - 预览版本](#7-2023-jdk-19-20---预览版本)
+7. [2022-2023: JDK 19-21 - 预览版本](#7-2023-jdk-19-20---预览版本)
 8. [2024: JDK 22 - 正式发布](#8-2024-jdk-22---正式发布)
 9. [API 演进历史](#9-api-演进历史)
 10. [时间线总览](#10-时间线总览)
@@ -58,11 +58,11 @@
 
 ---
 
-## 3. 2019: JDK 14 - Foreign Memory 孵化
+## 3. 2020: JDK 14 - Foreign Memory 孵化
 
 ### JEP 370: Foreign Memory Access API (Incubator)
 
-- **日期**: 2019-06 (JDK 14 孵化器)
+- **日期**: 2020-03 (JDK 14 孵化器)
 - **包**: `jdk.incubator.foreign`
 - **特性**:
   - `MemorySegment` - 内存段
@@ -71,19 +71,19 @@
 
 ```java
 // JDK 14 示例
-try (MemorySession session = MemorySession.openConfined()) {
-    MemorySegment segment = session.allocate(100);
-    segment.set(ValueLayout.JAVA_INT, 0, 42);
-}
+// JDK 14 使用 MemorySegment.allocateNative()
+MemorySegment segment = MemorySegment.allocateNative(100);
+segment.set(ValueLayout.JAVA_INT, 0, 42);
+// 需要手动管理生命周期
 ```
 
 ---
 
-## 4. 2020: JDK 15 - Linker API
+## 4. 2020-2021: JDK 15-16 - Linker API
 
 ### JEP 389: Foreign Linker API (Incubator)
 
-- **日期**: 2020-06 (JDK 15 孵化器)
+- **日期**: 2021-03 (JDK 16 孵化器)
 - **特性**:
   - `Linker` - 原生链接器
   - `SymbolLookup` - 符号查找
@@ -91,7 +91,7 @@ try (MemorySession session = MemorySession.openConfined()) {
   - `MemoryLayout` - 结构体布局
 
 ```java
-// JDK 15 示例
+// JDK 16 示例
 Linker linker = Linker.nativeLinker();
 SymbolLookup stdlib = linker.defaultLookup();
 MethodHandle strlen = linker.downcallHandle(
@@ -109,9 +109,9 @@ MethodHandle strlen = linker.downcallHandle(
 
 ## 5. 2021: JDK 16 - 内存 API 改进
 
-### JEP 387: Foreign Memory Access API (Second Incubator)
+### JEP 393: Foreign Memory Access API (Third Incubator)
 
-- **日期**: 2021-03 (JDK 16 第二孵化器)
+- **日期**: 2021-03 (JDK 16 第三孵化器)
 - **改进**:
   - `MemorySession` 替代手动管理
   - 更好的内存生命周期管理
@@ -128,12 +128,12 @@ MethodHandle strlen = linker.downcallHandle(
 
 ### JEP 412: Foreign Function & Memory API (Incubator)
 
-- **日期**: 2022-06 (JDK 18 孵化器)
+- **日期**: 2021-09 (JDK 17 孵化器)
 - **里程碑**: FFI 和 Memory API 合并
 
 ### JEP 419: Foreign Function & Memory API (Second Incubator)
 
-- **日期**: 2022-09 (JDK 19 第二孵化器)
+- **日期**: 2022-03 (JDK 18 第二孵化器)
 - **改进**:
   - 统一的 `Linker` 接口
   - 改进的 `MemoryLayout`
@@ -141,11 +141,11 @@ MethodHandle strlen = linker.downcallHandle(
 
 ---
 
-## 7. 2023: JDK 19-20 - 预览版本
+## 7. 2022-2023: JDK 19-21 - 预览版本
 
 ### JEP 424: Foreign Function & Memory API (Preview)
 
-- **日期**: 2023-03 (JDK 19 预览)
+- **日期**: 2022-09 (JDK 19 预览)
 - **包**: `java.lang.foreign` (移除 incubator)
 - **特性**:
   - 类型安全的外部函数调用
@@ -160,13 +160,20 @@ Linker linker = Linker.nativeLinker();
 MethodHandle strlen = linker.downcallHandle(...);
 ```
 
-### JEP 442: Foreign Function & Memory API (Second Preview)
+### JEP 434: Foreign Function & Memory API (Second Preview)
 
-- **日期**: 2023-09 (JDK 20 第二预览)
+- **日期**: 2023-03 (JDK 20 第二预览)
 - **改进**:
   - API 细节调整
   - 性能优化
   - 文档完善
+
+### JEP 442: Foreign Function & Memory API (Third Preview)
+
+- **日期**: 2023-09 (JDK 21 第三预览)
+- **改进**:
+  - 最终 API 调整
+  - 准备正式发布
 
 ---
 
@@ -194,7 +201,7 @@ MethodHandle strlen = linker.downcallHandle(...);
 |------|-----|------|
 | JDK 14 | `MemorySegment` | 首次引入 |
 | JDK 15 | `MemoryAddress` | 分离地址概念 |
-| JDK 16 | `MemorySession` | 会话管理 |
+| JDK 19 | `MemorySession` | 会话管理 |
 | JDK 19 | `MemorySegment` | 统一 API |
 | JDK 22 | `MemorySegment` | 正式版 |
 
@@ -202,7 +209,7 @@ MethodHandle strlen = linker.downcallHandle(...);
 
 | 版本 | API | 变化 |
 |------|-----|------|
-| JDK 15 | `NativeLinker` | 孵化器 |
+| JDK 16 | `NativeLinker` | 孵化器 |
 | JDK 18 | `Linker` | 统一接口 |
 | JDK 19 | `Linker` | 预览版 |
 | JDK 22 | `Linker` | 正式版 |
@@ -226,7 +233,7 @@ MethodHandle strlen = linker.downcallHandle(...);
 | 里程碑 | 版本 | 影响 |
 |--------|------|------|
 | **Foreign Memory 孵化** | JDK 14 | 堆外内存 API |
-| **Foreign Linker 孵化** | JDK 15 | FFI API |
+| **Foreign Linker 孵化** | JDK 16 | FFI API |
 | **API 合并** | JDK 18 | 统一接口 |
 | **预览版本** | JDK 19 | 移出 incubator |
 | **正式发布** | JDK 22 | 生产就绪 |

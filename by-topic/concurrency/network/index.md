@@ -484,7 +484,7 @@ vThread.start();
 
 ## 8. Sockets API 现代化 (JDK 24+)
 
-### JEP 521: Structured Concurrency
+### Structured Concurrency (JEP 453, 462, 480, 499)
 
 ```java
 // Structured Concurrency (JDK 24+ 预览)
@@ -669,8 +669,8 @@ channel.connect(UnixDomainSocketAddress.of(new File("/tmp/my.sock")));
 
 **JEP 文档:**
 - [JEP 380](/jeps/network/jep-380.md)
-- [JEP 426: Virtual Threads](https://openjdk.org/jeps/426)
-- [JEP 521](/jeps/gc/jep-521.md)
+- [JEP 425: Virtual Threads (First Preview)](https://openjdk.org/jeps/425)
+- [JEP 444: Virtual Threads (Final)](https://openjdk.org/jeps/444)
 
 **技术文档:**
 - [Java NIO Tutorial](https://docs.oracle.com/javase/tutorial/essential/io/)

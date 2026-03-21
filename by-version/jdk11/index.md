@@ -46,7 +46,7 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 |----|------|------|
 | **G1 GC** | 默认 | 均衡性能和延迟 |
 | **ZGC** | 实验 (JEP 333) | Linux，低延迟 |
-| **Shenandoah** | 实验 | 低延迟 GC |
+| **Shenandoah** | 实验 (非 mainline OpenJDK，JDK 12 起通过 JEP 189 进入主线) | 低延迟 GC |
 | **Epsilon GC** | 正式 (JEP 318) | 被动 GC |
 
 ---
@@ -59,9 +59,8 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 - **HTTP Client 正式版**：替代 HttpURLConnection
 - **Flight Recorder 正式版**：生产环境性能分析
 - **var 关键字支持 Lambda**：局部变量类型推断扩展
-- `java.util.logging` 从默认 JDK 中移除
 - `JavaFX` 从 JDK 中分离
-- `Pack200` 工具移除
+- `Pack200` 工具废弃（JEP 336，JDK 14 移除）
 
 **推荐配置**:
 ```bash

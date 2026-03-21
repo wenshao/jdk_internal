@@ -107,7 +107,7 @@ Java 网络编程从 JDK 1.0 到 JDK 26 的完整演进。
 | JDK 7 | Asynchronous I/O | 异步网络 |
 | JDK 9 | HTTP/2 | 多路复用 |
 | JDK 11 | HTTP Client 标准化 | 新 API |
-| JDK 18 | Unix Domain Socket | 本地 IPC |
+| JDK 16 | Unix Domain Socket | 本地 IPC |
 
 → [网络编程时间线](network/timeline.md)
 

@@ -293,7 +293,7 @@ public record Range(int start, int end) {
 
     // Compact Constructor (无参数列表)
     public Range {
-        // 在这里, start 和 end 已经被赋值
+        // 在这里, start 和 end 是参数 (字段尚未赋值)
         if (start > end) {
             throw new IllegalArgumentException("start > end");
         }
