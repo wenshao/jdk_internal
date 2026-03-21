@@ -36,13 +36,13 @@ try {
     f2.cancel(true);
 }
 
-// 结构化并发 - 生命周期受控
-try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+// 结构化并发 - 生命周期受控 (JEP 525, 第六次预览 API)
+try (var scope = StructuredTaskScope.open(
+        Joiner.<Object>allSuccessfulOrThrow())) {
     Subtask<String> t1 = scope.fork(() -> task1());
     Subtask<Integer> t2 = scope.fork(() -> task2());
 
     scope.join();         // 等待所有子任务
-    scope.throwIfFailed(); // 任一失败则抛出异常
 
     return combine(t1.get(), t2.get());
 } // 自动关闭，取消未完成任务
@@ -129,24 +129,17 @@ try (var scope = StructuredTaskScope.open(
     String first = scope.join();  // 返回第一个成功结果
 }
 
-// 3. 等待所有完成，不返回结果
+// 3. 等待所有完成（成功或失败），收集所有 Subtask
 try (var scope = StructuredTaskScope.open(
-        Joiner.<String>awaitAllSuccessfulOrThrow())) {
+        Joiner.<String>awaitAll())) {
     Subtask<String> t1 = scope.fork(() -> task1());
-    Subtask<Integer> t2 = scope.fork(() -> task2());
+    Subtask<String> t2 = scope.fork(() -> task2());
 
     scope.join();
-    // 使用 Subtask.get() 获取结果
-    return combine(t1.get(), t2.get());
-}
-
-// 4. 等待所有完成，返回所有 Subtask
-try (var scope = StructuredTaskScope.open(
-        Joiner.awaitAll(StructuredTaskScope::join))) {
-    scope.fork(() -> task1());
-    scope.fork(() -> task2());
-
-    List<Subtask<String>> subtasks = scope.join();
+    // 使用 Subtask.get() 获取结果（需检查 state）
+    if (t1.state() == Subtask.State.SUCCESS) {
+        System.out.println(t1.get());
+    }
 }
 ```
 

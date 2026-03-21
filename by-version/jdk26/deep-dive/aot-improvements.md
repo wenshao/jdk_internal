@@ -1,6 +1,7 @@
 # JDK 26 AOT 编译改进深度分析
 
-> **JEP**: 514/515/516 | **状态**: 正式发布/预览
+> **JEP**: 516 (AOT Object Caching) | **状态**: 正式发布
+> **注意**: JEP 514/515 属于 JDK 25，非 JDK 26
 > **作者**: Ioi Lam, Erik Österlund 等
 
 ---
@@ -22,9 +23,9 @@
 
 | JEP | 标题 | 状态 |
 |-----|------|------|
-| JEP 514 | AOT Ergonomics | 正式 |
-| JEP 515 | AOT Method Profiling | 预览 |
-| JEP 516 | AOT Object Caching | 正式 |
+| JEP 516 | AOT Object Caching | 正式 (JDK 26) |
+| JEP 514 | AOT Command-Line Ergonomics | 正式 (JDK 25) |
+| JEP 515 | AOT Method Profiling | 正式 (JDK 25) |
 
 ### 问题
 
@@ -386,7 +387,7 @@ java -XX:SharedArchiveFile=app.jsa \
 
 ## 8. 总结
 
-JDK 26 的 AOT 改进 (JEP 514/515/516) 带来了：
+JDK 26 的 AOT 改进 (JEP 516，延续 JDK 25 的 JEP 514/515) 带来了：
 
 1. **自动优化**：无需复杂配置
 2. **元数据缓存**：减少类加载开销

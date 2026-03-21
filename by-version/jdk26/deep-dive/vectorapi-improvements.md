@@ -1,6 +1,6 @@
 # JDK 26 VectorAPI 改进深度分析
 
-> **Commit**: 8376186, 8377447, 8378758 | **代码量**: +35,619 / -17,810 行
+> **JEP**: 529 (第11次孵化) | **Commit**: 8376186, 8377447, 8378758 | **代码量**: +35,619 / -17,810 行
 > **作者**: Jatin Bhateja, Eric Fang 等
 
 ---
@@ -120,8 +120,8 @@ public static final Binary UMAX =
     new Binary("UMAX", "Math.max(intVal(a), intVal(b))", int.class, long.class);
 
 // 使用示例
-IntVector a = IntVector.toArray(IntVector.SPECIES_256, array1);
-IntVector b = IntVector.toArray(IntVector.SPECIES_256, array2);
+IntVector a = IntVector.fromArray(IntVector.SPECIES_256, array1, 0);
+IntVector b = IntVector.fromArray(IntVector.SPECIES_256, array2, 0);
 
 // 无符号比较
 IntVector min = a.lanewise(VectorOperators.UMIN, b);
