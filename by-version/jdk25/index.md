@@ -180,18 +180,6 @@ void main(String[] args) {
 }
 ```
 
-### Scoped Values (Final)
-
-```java
-public static final ScopedValue<String> USER = ScopedValue.newInstance();
-
-// 在作用域内设置值
-ScopedValue.where(USER, "alice")
-    .run(() -> {
-        System.out.println(USER.get()); // "alice"
-    });
-```
-
 ---
 
 ## 5. JEP 汇总
@@ -256,7 +244,7 @@ ScopedValue.where(USER, "alice")
 
 | 领域 | 改进 | 数据 | 深度分析 |
 |------|------|------|----------|
-| **内存** | 紧凑对象头 | -16% 对象头大小 | [→](/jeps/gc/jep-519.md) |
+| **内存** | 紧凑对象头 | -33% 对象头大小 (12→8 字节) | [→](/jeps/gc/jep-519.md) |
 | **启动时间** | 类加载优化 | ~5-10% | → |
 | **并发** | Scoped Values | 比 ThreadLocal 更快 | [→](/deep-dive/jep-506-implementation.md) |
 | **追踪** | JFR 方法计时 | 低开销方法级追踪 | [→](/jeps/jfr/jep-520.md) |
@@ -304,10 +292,11 @@ public class ScopedValueDemo {
                 System.out.println("User: " + USER.get()); // "User: alice"
             });
 
-        // 虚拟线程中自动继承
-        Thread.ofVirtual().start(() -> {
-            System.out.println("Virtual thread user: " + USER.get()); // "alice"
-        });
+        // 虚拟线程中需要在 ScopedValue.where 作用域内使用
+        ScopedValue.where(USER, "bob")
+            .run(() -> Thread.ofVirtual().start(() -> {
+                System.out.println("Virtual thread user: " + USER.get()); // "bob"
+            }));
     }
 }
 ```
@@ -333,7 +322,7 @@ java --enable-preview MyApp
 
 - **Scoped Values** (JEP 506)：正式版，替代 ThreadLocal
 - **Flexible Constructor Bodies** (JEP 513)：正式版，构造器更灵活
-- **Module Import Declarations** (JEP 511)：预览，简化模块导入
+- **Module Import Declarations** (JEP 511)：正式版，简化模块导入
 - **Primitive Types in Patterns** (JEP 507)：第3次预览
 
 ### 性能
