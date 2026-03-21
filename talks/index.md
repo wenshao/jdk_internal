@@ -64,7 +64,7 @@
 | 主题 | 相关本地文档 | 相关 JEP |
 |------|-------------|---------|
 | **ZGC** | [GC 演进](../by-topic/core/gc/) | [JEP 439](../jeps/core/jep-439.md) |
-| **Shenandoah** | [GC 演进](../by-topic/core/gc/) | [JEP 429](../jeps/core/jep-429.md) |
+| **Scoped Values** | [Scoped Values](../by-topic/core/loom/) | [JEP 429](../jeps/core/jep-429.md) |
 | **G1 GC** | [GC 演进](../by-topic/core/gc/) | [JEP 522](../jeps/core/jep-522.md) |
 | **Project Valhalla** | [JEPs](../jeps/) | - |
 | **Project Loom** | [Virtual Threads](../by-topic/concurrency/concurrency/) | [JEP 444](../jeps/concurrency/jep-444.md) |
@@ -239,7 +239,7 @@
 | 资源 | 类型 | 本地文档 |
 |------|------|----------|
 | JVMLS 2023 | 演讲 | [Shenandoah](../by-topic/core/gc/) |
-| JEP 429 | JEP Owner | [JEP 429](../jeps/core/jep-429.md) |
+| JEP 429 | Scoped Values (Incubator) | [JEP 429](../jeps/core/jep-429.md) |
 
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/roman-kennke.md)
@@ -493,7 +493,7 @@
 
 ---
 
-### IoI Lam - C2 JIT 编译器
+### IoI Lam - AOT/CDS
 
 | 资源 | 类型 | 本地文档 |
 |------|------|----------|
@@ -638,7 +638,7 @@
 - [贡献者档案](../by-contributor/profiles/jaikiran-pai.md)
 - [NIO API](../by-topic/io/)
 - [网络编程](../by-topic/io/)
-- [组织: Red Hat](../contributors/orgs/redhat.md)
+- [组织: Oracle](../contributors/orgs/oracle.md)
 
 ---
 
@@ -712,12 +712,12 @@
 
 ---
 
-### Volkan Yazici - ZGC
+### Volkan Yazici - HTTP Client
 
 | 资源 | 类型 | 本地文档 |
 |------|------|----------|
-| ZGC | 实现 | [ZGC](../by-topic/core/gc/zgc.md) |
-| GC | 垃圾收集 | [GC](../by-topic/core/gc/) |
+| HTTP Client | 实现 | [网络](../by-topic/io/) |
+| 网络 | 编程 | [IO](../by-topic/io/) |
 
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/volkan-yazici.md)
@@ -740,12 +740,12 @@
 
 ---
 
-### Justin Lu - ZGC
+### Justin Lu - i18n/L10n
 
 | 资源 | 类型 | 本地文档 |
 |------|------|----------|
-| ZGC | 实现 | [ZGC](../by-topic/core/gc/zgc.md) |
-| GC | 垃圾收集 | [GC](../by-topic/core/gc/) |
+| i18n | 国际化 | [国际化](../by-topic/core/i18n/) |
+| L10n | 本地化 | [本地化](../by-topic/core/i18n/) |
 
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/justin-lu.md)
@@ -824,12 +824,12 @@
 
 ---
 
-### Adam Sotona - 移动/嵌入式
+### Adam Sotona - ClassFile API
 
 | 资源 | 类型 | 本地文档 |
 |------|------|----------|
-| 移动 | Java | [移动](../by-topic/platform/) |
-| 嵌入式 | IoT | [嵌入式](../by-topic/platform/) |
+| ClassFile API | 实现 | [ClassFile](../by-topic/platform/) |
+| 字节码 | 处理 | [字节码](../by-topic/platform/) |
 
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/adam-sotona.md)
@@ -878,7 +878,7 @@
 - [贡献者档案](../by-contributor/profiles/matthias-baesken.md)
 - [诊断工具](../by-topic/diagnostics/)
 - [Windows 平台](../by-topic/platform/windows/)
-- [组织: Oracle](../contributors/orgs/oracle.md)
+- [组织: SAP](../contributors/orgs/sap.md)
 
 ---
 
@@ -938,12 +938,12 @@
 
 ---
 
-### Jatin Bhateja - ZGC
+### Jatin Bhateja - Vector API/SIMD
 
 | 资源 | 类型 | 本地文档 |
 |------|------|----------|
-| ZGC | 实现 | [ZGC](../by-topic/core/gc/zgc.md) |
-| GC | 垃圾收集 | [GC](../by-topic/core/gc/) |
+| Vector API | 实现 | [性能](../by-topic/core/performance/) |
+| SIMD | 优化 | [性能](../by-topic/core/performance/) |
 
 **本地资源**:
 - [贡献者档案](../by-contributor/profiles/jatin-bhateja.md)
@@ -963,11 +963,11 @@
 - [贡献者档案](../by-contributor/profiles/anatoly-zelenin.md)
 - [JVM 运行时](../by-topic/core/jit/)
 - [内存管理](../by-topic/core/memory/)
-- [组织: Oracle](../contributors/orgs/oracle.md)
+- [组织: SAP](../contributors/orgs/sap.md)
 
 ---
 
-### Alexey Semenyuk - JFR
+### Alexey Semenyuk - jpackage/AOT
 
 | 资源 | 类型 | 本地文档 |
 |------|------|----------|
@@ -1035,7 +1035,7 @@
 - [贡献者档案](../by-contributor/profiles/goetz-lindenmaier.md)
 - [JIT 编译](../by-topic/core/jit/)
 - [性能优化](../by-topic/core/performance/)
-- [组织: Oracle](../contributors/orgs/oracle.md)
+- [组织: SAP](../contributors/orgs/sap.md)
 
 ---
 

@@ -26,7 +26,7 @@ Stream   Writer    Buffer  Path    增强    线程
 | **JDK 1.1** | Reader/Writer | 字符流 | - |
 | **JDK 1.4** | NIO | Buffer, Channel, Selector | JSR 51 |
 | **JDK 7** | NIO.2 | Path, Files, WatchService | JSR 203 |
-| **JDK 11** | Files 增强 | readFile, readString | - |
+| **JDK 11** | Files 增强 | readString, writeString | - |
 | **JDK 21** | 虚拟线程 | 阻塞 IO 不阻塞平台线程 | JEP 444 |
 
 ---

@@ -41,10 +41,10 @@ JDK 1.0 ── JDK 2 ── JDK 6 ── JDK 8 ── JDK 9 ── JDK 17 ──
 |------|------|------|-----|
 | **JDK 1.0** | ClassLoader | 基础类加载 | - |
 | **JDK 2** | 双亲委派 | 安全性保证 | - |
-| **JDK 6** | 线程上下文类加载器 | JavaEE 支持 | - |
+| **JDK 1.2** | 线程上下文类加载器 | JavaEE 支持 | - |
 | **JDK 8** | 元空间 | 取代永久代 | - |
 | **JDK 9** | 模块化类加载 | JPMS | JEP 220 |
-| **JDK 21** | 外部函数 | 不依赖 JNI | JEP 444 |
+| **JDK 21** | 外部函数 | 不依赖 JNI | JEP 442 |
 | **JDK 26** | CDS 改进 | 应用类数据共享 | JEP 467 |
 
 ---
@@ -207,8 +207,9 @@ public class CustomClassLoader extends ClassLoader {
 java -Xbootclasspath/a:/path -version
 
 # 输出
-$ java -XshowSettings:properties -version 2>&1 | grep sun.boot.class.path
-sun.boot.class.path = /usr/lib/jvm/java-21/jre/lib/resources.jar:...
+# 注意: sun.boot.class.path 在 JDK 9+ 已移除
+# JDK 8 及之前:
+# sun.boot.class.path = /usr/lib/jvm/java-8/jre/lib/rt.jar:...
 ```
 
 **加载内容**:
@@ -495,7 +496,7 @@ private static final Map<String, Object> CACHE =
 └─────────────────────────────────────────────────────────┘
 ```
 
-### AppCDS (JDK 13+)
+### AppCDS (JDK 10+)
 
 **应用类数据共享**
 

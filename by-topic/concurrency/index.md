@@ -70,12 +70,12 @@ JDK 1.0 ─── JDK 5 ─── JDK 7 ─── JDK 11 ─── JDK 19 ──
 | JDK 5 | Executor 框架 | JSR-166 |
 | JDK 7 | Fork/Join 框架 | JSR-166y |
 | JDK 8 | Lambda、Parallel Stream | JEP 126 |
-| JDK 8 | CompletableFuture | JEP 107 |
+| JDK 8 | CompletableFuture | JEP 155 |
 | JDK 9 | CompletableFuture 改进、Reactive Streams | JEP 266 |
 | JDK 19 | **Virtual Threads** (预览) | JEP 425 |
 | JDK 20 | Virtual Threads (第二次预览) | JEP 436 |
 | JDK 21 | **Virtual Threads** (正式)、**Structured Concurrency** (预览)、**Scoped Values** (预览) | JEP 444, JEP 453, JEP 446 |
-| JDK 22-26 | Structured Concurrency (持续预览) | JEP 462, 477, 483, 491, 493 |
+| JDK 22-24 | Structured Concurrency (持续预览) | JEP 462, 480, 499 |
 
 → [并发时间线](concurrency/timeline.md)
 
@@ -89,7 +89,6 @@ JDK 1.0 ─── JDK 5 ─── JDK 7 ─── JDK 11 ─── JDK 19 ──
 | JDK 9 | HTTP Client (孵化器) | JEP 110 |
 | JDK 10 | HTTP Client (孵化器) | - |
 | JDK 11 | **HTTP Client** (标准) | JEP 321 |
-| JDK 16 | HTTP/2 支持 | - |
 | JDK 22-23 | 连接复用优化 | - |
 | JDK 26 | **HTTP/3** (预览) | JEP 517 |
 
