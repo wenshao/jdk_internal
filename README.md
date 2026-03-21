@@ -40,7 +40,7 @@
 |------|----------|------|------|
 | **语法演进** | 8 → 26 | [泛型/Lambda/Record/Pattern Matching](by-topic/language/syntax/) | Enum 优化 -82% 内存 |
 | **Lambda** | 8 → 26 | [函数式编程/invokedynamic](by-topic/language/lambda/) | 生成优化 +15-20% |
-| **Stream API** | 8 → 26 | [函数式数据处理/并行流](by-topic/language/streams/) | Gatherers (JDK 21+) |
+| **Stream API** | 8 → 26 | [函数式数据处理/并行流](by-topic/language/streams/) | Gatherers (JDK 22+) |
 | **字符串处理** | 8 → 26 | [String 优化历程](by-topic/language/string/) | Compact Strings -50% |
 | **Class File API** | 22 → 26 | [标准字节码 API](by-topic/language/classfile/) | 替代 ASM |
 | **反射与元数据** | 8 → 26 | [反射/注解/MethodHandle](by-topic/language/reflection/) | 变量引用 |

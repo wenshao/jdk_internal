@@ -48,8 +48,8 @@ C4 (Continuously Concurrent Compacting Collector) 是 Azul 独有的垃圾回收
 
 | 特性 | G1 GC | ZGC | Shenandoah | C4 GC |
 |------|-------|-----|------------|-------|
-| Pause 时间 | 10-200ms | < 1ms | < 10ms | < 1ms |
-| 最大堆 | 32GB | 16TB | 16TB | TB+ |
+| Pause 时间 | 10-200ms | < 1ms | < 1ms | < 1ms |
+| 最大堆 | 无硬性上限 (>32GB 关闭压缩指针) | 16TB | 16TB | TB+ |
 | 压缩 | 有限 | 是 | 是 | 是 |
 | 商业 | ❌ | ❌ | ❌ | ✅ |
 

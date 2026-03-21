@@ -115,7 +115,7 @@ jdeps --module-path out -s myapp.jar
 | `java.base` | 基础类 (自动依赖) |
 | `java.sql` | JDBC API |
 | `java.logging` | java.util.logging |
-| `java.desktop` | AWT, Swing, JavaFX |
+| `java.desktop` | AWT, Swing |
 | `jdk.httpserver` | HTTP Server |
 
 ### 创建自定义运行时
@@ -140,7 +140,7 @@ jlink --add-modules java.base,java.sql --output custom-jre
 
 | 问题 | 解决方案 |
 |------|----------|
-| 包冲突 | 使用 `jar --upgrade` |
+| 包冲突 | 重新组织包结构，避免拆分包 |
 | 反射访问 | 使用 `--add-opens` |
 | 缺失依赖 | 添加 `requires` |
 

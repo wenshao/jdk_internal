@@ -28,7 +28,7 @@ java -version
 jdeps --jdk-internals myapp.jar
 
 # 3. 检查已废弃 API
-jdeps --deprecation myapp.jar
+jdeprscan myapp.jar
 ```
 
 ### 风险评估矩阵
@@ -182,8 +182,7 @@ public class Config {
     }
 }
 
-// 方案 4: 临时启用 (不推荐)
-// 启动参数: --finalization=enabled
+// 方案 4: 参考 JEP 500 文档了解迁移选项
 ```
 
 ---
@@ -250,8 +249,8 @@ try {
 
 // 新代码: StructuredTaskScope
 try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
-    Future<String> user = scope.fork(() -> fetchUser());
-    Future<List<Order>> orders = scope.fork(() -> fetchOrders());
+    Subtask<String> user = scope.fork(() -> fetchUser());
+    Subtask<List<Order>> orders = scope.fork(() -> fetchOrders());
     
     scope.join();
     scope.throwIfFailed();
@@ -371,7 +370,7 @@ java -XX:SharedArchiveFile=app.aot -cp myapp.jar MyApp
 ```bash
 # G1 GC (通用场景)
 -XX:+UseG1GC
--XX:+G1UseClaimTable
+# JEP 522 Claim Table 优化默认启用，无需额外参数
 -XX:MaxGCPauseMillis=100
 
 # Shenandoah (低延迟场景)
@@ -420,7 +419,8 @@ mvn test -DargLine="--enable-preview"
 ```bash
 # 方案 1: 重构代码 (推荐)
 # 方案 2: 临时启用
-java --finalization=enabled -jar myapp.jar
+# 注意: --finalization=enabled 用于重新启用 Object.finalize()，
+# 与 final 字段修改无关。请参考 JEP 500 文档了解迁移选项。
 ```
 
 ### Q: HTTP/3 连接失败

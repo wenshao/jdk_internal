@@ -65,6 +65,8 @@ Oracle JDK 是 Oracle 公司官方维护的 Java Development Kit，基于 OpenJD
 | **Java SE Advanced** | $300 | 包含 JRockit Mission Control |
 | **Java SE Advanced Desktop** | $100 | 桌面高级版 |
 
+> ⚠️ **注意**: 上述价格为 2023 年之前的旧定价模型。2023 年起，Oracle 改为按员工数量计费的 **Java SE Universal Subscription** 定价模式。此外，"Java SE Advanced" 中的 JRockit Mission Control 已被 Java Mission Control (JMC) 取代。
+
 **订阅包含**:
 - ✅ 安全更新 (JDK 8, 11 _extended support_)
 - ✅ 性能优化
@@ -87,7 +89,7 @@ Oracle JDK 是 Oracle 公司官方维护的 Java Development Kit，基于 OpenJD
 | JDK 23 | 2024-09 | ✅ 2025-03 | - |
 | JDK 24 | 2025-03 | ✅ 2025-09 | - |
 | JDK 25 | 2025-09 | ✅ 2026-03 | 2032-10 (Extended) |
-| JDK 26 | 2026-03 | ✅ 2026-09 | 2029-10 (Extended) |
+| JDK 26 | 2026-03 | ✅ 2026-09 | - |
 
 > **说明**: 
 > - JDK 17+ 使用 NFTC 许可，免费获得安全更新直至下一个 LTS 发布后 6 个月
@@ -97,7 +99,7 @@ Oracle JDK 是 Oracle 公司官方维护的 Java Development Kit，基于 OpenJD
 
 | 版本类型 | 支持周期 | 示例 |
 |----------|----------|------|
-| 特性版本 | 6 个月 | JDK 23, 24, 25, 26 |
+| 特性版本 | 6 个月 | JDK 23, 24, 26 |
 | LTS 版本 | 8+ 年 | JDK 17, 21, 25 |
 
 ---

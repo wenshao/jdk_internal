@@ -251,7 +251,6 @@ public:
         unlocked_value         = 0,
         locked_value           = 1,
         monitor_value          = 2,
-        biased_locking_value   = 3
     };
 
     // 当对象被锁定时，类指针存储在 displaced mark word 或栈中

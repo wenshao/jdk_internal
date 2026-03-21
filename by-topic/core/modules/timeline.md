@@ -547,7 +547,7 @@ jdeps --reverse --module-path lib \
 | JDK 16 | 强封装默认 | JEP 396 |
 | JDK 17 | 完全强封装 | JEP 403 |
 | JDK 23 | 模块导入声明 (预览) | JEP 476 |
-| JDK 24 | 模块导入声明 (二次预览) | JEP 476 |
+| JDK 24 | 模块导入声明 (二次预览) | JEP 494 |
 | JDK 25 | 模块导入声明 (正式) | JEP 511 |
 
 ---

@@ -111,7 +111,7 @@ if (obj instanceof String s) {
 
 ### JEP 378: Text Blocks (正式)
 
-- **日期**: 2020-06 (预览) → 2021-03 (正式, JDK 15)
+- **日期**: 2020-06 (预览) → 2020-09-15 (正式, JDK 15)
 - **特性**: 多行字符串字面量
 
 ```java
@@ -193,7 +193,7 @@ String formatted = switch (obj) {
 
 ### JEP 443: Unnamed Patterns & Variables
 
-- **日期**: 2023-09 (正式, JDK 21)
+- **日期**: 2023-09 (预览, JDK 21; 正式为 JEP 456, JDK 22)
 - **特性**: 使用 `_` 忽略不关心的值
 
 ```java
@@ -233,9 +233,9 @@ public class Sub extends Super {
 }
 ```
 
-### JEP 477: Implicitly Declared Classes (正式)
+### JEP 477: Implicitly Declared Classes (第三次预览)
 
-- **日期**: 2024-09 (正式, JDK 23)
+- **日期**: 2024-09 (第三次预览, JDK 23)
 - **特性**: 简化 Java 入门语法
 
 ```java

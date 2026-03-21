@@ -50,7 +50,7 @@
 
 **版本演进时间线**:
 ```
-JDK 8 (2014) → JDK 11 (2018) → JDK 17 (2021) → JDK 21 (2023) → JDK 25 (2025) → JDK 26 (2025)
+JDK 8 (2014) → JDK 11 (2018) → JDK 17 (2021) → JDK 21 (2023) → JDK 25 (2025) → JDK 26 (2026)
 ```
 
 ---
@@ -118,11 +118,12 @@ JDK 8 (2014) → JDK 11 (2018) → JDK 17 (2021) → JDK 21 (2023) → JDK 25 (2
 
 | 组织 | 贡献者数 | 主要领域 | 代表贡献者 |
 |------|----------|----------|------------|
-| **[Oracle](contributors/orgs/oracle.md)** | 18 | JVM, 编译器, 核心库 | Mark Reinhold, Brian Goetz |
+| **[Oracle](contributors/orgs/oracle.md)** | 18 | JVM, 编译器, 核心库 | Mark Reinhold, Brian Goetz, Magnus Ihse Bursie, Thomas Schatzl |
 | **[Red Hat](contributors/orgs/redhat.md)** | 12 | GC, 性能, 平台 | Aleksey Shipilev, Roman Kennke |
-| **[Amazon](contributors/orgs/amazon.md)** | 8 | 网络, 安全, 工具 | Shaojin Wen, Jason Greene |
-| **[Microsoft](contributors/orgs/microsoft.md)** | 6 | Windows, 性能, 测试 | Magnus Ihse Bursie |
-| **[SAP](contributors/orgs/sap.md)** | 5 | GC, 编译器, 测试 | Thomas Schatzl |
+| **[Alibaba](contributors/orgs/alibaba.md)** | 6 | 核心库, 性能 | Shaojin Wen |
+| **[Amazon](contributors/orgs/amazon.md)** | 8 | 网络, 安全, 工具 | Jason Greene |
+| **[Microsoft](contributors/orgs/microsoft.md)** | 6 | Windows, 性能, 测试 | |
+| **[SAP](contributors/orgs/sap.md)** | 5 | GC, 编译器, 测试 | |
 
 ### 活跃度趋势
 
@@ -239,7 +240,7 @@ GitHub API → PR 数据 → 分类分析 → 文档生成 → 链接验证 → 
 - [JDK 17 文档](/by-version/jdk17/) - LTS 2021
 - [JDK 21 文档](/by-version/jdk21/) - LTS 2023
 - [JDK 25 文档](/by-version/jdk25/) - GA 2025
-- [JDK 26 文档](/by-version/jdk26/) - GA 2025
+- [JDK 26 文档](/by-version/jdk26/) - GA 2026
 
 ### 主题浏览
 - [垃圾收集演进](/by-topic/core/gc/)

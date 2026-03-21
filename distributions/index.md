@@ -223,7 +223,7 @@ OpenJDK 是 Java 的官方参考实现，各大厂商和组织基于 OpenJDK 构
 
 ### NFTC (No-Fee Terms and Conditions)
 - **含义**: 免费用于生产环境
-- **适用**: Oracle JDK 17+, GraalVM Community
+- **适用**: Oracle JDK 17+
 
 ### OTNLA (Oracle Technology Network License Agreement)
 - **含义**: 个人免费，商业付费
@@ -233,7 +233,7 @@ OpenJDK 是 Java 的官方参考实现，各大厂商和组织基于 OpenJDK 构
 ### GFTC (GraalVM Free Terms and Conditions)
 - **含义**: 生产环境免费
 - **限制**: 不包含商业支持
-- **适用**: GraalVM Community Edition
+- **适用**: Oracle GraalVM (自 2023 年中起，Oracle 将原 CE 和 EE 合并为单一的 "Oracle GraalVM" 发行版，统一使用 GFTC 许可)
 
 ---
 
@@ -292,7 +292,7 @@ OpenJDK 是 Java 的官方参考实现，各大厂商和组织基于 OpenJDK 构
 | **Corretto** | 2026-05 | 2027-09 | 2029-09 | 2032-04 | 2032-09 |
 | **Zulu** | 2030-12 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |
 | **Dragonwell** | 2029-07 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |
-| **Kona** | 2025-04 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |
+| **Kona** | 2026-05 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |
 | **Liberica** | 2026-05 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |
 | **Semeru** | 2026-09 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |
 | **SAPMachine** | 2030-12 | 2027-10 | 2029-10 | 2031-10 | 2032-10 |

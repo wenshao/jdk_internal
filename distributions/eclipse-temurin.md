@@ -65,7 +65,7 @@ Eclipse Temurin (原 AdoptOpenJDK) 是 Eclipse Foundation 旗下的 Adoptium 项
 | Temurin 11 | - | 2027-10 | ✅ |
 | Temurin 17 | - | 2029-10 | ✅ |
 | Temurin 21 | 2023-09 | 2031-10 | ✅ |
-| Temurin 24 | 2025-03 | 2026-03 | ✅ |
+| Temurin 24 | 2025-03 | 2025-09 | ✅ |
 
 ### 支持策略
 

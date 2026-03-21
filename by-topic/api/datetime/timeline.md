@@ -457,26 +457,8 @@ LocalDateTime now = LocalDateTime.now();
 String formatted = now.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
 ```
 
----
 
-## 6. JDK 21 - 传统日期包废弃
-
-### java.util.Date 废弃
-
-```java
-// JDK 21 标记 java.util.Date 为 deprecated
-@Deprecated(since = "21")
-public class Date {
-    // ...
-}
-
-// 推荐使用 java.time
-LocalDate.now();
-```
-
----
-
-## 7. JDK 22-24 - 性能优化
+## 6. JDK 22-24 - 性能优化
 
 ### JDK 22 - ISO 日期格式修复 (JDK-8317742)
 
@@ -676,7 +658,7 @@ int value = switch (fieldName) {
 
 ---
 
-## 8. 日期时间选择指南
+## 7. 日期时间选择指南
 
 ### 类选择
 
@@ -700,7 +682,7 @@ int value = switch (fieldName) {
 
 ---
 
-## 9. 最佳实践
+## 8. 最佳实践
 
 ### 使用新 API
 
@@ -737,7 +719,7 @@ int month = 2;  // 容易出错 (3月应该是 2 还是 3?)
 
 ---
 
-## 10. 时间线总结
+## 9. 时间线总结
 
 | 版本 | 特性 | 说明 |
 |------|------|------|
@@ -749,7 +731,7 @@ int month = 2;  // 容易出错 (3月应该是 2 还是 3?)
 
 ---
 
-## 11. 相关链接
+## 10. 相关链接
 
 - [java.time 包](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/package-summary.html)
 - [JSR 310: Date and Time API](https://jcp.org/en/jsr/detail?id=310)

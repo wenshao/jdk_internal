@@ -59,7 +59,7 @@ Alan Bateman 是 Oracle 的 **Java 核心库架构师**，负责 java.base 模�
 | **合作者** | Ron Pressler |
 | **状态** | Preview |
 
-### JEP 499: Structured Concurrency (Preview) - JDK 21
+### JEP 453: Structured Concurrency (Preview) - JDK 21
 
 | 属性 | 值 |
 |------|-----|

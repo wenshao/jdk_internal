@@ -372,7 +372,7 @@ Aleksey Shipilev 从 JDK 8 开始就有重要贡献：
 | JDK 8 | JMH 框架初始版本 |
 | JDK 9 | JMH 集成到 OpenJDK |
 | JDK 11 | Shenandoah GC 优化 |
-| JDK 17 | 分代 ZGC 贡献 |
+| JDK 17 | Shenandoah GC 优化 |
 | JDK 21 | 虚拟线程性能优化 |
 | JDK 26 | JEP 503, C2 优化 |
 

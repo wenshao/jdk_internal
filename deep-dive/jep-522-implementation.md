@@ -352,12 +352,12 @@ GC 暂停时间            120ms      95ms       -20.8%
 
 | GC | 写屏障类型 | 同步开销 |
 |----|-----------|----------|
-| Serial | 无 | 无 |
+| Serial | 卡表 | 无 |
 | Parallel | 卡表 | 低 |
 | G1 (传统) | 卡表 + SATB | 中 |
 | **G1 (优化后)** | **卡表 + Claim** | **低** |
 | ZGC | 染色指针 | 无 |
-| Shenandoah | Brooks 指针 | 低 |
+| Shenandoah | 读引用屏障 (Load-reference barrier) | 低 |
 
 ### 8.2 适用场景
 

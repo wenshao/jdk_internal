@@ -269,7 +269,9 @@ JEP 500 的目标：
 
 **临时方案**:
 ```bash
-java --finalization=enabled -jar myapp.jar
+# --finalization=enabled 用于重新启用已废弃的 Object.finalize() 机制，
+# 与 JEP 500 final 字段修改限制无关。
+# 如需临时允许反射修改 final 字段，请参考 JEP 500 文档中的迁移选项。
 ```
 
 ### Q: KDF API 支持哪些算法？

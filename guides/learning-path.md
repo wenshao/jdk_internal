@@ -162,7 +162,7 @@ HttpClient client = HttpClient.newBuilder()
 ```bash
 # G1 GC 优化配置
 -XX:+UseG1GC
--XX:+G1UseClaimTable
+# JEP 522 Claim Table 优化默认启用，无需额外参数
 -XX:G1HeapRegionSize=32m
 
 # Shenandoah 分代模式

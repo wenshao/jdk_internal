@@ -58,7 +58,6 @@ jmc recording.jfr
 |------|------|------|
 | `default` | 默认配置，低开销 | < 1% |
 | `profile` | 性能分析配置 | 1-2% |
-| `continuous` | 持续监控配置 | < 1% |
 
 ### 自定义事件
 
@@ -93,7 +92,7 @@ event.commit();
 ### CPU 事件
 
 - `jdk.ExecutionSample` - 执行采样
-- `jdk.CPUTime` - CPU 时间 (JDK 25+)
+- `jdk.CPUTimeSample` - CPU 时间 (JDK 25+)
 - `jdk.ThreadAllocationStatistics` - 线程分配统计
 
 ### IO 事件

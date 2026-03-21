@@ -37,7 +37,7 @@ Maurizio Cimadamore 是 Oracle 的 **Java 编译器架构师** 和 **Project Pan
 | **LinkedIn** | [mcimadamore](https://ie.linkedin.com/in/mcimadamore) |
 | **教育** | University of Bologna |
 | **专长** | javac Compiler, Lambda Expressions, Project Panama, Foreign Function & Memory API |
-| **职业经历** | Sun Microsystems → Oracle → Amazon → Oracle |
+| **职业经历** | Sun Microsystems → Oracle |
 
 > **数据来源**: [LinkedIn](https://ie.linkedin.com/in/mcimadamore), [nipafx.dev Interview](https://nipafx.dev/maurizio-cimadamore-26h/)
 
@@ -169,13 +169,9 @@ try (Arena arena = Arena.ofConfined()) {
 
 早期职业生涯在 Sun Microsystems，后来随 Sun 被收购加入 Oracle。
 
-### Amazon
-
-曾在 Amazon 工作一段时间。
-
 ### Oracle (当前)
 
-返回 Oracle 继续领导 Project Panama 和 Java 编译器开发。
+继续领导 Project Panama 和 Java 编译器开发。
 
 ---
 

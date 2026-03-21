@@ -311,9 +311,8 @@ Object load_barrier(Object obj) {
 | 版本 | 变更 | JEP | 说明 |
 |------|------|-----|------|
 | JDK 11 | ZGC 引入 | JEP 333 | 实验性, Per Liden, Erik Österlund |
-| JDK 14 | ZGC 生产可用 | JEP 368 | 脱离实验标签 |
-| JDK 15 | Windows 支持 | JEP 377 | 跨平台完整支持 |
-| JDK 17 | 并发线程栈扫描 | JEP 379 | 降低 pause 时间 |
+| JDK 15 | ZGC 生产可用 | JEP 377 | 脱离实验标签 |
+| JDK 16 | 并发线程栈扫描 | JEP 376 | 降低 pause 时间 |
 | JDK 21 | **分代 ZGC** | JEP 439 | Stefan Karlsson (Owner), 显著降低 GC 频率 |
 | JDK 23 | 分代改进 | JEP 474 | 进一步优化, 默认启用 |
 | JDK 26 | NUMA-aware Relocation | - | 多插槽服务器优化 |
@@ -446,8 +445,6 @@ Object load_barrier(Object obj) {
 |------|------|-----|------|
 | JDK 12 | Shenandoah 引入 | JEP 189 | 实验性, Red Hat |
 | JDK 15 | Shenandoah 生产可用 | JEP 379 | 脱离实验标签 |
-| JDK 17 | 并发线程栈扫描 | JEP 379 | 降低 pause 时间 |
-| JDK 21 | **分代 ZGC** | JEP 439 | Stefan Karlsson (Owner), Oracle |
 | JDK 25 | **分代 Shenandoah** | JEP 521 | William Kemper (Owner), Amazon |
 | JDK 26 | 进一步优化 | - | 持续改进 |
 

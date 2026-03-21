@@ -37,7 +37,7 @@
 
 | JEP | Title | Role | Status | Target |
 |-----|------|------|--------|--------|
-| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Lead | Final | JDK 25 |
+| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Lead | Final | JDK 24 |
 | [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | Co-contributor | Final | JDK 25 |
 
 ---
@@ -63,7 +63,7 @@
 
 ### JEP 519: Compact Object Headers
 
-Led the implementation of compact object headers in JDK 21:
+Led the implementation of compact object headers in JDK 24:
 
 - Reduced object header size from 12-16 bytes to 8 bytes
 - Improved memory efficiency for most applications
@@ -97,7 +97,7 @@ Contributions to AArch64 platform support:
 | **GitHub** | [@rkennke](https://github.com/rkennke) |
 | **OpenJDK Census** | [rkennke](https://openjdk.org/census#rkennke) |
 | **JEP 519** | [Compact Object Headers](https://openjdk.org/jeps/519) |
-| **JEP 521** | [Generational ZGC](https://openjdk.org/jeps/521) |
+| **JEP 521** | [Generational Shenandoah](https://openjdk.org/jeps/521) |
 
 ---
 

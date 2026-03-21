@@ -21,7 +21,7 @@
 
 ## 1. 概要
 
-Brian Goetz 是 Oracle 的 Java Language Architect，是 Java 语言演进的核心设计者。自 JDK 5 以来，他主导了众多关键语言特性的设计，包括泛型、Lambda 表达式、Stream API、以及最新的 Virtual Threads（Project Loom）。
+Brian Goetz 是 Oracle 的 Java Language Architect，是 Java 语言演进的核心设计者。自 JDK 5 以来，他参与了众多关键语言特性的设计，包括并发工具（JSR 166）、Lambda 表达式、Stream API、以及最新的 Virtual Threads（Project Loom）。
 
 ### 基本信息
 
@@ -30,7 +30,7 @@ Brian Goetz 是 Oracle 的 Java Language Architect，是 Java 语言演进的核
 | **姓名** | Brian Goetz |
 | **组织** | [Oracle](/contributors/orgs/oracle.md) |
 | **角色** | Java Language Architect |
-| **教育背景** | Carnegie Mellon University (计算机科学硕士, 1990) |
+| **教育背景** | Carnegie Mellon University (计算机科学硕士, 1990) [未经验证] |
 | **位置** | Williston, Vermont, 美国 |
 | **主要领域** | 语言设计、并发编程、内存模型 |
 | **知名著作** | 《Java Concurrency in Practice》(2006) |
@@ -61,7 +61,7 @@ Brian Goetz 是 Oracle 的 Java Language Architect，是 Java 语言演进的核
 
 | 时期 | 特性 | JSR/JEP | 说明 |
 |------|------|---------|------|
-| **JDK 5** | 泛型、增强 for 循环、并发工具 | JSR 201 | 语言基础现代化 |
+| **JDK 5** | 并发工具 (java.util.concurrent) | JSR 166 | 并发编程基础设施 |
 | **JDK 8** | Lambda 表达式、Stream API | JSR 335 | 函数式编程革命 |
 | **JDK 17-21** | Record、Pattern Matching、Sealed Classes | JEP 395/394/409/406/441 | 模式匹配演进 |
 | **JDK 21** | Virtual Threads (Project Loom) | JEP 444 | 并发编程范式转变 |
@@ -167,11 +167,11 @@ Brian Goetz 强调语言的渐进式演进，而非革命性变化。
 
 > "Java 的成功在于我们**拒绝**了很多看似诱人的特性。我们不追求语言的'纯粹性'，而是关注**实用性**和**可维护性**。"
 
-**典型案例 - 为什么没有 User-Defined Value Types**:
+**典型案例 - Project Valhalla 的渐进式演进**:
 
-- Project Valhalla 探索了十几年
-- 最终决定**不引入**用户定义的值类型
-- 原因：复杂性过高，收益不够明确
+- Project Valhalla 已探索十余年
+- 正在积极开发值类 (value classes, JEP 401)
+- 采用渐进式方法，逐步引入值对象语义
 
 ---
 

@@ -85,8 +85,8 @@ ScopedValue.where(CURRENT_USER, user).run(() -> {
 
 ```java
 try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
-    Future<String> user = scope.fork(() -> fetchUser());
-    Future<List<Order>> orders = scope.fork(() -> fetchOrders());
+    Subtask<String> user = scope.fork(() -> fetchUser());
+    Subtask<List<Order>> orders = scope.fork(() -> fetchOrders());
     
     scope.join();
     scope.throwIfFailed();
@@ -146,18 +146,18 @@ PrivateKey key = decoder.decode(pem, PrivateKey.class);
 ```bash
 # G1 GC (推荐)
 -XX:+UseG1GC
--XX:+G1UseClaimTable              # 启用 Claim Table 优化
+# JEP 522 Claim Table 优化默认启用，无需额外参数
 -XX:G1HeapRegionSize=32m          # Region 大小
 -XX:MaxGCPauseMillis=200          # 目标暂停时间
 
 # Shenandoah 分代模式
 -XX:+UseShenandoahGC
 -XX:ShenandoahGCMode=generational
--XX:ShenandoahYoungGenerationSize=25%
+# 注意: -XX:ShenandoahYoungGenerationSize 不是有效的 JVM 参数
 
 # ZGC (JDK 21+ 已支持分代)
 -XX:+UseZGC
--XX:+ZGenerational
+# 注意: JDK 23+ 分代模式已是默认，无需 -XX:+ZGenerational
 ```
 
 ### 内存配置
@@ -195,9 +195,6 @@ PrivateKey key = decoder.decode(pem, PrivateKey.class);
 # 使用 AOT 缓存
 -XX:SharedArchiveFile=app.aot
 
-# 方法分析数据
--XX:ProfileAtExit=profile.prof   # 收集
--XX:ProfileData=profile.prof     # 使用
 ```
 
 ---
@@ -259,8 +256,8 @@ java --enable-preview -jar myapp.jar
 
 | 优化 | 内存节省 |
 |------|----------|
-| 紧凑对象头 | 20-40% |
-| 压缩指针 | ~50% |
+| 紧凑对象头 | 10-20% |
+| 压缩指针 | ~20-30% |
 
 ---
 
@@ -322,5 +319,5 @@ JEP 504: Applet API
 
 ```
 JEP 500: final 字段修改默认禁止
-  └── 使用 --finalization=enabled 临时启用
+  └── 参考 JEP 500 文档了解迁移选项
 ```

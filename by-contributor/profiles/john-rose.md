@@ -94,17 +94,6 @@ John Rose (OpenJDK 用户名：**jrose**) 是 Oracle 的 **JVM 架构师**，自
 
 **影响**: 引入了新的字节码指令 `invokedynamic`，为 JVM 上的动态语言提供支持。
 
-### JEP 290: Filter Incoming Serialization Data (JDK 9)
-
-| 属性 | 值 |
-|------|-----|
-| **角色** | Contributor |
-| **状态** | Closed / Delivered |
-| **发布版本** | JDK 9 |
-| **文档** | [JEP 290](/jeps/security/jep-290.md) |
-
-**影响**: 增强序列化数据过滤机制，防止反序列化攻击。
-
 ---
 
 ## 4. 核心技术贡献
@@ -271,7 +260,6 @@ John Rose (jrose)
 - [JEP 160: Lambda-Form Representation](/jeps/language/jep-160.md)
 - [JEP 309: Dynamic Class-File Constants](/jeps/language/jep-309.md)
 - [JEP 514: AOT Command-Line Ergonomics](/jeps/performance/jep-514.md)
-- [JEP 290: Filter Serialization Data](/jeps/security/jep-290.md)
 
 ### 技术文档
 - [Method handles and invokedynamic - OpenJDK Wiki](https://wiki.openjdk.org/spaces/HotSpot/pages/11829269/Method+handles+and+invokedynamic)

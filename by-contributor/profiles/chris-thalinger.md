@@ -1,7 +1,7 @@
 # Chris Thalinger
 
-> **Organization**: Oracle
-> **Role**: GraalVM Developer
+> **Organization**: Twitter/X (formerly Oracle)
+> **Role**: JVM Engineer (formerly GraalVM Developer)
 
 ---
 ## 目录
@@ -17,7 +17,7 @@
 
 ## 1. 概述
 
-Chris Thalinger 是 Oracle 的 **GraalVM 开发者**，专注于 Graal 编译器和 HotSpot JIT 集成。
+Chris Thalinger 是前 Oracle GraalVM 开发者，后加入 Twitter/X，专注于 JVM 性能优化。此前在 Oracle 专注于 Graal 编译器和 HotSpot JIT 集成。
 
 ---
 
@@ -26,7 +26,7 @@ Chris Thalinger 是 Oracle 的 **GraalVM 开发者**，专注于 Graal 编译器
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Chris Thalinger |
-| **当前组织** | Oracle (GraalVM Team) |
+| **当前组织** | Twitter/X |
 | **专长** | Graal, JIT Compiler, HotSpot |
 | **JDK 26 贡献** | 3 commits (Graal) |
 

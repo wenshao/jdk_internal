@@ -163,7 +163,7 @@ java -server MyApp
 
 ### JDK 6 (2006) - Mustang
 
-**分层编译 (Tiered Compilation) 引入**
+**分层编译 (Tiered Compilation) 实验性支持（JDK 7 正式引入）**
 
 ```
 Level 0 → Level 1 → Level 2 → Level 3 → Level 4
@@ -221,7 +221,7 @@ list.forEach(s -> System.out.println(s));
 
 ### JDK 10 (2018)
 
-**G1GC 成为默认**
+**G1GC 成为默认 (JDK 9, JEP 248)**
 
 - 为 JIT 提供更好的 GC 支持
 - 降低 GC 暂停对编译的影响

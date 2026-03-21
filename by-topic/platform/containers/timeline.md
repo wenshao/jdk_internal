@@ -44,9 +44,9 @@ docker run -m 512m openjdk:8 java -Xmx4g
 
 ---
 
-## 2. JDK 10: 容器感知 (JEP 307)
+## 2. JDK 10: 容器感知 (JDK-8146115)
 
-### JEP 307: Container Awareness
+### 容器感知 (Container Awareness, JDK-8146115)
 
 | 日期 | 版本 | 变化 |
 |------|------|------|

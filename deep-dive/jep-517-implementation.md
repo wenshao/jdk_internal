@@ -461,24 +461,24 @@ public class QuicTransportErrors {
 ```java
 public class Http3Errors {
     
-    // HTTP/3 错误码
-    public static final int H3_NO_ERROR = 0x00;
-    public static final int H3_GENERAL_PROTOCOL_ERROR = 0x01;
-    public static final int H3_INTERNAL_ERROR = 0x02;
-    public static final int H3_STREAM_CREATION_ERROR = 0x03;
-    public static final int H3_CLOSED_CRITICAL_STREAM = 0x04;
-    public static final int H3_FRAME_UNEXPECTED = 0x05;
-    public static final int H3_FRAME_ERROR = 0x06;
-    public static final int H3_EXCESSIVE_LOAD = 0x07;
-    public static final int H3_ID_ERROR = 0x08;
-    public static final int H3_SETTINGS_ERROR = 0x09;
-    public static final int H3_MISSING_SETTINGS = 0x0A;
-    public static final int H3_REQUEST_REJECTED = 0x0B;
-    public static final int H3_REQUEST_CANCELLED = 0x0C;
-    public static final int H3_REQUEST_INCOMPLETE = 0x0D;
-    public static final int H3_MESSAGE_ERROR = 0x0E;
-    public static final int H3_CONNECT_ERROR = 0x0F;
-    public static final int H3_VERSION_FALLBACK = 0x10;
+    // HTTP/3 错误码 (per RFC 9114)
+    public static final int H3_NO_ERROR = 0x0100;
+    public static final int H3_GENERAL_PROTOCOL_ERROR = 0x0101;
+    public static final int H3_INTERNAL_ERROR = 0x0102;
+    public static final int H3_STREAM_CREATION_ERROR = 0x0103;
+    public static final int H3_CLOSED_CRITICAL_STREAM = 0x0104;
+    public static final int H3_FRAME_UNEXPECTED = 0x0105;
+    public static final int H3_FRAME_ERROR = 0x0106;
+    public static final int H3_EXCESSIVE_LOAD = 0x0107;
+    public static final int H3_ID_ERROR = 0x0108;
+    public static final int H3_SETTINGS_ERROR = 0x0109;
+    public static final int H3_MISSING_SETTINGS = 0x010A;
+    public static final int H3_REQUEST_REJECTED = 0x010B;
+    public static final int H3_REQUEST_CANCELLED = 0x010C;
+    public static final int H3_REQUEST_INCOMPLETE = 0x010D;
+    public static final int H3_MESSAGE_ERROR = 0x010E;
+    public static final int H3_CONNECT_ERROR = 0x010F;
+    public static final int H3_VERSION_FALLBACK = 0x0110;
 }
 ```
 
@@ -494,7 +494,7 @@ public class Http3Errors {
 # HTTP/3 相关配置
 jdk.httpclient.http3.enabled=true
 jdk.httpclient.http3.maxStreams=100
-jdk.httpclient.http3.maxFrameSize=16777215
+# Note: maxFrameSize is an HTTP/2 concept (SETTINGS_MAX_FRAME_SIZE), not applicable to HTTP/3
 jdk.httpclient.http3.headerTableSize=65536
 ```
 
