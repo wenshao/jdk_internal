@@ -1,8 +1,8 @@
 # JDK 26 Commit 分析报告
 
-> 生成时间: 2026-03-19 17:44
+> 生成时间: 2026-03-21
 > 数据来源: git log
-> 总 Commit 数: 3936
+> 总 Commit 数: 3439
 
 ---
 
@@ -46,36 +46,36 @@
 
 | 排名 | 作者 | Commit 数 |
 |------|------|-----------|
-| 1 | Thomas Schatzl | 140 |
-| 2 | Albert Mingkun Yang | 136 |
-| 3 | Phil Race | 110 |
-| 4 | Matthias Baesken | 105 |
-| 5 | Alexey Semenyuk | 85 |
-| 6 | Aleksey Shipilev | 80 |
-| 7 | Ioi Lam | 76 |
-| 8 | Kim Barrett | 76 |
-| 9 | SendaoYan | 71 |
-| 10 | Jaikiran Pai | 67 |
-| 11 | Francesco Andreuzzi | 60 |
-| 12 | Prasanta Sadhukhan | 59 |
-| 13 | Chen Liang | 59 |
-| 14 | Sergey Bylokhov | 57 |
-| 15 | Erik Gahlin | 57 |
-| 16 | Brian Burkhalter | 53 |
-| 17 | Axel Boldt-Christmas | 52 |
-| 18 | David Holmes | 50 |
-| 19 | Emanuel Peter | 49 |
-| 20 | Jan Lahoda | 48 |
-| 21 | Daniel Fuchs | 47 |
-| 22 | Volkan Yazici | 45 |
-| 23 | Joel Sikström | 44 |
-| 24 | Justin Lu | 43 |
-| 25 | William Kemper | 43 |
-| 26 | Manuel Hässig | 39 |
-| 27 | Naoto Sato | 36 |
-| 28 | Leonid Mesnik | 33 |
-| 29 | Coleen Phillimore | 32 |
-| 30 | Yasumasa Suenaga | 32 |
+| 1 | Thomas Schatzl | 130 |
+| 2 | Albert Mingkun Yang | 120 |
+| 3 | Matthias Baesken | 90 |
+| 4 | Phil Race | 79 |
+| 5 | Aleksey Shipilev | 76 |
+| 6 | Kim Barrett | 69 |
+| 7 | Ioi Lam | 68 |
+| 8 | Alexey Semenyuk | 67 |
+| 9 | SendaoYan | 61 |
+| 10 | Francesco Andreuzzi | 60 |
+| 11 | Prasanta Sadhukhan | 55 |
+| 12 | Jaikiran Pai | 54 |
+| 13 | Erik Gahlin | 54 |
+| 14 | Chen Liang | 54 |
+| 15 | Sergey Bylokhov | 46 |
+| 16 | David Holmes | 46 |
+| 17 | Emanuel Peter | 46 |
+| 18 | Axel Boldt-Christmas | 46 |
+| 19 | Brian Burkhalter | 43 |
+| 20 | Jan Lahoda | 41 |
+| 21 | Volkan Yazici | 41 |
+| 22 | Justin Lu | 40 |
+| 23 | Joel Sikström | 40 |
+| 24 | William Kemper | 39 |
+| 25 | Manuel Hässig | 33 |
+| 26 | Leonid Mesnik | 32 |
+| 27 | Naoto Sato | 31 |
+| 28 | Daniel Fuchs | 30 |
+| 29 | Mikhail Yankelevich | 29 |
+| 30 | Magnus Ihse Bursie | 29 |
 
 ---
 
