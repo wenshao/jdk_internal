@@ -308,9 +308,98 @@ done
 ✅ JEP 514/515/519 belong to JDK 25
 ```
 
+**6. Contributor Job Changes**
+```markdown
+❌ Aleksey Shipilev - Red Hat (outdated, left in 2020)
+✅ Aleksey Shipilev - Amazon (current, since 2020)
+
+❌ Thomas Wuerthinger - Oracle (outdated, left in 2019)
+✅ Thomas Wuerthinger - Independent/GraalVM Labs (current)
+```
+
 ---
 
-## Quick Reference
+## 3. Contributor Data Maintenance
+
+### Job Changes and Organization Updates
+
+**Important**: OpenJDK contributors frequently change jobs. Organization attribution must be regularly verified.
+
+**Why this matters**:
+- Contributors may move between companies (Oracle → Amazon, Red Hat → Amazon, etc.)
+- GitHub company info may be outdated
+- OpenJDK Census may lag behind real changes
+- PR history spans multiple organizations
+
+**Verification workflow**:
+
+| Step | Action | Source |
+|------|--------|--------|
+| 1 | Check GitHub profile | `github.com/{username}` |
+| 2 | Check LinkedIn | `linkedin.com/in/{username}` |
+| 3 | Check recent PRs | GitHub PR search |
+| 4 | Check mailing list | mail.openjdk.org |
+| 5 | Check OpenJDK Census | openjdk.org/census |
+
+**Example: Aleksey Shipilev**:
+```
+2011-2015: Red Hat (Shenandoah GC development)
+2015-2020: Red Hat (continued)
+2020-present: Amazon (Corretto team)
+```
+
+**Documentation practice**:
+```markdown
+### Organization History
+
+| Period | Organization | Role |
+|--------|--------------|------|
+| 2020-present | Amazon | Senior Engineer |
+| 2011-2020 | Red Hat | Senior Engineer |
+```
+
+**Update frequency**:
+- **Active contributors**: Check every 6 months
+- **Inactive contributors**: Check annually
+- **After major PRs**: Verify current organization
+
+### Common Job Change Patterns
+
+| From | To | Frequency |
+|------|-----|-----------|
+| Oracle | Amazon | Common |
+| Oracle | Google | Common |
+| Red Hat | Amazon | Common |
+| Oracle | Independent | Common (retirement/consulting) |
+| Company | Startup | Common |
+
+### Red Flags for Outdated Info
+
+| Indicator | Action |
+|-----------|--------|
+| GitHub company unchanged for 5+ years | Verify |
+| No recent PRs (2+ years) | Mark as "formerly" |
+| Mailing list signature changed | Update |
+| LinkedIn shows new company | Update immediately |
+
+### Documentation Template
+
+```markdown
+## 基本信息
+
+| 属性 | 值 |
+|------|-----|
+| **GitHub** | @username |
+| **当前组织** | Company (verified 2026-03) |
+| **曾任组织** | Previous Company (2020-2024) |
+| **主要领域** | Technical focus |
+```
+
+**Note**: Always add verification date to organization info.
+
+---
+
+## 4. Quick Reference
 
 ### Essential Commands
 
@@ -353,13 +442,24 @@ gh pr list --repo openjdk/jdk --search "author:{username} label:integrated" --js
 
 ---
 
-## Recent Updates
+## 5. Recent Updates
 
 ### 2026-03-21
+
+**Kuai Wei Deep Investigation**:
+- ✅ Multi-layer association analysis (11 colleagues identified)
+- ✅ Added colleague profiles: sendaoyan, yanglong1010, tanghaoth90, xhao, joshua-zhu, luchsh, sanhong, alijvm, aitozi, xiangzhai, headius
+- ✅ Documented Shanghai/Hangzhou JVM community network
+- ✅ Jeandle JDK project contributions tracked
+- ✅ OpenJDK contribution timeline (2018-2025)
+- ✅ Reviewer network documented (shade, kvn, vlivanov, etc.)
+
+**Other Updates**:
 - ✅ Added Jaroslav Bachorik (DataDog, JFR tools, 6 PRs)
 - ✅ Fixed all stats to use GitHub Integrated PRs
 - ✅ Corrected JDK 25 as Feature version (not LTS)
 - ✅ Updated contributor rankings by PRs
+- ✅ Added job change tracking guidelines
 
 ### Key Changes
 | Document | Change |
@@ -371,8 +471,10 @@ gh pr list --repo openjdk/jdk --search "author:{username} label:integrated" --js
 
 ---
 
-**Remember**: 
+**Remember**:
 1. ✅ Always verify links before committing
 2. ✅ Use GitHub PRs for statistics
 3. ✅ Follow template structures
 4. ✅ Keep technical terms in English
+5. ✅ Verify contributor organization info regularly (job changes are common)
+6. ✅ Document organization history with verification dates
