@@ -131,7 +131,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 
 | 组织 | 主要贡献 | 关键 JEP |
 |------|----------|---------|
-| **Oracle** | Class-File API, Unnamed Variables | [JEP 457](https://openjdk.org/jeps/457), [JEP 462](https://openjdk.org/jeps/462) |
+| **Oracle** | Class-File API, Unnamed Variables | [JEP 457](../../jeps/tools/jep-457.md), [JEP 462](https://openjdk.org/jeps/462) |
 | **Alibaba** | 字符串拼接早期优化 | [8310929](../../by-pr/8310/8310929.md) |
 | **Red Hat** | AArch64 改进 | 多个 |
 
@@ -139,29 +139,29 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 
 | 组织 | 主要贡献 | 关键 JEP |
 |------|----------|---------|
-| **Oracle** | Record Patterns, Pattern Matching for switch | [JEP 440](https://openjdk.org/jeps/440), [JEP 441](https://openjdk.org/jeps/441) |
-| **Red Hat** | Scoped Value (Incubator) | [JEP 436](https://openjdk.org/jeps/436) |
+| **Oracle** | Record Patterns, Pattern Matching for switch | [JEP 440](../../jeps/language/jep-440.md), [JEP 441](../../jeps/language/jep-441.md) |
+| **Red Hat** | Scoped Value (Incubator) | [JEP 436](../../jeps/concurrency/jep-436.md) |
 | **ISCAS PLCT** | RISC-V 早期支持 | 多个 |
 
 ### JDK 18 (2022-03)
 
 | 组织 | 主要贡献 | 关键 JEP |
 |------|----------|---------|
-| **Oracle** | Simple Web Server, Code Snippets in API Docs | [JEP 408](https://openjdk.org/jeps/408), [JEP 416](https://openjdk.org/jeps/416) |
+| **Oracle** | Simple Web Server, Code Snippets in API Docs | [JEP 408](../../jeps/tools/jep-408.md), [JEP 416](../../jeps/tools/jep-416.md) |
 | **SAP** | 构建系统优化 | 多个 |
 
 ### JDK 16 (2021-03)
 
 | 组织 | 主要贡献 | 关键 JEP |
 |------|----------|---------|
-| **Oracle** | Pattern Matching for instanceof, Records | [JEP 394](https://openjdk.org/jeps/394), [JEP 395](https://openjdk.org/jeps/395) |
+| **Oracle** | Pattern Matching for instanceof, Records | [JEP 394](../../jeps/language/jep-394.md), [JEP 395](../../jeps/language/jep-395.md) |
 | **Red Hat** | AArch64 改进 | 多个 |
 
 ### JDK 14 (2020-03)
 
 | 组织 | 主要贡献 | 关键 JEP |
 |------|----------|----------|
-| **Oracle** | Switch Expressions, Records (Preview) | [JEP 361](https://openjdk.org/jeps/361), [JEP 359](https://openjdk.org/jeps/359) |
+| **Oracle** | Switch Expressions, Records (Preview) | [JEP 361](../../jeps/language/jep-361.md), [JEP 359](https://openjdk.org/jeps/359) |
 | **SAP** | PPC64LE 改进 | 多个 |
 
 ### JDK 13 (2019-09)
@@ -175,7 +175,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 
 | 组织 | 主要贡献 | 关键 JEP |
 |------|----------|---------|
-| **Oracle** | Local-Variable Type Inference (var) | [JEP 286](https://openjdk.org/jeps/286) |
+| **Oracle** | Local-Variable Type Inference (var) | [JEP 286](../../jeps/language/jep-286.md) |
 | **Red Hat** | AArch64 早期支持 | 多个 |
 
 ### JDK 21 (LTS, 2023-09)
@@ -191,8 +191,8 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 
 | 组织 | 主要贡献 | 关键 JEP |
 |------|----------|----------|
-| **Oracle** | Virtual Threads (Preview) | [JEP 425](https://openjdk.org/jeps/425) |
-| **ISCAS PLCT** | Linux/RISC-V Port | [JEP 422](https://openjdk.org/jeps/422) |
+| **Oracle** | Virtual Threads (Preview) | [JEP 425](../../jeps/concurrency/jep-425.md) |
+| **ISCAS PLCT** | Linux/RISC-V Port | [JEP 422](../../jeps/ffi/jep-422.md) |
 
 ### JDK 17 (LTS, 2021-09)
 
@@ -207,14 +207,14 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | 组织 | 主要贡献 | 关键 JEP |
 |------|----------|----------|
 | **Oracle** | Text Blocks, ZGC | 多个 |
-| **Red Hat** | Shenandoah GC (Standard) | [JEP 379](https://openjdk.org/jeps/379) |
+| **Red Hat** | Shenandoah GC (Standard) | [JEP 379](../../jeps/gc/jep-379.md) |
 
 ### JDK 12 (2019-03)
 
 | 组织 | 主要贡献 | 关键 JEP |
 |------|----------|----------|
-| **Oracle** | Switch Expressions | [JEP 325](https://openjdk.org/jeps/325) |
-| **Red Hat** | Shenandoah GC (Incubator) | [JEP 189](https://openjdk.org/jeps/189) |
+| **Oracle** | Switch Expressions | [JEP 325](../../jeps/language/jep-325.md) |
+| **Red Hat** | Shenandoah GC (Incubator) | [JEP 189](../../jeps/gc/jep-189.md) |
 
 ### JDK 11 (LTS, 2018-09)
 
@@ -227,8 +227,8 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 
 | 组织 | 主要贡献 | 关键 JEP |
 |------|----------|----------|
-| **Oracle** | Module System, JShell | [JEP 261](https://openjdk.org/jeps/261) |
-| **Red Hat** | AArch64 Port | [JEP 237](https://openjdk.org/jeps/237) |
+| **Oracle** | Module System, JShell | [JEP 261](../../jeps/language/jep-261.md) |
+| **Red Hat** | AArch64 Port | [JEP 237](../../jeps/ffi/jep-237.md) |
 
 ### JDK 8 (LTS, 2014-03)
 
@@ -287,8 +287,8 @@ IBM       15      20      30      40      45
 
 | JEP | 标题 | 主导组织 | Lead | 版本 |
 |-----|------|----------|------|------|
-| [JEP 189](https://openjdk.org/jeps/189) | Shenandoah GC (Incubator) | Red Hat | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | JDK 12 |
-| [JEP 379](https://openjdk.org/jeps/379) | Shenandoah GC (Standard) | Red Hat | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | JDK 15 |
+| [JEP 189](../../jeps/gc/jep-189.md) | Shenandoah GC (Incubator) | Red Hat | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | JDK 12 |
+| [JEP 379](../../jeps/gc/jep-379.md) | Shenandoah GC (Standard) | Red Hat | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | JDK 15 |
 | [JEP 519](../../jeps/gc/jep-519.md) | Compact Object Headers | Red Hat | [Roman Kennke](../../by-contributor/profiles/roman-kennke.md) | JDK 25 |
 | [JEP 521](../../jeps/gc/jep-521.md) | Generational Shenandoah | Amazon | [William Kemper](../../by-contributor/profiles/william-kemper.md) | JDK 26 |
 | [JEP 439](../../jeps/gc/jep-439.md) | Generational ZGC | Oracle | - | JDK 21 |
@@ -297,8 +297,8 @@ IBM       15      20      30      40      45
 
 | JEP | 标题 | 主导组织 | Lead | 版本 |
 |-----|------|----------|------|------|
-| [JEP 237](https://openjdk.org/jeps/237) | AArch64 Port | Red Hat | [Andrew Dinn](../../by-contributor/profiles/andrew-dinn.md) | JDK 9 |
-| [JEP 422](https://openjdk.org/jeps/422) | Linux/RISC-V Port | ISCAS PLCT | [Fei Yang](../../by-contributor/profiles/fei-yang.md) | JDK 19 |
+| [JEP 237](../../jeps/ffi/jep-237.md) | AArch64 Port | Red Hat | [Andrew Dinn](../../by-contributor/profiles/andrew-dinn.md) | JDK 9 |
+| [JEP 422](../../jeps/ffi/jep-422.md) | Linux/RISC-V Port | ISCAS PLCT | [Fei Yang](../../by-contributor/profiles/fei-yang.md) | JDK 19 |
 
 ### 语言与运行时 JEP
 
