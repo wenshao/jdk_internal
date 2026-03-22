@@ -22,8 +22,14 @@
 
 ### 2025 新星
 
-| 贡献者 | 首次贡献 | Commits | 领域 | 组织 | 亮点 |
-|--------|----------|---------|------|------|------|
+| 贡献者 | 首次贡献 | PRs | 领域 | 组织 | 亮点 |
+|--------|----------|-----|------|------|------|
+| [Tobias Holenstein](/by-contributor/profiles/tobias-holenstein.md) | 2023 | 83 | C2/IGV | Oracle | C2 编译器和 IGV 工具改进 |
+| [Aggelos Biboudis](/by-contributor/profiles/aggelos-biboudis.md) | 2023 | 64 | javac/patterns | Oracle | javac 模式匹配支持 |
+| [Marc Chevalier](/by-contributor/profiles/marc-chevalier.md) | 2024 | 45 | C2 | Oracle | C2 编译器优化 |
+| [Mikhail Yankelevich](/by-contributor/profiles/mikhail-yankelevich.md) | 2024 | 44 | 安全测试 | Oracle | 安全性测试改进 |
+| [Kelvin Nilsen](/by-contributor/profiles/kelvin-nilsen.md) | 2024 | 40 | Gen Shenandoah | Amazon | 分代 Shenandoah GC |
+| [Casper Norrbin](/by-contributor/profiles/casper-norrbin.md) | 2024 | 39 | 容器/运行时 | Oracle | 容器和运行时改进 |
 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 2024-05 | 27 | 核心库/性能 | 阿里巴巴 | 字符串拼接优化 (+40% 启动) |
 
 ### 2024 新星
@@ -52,12 +58,15 @@
 |--------|----------|---------|---------|------|
 | [William Kemper](/by-contributor/profiles/william-kemper.md) | 2022 | 34 | Shenandoah | Amazon |
 | Felix Nensemba | 2023 | 25 | Shenandoah | Amazon |
+| [Kelvin Nilsen](/by-contributor/profiles/kelvin-nilsen.md) | 2024 | 40 | Gen Shenandoah | Amazon |
 | Y. S. K. Nilsen | 2023 | 20 | 各类 GC | Amazon |
 
 ### 编译器领域
 
-| 贡献者 | 首次贡献 | Commits | 编译器 | 组织 |
-|--------|----------|---------|--------|------|
+| 贡献者 | 首次贡献 | PRs | 编译器 | 组织 |
+|--------|----------|-----|--------|------|
+| [Tobias Holenstein](/by-contributor/profiles/tobias-holenstein.md) | 2023 | 83 | C2/IGV | Oracle |
+| [Marc Chevalier](/by-contributor/profiles/marc-chevalier.md) | 2024 | 45 | C2 | Oracle |
 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 2023 | 42 | C2 | Oracle |
 
 ### 核心库领域
@@ -193,7 +202,11 @@
 
 | 贡献者 | 影响力 | 说明 |
 |--------|--------|------|
+| [Tobias Holenstein](/by-contributor/profiles/tobias-holenstein.md) | ⭐⭐⭐⭐⭐ | C2/IGV 83 PRs，快速成长 |
+| [Aggelos Biboudis](/by-contributor/profiles/aggelos-biboudis.md) | ⭐⭐⭐⭐⭐ | javac 模式匹配，64 PRs |
 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | ⭐⭐⭐⭐⭐ | JDK 24 启动性能 +40% |
+| [Marc Chevalier](/by-contributor/profiles/marc-chevalier.md) | ⭐⭐⭐⭐ | C2 编译器，45 PRs |
+| [Kelvin Nilsen](/by-contributor/profiles/kelvin-nilsen.md) | ⭐⭐⭐⭐ | 分代 Shenandoah GC |
 | [Chen Liang](/by-contributor/profiles/chen-liang.md) | ⭐⭐⭐⭐ | ClassFile API 改进 |
 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | ⭐⭐⭐⭐ | C2 编译器优化 |
 

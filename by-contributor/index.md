@@ -34,20 +34,20 @@
 
 | 状态 | 说明 | 代表贡献者 |
 |------|------|------------|
-| ✅ **活跃** | 2025-2026 有提交 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md), [Phil Race](/by-contributor/profiles/phil-race.md), [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) |
-| ⚠️ **减少参与** | 2022 年后减少 | [Thomas Wuerthinger](/by-contributor/profiles/thomas-wuerthinger.md) |
+| ✅ **活跃** | 2025-2026 有提交 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md), [Phil Race](/by-contributor/profiles/phil-race.md), [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md), [Ivan Walulya](/by-contributor/profiles/ivan-walulya.md), [Roberto Castaneda Lozano](/by-contributor/profiles/roberto-castaneda-lozano.md), [Calvin Cheung](/by-contributor/profiles/calvin-cheung.md), [Chris Plummer](/by-contributor/profiles/chris-plummer.md), [Erik Duveblad](/by-contributor/profiles/erik-duveblad.md) |
+| ⚠️ **减少参与** | 2022 年后减少 | [Thomas Wuerthinger](/by-contributor/profiles/thomas-wuerthinger.md), [Sundararajan Athijegannathan](/by-contributor/profiles/sundararajan-athijegannathan.md), [Lutz Schmidt](/by-contributor/profiles/lutz-schmidt.md), [Konstantin Shefov](/by-contributor/profiles/konstantin-shefov.md) |
 
 ### 按主题领域
 
 | 领域 | 代表贡献者 | Topic 页面 |
 |------|------------|------------|
-| [GC](/by-topic/core/gc/) | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md), [William Kemper](/by-contributor/profiles/william-kemper.md) | [GC 演进](/by-topic/core/gc/timeline.md) |
+| [GC](/by-topic/core/gc/) | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md), [William Kemper](/by-contributor/profiles/william-kemper.md), [Tony Printezis](/by-contributor/profiles/tony-printezis.md), [Ivan Walulya](/by-contributor/profiles/ivan-walulya.md), [Kelvin Nilsen](/by-contributor/profiles/kelvin-nilsen.md) | [GC 演进](/by-topic/core/gc/timeline.md) |
 | [并发](/by-topic/concurrency/concurrency/) | [David Holmes](/by-contributor/profiles/david-holmes.md) | [并发编程](/by-topic/concurrency/concurrency/timeline.md) |
 | [性能优化](/by-topic/core/performance/) | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | [性能优化](/by-topic/core/performance/timeline.md) |
 | [JFR](/by-topic/core/performance/) | [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | [JFR 演进](/by-topic/core/performance/timeline.md) |
-| [编译器](/by-topic/core/jit/) | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | [JIT 编译](/by-topic/core/jit/timeline.md) |
-| [语言特性](/by-topic/language/) | [Jan Lahoda](/by-contributor/profiles/jan-lahoda.md), [Chen Liang](/by-contributor/profiles/chen-liang.md) | [语言演进](/by-topic/language/) |
-| [HTTP 客户端](/by-topic/concurrency/http/) | [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | [HTTP 客户端](/by-topic/concurrency/http/timeline.md) |
+| [编译器](/by-topic/core/jit/) | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md), [Roberto Castaneda Lozano](/by-contributor/profiles/roberto-castaneda-lozano.md), [Marc Chevalier](/by-contributor/profiles/marc-chevalier.md), [Tobias Holenstein](/by-contributor/profiles/tobias-holenstein.md) | [JIT 编译](/by-topic/core/jit/timeline.md) |
+| [语言特性](/by-topic/language/) | [Jan Lahoda](/by-contributor/profiles/jan-lahoda.md), [Chen Liang](/by-contributor/profiles/chen-liang.md), [Aggelos Biboudis](/by-contributor/profiles/aggelos-biboudis.md) | [语言演进](/by-topic/language/) |
+| [HTTP 客户端](/by-topic/concurrency/http/) | [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md), [Patrick Concannon](/by-contributor/profiles/patrick-concannon.md) | [HTTP 客户端](/by-topic/concurrency/http/timeline.md) |
 | [国际化](/by-topic/security/i18n/) | [Naoto Sato](/by-contributor/profiles/naoto-sato.md) | [国际化](/by-topic/security/i18n/timeline.md) |
 
 ---
@@ -76,6 +76,14 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 构建系统 | [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md) | [详情](/by-contributor/profiles/magnus-ihse-bursie.md) | [→](/by-topic/platform/) |
 | Swing/AWT | [Prasanta Sadhukhan](/by-contributor/profiles/prasanta-sadhukhan.md) | [详情](/by-contributor/profiles/prasanta-sadhukhan.md) | [→](/by-topic/api/) |
 | HTTP/3 | [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | [详情](/by-contributor/profiles/daniel-fuchs.md) | [→](/by-topic/concurrency/http/) |
+| CDS/AppCDS | [Calvin Cheung](/by-contributor/profiles/calvin-cheung.md) | [详情](/by-contributor/profiles/calvin-cheung.md) | [→](/by-topic/core/classloading/) |
+| CDS/AppCDS | [Yumin Qi](/by-contributor/profiles/yumin-qi.md) | [详情](/by-contributor/profiles/yumin-qi.md) | [→](/by-topic/core/classloading/) |
+| Debugging/JDWP | [Chris Plummer](/by-contributor/profiles/chris-plummer.md) | [详情](/by-contributor/profiles/chris-plummer.md) | [→](/by-topic/platform/) |
+| javadoc | [Nizar Ben Alla](/by-contributor/profiles/nizar-ben-alla.md) | [详情](/by-contributor/profiles/nizar-ben-alla.md) | [→](/by-topic/api/) |
+| javadoc | [Hannes Wallnoefer](/by-contributor/profiles/hannes-wallnoefer.md) | [详情](/by-contributor/profiles/hannes-wallnoefer.md) | [→](/by-topic/api/) |
+| jlink | [Henry Jen](/by-contributor/profiles/henry-jen.md) | [详情](/by-contributor/profiles/henry-jen.md) | [→](/by-topic/platform/) |
+| JMX/JFR | [Kevin Walls](/by-contributor/profiles/kevin-walls.md) | [详情](/by-contributor/profiles/kevin-walls.md) | [→](/by-topic/core/performance/) |
+| Skara/GitHub 工具 | [Erik Duveblad](/by-contributor/profiles/erik-duveblad.md) | [详情](/by-contributor/profiles/erik-duveblad.md) | [→](/by-topic/platform/) |
 
 [→ Oracle 全部贡献者](/contributors/orgs/oracle.md)
 
@@ -102,6 +110,8 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 |--------|----------|------|-------|
 | Raffaello Giulietti | 核心库 | [OpenJDK Census](https://openjdk.org/census#rsgiulie) | - |
 | [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | AArch64 | [详情](/by-contributor/profiles/andrew-dinn.md) | [→](/by-topic/platform/) |
+| [Andrew Hughes](/by-contributor/profiles/andrew-hughes.md) | Updates | [详情](/by-contributor/profiles/andrew-hughes.md) | - |
+| [Severin Gehwolf](/by-contributor/profiles/severin-gehwolf.md) | Containers | [详情](/by-contributor/profiles/severin-gehwolf.md) | [→](/by-topic/platform/) |
 
 [→ Red Hat 全部贡献者](/contributors/orgs/redhat.md)
 
@@ -121,6 +131,11 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 |--------|----------|------|-------|
 | [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | 跨平台构建 | [详情](/by-contributor/profiles/matthias-baesken.md) | [→](/by-topic/platform/) |
 | [Erik Joelsson](/by-contributor/profiles/erik-joelsson.md) | 构建系统 | [详情](/by-contributor/profiles/erik-joelsson.md) | [→](/by-topic/platform/) |
+| [Martin Doerr](/by-contributor/profiles/martin-doerr.md) | PPC64 | [详情](/by-contributor/profiles/martin-doerr.md) | [→](/by-topic/platform/) |
+| [David Briemann](/by-contributor/profiles/david-briemann.md) | PPC64 | [详情](/by-contributor/profiles/david-briemann.md) | [→](/by-topic/platform/) |
+| [Richard Reingruber](/by-contributor/profiles/richard-reingruber.md) | C2 编译器 | [详情](/by-contributor/profiles/richard-reingruber.md) | [→](/by-topic/core/jit/) |
+| [Christoph Langer](/by-contributor/profiles/christoph-langer.md) | Networking | [详情](/by-contributor/profiles/christoph-langer.md) | [→](/by-topic/concurrency/network/) |
+| [Lutz Schmidt](/by-contributor/profiles/lutz-schmidt.md) | CodeCache | [详情](/by-contributor/profiles/lutz-schmidt.md) | [→](/by-topic/core/) |
 
 [→ SAP 全部贡献者](/contributors/orgs/sap.md)
 
@@ -131,7 +146,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 贡献者 | 实际组织 | 查看 |
 |--------|----------|------|
 | [Amit Kumar](/by-contributor/profiles/amit-kumar.md) | [IBM](/contributors/orgs/ibm.md) | [详情](/by-contributor/profiles/amit-kumar.md) |
-| Christian Stein | Oracle | [OpenJDK Mail](https://mail.openjdk.org/pipermail/) |
+| [Christian Stein](/by-contributor/profiles/christian-stein.md) | Oracle | [详情](/by-contributor/profiles/christian-stein.md) |
 
 [→ Google 全部贡献者](/contributors/orgs/google.md)
 
@@ -172,7 +187,10 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 领域 | 代表贡献者 | 查看 | Topic |
 |------|------------|------|-------|
 | G1 GC | Thomas Schatzl | [详情](/by-contributor/profiles/thomas-schatzl.md) | [→](/by-topic/core/gc/) |
+| G1 GC (先驱) | [Tony Printezis](/by-contributor/profiles/tony-printezis.md) | [详情](/by-contributor/profiles/tony-printezis.md) | [→](/by-topic/core/gc/) |
+| G1 GC 内部 | [Ivan Walulya](/by-contributor/profiles/ivan-walulya.md) | [详情](/by-contributor/profiles/ivan-walulya.md) | [→](/by-topic/core/gc/) |
 | Shenandoah GC | William Kemper | [详情](/by-contributor/profiles/william-kemper.md) | [→](/by-topic/core/gc/) |
+| Generational Shenandoah | [Kelvin Nilsen](/by-contributor/profiles/kelvin-nilsen.md) | [详情](/by-contributor/profiles/kelvin-nilsen.md) | [→](/by-topic/core/gc/) |
 | ZGC | Stefan Karlsson | [详情](/by-contributor/profiles/stefan-karlsson.md) | [→](/by-topic/core/gc/) |
 | 内存管理 | - | - | [→](/by-topic/core/memory/) |
 
@@ -182,6 +200,8 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 |------|------------|------|-------|
 | HTTP/3 | Daniel Fuchs | [详情](/by-contributor/profiles/daniel-fuchs.md) | [→](/by-topic/concurrency/http/) |
 | HttpClient | Volkan Yazıcı | [详情](/by-contributor/profiles/volkan-yazici.md) | [→](/by-topic/concurrency/http/) |
+| HTTP | [Patrick Concannon](/by-contributor/profiles/patrick-concannon.md) | [详情](/by-contributor/profiles/patrick-concannon.md) | [→](/by-topic/concurrency/http/) |
+| XML/JAXP | [Joe Wang](/by-contributor/profiles/joe-wang.md) | [详情](/by-contributor/profiles/joe-wang.md) | [→](/by-topic/api/) |
 | 网络编程 | - | - | [→](/by-topic/concurrency/network/) |
 
 #### 编译器与语言
@@ -191,7 +211,12 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | ClassFile API | Chen Liang | [详情](/by-contributor/profiles/chen-liang.md) | [→](/by-topic/language/classfile/) |
 | javac | Jan Lahoda | [详情](/by-contributor/profiles/jan-lahoda.md) | [→](/by-topic/language/syntax/) |
 | C2 编译器 | Emanuel Peter | [详情](/by-contributor/profiles/emanuel-peter.md) | [→](/by-topic/core/jit/) |
+| C2 JIT/IGV | [Roberto Castaneda Lozano](/by-contributor/profiles/roberto-castaneda-lozano.md) | [详情](/by-contributor/profiles/roberto-castaneda-lozano.md) | [→](/by-topic/core/jit/) |
+| C2 编译器 | [Marc Chevalier](/by-contributor/profiles/marc-chevalier.md) | [详情](/by-contributor/profiles/marc-chevalier.md) | [→](/by-topic/core/jit/) |
+| C2/IGV | [Tobias Holenstein](/by-contributor/profiles/tobias-holenstein.md) | [详情](/by-contributor/profiles/tobias-holenstein.md) | [→](/by-topic/core/jit/) |
+| C2 编译器 | [Benoit Maillard](/by-contributor/profiles/benoit-maillard.md) | [详情](/by-contributor/profiles/benoit-maillard.md) | [→](/by-topic/core/jit/) |
 | C++ 现代化 | Kim Barrett | [详情](/by-contributor/profiles/kim-barrett.md) | [→](/by-topic/language/syntax/) |
+| javac/Patterns | [Aggelos Biboudis](/by-contributor/profiles/aggelos-biboudis.md) | [详情](/by-contributor/profiles/aggelos-biboudis.md) | [→](/by-topic/language/) |
 | 语言特性 | - | - | [→](/by-topic/language/) |
 
 #### 工具与监控
@@ -202,6 +227,9 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | JFR 工具 | Jaroslav Bachorik | [详情](/by-contributor/profiles/jaroslav-bachorik.md) | [→](/by-topic/core/performance/) |
 | JVMTI | Leonid Mesnik | [详情](/by-contributor/profiles/leonid-mesnik.md) | [→](/by-topic/platform/) |
 | JMX | Claes Redestad | [详情](/by-contributor/profiles/claes-redestad.md) | [→](/by-topic/platform/) |
+| NMT/诊断 | [Johan Sjolen](/by-contributor/profiles/johan-sjolen.md) | [详情](/by-contributor/profiles/johan-sjolen.md) | [→](/by-topic/core/) |
+| Debugging/JDWP | [Chris Plummer](/by-contributor/profiles/chris-plummer.md) | [详情](/by-contributor/profiles/chris-plummer.md) | [→](/by-topic/platform/) |
+| JMX/JFR | [Kevin Walls](/by-contributor/profiles/kevin-walls.md) | [详情](/by-contributor/profiles/kevin-walls.md) | [→](/by-topic/core/performance/) |
 
 #### 国际化与客户端
 
@@ -211,6 +239,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 本地化 | Justin Lu | [详情](/by-contributor/profiles/justin-lu.md) | [→](/by-topic/security/i18n/) |
 | Client Libraries | Phil Race | [详情](/by-contributor/profiles/phil-race.md) | [→](/by-topic/api/) |
 | 图形/打印 | Brian Burkhalter | [详情](/by-contributor/profiles/brian-burkhalter.md) | [→](/by-topic/api/) |
+| Nashorn | [Sundararajan Athijegannathan](/by-contributor/profiles/sundararajan-athijegannathan.md) | [详情](/by-contributor/profiles/sundararajan-athijegannathan.md) | [→](/by-topic/language/) |
 
 #### 并发与运行时
 
@@ -219,6 +248,9 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 并发 | David Holmes | [详情](/by-contributor/profiles/david-holmes.md) | [→](/by-topic/concurrency/concurrency/) |
 | 虚拟线程 | - | - | [→](/by-topic/concurrency/concurrency/) |
 | AOT/CDS | Ioi Lam | [详情](/by-contributor/profiles/ioi-lam.md) | [→](/by-topic/core/classloading/) |
+| CDS/AppCDS | [Calvin Cheung](/by-contributor/profiles/calvin-cheung.md) | [详情](/by-contributor/profiles/calvin-cheung.md) | [→](/by-topic/core/classloading/) |
+| CDS/AppCDS | [Yumin Qi](/by-contributor/profiles/yumin-qi.md) | [详情](/by-contributor/profiles/yumin-qi.md) | [→](/by-topic/core/classloading/) |
+| CDS/Static JDK | [Jiangli Zhou](/by-contributor/profiles/jiangli-zhou.md) | [详情](/by-contributor/profiles/jiangli-zhou.md) | [→](/by-topic/core/classloading/) |
 | 类加载器 | - | - | [→](/by-topic/core/classloading/) |
 
 #### 构建系统
@@ -227,20 +259,27 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 |------|------------|------|-------|
 | 构建系统 | Magnus Ihse Bursie | [详情](/by-contributor/profiles/magnus-ihse-bursie.md) | [→](/by-topic/platform/) |
 | 跨平台 | Matthias Baesken | [详情](/by-contributor/profiles/matthias-baesken.md) | [→](/by-topic/platform/) |
-| 容器支持 | - | - | [→](/by-topic/platform/containers/) |
+| 构建基础设施 | [Tim Bell](/by-contributor/profiles/tim-bell.md) | [详情](/by-contributor/profiles/tim-bell.md) | [→](/by-topic/platform/) |
+| Skara/GitHub 工具 | [Erik Duveblad](/by-contributor/profiles/erik-duveblad.md) | [详情](/by-contributor/profiles/erik-duveblad.md) | [→](/by-topic/platform/) |
+| JEP 458/jtreg | [Christian Stein](/by-contributor/profiles/christian-stein.md) | [详情](/by-contributor/profiles/christian-stein.md) | [→](/by-topic/platform/) |
+| 容器支持 | [Casper Norrbin](/by-contributor/profiles/casper-norrbin.md) | [详情](/by-contributor/profiles/casper-norrbin.md) | [→](/by-topic/platform/containers/) |
 
 #### UI 组件
 
 | 领域 | 代表贡献者 | 查看 | Topic |
 |------|------------|------|-------|
 | Swing/AWT | Prasanta Sadhukhan | [详情](/by-contributor/profiles/prasanta-sadhukhan.md) | [→](/by-topic/api/) |
+| AWT/Swing | [Alexander Ivanov](/by-contributor/profiles/alexander-ivanov.md) | [详情](/by-contributor/profiles/alexander-ivanov.md) | [→](/by-topic/api/) |
+| AWT/Swing | [Alexander Zuev](/by-contributor/profiles/alexander-zuev.md) | [详情](/by-contributor/profiles/alexander-zuev.md) | [→](/by-topic/api/) |
+| AWT/Swing | [Dmitry Markov](/by-contributor/profiles/dmitry-markov.md) | [详情](/by-contributor/profiles/dmitry-markov.md) | [→](/by-topic/api/) |
 
 #### 安全与加密
 
 | 领域 | 代表贡献者 | 查看 | Topic |
 |------|------------|------|-------|
-| 安全特性 | - | - | [→](/by-topic/security/security/) |
-| TLS/SSL | - | - | [→](/by-topic/security/security/) |
+| 安全特性 | [Sean Coffey](/by-contributor/profiles/sean-coffey.md) | [详情](/by-contributor/profiles/sean-coffey.md) | [→](/by-topic/security/security/) |
+| TLS/SSL | [Fernando Guallini](/by-contributor/profiles/fernando-guallini.md) | [详情](/by-contributor/profiles/fernando-guallini.md) | [→](/by-topic/security/security/) |
+| Crypto 测试 | [Mikhail Yankelevich](/by-contributor/profiles/mikhail-yankelevich.md) | [详情](/by-contributor/profiles/mikhail-yankelevich.md) | [→](/by-topic/security/security/) |
 | 后量子密码 | Ben Perez | [详情](/by-contributor/profiles/ben-perez.md) | [→](/by-topic/crypto/) |
 
 #### 数学与计算
@@ -248,6 +287,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 领域 | 代表贡献者 | 查看 | Topic |
 |------|------------|------|-------|
 | 数学库 | Joe Darcy | [详情](/by-contributor/profiles/joe-darcy.md) | [→](/by-topic/math/) |
+| 数学/AArch64 | [Anton Artemov](/by-contributor/profiles/anton-artemov.md) | [详情](/by-contributor/profiles/anton-artemov.md) | [→](/by-topic/math/) |
 | Vector API | - | - | [→](/by-topic/language/) |
 
 #### 社区与生态
@@ -265,11 +305,25 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 | 贡献者 | 组织 | 主要领域 | 档案 | Topic |
 |--------|------|----------|------|-------|
+| [Aggelos Biboudis](/by-contributor/profiles/aggelos-biboudis.md) | [Oracle](/contributors/orgs/oracle.md) | [javac/Patterns](/by-topic/language/) | [详情](/by-contributor/profiles/aggelos-biboudis.md) | [→](/by-topic/language/) |
 | [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) | [Oracle](/contributors/orgs/oracle.md) | [GC](/by-topic/core/gc/) | [详情](/by-contributor/profiles/albert-mingkun-yang.md) | [→](/by-topic/core/gc/) |
 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | [Amazon](/contributors/orgs/amazon.md) | [性能优化](/by-topic/core/performance/) | [详情](/by-contributor/profiles/aleksey-shipilev.md) | [→](/by-topic/core/performance/) |
+| [Alexander Ivanov](/by-contributor/profiles/alexander-ivanov.md) | [Oracle](/contributors/orgs/oracle.md) | [AWT/Swing](/by-topic/api/) | [详情](/by-contributor/profiles/alexander-ivanov.md) | [→](/by-topic/api/) |
+| [Alexander Zuev](/by-contributor/profiles/alexander-zuev.md) | [Oracle](/contributors/orgs/oracle.md) | [AWT/Swing](/by-topic/api/) | [详情](/by-contributor/profiles/alexander-zuev.md) | [→](/by-topic/api/) |
 | [Alexey Semenyuk](/by-contributor/profiles/alexey-semenyuk.md) | [Oracle](/contributors/orgs/oracle.md) | [jpackage/AOT](/by-topic/platform/) | [详情](/by-contributor/profiles/alexey-semenyuk.md) | [→](/by-topic/platform/) |
+| [Andrew Hughes](/by-contributor/profiles/andrew-hughes.md) | [Red Hat](/contributors/orgs/redhat.md) | Updates | [详情](/by-contributor/profiles/andrew-hughes.md) | - |
 | [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | [ByteDance](/contributors/orgs/bytedance.md) | [RISC-V](/by-topic/platform/) | [详情](/by-contributor/profiles/anjian-wen.md) | [→](/by-topic/platform/) |
+| [Anton Artemov](/by-contributor/profiles/anton-artemov.md) | - | [数学/AArch64](/by-topic/math/) | [详情](/by-contributor/profiles/anton-artemov.md) | [→](/by-topic/math/) |
 | [Ben Perez](/by-contributor/profiles/ben-perez.md) | Trail of Bits | [后量子密码学](/by-topic/crypto/) | [详情](/by-contributor/profiles/ben-perez.md) | [→](/by-topic/crypto/) |
+| [Benoit Maillard](/by-contributor/profiles/benoit-maillard.md) | [Oracle](/contributors/orgs/oracle.md) | [C2 编译器](/by-topic/core/jit/) | [详情](/by-contributor/profiles/benoit-maillard.md) | [→](/by-topic/core/jit/) |
+| [Calvin Cheung](/by-contributor/profiles/calvin-cheung.md) | [Oracle](/contributors/orgs/oracle.md) | [CDS/AppCDS](/by-topic/core/classloading/) | [详情](/by-contributor/profiles/calvin-cheung.md) | [→](/by-topic/core/classloading/) |
+| [Casper Norrbin](/by-contributor/profiles/casper-norrbin.md) | - | [Linux Containers](/by-topic/platform/) | [详情](/by-contributor/profiles/casper-norrbin.md) | [→](/by-topic/platform/) |
+| [Chris Plummer](/by-contributor/profiles/chris-plummer.md) | [Oracle](/contributors/orgs/oracle.md) | [Debugging/JDWP](/by-topic/platform/) | [详情](/by-contributor/profiles/chris-plummer.md) | [→](/by-topic/platform/) |
+| [Christian Stein](/by-contributor/profiles/christian-stein.md) | [Oracle](/contributors/orgs/oracle.md) | [JEP 458/jtreg](/by-topic/platform/) | [详情](/by-contributor/profiles/christian-stein.md) | [→](/by-topic/platform/) |
+| [Christoph Langer](/by-contributor/profiles/christoph-langer.md) | [SAP](/contributors/orgs/sap.md) | [Networking](/by-topic/concurrency/network/) | [详情](/by-contributor/profiles/christoph-langer.md) | [→](/by-topic/concurrency/network/) |
+| [David Briemann](/by-contributor/profiles/david-briemann.md) | [SAP](/contributors/orgs/sap.md) | [PPC64](/by-topic/platform/) | [详情](/by-contributor/profiles/david-briemann.md) | [→](/by-topic/platform/) |
+| [Dmitry Markov](/by-contributor/profiles/dmitry-markov.md) | [Oracle](/contributors/orgs/oracle.md) | [AWT/Swing](/by-topic/api/) | [详情](/by-contributor/profiles/dmitry-markov.md) | [→](/by-topic/api/) |
+| [Erik Duveblad](/by-contributor/profiles/erik-duveblad.md) | [Oracle](/contributors/orgs/oracle.md) | [Skara/GitHub 工具](/by-topic/platform/) | [详情](/by-contributor/profiles/erik-duveblad.md) | [→](/by-topic/platform/) |
 | [Brian Burkhalter](/by-contributor/profiles/brian-burkhalter.md) | [Oracle](/contributors/orgs/oracle.md) | [图形/打印](/by-topic/api/) | [详情](/by-contributor/profiles/brian-burkhalter.md) | [→](/by-topic/api/) |
 | [Chen Liang](/by-contributor/profiles/chen-liang.md) | [Oracle](/contributors/orgs/oracle.md) | [ClassFile API](/by-topic/language/classfile/) | [详情](/by-contributor/profiles/chen-liang.md) | [→](/by-topic/language/classfile/) |
 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | [Oracle](/contributors/orgs/oracle.md) | [性能优化](/by-topic/core/performance/) | [详情](/by-contributor/profiles/claes-redestad.md) | [→](/by-topic/core/performance/) |
@@ -285,43 +339,72 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | [Oracle](/contributors/orgs/oracle.md) | [C2 编译器](/by-topic/core/jit/) | [详情](/by-contributor/profiles/emanuel-peter.md) | [→](/by-topic/core/jit/) |
 | [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | [Oracle](/contributors/orgs/oracle.md) | [JFR](/by-topic/core/performance/) | [详情](/by-contributor/profiles/erik-gahlin.md) | [→](/by-topic/core/performance/) |
 | [Fei Yang](/by-contributor/profiles/fei-yang.md) | Huawei | [RISC-V](/by-topic/platform/) | [详情](/by-contributor/profiles/fei-yang.md) | [→](/by-topic/platform/) |
+| [Fernando Guallini](/by-contributor/profiles/fernando-guallini.md) | - | [SSL/TLS 测试](/by-topic/security/security/) | [详情](/by-contributor/profiles/fernando-guallini.md) | [→](/by-topic/security/security/) |
+| [Guoxiong Li](/by-contributor/profiles/guoxiong-li.md) | - | [GC Cleanup](/by-topic/core/gc/) | [详情](/by-contributor/profiles/guoxiong-li.md) | [→](/by-topic/core/gc/) |
 | Han Gq | - | - | [详情](/by-contributor/profiles/han-gq.md) | - |
 | Hamlin Li | - | - | [详情](/by-contributor/profiles/hamlin-li.md) | - |
+| [Hannes Wallnoefer](/by-contributor/profiles/hannes-wallnoefer.md) | [Oracle](/contributors/orgs/oracle.md) | [javadoc](/by-topic/api/) | [详情](/by-contributor/profiles/hannes-wallnoefer.md) | [→](/by-topic/api/) |
+| [Henry Jen](/by-contributor/profiles/henry-jen.md) | [Oracle](/contributors/orgs/oracle.md) | [jlink](/by-topic/platform/) | [详情](/by-contributor/profiles/henry-jen.md) | [→](/by-topic/platform/) |
+| [Igor Ignatev](/by-contributor/profiles/igor-ignatev.md) | [Oracle](/contributors/orgs/oracle.md) | [测试基础设施](/by-topic/) | [详情](/by-contributor/profiles/igor-ignatev.md) | [→](/by-topic/) |
 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | [Oracle](/contributors/orgs/oracle.md) | [AOT/CDS](/by-topic/core/classloading/) | [详情](/by-contributor/profiles/ioi-lam.md) | [→](/by-topic/core/classloading/) |
+| [Ivan Walulya](/by-contributor/profiles/ivan-walulya.md) | [Oracle](/contributors/orgs/oracle.md) | [G1 GC](/by-topic/core/gc/) | [详情](/by-contributor/profiles/ivan-walulya.md) | [→](/by-topic/core/gc/) |
 | [Jaikiran Pai](/by-contributor/profiles/jaikiran-pai.md) | [Oracle](/contributors/orgs/oracle.md) | [JavaEE](/by-topic/api/) | [详情](/by-contributor/profiles/jaikiran-pai.md) | [→](/by-topic/api/) |
 | [Jan Lahoda](/by-contributor/profiles/jan-lahoda.md) | [Oracle](/contributors/orgs/oracle.md) | [javac](/by-topic/language/syntax/) | [详情](/by-contributor/profiles/jan-lahoda.md) | [→](/by-topic/language/syntax/) |
+| [Jiangli Zhou](/by-contributor/profiles/jiangli-zhou.md) | [Oracle](/contributors/orgs/oracle.md) | [CDS/Static JDK](/by-topic/core/classloading/) | [详情](/by-contributor/profiles/jiangli-zhou.md) | [→](/by-topic/core/classloading/) |
+| [Joe Wang](/by-contributor/profiles/joe-wang.md) | [Oracle](/contributors/orgs/oracle.md) | [XML/JAXP](/by-topic/api/) | [详情](/by-contributor/profiles/joe-wang.md) | [→](/by-topic/api/) |
+| [Johan Sjolen](/by-contributor/profiles/johan-sjolen.md) | [Oracle](/contributors/orgs/oracle.md) | [NMT/诊断](/by-topic/core/) | [详情](/by-contributor/profiles/johan-sjolen.md) | [→](/by-topic/core/) |
 | [Jaroslav Bachorik](/by-contributor/profiles/jaroslav-bachorik.md) | [DataDog](/contributors/orgs/) | [JFR 工具](/by-topic/core/performance/), BTrace | [详情](/by-contributor/profiles/jaroslav-bachorik.md) | [→](/by-topic/core/performance/) |
 | [Jim Laskey](/by-contributor/profiles/jim-laskey.md) | [Oracle](/contributors/orgs/oracle.md) | [语言设计](/by-topic/language/) | [详情](/by-contributor/profiles/jim-laskey.md) | [→](/by-topic/language/) |
 | [Johannes Graham](/by-contributor/profiles/johannes-graham.md) | [Oracle](/contributors/orgs/oracle.md) | [C2 编译器](/by-topic/core/jit/) | [详情](/by-contributor/profiles/johannes-graham.md) | [→](/by-topic/core/jit/) |
+| [Julian Waters](/by-contributor/profiles/julian-waters.md) | - | [构建系统](/by-topic/platform/) | [详情](/by-contributor/profiles/julian-waters.md) | [→](/by-topic/platform/) |
 | [Justin Lu](/by-contributor/profiles/justin-lu.md) | [Oracle](/contributors/orgs/oracle.md) | [本地化](/by-topic/security/i18n/) | [详情](/by-contributor/profiles/justin-lu.md) | [→](/by-topic/security/i18n/) |
 
 ### K-O
 
 | 贡献者 | 组织 | 主要领域 | 档案 | Topic |
 |--------|------|----------|------|-------|
+| [Kelvin Nilsen](/by-contributor/profiles/kelvin-nilsen.md) | [Amazon](/contributors/orgs/amazon.md) | [Generational Shenandoah](/by-topic/core/gc/) | [详情](/by-contributor/profiles/kelvin-nilsen.md) | [→](/by-topic/core/gc/) |
+| [Kevin Walls](/by-contributor/profiles/kevin-walls.md) | [Oracle](/contributors/orgs/oracle.md) | [JMX/JFR](/by-topic/core/performance/) | [详情](/by-contributor/profiles/kevin-walls.md) | [→](/by-topic/core/performance/) |
 | [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | [Oracle](/contributors/orgs/oracle.md) | [C++ 现代化](/by-topic/language/syntax/) | [详情](/by-contributor/profiles/kim-barrett.md) | [→](/by-topic/language/syntax/) |
+| [Konstantin Shefov](/by-contributor/profiles/konstantin-shefov.md) | - | [测试](/by-topic/) | [详情](/by-contributor/profiles/konstantin-shefov.md) | [→](/by-topic/) |
 | Kuai Wei | - | - | [详情](/by-contributor/profiles/kuai-wei.md) | - |
 | [Leonid Mesnik](/by-contributor/profiles/leonid-mesnik.md) | [Oracle](/contributors/orgs/oracle.md) | [JVMTI](/by-topic/platform/) | [详情](/by-contributor/profiles/leonid-mesnik.md) | [→](/by-topic/platform/) |
+| [Lutz Schmidt](/by-contributor/profiles/lutz-schmidt.md) | [SAP](/contributors/orgs/sap.md) | [CodeCache](/by-topic/core/) | [详情](/by-contributor/profiles/lutz-schmidt.md) | [→](/by-topic/core/) |
 | [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md) | [Oracle](/contributors/orgs/oracle.md) | [构建系统](/by-topic/platform/) | [详情](/by-contributor/profiles/magnus-ihse-bursie.md) | [→](/by-topic/platform/) |
+| [Marc Chevalier](/by-contributor/profiles/marc-chevalier.md) | [Oracle](/contributors/orgs/oracle.md) | [C2 编译器](/by-topic/core/jit/) | [详情](/by-contributor/profiles/marc-chevalier.md) | [→](/by-topic/core/jit/) |
+| [Martin Doerr](/by-contributor/profiles/martin-doerr.md) | [SAP](/contributors/orgs/sap.md) | [PPC64](/by-topic/platform/) | [详情](/by-contributor/profiles/martin-doerr.md) | [→](/by-topic/platform/) |
 | [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | [SAP](/contributors/orgs/sap.md) | [跨平台](/by-topic/platform/) | [详情](/by-contributor/profiles/matthias-baesken.md) | [→](/by-topic/platform/) |
+| [Mikhail Yankelevich](/by-contributor/profiles/mikhail-yankelevich.md) | - | [Crypto 测试](/by-topic/security/security/) | [详情](/by-contributor/profiles/mikhail-yankelevich.md) | [→](/by-topic/security/security/) |
 | [Naoto Sato](/by-contributor/profiles/naoto-sato.md) | [Oracle](/contributors/orgs/oracle.md) | [i18n](/by-topic/security/i18n/) | [详情](/by-contributor/profiles/naoto-sato.md) | [→](/by-topic/security/i18n/) |
+| [Nizar Ben Alla](/by-contributor/profiles/nizar-ben-alla.md) | [Oracle](/contributors/orgs/oracle.md) | [javadoc](/by-topic/api/) | [详情](/by-contributor/profiles/nizar-ben-alla.md) | [→](/by-topic/api/) |
 
 ### P-Z
 
 | 贡献者 | 组织 | 主要领域 | 档案 | Topic |
 |--------|------|----------|------|-------|
+| [Patrick Concannon](/by-contributor/profiles/patrick-concannon.md) | [Oracle](/contributors/orgs/oracle.md) | [HTTP](/by-topic/concurrency/http/) | [详情](/by-contributor/profiles/patrick-concannon.md) | [→](/by-topic/concurrency/http/) |
 | [Phil Race](/by-contributor/profiles/phil-race.md) | [Oracle](/contributors/orgs/oracle.md) | [Client Libraries](/by-topic/api/) | [详情](/by-contributor/profiles/phil-race.md) | [→](/by-topic/api/) |
 | [Prasanta Sadhukhan](/by-contributor/profiles/prasanta-sadhukhan.md) | [Oracle](/contributors/orgs/oracle.md) | [Swing/AWT](/by-topic/api/) | [详情](/by-contributor/profiles/prasanta-sadhukhan.md) | [→](/by-topic/api/) |
+| [Richard Reingruber](/by-contributor/profiles/richard-reingruber.md) | [SAP](/contributors/orgs/sap.md) | [C2 编译器](/by-topic/core/jit/) | [详情](/by-contributor/profiles/richard-reingruber.md) | [→](/by-topic/core/jit/) |
+| [Roberto Castaneda Lozano](/by-contributor/profiles/roberto-castaneda-lozano.md) | [Oracle](/contributors/orgs/oracle.md) | [C2 JIT/IGV](/by-topic/core/jit/) | [详情](/by-contributor/profiles/roberto-castaneda-lozano.md) | [→](/by-topic/core/jit/) |
 | [Roger Riggs](/by-contributor/profiles/roger-riggs.md) | [Oracle](/contributors/orgs/oracle.md) | [核心库](/by-topic/core/) | [详情](/by-contributor/profiles/roger-riggs.md) | [→](/by-topic/core/) |
+| [Sean Coffey](/by-contributor/profiles/sean-coffey.md) | [Oracle](/contributors/orgs/oracle.md) | [Security/TLS](/by-topic/security/security/) | [详情](/by-contributor/profiles/sean-coffey.md) | [→](/by-topic/security/security/) |
 | [Sendaoyan](/by-contributor/profiles/sendaoyan.md) | Independent | [测试](/by-topic/) | [详情](/by-contributor/profiles/sendaoyan.md) | [→](/by-topic/) |
+| [Severin Gehwolf](/by-contributor/profiles/severin-gehwolf.md) | [Red Hat](/contributors/orgs/redhat.md) | [Containers](/by-topic/platform/) | [详情](/by-contributor/profiles/severin-gehwolf.md) | [→](/by-topic/platform/) |
 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | [Alibaba](/contributors/orgs/alibaba.md) | [核心库](/by-topic/core/) | [详情](/by-contributor/profiles/shaojin-wen.md) | [→](/by-topic/core/) |
+| [Sundararajan Athijegannathan](/by-contributor/profiles/sundararajan-athijegannathan.md) | [Oracle](/contributors/orgs/oracle.md) | [Nashorn](/by-topic/language/) | [详情](/by-contributor/profiles/sundararajan-athijegannathan.md) | [→](/by-topic/language/) |
 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | [Oracle](/contributors/orgs/oracle.md) | [G1 GC](/by-topic/core/gc/) | [详情](/by-contributor/profiles/thomas-schatzl.md) | [→](/by-topic/core/gc/) |
+| [Tim Bell](/by-contributor/profiles/tim-bell.md) | [Oracle](/contributors/orgs/oracle.md) | [构建基础设施](/by-topic/platform/) | [详情](/by-contributor/profiles/tim-bell.md) | [→](/by-topic/platform/) |
+| [Tobias Holenstein](/by-contributor/profiles/tobias-holenstein.md) | [Oracle](/contributors/orgs/oracle.md) | [C2/IGV](/by-topic/core/jit/) | [详情](/by-contributor/profiles/tobias-holenstein.md) | [→](/by-topic/core/jit/) |
 | Tongbao Zhang | - | - | [详情](/by-contributor/profiles/tongbao-zhang.md) | - |
+| [Tony Printezis](/by-contributor/profiles/tony-printezis.md) | - | [G1 GC](/by-topic/core/gc/) | [详情](/by-contributor/profiles/tony-printezis.md) | [→](/by-topic/core/gc/) |
 | [Volkan Yazıcı](/by-contributor/profiles/volkan-yazici.md) | - | [HttpClient](/by-topic/concurrency/http/) | [详情](/by-contributor/profiles/volkan-yazici.md) | [→](/by-topic/concurrency/http/) |
 | [William Kemper](/by-contributor/profiles/william-kemper.md) | [Amazon](/contributors/orgs/amazon.md) | [Shenandoah GC](/by-topic/core/gc/) | [详情](/by-contributor/profiles/william-kemper.md) | [→](/by-topic/core/gc/) |
 | Xiaowei Lu | - | - | [详情](/by-contributor/profiles/xiaowei-lu.md) | - |
 | [Yasumasa Suenaga](/by-contributor/profiles/yasumasa-suenaga.md) | [NTT DATA](/contributors/orgs/) | - | [详情](/by-contributor/profiles/yasumasa-suenaga.md) | - |
 | Yude Lin | - | - | [详情](/by-contributor/profiles/yude-lin.md) | - |
+| [Yumin Qi](/by-contributor/profiles/yumin-qi.md) | [Oracle](/contributors/orgs/oracle.md) | [CDS/AppCDS](/by-topic/core/classloading/) | [详情](/by-contributor/profiles/yumin-qi.md) | [→](/by-topic/core/classloading/) |
+| [Zifei Han](/by-contributor/profiles/zifei-han.md) | - | [RISC-V](/by-topic/platform/) | [详情](/by-contributor/profiles/zifei-han.md) | [→](/by-topic/platform/) |
 
 ---
 

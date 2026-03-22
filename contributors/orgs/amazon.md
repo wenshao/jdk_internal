@@ -44,9 +44,10 @@ Amazon 通过 Corretto 团队参与 OpenJDK 开发，专注于 Shenandoah GC、A
 |------|--------|--------|-----|------|----------|------|
 | 1 | Aleksey Shipilev | [@shipilev](https://github.com/shipilev) | 803+ | Reviewer | Shenandoah GC | [详情](../../by-contributor/profiles/aleksey-shipilev.md) |
 | 2 | William Kemper | [@earthling-amzn](https://github.com/earthling-amzn) | 123 | Reviewer | Shenandoah GC | [详情](../../by-contributor/profiles/william-kemper.md) |
-| 3 | ~~Nick Gasson~~ | ~~[@benty-amzn](https://github.com/benty-amzn)~~ | ~~15~~ | ~~Reviewer~~ | ~~AArch64~~ | **注: 实际属于 Arm，非 Amazon** |
+| 3 | Kelvin Nilsen | — | 40 | Committer | Generational Shenandoah GC | [详情](../../by-contributor/profiles/kelvin-nilsen.md) |
+| 4 | ~~Nick Gasson~~ | ~~[@benty-amzn](https://github.com/benty-amzn)~~ | ~~15~~ | ~~Reviewer~~ | ~~AArch64~~ | **注: 实际属于 Arm，非 Amazon** |
 
-**小计**: 941+ PRs
+**小计**: 981+ PRs
 
 > **注**: 
 > - Andrew Dinn (@adinn) 是 **Red Hat** 员工，不属于 Amazon

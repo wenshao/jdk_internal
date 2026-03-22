@@ -78,6 +78,18 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 200+ | C2 编译器 |
 | [Tobias Hartmann](/by-contributor/profiles/tobias-hartmann.md) | 150+ | JIT 编译器 |
 | [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | 100+ | C2 架构 |
+| [Hannes Wallnoefer](/by-contributor/profiles/hannes-wallnoefer.md) | 201 | Javadoc |
+| [Kevin Walls](/by-contributor/profiles/kevin-walls.md) | 167 | JMX/JFR |
+| [Alexander Ivanov](/by-contributor/profiles/alexander-ivanov.md) | 133 | AWT |
+| [Roberto Castaneda Lozano](/by-contributor/profiles/roberto-castaneda-lozano.md) | 107 | C2 |
+| [Guoxiong Li](/by-contributor/profiles/guoxiong-li.md) | 102 | GC |
+| [Nizar Ben Alla](/by-contributor/profiles/nizar-ben-alla.md) | 98 | Javadoc |
+| [Ivan Walulya](/by-contributor/profiles/ivan-walulya.md) | 90 | G1 GC |
+| [Tobias Holenstein](/by-contributor/profiles/tobias-holenstein.md) | 83 | C2/IGV |
+| [Aggelos Biboudis](/by-contributor/profiles/aggelos-biboudis.md) | 64 | javac/patterns |
+| [Marc Chevalier](/by-contributor/profiles/marc-chevalier.md) | 45 | C2 |
+| [Mikhail Yankelevich](/by-contributor/profiles/mikhail-yankelevich.md) | 44 | 安全测试 |
+| [Casper Norrbin](/by-contributor/profiles/casper-norrbin.md) | 39 | 容器/运行时 |
 | [David Beaumont](/by-contributor/profiles/david-beaumont.md) | 20+ | 编译器 |
 
 **主要贡献领域**：
@@ -98,6 +110,8 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 |--------|----------------|------|
 | [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | 50+ | AArch64 |
 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | HotSpot, CDS |
+| [Severin Gehwolf](/by-contributor/profiles/severin-gehwolf.md) | 30+ | 容器/运行时 |
+| [Andrew Hughes](/by-contributor/profiles/andrew-hughes.md) | 20+ | 安全/backports |
 
 **主要贡献领域**：
 - Shenandoah GC (主要开发者)
@@ -113,8 +127,13 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 
 | 贡献者 | Integrated PRs | 领域 |
 |--------|----------------|------|
+| [Martin Doerr](/by-contributor/profiles/martin-doerr.md) | 147 | PPC64 |
 | [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | 100+ | 构建系统 |
+| [Christoph Langer](/by-contributor/profiles/christoph-langer.md) | 50+ | 核心库 |
+| [Richard Reingruber](/by-contributor/profiles/richard-reingruber.md) | 30+ | HotSpot |
 | Goetz Lindenmaier | 30+ | HotSpot |
+| [David Briemann](/by-contributor/profiles/david-briemann.md) | 10+ | 测试 |
+| [Lutz Schmidt](/by-contributor/profiles/lutz-schmidt.md) | 10+ | HotSpot |
 
 **主要贡献领域**：
 - HotSpot VM 移植
@@ -149,6 +168,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 803+ | Shenandoah GC, JMH |
 | ~~[Nick Gasson](/by-contributor/profiles/nick-gasson.md)~~ | ~~30+~~ | **已修正: 属于 Arm，非 Amazon** |
 | [William Kemper](/by-contributor/profiles/william-kemper.md) | 50+ | Shenandoah |
+| [Kelvin Nilsen](/by-contributor/profiles/kelvin-nilsen.md) | 40 | Gen Shenandoah |
 
 **主要贡献领域**：
 - Shenandoah GC (Corretto)

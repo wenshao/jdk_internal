@@ -41,11 +41,16 @@ SAP 是 OpenJDK 的长期贡献者，专注于 PowerPC (PPC) 移植、AIX 平台
 | 排名 | 贡献者 | GitHub | PRs | 角色 | 领域 | 档案 |
 |------|--------|--------|-----|------|------|------|
 | 1 | Matthias Baesken | [@MBaesken](https://github.com/MBaesken) | 515 | Reviewer | 构建系统 | [详情](../../by-contributor/profiles/matthias-baesken.md) |
-| 2 | Goetz Lindenmaier | [@goetzk](https://github.com/goetzk) | 30+ | Reviewer | HotSpot Runtime | [详情](../../by-contributor/profiles/goetz-lindenmaier.md) |
-| 3 | Martin Haessig | [@mhaessig](https://github.com/mhaessig) | 57 | Committer | 测试 | [详情](../../by-contributor/profiles/martin-haessig.md) |
-| 4 | Anatoly Zelenin | [@toxaart](https://github.com/toxaart) | 29 | Committer | PPC | [详情](../../by-contributor/profiles/anatoly-zelenin.md) |
+| 2 | Martin Doerr | — | 147 | Committer | PPC64/s390x, JIT 编译器 | [详情](../../by-contributor/profiles/martin-doerr.md) |
+| 3 | Christoph Langer | — | 81 | Committer | 网络/AIX, SapMachine lead | [详情](../../by-contributor/profiles/christoph-langer.md) |
+| 4 | Richard Reingruber | — | 76 | Committer | C2 编译器/PPC64 | [详情](../../by-contributor/profiles/richard-reingruber.md) |
+| 5 | Martin Haessig | [@mhaessig](https://github.com/mhaessig) | 57 | Committer | 测试 | [详情](../../by-contributor/profiles/martin-haessig.md) |
+| 6 | Goetz Lindenmaier | [@goetzk](https://github.com/goetzk) | 30+ | Reviewer | HotSpot Runtime | [详情](../../by-contributor/profiles/goetz-lindenmaier.md) |
+| 7 | Anatoly Zelenin | [@toxaart](https://github.com/toxaart) | 29 | Committer | PPC | [详情](../../by-contributor/profiles/anatoly-zelenin.md) |
+| 8 | David Briemann | — | 26 | Committer | PPC64 架构 | [详情](../../by-contributor/profiles/david-briemann.md) |
+| 9 | Lutz Schmidt | — | 17 | Committer | CodeCache/s390 (已退休) | [详情](../../by-contributor/profiles/lutz-schmidt.md) |
 
-**小计**: 631+ PRs
+**小计**: 978+ PRs
 
 ---
 
