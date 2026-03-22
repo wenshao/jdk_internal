@@ -155,7 +155,7 @@ int v = ((buf[0] & 0xff) << 24)
 | **JBS Issue** | JDK-8318446 | JDK-8345485 |
 | **主要作者** | Emanuel Peter | Kuai Wei, Shaojin Wen |
 | **字节序支持** | Big-Endian / Little-Endian | Big-Endian / Little-Endian |
-| **反向字节序** | JDK-8347405 (已集成) | 已包含在核心 PR |
+| **反向字节序** | JDK-8347405 (已关闭，未集成) | 已包含在核心 PR |
 
 ### 3.3 互补应用场景
 
@@ -181,13 +181,13 @@ static int deserialize(byte[] buf, int offset) {
 
 ### 3.4 架构讨论: 统一 MergeMemory Phase
 
-在 PR #24023 的 Review 讨论中，Quan Anh Mai (@merykitty) 提出了将 MergeLoad 和 MergeStore 统一为一个独立的优化 Phase (而非嵌入 IGVN) 的想法：
+Emanuel Peter 在 PR review 中转述了 Quan Anh Mai (@merykitty) 的想法：
 
 > "Once proposed the idea of not doing MergeStores / MergeLoads as IGVN optimizations,
 > but rather to just have a separate and dedicated phase. That would allow you to take a
 > global view, collect all loads (and stores), put them in a big list, and then make groups
 > that belong together."
-> — [PR #24023 Comment](https://github.com/openjdk/jdk/pull/24023), 2025-06-17
+> — Emanuel Peter, [PR #24023](https://github.com/openjdk/jdk/pull/24023) review, 2025-06-17
 
 这种方法的潜在优势：
 - 全局视图，可以同时分析所有 Load/Store 节点
@@ -218,7 +218,7 @@ Kuai Wei 在 2025-07-18 关闭了 PR #24023，计划按此方向重构：
 ### JDK 25 (2025) — 初始实现
 
 - **JDK-8345485** ([PR #24023](https://github.com/openjdk/jdk/pull/24023)): 核心 MergeLoad 实现 (v1)
-  - 作者: [Kuai Wei](https://github.com/kuaiwei)
+  - 作者: [Kuai Wei](/by-contributor/profiles/kuai-wei.md)
   - 状态: 已关闭 (2025-07-18)，计划重构为独立 Phase
   - 支持 Or 操作符的 2/4/8 字节读取合并
   - 经过 Emanuel Peter 深度 Review (16+ 轮修订)
@@ -247,13 +247,13 @@ Kuai Wei 在 2025-07-18 关闭了 PR #24023，计划按此方向重构：
 
 | 贡献者 | 公司 | 主要贡献 |
 |--------|------|----------|
-| [Kuai Wei](https://github.com/kuaiwei) | - | MergeLoad 初始实现 (PR #24023), MergeStore 反向字节序 |
+| [Kuai Wei](/by-contributor/profiles/kuai-wei.md) | - | MergeLoad 初始实现 (PR #24023), MergeStore 反向字节序 |
 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) (温绍锦) | Alibaba | MergeLoadBench, MergeLoad v2/v3, Add 操作符支持 |
 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | Oracle | MergeStore 作者, MergeLoad 技术审查和架构指导 |
 | [Roberto Castaneda Lozano](https://github.com/robcasloz) | Oracle | C2 编译器 Review |
 | sendaoYan | - | MergeLoadBench VarHandle 修复 (JDK-8349142) |
 
-### Kuai Wei
+### [Kuai Wei](/by-contributor/profiles/kuai-wei.md)
 
 - **GitHub**: [kuaiwei](https://github.com/kuaiwei)
 - **主要贡献**:
@@ -319,14 +319,7 @@ Kuai Wei 在 2025-07-18 关闭了 PR #24023，计划按此方向重构：
 > 注意: `getIntB` / `getLongB` (数组直接访问模式) 加速较小，因为 C2 已有部分优化。
 > Unsafe 访问模式 (`*U` 后缀) 获益最大。
 
-**AArch64 Neoverse-N2 结果** (部分):
-
-| 测试用例 | 无 MergeLoad | 有 MergeLoad | 加速比 |
-|----------|-------------|-------------|--------|
-| getIntBU | 8393 | 3087 | **2.72x** |
-| getIntLU | 8385 | 3084 | **2.72x** |
-| getLongBU | 16815 | 5615 | **2.99x** |
-| getLongLU | 16791 | 5613 | **2.99x** |
+(AArch64 数据见 PR #24023 原始 benchmark，此处略)
 
 **Review 关键讨论**:
 

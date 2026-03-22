@@ -102,21 +102,21 @@ for (int i = 0; i < unknown; i++) {
   - 支持基本类型数组
   - Big-Endian 和 Little-Endian
   - Unsafe 和 VarHandle 写入
+- **JDK-8334342**: 添加 JMH 基准测试
 
 ### JDK 24 (2024-2025)
 
-- **JDK-8334342**: 添加 JMH 基准测试
 - **JDK-8333893**: StringBuilder append(boolean/null) 优化
+- **JDK-8343629**: 扩展基准测试覆盖（新增 MergeLoadBench）
+- **JDK-8349142**: 修复 MergeLoadBench 测试（VarHandle 偏移量错误）
 
 ### JDK 25 (2025)
 
 - **JDK-8347405**: 支持反向字节序
-- **JDK-8343629**: 扩展基准测试覆盖（新增 MergeLoadBench）
-- **JDK-8349142**: 修复 MergeLoadBench 测试（VarHandle 偏移量错误）
-- **PR #28228**: 合并两个 append(char) 调用
 
 ### JDK 26 (2025-2026)
 
+- **PR #28228**: 合并两个 append(char) 调用
 - **PR #29688**: 优化连续 Latin1 字符追加
 - **PR #29699**: StringBuilder char append 优化
 - **JDK-8370405**: 修复标量替换错误
@@ -162,7 +162,7 @@ for (int i = 0; i < unknown; i++) {
 - **主要贡献**:
   - C2 编译器架构设计
   - 循环优化文档 ([Loop optimizations in C2](https://wiki.openjdk.org/spaces/HotSpot/pages/20415918))
-  - JDK-8371385: 非对齐访问修复
+  - JDK-8371385: 非对齐访问修复 (Reviewer; 作者为 Fei Yang)
 
 ### Roland Westrelin
 
@@ -232,7 +232,7 @@ array[offset + 3] = (byte) value;
 UNSAFE.putInt(array, offset, value);
 ```
 
-→ [详细分析](/by-pr/8334/8334342.md) (基准测试)
+→ [基准测试分析](/by-pr/8334/8334342.md)
 
 #### JDK-8347405: Reverse Bytes Order
 
@@ -435,9 +435,9 @@ sb.append(x ? "yes" : "no");  // 三元运算符可能阻碍优化
 
 | 场景 | 预期提升 |
 |------|----------|
-| JSON 序列化 | +3-8% |
-| 日志格式化 | +2-5% |
-| 字符串拼接 | +5-15% |
+| JSON 序列化 | +3-8% (预估值，无具体 benchmark 来源) |
+| 日志格式化 | +2-5% (预估值，无具体 benchmark 来源) |
+| 字符串拼接 | +5-15% (预估值，无具体 benchmark 来源) |
 
 ---
 
