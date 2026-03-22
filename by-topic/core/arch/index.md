@@ -13,9 +13,15 @@
 4. [32 位 x86 移除时间线](#4-32-位-x86-移除时间线)
 5. [按版本演进](#5-按版本演进)
 6. [架构特定 JIT 优化](#6-架构特定-jit-优化)
-7. [贡献者](#7-贡献者)
-8. [相关链接](#8-相关链接)
-9. [相关主题](#9-相关主题)
+7. [x86-64 后端深入](#7-x86-64-后端深入-x86-64-backend-internals)
+8. [AArch64 后端深入](#8-aarch64-后端深入-aarch64-backend-internals)
+9. [RISC-V 后端深入](#9-risc-v-后端深入-risc-v-backend-internals)
+10. [跨平台挑战](#10-跨平台挑战-cross-platform-challenges)
+11. [CPU 特性检测](#11-cpu-特性检测-cpu-feature-detection)
+12. [平台特定优化](#12-平台特定优化-platform-specific-optimizations)
+13. [贡献者](#13-贡献者)
+14. [相关链接](#14-相关链接)
+15. [相关主题](#15-相关主题)
 
 ---
 
@@ -429,7 +435,435 @@ java -XX:+PrintFlagsFinal -version 2>&1 | grep -i riscv
 
 ---
 
-## 7. 贡献者
+## 7. x86-64 后端深入 (x86-64 Backend Internals)
+
+### 寄存器分配 (Register Allocation)
+
+x86-64 提供 16 个通用寄存器 (GPR: RAX-R15) 和 16/32 个 SIMD 寄存器 (XMM/YMM/ZMM)。C2 编译器使用 **线性扫描寄存器分配** (Linear Scan Register Allocation) 将虚拟寄存器映射到物理寄存器。
+
+**寄存器约定 (Register Convention)**:
+
+| 寄存器 | HotSpot 用途 | 说明 |
+|--------|-------------|------|
+| `RSP` | Java 栈指针 (Stack Pointer) | 不可用于分配 |
+| `RBP` | 帧指针 (Frame Pointer) | `-XX:+PreserveFramePointer` 时保留 |
+| `R15` | Java 堆基址 (Heap Base) | 压缩指针 (Compressed Oops) 模式下存放 narrow oop base |
+| `R12` | Java Thread 指针 | 指向当前 JavaThread 结构体 |
+| `RAX` | 返回值 / 临时寄存器 | C2 也用作 method handle 调用临时寄存器 |
+| `XMM0-XMM15` | 浮点 / SIMD 操作 | AVX-512 扩展到 ZMM0-ZMM31 (32 个 512-bit 寄存器) |
+
+### 指令选择 (Instruction Selection)
+
+C2 使用 **AD 文件** (Architecture Description File, `x86_64.ad`) 描述指令选择规则，将 Ideal IR 节点匹配到机器指令:
+
+```
+// x86_64.ad 中的指令模式示例 (Instruction Pattern Example)
+// 匹配 AddI 节点 → 生成 x86 ADD 指令
+instruct addI_rReg(rRegI dst, rRegI src, rFlagsReg cr)
+%{
+  match(Set dst (AddI dst src));
+  effect(KILL cr);
+  format %{ "addl   $dst, $src" %}
+  ins_encode %{ __ addl($dst$$Register, $src$$Register); %}
+%}
+```
+
+**关键 AD 文件**: `src/hotspot/cpu/x86/x86_64.ad` — 超过 12,000 行的指令模式定义。
+
+### SIMD/AVX 向量化支持 (SIMD/AVX Vectorization)
+
+x86-64 的 SIMD 支持分为多个层级:
+
+| 指令集 | 寄存器宽度 | UseAVX 值 | 典型处理器 |
+|--------|-----------|-----------|-----------|
+| SSE2 | 128-bit (XMM) | 0 | Pentium 4+ (2001) |
+| AVX | 256-bit (YMM) | 1 | Sandy Bridge (2011) |
+| AVX2 | 256-bit (YMM) | 2 | Haswell (2013) |
+| AVX-512 | 512-bit (ZMM) | 3 | Skylake-SP (2017) |
+
+**AVX-512 降频问题 (Throttling Issue)**:
+- 使用 512-bit ZMM 寄存器时，部分 Intel 处理器会降低核心频率 (license-based frequency throttling)
+- C2 的 SuperWord 自动向量化使用成本模型 (cost model) 评估是否使用 AVX-512
+- `-XX:UseAVX=2` 可强制限制在 AVX2，避免降频风险
+- Ice Lake (2019) 及之后的处理器已大幅缓解降频问题
+
+### 内存模型: TSO (Total Store Order)
+
+x86-64 实现 **TSO (Total Store Order)** 内存模型，这是一种相对较强的内存序:
+
+```
+┌──────────────────────────────────────────────────────┐
+│  x86-64 TSO 保证 (TSO Guarantees)                      │
+├──────────────────────────────────────────────────────┤
+│  ✓ Store-Store 有序 (stores not reordered with stores) │
+│  ✓ Load-Load 有序 (loads not reordered with loads)     │
+│  ✓ Load-Store 有序 (loads not reordered with stores)   │
+│  ✗ Store-Load 可重排 (stores CAN be reordered with     │
+│    subsequent loads → 需要 MFENCE/LOCK 前缀)           │
+└──────────────────────────────────────────────────────┘
+```
+
+**对 JIT 编译的影响**:
+- Java 的 `volatile` 写操作编译为 `MOV` + `LOCK ADDL [RSP], 0` (StoreLoad barrier)
+- 大多数其他 JMM (Java Memory Model) 操作在 x86 上无需额外内存屏障指令
+- `VarHandle` 的 `setRelease` 在 x86 上是免费的 (free)，因为 TSO 已保证 Store-Store 顺序
+
+---
+
+## 8. AArch64 后端深入 (AArch64 Backend Internals)
+
+### ARM 特性利用 (ARM Feature Utilization)
+
+AArch64 提供 31 个通用寄存器 (X0-X30) 和 32 个 SIMD/FP 寄存器 (V0-V31)，寄存器资源比 x86-64 更丰富。
+
+**寄存器约定**:
+
+| 寄存器 | HotSpot 用途 |
+|--------|-------------|
+| `X28` (R28) | Java Thread 指针 |
+| `X27` (RHeapBase) | 压缩指针堆基址 |
+| `X29` (FP) | 帧指针 |
+| `X30` (LR) | 链接寄存器 (返回地址) |
+| `X8` (Rscratch1) | 临时寄存器 1 |
+| `X9` (Rscratch2) | 临时寄存器 2 |
+
+**条件指令 (Conditional Instructions)**:
+- AArch64 支持条件选择 (`CSEL`)、条件递增 (`CINC`) 等指令
+- C2 可将简单的 `if-else` 模式编译为无分支代码 (branchless code)，避免分支预测失败的性能损失
+
+### W^X: Write-XOR-Execute (JEP 391)
+
+macOS/AArch64 (Apple Silicon) 强制执行 W^X 内存策略 — 内存页不能同时拥有写 (W) 和执行 (X) 权限。这对 JIT 编译器是根本性挑战，因为 JIT 需要先写入机器码再执行。
+
+**HotSpot 解决方案**:
+
+```
+┌──────────────────────────────────────────────────────┐
+│  W^X 实现流程 (W^X Implementation Flow)                │
+├──────────────────────────────────────────────────────┤
+│                                                       │
+│  1. pthread_jit_write_protect_np(false)               │
+│     → 切换到 可写模式 (writable)                        │
+│                                                       │
+│  2. 写入 JIT 编译后的机器码                              │
+│     → memcpy() / Code emission                         │
+│                                                       │
+│  3. pthread_jit_write_protect_np(true)                │
+│     → 切换到 可执行模式 (executable)                     │
+│                                                       │
+│  4. sys_icache_invalidate()                           │
+│     → 刷新指令缓存 (flush I-cache)                      │
+│                                                       │
+│  注意: 此 API 是 per-thread 的，不影响其他线程             │
+└──────────────────────────────────────────────────────┘
+```
+
+**关键实现细节**:
+- Apple 的 `MAP_JIT` 标志用于分配 JIT 内存区域
+- `pthread_jit_write_protect_np` 基于 ARM 的 TPIDR_EL0 寄存器切换，开销极低 (纳秒级)
+- Linux/AArch64 不需要 W^X — 使用标准的 `mprotect()` 即可
+- 指令缓存 (I-cache) 与数据缓存 (D-cache) 在 AArch64 上不保证一致性，必须显式刷新
+
+### LSE 原子操作 (Large System Extensions Atomics)
+
+ARMv8.1 引入的 LSE (Large System Extensions) 提供硬件原子指令，替代传统的 LL/SC (Load-Linked/Store-Conditional) 循环:
+
+| 传统 LL/SC | LSE 原子指令 | 用途 |
+|-----------|-------------|------|
+| `LDXR`+`STXR` 循环 | `LDADD` | 原子加法 |
+| `LDXR`+`STXR` 循环 | `SWPAL` | 原子交换 (acquire-release) |
+| `LDXR`+`STXR` 循环 | `CAS` / `CASAL` | 比较并交换 (CAS) |
+
+**性能影响**:
+- 高竞争场景 (high contention): LSE 原子操作比 LL/SC 快 **3-10 倍**
+- 低竞争场景: 性能差异较小
+- HotSpot 通过 `-XX:+UseLSE` 控制 (默认在支持的硬件上启用)
+- AWS Graviton2+、Apple M1+ 等现代 ARM 处理器均支持 LSE
+
+### NEON/SVE 向量化 (NEON/SVE Vectorization)
+
+**NEON (固定 128-bit)**:
+- 所有 AArch64 处理器均支持，是 Vector API 在 ARM 上的基线实现
+- 32 个 128-bit 向量寄存器 (V0-V31)
+- 缺少原生谓词 (predicate) 支持 — VectorMask 需要编译为普通向量寄存器 + blend
+
+**SVE (可伸缩 128-2048 bit)**:
+- 向量长度在硬件层面确定，软件无需修改即可利用不同宽度
+- 引入专用谓词寄存器 (P0-P15)，天然支持 VectorMask
+- AWS Graviton3: 256-bit SVE; Fujitsu A64FX: 512-bit SVE
+- C2 编译时调用 `VM_Version::sve_vector_length()` 获取运行时向量长度
+
+**SVE2 关键优化实例**:
+- `BEXT` (Bit Extract): 将位域提取操作从 240+ 条指令降至 1 条
+- `BDEP` (Bit Deposit): 位域存放操作同样大幅简化
+- `HISTCNT` (Histogram Count): 向量化直方图统计
+
+---
+
+## 9. RISC-V 后端深入 (RISC-V Backend Internals)
+
+### JEP 422 Port 架构
+
+RISC-V 移植基于 **RV64GV** 配置 — 即 RV64I (基础整数) + M (乘除) + A (原子) + F (单精度浮点) + D (双精度浮点) + C (压缩指令) + V (向量扩展):
+
+```
+RV64GV = RV64I + M + A + F + D + C + V
+         │       │   │   │   │   │   └─ Vector 扩展 (可变长 SIMD)
+         │       │   │   │   │   └─ Compressed 指令 (16-bit 编码)
+         │       │   │   │   └─ Double-precision 浮点
+         │       │   │   └─ Single-precision 浮点
+         │       │   └─ Atomic 指令 (LR/SC, AMO)
+         │       └─ Multiply/Divide
+         └─ Base Integer (64-bit)
+```
+
+**寄存器资源**:
+- 32 个通用寄存器 (x0-x31), 其中 x0 硬连线为零
+- 32 个浮点寄存器 (f0-f31)
+- 32 个向量寄存器 (v0-v31), 宽度由硬件决定 (VLEN)
+
+**HotSpot RISC-V 寄存器约定**:
+
+| 寄存器 | ABI 名称 | HotSpot 用途 |
+|--------|---------|-------------|
+| `x2` | sp | 栈指针 |
+| `x4` | tp | Java Thread 指针 |
+| `x8` | s0/fp | 帧指针 |
+| `x27` | s11 | 堆基址 (Heap Base) |
+| `x10-x17` | a0-a7 | 参数传递 / 返回值 |
+| `x28` | t3 | 临时寄存器 |
+
+### RVV 向量扩展 (RISC-V Vector Extension)
+
+RVV 采用与 ARM SVE 类似的 **可伸缩向量** (scalable vector) 设计，但有独特的 LMUL (Length Multiplier) 机制:
+
+**LMUL 分组 (Register Grouping)**:
+- LMUL=1: 每个向量操作使用 1 个向量寄存器
+- LMUL=2: 每个向量操作使用 2 个相邻寄存器 (有效宽度翻倍)
+- LMUL=4/8: 使用 4/8 个寄存器组成更宽的逻辑向量
+- 这允许软件在向量宽度和可用寄存器数量之间权衡
+
+**Vector API 映射**:
+- Vector API 的 `SPECIES_PREFERRED` 映射到硬件的 VLEN × LMUL
+- `VectorMask` 利用 RVV 的 `v0.t` 谓词机制
+- C2 向量化通过 `vsetvli` 指令设置向量长度和元素类型
+
+**当前支持的 RVV intrinsics (JDK 25)**:
+- `Arrays.fill` / `Arrays.copyOf` 向量化
+- `String.indexOf` / `String.compareTo` 加速
+- 密码学: Zvkn (向量化 AES/SHA)
+- 位操作: Zvbb (字节反转、位计数)
+
+### 当前状态和限制 (Current Status & Limitations)
+
+**已完成**:
+- 模板解释器 (Template Interpreter) — 完整实现
+- C1 JIT 编译器 — 完整实现
+- C2 JIT 编译器 — 基本实现，持续优化中
+- RVV 向量化 — 基础支持，核心 intrinsics 已覆盖
+
+**已知限制 (JDK 25 时间点)**:
+- **硬件可用性**: 高性能 RISC-V 硬件 (SiFive P870, SpacemiT K1) 仍在早期阶段
+- **C2 优化深度**: 与 x86-64 相比，RISC-V 的指令调度和窥孔优化 (peephole optimization) 仍不完善
+- **向量化覆盖率**: RVV intrinsics 覆盖面不如 x86 AVX 和 ARM NEON 广泛
+- **Graal 支持**: RISC-V 尚无 Graal JIT 支持 (仅 C1 + C2)
+- **紧凑对象头**: Compact Object Headers (JEP 450) 的 RISC-V 支持正在开发中
+- **测试基础设施**: CI 硬件资源有限，部分测试通过 QEMU 模拟运行
+
+---
+
+## 10. 跨平台挑战 (Cross-Platform Challenges)
+
+### 内存模型差异 (Memory Model Differences)
+
+不同 CPU 架构的内存模型强弱差异显著，这是 JVM 移植的核心挑战之一:
+
+```
+强 ←────────────────────────────────────────────────→ 弱
+  x86-64 (TSO)    RISC-V (RVWMO)   AArch64 (弱序)
+  ─────────       ──────────       ──────────
+  仅 Store→Load   大部分操作       所有操作
+  可重排           可重排           可重排
+  │               │                │
+  │  volatile 写:  │  volatile 写:  │  volatile 写:
+  │  MOV+LOCK ADD  │  FENCE rw,rw   │  STLR
+  │               │  +SW            │  (store-release)
+  │               │  +FENCE rw,rw   │
+  │               │                │
+  │  acquire:     │  acquire:      │  acquire:
+  │  免费 (free)   │  FENCE r,rw    │  LDAR
+  │               │                │  (load-acquire)
+  │               │                │
+  │  release:     │  release:      │  release:
+  │  免费 (free)   │  FENCE rw,w    │  STLR
+  │               │                │
+```
+
+**JMM (Java Memory Model) 到硬件指令的映射**:
+
+| JMM 操作 | x86-64 | AArch64 | RISC-V |
+|----------|--------|---------|--------|
+| Normal Load | `MOV` | `LDR` | `LW/LD` |
+| Normal Store | `MOV` | `STR` | `SW/SD` |
+| Volatile Load | `MOV` | `LDAR` (load-acquire) | `FENCE iorw,iorw` + `LW` + `FENCE r,rw` |
+| Volatile Store | `MOV` + `LOCK ADDL [RSP],0` | `STLR` (store-release) + `DMB ISH` | `FENCE rw,w` + `SW` + `FENCE rw,rw` |
+| CAS | `LOCK CMPXCHG` | `LDAXR`+`STLXR` 或 `CASAL` (LSE) | `LR.W.AQ` + `SC.W.RL` 或 `AMOSWAP` |
+
+### 原子操作映射 (Atomic Operation Mapping)
+
+`Unsafe.compareAndSwap` (以及 `VarHandle.compareAndSet`) 在不同架构上的实现差异:
+
+- **x86-64**: 单条 `LOCK CMPXCHG` 指令，天然提供 sequential consistency
+- **AArch64 (无 LSE)**: `LDXR`/`STXR` 循环 + 内存屏障，失败时需要重试
+- **AArch64 (有 LSE)**: 单条 `CASAL` 指令，类似 x86 的简洁性
+- **RISC-V**: `LR.W.AQ`/`SC.W.RL` (Load-Reserved/Store-Conditional) 循环
+
+### 信号处理差异 (Signal Handling Differences)
+
+HotSpot 使用操作系统信号实现多种运行时功能:
+
+| 功能 | 信号 (Linux) | x86-64 | AArch64 | RISC-V |
+|------|-------------|--------|---------|--------|
+| NullPointerException | `SIGSEGV` | 访问地址 0 触发 | 相同 | 相同 |
+| StackOverflowError | `SIGSEGV` | 红区/黄区保护页 | 相同 | 相同 |
+| Safepoint polling | `SIGSEGV` | 读取受保护的 polling 页 | 相同 | 相同 |
+| 隐式除零 | `SIGFPE` | 硬件自动触发 | **需要软件检查** (ARM 无除零异常) | **需要软件检查** |
+
+**AArch64/RISC-V 除零处理**: 这两种架构的整数除零不会产生硬件异常，HotSpot 需要在除法操作前插入显式的零检查指令 (explicit zero-check)。
+
+---
+
+## 11. CPU 特性检测 (CPU Feature Detection)
+
+### VM_Version 机制
+
+HotSpot 在启动时通过 `VM_Version` 类检测 CPU 能力，各架构有独立实现:
+
+```
+src/hotspot/cpu/x86/vm_version_x86.cpp     // CPUID 指令检测
+src/hotspot/cpu/aarch64/vm_version_aarch64.cpp  // /proc/cpuinfo 或 MRS 指令
+src/hotspot/cpu/riscv/vm_version_riscv.cpp  // /proc/cpuinfo 解析
+```
+
+**x86-64 检测流程**:
+1. 执行 `CPUID` 指令获取处理器特性叶 (feature leaves)
+2. 检测 SSE, AVX, AVX2, AVX-512 等指令集支持
+3. 检测 XSAVE 支持 (OS 是否保存 AVX 寄存器状态)
+4. 根据检测结果设置 `UseAVX`、`UseSSE42`、`UseAES` 等标志
+
+**AArch64 检测流程**:
+1. Linux: 读取 `/proc/cpuinfo` 的 `Features` 字段或使用 `getauxval(AT_HWCAP)`
+2. macOS: 使用 `sysctlbyname("hw.optional.arm.*")` 查询
+3. 检测 NEON (始终可用)、CRC32、SHA、AES、SVE、LSE 等特性
+
+### 关键 JVM 特性标志 (Key JVM Feature Flags)
+
+**x86-64 标志**:
+
+| 标志 | 默认值 | 说明 |
+|------|--------|------|
+| `-XX:UseAVX=N` | 自动检测 | AVX 级别: 0 (无), 1 (AVX), 2 (AVX2), 3 (AVX-512) |
+| `-XX:UseSSE=N` | 自动检测 | SSE 级别 |
+| `-XX:+UseAES` | 自动 | AES-NI 硬件加速 |
+| `-XX:+UseAESCTRIntrinsics` | 自动 | AES-CTR 模式 intrinsic |
+| `-XX:+UseSHA` | 自动 | SHA 硬件加速 |
+| `-XX:+UseAdler32Intrinsics` | true | Adler32 校验和 intrinsic |
+
+**AArch64 标志**:
+
+| 标志 | 默认值 | 说明 |
+|------|--------|------|
+| `-XX:UseSVE=N` | 自动检测 | SVE 级别: 0 (NEON only), 1 (SVE), 2 (SVE2) |
+| `-XX:+UseLSE` | 自动 | LSE 原子指令 |
+| `-XX:+UseNeon` | true | NEON SIMD (始终启用) |
+| `-XX:+UseSIMDForMemoryOps` | true | 使用 SIMD 指令进行内存操作 |
+| `-XX:+UseCRC32` | 自动 | CRC32 硬件加速 |
+
+**RISC-V 标志**:
+
+| 标志 | 默认值 | 说明 |
+|------|--------|------|
+| `-XX:+UseRVV` | 自动检测 | RVV 向量扩展 |
+| `-XX:+UseZba` | 自动 | 地址生成加速扩展 |
+| `-XX:+UseZbb` | 自动 | 基础位操作扩展 |
+| `-XX:+UseZbs` | 自动 | 单比特操作扩展 |
+| `-XX:+UseZicboz` | 自动 | 缓存行清零扩展 |
+
+### 运行时特性查询
+
+```bash
+# 查看 JVM 检测到的 CPU 特性
+java -XX:+PrintFlagsFinal -version 2>&1 | grep -E "UseAVX|UseSVE|UseLSE|UseAES|UseRVV"
+
+# 打印详细 CPU 特性检测结果
+java -XX:+UnlockDiagnosticVMOptions -XX:+PrintCPUFeatures -version
+```
+
+---
+
+## 12. 平台特定优化 (Platform-Specific Optimizations)
+
+### Intrinsics 机制 (Intrinsics Mechanism)
+
+HotSpot **intrinsics** 是 JIT 编译器对特定 Java 方法的手写汇编替换，绕过常规编译流程以获得最佳性能。每个架构有各自的 intrinsic 实现:
+
+```
+src/hotspot/cpu/x86/stubGenerator_x86_64.cpp        // x86-64 intrinsic stubs
+src/hotspot/cpu/aarch64/stubGenerator_aarch64.cpp    // AArch64 intrinsic stubs
+src/hotspot/cpu/riscv/stubGenerator_riscv.cpp        // RISC-V intrinsic stubs
+```
+
+**intrinsic 注册流程**:
+1. `vmIntrinsics.hpp` 定义全局 intrinsic ID 枚举
+2. `c2_MacroAssembler_<arch>.cpp` 实现架构特定的代码生成
+3. C2 编译时检查方法是否有 `@IntrinsicCandidate` 注解 + 是否有对应平台实现
+4. 若匹配，替换为手写汇编；否则回退到正常编译
+
+**各架构 intrinsic 覆盖率对比 (JDK 25)**:
+
+| 方法类别 | x86-64 | AArch64 | RISC-V |
+|---------|--------|---------|--------|
+| `String` 操作 | 完整 | 完整 | 部分 |
+| `Math` 函数 | 完整 | 完整 | 基本 |
+| `Arrays` 操作 | 完整 | 完整 | 部分 |
+| AES/SHA 加密 | 完整 (AES-NI) | 完整 (ARMv8 Crypto) | 部分 (Zvkn) |
+| Base64 编解码 | AVX-512 优化 | NEON 优化 | 基本 |
+| CRC32/CRC32C | 硬件加速 | 硬件加速 | 软件实现 |
+| ML-DSA 后量子密码学 | AVX-512 (JDK 25) | 开发中 | 无 |
+
+### Unsafe → VarHandle 迁移 (Migration from Unsafe to VarHandle)
+
+`sun.misc.Unsafe` 提供底层内存操作 (CAS、内存屏障、直接内存访问)，长期以来是高性能库的核心依赖。JDK 9 引入 `VarHandle` 作为标准替代:
+
+**迁移对照**:
+
+| Unsafe 方法 | VarHandle 等价 | 内存序语义 |
+|------------|---------------|-----------|
+| `compareAndSwapInt` | `VarHandle.compareAndSet` | volatile (sequential consistency) |
+| `compareAndSwapObject` | `VarHandle.compareAndSet` | volatile |
+| `getIntVolatile` | `VarHandle.getVolatile` | volatile load |
+| `putIntVolatile` | `VarHandle.setVolatile` | volatile store |
+| `putOrderedInt` | `VarHandle.setRelease` | release (写屏障) |
+| `getObject` | `VarHandle.get` | plain (无屏障) |
+| `loadFence` | `VarHandle.loadLoadFence` | LoadLoad + LoadStore |
+| `storeFence` | `VarHandle.storeStoreFence` | StoreStore |
+| `fullFence` | `VarHandle.fullFence` | Full fence |
+
+**VarHandle 的架构优势**:
+- 提供细粒度的内存序语义 (`getAcquire`/`setRelease`/`getOpaque` 等)
+- 在弱序架构 (AArch64, RISC-V) 上可选择更轻量的屏障，而非总是使用最重的 volatile
+- 例如: `VarHandle.setRelease` 在 x86 上是 free (TSO 保证)，在 AArch64 上生成 `STLR` (比 `DMB ISH` + `STR` 更轻量)
+- JIT 编译器可根据具体访问模式和目标架构选择最优指令
+
+**迁移现状 (JDK 25)**:
+- JDK 内部代码已大量使用 `VarHandle` 替代 `Unsafe`
+- `java.util.concurrent` 包已完全迁移到 `VarHandle`
+- `Unsafe` 的内存访问方法标记为 `@Deprecated(forRemoval=true)` (JEP 471)
+- 第三方库 (Netty, Disruptor, Caffeine) 逐步迁移中
+
+---
+
+## 13. 贡献者
 
 ### AArch64 团队
 
@@ -474,7 +908,7 @@ java -XX:+PrintFlagsFinal -version 2>&1 | grep -i riscv
 
 ---
 
-## 8. 相关链接
+## 14. 相关链接
 
 ### AArch64
 
@@ -513,7 +947,7 @@ java -XX:+PrintFlagsFinal -version 2>&1 | grep -i riscv
 
 ---
 
-## 9. 相关主题
+## 15. 相关主题
 
 - [JIT 编译](../jit/) - 架构特定的编译优化和向量化
 - [性能优化](../performance/) - 平台性能调优
