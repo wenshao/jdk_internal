@@ -11,17 +11,15 @@ Java 语言特性演进项目：让 Java 更简洁、更安全、更易表达。
 2. [项目概述](#2-项目概述)
 3. [主要特性详解](#3-主要特性详解)
    - [3.1 var 类型推断](#31-var-类型推断-local-variable-type-inference---jep-286323)
-   - [3.2 Switch 表达式与模式匹配完整演进](#32-switch-表达式与模式匹配完整演进)
-   - [3.3 Records 深入](#33-records-深入-jep-395)
-   - [3.4 Sealed Classes 深入](#34-sealed-classes-深入-jep-409)
-   - [3.5 Text Blocks](#35-text-blocks-深入-jep-378)
-   - [3.6 Record Patterns](#36-record-patterns-jep-440)
-   - [3.7 Unnamed Patterns & Variables](#37-unnamed-patterns--variables-jep-456)
-   - [3.8 Compact Source Files & Instance Main](#38-compact-source-files--instance-main-methods-jep-512)
-   - [3.9 Flexible Constructor Bodies](#39-flexible-constructor-bodies-深入-jep-513)
-   - [3.10 Primitive Patterns](#310-primitive-patterns-jep-455--488--507--530)
-   - [3.11 String Templates (已撤回)](#311-string-templates-已撤回---jep-430--459--465)
-   - [3.12 Stream Gatherers](#312-stream-gatherers-jep-485)
+   - [3.2 Switch 表达式与模式匹配](#32-switch-表达式与模式匹配完整演进)
+   - [3.3 Text Blocks](#33-text-blocks-jep-378)
+   - [3.4 Records 深入](#34-records-深入-jep-395)
+   - [3.5 Sealed Classes 深入](#35-sealed-classes-深入-jep-409)
+   - [3.6 Compact Source Files & Instance Main](#36-compact-source-files--instance-main-methods-jep-512)
+   - [3.7 Flexible Constructor Bodies](#37-flexible-constructor-bodies-深入-jep-513)
+   - [3.8 Primitive Patterns](#38-primitive-patterns-jep-455--488--507--530)
+   - [3.9 String Templates (已撤回)](#39-string-templates-已撤回---jep-430--459--465)
+   - [3.10 Stream Gatherers](#310-stream-gatherers-jep-485)
 4. [时间线](#4-时间线)
 5. [核心贡献者](#5-核心贡献者)
 6. [与其他项目的关系](#6-与其他项目的关系)
@@ -197,208 +195,27 @@ var r = orderService.findActive();            // r 是什么类型？
 
 ### 3.2 Switch 表达式与模式匹配完整演进
 
-Switch 在 Amber 项目下经历了**最长的演进链**，从简单的语法改进到完整的模式匹配系统：
+Switch 在 Amber 项目下经历了**最长的演进链**，从 JDK 12 的 Switch Expressions 预览到
+JDK 22 的 Unnamed Patterns，涵盖 Switch Expressions (JEP 325→354→361)、
+Pattern Matching for instanceof (JEP 394)、Pattern Matching for switch (JEP 406→441)、
+Record Patterns (JEP 440)、Unnamed Patterns & Variables (JEP 456) 五大阶段。
 
-```
-JEP 325 (Preview)    JDK 12   Switch Expressions (第一预览)
-    ↓
-JEP 354 (2nd Preview) JDK 13  Switch Expressions (第二预览, 引入 yield)
-    ↓
-JEP 361 (Final)       JDK 14  Switch Expressions (正式发布)
-    ↓
-JEP 394 (Final)       JDK 16  Pattern Matching for instanceof (正式)
-    ↓
-JEP 406 (Preview)     JDK 17  Pattern Matching for switch (第一预览)
-    ↓
-JEP 440 (Final)       JDK 21  Record Patterns (正式)
-    ↓
-JEP 441 (Final)       JDK 21  Pattern Matching for switch (正式)
-    ↓
-JEP 456 (Final)       JDK 22  Unnamed Patterns & Variables (正式)
-    ↓
-JEP 455→488→507→530   JDK 23-26  Primitive Patterns (预览中)
-```
-
-#### 阶段 1: Switch Expressions (JEP 325 → 354 → 361)
-
-```java
-// ===== JEP 325 (JDK 12 Preview): 引入 arrow syntax =====
-// 旧写法 - 语句形式, 需要 break, 容易 fall-through 出错
-int result;
-switch (day) {
-    case MONDAY:
-    case FRIDAY:
-    case SUNDAY:
-        result = 6;
-        break;        // 忘记 break 就 fall-through!
-    case TUESDAY:
-        result = 7;
-        break;
-    default:
-        result = 0;
-}
-
-// JDK 12 新写法 - 表达式形式
-int result = switch (day) {
-    case MONDAY, FRIDAY, SUNDAY -> 6;    // 多标签, 无 fall-through
-    case TUESDAY                -> 7;
-    default                     -> 0;
-};  // 注意分号 - 因为整个 switch 是一个表达式
-
-// ===== JEP 354 (JDK 13 Preview): break 改为 yield =====
-// JDK 12 中使用 break value 返回值，JDK 13 改为 yield 更清晰
-String message = switch (status) {
-    case 0 -> {
-        log("Processing...");
-        yield "OK";       // yield 用于代码块中返回值 (替代了 JDK 12 的 break value)
-    }
-    case 1 -> "Warning";  // 单行表达式不需要 yield
-    case 2 -> "Error";
-    default -> "Unknown";
-};
-
-// ===== JEP 361 (JDK 14 Final): 正式发布 =====
-// 语义与 JDK 13 相同, 两种形式都可用：
-// 1) arrow 形式 (推荐, 无 fall-through)
-int numLetters = switch (day) {
-    case MONDAY, FRIDAY, SUNDAY -> 6;
-    case TUESDAY                -> 7;
-    case THURSDAY, SATURDAY     -> 8;
-    case WEDNESDAY              -> 9;
-};
-
-// 2) colon 形式 + yield (兼容旧语法, 仍有 fall-through 风险)
-int numLetters = switch (day) {
-    case MONDAY:
-    case FRIDAY:
-    case SUNDAY:
-        yield 6;          // 用 yield 替代 break
-    case TUESDAY:
-        yield 7;
-    default:
-        yield 0;
-};
-```
-
-#### 阶段 2: Pattern Matching for instanceof (JEP 394)
-
-```java
-// JDK 16 正式 - 消除冗余的类型转换
-// 旧写法
-if (obj instanceof String) {
-    String s = (String) obj;     // 冗余的强制转换
-    System.out.println(s.length());
-}
-
-// 新写法 - 模式变量 (pattern variable)
-if (obj instanceof String s) {
-    System.out.println(s.length());  // s 已自动绑定
-}
-
-// 模式变量的作用域 (flow scoping) - 编译器根据控制流推断
-if (obj instanceof String s && s.length() > 5) {
-    // ✓ s 在 && 后面可用 (因为 && 只在左边为 true 时计算右边)
-}
-
-if (!(obj instanceof String s)) {
-    return;
-}
-// ✓ s 在这里可用 (因为如果 obj 不是 String, 已经 return 了)
-System.out.println(s.toUpperCase());
-
-// ✗ 编译错误 - 在 || 后面不安全
-if (obj instanceof String s || s.length() > 5) {  // 编译错误！
-    // s 可能没有被绑定
-}
-```
-
-#### 阶段 3: Pattern Matching for switch (JEP 406 → 441)
-
-```java
-// JEP 406 (JDK 17 Preview) → JEP 420 (JDK 18) → JEP 427 (JDK 19)
-// → JEP 433 (JDK 20) → JEP 441 (JDK 21 Final)
-// 经过了 4 轮预览才最终定稿
-
-// 类型模式 (type pattern) 在 switch 中
-String formatted = switch (obj) {
-    case Integer i -> String.format("int %d", i);
-    case Long l    -> String.format("long %d", l);
-    case Double d  -> String.format("double %f", d);
-    case String s  -> String.format("String %s", s);
-    default        -> obj.toString();
-};
-
-// 守卫模式 (guarded pattern) - when 子句
-String check = switch (obj) {
-    case String s when s.length() > 5 -> "Long string: " + s;
-    case String s                     -> "Short string: " + s;
-    case Integer i when i > 0         -> "Positive int";
-    case Integer i                    -> "Non-positive int";
-    default                           -> "Unknown";
-};
-// 注意: case 的顺序重要! 有守卫的 case 必须在无守卫的同类型 case 之前
-
-// null 处理 (不再需要在 switch 外检查 null)
-String result = switch (obj) {
-    case null      -> "null value";        // 显式处理 null
-    case String s  -> "String: " + s;
-    default        -> "Other type";
-};
-
-// null + default 合并
-String result = switch (obj) {
-    case String s  -> "String: " + s;
-    case null, default -> "null or other";  // null 和 default 可以合并
-};
-
-// 穷尽性检查 (exhaustiveness) - 密封类不需要 default
-sealed interface Shape permits Circle, Rectangle {}
-record Circle(double r) implements Shape {}
-record Rectangle(double w, double h) implements Shape {}
-
-double area = switch (shape) {
-    case Circle c    -> Math.PI * c.r() * c.r();
-    case Rectangle r -> r.w() * r.h();
-    // 无需 default - 编译器知道所有子类型都已覆盖
-};
-```
-
-#### 阶段 4: Record Patterns + Unnamed Patterns (JEP 440, 456)
-
-```java
-// Record Patterns (JEP 440, JDK 21) - 解构 Record 组件
-record Point(int x, int y) {}
-record Rectangle(Point topLeft, Point bottomRight) {}
-
-// 嵌套解构 (nested deconstruction)
-String describe(Object obj) {
-    return switch (obj) {
-        case Rectangle(Point(int x1, int y1), Point(int x2, int y2)) ->
-            "Rectangle from (%d,%d) to (%d,%d)".formatted(x1, y1, x2, y2);
-        case Point(int x, int y) ->
-            "Point at (%d,%d)".formatted(x, y);
-        default -> "Unknown shape";
-    };
-}
-
-// Unnamed Patterns (JEP 456, JDK 22) - 使用 _ 忽略不关心的值
-void extractX(Object obj) {
-    if (obj instanceof Point(int x, _)) {   // 只关心 x, 忽略 y
-        System.out.println("X: " + x);
-    }
-}
-
-// Lambda 中忽略参数
-stream.map(_ -> "constant");
-
-// catch 中忽略异常对象
-try { riskyOp(); }
-catch (Exception _) { logger.error("Failed"); }
-```
+→ [详见 Switch 表达式与模式匹配演进](switch-patterns.md)
 
 ---
 
-### 3.3 Records 深入 (JEP 395)
+### 3.3 Text Blocks (JEP 378)
+
+Text Blocks (文本块) 是 JDK 15 正式引入的多行字符串字面量 (multi-line string literals)，
+经过 JEP 355 (JDK 13 预览)、JEP 368 (JDK 14 预览) 两轮迭代后定稿。
+核心要点：结束分隔符位置控制缩进 (`String::stripIndent`)、
+`\s` 保留尾部空格、`\` 行连续符、`String.formatted()` 搭配使用。
+
+→ [详见 Text Blocks 深入](text-blocks.md)
+
+---
+
+### 3.4 Records 深入 (JEP 395)
 
 Records (记录类) 是**透明的数据载体** (transparent carriers for data)，
 自动生成 constructor、accessor、equals、hashCode、toString。
@@ -542,7 +359,7 @@ System.out.println(eval(expr)); // 输出 7.0
 
 ---
 
-### 3.4 Sealed Classes 深入 (JEP 409)
+### 3.5 Sealed Classes 深入 (JEP 409)
 
 密封类 (sealed classes) 限制哪些类可以继承/实现它，
 结合模式匹配实现**穷尽性检查** (exhaustiveness checking)。
@@ -659,190 +476,7 @@ String prettyPrint(JsonValue json, int indent) {
 
 ---
 
-### 3.5 Text Blocks 深入 (JEP 378)
-
-Text Blocks (文本块) 是 JDK 15 正式引入的多行字符串字面量 (multi-line string literals)。
-
-#### 缩进管理 (Indentation Management)
-
-```java
-// Text Block 的缩进由**结束分隔符 (closing delimiter) 的位置**决定
-// 编译器会自动调用 String::stripIndent 移除"附带缩进" (incidental whitespace)
-
-// 示例 1: 结束符与内容同级 → 无附带缩进
-String s1 = """
-    line 1
-    line 2
-    """;
-// 等价于 "line 1\nline 2\n"  (4 个空格被视为附带缩进, 被移除)
-
-// 示例 2: 结束符更靠左 → 保留部分缩进
-String s2 = """
-    line 1
-    line 2
-""";
-// 等价于 "    line 1\n    line 2\n"  (结束符在第 0 列, 所以 4 个空格保留)
-
-// 示例 3: 结束符更靠右 → 不影响缩进移除
-String s3 = """
-    line 1
-    line 2
-        """;
-// 等价于 "line 1\nline 2\n"  (最小缩进仍是 4 个空格)
-
-// String::stripIndent() 算法:
-// 1. 找到所有非空行的最小公共前导空白 (common leading whitespace)
-// 2. 移除每行的该前缀
-// 3. 移除尾部空白 (trailing whitespace from each line)
-```
-
-#### 转义序列 (Escape Sequences)
-
-```java
-// \s - 保留尾部空格 (preserve trailing space)
-// 普通 text block 会移除每行尾部空白, \s 阻止这种移除
-String table = """
-    Name   \s
-    Alice  \s
-    Bob    \s
-    """;
-// 每行保留了尾部的空格 (不含 \s 本身, \s 转义为一个空格)
-
-// \ - 行连续符 (line continuation), 取消行尾换行
-String longLine = """
-    This is a very long line that \
-    we want to keep on a single line \
-    in the output.""";
-// 等价于 "This is a very long line that we want to keep on a single line in the output."
-// 注意: \ 后面不能有空格!
-
-// 组合使用
-String poem = """
-    Roses are red,\s\s\s
-    Violets are blue.\
-     Sugar is sweet.""";
-// "Roses are red,   \nViolets are blue. Sugar is sweet."
-// 第1行: \s\s\s 保留 3 个尾部空格
-// 第2行: \ 取消换行, 第3行的前导空格成为连接的一部分
-```
-
-#### String.formatted() 与 Text Blocks
-
-```java
-// String.formatted() 是 String.format() 的实例方法版本 (JDK 15+)
-// 非常适合与 text blocks 搭配使用
-
-String html = """
-    <html>
-        <body>
-            <h1>%s</h1>
-            <p>Welcome, %s! You have %d messages.</p>
-        </body>
-    </html>
-    """.formatted(title, userName, messageCount);
-
-String json = """
-    {
-        "name": "%s",
-        "age": %d,
-        "email": "%s"
-    }
-    """.formatted(name, age, email);
-
-// SQL 查询
-String sql = """
-    SELECT u.name, u.email, COUNT(o.id) as order_count
-    FROM users u
-    LEFT JOIN orders o ON u.id = o.user_id
-    WHERE u.status = '%s'
-      AND u.created_at > '%s'
-    GROUP BY u.name, u.email
-    HAVING COUNT(o.id) > %d
-    ORDER BY order_count DESC
-    """.formatted(status, startDate, minOrders);
-
-// 注意: 对于 SQL, 实际项目中应使用 PreparedStatement 防止注入
-// formatted() 主要用于日志、模板、测试等场景
-```
-
----
-
-### 3.6 Record Patterns (JEP 440)
-
-```java
-// 嵌套解构
-record Point(int x, int y) {}
-record Rectangle(Point topLeft, Point bottomRight) {}
-
-// 旧写法
-void printOld(Rectangle r) {
-    Point tl = r.topLeft();
-    int x = tl.x();
-    int y = tl.y();
-    System.out.println("Top-left: (" + x + ", " + y + ")");
-}
-
-// 新写法 - Record Pattern
-void printNew(Rectangle r) {
-    if (r instanceof Rectangle(Point(int x, int y), Point bottomRight)) {
-        System.out.println("Top-left: (" + x + ", " + y + ")");
-    }
-}
-
-// switch + Record Pattern
-String describe(Object obj) {
-    return switch (obj) {
-        case Rectangle(Point(int x1, int y1), Point(int x2, int y2)) ->
-            "Rectangle from (%d,%d) to (%d,%d)".formatted(x1, y1, x2, y2);
-        case Point(int x, int y) ->
-            "Point at (%d,%d)".formatted(x, y);
-        default -> "Unknown shape";
-    };
-}
-
-// 结合 unnamed pattern
-void extractX(Object obj) {
-    if (obj instanceof Point(int x, _)) {
-        // 只关心 x 坐标，忽略 y
-        System.out.println("X coordinate: " + x);
-    }
-}
-```
-
-### 3.7 Unnamed Patterns & Variables (JEP 456)
-
-```java
-// 使用 _ 忽略不关心的值
-
-// instanceof 中忽略变量
-if (obj instanceof String _) {
-    // 只关心类型，不关心具体值
-    System.out.println("It's a string!");
-}
-
-// Lambda 中忽略参数
-stream.map(_ -> "constant")  // 所有元素映射为 "constant"
-
-// Record 模式中忽略组件
-if (obj instanceof Point(int x, _)) {
-    // 只关心 x 坐标，忽略 y
-    System.out.println("X: " + x);
-}
-
-// 异常处理中忽略异常对象
-try {
-    riskyOperation();
-} catch (Exception _) {
-    logger.error("Failed");
-}
-
-// try-with-resources 中忽略资源变量
-try (var _ = ScopedContext.open()) {
-    doWork();
-}
-```
-
-### 3.8 Compact Source Files & Instance Main Methods (JEP 512)
+### 3.6 Compact Source Files & Instance Main Methods (JEP 512)
 
 ```java
 // 单文件程序无需类声明 (JDK 25 正式)
@@ -868,7 +502,7 @@ final class HelloWorld {
 }
 ```
 
-### 3.9 Flexible Constructor Bodies 深入 (JEP 513)
+### 3.7 Flexible Constructor Bodies 深入 (JEP 513)
 
 JDK 25 正式发布。允许在构造器中 `super()` 或 `this()` **之前**执行语句 (prologue statements)。
 
@@ -966,7 +600,7 @@ var c2 = new Connection("https://example.com/api");  // 自动解析
 
 ---
 
-### 3.10 Primitive Patterns (JEP 455 → 488 → 507 → 530)
+### 3.8 Primitive Patterns (JEP 455 → 488 → 507 → 530)
 
 ```java
 // 原始类型模式匹配 (JDK 23+ 预览，持续到 JDK 26)
@@ -1006,7 +640,7 @@ if (num instanceof Integer i) {
 
 ---
 
-### 3.11 String Templates (已撤回 - JEP 430 → 459 → 465)
+### 3.9 String Templates (已撤回 - JEP 430 → 459 → 465)
 
 #### 原始设计 (Original Design)
 
@@ -1061,149 +695,14 @@ Brian Goetz 在邮件列表中解释了主要原因:
 
 ---
 
-### 3.12 Stream Gatherers (JEP 485)
+### 3.10 Stream Gatherers (JEP 485)
 
-JDK 24 正式发布。Gatherers 是 Stream API 的扩展，
-允许定义**自定义中间操作** (custom intermediate operations)，
-弥补了 Stream API 只能通过 `Collector` 自定义终端操作的不足。
+JDK 24 正式发布。Gatherers 是 Stream API 的扩展，允许定义**自定义中间操作**
+(custom intermediate operations)，弥补了 Stream API 只能通过 `Collector`
+自定义终端操作的不足。内置 5 个 Gatherer：`windowFixed`、`windowSliding`、
+`fold`、`scan`、`mapConcurrent`，并支持通过 `Gatherer.ofSequential()` 自定义。
 
-#### 核心概念 (Core Concepts)
-
-```java
-// Stream 管道: source → intermediate ops → terminal op
-// 内置中间操作: map, filter, flatMap, sorted, distinct, limit...
-// 自定义终端操作: Collector (JDK 8)
-// 自定义中间操作: Gatherer (JDK 24) ← 新增！
-
-// 使用方式: stream.gather(myGatherer)
-// Gatherer 接口: Gatherer<T, A, R>
-//   T = 输入元素类型 (input type)
-//   A = 中间状态类型 (state type)
-//   R = 输出元素类型 (output type)
-```
-
-#### 内置 Gatherers (Built-in Gatherers)
-
-```java
-import java.util.stream.Gatherers;
-
-// 1. windowFixed(int size) - 固定大小的窗口 (fixed-size window)
-List<List<Integer>> windows = Stream.of(1, 2, 3, 4, 5, 6, 7)
-    .gather(Gatherers.windowFixed(3))
-    .toList();
-// [[1, 2, 3], [4, 5, 6], [7]]
-
-// 2. windowSliding(int size) - 滑动窗口 (sliding window)
-List<List<Integer>> sliding = Stream.of(1, 2, 3, 4, 5)
-    .gather(Gatherers.windowSliding(3))
-    .toList();
-// [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
-
-// 3. fold(init, folder) - 有状态的归约, 输出单个结果
-// 类似 reduce, 但初始值可以是不同类型
-Optional<String> csv = Stream.of("a", "b", "c")
-    .gather(Gatherers.fold(() -> "", (acc, el) -> acc.isEmpty() ? el : acc + "," + el))
-    .findFirst();
-// "a,b,c"
-
-// 4. scan(init, scanner) - 有状态的累积, 输出每步结果
-// 类似 fold, 但每步都输出中间结果
-List<Integer> runningSum = Stream.of(1, 2, 3, 4, 5)
-    .gather(Gatherers.scan(() -> 0, Integer::sum))
-    .toList();
-// [1, 3, 6, 10, 15]
-
-// 5. mapConcurrent(maxConcurrency, mapper) - 并发映射
-// 自动使用虚拟线程, 限制最大并发数
-List<String> results = urls.stream()
-    .gather(Gatherers.mapConcurrent(10, url -> fetchContent(url)))
-    .toList();
-// 最多 10 个虚拟线程同时执行 fetchContent
-```
-
-#### 自定义 Gatherer (Custom Gatherer)
-
-```java
-// Gatherer 由 4 个函数组成:
-// 1. initializer  - 创建初始状态 (可选)
-// 2. integrator   - 处理每个输入元素 (必需)
-// 3. combiner     - 合并并行状态 (可选, 并行流需要)
-// 4. finisher     - 处理最终状态 (可选)
-
-// 示例 1: distinctBy - 按某个属性去重
-static <T, K> Gatherer<T, ?, T> distinctBy(Function<T, K> keyExtractor) {
-    return Gatherer.ofSequential(
-        HashSet<K>::new,                         // initializer: 创建 Set 记录已见的 key
-        (seen, element, downstream) -> {         // integrator
-            K key = keyExtractor.apply(element);
-            if (seen.add(key)) {                 // 如果 key 是新的
-                return downstream.push(element); // 推送到下游
-            }
-            return true;                         // 继续处理 (返回 false 则短路)
-        }
-    );
-}
-
-// 使用
-record Employee(String name, String dept) {}
-var unique = employees.stream()
-    .gather(distinctBy(Employee::dept))  // 每个部门只保留第一个
-    .toList();
-
-// 示例 2: takeWhileInclusive - 类似 takeWhile 但包含第一个不满足条件的元素
-static <T> Gatherer<T, ?, T> takeWhileInclusive(Predicate<T> predicate) {
-    return Gatherer.ofSequential(
-        () -> new Object() { boolean done = false; },
-        (state, element, downstream) -> {
-            if (state.done) return false;        // 已结束, 短路
-            if (!predicate.test(element)) {
-                state.done = true;
-            }
-            return downstream.push(element);     // 包含不满足条件的那个元素
-        }
-    );
-}
-
-// 使用
-var result = Stream.of(1, 2, 3, 10, 4, 5)
-    .gather(takeWhileInclusive(n -> n < 10))
-    .toList();
-// [1, 2, 3, 10]  ← 包含了 10
-
-// 示例 3: 带 finisher 的 Gatherer - 批量收集后在结束时输出最后一批
-static <T> Gatherer<T, ?, List<T>> batch(int size) {
-    return Gatherer.ofSequential(
-        ArrayList<T>::new,                       // initializer
-        (buffer, element, downstream) -> {       // integrator
-            buffer.add(element);
-            if (buffer.size() >= size) {
-                var batch = List.copyOf(buffer);
-                buffer.clear();
-                return downstream.push(batch);
-            }
-            return true;
-        },
-        (buffer, downstream) -> {                // finisher
-            if (!buffer.isEmpty()) {
-                downstream.push(List.copyOf(buffer));  // 输出最后不足 size 的一批
-            }
-        }
-    );
-}
-```
-
-#### Gatherer 组合 (Composition)
-
-```java
-// Gatherer 可以通过 andThen 组合
-var pipeline = Gatherers.<String>windowSliding(3)
-    .andThen(Gatherers.mapConcurrent(4, window ->
-        window.stream().mapToInt(String::length).average().orElse(0)));
-
-var movingAvgLengths = words.stream()
-    .gather(pipeline)
-    .toList();
-```
+→ [详见 Stream Gatherers 深入](stream-gatherers.md)
 
 ---
 
@@ -1397,4 +896,7 @@ Record (Amber) + Inline Class (Valhalla)
 - [JEP 430](/jeps/language/jep-430.md)
 - [JEP 465: String Templates (Third Preview - Withdrawn)](https://openjdk.org/jeps/465)
 
-→ [相关主题: Records](../records/) | [模式匹配](../patterns/) | [语法演进](../../language/syntax/)
+### 子文件
+- [Switch 表达式与模式匹配演进](switch-patterns.md)
+- [Text Blocks 深入](text-blocks.md)
+- [Stream Gatherers 深入](stream-gatherers.md)
