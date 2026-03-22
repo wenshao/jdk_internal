@@ -41,6 +41,12 @@ Runnable  Future   Pool    Parallel Thread  Concurrency Values Constants Values
 - [Structured Concurrency](#structured-concurrency)
 - [Scoped Values](#scoped-values)
 - [最新增强](#最新增强)
+- [synchronized 内部实现](#synchronized-内部实现)
+- [java.util.concurrent 深入](#javautilconcurrent-深入)
+- [ForkJoinPool 深入](#forkjoinpool-深入)
+- [CompletableFuture 深入](#completablefuture-深入)
+- [虚拟线程与传统并发的交互](#虚拟线程与传统并发的交互)
+- [并发调试](#并发调试)
 - [核心贡献者](#核心贡献者)
 - [相关链接](#相关链接)
 
@@ -414,27 +420,6 @@ vt.start();
 | 适用场景 | CPU 密集 | I/O 密集 |
 | 阻塞操作 | 昂贵 | 便宜 |
 
-### 适用场景
-
-```java
-// ✅ 推荐: I/O 密集型任务
-try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
-    // HTTP 请求
-    List<CompletableFuture<String>> futures = urls.stream()
-        .map(url -> CompletableFuture.supplyAsync(() -> fetch(url), executor))
-        .toList();
-
-    // 数据库查询
-    for (int i = 0; i < 1000; i++) {
-        executor.submit(() -> db.query("SELECT * FROM users"));
-    }
-}
-
-// ❌ 避免: CPU 密集型任务使用虚拟线程
-// 虚拟线程对 CPU 密集型任务无性能提升
-// 应使用 ForkJoinPool 或平台线程池
-```
-
 ### Pinning 问题
 
 ```java
@@ -615,7 +600,489 @@ public Logger getLogger() {
 
 ---
 
-## 9. 重要 PR 分析
+## 9. synchronized 内部实现
+
+### 对象头与锁状态 (Mark Word)
+
+HotSpot 中每个 Java 对象的对象头 (object header) 包含一个 mark word，用于存储锁状态。在 64 位 JVM 中，mark word 为 64 bit：
+
+```
+64-bit Mark Word 布局 (低 2 bit 为 tag):
+
+  Unlocked (无锁):   [unused:25 | hashcode:31 | age:4 | 0 | 01]
+  Thin Lock (轻量级): [Lock Record 指针 (62 bit)             | 00]
+  Fat Lock (重量级):  [ObjectMonitor 指针 (62 bit)            | 10]
+  GC Marked:         [Forwarding 指针 (62 bit)               | 11]
+```
+
+### Biased Locking（已废弃）
+
+Biased Locking（偏向锁）在 JDK 6 引入，JDK 15 通过 JEP 374 默认禁用，JDK 18 彻底移除代码。
+
+**原理**：当一个对象只被单线程访问时，将线程 ID 写入 mark word，后续同一线程进入 synchronized 无需任何 CAS 操作。
+
+**废弃原因**：
+- 现代硬件上 CAS 操作已非常快（几纳秒），Biased Locking 的收益不明显
+- 偏向撤销 (bias revocation) 需要 STW safepoint，代价高
+- 代码复杂度高，与 Compact Object Headers (JEP 450) 不兼容
+- HotSpot 中维护 Biased Locking 的代码超过 1500 行
+
+### Thin Lock（轻量级锁）
+
+当存在轻度竞争时，HotSpot 使用 Thin Lock（基于 CAS 的轻量级锁）：
+
+**获取过程**：
+1. 在当前线程栈帧中分配 Lock Record
+2. 将对象 mark word 复制到 Lock Record（Displaced Mark Word）
+3. CAS 将对象 mark word 替换为 Lock Record 指针（tag 位设为 `00`）
+
+```
+Thread Stack          Object Header
+┌─────────────┐       ┌──────────────────┐
+│ Lock Record │◄──────│ LR ptr │ tag: 00 │
+│ [Displaced  │       └──────────────────┘
+│  Mark Word] │  ← 保存原始 mark word
+└─────────────┘
+
+CAS 成功 → 获取锁
+CAS 失败 → 已被自己持有则重入计数，否则膨胀为 Fat Lock
+```
+
+**重入处理**：同一线程再次进入 synchronized 时，CAS 会失败，但 JVM 检测到 Lock Record 指针属于当前线程栈帧范围，则直接压入一个新的 Displaced Mark Word 为 `null` 的 Lock Record 作为重入计数。
+
+### Fat Lock（重量级锁）与 ObjectMonitor
+
+当 Thin Lock CAS 竞争失败（自旋一定次数后仍未获得锁），发生 **Lock Inflation（锁膨胀）**：
+
+```java
+// HotSpot 内部 ObjectMonitor 结构（C++ 实现，简化版）
+// src/hotspot/share/runtime/objectMonitor.hpp
+class ObjectMonitor {
+    volatile markWord _header;      // displaced mark word
+    volatile intptr_t _owner;       // 持有锁的线程
+    volatile int _recursions;       // 重入次数
+    ObjectWaiter* _EntryList;       // 等待获取锁的线程（竞争队列）
+    ObjectWaiter* _cxq;             // 最近到达的竞争者（Contention Queue）
+    ObjectWaiter* _WaitSet;         // 调用 wait() 的线程
+    volatile int _waiters;          // wait() 的线程数
+    volatile int _contentions;      // 竞争计数
+};
+```
+
+**锁膨胀过程 (Lock Inflation)**：
+1. 分配 ObjectMonitor 对象
+2. 将对象原始 mark word 保存到 ObjectMonitor 的 `_header` 字段
+3. 用 CAS 将对象 mark word 替换为 ObjectMonitor 指针（tag 位设为 `10`）
+4. 竞争线程进入 `_cxq` 或 `_EntryList`，通过 `pthread_mutex` + `pthread_cond`（Linux）或等价 OS 原语阻塞
+
+**锁降级 (Lock Deflation)**：JDK 21+ 默认使用异步锁降级（通过 `DeflateIdleMonitors` 在 safepoint 或异步执行）。当 ObjectMonitor 无竞争者且无 owner 时，可回收 ObjectMonitor，将对象 mark word 恢复为无锁状态。JVM 参数 `-XX:+UseObjectMonitorTable`（JDK 21+）将 monitor 从对象头移至全局表，支持更高效的 deflation。
+
+---
+
+## 10. java.util.concurrent 深入
+
+### AQS (AbstractQueuedSynchronizer) 原理
+
+AQS 是 `java.util.concurrent` 中大多数同步器（ReentrantLock、Semaphore、CountDownLatch、ReentrantReadWriteLock 等）的基础框架，由 Doug Lea 设计。
+
+```
+核心: volatile int state  ← 同步状态
+
+CLH 变体等待队列 (双向链表):
+  HEAD(哨兵) ◄──► Node(T1, WAITING) ◄──► Node(T2, WAITING) ◄──► TAIL(T3)
+
+独占模式 (Exclusive): ReentrantLock, ReentrantReadWriteLock(写)
+共享模式 (Shared): Semaphore, CountDownLatch, ReadLock
+```
+
+**核心字段 `state`**：
+- **ReentrantLock**: `state = 0` 表示无锁，`state > 0` 表示持有锁（值为重入次数）
+- **Semaphore**: `state` 表示可用许可数
+- **CountDownLatch**: `state` 表示剩余计数
+- **ReentrantReadWriteLock**: 高 16 位 = 读锁持有数，低 16 位 = 写锁重入数
+
+**CLH 队列变体**：经典 CLH 锁使用隐式链表（每个节点自旋在前驱的状态上），AQS 改为显式双向链表，支持取消 (cancellation) 和超时 (timeout)。JDK 9+ 的 AQS 重写（由 Doug Lea 完成）移除了原始 Node 中的 `prev`/`next` 设计，改为 `VarHandle` 操作。
+
+**获取锁的流程（独占模式）**：
+```
+acquire(arg):
+  1. tryAcquire(arg)          ← 子类实现，CAS 修改 state
+  2. 如果失败 → 创建 Node，CAS 加入队列尾部
+  3. 在队列中自旋：
+     - 如果前驱是 head → 再次 tryAcquire
+     - 否则 → park 当前线程 (LockSupport.park)
+  4. 被 unpark 后重新尝试获取
+```
+
+### ConcurrentHashMap 演进
+
+**JDK 7: 分段锁 (Segment)**
+
+```
+JDK 7: Segment[] (默认 16 个分段)
+  每个 Segment 继承 ReentrantLock，内含 HashEntry 数组
+  不同 Segment 可并发写入，并发度 = Segment 数量（创建后不可变）
+```
+
+**JDK 8+: CAS + synchronized（Node 粒度锁）**
+
+```
+Node[] table:  [null] [Node→Node→null] [null] [TreeNode→...] ...
+
+put 操作:
+  1. hash 定位桶 → 桶为空 → CAS 插入首节点（无锁）
+  2. 桶非空 → synchronized(桶头节点) 遍历链表/红黑树插入
+  3. 链表长度 >= 8 且 table.length >= 64 → 树化 (treeifyBin)
+
+扩容: 多线程协助迁移 (transfer)，每个线程负责一段桶
+size(): 使用 baseCount + CounterCell[] (类似 LongAdder)
+```
+
+**关键改进**：
+- 锁粒度从 Segment（多个桶共享一把锁）细化到单个桶头节点
+- 空桶插入使用无锁 CAS，减少锁竞争
+- `size()` 使用分散计数器（`CounterCell[]`），避免全局 CAS 热点
+
+### StampedLock
+
+**JDK 8 引入**，比 `ReentrantReadWriteLock` 提供更高的并发性能，支持乐观读 (optimistic read)。
+
+```java
+StampedLock lock = new StampedLock();
+
+// 乐观读 - 不阻塞写线程
+long stamp = lock.tryOptimisticRead();    // 获取乐观读戳记（非阻塞）
+double x = this.x, y = this.y;           // 读取共享数据
+if (!lock.validate(stamp)) {             // 验证期间是否有写操作
+    // 乐观读失败 → 退化为悲观读锁
+    stamp = lock.readLock();
+    try {
+        x = this.x;
+        y = this.y;
+    } finally {
+        lock.unlockRead(stamp);
+    }
+}
+
+// 写锁
+long stamp = lock.writeLock();
+try {
+    this.x = newX;
+    this.y = newY;
+} finally {
+    lock.unlockWrite(stamp);
+}
+
+// 锁降级: 写锁 → 读锁
+long ws = lock.writeLock();
+try {
+    this.x = newX;
+    long rs = lock.tryConvertToReadLock(ws);  // 降级
+    if (rs != 0L) {
+        ws = rs;  // 降级成功
+    } else {
+        lock.unlockWrite(ws);
+        ws = lock.readLock();
+    }
+    // 此处持有读锁
+} finally {
+    lock.unlock(ws);
+}
+```
+
+**内部实现**：StampedLock 使用一个 `long state` 字段，高位记录写锁状态与版本号，低位记录读锁计数。乐观读只是记录当前版本号，`validate()` 检查版本号是否改变。
+
+**注意事项**：
+- StampedLock 不可重入
+- 不支持 Condition
+- 不支持虚拟线程中的 unmount（使用 `readLock()`/`writeLock()` 会 pin 虚拟线程）
+
+---
+
+## 11. ForkJoinPool 深入
+
+### Work-Stealing 算法
+
+每个工作线程持有一个双端队列 (WorkQueue)：
+
+```
+Worker-0 Queue:  [A][B][C][D][E]  ← push/pop 从顶部 (LIFO, 本线程)
+                  ↑ steal 从底部 (FIFO, 其他线程)
+
+Worker-1 Queue:  [F][G]
+Worker-2 Queue:  [空] ← 从其他 Worker 底部窃取任务
+```
+
+**规则**：
+- 本线程 push/pop 从队列顶部操作（LIFO）--- 缓存友好
+- 窃取从队列底部操作（FIFO）--- 窃取大任务，减少窃取频率
+- push/pop 使用无锁操作，steal 需要 CAS
+
+### ManagedBlocker
+
+当 ForkJoinPool 中的任务需要执行阻塞操作（如 I/O）时，使用 `ManagedBlocker` 避免线程饥饿：
+
+```java
+// ForkJoinPool.ManagedBlocker 接口
+ForkJoinPool.managedBlock(new ForkJoinPool.ManagedBlocker() {
+    private boolean done = false;
+
+    @Override
+    public boolean block() throws InterruptedException {
+        // 执行阻塞操作
+        result = blockingCall();
+        done = true;
+        return true;
+    }
+
+    @Override
+    public boolean isReleasable() {
+        return done;  // 是否已完成或无需阻塞
+    }
+});
+```
+
+**工作机制**：`managedBlock()` 在阻塞前检查是否需要补偿线程。如果当前线程是 ForkJoinPool 的工作线程且池中活跃线程不足，会创建额外的补偿线程 (compensation thread) 以维持并行度。
+
+### Common Pool
+
+`ForkJoinPool.commonPool()` 是 JVM 全局共享的 ForkJoinPool，被 `CompletableFuture`、`parallel()` Stream 等使用：
+
+```java
+// 默认并行度 = Runtime.getRuntime().availableProcessors() - 1
+// 可通过系统属性调整:
+// -Djava.util.concurrent.ForkJoinPool.common.parallelism=16
+// -Djava.util.concurrent.ForkJoinPool.common.threadFactory=...
+
+// Common Pool 的生命周期与 JVM 一致，不可 shutdown
+ForkJoinPool common = ForkJoinPool.commonPool();
+common.shutdown();  // 无效，Common Pool 忽略 shutdown 调用
+```
+
+**注意**：所有使用 Common Pool 的代码共享同一组线程，长时间运行的任务会影响其他使用者（如 parallel Stream）。建议为独立的计算密集型任务创建专用 ForkJoinPool。
+
+---
+
+## 12. CompletableFuture 深入
+
+### 完成链 (Completion Chain)
+
+CompletableFuture 内部使用栈式链表 (Completion stack) 管理依赖关系：
+
+```java
+CompletableFuture<String> cf1 = supplyAsync(() -> "hello");
+CompletableFuture<Integer> cf2 = cf1.thenApply(String::length);
+CompletableFuture<Void> cf3 = cf2.thenAccept(System.out::println);
+```
+
+```
+内部结构 (栈式链表):
+  cf1 (result: "hello")  → stack: UniApply(cf2)  → null
+  cf2 (result: 5)        → stack: UniAccept(cf3) → null
+  cf3 (result: null)
+
+当 cf1 完成时，触发 stack 中所有 Completion 依次执行
+```
+
+### thenCompose vs thenApply
+
+```java
+// thenApply: 同步转换，Function<T, U>
+// 返回 CompletableFuture<U>
+CompletableFuture<String> cf = CompletableFuture.supplyAsync(() -> 42)
+    .thenApply(n -> "Value: " + n);  // 同步转换
+
+// thenCompose: 异步展平，Function<T, CompletableFuture<U>>
+// 类似 flatMap，避免 CompletableFuture<CompletableFuture<U>>
+CompletableFuture<String> cf = CompletableFuture.supplyAsync(() -> 42)
+    .thenCompose(n -> fetchAsync(n));  // 返回新的 CompletableFuture
+
+// 错误示范: thenApply + 异步操作 → 嵌套 CompletableFuture
+CompletableFuture<CompletableFuture<String>> nested =
+    CompletableFuture.supplyAsync(() -> 42)
+        .thenApply(n -> fetchAsync(n));  // ❌ 嵌套了
+
+// 正确: thenCompose 展平
+CompletableFuture<String> flat =
+    CompletableFuture.supplyAsync(() -> 42)
+        .thenCompose(n -> fetchAsync(n));  // ✅ 展平
+```
+
+### 异常处理策略
+
+```java
+CompletableFuture<String> cf = CompletableFuture.supplyAsync(() -> {
+    if (error) throw new RuntimeException("failed");
+    return "ok";
+});
+
+// 方式 1: exceptionally - 异常时提供默认值
+cf.exceptionally(ex -> "fallback");
+
+// 方式 2: handle - 同时处理正常值和异常（二选一）
+cf.handle((result, ex) -> {
+    if (ex != null) return "error: " + ex.getMessage();
+    return result.toUpperCase();
+});
+
+// 方式 3: whenComplete - 无论成功失败都执行，不改变结果
+cf.whenComplete((result, ex) -> {
+    if (ex != null) log.error("Failed", ex);
+    else log.info("Got: " + result);
+});
+
+// 异常传播: 链中的异常会沿着完成链传播
+CompletableFuture.supplyAsync(() -> { throw new RuntimeException("A"); })
+    .thenApply(s -> s + "B")      // 跳过（上游异常）
+    .thenApply(s -> s + "C")      // 跳过
+    .exceptionally(ex -> "recovered");  // 在这里捕获
+
+// JDK 12+: exceptionallyCompose - 异常时返回新的 CompletableFuture
+cf.exceptionallyCompose(ex -> fetchFallbackAsync());
+```
+
+---
+
+## 13. 虚拟线程与传统并发的交互
+
+### synchronized 中的 Pinning
+
+虚拟线程在 `synchronized` 块/方法内执行阻塞操作时，会被 **pin（固定）** 到载体线程 (carrier thread)，导致载体线程无法服务其他虚拟线程：
+
+```java
+// ❌ Pinning 场景: synchronized + 阻塞 I/O
+synchronized (sharedLock) {
+    socket.read(buffer);  // 载体线程被 pin，无法复用
+}
+
+// 检测 Pinning:
+// -Djdk.tracePinnedThreads=full   打印完整堆栈
+// -Djdk.tracePinnedThreads=short  打印摘要
+```
+
+**JDK 24 改进**：JEP 491 (Synchronize Virtual Threads without Pinning) 使虚拟线程在 `synchronized` 块中阻塞时可以 unmount，消除了大部分 pinning 问题。但 JNI 关键区和 `monitorenter` 在 native 代码中仍会导致 pinning。
+
+### ReentrantLock 与虚拟线程
+
+```java
+// ✅ ReentrantLock 天然支持虚拟线程 unmount
+// 因为 ReentrantLock.lock() 内部使用 LockSupport.park()
+// 虚拟线程在 park 时会 unmount 释放载体线程
+ReentrantLock lock = new ReentrantLock();
+lock.lock();
+try {
+    Thread.sleep(1000);       // 虚拟线程 unmount，载体线程释放
+    socket.read(buffer);      // 同样 unmount
+} finally {
+    lock.unlock();
+}
+
+// ⚠️ 注意: ReentrantLock.lock() 本身不会 pin
+// 但如果持有 ReentrantLock 期间又进入 synchronized 块
+// 那么 synchronized 块中的阻塞操作仍然会 pin（JDK 24 之前）
+```
+
+### Semaphore 与虚拟线程
+
+```java
+// ✅ Semaphore 完全兼容虚拟线程
+// Semaphore 基于 AQS，阻塞时使用 LockSupport.park()
+Semaphore semaphore = new Semaphore(10);
+
+try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
+    for (int i = 0; i < 100_000; i++) {
+        executor.submit(() -> {
+            semaphore.acquire();  // 虚拟线程可 unmount 等待
+            try {
+                accessLimitedResource();
+            } finally {
+                semaphore.release();
+            }
+        });
+    }
+}
+```
+
+### 最佳实践总结
+
+| 同步机制 | 虚拟线程兼容性 | 说明 |
+|----------|---------------|------|
+| **synchronized** | JDK 24 前会 pin | JDK 24+ 通过 JEP 491 解决 |
+| **ReentrantLock** | 完全兼容 | 基于 AQS + `LockSupport.park()` |
+| **Semaphore** | 完全兼容 | 基于 AQS |
+| **CountDownLatch** | 完全兼容 | 基于 AQS |
+| **StampedLock** | 会 pin | 内部使用忙等待 (busy-wait)，不适合虚拟线程 |
+| **ThreadLocal** | 功能正常但浪费内存 | 每个虚拟线程一份副本，推荐用 ScopedValue |
+
+---
+
+## 14. 并发调试
+
+### Thread Dump 分析
+
+```bash
+# 获取 Thread Dump
+jcmd <pid> Thread.dump_to_file -format=json output.json   # JDK 21+ JSON 格式
+jcmd <pid> Thread.print                                    # 传统文本格式
+jstack <pid>                                               # 经典工具
+kill -3 <pid>                                              # SIGQUIT
+```
+
+**关键状态标识**：
+- `BLOCKED (on object monitor)` --- 等待获取 monitor 锁
+- `WAITING` / `TIMED_WAITING` --- `wait()`, `park()`, `sleep()` 等
+- `waiting to lock <addr>` --- 等待获取的锁对象地址
+- `locked <addr>` --- 当前持有的锁对象地址
+
+### 死锁检测
+
+```bash
+# JVM 自动死锁检测 (Thread.print 末尾会报告)
+jcmd <pid> Thread.print
+```
+
+```java
+// 编程方式检测死锁
+ThreadMXBean tmx = ManagementFactory.getThreadMXBean();
+long[] deadlockedIds = tmx.findDeadlockedThreads();  // 包含 Lock 的死锁
+if (deadlockedIds != null) {
+    ThreadInfo[] infos = tmx.getThreadInfo(deadlockedIds, true, true);
+    for (ThreadInfo info : infos) {
+        System.err.println(info);
+    }
+}
+```
+
+### JFR 并发事件
+
+Java Flight Recorder (JFR) 提供多种并发相关事件：
+
+| JFR 事件 | 说明 | 默认阈值 |
+|----------|------|----------|
+| `jdk.JavaMonitorWait` | `Object.wait()` 调用 | 20 ms |
+| `jdk.JavaMonitorEnter` | 进入 synchronized 块的等待 | 20 ms |
+| `jdk.ThreadPark` | `LockSupport.park()` 调用 | 20 ms |
+| `jdk.ThreadSleep` | `Thread.sleep()` 调用 | 20 ms |
+| `jdk.VirtualThreadPinned` | 虚拟线程被 pin | 20 ms |
+| `jdk.VirtualThreadSubmitFailed` | 虚拟线程提交失败 | 无阈值 |
+
+```bash
+# 启动 JFR 记录
+jcmd <pid> JFR.start settings=profile duration=60s filename=concurrency.jfr
+
+# 分析锁竞争和 Pinning
+jfr print --events jdk.JavaMonitorEnter concurrency.jfr
+jfr print --events jdk.VirtualThreadPinned concurrency.jfr
+```
+
+**典型分析场景**：
+- **锁竞争热点**：查看 `jdk.JavaMonitorEnter` 的 `monitorClass` 和 `duration`
+- **虚拟线程 Pinning**：查看 `jdk.VirtualThreadPinned` 调用栈，定位 synchronized 中的阻塞
+- **线程饥饿**：分析 `jdk.ThreadPark` 持续时间分布
+
+---
+
+## 15. 重要 PR 分析
 
 ### 并发集合优化
 
@@ -709,7 +1176,7 @@ long result = expanded + 0x3030303030303030L;
 
 ---
 
-## 10. 并发性能最佳实践
+## 16. 并发性能最佳实践
 
 ### 并发集合选择
 
@@ -761,27 +1228,9 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 // 应使用 ForkJoinPool.commonPool()
 ```
 
-### Pinning 避免模式
-
-```java
-// ❌ 避免：synchronized 中阻塞
-synchronized (lock) {
-    Thread.sleep(1000);  // Pinning 发生
-}
-
-// ✅ 推荐：使用 ReentrantLock
-ReentrantLock lock = new ReentrantLock();
-lock.lock();
-try {
-    Thread.sleep(1000);  // OK，虚拟线程可卸载
-} finally {
-    lock.unlock();
-}
-```
-
 ---
 
-## 11. 核心贡献者
+## 17. 核心贡献者
 
 > **统计来源**: 本地 JDK 源码 master 分支 git 历史分析
 > **统计时间**: 2026-03-20
@@ -808,7 +1257,7 @@ try {
 
 ---
 
-## 12. Git 提交历史
+## 18. Git 提交历史
 
 > 基于 OpenJDK master 分支分析
 
@@ -830,7 +1279,7 @@ git log --oneline -- src/java.base/share/classes/java/util/concurrent/
 
 ---
 
-## 13. 相关链接
+## 19. 相关链接
 
 ### 内部文档
 
