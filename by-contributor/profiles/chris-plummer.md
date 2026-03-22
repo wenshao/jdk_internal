@@ -19,7 +19,7 @@
 
 ## 1. 概述
 
-Chris Plummer is a long-standing Oracle engineer and one of the most prolific contributors to JDK serviceability infrastructure. With 437 contributions to openjdk/jdk, he is the primary maintainer and developer for the Java debugging stack: JDWP (Java Debug Wire Protocol), JDI (Java Debug Interface), JVMTI (JVM Tool Interface), and SA (Serviceability Agent). His work ensures that debuggers, profilers, and diagnostic tools function correctly across all JDK releases, including adapting the entire debugging subsystem for Project Loom's virtual threads.
+Chris Plummer is a long-standing Oracle engineer based in San Martin, California, and one of the most prolific contributors to JDK serviceability infrastructure. With 437 contributions to openjdk/jdk, he is the primary maintainer and developer for the Java debugging stack: JDWP (Java Debug Wire Protocol), JDI (Java Debug Interface), JVMTI (JVM Tool Interface), and SA (Serviceability Agent). His work ensures that debuggers, profilers, and diagnostic tools function correctly across all JDK releases, including adapting the entire debugging subsystem for Project Loom's virtual threads. He is a JDK Reviewer/Committer in the OpenJDK Census.
 
 ---
 
@@ -29,6 +29,7 @@ Chris Plummer is a long-standing Oracle engineer and one of the most prolific co
 |-----------|-------|
 | **Name** | Chris Plummer |
 | **Current Organization** | Oracle |
+| **Location** | San Martin, California, USA |
 | **GitHub** | [@plummercj](https://github.com/plummercj) |
 | **OpenJDK** | [@plummercj](https://openjdk.org/census#plummercj) |
 | **Email** | cjplummer@openjdk.org |

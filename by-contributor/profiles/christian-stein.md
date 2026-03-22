@@ -28,10 +28,12 @@ Christian Stein is an Oracle engineer based in Germany, widely known in the Java
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Christian Stein |
-| **Current Organization** | Oracle |
+| **Current Organization** | Oracle (Java Platform Group, Language Tools) |
 | **GitHub** | [@sormuras](https://github.com/sormuras) |
+| **Personal Website** | [sormuras.github.io](https://sormuras.github.io/) |
 | **Bio** | @openjdk / @junit-team |
 | **Location** | Germany |
+| **Java Experience** | Programming with Java since 1998 |
 | **PRs** | [77 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Asormuras+is%3Aclosed+label%3Aintegrated) |
 | **Total Contributions** | 77 |
 | **Primary Areas** | Source launcher, jtreg, jar tool, module system, JUnit migration |
@@ -94,7 +96,50 @@ Refactored `com.sun.tools.javac.main.CommandLine` into a reusable module shared 
 
 ---
 
-## 6. Development Style
+## 6. Career History & Community Roles
+
+| Year | Event | Details |
+|------|-------|---------|
+| **1998** | Started Java development | Programming with Java since 1998 |
+| **2017** | Joined JUnit Team | Core member of JUnit 5 development team |
+| **2019** | OpenJDK Author | Granted OpenJDK Author status |
+| **~2020** | Joined Oracle | Java Platform Group, Language Tools team |
+| **2020** | OpenJDK Committers' Workshop | Talk: "Bach.java + Testing In The Modular World" |
+
+### OpenJDK Roles
+
+- **JDK Committer/Reviewer**: Mainline contributor
+- **JEP Owner**: JEP 458 (Launch Multi-File Source-Code Programs) — primary implementer
+- **jtreg Steward**: Responsible for jtreg version updates across JDK releases
+
+### Open Source Projects
+
+| Project | Role |
+|---------|------|
+| **JUnit 5** | Core Team Member (since 2017) |
+| **Apache Maven** | Developer |
+| **Bach** | Creator — module-only build tool leveraging jshell/java |
+| **junit-platform-maven-plugin** | Author — Maven integration for JUnit Platform |
+
+### Conference Talks
+
+| Year | Event | Topic |
+|------|-------|-------|
+| **2021** | FOSDEM | [Free Java Devroom talk](https://archive.fosdem.org/2021/schedule/speaker/christian_stein/) |
+| **2023** | JavaLand | "JDK Tools and where to find them" |
+| **2020** | JUG Hessel | "Bach.java + Testing In The Modular World" |
+| **2019** | Accento.dev Karlsruhe | ["Testing In The Modular World"](https://2019.accento.dev/speakers/christian-stein/) |
+| **Various** | JavaZone Oslo, German JUGs | "JUnit 5 - Platform & Jupiter API" |
+
+### Writing
+
+- Contributor at [Inside.java](https://inside.java/u/ChristianStein/)
+- Author at [foojay.io](https://foojay.io/today/author/sormuras/)
+- Technical blog at [sormuras.github.io](https://sormuras.github.io/)
+
+---
+
+## 7. Development Style
 
 ### Patterns
 
@@ -110,8 +155,13 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 
 ---
 
-## 7. Related Links
+## 8. Related Links
 
 - [GitHub Profile](https://github.com/sormuras)
+- [Personal Website](https://sormuras.github.io/)
+- [Inside.java Author Page](https://inside.java/u/ChristianStein/)
+- [foojay.io Author Page](https://foojay.io/today/author/sormuras/)
+- [FOSDEM 2021 Speaker Page](https://archive.fosdem.org/2021/schedule/speaker/christian_stein/)
+- [Accento 2019 Speaker Page](https://2019.accento.dev/speakers/christian-stein/)
 - [GitHub Commits to openjdk/jdk](https://github.com/openjdk/jdk/commits?author=sormuras)
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Asormuras+is%3Aclosed+label%3Aintegrated)

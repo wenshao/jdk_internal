@@ -29,6 +29,8 @@ Alexander Ivanov (Alexey Ivanov) is a Java Client Sustaining Engineer at Oracle 
 |-----------|-------|
 | **Name** | Alexey Ivanov |
 | **Current Organization** | Oracle |
+| **Title** | Java Client Sustaining Engineer |
+| **Education** | St. Petersburg State University |
 | **Location** | Dublin, Ireland |
 | **GitHub** | [@aivanov-jdk](https://github.com/aivanov-jdk) |
 | **OpenJDK** | [@aivanov](https://openjdk.org/census#aivanov) |
@@ -99,7 +101,30 @@ A sustained campaign to modernize client library code: marking fields `final` in
 
 ---
 
-## 6. Development Style
+## 6. Career History & OpenJDK Roles
+
+| Period | Role | Details |
+|--------|------|---------|
+| **Education** | St. Petersburg State University | Computer Science background |
+| **~2015** | JDK 8u Committer | Nominated with 10 changes to JDK8u at time of nomination |
+| **Current** | Java Client Sustaining Engineer, Oracle | Java SE sustaining team, focused on GUI and deployment issues |
+
+### OpenJDK Roles
+
+- **JDK Reviewer** — Code review authority across client libraries
+- **JDK 8u Committer** — [Nominated April 2015](https://mail.openjdk.org/pipermail/jdk8u-dev/2015-April/003427.html)
+- Expertise: AWT, Swing, Win32 GUI programming, 2D graphics
+
+### Notable Achievements
+
+- Primary maintainer of Java desktop stack (AWT, Swing, 2D) stability across JDK releases
+- Creator/maintainer of PassFailJFrame improvements, the central test framework for interactive GUI testing used by hundreds of tests
+- Systematic code modernization campaign across client libraries
+- Cross-platform GUI expertise spanning Linux, macOS, and Windows
+
+---
+
+## 7. Development Style
 
 ### Patterns
 
@@ -114,9 +139,11 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 
 ---
 
-## 7. Related Links
+## 8. Related Links
 
 - [GitHub Profile](https://github.com/aivanov-jdk)
+- [LinkedIn](https://www.linkedin.com/in/aivanov-jdk/)
+- [OpenJDK Census](https://openjdk.org/census#aivanov)
+- [JDK 8u Committer Nomination](https://mail.openjdk.org/pipermail/jdk8u-dev/2015-April/003427.html)
 - [GitHub Commits to openjdk/jdk](https://github.com/openjdk/jdk/commits?author=aivanov-jdk)
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aaivanov-jdk+is%3Aclosed+label%3Aintegrated)
-- [OpenJDK Census](https://openjdk.org/census#aivanov)

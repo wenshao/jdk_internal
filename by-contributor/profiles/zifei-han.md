@@ -21,14 +21,17 @@
 
 Zifei Han is a community contributor and one of the most active RISC-V platform engineers working on OpenJDK. With 66 contributions to openjdk/jdk, he focuses on RISC-V architecture support, including the RISC-V Vector Extension (RVV) implementation, C1/C2 compiler backends for RISC-V, and low-level assembler improvements. His work helps ensure that the JDK runs efficiently on the emerging RISC-V hardware ecosystem, covering vector API support, compiler intrinsics, and platform-specific bug fixes.
 
+Zifei 也是 **Apache** 开源社区的贡献者 (GitHub profile 显示 Apache 组织成员)，曾参与 **Apache SkyWalking** (APM 监控系统) 的开发。在 RISC-V 领域，他维护了 [vector-api-test-rvv](https://github.com/zifeihan/vector-api-test-rvv) 测试项目，用于在 RISC-V 硬件上对 JDK Vector API 进行性能基准测试。他的测试结果显示，启用 `-XX:+UseRVV` 后 C2 汇编指令数可减少约 50%。他还参与了 JDK 17u 和 JDK 11u 的 RISC-V 移植工作。
+
 ---
 
 ## 2. Basic Information
 
 | Attribute | Value |
 |-----------|-------|
-| **Name** | Zifei Han |
+| **Name** | Zifei Han (韩子飞) |
 | **GitHub** | [@zifeihan](https://github.com/zifeihan) |
+| **Organization** | Apache Member; Community Contributor |
 | **PRs** | [66 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Azifeihan+is%3Aclosed+label%3Aintegrated) |
 | **Total Contributions** | 66 |
 | **主要领域** | RISC-V, Vector Extension (RVV), C1/C2 Compiler Backends, MacroAssembler |
@@ -119,3 +122,5 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Most c
 - [GitHub Profile](https://github.com/zifeihan)
 - [GitHub Commits to openjdk/jdk](https://github.com/openjdk/jdk/commits?author=zifeihan)
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Azifeihan+is%3Aclosed+label%3Aintegrated)
+- [vector-api-test-rvv](https://github.com/zifeihan/vector-api-test-rvv) - RISC-V Vector API performance benchmarks
+- [State of OpenJDK on RISC-V (JCP, April 2024)](https://jcp.org/aboutJava/communityprocess/ec-public/materials/2024-04-24/JCP-State_of_OpenJDK_on_RISC-V.pdf)

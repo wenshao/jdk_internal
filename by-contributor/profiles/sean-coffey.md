@@ -19,7 +19,9 @@
 
 ## 1. 概述
 
-Sean Coffey is an OpenJDK engineer at Oracle and a key contributor to the Java security subsystem. With 171 contributions to openjdk/jdk, he specializes in JSSE (Java Secure Socket Extension), TLS protocol implementation, SSL logging and diagnostics, and cryptographic provider infrastructure. His work ensures that Java's TLS stack remains correct, debuggable, and performant. A significant portion of his contributions predate the GitHub migration, reflecting long-standing expertise in Java security internals.
+Sean Coffey (Seán Coffey) is a consulting engineer in the Java Platform Group at Oracle, passionate about improving the debug and supportability features of the JDK. With 171 contributions to openjdk/jdk, he specializes in JSSE (Java Secure Socket Extension), TLS protocol implementation, SSL logging and diagnostics, and cryptographic provider infrastructure. His work ensures that Java's TLS stack remains correct, debuggable, and performant. A significant portion of his contributions predate the GitHub migration, reflecting long-standing expertise in Java security internals.
+
+Sean 是 OpenJDK 7u 项目的维护者之一，并曾担任 **JDK 8 Updates 项目负责人 (Project Lead)**。他的核心领域涵盖 networking、security、IO/NIO 和 i18n。他是 OpenJDK Members Group 成员和 JDK Reviewer。他在 FOSDEM 上多次演讲：2013 年主讲 "OpenJDK7u, progress and highlights"，2025 年主讲 "Monitoring Security Operations with JDK Flight Recorder Events"。
 
 ---
 
@@ -34,6 +36,8 @@ Sean Coffey is an OpenJDK engineer at Oracle and a key contributor to the Java s
 | **PRs** | [38 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Acoffeys+is%3Aclosed+label%3Aintegrated) |
 | **Total Contributions** | 171 (including pre-GitHub commits) |
 | **主要领域** | JSSE, TLS/SSL, Security Providers, Crypto, Diagnostics |
+| **OpenJDK 角色** | OpenJDK Member, JDK Reviewer, 前 JDK 8u Project Lead, OpenJDK 7u Maintainer |
+| **会议演讲** | FOSDEM 2013 ("OpenJDK7u, progress and highlights"), FOSDEM 2025 ("Monitoring Security Operations with JDK Flight Recorder Events") |
 
 ---
 
@@ -124,3 +128,5 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 - [GitHub Commits to openjdk/jdk](https://github.com/openjdk/jdk/commits?author=coffeys)
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Acoffeys+is%3Aclosed+label%3Aintegrated)
 - [OpenJDK Census](https://openjdk.org/census#coffeys)
+- [FOSDEM 2013 Speaker Profile](https://archive.fosdem.org/2013/schedule/speaker/sean_coffey/)
+- [FOSDEM 2025 Speaker Profile](https://archive.fosdem.org/2025/schedule/speaker/sean_coffey/)

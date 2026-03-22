@@ -27,10 +27,14 @@ Andrew Hughes is a Red Hat engineer based in Sheffield, UK, and one of the most 
 
 | Attribute | Value |
 |-----------|-------|
-| **Name** | Andrew Hughes |
+| **Name** | Andrew John Hughes |
 | **Current Organization** | Red Hat, Inc. (@rh-openjdk) |
+| **Title** | Senior Software Engineer (Free Java) |
 | **GitHub** | [@gnu-andrew](https://github.com/gnu-andrew) |
+| **Personal Website** | [fuseyism.com](http://fuseyism.com/) |
+| **Blog** | [blog.fuseyism.com](http://blog.fuseyism.com/) |
 | **Bio** | #java / @openjdk developer, OpenJDK 8u, 11u, 17u, 21u, 25u, @icedtea-git & #GNUClasspath maintainer |
+| **Education** | PhD, University of Sheffield (2009) |
 | **Location** | Sheffield, UK |
 | **PRs** | [6 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Agnu-andrew+is%3Aclosed+label%3Aintegrated) |
 | **Total Contributions** | 65 (including pre-GitHub commits and update repos) |
@@ -100,7 +104,38 @@ Fixed the x86 32-bit build when `-fcf-protection` was passed in compiler flags. 
 
 ---
 
-## 6. Development Style
+## 6. Career History
+
+| Period | Role | Details |
+|--------|------|---------|
+| **2004-2007** | GNU Classpath Volunteer | Free Java contributor, working on GNU Classpath, GCJ, Mauve test suite, Kaffe, JamVM, Cacao, and Jikes RVM |
+| **2007-2008** | OpenJDK/IcedTea Volunteer | Started contributing to OpenJDK and IcedTea projects; won Innovation Challenge Awards |
+| **2008-present** | Red Hat Senior Software Engineer | Joined Red Hat's Java team in October 2008; maintains OpenJDK update releases and IcedTea |
+
+### OpenJDK Roles
+
+- **Maintainer**: OpenJDK 8u, 11u, 17u, 21u, 25u update projects
+- **Reviewer**: OpenJDK mainline
+- **Co-maintainer**: GNU Classpath (alongside Mark Wielaard, responsible for releases from 0.96 on)
+- **Maintainer**: IcedTea project (responsible for most recent releases)
+
+### Conference Talks
+
+| Year | Event | Topic |
+|------|-------|-------|
+| **2009** | FOSDEM (Free Java Devroom) | Cross-compiling OpenJDK using IcedTea and OpenEmbedded (Jalimo project) |
+| **2009** | FOSDEM | The State of OpenJDK 7 |
+
+### Notable Achievements
+
+- Instrumental in Red Hat's takeover of stewardship for OpenJDK 8 and OpenJDK 11 projects from Oracle
+- One of the longest-serving Free Java contributors, active since 2004
+- Ensures critical security patches reach downstream Linux distributions through update release management
+- Started using GNU/Linux in 1998; has been focused exclusively on Free Java since 2004
+
+---
+
+## 7. Development Style
 
 ### Patterns
 
@@ -116,9 +151,15 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 
 ---
 
-## 7. Related Links
+## 8. Related Links
 
 - [GitHub Profile](https://github.com/gnu-andrew)
+- [Personal Website](http://fuseyism.com/)
+- [Blog (GNU/Andrew)](http://blog.fuseyism.com/)
+- [LinkedIn](https://www.linkedin.com/in/gnuandrew/)
+- [Red Hat Developer Profile](https://developers.redhat.com/author/andrew-hughes)
+- [OpenJDK Wiki Profile](https://wiki.openjdk.org/display/~andrew)
+- [Twitter/X](https://twitter.com/gnu_andrew_java)
 - [GitHub Commits to openjdk/jdk](https://github.com/openjdk/jdk/commits?author=gnu-andrew)
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Agnu-andrew+is%3Aclosed+label%3Aintegrated)
 - [IcedTea Project](https://icedtea.classpath.org/)

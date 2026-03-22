@@ -28,8 +28,10 @@ Tobias Holenstein is a compiler engineer who has made 67 contributions to openjd
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Tobias Holenstein |
-| **Current Organization** | Oracle (GitHub profile lists Snyk) |
+| **Current Organization** | Oracle (HotSpot JIT Compiler Team) |
+| **Title** | Member of Technical Staff |
 | **Location** | Zurich, Switzerland |
+| **Personal Website** | [tobias-holenstein.com](https://www.tobias-holenstein.com/) |
 | **GitHub** | [@tobiasholenstein](https://github.com/tobiasholenstein) |
 | **PRs** | [83 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Atobiasholenstein+is%3Aclosed+label%3Aintegrated) |
 | **Total Contributions** | 67 (tracked count) |
@@ -103,7 +105,28 @@ Upgraded IGV to Netbeans Platform 20 ([PR #17106](https://github.com/openjdk/jdk
 
 ---
 
-## 6. Development Style
+## 6. Career History & Academic Background
+
+| Period | Role | Details |
+|--------|------|---------|
+| **Current** | Member of Technical Staff, Oracle | HotSpot JIT Compiler Team, maintains and improves the C2 compiler and IGV |
+| **Previous** | Software Engineer, Snyk | Security-focused development tooling |
+| **Academic** | Research (ETH Zurich area) | Designed and implemented an LLIR interpreter backend for PyPy's tracing JIT compiler framework (up to 6x faster performance); extended the Data-Centric Parallel Programming Framework (DaCe) with the polyhedral model |
+
+### Publications & Articles
+
+| Year | Title | Venue |
+|------|-------|-------|
+| **2023** | [Preserving the Mental Map when Visualizing Dynamic Graphs](https://inside.java/2023/06/12/preserving-mental-map/) | Inside.java — Article about IGV's approach to maintaining layout stability when visualizing C2's dynamic IR graphs |
+
+### OpenJDK Roles
+
+- **JDK Reviewer** (voted in June 2023 with 22 yes votes, 0 vetoes)
+- Primary driver of IGV (IdealGraphVisualizer) modernization
+
+---
+
+## 7. Development Style
 
 ### Patterns
 
@@ -118,8 +141,12 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. IGV-re
 
 ---
 
-## 7. Related Links
+## 8. Related Links
 
 - [GitHub Profile](https://github.com/tobiasholenstein)
+- [Personal Website](https://www.tobias-holenstein.com/)
+- [LinkedIn](https://www.linkedin.com/in/tobiasholenstein/)
+- [Inside.java Article: Preserving the Mental Map](https://inside.java/2023/06/12/preserving-mental-map/)
+- [JDK Reviewer Vote Result](https://mail.openjdk.org/pipermail/jdk-dev/2023-June/007918.html)
 - [GitHub Commits to openjdk/jdk](https://github.com/openjdk/jdk/commits?author=tobiasholenstein)
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Atobiasholenstein+is%3Aclosed+label%3Aintegrated)

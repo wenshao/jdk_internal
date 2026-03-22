@@ -22,6 +22,8 @@
 
 Ivan Walulya is a HotSpot GC engineer at Oracle based in Gothenburg, Sweden. With 99 contributions to openjdk/jdk, he is a core developer on the G1 garbage collector, focusing on concurrent marking, remembered set management, parallel GC phases, and oop iteration optimization. His work directly impacts G1 pause times, throughput, and memory footprint across production JDK deployments.
 
+He holds a PhD from Chalmers University of Technology (2018) with a thesis titled "On Design and Applications of Practical Concurrent Data Structures", focusing on lock-free concurrent algorithms. His academic research on lock-free data structures (priority queues, kD-trees, linked-lists, binary search trees) with publications receiving over 100 citations directly informs his work on concurrent GC algorithms. He is a co-author of **JEP 522: G1 GC: Improve Throughput by Reducing Synchronization** (targeted to JDK 26), a significant JEP to reduce write barrier overhead and synchronization between application and GC threads. He is a member of the HotSpot Group and the Galahad Project in OpenJDK.
+
 ---
 
 ## 2. Basic Information
@@ -30,7 +32,9 @@ Ivan Walulya is a HotSpot GC engineer at Oracle based in Gothenburg, Sweden. Wit
 |-----------|-------|
 | **Name** | Ivan Walulya |
 | **Current Organization** | Oracle |
+| **Previous Affiliation** | Chalmers University of Technology (PhD) |
 | **Location** | Gothenburg, Sweden |
+| **Education** | PhD in Computer Science, Chalmers University of Technology (2018) |
 | **GitHub** | [@walulyai](https://github.com/walulyai) |
 | **OpenJDK** | [@iwalulya](https://openjdk.org/census#iwalulya) |
 | **Email** | iwalulya@openjdk.org |
@@ -63,6 +67,10 @@ Ivan Walulya is a HotSpot GC engineer at Oracle based in Gothenburg, Sweden. Wit
 ---
 
 ## 4. Key Contributions
+
+### 4.0 JEP 522: G1 GC Throughput Improvement (JDK 26)
+
+Co-authored [JEP 522](https://openjdk.org/jeps/522) with Thomas Schatzl, targeting JDK 26. This JEP reduces G1's synchronization overhead and write barrier size to improve application throughput. This is one of the most impactful G1 changes in recent JDK releases.
 
 ### 4.1 G1 Concurrent Marking Improvements
 
@@ -118,3 +126,7 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 - [GitHub Commits to openjdk/jdk](https://github.com/openjdk/jdk/commits?author=walulyai)
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Awalulyai+is%3Aclosed+label%3Aintegrated)
 - [OpenJDK Census](https://openjdk.org/census#iwalulya)
+- [JEP 522: G1 GC: Improve Throughput by Reducing Synchronization](https://openjdk.org/jeps/522)
+- [ResearchGate Profile](https://www.researchgate.net/profile/Ivan-Walulya)
+- [Chalmers Research Profile](https://research.chalmers.se/en/person/ivanw)
+- [PhD Thesis: On Design and Applications of Practical Concurrent Data Structures](https://publications.lib.chalmers.se/records/fulltext/500027/500027.pdf)

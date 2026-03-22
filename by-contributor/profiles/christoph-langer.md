@@ -19,7 +19,9 @@
 
 ## 1. 概述
 
-Christoph Langer is a SAP engineer and a key cross-platform contributor to the OpenJDK project. With 201 contributions to openjdk/jdk, he focuses on networking, core libraries, build infrastructure, and platform portability -- particularly ensuring JDK works correctly on AIX and across diverse Linux configurations. As a representative of SAP's long-standing JVM investment, Langer bridges the gap between enterprise JVM requirements and upstream OpenJDK development, contributing fixes that improve portability, debug symbol handling, and test reliability across all supported platforms.
+Christoph Langer is a **Development Manager** at SAP, heading the **SapMachine** team (SAP's OpenJDK distribution), and a key cross-platform contributor to the OpenJDK project. With 201 contributions to openjdk/jdk, he focuses on networking, core libraries, build infrastructure, and platform portability -- particularly ensuring JDK works correctly on AIX and across diverse Linux configurations. As a representative of SAP's long-standing JVM investment, Langer bridges the gap between enterprise JVM requirements and upstream OpenJDK development, contributing fixes that improve portability, debug symbol handling, and test reliability across all supported platforms.
+
+Christoph 在 OpenJDK 中担任多个重要角色：**Build Group 成员**、**Vulnerability Group 成员**、**JDK 11 Updates 联合维护者 (Co-Maintainer)**、JDK Reviewer/Committer、JDK Updates Reviewer、Code Tools Committer。他也是 **Java SE 25 Platform (JSR 400) Expert Group** 成员。他在 FOSDEM 2020 上演讲了 "Helpful NullPointerExceptions - The little thing that became a JEP"，介绍了 JEP 358 (该功能源自 SAP 商业 JVM 自 2006 年起的实现)。
 
 ---
 
@@ -28,13 +30,16 @@ Christoph Langer is a SAP engineer and a key cross-platform contributor to the O
 | Attribute | Value |
 |-----------|-------|
 | **Name** | Christoph Langer |
-| **Current Organization** | SAP |
+| **Current Organization** | SAP (Development Manager, SapMachine team) |
 | **GitHub** | [@RealCLanger](https://github.com/RealCLanger) |
 | **OpenJDK** | [@clanger](https://openjdk.org/census#clanger) |
 | **Email** | clanger@openjdk.org |
 | **PRs** | [81 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3ARealCLanger+is%3Aclosed+label%3Aintegrated) |
 | **Total Contributions** | 201 (including pre-GitHub commits) |
 | **主要领域** | Networking, Core Libraries, Cross-Platform Portability, Build/Packaging |
+| **OpenJDK 角色** | Build Group Member, Vulnerability Group Member, JDK Reviewer/Committer, JDK Updates Reviewer, Code Tools Committer, JDK 11u Co-Maintainer |
+| **标准组织** | Java SE 25 Platform (JSR 400) Expert Group Member |
+| **会议演讲** | FOSDEM 2020: "Helpful NullPointerExceptions - The little thing that became a JEP" |
 
 ---
 
@@ -130,3 +135,5 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Langer
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3ARealCLanger+is%3Aclosed+label%3Aintegrated)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20clanger)
 - [OpenJDK Census](https://openjdk.org/census#clanger)
+- [FOSDEM 2020 Speaker Profile](https://archive.fosdem.org/2020/schedule/speaker/christoph_langer/)
+- [SapMachine](https://sapmachine.io/) - SAP's OpenJDK distribution

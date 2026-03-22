@@ -19,7 +19,9 @@
 
 ## 1. 概述
 
-Tony Printezis is a veteran garbage collection engineer who played a central role in the development and evolution of the G1 (Garbage-First) garbage collector in HotSpot. With 193 contributions to openjdk/jdk, the vast majority from the pre-GitHub era (before 2019), he was one of the architects of G1 GC's concurrent marking, remembered set management, and pause-time optimization. He worked at Oracle on the HotSpot GC team before moving to Twitter/X where he worked on JVM performance at scale, and is currently at Rivos working on RISC-V.
+Tony Printezis (Antonios Printezis) is a veteran garbage collection engineer with over 20 years of virtual machine implementation experience. He is a co-author of the foundational 2004 paper "Garbage-First Garbage Collection" (with David Detlefs, Christine Flood, and Steve Heller) and was the tech lead of G1 GC. He also designed and implemented the first version of the Concurrent Mark-Sweep (CMS) garbage collector in ExactVM -- the first incremental/concurrent GC ever productized in a Java Virtual Machine. Earlier in his career, he was a member of the Persistent Java (PJama) research group at the University of Glasgow.
+
+With 193 contributions to openjdk/jdk, the vast majority from the pre-GitHub era (before 2019), he was one of the architects of G1 GC's concurrent marking, remembered set management, and pause-time optimization. He worked at Oracle/Sun on the HotSpot GC team, then moved to Twitter/X where he worked on JVM performance at scale as a Staff Software Engineer on the VM Team. He is currently at Rivos working on RISC-V architecture.
 
 ---
 
@@ -27,13 +29,15 @@ Tony Printezis is a veteran garbage collection engineer who played a central rol
 
 | Attribute | Value |
 |-----------|-------|
-| **Name** | Tony Printezis |
-| **Current Organization** | Rivos |
-| **Previous Organizations** | Oracle, Twitter/X |
+| **Name** | Tony Printezis (Antonios Printezis) |
+| **Current Organization** | Rivos (RISC-V) |
+| **Previous Organizations** | Twitter/X, Oracle/Sun Microsystems, University of Glasgow |
+| **Education** | PhD and BSc(Hons) in Computing Science, University of Glasgow |
 | **GitHub** | [@gctony](https://github.com/gctony) |
 | **OpenJDK** | [@tonyp](https://openjdk.org/census#tonyp) |
+| **OpenJDK Roles** | HotSpot Group Member, JDK Project Member, JDK Updates Project Member |
 | **Total Contributions** | 193 (primarily pre-GitHub commits) |
-| **主要领域** | G1 GC, GC Infrastructure, HotSpot Runtime |
+| **主要领域** | G1 GC, CMS GC, GC Infrastructure, HotSpot Runtime, RISC-V |
 
 ---
 
@@ -104,6 +108,7 @@ Tony Printezis's openjdk/jdk contributions were concentrated in the pre-GitHub e
 - **Performance-oriented**: Work consistently focused on reducing GC pause times and improving throughput, reflecting the core goals of G1 GC development.
 - **Infrastructure builder**: Contributed foundational GC infrastructure that multiple collectors depend on, not just G1-specific code.
 - **Cross-domain evolution**: Transitioned from GC work at Oracle to large-scale JVM tuning at Twitter/X, and later to RISC-V architecture work at Rivos.
+- **Conference speaker**: Prolific speaker at industry conferences on JVM and GC topics.
 
 ### Commit Style
 
@@ -117,3 +122,20 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Pre-Gi
 - [GitHub Commits to openjdk/jdk](https://github.com/openjdk/jdk/commits?author=gctony)
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Agctony+is%3Aclosed+label%3Aintegrated)
 - [OpenJDK Census](https://openjdk.org/census#tonyp)
+
+### 会议演讲
+
+| 会议 | 年份 | 主题 |
+|------|------|------|
+| QCon San Francisco | 2015 | [Life of a Twitter JVM Engineer](https://www.infoq.com/presentations/twitter-services/) |
+| QCon San Francisco | 2016 | JVM/GC at Twitter |
+| QCon New York | 2019 | JVM performance and GC |
+| QCon London | 2022 | Program Committee Chair |
+
+### 学术论文
+
+| 论文 | 年份 | 说明 |
+|------|------|------|
+| [Garbage-First Garbage Collection](https://www.researchgate.net/publication/221032945_Garbage-First_garbage_collection) | 2004 (ISMM) | G1 GC 奠基论文 (合著: Detlefs, Flood, Heller, Printezis) |
+| [A Generational Mostly-concurrent Garbage Collector](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=25d7b11119a6a616b936c8203e8a28d7c016d27f) | 2000 | CMS GC 相关研究 |
+| PhD Thesis: High-Performance Persistent Object Stores | - | University of Glasgow |

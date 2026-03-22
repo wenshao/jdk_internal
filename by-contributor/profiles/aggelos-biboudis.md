@@ -10,8 +10,10 @@
 |------|-----|
 | **姓名** | Aggelos Biboudis (Angelos Bimpoudis) |
 | **当前组织** | [Oracle](/contributors/orgs/oracle.md) |
-| **职位** | Java Platform Group - 语言和工具 |
+| **职位** | Principal Member of Technical Staff, Java Platform Group - 语言和工具 |
 | **位置** | 苏黎世, 瑞士 |
+| **学历** | PhD, University of Athens (导师: Yannis Smaragdakis) |
+| **个人主页** | [biboudis.github.io](http://biboudis.github.io/) |
 | **GitHub** | [@biboudis](https://github.com/biboudis) |
 | **OpenJDK** | [@biboudis](https://openjdk.org/census#biboudis) |
 | **角色** | JDK Reviewer, Committer |
@@ -73,19 +75,50 @@
 
 ---
 
-## 5. 技术深度
+## 5. 职业时间线
 
-Aggelos Biboudis 是 Oracle Java Platform Group 的核心成员，专注于 Java 语言新特性的设计和 javac 编译器实现。
+| 年份 | 事件 | 详情 |
+|------|------|------|
+| **~2017** | PhD 毕业 | University of Athens, 导师 Yannis Smaragdakis, 论文主题: "Expressive and efficient streaming libraries" |
+| **2017-2019** | 博士后研究员 @ EPFL | Scala 3 编译器团队 (LAMP 实验室), 导师 Martin Odersky |
+| **~2019** | 软件工程师 @ Swisscom AG | 瑞士电信公司 |
+| **~2020+** | 加入 Oracle | Java Platform Group, 苏黎世, 专注 Java 语言演进和 javac 编译器 |
+
+---
+
+## 6. 学术成就与发表
+
+### 代表性论文
+
+| 会议 | 论文 |
+|------|------|
+| **POPL 2017** | "Stream Fusion, to Completeness" (与 Oleg Kiselyov, Nick Palladinos, Yannis Smaragdakis 合著) |
+| **ECOOP 2015** | "Streams à la carte: Extensible Pipelines with Object Algebras" |
+| **GPCE 2016** | "Recaf: Java Dialects as Libraries" |
+| **2018** | "Functional Stream Libraries and Fusion: What's Next" (与 Oleg Kiselyov, Martin Odersky 合著) |
+
+### 学术服务
+
+- 曾任 ICFP、SPLASH、OOPSLA 等顶级会议程序委员会成员
+- 共同组织 Shonan Meeting (函数式流处理库)
+- 在 EPFL 和 University of Athens 教授软件工程、编程和编译器课程
+
+---
+
+## 7. 技术深度
+
+Aggelos Biboudis 是 Oracle Java Platform Group 的核心成员，专注于 Java 语言新特性的设计和 javac 编译器实现。他的学术背景 (流处理融合、多阶段编程、类型系统) 为其语言设计工作提供了扎实的理论基础。
 
 **关键技术领域**:
 - 模式匹配：原始类型模式、instanceof 扩展、switch 表达式集成
 - javac 编译器：类型检查、代码生成、Lambda 翻译、签名生成
 - JEP 实现：从规范到编译器到运行时的完整特性交付
 - 类型系统：泛型、内部类、类型注解、精确转换
+- 流处理融合：PhD 研究成果，multi-stage programming 优化技术
 
 ---
 
-## 6. 协作网络
+## 8. 协作网络
 
 | 审查者 | 领域 |
 |--------|------|
@@ -95,7 +128,7 @@ Aggelos Biboudis 是 Oracle Java Platform Group 的核心成员，专注于 Java
 
 ---
 
-## 7. 历史贡献
+## 9. 历史贡献
 
 | JDK 版本 | 主要贡献 |
 |----------|----------|
@@ -107,11 +140,15 @@ Aggelos Biboudis 是 Oracle Java Platform Group 的核心成员，专注于 Java
 
 ---
 
-## 8. 外部资源
+## 10. 外部资源
 
 | 类型 | 链接 |
 |------|------|
 | **GitHub** | [@biboudis](https://github.com/biboudis) |
+| **个人主页** | [biboudis.github.io](http://biboudis.github.io/) |
+| **Google Scholar** | [Aggelos Biboudis](https://scholar.google.com/citations?user=hIq9bFUAAAAJ&hl=en) |
+| **DBLP** | [Aggelos Biboudis](https://dblp.uni-trier.de/pid/136/1016.html) |
+| **LinkedIn** | [biboudis](https://www.linkedin.com/in/biboudis/) |
 | **OpenJDK Census** | [biboudis](https://openjdk.org/census#biboudis) |
 | **公司** | [Oracle](https://www.oracle.com/) |
 | **Commits** | [openjdk/jdk commits](https://github.com/openjdk/jdk/commits?author=biboudis) |

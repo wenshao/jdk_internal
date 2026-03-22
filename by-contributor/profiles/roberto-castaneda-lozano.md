@@ -42,7 +42,11 @@
 
 | 年份 | 事件 | 详情 |
 |------|------|------|
-| **早期** | 加入 Oracle | Oracle HotSpot JVM Compiler 团队 |
+| **~2014-2018** | KTH Royal Institute of Technology 博士研究 | 约束编程在编译器优化中的应用 (RISE SICS) |
+| **2018** | 获得博士学位 | 论文: "Constraint-Based Register Allocation and Instruction Scheduling" |
+| **2019** | ACP Doctoral Research Award Honorable Mention | 博士研究获学术界认可 |
+| **~2018-2020** | University of Edinburgh 研究员 | 计算系统架构研究所, 编译器安全研究 |
+| **~2020** | 加入 Oracle | HotSpot JVM Compiler 团队 |
 | **2020** | GitHub 时代贡献开始 | C2 编译器修复和改进 |
 | **2024** | Late Barrier Expansion for G1 | 实现 G1 GC 屏障的后置展开 |
 | **2025** | IGV 大规模增强 | 差异视图、CFG 视图、活跃范围可视化 |
@@ -115,7 +119,7 @@
 
 ### C2 编译器和 GC 屏障架构专家
 
-Roberto Castañeda Lozano 在 C2 JIT 编译器与 GC 子系统的交叉领域具有深厚专长。
+Roberto Castañeda Lozano 在 C2 JIT 编译器与 GC 子系统的交叉领域具有深厚专长。他拥有 KTH Royal Institute of Technology 博士学位，研究方向为约束编程在寄存器分配和指令调度中的应用。他开发的 [Unison](https://unison-code.github.io/) 开源工具将约束编程应用于 LLVM 编译器后端优化，被 Ericsson 等工业界合作伙伴认可。
 
 **关键技术领域**:
 - C2 Ideal Graph：节点优化、图变换、阶段管理
@@ -181,12 +185,25 @@ Roberto Castañeda Lozano 在 C2 JIT 编译器与 GC 子系统的交叉领域具
 |------|------|
 | **GitHub** | [@robcasloz](https://github.com/robcasloz) |
 | **OpenJDK Census** | [robcasloz](https://openjdk.org/census#robcasloz) |
+| **个人主页** | [robcasloz.github.io](https://robcasloz.github.io/) |
+| **DBLP** | [Roberto Castaneda Lozano](https://dblp.org/pid/38/8779.html) |
 | **公司** | [Oracle](https://www.oracle.com/) |
+
+### 学术论文与博客
+
+| 类型 | 标题 | 年份 |
+|------|------|------|
+| **博士论文** | Constraint-Based Register Allocation and Instruction Scheduling (KTH) | 2018 |
+| **期刊论文** | Combinatorial Register Allocation and Instruction Scheduling (ACM TOPLAS) | 2019 |
+| **综述论文** | Survey on Combinatorial Register Allocation and Instruction Scheduling (ACM Computing Surveys) | 2019 |
+| **Inside.java 博客** | [Preserving the Mental Map when Visualizing Dynamic Graphs](https://inside.java/2023/06/12/preserving-mental-map/) | 2023 |
 
 ### 相关链接
 
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=robcasloz)
 - [GitHub PRs](https://github.com/openjdk/jdk/pulls?q=author%3Arobcasloz+is%3Amerged)
+- [Unison: Constraint-based compiler backend](https://unison-code.github.io/)
+- [Publications](https://robcasloz.github.io/publications.html)
 
 ---
 

@@ -24,9 +24,13 @@
 |------|-----|
 | **姓名** | Severin Gehwolf |
 | **当前组织** | [Red Hat](/contributors/orgs/red-hat.md) (GitHub 显示 IBM) |
+| **职位** | Principal Software Engineer |
 | **GitHub** | [@jerboaa](https://github.com/jerboaa) |
 | **OpenJDK** | [@sgehwolf](https://openjdk.org/census#sgehwolf) |
 | **角色** | JDK Reviewer, Committer |
+| **OpenJDK 项目** | JDK Project, JDK Updates Project, Galahad Project |
+| **OpenJDK 组** | IDE & Tooling Support Group, Members Group |
+| **其他角色** | Eclipse Adoptium PMC Member |
 | **主要领域** | 容器支持, cgroup, jlink, 构建系统, HotSpot Runtime |
 | **Contributions (openjdk/jdk)** | 149 |
 | **PRs (integrated)** | 75 |
@@ -40,8 +44,11 @@
 
 | 年份 | 事件 | 详情 |
 |------|------|------|
-| **早期** | 加入 Red Hat | Red Hat OpenJDK 团队，专注 Linux 容器环境适配 |
+| **早期** | 加入 Red Hat | Red Hat OpenJDK 团队，专注 OpenJDK 工具和 Zero 汇编端口 |
+| **2015** | FOSDEM 2015 演讲 | "Sustaining the Zero Assembler Port in OpenJDK" (与 Roman Kennke) |
+| **2017** | FOSDEM 2017 演讲 | "Diagnosing Issues in Java Apps using Thermostat and Byteman" |
 | **2020** | GitHub 时代贡献开始 | 容器测试、cgroup 支持改进 |
+| **2022-2023** | cgroup v2 向后移植 | 主导 30 个 cgroup v2 补丁移植到 OpenJDK 8u372 |
 | **2023-2024** | cgroup v2 完善 | 嵌套控制组检测、层级内存限制修复 |
 | **2025** | jlink 可升级文件 / 运行时镜像链接 | JEP 493 相关实现，引入可升级文件概念 |
 | **2026** | 持续贡献 | 容器测试、构建系统改进 |
@@ -178,11 +185,25 @@ Severin Gehwolf 的工作确保 JVM 在现代容器化部署环境中正确运�
 |------|------|
 | **GitHub** | [@jerboaa](https://github.com/jerboaa) |
 | **OpenJDK Census** | [sgehwolf](https://openjdk.org/census#sgehwolf) |
+| **Red Hat Developer** | [severin-gehwolf](https://developers.redhat.com/author/severin-gehwolf) |
+
+### 会议演讲
+
+| 会议 | 年份 | 主题 |
+|------|------|------|
+| FOSDEM | 2015 | [Sustaining the Zero Assembler Port in OpenJDK](https://jerboaa.fedorapeople.org/presentations/OpenJDK_Zero_FOSDEM_2015-02-01.pdf) (与 Roman Kennke) |
+| FOSDEM | 2017 | [Diagnosing Issues in Java Apps using Thermostat and Byteman](https://archive.fosdem.org/2017/schedule/event/thermostat/) |
+
+### Red Hat Developer 文章
+
+- [Java 17: What's new in OpenJDK's container awareness](https://developers.redhat.com/articles/2022/04/19/java-17-whats-new-openjdks-container-awareness)
+- [OpenJDK 8u372 to feature cgroup v2 support](https://developers.redhat.com/articles/2023/04/19/openjdk-8u372-feature-cgroup-v2-support)
 
 ### 相关链接
 
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=jerboaa)
 - [GitHub PRs](https://github.com/openjdk/jdk/pulls?q=author%3Ajerboaa+is%3Amerged)
+- [Fedora Wiki: User:Jerboaa](https://fedoraproject.org/wiki/User:Jerboaa)
 
 ---
 

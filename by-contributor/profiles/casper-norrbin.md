@@ -25,11 +25,11 @@
 | **姓名** | Casper Norrbin |
 | **当前组织** | [Oracle](/contributors/orgs/oracle.md) |
 | **职位** | Software Engineer (HotSpot Runtime) |
-| **位置** | 斯德哥尔摩, 瑞典 |
+| **位置** | Stockholm, Sweden |
 | **GitHub** | [@caspernorrbin](https://github.com/caspernorrbin) |
 | **OpenJDK** | [@caspernorrbin](https://openjdk.org/census#caspernorrbin) |
 | **角色** | JDK Committer |
-| **主要领域** | Linux 容器, 运行时, HotSpot Rewriter, 操作系统抽象 |
+| **主要领域** | Linux 容器, 运行时, HotSpot Rewriter, 操作系统抽象, ZGC (buddy allocator 实验) |
 | **PRs (integrated)** | 39 |
 | **活跃时间** | 2024 - 至今 (OpenJDK GitHub 时代) |
 

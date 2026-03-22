@@ -25,7 +25,7 @@
 | **职位** | HotSpot JVM Engineer |
 | **GitHub** | [@calvinccheung](https://github.com/calvinccheung) |
 | **OpenJDK** | [@calvinccheung](https://openjdk.org/census#calvinccheung) |
-| **角色** | OpenJDK Member, JDK Reviewer |
+| **角色** | OpenJDK Member, JDK Reviewer/Committer |
 | **PRs** | [187+ integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Acalvinccheung+is%3Aclosed+label%3Aintegrated) |
 | **贡献数** | 367 contributions to openjdk/jdk |
 | **主要领域** | CDS, AppCDS, 类加载, 启动优化, AOT 缓存 |
@@ -39,7 +39,7 @@
 |------|------|------|
 | **2020** | 开始在 openjdk/jdk 提交 PR | 最早期贡献涉及 CDS 测试清理和动态归档 |
 | **2020-10** | Lambda 代理类静态 CDS 归档 | PR #364: 将 Lambda 代理类支持引入静态 CDS 归档 |
-| **2020-至今** | Oracle HotSpot Engineer | 持续专注于 CDS/AppCDS 核心开发 |
+| **2020-至今** | Oracle HotSpot Engineer | 持续专注于 CDS/AppCDS 核心开发；创建了 OpenJDK HotSpot Wiki 上的 [AppCDS 文档页面](https://wiki.openjdk.org/display/HotSpot/Application+Class+Data+Sharing+-+AppCDS) |
 | **2024-2025** | AOT/Leyden 贡献 | 为 AOT 类链接、缓存稳定性做出大量贡献 |
 | **2025** | JDK 26 活跃贡献者 | 72 个 PR (2024-2025)，涵盖 AOT 缓存与 CDS 改进 |
 
