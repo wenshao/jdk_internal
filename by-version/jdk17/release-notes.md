@@ -64,10 +64,10 @@ public non-sealed class Square implements Shape {
 
 ---
 
-### JEP 395: Records (正式版) ⭐⭐
+### JEP 395: Records (JDK 16 已正式版) ⭐⭐
 
-**状态**: 正式发布
-**概述**: Record 正式版，简化数据载体类的定义。
+**状态**: JDK 16 正式发布 (JEP 395)，JDK 17 继续可用
+**概述**: Record 在 JDK 16 正式发布，简化数据载体类的定义。
 
 ```java
 // 定义 Record

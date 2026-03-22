@@ -24,7 +24,7 @@
 | **JDK 25** | 2025-09 | 2033+ | LTS |
 | **JDK 21** | 2023-09 | 2031-10 | 稳定 LTS |
 | **JDK 17** | 2021-09 | 2029-10 | 稳定 LTS |
-| **JDK 11** | 2018-09 | 2032-01 | 稳定 LTS |
+| **JDK 11** | 2018-09 | 2027-10 | 稳定 LTS |
 | **JDK 8** | 2014-03 | 2030-12 (付费) | 稳定 LTS |
 
 ### Feature 版本（短期支持，6个月）
@@ -110,7 +110,7 @@
 - [版本详情](jdk21/index.md) | [发布说明](jdk21/release-notes.md)
 
 #### [JDK 17](jdk17/) - LTS 2021
-- 新特性：Sealed Classes (正式版)、Records (正式版)
+- 新特性：Sealed Classes (正式版)、Records (JDK 16 已正式版)
 - Pattern Matching for instanceof (JDK 16 已正式版)
 - 强封装：JDK 内部 API 默认不可访问
 - [版本详情](jdk17/index.md) | [发布说明](jdk17/release-notes.md)
