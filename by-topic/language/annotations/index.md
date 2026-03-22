@@ -11,15 +11,16 @@
 2. [核心贡献者](#2-核心贡献者)
 3. [内置注解](#3-内置注解)
 4. [自定义注解](#4-自定义注解)
-5. [注解处理器 (JSR 269)](#5-注解处理器-jsr-269)
-6. [可重复注解 (JDK 8+)](#6-可重复注解-jdk-8)
-7. [类型注解 (JSR 308)](#7-类型注解-jsr-308)
+5. [注解处理器 (JSR 269 / APT)](#5-注解处理器-jsr-269--annotation-processing-tool-apt)
+6. [可重复注解 (JDK 8+ / JEP 120)](#6-可重复注解-jdk-8--repeatable-annotations-jep-120)
+7. [类型注解 (JSR 308 / JEP 104)](#7-类型注解-jsr-308--jep-104--type-annotations)
 8. [注解模式匹配 (JDK 21+)](#8-注解模式匹配-jdk-21)
-9. [常用注解](#9-常用注解)
-10. [注解反射](#10-注解反射)
-11. [重要 PR 分析](#11-重要-pr-分析)
-12. [注解性能最佳实践](#12-注解性能最佳实践)
-13. [相关链接](#13-相关链接)
+9. [元注解](#9-元注解-meta-annotations)
+10. [常用标准注解](#10-常用标准注解-standard-annotations)
+11. [运行时注解处理](#11-运行时注解处理-runtime-annotation-processing)
+12. [重要 PR 分析](#12-重要-pr-分析)
+13. [注解性能最佳实践](#13-注解性能最佳实践)
+14. [相关链接](#14-相关链接)
 
 ---
 
@@ -152,7 +153,27 @@ public @interface MyAnnotation {
 
 ---
 
-## 5. 注解处理器 (JSR 269)
+## 5. 注解处理器 (JSR 269) / Annotation Processing Tool (APT)
+
+> JSR 269 定义了 Pluggable Annotation Processing API，替代了早期 `com.sun.mirror` API。
+> 核心包：`javax.annotation.processing`，核心类：`AbstractProcessor`。
+
+### 处理器生命周期 (Processor Lifecycle)
+
+```
+                 ┌─────────────────────────────────────────┐
+                 │              javac 编译器                │
+                 │                                         │
+ 源码 ──────────►│  Round 1 ──► Round 2 ──► ... ──► Final  │──► .class
+                 │  discover    process      process  done  │
+                 │  processors  generated    generated       │
+                 │              sources      sources         │
+                 └─────────────────────────────────────────┘
+```
+
+- **多轮处理 (Multi-round processing)**: 每轮处理新生成的源文件，直到没有新文件产生
+- **最终轮 (Final round)**: `RoundEnvironment.processingOver()` 返回 `true`
+- **声明/返回语义**: `process()` 返回 `true` 表示"已消费"该注解，其他处理器不再处理
 
 ### 创建处理器
 
@@ -160,6 +181,7 @@ public @interface MyAnnotation {
 import javax.annotation.processing.*;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.*;
+import javax.tools.Diagnostic;
 import java.util.Set;
 
 @SupportedAnnotationTypes("com.example.MyAnnotation")
@@ -167,52 +189,97 @@ import java.util.Set;
 public class MyProcessor extends AbstractProcessor {
 
     @Override
+    public synchronized void init(ProcessingEnvironment processingEnv) {
+        super.init(processingEnv);
+        // processingEnv 提供四大工具：
+        // - getMessager()    编译消息输出 (Compiler messages)
+        // - getFiler()       文件创建 (Source/Class/Resource generation)
+        // - getElementUtils() 元素工具 (Element utilities)
+        // - getTypeUtils()   类型工具 (Type utilities)
+    }
+
+    @Override
     public boolean process(Set<? extends TypeElement> annotations,
                           RoundEnvironment roundEnv) {
         for (TypeElement annotation : annotations) {
             for (Element element : roundEnv.getElementsAnnotatedWith(annotation)) {
-                // 处理注解
                 processingEnv.getMessager().printMessage(
                     Diagnostic.Kind.NOTE,
                     "Processing: " + element);
             }
         }
-        return true;
+        return true; // 声明已消费 (claimed)
     }
+}
+```
+
+### 编译时代码生成 (Compile-time Code Generation)
+
+```java
+// 使用 Filer 生成新的 Java 源文件
+@Override
+public boolean process(Set<? extends TypeElement> annotations,
+                      RoundEnvironment roundEnv) {
+    for (Element element : roundEnv.getElementsAnnotatedWith(AutoValue.class)) {
+        String className = element.getSimpleName() + "_Impl";
+        String packageName = processingEnv.getElementUtils()
+            .getPackageOf(element).getQualifiedName().toString();
+
+        try {
+            JavaFileObject file = processingEnv.getFiler()
+                .createSourceFile(packageName + "." + className);
+            try (var writer = file.openWriter()) {
+                writer.write("package " + packageName + ";\n");
+                writer.write("public class " + className + " { }\n");
+            }
+        } catch (IOException e) {
+            processingEnv.getMessager().printMessage(
+                Diagnostic.Kind.ERROR, e.getMessage(), element);
+        }
+    }
+    return true;
 }
 ```
 
 ### 注册处理器
 
 ```bash
-# META-INF/services/javax.annotation.processing.Processor
+# 方式 1: ServiceLoader — META-INF/services/javax.annotation.processing.Processor
 com.example.MyProcessor
-```
 
-### 编译时处理
-
-```bash
-# 编译并运行处理器
+# 方式 2: 命令行指定
 javac -processor com.example.MyProcessor \
     -cp processor.jar \
     source/Main.java
+
+# 方式 3: 自动发现（默认行为）
+# 编译器扫描 classpath 上所有 META-INF/services 注册的处理器
+javac -cp processor.jar source/Main.java
+
+# 禁用注解处理
+javac -proc:none source/Main.java
 ```
 
 ---
 
-## 6. 可重复注解 (JDK 8+)
+## 6. 可重复注解 (JDK 8+) / Repeatable Annotations (JEP 120)
 
-### @Repeatable
+> JEP 120 引入 `@Repeatable` 元注解，允许同一注解在同一声明位置重复使用。
+> 编译器自动将重复注解包装到容器注解 (Container Annotation) 中。
+
+### 容器注解模式 (Container Annotation Pattern)
 
 ```java
 import java.lang.annotation.*;
 
+// 1. 容器注解 — 必须有 value() 方法返回注解数组
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 public @interface Roles {
-    Role[] value();
+    Role[] value();  // 必须命名为 value
 }
 
+// 2. 可重复注解 — @Repeatable 指向容器注解
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 @Repeatable(Roles.class)
@@ -220,29 +287,55 @@ public @interface Role {
     String value();
 }
 
-// 使用
+// 3. 使用：同一位置重复标注
 @Role("admin")
 @Role("user")
 public class User {}
+
+// 编译器实际生成等价形式：
+// @Roles({@Role("admin"), @Role("user")})
+// public class User {}
 ```
 
-### 运行时读取
+### 容器注解约束 (Container Constraints)
+
+| 约束 | 说明 |
+|------|------|
+| `value()` 返回类型 | 必须是可重复注解的数组 |
+| `@Retention` | 容器的保留策略 >= 可重复注解的保留策略 |
+| `@Target` | 容器的目标范围 >= 可重复注解的目标范围 |
+| `@Documented` | 若可重复注解有，则容器也必须有 |
+| `@Inherited` | 若可重复注解有，则容器也必须有 |
+
+### 运行时读取 — getAnnotation vs getAnnotationsByType
 
 ```java
+// getAnnotation: 只返回容器注解 (Container)
 Roles roles = User.class.getAnnotation(Roles.class);
-for (Role role : roles.value()) {
-    System.out.println(role.value());
+if (roles != null) {
+    for (Role role : roles.value()) {
+        System.out.println(role.value());
+    }
 }
 
-// 或直接获取多个
+// getAnnotationsByType: 自动展开容器，直接返回可重复注解数组（推荐）
 Role[] rolesArray = User.class.getAnnotationsByType(Role.class);
+for (Role role : rolesArray) {
+    System.out.println(role.value());  // "admin", "user"
+}
+
+// 注意：getAnnotation(Role.class) 返回 null（因为实际存储的是 @Roles）
+Role single = User.class.getAnnotation(Role.class);  // null!
 ```
 
 ---
 
-## 7. 类型注解 (JSR 308)
+## 7. 类型注解 (JSR 308 / JEP 104) / Type Annotations
 
-### 类型注解用途
+> JSR 308（对应 JEP 104）扩展了注解可出现的位置：从声明 (declarations) 扩展到类型使用 (type uses)。
+> 核心目标：启用可插拔类型系统 (Pluggable Type Systems)，在编译期捕获更多错误。
+
+### TYPE_USE 注解位置
 
 ```java
 import java.lang.annotation.*;
@@ -252,35 +345,69 @@ import java.lang.annotation.*;
 @Target(ElementType.TYPE_USE)
 @interface Nullable {}
 
-// 泛型类型
+// 泛型类型参数 (Generic type arguments)
 Map<@NonNull String, @Nullable Object> map;
 
-// 类型转换
+// 类型转换 (Type cast)
 String str = (@NonNull String) obj;
 
-// 继承
+// 继承/实现 (extends/implements)
 class MyClass extends @NonNull ArrayList<@NonNull String> {}
 
-// 异常
+// 异常声明 (throws)
 void method() throws @NonNull Exception {}
 
-// 创建
+// 对象创建 (new)
 new @NonNull ArrayList<@NonNull String>();
 
-// 类型参数
-<@NonNull T> void genericMethod(T t) {}
+// 类型参数边界 (Type parameter bounds)
+<@NonNull T extends @Nullable Comparable<T>> void sort(List<T> list) {}
 
-// 数组
-String @NonNull [] array;
+// 数组 — 注意位置含义不同
+String @NonNull []   array1;  // 数组本身非空
+@NonNull String []   array2;  // 数组元素非空
+@NonNull String @NonNull [] array3;  // 两者都非空
 ```
 
-### Checker Framework
+### Checker Framework 与 @NonNull/@Nullable 生态
+
+Checker Framework 是 TYPE_USE 注解的主要消费者，提供编译期空安全检查：
 
 ```bash
-# 类型检查
+# 使用 Checker Framework 进行空值检查
 javac -processor org.checkerframework.checker.nullness.NullnessChecker \
+    -Astubs=stubs/ \
     MyFile.java
 ```
+
+```java
+import org.checkerframework.checker.nullness.qual.*;
+
+public class SafeService {
+    // 方法参数非空约束 — 编译期强制
+    public String process(@NonNull String input) {
+        return input.trim();  // 安全：编译器已保证 input != null
+    }
+
+    // 返回值可空声明
+    public @Nullable String find(String key) {
+        return map.get(key);  // 可能返回 null
+    }
+
+    // 编译错误示例：
+    // String result = find("key").trim();
+    //   ↑ error: dereference of possibly-null reference
+}
+```
+
+**常见 TYPE_USE 注解生态对比**:
+
+| 注解包 | 来源 | 特点 |
+|--------|------|------|
+| `org.checkerframework.checker.nullness.qual` | Checker Framework | 完整的可插拔类型系统 |
+| `org.jetbrains.annotations` | JetBrains | IntelliJ IDEA 静态分析 |
+| `jakarta.annotation` | Jakarta EE | 标准化，但仅限声明位置 |
+| `org.eclipse.jdt.annotation` | Eclipse | ECJ 编译器支持 |
 
 ---
 
@@ -311,49 +438,139 @@ if (obj instanceof Circle(double radius)) {
 
 ---
 
-## 9. 常用注解
+## 9. 元注解 (Meta-Annotations)
 
-### Lombok 风格注解
+> 元注解是"注解的注解"，定义在 `java.lang.annotation` 包中，用于控制自定义注解的行为。
 
-```java
-@Data                    // Getter, Setter, equals, hashCode, toString
-@AllArgsConstructor       // 全参构造器
-@NoArgsConstructor        // 无参构造器
-@Builder                 // 建造者模式
-@Value                   // 不可变类
-@Slf4j                   // 日志
-```
-
-### Spring 注解
+| 元注解 | 作用 | 引入版本 |
+|--------|------|----------|
+| `@Target` | 限制注解可出现的位置 (Applicable contexts) | JDK 5 |
+| `@Retention` | 控制注解保留阶段 (SOURCE/CLASS/RUNTIME) | JDK 5 |
+| `@Inherited` | 子类自动继承父类的类级注解 | JDK 5 |
+| `@Documented` | 注解出现在 Javadoc 中 | JDK 5 |
+| `@Repeatable` | 允许同一位置重复使用 (见第 6 节) | JDK 8 |
 
 ```java
-@Component              // 组件
-@Service                // 服务
-@Repository             // 仓库
-@Controller             // 控制器
-@Autowired              // 自动装配
-@RequestMapping         // 请求映射
-@GetMapping             // GET 映射
-@PostMapping            // POST 映射
-```
+// @Inherited 的继承语义
+@Inherited
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+@interface Auditable {}
 
-### JPA 注解
+@Auditable
+class BaseEntity {}
 
-```java
-@Entity                  // 实体
-@Table                   // 表映射
-@Id                     // 主键
-@GeneratedValue         // 生成策略
-@Column                 // 列映射
-@OneToMany              // 一对多
-@ManyToOne              // 多对一
+class UserEntity extends BaseEntity {}
+// UserEntity.class.isAnnotationPresent(Auditable.class) → true
+// 注意：仅对类继承生效，接口实现不继承
 ```
 
 ---
 
-## 10. 注解反射
+## 10. 常用标准注解 (Standard Annotations)
 
-### 读取注解
+### java.lang 内置注解
+
+| 注解 | 用途 | Retention | 说明 |
+|------|------|-----------|------|
+| `@Override` | 重写检查 | SOURCE | 编译器验证方法确实重写了父类方法 |
+| `@Deprecated` | 弃用标记 | RUNTIME | JDK 9+ 增加 `forRemoval` 和 `since` |
+| `@SuppressWarnings` | 抑制警告 | SOURCE | 支持 `"unchecked"`, `"deprecation"`, `"preview"` 等 |
+| `@FunctionalInterface` | 函数式接口 | RUNTIME | 编译器验证恰好一个抽象方法 |
+| `@SafeVarargs` | 可变参数安全 | RUNTIME | 抑制堆污染警告 (heap pollution) |
+
+```java
+// @Deprecated 增强 (JDK 9+)
+@Deprecated(since = "17", forRemoval = true)
+public void legacyMethod() {}
+// since: 标注弃用起始版本
+// forRemoval: true 表示将在未来版本移除，编译器产生更强警告
+
+// @SuppressWarnings 常用值
+@SuppressWarnings("unchecked")     // 未检查的泛型操作
+@SuppressWarnings("deprecation")   // 使用已弃用 API
+@SuppressWarnings("preview")       // 预览特性 (JDK 14+)
+@SuppressWarnings({"unchecked", "rawtypes"})  // 多个值
+```
+
+### JDK 内部注解
+
+| 注解 | 包 | 用途 |
+|------|-----|------|
+| `@CallerSensitive` | `jdk.internal.reflect` | 标记对调用者敏感的方法（如 `Class.forName`） |
+| `@Stable` | `jdk.internal.vm.annotation` | 标记字段为稳定值，JIT 可常量折叠 |
+| `@Contended` | `jdk.internal.vm.annotation` | 避免伪共享 (False sharing)，填充缓存行 |
+| `@ForceInline` | `jdk.internal.vm.annotation` | 强制 JIT 内联 |
+
+### 框架注解设计模式 (Framework Annotation Patterns)
+
+#### Spring — 组件扫描与依赖注入
+
+```java
+// 组件层次 — @Component 的派生注解 (Stereotype annotations)
+@Component              // 通用组件 (Generic component)
+@Service                // 服务层 (Service layer)
+@Repository             // 数据访问层 (DAO layer)，自动异常转换
+@Controller             // MVC 控制器 (Web controller)
+
+// 依赖注入 (Dependency Injection)
+@Autowired              // 按类型注入 (By type)
+@Qualifier("myBean")    // 按名称限定 (By qualifier)
+@Primary                // 多候选时优先 (Primary candidate)
+@Lazy                   // 延迟初始化 (Lazy initialization)
+
+// 条件装配 (Conditional configuration)
+@ConditionalOnProperty(name = "feature.enabled", havingValue = "true")
+@ConditionalOnClass(DataSource.class)
+@ConditionalOnMissingBean(MyService.class)
+```
+
+#### JPA / Hibernate — 对象关系映射
+
+```java
+@Entity                              // 实体类 → 数据库表
+@Table(name = "users")               // 指定表名
+@Id                                  // 主键
+@GeneratedValue(strategy = IDENTITY) // 主键生成策略
+@Column(name = "user_name",          // 列映射
+        nullable = false, length = 50)
+@OneToMany(mappedBy = "user",        // 一对多
+           cascade = CascadeType.ALL,
+           fetch = FetchType.LAZY)
+@ManyToOne                           // 多对一
+@JoinColumn(name = "user_id")       // 外键列
+```
+
+#### Bean Validation — 约束验证
+
+```java
+@Valid                   // 级联验证 (Cascaded validation)
+@NotNull                 // 非空
+@NotBlank                // 非空且非空白字符串
+@Size(min = 2, max = 50) // 大小约束
+@Email                   // 邮箱格式
+@Pattern(regexp = "...")  // 正则匹配
+@Min(0) @Max(100)        // 数值范围
+```
+
+---
+
+## 11. 运行时注解处理 (Runtime Annotation Processing)
+
+### AnnotatedElement API
+
+> `java.lang.reflect.AnnotatedElement` 是所有可携带注解的反射元素的父接口。
+> 实现类：`Class`, `Method`, `Field`, `Constructor`, `Parameter`, `Package`, `Module`。
+
+| 方法 | 行为 | @Inherited | @Repeatable |
+|------|------|------------|-------------|
+| `getAnnotation(Class<A>)` | 返回指定类型的单个注解 | 考虑继承 | 返回 null（实际存的是容器） |
+| `getAnnotations()` | 返回所有注解 | 考虑继承 | 返回容器注解 |
+| `getDeclaredAnnotation(Class<A>)` | 仅当前元素声明的注解 | 不考虑 | 返回 null |
+| `getDeclaredAnnotations()` | 仅当前元素声明的所有注解 | 不考虑 | 返回容器注解 |
+| `getAnnotationsByType(Class<A>)` | 展开容器，返回数组 | 考虑继承 | **自动展开** |
+| `getDeclaredAnnotationsByType(Class<A>)` | 展开容器，仅当前元素 | 不考虑 | **自动展开** |
+| `isAnnotationPresent(Class<A>)` | 是否存在指定注解 | 考虑继承 | 对可重复注解返回 false |
 
 ```java
 import java.lang.annotation.*;
@@ -362,7 +579,7 @@ import java.lang.reflect.*;
 // 类注解
 MyAnnotation annotation = MyClass.class.getAnnotation(MyAnnotation.class);
 
-// 所有注解
+// 所有注解（含从父类 @Inherited 继承的）
 Annotation[] annotations = MyClass.class.getAnnotations();
 
 // 方法注解
@@ -380,22 +597,46 @@ Field field = MyClass.class.getDeclaredField("myField");
 MyAnnotation fieldAnnotation = field.getAnnotation(MyAnnotation.class);
 ```
 
-### 运行时处理注解
+### getAnnotation vs getAnnotationsByType 关键区别
 
 ```java
-public class AnnotationProcessor {
+@Role("admin")
+@Role("user")
+class User {}
+
+// getAnnotation — 查找精确类型，可重复注解存储为容器
+User.class.getAnnotation(Role.class);   // null — 实际不存在单个 @Role
+User.class.getAnnotation(Roles.class);  // @Roles({@Role("admin"), @Role("user")})
+
+// getAnnotationsByType — 自动展开容器（推荐用于可重复注解）
+User.class.getAnnotationsByType(Role.class);  // [@Role("admin"), @Role("user")]
+```
+
+### 运行时注解扫描实践
+
+```java
+public class AnnotationScanner {
     public static void process(Class<?> clazz) {
         // 检查类注解
         if (clazz.isAnnotationPresent(MyAnnotation.class)) {
             MyAnnotation annotation = clazz.getAnnotation(MyAnnotation.class);
             System.out.println("Value: " + annotation.value());
-            System.out.println("Count: " + annotation.count());
         }
 
-        // 处理方法
+        // 扫描方法注解
         for (Method method : clazz.getDeclaredMethods()) {
             if (method.isAnnotationPresent(MyAnnotation.class)) {
-                // 处理方法注解
+                MyAnnotation ma = method.getAnnotation(MyAnnotation.class);
+                // 基于注解值执行逻辑
+            }
+        }
+
+        // 扫描字段上的可重复注解
+        for (Field field : clazz.getDeclaredFields()) {
+            Constraint[] constraints =
+                field.getAnnotationsByType(Constraint.class);
+            for (Constraint c : constraints) {
+                validate(field, c);
             }
         }
     }
@@ -404,7 +645,7 @@ public class AnnotationProcessor {
 
 ---
 
-## 11. 重要 PR 分析
+## 12. 重要 PR 分析
 
 ### 注解处理器性能优化
 
@@ -451,7 +692,7 @@ buf.writeU1U2U4(u1Value, u2Value, u4Value);
 
 ---
 
-## 12. 注解性能最佳实践
+## 13. 注解性能最佳实践
 
 ### Retention 策略选择
 
@@ -490,7 +731,7 @@ public boolean process(Set<? extends TypeElement> annotations,
 
 ---
 
-## 13. 相关链接
+## 14. 相关链接
 
 ### 本地文档
 
