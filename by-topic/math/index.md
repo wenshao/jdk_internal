@@ -13,7 +13,7 @@ JDK 1.0 ── JDK 1.2 ── JDK 8 ── JDK 9 ── JDK 17 ── JDK 21 ─
    │        │          │        │        │         │        │
 Math     StrictMath  Splittable SecureRandom HexFormat  Math    Vector API
 类       精确数学    Random    DRBG增强   RandomGen  .clamp  数学加速
-BigDecimal           (JEP 193) (JEP 273)  (JEP 356) (JEP 460)
+BigDecimal           (JEP 193) (JEP 273)  (JEP 356)    -
 ```
 
 ### 核心演进
@@ -25,9 +25,9 @@ BigDecimal           (JEP 193) (JEP 273)  (JEP 356) (JEP 460)
 | **JDK 7** | ThreadLocalRandom | - | 线程局部随机数 |
 | **JDK 8** | SplittableRandom | JEP 193 | 可分割随机数 |
 | **JDK 9** | SecureRandom DRBG | JEP 273 | 密码学安全随机数增强 |
-| **JDK 15** | JEP 306: strictfp 恢复 | JEP 306 | 默认 strict 浮点语义 |
+| **JDK 17** | JEP 306: strictfp 恢复 | JEP 306 | 默认 strict 浮点语义 |
 | **JDK 17** | RandomGenerator, HexFormat | JEP 356 | 随机数统一接口 + 十六进制 |
-| **JDK 21** | Math.clamp | JEP 460 (sequenced) | 范围限制函数 |
+| **JDK 21** | Math.clamp | - | 范围限制函数 (standalone API addition) |
 | **JDK 22+** | fdlibm Java 移植 | - | Anton Artemov 的纯 Java 数学库 |
 
 ---
@@ -145,7 +145,7 @@ double result = Math.fma(a, b, c);   // IEEE 754 fused multiply-add
 
 JDK 1.2 引入 `strictfp` 关键字，要求浮点运算严格遵循 IEEE 754。不标 `strictfp` 的代码允许使用扩展精度 (extended precision)，结果可能因平台而异。
 
-### JEP 306: Restore Always-Strict Floating-Point Semantics (JDK 15 预览, JDK 17 最终)
+### JEP 306: Restore Always-Strict Floating-Point Semantics (JDK 17)
 
 现代硬件 (SSE2+) 已默认支持严格 IEEE 754 语义，不再有性能差异。JEP 306 将所有浮点运算恢复为 always-strict，`strictfp` 关键字实质上变为 no-op。
 

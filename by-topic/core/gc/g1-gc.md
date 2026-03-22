@@ -122,7 +122,7 @@ bool is_young()    const { return (get() & YoungMask) != 0; }      // Eden 或 S
 bool is_eden()     const { return get() == EdenTag; }               // 仅 Eden
 bool is_survivor() const { return get() == SurvTag; }               // 仅 Survivor
 bool is_humongous()const { return (get() & HumongousMask) != 0; }   // 任意 Humongous
-bool is_old()      const { return (get() & OldMask) != 0; }         // Old (含 Humongous)
+bool is_old()      const { return (get() & OldMask) != 0; }         // 仅 Old (不含 Humongous，另有 is_old_or_humongous())
 bool is_old_or_humongous() const { return (get() & (OldMask | HumongousMask)) != 0; }
 ```
 

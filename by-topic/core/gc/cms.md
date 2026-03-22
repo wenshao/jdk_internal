@@ -25,9 +25,9 @@ CMS (Concurrent Mark Sweep) 是 HotSpot JVM 中第一个实现了**并发回收 
 |------|------|------|
 | 2003 | JDK 1.4.2 | CMS 正式引入 HotSpot，成为第一个并发 GC |
 | 2006 | JDK 6 | CMS 成为服务端应用的主流选择 |
-| 2012 | JDK 7u4 | G1 GC 正式可用 (JEP 248) |
+| 2012 | JDK 7u4 | G1 GC 正式可用 |
 | 2017 | JDK 9 | **JEP 291**: CMS 被废弃 (Deprecated) |
-| 2019 | JDK 11 | G1 成为默认 GC，CMS 继续可用但不推荐 |
+| 2017 | JDK 9 | G1 成为默认 GC (JEP 248)，CMS 继续可用但不推荐 |
 | 2020 | JDK 14 | **JEP 363**: CMS 源码被完全移除 |
 
 ### 1.3 为什么 CMS 重要

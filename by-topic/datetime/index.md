@@ -2,7 +2,7 @@
 
 > JSR 310、java.time、时区处理、格式化、Stephen Colebourne 与 Joda-Time
 
-[← 返回主题索引](../by-topic/)
+[← 返回主题索引](../)
 
 ---
 
@@ -940,7 +940,6 @@ localDateTimeNow          avgt   10    ~60     ns/op
 zonedDateTimeNow          avgt   10   ~150     ns/op  ← 需要查 ZoneRules
 parseDate                 avgt   10    ~80     ns/op
 formatDate                avgt   10   ~100     ns/op
-```
 ```
 
 ### 优化清单

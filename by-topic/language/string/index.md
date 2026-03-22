@@ -419,7 +419,7 @@ StringBuilder sb = new StringBuilder(estimatedSize);
 // 避免: 默认容量 + 大量 append → 多次扩容 + 数组复制
 ```
 
-### MergeStore 优化 (JDK 内部)
+### StringBuilder 批量复制优化 (JDK 内部)
 
 JDK 内部对 `StringBuilder.append(char[])` 等方法做了批量复制优化:
 

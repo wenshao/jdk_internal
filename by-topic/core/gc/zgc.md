@@ -420,8 +420,9 @@ AArch64 平台不使用此重叠优化, 而是使用补码 (complement) 方式 -
 
 早期 ZGC (JDK 11-14) 不兼容 Compressed Oops, 因为着色指针占用了高位, 而 Compressed Oops 也需要利用 64 位指针的特定位。
 
-- **JDK 15+**: ZGC 进入 production, 成功将元数据位放在低位, 与 Compressed Oops 的兼容性通过消除 multi-mapping 的方式解决
-- **当前实现**: 元数据位位于指针低位 (bits 0-15), 地址位在高位, 通过 shift 操作在 barrier 中高效处理
+- **Generational ZGC (JDK 21+)**: 元数据位从高位重新设计到低位, 消除了 multi-mapping 的需求
+- **CompressedOops**: ZGC 始终不支持 CompressedOops (显式禁用), 因为着色指针与压缩指针在架构上不兼容
+- **当前实现**: 元数据位位于指针低位 (bits 0-3), 地址位在高位, 通过 shift 操作在 barrier 中高效处理
 
 ---
 
@@ -1214,10 +1215,10 @@ ZGC 的并发设计带来一定的吞吐量代价:
 | **暂停次数/GC周期** | 3 次 STW | 多次 STW (包含 mixed GC) | 2-3 次 STW |
 | **堆大小适用** | 中大堆 (8GB-TB级) | 中堆 (4-64GB) | 中大堆 (4GB-TB级) |
 | **吞吐量** | 中等 | 高 | 中等 |
-| **核心技术** | 着色指针 + 读屏障 | 写屏障 + SATB | Brooks 转发指针 |
-| **分代支持** | JDK 21+ | 始终分代 | 无 (JDK 24) |
-| **内存开销** | 中等 (额外虚拟地址) | 较低 | 中等 (转发指针) |
-| **CompressedOops** | JDK 15+ 支持 | 支持 | 支持 |
+| **核心技术** | 着色指针 + 读屏障 | 写屏障 + SATB | Mark Word 转发 + 读屏障 (LRB) |
+| **分代支持** | JDK 21+ | 始终分代 | JDK 21+ (实验), JDK 25 (正式) |
+| **内存开销** | 中等 (额外虚拟地址) | 较低 | 中等 (remembered sets) |
+| **CompressedOops** | 不支持 (显式禁用) | 支持 | 支持 |
 | **JDK 状态** | Production (JDK 15+) | 默认 GC | Experimental→Production |
 
 ### 11.5 何时选择 ZGC
