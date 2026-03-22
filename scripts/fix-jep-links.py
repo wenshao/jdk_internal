@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-自动修复 by-version/*/index.md 中缺失的 JEP 本地链接。
+自动修复 by-version/*/README.md 中缺失的 JEP 本地链接。
 
 对于每个提到 JEP NNN 但未链接到本地 jeps/ 文件的引用，
 如果本地文件存在，则自动添加链接。
@@ -84,7 +84,7 @@ def main():
     total = 0
     files_changed = 0
 
-    for index_file in sorted((REPO_ROOT / "by-version").rglob("index.md")):
+    for index_file in sorted((REPO_ROOT / "by-version").rglob("README.md")):
         n = fix_file(index_file, dry_run)
         if n > 0:
             total += n

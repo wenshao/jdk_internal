@@ -116,6 +116,45 @@ jobs:
             echo "✅ No placeholders found in changed files"
           fi
 
+      - name: Check for index.md usage
+        run: |
+          echo "=== Checking for index.md (should be README.md) ==="
+          ERRORS=0
+
+          # 检查是否有新建的 index.md 文件
+          INDEX_FILES=$(find . -name "index.md" -not -path "./.git/*" -not -path "./node_modules/*" 2>/dev/null || true)
+          if [ -n "$INDEX_FILES" ]; then
+            echo "$INDEX_FILES" | while read -r f; do
+              echo "::error file=${f}::Use README.md instead of index.md — GitHub only auto-renders README.md"
+              ERRORS=$((ERRORS + 1))
+            done
+          fi
+
+          # 检查变更文件中是否有 index.md 引用
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} HEAD -- '*.md' | grep -v '^reports/' || true)
+          else
+            FILES=$(git diff --name-only HEAD~1 HEAD -- '*.md' | grep -v '^reports/' || true)
+          fi
+
+          for f in $FILES; do
+            [ -f "$f" ] || continue
+            REFS=$(grep -n 'index\.md' "$f" 2>/dev/null | grep -v '```' | grep -v 'search-index' | grep -v 'scripts/' || true)
+            if [ -n "$REFS" ]; then
+              echo "::error file=${f}::References to index.md found — use README.md instead:"
+              echo "$REFS" | head -3
+              ERRORS=$((ERRORS + 1))
+            fi
+          done
+
+          if [ "$ERRORS" -gt 0 ]; then
+            echo ""
+            echo "❌ Found index.md usage — rename to README.md or update references"
+            exit 1
+          else
+            echo "✅ No index.md files or references found"
+          fi
+
   markdown-lint:
     name: Markdown Format Check
     runs-on: ubuntu-latest
@@ -219,8 +258,8 @@ jobs:
           echo "=== JEP local link coverage check ==="
           WARNINGS=0
 
-          # 扫描所有版本 index 文件
-          for f in by-version/*/index.md; do
+          # 扫描所有版本 README 文件
+          for f in by-version/*/README.md; do
             [ -f "$f" ] || continue
 
             # 提取所有 JEP 编号（格式：JEP NNN 或 JEP NNN]）
@@ -333,7 +372,6 @@ jobs:
             -not -path './.git/*' \
             -not -path './reports/*' \
             -not -path './AGENTS.md' \
-            -not -name 'index.md' \
             -not -name 'README.md' \
             -not -name 'MEMORY.md' \
             -not -name 'dashboard.md' | sed 's|^\./||' | sort > /tmp/all_pages.txt
