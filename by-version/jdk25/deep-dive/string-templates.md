@@ -1,6 +1,6 @@
 # String Templates 深度分析
 
-> JDK 25 正式特性 - JEP 430
+> JDK 21 正式特性 - JEP 430
 
 ---
 ## 目录

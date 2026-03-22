@@ -331,7 +331,7 @@ TABLESWITCH              // 分发到对应 case
 
 ```
 JEP 455  (JDK 23) - Primitive Types in Patterns (Preview)
-JEP 456  (JDK 24) - Primitive Types in Patterns (Second Preview)
+JEP 456  (JDK 22) - Primitive Types in Patterns (Second Preview)
 JEP 4xx  (JDK 25) - Primitive Types in Patterns (Third Preview)
 JEP 530  (JDK 26) - Primitive Types in Patterns (Fourth Preview)
 ```

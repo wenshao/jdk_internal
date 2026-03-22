@@ -58,7 +58,7 @@ Peter Levart 是 OpenJDK 社区中最活跃的独立贡献者之一。他的 240
 
 ### 4.1 JEP 416: Reimplement Core Reflection with Method Handles
 
-Peter Levart 对 JEP 416 (目标 JDK 18) 的实现做出了重要贡献：
+Peter Levart 对 JEP 416 (目标 JDK 26) 的实现做出了重要贡献：
 - 参与 PR #5027 的代码审查讨论
 - 他的补丁被纳入最终实现
 - JEP 416 用 java.lang.invoke method handles 重新实现了 java.lang.reflect.Method、Constructor 和 Field

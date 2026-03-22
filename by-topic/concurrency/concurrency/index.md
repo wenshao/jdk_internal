@@ -342,7 +342,7 @@ for (int i = 0; i < 100; i++) {
 
 ## 5. Virtual Threads
 
-**JDK 19 预览, JDK 21 正式 (JEP 444)**
+**JDK 21 预览, JDK 21 正式 (JEP 444)**
 
 ### 概述
 
@@ -463,7 +463,7 @@ try {
 
 ## 6. Structured Concurrency
 
-**JDK 19-20 孵化器, JDK 21 预览 (JEP 453), JDK 22 第二次预览 (JEP 462)**
+**JDK 21-20 孵化器, JDK 21 预览 (JEP 453), JDK 22 第二次预览 (JEP 462)**
 
 ### 概述
 
@@ -508,7 +508,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnSuccess<String>()) {
 
 ## 7. Scoped Values
 
-**JDK 20 预览, JDK 21 第二次预览 (JEP 446), JDK 25 正式 (JEP 506)**
+**JDK 21 预览, JDK 21 第二次预览 (JEP 446), JDK 25 正式 (JEP 506)**
 
 ### 概述
 

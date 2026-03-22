@@ -21,7 +21,7 @@
 
 ## 1. 概述
 
-Archie L. Cobbs 是一位资深的独立 Java 开发者和 OpenJDK 贡献者。他最为人知的贡献是作为 **JEP 447: Statements before super(...)** 的 Author 和 Owner，该提案允许在构造函数中的 `super()` 或 `this()` 调用之前执行语句。该特性经过多轮 Preview (JEP 447 → JEP 482 → JEP 492)，最终以 **JEP 513: Flexible Constructor Bodies** 的名称在 JDK 25 中正式发布。作为 OpenJDK 社区中少数以独立贡献者身份成功推动重要语言特性的开发者之一，他的贡献尤为引人注目。
+Archie L. Cobbs 是一位资深的独立 Java 开发者和 OpenJDK 贡献者。他最为人知的贡献是作为 **JEP 447: Statements before super(...)** 的 Author 和 Owner，该提案允许在构造函数中的 `super()` 或 `this()` 调用之前执行语句。该特性经过多轮 Preview (JEP 447 → JEP 482 → JEP 492)，最终以 **JEP 513: Flexible Constructor Bodies** 的名称在 JDK 23 中正式发布。作为 OpenJDK 社区中少数以独立贡献者身份成功推动重要语言特性的开发者之一，他的贡献尤为引人注目。
 
 ---
 

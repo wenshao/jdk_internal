@@ -52,7 +52,7 @@ JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 11 ─── JDK 17 ──
 | JDK 8 | G1 成为主流，CMS 标记废弃 | - |
 | JDK 11 | ZGC 引入 (实验性) | JEP 333 |
 | JDK 15 | ZGC 生产可用 | JEP 377 |
-| JDK 17 | 并发线程栈扫描 | JEP 379 |
+| JDK 15 | 并发线程栈扫描 | JEP 379 |
 | JDK 21 | **分代 ZGC** (JEP 439) | JEP 439 |
 | JDK 23 | ZGC 分代改进 | JEP 474 |
 | JDK 26 | G1 吞吐量提升 (JEP 522)、ZGC NUMA | JEP 522 |
@@ -117,8 +117,8 @@ SIMD 向量化计算 API，从 JDK 16 开始孵化。
 | JDK 17 | JEP 414 | 🥚 Second Incubator |
 | JDK 18 | JEP 417 | 🥚 Third Incubator |
 | JDK 19 | JEP 426 | 🥚 Fourth Incubator |
-| JDK 20 | JEP 448 | 🥚 Fifth Incubator |
-| JDK 21 | JEP 460 | 🥚 Sixth Incubator + Float16 |
+| JDK 21 | JEP 448 | 🥚 Fifth Incubator |
+| JDK 22 | JEP 460 | 🥚 Sixth Incubator + Float16 |
 | JDK 22-23 | - | 🥚 继续孵化 |
 | JDK 24 | - | 🥚 继续孵化 |
 | **JDK 26** | - | 🥚 **继续孵化** (GA 2026-03) |
@@ -152,7 +152,7 @@ Java 语言特性演进项目：更简洁、更安全、更易表达。
 | Pattern Matching for switch | JDK 21 | JEP 441 |
 | Record Patterns | JDK 21 | JEP 440 |
 | Unnamed Patterns & Variables | JDK 21 | JEP 443 |
-| Primitive Patterns | JDK 26 | JEP 455 |
+| Primitive Patterns | JDK 23 | JEP 455 |
 
 → [Amber 时间线](amber/timeline.md)
 
@@ -197,7 +197,7 @@ Java 语言特性演进项目：更简洁、更安全、更易表达。
 |------|------|-----|
 | Inline Classes / Primitive Classes | 开发中 | JEP 401 |
 | 增强泛型 (List<int>) | 开发中 | JEP 402 |
-| Primitive Patterns | JDK 26 | JEP 455 |
+| Primitive Patterns | JDK 23 | JEP 455 |
 
 **核心优势**:
 - 消除对象头: 节省 30-50% 内存
@@ -278,8 +278,8 @@ Java 类加载器从 JDK 1.0 到 JDK 26 的完整演进。
 | JDK 17 | switch 模式 (预览) | JEP 406 |
 | JDK 19 | Record 模式 (预览) | JEP 405 |
 | JDK 21 | Record/switch 模式 (正式) | JEP 440, JEP 441 |
-| JDK 23 | Switch Guards | JEP 456 |
-| JDK 26 | 原始类型模式 | JEP 455 |
+| JDK 22 | Switch Guards | JEP 456 |
+| JDK 23 | 原始类型模式 | JEP 455 |
 
 ### [泛型系统](generics/)
 

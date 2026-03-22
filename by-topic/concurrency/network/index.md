@@ -44,7 +44,7 @@ ServerSocket Channel  Async  Client Domain  Concurrency Threads  (预览)
 | **JDK 11** | HTTP Client | 新 API 标准化 | JEP 321 |
 | **JDK 16** | Unix Domain Socket | 本地 IPC | JEP 380 |
 | **JDK 21** | Virtual Threads | 轻量级网络 | JEP 444 |
-| **JDK 26** | HTTP/3 | 基于 QUIC | JEP 517 |
+| **JDK 25** | HTTP/3 | 基于 QUIC | JEP 517 |
 
 ---
 

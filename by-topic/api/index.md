@@ -48,7 +48,7 @@ JDK 1.0 ─── JDK 5 ─── JDK 8 ─── JDK 11 ─── JDK 21 ──
 | **JDK 23** | Stream Gatherers | Stream Gatherers (第二预览) | JEP 473 |
 | **JDK 24** | Stream 增强 | Stream Gatherers 正式 | JEP 485 |
 | **JDK 25** | Scoped Values | Scoped Values 正式 | JEP 506 |
-| **JDK 26** | HTTP/3 | HTTP Client 支持 HTTP/3 协议 | JEP 517 |
+| **JDK 25** | HTTP/3 | HTTP Client 支持 HTTP/3 协议 | JEP 517 |
 
 ---
 

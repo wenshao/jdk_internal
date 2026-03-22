@@ -391,7 +391,7 @@ SequencedMap<String, Integer> reversed = map.reversed();
 
 ## 7. Stream Gatherers
 
-**JDK 22 预览 (JEP 461), JDK 23 第二次预览 (JEP 473), JDK 24 正式 (JEP 485)**
+**JDK 23 预览 (JEP 461), JDK 23 第二次预览 (JEP 473), JDK 24 正式 (JEP 485)**
 
 ### 自定义中间操作
 

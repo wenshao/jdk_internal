@@ -1,6 +1,6 @@
 # Compact Object Headers 实现
 
-> JEP 519 相关实现 | Roman Kennke | JDK 26
+> JEP 519 相关实现 | Roman Kennke | JDK 25
 
 ---
 

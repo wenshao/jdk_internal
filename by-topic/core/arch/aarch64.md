@@ -52,7 +52,7 @@ AArch64 是 ARM 64位架构，广泛用于移动设备、云服务器和 Apple S
 | 版本 | JEP | 平台 | 说明 |
 |------|-----|------|------|
 | **JDK 9** | JEP 237 | Linux/AArch64 | 首次引入 |
-| **JDK 17** | JEP 383 | macOS/AArch64 | Apple Silicon 支持 |
+| **JDK 15** | JEP 383 | macOS/AArch64 | Apple Silicon 支持 |
 | **JDK 18** | - | Windows/AArch64 | Windows ARM 支持 |
 | **JDK 19** | - | 改进 | 性能优化 |
 | **JDK 21** | - | 改进 | 向量 intrinsic 增强 |
@@ -383,7 +383,7 @@ java -XX:+UseZGC \
 |-----|------|------|
 | JEP 237 | JDK 9 | Linux/AArch64 Port |
 | JEP 315 | JDK 11 | Improve AArch64 Intrinsics |
-| JEP 383 | JDK 17 | macOS/AArch64 Port |
+| JEP 383 | JDK 15 | macOS/AArch64 Port |
 
 ---
 

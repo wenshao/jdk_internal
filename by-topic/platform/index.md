@@ -116,7 +116,7 @@ JDK 25 ──── 紧凑对象头正式版 (JEP 519)，内存减少 10-20%
           │   移除 Linux 32 位 x86 端口 (JEP 503)
           │   JFR CPU 时间分析 (JEP 509)
           │
-JDK 26 ──── AOT 类加载与链接 (JEP 483)，容器启动优化
+JDK 24 ──── AOT 类加载与链接 (JEP 483)，容器启动优化
               G1 GC 减少同步 (JEP 522)
 ```
 
@@ -362,7 +362,7 @@ JDK 17+ ──── 持续改进
 # CDS (Class Data Sharing) -- 减少启动时间 20-40%
 -XX:SharedArchiveFile=app.jsa
 
-# AOT 类加载 (JDK 26+, JEP 483) -- 容器冷启动显著改善
+# AOT 类加载 (JDK 24+, JEP 483) -- 容器冷启动显著改善
 # 训练阶段:
 java -XX:AOTCacheOutput=app.aot -jar app.jar
 # 生产运行:
@@ -403,7 +403,7 @@ java -XX:AOTCache=app.aot -jar app.jar
 | JDK-8146115 | JDK 10 | Container Awareness | 容器资源感知 (UseContainerSupport) |
 | JEP 450 | JDK 24 | Compact Object Headers (Experimental) | 紧凑对象头实验版 |
 | JEP 519 | JDK 25 | Compact Object Headers | 紧凑对象头正式版 |
-| JEP 483 | JDK 26 | AOT Class Loading & Linking | AOT 类加载，容器启动优化 |
+| JEP 483 | JDK 24 | AOT Class Loading & Linking | AOT 类加载，容器启动优化 |
 | JEP 522 | JDK 26 | G1 GC: Reduce Synchronization | G1 减少同步提高吞吐 |
 
 ### 打包与分发

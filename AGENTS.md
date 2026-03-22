@@ -306,7 +306,7 @@ done
 
 **5. JEP Attribution**
 ```markdown
-❌ JEP 514/515/519 belong to JDK 26
+❌ JEP 514/515/519 belong to JDK 25
 ✅ JEP 514/515/519 belong to JDK 25
 ```
 

@@ -56,7 +56,7 @@ Vladimir Kozlov (OpenJDK 用户名: **kvn**) 是 Oracle 的 **Principal Member o
 | **状态** | Incubator (持续演进中, 已达第 11 轮 Incubator) |
 | **发布版本** | JDK 16-26+ |
 
-**影响**: 与 John Rose 共同领导 Vector API 的开发，为 Java 提供 SIMD (单指令多数据) 向量计算能力。该 API 从 JDK 16 (JEP 338) 首次引入，经历多轮 Incubator 迭代，至 JDK 26 已达第 11 轮 (JEP 529)，持续优化性能和 API 设计。
+**影响**: 与 John Rose 共同领导 Vector API 的开发，为 Java 提供 SIMD (单指令多数据) 向量计算能力。该 API 从 JDK 26 (JEP 338) 首次引入，经历多轮 Incubator 迭代，至 JDK 26 已达第 11 轮 (JEP 529)，持续优化性能和 API 设计。
 
 ### JEP 519: Compact Object Headers
 
@@ -153,7 +153,7 @@ Vladimir 是 C2 编译器循环优化领域的权威：
 - [JEP 338: Vector API (Incubator)](https://openjdk.org/jeps/338) - JDK 16
 - [JEP 414: Vector API (Second Incubator)](https://openjdk.org/jeps/414) - JDK 17
 - [JEP 529: Vector API (Eleventh Incubator)](https://openjdk.org/jeps/529) - JDK 26
-- [JEP 519: Compact Object Headers](https://openjdk.org/jeps/519) - JDK 26
+- [JEP 519: Compact Object Headers](https://openjdk.org/jeps/519) - JDK 25
 
 ---
 

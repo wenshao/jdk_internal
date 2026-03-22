@@ -37,7 +37,7 @@
 | JEP | Title | Role | Status | Target |
 |-----|------|------|--------|--------|
 | [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | Lead | Final | JDK 25 |
-| [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | Co-contributor | Final | JDK 25 |
+| [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | Co-contributor | Final | JDK 26 |
 
 ---
 
@@ -55,7 +55,7 @@
 
 - **Shenandoah GC**: Project lead of Shenandoah garbage collector
 - **Project Lilliput**: Lead of OpenJDK's initiative to minimize object memory overhead
-- **Compact Object Headers**: JEP 450 (Experimental, JDK 24) and JEP 519 (Final, JDK 25) lead
+- **Compact Object Headers**: JEP 450 (Experimental, JDK 25) and JEP 519 (Final, JDK 25) lead
 - **Memory Layout**: Object memory optimization
 - **HotSpot**: JVM runtime improvements
 
@@ -63,7 +63,7 @@
 
 ### JEP 450/519: Compact Object Headers (Project Lilliput)
 
-Led the implementation of compact object headers, first as JEP 450 (Experimental) in JDK 24, then finalized as JEP 519 in JDK 25 (LTS). This is the first integrated capability from Project Lilliput:
+Led the implementation of compact object headers, first as JEP 450 (Experimental) in JDK 25, then finalized as JEP 519 in JDK 25 (LTS). This is the first integrated capability from Project Lilliput:
 
 - Reduced object header size from 12 bytes to 8 bytes
 - SPECjbb2015: 22% less heap space, 8% less CPU time

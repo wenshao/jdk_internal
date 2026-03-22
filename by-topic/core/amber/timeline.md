@@ -193,7 +193,7 @@ String formatted = switch (obj) {
 
 ### JEP 443: Unnamed Patterns & Variables
 
-- **日期**: 2023-09 (预览, JDK 21; 正式为 JEP 456, JDK 22)
+- **日期**: 2023-09 (预览, JDK 22; 正式为 JEP 456, JDK 22)
 - **特性**: 使用 `_` 忽略不关心的值
 
 ```java

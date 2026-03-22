@@ -1,6 +1,6 @@
 # AOT 链接启动优化
 
-> JEP 514 | Ioi Lam | JDK 26
+> JEP 514 | Ioi Lam | JDK 25
 
 ---
 

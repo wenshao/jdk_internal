@@ -387,7 +387,7 @@ java -XX:SharedArchiveFile=app.jsa \
 
 ## 8. 总结
 
-JDK 26 的 AOT 改进 (JEP 516，延续 JDK 25 的 JEP 514/515) 带来了：
+JDK 25 的 AOT 改进 (JEP 516，延续 JDK 25 的 JEP 514/515) 带来了：
 
 1. **自动优化**：无需复杂配置
 2. **元数据缓存**：减少类加载开销

@@ -28,10 +28,10 @@ ServerSocket (JSR51)  (JSR203)  Client    Reimpl     Domain   Threads  Client
 | **JDK 7** | NIO.2 | JSR 203 | 异步通道, 文件系统 API |
 | **JDK 11** | HTTP Client | JEP 321 | 支持 HTTP/1.1 和 HTTP/2 |
 | **JDK 13** | Socket API 重新实现 | JEP 353 | 替换 PlainSocketImpl |
-| **JDK 14** | DatagramSocket API 重新实现 | JEP 373 | 替换 PlainDatagramSocketImpl |
+| **JDK 15** | DatagramSocket API 重新实现 | JEP 373 | 替换 PlainDatagramSocketImpl |
 | **JDK 16** | Unix Domain Sockets | JEP 380 | SocketChannel/ServerSocketChannel 支持 AF_UNIX |
 | **JDK 21** | Virtual Threads | JEP 444 | 轻量级并发, 简化阻塞式网络编程 |
-| **JDK 26** | HTTP/3 Client | JEP 517 | 基于 QUIC 的 HTTP/3 支持 (预览) |
+| **JDK 25** | HTTP/3 Client | JEP 517 | 基于 QUIC 的 HTTP/3 支持 (预览) |
 
 ---
 
@@ -140,7 +140,7 @@ JDK 13 用全新的 `NioSocketImpl` 替换了 `PlainSocketImpl`：
 // -Djdk.net.usePlainSocketImpl=true
 ```
 
-### JEP 373: 重新实现旧版 DatagramSocket API (JDK 14)
+### JEP 373: 重新实现旧版 DatagramSocket API (JDK 15)
 
 与 JEP 353 类似, 将 `DatagramSocket` 和 `MulticastSocket` 的底层实现替换为基于 NIO 的版本。
 

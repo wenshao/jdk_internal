@@ -263,7 +263,7 @@ java -XX:+UseG1GC -Xms4g -Xmx4g -jar app.jar
 | JEP | 名称 | 关系 |
 |-----|------|------|
 | [JEP 312](https://openjdk.org/jeps/312) | Thread-Local Handshakes | 提供卡表交换所需的通用线程局部握手机制 |
-| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | 同属 JDK 26 的 HotSpot 优化，压缩对象头减少内存占用 |
+| [JEP 519](https://openjdk.org/jeps/519) | Compact Object Headers | 同属 JDK 25 的 HotSpot 优化，压缩对象头减少内存占用 |
 | [JEP 521](https://openjdk.org/jeps/521) | Generational Shenandoah | 同属 JDK 26 的 GC 改进，为 Shenandoah 添加分代模式 |
 
 ---

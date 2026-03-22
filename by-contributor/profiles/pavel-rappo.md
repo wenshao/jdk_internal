@@ -20,7 +20,7 @@
 
 ## 1. 概述
 
-Pavel Rappo 是 Oracle 的 Java 平台工程师，专注于 Java **核心库**和 **javadoc 工具**的开发和维护。他是 JEP 413 (Code Snippets in Java API Documentation) 的共同负责人，也是 JEP 467 (Markdown Documentation Comments) 的审查者。他在 Core Libraries Group 中活跃，并参与了 JDK 25 发布更新工作。
+Pavel Rappo 是 Oracle 的 Java 平台工程师，专注于 Java **核心库**和 **javadoc 工具**的开发和维护。他是 JEP 413 (Code Snippets in Java API Documentation) 的共同负责人，也是 JEP 467 (Markdown Documentation Comments) 的审查者。他在 Core Libraries Group 中活跃，并参与了 JDK 23 发布更新工作。
 
 ---
 

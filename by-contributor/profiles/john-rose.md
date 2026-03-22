@@ -295,7 +295,7 @@ John Rose (jrose)
 | **Stream API** | JDK 8 | 依赖 Lambda 和方法引用 |
 | **动态语言支持** | JDK 7+ | JRuby, Jython, Nashorn |
 | **Vector API** | JDK 16-21 | 与 Vladimir Kozlov 合作 |
-| **AOT 编译 (Leyden)** | JDK 24-25 | JEP 514, JEP 515 |
+| **AOT 编译 (Leyden)** | JDK 25-25 | JEP 514, JEP 515 |
 | **Value Types** | 开发中 | Project Valhalla |
 | **Foreign Function & Memory** | JDK 16-22 | Project Panama |
 

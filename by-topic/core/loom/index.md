@@ -31,7 +31,7 @@
 - **Continuations** - 底层暂停/恢复机制
 
 **状态**:
-- **虚拟线程**: 正式发布 (JDK 21, JEP 444)；JDK 24 消除 synchronized 固定问题 (JEP 491)
+- **虚拟线程**: 正式发布 (JDK 24, JEP 444)；JDK 24 消除 synchronized 固定问题 (JEP 491)
 - **结构化并发**: 预览中 (JDK 26 第六次预览, JEP 525)
 - **Scoped Values**: 正式发布 (JDK 25, JEP 506)
 
@@ -229,14 +229,14 @@ Thread.sleep(1000);  // 不阻塞 Carrier Thread
 socket.read(buffer); // 不阻塞 Carrier Thread
 
 // 锁阻塞
-synchronized (lock) { // JDK 21-23 会 Pin; JDK 24+ 不再 Pin (JEP 491)
+synchronized (lock) { // JDK 24-23 会 Pin; JDK 24+ 不再 Pin (JEP 491)
     // ...
 }
 ```
 
 ### Pinning 问题
 
-> **JDK 24 重大改进 (JEP 491)**: `synchronized` 块内的阻塞不再固定虚拟线程到载体线程。JVM 内部重构了 monitor 实现，使用虚拟线程 ID 追踪 monitor 持有者，虚拟线程可在持有 monitor 时独立于载体线程进行挂起和恢复。仅少数边缘情况（native/VM 帧、类初始化器内阻塞）仍会导致 pinning。系统属性 `jdk.tracePinnedThreads` (JEP 444 引入) 已移除，改用 JFR 事件 `jdk.VirtualThreadPinned` 监控剩余 pinning 场景。
+> **JDK 21 重大改进 (JEP 491)**: `synchronized` 块内的阻塞不再固定虚拟线程到载体线程。JVM 内部重构了 monitor 实现，使用虚拟线程 ID 追踪 monitor 持有者，虚拟线程可在持有 monitor 时独立于载体线程进行挂起和恢复。仅少数边缘情况（native/VM 帧、类初始化器内阻塞）仍会导致 pinning。系统属性 `jdk.tracePinnedThreads` (JEP 444 引入) 已移除，改用 JFR 事件 `jdk.VirtualThreadPinned` 监控剩余 pinning 场景。
 
 ```java
 // JDK 21-23: ❌ 会 Pin Carrier

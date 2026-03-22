@@ -64,7 +64,7 @@ Java 语言特性演进项目：让 Java 更简洁、更安全、更易表达。
 | **Module Import Declarations** | JDK 25 | JEP 511 |
 | **Flexible Constructor Bodies** | JDK 25 | JEP 513 |
 | **String Templates** | (已撤回) | JEP 430 → 459 → 465 |
-| **Primitive Patterns** | JDK 26 (4th Preview) | JEP 455 → 488 → 507 → 530 |
+| **Primitive Patterns** | JDK 23 (4th Preview) | JEP 455 → 488 → 507 → 530 |
 
 ---
 

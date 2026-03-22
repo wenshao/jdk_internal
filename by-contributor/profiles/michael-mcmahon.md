@@ -55,7 +55,7 @@ Michael McMahon 是 Oracle Java Platform Group Core Libraries 团队的工程师
 | **JDK 11 (2018)** | HTTP Client 标准化 | JEP 321: HTTP Client API 正式成为标准 API |
 | **JDK 16 (2021)** | Unix Domain Sockets | JEP 380: Unix-Domain Socket Channels 交付 |
 | **2021-04** | Inside.java Podcast | Episode 16: 与 Daniel Fuchs 讨论 JDK 网络功能 |
-| **JDK 26 (2025-2026)** | HTTP/3 协作 | 支持 Daniel Fuchs 实现 JEP 517: HTTP/3 |
+| **JDK 25 (2025-2026)** | HTTP/3 协作 | 支持 Daniel Fuchs 实现 JEP 517: HTTP/3 |
 
 ---
 
@@ -188,7 +188,7 @@ Michael 主导了从 JDK 9 到 JDK 11 的 HTTP Client API 完整演进：
 - [JEP 110: HTTP/2 Client (Incubator)](https://openjdk.org/jeps/110) - JDK 9
 - [JEP 321: HTTP Client (Standard)](https://openjdk.org/jeps/321) - JDK 11
 - [JEP 380: Unix-Domain Socket Channels](https://openjdk.org/jeps/380) - JDK 16
-- [JEP 517: HTTP/3 for the HTTP Client API](https://openjdk.org/jeps/517) - JDK 26
+- [JEP 517: HTTP/3 for the HTTP Client API](https://openjdk.org/jeps/517) - JDK 25
 
 ### 技术文档
 - [Introduction to the Java HTTP Client](https://openjdk.org/groups/net/httpclient/intro.html)

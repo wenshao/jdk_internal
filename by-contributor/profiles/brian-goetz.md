@@ -64,7 +64,7 @@ Brian Goetz 是 Oracle 的 Java Language Architect，是 Java 语言演进的核
 |------|------|---------|------|
 | **JDK 5** | 并发工具 (java.util.concurrent) | JSR 166 | 并发编程基础设施 |
 | **JDK 8** | Lambda 表达式、Stream API | JSR 335 | 函数式编程革命 |
-| **JDK 17-21** | Record、Pattern Matching、Sealed Classes | JEP 395/394/409/406/441 | 模式匹配演进 |
+| **JDK 16-21** | Record、Pattern Matching、Sealed Classes | JEP 395/394/409/406/441 | 模式匹配演进 |
 | **JDK 21** | Virtual Threads (Project Loom) | JEP 444 | 并发编程范式转变 |
 | **JDK 21+** | Structured Concurrency、Scoped Values | JEP 453/446 | 结构化并发 |
 

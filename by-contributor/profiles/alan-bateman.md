@@ -66,7 +66,7 @@ Alan Bateman 是 Oracle 的 **Java 核心库架构师**，负责 java.base 模�
 |------|-----|
 | **角色** | Co-author |
 
-### JEP 453: Structured Concurrency (Incubator) - JDK 19
+### JEP 453: Structured Concurrency (Incubator) - JDK 21
 
 | 属性 | 值 |
 |------|-----|

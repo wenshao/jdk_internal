@@ -241,7 +241,7 @@ intList.add(42);  // 无装箱!
 
 ## 12. 2025-2026: 相关特性交付
 
-### JEP 455: Primitive Patterns (JDK 26)
+### JEP 455: Primitive Patterns (JDK 23)
 
 - **日期**: 2025
 - **状态**: ✅ 交付

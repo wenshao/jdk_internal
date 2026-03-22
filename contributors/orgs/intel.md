@@ -277,9 +277,9 @@ Intel 主导 Vector API 的开发：
 | Issue | 标题 | 说明 |
 |-------|------|------|
 | JEP 426 | Vector API (Third Preview) | JDK 22 |
-| JEP 448 | Vector API (Fourth Preview) | JDK 23 |
-| JEP 460 | Vector API (Fifth Preview) | JDK 24 |
-| JEP 485 | Vector API (Sixth Preview) | JDK 25 |
+| JEP 448 | Vector API (Fourth Preview) | JDK 21 |
+| JEP 460 | Vector API (Fifth Preview) | JDK 22 |
+| JEP 485 | Vector API (Sixth Preview) | JDK 24 |
 
 ### x86_64 优化
 

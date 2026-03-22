@@ -22,7 +22,7 @@
 
 ## 1. 概述
 
-Paul Sandoz 是 Oracle Java Platform Group 的 **架构师 (Architect)**，是 Java 平台多项核心基础设施的设计者和实现者。他的贡献横跨 Java 平台的多个层次：从 JDK 8 的 **Stream API** 原始设计与实现，到 JDK 9 的 **VarHandle** (JEP 193)，再到从 JDK 16 开始持续孵化至今的 **Vector API** (JEP 338+)。
+Paul Sandoz 是 Oracle Java Platform Group 的 **架构师 (Architect)**，是 Java 平台多项核心基础设施的设计者和实现者。他的贡献横跨 Java 平台的多个层次：从 JDK 16 的 **Stream API** 原始设计与实现，到 JDK 9 的 **VarHandle** (JEP 193)，再到从 JDK 16 开始持续孵化至今的 **Vector API** (JEP 338+)。
 
 在加入 Oracle 之前，Paul Sandoz 曾在 **Sun Microsystems** 共同领导 **JAX-RS** 规范并主导 **Jersey** (JAX-RS 参考实现) 的开发。之后他还曾在 **CloudBees** 工作，随后回到 Oracle 深耕 Java 平台底层。他的职业轨迹从云端 (Netflix/CloudBees)、中间层 (JAX-RS/Jersey)，一路深入到 Java 平台最底层的运行时和向量计算 API。
 

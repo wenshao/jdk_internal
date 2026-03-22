@@ -784,7 +784,7 @@ String date = FORMATTER.format(LocalDate.now());  // 受益于 JIT 常量传播
 
 | JEP | 标题 | 版本 | 状态 |
 |-----|------|------|------|
-| [JEP 483](/jeps/tools/jep-483.md) | Ahead-of-Time Class Loading & Linking | JDK 25 | ✅ Delivered |
+| [JEP 483](/jeps/tools/jep-483.md) | Ahead-of-Time Class Loading & Linking | JDK 24 | ✅ Delivered |
 | [JEP 509](/jeps/jfr/jep-509.md) | JFR CPU-Time Profiling | JDK 25 | ✅ Delivered |
 | [JEP 514](/jeps/performance/jep-514.md) | Ahead-of-Time Command-Line Ergonomics | JDK 25 | ✅ Delivered |
 | [JEP 515](/jeps/performance/jep-515.md) | Ahead-of-Time Method Analysis | JDK 25 | ✅ Delivered |

@@ -44,7 +44,7 @@ Locale   ResourceBundle Unicode Formatter Locale ICU4J   Unicode  Bidi
 | **JDK 6** | Formatter | 格式化增强 | - |
 | **JDK 8** | ICU4J | 国际化组件库 | JEP 252 |
 | **JDK 17** | Locale 增强 | 更多语言 | - |
-| **JDK 21** | Unicode 15.1 | 最新标准 | JEP 457 |
+| **JDK 22** | Unicode 15.1 | 最新标准 | JEP 457 |
 | **JDK 24** | Bidi 文本方向 | 双向文本 | - |
 
 ---

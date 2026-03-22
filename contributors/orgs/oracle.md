@@ -373,11 +373,11 @@ Oracle JDK 开发团队
 
 | JEP | 标题 | Lead | 团队 | 版本 |
 |-----|------|------|------|------|
-| [JEP 517](https://openjdk.org/jeps/517) | HTTP/3 for HTTP Client | Daniel Fuchs | Core Libraries | JDK 26 |
-| [JEP 514](https://openjdk.org/jeps/514) | AOT Command Line Ergonomics | Ioi Lam | HotSpot Runtime | JDK 26 |
+| [JEP 517](https://openjdk.org/jeps/517) | HTTP/3 for HTTP Client | Daniel Fuchs | Core Libraries | JDK 25 |
+| [JEP 514](https://openjdk.org/jeps/514) | AOT Command Line Ergonomics | Ioi Lam | HotSpot Runtime | JDK 25 |
 | [JEP 520](https://openjdk.org/jeps/520) | JFR Method Timing and Tracing | Erik Gahlin | HotSpot Runtime | JDK 26 |
-| [JEP 511](https://openjdk.org/jeps/511) | Module Import Declarations | Jan Lahoda | LangTools | JDK 26 |
-| [JEP 512](https://openjdk.org/jeps/512) | Compact Source Files | Jan Lahoda | LangTools | JDK 26 |
+| [JEP 511](https://openjdk.org/jeps/511) | Module Import Declarations | Jan Lahoda | LangTools | JDK 25 |
+| [JEP 512](https://openjdk.org/jeps/512) | Compact Source Files | Jan Lahoda | LangTools | JDK 25 |
 | [JEP 522](https://openjdk.org/jeps/522) | G1 GC Throughput Improvement | Thomas Schatzl | HotSpot GC | JDK 26 |
 | [JEP 504](https://openjdk.org/jeps/504) | Remove Applet API | Phil Race | Client Libraries | JDK 26 |
 

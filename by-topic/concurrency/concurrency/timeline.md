@@ -637,8 +637,8 @@ ScopedValue.where(USER, user).run(() -> process());
 | JDK 22 | 第二次预览 | JEP 462 |
 | JDK 23 | 第三次预览 | JEP 477 |
 | JDK 24 | 第四次预览 | JEP 483 |
-| JDK 25 | 第五次预览 | JEP 491 |
-| JDK 26 | 第六次预览 | JEP 493 |
+| JDK 24 | 第五次预览 | JEP 491 |
+| JDK 24 | 第六次预览 | JEP 493 |
 
 ### Structured Concurrency 原理
 
@@ -954,7 +954,7 @@ ForkJoinPool.commonPool().submit(() -> {
 | JDK 21 | Scoped Value 预览 | JEP 446 | 隐式参数传递 |
 | JDK 21 | Structured Concurrency 预览 | JEP 453 | 结构化并发 |
 | JDK 23 | Scoped Value 四次预览 | JEP 467 | 持续改进 |
-| JDK 26 | Structured Concurrency 六次预览 | JEP 493 | 持续改进 |
+| JDK 24 | Structured Concurrency 六次预览 | JEP 493 | 持续改进 |
 
 ---
 

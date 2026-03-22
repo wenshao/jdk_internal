@@ -79,7 +79,7 @@ Daniel Fuchs 是 Oracle Dublin 团队的 Consulting Member of Technical Staff，
 | **2022 年 3 月** | 参与 Jaikiran Pai 的 Reviewer CFV | 参与 OpenJDK 审查者提名 |
 | **2022 年 3 月** | 参与 Claes Redestad 的 Member Group 提名 | 支持 Claes 成为 OpenJDK Member |
 | **2023 年 8 月** | Core Libraries Group Member CFV | 由 Stuart Marks, Chris Hegarty, Joe Wang 提名 |
-| **2025-2026 年** | JEP 517 HTTP/3 实现 | 主导 HTTP/3 在 JDK 26 中的实现 |
+| **2025-2026 年** | JEP 517 HTTP/3 实现 | 主导 HTTP/3 在 JDK 25 中的实现 |
 | **2026 年 2 月** | Inside.java Podcast 嘉宾 | Episode 48: HTTP/3 in Java 26 |
 
 > **来源**: [OpenJDK 邮件列表](https://mail.openjdk.org/archives/list/members@openjdk.org/), [Inside.java Podcast](https://inside.java/2026/02/26/podcast-048/), [CFV Core Libraries Group Member](https://mail.openjdk.org/pipermail/core-libs-dev/2023-August/111036.html)
@@ -319,7 +319,7 @@ JEP 517 的主要协作者:
 
 | JEP | 标题 | 状态 |
 |-----|------|------|
-| [JEP 517](https://openjdk.org/jeps/517) | HTTP/3 for the HTTP Client API | ✅ JDK 26 |
+| [JEP 517](https://openjdk.org/jeps/517) | HTTP/3 for the HTTP Client API | ✅ JDK 25 |
 
 ### 深度分析
 

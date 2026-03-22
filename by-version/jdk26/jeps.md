@@ -85,7 +85,7 @@
 | JEP 513 | Flexible Constructor Bodies | JDK 25 |
 | JEP 519 | Compact Object Headers | JDK 25 |
 | JEP 520 | JFR Method Timing & Tracing | JDK 25 |
-| JEP 521 | Generational Shenandoah | JDK 25 |
+| JEP 521 | Generational Shenandoah | JDK 26 |
 
 ---
 

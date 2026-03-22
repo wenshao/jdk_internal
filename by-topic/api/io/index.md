@@ -30,7 +30,7 @@ Stream   Writer    Buffer  Path    增强    线程    Memory   对齐NIO  (JEP 
 | **JDK 21** | 虚拟线程 | 阻塞 IO 不阻塞平台线程 | JEP 444 |
 | **JDK 22** | Foreign Memory | Foreign Function & Memory API 正式 | JEP 454 |
 | **JDK 25** | File 行为对齐 | java.io.File 行为与 java.nio.file 对齐 | - |
-| **JDK 26** | HTTP/3 | HTTP Client API 支持 HTTP/3 协议 | JEP 517 |
+| **JDK 25** | HTTP/3 | HTTP Client API 支持 HTTP/3 协议 | JEP 517 |
 
 ---
 
@@ -389,7 +389,7 @@ try (Arena arena = Arena.ofConfined()) {
 JDK 25 修复了 `java.io.File` 对空路径名的长期行为不一致问题，使 `canRead()`、
 `exists()`、`isDirectory()` 等方法的行为与 `java.nio.file` API 保持一致。
 
-### HTTP/3 支持 (JDK 26, JEP 517)
+### HTTP/3 支持 (JDK 25, JEP 517)
 
 JDK 26 为 HTTP Client API 添加 HTTP/3 协议支持。HTTP/3 基于 QUIC (UDP)
 传输，提供更快的握手、消除队头阻塞等优势。

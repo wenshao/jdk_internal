@@ -98,7 +98,7 @@ int x = 10, y = 20;
 String result = STR."\{x} + \{y} = \{x + y}";  // "10 + 20 = 30"
 ```
 
-**注意**: JEP 430 在 JDK 25 之前被撤回，参见 [JDK-8343684](https://bugs.openjdk.org/browse/JDK-8343684)
+**注意**: JEP 430 在 JDK 21 之前被撤回，参见 [JDK-8343684](https://bugs.openjdk.org/browse/JDK-8343684)
 
 **详见**：[String Templates 分析](string-templates.md) | [JEP 430](jep-430.md) | [JEP 459](jep-459.md) | [JEP 471](jep-471.md)
 ---

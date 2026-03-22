@@ -734,7 +734,7 @@ String message = STR."Hello \{name}!";
 
 ### JDK 24-25 - String Templates 未发布
 
-由于 JEP 430 已撤回，JDK 24-25 没有继续此特性的预览。
+由于 JEP 430 已撤回，JDK 21-25 没有继续此特性的预览。
 
 ### JDK 25 - 隐式类 (正式)
 

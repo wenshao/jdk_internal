@@ -121,8 +121,8 @@
 
 | JEP | 标题 | 状态 | 说明 |
 |-----|------|------|------|
-| [JEP 503](https://openjdk.org/jeps/503) | Remove the 32-bit x86 Port | JDK 23 | 移除 32 位 x86 支持 |
-| [JEP 501](https://openjdk.org/jeps/501) | Deprecate the 32-bit x86 Port for Removal | JDK 22 | 弃用 32 位 x86 |
+| [JEP 503](https://openjdk.org/jeps/503) | Remove the 32-bit x86 Port | JDK 25 | 移除 32 位 x86 支持 |
+| [JEP 501](https://openjdk.org/jeps/501) | Deprecate the 32-bit x86 Port for Removal | JDK 24 | 弃用 32 位 x86 |
 | [JEP 379](https://openjdk.org/jeps/379) | Shenandoah: Low-Pause-Time Garbage Collector (Production) | JDK 15 | Shenandoah GC 正式版 |
 | [JEP 318](https://openjdk.org/jeps/318) | Epsilon: A No-Op Garbage Collector (Experimental) | JDK 11 | 无操作 GC，性能测试专用 |
 | [JEP 280](https://openjdk.org/jeps/280) | Indify String Concatenation | JDK 9 | 字符串拼接优化 |
@@ -380,7 +380,7 @@ Aleksey Shipilev 从 JDK 8 开始就有重要贡献：
 | JDK 11 | Shenandoah GC 优化 |
 | JDK 17 | Shenandoah GC 优化 |
 | JDK 21 | 虚拟线程性能优化 |
-| JDK 26 | JEP 503, C2 优化 |
+| JDK 25 | JEP 503, C2 优化 |
 
 ---
 

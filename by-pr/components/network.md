@@ -7,7 +7,7 @@
 
 ## Overview
 
-JDK 26 brings one of the most significant networking changes in recent years: **HTTP/3 support** (JEP 517). This release also includes TLS improvements, HTTP client enhancements, and test framework migrations.
+JDK 25 brings one of the most significant networking changes in recent years: **HTTP/3 support** (JEP 517). This release also includes TLS improvements, HTTP client enhancements, and test framework migrations.
 
 ---
 

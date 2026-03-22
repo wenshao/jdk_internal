@@ -136,7 +136,7 @@ William Kemper 是 Amazon (AWS) 的 SDE III（软件开发工程师 III），专
 
 ### 1. JEP 404 / JEP 521: Generational Shenandoah (JDK-8354078)
 
-The flagship contribution - implementing generational garbage collection for Shenandoah. JEP 404 integrated as experimental in JDK 24; JEP 521 drops experimental status, making it a product feature. Extensively tested with DaCapo, SPECjbb2015, SPECjvm2008, and Heapothesys benchmarks.
+The flagship contribution - implementing generational garbage collection for Shenandoah. JEP 404 integrated as experimental in JDK 26; JEP 521 drops experimental status, making it a product feature. Extensively tested with DaCapo, SPECjbb2015, SPECjvm2008, and Heapothesys benchmarks.
 
 ```cpp
 // Core generational Shenandoah architecture

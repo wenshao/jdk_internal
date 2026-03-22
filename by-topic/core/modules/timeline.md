@@ -370,7 +370,7 @@ module com.example.myapp {
 
 ## 9. JDK 23+ - 模块导入声明
 
-> **JEP 476** (JDK 23 预览) → **JEP 511** (JDK 25 正式)
+> **JEP 476** (JDK 25 预览) → **JEP 511** (JDK 25 正式)
 
 ### 基本用法
 

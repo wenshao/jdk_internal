@@ -22,7 +22,7 @@
 
 ## 1. 概述
 
-Axel Boldt-Christmas 是 Oracle 斯德哥尔摩 **HotSpot GC 团队** 的 ZGC 开发者，专注于 **ZGC (Z Garbage Collector)** 的开发和优化。他是 Generational ZGC 的核心贡献者之一，也是 JEP 490 (ZGC: Remove the Non-Generational Mode) 的实现者。在 JDK 26 中以 52 次提交排名前列。他拥有 [Inside.java 作者页面](https://inside.java/u/AxelBoldtChristmas/)，确认其 Oracle 身份。
+Axel Boldt-Christmas 是 Oracle 斯德哥尔摩 **HotSpot GC 团队** 的 ZGC 开发者，专注于 **ZGC (Z Garbage Collector)** 的开发和优化。他是 Generational ZGC 的核心贡献者之一，也是 JEP 490 (ZGC: Remove the Non-Generational Mode) 的实现者。在 JDK 24 中以 52 次提交排名前列。他拥有 [Inside.java 作者页面](https://inside.java/u/AxelBoldtChristmas/)，确认其 Oracle 身份。
 
 ---
 

@@ -200,7 +200,7 @@ provides com.example.spi.Provider
 
 ## 5. 模块导入声明 (JDK 23+)
 
-> **JEP 476** (JDK 23 预览) → **JEP 511** (JDK 25 正式)
+> **JEP 476** (JDK 25 预览) → **JEP 511** (JDK 25 正式)
 
 ### 基本语法
 
@@ -418,7 +418,7 @@ jpackage \
 
 ## 9. 强封装 (JDK 16+)
 
-### JEP 396 (JDK 16) / JEP 403 (JDK 17): 强封装
+### JEP 396 (JDK 17) / JEP 403 (JDK 17): 强封装
 
 ```bash
 # JDK 9-15: 允许非法访问 (默认警告)

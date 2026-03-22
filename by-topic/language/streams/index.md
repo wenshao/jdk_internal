@@ -711,7 +711,7 @@ IntStream.iterate(0, n -> n < 20, n -> n + 2)
 
 ## 9. Gatherers (JDK 24 正式)
 
-**JDK 22 预览 (JEP 461) → JDK 23 二次预览 (JEP 473) → JDK 24 正式 (JEP 485)**
+**JDK 23 预览 (JEP 461) → JDK 23 二次预览 (JEP 473) → JDK 24 正式 (JEP 485)**
 
 Stream::gather(Gatherer) 是新的中间流操作, 相当于中间操作版的 Stream::collect(Collector)。
 Gatherer 可实现一对一、一对多、多对一、多对多转换, 支持短路和并行执行。

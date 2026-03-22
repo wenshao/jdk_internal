@@ -324,7 +324,7 @@ arrayHandle.set(array, 5, 100);
 
 ## 5. ClassFile API
 
-**JDK 16 预览 (JEP 395), JDK 24 正式 (JEP 484)**
+**JDK 24 预览 (JEP 395), JDK 24 正式 (JEP 484)**
 
 ### 读取 Class 文件
 
@@ -398,7 +398,7 @@ codeBuilder.iload(1)
 
 ### Foreign Memory Access
 
-**JDK 14 预览 (JEP 370/389), JDK 22 正式 (JEP 454)**
+**JDK 22 预览 (JEP 370/389), JDK 22 正式 (JEP 454)**
 
 ```java
 // 分配外部内存

@@ -328,7 +328,7 @@ public class ChaCha20Example {
 | Nonce 大小 | 96 位 | 96 位 |
 | 认证加密 | 是 (AEAD) | 是 (AEAD) |
 
-### JDK 17 - KMAC & SHA-3 (JEP 370)
+### JDK 14 - KMAC & SHA-3 (JEP 370)
 
 #### SHA-3 家族
 
@@ -903,8 +903,8 @@ public class PostQuantumCrypto {
 | JDK 11 | **TLS 1.3** | JEP 332 | 更快更强的握手 |
 | JDK 11 | **ChaCha20-Poly1305** | JEP 329 | 现代加密算法 |
 | JDK 15 | 禁用弱签名 | - | 移除 DSA 1024 位 |
-| JDK 17 | **KMAC** | JEP 370 | SHA-3 家族 MAC |
-| JDK 17 | **SHA-3** | JEP 370 | Keccak 哈希 |
+| JDK 14 | **KMAC** | JEP 370 | SHA-3 家族 MAC |
+| JDK 14 | **SHA-3** | JEP 370 | Keccak 哈希 |
 | JDK 21 | **KEM API** | JEP 452 | 密钥封装机制 API |
 | JDK 21 | HSS/LMS | - | 后量子状态哈希签名 |
 | JDK 24 | **ML-KEM** | JEP 496 | 后量子密钥封装 (FIPS 203) |

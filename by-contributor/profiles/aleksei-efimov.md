@@ -59,7 +59,7 @@ Aleksei Efimov 是 Oracle Dublin 团队的高级软件工程师，隶属于 Java
 - `InetAddressResolver` - 正向和反向查找操作接口
 - `InetAddressResolver.LookupPolicy` - 查找策略描述类
 
-### JEP 517: HTTP/3 for the HTTP Client API (JDK 26)
+### JEP 517: HTTP/3 for the HTTP Client API (JDK 25)
 
 | 属性 | 值 |
 |------|-----|
@@ -107,7 +107,7 @@ Aleksei 在 DNS 客户端和地址解析方面做出了多项改进：
 |------|------|------|
 | **持续** | Java Core Libraries Networking 团队 | Dublin 办公室，专注于网络栈开发 |
 | **JDK 18** | JEP 418 实现 | Internet-Address Resolution SPI 核心实现 |
-| **JDK 26** | JEP 517 贡献 | HTTP/3 TLS 集成与安全审查 |
+| **JDK 25** | JEP 517 贡献 | HTTP/3 TLS 集成与安全审查 |
 
 ---
 

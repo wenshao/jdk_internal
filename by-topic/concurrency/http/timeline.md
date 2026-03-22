@@ -11,7 +11,7 @@
 4. [JDK 9 - HTTP Client (孵化器) - JEP 110](#4-jdk-9---http-client-孵化器---jep-110)
 5. [JDK 11 - HTTP Client (标准) - JEP 321](#5-jdk-11---http-client-标准---jep-321)
 6. [HTTP/2 支持](#6-http2-支持)
-7. [HTTP/3 (JDK 26, JEP 517)](#7-http3-jdk-26-jep-517)
+7. [HTTP/3 (JDK 25, JEP 517)](#7-http3-jdk-26-jep-517)
 8. [性能对比](#8-性能对比)
 9. [最佳实践](#9-最佳实践)
 10. [故障排查](#10-故障排查)
@@ -430,7 +430,7 @@ response.pushPromises().forEach(promise -> {
 
 ---
 
-## 7. HTTP/3 (JDK 26, JEP 517)
+## 7. HTTP/3 (JDK 25, JEP 517)
 
 ### QUIC 协议栈
 
@@ -678,7 +678,7 @@ client.shutdownNow();     // 立即关闭
 | JDK 16 | HTTP/2 支持 | - | 标准 |
 | JDK 21 | HTTP Client 正式 | - | 标准 |
 | JDK 22 | 连接复用优化 | - | 标准 |
-| JDK 26 | HTTP/3 支持 | JEP 517 | 预览 |
+| JDK 25 | HTTP/3 支持 | JEP 517 | 预览 |
 
 ---
 

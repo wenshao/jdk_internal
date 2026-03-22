@@ -46,7 +46,7 @@ Daniel Jelinski 是 Oracle 的 Consulting Member of Technical Staff，隶属于 
 
 ## 3. 主要贡献
 
-### JEP 517: HTTP/3 for the HTTP Client API (JDK 26)
+### JEP 517: HTTP/3 for the HTTP Client API (JDK 25)
 
 | 属性 | 值 |
 |------|-----|
