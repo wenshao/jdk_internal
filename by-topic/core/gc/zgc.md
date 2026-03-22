@@ -1,5 +1,13 @@
 # ZGC 详解
 
+> **30 秒速读**
+> - 亚毫秒级 GC 暂停 (<1ms)，暂停时间不随堆大小或存活对象数量增长
+> - 支持 TB 级堆内存，几乎所有 GC 操作并发执行 (标记、重定位、引用处理、类卸载)
+> - 核心技术: Colored Pointers (着色指针) + Load Barrier (读屏障)
+> - JDK 21 分代 ZGC 正式发布，分 Young/Old 两代独立收集，降低回收频率
+> - ZPage 三种类型: Small (2MB)、Medium (32MB)、Large (动态)
+> - ZDirector 以 100Hz 频率评估 GC 触发决策，源码约 237 个 .cpp/.hpp 文件
+
 > Z Garbage Collector: 低延迟垃圾收集器 -- 亚毫秒级暂停, 不随堆大小增长
 
 [← 返回 GC](../)
@@ -1446,3 +1454,13 @@ ZDirector::evaluate_rules()  [100Hz 评估]
         → pause_relocate_start()    [STW: flip 重定位位]
         → concurrent_relocate()     [并发: 移动对象]
 ```
+
+---
+
+## 推荐阅读
+
+- [G1 GC 深入](g1-gc.md) — 最广泛使用的 GC，与 ZGC 对比选型的基准
+- [Shenandoah GC](shenandoah.md) — 另一款低暂停 GC，并发策略与 ZGC 不同
+- [G1 vs ZGC vs Shenandoah 对比](/guides/comparisons/g1-vs-zgc-vs-shenandoah.md) — 三大 GC 全面对比指南
+- [GC 调优实践](tuning.md) — GC 参数调优案例与最佳实践
+- [内存管理主题](../memory/) — 堆外内存、Metaspace 等内存管理全景

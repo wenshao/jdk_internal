@@ -900,3 +900,12 @@ Record (Amber) + Inline Class (Valhalla)
 - [Switch 表达式与模式匹配演进](switch-patterns.md)
 - [Text Blocks 深入](text-blocks.md)
 - [Stream Gatherers 深入](stream-gatherers.md)
+
+---
+
+## 推荐阅读
+
+- [Switch 表达式与模式匹配演进](switch-patterns.md) — switch 从语句到表达式再到模式匹配的完整演进
+- [Stream Gatherers 深入](stream-gatherers.md) — 自定义中间操作，Stream API 最大扩展
+- [Records 主题](../records/) — record 类型与模式匹配的深度协同
+- [Pattern Matching 主题](../patterns/) — 模式匹配跨语言特性的统一视角

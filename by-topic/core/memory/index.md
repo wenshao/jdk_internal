@@ -1,5 +1,13 @@
 # 内存管理
 
+> **30 秒速读**
+> - JVM 四大内存区域: Heap (对象)、Metaspace (类元数据)、Stack (线程栈帧)、CodeCache (JIT 编译代码)
+> - Compressed Oops (JDK 7 默认): 64 位 JVM 压缩对象指针，堆 ≤32GB 时自动启用，节省 ~20-30% 内存
+> - Compact Object Headers (JDK 25 正式, JEP 519): 对象头 12B → 8B，节省 ~10-20% 堆内存
+> - JDK 8 移除永久代 (PermGen)，改为 Metaspace 原生内存动态扩展
+> - String Deduplication (JDK 8u20): GC 期间自动去重相同字符串，额外节省 ~10%
+> - NMT (Native Memory Tracking): 追踪 JVM 所有非堆内存分配，`-XX:NativeMemoryTracking=summary`
+
 > 堆、栈、Metaspace、Compressed Oops 演进历程
 
 [← 返回核心平台](../)
@@ -1082,6 +1090,15 @@ git log --oneline -- src/hotspot/share/memory/
 git log --oneline -- src/hotspot/share/oops/
 git log --oneline -- src/hotspot/share/classfile/
 ```
+
+---
+
+## 推荐阅读
+
+- [GC 演进主题](../gc/) — 垃圾收集器与内存回收策略全景
+- [JVM 内部机制](../jvm/) — JVM 运行时结构，含 NMT 内存追踪
+- [性能优化主题](../performance/) — 内存相关的性能调优实践
+- [G1 vs ZGC vs Shenandoah 对比](/guides/comparisons/g1-vs-zgc-vs-shenandoah.md) — GC 选型与内存管理策略对比
 
 ---
 

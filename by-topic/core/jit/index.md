@@ -1,5 +1,13 @@
 # JIT 编译
 
+> **30 秒速读**
+> - C1 快速编译 (毫秒级，中等代码质量)，C2 深度优化 (秒级，逃逸分析/标量替换/循环展开)
+> - 分层编译 5 级 (Level 0-4): JDK 6 实验引入，JDK 8 默认启用
+> - 典型路径: 解释器 → C1+profiling (Level 3) → C2 完全优化 (Level 4)
+> - JVMCI (JDK 9, JEP 243): JVM 编译器接口，支持 Graal JIT 等外部编译器
+> - JDK 25: AOT Method Profiling (JEP 515) 启动加速 15-25%
+> - JDK 26: 支持大参数方法编译、Lazy Constants 二次预览、自动向量化扩展
+
 > C1、C2、分层编译、Graal 演进历程
 
 [← 返回核心平台](../)
@@ -501,6 +509,16 @@ private void processUncommon() {
 ### 外部参考
 
 - [Emanuel's HotSpot C2 Blog](https://eme64.github.io/blog/) - C2 编译器深入解析 ([Part 1: Overview](https://eme64.github.io/blog/2024/12/06/Intro-to-C2-Part01.html), [Part 2: GVN](https://eme64.github.io/blog/2024/12/24/Intro-to-C2-Part02.html), [Part 3: Inlining](https://eme64.github.io/blog/2024/12/31/Intro-to-C2-Part03.html), [Part 4: Loop Optimizations](https://eme64.github.io/blog/2025/01/23/Intro-to-C2-Part04.html))
+
+---
+
+## 推荐阅读
+
+- [C2 编译器优化详解](c2-optimizations.md) — C2 编译器核心优化技术深入
+- [逃逸分析](escape-analysis.md) — JIT 最重要的优化之一，标量替换与栈上分配
+- [MergeStore 优化](mergestore.md) — JDK 新增的连续存储合并优化
+- [MergeLoad 优化](mergeload.md) — JDK 新增的连续加载合并优化
+- [性能优化主题](../performance/) — 从 JIT 到应用层的全链路性能优化
 
 ---
 

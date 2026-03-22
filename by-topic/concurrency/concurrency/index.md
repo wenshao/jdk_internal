@@ -544,6 +544,15 @@ jfr print --events jdk.VirtualThreadPinned concurrency.jfr
 
 **最后更新**: 2026-03-20
 
+---
+
+## 推荐阅读
+
+- [Project Loom 主题](../../core/loom/) — 虚拟线程、结构化并发的完整演进
+- [synchronized 内部实现](synchronized-internals.md) — 偏向锁、轻量级锁、重量级锁源码分析
+- [JUC 深入分析](juc-deep-dive.md) — java.util.concurrent 核心组件实现
+- [虚拟线程迁移指南](virtual-threads-guide.md) — 从传统线程池迁移到虚拟线程
+
 **Sources**:
 - [JEP 444](/jeps/concurrency/jep-444.md)
 - [JEP 462](/jeps/concurrency/jep-462.md)

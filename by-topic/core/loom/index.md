@@ -1,5 +1,13 @@
 # Project Loom
 
+> **30 秒速读**
+> - 虚拟线程 JDK 21 正式发布 (JEP 444)，JDK 24 消除 synchronized 固定问题 (JEP 491)
+> - 每个虚拟线程仅 ~几 KB 栈内存 (平台线程 ~1MB)，支持百万级并发
+> - 由 ForkJoinPool 调度，阻塞时自动释放 carrier 线程，无 OS 系统调用
+> - Scoped Values JDK 25 正式 (JEP 506)，结构化并发 JDK 26 第六次预览 (JEP 525)
+> - 底层基于 Continuations 栈帧 freeze/thaw 机制，StackChunk 链表存储在堆上
+> - 直接写同步阻塞代码即可，告别回调地狱和响应式编程复杂度
+
 虚拟线程 - 轻量级并发，百万级线程无压力。
 
 [← 返回核心平台](../)
@@ -1148,5 +1156,15 @@ ThreadLocal<byte[]> BIG = ThreadLocal.withInitial(() -> new byte[1_000_000]);
 - [Inside Java - Virtual Threads](https://inside.java/tag/loom)
 - [Spring Boot Virtual Threads Documentation](https://docs.spring.io/spring-boot/reference/features/task-execution-and-scheduling.html)
 - [Helidon 4 Architecture](https://helidon.io/docs/v4/about/architecture)
+
+---
+
+## 推荐阅读
+
+- [并发编程主题](../../concurrency/concurrency/) — Java 并发全景：synchronized、JUC、虚拟线程
+- [Panama FFI](../panama/) — 另一个 JDK 平台级项目，与 Loom 并行演进
+- [JFR 实战指南](/guides/jfr.md) — 使用 JFR 监控虚拟线程性能
+- [虚拟线程迁移指南](../../concurrency/concurrency/virtual-threads-guide.md) — 从传统线程池迁移到虚拟线程
+- [虚拟线程实现深入](/deep-dive/virtual-thread-implementation.md) — VirtualThread 源码级实现分析
 
 > [时间线](timeline.md) | [并发主题](../../concurrency/)

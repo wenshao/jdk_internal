@@ -1,5 +1,13 @@
 # JVM 内部机制与调优
 
+> **30 秒速读**
+> - 执行路径: Template Interpreter → C1 (快速编译) → C2 (深度优化)，分层编译 5 级 (Level 0-4)
+> - 对象头: Mark Word 8B + Klass Pointer 4B = 12B (压缩指针)；Compact Headers (JEP 519) 压缩至 8B
+> - Safepoint: GC 发起 STW 暂停的协调机制，所有 Java 线程必须到达安全点
+> - 核心诊断工具: jcmd (统一诊断)、JFR (飞行记录)、jmap (堆转储)、jstack (线程转储)
+> - NMT (Native Memory Tracking): 追踪 JVM 非堆内存使用，定位原生内存泄漏
+> - 类加载三层: Bootstrap → Platform → App ClassLoader
+
 > HotSpot 架构、对象模型、字节码执行、Safepoint、NMT、线程模型、启动过程、诊断工具
 
 [← 返回核心平台](../)
@@ -1095,3 +1103,12 @@ jhsdb clhsdb --exe <java> --core <core>
 - [HotSpot Wiki](https://wiki.openjdk.org/display/HotSpot)
 - [Lilliput Project (Compact Object Headers)](https://wiki.openjdk.org/display/lilliput)
 - [Loom Project (Virtual Threads)](https://wiki.openjdk.org/display/loom)
+
+---
+
+## 推荐阅读
+
+- [JIT 编译器主题](../jit/) — C1/C2/Graal 编译器与运行时优化
+- [GC 演进主题](../gc/) — 垃圾收集器实现与调优
+- [内存管理主题](../memory/) — 堆、Metaspace、NMT 内存追踪
+- [类加载机制](../classloading/) — ClassLoader 层次结构与模块化加载
