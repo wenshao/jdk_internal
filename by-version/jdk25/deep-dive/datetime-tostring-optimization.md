@@ -116,18 +116,18 @@ public class Event {
 
 | Issue | 标题 |
 |-------|------|
-| [JDK-8339699](../../by-pr/8339/8339699.md) | DataOutputStream writeUTF 优化 |
-| [JDK-8340232](../../by-pr/8340/8340232.md) | DataInputStream readUTF 优化 |
+| [JDK-8339699](../../../by-pr/8339/8339699.md) | DataOutputStream writeUTF 优化 |
+| [JDK-8340232](../../../by-pr/8340/8340232.md) | DataInputStream readUTF 优化 |
 
 ---
 
 ## 7. 更多信息
 
-- [完整 PR 分析](../../by-pr/8337/8337832.md)
+- [完整 PR 分析](../../../by-pr/8337/8337832.md)
 - [贡献者档案](/by-contributor/profiles/shaojin-wen.md)
 - [GitHub PR](https://github.com/openjdk/jdk/pull/20368)
 - [Topic: Date/Time API](/by-topic/api/datetime/index.md)
-- [相关 PR: JDK-8337279](../../by-pr/8337/8337279.md) - Share StringBuilder to format instant
+- [相关 PR: JDK-8337279](../../../by-pr/8337/8337279.md) - Share StringBuilder to format instant
 - [相关 PR: JDK-8337168](/by-topic/api/datetime/prs/jdk-8337168.md) - Optimize LocalDateTime.toString
 
 ---

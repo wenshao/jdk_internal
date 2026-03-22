@@ -169,6 +169,6 @@ A: 需要足够的堆内存（建议 >4GB），小内存场景收益不明显。
 ## 8. 更多资源
 
 - [JDK 25 发布说明](https://openjdk.org/projects/jdk/25/)
-- [JDK 25 JEP 列表](./jeps.md)
+- [JDK 25 JEP 列表](../jeps.md)
 - [虚拟线程指南](https://openjdk.org/jeps/444)
 - [分代 ZGC 文档](https://openjdk.org/jeps/468)

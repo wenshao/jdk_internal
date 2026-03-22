@@ -38,7 +38,7 @@ Strings
 
 ### 主要贡献者
 
-- **[Shaojin Wen (温绍锦)](../../by-contributor/profiles/shaojin-wen.md)** - hex8 算法、消除查找表
+- **[Shaojin Wen (温绍锦)](../../../by-contributor/profiles/shaojin-wen.md)** - hex8 算法、消除查找表
 - **Kieran Farrell** - UUIDv7、循环展开
 - **Aleksey Shipilev** - Compact Strings 适配
 - **Claes Redestad** - fromString 优化
@@ -184,7 +184,7 @@ public String toString() {
 ### 第一次优化：hex8 向量化
 
 **提交**: [4f54ac68](https://github.com/openjdk/jdk/commit/4f54ac68a9f)
-**作者**: [Shaojin Wen (温绍锦)](../../by-contributor/profiles/shaojin-wen.md)
+**作者**: [Shaojin Wen (温绍锦)](../../../by-contributor/profiles/shaojin-wen.md)
 **时间**: 2025-01-15
 
 核心思想：使用 `long` 类型模拟 SIMD 向量运算，一次处理 8 个十六进制数字。
@@ -230,7 +230,7 @@ HexDigits.put4(buf, 4, i0);
 
 **Issue**: [JDK-8353741](https://bugs.openjdk.org/browse/JDK-8353741)
 **提交**: [796ec5e7cfc](https://github.com/openjdk/jdk/commit/796ec5e7cfc)
-**作者**: [Shaojin Wen (温绍锦)](../../by-contributor/profiles/shaojin-wen.md)
+**作者**: [Shaojin Wen (温绍锦)](../../../by-contributor/profiles/shaojin-wen.md)
 **审查**: Ron Pressler
 **时间**: 2025-05-22
 
@@ -371,7 +371,7 @@ public static long expand(long i, long mask) {
 ### 审查者
 
 - Ron Pressler - JDK-8353741 审查
-- [Roger Riggs](../../by-contributor/profiles/roger-riggs.md) - 多次 PR 审查
+- [Roger Riggs](../../../by-contributor/profiles/roger-riggs.md) - 多次 PR 审查
 
 ---
 
@@ -405,7 +405,7 @@ ebadfaeb2e1 - 8196334: Optimize UUID#fromString
 
 ### 相关文章
 
-- [String 拼接优化](../../string/optimization.md)
+- [String 处理](index.md)
 - [Compact Strings (JEP 254)](/jeps/language/jep-254.md)
 - [性能优化时间线](../../core/performance/timeline.md)
 
@@ -414,6 +414,6 @@ ebadfaeb2e1 - 8196334: Optimize UUID#fromString
 **最后更新**: 2026-03-20
 
 **贡献者档案**:
-- [Shaojin Wen (温绍锦)](../../by-contributor/profiles/shaojin-wen.md)
-- [Claes Redestad](../../by-contributor/profiles/claes-redestad.md)
+- [Shaojin Wen (温绍锦)](../../../by-contributor/profiles/shaojin-wen.md)
+- [Claes Redestad](../../../by-contributor/profiles/claes-redestad.md)
 - Kieran Farrell

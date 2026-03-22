@@ -1,7 +1,7 @@
 # Andrew Haley
 
 > **GitHub**: [@theRealAph](https://github.com/theRealAph)
-> **Organization**: [Red Hat](../../contributors/orgs/red-hat.md)
+> **Organization**: [Red Hat](../../contributors/orgs/redhat.md)
 > **Role**: Java Platform Lead Engineer
 > **Email**: aph@redhat.com
 > **Location**: Cambridge, UK

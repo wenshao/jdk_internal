@@ -991,7 +991,7 @@ selector.select(1000);  // select 超时 (ms)
 
 - [HTTP 客户端](../http/) - HTTP Client 详解
 - [并发编程](../concurrency/) - 线程、虚拟线程
-- [网络时间线](/by-topic/net/timeline.md) - 详细历史演进
+- 网络时间线 - 详细历史演进
 
 ### 外部参考
 

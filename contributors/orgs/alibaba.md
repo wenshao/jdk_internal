@@ -61,7 +61,7 @@
 
 | 贡献者 | Profile | PRs | 角色 | 主要领域 |
 |--------|---------|-----|------|----------|
-| [Max Xing](../../by-contributor/profiles/max-xing.md) | [@MaxXSoft](https://github.com/MaxXSoft) | 16 | Author | RISC-V, C2 编译器, HotSpot |
+| Max Xing | [@MaxXSoft](https://github.com/MaxXSoft) | 16 | Author | RISC-V, C2 编译器, HotSpot |
 | [Lingjun Cao](../../by-contributor/profiles/lingjun-cao.md) | [@lingjun-cg](https://github.com/lingjun-cg) | 2 | Author | DecimalFormat 性能 |
 
 ### 次要贡献者
@@ -88,7 +88,7 @@
 
 | 领域 | 贡献者数 | 关键 PR | 相关文档 |
 |------|---------|---------|----------|
-| **核心库优化** | 1 | 60+ | [字符串优化](../../by-topic/core/performance/string-optimization.md) |
+| **核心库优化** | 1 | 60+ | 字符串优化 |
 | **C2 编译器** | 1 | 4 | [C2 优化阶段](../../by-topic/core/jit/c2-phases.md) |
 | **G1 GC** | 1 | 3 | [G1 GC](../../by-topic/core/gc/g1-gc.md) |
 | **ZGC** | 1 | 2 | [ZGC](../../by-topic/core/gc/zgc.md) |
@@ -167,8 +167,8 @@ JDK 24 是阿里巴巴开始活跃贡献的版本。
 
 | Issue | 标题 | 贡献者 | 类型 | 日期 |
 |-------|------|--------|------|------|
-| 8326936 | RISC-V: Shenandoah GC 原子操作修复 | [Max Xing](../../by-contributor/profiles/max-xing.md) | 正确性修复 | 2024-03-05 |
-| 8324280 | RISC-V: VM_Version::parse_satp_mode 修复 | [Max Xing](../../by-contributor/profiles/max-xing.md) | 正确性修复 | 2024-01-25 |
+| 8326936 | RISC-V: Shenandoah GC 原子操作修复 | Max Xing | 正确性修复 | 2024-03-05 |
+| 8324280 | RISC-V: VM_Version::parse_satp_mode 修复 | Max Xing | 正确性修复 | 2024-01-25 |
 | 8326446 | Apple M1 CPU Load 修复 | [Yibo Yan](../../by-contributor/profiles/yibo-yan.md) | 正确性修复 | 2024-03-08 |
 | 8319876 | VM_ThreadDump 内存优化 | [Yibo Yan](../../by-contributor/profiles/yibo-yan.md) | 内存优化 | 2023-11-17 |
 | 8333396 | java.text.Format 内部使用 StringBuilder | [Lingjun Cao](../../by-contributor/profiles/lingjun-cao.md) | 性能优化 | 2024-07-22 |
@@ -487,7 +487,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 - 提升 C2 编译器内存效率
 - 保持向后兼容性
 
-→ [完整分析](../../by-pr/8336/8336856.md) | [String "+" 运算符](../../by-topic/core/performance/string-concat.md)
+→ [完整分析](../../by-pr/8336/8336856.md) | String "+" 运算符
 
 ### DateTime 格式化优化 (JDK-8337832)
 
@@ -498,7 +498,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 - 优化格式化逻辑
 - 缓存常用格式
 
-→ [完整分析](../../by-pr/8337/8337832.md) | [日期时间 API](../../by-topic/core/library/datetime.md)
+→ [完整分析](../../by-pr/8337/8337832.md) | 日期时间 API
 
 ### C2 IR 节点修复 (JDK-8356328)
 
@@ -518,9 +518,9 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 | 主题 | 描述 | 链接 |
 |------|------|------|
-| 字符串处理 | String, StringBuilder 优化 | [字符串优化](../../by-topic/core/performance/string-optimization.md) |
-| 数字格式化 | Integer/Long toString 优化 | [数字格式化](../../by-topic/core/performance/number-formatting.md) |
-| ClassFile API | 字节码操作 API | [ClassFile API](../../by-topic/core/classfile/index.md) |
+| 字符串处理 | String, StringBuilder 优化 | 字符串优化 |
+| 数字格式化 | Integer/Long toString 优化 | 数字格式化 |
+| ClassFile API | 字节码操作 API | ClassFile API |
 
 ### 编译器
 
@@ -528,7 +528,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 |------|------|------|
 | C2 编译器 | 服务端编译器优化阶段 | [C2 阶段](../../by-topic/core/jit/c2-phases.md) |
 | JIT 编译 | 即时编译器概述 | [JIT 编译](../../by-topic/core/jit/index.md) |
-| IR 节点 | 中间表示节点 | [C2 IR](../../by-topic/core/jit/c2-ir.md) |
+| IR 节点 | 中间表示节点 | C2 IR |
 
 ### 垃圾收集
 
@@ -623,7 +623,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
 - **统计时间**: 2026-03-19
-- **分析工具**: [PR Analysis Tool](../../tools/pr-analysis.md)
+- **分析工具**: PR Analysis Tool
 
 ---
 
@@ -642,7 +642,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 - [Kuai Wei 贡献者档案](../../by-contributor/profiles/kuai-wei.md) - C2 编译器专家
 - [Yude Lin 贡献者档案](../../by-contributor/profiles/yude-lin.md) - G1 GC 专家
 - [Xiaowei Lu 贡献者档案](../../by-contributor/profiles/xiaowei-lu.md) - ZGC 专家
-- [Max Xing 贡献者档案](../../by-contributor/profiles/max-xing.md) - RISC-V, C2 编译器, HotSpot
+- Max Xing - RISC-V, C2 编译器, HotSpot
 - [Yibo Yan 贡献者档案](../../by-contributor/profiles/yibo-yan.md) - CPU Load/内存专家
 - [Lingjun Cao 贡献者档案](../../by-contributor/profiles/lingjun-cao.md) - DecimalFormat 专家
 - [中国贡献者索引](../../by-contributor/profiles/chinese-contributors.md)

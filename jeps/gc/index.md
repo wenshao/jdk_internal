@@ -56,7 +56,7 @@ Gen ZGC     Region      Gen ZGC     移除非Gen    Gen Sheno.   G1 吞吐
 - **更低延迟**：减少 STW 停顿时间
 - **更高吞吐**：适合大内存应用
 
-**详见**：[ZGC 分代模式分析](zgc-generational.md) | [JEP 439](jep-439.md) | [JEP 474](jep-474.md) | [JEP 490](jep-490.md)
+**详见**：[JEP 439](jep-439.md) | [JEP 474](jep-474.md) | [JEP 490](jep-490.md)
 
 ---
 
@@ -80,7 +80,7 @@ Gen ZGC     Region      Gen ZGC     移除非Gen    Gen Sheno.   G1 吞吐
 - 延迟屏障扩展，减少编译开销
 - 提升 G1 编译性能
 
-**详见**：[G1 GC 优化分析](g1-improvements.md) | [JEP 423](jep-423.md) | [JEP 475](jep-475.md) | [JEP 522](jep-522.md)
+**详见**：[JEP 423](jep-423.md) | [JEP 475](jep-475.md) | [JEP 522](jep-522.md)
 
 ---
 
@@ -105,7 +105,7 @@ Gen ZGC     Region      Gen ZGC     移除非Gen    Gen Sheno.   G1 吞吐
 - 更好的短期对象处理
 - 更低的 GC 停顿
 
-**详见**：[Shenandoah 分析](shenandoah.md) | [JEP 521](jep-521.md)
+**详见**：[JEP 521](jep-521.md)
 
 ---
 

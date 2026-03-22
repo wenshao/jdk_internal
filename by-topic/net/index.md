@@ -648,7 +648,7 @@ try (SocketChannel channel = SocketChannel.open(StandardProtocolFamily.UNIX)) {
 
 ### 内部文档
 
-- [网络时间线](timeline.md) - 详细的历史演进
+- 网络时间线 - 详细的历史演进
 - [I/O 处理](../api/io/) - 文件 I/O
 - [并发编程](../concurrency/concurrency/) - 并发基础
 - [HTTP 客户端](../concurrency/http/) - HTTP Client 详解

@@ -2,7 +2,7 @@
 
 > C2 没有而 GraalVM 有的完整技术清单
 >
-> **定位**: 列举 GraalVM 独有特性。更全面的技术对比见 [GraalVM 技术内幕](../../graalvm/graal-vs-c2.md)
+> **定位**: 列举 GraalVM 独有特性。更全面的技术对比见 [GraalVM 技术内幕](../graalvm/graal-vs-c2.md)
 
 [← 返回 JIT 编译](../)
 

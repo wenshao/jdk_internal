@@ -72,7 +72,7 @@ try (Arena arena = Arena.ofConfined()) {
 | `MemoryLayout` | 内存布局 |
 | `Arena` | 内存管理 |
 
-**详见**：[FFM API 详解](ffm-api.md) | [JEP 454](jep-454.md)
+**详见**：[JEP 454](jep-454.md)
 
 ---
 
@@ -93,7 +93,7 @@ JNI (Java Native Interface) 存在安全问题：
 System.loadLibrary("mylib");  // Warning: JNI is deprecated
 ```
 
-**详见**：[JNI 限制分析](jni-restrictions.md) | [JEP 472](jep-472.md)
+**详见**：[JEP 472](jep-472.md)
 
 ---
 

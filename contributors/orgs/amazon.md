@@ -350,8 +350,8 @@ Amazon 维护自己的 JDK 发行版 Corretto：
 
 | PR | 标题 | 分析文档 |
 |----|------|----------|
-| JDK-8354078 | Implement JEP 521: Generational Shenandoah | [详情](../../by-pr/8354/8354078.md) |
-| JDK-8370039 | GenShen: SATB barrier improvements | [详情](../../by-pr/8370/8370039.md) |
+| JDK-8354078 | Implement JEP 521: Generational Shenandoah | |
+| JDK-8370039 | GenShen: SATB barrier improvements | |
 
 ### ~~AArch64 (Nick Gasson)~~ -- 已修正: Nick Gasson 属于 Arm
 

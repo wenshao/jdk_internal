@@ -63,7 +63,7 @@ Thread.Builder.ofVirtual().name("my-vthread").task(() -> task());
 | 阻塞操作 | 阻塞OS线程 | 不阻塞OS线程 |
 | 上下文切换 | 内核级别 | JVM级别 |
 
-**详见**：[Virtual Threads 详解](virtual-threads.md) | [JEP 444](jep-444.md)
+**详见**：[JEP 444](jep-444.md)
 
 ---
 
@@ -95,7 +95,7 @@ try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
 }
 ```
 
-**详见**：[Structured Concurrency 详解](structured-concurrency.md)
+**详见**：[JEP 462](jep-462.md) | [JEP 480](jep-480.md) | [JEP 505](jep-505.md) | [JEP 525](jep-525.md)
 
 ---
 
@@ -131,7 +131,7 @@ void main() {
 }
 ```
 
-**详见**：[Implicit Classes 详解](implicit-classes.md) | [JEP 445](jep-445.md) | [JEP 463](jep-463.md) | [JEP 477](jep-477.md) | [JEP 512](jep-512.md)
+**详见**：[JEP 445](../language/jep-445.md) | [JEP 463](../language/jep-463.md) | [JEP 477](../language/jep-477.md) | [JEP 512](../language/jep-512.md)
 
 ---
 
@@ -167,7 +167,7 @@ USER_ID.where("user123", () -> {
 });
 ```
 
-**详见**：[Scoped Values 详解](scoped-values.md) | [JEP 446](jep-446.md) | [JEP 506](jep-506.md)
+**详见**：[JEP 446](jep-446.md) | [JEP 506](jep-506.md)
 
 ---
 

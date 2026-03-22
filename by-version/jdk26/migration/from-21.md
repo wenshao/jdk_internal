@@ -117,4 +117,4 @@ sdk use java 21
 
 - [JDK 26 发布说明](https://openjdk.org/projects/jdk/26/)
 - [JDK 26 完整特性](/by-version/jdk26/index.md)
-- [JDK 26 JEP 列表](./jeps.md)
+- [JDK 26 JEP 列表](../jeps.md)

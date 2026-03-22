@@ -241,7 +241,7 @@ Dragonwell 由阿里巴巴 JDK 团队维护：
 - **Shaojin Wen (温少进)** - 性能优化
 - **Fei Yang** - 核心库
 
-[阿里巴巴贡献者](../../contributors/orgs/alibaba.md)
+[阿里巴巴贡献者](../contributors/orgs/alibaba.md)
 
 ---
 

@@ -66,7 +66,7 @@ JDK 26 (GA: 2026-03-17) had **~450 unique contributors** making Integrated PRs d
 | 33 | [Johannes Bechberger](johannes-bechberger.md) | SAP | 18+ | JFR | [详情](johannes-bechberger.md) |
 | 34 | [Per Minborg](per-minborg.md) | Oracle | 15+ | Core Libs | [详情](per-minborg.md) |
 | 35 | [Jatin Bhateja](jatin-bhateja.md) | Intel | 15+ | Vector API | [详情](jatin-bhateja.md) |
-| 36 | [Roland Westrelin](roland-westrelin.md) | Red Hat | 15+ | C2 Compiler | [详情](roland-westrelin.md) |
+| 36 | Roland Westrelin | Red Hat | 15+ | C2 Compiler | - |
 | 37 | [Weijun Wang](weijun-wang.md) | Oracle | 15+ | Security | [详情](weijun-wang.md) |
 | 38 | [Alexey Semenyuk](alexey-semenyuk.md) | Oracle | 12+ | jpackage | [详情](alexey-semenyuk.md) |
 | 39 | [Alan Bateman](alan-bateman.md) | Oracle | 12+ | Concurrency | [详情](alan-bateman.md) |

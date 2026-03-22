@@ -573,7 +573,7 @@ int optimalSize = 8192;  // 根据系统调整
 
 ### 内部文档
 
-- [NIO 时间线](timeline.md) - 详细的历史演进
+- NIO 时间线 - 详细的历史演进
 - [I/O 处理](../api/io/) - 传统 I/O
 - [网络编程](../net/) - Socket, HTTP Client
 - [文件 I/O](../api/io/) - Files, Path

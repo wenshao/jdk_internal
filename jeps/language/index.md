@@ -100,7 +100,7 @@ String result = STR."\{x} + \{y} = \{x + y}";  // "10 + 20 = 30"
 
 **注意**: JEP 430 在 JDK 21 之前被撤回，参见 [JDK-8343684](https://bugs.openjdk.org/browse/JDK-8343684)
 
-**详见**：[String Templates 分析](string-templates.md) | [JEP 430](jep-430.md) | [JEP 459](jep-459.md) | [JEP 471](jep-471.md)
+**详见**：[JEP 430](jep-430.md) | [JEP 459](../tools/jep-459.md) | [JEP 471](../api/jep-471.md)
 ---
 
 ## 5. Pattern Matching
@@ -141,7 +141,7 @@ if (obj instanceof Point(int x, int y)) {
 }
 ```
 
-**详见**：[Pattern Matching 分析](pattern-matching.md) | [JEP 456](jep-456.md) | [JEP 507](jep-507.md) | [JEP 530](jep-530.md)
+**详见**：[JEP 456](jep-456.md) | [JEP 507](jep-507.md) | [JEP 530](jep-530.md)
 ---
 
 ## 6. Implicit Classes (隐式类)
@@ -170,7 +170,7 @@ void main() {
 }
 
 ```
-**详见**：[Implicit Classes 分析](implicit-classes.md) | [JEP 445](jep-445.md) | [JEP 463](jep-463.md) | [JEP 477](jep-477.md) | [JEP 512](jep-512.md)
+**详见**：[JEP 445](jep-445.md) | [JEP 463](jep-463.md) | [JEP 477](jep-477.md) | [JEP 512](jep-512.md)
 ---
 
 ## 7. 相关链接

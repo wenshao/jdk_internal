@@ -578,7 +578,7 @@ native-image \
 
 ### 相关主题
 - [JIT 编译优化](../jit/)
-- [AOT 编译技术](../../by-pr/8370/jep514-aot-linking.md)
+- [AOT 编译技术](../../../by-pr/8370/jep514-aot-linking.md)
 - [性能调优指南](../performance/)
 
 ---

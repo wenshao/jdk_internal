@@ -25,7 +25,7 @@
 | [JEP 484](jep-484.md) | Class-File API | 24 | ✅ 正式 | ClassFile API |
 | [JEP 511](jep-511.md) | Module Import Declarations | 25 | ✅ 正式 | 模块导入声明 |
 
-| [JEP 512](jep-512.md) | Compact Source Files | 25 | ✅ 正式 | 紧凑源文件 |
+| [JEP 512](../language/jep-512.md) | Compact Source Files | 25 | ✅ 正式 | 紧凑源文件 |
 | [JEP 526](jep-526.md) | Lazy Constants | 26 | 🔍 预览 | 凶迟常量 |
 
 ---
@@ -75,7 +75,7 @@ for (FieldModel field : model.fields()) {
 }
 ```
 
-**详见**：[Class-File API 分析](classfile-api.md) | [JEP 466](jep-466.md) | [JEP 484](jep-484.md)
+**详见**：[JEP 466](jep-466.md) | [JEP 484](jep-484.md)
 
 ---
 
@@ -107,7 +107,7 @@ module com.example.myapp {
 - **更快启动**： 减少 I/O
 - **更小体积**： 减少部署大小
 
-**详见**：[JEP 512](jep-512.md)
+**详见**：[JEP 512](../language/jep-512.md)
 
 ---
 

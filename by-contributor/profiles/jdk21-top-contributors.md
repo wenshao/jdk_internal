@@ -66,7 +66,7 @@ JDK 21 LTS (GA: 2023-09) had **~380 unique contributors** making Integrated PRs 
 | 33 | [Johannes Bechberger](johannes-bechberger.md) | SAP | 12+ | JFR | [详情](johannes-bechberger.md) |
 | 34 | [Per Minborg](per-minborg.md) | Oracle | 10+ | Core Libs | [详情](per-minborg.md) |
 | 35 | [Jatin Bhateja](jatin-bhateja.md) | Intel | 10+ | Vector API | [详情](jatin-bhateja.md) |
-| 36 | [Roland Westrelin](roland-westrelin.md) | Red Hat | 10+ | C2 Compiler | [详情](roland-westrelin.md) |
+| 36 | Roland Westrelin | Red Hat | 10+ | C2 Compiler | - |
 | 37 | [Weijun Wang](weijun-wang.md) | Oracle | 10+ | Security | [详情](weijun-wang.md) |
 | 38 | [Alexey Semenyuk](alexey-semenyuk.md) | Oracle | 8+ | jpackage | [详情](alexey-semenyuk.md) |
 | 39 | [Alan Bateman](alan-bateman.md) | Oracle | 8+ | Concurrency | [详情](alan-bateman.md) |

@@ -66,7 +66,7 @@ JDK 25 had **~400 unique contributors** making Integrated PRs during its develop
 | 33 | [Johannes Bechberger](johannes-bechberger.md) | SAP | 15+ | JFR | [详情](johannes-bechberger.md) |
 | 34 | [Per Minborg](per-minborg.md) | Oracle | 12+ | Core Libs | [详情](per-minborg.md) |
 | 35 | [Jatin Bhateja](jatin-bhateja.md) | Intel | 12+ | Vector API | [详情](jatin-bhateja.md) |
-| 36 | [Roland Westrelin](roland-westrelin.md) | Red Hat | 12+ | C2 Compiler | [详情](roland-westrelin.md) |
+| 36 | Roland Westrelin | Red Hat | 12+ | C2 Compiler | - |
 | 37 | [Weijun Wang](weijun-wang.md) | Oracle | 12+ | Security | [详情](weijun-wang.md) |
 | 38 | [Alexey Semenyuk](alexey-semenyuk.md) | Oracle | 10+ | jpackage | [详情](alexey-semenyuk.md) |
 | 39 | [Alan Bateman](alan-bateman.md) | Oracle | 10+ | Concurrency | [详情](alan-bateman.md) |

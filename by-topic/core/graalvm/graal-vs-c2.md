@@ -526,7 +526,7 @@ native-image -jar app.jar
 
 ### 技术文档
 - [Graal JIT](../../../by-topic/core/jit/graal-jit.md)
-- [JVMCI (JEP 243)](../../../jeps/compiler/jep-243.md)
+- [JVMCI (JEP 243)](../../../jeps/performance/jep-243.md)
 
 ### 性能对比
 - [性能基准测试](benchmarks.md)

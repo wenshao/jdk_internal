@@ -22,7 +22,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Fei Yang (杨飞) |
-| **当前组织** | [华为 (Huawei Technologies)](../../contributors/orgs/huawei.md) - JVM 团队 / 毕昇 JDK 团队 |
+| **当前组织** | 华为 (Huawei Technologies) - JVM 团队 / 毕昇 JDK 团队 |
 | **位置** | 中国 |
 | **GitHub** | [@RealFYang](https://github.com/RealFYang) |
 | **OpenJDK** | [@fyang](https://openjdk.org/census#fyang) |
