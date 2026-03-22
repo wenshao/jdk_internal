@@ -546,6 +546,11 @@ jfr print --events jdk.VirtualThreadPinned concurrency.jfr
 
 ---
 
+## 实战案例
+
+- [虚拟线程迁移实战](/cases/virtual-threads-migration.md) — Spring Boot 线程池→虚拟线程，完整迁移过程
+- [内存泄漏排查实战](/cases/memory-leak-diagnosis.md) — JFR+NMT+MAT 排查并发场景下的内存问题
+
 ## 推荐阅读
 
 - [Project Loom 主题](../../core/loom/) — 虚拟线程、结构化并发的完整演进

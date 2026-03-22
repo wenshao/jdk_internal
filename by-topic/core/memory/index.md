@@ -1093,6 +1093,11 @@ git log --oneline -- src/hotspot/share/classfile/
 
 ---
 
+## 实战案例
+
+- [内存泄漏排查实战](/cases/memory-leak-diagnosis.md) — JFR+NMT+MAT 全流程排查方法论
+- [GC 调优实战](/cases/gc-tuning-case.md) — 内存压力下的 GC 选型与参数调优
+
 ## 推荐阅读
 
 - [GC 演进主题](../gc/) — 垃圾收集器与内存回收策略全景

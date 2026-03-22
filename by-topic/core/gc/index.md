@@ -365,6 +365,11 @@ jcmd <pid> GC.heap_dump_all /tmp/heap.hprof
 - [ZGC Wiki](https://wiki.openjdk.org/display/zgc/Main)
 - [Shenandoah Wiki](https://wiki.openjdk.org/display/shenandoah/Main)
 
+### 实战案例
+
+- [GC 调优实战：G1→ZGC 迁移](/cases/gc-tuning-case.md) — P99 延迟 200ms→5ms，完整诊断和调优过程
+- [启动优化实战](/cases/startup-optimization.md) — AppCDS/AOT 减少 GC 预热时间
+
 ### 源码目录
 
 ```

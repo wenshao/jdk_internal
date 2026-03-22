@@ -1096,6 +1096,7 @@ if (module.isExported("com.example.api")) {
 - [内存管理](../memory/) - Metaspace 管理
 - [JEP 516: AOT Cache](/jeps/performance/jep-516.md) - AOT Cache 详细分析
 - [JDK 26 AOT 改进](/by-version/jdk26/deep-dive/aot-improvements.md) - 源码级分析
+- [启动优化实战](/cases/startup-optimization.md) - CDS/AOT 实战: 12s→1.5s
 
 ### 外部参考
 

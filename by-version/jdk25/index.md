@@ -34,7 +34,8 @@
 | 已知问题 | [已知问题](./known-issues.md) |
 | 性能调优 | [性能调优指南](./performance.md) |
 | 如何试用 | [快速开始](#快速开始) |
-| 从 JDK 21 升级 | [迁移指南](./migration/from-21.md) |
+| 从 JDK 17 升级 | [迁移指南 (17→25)](./migration/from-17.md) |
+| 从 JDK 21 升级 | [迁移指南 (21→25)](./migration/from-21.md) |
 | 按主题浏览 | [GC](/by-topic/core/gc/timeline.md) · [并发](/by-topic/concurrency/concurrency/timeline.md) |
 | 按模块学习 | [模块分析](/modules/) |
 

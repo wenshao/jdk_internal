@@ -7,6 +7,8 @@ on:
   pull_request:
     branches: [main]
     paths: ['**.md', 'scripts/**', '.github/workflows/**']
+  schedule:
+    - cron: '0 8 * * 1'  # 每周一 08:00 UTC
 
 jobs:
   link-check:
@@ -378,3 +380,26 @@ jobs:
           else
             echo "✅ No oversized files"
           fi
+
+  jep-validation:
+    name: JEP Validation (Weekly)
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run JEP validation
+        run: |
+          echo "=== JEP validation (validate_jeps.py) ==="
+          if [ -f scripts/validate_jeps.py ]; then
+            python3 scripts/validate_jeps.py jeps/ --verbose 2>&1 | tail -50
+            echo ""
+            echo "✅ JEP validation complete — review warnings above"
+          else
+            echo "⚠️ scripts/validate_jeps.py not found, skipping"
+          fi
+        continue-on-error: true
