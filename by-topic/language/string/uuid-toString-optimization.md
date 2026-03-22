@@ -405,7 +405,7 @@ ebadfaeb2e1 - 8196334: Optimize UUID#fromString
 
 ### 相关文章
 
-- [String 处理](index.md)
+- [String 处理](README.md)
 - [Compact Strings (JEP 254)](/jeps/language/jep-254.md)
 - [性能优化时间线](../../core/performance/timeline.md)
 

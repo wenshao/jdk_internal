@@ -19,8 +19,8 @@
 
 | 页面 | 说明 |
 |------|------|
-| [统计概览](/contributors/orgs/index.md) | 总体数据、年度趋势、组织分布 |
-| [Top 50 贡献者](/contributors/orgs/index.md) | 历史贡献排名 |
+| [统计概览](/contributors/orgs/README.md) | 总体数据、年度趋势、组织分布 |
+| [Top 50 贡献者](/contributors/orgs/README.md) | 历史贡献排名 |
 | [按领域分类](/by-topic/) | GC、编译器、核心库等 |
 | [按组织分类](#按组织) | Oracle、Red Hat、SAP 等 |
 | [中国贡献者](chinese-contributors.md) | 中国开发者专题 |
@@ -55,7 +55,7 @@
 | 9 | Alexey Semenyuk | 233 | Oracle | AOT |
 | 10 | Jan Lahoda | 324 | Oracle | javac |
 
-👉 [查看完整 Top 50](/contributors/orgs/index.md)
+👉 [查看完整 Top 50](/contributors/orgs/README.md)
 
 ---
 

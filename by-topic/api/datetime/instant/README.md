@@ -722,10 +722,10 @@ Instant (时间线上的点)
 
 ## 17. 相关文档
 
-- [OffsetDateTime 实现](../offsetdatetime/index.md)
-- [ZonedDateTime 实现](../zonedatetime/index.md)
-- [Duration 实现](../duration/index.md)
-- [主索引](../index.md)
+- [OffsetDateTime 实现](../offsetdatetime/README.md)
+- [ZonedDateTime 实现](../zonedatetime/README.md)
+- [Duration 实现](../duration/README.md)
+- [主索引](../README.md)
 
 ---
 

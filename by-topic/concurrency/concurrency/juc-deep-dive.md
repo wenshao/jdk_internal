@@ -2,7 +2,7 @@
 
 > AQS、ConcurrentHashMap、StampedLock、ForkJoinPool、CompletableFuture 的内部实现
 
-[← 返回并发编程](index.md)
+[← 返回并发编程](README.md)
 
 ---
 
@@ -305,4 +305,4 @@ cf.exceptionallyCompose(ex -> fetchFallbackAsync());
 
 **最后更新**: 2026-03-20
 
-[← 返回并发编程](index.md)
+[← 返回并发编程](README.md)

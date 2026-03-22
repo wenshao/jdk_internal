@@ -1086,10 +1086,10 @@ LocalDate (不带时间的日期)
 
 ## 18. 相关文档
 
-- [LocalDateTime 实现](../localdatetime/index.md)
-- [LocalTime 实现](../localtime/index.md)
-- [Period 实现](../period/index.md)
-- [主索引](../index.md)
+- [LocalDateTime 实现](../localdatetime/README.md)
+- [LocalTime 实现](../localtime/README.md)
+- [Period 实现](../period/README.md)
+- [主索引](../README.md)
 
 ---
 

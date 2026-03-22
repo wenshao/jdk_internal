@@ -2,7 +2,7 @@
 
 > Azure 优化和 OpenJDK 发行版维护
 
-[← 返回组织索引](../../by-contributor/index.md)
+[← 返回组织索引](../../by-contributor/README.md)
 
 ---
 ## 目录
@@ -189,4 +189,4 @@ Microsoft Build of OpenJDK 是 Microsoft 维护的 OpenJDK 发行版：
 - 添加 Microsoft Build of OpenJDK 介绍
 - 添加待补充信息说明
 
-[→ 返回组织索引](../../by-contributor/index.md)
+[→ 返回组织索引](../../by-contributor/README.md)

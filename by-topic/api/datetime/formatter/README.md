@@ -457,10 +457,10 @@ DateTimeFormatter german =
 
 ## 12. 相关文档
 
-- [LocalDate 实现](../localdate/index.md)
-- [LocalTime 实现](../localtime/index.md)
+- [LocalDate 实现](../localdate/README.md)
+- [LocalTime 实现](../localtime/README.md)
 - [JDK-8046707 性能问题](../issues/jdk-8046707.md)
-- [主索引](../index.md)
+- [主索引](../README.md)
 
 ---
 

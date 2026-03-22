@@ -234,7 +234,7 @@ jfr print --json --events "jdk.MethodTiming" timing.jfr
 - [JEP 520: JFR Method Timing](https://openjdk.org/jeps/520)
 - [JFR 完整指南](/guides/jfr.md)
 - [JDK 25 性能调优](../performance.md)
-- [JDK 25 主页](../index.md)
+- [JDK 25 主页](../README.md)
 
 ---
 

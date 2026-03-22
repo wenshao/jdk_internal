@@ -2,7 +2,7 @@
 
 > Sea of Nodes IR、IGVN、循环优化、Compile::Optimize() 执行顺序
 
-[← 返回 JIT 编译概览](index.md)
+[← 返回 JIT 编译概览](README.md)
 
 ---
 

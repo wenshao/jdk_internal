@@ -19,7 +19,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Yadong Wang (王亚东) |
-| **当前组织** | [华为 (Huawei)](../../contributors/orgs/index.md) - 毕昇 JDK 团队 |
+| **当前组织** | [华为 (Huawei)](../../contributors/orgs/README.md) - 毕昇 JDK 团队 |
 | **位置** | 中国 |
 | **邮箱** | yadong.wang [at] huawei.com |
 | **OpenJDK** | OpenJDK Committer |

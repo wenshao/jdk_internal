@@ -884,7 +884,7 @@ String str = date.toString();
 - [完整时间线](timeline.md)
 - [JSR 310 PR 分析](jsr310/pr-analysis.md)
 - [贡献者](contributors.md)
-- [主索引](index.md)
+- [主索引](README.md)
 
 ---
 

@@ -2,7 +2,7 @@
 
 > 核心库性能优化和 C2 编译器改进
 
-[← 返回组织索引](../../by-contributor/index.md)
+[← 返回组织索引](../../by-contributor/README.md)
 
 ---
 ## 目录
@@ -527,7 +527,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 | 主题 | 描述 | 链接 |
 |------|------|------|
 | C2 编译器 | 服务端编译器优化阶段 | [C2 阶段](../../by-topic/core/jit/c2-phases.md) |
-| JIT 编译 | 即时编译器概述 | [JIT 编译](../../by-topic/core/jit/index.md) |
+| JIT 编译 | 即时编译器概述 | [JIT 编译](../../by-topic/core/jit/README.md) |
 | IR 节点 | 中间表示节点 | C2 IR |
 
 ### 垃圾收集
@@ -547,7 +547,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 ---
 
-[→ 返回组织索引](../../by-contributor/index.md)
+[→ 返回组织索引](../../by-contributor/README.md)
 
 ---
 
@@ -615,7 +615,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 | 数字转换 | Integer/Long.toString | +10% | [8310929](../../by-pr/8310/8310929.md) |
 | 数组操作 | ArraysSupport 优化 | +3% | [8343962](../../by-pr/8343/8343962.md) |
 
-> **了解更多**: [JDK 性能优化](../../by-topic/core/performance/index.md)
+> **了解更多**: [JDK 性能优化](../../by-topic/core/performance/README.md)
 
 ---
 

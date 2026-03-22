@@ -152,8 +152,8 @@ RemoteInterface stub = (RemoteInterface) Naming.lookup("rmi://host/service");
 - [writeUTF PR 分析](../../../by-pr/8339/8339699.md)
 - [readUTF PR 分析](../../../by-pr/8340/8340232.md)
 - [贡献者档案](/by-contributor/profiles/shaojin-wen.md)
-- [Topic: I/O API](/by-topic/api/io/index.md)
-- [JDK 25](/by-version/jdk25/index.md)
+- [Topic: I/O API](/by-topic/api/io/README.md)
+- [JDK 25](/by-version/jdk25/README.md)
 
 ---
 

@@ -816,7 +816,7 @@ java -XX:+PrintFlagsFinal 2>&1 | grep -i unaligned
 
 ### 内部文档
 
-- [JIT 编译索引](index.md)
+- [JIT 编译索引](README.md)
 - [MergeStore 优化](mergestore.md) — 对称的写入合并优化
 - [C2 编译阶段](c2-phases.md)
 - [JIT 诊断工具](diagnostics.md)

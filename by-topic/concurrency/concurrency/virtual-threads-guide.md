@@ -2,7 +2,7 @@
 
 > 何时使用、反模式、从线程池迁移
 
-[← 返回并发编程](index.md)
+[← 返回并发编程](README.md)
 
 ---
 
@@ -220,4 +220,4 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 **最后更新**: 2026-03-20
 
-[← 返回并发编程](index.md)
+[← 返回并发编程](README.md)

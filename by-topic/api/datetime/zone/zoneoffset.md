@@ -605,8 +605,8 @@ ZoneOffset offset = (ZoneOffset) zone.normalized();  // Z
 
 - [ZoneId 实现](zoneid.md)
 - [ZoneRules 实现](zonerules.md)
-- [OffsetDateTime 实现](../offsetdatetime/index.md)
-- [主索引](../index.md)
+- [OffsetDateTime 实现](../offsetdatetime/README.md)
+- [主索引](../README.md)
 
 ---
 

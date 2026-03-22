@@ -2,7 +2,7 @@
 
 > JVM、s390x 和多平台支持的重要贡献者
 
-[← 返回组织索引](../../by-contributor/index.md)
+[← 返回组织索引](../../by-contributor/README.md)
 
 ---
 ## 目录
@@ -133,4 +133,4 @@ IBM 维护自己的 JVM 发行版 Semeru：
 - [IBM Research Labs](https://research.ibm.com/)
 - [IBM Z](https://www.ibm.com/it-infrastructure/z)
 
-[→ 返回组织索引](../../by-contributor/index.md)
+[→ 返回组织索引](../../by-contributor/README.md)

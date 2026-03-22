@@ -717,11 +717,11 @@ comparator.compare(odt1, odt2);  // 按瞬间比较
 
 ## 16. 相关文档
 
-- [ZonedDateTime 实现](../zonedatetime/index.md)
+- [ZonedDateTime 实现](../zonedatetime/README.md)
 - [ZoneOffset 实现](../zone/zoneoffset.md)
-- [Instant 实现](../instant/index.md)
-- [LocalDateTime 实现](../localdatetime/index.md)
-- [主索引](../index.md)
+- [Instant 实现](../instant/README.md)
+- [LocalDateTime 实现](../localdatetime/README.md)
+- [主索引](../README.md)
 
 ---
 

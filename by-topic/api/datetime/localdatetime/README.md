@@ -1023,12 +1023,12 @@ LocalDateTime dt = LocalDateTime.of(2024, Month.MARCH, 20, 14, 0);
 
 ## 16. 相关文档
 
-- [LocalDate 实现](../localdate/index.md)
-- [LocalTime 实现](../localtime/index.md)
-- [ZonedDateTime 实现](../zonedatetime/index.md)
-- [OffsetDateTime 实现](../offsetdatetime/index.md)
-- [Instant 实现](../instant/index.md)
-- [主索引](../index.md)
+- [LocalDate 实现](../localdate/README.md)
+- [LocalTime 实现](../localtime/README.md)
+- [ZonedDateTime 实现](../zonedatetime/README.md)
+- [OffsetDateTime 实现](../offsetdatetime/README.md)
+- [Instant 实现](../instant/README.md)
+- [主索引](../README.md)
 
 ---
 

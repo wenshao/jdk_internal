@@ -2,7 +2,7 @@
 
 > OpenJDK 贡献者
 
-[← 返回组织索引](../../by-contributor/index.md)
+[← 返回组织索引](../../by-contributor/README.md)
 
 ---
 ## 目录
@@ -72,4 +72,4 @@ Google 对 OpenJDK 的贡献主要体现在：
 
 **最后更新**: 2026-03-23
 
-[→ 返回组织索引](../../by-contributor/index.md)
+[→ 返回组织索引](../../by-contributor/README.md)

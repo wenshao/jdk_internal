@@ -239,7 +239,7 @@ PR 描述: {body}
 
 ```
 prs/
-├── index.md                    # 总索引
+├── README.md                    # 总索引
 ├── jdk26-overview.md           # JDK 26 概览
 ├── jdk26-statistics.md         # 统计报告
 │

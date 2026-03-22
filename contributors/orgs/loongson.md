@@ -2,7 +2,7 @@
 
 > LoongArch 架构移植
 
-[← 返回组织索引](../../by-contributor/index.md)
+[← 返回组织索引](../../by-contributor/README.md)
 
 ---
 ## 目录
@@ -138,4 +138,4 @@
 **更新内容**:
 - 新增贡献时间线章节
 
-[→ 返回组织索引](../../by-contributor/index.md)
+[→ 返回组织索引](../../by-contributor/README.md)

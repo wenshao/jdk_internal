@@ -2,7 +2,7 @@
 
 Text Blocks (文本块) 是 JDK 15 正式引入的多行字符串字面量 (multi-line string literals)。
 
-[← 返回 Project Amber 概览](index.md)
+[← 返回 Project Amber 概览](README.md)
 
 ---
 

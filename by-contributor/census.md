@@ -260,9 +260,9 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 
 ### 本站点相关页面
 
-- [贡献者索引](index.md) - 贡献者总览
+- [贡献者索引](README.md) - 贡献者总览
 - [顶级贡献者](profiles/jdk26-top-contributors.md) - JDK 26 Top 100
-- [历史累计 Top 50](index.md#5-顶级贡献者) - JDK 8-26 累计贡献
+- [历史累计 Top 50](README.md#5-顶级贡献者) - JDK 8-26 累计贡献
 - [中国贡献者](profiles/chinese-contributors.md) - 中国开发者专题
 
 ### 选举流程

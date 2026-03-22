@@ -203,7 +203,7 @@ git log --all --since="2023-01-01" --until="2025-12-31" \
 - [完整时间线](timeline.md)
 - [基础 API](basics.md)
 - [JSR 310 PR 分析](jsr310/pr-analysis.md)
-- [主索引](index.md)
+- [主索引](README.md)
 - [性能优化 PR](prs/)
 
 ---

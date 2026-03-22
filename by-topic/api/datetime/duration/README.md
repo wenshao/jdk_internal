@@ -863,11 +863,11 @@ Period p = Period.of(2, 3, 4);  // 2年3月4天
 
 ## 17. 相关文档
 
-- [Period 实现](../period/index.md)
-- [Instant 实现](../instant/index.md)
-- [LocalTime 实现](../localtime/index.md)
+- [Period 实现](../period/README.md)
+- [Instant 实现](../instant/README.md)
+- [LocalTime 实现](../localtime/README.md)
 - [基础 API](../basics.md)
-- [主索引](../index.md)
+- [主索引](../README.md)
 
 ---
 

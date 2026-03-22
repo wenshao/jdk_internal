@@ -2,7 +2,7 @@
 
 > Corretto 团队，Shenandoah GC 和 AArch64 优化
 
-[← 返回组织索引](../../by-contributor/index.md)
+[← 返回组织索引](../../by-contributor/README.md)
 
 ---
 ## 目录
@@ -384,4 +384,4 @@ Amazon 维护自己的 JDK 发行版 Corretto：
 - 添加协作深度分析 (JEP 521 案例)
 - 新增知识传承网络分析
 
-[→ 返回组织索引](../../by-contributor/index.md)
+[→ 返回组织索引](../../by-contributor/README.md)

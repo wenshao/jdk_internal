@@ -82,6 +82,6 @@
 
 ## 3. 相关资源
 
-- [JIT 索引](./index.md) - JIT 编译器完整文档
+- [JIT 索引](./README.md) - JIT 编译器完整文档
 - [C2 编译阶段](./c2-phases.md) - C2 编译流程
 - [IGV 教程](./igv-tutorial.md) - 理想图可视化工具

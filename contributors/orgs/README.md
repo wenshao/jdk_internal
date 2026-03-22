@@ -1,6 +1,6 @@
 # OpenJDK 贡献组织
 
-[← 返回贡献者索引](../../by-contributor/index.md)
+[← 返回贡献者索引](../../by-contributor/README.md)
 
 ---
 ## 目录
@@ -474,4 +474,4 @@ IBM       15      20      30      40      45
 - [OpenJDK JEPs](https://openjdk.org/jeps/)
 - [GitHub openjdk/jdk](https://github.com/openjdk/jdk)
 
-[→ 返回贡献者索引](../../by-contributor/index.md)
+[→ 返回贡献者索引](../../by-contributor/README.md)

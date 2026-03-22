@@ -149,7 +149,7 @@
 
 ## 3. 改进的文档
 
-### index.md (主页面)
+### README.md (主页面)
 **改进内容**:
 - 添加"一眼看懂 GraalVM"表格
 - 简化目录结构
@@ -181,7 +181,7 @@
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  入门层 (快速了解)                                       │
-│  ├── index.md (主页面)                                  │
+│  ├── README.md (主页面)                                  │
 │  ├── faq.md (常见问题)                                  │
 │  └── glossary.md (术语表)                               │
 │                                                         │
@@ -266,7 +266,7 @@
 
 | 需求 | 推荐文档 |
 |------|----------|
-| 了解 GraalVM | [index.md](index.md) |
+| 了解 GraalVM | [README.md](README.md) |
 | 性能数据 | [benchmarks.md](benchmarks.md) |
 | 构建 Native Image | [native-image-guide.md](native-image-guide.md) |
 | 理解优化原理 | [performance.md](performance.md) |

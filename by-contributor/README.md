@@ -608,7 +608,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 > - 仅统计标记为 `integrated` 的 PR
 > - 部分资深贡献者的 PR 数基于 OpenJDK Census 估算
 
-→ [查看完整历史贡献者列表](/contributors/orgs/index.md)
+→ [查看完整历史贡献者列表](/contributors/orgs/README.md)
 
 ---
 

@@ -2,7 +2,7 @@
 
 > **状态**: ✅ Final | **JDK**: 5 (2004) | **Specification Lead**: Gilad Bracha
 
-[← 返回 JSR 索引](../index.md) | [外部链接](https://jcp.org/en/jsr/detail?id=14)
+[← 返回 JSR 索引](../README.md) | [外部链接](https://jcp.org/en/jsr/detail?id=14)
 
 ---
 ## 目录

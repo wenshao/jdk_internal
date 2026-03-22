@@ -2,7 +2,7 @@
 
 > RISC-V 向量指令支持
 
-[← 返回组织索引](../../by-contributor/index.md)
+[← 返回组织索引](../../by-contributor/README.md)
 
 ---
 ## 目录
@@ -358,4 +358,4 @@
 - 添加协作深度分析 (RISC-V 向量指令案例)
 - 新增知识传承网络分析
 
-[→ 返回组织索引](../../by-contributor/index.md)
+[→ 返回组织索引](../../by-contributor/README.md)

@@ -106,11 +106,11 @@ JEP 500 在 JDK 26 中首先引入运行时警告。依赖反射修改 final 字
 
 ## 6. 相关链接
 
-- [JDK 26 主页](../index.md)
+- [JDK 26 主页](../README.md)
 - [JDK 26 破坏性变更](../breaking-changes.md)
 - [HTTP/3 实现深度分析](../deep-dive/http3-implementation.md)
 - [JDK 26 迁移指南](../migration/from-21.md)
 
 ---
 
-[← 返回 JDK 26](../index.md)
+[← 返回 JDK 26](../README.md)

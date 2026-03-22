@@ -542,8 +542,8 @@ ZonedDateTime back = instant.atZone(ZoneId.of("America/New_York"));
 - [ZoneId 实现](../zone/zoneid.md)
 - [ZoneOffset 实现](../zone/zoneoffset.md)
 - [ZoneRules 实现](../zone/zonerules.md)
-- [OffsetDateTime 实现](../offsetdatetime/index.md)
-- [主索引](../index.md)
+- [OffsetDateTime 实现](../offsetdatetime/README.md)
+- [主索引](../README.md)
 
 ---
 

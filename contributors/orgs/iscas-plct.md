@@ -2,7 +2,7 @@
 
 > RISC-V 架构优化
 
-[← 返回组织索引](../../by-contributor/index.md)
+[← 返回组织索引](../../by-contributor/README.md)
 
 ---
 ## 目录
@@ -116,4 +116,4 @@
 - [2024 RISC-V China Summit](https://plctlab.org/zh/news/050/)
 - [OpenJDK RISC-V Port (JEP 422)](https://openjdk.org/jeps/422)
 
-[→ 返回组织索引](../../by-contributor/index.md)
+[→ 返回组织索引](../../by-contributor/README.md)

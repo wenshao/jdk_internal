@@ -209,7 +209,7 @@ String message = STR."Hello \{name}, you have \{count} messages.";
 
 - [内部实现](implementation.md) - Compact Strings、StringLatin1、StringUTF16
 - [性能优化](optimization.md) - String Deduplication、VM 调优、最佳实践
-- [返回概览](index.md)
+- [返回概览](README.md)
 
 ---
 

@@ -4,7 +4,7 @@ JDK 24 正式发布。Gatherers 是 Stream API 的扩展，
 允许定义**自定义中间操作** (custom intermediate operations)，
 弥补了 Stream API 只能通过 `Collector` 自定义终端操作的不足。
 
-[← 返回 Project Amber 概览](index.md)
+[← 返回 Project Amber 概览](README.md)
 
 ---
 

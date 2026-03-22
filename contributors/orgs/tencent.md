@@ -2,7 +2,7 @@
 
 > G1 GC 和容器化优化
 
-[← 返回组织索引](../../by-contributor/index.md)
+[← 返回组织索引](../../by-contributor/README.md)
 
 ---
 ## 目录
@@ -337,4 +337,4 @@
 - 添加协作深度分析 (G1 GC 压缩指针修复案例)
 - 新增知识传承网络分析
 
-[→ 返回组织索引](../../by-contributor/index.md)
+[→ 返回组织索引](../../by-contributor/README.md)

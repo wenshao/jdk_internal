@@ -2,7 +2,7 @@
 
 > Vector API 和 x86_64 优化的主要贡献者
 
-[← 返回组织索引](../../by-contributor/index.md)
+[← 返回组织索引](../../by-contributor/README.md)
 
 ---
 ## 目录
@@ -343,4 +343,4 @@ Intel 主导 Vector API 的开发：
 - 添加协作深度分析 (Vector API 案例)
 - 新增知识传承网络分析
 
-[→ 返回组织索引](../../by-contributor/index.md)
+[→ 返回组织索引](../../by-contributor/README.md)

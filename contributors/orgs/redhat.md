@@ -2,7 +2,7 @@
 
 > Shenandoah GC 和 AArch64 的主要贡献者
 
-[← 返回组织索引](../../by-contributor/index.md)
+[← 返回组织索引](../../by-contributor/README.md)
 
 ---
 ## 目录
@@ -237,4 +237,4 @@ Red Hat 维护 OpenJDK 发行版：
 - 添加协作深度分析 (JEP 519 案例)
 - 新增知识传承网络分析
 
-[→ 返回组织索引](../../by-contributor/index.md)
+[→ 返回组织索引](../../by-contributor/README.md)

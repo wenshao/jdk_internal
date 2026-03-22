@@ -2,7 +2,7 @@
 
 > JEP 295 → GraalVM Native Image → Project Leyden (JEP 483/514/515/516)
 
-[← 返回 JIT 编译概览](index.md)
+[← 返回 JIT 编译概览](README.md)
 
 ---
 

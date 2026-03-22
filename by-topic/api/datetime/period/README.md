@@ -767,10 +767,10 @@ Period p = Period.of(1, -2, 3);
 
 ## 16. 相关文档
 
-- [Duration 实现](../duration/index.md)
-- [LocalDate 实现](../localdate/index.md)
+- [Duration 实现](../duration/README.md)
+- [LocalDate 实现](../localdate/README.md)
 - [基础 API](../basics.md)
-- [主索引](../index.md)
+- [主索引](../README.md)
 
 ---
 

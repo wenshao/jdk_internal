@@ -3,7 +3,7 @@
 Switch Expressions, Pattern Matching for instanceof, Pattern Matching for switch,
 Record Patterns, Unnamed Patterns 的完整演进历程。
 
-[← 返回 Project Amber 概览](index.md)
+[← 返回 Project Amber 概览](README.md)
 
 ---
 

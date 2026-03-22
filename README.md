@@ -119,14 +119,14 @@ jdk_internal/
 ├── README.md              # 项目概览（本文件）
 │
 ├── by-version/            # 按版本浏览
-│   ├── index.md           # 版本概览和对比
+│   ├── README.md           # 版本概览和对比
 │   ├── jdk8/              # JDK 8 (LTS 2014)
 │   ├── jdk9-24/           # JDK 9-24 (中间版本)
 │   ├── jdk25/             # JDK 25 (LTS 2025)
 │   └── jdk26/             # JDK 26 (Feature 2026-03)
 │
 ├── by-topic/              # 按主题跨版本
-│   ├── index.md           # 主题索引
+│   ├── README.md           # 主题索引
 │   ├── core/              # 核心平台
 │   │   ├── gc/            # GC 演进 (G1/ZGC/Shenandoah)
 │   │   ├── memory/        # 内存管理 (堆/栈/Metaspace)
@@ -174,15 +174,15 @@ jdk_internal/
 │       └── i18n/          # 国际化
 │
 ├── by-contributor/        # 按贡献者
-│   ├── index.md           # 贡献者索引
+│   ├── README.md           # 贡献者索引
 │   └── profiles/          # 个人详细页面
 │
 ├── by-pr/                 # 按 PR/Issue 深度分析
-│   ├── index.md           # PR 索引
+│   ├── README.md           # PR 索引
 │   └── {issue}/           # 按 issue 号分组
 │
 ├── jeps/                  # JEP 详细分析
-│   ├── index.md           # JEP 索引
+│   ├── README.md           # JEP 索引
 │   ├── language/          # 语言相关 JEP
 │   ├── core/              # 核心平台 JEP
 │   ├── concurrency/       # 并发相关 JEP
@@ -196,7 +196,7 @@ jdk_internal/
 │   └── removed/           # 已移除特性 JEP
 │
 ├── jsr/                   # JSR (Java Specification Requests)
-│   ├── index.md           # JSR 索引
+│   ├── README.md           # JSR 索引
 │   ├── language/          # 语言规范
 │   ├── api/               # API 规范
 │   └── platform/          # 平台规范

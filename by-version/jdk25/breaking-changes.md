@@ -194,7 +194,7 @@ jdeprscan --release 25 myapp.jar
 
 ## 7. 相关链接
 
-- [JDK 25 主页](../index.md)
+- [JDK 25 主页](../README.md)
 - [JDK 25 迁移指南](./migration/from-21.md)
 - [JDK 25 JEP 汇总](../jeps.md)
 - [JEP 503: Remove 32-bit x86 Port](https://openjdk.org/jeps/503)
@@ -202,4 +202,4 @@ jdeprscan --release 25 myapp.jar
 
 ---
 
-[← 返回 JDK 25](../index.md)
+[← 返回 JDK 25](../README.md)

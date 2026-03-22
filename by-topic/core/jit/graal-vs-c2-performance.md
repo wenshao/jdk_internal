@@ -386,7 +386,7 @@ Graal 持续改进:
 
 - [Graal JIT 详解](graal-jit.md) - Graal 架构和特性
 - [C2 优化阶段](c2-phases.md) - C2 编译流程
-- [JIT 编译概览](index.md) - 编译器对比
+- [JIT 编译概览](README.md) - 编译器对比
 
 ---
 

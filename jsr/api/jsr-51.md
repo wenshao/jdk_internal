@@ -2,7 +2,7 @@
 
 > **状态**: ✅ Final | **JDK**: 1.4 (2002) | **Specification Lead**: Mark Reinhold (Sun Microsystems)
 
-[← 返回 JSR 索引](../index.md) | [外部链接](https://jcp.org/en/jsr/detail?id=51)
+[← 返回 JSR 索引](../README.md) | [外部链接](https://jcp.org/en/jsr/detail?id=51)
 
 ---
 ## 目录

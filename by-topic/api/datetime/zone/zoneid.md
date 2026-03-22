@@ -687,8 +687,8 @@ for (int i = 0; i < 1000; i++) {
 
 - [ZoneOffset 实现](zoneoffset.md)
 - [ZoneRules 实现](zonerules.md)
-- [ZonedDateTime 实现](../zoneddatetime/index.md)
-- [主索引](../index.md)
+- [ZonedDateTime 实现](../zoneddatetime/README.md)
+- [主索引](../README.md)
 
 ---
 

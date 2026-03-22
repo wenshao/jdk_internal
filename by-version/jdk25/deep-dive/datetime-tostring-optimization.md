@@ -126,7 +126,7 @@ public class Event {
 - [完整 PR 分析](../../../by-pr/8337/8337832.md)
 - [贡献者档案](/by-contributor/profiles/shaojin-wen.md)
 - [GitHub PR](https://github.com/openjdk/jdk/pull/20368)
-- [Topic: Date/Time API](/by-topic/api/datetime/index.md)
+- [Topic: Date/Time API](/by-topic/api/datetime/README.md)
 - [相关 PR: JDK-8337279](../../../by-pr/8337/8337279.md) - Share StringBuilder to format instant
 - [相关 PR: JDK-8337168](/by-topic/api/datetime/prs/jdk-8337168.md) - Optimize LocalDateTime.toString
 

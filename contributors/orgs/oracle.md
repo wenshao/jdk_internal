@@ -541,7 +541,7 @@ Oracle JDK 开发团队
 | JDK-8317742 | Type check optimization | [详情](../../by-pr/8317/8317742.md) |
 | JDK-8311207 | Code cleanup | [详情](../../by-pr/8311/8311207.md) |
 
-[→ 返回组织索引](../../by-contributor/index.md)
+[→ 返回组织索引](../../by-contributor/README.md)
 
 ---
 

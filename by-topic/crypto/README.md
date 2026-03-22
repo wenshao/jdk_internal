@@ -800,7 +800,7 @@ new SecureRandom();                                // 普通用途
 ### 内部文档
 
 - [安全框架](../security/security/) - 安全框架详解
-- [SSL/TLS](../security/security/index.md) - SSL/TLS 详解
+- [SSL/TLS](../security/security/README.md) - SSL/TLS 详解
 
 ### JEP 参考
 

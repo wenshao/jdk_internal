@@ -2,7 +2,7 @@
 
 > PPC 移植、AIX 平台和 HotSpot 调试支持的重要贡献者
 
-[← 返回组织索引](../../by-contributor/index.md)
+[← 返回组织索引](../../by-contributor/README.md)
 
 ---
 ## 目录
@@ -167,4 +167,4 @@ SAP 维护自己的 JVM 发行版 SapMachine：
 - [SapMachine Wiki](https://github.com/SAP/SapMachine/wiki)
 - [SAP OpenJDK](https://openjdk.org/groups/hotspot/)
 
-[→ 返回组织索引](../../by-contributor/index.md)
+[→ 返回组织索引](../../by-contributor/README.md)

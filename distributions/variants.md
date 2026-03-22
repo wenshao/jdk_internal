@@ -2,7 +2,7 @@
 
 > OpenJDK 之外的 Java 平台：Android、GraalVM Native Image、WebAssembly 等
 
-[← 返回发行版](index.md)
+[← 返回发行版](README.md)
 
 ---
 ## 目录
@@ -333,7 +333,7 @@ cheerpjRunMain("com.example.Main", "/app.jar");
 
 ## 7. 相关文档
 
-- [JDK 发行版对比](index.md)
+- [JDK 发行版对比](README.md)
 - [GraalVM 详细文档](graalvm.md)
 - [性能优化指南](../by-topic/core/performance/)
 - [云原生 Java](../by-topic/core/cloud-native/)

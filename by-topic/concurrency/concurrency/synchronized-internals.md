@@ -2,7 +2,7 @@
 
 > 从 Mark Word 到 ObjectMonitor 的锁演进
 
-[← 返回并发编程](index.md)
+[← 返回并发编程](README.md)
 
 ---
 
@@ -198,4 +198,4 @@ try {
 
 **最后更新**: 2026-03-20
 
-[← 返回并发编程](index.md)
+[← 返回并发编程](README.md)

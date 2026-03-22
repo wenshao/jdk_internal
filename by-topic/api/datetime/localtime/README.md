@@ -388,9 +388,9 @@ LocalTime t3 = LocalTime.NOON;  // 引用 HOURS[12]
 
 ## 12. 相关文档
 
-- [LocalDate 实现](../localdate/index.md)
-- [DateTimeFormatter 实现](../formatter/index.md)
-- [主索引](../index.md)
+- [LocalDate 实现](../localdate/README.md)
+- [DateTimeFormatter 实现](../formatter/README.md)
+- [主索引](../README.md)
 
 ---
 

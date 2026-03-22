@@ -39,7 +39,7 @@ jdk_internal/
 ├── README.md              # Project overview
 │
 ├── by-version/            # ⭐ Browse by JDK version
-│   ├── index.md
+│   ├── README.md
 │   ├── jdk8/              # JDK 8 (LTS 2014)
 │   ├── jdk11/             # JDK 11 (LTS 2018)
 │   ├── jdk17/             # JDK 17 (LTS 2021)
@@ -47,19 +47,19 @@ jdk_internal/
 │   └── jdk26/             # JDK 26 (GA 2026-03-17)
 │
 ├── by-topic/              # ⭐ Browse by topic (architecture view)
-│   ├── index.md
+│   ├── README.md
 │   ├── gc/timeline.md     # G1/ZGC/Shenandoah timeline
 │   ├── concurrency/
 │   ├── string/
 │   └── http/
 │
 ├── by-contributor/        # Browse by contributor
-│   ├── index.md
+│   ├── README.md
 │   ├── profiles/          # 137 contributor profiles
 │   └── by-org/
 │
 ├── by-pr/                 # PR/Issue deep analysis
-│   ├── index.md
+│   ├── README.md
 │   └── {issue}/           # Grouped by issue number
 │
 ├── contributors/          # Organization stats
@@ -637,9 +637,9 @@ gh pr list --repo openjdk/jdk --search "author:{username} label:integrated" --js
 ### Key Changes
 | Document | Change |
 |----------|--------|
-| `by-version/index.md` | Fixed JDK 25 LTS error |
+| `by-version/README.md` | Fixed JDK 25 LTS error |
 | `contributors/stats/*` | Changed from commits to PRs |
-| `by-contributor/index.md` | Added Jaroslav Bachorik |
+| `by-contributor/README.md` | Added Jaroslav Bachorik |
 | `by-topic/core/performance/` | Added JEP table, fixed links |
 
 ---

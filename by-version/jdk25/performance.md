@@ -310,7 +310,7 @@ java -XX:+UseSerialGC \
 
 ## 8. 相关链接
 
-- [JDK 25 主页](../index.md)
+- [JDK 25 主页](../README.md)
 - [分代 ZGC 深度分析](../deep-dive/generational-zgc.md)
 - [Compact Object Headers 实现](/deep-dive/jep-519-implementation.md)
 - [Scoped Values 实现](/deep-dive/jep-506-implementation.md)
@@ -320,4 +320,4 @@ java -XX:+UseSerialGC \
 
 ---
 
-[← 返回 JDK 25](../index.md)
+[← 返回 JDK 25](../README.md)
