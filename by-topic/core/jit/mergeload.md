@@ -100,7 +100,7 @@ MergeLoad 在 C2 的 IGVN (Iterative Global Value Numbering) 阶段执行。与 
                     ↑ 匹配方向
 ```
 
-Emanuel Peter 在 [PR #24023 Review](https://github.com/openjdk/jdk/pull/24023#issuecomment-2749403442) 中指出:
+Emanuel Peter 在 [PR #24023 Review](https://github.com/openjdk/jdk/pull/24023) 中指出:
 
 > "I think your implementation should go into `OrINode`, and match the expression up from there.
 > Because we want to replace the old `OrI` with the new `LoadL`."
@@ -149,7 +149,7 @@ int v = ((buf[0] & 0xff) << 24)
 | 特性 | MergeStore | MergeLoad |
 |------|-----------|-----------|
 | **方向** | 写入合并 | 读取合并 |
-| **状态** | 已集成 (JDK 21+) | 开发中 (目标 JDK 26+) |
+| **状态** | 已集成 (JDK 23+) | 开发中 (目标 JDK 26+) |
 | **实现位置** | `StoreNode::Ideal` (memnode.cpp) | `OrINode::Ideal` / `AddINode::Ideal` (addnode.cpp) |
 | **匹配模式** | 连续 Store 链 | Load+Shift+Or/Add 表达式树 |
 | **JBS Issue** | JDK-8318446 | JDK-8345485 |
@@ -181,13 +181,13 @@ static int deserialize(byte[] buf, int offset) {
 
 ### 3.4 架构讨论: 统一 MergeMemory Phase
 
-在 PR #24023 的 Review 讨论中，Emanuel Peter 和 Kuai Wei 探讨了将 MergeLoad 和 MergeStore 统一为一个独立的优化 Phase (而非嵌入 IGVN) 的可能性：
+在 PR #24023 的 Review 讨论中，Quan Anh Mai (@merykitty) 提出了将 MergeLoad 和 MergeStore 统一为一个独立的优化 Phase (而非嵌入 IGVN) 的想法：
 
 > "Once proposed the idea of not doing MergeStores / MergeLoads as IGVN optimizations,
 > but rather to just have a separate and dedicated phase. That would allow you to take a
 > global view, collect all loads (and stores), put them in a big list, and then make groups
 > that belong together."
-> — Emanuel Peter, [PR #24023 Comment](https://github.com/openjdk/jdk/pull/24023#issuecomment-2935816714), 2025-06-17
+> — [PR #24023 Comment](https://github.com/openjdk/jdk/pull/24023), 2025-06-17
 
 这种方法的潜在优势：
 - 全局视图，可以同时分析所有 Load/Store 节点
@@ -205,7 +205,7 @@ Kuai Wei 在 2025-07-18 关闭了 PR #24023，计划按此方向重构：
 
 ### JDK 24 (2025) — 基准测试准备
 
-- **JDK-8343629** ([PR #21659](https://github.com/openjdk/jdk/pull/21659)): 新增 MergeLoadBench 基准测试
+- **JDK-8343629** ([PR #21659](https://github.com/openjdk/jdk/pull/21659)): 新增 MergeStore 基准测试 (MergeStoreBench)，同时包含 MergeLoadBench
   - 作者: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)
   - 集成时间: 2025-01-08
   - 为未来 MergeLoad 优化建立性能基线
@@ -476,6 +476,9 @@ public static long readVarLong(byte[] buf, int offset) {
 ```java
 // ML-DSA (FIPS 204) 后量子数字签名 — 使用 ADD 操作符
 // java.base: sun.security.provider.ML_DSA (lines 875-885)
+// 注意: 下方为简化示意，实际代码中的索引为非连续访问 (vIndex+1, +3, +5, +7, +8)，
+// 不会直接触发 MergeLoad 合并。MergeLoad 仅对连续地址的读取生效。
+// 实际优化收益来自其中连续部分的合并。
 int coeff = ((v[vIndex + 1] & 0xff) << 8)
           + ((v[vIndex + 3] & 0xff) << 6)
           + ((v[vIndex + 5] & 0xff) << 4)
@@ -699,7 +702,7 @@ LLVM 的加载合并是 C/C++ 编译器中最成熟的实现之一。
 
 ### 10.3 GraalVM
 
-根据 [PR #29980 的分析](https://github.com/openjdk/jdk/pull/29980#issuecomment-3978789018):
+根据 [PR #29980 的分析](https://github.com/openjdk/jdk/pull/29980):
 
 | 操作符 | HotSpot C2 (PR) | GraalVM |
 |--------|-----------------|---------|
@@ -708,7 +711,7 @@ LLVM 的加载合并是 C/C++ 编译器中最成熟的实现之一。
 | XOR | 不支持 | 有条件支持 (`XorNode`) |
 | AND | 不支持 | 有条件支持 (`AndNode`) |
 
-GraalVM 在 XOR 和 AND 操作符上有优势，对 AES 加密 (XOR 模式) 和位掩码操作 (AND 模式) 有额外的优化能力。
+GraalVM 在 XOR 和 AND 操作符上有优势，对 AES 加密 (XOR 模式) 和位掩码操作 (AND 模式) 有额外的优化能力。(来源: PR 评论，未经 GraalVM 源码验证)
 
 ### 10.4 对比表
 
