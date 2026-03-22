@@ -555,7 +555,7 @@ public int compute(boolean flag) {
 | **2020** | CE/EE 功能差异化 | EE 含额外优化，CE 仍可安装 Python/Ruby/R |
 | **2021** | JDK 17 移除实验性 Graal (JEP 410) | JVMCI 保留，Graal 需独立安装 |
 | **2023** | CE/EE 合并为 Oracle GraalVM | GFTC 免费许可，原 EE 优化免费可用 |
-| **2023** | Oracle 裁员 | Graal 团队 -30% |
+| **2023** | Oracle 裁员 | Graal 团队受影响 (未经证实的报道) |
 | **2023** | JDK 21 成为 GraalVM 基线 | LTS 对齐 |
 | **2025** | GraalVM 25 发布 (2025-09-16) | 对齐 JDK 25 LTS；WP-SCCP 默认启用；XGBoost 静态剖析器；高级混淆 (实验性) |
 | **2025** | GraalVM for JDK 24 为最后 Java SE 捆绑版 | 后续通过 GraalVM Free Terms 和 CE 提供 |

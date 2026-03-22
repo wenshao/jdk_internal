@@ -160,7 +160,7 @@ MethodHandle lengthHandle = lookup.unreflect(String.class.getMethod("length"));
 int length = (int) lengthHandle.invokeExact(str);
 
 // 优化 3: 使用 VarHandle (JDK 9+)
-VarHandle valueHandle = MethodHandles.privateLookupIn()
+VarHandle valueHandle = MethodHandles.privateLookupIn(String.class, MethodHandles.lookup())
     .findVarHandle(String.class, "value", byte[].class);
 ```
 

@@ -60,7 +60,7 @@ JDK 1.0 ── JDK 1.2 ── JDK 1.4 ── JDK 7 ── JDK 11 ── JDK 21 �
 | **JDK 25** | PEM 编码 (预览) | 密钥/证书 PEM 格式 | JEP 470 |
 | **JDK 26** | HPKE | 混合公钥加密 (RFC 9180) | - |
 | **JDK 26** | PEM 编码 (预览 2) | PEMRecord 重命名为 PEM | JEP 524 |
-| **JDK 26** | ML-DSA JAR 签名 | 后量子 JAR 签名 | JEP 518 |
+| **JDK 26** | ML-DSA JAR 签名 | 后量子 JAR 签名 | - |
 
 ---
 
@@ -333,7 +333,7 @@ JDK 对 TLS 协议的支持经历了完整的生命周期——从引入、默�
 | TLS 1.2 | JDK 7 | JDK 8 | 仍然支持 | RFC 5246 |
 | TLS 1.3 | JDK 11 (JEP 332) | JDK 13 | 当前推荐 | RFC 8446 |
 | DTLS 1.0 | JDK 9 | JDK 9 | 仍然支持 | RFC 4347 |
-| DTLS 1.2 | JDK 15 (JEP 373) | JDK 15 | 当前推荐 | RFC 6347 |
+| DTLS 1.2 | JDK 15 | JDK 15 | 当前推荐 | RFC 6347 |
 
 ### JSSE 架构 (Java Secure Socket Extension)
 
@@ -725,21 +725,22 @@ byte[] salt = "my-salt".getBytes();
 byte[] info = "tls13-derived-key".getBytes();
 
 // 3. Extract + Expand (一步完成)
-HKDFParameterSpec params = HKDFParameterSpec.extractThenExpand(
-    ikm,          // 输入密钥材料
-    salt,         // 盐值 (可选但推荐)
-    info,         // 上下文信息
-    32            // 输出密钥长度 (256 bits)
-);
+HKDFParameterSpec params = HKDFParameterSpec.ofExtract()
+    .addIKM(ikm)          // 输入密钥材料
+    .addSalt(salt)        // 盐值 (可选但推荐)
+    .thenExpand(info, 32); // 上下文信息 + 输出密钥长度 (256 bits)
 SecretKey derivedKey = hkdf.deriveKey("AES", params);
 
 // 4. 也可以分步执行
 // Extract 阶段
-HKDFParameterSpec extractParams = HKDFParameterSpec.extract(ikm, salt);
+HKDFParameterSpec extractParams = HKDFParameterSpec.ofExtract()
+    .addIKM(ikm)
+    .addSalt(salt)
+    .extractOnly();
 SecretKey prk = hkdf.deriveKey("HKDF-PRK", extractParams);
 
 // Expand 阶段
-HKDFParameterSpec expandParams = HKDFParameterSpec.expand(prk, info, 32);
+HKDFParameterSpec expandParams = HKDFParameterSpec.expandOnly(prk, info, 32);
 SecretKey expandedKey = hkdf.deriveKey("AES", expandParams);
 ```
 
@@ -788,21 +789,23 @@ KeyPair keyPair = kpg.generateKeyPair();
 
 // 将公钥编码为 PEM 格式字符串
 // PEM 类在 JDK 26 中从 PEMRecord 重命名为 PEM (JEP 524)
-String pemPublicKey = PEM.encode(keyPair.getPublic());
+PEMEncoder encoder = PEM.newEncoder();
+String pemPublicKey = encoder.encodeToString(keyPair.getPublic());
 // 输出:
 // -----BEGIN PUBLIC KEY-----
 // MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE...
 // -----END PUBLIC KEY-----
 
 // 将私钥编码为 PEM
-String pemPrivateKey = PEM.encode(keyPair.getPrivate());
+String pemPrivateKey = encoder.encodeToString(keyPair.getPrivate());
 // -----BEGIN PRIVATE KEY-----
 // MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEH...
 // -----END PRIVATE KEY-----
 
 // 从 PEM 字符串解码回密钥对象
-PublicKey decodedPubKey = PEM.decode(pemPublicKey, PublicKey.class);
-PrivateKey decodedPrivKey = PEM.decode(pemPrivateKey, PrivateKey.class);
+PEMDecoder decoder = PEM.newDecoder();
+PublicKey decodedPubKey = decoder.decode(pemPublicKey, PublicKey.class);
+PrivateKey decodedPrivKey = decoder.decode(pemPrivateKey, PrivateKey.class);
 ```
 
 ```java
@@ -815,13 +818,15 @@ X509Certificate cert = (X509Certificate)
     cf.generateCertificate(new FileInputStream("server.crt"));
 
 // 编码为 PEM
-String pemCert = PEM.encode(cert);
+PEMEncoder encoder = PEM.newEncoder();
+String pemCert = encoder.encodeToString(cert);
 // -----BEGIN CERTIFICATE-----
 // MIIDazCCAlOgAwIBAgIUB...
 // -----END CERTIFICATE-----
 
 // 从 PEM 解码回证书
-X509Certificate decodedCert = PEM.decode(pemCert, X509Certificate.class);
+PEMDecoder decoder = PEM.newDecoder();
+X509Certificate decodedCert = decoder.decode(pemCert, X509Certificate.class);
 ```
 
 ### PEM API 的设计要点
@@ -829,9 +834,9 @@ X509Certificate decodedCert = PEM.decode(pemCert, X509Certificate.class);
 | 方面 | 说明 |
 |------|------|
 | 类名变化 | JDK 25 (JEP 470) 中叫 `PEMRecord`，JDK 26 (JEP 524) 重命名为 `PEM` |
-| 支持类型 | `PublicKey`, `PrivateKey`, `X509Certificate`, `X509CRL`, `PKCS10CertRequest` |
+| 支持类型 | `PublicKey`, `PrivateKey`, `X509Certificate`, `X509CRL` |
 | 加密私钥 | 支持 PKCS#8 加密格式 (encrypted PEM) |
-| 线程安全 | `PEM.encode()` 和 `PEM.decode()` 均为线程安全的静态方法 |
+| 线程安全 | `PEMEncoder` 和 `PEMDecoder` 均为线程安全 |
 | 预览状态 | JDK 26 仍为预览，需要 `--enable-preview` 编译和运行 |
 
 ---

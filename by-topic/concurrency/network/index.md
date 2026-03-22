@@ -49,7 +49,7 @@ ServerSocket Channel  Async  Client   Datagram      Domain   Threads  (预览)
 | **JDK 15** | DatagramSocket 重实现 | NIO 后端替换旧的 DatagramSocket | JEP 373 |
 | **JDK 16** | Unix Domain Socket | 本地 IPC, AF_UNIX 支持 | JEP 380 |
 | **JDK 21** | Virtual Threads | 轻量级线程, 阻塞 I/O 不阻塞平台线程 | JEP 444 |
-| **JDK 25** | HTTP/3 | 基于 QUIC 协议 (预览) | JEP 517 |
+| **JDK 26** | HTTP/3 | 基于 QUIC 协议 (预览) | JEP 517 |
 
 ---
 
@@ -638,7 +638,7 @@ HTTP/3 基于 QUIC (Quick UDP Internet Connections), 使用 UDP 而非 TCP:
 | **连接迁移** | 不支持 (IP 变 = 断连) | 支持 (Connection ID) |
 | **头部压缩** | HPACK | QPACK |
 | **丢包影响** | 所有 Stream 阻塞 | 仅影响丢包的 Stream |
-| **JDK 支持** | JDK 11+ | JDK 25+ (预览) |
+| **JDK 支持** | JDK 11+ | JDK 26+ (预览) |
 
 ### 0-RTT 连接恢复
 

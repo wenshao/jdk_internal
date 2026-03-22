@@ -547,14 +547,16 @@ SecretKey derivedKey = kdf.deriveKey("AES",
 // JEP 470 (JDK 25 预览), JEP 524 (JDK 26 预览 2) 引入标准 API
 
 // 编码为 PEM 字符串
-String pem = PEM.encode(publicKey);
+PEMEncoder encoder = PEM.newEncoder();
+String pem = encoder.encodeToString(publicKey);
 // 输出:
 // -----BEGIN PUBLIC KEY-----
 // MIIBIjANBgkqhk...
 // -----END PUBLIC KEY-----
 
 // 从 PEM 字符串解码
-PublicKey restored = PEM.decode(pem, PublicKey.class);
+PEMDecoder decoder = PEM.newDecoder();
+PublicKey restored = decoder.decode(pem, PublicKey.class);
 
 // 支持类型: PublicKey, PrivateKey, X509Certificate, X509CRL, etc.
 ```
@@ -651,8 +653,8 @@ HttpClient client = HttpClient.newBuilder()
 
 | 版本 | JDK 支持 | 状态 |
 |------|----------|------|
-| TLS 1.0 | JDK 5+ | 不安全，已禁用 |
-| TLS 1.1 | JDK 5+ | 不安全，已禁用 |
+| TLS 1.0 | JDK 1.4+ | 不安全，已禁用 |
+| TLS 1.1 | JDK 7+ | 不安全，已禁用 |
 | TLS 1.2 | JDK 7+ | 可接受 |
 | **TLS 1.3** | JDK 11+ | **推荐** |
 
@@ -798,7 +800,7 @@ new SecureRandom();                                // 普通用途
 ### 内部文档
 
 - [安全框架](../security/security/) - 安全框架详解
-- [SSL/TLS](../security/ssl/) - SSL/TLS 详解
+- [SSL/TLS](../security/security/index.md) - SSL/TLS 详解
 
 ### JEP 参考
 

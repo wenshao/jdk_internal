@@ -30,7 +30,7 @@
 ## 1. 快速概览
 
 ```
-JDK 1.0 ── JDK 2 ── JDK 6 ── JDK 8 ── JDK 9 ── JDK 17 ── JDK 21 ── JDK 26
+JDK 1.0 ── JDK 1.2 ── JDK 6 ── JDK 8 ── JDK 9 ── JDK 17 ── JDK 21 ── JDK 26
    │         │        │        │        │        │        │        │
 类加载   双亲    线程上下   元空间   模块化   层层    外部    CDS
 机制    委派    类加载器   类加载   类加载   初始化   函数    改进
@@ -42,7 +42,7 @@ JDK 1.0 ── JDK 2 ── JDK 6 ── JDK 8 ── JDK 9 ── JDK 17 ──
 | 版本 | 特性 | 说明 | JEP |
 |------|------|------|-----|
 | **JDK 1.0** | ClassLoader | 基础类加载 | - |
-| **JDK 2** | 双亲委派 | 安全性保证 | - |
+| **JDK 1.2** | 双亲委派 | 安全性保证 | - |
 | **JDK 1.2** | 线程上下文类加载器 | JavaEE 支持 | - |
 | **JDK 5** | CDS (初版) | 核心类共享 metadata | - |
 | **JDK 8** | 元空间 | 取代永久代 | - |
@@ -51,7 +51,7 @@ JDK 1.0 ── JDK 2 ── JDK 6 ── JDK 8 ── JDK 9 ── JDK 17 ──
 | **JDK 13** | Dynamic CDS | 运行时动态归档 | JEP 350 |
 | **JDK 21** | 外部函数 | 不依赖 JNI | JEP 442 |
 | **JDK 24** | AOT Class Loading | 预完成 loading/linking | JEP 483 |
-| **JDK 26** | AOT Cache | 完整 AOT 缓存 | JEP 516 |
+| **JDK 26** | AOT Object Caching | Ahead-of-Time 对象缓存 (任意 GC) | JEP 516 |
 
 ---
 

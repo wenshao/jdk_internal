@@ -162,8 +162,8 @@ PermGen   Oops     Oops   字符串  低延迟  ZGC   JEP483   JEP519正式
 -XX:CompressedClassSpaceSize=1g  # 压缩类空间大小
 
 # 监控元空间
--XX:+PrintGCDetails              # 打印 GC 详情
--XX:+PrintGCTimeStamps           # 打印 GC 时间戳
+-Xlog:gc*                        # 打印 GC 详情 (JDK 9+, 替代已移除的 PrintGCDetails)
+-Xlog:gc*::time                  # 打印 GC 时间戳 (JDK 9+, 替代已移除的 PrintGCTimeStamps)
 ```
 
 **类卸载**: 需同时满足三条件: (1) 类的所有实例已回收, (2) 加载该类的 ClassLoader 已回收, (3) Class 对象无强引用。详见 [内存区域详解](#25-内存区域详解)。
@@ -483,14 +483,11 @@ ByteBuffer heap = ByteBuffer.allocate(64 * 1024 * 1024);
 │                 Mark Word 结构                          │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│  64 位 JVM:                                            │
-│  │ unused:25│ hashcode:31│ unused:1│ age:4│ biased:1│01││
+│  64 位 JVM (JDK 18+, 偏向锁已移除):                    │
+│  │ unused:22│ hash:31│ unused_gap:4│ age:4│self_fwd:1│lock:2│
 │                                                         │
-│  32 位 JVM:                                            │
-│  │ thread:13│ epoch:2│ age:4│ biased:1│01│ size:1│00││
-│                                                         │
-│  锁状态:                                               │
-│  ├── 01 - 无锁或偏向锁                                  │
+│  锁状态 (lock 最低 2 bits):                             │
+│  ├── 01 - 无锁                                          │
 │  ├── 00 - 轻量级锁                                      │
 │  ├── 10 - 重量级锁 (Monitor)                            │
 │  └── 11 - GC 标记                                       │
@@ -620,7 +617,7 @@ Map<String, Integer> map = new HashMap<>(1000);
 
   ┌─────────────────────────────────────────────────────┐
   │          Compact Header (8 bytes)                    │  = 8 bytes
-  │ [size:22 | klass:32 | age:6 | lock:4]               │  无需额外 padding
+  │ [lock:2|self_fwd:1|age:4|unused_gap:4|hash:31|klass:22] │  无需额外 padding
   └─────────────────────────────────────────────────────┘
 ```
 
@@ -628,17 +625,16 @@ Map<String, Integer> map = new HashMap<>(1000);
 
 紧凑对象头的核心创新是将 **Klass 指针嵌入 Mark Word**，消除独立的 Klass Pointer 字段:
 
-- **[63:42] 22 bits**: 对象大小 (用于 GC 遍历时跳过对象，无需查 Klass 的 layout 信息)
-- **[41:10] 32 bits**: 压缩的 Klass 指针 (与 CompressedClassPointers 共享编码)
-- **[9:4] 6 bits**: GC 年龄 (最大 63，传统头部仅 4 bits/最大 15)
-- **[3:0] 4 bits**: 锁状态与标志位
+- **[63:42] 22 bits**: 压缩的 Klass 指针 (Narrow Klass ID)
+- **[41:11] 31 bits**: identity hashCode (首次调用时写入)
+- **[10:7] 4 bits**: 未使用间隔位
+- **[6:3] 4 bits**: GC 年龄 (最大 15，与传统头部一致)
+- **[2] 1 bit**: self-forwarding 标志位
+- **[1:0] 2 bits**: 锁状态
 
 #### hashCode 的处理
 
-传统 Mark Word 中有 31 bits 存储 identity hashCode。紧凑头部中 **没有空间存储 hashCode**。解决方案:
-
-- 首次调用 `System.identityHashCode()` 或 `Object.hashCode()` 时，在对象外部 (side table 或对象尾部) 存储 hashCode
-- 已计算 hashCode 的对象通过 Mark Word 中的标志位标识
+紧凑头部仍保留 31 bits 用于存储 identity hashCode，与传统 Mark Word 一致。首次调用 `System.identityHashCode()` 或 `Object.hashCode()` 时计算并写入。
 
 #### 对堆大小的影响
 
@@ -646,7 +642,7 @@ Map<String, Integer> map = new HashMap<>(1000);
 
 | 对象类型 | 传统大小 | 紧凑后大小 | 节省 |
 |----------|----------|-----------|------|
-| `java.lang.Object` | 16 B | 12 B (对齐后 16 B) | 0~25% |
+| `java.lang.Object` | 16 B | 8 B (对齐后 8 B) | 50% |
 | 只含 1 个 int 字段 | 16 B | 12 B (对齐后 16 B) | 0% |
 | 只含 1 个 long 字段 | 24 B | 16 B | 33% |
 | `HashMap$Node` | 32 B | 28 B (对齐后 32 B) | 0~12% |

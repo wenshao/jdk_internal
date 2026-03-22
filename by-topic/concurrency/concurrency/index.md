@@ -91,18 +91,18 @@ t2.start();
 │                   线程生命周期                           │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│    NEW ──► RUNNABLE ──► RUNNING ──► TERMINATED        │
-│             │         │                                │
-│             │         ▼                                │
-│             │    BLOCKED (等待锁)                      │
-│             │         │                                │
-│             │         ▼                                │
-│             │    WAITING (wait(), join(), park())       │
-│             │         │                                │
-│             │         ▼                                │
-│             │    TIMED_WAITING (sleep(), wait(n))       │
-│             │         │                                │
-│             └─────────┴──► 回到 RUNNABLE                │
+│    NEW ──► RUNNABLE ──► TERMINATED                    │
+│             │                                          │
+│             ▼                                          │
+│        BLOCKED (等待锁)                                │
+│             │                                          │
+│             ▼                                          │
+│        WAITING (wait(), join(), park())                 │
+│             │                                          │
+│             ▼                                          │
+│        TIMED_WAITING (sleep(), wait(n))                 │
+│             │                                          │
+│             └──► 回到 RUNNABLE                          │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
 ```
@@ -348,7 +348,7 @@ for (int i = 0; i < 100; i++) {
 
 ## 5. Virtual Threads
 
-**JDK 21 预览, JDK 21 正式 (JEP 444)**
+**JDK 19 预览 (JEP 425), JDK 20 第二预览 (JEP 436), JDK 21 正式 (JEP 444)**
 
 ### 概述
 
@@ -448,7 +448,7 @@ try {
 
 ## 6. Structured Concurrency
 
-**JDK 21-20 孵化器, JDK 21 预览 (JEP 453), JDK 22 第二次预览 (JEP 462)**
+**JDK 19 孵化器 (JEP 428), JDK 20 孵化器 (JEP 437), JDK 21 预览 (JEP 453), JDK 22 第二次预览 (JEP 462)**
 
 ### 概述
 
@@ -575,7 +575,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 延迟初始化常量声明:
 
 ```java
-// 延迟初始化常量
+// 延迟初始化常量 (提案中的语法，尚未实现)
 private static lazy ExpensiveObject CACHE = new ExpensiveObject();
 
 // 首次访问时初始化
@@ -701,7 +701,7 @@ CLH 变体等待队列 (双向链表):
 - **CountDownLatch**: `state` 表示剩余计数
 - **ReentrantReadWriteLock**: 高 16 位 = 读锁持有数，低 16 位 = 写锁重入数
 
-**CLH 队列变体**：经典 CLH 锁使用隐式链表（每个节点自旋在前驱的状态上），AQS 改为显式双向链表，支持取消 (cancellation) 和超时 (timeout)。JDK 9+ 的 AQS 重写（由 Doug Lea 完成）移除了原始 Node 中的 `prev`/`next` 设计，改为 `VarHandle` 操作。
+**CLH 队列变体**：经典 CLH 锁使用隐式链表（每个节点自旋在前驱的状态上），AQS 改为显式双向链表，支持取消 (cancellation) 和超时 (timeout)。JDK 9+ 的 AQS 重写（由 Doug Lea 完成）将 `Unsafe` 操作替换为 `VarHandle`，但 `prev`/`next` 双向链表结构仍然保留。
 
 **获取锁的流程（独占模式）**：
 ```

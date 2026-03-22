@@ -47,7 +47,7 @@ JDK 1.0 ── JDK 1.3 ── JDK 7 ── JDK 9 ── JDK 10 ── JDK 17 ─
 | **JDK 1.3** | C1 (Client Compiler) | 快速启动编译器 | [C1 编译器详解](c1-compiler.md) |
 | **JDK 1.3** | C2 (Server Compiler) | 高性能编译器 | [C2 优化阶段](c2-phases.md) |
 | **JDK 5** | C1/C2 分离 | -client/-server | [编译器对比](#编译器对比) |
-| **JDK 7** | 分层编译 (实验) | C1 + C2 组合 | [分层编译详解](tiered-compilation.md) |
+| **JDK 6** | 分层编译 (实验), JDK 8 默认启用 | C1 + C2 组合 | [分层编译详解](tiered-compilation.md) |
 | **JDK 9** | JVMCI (JEP 243) | JVM 编译器接口 | [Graal JIT](graal-jit.md) |
 | **JDK 10** | Graal JIT (JEP 317) | 实验性高性能 JIT | [Graal JIT](graal-jit.md) |
 | **JDK 17** | JIT 优化 | 编译器改进 | [近期改进](recent-changes.md) |
@@ -100,7 +100,7 @@ JDK 1.0 ── JDK 1.3 ── JDK 7 ── JDK 9 ── JDK 10 ── JDK 17 ─
 | 方面 | C1 | C2 |
 |------|----|----|
 | **内联阈值** | ~35 字节码 (MaxInlineSize) | ~35 字节码 (冷方法) / ~325 字节码 (热方法, FreqInlineSize) |
-| **最大内联深度** | 15 层 (MaxInlineLevel, C1/C2 共享) | 15 层 (MaxInlineLevel, JDK 14 起从 9 提升) |
+| **最大内联深度** | 9 层 (C1MaxInlineLevel=9, 独立参数) | 15 层 (MaxInlineLevel=15, JDK 14 起从 9 提升) |
 | **虚方法内联** | 保守 (需类型统计) | 激进 (基于 profiling) |
 | **内联失败** | 放弃 | 记录供后续优化 |
 
