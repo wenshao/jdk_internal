@@ -68,7 +68,7 @@ JDK 1.0 ── JDK 8 ── JDK 9 ── JDK 11 ── JDK 16 ── JDK 17 ─�
 |------|--------|--------|------|----------|
 | 1 | Claes Redestad | 18 | Oracle | 模块系统 |
 | 2 | Alan Bateman | 17 | Oracle | JPMS 设计 |
-| 3 | Severin Gehwolf | 13 | Red Hat | 模块系统 |
+| 3 | Severin Gehwolf | 13 | Red Hat (当时；现 IBM) | 模块系统 |
 | 4 | Athijegannathan Sundararajan | 13 | Oracle | jlink |
 | 5 | Mandy Chung | 9 | Oracle | 模块层 |
 | 6 | Naoto Sato | 7 | Oracle | i18n 模块 |

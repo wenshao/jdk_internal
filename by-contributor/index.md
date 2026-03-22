@@ -390,7 +390,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | [Roger Riggs](/by-contributor/profiles/roger-riggs.md) | [Oracle](/contributors/orgs/oracle.md) | [核心库](/by-topic/core/) | [详情](/by-contributor/profiles/roger-riggs.md) | [→](/by-topic/core/) |
 | [Sean Coffey](/by-contributor/profiles/sean-coffey.md) | [Oracle](/contributors/orgs/oracle.md) | [Security/TLS](/by-topic/security/security/) | [详情](/by-contributor/profiles/sean-coffey.md) | [→](/by-topic/security/security/) |
 | [Sendaoyan](/by-contributor/profiles/sendaoyan.md) | Independent | [测试](/by-topic/) | [详情](/by-contributor/profiles/sendaoyan.md) | [→](/by-topic/) |
-| [Severin Gehwolf](/by-contributor/profiles/severin-gehwolf.md) | [Red Hat](/contributors/orgs/redhat.md) | [Containers](/by-topic/platform/) | [详情](/by-contributor/profiles/severin-gehwolf.md) | [→](/by-topic/platform/) |
+| [Severin Gehwolf](/by-contributor/profiles/severin-gehwolf.md) | IBM (前 Red Hat) | [Containers](/by-topic/platform/) | [详情](/by-contributor/profiles/severin-gehwolf.md) | [→](/by-topic/platform/) |
 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | [Alibaba](/contributors/orgs/alibaba.md) | [核心库](/by-topic/core/) | [详情](/by-contributor/profiles/shaojin-wen.md) | [→](/by-topic/core/) |
 | [Sundararajan Athijegannathan](/by-contributor/profiles/sundararajan-athijegannathan.md) | [Oracle](/contributors/orgs/oracle.md) | [Nashorn](/by-topic/language/) | [详情](/by-contributor/profiles/sundararajan-athijegannathan.md) | [→](/by-topic/language/) |
 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | [Oracle](/contributors/orgs/oracle.md) | [G1 GC](/by-topic/core/gc/) | [详情](/by-contributor/profiles/thomas-schatzl.md) | [→](/by-topic/core/gc/) |
