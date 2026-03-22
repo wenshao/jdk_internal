@@ -74,7 +74,7 @@
 
 ### JDK-8325495: Add 系列优化
 
-**作者**: [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md)
+**作者**: [Roland Westrelin](/by-contributor/profiles/roland-westrelin.md)
 
 **状态**: 8 个版本迭代 (2024年)
 

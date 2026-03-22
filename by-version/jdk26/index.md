@@ -35,6 +35,8 @@
 | 所有 JEP 详细列表 | [JEP 汇总](./jeps.md) |
 | 重要 PR 分析 | [Top 50 Commits](/by-pr/jdk26-top-prs.md) |
 | 深度技术分析 | [深度分析文档](./deep-dive/) |
+| 破坏性变更 | [破坏性变更](./breaking-changes.md) |
+| 已知问题 | [已知问题](./known-issues.md) |
 | 发布说明 | [完整 Release Notes](./release-notes.md) |
 | 贡献者排名 | [Top 贡献者](/by-contributor/profiles/jdk26-top-contributors.md) |
 | 如何试用 | [快速开始](#快速开始) |
@@ -360,7 +362,7 @@ java -XX:AOTCache=app.aot -XX:AOTConfiguration=app.aotconf MyApp
 
 | 贡献者 | 专长 | 详细资料 |
 |--------|------|----------|
-| [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | C2 JIT、循环优化 | → |
+| [Roland Westrelin](/by-contributor/profiles/roland-westrelin.md) | C2 JIT、循环优化 | → |
 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | MergeStore 优化 | → |
 | Vladimir Kozlov | C2 编译器负责人 | → |
 

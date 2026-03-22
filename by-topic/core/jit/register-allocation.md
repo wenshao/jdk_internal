@@ -564,7 +564,7 @@ for (int i = 0; i < n; i++) {
 | 贡献者 | 领域 | 组织 |
 |--------|------|------|
 | [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | C2 编译器架构 | Oracle |
-| [Roland Westrelin](/by-contributor/profiles/rooland-westrelin.md) | C2 优化 | Red Hat |
+| [Roland Westrelin](/by-contributor/profiles/roland-westrelin.md) | C2 优化 | Red Hat |
 | [John Rose](/by-contributor/profiles/john-rose.md) | JIT 编译器 | Oracle |
 
 ---

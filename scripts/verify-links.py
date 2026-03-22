@@ -39,10 +39,13 @@ class LinkVerifier:
         self.checked_count = 0
         
     def find_markdown_files(self) -> List[Path]:
-        """查找所有markdown文件"""
+        """查找所有markdown文件（排除 reports/ 目录避免自引用误报）"""
         md_files = []
+        reports_dir = self.root_dir / "reports"
         for ext in ['*.md', '*.markdown']:
-            md_files.extend(self.root_dir.rglob(ext))
+            for f in self.root_dir.rglob(ext):
+                if not str(f).startswith(str(reports_dir)):
+                    md_files.append(f)
         return md_files
     
     def extract_links(self, file_path: Path) -> List[Link]:

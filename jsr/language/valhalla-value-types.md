@@ -174,8 +174,8 @@ public @interface LooselyConsistentValue { }
 | ~~JEP 325~~ | ~~Value Types~~ | - | 误引 (JEP 325 实际是 Switch Expressions) |
 | ~~JEP 338~~ | ~~Value Types~~ | - | 误引 (JEP 338 实际是 Vector API) |
 | JEP 390 | Warnings for Value-Based Classes | 16 | ✅ 正式 |
-| JEP 401 | Value Classes (Preview) | TBD | 🚧 开发中 |
-| JEP 402 | Enhanced Value Types | TBD | 🚥 计划中 |
+| JEP 401 | Value Classes (Preview) | 开发中 (未定) | 🚧 开发中 |
+| JEP 402 | Enhanced Value Types | 开发中 (未定) | 🚥 计划中 |
 
 ### JEP 390: Value-Based Classes
 
