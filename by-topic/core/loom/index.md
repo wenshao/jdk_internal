@@ -51,7 +51,7 @@
 | **平台线程昂贵** | 每线程 ~1MB 栈内存，创建需要系统调用 | 虚拟线程 ~几 KB，纯 Java 对象 |
 | **线程数量受限** | 几千线程已达 OS 上限 | 百万级虚拟线程 |
 | **异步编程复杂** | 回调地狱、响应式流、丢失堆栈 | 直接写同步代码，堆栈完整 |
-| **阻塞开销大** | 阻塞浪费宝贵的平台线程资源 | 阻塞仅挂起虚拟线程，释放 carrier |
+| **阻塞开销大** | 阻塞浪费宝贵的平台线程资源 | 阻塞仅挂起虚拟线程，释放 carrier（载体线程） |
 | **并发错误处理** | 手动管理子任务生命周期 | 结构化并发自动传播取消/错误 |
 
 ### 核心组件
@@ -71,7 +71,7 @@
 │             │  • Joiner 模式   │  • 替代 ThreadLocal            │
 ├─────────────┴──────────────────┴────────────────────────────────┤
 │  Continuations (内部 API)                                       │
-│  • 栈帧冻结 (freeze) / 恢复 (thaw)                              │
+│  • 栈帧 freeze（冻结）/ thaw（解冻）                              │
 │  • v-stack ↔ h-stack 拷贝                                      │
 │  • StackChunk 链表管理                                          │
 └─────────────────────────────────────────────────────────────────┘
@@ -220,30 +220,32 @@ Freeze/Thaw 流程:
 |----------|-----|------|
 | `NEW` | 0 | 刚创建，尚未启动 |
 | `STARTED` | 1 | 已启动，正在初始化 |
-| `RUNNING` | 2 | 正在 carrier 上运行 |
+| `RUNNING` | 2 | 正在 carrier 上运行 (runnable-mounted) |
 | `PARKING` | 3 | 正在执行 park (yield 中) |
-| `PARKED` | 4 | 已 park，等待 unpark |
-| `PINNED` | 5 | 被 pin 到 carrier (无法 yield) |
-| `YIELDING` | 6 | 正在让出 carrier |
-| `YIELDED` | 7 | 已让出 (JDK 24+ 新增) |
-| `BLOCKING` | 8 | 正在阻塞获取 monitor (JDK 24+, JEP 491) |
-| `BLOCKED` | 9 | 已阻塞在 monitor 获取上 (JDK 24+, JEP 491) |
-| `UNBLOCKED` | 10 | 从 monitor 阻塞中恢复 (JDK 24+, JEP 491) |
-| `WAITING` | 11 | 在 Object.wait() 中等待 (JDK 24+, JEP 491) |
-| `WAIT` | 12 | 已进入 wait 状态 (JDK 24+, JEP 491) |
-| `TIMED_PARKING` | 13 | 正在执行带超时的 park |
-| `TIMED_PARKED` | 14 | 已 park，带超时 |
-| `TIMED_PINNED` | 15 | 被 pin，带超时 |
-| `TIMED_WAITING` | 16 | 带超时的 Object.wait() (JDK 24+) |
-| `TIMED_WAIT` | 17 | 已进入带超时的 wait (JDK 24+) |
+| `PARKED` | 4 | 已 park，等待 unpark (unmounted) |
+| `PINNED` | 5 | 被 pin 到 carrier (mounted, 无法 yield) |
+| `TIMED_PARKING` | 6 | 正在执行带超时的 park |
+| `TIMED_PARKED` | 7 | 已 park，带超时 (unmounted) |
+| `TIMED_PINNED` | 8 | 被 pin，带超时 (mounted) |
+| `UNPARKED` | 9 | 已 unpark，等待重新调度 (unmounted but runnable) |
+| `YIELDING` | 10 | 正在让出 carrier |
+| `YIELDED` | 11 | 已让出 (unmounted but runnable) |
+| `BLOCKING` | 12 | 正在阻塞获取 monitor (JDK 24+, JEP 491) |
+| `BLOCKED` | 13 | 已阻塞在 monitor 获取上 (unmounted, JDK 24+, JEP 491) |
+| `UNBLOCKED` | 14 | 从 monitor 阻塞中恢复 (unmounted but runnable, JDK 24+, JEP 491) |
+| `WAITING` | 15 | 在 Object.wait() 中等待 (JDK 24+, JEP 491) |
+| `WAIT` | 16 | 已进入 wait 状态 (waiting in Object.wait, JDK 24+, JEP 491) |
+| `TIMED_WAITING` | 17 | 带超时的 Object.wait() (JDK 24+) |
+| `TIMED_WAIT` | 18 | 已进入带超时的 wait (waiting in timed-Object.wait, JDK 24+) |
 | `TERMINATED` | 99 | 已终止 |
 
 状态转换主要路径:
 
 ```
-NEW → STARTED → RUNNING ─┬─→ PARKING → PARKED → (unpark) → RUNNING
+NEW → STARTED → RUNNING ─┬─→ PARKING → PARKED → (unpark) → UNPARKED → RUNNING
                          ├─→ BLOCKING → BLOCKED → UNBLOCKED → RUNNING  (JEP 491)
                          ├─→ WAITING → WAIT → (notify) → RUNNING      (JEP 491)
+                         ├─→ YIELDING → YIELDED → RUNNING
                          ├─→ PINNED (无法 unmount)
                          └─→ TERMINATED
 ```
@@ -257,7 +259,7 @@ NEW → STARTED → RUNNING ─┬─→ PARKING → PARKED → (unpark) → RUN
 - **最大池大小 (maximumPoolSize)**: `Math.max(parallelism, 256)`
 - **最小可运行数 (minRunnable)**: `Math.max(parallelism / 2, 1)`
 
-**Work-stealing 算法**:
+**Work-stealing（工作窃取）算法**:
 
 调度器基于 work-stealing 实现高效任务分配：
 - 每个 worker thread (即 carrier thread) 维护自己的本地双端队列 (deque)
@@ -267,7 +269,7 @@ NEW → STARTED → RUNNING ─┬─→ PARKING → PARKED → (unpark) → RUN
 
 **补偿并行度 (Compensating parallelism)**:
 
-当虚拟线程被 pin 到 carrier (无法 unmount) 时，调度器会检测到活跃 carrier 数量下降。如果低于 `minRunnable` 阈值，调度器会临时创建新的 carrier thread 来补偿，确保其他虚拟线程不会饿死。这就是最大池大小设为 256 的原因——为 pinning 场景预留余量。
+当虚拟线程被 pin 到 carrier (无法 unmount) 时，调度器会检测到活跃 carrier 数量下降。如果低于 `minRunnable` 阈值，调度器会临时创建新的 carrier thread 来补偿，确保其他虚拟线程不会饥饿 (starvation)。这就是最大池大小设为 256 的原因——为 pinning 场景预留余量。
 
 **系统属性配置**:
 
@@ -287,6 +289,7 @@ NEW → STARTED → RUNNING ─┬─→ PARKING → PARKED → (unpark) → RUN
 Carrier thread 是实际执行虚拟线程代码的平台线程。它是 `ForkJoinWorkerThread` 的子类 `CarrierThread`。
 
 ```
+// 伪代码 (pseudocode)
 CarrierThread 运行循环 (简化):
 
 while (true) {
@@ -319,7 +322,7 @@ while (true) {
 - Monitor 记录的 owner 是 carrier thread 的 OS thread ID
 - 虚拟线程无法从 carrier 上 unmount (因为 monitor 不认识虚拟线程)
 - 如果在 `synchronized` 块内执行阻塞操作，carrier thread 被白白占用
-- 这就是 **pinning** 问题：虚拟线程被 "钉" 在 carrier 上
+- 这就是 **pinning（固定）** 问题：虚拟线程被 "钉" 在 carrier 上
 
 ```java
 // JDK 21-23: 这段代码会导致 pinning
@@ -417,7 +420,7 @@ jfr print --events jdk.VirtualThreadPinned pinning.jfr
 | JDK 23 | JEP 480 | 第三次预览 |
 | JDK 24 | JEP 499 | 第四次预览 |
 | JDK 25 | JEP 505 | 第五次预览 - 重大 API 重构：构造函数改为静态工厂方法，引入 Joiner 接口 |
-| JDK 26 | JEP 525 | 第六次预览 - 新增 `Joiner.onTimeout()`，`allSuccessfulOrThrow()` 返回 List 而非 Stream |
+| JDK 26 | JEP 525 | 第六次预览 |
 
 ### 核心概念 (JDK 25+ API)
 
@@ -458,21 +461,20 @@ try (var scope = StructuredTaskScope.open(
 }
 
 // 2. allSuccessfulOrThrow: 等待全部完成，任一失败则抛异常
-// JDK 26: 返回 List 而非 Stream
 try (var scope = StructuredTaskScope.open(
         Joiner.allSuccessfulOrThrow())) {
     scope.fork(() -> validateA());
     scope.fork(() -> validateB());
 
-    List<ValidationResult> results = scope.join();  // JDK 26: List
+    List<ValidationResult> results = scope.join();
 }
 
-// 3. onTimeout (JDK 26 新增): 带超时的 Joiner
+// 3. 带超时的 scope: 使用 Configuration.withTimeout()
 try (var scope = StructuredTaskScope.open(
-        Joiner.allSuccessfulOrThrow()
-              .onTimeout(Duration.ofSeconds(5), () -> defaultValue))) {
+        Joiner.allSuccessfulOrThrow(),
+        cf -> cf.withTimeout(Duration.ofSeconds(5)))) {
     scope.fork(() -> slowOperation());
-    return scope.join();
+    return scope.join();  // 超时后抛出 TimeoutException
 }
 ```
 
@@ -735,22 +737,9 @@ WebServer.builder()
 | **Oracle JDBC** | 兼容 | 23c 驱动优化了虚拟线程体验 |
 | **R2DBC (响应式)** | 不适用 | 虚拟线程方案无需使用 R2DBC |
 
-**关键陷阱**: 虚拟线程数量不受限，但数据库连接数有限。必须使用连接池 (如 HikariCP) 限制并发数据库连接。否则可能导致数据库被瞬间打满。
+**关键陷阱**: 虚拟线程数量不受限，但数据库连接数有限。必须使用连接池 (如 HikariCP) 限制并发数据库连接。否则可能导致数据库连接池被瞬间耗尽。
 
-```java
-// 使用 Semaphore 限制并发数据库操作
-private static final Semaphore DB_PERMITS = new Semaphore(50);
-
-void queryDatabase() {
-    DB_PERMITS.acquire();
-    try {
-        // 最多 50 个并发数据库查询
-        return jdbcTemplate.queryForList("SELECT ...");
-    } finally {
-        DB_PERMITS.release();
-    }
-}
-```
+→ 详见 [Section 10.6 反模式 6](#反模式-6-忽视背压-backpressure) 的 Semaphore 背压模式。
 
 ### 日志框架注意事项
 
@@ -892,7 +881,7 @@ Semaphore permits = new Semaphore(100);  // 最多 100 并发
 
 try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
     for (var message : messageQueue) {
-        permits.acquire();
+        permits.acquire();  // throws InterruptedException
         executor.submit(() -> {
             try {
                 database.insert(transform(message));
@@ -901,7 +890,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
             }
         });
     }
-}
+} // 注意: 外层方法需声明 throws InterruptedException 或添加 try-catch
 ```
 
 ---
@@ -918,6 +907,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 | **2023** | JDK 20 | 虚拟线程 (第二次预览, JEP 436) |
 | **2023** | JDK 21 | **虚拟线程 (正式, JEP 444)** |
 | **2023** | JDK 21 | 结构化并发 (第一预览, JEP 453) |
+| **2023** | JDK 21 | Scoped Values (第一预览, JEP 446) |
 | **2024** | JDK 22 | 结构化并发 (第二预览, JEP 462) |
 | **2024** | JDK 22 | Scoped Values (第二预览, JEP 464) |
 | **2024** | JDK 23 | 结构化并发 (第三预览, JEP 480) |
@@ -1103,9 +1093,7 @@ static final ScopedValue<Context> CTX = ScopedValue.newInstance();
 ScopedValue.where(CTX, context).run(() -> handle());
 
 // 4. 使用 Semaphore 保护有限资源
-Semaphore dbPermits = new Semaphore(50);
-dbPermits.acquire();
-try { query(); } finally { dbPermits.release(); }
+//    → 详见 Section 10.6 反模式 6
 
 // 5. 给虚拟线程命名以便调试
 Thread.ofVirtual().name("request-handler-", 0).start(task);
