@@ -242,6 +242,125 @@ jobs:
             echo "✅ All JEPs with local files are properly linked"
           fi
 
+      - name: Check JEP number-title consistency
+        run: |
+          echo "=== JEP number vs title consistency ==="
+          ERRORS=0
+
+          # 每个 jep-NNN.md 的标题行应包含对应的 JEP 编号
+          for f in $(find jeps/ -name 'jep-*.md' -type f); do
+            # 从文件名提取编号
+            NUM=$(basename "$f" .md | sed 's/jep-//')
+
+            # 读取第一个 # 标题行
+            TITLE=$(grep -m1 '^# ' "$f" 2>/dev/null || true)
+
+            if [ -n "$TITLE" ]; then
+              # 标题中应包含 "JEP NNN" 或 "JEP NNN:"
+              if ! echo "$TITLE" | grep -qE "JEP\s*${NUM}[^0-9]"; then
+                echo "::error file=${f}::Title mismatch — filename is jep-${NUM}.md but title is: ${TITLE}"
+                ERRORS=$((ERRORS + 1))
+              fi
+            fi
+          done
+
+          if [ "$ERRORS" -gt 0 ]; then
+            echo ""
+            echo "❌ Found $ERRORS JEP title mismatch(es) — possible wrong content in file"
+            exit 1
+          else
+            echo "✅ All JEP files match their number ($( find jeps/ -name 'jep-*.md' | wc -l ) checked)"
+          fi
+
+      - name: Check contributor profile name consistency
+        run: |
+          echo "=== Contributor profile name check ==="
+          WARNINGS=0
+
+          for f in by-contributor/profiles/*.md; do
+            [ -f "$f" ] || continue
+            BASENAME=$(basename "$f" .md)
+
+            # 跳过非个人 profile 文件
+            echo "$BASENAME" | grep -qE 'jdk[0-9]|chinese-|top-|README|TEMPLATE|index|analysis' && continue
+
+            # 从文件名推导名字：kim-barrett → "kim barrett", shaojin-wen → "shaojin wen"
+            NAME_FROM_FILE=$(echo "$BASENAME" | tr '-' ' ')
+
+            # 从文件内提取 Name 字段或 # 标题
+            NAME_IN_FILE=$(grep -m1 -iP '^\| \*\*Name\*\*\s*\|' "$f" 2>/dev/null | sed 's/.*| *//;s/ *|.*//' || true)
+            if [ -z "$NAME_IN_FILE" ]; then
+              NAME_IN_FILE=$(grep -m1 '^# ' "$f" 2>/dev/null | sed 's/^# //' | sed 's/ (.*//' || true)
+            fi
+
+            if [ -n "$NAME_IN_FILE" ]; then
+              # 转小写比较
+              LOWER_FILE=$(echo "$NAME_FROM_FILE" | tr '[:upper:]' '[:lower:]')
+              LOWER_CONTENT=$(echo "$NAME_IN_FILE" | tr '[:upper:]' '[:lower:]')
+
+              # 文件名中的名字应出现在内容名字中
+              MATCH=true
+              for word in $LOWER_FILE; do
+                if ! echo "$LOWER_CONTENT" | grep -q "$word"; then
+                  MATCH=false
+                  break
+                fi
+              done
+
+              if [ "$MATCH" = "false" ]; then
+                echo "::warning file=${f}::Name mismatch — filename '${BASENAME}' vs content name '${NAME_IN_FILE}'"
+                WARNINGS=$((WARNINGS + 1))
+              fi
+            fi
+          done
+
+          if [ "$WARNINGS" -gt 0 ]; then
+            echo ""
+            echo "⚠️ ${WARNINGS} profile(s) have name mismatches — check for typos"
+          else
+            echo "✅ All profile filenames match their content"
+          fi
+
+      - name: Check for orphan pages
+        run: |
+          echo "=== Orphan page detection ==="
+          ORPHANS=0
+
+          # 收集所有 .md 文件（排除 index/README/reports）
+          find . -name '*.md' -type f \
+            -not -path './.git/*' \
+            -not -path './reports/*' \
+            -not -path './AGENTS.md' \
+            -not -name 'index.md' \
+            -not -name 'README.md' \
+            -not -name 'MEMORY.md' \
+            -not -name 'dashboard.md' | sed 's|^\./||' | sort > /tmp/all_pages.txt
+
+          # 收集所有被链接到的本地路径
+          grep -rohP '\]\(/([^)]+\.md)' . --include='*.md' 2>/dev/null \
+            | sed 's/](\///' | sort -u > /tmp/linked_pages.txt
+          grep -rohP '\]\(([^/)][^)]*\.md)' . --include='*.md' 2>/dev/null \
+            | sed 's/](//' | sort -u >> /tmp/linked_pages.txt
+
+          # 找到从未被引用的页面
+          TOTAL=$(wc -l < /tmp/all_pages.txt)
+          while read -r page; do
+            PAGENAME=$(basename "$page")
+            # 检查是否有任何文件链接到这个文件（通过文件名匹配）
+            if ! grep -q "$PAGENAME" /tmp/linked_pages.txt 2>/dev/null; then
+              echo "  orphan: $page"
+              ORPHANS=$((ORPHANS + 1))
+            fi
+          done < /tmp/all_pages.txt
+
+          echo ""
+          echo "Total pages: ${TOTAL}, Orphans: ${ORPHANS}"
+          if [ "$ORPHANS" -gt 0 ]; then
+            echo "⚠️ ${ORPHANS} page(s) are not linked from anywhere — consider adding references"
+          else
+            echo "✅ All pages are referenced"
+          fi
+
       - name: Check file sizes
         run: |
           echo "=== File size check ==="
