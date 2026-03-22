@@ -486,7 +486,176 @@ public void putChars4(byte[] buf) {
 
 ---
 
-## 10. 相关链接
+## 11. 跨编译器对比
+
+存储合并是一种通用的编译器优化技术，不同编译器在实现方式、触发时机和优化深度上有显著差异。本节将 HotSpot C2 的 MergeStore 与 GCC、LLVM、GraalVM 的对应实现进行对比分析。
+
+### 11.1 GCC: -fstore-merging
+
+GCC 的 [GIMPLE Store Merging Pass](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html) 是在 GCC 7 (2016) 中引入的优化，通过 `-fstore-merging` 标志控制。
+
+**核心特性**:
+
+- **默认在 `-O2` 及以上优化级别启用**（包括 `-Os`）
+- 合并连续的窄标量存储为更宽的存储指令，减少指令数量
+- 支持结构体成员的合并写入（例如连续初始化结构体字段）
+- 支持死存储消除（多次写入同一位置时，只保留最后一次）
+
+**典型优化示例**:
+
+```c
+// 优化前: 4 次 byte 存储
+buf[0] = 'H';
+buf[1] = 'e';
+buf[2] = 'l';
+buf[3] = 'l';
+
+// GCC -O2 优化后: 1 次 int 存储
+*(int*)buf = 0x6c6c6548;  // "Hell" (Little-Endian)
+```
+
+**与 HotSpot C2 的差异**:
+
+- GCC 是 **AOT 编译器**，有充足的编译时间进行分析，可以做更激进的优化
+- 在 GIMPLE 中间表示级别操作，拥有完整的程序信息
+- 不需要考虑 Java 对象模型（数组边界检查、对象头等）
+- 可以处理非对齐访问的架构限制（通过 `-fno-store-merging` 禁用）
+
+**禁用选项**: 在某些架构上（如不支持非对齐访问的 ARM 变体），合并后的宽存储可能导致数据对齐错误，此时可通过 `-fno-store-merging` 关闭。
+
+### 11.2 LLVM: MergeConsecutiveStores
+
+LLVM 的存储合并优化分布在**多个编译阶段**，形成了一套多层次的优化策略。
+
+**DAGCombiner 级别 (SelectionDAG)**:
+
+[MergeConsecutiveStores](https://llvm.org/doxygen/DAGCombiner_8cpp_source.html) 是 DAGCombiner 中的核心存储合并函数：
+
+- 扫描存储链，找到内存地址连续的存储候选
+- 通过 `getStoreMergeCandidates` 识别合并候选，仅沿链分析
+- `checkMergeStoreCandidatesForDependencies` 确保无环依赖
+- `tryStoreMergeOfConstants` 专门处理常量值的存储链合并
+- 支持从向量元素提取的连续存储合并
+- 最近优化了缓存机制：缓存 `getMergeStoreCandidates` 的否定结果以节省编译时间
+
+**InstCombine 级别 (IR)**:
+
+- 在 LLVM IR 级别识别可合并的存储指令
+- 支持等价指针操作数的存储合并（通过 bitcast 匹配类型）
+- 当两个存储值都是 `ConstantInt` 时，可以移位合并为更大的常量存储
+- 支持 memset 模式识别：将相同值的连续存储转化为 `memset` 调用
+
+**向量化支持**:
+
+- 多个标量 int 存储 → 单个 SIMD 向量写入
+- 通过 `storeOfVectorConstantIsCheap()` 目标钩子判断向量存储是否有利
+- GlobalISel 也有对应的常量值连续存储合并 Pass
+
+**启用方式**: Clang `-O2` 自动启用，无需额外标志。
+
+### 11.3 GraalVM
+
+GraalVM 的 Graal 编译器采用了与 C2 不同的中间表示和优化架构。
+
+**Graal JIT 编译器 (libgraal)**:
+
+- 基于 **StructuredGraph**（Sea of Nodes 变体）进行优化
+- 通过多个 Phase（优化阶段）实现各类优化
+- 具备类似的存储优化能力，但实现策略与 C2 MergeStore 不同
+- Graal 的 IR 更适合做高层语义优化，底层存储合并依赖后端代码生成
+
+**Native Image (SubstrateVM)**:
+
+- AOT 编译时有更多时间做激进优化
+- 可以结合封闭世界假设（Closed-World Assumption），获得更完整的存储模式信息
+- Profile-Guided Optimization (PGO) 可以指导存储合并决策
+- 由于是静态编译，可以跨方法边界分析连续存储模式
+
+**与 C2 MergeStore 的架构差异**:
+
+- C2 使用经典 Sea of Nodes IR；Graal 使用 StructuredGraph（增强的 Sea of Nodes）
+- C2 的 MergeStore 在 Ideal Graph 级别操作；Graal 的优化分散在多个 Phase 中
+- Graal 通过 JVMCI 接口与 HotSpot 集成，可以替代 C2 作为 JIT 编译器
+- Graal 的 Phase 机制更模块化，便于添加新的存储优化
+
+### 11.4 对比表
+
+| 特性 | HotSpot C2 | GCC | LLVM | GraalVM |
+|------|-----------|-----|------|---------|
+| **优化名称** | MergeStore | `-fstore-merging` | MergeConsecutiveStores | Phase-based 优化 |
+| **编译时机** | JIT (运行时) | AOT | AOT | JIT / AOT |
+| **默认启用** | JDK 21+ | `-O2`+ | `-O2`+ | 是 |
+| **IR 级别** | Ideal Graph | GIMPLE | SelectionDAG + LLVM IR | StructuredGraph |
+| **向量化合并** | 否 | 有限 | 是 (SIMD) | 有限 |
+| **memset 识别** | 否 | 是 | 是 | 有限 |
+| **Big-Endian** | 是 | 是 | 是 | 是 |
+| **Profile-Guided** | 是 (JIT PGO) | 可选 (`-fprofile-use`) | 可选 (`-fprofile-use`) | 是 (JIT + AOT PGO) |
+| **结构体合并** | N/A (Java 无结构体) | 是 | 是 | N/A |
+| **引入时间** | 2023 (JDK 21) | 2016 (GCC 7) | 早期版本 | - |
+
+### 11.5 HotSpot C2 的独特挑战
+
+HotSpot C2 作为 JIT 编译器，在实现存储合并时面临若干 AOT 编译器不需要处理的约束：
+
+**编译时间预算限制**:
+
+- JIT 编译发生在运行时，必须在**毫秒级**时间内完成
+- AOT 编译器（GCC、LLVM）没有时间限制，可以做更深层的分析
+- C2 必须在优化收益和编译开销之间权衡
+
+**Java 语义约束**:
+
+- **数组边界检查**: 合并存储前必须确保所有访问在数组边界内
+- **对象头**: Java 对象有头部信息（Mark Word、Klass Pointer），存储偏移量计算更复杂
+- **空指针检查**: 需要确保目标引用非 null
+- **类型安全**: Java 的强类型系统限制了跨类型存储合并的可能性
+
+**逃逸分析交互**:
+
+- 标量替换后的对象字段写入可能产生新的连续存储机会
+- JDK-8370405 修复的 Bug 正是 MergeStore 与标量替换交互的问题
+- 逃逸分析的结果直接影响 MergeStore 的触发条件
+
+**GC 安全点约束**:
+
+- 合并后的存储指令不能跨越 GC 安全点（Safepoint）
+- 写屏障（Write Barrier）的存在限制了引用类型存储的合并
+- 不同 GC（G1、ZGC、Shenandoah）的屏障实现影响合并策略
+
+**虚方法内联依赖**:
+
+- 连续存储可能来自不同的方法调用（如连续 `append` 调用）
+- 只有在虚方法被内联后，JIT 才能看到完整的连续存储模式
+- 内联决策直接影响 MergeStore 的优化效果
+
+### 11.6 未来方向
+
+**C2 AutoVectorization 与 MergeStore 的协同**:
+
+- 当前 MergeStore 仅做标量宽化（byte→int→long），未利用 SIMD 指令
+- LLVM 已支持将多个标量存储合并为向量存储（如 4 个 int → 1 个 128-bit SIMD）
+- 未来 C2 可以结合 Vector API 和 AutoVectorization 实现类似优化
+
+**支持更复杂的模式**:
+
+- 条件存储合并：当分支两侧都有连续存储时的合并
+- 循环内存储合并：识别循环展开后的连续存储模式
+- 跨基本块的存储合并：当前仅在同一基本块内分析
+
+**memset 模式识别**:
+
+- GCC 和 LLVM 都能将相同值的连续存储转化为 `memset` 调用
+- C2 目前缺少此优化，可以借鉴 LLVM 的 InstCombine 实现
+
+**与 Graal JVMCI 的竞争**:
+
+- Graal 通过 JVMCI 可以替代 C2，两者在存储优化上的竞争推动双方进步
+- Leyden 项目（AOT 编译）可能为 HotSpot 带来类似 AOT 编译器的优化机会
+- 未来 C2 和 Graal 可能在存储优化上趋于功能对等
+
+---
+
+## 12. 相关链接
 
 ### 内部文档
 
