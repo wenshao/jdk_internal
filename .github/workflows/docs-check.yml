@@ -212,6 +212,36 @@ jobs:
             echo "✅ Version facts check passed"
           fi
 
+      - name: Check JEP local link coverage
+        run: |
+          echo "=== JEP local link coverage check ==="
+          WARNINGS=0
+
+          # 扫描所有版本 index 文件
+          for f in by-version/*/index.md; do
+            [ -f "$f" ] || continue
+
+            # 提取所有 JEP 编号（格式：JEP NNN 或 JEP NNN]）
+            grep -oP 'JEP\s+\K[0-9]{3,4}' "$f" | sort -u | while read -r NUM; do
+              # 检查是否有本地 jeps/ 文件
+              LOCAL=$(find jeps/ -name "jep-${NUM}.md" 2>/dev/null | head -1)
+              if [ -n "$LOCAL" ]; then
+                # 本地文件存在，检查是否已链接到它
+                if ! grep -qP "\(/jeps/.*jep-${NUM}\.md\)" "$f" 2>/dev/null; then
+                  echo "::warning file=${f}::JEP ${NUM} has local file (${LOCAL}) but no local link in this page"
+                  WARNINGS=$((WARNINGS + 1))
+                fi
+              fi
+            done
+          done
+
+          if [ "$WARNINGS" -gt 0 ]; then
+            echo ""
+            echo "⚠️ ${WARNINGS} JEP(s) have local files but are not linked — consider adding local links"
+          else
+            echo "✅ All JEPs with local files are properly linked"
+          fi
+
       - name: Check file sizes
         run: |
           echo "=== File size check ==="
