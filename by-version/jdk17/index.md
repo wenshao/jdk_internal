@@ -175,7 +175,20 @@ JDK 17 是继 JDK 11 之后的 LTS 版本，包含多项重要新特性：
 
 ---
 
-## 5. 相关链接
+## 5. 按主题深入
+
+| 主题 | JDK 17 引入/改进 | 链接 |
+|------|------------------|------|
+| **Record 类型** | Record 正式版 (JEP 395) | [→](/by-topic/core/records/) |
+| **模式匹配** | instanceof 模式匹配 (JEP 394)、switch 预览 (JEP 406) | [→](/by-topic/core/patterns/) |
+| **GC 演进** | ZGC/Shenandoah 正式版 | [→](/by-topic/core/gc/) |
+| **安全特性** | Security Manager 废弃 (JEP 411) | [→](/by-topic/security/security/) |
+| **内存管理** | 弹性 Metaspace (JEP 387) | [→](/by-topic/core/memory/) |
+| **JIT 编译** | 移除实验性 AOT/JIT (JEP 410) | [→](/by-topic/core/jit/) |
+
+---
+
+## 6. 相关链接
 
 - [JDK 17 发布说明](https://openjdk.org/projects/jdk/17/)
 - [JDK 17 新特性](https://openjdk.org/projects/jdk/17/features)

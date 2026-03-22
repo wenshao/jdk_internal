@@ -1238,4 +1238,16 @@ list.stream()
 
 ---
 
-**最后更新**: 2026-03-22
+## 按版本查看
+
+| 版本 | 状态 | 说明 |
+|------|------|------|
+| [JDK 8](/by-version/jdk8/) | 首发 | Stream API、Collectors (JEP 107) |
+| [JDK 9](/by-version/jdk9/) | 改进 | Stream.ofNullable()、takeWhile/dropWhile |
+| [JDK 16](/by-version/jdk16/) | 改进 | Stream.toList() |
+| [JDK 22](/by-version/jdk22/) | 预览 | Gatherers (JEP 461) |
+| [JDK 24](/by-version/jdk24/) | 正式 | Gatherers 正式版 (JEP 485) |
+
+---
+
+**最后更新**: 2026-03-23

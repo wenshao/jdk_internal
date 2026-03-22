@@ -542,7 +542,19 @@ jfr print --events jdk.VirtualThreadPinned concurrency.jfr
 
 ---
 
-**最后更新**: 2026-03-20
+## 按版本查看
+
+| 版本 | 并发关键变化 |
+|------|-------------|
+| [JDK 8](/by-version/jdk8/) | CompletableFuture、StampedLock |
+| [JDK 19](/by-version/jdk19/) | Virtual Threads 预览 (JEP 425) |
+| [JDK 21](/by-version/jdk21/) | Virtual Threads 正式版 (JEP 444)、结构化并发预览 |
+| [JDK 25](/by-version/jdk25/) | Scoped Values 正式版 (JEP 506)、结构化并发第 5 次预览 |
+| [JDK 26](/by-version/jdk26/) | 结构化并发第 6 次预览 (JEP 525) |
+
+---
+
+**最后更新**: 2026-03-23
 
 ---
 

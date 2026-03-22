@@ -1107,4 +1107,15 @@ git log --oneline -- src/hotspot/share/classfile/
 
 ---
 
-**最后更新**: 2026-03-22
+## 按版本查看
+
+| 版本 | 内存管理关键变化 |
+|------|-----------------|
+| [JDK 8](/by-version/jdk8/) | Metaspace 替代 PermGen、Compressed Oops 默认 |
+| [JDK 9](/by-version/jdk9/) | Compact Strings (JEP 254) |
+| [JDK 16](/by-version/jdk16/) | 弹性 Metaspace (JEP 387) |
+| [JDK 25](/by-version/jdk25/) | Compact Object Headers 实验 (JEP 519) — 对象头 12→8 字节 |
+
+---
+
+**最后更新**: 2026-03-23

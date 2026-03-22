@@ -107,7 +107,25 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
 ---
 
-## 6. 相关链接
+## 6. 按主题深入
+
+| 主题 | JDK 21 引入/改进 | 链接 |
+|------|------------------|------|
+| **虚拟线程** | Virtual Threads 正式版 (JEP 444) | [→](/by-topic/concurrency/concurrency/) |
+| **Project Loom** | Loom 项目完整演进 | [→](/by-topic/core/loom/) |
+| **GC 演进** | 分代 ZGC 正式版 (JEP 439) | [→](/by-topic/core/gc/) |
+| **模式匹配** | switch 模式匹配正式版 (JEP 441)、Record Patterns (JEP 440) | [→](/by-topic/core/patterns/) |
+| **并发编程** | 结构化并发预览 (JEP 453)、Scoped Values 预览 | [→](/by-topic/concurrency/concurrency/) |
+| **安全特性** | KEM API (JEP 452) | [→](/by-topic/security/security/) |
+
+### 实战案例
+
+- [虚拟线程迁移实战](/cases/virtual-threads-migration.md) — Spring Boot 线程池→虚拟线程
+- [GC 调优实战](/cases/gc-tuning-case.md) — 分代 ZGC 调优
+
+---
+
+## 7. 相关链接
 
 - [JDK 21 发布说明](https://openjdk.org/projects/jdk/21/)
 - [虚拟线程指南](https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html)

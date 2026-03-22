@@ -99,7 +99,19 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 
 ---
 
-## 5. 相关链接
+## 5. 按主题深入
+
+| 主题 | JDK 11 引入/改进 | 链接 |
+|------|------------------|------|
+| **HTTP 客户端** | HttpClient 正式版 (JEP 321) | [→](/by-topic/concurrency/http/) |
+| **GC 演进** | ZGC 实验版、Epsilon GC | [→](/by-topic/core/gc/) |
+| **安全特性** | TLS 1.3 (JEP 332) | [→](/by-topic/security/security/) |
+| **字符串处理** | String.strip()、isBlank()、repeat() | [→](/by-topic/language/string/) |
+| **模块系统** | JPMS 成熟 | [→](/by-topic/core/modules/) |
+
+---
+
+## 6. 相关链接
 
 - [JDK 11 发布说明](https://openjdk.org/projects/jdk/11/)
 - [从 JDK 8 迁移](https://docs.oracle.com/en/java/javase/11/migrate/)

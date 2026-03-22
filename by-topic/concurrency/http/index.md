@@ -1057,3 +1057,11 @@ HttpClient client = HttpClient.newBuilder()
 **技术博客:**
 - [New HTTP Client](https://openjdk.org/groups/net/httpclient/intro.html)
 - [HTTP/2 Support](https://inside.java/2021/07/13/http2/)
+
+## 按版本查看
+
+| 版本 | 状态 | 说明 |
+|------|------|------|
+| [JDK 9](/by-version/jdk9/) | 孵化 | HttpClient 孵化版 (JEP 110) |
+| [JDK 11](/by-version/jdk11/) | 正式 | HttpClient 正式版，HTTP/2 (JEP 321) |
+| [JDK 26](/by-version/jdk26/) | 正式 | HTTP/3 正式版，QUIC 协议 (JEP 517) |

@@ -208,7 +208,23 @@ void meeting() { }
 
 ---
 
-## 6. 相关链接
+## 6. 按主题深入
+
+JDK 8 引入的特性在以下主题中有跨版本演进追踪：
+
+| 主题 | JDK 8 引入的特性 | 链接 |
+|------|------------------|------|
+| **Lambda 表达式** | invokedynamic、函数式接口 | [→](/by-topic/language/lambda/) |
+| **Stream API** | 函数式数据处理管道 | [→](/by-topic/language/streams/) |
+| **日期时间 API** | java.time (JSR 310) | [→](/by-topic/api/datetime/) |
+| **GC 演进** | G1 正式版、CMS | [→](/by-topic/core/gc/) |
+| **字符串处理** | String 优化历程 | [→](/by-topic/language/string/) |
+| **泛型系统** | 类型推断改进 | [→](/by-topic/core/generics/) |
+| **并发编程** | CompletableFuture、StampedLock | [→](/by-topic/concurrency/concurrency/) |
+
+---
+
+## 7. 相关链接
 
 - [JDK 8 发布说明](https://openjdk.org/projects/jdk8/)
 - [JDK 8 文档](https://docs.oracle.com/javase/8/)

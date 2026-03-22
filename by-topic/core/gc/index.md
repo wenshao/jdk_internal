@@ -385,4 +385,19 @@ src/hotspot/share/gc/
 
 ---
 
-**最后更新**: 2026-03-22
+## 按版本查看
+
+| 版本 | GC 关键变化 |
+|------|------------|
+| [JDK 8](/by-version/jdk8/) | G1 正式版、CMS 优化 |
+| [JDK 9](/by-version/jdk9/) | G1 成为默认 GC (JEP 248) |
+| [JDK 11](/by-version/jdk11/) | ZGC 实验版 (JEP 333)、Epsilon GC |
+| [JDK 15](/by-version/jdk15/) | ZGC 正式版 (JEP 377)、Shenandoah 正式版 (JEP 379) |
+| [JDK 17](/by-version/jdk17/) | ZGC 并发栈处理 (JEP 376) |
+| [JDK 21](/by-version/jdk21/) | 分代 ZGC 正式版 (JEP 439) |
+| [JDK 25](/by-version/jdk25/) | 分代 Shenandoah 实验 (JEP 521)、Compact Object Headers (JEP 519) |
+| [JDK 26](/by-version/jdk26/) | G1 吞吐量 +10-20% (JEP 522) |
+
+---
+
+**最后更新**: 2026-03-23

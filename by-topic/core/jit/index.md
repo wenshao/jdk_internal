@@ -522,4 +522,16 @@ private void processUncommon() {
 
 ---
 
-**最后更新**: 2026-03-22
+## 按版本查看
+
+| 版本 | JIT 关键变化 |
+|------|-------------|
+| [JDK 8](/by-version/jdk8/) | 分层编译默认启用、Lambda invokedynamic |
+| [JDK 9](/by-version/jdk9/) | AOT 编译实验 (jaotc) |
+| [JDK 17](/by-version/jdk17/) | 移除实验性 AOT/JIT (JEP 410) |
+| [JDK 25](/by-version/jdk25/) | AOT 命令行优化 (JEP 514)、方法分析 (JEP 515) |
+| [JDK 26](/by-version/jdk26/) | MergeStore 优化、G1 吞吐量提升 (JEP 522) |
+
+---
+
+**最后更新**: 2026-03-23
