@@ -61,6 +61,26 @@
 | **安全特性** | 8 → 26 | [TLS/加密/后量子密码](by-topic/security/security/) |
 | **国际化** | 8 → 26 | [Locale/ResourceBundle/Unicode](by-topic/security/i18n/) |
 
+### 实战案例
+
+| 案例 | 场景 | 核心技术 |
+|------|------|---------|
+| [GC 调优实战](cases/gc-tuning-case.md) | G1→ZGC 迁移, P99 200ms→5ms | GC 日志分析, ZGC |
+| [虚拟线程迁移](cases/virtual-threads-migration.md) | Spring Boot 线程池→虚拟线程 | Virtual Threads, Semaphore |
+| [启动优化](cases/startup-optimization.md) | 12s→1.5s, CDS/AOT | AppCDS, AOT Cache |
+| [内存泄漏排查](cases/memory-leak-diagnosis.md) | JFR+NMT+MAT 排查 | OldObjectSample, NMT |
+
+### 源码深入分析
+
+| 主题 | JEP | 核心内容 |
+|------|-----|---------|
+| [Virtual Thread 实现](deep-dive/virtual-thread-implementation.md) | JEP 444 | 20 状态机, mount/unmount, ForkJoinPool |
+| [Scoped Values 实现](deep-dive/jep-506-implementation.md) | JEP 506 | Carrier 链表, 2-way cache, ScopedValueContainer |
+| [Compact Object Headers](deep-dive/jep-519-implementation.md) | JEP 519 | mark word 位布局, narrowKlass 编码 |
+| [HTTP/3 实现](deep-dive/jep-517-implementation.md) | JEP 517 | QUIC, QPACK, Http3Connection |
+| [G1 吞吐量优化](deep-dive/jep-522-implementation.md) | JEP 522 | 双卡表, ClaimTable |
+| [Module Import 编译器实现](deep-dive/jep-511-implementation.md) | JEP 511 | JCModuleImport, TypeEnter |
+
 ---
 
 ## 3. 快速导航
@@ -76,6 +96,8 @@
 | **按 JEP** | JDK Enhancement Proposals | [浏览 JEP](jeps/) |
 | **按 JSR** | Java Specification Requests | [浏览 JSR](jsr/) |
 | **技术演讲** | JVMLS 等会议演讲 | [浏览演讲](talks/) |
+| **实战案例** | GC 调优、虚拟线程迁移等 | [浏览案例](cases/) |
+| **源码深入** | JEP 实现源码分析 | [浏览深入分析](deep-dive/) |
 
 ### 按角色
 
@@ -179,6 +201,9 @@ jdk_internal/
 │   ├── api/               # API 规范
 │   └── platform/          # 平台规范
 │
+├── cases/                 # 实战案例 (GC 调优/虚拟线程/启动优化)
+├── deep-dive/             # 源码深入分析 (JEP 实现细节)
+│
 ├── guides/                # 通用指南
 │   ├── learning-path.md   # 学习路径
 │   ├── migration-guide.md # 迁移指南
@@ -246,4 +271,4 @@ jdk_internal/
 >
 > **最后更新**: 2026-03-22
 >
-> **文档统计**: 1002 个文档文件 | 17,505+ 个链接 | 覆盖 JDK 8/11/17/21/25/26
+> **文档统计**: 1016 个文档文件 | 17,505+ 个链接 | 覆盖 JDK 8/11/17/21/25/26
