@@ -81,26 +81,37 @@ JSR (Java Specification Request) 是通过 **JCP (Java Community Process)** 提�
 
 | JSR | 标题 | JDK | 状态 | 说明 |
 |-----|------|-----|------|------|
+| [JSR 397](language/jsr-397.md) ⭐ | Sealed Classes | 17 | ✅ Final | 密封类 |
+| [JSR 395](language/jsr-395.md) ⭐ | Records | 16 | ✅ Final | 记录类 |
 | [JSR 335](language/jsr-335.md) ⭐ | Lambda Expressions | 8 | ✅ Final | Lambda 表达式、Stream API |
 | [JSR 308](language/jsr-308.md) ⭐ | Annotations on Java Types | 8 | ✅ Final | TYPE_USE 注解、Checker Framework |
 | [JSR 292](language/jsr-292.md) ⭐ | invokedynamic | 7 | ✅ Final | MethodHandle、动态语言支持 |
 | [JSR 269](language/jsr-269.md) ⭐ | Pluggable Annotation Processing | 6 | ✅ Final | APT、编译时代码生成 |
-| [JSR 395](language/jsr-395.md) ⭐ | Records | 16 | ✅ Final | 记录类 |
-| [JSR 397](language/jsr-397.md) ⭐ | Sealed Classes | 17 | ✅ Final | 密封类 |
+| [JSR 201](language/jsr-201.md) ⭐ | Enums, Autoboxing, Enhanced For | 5 | ✅ Final | 枚举、自动装箱、增强 for |
+| [JSR 175](language/jsr-175.md) ⭐ | Metadata (Annotations) | 5 | ✅ Final | @interface 语法、元注解 |
+| [JSR 133](language/jsr-133.md) ⭐ | Java Memory Model | 5 | ✅ Final | happens-before、volatile 语义 |
+| [JSR 14](language/jsr-14.md) ⭐ | Generics | 5 | ✅ Final | 类型擦除、通配符、PECS |
 | ~~JSR 409~~ | Value Types | - | ❌ Withdrawn | 值类型 (已撤回，并入 Project Valhalla) |
 
 ### API 规范
 
-| JSR | 标题 | JDK | 状态 | 说明 |
-|-----|------|-----|------|------|
-| [JSR 166](api/jsr-166.md) ⭐ | Concurrency Utilities | 5 | ✅ Final | java.util.concurrent |
-| [JSR 199](api/jsr-199.md) ⭐ | Java Compiler API | 6 | ✅ Final | javax.tools 编程式编译 |
+| JSR | 标题 | JDK/EE | 状态 | 说明 |
+|-----|------|--------|------|------|
+| [JSR 380](api/jsr-380.md) ⭐ | Bean Validation 2.0 | EE 8 | ✅ Final | @NotNull/@Valid |
+| [JSR 374](api/jsr-374.md) ⭐ | JSON Processing 1.1 | EE 8 | ✅ Final | JsonPointer/JsonPatch |
+| [JSR 367](api/jsr-367.md) ⭐ | JSON Binding (JSON-B) | EE 8 | ✅ Final | 对象↔JSON 绑定 |
+| [JSR 354](api/jsr-354.md) ⭐ | Money and Currency API | 独立 | ✅ Final | MonetaryAmount (Moneta) |
+| [JSR 339](api/jsr-339.md) ⭐ | JAX-RS 2.0 | EE 7 | ✅ Final | RESTful Web Services |
+| [JSR 330](api/jsr-330.md) ⭐ | Dependency Injection | EE 6 | ✅ Final | @Inject/@Named |
+| [JSR 310](api/jsr-310.md) ⭐ | Date and Time API | 8 | ✅ Final | java.time (Joda-Time) |
+| [JSR 250](api/jsr-250.md) ⭐ | Common Annotations | 6 | ✅ Final | @Resource/@PostConstruct |
+| [JSR 221](api/jsr-221.md) ⭐ | JDBC 4.0 | 6 | ✅ Final | ServiceLoader 发现、SQLXML |
 | [JSR 223](api/jsr-223.md) ⭐ | Scripting for Java | 6 | ✅ Final | javax.script 脚本引擎 |
 | [JSR 203](api/jsr-203.md) ⭐ | NIO.2 | 7 | ✅ Final | java.nio.file, 异步 I/O |
-| [JSR 310](api/jsr-310.md) ⭐ | Date and Time API | 8 | ✅ Final | java.time (Joda-Time 启发) |
-| [JSR 330](api/jsr-330.md) ⭐ | Dependency Injection | - | ✅ Final | @Inject/@Named (Spring/Guice) |
-| [JSR 380](api/jsr-380.md) ⭐ | Bean Validation 2.0 | - | ✅ Final | @NotNull/@Valid (Hibernate Validator) |
-| [JSR 353](https://jcp.org/en/jsr/detail?id=353) | JSON Processing | EE 7 | ✅ Final | JSON-P (Java EE) |
+| [JSR 199](api/jsr-199.md) ⭐ | Java Compiler API | 6 | ✅ Final | javax.tools 编程式编译 |
+| [JSR 173](api/jsr-173.md) ⭐ | StAX | 6 | ✅ Final | XMLStreamReader 拉式解析 |
+| [JSR 166](api/jsr-166.md) ⭐ | Concurrency Utilities | 5 | ✅ Final | java.util.concurrent |
+| [JSR 51](api/jsr-51.md) ⭐ | NIO | 1.4 | ✅ Final | Channel/Buffer/Selector |
 
 ### 平台规范
 
@@ -112,7 +123,7 @@ JSR (Java Specification Request) 是通过 **JCP (Java Community Process)** 提�
 | [JSR 383](https://jcp.org/en/jsr/detail?id=383) | Java SE 11 Platform | 11 | ✅ Final | Java SE 11 平台 |
 | [JSR 376](platform/jsr-376.md) ⭐ | Java SE 9 Platform | 9 | ✅ Final | 模块系统 (JPMS) |
 
-> ⭐ = 有本地详细文档 (共 15 篇)
+> ⭐ = 有本地详细文档 (共 27 篇)
 
 ---
 
