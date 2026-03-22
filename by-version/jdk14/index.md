@@ -22,15 +22,15 @@ JDK 14 引入了 Records（第1次预览）、Pattern Matching for instanceof（
 | **Records（第1次预览）** | ⭐⭐⭐⭐⭐ | JEP 359，不可变数据类 |
 | **Pattern Matching for instanceof（第1次预览）** | ⭐⭐⭐⭐ | JEP 305，模式匹配 |
 | **Helpful NPE** | ⭐⭐⭐⭐ | JEP 358，更清晰的空指针异常 |
-| **Switch 表达式（正式版）** | ⭐⭐⭐⭐ | JEP 361 |
-| **文本块（第2次预览）** | ⭐⭐⭐⭐ | JEP 368 |
+| **Switch 表达式（正式版）** | ⭐⭐⭐⭐ | [JEP 361](/jeps/language/jep-361.md) |
+| **文本块（第2次预览）** | ⭐⭐⭐⭐ | [JEP 368](/jeps/language/jep-368.md) |
 | **Packaging Tool（孵化器）** | ⭐⭐⭐ | JEP 343，打包工具 |
 | **JFR 事件流** | ⭐⭐⭐ | JEP 349 |
-| **Foreign-Memory Access API（孵化器）** | ⭐⭐⭐ | JEP 370 |
+| **Foreign-Memory Access API（孵化器）** | ⭐⭐⭐ | [JEP 370](/jeps/ffi/jep-370.md) |
 | **非易失性映射字节缓冲区** | ⭐⭐⭐ | JEP 352 |
-| **ZGC on macOS** | ⭐⭐⭐ | JEP 364 |
-| **ZGC on Windows** | ⭐⭐⭐ | JEP 365 |
-| **移除 CMS GC** | ⭐⭐ | JEP 363 |
+| **ZGC on macOS** | ⭐⭐⭐ | [JEP 364](/jeps/platform/jep-364.md) |
+| **ZGC on Windows** | ⭐⭐⭐ | [JEP 365](/jeps/platform/jep-365.md) |
+| **移除 CMS GC** | ⭐⭐ | [JEP 363](/jeps/gc/jep-363.md) |
 | **移除 Pack200** | ⭐⭐ | JEP 367 |
 
 ---
@@ -39,21 +39,21 @@ JDK 14 引入了 Records（第1次预览）、Pattern Matching for instanceof（
 
 | JEP | 标题 | 说明 |
 |-----|------|------|
-| [JEP 359](https://openjdk.org/jeps/359) | Records (Preview) | Records |
-| [JEP 305](https://openjdk.org/jeps/305) | Pattern Matching for instanceof (Preview) | instanceof 模式匹配 |
-| [JEP 358](https://openjdk.org/jeps/358) | Helpful NullPointerExceptions | Helpful NPE |
-| [JEP 361](https://openjdk.org/jeps/361) | Switch Expressions | Switch 表达式（正式版） |
-| [JEP 368](https://openjdk.org/jeps/368) | Text Blocks (Second Preview) | 文本块（第2次预览） |
-| [JEP 343](https://openjdk.org/jeps/343) | Packaging Tool | 打包工具 |
-| [JEP 345](https://openjdk.org/jeps/345) | NUMA-Aware Memory Allocation for G1 | G1 NUMA 感知 |
+| [JEP 359](/jeps/language/jep-359.md) | Records (Preview) | Records |
+| [JEP 305](/jeps/language/jep-305.md) | Pattern Matching for instanceof (Preview) | instanceof 模式匹配 |
+| [JEP 358](/jeps/platform/jep-358.md) | Helpful NullPointerExceptions | Helpful NPE |
+| [JEP 361](/jeps/language/jep-361.md) | Switch Expressions | Switch 表达式（正式版） |
+| [JEP 368](/jeps/language/jep-368.md) | Text Blocks (Second Preview) | 文本块（第2次预览） |
+| [JEP 343](/jeps/tools/jep-343.md) | Packaging Tool | 打包工具 |
+| [JEP 345](/jeps/gc/jep-345.md) | NUMA-Aware Memory Allocation for G1 | G1 NUMA 感知 |
 | [JEP 349](https://openjdk.org/jeps/349) | JFR Event Streaming | JFR 事件流 |
-| [JEP 370](https://openjdk.org/jeps/370) | Foreign-Memory Access API (Incubator) | 外部内存 API |
+| [JEP 370](/jeps/ffi/jep-370.md) | Foreign-Memory Access API (Incubator) | 外部内存 API |
 | [JEP 352](https://openjdk.org/jeps/352) | Non-Volatile Mapped Byte Buffers | 非易失性映射字节缓冲区 |
-| [JEP 364](https://openjdk.org/jeps/364) | ZGC on macOS | ZGC macOS 支持 |
-| [JEP 365](https://openjdk.org/jeps/365) | ZGC on Windows | ZGC Windows 支持 |
-| [JEP 363](https://openjdk.org/jeps/363) | Remove the Concurrent Mark Sweep (CMS) Garbage Collector | 移除 CMS GC |
+| [JEP 364](/jeps/platform/jep-364.md) | ZGC on macOS | ZGC macOS 支持 |
+| [JEP 365](/jeps/platform/jep-365.md) | ZGC on Windows | ZGC Windows 支持 |
+| [JEP 363](/jeps/gc/jep-363.md) | Remove the Concurrent Mark Sweep (CMS) Garbage Collector | 移除 CMS GC |
 | [JEP 367](https://openjdk.org/jeps/367) | Remove the Pack200 Tools and API | 移除 Pack200 |
-| [JEP 362](https://openjdk.org/jeps/362) | Deprecate the Solaris and SPARC Ports | 废弃 Solaris/SPARC |
+| [JEP 362](/jeps/platform/jep-362.md) | Deprecate the Solaris and SPARC Ports | 废弃 Solaris/SPARC |
 | [JEP 366](https://openjdk.org/jeps/366) | Deprecate the ParallelScavenge + SerialOld GC Combination | 废弃 PS+SerialOld |
 
 ---

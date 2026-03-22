@@ -201,20 +201,20 @@ JDK 8 ───────► JDK 11 ───────► JDK 17 ───�
 
 | JEP | 标题 | 链接 |
 |-----|------|------|
-| JEP 444 | Virtual Threads | [分析](/jeps/concurrency/jep-444.md) |
-| JEP 454 | Foreign Function & Memory API | [分析](/jeps/ffi/jep-454.md) |
-| JEP 462 | Structured Concurrency | [分析](/jeps/concurrency/jep-462.md) |
-| JEP 506 | Scoped Values | [分析](/jeps/concurrency/jep-506.md) |
-| JEP 510 | KDF API | [分析](/jeps/security/jep-510.md) |
-| JEP 513 | Flexible Constructor Bodies | [分析](/jeps/language/jep-513.md) |
-| JEP 517 | HTTP/3 for HTTP Client | [分析](/jeps/network/jep-517.md) |
-| JEP 519 | Compact Object Headers | [分析](/jeps/gc/jep-519.md) |
-| JEP 520 | JFR Method Timing | [分析](/jeps/jfr/jep-520.md) |
-| JEP 521 | Generational Shenandoah | [分析](/jeps/gc/jep-521.md) |
-| JEP 522 | G1 GC Throughput | [分析](/jeps/gc/jep-522.md) |
-| JEP 525 | Structured Concurrency (Preview) | [分析](/jeps/concurrency/jep-525.md) |
-| JEP 526 | Lazy Constants | [分析](/jeps/tools/jep-526.md) |
-| JEP 530 | Primitive Types in Patterns | [分析](/jeps/language/jep-530.md) |
+| [JEP 444](/jeps/concurrency/jep-444.md) | Virtual Threads | [分析](/jeps/concurrency/jep-444.md) |
+| [JEP 454](/jeps/ffi/jep-454.md) | Foreign Function & Memory API | [分析](/jeps/ffi/jep-454.md) |
+| [JEP 462](/jeps/concurrency/jep-462.md) | Structured Concurrency | [分析](/jeps/concurrency/jep-462.md) |
+| [JEP 506](/jeps/concurrency/jep-506.md) | Scoped Values | [分析](/jeps/concurrency/jep-506.md) |
+| [JEP 510](/jeps/security/jep-510.md) | KDF API | [分析](/jeps/security/jep-510.md) |
+| [JEP 513](/jeps/language/jep-513.md) | Flexible Constructor Bodies | [分析](/jeps/language/jep-513.md) |
+| [JEP 517](/jeps/network/jep-517.md) | HTTP/3 for HTTP Client | [分析](/jeps/network/jep-517.md) |
+| [JEP 519](/jeps/gc/jep-519.md) | Compact Object Headers | [分析](/jeps/gc/jep-519.md) |
+| [JEP 520](/jeps/jfr/jep-520.md) | JFR Method Timing | [分析](/jeps/jfr/jep-520.md) |
+| [JEP 521](/jeps/gc/jep-521.md) | Generational Shenandoah | [分析](/jeps/gc/jep-521.md) |
+| [JEP 522](/jeps/gc/jep-522.md) | G1 GC Throughput | [分析](/jeps/gc/jep-522.md) |
+| [JEP 525](/jeps/concurrency/jep-525.md) | Structured Concurrency (Preview) | [分析](/jeps/concurrency/jep-525.md) |
+| [JEP 526](/jeps/tools/jep-526.md) | Lazy Constants | [分析](/jeps/tools/jep-526.md) |
+| [JEP 530](/jeps/language/jep-530.md) | Primitive Types in Patterns | [分析](/jeps/language/jep-530.md) |
 | [更多 JEP](/jeps/) | 完整列表 | → |
 
 ### PR/Issue 深度分析
@@ -260,11 +260,11 @@ JDK 8 ───────► JDK 11 ───────► JDK 17 ───�
 
 | JEP | 标题 | 链接 |
 |-----|------|------|
-| JEP 506 | Scoped Values 实现 | [→](/deep-dive/jep-506-implementation.md) |
-| JEP 511 | Module Import 实现 | [→](/deep-dive/jep-511-implementation.md) |
-| JEP 517 | HTTP/3 实现 | [→](/deep-dive/jep-517-implementation.md) |
-| JEP 519 | Compact Object Headers 实现 | [→](/deep-dive/jep-519-implementation.md) |
-| JEP 522 | G1 GC Throughput 实现 | [→](/deep-dive/jep-522-implementation.md) |
+| [JEP 506](/jeps/concurrency/jep-506.md) | Scoped Values 实现 | [→](/deep-dive/jep-506-implementation.md) |
+| [JEP 511](/jeps/tools/jep-511.md) | Module Import 实现 | [→](/deep-dive/jep-511-implementation.md) |
+| [JEP 517](/jeps/network/jep-517.md) | HTTP/3 实现 | [→](/deep-dive/jep-517-implementation.md) |
+| [JEP 519](/jeps/gc/jep-519.md) | Compact Object Headers 实现 | [→](/deep-dive/jep-519-implementation.md) |
+| [JEP 522](/jeps/gc/jep-522.md) | G1 GC Throughput 实现 | [→](/deep-dive/jep-522-implementation.md) |
 | JDK 25 | KDF API 实现 | [→](/jeps/security/jep-510.md) |
 | JDK 25 | Flexible Constructor Bodies | [→](/jeps/language/jep-513.md) |
 

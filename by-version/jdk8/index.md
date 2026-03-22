@@ -44,11 +44,11 @@ JDK 8 是一个具有里程碑意义的版本，引入了 Lambda 表达式、Str
 |-----|------|------|
 | [JEP 101](https://openjdk.org/jeps/101) | Generalized Target-Type Inference | 泛型目标类型推断 |
 | [JEP 103](https://openjdk.org/jeps/103) | Parallel Array Sorting | 并行数组排序 |
-| [JEP 104](https://openjdk.org/jeps/104) | Annotations on Java Types | 类型注解 |
+| [JEP 104](/jeps/language/jep-104.md) | Annotations on Java Types | 类型注解 |
 | [JEP 105](https://openjdk.org/jeps/105) | DocTree API | 文档树 API |
 | [JEP 106](https://openjdk.org/jeps/106) | Add Javadoc to javax.tools | Javadoc 工具 API |
-| [JEP 107](https://openjdk.org/jeps/107) | Bulk Data Operations for Collections | 集合批量操作 |
-| [JEP 109](https://openjdk.org/jeps/109) | Enhance Core Libraries with Lambda | 核心库 Lambda 增强 |
+| [JEP 107](/jeps/language/jep-107.md) | Bulk Data Operations for Collections | 集合批量操作 |
+| [JEP 109](/jeps/language/jep-109.md) | Enhance Core Libraries with Lambda | 核心库 Lambda 增强 |
 | [JEP 112](https://openjdk.org/jeps/112) | Charset Implementation Improvements | 字符集实现改进 |
 | [JEP 113](https://openjdk.org/jeps/113) | MS-SFU Kerberos 5 Extensions | MS-SFU Kerberos 扩展 |
 | [JEP 114](https://openjdk.org/jeps/114) | TLS Server Name Indication (SNI) Extension | TLS SNI 扩展 |
@@ -56,12 +56,12 @@ JDK 8 是一个具有里程碑意义的版本，引入了 Lambda 表达式、Str
 | [JEP 117](https://openjdk.org/jeps/117) | Remove the Annotation-Processing Tool (apt) | 移除 apt 工具 |
 | [JEP 118](https://openjdk.org/jeps/118) | Access to Parameter Names at Runtime | 运行时参数名访问 |
 | [JEP 119](https://openjdk.org/jeps/119) | javax.lang.model Implementation Backed by Core Reflection | 反射支持的 javax.lang.model |
-| [JEP 120](https://openjdk.org/jeps/120) | Repeating Annotations | 重复注解 |
+| [JEP 120](/jeps/language/jep-120.md) | Repeating Annotations | 重复注解 |
 | [JEP 121](https://openjdk.org/jeps/121) | Stronger Algorithms for Password-Based Encryption | 更强的 PBE 算法 |
 | [JEP 122](https://openjdk.org/jeps/122) | Remove the Permanent Generation | 移除永久代 |
 | [JEP 123](https://openjdk.org/jeps/123) | Configurable Secure Random-Number Generation | 可配置安全随机数 |
 | [JEP 124](https://openjdk.org/jeps/124) | Enhance the Certificate Revocation-Checking API | 证书撤销检查 API 增强 |
-| [JEP 126](https://openjdk.org/jeps/126) | Lambda Expressions & Virtual Extension Methods | Lambda 表达式 |
+| [JEP 126](/jeps/language/jep-126.md) | Lambda Expressions & Virtual Extension Methods | Lambda 表达式 |
 | [JEP 127](https://openjdk.org/jeps/127) | Improve Locale Data Packaging and Adopt Unicode CLDR Data | CLDR 区域数据 |
 | [JEP 128](https://openjdk.org/jeps/128) | BCP 47 Locale Matching | BCP 47 区域匹配 |
 | [JEP 129](https://openjdk.org/jeps/129) | NSA Suite B Cryptographic Algorithms | NSA Suite B 算法 |
@@ -76,11 +76,11 @@ JDK 8 是一个具有里程碑意义的版本，引入了 Lambda 表达式、Str
 | [JEP 142](https://openjdk.org/jeps/142) | Reduce Cache Contention on Specified Fields | 减少缓存竞争 |
 | [JEP 147](https://openjdk.org/jeps/147) | Reduce Class Metadata Footprint | 减少类元数据占用 |
 | [JEP 149](https://openjdk.org/jeps/149) | Reduce Core-Library Memory Usage | 减少核心库内存占用 |
-| [JEP 150](https://openjdk.org/jeps/150) | Date & Time API | 日期时间 API（已撤销，由 JSR 310 交付） |
+| [JEP 150](/jeps/language/jep-150.md) | Date & Time API | 日期时间 API（已撤销，由 JSR 310 交付） |
 | [JEP 153](https://openjdk.org/jeps/153) | Launch JavaFX Applications | 启动 JavaFX 应用 |
 | [JEP 155](https://openjdk.org/jeps/155) | Concurrency Updates | 并发更新 |
 | [JEP 157](https://openjdk.org/jeps/157) | G1 GC: NUMA-Aware Allocation | G1 GC NUMA 感知分配 |
-| [JEP 160](https://openjdk.org/jeps/160) | Lambda-Form Representation for Method Handles | Lambda 形式方法句柄 |
+| [JEP 160](/jeps/language/jep-160.md) | Lambda-Form Representation for Method Handles | Lambda 形式方法句柄 |
 | [JEP 161](https://openjdk.org/jeps/161) | Compact Profiles | 紧凑配置 |
 | [JEP 162](https://openjdk.org/jeps/162) | Prepare for Modularization | 模块化准备 |
 | [JEP 163](https://openjdk.org/jeps/163) | Prepare JavaFX UI Controls & CSS APIs for Modularization | JavaFX 模块化准备 |
@@ -88,8 +88,8 @@ JDK 8 是一个具有里程碑意义的版本，引入了 Lambda 表达式、Str
 | [JEP 166](https://openjdk.org/jeps/166) | Overhaul JKS-JCEKS-PKCS12 Keystores | 密钥库改进 |
 | [JEP 171](https://openjdk.org/jeps/171) | Fence Intrinsics | 栅栏内联函数 |
 | [JEP 173](https://openjdk.org/jeps/173) | Retire Some Rarely-Used GC Combinations | 移除罕见 GC 组合 |
-| [JEP 174](https://openjdk.org/jeps/174) | Nashorn JavaScript Engine | Nashorn 引擎 |
-| [JEP 176](https://openjdk.org/jeps/176) | Mechanical Checking of Caller-Sensitive Methods | 调用敏感方法检查 |
+| [JEP 174](/jeps/language/jep-174.md) | Nashorn JavaScript Engine | Nashorn 引擎 |
+| [JEP 176](/jeps/language/jep-176.md) | Mechanical Checking of Caller-Sensitive Methods | 调用敏感方法检查 |
 | [JEP 177](https://openjdk.org/jeps/177) | Optimize java.text.DecimalFormat.format | DecimalFormat 优化 |
 | [JEP 178](https://openjdk.org/jeps/178) | Statically-Linked JNI Libraries | 静态链接 JNI 库 |
 | [JEP 179](https://openjdk.org/jeps/179) | Document JDK API Support and Stability | JDK API 稳定性文档 |

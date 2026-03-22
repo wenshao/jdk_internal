@@ -29,9 +29,9 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 | **Nest-Based Access Control** | JEP 181，简化私有访问 |
 | **Lambda 局部变量类型推断** | JEP 323，Lambda 参数可用 var (JEP 323) |
 | **Epsilon GC** | JEP 318，被动 GC |
-| **动态类文件常量** | JEP 309 |
-| **单文件源程序启动** | JEP 330 |
-| **TLS 1.3** | JEP 332 |
+| **动态类文件常量** | [JEP 309](/jeps/language/jep-309.md) |
+| **单文件源程序启动** | [JEP 330](/jeps/tools/jep-330.md) |
+| **TLS 1.3** | [JEP 332](/jeps/security/jep-332.md) |
 | **ChaCha20/Poly1305** | JEP 329，加密算法 |
 | **Curve25519/Curve448** | JEP 324，密钥交换 |
 | **Unicode 10** | JEP 327 |
@@ -80,20 +80,20 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 | JEP | 标题 | 说明 |
 |-----|------|------|
 | [JEP 181](https://openjdk.org/jeps/181) | Nest-Based Access Control | 基于嵌套的访问控制 |
-| [JEP 309](https://openjdk.org/jeps/309) | Dynamic Class-File Constants | 动态类文件常量 |
+| [JEP 309](/jeps/language/jep-309.md) | Dynamic Class-File Constants | 动态类文件常量 |
 | [JEP 315](https://openjdk.org/jeps/315) | Improve Aarch64 Intrinsics | 改进 AArch64 内联 |
-| [JEP 318](https://openjdk.org/jeps/318) | Epsilon: A No-Op Garbage Collector | Epsilon GC |
-| [JEP 320](https://openjdk.org/jeps/320) | Remove the Java EE and CORBA Modules | 移除 Java EE 和 CORBA |
-| [JEP 321](https://openjdk.org/jeps/321) | HTTP Client (Standard) | HTTP 客户端 |
-| [JEP 323](https://openjdk.org/jeps/323) | Local-Variable Syntax for Lambda Parameters | Lambda var 语法 |
+| [JEP 318](/jeps/gc/jep-318.md) | Epsilon: A No-Op Garbage Collector | Epsilon GC |
+| [JEP 320](/jeps/language/jep-320.md) | Remove the Java EE and CORBA Modules | 移除 Java EE 和 CORBA |
+| [JEP 321](/jeps/network/jep-321.md) | HTTP Client (Standard) | HTTP 客户端 |
+| [JEP 323](/jeps/language/jep-323.md) | Local-Variable Syntax for Lambda Parameters | Lambda var 语法 |
 | [JEP 324](https://openjdk.org/jeps/324) | Key Agreement with Curve25519 and Curve448 | Curve25519/Curve448 |
 | [JEP 327](https://openjdk.org/jeps/327) | Unicode 10 | Unicode 10 |
-| [JEP 328](https://openjdk.org/jeps/328) | Flight Recorder | 飞行记录器 |
-| [JEP 329](https://openjdk.org/jeps/329) | ChaCha20 and Poly1305 Cryptographic Algorithms | ChaCha20/Poly1305 |
-| [JEP 330](https://openjdk.org/jeps/330) | Launch Single-File Source-Code Programs | 单文件程序 |
+| [JEP 328](/jeps/jfr/jep-328.md) | Flight Recorder | 飞行记录器 |
+| [JEP 329](/jeps/security/jep-329.md) | ChaCha20 and Poly1305 Cryptographic Algorithms | ChaCha20/Poly1305 |
+| [JEP 330](/jeps/tools/jep-330.md) | Launch Single-File Source-Code Programs | 单文件程序 |
 | [JEP 331](https://openjdk.org/jeps/331) | Low-Overhead Heap Profiling | 低开销堆分析 |
-| [JEP 332](https://openjdk.org/jeps/332) | Transport Layer Security (TLS) 1.3 | TLS 1.3 |
-| [JEP 333](https://openjdk.org/jeps/333) | ZGC: A Scalable Low-Latency Garbage Collector | ZGC |
+| [JEP 332](/jeps/security/jep-332.md) | Transport Layer Security (TLS) 1.3 | TLS 1.3 |
+| [JEP 333](/jeps/gc/jep-333.md) | ZGC: A Scalable Low-Latency Garbage Collector | ZGC |
 | [JEP 335](https://openjdk.org/jeps/335) | Deprecate the Nashorn JavaScript Engine | 废弃 Nashorn |
 | [JEP 336](https://openjdk.org/jeps/336) | Deprecate the Pack200 Tools and API | 废弃 Pack200 |
 

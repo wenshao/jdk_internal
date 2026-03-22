@@ -44,21 +44,21 @@ JDK 21 是继 JDK 17 之后的 LTS 版本，引入了虚拟线程等重要特性
 
 | JEP | 标题 | 说明 |
 |-----|------|------|
-| [JEP 430](https://openjdk.org/jeps/430) | String Templates (Preview) | 字符串模板（后撤销） |
-| [JEP 431](https://openjdk.org/jeps/431) | Sequenced Collections | 有序集合 |
-| [JEP 439](https://openjdk.org/jeps/439) | Generational ZGC | 分代 ZGC |
-| [JEP 440](https://openjdk.org/jeps/440) | Record Patterns | 记录模式 |
-| [JEP 441](https://openjdk.org/jeps/441) | Pattern Matching for switch | switch 模式匹配 |
-| [JEP 442](https://openjdk.org/jeps/442) | Foreign Function & Memory API (Third Preview) | FFM API（第3次预览） |
-| [JEP 443](https://openjdk.org/jeps/443) | Unnamed Patterns and Variables (Preview) | 未命名模式和变量 |
-| [JEP 444](https://openjdk.org/jeps/444) | Virtual Threads | 虚拟线程 |
-| [JEP 445](https://openjdk.org/jeps/445) | Unnamed Classes and Instance Main Methods (Preview) | 未命名类 |
-| [JEP 446](https://openjdk.org/jeps/446) | Scoped Values (Preview) | 作用域值 |
-| [JEP 448](https://openjdk.org/jeps/448) | Vector API (Sixth Incubator) | Vector API（第6次孵化） |
-| [JEP 449](https://openjdk.org/jeps/449) | Deprecate the Windows 32-bit x86 Port for Removal | 废弃 32 位 Windows |
-| [JEP 451](https://openjdk.org/jeps/451) | Prepare to Disallow the Dynamic Loading of Agents | 准备禁止动态加载代理 |
-| [JEP 452](https://openjdk.org/jeps/452) | Key Encapsulation Mechanism API | KEM API |
-| [JEP 453](https://openjdk.org/jeps/453) | Structured Concurrency (Preview) | 结构化并发 |
+| [JEP 430](/jeps/language/jep-430.md) | String Templates (Preview) | 字符串模板（后撤销） |
+| [JEP 431](/jeps/language/jep-431.md) | Sequenced Collections | 有序集合 |
+| [JEP 439](/jeps/gc/jep-439.md) | Generational ZGC | 分代 ZGC |
+| [JEP 440](/jeps/language/jep-440.md) | Record Patterns | 记录模式 |
+| [JEP 441](/jeps/language/jep-441.md) | Pattern Matching for switch | switch 模式匹配 |
+| [JEP 442](/jeps/ffi/jep-442.md) | Foreign Function & Memory API (Third Preview) | FFM API（第3次预览） |
+| [JEP 443](/jeps/language/jep-443.md) | Unnamed Patterns and Variables (Preview) | 未命名模式和变量 |
+| [JEP 444](/jeps/concurrency/jep-444.md) | Virtual Threads | 虚拟线程 |
+| [JEP 445](/jeps/language/jep-445.md) | Unnamed Classes and Instance Main Methods (Preview) | 未命名类 |
+| [JEP 446](/jeps/concurrency/jep-446.md) | Scoped Values (Preview) | 作用域值 |
+| [JEP 448](/jeps/tools/jep-448.md) | Vector API (Sixth Incubator) | Vector API（第6次孵化） |
+| [JEP 449](/jeps/tools/jep-449.md) | Deprecate the Windows 32-bit x86 Port for Removal | 废弃 32 位 Windows |
+| [JEP 451](/jeps/security/jep-451.md) | Prepare to Disallow the Dynamic Loading of Agents | 准备禁止动态加载代理 |
+| [JEP 452](/jeps/security/jep-452.md) | Key Encapsulation Mechanism API | KEM API |
+| [JEP 453](/jeps/concurrency/jep-453.md) | Structured Concurrency (Preview) | 结构化并发 |
 
 ---
 

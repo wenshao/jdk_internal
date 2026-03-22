@@ -20,10 +20,10 @@ JDK 13 引入了文本块（第1次预览）和动态 CDS 存档。
 | 特性 | 影响 | 详情 |
 |------|------|------|
 | **文本块（第1次预览）** | ⭐⭐⭐⭐⭐ | JEP 355，多行字符串 |
-| **动态 CDS 存档** | ⭐⭐⭐⭐ | JEP 350 |
-| **ZGC 释放未使用内存** | ⭐⭐⭐ | JEP 351 |
-| **重新实现 Socket API** | ⭐⭐⭐ | JEP 353 |
-| **Switch 表达式（第2次预览）** | ⭐⭐⭐⭐ | JEP 354 |
+| **动态 CDS 存档** | ⭐⭐⭐⭐ | [JEP 350](/jeps/performance/jep-350.md) |
+| **ZGC 释放未使用内存** | ⭐⭐⭐ | [JEP 351](/jeps/gc/jep-351.md) |
+| **重新实现 Socket API** | ⭐⭐⭐ | [JEP 353](/jeps/api/jep-353.md) |
+| **Switch 表达式（第2次预览）** | ⭐⭐⭐⭐ | [JEP 354](/jeps/language/jep-354.md) |
 
 ---
 
@@ -31,11 +31,11 @@ JDK 13 引入了文本块（第1次预览）和动态 CDS 存档。
 
 | JEP | 标题 | 说明 |
 |-----|------|------|
-| [JEP 355](https://openjdk.org/jeps/355) | Text Blocks (Preview) | 文本块 |
-| [JEP 350](https://openjdk.org/jeps/350) | Dynamic CDS Archives | 动态 CDS 存档 |
-| [JEP 351](https://openjdk.org/jeps/351) | ZGC: Uncommit Unused Memory | ZGC 释放内存 |
-| [JEP 353](https://openjdk.org/jeps/353) | Reimplement the Legacy Socket API | 重新实现 Socket API |
-| [JEP 354](https://openjdk.org/jeps/354) | Switch Expressions (Second Preview) | Switch 表达式（第2次预览） |
+| [JEP 355](/jeps/language/jep-355.md) | Text Blocks (Preview) | 文本块 |
+| [JEP 350](/jeps/performance/jep-350.md) | Dynamic CDS Archives | 动态 CDS 存档 |
+| [JEP 351](/jeps/gc/jep-351.md) | ZGC: Uncommit Unused Memory | ZGC 释放内存 |
+| [JEP 353](/jeps/api/jep-353.md) | Reimplement the Legacy Socket API | 重新实现 Socket API |
+| [JEP 354](/jeps/language/jep-354.md) | Switch Expressions (Second Preview) | Switch 表达式（第2次预览） |
 
 ---
 
