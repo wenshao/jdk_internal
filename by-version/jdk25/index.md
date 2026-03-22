@@ -191,10 +191,10 @@ void main(String[] args) {
 
 | JEP | 标题 | 状态 | 描述 | 深度分析 |
 |-----|------|------|------|----------|
-| JEP 507 | Primitive Types in Patterns | 🔍 预览 | 原始类型模式匹配 (第3次) | → |
-| JEP 511 | Module Import Declarations | ✅ 正式 | 模块导入声明 | → |
-| JEP 502 | Stable Values | 🔍 预览 | 稳定值 | → |
-| JEP 512 | Compact Source Files and Instance Main Methods | ✅ 正式 | 简化源文件 | → |
+| [JEP 507](/jeps/language/jep-507.md) | Primitive Types in Patterns | 🔍 预览 | 原始类型模式匹配 (第3次) | → |
+| [JEP 511](/jeps/tools/jep-511.md) | Module Import Declarations | ✅ 正式 | 模块导入声明 | → |
+| [JEP 502](/jeps/performance/jep-502.md) | Stable Values | 🔍 预览 | 稳定值 | → |
+| [JEP 512](/jeps/language/jep-512.md) | Compact Source Files and Instance Main Methods | ✅ 正式 | 简化源文件 | → |
 | [JEP 513](/jeps/language/jep-513.md) | Flexible Constructor Bodies | ✅ 正式 | 灵活构造器 | → |
 | [JEP 503](/jeps/performance/jep-503.md) | Remove 32-bit x86 Port | ✅ 正式 | 移除 32 位 x86 | → |
 
@@ -204,9 +204,9 @@ void main(String[] args) {
 |-----|------|------|------|----------|
 | [JEP 519](/jeps/gc/jep-519.md) | Compact Object Headers (Experimental) | 🚀 内存优化 | 紧凑对象头 (实验性) | → |
 | [JEP 520](/jeps/jfr/jep-520.md) | JFR Method Timing | 🚀 性能追踪 | JFR 方法计时 | → |
-| JEP 508 | Vector API (Tenth Incubator) | 🚀 SIMD | 向量 API（第10次孵化） | → |
-| JEP 514 | Ahead-of-Time Command-Line Ergonomics | 🚀 启动 | AOT 命令行优化 | → |
-| JEP 515 | Ahead-of-Time Method Profiling | 🚀 启动 | AOT 方法分析 | → |
+| [JEP 508](/jeps/concurrency/jep-508.md) | Vector API (Tenth Incubator) | 🚀 SIMD | 向量 API（第10次孵化） | → |
+| [JEP 514](/jeps/performance/jep-514.md) | Ahead-of-Time Command-Line Ergonomics | 🚀 启动 | AOT 命令行优化 | → |
+| [JEP 515](/jeps/performance/jep-515.md) | Ahead-of-Time Method Profiling | 🚀 启动 | AOT 方法分析 | → |
 
 ### 并发
 
@@ -226,14 +226,14 @@ void main(String[] args) {
 
 | JEP | 标题 | 状态 | 描述 | 深度分析 |
 |-----|------|------|------|----------|
-| JEP 509 | JFR CPU-Time Profiling | ⚠️ 实验 | CPU 时间采样 | → |
-| JEP 518 | JFR Cooperative Sampling | ✅ 正式 | 协作采样 | → |
+| [JEP 509](/jeps/jfr/jep-509.md) | JFR CPU-Time Profiling | ⚠️ 实验 | CPU 时间采样 | → |
+| [JEP 518](/jeps/jfr/jep-518.md) | JFR Cooperative Sampling | ✅ 正式 | 协作采样 | → |
 
 ### GC
 
 | JEP | 标题 | 状态 | 描述 | 深度分析 |
 |-----|------|------|------|----------|
-| JEP 521 | Generational Shenandoah (Experimental) | ⚠️ 实验 | 分代 Shenandoah | → |
+| [JEP 521](/jeps/gc/jep-521.md) | Generational Shenandoah (Experimental) | ⚠️ 实验 | 分代 Shenandoah | → |
 
 > 图例: ✅ 正式发布 | 🔍 预览特性 (需要 `--enable-preview`) | 🚀 性能提升 | ⚠️ 废弃/移除 | ⚠️ 实验性
 

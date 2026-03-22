@@ -143,29 +143,29 @@ try (var scope = StructuredTaskScope.open(Joiner.allSuccessfulOrThrow())) {
 
 | JEP | 标题 | 状态 | 描述 |
 |-----|------|------|------|
-| [JEP 530](https://openjdk.org/jeps/530) | Primitive Types in Patterns | 🔍 预览 | 模式匹配支持原始类型 (第4次) |
-| [JEP 526](https://openjdk.org/jeps/526) | Lazy Constants | 🔍 预览 | 延迟常量初始化 (第2次) |
-| [JEP 500](https://openjdk.org/jeps/500) | Prepare to Make Final Mean Final | ✅ 正式 | 严格 final 语义 |
+| [JEP 530](/jeps/language/jep-530.md) | Primitive Types in Patterns | 🔍 预览 | 模式匹配支持原始类型 (第4次) |
+| [JEP 526](/jeps/tools/jep-526.md) | Lazy Constants | 🔍 预览 | 延迟常量初始化 (第2次) |
+| [JEP 500](/jeps/removed/jep-500.md) | Prepare to Make Final Mean Final | ✅ 正式 | 严格 final 语义 |
 
 ### 并发
 
 | JEP | 标题 | 状态 | 描述 |
 |-----|------|------|------|
-| [JEP 525](https://openjdk.org/jeps/525) | Structured Concurrency | 🔍 预览 | 结构化并发 (第6次预览) |
+| [JEP 525](/jeps/concurrency/jep-525.md) | Structured Concurrency | 🔍 预览 | 结构化并发 (第6次预览) |
 
 ### 性能
 
 | JEP | 标题 | 影响 | 描述 |
 |-----|------|------|------|
-| [JEP 522](https://openjdk.org/jeps/522) | G1 GC Throughput | 🚀 特定工作负载下 +10-20% | 减少同步提升吞吐量 |
-| [JEP 516](https://openjdk.org/jeps/516) | AOT Object Caching | ⚡ 更快启动 | 任意 GC 的 AOT 缓存 |
-| [JEP 529](https://openjdk.org/jeps/529) | Vector API | 🔬 孵化 | 向量 API (第11次) |
+| [JEP 522](/jeps/gc/jep-522.md) | G1 GC Throughput | 🚀 特定工作负载下 +10-20% | 减少同步提升吞吐量 |
+| [JEP 516](/jeps/performance/jep-516.md) | AOT Object Caching | ⚡ 更快启动 | 任意 GC 的 AOT 缓存 |
+| [JEP 529](/jeps/language/jep-529.md) | Vector API | 🔬 孵化 | 向量 API (第11次) |
 
 ### 网络
 
 | JEP | 标题 | 状态 | 描述 |
 |-----|------|------|------|
-| [JEP 517](https://openjdk.org/jeps/517) | HTTP/3 Client | ✅ 正式 | QUIC 协议支持 |
+| [JEP 517](/jeps/network/jep-517.md) | HTTP/3 Client | ✅ 正式 | QUIC 协议支持 |
 
 ### 安全
 
@@ -177,7 +177,7 @@ try (var scope = StructuredTaskScope.open(Joiner.allSuccessfulOrThrow())) {
 
 | JEP | 标题 | 状态 | 描述 |
 |-----|------|------|------|
-| [JEP 504](https://openjdk.org/jeps/504) | Remove Applet API | ✅ 正式 | 移除过时的 Applet API |
+| [JEP 504](/jeps/removed/jep-504.md) | Remove Applet API | ✅ 正式 | 移除过时的 Applet API |
 
 > 图例: ✅ 正式发布 | 🔍 预览特性 (需要 `--enable-preview`) | 🚀 性能提升 | ⚡ 启动优化
 
