@@ -105,7 +105,7 @@
 |------|----------|
 | **开发者** | [学习路径](guides/learning-path.md) |
 | **架构师** | [主题演进](by-topic/) |
-| **运维** | [版本迁移](guides/migration-guide.md) |
+| **运维** | [版本迁移](guides/migration-guide.md) · [JDK 17→25 直升](by-version/jdk25/migration/from-17.md) |
 | **初学者** | [JDK 8 入门](by-version/jdk8/) |
 | **研究者** | [Agent 研究方法](AGENTS.md) |
 
