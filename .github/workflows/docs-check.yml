@@ -1,0 +1,231 @@
+name: Docs Quality Check
+
+on:
+  push:
+    branches: [main]
+    paths: ['**.md', 'scripts/**']
+  pull_request:
+    branches: [main]
+    paths: ['**.md', 'scripts/**']
+
+jobs:
+  link-check:
+    name: Link Verification
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run link verification
+        run: |
+          python3 scripts/verify-links.py 2>&1 | tail -20
+          # 脚本在有断链时 exit 1，此处允许失败但记录结果
+        continue-on-error: true
+
+      - name: Check for broken local links (strict)
+        run: |
+          echo "=== Checking local links in changed files ==="
+          ERRORS=0
+
+          # 获取要检查的文件列表
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} HEAD -- '*.md' | grep -v '^reports/' || true)
+          else
+            FILES=$(git diff --name-only HEAD~1 HEAD -- '*.md' | grep -v '^reports/' || true)
+          fi
+
+          if [ -z "$FILES" ]; then
+            echo "No markdown files changed."
+            exit 0
+          fi
+
+          for f in $FILES; do
+            [ -f "$f" ] || continue
+            DIR=$(dirname "$f")
+
+            # 提取本地链接 (非 http, 非锚点)
+            grep -oP '\]\((?!http|#)([^)]+)\)' "$f" 2>/dev/null | sed 's/](\(.*\))/\1/' | while read -r link; do
+              # 去除锚点
+              CLEAN=$(echo "$link" | cut -d'#' -f1)
+              [ -z "$CLEAN" ] && continue
+
+              # 解析路径
+              if [[ "$CLEAN" == /* ]]; then
+                TARGET=".${CLEAN}"
+              else
+                TARGET="${DIR}/${CLEAN}"
+              fi
+
+              if [ ! -e "$TARGET" ]; then
+                echo "::error file=${f}::Broken link: ${link} → target not found: ${TARGET}"
+                ERRORS=$((ERRORS + 1))
+              fi
+            done
+          done
+
+          if [ "$ERRORS" -gt 0 ]; then
+            echo ""
+            echo "❌ Found $ERRORS broken link(s) in changed files"
+            exit 1
+          else
+            echo "✅ All local links in changed files are valid"
+          fi
+
+  placeholder-check:
+    name: Placeholder Detection
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for placeholder content in changed files
+        run: |
+          echo "=== Checking for placeholders ==="
+
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} HEAD -- '*.md' | grep -v '^reports/' | grep -v '^AGENTS.md' || true)
+          else
+            FILES=$(git diff --name-only HEAD~1 HEAD -- '*.md' | grep -v '^reports/' | grep -v '^AGENTS.md' || true)
+          fi
+
+          if [ -z "$FILES" ]; then
+            echo "No markdown files changed."
+            exit 0
+          fi
+
+          FOUND=0
+          for f in $FILES; do
+            [ -f "$f" ] || continue
+            # 检查新增行中的占位符
+            HITS=$(grep -nE '待补充|待完善|FIXME|WIP|TODO[^W]' "$f" 2>/dev/null || true)
+            if [ -n "$HITS" ]; then
+              echo "::warning file=${f}::Placeholder content found:"
+              echo "$HITS" | head -5
+              FOUND=$((FOUND + 1))
+            fi
+          done
+
+          if [ "$FOUND" -gt 0 ]; then
+            echo ""
+            echo "⚠️ Found placeholders in $FOUND file(s) — review before merging"
+          else
+            echo "✅ No placeholders found in changed files"
+          fi
+
+  markdown-lint:
+    name: Markdown Format Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check markdown formatting
+        run: |
+          echo "=== Markdown format checks ==="
+          ERRORS=0
+
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} HEAD -- '*.md' | grep -v '^reports/' || true)
+          else
+            FILES=$(git diff --name-only HEAD~1 HEAD -- '*.md' | grep -v '^reports/' || true)
+          fi
+
+          if [ -z "$FILES" ]; then
+            echo "No markdown files changed."
+            exit 0
+          fi
+
+          for f in $FILES; do
+            [ -f "$f" ] || continue
+
+            # 检查文件末尾是否有换行
+            if [ -s "$f" ] && [ "$(tail -c 1 "$f" | wc -l)" -eq 0 ]; then
+              echo "::warning file=${f}::Missing newline at end of file"
+            fi
+
+            # 检查连续空行 (>2)
+            if grep -Pzo '\n\n\n\n' "$f" >/dev/null 2>&1; then
+              echo "::warning file=${f}::Contains 3+ consecutive blank lines"
+            fi
+
+            # 检查 Tab 字符 (非代码块)
+            # 简单检查：非 ``` 开头的行
+            TAB_LINES=$(grep -nP '^\t' "$f" 2>/dev/null | grep -v '```' | head -3 || true)
+            if [ -n "$TAB_LINES" ]; then
+              echo "::warning file=${f}::Tab indentation found (prefer spaces):"
+              echo "$TAB_LINES"
+            fi
+          done
+
+          echo "✅ Markdown format check complete"
+
+  content-quality:
+    name: Content Quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check JDK version consistency
+        run: |
+          echo "=== JDK version fact checks ==="
+          ERRORS=0
+
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} HEAD -- '*.md' | grep -v '^reports/' || true)
+          else
+            FILES=$(git diff --name-only HEAD~1 HEAD -- '*.md' | grep -v '^reports/' || true)
+          fi
+
+          if [ -z "$FILES" ]; then
+            echo "No markdown files changed."
+            exit 0
+          fi
+
+          for f in $FILES; do
+            [ -f "$f" ] || continue
+
+            # JDK 25 必须标注为 LTS
+            if grep -qE 'JDK 25.*非.?LTS|JDK 25.*Feature Release' "$f" 2>/dev/null; then
+              echo "::error file=${f}::JDK 25 is LTS, not Feature Release"
+              ERRORS=$((ERRORS + 1))
+            fi
+
+            # JDK 26 不能标注为 LTS
+            if grep -qE 'JDK 26.*LTS' "$f" 2>/dev/null; then
+              echo "::error file=${f}::JDK 26 is Feature Release, not LTS"
+              ERRORS=$((ERRORS + 1))
+            fi
+
+            # String Templates 不应标为正式版
+            if grep -qE 'String Templates.*正式|String Templates.*Final' "$f" 2>/dev/null; then
+              echo "::error file=${f}::String Templates was withdrawn, not finalized"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done
+
+          if [ "$ERRORS" -gt 0 ]; then
+            echo ""
+            echo "❌ Found $ERRORS factual error(s)"
+            exit 1
+          else
+            echo "✅ Version facts check passed"
+          fi
+
+      - name: Check file sizes
+        run: |
+          echo "=== File size check ==="
+
+          # 单个 md 文件不应超过 100KB (reports 除外)
+          LARGE=$(find . -name '*.md' -size +100k -not -path './reports/*' -not -path './.git/*' 2>/dev/null || true)
+
+          if [ -n "$LARGE" ]; then
+            echo "⚠️ Large files (>100KB) found:"
+            echo "$LARGE" | while read -r f; do
+              SIZE=$(du -h "$f" | cut -f1)
+              echo "  $SIZE  $f"
+            done
+            echo "Consider splitting these files."
+          else
+            echo "✅ No oversized files"
+          fi
