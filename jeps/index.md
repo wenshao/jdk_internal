@@ -29,114 +29,114 @@
 
 ### 1.1 语言特性
 
-#### JDK 8 基础
-
-| JEP | 标题 | JDK | 状态 |
-|-----|------|-----|------|
-| [JEP 104](language/jep-104.md) | Annotations on Java Types | 8 | ✅ 正式 |
-| [JEP 107](language/jep-107.md) | Bulk Data Operations (Stream API) | 8 | ✅ 正式 |
-| [JEP 109](language/jep-109.md) | Enhance Core Libraries with Lambda | 8 | ✅ 正式 |
-| [JEP 120](language/jep-120.md) | Repeating Annotations | 8 | ✅ 正式 |
-| [JEP 126](language/jep-126.md) | Lambda Expressions | 8 | ✅ 正式 |
-| [JEP 150](language/jep-150.md) | Date & Time API (JSR 310) | 8 | ✅ 正式 |
-| [JEP 160](language/jep-160.md) | Lambda-Form Representation for Method Handles | 8 | ✅ 正式 |
-| [JEP 174](language/jep-174.md) | Nashorn JavaScript Engine | 8 | ✅ (JDK 15 移除) |
-| [JEP 176](language/jep-176.md) | Mechanical Checking of Caller-Sensitive Methods | 8 | ✅ 正式 |
-| [JEP 192](language/jep-192.md) | String Deduplication in G1 | 8 | ✅ 正式 |
-
-#### 模块系统 (JDK 9-17)
-
-| JEP | 标题 | JDK | 状态 |
-|-----|------|-----|------|
-| [JEP 200](language/jep-200.md) | The Modular JDK | 9 | ✅ 正式 |
-| [JEP 201](language/jep-201.md) | Modular Source Code | 9 | ✅ 正式 |
-| [JEP 254](language/jep-254.md) | Compact Strings | 9 | ✅ 正式 |
-| [JEP 260](language/jep-260.md) | Encapsulate Most Internal APIs | 9 | ✅ 正式 |
-| [JEP 261](language/jep-261.md) | Module System | 9 | ✅ 正式 |
-| [JEP 269](language/jep-269.md) | Convenience Factory Methods for Collections | 9 | ✅ 正式 |
-| [JEP 280](language/jep-280.md) | Indify String Concatenation | 9 | ✅ 正式 |
-| [JEP 286](language/jep-286.md) | Local-Variable Type Inference (var) | 10 | ✅ 正式 |
-| [JEP 309](language/jep-309.md) | Dynamic Class-File Constants | 11 | ✅ 正式 |
-| [JEP 320](language/jep-320.md) | Remove Java EE and CORBA Modules | 11 | 🗑️ 移除 |
-| [JEP 323](language/jep-323.md) | Local-Variable Syntax for Lambda Parameters | 11 | ✅ 正式 |
-| [JEP 334](language/jep-334.md) | JVM Constants API | 12 | ✅ 正式 |
-| [JEP 371](language/jep-371.md) | Hidden Classes | 15 | ✅ 正式 |
-| [JEP 390](language/jep-390.md) | Warnings for Value-Based Classes | 16 | ✅ 正式 |
-| [JEP 396](language/jep-396.md) | Strongly Encapsulate JDK Internals by Default | 16 | ✅ 正式 |
-| [JEP 306](language/jep-306.md) | Restore Always-Strict Floating-Point Semantics | 17 | ✅ 正式 |
-| [JEP 403](language/jep-403.md) | Strongly Encapsulate JDK Internals | 17 | ✅ 正式 |
-
-#### Switch 表达式 (JDK 12-14)
-
-| JEP | 标题 | JDK | 状态 |
-|-----|------|-----|------|
-| [JEP 325](language/jep-325.md) | Switch Expressions (Preview) | 12 | 🔍 预览 |
-| [JEP 354](language/jep-354.md) | Switch Expressions (2nd Preview) | 13 | 🔍 预览 |
-| [JEP 361](language/jep-361.md) | Switch Expressions | 14 | ✅ 正式 |
-
-#### Text Blocks (JDK 13-15)
-
-| JEP | 标题 | JDK | 状态 |
-|-----|------|-----|------|
-| [JEP 355](language/jep-355.md) | Text Blocks (Preview) | 13 | 🔍 预览 |
-| [JEP 368](language/jep-368.md) | Text Blocks (2nd Preview) | 14 | 🔍 预览 |
-| [JEP 378](language/jep-378.md) | Text Blocks | 15 | ✅ 正式 |
-
-#### Records (JDK 14-16)
-
-| JEP | 标题 | JDK | 状态 |
-|-----|------|-----|------|
-| [JEP 359](language/jep-359.md) | Records (Preview) | 14 | 🔍 预览 |
-| [JEP 384](language/jep-384.md) | Records (2nd Preview) | 15 | 🔍 预览 |
-| [JEP 395](language/jep-395.md) | Records | 16 | ✅ 正式 |
-
-#### Sealed Classes (JDK 15-17)
-
-| JEP | 标题 | JDK | 状态 |
-|-----|------|-----|------|
-| [JEP 397](language/jep-397.md) | Sealed Classes (2nd Preview) | 16 | 🔍 预览 |
-| [JEP 409](language/jep-409.md) | Sealed Classes | 17 | ✅ 正式 |
-
-#### Pattern Matching (JDK 14-21)
-
-| JEP | 标题 | JDK | 状态 |
-|-----|------|-----|------|
-| [JEP 305](language/jep-305.md) | Pattern Matching for instanceof (Preview) | 14 | 🔍 预览 |
-| [JEP 375](language/jep-375.md) | Pattern Matching for instanceof (2nd Preview) | 15 | 🔍 预览 |
-| [JEP 394](language/jep-394.md) | Pattern Matching for instanceof | 16 | ✅ 正式 |
-| [JEP 406](language/jep-406.md) | Pattern Matching for switch (Preview) | 17 | 🔍 预览 |
-| [JEP 440](language/jep-440.md) | Record Patterns | 21 | ✅ 正式 |
-| [JEP 441](language/jep-441.md) | Pattern Matching for switch | 21 | ✅ 正式 |
-| [JEP 443](language/jep-443.md) | Unnamed Patterns and Variables (Preview) | 21 | 🔍 预览 |
-| [JEP 456](language/jep-456.md) | Unnamed Variables and Patterns | 22 | ✅ 正式 |
-| [JEP 488](language/jep-488.md) | Primitive Types in Patterns (2nd Preview) | 24 | 🔍 预览 |
-| [JEP 507](language/jep-507.md) | Primitive Types in Patterns (3rd Preview) | 25 | 🔍 预览 |
-| [JEP 530](language/jep-530.md) | Primitive Types in Patterns (4th Preview) | 26 | 🔍 预览 |
-
-#### 现代 Java 语法 (JDK 21-26)
-
-| JEP | 标题 | JDK | 状态 |
-|-----|------|-----|------|
-| [JEP 430](language/jep-430.md) | String Templates | 21 | ⚠️ 撤回 |
-| [JEP 431](language/jep-431.md) | Sequenced Collections | 21 | ✅ 正式 |
-| [JEP 445](language/jep-445.md) | Unnamed Classes & Instance Main Methods | 21 | 🔍 预览 |
-| [JEP 461](language/jep-461.md) | Stream Gatherers (Preview) | 22 | 🔍 预览 |
-| [JEP 463](language/jep-463.md) | Implicit Classes (2nd Preview) | 22 | 🔍 预览 |
-| [JEP 473](language/jep-473.md) | Stream Gatherers (2nd Preview) | 23 | 🔍 预览 |
-| [JEP 476](language/jep-476.md) | Module Import Declarations (Preview) | 23 | 🔍 预览 |
-| [JEP 477](language/jep-477.md) | Implicit Classes (3rd Preview) | 23 | 🔍 预览 |
-| [JEP 482](language/jep-482.md) | Flexible Constructor Bodies (2nd Preview) | 23 | 🔍 预览 |
-| [JEP 492](language/jep-492.md) | Flexible Constructor Bodies (3rd Preview) | 24 | 🔍 预览 |
-| [JEP 494](language/jep-494.md) | Module Import Declarations (2nd Preview) | 24 | 🔍 预览 |
-| [JEP 512](language/jep-512.md) | Compact Source Files | 25 | ✅ 正式 |
-| [JEP 513](language/jep-513.md) | Flexible Constructor Bodies | 25 | ✅ 正式 |
-
 #### Project Valhalla
 
 | JEP | 标题 | JDK | 状态 |
 |-----|------|-----|------|
 | [JEP 401](language/jep-401.md) | Value Classes (Preview) | 26 | 🔍 预览 |
 | [JEP 402](language/jep-402.md) | Unified Generics | - | 🔬 草案 |
+
+#### 现代 Java 语法 (JDK 21-26)
+
+| JEP | 标题 | JDK | 状态 |
+|-----|------|-----|------|
+| [JEP 513](language/jep-513.md) | Flexible Constructor Bodies | 25 | ✅ 正式 |
+| [JEP 512](language/jep-512.md) | Compact Source Files | 25 | ✅ 正式 |
+| [JEP 494](language/jep-494.md) | Module Import Declarations (2nd Preview) | 24 | 🔍 预览 |
+| [JEP 492](language/jep-492.md) | Flexible Constructor Bodies (3rd Preview) | 24 | 🔍 预览 |
+| [JEP 482](language/jep-482.md) | Flexible Constructor Bodies (2nd Preview) | 23 | 🔍 预览 |
+| [JEP 477](language/jep-477.md) | Implicit Classes (3rd Preview) | 23 | 🔍 预览 |
+| [JEP 476](language/jep-476.md) | Module Import Declarations (Preview) | 23 | 🔍 预览 |
+| [JEP 473](language/jep-473.md) | Stream Gatherers (2nd Preview) | 23 | 🔍 预览 |
+| [JEP 463](language/jep-463.md) | Implicit Classes (2nd Preview) | 22 | 🔍 预览 |
+| [JEP 461](language/jep-461.md) | Stream Gatherers (Preview) | 22 | 🔍 预览 |
+| [JEP 445](language/jep-445.md) | Unnamed Classes & Instance Main Methods | 21 | 🔍 预览 |
+| [JEP 431](language/jep-431.md) | Sequenced Collections | 21 | ✅ 正式 |
+| [JEP 430](language/jep-430.md) | String Templates | 21 | ⚠️ 撤回 |
+
+#### Pattern Matching (JDK 14→26)
+
+| JEP | 标题 | JDK | 状态 |
+|-----|------|-----|------|
+| [JEP 530](language/jep-530.md) | Primitive Types in Patterns (4th Preview) | 26 | 🔍 预览 |
+| [JEP 507](language/jep-507.md) | Primitive Types in Patterns (3rd Preview) | 25 | 🔍 预览 |
+| [JEP 488](language/jep-488.md) | Primitive Types in Patterns (2nd Preview) | 24 | 🔍 预览 |
+| [JEP 456](language/jep-456.md) | Unnamed Variables and Patterns | 22 | ✅ 正式 |
+| [JEP 443](language/jep-443.md) | Unnamed Patterns and Variables (Preview) | 21 | 🔍 预览 |
+| [JEP 441](language/jep-441.md) | Pattern Matching for switch | 21 | ✅ 正式 |
+| [JEP 440](language/jep-440.md) | Record Patterns | 21 | ✅ 正式 |
+| [JEP 406](language/jep-406.md) | Pattern Matching for switch (Preview) | 17 | 🔍 预览 |
+| [JEP 394](language/jep-394.md) | Pattern Matching for instanceof | 16 | ✅ 正式 |
+| [JEP 375](language/jep-375.md) | Pattern Matching for instanceof (2nd Preview) | 15 | 🔍 预览 |
+| [JEP 305](language/jep-305.md) | Pattern Matching for instanceof (Preview) | 14 | 🔍 预览 |
+
+#### Sealed Classes (JDK 15→17)
+
+| JEP | 标题 | JDK | 状态 |
+|-----|------|-----|------|
+| [JEP 409](language/jep-409.md) | Sealed Classes | 17 | ✅ 正式 |
+| [JEP 397](language/jep-397.md) | Sealed Classes (2nd Preview) | 16 | 🔍 预览 |
+
+#### Records (JDK 14→16)
+
+| JEP | 标题 | JDK | 状态 |
+|-----|------|-----|------|
+| [JEP 395](language/jep-395.md) | Records | 16 | ✅ 正式 |
+| [JEP 384](language/jep-384.md) | Records (2nd Preview) | 15 | 🔍 预览 |
+| [JEP 359](language/jep-359.md) | Records (Preview) | 14 | 🔍 预览 |
+
+#### Text Blocks (JDK 13→15)
+
+| JEP | 标题 | JDK | 状态 |
+|-----|------|-----|------|
+| [JEP 378](language/jep-378.md) | Text Blocks | 15 | ✅ 正式 |
+| [JEP 368](language/jep-368.md) | Text Blocks (2nd Preview) | 14 | 🔍 预览 |
+| [JEP 355](language/jep-355.md) | Text Blocks (Preview) | 13 | 🔍 预览 |
+
+#### Switch 表达式 (JDK 12→14)
+
+| JEP | 标题 | JDK | 状态 |
+|-----|------|-----|------|
+| [JEP 361](language/jep-361.md) | Switch Expressions | 14 | ✅ 正式 |
+| [JEP 354](language/jep-354.md) | Switch Expressions (2nd Preview) | 13 | 🔍 预览 |
+| [JEP 325](language/jep-325.md) | Switch Expressions (Preview) | 12 | 🔍 预览 |
+
+#### 模块系统与核心改进 (JDK 9-17)
+
+| JEP | 标题 | JDK | 状态 |
+|-----|------|-----|------|
+| [JEP 403](language/jep-403.md) | Strongly Encapsulate JDK Internals | 17 | ✅ 正式 |
+| [JEP 306](language/jep-306.md) | Restore Always-Strict Floating-Point Semantics | 17 | ✅ 正式 |
+| [JEP 396](language/jep-396.md) | Strongly Encapsulate JDK Internals by Default | 16 | ✅ 正式 |
+| [JEP 390](language/jep-390.md) | Warnings for Value-Based Classes | 16 | ✅ 正式 |
+| [JEP 371](language/jep-371.md) | Hidden Classes | 15 | ✅ 正式 |
+| [JEP 334](language/jep-334.md) | JVM Constants API | 12 | ✅ 正式 |
+| [JEP 323](language/jep-323.md) | Local-Variable Syntax for Lambda Parameters | 11 | ✅ 正式 |
+| [JEP 320](language/jep-320.md) | Remove Java EE and CORBA Modules | 11 | 🗑️ 移除 |
+| [JEP 309](language/jep-309.md) | Dynamic Class-File Constants | 11 | ✅ 正式 |
+| [JEP 286](language/jep-286.md) | Local-Variable Type Inference (var) | 10 | ✅ 正式 |
+| [JEP 280](language/jep-280.md) | Indify String Concatenation | 9 | ✅ 正式 |
+| [JEP 269](language/jep-269.md) | Convenience Factory Methods for Collections | 9 | ✅ 正式 |
+| [JEP 261](language/jep-261.md) | Module System | 9 | ✅ 正式 |
+| [JEP 260](language/jep-260.md) | Encapsulate Most Internal APIs | 9 | ✅ 正式 |
+| [JEP 254](language/jep-254.md) | Compact Strings | 9 | ✅ 正式 |
+| [JEP 201](language/jep-201.md) | Modular Source Code | 9 | ✅ 正式 |
+| [JEP 200](language/jep-200.md) | The Modular JDK | 9 | ✅ 正式 |
+
+#### JDK 8 基础
+
+| JEP | 标题 | JDK | 状态 |
+|-----|------|-----|------|
+| [JEP 126](language/jep-126.md) | Lambda Expressions | 8 | ✅ 正式 |
+| [JEP 150](language/jep-150.md) | Date & Time API (JSR 310) | 8 | ✅ 正式 |
+| [JEP 107](language/jep-107.md) | Bulk Data Operations (Stream API) | 8 | ✅ 正式 |
+| [JEP 109](language/jep-109.md) | Enhance Core Libraries with Lambda | 8 | ✅ 正式 |
+| [JEP 104](language/jep-104.md) | Annotations on Java Types | 8 | ✅ 正式 |
+| [JEP 120](language/jep-120.md) | Repeating Annotations | 8 | ✅ 正式 |
+| [JEP 174](language/jep-174.md) | Nashorn JavaScript Engine | 8 | ✅ (JDK 15 移除) |
+| [JEP 160](language/jep-160.md) | Lambda-Form Representation for Method Handles | 8 | ✅ 正式 |
+| [JEP 176](language/jep-176.md) | Mechanical Checking of Caller-Sensitive Methods | 8 | ✅ 正式 |
+| [JEP 192](language/jep-192.md) | String Deduplication in G1 | 8 | ✅ 正式 |
 
 ---
 
@@ -254,19 +254,19 @@
 
 | JEP | 标题 | JDK | 状态 |
 |-----|------|-----|------|
-| [JEP 290](security/jep-290.md) | Filter Incoming Serialization Data | 9 | ✅ 正式 |
-| [JEP 329](security/jep-329.md) | ChaCha20-Poly1305 | 11 | ✅ 正式 |
-| [JEP 332](security/jep-332.md) | TLS 1.3 | 11 | ✅ 正式 |
-| [JEP 411](security/jep-411.md) | Deprecate the Security Manager for Removal | 17 | 🗑️ 废弃 |
-| [JEP 415](security/jep-415.md) | Context-Specific Deserialization Filters | 17 | ✅ 正式 |
-| [JEP 451](security/jep-451.md) | Prepare to Restrict Dynamic Agent Loading | 21 | ⚠️ 警告 |
-| [JEP 452](security/jep-452.md) | Key Encapsulation Mechanism API | 21 | ✅ 正式 |
-| [JEP 470](security/jep-470.md) | PEM Encodings (Preview) | 25 | 🔍 预览 |
-| [JEP 486](security/jep-486.md) | Permanently Disable the Security Manager | 24 | ✅ 正式 |
-| [JEP 496](security/jep-496.md) | Quantum-Resistant ML-KEM (FIPS 203) | 24 | ✅ 正式 |
-| [JEP 497](security/jep-497.md) | Quantum-Resistant ML-DSA (FIPS 204) | 24 | ✅ 正式 |
-| [JEP 498](security/jep-498.md) | Warn upon Use of sun.misc.Unsafe Memory Access | 24 | ✅ 正式 |
 | [JEP 510](security/jep-510.md) | Key Derivation Function API | 25 | ✅ 正式 |
+| [JEP 470](security/jep-470.md) | PEM Encodings (Preview) | 25 | 🔍 预览 |
+| [JEP 498](security/jep-498.md) | Warn upon Use of sun.misc.Unsafe Memory Access | 24 | ✅ 正式 |
+| [JEP 497](security/jep-497.md) | Quantum-Resistant ML-DSA (FIPS 204) | 24 | ✅ 正式 |
+| [JEP 496](security/jep-496.md) | Quantum-Resistant ML-KEM (FIPS 203) | 24 | ✅ 正式 |
+| [JEP 486](security/jep-486.md) | Permanently Disable the Security Manager | 24 | ✅ 正式 |
+| [JEP 452](security/jep-452.md) | Key Encapsulation Mechanism API | 21 | ✅ 正式 |
+| [JEP 451](security/jep-451.md) | Prepare to Restrict Dynamic Agent Loading | 21 | ⚠️ 警告 |
+| [JEP 415](security/jep-415.md) | Context-Specific Deserialization Filters | 17 | ✅ 正式 |
+| [JEP 411](security/jep-411.md) | Deprecate the Security Manager for Removal | 17 | 🗑️ 废弃 |
+| [JEP 332](security/jep-332.md) | TLS 1.3 | 11 | ✅ 正式 |
+| [JEP 329](security/jep-329.md) | ChaCha20-Poly1305 | 11 | ✅ 正式 |
+| [JEP 290](security/jep-290.md) | Filter Incoming Serialization Data | 9 | ✅ 正式 |
 
 ---
 
@@ -303,29 +303,29 @@
 
 | JEP | 标题 | JDK | 状态 |
 |-----|------|-----|------|
-| [JEP 222](tools/jep-222.md) | jshell (REPL) | 9 | ✅ 正式 |
-| [JEP 238](tools/jep-238.md) | Multi-Release JAR Files | 9 | ✅ 正式 |
-| [JEP 282](tools/jep-282.md) | jlink | 9 | ✅ 正式 |
-| [JEP 343](tools/jep-343.md) | Packaging Tool (Incubator) | 14 | 🥚 孵化 |
-| [JEP 392](tools/jep-392.md) | Packaging Tool | 16 | ✅ 正式 |
-| [JEP 408](tools/jep-408.md) | Simple Web Server | 18 | ✅ 正式 |
-| [JEP 416](tools/jep-416.md) | Code Snippets in Java API Documentation | 18 | ✅ 正式 |
-| [JEP 467](tools/jep-467.md) | Markdown Documentation Comments | 23 | ✅ 正式 |
-| [JEP 483](tools/jep-483.md) | Ahead-of-Time Class Loading & Linking | 24 | ✅ 正式 |
-| [JEP 485](tools/jep-485.md) | Stream Gatherers | 24 | ✅ 正式 |
-| [JEP 493](tools/jep-493.md) | Linking Run-Time Images without JMOD Files | 24 | ✅ 正式 |
-| [JEP 511](tools/jep-511.md) | Module Import Declarations | 25 | ✅ 正式 |
 | [JEP 526](tools/jep-526.md) | Lazy Constants (Preview) | 26 | 🔍 预览 |
+| [JEP 511](tools/jep-511.md) | Module Import Declarations | 25 | ✅ 正式 |
+| [JEP 493](tools/jep-493.md) | Linking Run-Time Images without JMOD Files | 24 | ✅ 正式 |
+| [JEP 485](tools/jep-485.md) | Stream Gatherers | 24 | ✅ 正式 |
+| [JEP 483](tools/jep-483.md) | Ahead-of-Time Class Loading & Linking | 24 | ✅ 正式 |
+| [JEP 467](tools/jep-467.md) | Markdown Documentation Comments | 23 | ✅ 正式 |
+| [JEP 416](tools/jep-416.md) | Code Snippets in Java API Documentation | 18 | ✅ 正式 |
+| [JEP 408](tools/jep-408.md) | Simple Web Server | 18 | ✅ 正式 |
+| [JEP 392](tools/jep-392.md) | Packaging Tool | 16 | ✅ 正式 |
+| [JEP 343](tools/jep-343.md) | Packaging Tool (Incubator) | 14 | 🥚 孵化 |
+| [JEP 282](tools/jep-282.md) | jlink | 9 | ✅ 正式 |
+| [JEP 238](tools/jep-238.md) | Multi-Release JAR Files | 9 | ✅ 正式 |
+| [JEP 222](tools/jep-222.md) | jshell (REPL) | 9 | ✅ 正式 |
 
 #### 已废弃/移除
 
 | JEP | 标题 | JDK | 状态 |
 |-----|------|-----|------|
-| [JEP 372](tools/jep-372.md) | Remove Nashorn | 15 | 🗑️ 移除 |
-| [JEP 385](tools/jep-385.md) | Deprecate RMI Activation | 15 | 🗑️ 废弃 |
-| [JEP 398](tools/jep-398.md) | Deprecate Applet API | 17 | 🗑️ 废弃 |
-| [JEP 407](tools/jep-407.md) | Remove RMI Activation | 17 | 🗑️ 移除 |
 | [JEP 410](tools/jep-410.md) | Remove Experimental AOT/JIT Compiler | 17 | 🗑️ 移除 |
+| [JEP 407](tools/jep-407.md) | Remove RMI Activation | 17 | 🗑️ 移除 |
+| [JEP 398](tools/jep-398.md) | Deprecate Applet API | 17 | 🗑️ 废弃 |
+| [JEP 385](tools/jep-385.md) | Deprecate RMI Activation | 15 | 🗑️ 废弃 |
+| [JEP 372](tools/jep-372.md) | Remove Nashorn | 15 | 🗑️ 移除 |
 
 ---
 
@@ -348,19 +348,19 @@
 
 | JEP | 标题 | JDK | 状态 |
 |-----|------|-----|------|
-| [JEP 237](ffi/jep-237.md) | AArch64 Port | 9 | ✅ 正式 |
-| [JEP 307](platform/jep-307.md) | Container Awareness | 10 | ✅ 正式 |
-| [JEP 340](platform/jep-340.md) | One AArch64 Port, Not Two | 12 | ✅ 正式 |
-| [JEP 358](platform/jep-358.md) | Apple Silicon Support | 14 | ✅ 正式 |
-| [JEP 362](platform/jep-362.md) | Deprecate Solaris/SPARC | 14 | 🗑️ 废弃 |
-| [JEP 364](platform/jep-364.md) | ZGC on macOS | 14 | ✅ 正式 |
-| [JEP 365](platform/jep-365.md) | ZGC on Windows | 14 | ✅ 正式 |
-| [JEP 381](platform/jep-381.md) | Remove Solaris/SPARC | 15 | 🗑️ 移除 |
-| [JEP 386](platform/jep-386.md) | Alpine Linux Port (musl libc) | 16 | ✅ 正式 |
-| [JEP 388](platform/jep-388.md) | Windows/AArch64 Port | 16 | ✅ 正式 |
-| [JEP 391](platform/jep-391.md) | macOS/AArch64 Port (Apple Silicon) | 17 | ✅ 正式 |
-| [JEP 422](ffi/jep-422.md) | Linux/RISC-V Port | 19 | ✅ 正式 |
 | [JEP 501](platform/jep-501.md) | Deprecate 32-bit x86 Port | 24 | 🗑️ 废弃 |
+| [JEP 422](ffi/jep-422.md) | Linux/RISC-V Port | 19 | ✅ 正式 |
+| [JEP 391](platform/jep-391.md) | macOS/AArch64 Port (Apple Silicon) | 17 | ✅ 正式 |
+| [JEP 388](platform/jep-388.md) | Windows/AArch64 Port | 16 | ✅ 正式 |
+| [JEP 386](platform/jep-386.md) | Alpine Linux Port (musl libc) | 16 | ✅ 正式 |
+| [JEP 381](platform/jep-381.md) | Remove Solaris/SPARC | 15 | 🗑️ 移除 |
+| [JEP 365](platform/jep-365.md) | ZGC on Windows | 14 | ✅ 正式 |
+| [JEP 364](platform/jep-364.md) | ZGC on macOS | 14 | ✅ 正式 |
+| [JEP 362](platform/jep-362.md) | Deprecate Solaris/SPARC | 14 | 🗑️ 废弃 |
+| [JEP 358](platform/jep-358.md) | Apple Silicon Support | 14 | ✅ 正式 |
+| [JEP 340](platform/jep-340.md) | One AArch64 Port, Not Two | 12 | ✅ 正式 |
+| [JEP 307](platform/jep-307.md) | Container Awareness | 10 | ✅ 正式 |
+| [JEP 237](ffi/jep-237.md) | AArch64 Port | 9 | ✅ 正式 |
 
 ---
 
@@ -368,9 +368,9 @@
 
 | JEP | 标题 | JDK | 状态 |
 |-----|------|-----|------|
-| [JEP 321](network/jep-321.md) | HTTP Client | 11 | ✅ 正式 |
-| [JEP 380](network/jep-380.md) | Unix Domain Sockets | 16 | ✅ 正式 |
 | [JEP 517](network/jep-517.md) | HTTP/3 for HTTP Client | 26 | ✅ 正式 |
+| [JEP 380](network/jep-380.md) | Unix Domain Sockets | 16 | ✅ 正式 |
+| [JEP 321](network/jep-321.md) | HTTP Client | 11 | ✅ 正式 |
 
 ---
 
@@ -378,10 +378,10 @@
 
 | JEP | 标题 | JDK | 状态 |
 |-----|------|-----|------|
-| [JEP 328](jfr/jep-328.md) | Java Flight Recorder | 11 | ✅ 正式 |
-| [JEP 509](jfr/jep-509.md) | JFR CPU-Time Profiling | 25 | 🧪 实验 |
-| [JEP 518](jfr/jep-518.md) | JFR Cooperative Sampling | 25 | ✅ 正式 |
 | [JEP 520](jfr/jep-520.md) | JFR Method Timing and Tracing | 25 | ✅ 正式 |
+| [JEP 518](jfr/jep-518.md) | JFR Cooperative Sampling | 25 | ✅ 正式 |
+| [JEP 509](jfr/jep-509.md) | JFR CPU-Time Profiling | 25 | 🧪 实验 |
+| [JEP 328](jfr/jep-328.md) | Java Flight Recorder | 11 | ✅ 正式 |
 
 ---
 
@@ -401,15 +401,15 @@
 
 | 版本 | 类型 | GA 日期 | 链接 |
 |------|------|---------|------|
-| JDK 8 | LTS | 2014-03 | [→](../by-version/jdk8/) |
-| JDK 11 | LTS | 2018-09 | [→](../by-version/jdk11/) |
-| JDK 17 | LTS | 2021-09 | [→](../by-version/jdk17/) |
-| JDK 21 | LTS | 2023-09 | [→](../by-version/jdk21/) |
-| JDK 22 | Feature | 2024-03 | [→](../by-version/jdk22/) |
-| JDK 23 | Feature | 2024-09 | [→](../by-version/jdk23/) |
-| JDK 24 | Feature | 2025-03 | [→](../by-version/jdk24/) |
-| JDK 25 | **LTS** | 2025-09 | [→](../by-version/jdk25/) |
 | JDK 26 | Feature | 2026-03 | [→](../by-version/jdk26/) |
+| JDK 25 | **LTS** | 2025-09 | [→](../by-version/jdk25/) |
+| JDK 24 | Feature | 2025-03 | [→](../by-version/jdk24/) |
+| JDK 23 | Feature | 2024-09 | [→](../by-version/jdk23/) |
+| JDK 22 | Feature | 2024-03 | [→](../by-version/jdk22/) |
+| JDK 21 | LTS | 2023-09 | [→](../by-version/jdk21/) |
+| JDK 17 | LTS | 2021-09 | [→](../by-version/jdk17/) |
+| JDK 11 | LTS | 2018-09 | [→](../by-version/jdk11/) |
+| JDK 8 | LTS | 2014-03 | [→](../by-version/jdk8/) |
 
 ---
 
