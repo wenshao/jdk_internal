@@ -187,7 +187,7 @@ Martin Doerr 的工作集中在 JVM 最底层：CPU 指令生成、寄存器分�
 
 | 协作者 | 合作领域 |
 |--------|----------|
-| Thomas Stuefe | SAP JVM 团队, HotSpot Runtime |
+| Thomas Stuefe | SAP JVM 团队（当时；现 Red Hat）, HotSpot Runtime |
 | Amit Kumar | PPC64 平台测试 |
 | Lutz Schmidt | SAP JVM 团队, s390x |
 

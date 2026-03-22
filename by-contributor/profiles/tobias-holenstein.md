@@ -2,6 +2,7 @@
 
 > **GitHub**: [@tobiasholenstein](https://github.com/tobiasholenstein)
 > **Organization**: Oracle (formerly Snyk)
+> **注意**: GitHub 个人资料可能仍显示 Snyk，但根据 OpenJDK Census 及近期提交记录，他目前就职于 Oracle。
 > **OpenJDK Contributions**: 67 to openjdk/jdk (83 integrated PRs on GitHub)
 
 ---

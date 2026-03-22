@@ -151,7 +151,7 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Phil Race](phil-race.md) | 1,313 | Oracle |
+| [Phil Race](/by-contributor/profiles/phil-race.md) | 1,313 | Oracle |
 
 ### Swing
 

@@ -952,19 +952,6 @@
 
 ---
 
-### Anatoly Zelenin - JVM 运行时
-
-| 资源 | 类型 | 本地文档 |
-|------|------|----------|
-| 运行时 | 实现 | [JVM](../by-topic/core/jit/) |
-| 内存 | 管理 | [内存](../by-topic/core/memory/) |
-
-**本地资源**:
-- [贡献者档案](../by-contributor/profiles/anatoly-zelenin.md)
-- [JVM 运行时](../by-topic/core/jit/)
-- [内存管理](../by-topic/core/memory/)
-- [组织: SAP](../contributors/orgs/sap.md)
-
 ---
 
 ### Alexey Semenyuk - jpackage/AOT

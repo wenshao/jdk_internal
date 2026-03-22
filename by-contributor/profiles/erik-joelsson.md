@@ -148,7 +148,6 @@ Erik Joelsson 是 OpenJDK 构建系统和测试框架的核心贡献者，专注
 |--------|----------|
 | Matthias Baesken | SAP 构建系统 |
 | Martin Haessig | 测试框架 |
-| Anatoly Zelenin | PPC 平台构建 |
 
 ---
 
