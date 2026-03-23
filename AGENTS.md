@@ -222,6 +222,113 @@ gh pr list --repo openjdk/jdk --limit 1000 \
 > **Source**: [GitHub Integrated PRs](link)
 ```
 
+### Contributor Discovery & Organization Verification (2026-03-23 沉淀)
+
+> 本节总结了通过源码版权 + 邮件列表 + GitHub API + OpenJDK Census 四重验证发现遗漏贡献者的方法论。
+> 通过此方法发现了大量被遗漏的贡献者，如 Tencent 从 10+ PRs 修正为 228+ PRs，Red Hat 新发现 Roland Westrelin (225 PRs) 等。
+
+#### 方法 1: 源码版权反查法
+
+**原理**: openjdk/jdk 源码文件头部包含 `Copyright (c) [year], [Organization]` 版权声明。通过搜索非 Oracle 版权 → 定位文件 → 查看 git commit 历史 → 反查 PR 作者 → 确认组织归属。
+
+```bash
+# Step 1: 搜索特定组织的版权文件
+gh api "search/code?q=%22Tencent%22+repo:openjdk/jdk&per_page=100" \
+  --jq '.items[].path'
+
+# Step 2: 查看文件的 commit 作者
+gh api "repos/openjdk/jdk/commits?path={file_path}&per_page=5" \
+  --jq '.[].author.login'
+
+# Step 3: 验证作者的 GitHub 公司信息
+gh api users/{username} --jq '{name, company, location}'
+
+# Step 4: 统计作者的 Integrated PRs
+gh api "search/issues?q=repo:openjdk/jdk+author:{username}+label:integrated+is:pr" \
+  --jq '.total_count'
+```
+
+**注意**: 部分组织曾使用子公司名称 (如 Tencent 曾用 "THL A29 Limited")，需搜索历史名称。
+
+**实战成果**:
+| 组织 | 搜索关键词 | 版权文件数 | 发现的遗漏贡献者 |
+|------|-----------|-----------|-----------------|
+| Tencent | "Tencent" | 58 | Jie Fu (187 PRs), John Jiang (30 PRs) |
+| Alibaba | "Alibaba" | 90 | Denghui Dong (36 PRs), Long Yang (3 PRs) |
+| Amazon | "Amazon.com" | 526 | Cesar Soares (46 PRs), Chad Rakoczy (18 PRs), Oliver Gillespie (18 PRs) |
+| Red Hat | "Red Hat" | 872 | Roland Westrelin (225 PRs) |
+
+#### 方法 2: OpenJDK 邮件列表 CFV 提名法
+
+**原理**: 当贡献者被提名为 Committer/Reviewer 时，提名邮件通常包含其组织归属信息。
+
+```bash
+# 浏览 jdk-dev 邮件列表按月归档的主题索引
+# URL 格式: https://mail.openjdk.org/pipermail/jdk-dev/{YYYY}-{Month}/subject.html
+
+# 用 WebFetch 获取每月 subject.html，搜索 "CFV" 主题
+# 找到 CFV 后，获取提名邮件详情确认组织
+
+# 也可以搜索月度文本归档中的邮箱域名
+curl -s "https://mail.openjdk.org/pipermail/jdk-dev/{YYYY}-{Month}.txt" | \
+  grep -i "@tencent.com\|@alibaba"
+```
+
+**实战成果**:
+| 来源 | 发现 |
+|------|------|
+| jiefu@tencent.com 投票邮件 | 确认 Jie Fu 是 Tencent |
+| CFV: Denghui Dong (2021-08) | 确认 "Alibaba JVM Team" |
+| CFV: Shaojin Wen (2024-08) | 确认 Alibaba, 由 Claes Redestad 提名 |
+| JDK-8364597 "Replace THL A29 Limited with Tencent" | 发现 John Jiang (@johnshajiang) |
+
+#### 方法 3: OpenJDK Census 角色验证法
+
+**原理**: [OpenJDK Census](https://openjdk.org/census) 记录了所有 Author/Committer/Reviewer 的角色。用于验证和修正文档中的角色信息。
+
+```
+# 访问 https://openjdk.org/census
+# 在 JDK Project 下查找贡献者的 OpenJDK 用户名和角色
+# 常见用户名映射: swen=Shaojin Wen, ddong=Denghui Dong, jiefu=Jie Fu
+```
+
+#### 方法 4: Dragonwell/Corretto/SapMachine 等下游项目验证法
+
+**原理**: 当 GitHub 公司信息缺失时，可通过检查贡献者在下游发行版项目的贡献来确认归属。
+
+```bash
+# 检查是否在 Alibaba Dragonwell 项目有贡献
+gh api "search/issues?q=repo:dragonwell-project/dragonwell11+author:{username}" \
+  --jq '.total_count'
+
+# 检查是否在 Amazon Corretto 项目有贡献
+gh api "search/issues?q=repo:corretto/corretto-17+author:{username}" \
+  --jq '.total_count'
+```
+
+#### 方法 5: PR 审查关系网络法
+
+**原理**: 同组织贡献者之间经常互相审查 PR。通过分析审查者来推断未知贡献者的归属。
+
+```bash
+# 获取某 PR 的审查者列表
+gh api "repos/openjdk/jdk/pulls/{pr_number}/reviews" --jq '.[].user.login'
+```
+
+**实战成果**: 通过 Swati Sharma (@sviswa7) 的 PR 由 Jatin Bhateja (@jatin-bhateja, Intel) 审查，推断 sviswa7 为 Intel 贡献者。
+
+#### 验证标准
+
+| 证据强度 | 标准 | 是否足以确认归属 |
+|----------|------|-----------------|
+| ✅ 强 | GitHub 公司标注 | 是 |
+| ✅ 强 | CFV 提名邮件明确标注组织 | 是 |
+| ✅ 强 | 邮件列表中使用公司邮箱 (如 @tencent.com) | 是 |
+| ⚠️ 中 | 下游发行版项目有贡献 (如 Dragonwell) | 是 (需多个信号) |
+| ⚠️ 中 | PR 审查关系指向特定组织 | 是 (需多个信号) |
+| ❌ 弱 | 仅修改过某组织版权文件 | 否 (Oracle 人也改 Alibaba 文件) |
+| ❌ 弱 | 名字听起来像某国家的 | 否 |
+
 ### Top Contributors (by PRs)
 
 | Rank | Contributor | PRs | Organization | Focus |
@@ -310,12 +417,14 @@ done
 ✅ JEP 514/515/519 belong to JDK 25
 ```
 
-**6. Contributor Job Changes (verified 2026-03-22)**
+**6. Contributor Job Changes (verified 2026-03-23)**
 ```markdown
 ✅ Aleksey Shipilev - Amazon (since 2023, previously Red Hat 2016-2023, Oracle 2012-2016)
 ✅ Roman Kennke - Datadog (previously Amazon, Red Hat)
 ✅ Thomas Stuefe - Red Hat (previously SAP)
 ✅ William Kemper - Amazon (previously Red Hat)
+✅ Andrew Dinn - IBM (previously Red Hat) -- GitHub bio confirms
+✅ Severin Gehwolf - IBM (previously Red Hat)
 ✅ Fei Yang - Huawei (NOT ISCAS PLCT Lab)
 ✅ Nick Gasson - Arm (NOT Amazon)
 ✅ Axel Boldt-Christmas - Oracle (NOT SAP)
@@ -329,6 +438,9 @@ done
 ✅ Volker Simonis - AWS (previously SAP)
 ✅ Thomas Wuerthinger - Oracle Labs VP (NOT "Independent")
 ✅ Eric Fang - NVIDIA (NOT Oracle)
+✅ Martin Haessig (mhaessig) - Oracle (NOT SAP, real name Manuel Hässig)
+✅ Jie Fu (DamonFool) - Tencent (jiefu@tencent.com, OpenJDK Reviewer)
+✅ John Jiang (johnshajiang) - Tencent (confirmed via JDK-8364597)
 ```
 
 ---
