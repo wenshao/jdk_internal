@@ -28,10 +28,10 @@ Amazon 通过 Corretto 团队参与 OpenJDK 开发，专注于 Shenandoah GC、A
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 159 (核心) + 测试 |
-| **贡献者数** | 4 (3 核心 + 1 测试) |
+| **Integrated PRs** | 1,048+ |
+| **贡献者数** | 7 |
 | **活跃时间** | 2020 - 至今 |
-| **主要领域** | Shenandoah GC, AArch64, C2 编译器 |
+| **主要领域** | Shenandoah GC, C2 编译器, AArch64, Runtime, 安全 |
 | **Corretto** | [Amazon Corretto](https://aws.amazon.com/corretto/) |
 
 > **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。OpenJDK Committer 使用 `@openjdk.org` 邮箱提交代码，因此 git commits 按邮箱统计不准确。
@@ -42,16 +42,23 @@ Amazon 通过 Corretto 团队参与 OpenJDK 开发，专注于 Shenandoah GC、A
 
 | 排名 | 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
 |------|--------|--------|-----|------|----------|------|
-| 1 | Aleksey Shipilev | [@shipilev](https://github.com/shipilev) | 803+ | Reviewer | Shenandoah GC | [详情](../../by-contributor/profiles/aleksey-shipilev.md) |
+| 1 | Aleksey Shipilev | [@shipilev](https://github.com/shipilev) | 803+ | Reviewer | Shenandoah GC, JMH, 性能 | [详情](../../by-contributor/profiles/aleksey-shipilev.md) |
 | 2 | William Kemper | [@earthling-amzn](https://github.com/earthling-amzn) | 123 | Reviewer | Shenandoah GC | [详情](../../by-contributor/profiles/william-kemper.md) |
-| 3 | Kelvin Nilsen | — | 40 | Committer | Generational Shenandoah GC | [详情](../../by-contributor/profiles/kelvin-nilsen.md) |
-| 4 | ~~Nick Gasson~~ | ~~[@benty-amzn](https://github.com/benty-amzn)~~ | ~~15~~ | ~~Reviewer~~ | ~~AArch64~~ | **注: 实际属于 Arm，非 Amazon** |
+| 3 | Cesar Soares | [@JohnTortugo](https://github.com/JohnTortugo) | 46 | Committer | C2 编译器, Runtime, 性能 | - |
+| 4 | Kelvin Nilsen | [@kdnilsen](https://github.com/kdnilsen) | 40 | Committer | Generational Shenandoah GC | [详情](../../by-contributor/profiles/kelvin-nilsen.md) |
+| 5 | Oliver Gillespie | [@olivergillespie](https://github.com/olivergillespie) | 18 | Author | Runtime, 安全, 性能 | - |
+| 6 | Chad Rakoczy | [@chadrako](https://github.com/chadrako) | 18 | Author | NMethod 重定位, AArch64, 解释器 | - |
 
-**小计**: 981+ PRs
+**总计**: 1,048+ PRs
 
-> **注**: 
+> **新增贡献者说明**:
+> - **Cesar Soares** (@JohnTortugo, 46 PRs): GitHub 公司标注 "Amazon LLC"，位于 Seattle。专注 C2 编译器、Runtime 和性能优化。2020 年开始贡献，2023-2025 年高峰期。
+> - **Chad Rakoczy** (@chadrako, 18 PRs): GitHub 公司标注 "@Corretto"，位于 Seattle。专注 NMethod 重定位 (JDK-8316694)、AArch64 解释器优化。2023 年开始贡献。
+> - **Oliver Gillespie** (@olivergillespie, 18 PRs): 通过 [Corretto 项目贡献](https://github.com/corretto/corretto-17) 确认 Amazon 关联。专注 Runtime、安全和性能优化。
+>
+> **注**:
+> - Nick Gasson (@nick-arm) 实际属于 **Arm**，非 Amazon，已从列表移除
 > - Andrew Dinn (@adinn) 是 **Red Hat** 员工，不属于 Amazon
-> - David Beaumont (@dbeaumont) 是 **Oracle** 员工，不属于 Amazon
 
 ---
 
@@ -374,14 +381,15 @@ Amazon 维护自己的 JDK 发行版 Corretto：
 
 ---
 
-**文档版本**: 1.0
-**最后更新**: 2026-03-21
-**更新内容**:
-- 新增多层网络分析章节 (6 个小节)
-- 添加协作网络可视化图表
-- 补充技术影响力网络分析 (5 大领域)
-- 新增组织关系网络图 (Amazon 团队结构)
-- 添加协作深度分析 (JEP 521 案例)
-- 新增知识传承网络分析
+**文档版本**: 2.0
+**最后更新**: 2026-03-23
+**本次更新**:
+- **新增**: Cesar Soares (@JohnTortugo, Amazon LLC) — 46 PRs, C2 编译器/Runtime/性能
+- **新增**: Chad Rakoczy (@chadrako, @Corretto) — 18 PRs, NMethod 重定位/AArch64
+- **新增**: Oliver Gillespie (@olivergillespie) — 18 PRs, Runtime/安全/性能 (通过 Corretto 项目确认)
+- **方法**: 通过 openjdk/jdk 源码中 `Copyright ... Amazon.com` 版权声明 (526 个文件) 反查 commit 作者和 GitHub 公司信息
+- **更新**: 总 PR 数从 159 更正为 1,048+ (含 Aleksey Shipilev 803+)
+- **更新**: 贡献者数从 4 更正为 7 (移除错误归属的 Nick Gasson，新增 3 人)
+- **修正**: Kelvin Nilsen GitHub 补充为 @kdnilsen
 
-[→ 返回组织索引](../../by-contributor/README.md)
+[← 返回组织索引](README.md)
