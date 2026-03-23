@@ -82,7 +82,7 @@
 | [SAP](/contributors/orgs/sap.md) | 700+ | PPC, AIX | [查看详情](/contributors/orgs/sap.md) |
 | [Google](/contributors/orgs/google.md) | 170+ | 核心库，编译器 | [查看详情](/contributors/orgs/google.md) |
 | [Amazon](/contributors/orgs/amazon.md) | 165+ | AArch64, 编译器 | [查看详情](/contributors/orgs/amazon.md) |
-| [阿里巴巴](/contributors/orgs/alibaba.md) | 407 | 核心库, C2, GC, HotSpot Runtime | [查看详情](/contributors/orgs/alibaba.md) |
+| [阿里巴巴](/contributors/orgs/alibaba.md) | 380 | 核心库, C2, GC, HotSpot Runtime | [查看详情](/contributors/orgs/alibaba.md) |
 | [Red Hat](/contributors/orgs/redhat.md) | 668+ | C2 编译器, HotSpot Runtime, AArch64 | [查看详情](/contributors/orgs/redhat.md) |
 | [字节跳动](/contributors/orgs/bytedance.md) | 25 | RISC-V | [查看详情](/contributors/orgs/bytedance.md) |
 | [龙芯](/contributors/orgs/loongson.md) | 50+ | LoongArch | [查看详情](/contributors/orgs/loongson.md) |

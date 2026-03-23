@@ -33,9 +33,9 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 205 (核心+PR贡献者) + 202 (测试) = 407 |
+| **Integrated PRs** | 178 (核心+PR贡献者) + 202 (测试) = 380 |
 | **Git Commits (次要)** | 2 (1 位次要贡献者) |
-| **贡献者数** | 11 (4 核心 + 5 PR贡献者 + 1 次要 + 1 测试) |
+| **贡献者数** | 10 (4 核心 + 4 PR贡献者 + 1 次要 + 1 测试) |
 | **活跃时间** | 2021 - 至今 |
 | **主要领域** | 核心库、C2 编译器、AArch64、ZGC、RISC-V、HotSpot Runtime |
 | **Dragonwell** | [Alibaba Dragonwell](https://github.com/dragonwell-project/dragonwell8), [Dragonwell Team](dragonwell.md) |
@@ -62,15 +62,15 @@
 | 贡献者 | Profile | PRs | 角色 | 主要领域 |
 |--------|---------|-----|------|----------|
 | Denghui Dong (董登辉) | [@D-D-H](https://github.com/D-D-H) | 36 | Committer | HotSpot Runtime, 编译器, GC |
-| Guanqiang Han (韩关强) | [@hgqxjj](https://github.com/hgqxjj) | 27 | Author | C2 编译器, GC, Runtime |
 | Max Xing | [@MaxXSoft](https://github.com/MaxXSoft) | 16 | Author | RISC-V, C2 编译器, HotSpot |
 | Long Yang (杨龙) | [@yanglong1010](https://github.com/yanglong1010) | 3 | Author | JFR, Runtime |
 | [Lingjun Cao](../../by-contributor/profiles/lingjun-cao.md) | [@lingjun-cg](https://github.com/lingjun-cg) | 2 | Author | DecimalFormat 性能 |
 
-> **新增贡献者说明**:
-> - **Denghui Dong** (36 PRs): 通过 openjdk/jdk 源码 `Copyright (c) [year], Alibaba` 版权声明和 [Dragonwell 项目贡献](https://github.com/dragonwell-project/dragonwell11) 确认为阿里巴巴。曾 sponsor Kuai Wei 的 PR。活跃于 2021-2024。
-> - **Guanqiang Han** (27 PRs): 通过 openjdk/jdk 源码 Alibaba 版权文件的 commit 历史确认。2025 年开始贡献，专注 C2 编译器和 GC 修复。
-> - **Long Yang** (3 PRs): GitHub 公司标注为 @Alibaba，位于杭州。专注 JFR 和 Runtime。
+> **贡献者归属确认**:
+> - **Denghui Dong** (36 PRs): GitHub 未标注公司，但通过 [Dragonwell 项目 14 个 PR](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:D-D-H) + sponsor Kuai Wei PR + Alibaba 研究论文共同作者 确认为阿里巴巴。活跃于 2021-2024。
+> - **Max Xing** (16 PRs): GitHub 公司标注 "MaxXSoft"(个人品牌)，但通过 [Dragonwell 项目贡献](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:MaxXSoft) 确认关联。
+> - **Long Yang** (3 PRs): GitHub 公司标注为 @Alibaba，位于杭州。
+> - ~~**Guanqiang Han** (27 PRs)~~: 经核实，仅修改过 Alibaba 版权文件，无 Dragonwell 项目贡献且 GitHub 未标注公司，归属证据不足，已移除。
 
 ### 次要贡献者
 
@@ -97,8 +97,8 @@
 | 领域 | 贡献者数 | 关键 PR | 相关文档 |
 |------|---------|---------|----------|
 | **核心库优化** | 2 | 60+ | 字符串优化, I/O 优化 |
-| **HotSpot Runtime** | 2 | 40+ | JFR, Safepoint, Thread |
-| **C2 编译器** | 3 | 30+ | [C2 优化阶段](../../by-topic/core/jit/c2-phases.md) |
+| **HotSpot Runtime** | 2 | 30+ | JFR, Safepoint, Thread |
+| **C2 编译器** | 2 | 20+ | [C2 优化阶段](../../by-topic/core/jit/c2-phases.md) |
 | **G1 GC** | 2 | 5+ | [G1 GC](../../by-topic/core/gc/g1-gc.md) |
 | **ZGC** | 2 | 5+ | [ZGC](../../by-topic/core/gc/zgc.md) |
 | **AArch64** | 1 | 2 | [AArch64](../../by-topic/core/arch/aarch64.md) |
@@ -658,16 +658,17 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 ---
 
-> **文档版本**: 4.0
+> **文档版本**: 4.1
 > **最后更新**: 2026-03-23
-> **本次更新**:
-> - **新增**: Denghui Dong (董登辉, @D-D-H) — 36 PRs, HotSpot Runtime/编译器/GC (通过源码 Alibaba 版权 + Dragonwell 项目确认)
-> - **新增**: Guanqiang Han (韩关强, @hgqxjj) — 27 PRs, C2 编译器/GC/Runtime (通过源码 Alibaba 版权文件 commit 历史确认)
-> - **新增**: Long Yang (杨龙, @yanglong1010) — 3 PRs, JFR/Runtime (GitHub 公司标注 @Alibaba)
-> - **方法**: 通过搜索 openjdk/jdk 源码中 `Copyright (c) [year], Alibaba` 版权声明反查 git commit 和 PR 作者
-> - **更新**: 总 PR 数从 341 更正为 407 (核心+PR贡献者 205 + 测试 202)
-> - **更新**: 贡献者数从 8 更正为 11 (4 核心 + 5 PR贡献者 + 1 次要 + 1 测试)
-> - **更新**: 技术领域新增 HotSpot Runtime，C2 编译器贡献者数从 1 更正为 3
+> **本次更新 (v4.1)**:
+> - **移除**: Guanqiang Han (@hgqxjj, 27 PRs) — 经核实归属证据不足 (无 Dragonwell 贡献，GitHub 未标注公司，仅修改过 Alibaba 版权文件)
+> - **修正**: 总 PR 数从 407 修正为 380 (核心+PR贡献者 178 + 测试 202)
+> - **修正**: 贡献者数从 11 修正为 10
+>
+> **v4.0 更新**:
+> - **新增**: Denghui Dong (@D-D-H) — 36 PRs (Dragonwell 项目 + sponsor 确认)
+> - **新增**: Long Yang (@yanglong1010) — 3 PRs (GitHub 公司 @Alibaba)
+> - **方法**: 通过 openjdk/jdk 源码中 `Copyright (c) [year], Alibaba` 版权声明反查
 >
 > **历史更新**:
 > - v3.1: 修正 Max Xing 和 SendaoYan PR 数

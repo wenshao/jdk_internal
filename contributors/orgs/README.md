@@ -30,7 +30,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | [SAP](sap.md) | 734+ | 30+ | PPC, AIX, 构建 | SapMachine |
 | [Red Hat](redhat.md) | 668+ | 5 | C2 编译器, HotSpot Runtime, AArch64 | Red Hat OpenJDK |
 | [Amazon](amazon.md) | 1,048+ | 7 | Shenandoah GC, C2 编译器, Runtime | Corretto |
-| [Alibaba](alibaba.md) | 407 | 11 | 核心库, C2, GC, HotSpot Runtime | Dragonwell |
+| [Alibaba](alibaba.md) | 380 | 10 | 核心库, C2, GC, HotSpot Runtime | Dragonwell |
 | [IBM](ibm.md) | 113+ | 25+ | s390x, JVM | Semeru |
 | [ARM](arm.md) | 50+ | 2+ | AArch64, Build | - |
 | [Loongson](loongson.md) | 30+ | 5+ | LoongArch | Loongson JDK |
@@ -552,7 +552,7 @@ OpenJDK 核心贡献者在组织间的流动对技术方向有深远影响：
 | | [ARM](arm.md) (英国) | 50+ | - |
 | | Oracle 欧洲团队 | - | - |
 | **中国** | | | |
-| | [Alibaba](alibaba.md) | 407 | Dragonwell |
+| | [Alibaba](alibaba.md) | 380 | Dragonwell |
 | | [Loongson](loongson.md) | 30+ | Loongson JDK |
 | | [ByteDance](bytedance.md) | 25 | - |
 | | [ISCAS PLCT](iscas-plct.md) | 20+ | - |
