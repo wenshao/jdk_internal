@@ -28,7 +28,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 |------|----------------|----------|----------|------------|
 | [Oracle](oracle.md) | 4,200+ | 320+ | 全领域 | Oracle JDK |
 | [SAP](sap.md) | 734+ | 30+ | PPC, AIX, 构建 | SapMachine |
-| [Red Hat](redhat.md) | 200+ | 5+ | Shenandoah GC, AArch64, Leyden | Red Hat OpenJDK |
+| [Red Hat](redhat.md) | 668+ | 5 | C2 编译器, HotSpot Runtime, AArch64 | Red Hat OpenJDK |
 | [Amazon](amazon.md) | 138+ | 20+ | Shenandoah GC, AArch64 | Corretto |
 | [Alibaba](alibaba.md) | 121 | 10+ | 核心库, C2, GC | Dragonwell |
 | [IBM](ibm.md) | 113+ | 25+ | s390x, JVM | Semeru |
@@ -36,7 +36,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | [Loongson](loongson.md) | 30+ | 5+ | LoongArch | Loongson JDK |
 | [ByteDance](bytedance.md) | 25 | 5+ | RISC-V 向量 | - |
 | [ISCAS PLCT](iscas-plct.md) | 20+ | 5+ | RISC-V | - |
-| [Intel](intel.md) | 15+ | 1 | Vector API, x86_64 | - |
+| [Intel](intel.md) | 146+ | 2 | Vector API, x86_64, SuperWord | - |
 | [Google](google.md) | ~14 | ~3 | 构建系统, javac | - |
 | [Tencent](tencent.md) | 198+ | 3 | 构建稳定性, 编译器, GC, Vector API | Kona |
 | [Microsoft](microsoft.md) | 少量 | ~3-5 | Azure 优化, Build | Microsoft Build of OpenJDK |

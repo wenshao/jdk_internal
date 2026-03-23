@@ -25,10 +25,10 @@ Intel 通过 Vector API 项目参与 OpenJDK 开发，专注于 x86_64 架构的
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 15+ |
-| **贡献者数** | 1 |
+| **Integrated PRs** | 146+ |
+| **贡献者数** | 2 |
 | **活跃时间** | 2021 - 至今 |
-| **主要领域** | Vector API, x86_64 |
+| **主要领域** | Vector API, x86_64, SuperWord |
 
 > **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。
 
@@ -36,11 +36,16 @@ Intel 通过 Vector API 项目参与 OpenJDK 开发，专注于 x86_64 架构的
 
 ## 2. 贡献者
 
-| 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
-|--------|--------|-----|------|----------|------|
-| [Jatin Bhateja](../../by-contributor/profiles/jatin-bhateja.md) | [@jatin-bhateja](https://github.com/jatin-bhateja) | 15+ | Author | Vector API | [详情](../../by-contributor/profiles/jatin-bhateja.md) |
+| 排名 | 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
+|------|--------|--------|-----|------|----------|------|
+| 1 | Jatin Bhateja | [@jatin-bhateja](https://github.com/jatin-bhateja) | 109 | Committer | Vector API, x86_64 intrinsics | [详情](../../by-contributor/profiles/jatin-bhateja.md) |
+| 2 | Swati Sharma | [@sviswa7](https://github.com/sviswa7) | 37 | Author | SuperWord, Vector API, x86_64 | - |
 
-**小计**: 15+ PRs
+**总计**: 146+ PRs
+
+> **更正说明**:
+> - **Jatin Bhateja** 实际 PR 数为 109 (之前记录为 15+)，GitHub 公司标注 @intel
+> - **Swati Sharma** (@sviswa7, 37 PRs) 之前遗漏。通过 PR 审查关系确认 Intel 关联 (由 @jatin-bhateja 审查)，专注 x86 SuperWord/向量化
 
 ---
 
