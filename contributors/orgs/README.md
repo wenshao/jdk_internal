@@ -57,7 +57,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | **Red Hat** | - | - | ✅ 创始 (历史) | [Andrew Dinn](../../by-contributor/profiles/andrew-dinn.md) |
 | **Amazon** | - | - | ✅ 维护 | [William Kemper](../../by-contributor/profiles/william-kemper.md), [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) |
 | **Alibaba** | ✅ | ✅ | - | [Yude Lin](../../by-contributor/profiles/yude-lin.md), [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) |
-| **Tencent** | ✅ | - | - | [Tongbao Zhang](../../by-contributor/profiles/tongbao-zhang.md) |
+| **Tencent** | ✅ | ✅ (修复) | ✅ (修复) | [Jie Fu](https://github.com/DamonFool), [Tongbao Zhang](../../by-contributor/profiles/tongbao-zhang.md) |
 
 ### 编译器 (JIT)
 
@@ -69,6 +69,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | **Alibaba** | ✅ | - | - | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md), [Denghui Dong](https://github.com/D-D-H) |
 | **Intel** | ✅ (向量化) | - | - | [Jatin Bhateja](../../by-contributor/profiles/jatin-bhateja.md), [Swati Sharma](https://github.com/sviswa7) |
 | **IBM** | ✅ (s390x) | - | - | [Amit Kumar](../../by-contributor/profiles/amit-kumar.md) |
+| **Tencent** | ✅ (测试/修复) | ✅ (测试/修复) | - | [Jie Fu (傅杰)](https://github.com/DamonFool) (187 PRs) |
 
 ### 架构移植
 
@@ -103,6 +104,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | 组织 | 构建系统 | 测试框架 | CI/CD | 代表贡献者 |
 |------|----------|----------|-------|------------|
 | **Oracle** | ✅ 核心 | ✅ | ✅ | [Magnus Ihse Bursie](../../by-contributor/profiles/magnus-ihse-bursie.md) |
+| **Tencent** | ✅ (稳定性) | ✅ (修复) | - | [Jie Fu (傅杰)](https://github.com/DamonFool) — 构建稳定性守护者 (126+ PRs) |
 | **SAP** | ✅ | ✅ | - | [Matthias Baesken](../../by-contributor/profiles/matthias-baesken.md) |
 | **ARM** | ✅ | - | - | [Pankaj Bansal](../../by-contributor/profiles/pankaj-bansal.md) |
 
