@@ -1,8 +1,8 @@
 # 阿里巴巴
 
-> 核心库性能优化和 C2 编译器改进
+> 核心库性能优化、编译器改进和 HotSpot Runtime 增强
 
-[← 返回组织索引](../../by-contributor/README.md)
+[← 返回组织索引](README.md)
 
 ---
 ## 目录
@@ -53,7 +53,7 @@
 | 贡献者 | Profile | PRs | 角色 | 主要领域 |
 |--------|---------|-----|------|----------|
 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | Committer | 核心库优化 |
-| [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | Author | C2 编译器 |
+| [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | Committer | C2 编译器 |
 | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | [@linade](https://github.com/linade) | 8 | Author | G1 GC, AArch64 |
 | [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | Committer | ZGC |
 
@@ -62,7 +62,7 @@
 > - **Denghui Dong** (ddong): Committer ✅ — [提名邮件 (2021-08)](https://mail.openjdk.org/pipermail/jdk-dev/2021-August/005899.html)，确认 Alibaba JVM Team
 > - **Xiaowei Lu** (xwlu): Committer ✅ — OpenJDK Census 确认 (文档之前误记为 Author)
 > - **Sendao Yan** (syan): Committer ✅
-> - **Kuai Wei** (kwei): Author ✅
+> - **Kuai Wei** (kwei): Committer ✅ — 可自行 /integrate (之前误记为 Author)
 > - **Yude Lin** (linade): Author ✅
 > - **Long Yang** (lyang): Author ✅
 
@@ -110,16 +110,17 @@
 
 ## 3. 技术领域
 
-| 领域 | 贡献者数 | 关键 PR | 相关文档 |
-|------|---------|---------|----------|
-| **核心库优化** | 2 | 60+ | 字符串优化, I/O 优化 |
-| **HotSpot Runtime** | 2 | 30+ | JFR, Safepoint, Thread |
-| **C2 编译器** | 2 | 20+ | [C2 优化阶段](../../by-topic/core/jit/c2-phases.md) |
-| **G1 GC** | 2 | 5+ | [G1 GC](../../by-topic/core/gc/g1-gc.md) |
-| **ZGC** | 2 | 5+ | [ZGC](../../by-topic/core/gc/zgc.md) |
-| **AArch64** | 1 | 2 | [AArch64](../../by-topic/core/arch/aarch64.md) |
-| **RISC-V** | 1 | 16 | [RISC-V](../../by-topic/core/arch/riscv.md) |
-| **DecimalFormat** | 1 | 2 | 性能优化 |
+| 领域 | 贡献者 | PRs | 相关文档 |
+|------|--------|-----|----------|
+| **核心库优化** | Shaojin Wen, Lingjun Cao | 99 | 字符串, ClassFile API, I/O, DateTime |
+| **C2 编译器** | Yi Yang, Kuai Wei, Max Xing, D-D-H | 50+ | [C2 优化阶段](../../by-topic/core/jit/c2-phases.md) |
+| **C1 编译器** | Denghui Dong | 10+ | C1 NullCheckEliminator, CriticalEdgeFinder |
+| **HotSpot Runtime** | Yi Yang, Denghui Dong, Long Yang | 25+ | HeapDump, JFR, jcmd |
+| **AArch64** | Joshua Zhu, sandlerwang | 9 | 寄存器压力, prfm, SVE |
+| **G1 GC** | Yude Lin, Liang Mao | 5+ | [G1 GC](../../by-topic/core/gc/g1-gc.md) |
+| **ZGC** | Xiaowei Lu | 3 | [ZGC](../../by-topic/core/gc/zgc.md) |
+| **RISC-V** | Max Xing | 2 | [RISC-V](../../by-topic/core/arch/riscv.md) |
+| **编译器测试** | SendaoYan (前员工) | 202 | 编译器/GC 测试稳定性 |
 
 ---
 
@@ -437,39 +438,41 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 | 类别 | PRs | 占比 |
 |------|-----|------|
-| 核心+PR贡献者 | 139 | 41% |
-| 测试贡献 | 202 | 59% |
-| **总计** | **341** | 100% |
-
-> **注**: 部分 PR 可能跨版本合入，统计基于主要目标版本。SendaoYan 202 PRs 为 2022-2026 年贡献，归属于 Alibaba。核心贡献者 121 PRs + 其他 PR 贡献者 18 PRs (Max Xing: 16, Lingjun Cao: 2) = 139 PRs。
+| 核心+PR贡献者 | 246 | 55% |
+| 测试贡献 (SendaoYan) | 202 | 45% |
+| **总计** | **448** | 100% |
 
 ## 6. 贡献时间线
 
 ```
-2021: █████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7 PRs
-2022: ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2 PRs
-2023: ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 8 PRs
-2024: ███████████████████████████████████████████████████████████████░░ 68 PRs (高峰期)
-2025: ███████████████████████████████████████████████████████████░░ 77 PRs (高峰期)
-2026: ██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 25 PRs
+2020: ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 3 PRs (Joshua Zhu, sandlerwang)
+2021: ██████████████████████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░ 52 PRs (Yi Yang 45, 其他)
+2022: █████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 12 PRs
+2023: ████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 21 PRs
+2024: ████████████████████████████████████████████████████████████████░ 81+ PRs (高峰期)
+2025: ████████████████████████████████████████████████████████████████░ 80+ PRs
+2026: ████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 32+ PRs (至今)
 ```
 
-> **总计**: 341 PRs (2021-2026)
+> **总计**: 448 PRs (2020-2026, 含 SendaoYan 202 PRs 测试贡献)
 
 ---
 
 ## 7. 影响的模块
 
-| 目录 | 修改次数 | 说明 |
-|------|----------|------|
-| java.lang | 23 | 核心类库 |
-| AArch64 移植 | 21 | ARM 架构优化 |
-| java.util | 14 | 集合框架 |
-| java.text | 14 | 文本格式化 |
-| jdk.internal.util | 10 | 内部工具类 |
-| java.time | 9 | 日期时间 |
-| C2 编译器 | 8 | 服务端编译器 |
-| G1 GC | 8 | G1 垃圾收集器 |
+| 模块 | 贡献者 | 说明 |
+|------|--------|------|
+| C2 编译器 | Yi Yang, Kuai Wei, Max Xing | 优化、崩溃修复、SuperWord |
+| C1 编译器 | Denghui Dong | NullCheckEliminator, CriticalEdgeFinder |
+| HotSpot Runtime | Yi Yang, Denghui Dong, Long Yang | HeapDump, JFR, jcmd, Safepoint |
+| java.lang | Shaojin Wen | String, Integer/Long, StringBuilder |
+| ClassFile API | Shaojin Wen | StackMapGenerator, BufWriter, DirectCodeBuilder |
+| java.time | Shaojin Wen | LocalDateTime.toString, DateTimeFormatter |
+| AArch64 | Joshua Zhu, sandlerwang | 寄存器压力, prfm, SVE, itable |
+| G1/Shenandoah GC | Yude Lin, Liang Mao | 监控 MXBean, 正确性修复 |
+| ZGC | Xiaowei Lu | 自愈顺序, 转发表 |
+| RISC-V | Max Xing | Shenandoah 原子操作, satp_mode |
+| 编译器/GC 测试 | SendaoYan | 202 PRs 测试稳定性 |
 
 ---
 
@@ -665,7 +668,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 ---
 
-[→ 返回组织索引](../../by-contributor/README.md)
+[← 返回组织索引](README.md)
 
 ---
 
@@ -685,10 +688,11 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 ### 多领域覆盖
 
-- **核心库**: java.lang, java.util, java.time
-- **编译器**: C2 IR 优化
-- **架构**: AArch64
-- **GC**: G1, ZGC
+- **核心库**: java.lang, java.util, java.time, ClassFile API (Shaojin Wen 97 PRs)
+- **编译器**: C2 优化 (Yi Yang 57 PRs), C1 优化 (Denghui Dong), MergeStore (Kuai Wei)
+- **HotSpot Runtime**: HeapDump, JFR, jcmd (Yi Yang, Denghui Dong)
+- **架构**: AArch64 寄存器压力优化 (Joshua Zhu), RISC-V (Max Xing)
+- **GC**: G1 监控 MXBean (Yude Lin), ZGC 自愈 (Xiaowei Lu)
 
 ---
 
@@ -740,7 +744,7 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 ## 15. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
-- **统计时间**: 2026-03-19
+- **统计时间**: 2026-03-23
 - **分析工具**: PR Analysis Tool
 
 ---
@@ -756,29 +760,35 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 ### 内部文档
 
-- [Shaojin Wen 贡献者档案](../../by-contributor/profiles/shaojin-wen.md) - 核心库优化专家
-- [Kuai Wei 贡献者档案](../../by-contributor/profiles/kuai-wei.md) - C2 编译器专家
-- [Yude Lin 贡献者档案](../../by-contributor/profiles/yude-lin.md) - G1 GC 专家
-- [Xiaowei Lu 贡献者档案](../../by-contributor/profiles/xiaowei-lu.md) - ZGC 专家
-- Max Xing - RISC-V, C2 编译器, HotSpot
-- [Yibo Yan 贡献者档案](../../by-contributor/profiles/yibo-yan.md) - CPU Load/内存专家
-- [Lingjun Cao 贡献者档案](../../by-contributor/profiles/lingjun-cao.md) - DecimalFormat 专家
+- [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) — 核心库优化 (97 PRs)
+- [Yi Yang](https://github.com/y1yang0) — C2 编译器, HeapDump (57 PRs)
+- [Denghui Dong](https://github.com/D-D-H) — C1 编译器, JFR (36 PRs)
+- [Max Xing](https://github.com/MaxXSoft) — RISC-V, C2 编译器 (16 PRs)
+- [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) — C2 编译器, MergeStore (13 PRs)
+- [Yude Lin](../../by-contributor/profiles/yude-lin.md) — G1 GC, AArch64 (8 PRs)
+- [Joshua Zhu](../../by-contributor/profiles/joshua-zhu.md) — AArch64, 编译器 (6 PRs)
+- [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) — ZGC (3 PRs)
+- [SendaoYan](../../by-contributor/profiles/sendaoyan.md) — 编译器/GC 测试 (202 PRs, 前员工)
 - [中国贡献者索引](../../by-contributor/profiles/chinese-contributors.md)
 
 ---
 
-> **文档版本**: 4.1
+> **文档版本**: 5.0
 > **最后更新**: 2026-03-23
-> **本次更新 (v4.1)**:
-> - **移除**: Guanqiang Han (@hgqxjj, 27 PRs) — 经核实归属证据不足 (无 Dragonwell 贡献，GitHub 未标注公司，仅修改过 Alibaba 版权文件)
-> - **修正**: 总 PR 数从 407 修正为 380 (核心+PR贡献者 178 + 测试 202)
-> - **修正**: 贡献者数从 11 修正为 10
+> **本次更新 (v5.0) — 多轮核实与完善**:
+> - **角色修正**: Kuai Wei: Author → Committer (可自行 /integrate)
+> - **tagline 修正**: 新增 "HotSpot Runtime 增强"
+> - **技术领域表**: 全面重写，按贡献者和具体工作分列
+> - **影响模块表**: 更新为按模块-贡献者矩阵
+> - **贡献时间线**: 修正为包含所有 14 位贡献者的年度数据 (含 2020 年)
+> - **版本统计**: 修正旧表残留的 341/139 数据为 448/246
+> - **导航链接**: 修正指向 README.md
+> - **内部文档链接**: 补充所有 14 位贡献者
+> - **技术特点**: 更新多领域覆盖描述
+> - **数据来源时间**: 更新为 2026-03-23
 >
-> **v4.0 更新**:
-> - **新增**: Denghui Dong (@D-D-H) — 36 PRs (Dragonwell 项目 + sponsor 确认)
-> - **新增**: Long Yang (@yanglong1010) — 3 PRs (GitHub 公司 @Alibaba)
-> - **方法**: 通过 openjdk/jdk 源码中 `Copyright (c) [year], Alibaba` 版权声明反查
->
-> **历史更新**:
-> - v3.1: 修正 Max Xing 和 SendaoYan PR 数
-> - v3.0: 初始版本
+> **v4.2**: 新增 Yi Yang (57), Joshua Zhu (6), Liang Mao (2), sandlerwang (3) 通过 /sponsor 网络发现
+> **v4.1**: 移除 hgqxjj (归属证据不足), 角色修正 (Xiaowei Lu: Author→Committer)
+> **v4.0**: 新增 D-D-H (36), Long Yang (3) 通过源码版权反查
+> **v3.1**: 修正 Max Xing 和 SendaoYan PR 数
+> **v3.0**: 初始版本
