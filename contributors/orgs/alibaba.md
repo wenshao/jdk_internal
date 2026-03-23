@@ -55,7 +55,16 @@
 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | Committer | 核心库优化 |
 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | Author | C2 编译器 |
 | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | [@linade](https://github.com/linade) | 8 | Author | G1 GC, AArch64 |
-| [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | Author | ZGC |
+| [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | Committer | ZGC |
+
+> **OpenJDK Census 角色核实** (2026-03-23):
+> - **Shaojin Wen** (swen): Committer ✅ — [提名邮件 (2024-08)](https://mail.openjdk.org/pipermail/jdk-dev/2024-August/009326.html)，由 Claes Redestad (Oracle) 提名，确认 Alibaba
+> - **Denghui Dong** (ddong): Committer ✅ — [提名邮件 (2021-08)](https://mail.openjdk.org/pipermail/jdk-dev/2021-August/005899.html)，确认 Alibaba JVM Team
+> - **Xiaowei Lu** (xwlu): Committer ✅ — OpenJDK Census 确认 (文档之前误记为 Author)
+> - **Sendao Yan** (syan): Committer ✅
+> - **Kuai Wei** (kwei): Author ✅
+> - **Yude Lin** (linade): Author ✅
+> - **Long Yang** (lyang): Author ✅
 
 ### 其他 PR 贡献者
 
