@@ -12,9 +12,9 @@
 | **GitHub** | [@sandlerwang](https://github.com/sandlerwang) |
 | **OpenJDK** | Author |
 | **PRs** | [3 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Asandlerwang+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | AArch64, Parallel GC |
+| **主要领域** | AArch64 (Graviton), Parallel GC, Vector |
 | **活跃时间** | 2020-2024 |
-| **位置** | 中国 |
+| **关注领域** | AWS Graviton (AArch64), Panama Vector API (forks: aws-graviton-getting-started, panama-vector) |
 | **归属确认** | [Dragonwell 10 PRs](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:sandlerwang) + D-D-H sponsor |
 
 > **数据调查时间**: 2026-03-23

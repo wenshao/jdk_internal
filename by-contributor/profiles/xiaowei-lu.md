@@ -28,6 +28,7 @@
 | **邮箱** | lxw263044@alibaba-inc.com |
 | **GitHub** | [@weixlu](https://github.com/weixlu) |
 | **ORCID** | [0009-0001-6990-5081](https://orcid.org/0009-0001-6990-5081) |
+| **OpenJDK** | Committer (xwlu) |
 | **Integrated PRs** | [3](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aweixlu+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | ZGC, Jade GC, 垃圾回收器, 内存模型 |
 | **活跃时间** | 2021 - 至今 |

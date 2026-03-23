@@ -632,6 +632,21 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 → [C2 编译器](../../by-topic/core/jit/c2-phases.md) | [Kuai Wei 贡献者档案](../../by-contributor/profiles/kuai-wei.md)
 
+### Jade GC (EuroSys 2024)
+
+**论文**: [Jade: A High-throughput Concurrent Copying Garbage Collector](https://dl.acm.org/doi/10.1145/3627703.3650087) (EuroSys 2024, Athens)
+
+**阿里巴巴共同作者**: [Liang Mao](../../by-contributor/profiles/liang-mao.md), [Yude Lin](../../by-contributor/profiles/yude-lin.md), [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md), [Denghui Dong](../../by-contributor/profiles/denghui-dong.md)
+
+**合作机构**: 上海交通大学 IPADS 实验室 (Mingyu Wu, Haibo Chen, Binyu Zang)
+
+**技术贡献**:
+- Group-wise collection 缩短预回收周期
+- 分代堆布局 + 单阶段算法最大化 Young GC 吞吐量
+- 兼顾短暂停和高 GC 效率
+
+→ [PDF](https://ipads.se.sjtu.edu.cn/_media/publications/wu-eurosys24.pdf) | [ACM DL](https://dl.acm.org/doi/10.1145/3627703.3650087)
+
 ---
 
 ## 11. 相关主题文档

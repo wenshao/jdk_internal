@@ -18,12 +18,15 @@
 
 | 属性 | 值 |
 |------|-----|
-| **姓名** | Yude Lin |
-| **当前组织** | 阿里巴巴 (Alibaba) |
+| **姓名** | Yude Lin (林育德) |
+| **当前组织** | [阿里巴巴 (Alibaba)](/contributors/orgs/alibaba.md) |
 | **GitHub** | [@linade](https://github.com/linade) |
+| **OpenJDK** | Author (linade) |
 | **Integrated PRs** | [8](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Alinade+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | G1 GC, AArch64 |
+| **主要领域** | G1 GC, Shenandoah GC, AArch64 |
 | **活跃时间** | 2021 - 2024 |
+| **论文** | "Jade: A High-throughput Concurrent Copying GC" (EuroSys 2024, 第 3 作者) |
+| **归属确认** | [Dragonwell 12 PRs](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:linade) + Jade 论文 Alibaba 署名 |
 
 ---
 

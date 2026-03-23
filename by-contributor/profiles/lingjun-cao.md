@@ -20,9 +20,12 @@
 | **姓名** | Lingjun Cao (曹令军) |
 | **GitHub** | [@lingjun-cg](https://github.com/lingjun-cg) |
 | **邮箱** | lingjun.cg@alibaba-inc.com |
-| **当前组织** | [Alibaba](../../contributors/orgs/alibaba.md) |
-| **角色** | Author |
-| **Commits** | 2 (mainline OpenJDK) |
+| **当前组织** | [Alibaba](/contributors/orgs/alibaba.md) |
+| **位置** | 杭州 |
+| **OpenJDK** | Author |
+| **PRs** | [2 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Alingjun-cg+is%3Aclosed+label%3Aintegrated) |
+| **社区参与** | [OpenJDK i18n-dev 邮件列表](https://www.mail-archive.com/i18n-dev@openjdk.org/msg03682.html) (DecimalFormat 性能讨论) |
+| **Dragonwell** | [Dragonwell8 Extended Edition Release Notes](https://github.com/dragonwell-project/dragonwell8/wiki/Alibaba-Dragonwell8-Extended-Edition-Release-Notes) (PR #635) |
 | **主要领域** | DecimalFormat, 性能优化, java.text |
 | **活跃时间** | 2024 |
 | **其他贡献** | Alibaba Dragonwell (内部 OpenJDK 发行版) |
