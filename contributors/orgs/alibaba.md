@@ -29,21 +29,18 @@
 
 ## 1. 概览
 
-阿里巴巴通过 Dragonwell 团队参与 OpenJDK 开发，专注于核心库性能优化、字符串处理和 C2 编译器改进。
+阿里巴巴通过 Dragonwell/JVM 团队参与 OpenJDK 开发，主要贡献集中在核心库性能优化、C2/C1 编译器改进、HotSpot Runtime 增强和 AArch64/RISC-V 架构支持。
 
 | 指标 | 值 |
 | Issue | 标题 | 类型 | 版本 | 分析 |
 |-------|------|------|------|------|
-| **Integrated PRs** | 246 (核心+PR贡献者) + 202 (测试) = 448 |
-| **Git Commits (次要)** | 2 (1 位次要贡献者) |
+| **Integrated PRs** | 246 (当前) + 202 (前员工测试) = 448 |
 | **贡献者数** | 13 (6 Committer + 7 Author) |
 | **活跃时间** | 2021 - 至今 |
 | **主要领域** | 核心库、C2 编译器、AArch64、ZGC、RISC-V、HotSpot Runtime |
 | **Dragonwell** | [Alibaba Dragonwell](https://github.com/dragonwell-project/dragonwell8), [Dragonwell Team](dragonwell.md) |
 
-> **统计说明**: 
-> - 核心/测试贡献者使用 GitHub Integrated PRs 统计
-> - 次要贡献者使用 git commit 邮箱 (`@alibaba-inc.com`) 统计
+> **统计说明**: 使用 GitHub Integrated PRs 统计。OpenJDK Committer 使用 `@openjdk.org` 邮箱提交代码，因此 git commits 按邮箱统计不准确。
 
 ---
 
@@ -188,7 +185,7 @@ JDK 25 继续了核心库性能优化的工作。
 | [8333462](../../by-pr/8333/8333462.md) | DecimalFormat 构造函数性能回归 | Lingjun Cao | 性能优化 | [详情](../../by-pr/8333/8333462.md) |
 | [8323795](../../by-pr/8323/8323795.md) | jcmd Compiler.codecache should print total size | Yi Yang | 功能增强 | [详情](../../by-pr/8323/8323795.md) |
 
-**JDK 24 统计**: 14 PRs
+**JDK 24 统计**: 11 PRs (Max Xing: 3, Shaojin Wen: 2, Lingjun Cao: 2, Liang Mao: 1, Denghui Dong: 1, Joshua Zhu: 1, Yi Yang: 1)
 
 ### JDK 23 (GA 2024-09)
 
