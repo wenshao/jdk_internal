@@ -23,8 +23,8 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 155+ |
-| **上游贡献者** | 2 (1 Reviewer + 1 Committer) |
+| **Integrated PRs** | 167+ |
+| **上游贡献者** | 3 (1 Reviewer + 2 Committer) |
 | **活跃时间** | 2015 - 至今 |
 | **主要领域** | RISC-V Port, AArch64, HotSpot JIT |
 | **毕昇 JDK** | [BiSheng JDK](https://www.openeuler.org/en/other/projects/bishengjdk/) |
@@ -42,8 +42,9 @@
 |------|--------|--------|-----|------|----------|------|
 | 1 | [Fei Yang (杨飞)](../../by-contributor/profiles/fei-yang.md) | [@RealFYang](https://github.com/RealFYang) | 100 | Reviewer | RISC-V, AArch64, C1/C2 JIT | [详情](../../by-contributor/profiles/fei-yang.md) |
 | 2 | Feilong Jiang | [@feilongjiang](https://github.com/feilongjiang) | 55 | Committer | RISC-V | - |
+| 3 | Yadong Wang | [@yadongw](https://github.com/yadongw) | 12 | Committer | RISC-V | - |
 
-**总计**: 155+ PRs (1 Reviewer + 1 Committer)
+**总计**: 167+ PRs (1 Reviewer + 2 Committer)
 
 ### Fei Yang (杨飞) — RISC-V Port Project Lead
 
@@ -56,15 +57,24 @@ Fei Yang 是华为 JVM 团队成员，[OpenJDK RISC-V Port](https://openjdk.org/
 
 ### Feilong Jiang — RISC-V 贡献者
 
-Feilong Jiang 是华为杭州的 RISC-V 贡献者。
+Feilong Jiang 是华为杭州的 RISC-V 贡献者，也经常审查其他 RISC-V 贡献者（如 ByteDance Anjian-Wen）的 PR。
 
-- [CFV: New JDK Committer: Feilong Jiang](https://mail.openjdk.org/pipermail/jdk-dev/2023-June/) (2023-06, 提名确认 "Huawei JVM Team")
+- [CFV: New JDK Committer: Feilong Jiang](https://mail.openjdk.org/pipermail/jdk-dev/2023-June/) (2023-06, 确认 "Huawei JVM Team")
 - 位置: 杭州
 - GitHub company: Huawei
 
+### Yadong Wang — RISC-V 贡献者
+
+Yadong Wang 是华为上海的 RISC-V 贡献者，参与了 RISC-V Port 的早期开发。
+
+- [CFV: New JDK Committer: Yadong Wang](https://mail.openjdk.org/pipermail/jdk-dev/2023-June/007923.html) (2023-06, 确认 "Huawei JDK team")
+- 位置: 上海
+- 代表工作: [8299844: RISC-V: Implement _onSpinWait intrinsic](https://github.com/openjdk/jdk/pull/11921)
+
 > **OpenJDK Census 角色核实** (2026-03-23):
 > - **Fei Yang** (fyang): Reviewer ✅ — [CFV 2022-03](https://mail.openjdk.org/pipermail/jdk-dev/2022-March/006470.html), 确认 "JVM team at Huawei"
-> - **Feilong Jiang** (fjiang): Committer ✅ — [CFV 2023-06](https://mail.openjdk.org/pipermail/jdk-dev/2023-June/007923.html)
+> - **Feilong Jiang** (fjiang): Committer ✅ — [CFV 2023-06](https://mail.openjdk.org/pipermail/jdk-dev/2023-June/)
+> - **Yadong Wang** (yadongw): Committer ✅ — [CFV 2023-06](https://mail.openjdk.org/pipermail/jdk-dev/2023-June/), 确认 "Huawei JDK team"
 
 ---
 
