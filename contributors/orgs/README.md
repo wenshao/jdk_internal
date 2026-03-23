@@ -30,14 +30,14 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | [Amazon](amazon.md) | 1,048+ | 1 | 4 | 1 | Shenandoah GC, C2, Runtime | Corretto |
 | [SAP](sap.md) | 851+ | 3 | 4 | - | PPC, AIX, 构建 | SapMachine |
 | [Red Hat](redhat.md) | 649+ | 4 | - | - | C2 编译器, HotSpot Runtime | Red Hat OpenJDK |
-| [Alibaba](alibaba.md) | 380 | - | 4 | 3 | 核心库, C2, GC, Runtime | Dragonwell |
+| [Alibaba](alibaba.md) | 448 | - | 5 | 6 | 核心库, C2, GC, Runtime | Dragonwell |
 | [IBM](ibm.md) | 239+ | 2 | 2 | - | s390x, 容器/cgroup, AArch64 | Semeru |
 | [Tencent](tencent.md) | 228+ | 2 | - | 2 | 构建稳定性, 编译器, GC, 安全 | Kona |
 | [Intel](intel.md) | 146+ | 1 | - | 1 | Vector API, x86_64, SuperWord | - |
 | [ARM](arm.md) | 31+ | 1 | - | 1 | AArch64, Build | - |
 | [Loongson](loongson.md) | 30+ | - | - | 3+ | LoongArch | Loongson JDK |
 | [ByteDance](bytedance.md) | 25 | - | 1 | - | RISC-V 向量 | - |
-| [ISCAS PLCT](iscas-plct.md) | 20+ | - | - | 1+ | RISC-V | - |
+| [ISCAS PLCT](iscas-plct.md) | 64+ | - | 1 | 1 | RISC-V, 核心库 | - |
 | [Google](google.md) | ~14 | - | - | ~3 | 构建系统, javac | - |
 | [Microsoft](microsoft.md) | 少量 | - | - | ~3 | Azure 优化, Build | Microsoft Build of OpenJDK |
 

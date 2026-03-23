@@ -25,10 +25,10 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 20+ |
-| **贡献者数** | 1+ |
+| **Integrated PRs** | 64+ |
+| **贡献者数** | 2+ |
 | **活跃时间** | 2023 - 至今 |
-| **主要领域** | RISC-V |
+| **主要领域** | RISC-V, 核心库 |
 | **位置** | 杭州 |
 | **PLCT Lab** | [plctlab.org](https://plctlab.org/) |
 
@@ -40,11 +40,15 @@
 
 | 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
 |--------|--------|-----|------|----------|------|
-| Yadong Wang | - | 20+ | Committer | RISC-V | - |
-| Dingli Zhang | - | - | Contributor | RISC-V | - |
+| Dingli Zhang | [@DingliZhang](https://github.com/DingliZhang) | 54 | Committer | RISC-V | - |
+| Glavo | [@Glavo](https://github.com/Glavo) | 10 | Author | 核心库, 国际化, NIO | - |
 
-**小计**: 20+ PRs
+**小计**: 64+ PRs
 
+> **新增贡献者**:
+> - **Dingli Zhang** (54 PRs): GitHub 公司标注 ISCAS。之前 PR 数未记录，经核实为 54 个。
+> - **Glavo** (10 PRs): GitHub 公司标注 @plctlab。通过方法 5 (PR sponsor 关系网络) 发现 — y1yang0 (Alibaba) 曾 sponsor 其 PR。专注核心库/国际化/NIO 优化。
+>
 > **注**:
 > - Fei Yang (杨飞) 是 **华为 (Huawei)** 员工，不属于 ISCAS PLCT
 > - Anjian-Wen 是 **字节跳动** 员工，专注于 RISC-V 向量指令，不属于 ISCAS PLCT

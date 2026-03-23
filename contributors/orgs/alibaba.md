@@ -33,9 +33,9 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 178 (核心+PR贡献者) + 202 (测试) = 380 |
+| **Integrated PRs** | 246 (核心+PR贡献者) + 202 (测试) = 448 |
 | **Git Commits (次要)** | 2 (1 位次要贡献者) |
-| **贡献者数** | 10 (4 核心 + 4 PR贡献者 + 1 次要 + 1 测试) |
+| **贡献者数** | 14 (4 核心 + 8 PR贡献者 + 1 次要 + 1 测试) |
 | **活跃时间** | 2021 - 至今 |
 | **主要领域** | 核心库、C2 编译器、AArch64、ZGC、RISC-V、HotSpot Runtime |
 | **Dragonwell** | [Alibaba Dragonwell](https://github.com/dragonwell-project/dragonwell8), [Dragonwell Team](dragonwell.md) |
@@ -70,16 +70,23 @@
 
 | 贡献者 | Profile | PRs | 角色 | 主要领域 |
 |--------|---------|-----|------|----------|
-| Denghui Dong (董登辉) | [@D-D-H](https://github.com/D-D-H) | 36 | Committer | HotSpot Runtime, 编译器, GC |
-| Max Xing | [@MaxXSoft](https://github.com/MaxXSoft) | 16 | Author | RISC-V, C2 编译器, HotSpot |
-| Long Yang (杨龙) | [@yanglong1010](https://github.com/yanglong1010) | 3 | Author | JFR, Runtime |
-| [Lingjun Cao](../../by-contributor/profiles/lingjun-cao.md) | [@lingjun-cg](https://github.com/lingjun-cg) | 2 | Author | DecimalFormat 性能 |
+| Yi Yang (杨易) | [@y1yang0](https://github.com/y1yang0) | 57 | Committer | C2 编译器, HotSpot | - |
+| Denghui Dong (董登辉) | [@D-D-H](https://github.com/D-D-H) | 36 | Committer | HotSpot Runtime, 编译器, GC | - |
+| Max Xing | [@MaxXSoft](https://github.com/MaxXSoft) | 16 | Author | RISC-V, C2 编译器, HotSpot | - |
+| Joshua Zhu (朱文杰) | [@JoshuaZhuwj](https://github.com/JoshuaZhuwj) | 6 | Author | AArch64, 编译器 | [详情](../../by-contributor/profiles/joshua-zhu.md) |
+| Long Yang (杨龙) | [@yanglong1010](https://github.com/yanglong1010) | 3 | Author | JFR, Runtime | - |
+| sandlerwang | [@sandlerwang](https://github.com/sandlerwang) | 3 | Author | AArch64, GC | - |
+| Liang Mao (毛亮) | [@mmyxym](https://github.com/mmyxym) | 2 | Author | GC | - |
+| [Lingjun Cao](../../by-contributor/profiles/lingjun-cao.md) | [@lingjun-cg](https://github.com/lingjun-cg) | 2 | Author | DecimalFormat 性能 | - |
 
 > **贡献者归属确认**:
-> - **Denghui Dong** (36 PRs): GitHub 未标注公司，但通过 [Dragonwell 项目 14 个 PR](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:D-D-H) + sponsor Kuai Wei PR + Alibaba 研究论文共同作者 确认为阿里巴巴。活跃于 2021-2024。
-> - **Max Xing** (16 PRs): GitHub 公司标注 "MaxXSoft"(个人品牌)，但通过 [Dragonwell 项目贡献](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:MaxXSoft) 确认关联。
-> - **Long Yang** (3 PRs): GitHub 公司标注为 @Alibaba，位于杭州。
-> - ~~**Guanqiang Han** (27 PRs)~~: 经核实，仅修改过 Alibaba 版权文件，无 Dragonwell 项目贡献且 GitHub 未标注公司，归属证据不足，已移除。
+> - **Yi Yang** (57 PRs): 通过 [Dragonwell 项目 12 个 PR](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:y1yang0) + 审查 D-D-H 的 PR + sponsor wenshao/sendaoYan 的 PR 确认为阿里巴巴。主要贡献 C2 编译器，活跃于 2021-2024。**(通过方法 5: PR 审查/Sponsor 关系网络发现)**
+> - **Denghui Dong** (36 PRs): 通过 [Dragonwell 项目 14 个 PR](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:D-D-H) + sponsor yanglong1010/mmyxym/sandlerwang 的 PR 确认。
+> - **Joshua Zhu** (6 PRs): GitHub 公司标注 @Alibaba，位于上海。Dragonwell 项目 22 个 PR。
+> - **Liang Mao** (2 PRs): [Dragonwell 项目 38 个 PR](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:mmyxym)，D-D-H 为其 sponsor。
+> - **sandlerwang** (3 PRs): [Dragonwell 项目 10 个 PR](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:sandlerwang)，D-D-H 为其 sponsor。
+> - **Max Xing** (16 PRs): [Dragonwell 项目贡献](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:MaxXSoft) 确认关联。
+> - **Long Yang** (3 PRs): GitHub 公司标注 @Alibaba，D-D-H 为其 sponsor。
 
 ### 次要贡献者
 
