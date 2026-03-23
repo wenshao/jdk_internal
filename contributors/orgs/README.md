@@ -38,7 +38,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | [ISCAS PLCT](iscas-plct.md) | 20+ | 5+ | RISC-V | - |
 | [Intel](intel.md) | 146+ | 2 | Vector API, x86_64, SuperWord | - |
 | [Google](google.md) | ~14 | ~3 | 构建系统, javac | - |
-| [Tencent](tencent.md) | 198+ | 3 | 构建稳定性, 编译器, GC, Vector API | Kona |
+| [Tencent](tencent.md) | 228+ | 4 | 构建稳定性, 编译器, GC, 安全/TLS, Vector API | Kona |
 | [Microsoft](microsoft.md) | 少量 | ~3-5 | Azure 优化, Build | Microsoft Build of OpenJDK |
 
 > **统计时间**: 2026-03-23 | **统计方法**: GitHub Integrated PRs
@@ -556,7 +556,7 @@ OpenJDK 核心贡献者在组织间的流动对技术方向有深远影响：
 | | [Loongson](loongson.md) | 30+ | Loongson JDK |
 | | [ByteDance](bytedance.md) | 25 | - |
 | | [ISCAS PLCT](iscas-plct.md) | 20+ | - |
-| | [Tencent](tencent.md) | 198+ | Kona |
+| | [Tencent](tencent.md) | 228+ | Kona |
 
 ### 中国企业特点
 

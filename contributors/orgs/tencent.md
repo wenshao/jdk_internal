@@ -27,10 +27,10 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 198+ |
-| **贡献者数** | 3 |
+| **Integrated PRs** | 228+ |
+| **贡献者数** | 4 |
 | **活跃时间** | 2020 - 至今 |
-| **主要领域** | 构建稳定性, 编译器, GC, 容器, Vector API |
+| **主要领域** | 构建稳定性, 编译器, GC, 容器, Vector API, 安全/TLS |
 | **Kona** | [Tencent Kona](https://github.com/Tencent/TencentKona-17) |
 
 > **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。OpenJDK Committer 使用 `@openjdk.org` 邮箱提交代码，因此 git commits 按邮箱统计不准确。
@@ -41,11 +41,16 @@
 
 | 排名 | 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
 |------|--------|--------|-----|------|----------|------|
-| 1 | Jie Fu (傅杰) | [@DamonFool](https://github.com/DamonFool) | 187 | Committer | 构建稳定性, 编译器, GC | [详情](../../by-contributor/profiles/jie-fu.md) |
-| 2 | Caspar Wang (王超) | [@casparcwang](https://github.com/casparcwang) | 6 | Author | C2 编译器, 容器, ZGC | - |
-| 3 | Tongbao Zhang | [@tbzhang](https://github.com/tbzhang) | 5 | Author | G1 GC | [详情](../../by-contributor/profiles/tongbao-zhang.md) |
+| 1 | Jie Fu (傅杰) | [@DamonFool](https://github.com/DamonFool) | 187 | Reviewer | 构建稳定性, 编译器, GC | [详情](../../by-contributor/profiles/jie-fu.md) |
+| 2 | John Jiang | [@johnshajiang](https://github.com/johnshajiang) | 30 | Reviewer | 安全, TLS/SSL, 加密 | - |
+| 3 | Caspar Wang (王超) | [@casparcwang](https://github.com/casparcwang) | 6 | Author | C2 编译器, 容器, ZGC | - |
+| 4 | Tongbao Zhang | [@tbzhang](https://github.com/tbzhang) | 5 | Author | G1 GC | [详情](../../by-contributor/profiles/tongbao-zhang.md) |
 
-**总计**: 198+ PRs
+**总计**: 228+ PRs
+
+> **角色更正**:
+> - **Jie Fu**: OpenJDK Census 角色为 **Reviewer** (之前误记为 Committer)。邮件列表确认邮箱为 jiefu@tencent.com。
+> - **John Jiang**: 通过 [JDK-8364597](https://bugs.openjdk.org/browse/JDK-8364597) (将 58 个文件中 "THL A29 Limited" 替换为 "Tencent") 和 GitHub 公司标注确认。OpenJDK Reviewer (jjiang)。
 
 ### Jie Fu (傅杰) — 核心贡献者
 
@@ -59,6 +64,17 @@ Jie Fu 是腾讯 Kona JDK 团队的核心成员，也是 OpenJDK 全球最活跃
 - **容器支持**: 5+ PRs 改进 Docker/cgroup 支持
 
 > **年度贡献**: 2020 (29) → 2021 (81) → 2022 (48) → 2023 (19) → 2024 (7) → 2025-26 (3)
+
+### John Jiang — 安全/TLS 专家
+
+John Jiang 是腾讯 Kona JDK 团队的安全领域专家，OpenJDK Reviewer (30 PRs)。他的贡献集中在：
+
+- **TLS/SSL**: SSL 握手、证书验证、协议异常处理
+- **加密**: ECDSA/ECDH 密钥协商、PKCS 签名
+- **安全基础设施**: SecureRandom、安全提供者
+- **版权维护**: 将 58 个文件的 "THL A29 Limited"(已解散的腾讯子公司) 更新为 "Tencent" (JDK-8364597)
+
+> **发现方法**: 通过 OpenJDK 邮件列表中 jiefu@tencent.com 投票记录 → 追溯 JDK-8364597 (Replace THL A29 Limited with Tencent) → 确认 John Jiang (@johnshajiang) 为 Tencent 员工。
 
 ### Caspar Wang (王超) — C2 编译器与容器
 
@@ -77,6 +93,7 @@ Tongbao Zhang 专注于 G1 GC 正确性修复：
 - Shenandoah GC 测试修复
 
 > **角色说明**:
+> - **Reviewer**: 有权批准变更集的资深贡献者 ([详情](https://openjdk.org/bylaws))
 > - **Committer**: 有直接推送权限的贡献者 ([详情](https://openjdk.org/guide/))
 > - **Author**: 可以创建和提交更改的贡献者 ([详情](https://dev.java/contribute/openjdk/))
 

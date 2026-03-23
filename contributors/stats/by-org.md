@@ -52,7 +52,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 | 4 | **SAP** | 734+ | 3% | 30+ | PPC, HotSpot, 构建系统 |
 | 5 | **Alibaba** | 380 | 2% | 10 | 核心库, C2, GC, HotSpot Runtime |
 | 6 | **IBM** | 400+ | 2% | 25+ | JVM, AOT |
-| 7 | **腾讯** | 198+ | 1% | 3 | 构建稳定性, 编译器, GC, Vector API |
+| 7 | **腾讯** | 228+ | 1% | 4 | 构建稳定性, 编译器, GC, 安全/TLS, Vector API |
 | 8 | **Google** | 200+ | 1% | 15+ | 核心库 |
 | 9 | **Intel** | 146+ | <1% | 2 | Vector API, x86_64, SuperWord |
 | 10 | **华为** | 15+ | <1% | 8+ | JIT, AOT, RISC-V |
