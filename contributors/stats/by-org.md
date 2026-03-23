@@ -48,10 +48,10 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 |------|------|----------------|------|----------|----------|
 | 1 | **Oracle** | 15,000+ | 70%+ | 800+ | 全领域 |
 | 2 | **Amazon** | 1,048+ | 5% | 7 | Shenandoah GC, C2 编译器, Runtime |
-| 3 | **Red Hat** | 668+ | 3% | 5 | C2 编译器, HotSpot Runtime, AArch64 |
-| 4 | **SAP** | 734+ | 3% | 30+ | PPC, HotSpot, 构建系统 |
+| 3 | **SAP** | 851+ | 4% | 7 | PPC, HotSpot, 构建系统 |
+| 4 | **Red Hat** | 649+ | 3% | 4 | C2 编译器, HotSpot Runtime, AArch64 |
 | 5 | **Alibaba** | 380 | 2% | 10 | 核心库, C2, GC, HotSpot Runtime |
-| 6 | **IBM** | 400+ | 2% | 25+ | JVM, AOT |
+| 6 | **IBM** | 239+ | 1% | 4 | s390x, 容器/cgroup, AArch64, JVM |
 | 7 | **腾讯** | 228+ | 1% | 4 | 构建稳定性, 编译器, GC, 安全/TLS, Vector API |
 | 8 | **Google** | 200+ | 1% | 15+ | 核心库 |
 | 9 | **Intel** | 146+ | <1% | 2 | Vector API, x86_64, SuperWord |

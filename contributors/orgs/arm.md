@@ -25,7 +25,7 @@ ARM Ltd. 通过构建系统和 AArch64 架构支持参与 OpenJDK 开发。
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 50+ |
+| **Integrated PRs** | 31+ |
 | **贡献者数** | 2+ |
 | **活跃时间** | 2026 - 至今 |
 | **主要领域** | Build System, AArch64 |
@@ -38,7 +38,7 @@ ARM Ltd. 通过构建系统和 AArch64 架构支持参与 OpenJDK 开发。
 
 | 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
 |--------|--------|-----|------|----------|------|
-| Nick Gasson | [@nick-arm](https://github.com/nick-arm) | 45+ | Reviewer | AArch64 | [详情](../../by-contributor/profiles/nick-gasson.md) |
+| Nick Gasson | [@nick-arm](https://github.com/nick-arm) | 31 | Reviewer | AArch64 | [详情](../../by-contributor/profiles/nick-gasson.md) |
 | [Pankaj Bansal](../../by-contributor/profiles/pankaj-bansal.md) | [@pankaj-bansal-arm](https://github.com/pankaj-bansal-arm) | 4+ | Author | Build System, AArch64 | [详情](../../by-contributor/profiles/pankaj-bansal.md) |
 
 **小计**: 50+ PRs
