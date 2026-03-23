@@ -33,13 +33,16 @@
 
 | 指标 | 值 |
 |------|------|
-| **Integrated PRs** | 246 (当前) + 202 (前员工测试) = 448 |
+| **Authored PRs** | 246 (当前) + 202 (前员工测试) = **448** |
+| **参与贡献 (含 Review/Sponsor)** | **600+** (来自内部仪表盘统计) |
 | **贡献者数** | 13 上游贡献者 (6 Committer + 7 Author) + 1 团队负责人 |
-| **活跃时间** | 2021 - 至今 |
+| **活跃时间** | 2020 - 至今 |
 | **主要领域** | 核心库、C2 编译器、AArch64、ZGC、RISC-V、HotSpot Runtime |
 | **Dragonwell** | [Alibaba Dragonwell](https://github.com/dragonwell-project/dragonwell8), [Dragonwell Team](dragonwell.md) |
 
-> **统计说明**: 使用 GitHub Integrated PRs 统计。OpenJDK Committer 使用 `@openjdk.org` 邮箱提交代码，因此 git commits 按邮箱统计不准确。
+> **统计说明**:
+> - **Authored PRs (448)**: 贡献者作为 PR 作者的 Integrated PRs，通过 GitHub API 逐人验证
+> - **参与贡献 (600+)**: 包含 Authored + Reviewed + Sponsored 的所有 PR，来源于阿里内部 OpenJDK 贡献仪表盘。其中约 60% 是 Authored，40% 是以 Reviewer/Sponsor 身份参与其他组织的 PR
 
 ---
 
