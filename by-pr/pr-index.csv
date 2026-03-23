@@ -1,0 +1,238 @@
+bug_id,title,author,org,jdk_version,component
+8143900,OptimizeStringConcat opaque dependency on Integer.sizeTable,y1yang0,Alibaba,,hotspot/compiler
+8252835,Revert fix for JDK-8246051,sandlerwang,Alibaba,,hotspot/gc
+8253048,AArch64: CallLeaf no need to preserve callee-saved registers,JoshuaZhuwj,Alibaba,,hotspot/compiler
+8266185,Shenandoah fix comments and assertions,linade,Alibaba,,hotspot/gc
+8266963,Remove safepoint poll (reentrancy issue),linade,Alibaba,,hotspot/gc
+8268858,Determine register pressure automatically,JoshuaZhuwj,Alibaba,,hotspot/compiler
+8269598,Regressions up to 5% on aarch64 due to JDK-8268858,JoshuaZhuwj,Alibaba,,hotspot/compiler
+8270347,ZGC forwarding table release-acquire ordering,weixlu,Alibaba,,hotspot/gc
+8271203,C2: assert failed: Check this code when new subtype is added,y1yang0,Alibaba,,hotspot/compiler
+8272138,ZGC: Adopt relaxed ordering for self-healing,weixlu,Alibaba,,hotspot/gc
+8272493,Suboptimal code around Preconditions.checkIndex with AVX2,y1yang0,Alibaba,,hotspot/compiler
+8273021,C2: Improve Add and Xor ideal optimizations,y1yang0,Alibaba,,hotspot/compiler
+8273112,-Xloggc should override -verbose:gc,weixlu,Alibaba,,hotspot/runtime
+8273585,String.charAt performance degrades due to JDK-8268698,y1yang0,Alibaba,,hotspot/compiler
+8274328,C2: Redundant CFG edges fixup in block ordering,y1yang0,Alibaba,,hotspot/compiler
+8274546,Shenandoah remove unused ShenandoahUpdateRootsTask,linade,Alibaba,,hotspot/gc
+8275775,Add jcmd VM.classes to print details of all classes,y1yang0,Alibaba,,hotspot/runtime
+8278125,Some preallocated OOMEs are missing stack trace,y1yang0,Alibaba,,hotspot/runtime
+8280843,macos-Aarch64 SEGV in sender_for_compiled_frame,D-D-H,Alibaba,,hotspot/runtime
+8282874,Bad performance on gather/scatter API (IntSpecies),JoshuaZhuwj,Alibaba,,hotspot/compiler
+8282883,Use JVM_LEAF to avoid ThreadStateTransition,y1yang0,Alibaba,,hotspot/runtime
+8288204,GVN Crash: correct memory chain,y1yang0,Alibaba,,hotspot/compiler
+8290432,C2 fails with assert(node->_last_del == _last),y1yang0,Alibaba,,hotspot/compiler
+8297247,G1 add Remark/Cleanup pause MXBean,linade,Alibaba,,hotspot/gc
+8298432,GetPrimitiveArrayCritical 优化,,,JDK 26,
+8298521,G1MonitoringSupport member rename,linade,Alibaba,,hotspot/gc
+8299518,HotSpotVirtualMachine shared code across platforms,y1yang0,Alibaba,,hotspot/runtime
+8306441,Two phase segmented heap dump,y1yang0,Alibaba,,hotspot/runtime
+8310190,C2 AlignVector enhancement for SuperWord vectorization,,,,
+8310502,Optimization for j.l.Long.fastUUID,wenshao,Alibaba,JDK 21,
+8310502,Optimization for j.l.Long.fastUUID,wenshao,Alibaba,,
+8310929,Optimization for Integer.toString,wenshao,Intel,,
+8310929,Optimization for Integer.toString,wenshao,Intel,,
+8311207,Cleanup for Optimization for UUID.toString,wenshao,Intel,,
+8311220,Optimization for StringLatin UpperLower,,,,
+8311775,duplicate verifyHeapDump in several tests,y1yang0,Alibaba,,test
+8314021,HeapDump: Optimize segmented heap file merging phase,y1yang0,Alibaba,,hotspot/runtime
+8315968,Move java.util.Digits to jdk.internal.util and refactor to reduce duplication,wenshao,Alibaba,,
+8315970,Big-endian issues after JDK-8310929,wenshao,Oracle,,
+8316426,Optimization for HexFormat.formatHex,wenshao,Alibaba,,
+8316426,Optimization for HexFormat.formatHex,wenshao,Alibaba,,
+8316704,Regex-free parsing of Formatter and FormatProcessor specifiers,wenshao,Alibaba,,
+8316704,Regex-free parsing of Formatter and FormatProcessor specifiers,wenshao,Alibaba,,
+8317742,ISO Standard Date Format implementation consistency on DateTimeFormatter and Str,wenshao,Alibaba,,
+8319876,Reduce memory consumption of VM_ThreadDump::doit,yanglong1010,Alibaba,,hotspot/runtime
+8321404,Limit heap dumps triggered by HeapDumpBeforeFullGC,D-D-H,Alibaba,,hotspot/runtime
+8322694,C1: Handle Constant and IfOp in NullCheckEliminator,D-D-H,Alibaba,,hotspot/compiler
+8322735,C2: improvements of bubble sort in SuperWord,D-D-H,Alibaba,,hotspot/compiler
+8323122,AArch64 itable stub size estimation,linade,Alibaba,,hotspot/compiler
+8323795,jcmd Compiler.codecache should print total size,y1yang0,Alibaba,,hotspot/runtime
+8324123,aarch64: fix prfm literal encoding in assembler,sandlerwang,Alibaba,,hotspot/compiler
+8324280,RISC-V: Incorrect VM_Version::parse_satp_mode,MaxXSoft,Alibaba,,hotspot/runtime
+8324817,Parallel GC pre-touch all heap pages when large page disabled,sandlerwang,Alibaba,,hotspot/gc
+8324890,SuperWord VLoop 重构,,,,
+8324974,JFR: EventCompilerPhase should be UNTIMED,D-D-H,Alibaba,,hotspot/jfr
+8325144,C1: Optimize CriticalEdgeFinder,D-D-H,Alibaba,,hotspot/compiler
+8326111,JFR: Cleanup for JFR_ONLY,D-D-H,Alibaba,,hotspot/jfr
+8326127,JFR: Add SafepointCleanupTask to hardToTestEvents,D-D-H,Alibaba,,hotspot/jfr
+8326135,ADLC reports unused operands,kuaiwei,Alibaba,,hotspot/compiler
+8326446,Apple M1 CPULoad User and System inaccurate,yanglong1010,Alibaba,,hotspot/runtime
+8326498,HttpClient HTTP/2 连接泄漏修复,test,,JDK 26,
+8326541,AArch64: ZGC C2 load barrier stub register spilling,JoshuaZhuwj,Alibaba,,hotspot/gc
+8326936,RISC-V: Shenandoah GC incorrect atomic operations,MaxXSoft,Alibaba,,hotspot/gc
+8327247,C2 编译复杂字符串拼接时内存占用高达 2GB,cl4es,Oracle,JDK 8,
+8327379,Make TimeLinearScan a develop flag,D-D-H,Alibaba,,hotspot/compiler
+8327693,C1: LIRGenerator::_instruction_for_operand assertion only,D-D-H,Alibaba,,hotspot/compiler
+8328064,Remove obsolete comments in constantPool,linade,Alibaba,,hotspot/runtime
+8328938,禁止大步长的 SuperWord 向量化,,,,
+8331932,JDK 23-b13 启动性能回归修复,,,JDK 23,
+8332163,C2 SuperWord VTransformGraph 重构,,,,
+8333334,C2: Make Node::dominates more precise for scalar replacement,MaxXSoft,Alibaba,,hotspot/compiler
+8333396,Use StringBuilder internally for java.text.Format,lingjun-cg,Alibaba,,core-libs
+8333462,Performance regression of new DecimalFormat(),lingjun-cg,Alibaba,,core-libs
+8333713,SuperWord 清理 - 重命名 superword 为 auto_vectorization,,,JDK 7,
+8333833,Remove the use of ByteArrayLittleEndian from UUID::toString,wenshao,Alibaba,,
+8333893,Optimization for StringBuilder append boolean & null,wenshao,Alibaba,,
+8334328,Reduce object allocation for FloatToDecimal and DoubleToDecimal,wenshao,Alibaba,,
+8334328,Reduce object allocation for FloatToDecimal and DoubleToDecimal,wenshao,Alibaba,,
+8334342,Add MergeStore JMH benchmarks,wenshao,Alibaba,,
+8334431,修复 SuperWord Store-to-Load 转发失败导致的性能回归,epeter,Intel,JDK 24,
+8334431,C2 IR Graph MemBarAcquire in loop,kuaiwei,Alibaba,,hotspot/compiler
+8335182,整合和简化字符串拼接代码形态,cl4es,Oracle,,
+8335252,Reduce size of j.u.Formatter.Conversion#isValid,wenshao,Alibaba,,
+8335252,Reduce size of j.u.Formatter.Conversion#isValid,wenshao,Alibaba,,
+8335493,check_gc_overhead_limit should reset SoftRefPolicy,mmyxym,Alibaba,,hotspot/gc
+8335536,Fix assertion failure in IdealGraphPrinter,MaxXSoft,Alibaba,,hotspot/compiler
+8335645,j.u.Formatter#trailingZeros improved with String repeat,wenshao,Alibaba,JDK 21,
+8335645,j.u.Formatter#trailingZeros improved with String repeat,wenshao,Alibaba,JDK 21,
+8335802,Improve startup speed HexFormat uses boolean instead of enum,wenshao,Alibaba,,
+8335802,Improve startup speed HexFormat uses boolean instead of enum,wenshao,Alibaba,,
+8336278,"Micro-optimize Replace String.format(""%n"") to System.lineSeparator",wenshao,Alibaba,,
+8336706,Optimize LocalDate.toString with StringBuilder.repeat,wenshao,Alibaba,,
+8336741,Optimize LocalTime.toString with StringBuilder.repeat,wenshao,Alibaba,,
+8336792,DateTimeFormatterBuilder append zeros based on StringBuilder.repeat,wenshao,Alibaba,JDK 21,
+8336831,Optimize StringConcatHelper.simpleConcat,wenshao,Alibaba,,
+8336856,Efficient hidden class-based string concatenation strategy,wenshao,Alibaba,JDK 24,core-libs → java.lang
+8337167,StringSize deduplication,wenshao,Alibaba,,
+8337168,Optimize LocalDateTime.toString,wenshao,Alibaba,,
+8337168,Optimize LocalDateTime.toString,wenshao,Alibaba,,
+8337245,Fix wrong comment of StringConcatHelper,wenshao,Oracle,,
+8337279,Share StringBuilder to format instant,wenshao,Alibaba,JDK 25,
+8337832,Optimize datetime toString,wenshao,Alibaba,,
+8337832,Optimize datetime toString,wenshao,Alibaba,,
+8338409,Use record to simplify code,wenshao,Alibaba,,
+8338532,Speed up the ClassFile API MethodTypeDesc#ofDescriptor,wenshao,Alibaba,,
+8338591,优化 MemorySegment::copy 性能,,,,
+8338930,StringConcatFactory hardCoded string concatenation strategy,wenshao,Alibaba,,
+8338936,StringConcatFactory optimize construction of MethodType and MethodTypeDesc,wenshao,Alibaba,,
+8338937,Optimize the string concatenation of ClassDesc,wenshao,Alibaba,,
+8338967,优化 MemorySegment::fill 性能,,,,
+8339063,AArch64: Skip verify_sve_vector_length for 128-bit,JoshuaZhuwj,Alibaba,,hotspot/runtime
+8339168,Optimize ClassFile Util slotSize,wenshao,Alibaba,,
+8339196,Optimize BufWriterImpl#writeU1/U2/Int/Long,wenshao,Alibaba,,
+8339205,Optimize StackMapGenerator,wenshao,Alibaba,,
+8339217,Optimize ClassFile API loadConstant,wenshao,Alibaba,,
+8339290,Optimize ClassFile Utf8EntryImpl#writeTo,wenshao,Alibaba,,
+8339299,C1 inline final method missing type profile,kuaiwei,Alibaba,,hotspot/compiler
+8339317,Optimize ClassFile writeBuffer,wenshao,Alibaba,JDK 21,
+8339320,Optimize ClassFile Utf8EntryImpl#inflate,wenshao,Alibaba,,
+8339401,Optimize ClassFile load and store instructions,wenshao,Alibaba,,
+8339531,改进 MemorySegment::mismatch 性能,,,,
+8339635,StringConcatFactory optimization for CompactStrings off,wenshao,Alibaba,,
+8339699,Optimize DataOutputStream writeUTF,wenshao,Alibaba,,
+8339725,Concurrent GC crashed due to GetMethodDeclaringClass,mmyxym,Alibaba,,hotspot/gc
+8339799,减少 java.lang.invoke 字节码生成器的工作量,cl4es,Oracle,,
+8340093,C2 SuperWord 成本模型实现,,,JDK 9,
+8340144,C1: remove unused Compilation::_max_spills,D-D-H,Alibaba,,hotspot/compiler
+8340232,Optimize DataInputStream::readUTF,wenshao,Alibaba,,
+8340544,Optimize setLocalsFromArg,wenshao,Alibaba,,
+8340587,Optimize StackMapGenerator$Frame::checkAssignableTo,wenshao,Alibaba,,
+8340708,Optimize StackMapGenerator::processMethod,wenshao,Alibaba,,
+8340710,Optimize DirectClassBuilder::build,wenshao,Alibaba,,
+8341006,Optimize StackMapGenerator detect frames,wenshao,Alibaba,,
+8341136,Optimize StackMapGenerator::trimAndCompress,wenshao,Alibaba,,
+8341141,Optimize DirectCodeBuilder,wenshao,Alibaba,,
+8341199,Use ClassFile's new API loadConstant(int),wenshao,Alibaba,,
+8341415,Optimize RawBytecodeHelper::next,wenshao,Alibaba,,
+8341470,BigDecimal.stripTrailingZeros() 优化,,,,
+8341510,Optimize StackMapGenerator::processFieldInstructions,wenshao,Alibaba,,
+8341512,Optimize StackMapGenerator::processInvokeInstructions,wenshao,Alibaba,,
+8341548,More concise use of classfile API,wenshao,Alibaba,,
+8341581,Optimize BytecodeHelpers validate slot,wenshao,Alibaba,,
+8341664,ReferenceClassDescImpl cache internalName,wenshao,Alibaba,,
+8341755,Optimize argNames in InnerClassLambdaMetafactory,wenshao,Alibaba,,
+8341859,Optimize ClassFile Benchmark Write,wenshao,Alibaba,,
+8341900,Optimize DirectCodeBuilder writeBody,wenshao,Alibaba,,
+8341906,Optimize ClassFile writing BufBuffer,wenshao,Alibaba,,
+8342336,Optimize ClassFile imports,wenshao,Alibaba,JDK 22,
+8342650,Move getChars to DecimalDigits,,,,
+8343500,Optimize ArrayClassDescImpl computeDescriptor,wenshao,Alibaba,JDK 21,
+8343629,More MergeStore benchmark,wenshao,Alibaba,,
+8343650,Reuse StringLatin1::putCharsAt and StringUTF16::putCharsAt,wenshao,Alibaba,,
+8343829,统一 FloatingDecimal 中的十进制和十六进制解析,,,,
+8343925,Unknown,,,,
+8343925,[BACKOUT] JDK-8342650 Move getChars to DecimalDigits,wenshao,Alibaba,,
+8343962,[REDO] Move getChars to DecimalDigits,cl4es,Intel,,
+8343962,[REDO] Move getChars to DecimalDigits,wenshao,Alibaba,,
+8343984,Unknown,,,,
+8343984,Fix Unsafe address overflow,wenshao,Alibaba,,
+8344085,改进小循环迭代计数的 SuperWord 向量化,epeter,,,
+8344168,Change Unsafe base offset from int to long,wenshao,Alibaba,,
+8346986,Remove ASM dependency from ClassFile API,asotona,Oracle,JDK 22,
+8347405,MergeStores reverse byte order,kuaiwei,Alibaba,,hotspot/compiler
+8347499,C2: PhaseIdealLoop eliminate more redundant safepoints,MaxXSoft,Alibaba,,hotspot/compiler
+8347606,ML-KEM (Kyber) 实现,,,JDK 26,
+8347608,优化 ML-KEM Java 实现,bperez,,JDK 25,
+8347645,C2 XOR 有界值处理阻止常量折叠,j3graham,,,
+8348870,Eliminate array bound checks in DecimalDigits,wenshao,Alibaba,,
+8348880,Replace ConcurrentMap with AtomicReferenceArray for ZoneOffset.QUARTER_CACHE,wenshao,Alibaba,,
+8348898,Remove unused OctalDigits to clean up code,wenshao,Alibaba,,
+8349142,JMH MergeLoadBench 测试修复,,,,
+8349400,Improve startup speed via eliminating nested classes,wenshao,Intel,,
+8349910,HTTP/3 for the HTTP Client (JEP 517),,,JDK 26,
+8351443,改进 StringBuilder 的健壮性,rriggs,,,
+8351565,实现 JEP 502: Stable Values (Preview),,,,
+8353741,Eliminate table lookup in UUID.toString,wenshao,Intel,,
+8353741,Eliminate table lookup in UUID.toString,wenshao,Alibaba,,
+8355177,Speed up StringBuilder::append(char[]) via Unsafe::copyMemory,wenshao,Alibaba,,
+8355240,Remove unused Import in StringUTF16,wenshao,Alibaba,,
+8355300,Add final to BitSieve,wenshao,Alibaba,,
+8356021,Use Double::hashCode in java.util.Locale::hashCode,wenshao,Alibaba,,
+8356021,Unknown,,,,
+8356036,FileKey.hashCode and UnixFileStore.hashCode implementations can use Long.hashCod,wenshao,Alibaba,,
+8356036,Unknown,,,,
+8356152,String.concat 可能抛出 StringIndexOutOfBoundsException,,,JDK 24,
+8356328,C2 IR node size_of() function,kuaiwei,Alibaba,,hotspot/compiler
+8356605,JRSUIControl.hashCode and JRSUIState.hashCode can use Long.hashCode,wenshao,Alibaba,JDK 8,
+8356605,Unknown,,,,
+8357063,Document preconditions for DecimalDigits methods,wenshao,Alibaba,,
+8357063,Document preconditions for DecimalDigits methods,wenshao,Alibaba,,
+8357081,Removed unused methods of HexDigits,,,,
+8357289,Break down the String constructor into smaller methods,wenshao,Alibaba,JDK 26,
+8357289,Break down the String constructor into smaller methods,wenshao,Alibaba,,
+8357681,Fixed the DigitList::toString method causing incorrect results during debugging,,,,
+8357685,Change the type of Integer::digits from char[] to byte[],wenshao,Alibaba,,
+8357685,Change the type of Integer::digits from char[] to byte[],wenshao,Alibaba,JDK 9,
+8357690,Add @Stable and final to CharacterData classes,,,,
+8357690,Add @Stable and final to CharacterData classes,,,JDK 25,
+8357913,Add @Stable to BigInteger and BigDecimal,,,,
+8357913,Add `@Stable` to BigInteger and BigDecimal,,,,
+8358104,Fix ZGC compilation error on GCC 10.2,MaxXSoft,Alibaba,,hotspot/gc
+8359683,ZGC NUMA-Aware Relocation,,,JDK 26,
+8360192,C2: Make type of count leading/trailing zero precise,MaxXSoft,Alibaba,,hotspot/compiler
+8362376,在 Java FDLIBM 实现中使用 @Stable 注解,,IBM,,
+8364361,Process 应实现 Closeable 接口,,,,
+8365186,Reduce size of j.t.f.DateTimePrintContext::adjust,wenshao,Intel,,
+8365620,Using enhanced switch in MethodHandleDesc,wenshao,Alibaba,JDK 21,
+8365832,Optimize FloatingDecimal and DigitList with byte[] and cleanup,wenshao,Alibaba,,
+8365832,Optimize FloatingDecimal and DigitList with byte[] and cleanup,wenshao,Alibaba,,
+8365932,Ahead-of-Time Object caching (JEP 516),,,,
+8366224,引入 DecimalDigits.appendPair 实现高效两位数格式化,wenshao,Alibaba,,
+8368024,Remove StringConcatFactory#generateMHInlineCopy,wenshao,Alibaba,JDK 9,
+8368172,Make java.time.format.DateTimePrintContext immutable,wenshao,Alibaba,,
+8368825,Use switch expression for DateTimeFormatterBuilder pattern character lookup,wenshao,Alibaba,,
+8370013,Refactor Double.toHexString to eliminate regex and StringBuilder,Test,,JDK 25,
+8370405,MergeStores 在分配消除中被错误标量替换,,,,
+8370503,Use String.newStringWithLatin1Bytes to simplify Integer/Long toString method,IntrinsicCandidate,,JDK 9,
+8371146,C2 SuperWord 向量化优化,Benchmark,Intel,JDK 26,
+8371259,ML-DSA Intrinsics (后量子密码优化),Test,,JDK 26,
+8371475,HttpClient CUBIC 拥塞控制,,,JDK 26,
+8371626,Linux ICF 链接优化,,,JDK 26,
+8371701,NUMA 线程亲和性,,Intel,JDK 26,
+8371953,反射 API 性能优化,,,JDK 26,
+8372159,HttpClient VirtualThread 优化,,,JDK 26,
+8372162,G1 GC Claim Table 优化,,,JDK 26,
+ANALYSIS_STRATEGY,JDK 26 PR 分析策略,,,JDK 26,
+compiler,JDK 26 Compiler Component Summary,,Intel,JDK 26,
+gc,JDK 26 GC Component Summary,AOTSafeClassInitializer,,JDK 26,
+jdk26-commits,JDK 26 Commit 分析报告,AOTSafeClassInitializer,SAP,JDK 26,
+jdk26-jeps,JDK 26 JEP 深度分析,LazyConstant,,JDK 26,
+jdk26-top-prs,JDK 26 Top 50 Most Impactful Commits,,,JDK 26,
+jep514-aot-linking,AOT 链接启动优化,,,JDK 25,
+jep519-compact-headers,Compact Object Headers 实现,,,JDK 25,
+jep520-jfr-method-timing,JFR 方法计时追踪,Label,,JDK 26,
+jep521-generational-shenandoah,分代 Shenandoah GC,,,JDK 26,
+network,JDK 26 Network Component Summary,,,JDK 26,
+security,JDK 26 Security Component Summary,,,JDK 26,
