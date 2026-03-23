@@ -1,0 +1,4 @@
+# Cache files are local-only, too large for git
+# Run the fetch scripts to rebuild them
+.jbs-cache.json
+.reviewer-cache.json
