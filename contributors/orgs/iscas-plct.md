@@ -40,8 +40,8 @@
 
 | 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
 |--------|--------|-----|------|----------|------|
-| Dingli Zhang (张定立) | [@DingliZhang](https://github.com/DingliZhang) | 54 | Committer | RISC-V | - |
-| Glavo | [@Glavo](https://github.com/Glavo) | 10 | Author | 核心库, 国际化, NIO, JavaFX | - |
+| Dingli Zhang (张定立) | [@DingliZhang](https://github.com/DingliZhang) | 54 | Committer | RISC-V | [详情](../../by-contributor/profiles/dingli-zhang.md) |
+| Glavo | [@Glavo](https://github.com/Glavo) | 10 | Author | 核心库, 国际化, NIO, JavaFX | [详情](../../by-contributor/profiles/glavo.md) |
 
 **总计**: 64+ PRs
 
