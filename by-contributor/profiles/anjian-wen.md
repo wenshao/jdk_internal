@@ -22,7 +22,7 @@
 | **姓名** | Anjian-Wen |
 | **当前组织** | 字节跳动 (ByteDance) |
 | **GitHub** | [@Anjian-Wen](https://github.com/Anjian-Wen) |
-| **OpenJDK** | Author |
+| **OpenJDK** | Committer (wenanjian) — [OpenJDK Census](https://openjdk.org/census) |
 | **PRs** | [25 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AAnjian-Wen+is%3Aclosed+label%3Aintegrated) |
 | **邮箱** | wenanjian@bytedance.com |
 | **主要领域** | RISC-V 向量指令、Zvbb、Zfa、AES 加密 |

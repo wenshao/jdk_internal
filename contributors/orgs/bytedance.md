@@ -26,20 +26,43 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 25 |
-| **贡献者数** | 1 |
+| **Integrated PRs** | 25 (上游) |
+| **上游贡献者** | 1 (Committer) |
 | **活跃时间** | 2025 - 至今 |
-| **主要领域** | RISC-V 向量指令 |
+| **主要领域** | RISC-V 向量指令, 密码学 intrinsics, 解释器优化 |
+| **下游项目** | [CompoundVM](https://github.com/bytedance/CompoundVM) — JVM 17/25 性能移植到 JDK 8 |
 
 ---
 
 ## 2. 贡献者
 
+### JVM/JDK 团队
+
+字节跳动的 JVM/JDK 工作分为两个方向：
+
+| 方向 | 负责人/成员 | 项目 | 上游 PRs |
+|------|------------|------|----------|
+| **RISC-V 上游贡献** | [Anjian Wen](../../by-contributor/profiles/anjian-wen.md) | OpenJDK 上游 | 25 PRs |
+| **CompoundVM (下游)** | [Duanyang Jing](https://github.com/duanyangjing) 等 | [CompoundVM](https://github.com/bytedance/CompoundVM) | 0 (下游定制) |
+
+### 上游贡献者
+
 | 贡献者 | GitHub | PRs | 角色 | 主要领域 |
 |--------|--------|-----|------|----------|
-| [Anjian Wen](../../by-contributor/profiles/anjian-wen.md) | [@Anjian-Wen](https://github.com/Anjian-Wen) | 25 | Author | RISC-V 向量指令 |
+| [Anjian Wen](../../by-contributor/profiles/anjian-wen.md) | [@Anjian-Wen](https://github.com/Anjian-Wen) | 25 | Committer (wenanjian) | RISC-V 向量指令, 密码学, 解释器 |
 
----
+### CompoundVM 团队 (下游贡献)
+
+[CompoundVM (CVM)](https://github.com/bytedance/CompoundVM) 是字节跳动的 JDK 定制项目，将高版本 JVM (17/25) 的性能带到低版本 JDK (8) 上，已在生产环境使用。
+
+| 成员 | GitHub | 角色 | 位置 |
+|------|--------|------|------|
+| Duanyang Jing | [@duanyangjing](https://github.com/duanyangjing) | Compiler/VM Engineer | 杭州 |
+| Jeffery | [@superajun-wsj](https://github.com/superajun-wsj) | CVM Developer | - |
+| machunhui | [@machunhui](https://github.com/machunhui) | CVM Developer | - |
+
+> **注**: CompoundVM 团队成员目前没有上游 OpenJDK Integrated PRs，他们的工作集中在下游 JDK 定制。
+
 ---
 
 ## 3. 多层网络分析
