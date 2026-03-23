@@ -329,6 +329,38 @@ gh api "repos/openjdk/jdk/pulls/{pr_number}/reviews" --jq '.[].user.login'
 | ❌ 弱 | 仅修改过某组织版权文件 | 否 (Oracle 人也改 Alibaba 文件) |
 | ❌ 弱 | 名字听起来像某国家的 | 否 |
 
+### PR 结构化索引 (pr-index.csv)
+
+**文件**: `by-pr/pr-index.csv`
+
+包含所有已分析 PR 的结构化数据，可用于快速交叉分析：
+
+| 字段 | 说明 |
+|------|------|
+| `bug_id` | JBS Bug ID (如 8336856) |
+| `title` | PR 标题 |
+| `author` | GitHub 用户名 |
+| `org` | 归属组织 (Alibaba, Oracle, Tencent 等) |
+| `jdk_version` | 目标 JDK 版本 |
+| `component` | 组件 (hotspot/compiler, core-libs 等) |
+
+**用法示例**:
+```bash
+# 按组织统计
+cut -d',' -f4 by-pr/pr-index.csv | sort | uniq -c | sort -rn
+
+# 查找某组织的所有 PR
+grep ",Alibaba," by-pr/pr-index.csv
+
+# 按作者查找
+grep ",wenshao," by-pr/pr-index.csv
+
+# 按组件查找
+grep "hotspot/compiler" by-pr/pr-index.csv
+```
+
+**维护**: 当新增 PR 分析文档时，同步更新此 CSV。作者→组织的映射表在 Python 脚本中维护。
+
 ### Top Contributors (by PRs)
 
 | Rank | Contributor | PRs | Organization | Focus |
