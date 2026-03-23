@@ -410,15 +410,32 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 > **注**: 部分 PR 可能跨版本合入，统计基于主要目标版本。
 
-### 测试贡献 (SendaoYan)
+### 测试贡献 (SendaoYan) — 代表性 PR
 
 | 年份 | PRs | 主要领域 |
 |------|------|------|
 | **2026** | 24 | GC 测试，稳定性修复 |
-| **2025** | 95 | JFR 测试，编译器测试 |
-| **2024** | 82 | 编译器测试，GC 测试 |
+| **2025** | 95 | JFR 测试，编译器测试, RISC-V, UBSAN |
+| **2024** | 82 | 编译器测试，GC 测试, RISC-V, ASAN |
 | **2022** | 1 | 初始贡献 |
 | **小计** | **202** | 测试稳定性 |
+
+> **代表性 PR** (从 202 个中选取, 按类别):
+
+| Bug ID | 标题 | 类型 | 分析 |
+|--------|------|------|------|
+| [8350723](../../by-pr/8350/8350723.md) | RISC-V: debug.cpp help() missing riscv line | RISC-V | [详情](../../by-pr/8350/8350723.md) |
+| [8344526](../../by-pr/8344/8344526.md) | RISC-V: implement -XX:+VerifyActivationFrameSize | RISC-V | [详情](../../by-pr/8344/8344526.md) |
+| [8341562](../../by-pr/8341/8341562.md) | RISC-V: Generate comments in PrintInterpreter | RISC-V | [详情](../../by-pr/8341/8341562.md) |
+| [8341880](../../by-pr/8341/8341880.md) | RISC-V: riscv_vector.h build fails with gcc13 | 构建修复 | [详情](../../by-pr/8341/8341880.md) |
+| [8351233](../../by-pr/8351/8351233.md) | [ASAN] avx2-emu-funcs.hpp uninitialized error | ASAN | [详情](../../by-pr/8351/8351233.md) |
+| [8345016](../../by-pr/8345/8345016.md) | [ASAN] java.c format-truncation warning | ASAN | [详情](../../by-pr/8345/8345016.md) |
+| [8349465](../../by-pr/8349/8349465.md) | [UBSAN] test_os_reserve_between null pointer | UBSAN | [详情](../../by-pr/8349/8349465.md) |
+| [8349200](../../by-pr/8349/8349200.md) | [JMH] ZonedDateTimeFormatterBenchmark fails | JMH 测试 | [详情](../../by-pr/8349/8349200.md) |
+| [8334057](../../by-pr/8334/8334057.md) | JLinkReproducibleTest.java support vm.opts | 测试修复 | [详情](../../by-pr/8334/8334057.md) |
+| [8332923](../../by-pr/8332/8332923.md) | ObjectMonitorUsage.java unexpected waiter_count | 测试修复 | [详情](../../by-pr/8332/8332923.md) |
+
+→ [SendaoYan 完整 PR 列表 (202)](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AsendaoYan+is%3Aclosed+label%3Aintegrated)
 
 ### 总计
 
