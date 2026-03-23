@@ -738,12 +738,15 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 **版本**: Dragonwell 8 / 11 / 17 / 21
 
 **团队链接**:
-- [Dragonwell 团队](dragonwell.md) - 核心团队成员和社交网络
-- [Sanhong Li](../../by-contributor/profiles/sanhong.md) - ASE 2021 论文作者，JVM 团队
+- [Dragonwell 团队](dragonwell.md) - 核心团队成员
+- [Sanhong Li (李三红)](../../by-contributor/profiles/sanhong.md) - Chief JVM Architect, Java Champion
 - [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) - C2 编译器专家
-- [Long Yang](../../by-contributor/profiles/yanglong1010.md) - JVM 团队，杭州
-- [SendaoYan](../../by-contributor/profiles/sendaoyan.md) - 编译器测试工程师
 - [Joshua Zhu](../../by-contributor/profiles/joshua-zhu.md) - 上海团队
+
+**社区链接**:
+- [GreenTeaJUG](http://greenteajug.cn/) - 中国最大 Java 用户组, 由 Sanhong Li 和[莫简豪 (Mo Jianhao)](https://github.com/mojianhao) 共同领导
+  - 莫简豪: 前阿里巴巴, 现任[简算科技 (JianSuan)](https://jiansuan.tech/) Executive Director, GreenTeaJUG Leader
+  - 组织 OpenJDK 技术分享活动 (邀请 Alibaba, Huawei, Azul, ByteDance 等技术专家)
 
 **外部链接**:
 - [Dragonwell 官网](https://dragonwell-jdk.io/)

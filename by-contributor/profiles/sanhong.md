@@ -28,7 +28,7 @@ Sanhong Li (李三红) 是 **Java Champion**，阿里巴巴云智能基础产品
 - **JCP Executive Committee** 阿里巴巴代表
 - **GraalVM Project Advisory Board** 成员
 - **Adoptium Summit 2025 Program Committee** 成员
-- **上海 Java 用户组 (GreenTeaJUG)** 联合负责人 (中国最大 JUG)
+- **上海 Java 用户组 ([GreenTeaJUG](http://greenteajug.cn/))** 联合负责人 (中国最大 JUG, 与[莫简豪](https://github.com/mojianhao)共同领导)
 - **APMCon** 联合主席
 
 ---
