@@ -53,17 +53,17 @@
 | 排名 | 贡献者 | GitHub | PRs | 角色 | 主要领域 |
 |------|--------|--------|-----|------|----------|
 | 1 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | Committer | 核心库, ClassFile API, String |
-| 2 | Yi Yang (杨易) | [@y1yang0](https://github.com/y1yang0) | 57 | Committer | C2 编译器, HeapDump, HotSpot |
-| 3 | Denghui Dong (董登辉) | [@D-D-H](https://github.com/D-D-H) | 36 | Committer | C1 编译器, JFR, Runtime |
-| 4 | Max Xing | [@MaxXSoft](https://github.com/MaxXSoft) | 16 | Author | RISC-V, C2 编译器 |
+| 2 | [Yi Yang (杨易)](../../by-contributor/profiles/yi-yang.md) | [@y1yang0](https://github.com/y1yang0) | 57 | Committer | C2 编译器, HeapDump, HotSpot |
+| 3 | [Denghui Dong (董登辉)](../../by-contributor/profiles/denghui-dong.md) | [@D-D-H](https://github.com/D-D-H) | 36 | Committer | C1 编译器, JFR, Runtime |
+| 4 | [Max Xing](../../by-contributor/profiles/max-xing.md) | [@MaxXSoft](https://github.com/MaxXSoft) | 16 | Author | RISC-V, C2 编译器 |
 | 5 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | [@kuaiwei](https://github.com/kuaiwei) | 13 | Committer | C2 编译器, MergeStore |
 | 6 | [Yude Lin](../../by-contributor/profiles/yude-lin.md) | [@linade](https://github.com/linade) | 8 | Author | G1 GC, AArch64 |
 | 7 | [Joshua Zhu](../../by-contributor/profiles/joshua-zhu.md) | [@JoshuaZhuwj](https://github.com/JoshuaZhuwj) | 6 | Author | AArch64, 编译器 |
 | 8 | [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) | [@weixlu](https://github.com/weixlu) | 3 | Committer | ZGC |
-| 9 | Long Yang (杨龙) | [@yanglong1010](https://github.com/yanglong1010) | 3 | Author | JFR, Runtime |
-| 10 | sandlerwang | [@sandlerwang](https://github.com/sandlerwang) | 3 | Author | AArch64, GC |
+| 9 | [Long Yang (杨龙)](../../by-contributor/profiles/long-yang.md) | [@yanglong1010](https://github.com/yanglong1010) | 3 | Author | JFR, Runtime |
+| 10 | [sandlerwang](../../by-contributor/profiles/sandlerwang.md) | [@sandlerwang](https://github.com/sandlerwang) | 3 | Author | AArch64, GC |
 | 11 | [Lingjun Cao](../../by-contributor/profiles/lingjun-cao.md) | [@lingjun-cg](https://github.com/lingjun-cg) | 2 | Author | DecimalFormat |
-| 12 | Liang Mao (毛亮) | [@mmyxym](https://github.com/mmyxym) | 2 | Author | GC |
+| 12 | [Liang Mao (毛亮)](../../by-contributor/profiles/liang-mao.md) | [@mmyxym](https://github.com/mmyxym) | 2 | Author | GC |
 | | **核心+PR 小计** | | **246** | **5C + 7A** | |
 | 13 | [SendaoYan](../../by-contributor/profiles/sendaoyan.md) (前员工) | [@sendaoYan](https://github.com/sendaoYan) | 202 | Committer | 编译器/GC 测试 |
 | | **总计** | | **448** | **6C + 7A** | |
@@ -169,9 +169,6 @@ JDK 25 继续了核心库性能优化的工作。
 
 | Issue | 标题 | 贡献者 | 类型 | 分析 |
 |-------|------|--------|------|------|
-| [8349400](../../by-pr/8349/8349400.md) | 消除嵌套类提升启动速度 | Shaojin Wen | 性能优化 +5% | [详情](../../by-pr/8349/8349400.md) |
-| [8348898](../../by-pr/8348/8348898.md) | 移除未使用的 OctalDigits | Shaojin Wen | 代码清理 -130 行 | [详情](../../by-pr/8348/8348898.md) |
-| [8348880](../../by-pr/8348/8348880.md) | ZoneOffset.QUARTER_CACHE AtomicReferenceArray | Shaojin Wen | 内存优化 -85% | [详情](../../by-pr/8348/8348880.md) |
 | [8339725](../../by-pr/8339/8339725.md) | Concurrent GC crashed due to GetMethodDeclaringClass | Liang Mao | **GC 修复** | [详情](../../by-pr/8339/8339725.md) |
 | [8339063](../../by-pr/8339/8339063.md) | AArch64: Skip verify_sve_vector_length for 128-bit | Joshua Zhu | 性能优化 | [详情](../../by-pr/8339/8339063.md) |
 | [8335493](../../by-pr/8335/8335493.md) | check_gc_overhead_limit should reset SoftRefPolicy | Liang Mao | GC 修复 | [详情](../../by-pr/8335/8335493.md) |
@@ -745,13 +742,17 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 ### 内部文档
 
 - [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) — 核心库优化 (97 PRs)
-- [Yi Yang](https://github.com/y1yang0) — C2 编译器, HeapDump (57 PRs)
-- [Denghui Dong](https://github.com/D-D-H) — C1 编译器, JFR (36 PRs)
-- [Max Xing](https://github.com/MaxXSoft) — RISC-V, C2 编译器 (16 PRs)
+- [Yi Yang (杨易)](../../by-contributor/profiles/yi-yang.md) — C2 编译器, HeapDump (57 PRs)
+- [Denghui Dong (董登辉)](../../by-contributor/profiles/denghui-dong.md) — C1 编译器, JFR (36 PRs)
+- [Max Xing](../../by-contributor/profiles/max-xing.md) — RISC-V, C2 编译器 (16 PRs)
 - [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) — C2 编译器, MergeStore (13 PRs)
 - [Yude Lin](../../by-contributor/profiles/yude-lin.md) — G1 GC, AArch64 (8 PRs)
 - [Joshua Zhu](../../by-contributor/profiles/joshua-zhu.md) — AArch64, 编译器 (6 PRs)
 - [Xiaowei Lu](../../by-contributor/profiles/xiaowei-lu.md) — ZGC (3 PRs)
+- [Long Yang (杨龙)](../../by-contributor/profiles/long-yang.md) — JFR, Runtime (3 PRs)
+- [sandlerwang](../../by-contributor/profiles/sandlerwang.md) — AArch64, GC (3 PRs)
+- [Liang Mao (毛亮)](../../by-contributor/profiles/liang-mao.md) — GC (2 PRs)
+- [Lingjun Cao](../../by-contributor/profiles/lingjun-cao.md) — DecimalFormat (2 PRs)
 - [SendaoYan](../../by-contributor/profiles/sendaoyan.md) — 编译器/GC 测试 (202 PRs, 前员工)
 - [中国贡献者索引](../../by-contributor/profiles/chinese-contributors.md)
 
