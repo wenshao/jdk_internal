@@ -5,6 +5,37 @@
 [← 返回组织索引](../../by-contributor/README.md)
 
 ---
+
+## 代表性 PR
+
+> 以下为各贡献者的代表性工作（最新 5 个）。完整列表见 GitHub 链接。
+
+### Thomas Stuefe (@tstuefe) — 337 PRs
+
+| Bug ID | 标题 | 分析 |
+|--------|------|------|
+| [8379967](../../by-pr/8379/8379967.md) | 8379967: (process) Improve ProcessBuilder error reporting | [详情](../../by-pr/8379/8379967.md) |
+| [8380011](../../by-pr/8380/8380011.md) | 8380011: Path-to-gcroots search should not trigger stack overflows | [详情](../../by-pr/8380/8380011.md) |
+| [8377907](../../by-pr/8377/8377907.md) | 8377907: (process) Race in ProcessBuilder can cause JVM hangs | [详情](../../by-pr/8377/8377907.md) |
+| [8377138](../../by-pr/8377/8377138.md) | 8377138: VMError::report should handle out-of-stackbounds errors grace | [详情](../../by-pr/8377/8377138.md) |
+| [8373490](../../by-pr/8373/8373490.md) | 8373490: JFR Leak Profiler: path-to-gc-root very slow for large object | [详情](../../by-pr/8373/8373490.md) |
+
+→ [完整 PR 列表](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Atstuefe+is%3Aclosed+label%3Aintegrated)
+
+### Roland Westrelin (@rwestrel) — 216 PRs
+
+| Bug ID | 标题 | 分析 |
+|--------|------|------|
+| [8376591](../../by-pr/8376/8376591.md) | 8376591: TestLoopNestTooManyTraps fails with various stress flags | [详情](../../by-pr/8376/8376591.md) |
+| [8379180](../../by-pr/8379/8379180.md) | 8379180: C2: assert((ptr->bottom_type() == Type::TOP) || ((base == Com | [详情](../../by-pr/8379/8379180.md) |
+| [8373143](../../by-pr/8373/8373143.md) | 8373143: C2: verify that adr_type and adr's type match in LoadNode::ma | [详情](../../by-pr/8373/8373143.md) |
+| [8370200](../../by-pr/8370/8370200.md) | 8370200: Crash: assert(outer->outcnt() >= phis + 2 - be_loads && outer | [详情](../../by-pr/8370/8370200.md) |
+| [8358334](../../by-pr/8358/8358334.md) | 8358334: C2/Shenandoah: incorrect execution with Unsafe | [详情](../../by-pr/8358/8358334.md) |
+
+→ [完整 PR 列表](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Arwestrel+is%3Aclosed+label%3Aintegrated)
+
+---
+
 ## 目录
 
 1. [概览](#1-概览)

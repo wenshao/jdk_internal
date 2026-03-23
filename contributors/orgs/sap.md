@@ -5,6 +5,37 @@
 [← 返回组织索引](../../by-contributor/README.md)
 
 ---
+
+## 代表性 PR
+
+> 以下为各贡献者的代表性工作（最新 5 个）。完整列表见 GitHub 链接。
+
+### Matthias Baesken (@MBaesken) — 492 PRs
+
+| Bug ID | 标题 | 分析 |
+|--------|------|------|
+| [8379802](../../by-pr/8379/8379802.md) | 8379802: [AIX] unify DL_info struct and put it into a single header | [详情](../../by-pr/8379/8379802.md) |
+| [8379416](../../by-pr/8379/8379416.md) | 8379416: AIX build fails if system (not GNU) date tool is in PATH | [详情](../../by-pr/8379/8379416.md) |
+| [8379499](../../by-pr/8379/8379499.md) | 8379499: [AIX] headless-only build of libjawt.so fails | [详情](../../by-pr/8379/8379499.md) |
+| [8379202](../../by-pr/8379/8379202.md) | 8379202: Support linktime-gc on Linux with clang | [详情](../../by-pr/8379/8379202.md) |
+| [8378347](../../by-pr/8378/8378347.md) | 8378347: AIX version checks for 7.1 and 5.X are obsolete | [详情](../../by-pr/8378/8378347.md) |
+
+→ [完整 PR 列表](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AMBaesken+is%3Aclosed+label%3Aintegrated)
+
+### Martin Doerr (@TheRealMDoerr) — 141 PRs
+
+| Bug ID | 标题 | 分析 |
+|--------|------|------|
+| [8379448](../../by-pr/8379/8379448.md) | 8379448: [PPC64] Build without C2 broken after 8373595 | [详情](../../by-pr/8379/8379448.md) |
+| [8378353](../../by-pr/8378/8378353.md) | 8378353: [PPC64] StringCoding.countPositives causes errors when the le | [详情](../../by-pr/8378/8378353.md) |
+| [8378233](../../by-pr/8378/8378233.md) | 8378233: depends_only_on_test_impl() assertion hit after JDK-8347365 | [详情](../../by-pr/8378/8378233.md) |
+| [8371820](../../by-pr/8371/8371820.md) | 8371820: Further AES performance improvements for key schedule generat | [详情](../../by-pr/8371/8371820.md) |
+| [8368205](../../by-pr/8368/8368205.md) | 8368205: [TESTBUG] VectorMaskCompareNotTest.java crashes when MaxVecto | [详情](../../by-pr/8368/8368205.md) |
+
+→ [完整 PR 列表](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3ATheRealMDoerr+is%3Aclosed+label%3Aintegrated)
+
+---
+
 ## 目录
 
 1. [概览](#1-概览)

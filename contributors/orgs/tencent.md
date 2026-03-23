@@ -5,6 +5,37 @@
 [← 返回组织索引](README.md)
 
 ---
+
+## 代表性 PR
+
+> 以下为各贡献者的代表性工作（最新 5 个）。完整列表见 GitHub 链接。
+
+### Jie Fu (@DamonFool) — 185 PRs
+
+| Bug ID | 标题 | 分析 |
+|--------|------|------|
+| [8375787](../../by-pr/8375/8375787.md) | 8375787: compiler/vectorapi/TestCastShapeBadOpc.java fails with releas | [详情](../../by-pr/8375/8375787.md) |
+| [8374200](../../by-pr/8374/8374200.md) | 8374200: jdk/internal/platform/cgroup/TestCgroupMetrics.java fails wit | [详情](../../by-pr/8374/8374200.md) |
+| [8374178](../../by-pr/8374/8374178.md) | 8374178: Missing include in systemDictionary.cpp after JDK-8365526 | [详情](../../by-pr/8374/8374178.md) |
+| [8334695](../../by-pr/8334/8334695.md) | 8334695: Fix build failure without zgc after JDK-8333300 | [详情](../../by-pr/8334/8334695.md) |
+| [8329884](../../by-pr/8329/8329884.md) | 8329884: Serial: Fix build failure due to ‘Copy’ has not been declared | [详情](../../by-pr/8329/8329884.md) |
+
+→ [完整 PR 列表](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3ADamonFool+is%3Aclosed+label%3Aintegrated)
+
+### John Jiang (@johnshajiang) — 27 PRs
+
+| Bug ID | 标题 | 分析 |
+|--------|------|------|
+| [8373231](../../by-pr/8373/8373231.md) | 8373231: ECDSAOperations::toAffinePoint is redundant | [详情](../../by-pr/8373/8373231.md) |
+| [8364597](../../by-pr/8364/8364597.md) | 8364597: Replace THL A29 Limited with Tencent | [详情](../../by-pr/8364/8364597.md) |
+| [8333046](../../by-pr/8333/8333046.md) | 8333046: Clean codes in sun.security.util.math | [详情](../../by-pr/8333/8333046.md) |
+| [8327182](../../by-pr/8327/8327182.md) | 8327182: Move serverAlias into the loop | [详情](../../by-pr/8327/8327182.md) |
+| [8320449](../../by-pr/8320/8320449.md) | 8320449: ECDHKeyAgreement should validate parameters before using them | [详情](../../by-pr/8320/8320449.md) |
+
+→ [完整 PR 列表](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ajohnshajiang+is%3Aclosed+label%3Aintegrated)
+
+---
+
 ## 目录
 
 1. [概览](#1-概览)

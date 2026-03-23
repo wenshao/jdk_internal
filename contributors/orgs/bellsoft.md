@@ -5,6 +5,25 @@
 [← 返回组织索引](README.md)
 
 ---
+
+## 代表性 PR
+
+> 以下为各贡献者的代表性工作（最新 5 个）。完整列表见 GitHub 链接。
+
+### Boris Ulasevich (@bulasevich) — 39 PRs
+
+| Bug ID | 标题 | 分析 |
+|--------|------|------|
+| [8374343](../../by-pr/8374/8374343.md) | 8374343: Fix SIGSEGV when lib/modules is unreadable | [详情](../../by-pr/8374/8374343.md) |
+| [8371459](../../by-pr/8371/8371459.md) | 8371459: [REDO] AArch64: Use SHA3 GPR intrinsic where it's faster | [详情](../../by-pr/8371/8371459.md) |
+| [8359256](../../by-pr/8359/8359256.md) | 8359256: AArch64: Use SHA3 GPR intrinsic where it's faster | [详情](../../by-pr/8359/8359256.md) |
+| [8338197](../../by-pr/8338/8338197.md) | 8338197: [ubsan] ad_x86.hpp:6417:11: runtime error: shift exponent 100 | [详情](../../by-pr/8338/8338197.md) |
+| [8365071](../../by-pr/8365/8365071.md) | 8365071: ARM32: JFR intrinsic jvm_commit triggers C2 regalloc assert | [详情](../../by-pr/8365/8365071.md) |
+
+→ [完整 PR 列表](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Abulasevich+is%3Aclosed+label%3Aintegrated)
+
+---
+
 ## 目录
 
 1. [概览](#1-概览)

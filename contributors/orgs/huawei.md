@@ -5,6 +5,37 @@
 [← 返回组织索引](README.md)
 
 ---
+
+## 代表性 PR
+
+> 以下为各贡献者的代表性工作（最新 5 个）。完整列表见 GitHub 链接。
+
+### Fei Yang (@RealFYang) — 93 PRs
+
+| Bug ID | 标题 | 分析 |
+|--------|------|------|
+| [8379564](../../by-pr/8379/8379564.md) | 8379564: Hotspot fails to build with gcc 14 after JDK-8378804 | [详情](../../by-pr/8379/8379564.md) |
+| [8378888](../../by-pr/8378/8378888.md) | 8378888: jdk/incubator/vector/Float16OperationsBenchmark.java uses wro | [详情](../../by-pr/8378/8378888.md) |
+| [8372046](../../by-pr/8372/8372046.md) | 8372046: compiler/floatingpoint/TestSubNodeFloatDoubleNegation.java fa | [详情](../../by-pr/8372/8372046.md) |
+| [8371869](../../by-pr/8371/8371869.md) | 8371869: RISC-V: too many warnings when build on BPI-F3 SBC | [详情](../../by-pr/8371/8371869.md) |
+| [8371753](../../by-pr/8371/8371753.md) | 8371753: compiler/c2/cr7200264/TestIntVect.java fails IR verification | [详情](../../by-pr/8371/8371753.md) |
+
+→ [完整 PR 列表](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3ARealFYang+is%3Aclosed+label%3Aintegrated)
+
+### Feilong Jiang (@feilongjiang) — 52 PRs
+
+| Bug ID | 标题 | 分析 |
+|--------|------|------|
+| [8376572](../../by-pr/8376/8376572.md) | 8376572: RISC-V: Interpreter: Load array index as signed int | [详情](../../by-pr/8376/8376572.md) |
+| [8369947](../../by-pr/8369/8369947.md) | 8369947: Bytecode rewriting causes Java heap corruption on RISC-V | [详情](../../by-pr/8369/8369947.md) |
+| [8369616](../../by-pr/8369/8369616.md) | 8369616: JavaFrameAnchor on RISC-V has unnecessary barriers and wrong  | [详情](../../by-pr/8369/8369616.md) |
+| [8361504](../../by-pr/8361/8361504.md) | 8361504: RISC-V: Make C1 clone intrinsic platform guard more specific | [详情](../../by-pr/8361/8361504.md) |
+| [8337780](../../by-pr/8337/8337780.md) | 8337780: RISC-V: C2: Change C calling convention for sp to NS | [详情](../../by-pr/8337/8337780.md) |
+
+→ [完整 PR 列表](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Afeilongjiang+is%3Aclosed+label%3Aintegrated)
+
+---
+
 ## 目录
 
 1. [概览](#1-概览)

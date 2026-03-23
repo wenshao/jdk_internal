@@ -5,6 +5,49 @@
 [← 返回组织索引](../../by-contributor/README.md)
 
 ---
+
+## 代表性 PR
+
+> 以下为各贡献者的代表性工作（最新 5 个）。完整列表见 GitHub 链接。
+
+### Aleksey Shipilev (@shipilev) — 775 PRs
+
+| Bug ID | 标题 | 分析 |
+|--------|------|------|
+| [8378338](../../by-pr/8378/8378338.md) | 8378338: Shenandoah: Heap-used generic verification error after update | [详情](../../by-pr/8378/8378338.md) |
+| [8378080](../../by-pr/8378/8378080.md) | 8378080: Zero: JNIEnv argument is corrupted in native calls | [详情](../../by-pr/8378/8378080.md) |
+| [8377990](../../by-pr/8377/8377990.md) | 8377990: Zero: Replace Java math ops with UB-safe implementations | [详情](../../by-pr/8377/8377990.md) |
+| [8376761](../../by-pr/8376/8376761.md) | 8376761: ARM32: Constant base assert after JDK-8373266 | [详情](../../by-pr/8376/8376761.md) |
+| [8376570](../../by-pr/8376/8376570.md) | 8376570: GrowableArray::remove_{till;range} should work on empty list | [详情](../../by-pr/8376/8376570.md) |
+
+→ [完整 PR 列表](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ashipilev+is%3Aclosed+label%3Aintegrated)
+
+### William Kemper (@earthling-amzn) — 119 PRs
+
+| Bug ID | 标题 | 分析 |
+|--------|------|------|
+| [8380562](../../by-pr/8380/8380562.md) | 8380562: GenShen: GC notification event may see invalid values | [详情](../../by-pr/8380/8380562.md) |
+| [8379688](../../by-pr/8379/8379688.md) | 8379688: GenShen: Skip promotions when marking finds enough immediate  | [详情](../../by-pr/8379/8379688.md) |
+| [8379367](../../by-pr/8379/8379367.md) | 8379367: GenShen: Replace atomic promotion failure counters with threa | [详情](../../by-pr/8379/8379367.md) |
+| [8379021](../../by-pr/8379/8379021.md) | 8379021: Shenandoah: Speedup ShenandoahSimpleBitMapTest | [详情](../../by-pr/8379/8379021.md) |
+| [8350605](../../by-pr/8350/8350605.md) | 8350605: assert(!heap->is_uncommit_in_progress()) failed: Cannot uncom | [详情](../../by-pr/8350/8350605.md) |
+
+→ [完整 PR 列表](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aearthling-amzn+is%3Aclosed+label%3Aintegrated)
+
+### Cesar Soares (@JohnTortugo) — 43 PRs
+
+| Bug ID | 标题 | 分析 |
+|--------|------|------|
+| [8373021](../../by-pr/8373/8373021.md) | 8373021: aarch64: MacroAssembler::arrays_equals reads out of bounds | [详情](../../by-pr/8373/8373021.md) |
+| [8361699](../../by-pr/8361/8361699.md) | 8361699: C2: assert(can_reduce_phi(n->as_Phi())) failed: Sanity: previ | [详情](../../by-pr/8361/8361699.md) |
+| [8356289](../../by-pr/8356/8356289.md) | 8356289: Shenandoah: Clean up SATB barrier runtime entry points | [详情](../../by-pr/8356/8356289.md) |
+| [8359064](../../by-pr/8359/8359064.md) | 8359064: Expose reason for marking nmethod non-entrant to JVMCI client | [详情](../../by-pr/8359/8359064.md) |
+| [8357600](../../by-pr/8357/8357600.md) | 8357600: Patch nmethod flushing message to include more details | [详情](../../by-pr/8357/8357600.md) |
+
+→ [完整 PR 列表](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AJohnTortugo+is%3Aclosed+label%3Aintegrated)
+
+---
+
 ## 目录
 
 1. [概览](#1-概览)

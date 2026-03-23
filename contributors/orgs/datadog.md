@@ -5,6 +5,25 @@
 [← 返回组织索引](README.md)
 
 ---
+
+## 代表性 PR
+
+> 以下为各贡献者的代表性工作（最新 5 个）。完整列表见 GitHub 链接。
+
+### Roman Kennke (@rkennke) — 106 PRs
+
+| Bug ID | 标题 | 分析 |
+|--------|------|------|
+| [8355319](../../by-pr/8355/8355319.md) | 8355319: Update Manpage for Compact Object Headers (Production) | [详情](../../by-pr/8355/8355319.md) |
+| [8355319](../../by-pr/8355/8355319.md) | 8355319: Update Manpage for Compact Object Headers (Production) | [详情](../../by-pr/8355/8355319.md) |
+| [8357370](../../by-pr/8357/8357370.md) | 8357370: Export supported GCs in JVMCI | [详情](../../by-pr/8357/8357370.md) |
+| [8356329](../../by-pr/8356/8356329.md) | 8356329: Report compact object headers in hs_err | [详情](../../by-pr/8356/8356329.md) |
+| [8356266](../../by-pr/8356/8356266.md) | 8356266: Fix non-Shenandoah build after JDK-8356075 | [详情](../../by-pr/8356/8356266.md) |
+
+→ [完整 PR 列表](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Arkennke+is%3Aclosed+label%3Aintegrated)
+
+---
+
 ## 目录
 
 1. [概览](#1-概览)
