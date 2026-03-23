@@ -40,6 +40,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | [ISCAS PLCT](iscas-plct.md) | 64+ | - | 1 | 1 | RISC-V, 核心库 | - |
 | [Huawei](huawei.md) | 167+ | 1 | 2 | - | RISC-V Port (JEP 422), AArch64 | BiSheng JDK |
 | [BellSoft](bellsoft.md) | 40+ | - | 1 | - | ARM32, AArch64, RISC-V | Liberica JDK |
+| [Azul](azul.md) | 18+ | - | 1 | - | CRaC, Runtime | Zulu JDK |
 | [Google](google.md) | ~14 | - | - | ~3 | 构建系统, javac | - |
 | [Microsoft](microsoft.md) | 少量 | - | - | ~3 | Azure 优化, Build | Microsoft Build of OpenJDK |
 

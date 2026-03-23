@@ -39,7 +39,7 @@ Intel 通过 Vector API 项目参与 OpenJDK 开发，专注于 x86_64 架构的
 | 排名 | 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
 |------|--------|--------|-----|------|----------|------|
 | 1 | Jatin Bhateja | [@jatin-bhateja](https://github.com/jatin-bhateja) | 109 | Committer | Vector API, x86_64 intrinsics | [详情](../../by-contributor/profiles/jatin-bhateja.md) |
-| 2 | Swati Sharma | [@sviswa7](https://github.com/sviswa7) | 37 | Author | SuperWord, Vector API, x86_64 | - |
+| 2 | [Swati Sharma](../../by-contributor/profiles/swati-sharma.md) | [@sviswa7](https://github.com/sviswa7) | 37 | Author | SuperWord, Vector API, x86_64 | [详情](../../by-contributor/profiles/swati-sharma.md) |
 
 **总计**: 146+ PRs
 

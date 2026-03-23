@@ -44,10 +44,10 @@ Amazon 通过 Corretto 团队参与 OpenJDK 开发，专注于 Shenandoah GC、A
 |------|--------|--------|-----|------|----------|------|
 | 1 | Aleksey Shipilev | [@shipilev](https://github.com/shipilev) | 803+ | Reviewer | Shenandoah GC, JMH, 性能 | [详情](../../by-contributor/profiles/aleksey-shipilev.md) |
 | 2 | William Kemper | [@earthling-amzn](https://github.com/earthling-amzn) | 123 | Reviewer | Shenandoah GC | [详情](../../by-contributor/profiles/william-kemper.md) |
-| 3 | Cesar Soares | [@JohnTortugo](https://github.com/JohnTortugo) | 46 | Committer | C2 编译器, Runtime, 性能 | - |
-| 4 | Kelvin Nilsen | [@kdnilsen](https://github.com/kdnilsen) | 40 | Committer | Generational Shenandoah GC | [详情](../../by-contributor/profiles/kelvin-nilsen.md) |
-| 5 | Oliver Gillespie | [@olivergillespie](https://github.com/olivergillespie) | 18 | Author | Runtime, 安全, 性能 | - |
-| 6 | Chad Rakoczy | [@chadrako](https://github.com/chadrako) | 18 | Author | NMethod 重定位, AArch64, 解释器 | - |
+| 3 | [Cesar Soares](../../by-contributor/profiles/cesar-soares.md) | [@JohnTortugo](https://github.com/JohnTortugo) | 46 | Committer | C2 编译器, Runtime, 性能 | [详情](../../by-contributor/profiles/cesar-soares.md) |
+| 4 | [Kelvin Nilsen](../../by-contributor/profiles/kelvin-nilsen.md) | [@kdnilsen](https://github.com/kdnilsen) | 40 | Committer | Generational Shenandoah GC | [详情](../../by-contributor/profiles/kelvin-nilsen.md) |
+| 5 | [Oliver Gillespie](../../by-contributor/profiles/oliver-gillespie.md) | [@olivergillespie](https://github.com/olivergillespie) | 18 | Author | Runtime, 安全, 性能 | [详情](../../by-contributor/profiles/oliver-gillespie.md) |
+| 6 | [Chad Rakoczy](../../by-contributor/profiles/chad-rakoczy.md) | [@chadrako](https://github.com/chadrako) | 18 | Author | NMethod 重定位, AArch64, 解释器 | [详情](../../by-contributor/profiles/chad-rakoczy.md) |
 
 **总计**: 1,048+ PRs
 

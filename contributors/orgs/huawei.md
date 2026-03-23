@@ -41,8 +41,8 @@
 | 排名 | 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
 |------|--------|--------|-----|------|----------|------|
 | 1 | [Fei Yang (杨飞)](../../by-contributor/profiles/fei-yang.md) | [@RealFYang](https://github.com/RealFYang) | 100 | Reviewer | RISC-V, AArch64, C1/C2 JIT | [详情](../../by-contributor/profiles/fei-yang.md) |
-| 2 | Feilong Jiang | [@feilongjiang](https://github.com/feilongjiang) | 55 | Committer | RISC-V | - |
-| 3 | Yadong Wang | [@yadongw](https://github.com/yadongw) | 12 | Committer | RISC-V | - |
+| 2 | [Feilong Jiang](../../by-contributor/profiles/feilong-jiang.md) | [@feilongjiang](https://github.com/feilongjiang) | 55 | Committer | RISC-V | [详情](../../by-contributor/profiles/feilong-jiang.md) |
+| 3 | Yadong Wang | [@yadongw](https://github.com/yadongw) | 12 | Committer | RISC-V | [详情](../../by-contributor/profiles/yadong-wang.md) |
 
 **总计**: 167+ PRs (1 Reviewer + 2 Committer)
 
