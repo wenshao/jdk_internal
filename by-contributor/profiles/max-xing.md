@@ -8,12 +8,15 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Max Xing |
-| **当前组织** | [阿里巴巴 (Alibaba)](/contributors/orgs/alibaba.md) |
-| **GitHub** | [@MaxXSoft](https://github.com/MaxXSoft) |
+| **当前组织** | [阿里巴巴 (Alibaba) - 阿里云](/contributors/orgs/alibaba.md) |
+| **GitHub** | [@MaxXSoft](https://github.com/MaxXSoft) (974 followers) |
+| **个人网站** | [MaxXSoft.net](http://MaxXSoft.net/) |
 | **OpenJDK** | Author |
 | **PRs** | [16 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AMaxXSoft+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | RISC-V, C2 编译器, HotSpot, 代码清理 |
 | **活跃时间** | 2024 - 2026 |
+| **教育背景** | 北京科技大学 (USTB), 曾任北京大学 (PKU) 编译原理课程助教 |
+| **个人项目** | [Fuxi (伏羲)](https://github.com/MaxXSoft/Fuxi) — RISC-V 32 位处理器 (Chisel3), [Koopa](https://github.com/pku-minic/koopa) — 编译器课程 IR 库 |
 | **归属确认** | [Dragonwell 项目贡献](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:MaxXSoft) |
 
 > **数据调查时间**: 2026-03-23

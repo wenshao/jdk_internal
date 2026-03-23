@@ -8,12 +8,14 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Yi Yang (杨易) |
-| **当前组织** | [阿里巴巴 (Alibaba)](/contributors/orgs/alibaba.md) |
-| **GitHub** | [@y1yang0](https://github.com/y1yang0) |
+| **当前组织** | [阿里巴巴 (Alibaba) - 云基础设施部](/contributors/orgs/alibaba.md) |
+| **GitHub** | [@y1yang0](https://github.com/y1yang0) (2.3k followers) |
 | **OpenJDK** | Committer (yyang) — [CFV 2021-05](https://mail.openjdk.org/pipermail/jdk-dev/2021-May/) |
 | **PRs** | [57 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ay1yang0+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | C2 编译器, C1 编译器, HeapDump, HotSpot Runtime, CDS, JFR |
 | **活跃时间** | 2021 - 2024 (高峰期 2021: 45 PRs) |
+| **著作** | 《深入解析Java虚拟机HotSpot》(机械工业出版社, 2020) |
+| **个人项目** | [YVM](https://github.com/y1yang0/YVM) (C++ 实现的 JVM), [Yarrow](https://github.com/y1yang0/Yarrow) (JVMCI 优化编译器) |
 | **归属确认** | [Dragonwell 12 PRs](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:y1yang0) + sponsor wenshao/sendaoYan + 审查 D-D-H |
 
 > **数据调查时间**: 2026-03-23

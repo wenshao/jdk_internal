@@ -1,6 +1,6 @@
 # Joshua Zhu
 
-> **Alibaba** (unverified) | **Shanghai**
+> AArch64 编译器优化、RISC-V 移植
 
 ---
 
@@ -8,12 +8,15 @@
 
 | 属性 | 值 |
 |------|-----|
+| **姓名** | Joshua Zhu (朱文杰) |
 | **GitHub** | [@JoshuaZhuwj](https://github.com/JoshuaZhuwj) |
-| **姓名** | Joshua Zhu |
 | **位置** | 上海 |
-| **组织** | [Alibaba](../../contributors/orgs/alibaba.md) (基于社交网络推断，未经公开来源验证) |
-| **主要领域** | JVM, 核心库 |
-| **备注** | 无公开 OpenJDK commits 或 PRs 记录；组织归属基于同事关系推断 |
+| **组织** | [Alibaba](/contributors/orgs/alibaba.md) |
+| **OpenJDK** | Author |
+| **PRs** | [6 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AJoshuaZhuwj+is%3Aclosed+label%3Aintegrated) |
+| **主要领域** | AArch64, 编译器寄存器分配, RISC-V |
+| **活跃时间** | 2020 - 2024 |
+| **归属确认** | GitHub company=@Alibaba + [Dragonwell 22 PRs](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:JoshuaZhuwj) |
 
 ---
 

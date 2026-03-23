@@ -12,12 +12,15 @@
 | **GitHub** | [@kuaiwei](https://github.com/kuaiwei) |
 | **组织** | [Alibaba](../../contributors/orgs/alibaba.md) |
 | **邮箱** | kuaiwei.kw@alibaba-inc.com, wei.kuai@gmail.com |
-| **OpenJDK Census** | ✅ [Author, JDK Project](https://openjdk.org/census#kwei) (username: `kwei`) |
+| **OpenJDK Census** | ✅ [Committer, JDK Project](https://openjdk.org/census#kwei) (username: `kwei`) |
 | **Integrated PRs** | 13 |
 | **Dragonwell Commits** | 15+ |
 | **GitHub 统计** | 19 public repos, 15 followers, 8 following |
 | **主要领域** | C2 Compiler, IR Optimization, RISC-V, ZGC |
-| **活跃时间** | 2018 - 至今 (首个 Integrated PR: 2021) |
+| **活跃时间** | 2018 - 至今 (2018 年加入阿里云, 首个 Integrated PR: 2021) |
+| **教育背景** | Carnegie Mellon University (高级计算机科学), University of Auckland (博士研究) |
+| **工作经历** | HPE (HotSpot JIT, 2007-2018) → 阿里云 (JVM 架构师, 2018-至今), 新西兰 3E Software CEO |
+| **演讲** | "Speed JVM Performance with JWarmUp" (合作), "Java on RISC-V: OpenJDK Porting" (RISC-V Forum 2021, 与 Sanhong Li 合作) |
 
 > **统计来源**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akuaiwei+label%3Aintegrated+is%3Aclosed), [OpenJDK Census](https://openjdk.org/census#kwei)
 

@@ -11,9 +11,12 @@
 | **GitHub** | [@sendaoYan](https://github.com/sendaoYan) |
 | **位置** | 上海 |
 | **职业** | Compiler Tester |
-| **曾任组织** | Alibaba (2022-2025) |
-| **Integrated PRs** | 202 |
-| **主要领域** | 编译器测试，GC 测试，稳定性修复 |
+| **曾任组织** | [Alibaba](/contributors/orgs/alibaba.md) (2022-2025) |
+| **OpenJDK** | Committer (syan) |
+| **Integrated PRs** | [202](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AsendaoYan+is%3Aclosed+label%3Aintegrated) |
+| **主要领域** | 编译器测试, GC 测试, 构建修复, FFM 测试, 稳定性修复 |
+| **Eclipse** | [Eclipse AQAvit](https://projects.eclipse.org/projects/adoptium.aqavit) Committer (inactive 2025) |
+| **其他项目** | Jeandle (LLVM-based JIT compiler for HotSpot) |
 
 ---
 

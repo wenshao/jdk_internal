@@ -8,13 +8,16 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Denghui Dong (董登辉) |
-| **当前组织** | [阿里巴巴 (Alibaba) - JVM Team](/contributors/orgs/alibaba.md) |
+| **当前组织** | [阿里巴巴 (Alibaba) - JVM Team](/contributors/orgs/alibaba.md) (2017 年加入) |
 | **GitHub** | [@D-D-H](https://github.com/D-D-H) |
-| **OpenJDK** | Committer (ddong) — [CFV 2021-08 "Alibaba JVM Team"](https://mail.openjdk.org/pipermail/jdk-dev/2021-August/005899.html) |
+| **OpenJDK** | Committer (ddong) — [CFV 2021-08 "Alibaba JVM Team"](https://mail.openjdk.org/pipermail/jdk-dev/2021-August/005899.html), [JDK 8u Committer 2019](https://mail.openjdk.org/pipermail/jdk8u-dev/2019-November/010565.html) |
 | **PRs** | [36 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AD-D-H+is%3Aclosed+label%3Aintegrated) |
-| **主要领域** | C1 编译器, JFR, HeapDump, HotSpot Runtime, String Dedup |
+| **主要领域** | C1 编译器, JFR, HeapDump, HotSpot Runtime, String Dedup, RAS |
 | **活跃时间** | 2021 - 2024 |
-| **归属确认** | [CFV 提名 "Alibaba JVM Team"](https://mail.openjdk.org/pipermail/jdk-dev/2021-August/005899.html) + [Dragonwell 14 PRs](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:D-D-H) |
+| **Eclipse** | [Eclipse Jifa](https://projects.eclipse.org/projects/technology.jifa) Project Lead (HeapDump/GC Log/JFR 在线分析), [Eclipse EMT4J](https://github.com/adoptium/emt4j) (JDK 迁移工具) |
+| **论文** | "Jade: A High-throughput Concurrent Copying GC" (EuroSys 2024), "Java Performance Troubleshooting at Alibaba" (ICSE SEIP 2018) |
+| **社区角色** | Anolis 社区 Java SIG (RAS) 负责人 |
+| **归属确认** | [CFV "Alibaba JVM Team"](https://mail.openjdk.org/pipermail/jdk-dev/2021-August/005899.html) + [Dragonwell 14 PRs](https://github.com/dragonwell-project/dragonwell11/pulls?q=author:D-D-H) |
 
 > **数据调查时间**: 2026-03-23
 
