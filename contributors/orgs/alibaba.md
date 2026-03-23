@@ -35,7 +35,7 @@
 | Issue | 标题 | 类型 | 版本 | 分析 |
 |-------|------|------|------|------|
 | **Integrated PRs** | 246 (当前) + 202 (前员工测试) = 448 |
-| **贡献者数** | 13 (6 Committer + 7 Author) |
+| **贡献者数** | 13 上游贡献者 (6 Committer + 7 Author) + 1 团队负责人 |
 | **活跃时间** | 2021 - 至今 |
 | **主要领域** | 核心库、C2 编译器、AArch64、ZGC、RISC-V、HotSpot Runtime |
 | **Dragonwell** | [Alibaba Dragonwell](https://github.com/dragonwell-project/dragonwell8), [Dragonwell Team](dragonwell.md) |
@@ -46,11 +46,18 @@
 
 ## 2. 贡献者
 
-### 贡献者列表 (按 PR 数排序)
+### 团队负责人
+
+| 负责人 | 职位 | 主要职责 | 档案 |
+|--------|------|----------|------|
+| [Sanhong Li (李三红)](../../by-contributor/profiles/sanhong.md) | Chief JVM Architect, Alibaba Cloud | Dragonwell JDK 负责人, AJDK 架构师 | [详情](../../by-contributor/profiles/sanhong.md) |
+
+> **Sanhong Li** 是阿里巴巴 JVM 团队的技术领导者，2014 年加入阿里巴巴（此前在 Intel 和 IBM J9VM 团队）。他领导了 Alibaba JDK (AJDK) 和开源 Dragonwell JDK 的开发，发表 10+ 篇论文 (ICSE, ASE)，在 JVMLS、JavaOne、QCon 等会议演讲。虽然他本人没有直接的上游 OpenJDK Integrated PRs，但作为团队负责人指导了以下所有贡献者的上游贡献工作。
+
+### 上游贡献者列表 (按 PR 数排序)
 
 | 排名 | 贡献者 | GitHub | PRs | 角色 | 主要领域 |
-| Issue | 标题 | 类型 | 版本 | 分析 |
-|-------|------|------|------|------|
+|------|--------|--------|-----|------|----------|
 | 1 | [Shaojin Wen](../../by-contributor/profiles/shaojin-wen.md) | [@wenshao](https://github.com/wenshao) | 97 | Committer | 核心库, ClassFile API, String |
 | 2 | [Yi Yang (杨易)](../../by-contributor/profiles/yi-yang.md) | [@y1yang0](https://github.com/y1yang0) | 57 | Committer | C2 编译器, HeapDump, HotSpot |
 | 3 | [Denghui Dong (董登辉)](../../by-contributor/profiles/denghui-dong.md) | [@D-D-H](https://github.com/D-D-H) | 36 | Committer | C1 编译器, JFR, Runtime |
