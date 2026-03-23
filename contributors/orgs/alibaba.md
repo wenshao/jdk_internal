@@ -297,6 +297,91 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 **JDK 21/22 统计**: 10 PRs (Shaojin Wen: 8, Yude Lin: 2)
 
+### 其他贡献者 PR (按贡献者分类)
+
+> 以下贡献者的 PR 跨越多个 JDK 版本，按贡献者分类展示。
+
+#### Yi Yang (@y1yang0) — 57 PRs (C2 编译器, HotSpot)
+
+| Issue | 标题 | 类型 | 版本 |
+|-------|------|------|------|
+| 8323795 | jcmd Compiler.codecache should print total size | 功能增强 | JDK 23 |
+| 8314021 | HeapDump: Optimize segmented heap file merging | 性能优化 | JDK 22 |
+| 8311775 | duplicate verifyHeapDump in several tests | 测试清理 | JDK 22 |
+| 8306441 | Two phase segmented heap dump | **核心功能** | JDK 22 |
+| 8143900 | OptimizeStringConcat opaque dependency on sizeTable | C2 优化 | JDK 21 |
+| 8299518 | HotSpotVirtualMachine shared code across platforms | 重构 | JDK 21 |
+| 8288204 | GVN Crash: assert() failed: correct memory chain | C2 修复 | JDK 20 |
+| 8290432 | C2 fails with assert(node->_last_del == _last) | C2 修复 | JDK 20 |
+| 8282883 | Use JVM_LEAF to avoid ThreadStateTransition | 性能优化 | JDK 19 |
+| 8275775 | Add jcmd VM.classes to print details | 功能增强 | JDK 19 |
+| 8278125 | preallocated OOMEs missing stack trace | 修复 | JDK 19 |
+| 8273585 | String.charAt performance degrades | **性能回归修复** | JDK 18 |
+| 8274328 | C2: Redundant CFG edges fixup | C2 优化 | JDK 18 |
+| 8273021 | C2: Improve Add and Xor ideal optimizations | C2 优化 | JDK 18 |
+| 8271203 | C2: assert in subtype check | C2 修复 | JDK 18 |
+| 8272493 | Suboptimal code around Preconditions.checkIndex | C2 优化 | JDK 19 |
+
+> **注**: 以上为 Yi Yang 57 PRs 中的代表性工作。完整列表见 [GitHub](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ay1yang0+label%3Aintegrated)。
+
+#### Denghui Dong (@D-D-H) — 36 PRs (HotSpot Runtime, C1, JFR)
+
+| Issue | 标题 | 类型 | 版本 |
+|-------|------|------|------|
+| 8340144 | C1: remove unused Compilation::_max_spills | 代码清理 | JDK 24 |
+| 8327693 | C1: LIRGenerator::_instruction_for_operand assertion only | 代码清理 | JDK 23 |
+| 8327379 | Make TimeLinearScan a develop flag | 清理 | JDK 23 |
+| 8326127 | JFR: SafepointCleanupTask to hardToTestEvents | JFR | JDK 23 |
+| 8326111 | JFR: Cleanup for JFR_ONLY | 代码清理 | JDK 23 |
+| 8325144 | C1: Optimize CriticalEdgeFinder | **C1 优化** | JDK 23 |
+| 8324974 | JFR: EventCompilerPhase UNTIMED | JFR | JDK 23 |
+| 8322694 | C1: Handle Constant and IfOp in NullCheckEliminator | **C1 优化** | JDK 23 |
+| 8322735 | C2: improvements of bubble sort in SuperWord | C2 优化 | JDK 23 |
+| 8321404 | Limit heap dumps triggered by HeapDumpBeforeFullGC | 功能增强 | JDK 23 |
+| 8280843 | macos-Aarch64 SEGV in sender_for_compiled_frame | 修复 | JDK 19 |
+
+> **注**: 以上为代表性工作。完整列表见 [GitHub](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AD-D-H+label%3Aintegrated)。
+
+#### Max Xing (@MaxXSoft) — 16 PRs (RISC-V, C2, HotSpot)
+
+| Issue | 标题 | 类型 | 版本 |
+|-------|------|------|------|
+| 8347499 | C2: PhaseIdealLoop eliminate redundant safepoints | **C2 优化** | JDK 25 |
+| 8360192 | C2: Make type of count leading/trailing zero precise | C2 优化 | JDK 26 |
+| 8358104 | Fix ZGC compilation error on GCC 10.2 | 构建修复 | JDK 26 |
+| 8333334 | C2: Make Node::dominates more precise for scalar replacement | **C2 优化** | JDK 24 |
+| 8335536 | Fix assertion failure in IdealGraphPrinter | 修复 | JDK 24 |
+| 8326936 | RISC-V: Shenandoah GC incorrect atomic operations | **正确性修复** | JDK 23 |
+| 8324280 | RISC-V: Incorrect VM_Version::parse_satp_mode | 修复 | JDK 23 |
+
+> **注**: 以上为代表性工作。完整列表见 [GitHub](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AMaxXSoft+label%3Aintegrated)。
+
+#### Joshua Zhu (@JoshuaZhuwj) — 6 PRs (AArch64, 编译器)
+
+| Issue | 标题 | 类型 | 版本 |
+|-------|------|------|------|
+| 8339063 | AArch64: Skip verify_sve_vector_length for 128-bit | 性能优化 | JDK 24 |
+| 8326541 | AArch64: ZGC C2 load barrier stub register spilling | 正确性修复 | JDK 23 |
+| 8282874 | Bad performance on gather/scatter API (IntSpecies) | 性能修复 | JDK 19 |
+| 8269598 | Regressions up to 5% on aarch64 due to JDK-8268858 | **回归修复** | JDK 18 |
+| 8268858 | Determine register pressure automatically | **编译器优化** | JDK 18 |
+| 8253048 | AArch64: CallLeaf no need to preserve callee-saved | 性能优化 | JDK 17 |
+
+#### Liang Mao (@mmyxym) — 2 PRs (GC)
+
+| Issue | 标题 | 类型 | 版本 |
+|-------|------|------|------|
+| 8339725 | Concurrent GC crashed due to GetMethodDeclaringClass | **GC 修复** | JDK 24 |
+| 8335493 | check_gc_overhead_limit should reset SoftRefPolicy | GC 修复 | JDK 24 |
+
+#### sandlerwang (@sandlerwang) — 3 PRs (AArch64, GC)
+
+| Issue | 标题 | 类型 | 版本 |
+|-------|------|------|------|
+| 8324817 | Parallel GC pre-touch all heap pages when large page disabled | **GC 修复** | JDK 23 |
+| 8324123 | aarch64: fix prfm literal encoding in assembler | AArch64 修复 | JDK 23 |
+| 8252835 | Revert fix for JDK-8246051 | 回退 | JDK 17 |
+
 ### JDK 17 / JDK 11
 
 早期贡献主要在 ZGC 和 Shenandoah GC。
@@ -316,17 +401,25 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 
 ## 5. 版本贡献统计
 
-### 核心贡献者
+### 全贡献者统计
 
-| 版本 | PRs | 主要贡献者 | 主要领域 |
-|------|-----|-----------|----------|
-| **JDK 26** | 8 | Shaojin Wen (8) | 核心库性能优化 |
-| **JDK 25** | 20 | Shaojin Wen (18), Kuai Wei (2) | ClassFile API, String, C2 |
-| **JDK 24** | 8 | Shaojin Wen (6), Kuai Wei (2) | 核心库性能优化 |
-| **JDK 23** | 44 | Shaojin Wen (34), Kuai Wei (7), Yude Lin (3) | ClassFile API, String, C2 |
-| **JDK 21/22** | 10 | Shaojin Wen (8), Yude Lin (2) | 数字格式化，GC 监控 |
-| **JDK 17/11** | 6 | Yude Lin (3), Xiaowei Lu (3) | ZGC, Shenandoah |
-| **小计** | **121** | **4 位核心贡献者** | - |
+| 贡献者 | PRs | 主要领域 | 活跃版本 |
+|--------|-----|----------|----------|
+| Shaojin Wen | 97 | 核心库, ClassFile API, String | JDK 21-26 |
+| Yi Yang | 57 | C2 编译器, HeapDump, HotSpot | JDK 17-23 |
+| Denghui Dong | 36 | C1 编译器, JFR, HotSpot Runtime | JDK 19-24 |
+| Max Xing | 16 | RISC-V, C2 编译器 | JDK 23-26 |
+| Kuai Wei | 13 | C2 编译器, MergeStore | JDK 23-25 |
+| Yude Lin | 8 | G1 GC, AArch64, Shenandoah | JDK 17-23 |
+| Joshua Zhu | 6 | AArch64, 编译器 | JDK 17-24 |
+| Xiaowei Lu | 3 | ZGC | JDK 17 |
+| Long Yang | 3 | JFR, Runtime | JDK 23-24 |
+| sandlerwang | 3 | AArch64, GC | JDK 17-23 |
+| Lingjun Cao | 2 | DecimalFormat | JDK 24 |
+| Liang Mao | 2 | GC | JDK 24 |
+| **核心+PR小计** | **246** | - | - |
+| SendaoYan (前员工) | 202 | 编译器/GC 测试 | JDK 22-26 |
+| **总计** | **448** | - | - |
 
 > **注**: 部分 PR 可能跨版本合入，统计基于主要目标版本。
 
