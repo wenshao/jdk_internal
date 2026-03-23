@@ -42,7 +42,9 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | [BellSoft](bellsoft.md) | 40+ | - | 1 | - | ARM32, AArch64, RISC-V | Liberica JDK |
 | [Azul](azul.md) | 18+ | - | 1 | - | CRaC, Runtime | Zulu JDK |
 | [Google](google.md) | ~14 | - | - | ~3 | 构建系统, javac | - |
+| [Datadog](datadog.md) | 113+ | 1 | 1 | - | Compact Object Headers (JEP 519), JFR | - |
 | [Microsoft](microsoft.md) | 少量 | - | - | ~3 | Azure 优化, Build | Microsoft Build of OpenJDK |
+| [独立贡献者](independent.md) | 500+ | 1 | 2 | 1 | 代码清理, C2, 安全 | - |
 
 > **统计时间**: 2026-03-23 | **统计方法**: GitHub Integrated PRs
 > **角色来源**: [OpenJDK Census](https://openjdk.org/census) JDK Project 部分
