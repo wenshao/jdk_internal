@@ -38,7 +38,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | [ISCAS PLCT](iscas-plct.md) | 20+ | 5+ | RISC-V | - |
 | [Intel](intel.md) | 15+ | 1 | Vector API, x86_64 | - |
 | [Google](google.md) | ~14 | ~3 | 构建系统, javac | - |
-| [Tencent](tencent.md) | 10+ | 5+ | G1 GC, 容器 | Kona |
+| [Tencent](tencent.md) | 198+ | 3 | 构建稳定性, 编译器, GC, Vector API | Kona |
 | [Microsoft](microsoft.md) | 少量 | ~3-5 | Azure 优化, Build | Microsoft Build of OpenJDK |
 
 > **统计时间**: 2026-03-23 | **统计方法**: GitHub Integrated PRs
@@ -235,7 +235,7 @@ Alibaba    7       2       8      68      35
 | **ISCAS PLCT** | 15 | 50 | 35 | ↑ 持续贡献 |
 | **ByteDance** | 0 | 0 | 24 | ↑ 新兴 |
 | **Loongson** | 5 | 10 | 15 | ↑ 增长 |
-| **Tencent** | 2 | 4 | 4 | → 稳定 |
+| **Tencent** | 19 | 7 | 3 | ↓ 高峰后回落 |
 
 ### 组织贡献份额 (JDK 26)
 
@@ -470,14 +470,14 @@ IBM        ██                                                          3%
 
 ### Tencent
 
-> G1 GC 和云原生优化
+> 构建稳定性守护者，编译器测试和 GC 优化
 
 | 属性 | 值 |
 |------|-----|
-| **专注领域** | G1 GC, 容器优化 |
-| **贡献特点** | 云原生场景驱动 |
-| **Kona** | 微服务/容器优化 |
-| **代表贡献者** | [Tongbao Zhang](../../by-contributor/profiles/tongbao-zhang.md) |
+| **专注领域** | 构建稳定性, 编译器测试, GC, Vector API |
+| **贡献特点** | 广度最大的中国企业贡献者，OpenJDK 构建稳定性守护者 |
+| **核心贡献者** | [Jie Fu (傅杰)](https://github.com/DamonFool) — 187 PRs，全球前列 |
+| **Kona** | 腾讯云默认 JDK，4 个 LTS 版本 |
 | **详情** | [Tencent 组织页面](tencent.md) |
 
 ### Microsoft
@@ -552,7 +552,7 @@ OpenJDK 核心贡献者在组织间的流动对技术方向有深远影响：
 | | [Loongson](loongson.md) | 30+ | Loongson JDK |
 | | [ByteDance](bytedance.md) | 25 | - |
 | | [ISCAS PLCT](iscas-plct.md) | 20+ | - |
-| | [Tencent](tencent.md) | 10+ | Kona |
+| | [Tencent](tencent.md) | 198+ | Kona |
 
 ### 中国企业特点
 
