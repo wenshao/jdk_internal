@@ -24,24 +24,25 @@
 
 OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了各主要贡献组织的工作领域、版本贡献和专业方向。
 
-| 组织 | Integrated PRs | 贡献者数 | 主要领域 | JDK 发行版 |
-|------|----------------|----------|----------|------------|
-| [Oracle](oracle.md) | 4,200+ | 320+ | 全领域 | Oracle JDK |
-| [SAP](sap.md) | 734+ | 30+ | PPC, AIX, 构建 | SapMachine |
-| [Red Hat](redhat.md) | 649+ | 4 | C2 编译器, HotSpot Runtime, AArch64 | Red Hat OpenJDK |
-| [Amazon](amazon.md) | 1,048+ | 7 | Shenandoah GC, C2 编译器, Runtime | Corretto |
-| [Alibaba](alibaba.md) | 380 | 10 | 核心库, C2, GC, HotSpot Runtime | Dragonwell |
-| [IBM](ibm.md) | 239+ | 4 | s390x, 容器/cgroup, AArch64, JVM | Semeru |
-| [ARM](arm.md) | 31+ | 2 | AArch64, Build | - |
-| [Loongson](loongson.md) | 30+ | 5+ | LoongArch | Loongson JDK |
-| [ByteDance](bytedance.md) | 25 | 5+ | RISC-V 向量 | - |
-| [ISCAS PLCT](iscas-plct.md) | 20+ | 5+ | RISC-V | - |
-| [Intel](intel.md) | 146+ | 2 | Vector API, x86_64, SuperWord | - |
-| [Google](google.md) | ~14 | ~3 | 构建系统, javac | - |
-| [Tencent](tencent.md) | 228+ | 4 | 构建稳定性, 编译器, GC, 安全/TLS, Vector API | Kona |
-| [Microsoft](microsoft.md) | 少量 | ~3-5 | Azure 优化, Build | Microsoft Build of OpenJDK |
+| 组织 | Integrated PRs | Reviewer | Committer | Author | 主要领域 | JDK 发行版 |
+|------|----------------|----------|-----------|--------|----------|------------|
+| [Oracle](oracle.md) | 4,200+ | 30+ | 20+ | - | 全领域 | Oracle JDK |
+| [Amazon](amazon.md) | 1,048+ | 1 | 4 | 1 | Shenandoah GC, C2, Runtime | Corretto |
+| [SAP](sap.md) | 851+ | 3 | 4 | - | PPC, AIX, 构建 | SapMachine |
+| [Red Hat](redhat.md) | 649+ | 4 | - | - | C2 编译器, HotSpot Runtime | Red Hat OpenJDK |
+| [Alibaba](alibaba.md) | 380 | - | 4 | 3 | 核心库, C2, GC, Runtime | Dragonwell |
+| [IBM](ibm.md) | 239+ | 2 | 2 | - | s390x, 容器/cgroup, AArch64 | Semeru |
+| [Tencent](tencent.md) | 228+ | 2 | - | 2 | 构建稳定性, 编译器, GC, 安全 | Kona |
+| [Intel](intel.md) | 146+ | 1 | - | 1 | Vector API, x86_64, SuperWord | - |
+| [ARM](arm.md) | 31+ | 1 | - | 1 | AArch64, Build | - |
+| [Loongson](loongson.md) | 30+ | - | - | 3+ | LoongArch | Loongson JDK |
+| [ByteDance](bytedance.md) | 25 | - | 1 | - | RISC-V 向量 | - |
+| [ISCAS PLCT](iscas-plct.md) | 20+ | - | - | 1+ | RISC-V | - |
+| [Google](google.md) | ~14 | - | - | ~3 | 构建系统, javac | - |
+| [Microsoft](microsoft.md) | 少量 | - | - | ~3 | Azure 优化, Build | Microsoft Build of OpenJDK |
 
 > **统计时间**: 2026-03-23 | **统计方法**: GitHub Integrated PRs
+> **角色来源**: [OpenJDK Census](https://openjdk.org/census) JDK Project 部分
 >
 > **注**: PR 数据为各组织详情页面中记录的值，部分组织的统计范围仅限近几年活跃贡献者。完整历史数据参见 [按组织统计](../stats/by-org.md)。
 
