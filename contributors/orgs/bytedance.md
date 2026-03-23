@@ -279,12 +279,24 @@
 
 ## 6. 关键贡献
 
+### RISC-V 密码学 Intrinsics (AES/GHASH)
+
+| Issue | 标题 | 说明 |
+|-------|------|------|
+| 8371968 | RISC-V: implement AES CBC intrinsics | AES CBC 模式加解密 |
+| 8365732 | RISC-V: implement AES CTR intrinsics | AES CTR 模式加解密 |
+| 8373069 | RISC-V: implement GHASH intrinsic | GHASH 认证哈希 |
+| 8374351 | RISC-V: Small refactoring for crypto macro-assembler routines | 密码学汇编重构 |
+
 ### RISC-V 向量指令 (Zvbb)
 
 | Issue | 标题 | 说明 |
 |-------|------|------|
 | 8329887 | RISC-V: C2 支持 Zvbb Vector And-Not 指令 | 向量 And-Not 指令 |
 | 8355074 | RISC-V: C2 支持向量标量版 Zvbb Vector And-Not | 向量标量版本 |
+| 8355657 | RISC-V: Improve PrintOptoAssembly output of vector-scalar instructions | 向量标量输出改进 |
+| 8355562 | RISC-V: Cleanup names of vector-scalar instructions | 命名清理 |
+| 8355796 | RISC-V: AllBitsSetVectorMatchRuleTest.java fix | 测试修复 |
 
 **Zvbb 指令集**: Vector Bit-manipulation used in Cryptography
 
@@ -297,30 +309,51 @@
 
 **Zfa 指令集**: Additional Floating-Point instructions
 
-### RISC-V 内存操作
+### RISC-V 解释器优化
+
+| Issue | 标题 | 说明 |
+|-------|------|------|
+| 8358105 | RISC-V: Optimize interpreter profile updates | 解释器性能优化 |
+| 8357626 | RISC-V: Tighten up template interpreter method entry code | 方法入口优化 |
+| 8359801 | RISC-V: Simplify Interpreter::profile_taken_branch | 分支 profiling 简化 |
+| 8359105 | RISC-V: No need for acquire fence in safepoint poll during JNI calls | JNI 优化 |
+| 8377225 | RISC-V: Improve receiver type profiling reliability | 类型 profiling 改进 |
+
+### RISC-V 内存操作与数组填充
 
 | Issue | 标题 | 说明 |
 |-------|------|------|
 | 8351140 | RISC-V: Intrinsify Unsafe::setMemory | 内存填充 intrinsic |
-
-### RISC-V 数组填充优化
-
-| Issue | 标题 | 说明 |
-|-------|------|------|
 | 8356593 | RISC-V: 数组填充 stub 小改进 | 性能优化 |
 | 8356700 | RISC-V: fill_words/zero_memory 声明不可压缩范围 | 正确性 |
 | 8356869 | RISC-V: 改进数组填充 stub 尾部处理 | 性能优化 |
+
+### 其他
+
+| Issue | 标题 | 说明 |
+|-------|------|------|
+| 8354815 | RISC-V: Change type of bitwise rotation shift to iRegIorL2I | 类型修正 |
+| 8360179 | RISC-V: Only enable BigInteger intrinsics when AvoidUnalignedAccess == false | 正确性修复 |
+| 8359218 | RISC-V: Only enable CRC32 intrinsic when AvoidUnalignedAccess == false | 正确性修复 |
+| 8366747 | RISC-V: Improve VerifyMethodHandles for method handle linkers | 验证改进 |
+| 8371966 | RISC-V: Incorrect pointer dereference in TemplateInterpreterGenerator | Bug 修复 |
 
 ---
 
 ## 7. 技术特点
 
-### RISC-V 专注
+### RISC-V 全栈贡献
 
-字节跳动的贡献完全聚焦于 RISC-V：
-- 向量指令支持
-- 浮点指令支持
-- 内存操作优化
+字节跳动的贡献覆盖 RISC-V 多个层面：
+
+| 层面 | PRs | 说明 |
+|------|-----|------|
+| **密码学 Intrinsics** | 4 | AES CBC/CTR, GHASH 原生实现 |
+| **向量指令** | 5 | Zvbb 位操作，向量标量指令 |
+| **解释器优化** | 5 | Profile, 方法入口, JNI |
+| **内存/数组操作** | 4 | setMemory, 数组填充 |
+| **浮点指令** | 2 | Zfa fminm/fmaxm |
+| **其他修复** | 5 | 正确性修复, 验证改进 |
 
 ### 支持的 RISC-V 扩展
 
@@ -329,6 +362,8 @@
 | **Zvbb** | 向量位操作 (密码学相关) |
 | **Zfa** | 附加浮点指令 |
 | **V** | 向量扩展 |
+
+> **注**: 通过源码版权声明搜索 (`Copyright ... ByteDance`)、PR 描述搜索和 commit 邮箱搜索均未发现其他字节跳动贡献者。当前确认仅 Anjian-Wen 一人贡献上游 OpenJDK。
 
 ---
 
@@ -348,14 +383,13 @@
 
 ---
 
-**文档版本**: 1.0
-**最后更新**: 2026-03-21
-**更新内容**:
-- 新增多层网络分析章节 (6 个小节)
-- 添加协作网络可视化图表
-- 补充技术影响力网络分析 (4 大领域)
-- 新增组织关系网络图 (字节跳动团队结构)
-- 添加协作深度分析 (RISC-V 向量指令案例)
-- 新增知识传承网络分析
+**文档版本**: 2.0
+**最后更新**: 2026-03-23
+**本次更新**:
+- **完善**: 关键贡献列表从 7 个扩展为全部 25 个 PR 的完整记录
+- **新增**: 密码学 Intrinsics 分类 (AES CBC/CTR, GHASH) — 4 PRs
+- **新增**: 解释器优化分类 (profile, 方法入口, JNI) — 5 PRs
+- **更新**: 技术特点从 3 个领域扩展为 6 个层面的全栈分析
+- **验证**: 通过源码版权、PR 搜索、commit 邮箱三种方式确认无遗漏贡献者
 
 [→ 返回组织索引](../../by-contributor/README.md)
