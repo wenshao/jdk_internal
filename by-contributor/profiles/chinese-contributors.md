@@ -159,7 +159,7 @@
 | ISCAS | 53 | - |
 | 字节跳动 | 25 | [详情](../../contributors/orgs/bytedance.md) |
 | 龙芯 | 50+ | [详情](../../contributors/orgs/loongson.md) |
-| 腾讯 | 40+ | [详情](../../contributors/orgs/tencent.md) |
+| 腾讯 | 198+ | [详情](../../contributors/orgs/tencent.md) |
 
 ---
 

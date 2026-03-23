@@ -47,16 +47,17 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 | 排名 | 组织 | Integrated PRs | 占比 | 贡献者数 | 主要领域 |
 |------|------|----------------|------|----------|----------|
 | 1 | **Oracle** | 15,000+ | 70%+ | 800+ | 全领域 |
-| 2 | **Red Hat** | 1,000+ | 5% | 50+ | GC, 编译器 |
-| 3 | **SAP** | 500+ | 2% | 30+ | HotSpot, 构建系统 |
-| 4 | **IBM** | 400+ | 2% | 25+ | JVM, AOT |
-| 5 | **Amazon** | 300+ | 1.5% | 20+ | GC, 性能 |
-| 6 | **Google** | 200+ | 1% | 15+ | 核心库 |
-| 7 | **DataDog** | 6 | <1% | 1+ | JFR 工具 |
-| 8 | **Alibaba** | 100+ | <1% | 10+ | 核心库，性能 |
-| 9 | **腾讯** | 20+ | <1% | 5+ | GC |
-| 10 | **华为** | 15+ | <1% | 8+ | JIT, AOT |
-| 11 | **字节跳动** | 10+ | <1% | 5+ | RISC-V |
+| 2 | **Amazon** | 1,048+ | 5% | 7 | Shenandoah GC, C2 编译器, Runtime |
+| 3 | **Red Hat** | 668+ | 3% | 5 | C2 编译器, HotSpot Runtime, AArch64 |
+| 4 | **SAP** | 734+ | 3% | 30+ | PPC, HotSpot, 构建系统 |
+| 5 | **Alibaba** | 407 | 2% | 11 | 核心库, C2, GC, HotSpot Runtime |
+| 6 | **IBM** | 400+ | 2% | 25+ | JVM, AOT |
+| 7 | **腾讯** | 198+ | 1% | 3 | 构建稳定性, 编译器, GC, Vector API |
+| 8 | **Google** | 200+ | 1% | 15+ | 核心库 |
+| 9 | **Intel** | 146+ | <1% | 2 | Vector API, x86_64, SuperWord |
+| 10 | **华为** | 15+ | <1% | 8+ | JIT, AOT, RISC-V |
+| 11 | **字节跳动** | 25 | <1% | 1 | RISC-V |
+| 12 | **DataDog** | 6 | <1% | 1+ | JFR 工具 |
 
 ---
 

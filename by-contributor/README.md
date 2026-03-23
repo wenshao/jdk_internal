@@ -157,7 +157,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | [NTT DATA](/contributors/orgs/) | [Yasumasa Suenaga](/by-contributor/profiles/yasumasa-suenaga.md) | [详情](/by-contributor/profiles/yasumasa-suenaga.md) |
 | [ByteDance](/contributors/orgs/bytedance.md) | [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | [详情](/by-contributor/profiles/anjian-wen.md) |
 | [DataDog](/contributors/orgs/) | [Jaroslav Bachorik](/by-contributor/profiles/jaroslav-bachorik.md), [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | [详情](/by-contributor/profiles/jaroslav-bachorik.md) |
-| [Tencent](/contributors/orgs/tencent.md) | (无主要贡献者) | - |
+| [Tencent](/contributors/orgs/tencent.md) | [Jie Fu (傅杰)](https://github.com/DamonFool) (187 PRs) | [详情](/contributors/orgs/tencent.md) |
 | Huawei | [Fei Yang](/by-contributor/profiles/fei-yang.md) | [详情](/by-contributor/profiles/fei-yang.md) |
 | [龙芯](/contributors/orgs/loongson.md) | Zhang Xiaofeng, Liu Xinyu | [详情](/contributors/orgs/loongson.md) |
 

@@ -29,8 +29,8 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | [Oracle](oracle.md) | 4,200+ | 320+ | 全领域 | Oracle JDK |
 | [SAP](sap.md) | 734+ | 30+ | PPC, AIX, 构建 | SapMachine |
 | [Red Hat](redhat.md) | 668+ | 5 | C2 编译器, HotSpot Runtime, AArch64 | Red Hat OpenJDK |
-| [Amazon](amazon.md) | 138+ | 20+ | Shenandoah GC, AArch64 | Corretto |
-| [Alibaba](alibaba.md) | 121 | 10+ | 核心库, C2, GC | Dragonwell |
+| [Amazon](amazon.md) | 1,048+ | 7 | Shenandoah GC, C2 编译器, Runtime | Corretto |
+| [Alibaba](alibaba.md) | 407 | 11 | 核心库, C2, GC, HotSpot Runtime | Dragonwell |
 | [IBM](ibm.md) | 113+ | 25+ | s390x, JVM | Semeru |
 | [ARM](arm.md) | 50+ | 2+ | AArch64, Build | - |
 | [Loongson](loongson.md) | 30+ | 5+ | LoongArch | Loongson JDK |
@@ -64,9 +64,11 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | 组织 | C2 编译器 | C1 编译器 | Graal | 代表贡献者 |
 |------|-----------|-----------|-------|------------|
 | **Oracle** | ✅ 核心 | ✅ 核心 | ✅ | [Emanuel Peter](../../by-contributor/profiles/emanuel-peter.md), [Christian Hagedorn](../../by-contributor/profiles/christian-hagedorn.md) |
-| **Alibaba** | ✅ | - | - | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) |
+| **Red Hat** | ✅ 核心 | - | - | [Roland Westrelin](https://github.com/rwestrel) (225 PRs) |
+| **Amazon** | ✅ | - | - | [Cesar Soares](https://github.com/JohnTortugo), [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) |
+| **Alibaba** | ✅ | - | - | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md), [Denghui Dong](https://github.com/D-D-H) |
+| **Intel** | ✅ (向量化) | - | - | [Jatin Bhateja](../../by-contributor/profiles/jatin-bhateja.md), [Swati Sharma](https://github.com/sviswa7) |
 | **IBM** | ✅ (s390x) | - | - | [Amit Kumar](../../by-contributor/profiles/amit-kumar.md) |
-| **Amazon** | ✅ | - | - | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) |
 
 ### 架构移植
 
@@ -358,28 +360,28 @@ IBM        ██                                                          3%
 
 ### Amazon
 
-> Shenandoah GC 维护者
+> Shenandoah GC 维护者，C2 编译器和 Runtime 贡献者
 
 | 属性 | 值 |
 |------|-----|
-| **专注领域** | Shenandoah GC, AArch64, 性能 |
-| **贡献特点** | GC 深度优化，云原生场景 |
-| **代表工作** | JEP 521 Generational Shenandoah |
+| **专注领域** | Shenandoah GC, C2 编译器, Runtime, 性能 |
+| **贡献特点** | GC 深度优化，编译器改进，云原生场景 |
+| **代表工作** | JEP 521 Generational Shenandoah, C2 编译器优化 |
 | **Corretto** | AWS 云优化，免费 LTS 支持 |
-| **代表贡献者** | [William Kemper](../../by-contributor/profiles/william-kemper.md), [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) |
+| **代表贡献者** | [Aleksey Shipilev](../../by-contributor/profiles/aleksey-shipilev.md) (803+), [William Kemper](../../by-contributor/profiles/william-kemper.md) (123), [Cesar Soares](https://github.com/JohnTortugo) (46) |
 | **详情** | [Amazon 组织页面](amazon.md) |
 
 ### Red Hat
 
-> AArch64 和 Leyden 贡献者
+> C2 编译器和 HotSpot Runtime 核心贡献者
 
 | 属性 | 值 |
 |------|-----|
-| **专注领域** | Shenandoah GC (历史), AArch64, Project Leyden |
-| **贡献特点** | 架构优化，启动性能 |
-| **代表工作** | AArch64 移植, JEP 519 Compact Object Headers |
+| **专注领域** | C2 编译器, HotSpot Runtime, AArch64 |
+| **贡献特点** | 编译器深度优化，运行时内存管理 |
+| **代表工作** | C2 循环优化 (Roland Westrelin, 225 PRs), HotSpot Runtime/NMT (Thomas Stuefe, 347 PRs) |
 | **特点** | 多位核心贡献者已流向 Amazon/Datadog |
-| **代表贡献者** | [Andrew Dinn](../../by-contributor/profiles/andrew-dinn.md), [Thomas Stuefe](../../by-contributor/profiles/thomas-stuefe.md), [Andrew Haley](../../by-contributor/profiles/andrew-haley.md) |
+| **代表贡献者** | [Thomas Stuefe](../../by-contributor/profiles/thomas-stuefe.md) (347), [Roland Westrelin](https://github.com/rwestrel) (225), [Andrew Haley](../../by-contributor/profiles/andrew-haley.md) (71) |
 | **详情** | [Red Hat 组织页面](redhat.md) |
 
 ### SAP
@@ -426,10 +428,10 @@ IBM        ██                                                          3%
 
 | 属性 | 值 |
 |------|-----|
-| **专注领域** | Vector API, x86_64 架构优化 |
-| **贡献特点** | SIMD 向量指令支持 |
-| **代表工作** | Vector API 向量化实现 |
-| **代表贡献者** | [Jatin Bhateja](../../by-contributor/profiles/jatin-bhateja.md) |
+| **专注领域** | Vector API, x86_64 架构优化, SuperWord |
+| **贡献特点** | SIMD 向量指令支持，自动向量化 |
+| **代表工作** | Vector API 向量化实现, SuperWord 优化 |
+| **代表贡献者** | [Jatin Bhateja](../../by-contributor/profiles/jatin-bhateja.md) (109), [Swati Sharma](https://github.com/sviswa7) (37) |
 | **详情** | [Intel 组织页面](intel.md) |
 
 ### ISCAS PLCT
@@ -538,17 +540,17 @@ OpenJDK 核心贡献者在组织间的流动对技术方向有深远影响：
 |------|------|-----|--------|
 | **北美** | | | |
 | | [Oracle](oracle.md) (美国总部) | 4,200+ | Oracle JDK |
-| | [Amazon](amazon.md) | 138+ | Corretto |
+| | [Amazon](amazon.md) | 1,048+ | Corretto |
 | | [IBM](ibm.md) | 113+ | Semeru |
-| | [Intel](intel.md) | 15+ | - |
+| | [Intel](intel.md) | 146+ | - |
 | | [Microsoft](microsoft.md) | 少量 | Microsoft Build of OpenJDK |
 | **欧洲** | | | |
 | | [SAP](sap.md) (德国) | 734+ | SapMachine |
-| | [Red Hat](redhat.md) | 200+ | Red Hat OpenJDK |
+| | [Red Hat](redhat.md) | 668+ | Red Hat OpenJDK |
 | | [ARM](arm.md) (英国) | 50+ | - |
 | | Oracle 欧洲团队 | - | - |
 | **中国** | | | |
-| | [Alibaba](alibaba.md) | 121 | Dragonwell |
+| | [Alibaba](alibaba.md) | 407 | Dragonwell |
 | | [Loongson](loongson.md) | 30+ | Loongson JDK |
 | | [ByteDance](bytedance.md) | 25 | - |
 | | [ISCAS PLCT](iscas-plct.md) | 20+ | - |
@@ -558,8 +560,8 @@ OpenJDK 核心贡献者在组织间的流动对技术方向有深远影响：
 
 | 特点 | 说明 |
 |------|------|
-| **增长迅速** | 2023-2025 年贡献增长显著，尤其是 Alibaba 和 ISCAS PLCT |
-| **领域聚焦** | 核心库性能 (Alibaba)、RISC-V (ISCAS/ByteDance)、LoongArch (Loongson) |
+| **增长迅速** | 2023-2025 年贡献增长显著，尤其是 Tencent、Alibaba 和 ISCAS PLCT |
+| **领域聚焦** | 构建稳定性 (Tencent)、核心库性能 (Alibaba)、RISC-V (ISCAS/ByteDance)、LoongArch (Loongson) |
 | **国产架构** | LoongArch 和 RISC-V 两大方向，推动国产芯片生态 |
 | **发行版丰富** | Dragonwell、Kona、Loongson JDK 等针对不同场景 |
 
