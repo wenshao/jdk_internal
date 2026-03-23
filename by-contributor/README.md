@@ -97,31 +97,40 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 
 #### Amazon
 
-| 贡献者 | 主要领域 | 查看 | Topic |
-|--------|----------|------|-------|
-| [Nick Gasson](/by-contributor/profiles/nick-gasson.md) | AArch64 | [详情](/by-contributor/profiles/nick-gasson.md) | [→](/by-topic/platform/) |
-| [David Beaumont](/by-contributor/profiles/david-beaumont.md) | 编译器 | [详情](/by-contributor/profiles/david-beaumont.md) | [→](/by-topic/core/jit/) |
+| 贡献者 | PRs | 主要领域 | 查看 |
+|--------|-----|----------|------|
+| [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 803+ | Shenandoah GC, 性能 | [详情](/by-contributor/profiles/aleksey-shipilev.md) |
+| [William Kemper](/by-contributor/profiles/william-kemper.md) | 123 | Shenandoah GC | [详情](/by-contributor/profiles/william-kemper.md) |
+| [Cesar Soares](https://github.com/JohnTortugo) | 46 | C2 编译器, Runtime | - |
+| [Kelvin Nilsen](/by-contributor/profiles/kelvin-nilsen.md) | 40 | Generational Shenandoah | [详情](/by-contributor/profiles/kelvin-nilsen.md) |
+
+> **注**: Nick Gasson 实际属于 **Arm**，David Beaumont 属于 **Oracle**，已更正。
 
 [→ Amazon 全部贡献者](/contributors/orgs/amazon.md)
 
 #### Red Hat
 
-| 贡献者 | 主要领域 | 查看 | Topic |
-|--------|----------|------|-------|
-| Raffaello Giulietti | 核心库 | [OpenJDK Census](https://openjdk.org/census#rsgiulie) | - |
-| [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | AArch64 | [详情](/by-contributor/profiles/andrew-dinn.md) | [→](/by-topic/platform/) |
-| [Andrew Hughes](/by-contributor/profiles/andrew-hughes.md) | Updates | [详情](/by-contributor/profiles/andrew-hughes.md) | - |
-| [Severin Gehwolf](/by-contributor/profiles/severin-gehwolf.md) | Containers | [详情](/by-contributor/profiles/severin-gehwolf.md) | [→](/by-topic/platform/) |
+| 贡献者 | PRs | 主要领域 | 查看 |
+|--------|-----|----------|------|
+| [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 347 | HotSpot Runtime, NMT | [详情](/by-contributor/profiles/thomas-stuefe.md) |
+| [Roland Westrelin](https://github.com/rwestrel) | 225 | C2 编译器 | - |
+| [Andrew Haley](/by-contributor/profiles/andrew-haley.md) | 71 | AArch64 | [详情](/by-contributor/profiles/andrew-haley.md) |
+| [Andrew Hughes](/by-contributor/profiles/andrew-hughes.md) | 6 | Updates | [详情](/by-contributor/profiles/andrew-hughes.md) |
+
+> **注**: Andrew Dinn 已转至 **IBM**，Severin Gehwolf 已转至 **IBM**。
 
 [→ Red Hat 全部贡献者](/contributors/orgs/redhat.md)
 
 #### IBM
 
-| 贡献者 | 主要领域 | 查看 | Topic |
-|--------|----------|------|-------|
-| [Goetz Lindenmaier](/by-contributor/profiles/goetz-lindenmaier.md) | HotSpot Runtime | [详情](/by-contributor/profiles/goetz-lindenmaier.md) | [→](/by-topic/core/) |
-| [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | HotSpot | [详情](/by-contributor/profiles/thomas-stuefe.md) | [→](/by-topic/core/) |
-| [Amit Kumar](/by-contributor/profiles/amit-kumar.md) | s390x, Compiler | [详情](/by-contributor/profiles/amit-kumar.md) | [→](/by-topic/core/jit/) |
+| 贡献者 | PRs | 主要领域 | 查看 |
+|--------|-----|----------|------|
+| [Amit Kumar](/by-contributor/profiles/amit-kumar.md) | 93 | s390x, Compiler | [详情](/by-contributor/profiles/amit-kumar.md) |
+| [Severin Gehwolf](/by-contributor/profiles/severin-gehwolf.md) | 75 | 容器/cgroup, jlink | [详情](/by-contributor/profiles/severin-gehwolf.md) |
+| [Ashutosh Mehra](https://github.com/ashu-mehra) | 46 | AOT, CDS, Runtime | - |
+| [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | 25 | AArch64, Byteman | [详情](/by-contributor/profiles/andrew-dinn.md) |
+
+> **注**: Goetz Lindenmaier 属于 **SAP**，Thomas Stuefe 属于 **Red Hat**，已更正。
 
 [→ IBM 全部贡献者](/contributors/orgs/ibm.md)
 
@@ -157,7 +166,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | [NTT DATA](/contributors/orgs/) | [Yasumasa Suenaga](/by-contributor/profiles/yasumasa-suenaga.md) | [详情](/by-contributor/profiles/yasumasa-suenaga.md) |
 | [ByteDance](/contributors/orgs/bytedance.md) | [Anjian Wen](/by-contributor/profiles/anjian-wen.md) | [详情](/by-contributor/profiles/anjian-wen.md) |
 | [DataDog](/contributors/orgs/) | [Jaroslav Bachorik](/by-contributor/profiles/jaroslav-bachorik.md), [Roman Kennke](/by-contributor/profiles/roman-kennke.md) | [详情](/by-contributor/profiles/jaroslav-bachorik.md) |
-| [Tencent](/contributors/orgs/tencent.md) | [Jie Fu (傅杰)](https://github.com/DamonFool) (187 PRs) | [详情](/contributors/orgs/tencent.md) |
+| [Tencent](/contributors/orgs/tencent.md) | [Jie Fu (傅杰)](https://github.com/DamonFool) (187 PRs), [John Jiang](https://github.com/johnshajiang) (30 PRs) | [详情](/contributors/orgs/tencent.md) |
 | Huawei | [Fei Yang](/by-contributor/profiles/fei-yang.md) | [详情](/by-contributor/profiles/fei-yang.md) |
 | [龙芯](/contributors/orgs/loongson.md) | Zhang Xiaofeng, Liu Xinyu | [详情](/contributors/orgs/loongson.md) |
 

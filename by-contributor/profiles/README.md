@@ -86,7 +86,7 @@
 | [Red Hat](/contributors/orgs/redhat.md) | 668+ | C2 编译器, HotSpot Runtime, AArch64 | [查看详情](/contributors/orgs/redhat.md) |
 | [字节跳动](/contributors/orgs/bytedance.md) | 25 | RISC-V | [查看详情](/contributors/orgs/bytedance.md) |
 | [龙芯](/contributors/orgs/loongson.md) | 50+ | LoongArch | [查看详情](/contributors/orgs/loongson.md) |
-| [腾讯](/contributors/orgs/tencent.md) | 198+ | 构建稳定性, 编译器, GC, Vector API | [查看详情](/contributors/orgs/tencent.md) |
+| [腾讯](/contributors/orgs/tencent.md) | 228+ | 构建稳定性, 编译器, GC, 安全/TLS, Vector API | [查看详情](/contributors/orgs/tencent.md) |
 | [IBM](/contributors/orgs/ibm.md) | 50+ | JVM, 测试 | [查看详情](/contributors/orgs/ibm.md) |
 
 ---
