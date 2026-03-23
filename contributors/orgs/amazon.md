@@ -40,6 +40,18 @@ Amazon 通过 Corretto 团队参与 OpenJDK 开发，专注于 Shenandoah GC、A
 
 ## 2. 贡献者
 
+### 团队负责人
+
+| 负责人 | 职位 | 主要职责 |
+|--------|------|----------|
+| Volker Simonis | Principal Software Engineer, Amazon | Corretto 团队技术负责人, OpenJDK Member |
+
+> **Volker Simonis** ([@simonis](https://github.com/simonis), 34 PRs) 是 Amazon Corretto 团队的技术负责人。前 SAP SapMachine 团队成员，OpenJDK Members/HotSpot/Build/Porters/Vulnerability 多个 Group 成员。位于德国 Walldorf。[个人简历](https://simonis.io/cv/simonis_cv.html)。
+>
+> 他本人也有 34 个上游 Integrated PRs，但主要以团队管理和架构决策为主。
+
+### 上游贡献者列表
+
 | 排名 | 贡献者 | GitHub | PRs | 角色 | 主要领域 | 档案 |
 |------|--------|--------|-----|------|----------|------|
 | 1 | Aleksey Shipilev | [@shipilev](https://github.com/shipilev) | 803+ | Reviewer | Shenandoah GC, JMH, 性能 | [详情](../../by-contributor/profiles/aleksey-shipilev.md) |

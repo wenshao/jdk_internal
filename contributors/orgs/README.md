@@ -35,7 +35,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | [Tencent](tencent.md) | 228+ | 2 | - | 2 | 构建稳定性, 编译器, GC, 安全 | Kona |
 | [Intel](intel.md) | 146+ | 1 | - | 1 | Vector API, x86_64, SuperWord | - |
 | [ARM](arm.md) | 31+ | 1 | - | 1 | AArch64, Build | - |
-| [Loongson](loongson.md) | 30+ | - | - | 3+ | LoongArch | Loongson JDK |
+| [Loongson](loongson.md) | 36+ | - | 1 | 2 | LoongArch | Loongson JDK |
 | [ByteDance](bytedance.md) | 25 | - | 1 | - | RISC-V 向量 | - |
 | [ISCAS PLCT](iscas-plct.md) | 64+ | - | 1 | 1 | RISC-V, 核心库 | - |
 | [Huawei](huawei.md) | 167+ | 1 | 2 | - | RISC-V Port (JEP 422), AArch64 | BiSheng JDK |

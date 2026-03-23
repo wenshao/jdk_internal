@@ -2,7 +2,7 @@
 
 > LoongArch 架构移植
 
-[← 返回组织索引](../../by-contributor/README.md)
+[← 返回组织索引](README.md)
 
 ---
 ## 目录
@@ -25,26 +25,32 @@
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 30+ |
-| **贡献者数** | 3+ |
+| **Integrated PRs** | 36+ |
+| **贡献者数** | 3 |
 | **活跃时间** | 2021 - 至今 |
-| **主要领域** | LoongArch |
+| **主要领域** | LoongArch Zero VM, 编译器, 网络 |
 | **Loongson JDK** | [龙芯 JDK](https://github.com/loongson/jdk) |
 
-> **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。
+> **统计说明**: 使用 GitHub Integrated PRs 统计。
 
 ---
 
 ## 2. 贡献者
 
-| 贡献者 | GitHub | PRs | 角色 | 主要领域 |
-|--------|--------|-----|------|----------|
-| Zhang Xiaofeng | [@xfeng](https://github.com/xfeng) | 20+ | Author | LoongArch |
-| Liu Xinyu | [@liuxinyu](https://github.com/liuxinyu) | 10+ | Author | C2 编译器 |
+| 排名 | 贡献者 | GitHub | PRs | 角色 | 主要领域 |
+|------|--------|--------|-----|------|----------|
+| 1 | SUN Guoyun | [@sunny868](https://github.com/sunny868) | 15 | Author | LoongArch, 网络 |
+| 2 | Ao Qi | [@theaoqi](https://github.com/theaoqi) | 14 | Committer | LoongArch Zero VM, 编译器 |
+| 3 | Haomin Wang | [@haominw](https://github.com/haominw) | 7 | Author | LoongArch, Vector |
 
-**小计**: 30+ PRs
+**总计**: 36+ PRs (1 Committer + 2 Author)
 
-> **注**: Fei Yang (@RealFYang) 是 **华为 (Huawei)** 贡献者，专注于 RISC-V，不属于龙芯。@merykitty 是 Quan Anh Mai (独立贡献者)，不是 Fei Yang 的别名。
+> **重要更正**: 之前文档中的 "Zhang Xiaofeng (@xfeng)" 和 "Liu Xinyu (@liuxinyu)" 经核实在上游 OpenJDK (openjdk/jdk) 没有 Integrated PRs，已替换为实际贡献者。
+> 发现方法: 通过搜索 `LoongArch` 关键词的 Integrated PRs 反查作者。
+>
+> **Ao Qi** (@theaoqi): GitHub company=**Loongson**, 北京。代表工作: [JDK-8270517: Add Zero support for LoongArch](https://github.com/openjdk/jdk/pull/)。
+>
+> **注**: [Fei Yang](../../by-contributor/profiles/fei-yang.md) (@RealFYang) 是 **[华为](huawei.md)** 员工 (RISC-V Port Lead)，不属于龙芯。
 
 ---
 
