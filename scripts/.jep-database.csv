@@ -1,0 +1,501 @@
+jep_number,title,status,target_version,owner
+1,JDK Enhancement-Proposal & Roadmap Process,Active,,Mark Reinhold
+2,JEP Template,Active,,Mark Reinhold
+3,JDK Release Process,Active,,Mark Reinhold
+11,Incubator Modules,Active,,Chris Hegarty
+12,Preview Features,Active,,Alex Buckley
+14,The Tip & Tail Model of Library Development,Active,,Alex Buckley
+101,Generalized Target-Type Inference,Closed / Delivered,8,Maurizio Cimadamore
+102,Process API Updates,Closed / Delivered,9,Roger Riggs
+103,Parallel Array Sorting,Closed / Delivered,8,Chris Hegarty
+104,Type Annotations,Closed / Delivered,8,Michael Ernst
+105,DocTree API,Closed / Delivered,8,Jonathan Gibbons
+106,Add Javadoc to javax.tools,Closed / Delivered,8,Jonathan Gibbons
+107,Bulk Data Operations for Collections,Closed / Delivered,8,Mike Duigou
+108,Collections Enhancements from Third-Party Libraries,Closed / Withdrawn,,Mike Duigou
+109,Enhance Core Libraries with Lambda,Closed / Delivered,8,Stuart Marks
+110,HTTP/2 Client (Incubator),Closed / Delivered,9,Michael McMahon
+111,Additional Unicode Constructs for Regular Expressions,Candidate,,Xueming Shen
+112,Charset Implementation Improvements,Closed / Delivered,8,Xueming Shen
+113,MS-SFU Kerberos 5 Extensions,Closed / Delivered,8,Weijun Wang
+114,TLS Server Name Indication (SNI) Extension,Closed / Delivered,8,Xuelei Fan
+115,AEAD CipherSuites,Closed / Delivered,8,Bradford Wetmore
+116,Extended Validation SSL Certificates,Closed / Withdrawn,,Xuelei Fan
+117,Remove the Annotation-Processing Tool (apt),Closed / Delivered,8,Joe Darcy
+118,Access to Parameter Names at Runtime,Closed / Delivered,8,Alex Buckley
+119,javax.lang.model Implementation Backed by Core Reflection,Closed / Delivered,8,Joe Darcy
+120,Repeating Annotations,Closed / Delivered,8,Alex Buckley
+121,Stronger Algorithms for Password-Based Encryption,Closed / Delivered,8,Vincent Ryan
+122,Remove the Permanent Generation,Closed / Delivered,8,Jon Masamitsu
+123,Configurable Secure Random-Number Generation,Closed / Delivered,8,Bradford Wetmore
+124,Enhance the Certificate Revocation-Checking API,Closed / Delivered,8,Sean Mullan
+125,"Network Interface Aliases, Events, and Defaults",Closed / Withdrawn,,Michael McMahon
+126,Lambda Expressions & Virtual Extension Methods,Closed / Delivered,8,Brian Goetz
+127,Improve Locale Data Packaging and Adopt Unicode CLDR Data,Closed / Delivered,8,Naoto Sato
+128,Unicode BCP 47 Locale Matching,Closed / Delivered,8,Yuka Kamiya
+129,NSA Suite B Cryptographic Algorithms,Closed / Delivered,8,Valerie Peng
+130,SHA-224 Message Digests,Closed / Delivered,8,Valerie Peng
+131,PKCS#11 Crypto Provider for 64-bit Windows,Closed / Delivered,8,Valerie Peng
+132,More-prompt finalization,Closed / Withdrawn,,Jon Masamitsu
+133,Unicode 6.2,Closed / Delivered,8,Yuka Kamiya
+134,Intuitive Semantics for Nested Reference Objects,Candidate,,Mandy Chung
+135,Base64 Encoding & Decoding,Closed / Delivered,8,Alan Bateman
+136,Enhanced Verification Errors,Closed / Delivered,8,Keith Mcguigan
+137,Diagnostic-Command Framework,Draft,,Frederic Parain
+138,Autoconf-Based Build System,Closed / Delivered,8,Magnus Ihse Bursie
+139,Enhance javac to Improve Build Speed,Closed / Delivered,8,Magnus Ihse Bursie
+140,Limited doPrivileged,Closed / Delivered,8,Jeffrey Nisewanger
+141,Increase the Client VM's Default Heap Size,Closed / Withdrawn,,Jesper Wilhelmsson
+142,Reduce Cache Contention on Specified Fields,Closed / Delivered,8,Tony Printezis
+143,Improve Contended Locking,Closed / Delivered,9,Daniel Daugherty
+144,Reduce GC Latency for Large Heaps,Closed / Withdrawn,,Jesper Wilhelmsson
+145,Cache Compiled Code,Closed / Withdrawn,,Christian Thalinger
+146,Improve Fatal Error Logs,Closed / Withdrawn,,Tom Rodriguez
+147,Reduce Class Metadata Footprint,Closed / Delivered,8,Jiangli Zhou
+148,Small VM,Closed / Delivered,8,Bob Vandette
+149,Reduce Core-Library Memory Usage,Closed / Delivered,8,Roger Riggs
+150,Date & Time API,Closed / Delivered,8,Xueming Shen
+151,Compress Time-Zone Data,Closed / Withdrawn,,Stuart Marks
+152,Crypto Operations with Network HSMs,Closed / Withdrawn,,Vincent Ryan
+153,Launch JavaFX Applications,Closed / Delivered,8,Kumar Srinivasan
+154,Remove Serialization,Closed / Withdrawn,,Alan Bateman
+155,Concurrency Updates,Closed / Delivered,8,Chris Hegarty
+156,G1 GC: Reduce need for full GCs,Closed / Delivered,8u40,Stefan Karlsson
+157,G1 GC: NUMA-Aware Allocation,Closed / Withdrawn,,Jesper Wilhelmsson
+158,Unified JVM Logging,Closed / Delivered,9,Marcus Larsson
+159,Enhanced Class Redefinition,Closed / Withdrawn,,Thomas Wuerthinger
+160,Lambda-Form Representation for Method Handles,Closed / Delivered,8,John Rose
+161,Compact Profiles,Closed / Delivered,8,Bob Vandette
+162,Prepare for Modularization,Closed / Delivered,8,Alan Bateman
+163,Enable NUMA Mode by Default When Appropriate,Draft,,Jesper Wilhelmsson
+164,Leverage CPU Instructions for AES Cryptography,Closed / Delivered,8,Vladimir Kozlov
+165,Compiler Control,Closed / Delivered,9,Nils Eliasson
+166,Overhaul JKS-JCEKS-PKCS12 Keystores,Closed / Delivered,8,Vincent Ryan
+167,Event-Based JVM Tracing,Closed / Delivered,7u40,Staffan Larsen
+168,Network Discovery of Manageable Java Processes,Closed / Delivered,8,Dmitriy Samersoff
+169,Larval State for Value Objects,Draft,,John Rose
+170,JDBC 4.2,Closed / Delivered,8,Lance Andersen
+171,Fence Intrinsics,Closed / Delivered,8,Doug Lea
+172,DocLint,Closed / Delivered,8,Jonathan Gibbons
+173,Retire Some Rarely-Used GC Combinations,Closed / Delivered,8,Bengt Rutisson
+174,Nashorn JavaScript Engine,Closed / Delivered,8,Jim Laskey
+175,PowerPC/AIX Port,Closed / Delivered,8u20,Volker Simonis
+176,Mechanical Checking of Caller-Sensitive Methods,Closed / Delivered,8,John Rose
+177,Optimize java.text.DecimalFormat.format,Closed / Delivered,8,Joe Darcy
+178,Statically-Linked JNI Libraries,Closed / Delivered,8,Bob Vandette
+179,Document JDK API Support and Stability,Closed / Delivered,8,Joe Darcy
+180,Handle Frequent HashMap Collisions with Balanced Trees,Closed / Delivered,8,Brent Christian
+181,Nest-Based Access Control,Closed / Delivered,11,David Holmes
+182,Policy for Retiring javac -source and -target Options,Draft,,Joe Darcy
+183,HTTP Cross-Origin Resource Sharing,Closed / Withdrawn,,Michael McMahon
+184,HTTP URL Permissions,Closed / Delivered,8,Michael McMahon
+185,Restrict Fetching of External XML Resources,Closed / Delivered,8,Joe Wang
+186,Collection Literals,Closed / Withdrawn,,Brian Goetz
+188,Java Memory Model Update,Draft,,Doug Lea
+189,Shenandoah: A Low-Pause-Time Garbage Collector (Experimental),Closed / Delivered,12,Roman Kennke
+190,Pluggable Static Analyzers,Draft,,Jan Lahoda
+191,Foreign Function Interface,Closed / Withdrawn,,John Rose
+192,String Deduplication in G1,Closed / Delivered,8u20,Per Liden
+193,Variable Handles,Closed / Delivered,9,Paul Sandoz
+194,Nashorn Code Persistence,Closed / Withdrawn,,Jim Laskey
+195,Scalable Native Memory Tracking,Closed / Delivered,8u40,Mary Lautman
+196,Nashorn Optimistic Typing,Closed / Delivered,8u40,Marcus Lagergren
+197,Segmented Code Cache,Closed / Delivered,9,Tobias Hartmann
+198,Light-Weight JSON API,Closed / Withdrawn,,Mike Duigou
+199,"Smart Java Compilation, Phase Two",Closed / Delivered,9,Andreas Lundblad
+200,The Modular JDK,Closed / Delivered,9,Mark Reinhold
+201,Modular Source Code,Closed / Delivered,9,Alan Bateman
+202,Nashorn Class Filter,Closed / Delivered,8u40,Sundararajan Athijegannathan
+203,Nashorn: Lexically-Scoped Variable & Constant Declarations,Closed / Delivered,8u40,Hannes Wallnoefer
+204,JavaFX Accessibility,Closed / Delivered,8u40,Steve Northover
+205,New Controls for JavaFX,Closed / Delivered,8u40,Steve Northover
+206,Modernize the JavaFX Media Stack on Mac OS X,Closed / Delivered,8u40,David Dehaven
+207,Leverage CPU Instructions to Improve SHA Performance on SPARC,Closed / Delivered,8u40,Vladimir Kozlov
+208,Java Packager Improvements,Closed / Delivered,8u40,Danno Ferrin
+209,JavaFX Scene Builder Update,Closed / Delivered,8u40,Simon Vienot
+210,LambdaForm Reduction and Caching,Closed / Delivered,8u40,Vladimir Ivanov
+211,Elide Deprecation Warnings on Import Statements,Closed / Delivered,9,Joe Darcy
+212,Resolve Lint and Doclint Warnings,Closed / Delivered,9,Joe Darcy
+213,Milling Project Coin,Closed / Delivered,9,Joe Darcy
+214,Remove GC Combinations Deprecated in JDK 8,Closed / Delivered,9,Bengt Rutisson
+215,Tiered Attribution for javac,Closed / Delivered,9,Vicente Arturo Romero Zaldivar
+216,Process Import Statements Correctly,Closed / Delivered,9,Jan Lahoda
+217,Annotations Pipeline 2.0,Closed / Delivered,9,Joel Borggrén-Franck
+218,Generics over Primitive Types,Candidate,,Brian Goetz
+219,Datagram Transport Layer Security (DTLS),Closed / Delivered,9,Xuelei Fan
+220,Modular Run-Time Images,Closed / Delivered,9,Alan Bateman
+221,New Doclet API,Closed / Delivered,9,Kumar Srinivasan
+222,jshell: The Java Shell (Read-Eval-Print Loop),Closed / Delivered,9,Robert Field
+223,New Version-String Scheme,Closed / Delivered,9,Iris Clark
+224,HTML5 Javadoc,Closed / Delivered,9,Bhavesh Patel
+225,Javadoc Search,Closed / Delivered,9,Bhavesh Patel
+226,UTF-8 Property Resource Bundles,Closed / Delivered,9,Naoto Sato
+227,Unicode 7.0,Closed / Delivered,9,Yuka Kamiya
+228,Add More Diagnostic Commands,Closed / Delivered,9,Staffan Larsen
+229,Create PKCS12 Keystores by Default,Closed / Delivered,9,Vincent Ryan
+230,Microbenchmark Suite,Closed / Delivered,12,Claes Redestad
+231,Remove Launch-Time JRE Version Selection,Closed / Delivered,9,Kumar Srinivasan
+232,Improve Secure Application Performance,Closed / Delivered,9,Sean Mullan
+233,Generate Run-Time Compiler Tests Automatically,Closed / Delivered,9,Igor Ignatyev
+234,Additional Run-Time Compiler JVM Trace Events,Candidate,,Igor Ignatyev
+235,Test Class-File Attributes Generated by javac,Closed / Delivered,9,Andrei Eremeev
+236,Parser API for Nashorn,Closed / Delivered,9,Sundararajan Athijegannathan
+237,Linux/AArch64 Port,Closed / Delivered,9,Andrew Haley
+238,Multi-Release JAR Files,Closed / Delivered,9,Paul Sandoz
+239,Update JavaFX/WebView to Newer Version of WebKit,Closed / Delivered,8u60,Victor Dyakov
+240,Remove the JVM TI hprof Agent,Closed / Delivered,9,Staffan Larsen
+241,Remove the jhat Tool,Closed / Delivered,9,Staffan Larsen
+242,JVM Trace Events for Failed Allocations,Closed / Delivered,8u60,Marcus Larsson
+243,Java-Level JVM Compiler Interface,Closed / Delivered,9,John Rose
+244,TLS Application-Layer Protocol Negotiation Extension,Closed / Delivered,9,Bradford Wetmore
+245,Validate JVM Command-Line Flag Arguments,Closed / Delivered,9,Gerard Ziemski
+246,Leverage CPU Instructions for GHASH and RSA,Closed / Delivered,9,Anthony Scarpino
+247,Compile for Older Platform Versions,Closed / Delivered,9,Jan Lahoda
+248,Make G1 the Default Garbage Collector,Closed / Delivered,9,Stefan Johansson
+249,OCSP Stapling for TLS,Closed / Delivered,9,Jamil Nimeh
+250,Store Interned Strings in CDS Archives,Closed / Delivered,9,Ioi Lam
+251,Multi-Resolution Images,Closed / Delivered,9,Alexandr Scherbatiy
+252,Use CLDR Locale Data by Default,Closed / Delivered,9,Naoto Sato
+253,Prepare JavaFX UI Controls & CSS APIs for Modularization,Closed / Delivered,9,Jonathan Giles
+254,Compact Strings,Closed / Delivered,9,Xueming Shen
+255,Merge Selected Xerces 2.11.0 Updates into JAXP,Closed / Delivered,9,Joe Wang
+256,BeanInfo Annotations,Closed / Delivered,9,Sergey Bylokhov
+257,Update JavaFX/Media to Newer Version of GStreamer,Closed / Delivered,9,Alexander Matveev
+258,HarfBuzz Font-Layout Engine,Closed / Delivered,9,Philip Race
+259,Stack-Walking API,Closed / Delivered,9,Mandy Chung
+260,Encapsulate Most Internal APIs,Closed / Delivered,9,Chris Hegarty
+261,Module System,Closed / Delivered,9,Mark Reinhold
+262,TIFF Image I/O,Closed / Delivered,9,Philip Race
+263,HiDPI Graphics on Windows and Linux,Closed / Delivered,9,Alexandr Scherbatiy
+264,Platform Logging API and Service,Closed / Delivered,9,Daniel Fuchs
+265,Marlin Graphics Renderer,Closed / Delivered,9,Laurent Bourgès
+266,More Concurrency Updates,Closed / Delivered,9,Doug Lea
+267,Unicode 8.0,Closed / Delivered,9,Yuka Kamiya
+268,XML Catalogs,Closed / Delivered,9,Joe Wang
+269,Convenience Factory Methods for Collections,Closed / Delivered,9,Stuart Marks
+270,Reserved Stack Areas for Critical Sections,Closed / Delivered,9,Frederic Parain
+271,Unified GC Logging,Closed / Delivered,9,Bengt Rutisson
+272,Platform-Specific Desktop Features,Closed / Delivered,9,Alexander Zvegintsev
+273,DRBG-Based SecureRandom Implementations,Closed / Delivered,9,Weijun Wang
+274,Enhanced Method Handles,Closed / Delivered,9,Michael Haupt
+275,Modular Java Application Packaging,Closed / Delivered,9,Chris Bensen
+276,Dynamic Linking of Language-Defined Object Models,Closed / Delivered,9,Attila Szegedi
+277,Enhanced Deprecation,Closed / Delivered,9,Stuart Marks
+278,Additional Tests for Humongous Objects in G1,Closed / Delivered,9,Igor Ignatyev
+279,Improve Test-Failure Troubleshooting,Closed / Delivered,9,Igor Ignatyev
+280,Indify String Concatenation,Closed / Delivered,9,Aleksey Shipilev
+281,HotSpot C++ Unit-Test Framework,Closed / Delivered,9,Igor Ignatyev
+282,jlink: The Java Linker,Closed / Delivered,9,Jim Laskey
+283,Enable GTK 3 on Linux,Closed / Delivered,9,David Hill
+284,New HotSpot Build System,Closed / Delivered,9,Erik Joelsson
+285,Spin-Wait Hints,Closed / Delivered,9,Paul Sandoz
+286,Local-Variable Type Inference,Closed / Delivered,10,Dan Smith
+287,SHA-3 Hash Algorithms,Closed / Delivered,9,Valerie Peng
+288,Disable SHA-1 Certificates,Closed / Delivered,9,Sean Mullan
+289,Deprecate the Applet API,Closed / Delivered,9,Daniil Titov
+290,Filter Incoming Serialization Data,Closed / Delivered,9,Roger Riggs
+291,Deprecate the Concurrent Mark Sweep (CMS) Garbage Collector,Closed / Delivered,9,Jon Masamitsu
+292,Implement Selected ECMAScript 6 Features in Nashorn,Closed / Delivered,9,Hannes Wallnoefer
+293,Guidelines for JDK Command-Line Tool Options,Active,,Jonathan Gibbons
+294,Linux/s390x Port,Closed / Delivered,9,Volker Simonis
+295,Ahead-of-Time Compilation,Closed / Delivered,9,Vladimir Kozlov
+296,Consolidate the JDK Forest into a Single Repository,Closed / Delivered,10,Joe Darcy
+297,Unified arm32/arm64 Port,Closed / Delivered,9,Ed Nevill
+298,Remove Demos and Samples,Closed / Delivered,9,Aleksandre Iline
+299,Reorganize Documentation,Closed / Delivered,9,Jonathan Gibbons
+300,Augment Use-Site Variance with Declaration-Site Defaults,Candidate,,Dan Smith
+301,Enhanced Enums,Closed / Withdrawn,,Maurizio Cimadamore
+302,Lambda Leftovers,Candidate,,Maurizio Cimadamore
+303,Intrinsics for the LDC and INVOKEDYNAMIC Instructions,Candidate,,Vicente Arturo Romero Zaldivar
+304,Garbage Collector Interface,Closed / Delivered,10,Roman Kennke
+305,Pattern Matching for instanceof (Preview),Closed / Delivered,14,Gavin Bierman
+306,Restore Always-Strict Floating-Point Semantics,Closed / Delivered,17,Joe Darcy
+307,Parallel Full GC for G1,Closed / Delivered,10,Stefan Johansson
+308,Improve Dynamic Number of Thread Sizing for G1,Closed / Withdrawn,,Thomas Schatzl
+309,Dynamic Class-File Constants,Closed / Delivered,11,Lois Foltan
+310,Application Class-Data Sharing,Closed / Delivered,10,Ioi Lam
+311,Java Packager API & CLI,Closed / Withdrawn,,Victor Drozdov
+312,Thread-Local Handshakes,Closed / Delivered,10,Robbin Ehn
+313,Remove the Native-Header Generation Tool (javah),Closed / Delivered,10,Jonathan Gibbons
+314,Additional Unicode Language-Tag Extensions,Closed / Delivered,10,Naoto Sato
+315,Improve Aarch64 Intrinsics,Closed / Delivered,11,Dmitrij Pochepko
+316,Heap Allocation on Alternative Memory Devices,Closed / Delivered,10,Kishor Kharbas
+317,Experimental Java-Based JIT Compiler,Closed / Delivered,10,Igor Veresov
+318,Epsilon: A No-Op Garbage Collector (Experimental),Closed / Delivered,11,Aleksey Shipilev
+319,Root Certificates,Closed / Delivered,10,Rajan Halade
+320,Remove the Java EE and CORBA Modules,Closed / Delivered,11,Lance Andersen
+321,HTTP Client API,Closed / Delivered,11,Chris Hegarty
+322,Time-Based Release Versioning,Closed / Delivered,10,Mark Reinhold
+323,Local-Variable Syntax for Lambda Parameters,Closed / Delivered,11,Vicente Arturo Romero Zaldivar
+324,Key Agreement with Curve25519 and Curve448,Closed / Delivered,11,Adam Petcher
+325,Switch Expressions (Preview),Closed / Delivered,12,Jan Lahoda
+326,Raw String Literals (Preview),Closed / Withdrawn,,Jim Laskey
+327,Unicode 10,Closed / Delivered,11,Rachna Goel
+328,Flight Recorder,Closed / Delivered,11,Erik Gahlin
+329,ChaCha20 and Poly1305 Cryptographic Algorithms,Closed / Delivered,11,Jamil Nimeh
+330,Launch Single-File Source-Code Programs,Closed / Delivered,11,Jonathan Gibbons
+331,Low-Overhead Heap Profiling,Closed / Delivered,11,Jean Christophe Beyler
+332,Transport Layer Security (TLS) 1.3,Closed / Delivered,11,Xuelei Fan
+333,ZGC: A Scalable Low-Latency Garbage Collector (Experimental),Closed / Delivered,11,Per Liden
+334,JVM Constants API,Closed / Delivered,12,Vicente Arturo Romero Zaldivar
+335,Deprecate the Nashorn JavaScript Engine for Removal,Closed / Delivered,11,Jim Laskey
+336,Deprecate the Pack200 Tools and API,Closed / Delivered,11,Henry Jen
+337,RDMA Network Sockets,Closed / Withdrawn,,Yingqi Lu
+338,Vector API (Incubator),Closed / Delivered,16,Paul Sandoz
+339,Edwards-Curve Digital Signature Algorithm (EdDSA),Closed / Delivered,15,Anthony Scarpino
+340,"One AArch64 Port, Not Two",Closed / Delivered,12,Bob Vandette
+341,Default CDS Archives,Closed / Delivered,12,Jiangli Zhou
+342,Limit Speculative Execution,Closed / Withdrawn,,Jesper Wilhelmsson
+343,Packaging Tool (Incubator),Closed / Delivered,14,Kevin Rushforth
+344,Abortable Mixed Collections for G1,Closed / Delivered,12,Erik Helin
+345,NUMA-Aware Memory Allocation for G1,Closed / Delivered,14,Sangheon Kim
+346,Promptly Return Unused Committed Memory from G1,Closed / Delivered,12,Thomas Schatzl
+347,Enable C++14 Language Features,Closed / Delivered,16,Kim Barrett
+348,Compiler Intrinsics for Java SE APIs,Closed / Withdrawn,,Vicente Arturo Romero Zaldivar
+349,JFR Event Streaming,Closed / Delivered,14,Erik Gahlin
+350,Dynamic CDS Archives,Closed / Delivered,13,Calvin Cheung
+351,ZGC: Uncommit Unused Memory (Experimental),Closed / Delivered,13,Per Liden
+352,Non-Volatile Mapped Byte Buffers,Closed / Delivered,14,Andrew Dinn
+353,Reimplement the Legacy Socket API,Closed / Delivered,13,Alan Bateman
+354,Switch Expressions (Second Preview),Closed / Delivered,13,Jan Lahoda
+355,Text Blocks (Preview),Closed / Delivered,13,Jim Laskey
+356,Enhanced Pseudo-Random Number Generators,Closed / Delivered,17,Jim Laskey
+357,Migrate from Mercurial to Git,Closed / Delivered,16,Joe Darcy
+358,Helpful NullPointerExceptions,Closed / Delivered,14,Goetz Lindenmaier
+359,Records (Preview),Closed / Delivered,14,Vicente Arturo Romero Zaldivar
+360,Sealed Classes (Preview),Closed / Delivered,15,Vicente Arturo Romero Zaldivar
+361,Switch Expressions,Closed / Delivered,14,Jan Lahoda
+362,Deprecate the Solaris and SPARC Ports,Closed / Delivered,14,Mikael Vidstedt
+363,Remove the Concurrent Mark Sweep (CMS) Garbage Collector,Closed / Delivered,14,Thomas Schatzl
+364,ZGC on macOS (Experimental),Closed / Delivered,14,Erik Österlund
+365,ZGC on Windows (Experimental),Closed / Delivered,14,Stefan Karlsson
+366,Deprecate the ParallelScavenge + SerialOld GC Combination,Closed / Delivered,14,Thomas Schatzl
+367,Remove the Pack200 Tools and API,Closed / Delivered,14,Vicente Arturo Romero Zaldivar
+368,Text Blocks (Second Preview),Closed / Delivered,14,Jim Laskey
+369,Migrate to GitHub,Closed / Delivered,16,Joe Darcy
+370,Foreign-Memory Access API (Incubator),Closed / Delivered,14,Maurizio Cimadamore
+371,Hidden Classes,Closed / Delivered,15,Mandy Chung
+372,Remove the Nashorn JavaScript Engine,Closed / Delivered,15,Jim Laskey
+373,Reimplement the Legacy DatagramSocket API,Closed / Delivered,15,Daniel Fuchs
+374,Deprecate and Disable Biased Locking,Closed / Delivered,15,Patricio Chilano Mateo
+375,Pattern Matching for instanceof (Second Preview),Closed / Delivered,15,Jan Lahoda
+376,ZGC: Concurrent Thread-Stack Processing,Closed / Delivered,16,Erik Österlund
+377,ZGC: A Scalable Low-Latency Garbage Collector (Production),Closed / Delivered,15,Per Liden
+378,Text Blocks,Closed / Delivered,15,Jim Laskey
+379,Shenandoah: A Low-Pause-Time Garbage Collector (Production),Closed / Delivered,15,Aleksey Shipilev
+380,Unix-Domain Socket Channels,Closed / Delivered,16,Michael McMahon
+381,Remove the Solaris and SPARC Ports,Closed / Delivered,15,Mikael Vidstedt
+382,New macOS Rendering Pipeline,Closed / Delivered,17,Philip Race
+383,Foreign-Memory Access API (Second Incubator),Closed / Delivered,15,Maurizio Cimadamore
+384,Records (Second Preview),Closed / Delivered,15,Vicente Arturo Romero Zaldivar
+385,Deprecate RMI Activation for Removal,Closed / Delivered,15,Stuart Marks
+386,Alpine Linux Port,Closed / Delivered,16,Boris Ulasevich
+387,Elastic Metaspace,Closed / Delivered,16,Thomas Stuefe
+388,Windows/AArch64 Port,Closed / Delivered,16,Vladimir Kozlov
+389,Foreign Linker API (Incubator),Closed / Delivered,16,Maurizio Cimadamore
+390,Warnings for Value-Based Classes,Closed / Delivered,16,Dan Smith
+391,macOS/AArch64 Port,Closed / Delivered,17,Vladimir Kempik
+392,Packaging Tool,Closed / Delivered,16,Andy Herrick
+393,Foreign-Memory Access API (Third Incubator),Closed / Delivered,16,Maurizio Cimadamore
+394,Pattern Matching for instanceof,Closed / Delivered,16,Gavin Bierman
+395,Records,Closed / Delivered,16,Gavin Bierman
+396,Strongly Encapsulate JDK Internals by Default,Closed / Delivered,16,Mark Reinhold
+397,Sealed Classes (Second Preview),Closed / Delivered,16,Gavin Bierman
+398,Deprecate the Applet API for Removal,Closed / Delivered,17,Andy Herrick
+399,Intermediate-Representation Graph Serialization,Candidate,,Igor Ignatyev
+400,UTF-8 by Default,Closed / Delivered,18,Naoto Sato
+401,Value Classes and Objects (Preview),Submitted,,Dan Smith
+402,Enhanced Primitive Boxing (Preview),Draft,,Dan Smith
+403,Strongly Encapsulate JDK Internals,Closed / Delivered,17,Mark Reinhold
+404,Generational Shenandoah (Experimental),Closed / Delivered,24,William Kemper
+405,Record Patterns (Preview),Closed / Delivered,19,Gavin Bierman
+406,Pattern Matching for switch (Preview),Closed / Delivered,17,Gavin Bierman
+407,Remove RMI Activation,Closed / Delivered,17,Stuart Marks
+408,Simple Web Server,Closed / Delivered,18,Julia Boes
+409,Sealed Classes,Closed / Delivered,17,Gavin Bierman
+410,Remove the Experimental AOT and JIT Compiler,Closed / Delivered,17,Vladimir Kozlov
+411,Deprecate the Security Manager for Removal,Closed / Delivered,17,Sean Mullan
+412,Foreign Function & Memory API (Incubator),Closed / Delivered,17,Maurizio Cimadamore
+413,Code Snippets in Java API Documentation,Closed / Delivered,18,Pavel Rappo
+414,Vector API (Second Incubator),Closed / Delivered,17,Paul Sandoz
+415,Context-Specific Deserialization Filters,Closed / Delivered,17,Roger Riggs
+416,Reimplement Core Reflection with Method Handles,Closed / Delivered,18,Mandy Chung
+417,Vector API (Third Incubator),Closed / Delivered,18,Paul Sandoz
+418,Internet-Address Resolution SPI,Closed / Delivered,18,Aleksej Efimov
+419,Foreign Function & Memory API (Second Incubator),Closed / Delivered,18,Maurizio Cimadamore
+420,Pattern Matching for switch (Second Preview),Closed / Delivered,18,Gavin Bierman
+421,Deprecate Finalization for Removal,Closed / Delivered,18,Brent Christian
+422,Linux/RISC-V Port,Closed / Delivered,19,Fei Yang
+423,Region Pinning for G1,Closed / Delivered,22,Thomas Schatzl
+424,Foreign Function & Memory API (Preview),Closed / Delivered,19,Maurizio Cimadamore
+425,Virtual Threads (Preview),Closed / Delivered,19,Alan Bateman
+426,Vector API (Fourth Incubator),Closed / Delivered,19,Paul Sandoz
+427,Pattern Matching for switch (Third Preview),Closed / Delivered,19,Gavin Bierman
+428,Structured Concurrency (Incubator),Closed / Delivered,19,Alan Bateman
+429,Scoped Values (Incubator),Closed / Delivered,20,Andrew Haley
+430,String Templates (Preview),Closed / Delivered,21,Jim Laskey
+431,Sequenced Collections,Closed / Delivered,21,Stuart Marks
+432,Record Patterns (Second Preview),Closed / Delivered,20,Gavin Bierman
+433,Pattern Matching for switch (Fourth Preview),Closed / Delivered,20,Gavin Bierman
+434,Foreign Function & Memory API (Second Preview),Closed / Delivered,20,Maurizio Cimadamore
+435,Asynchronous Stack Trace VM API,Closed / Withdrawn,,Johannes Bechberger
+436,Virtual Threads (Second Preview),Closed / Delivered,20,Alan Bateman
+437,Structured Concurrency (Second Incubator),Closed / Delivered,20,Alan Bateman
+438,Vector API (Fifth Incubator),Closed / Delivered,20,Paul Sandoz
+439,Generational ZGC,Closed / Delivered,21,Stefan Karlsson
+440,Record Patterns,Closed / Delivered,21,Gavin Bierman
+441,Pattern Matching for switch,Closed / Delivered,21,Gavin Bierman
+442,Foreign Function & Memory API (Third Preview),Closed / Delivered,21,Maurizio Cimadamore
+443,Unnamed Patterns and Variables (Preview),Closed / Delivered,21,Angelos Bimpoudis
+444,Virtual Threads,Closed / Delivered,21,Alan Bateman
+445,Unnamed Classes and Instance Main Methods (Preview),Closed / Delivered,21,Jim Laskey
+446,Scoped Values (Preview),Closed / Delivered,21,Andrew Haley
+447,Statements before super(...) (Preview),Closed / Delivered,22,Archie Cobbs
+448,Vector API (Sixth Incubator),Closed / Delivered,21,Paul Sandoz
+449,Deprecate the Windows 32-bit x86 Port for Removal,Closed / Delivered,21,George Adams
+450,Compact Object Headers (Experimental),Closed / Delivered,24,Roman Kennke
+451,Prepare to Disallow the Dynamic Loading of Agents,Closed / Delivered,21,Ron Pressler
+452,Key Encapsulation Mechanism API,Closed / Delivered,21,Weijun Wang
+453,Structured Concurrency (Preview),Closed / Delivered,21,Alan Bateman
+454,Foreign Function & Memory API,Closed / Delivered,22,Maurizio Cimadamore
+455,"Primitive Types in Patterns, instanceof, and switch (Preview)",Closed / Delivered,23,Angelos Bimpoudis
+456,Unnamed Variables & Patterns,Closed / Delivered,22,Angelos Bimpoudis
+457,Class-File API (Preview),Closed / Delivered,22,Adam Sotona
+458,Launch Multi-File Source-Code Programs,Closed / Delivered,22,Ron Pressler
+459,String Templates (Second Preview),Closed / Delivered,22,Jim Laskey
+460,Vector API (Seventh Incubator),Closed / Delivered,22,Paul Sandoz
+461,Stream Gatherers (Preview),Closed / Delivered,22,Viktor Klang
+462,Structured Concurrency (Second Preview),Closed / Delivered,22,Alan Bateman
+463,Implicitly Declared Classes and Instance Main Methods (Second Preview),Closed / Delivered,22,Jim Laskey
+464,Scoped Values (Second Preview),Closed / Delivered,22,Andrew Haley
+465,String Templates (Third Preview),Closed / Withdrawn,,Gavin Bierman
+466,Class-File API (Second Preview),Closed / Delivered,23,Adam Sotona
+467,Markdown Documentation Comments,Closed / Delivered,23,Jonathan Gibbons
+468,Derived Record Creation (Preview),Candidate,,Gavin Bierman
+469,Vector API (Eighth Incubator),Closed / Delivered,23,Paul Sandoz
+470,PEM Encodings of Cryptographic Objects (Preview),Closed / Delivered,25,Anthony Scarpino
+471,Deprecate the Memory-Access Methods in sun.misc.Unsafe for Removal,Closed / Delivered,23,Ron Pressler
+472,Prepare to Restrict the Use of JNI,Closed / Delivered,24,Ron Pressler
+473,Stream Gatherers (Second Preview),Closed / Delivered,23,Viktor Klang
+474,ZGC: Generational Mode by Default,Closed / Delivered,23,Axel Boldt-Christmas
+475,Late Barrier Expansion for G1,Closed / Delivered,24,Roberto Castaneda Lozano
+476,Module Import Declarations (Preview),Closed / Delivered,23,Gavin Bierman
+477,Implicitly Declared Classes and Instance Main Methods (Third Preview),Closed / Delivered,23,Gavin Bierman
+478,Key Derivation Function API (Preview),Closed / Delivered,24,Kevin Driver
+479,Remove the Windows 32-bit x86 Port,Closed / Delivered,24,George Adams
+480,Structured Concurrency (Third Preview),Closed / Delivered,23,Alan Bateman
+481,Scoped Values (Third Preview),Closed / Delivered,23,Andrew Haley
+482,Flexible Constructor Bodies (Second Preview),Closed / Delivered,23,Archie Cobbs
+483,Ahead-of-Time Class Loading & Linking,Closed / Delivered,24,Ioi Lam
+484,Class-File API,Closed / Delivered,24,Adam Sotona
+485,Stream Gatherers,Closed / Delivered,24,Viktor Klang
+486,Permanently Disable the Security Manager,Closed / Delivered,24,Sean Mullan
+487,Scoped Values (Fourth Preview),Closed / Delivered,24,Andrew Haley
+488,"Primitive Types in Patterns, instanceof, and switch (Second Preview)",Closed / Delivered,24,Angelos Bimpoudis
+489,Vector API (Ninth Incubator),Closed / Delivered,24,Paul Sandoz
+490,ZGC: Remove the Non-Generational Mode,Closed / Delivered,24,Axel Boldt-Christmas
+491,Synchronize Virtual Threads without Pinning,Closed / Delivered,24,Alan Bateman
+492,Flexible Constructor Bodies (Third Preview),Closed / Delivered,24,Archie Cobbs
+493,Linking Run-Time Images without JMODs,Closed / Delivered,24,Severin Gehwolf
+494,Module Import Declarations (Second Preview),Closed / Delivered,24,Gavin Bierman
+495,Simple Source Files and Instance Main Methods (Fourth Preview),Closed / Delivered,24,Gavin Bierman
+496,Quantum-Resistant Module-Lattice-Based Key Encapsulation Mechanism,Closed / Delivered,24,Weijun Wang
+497,Quantum-Resistant Module-Lattice-Based Digital Signature Algorithm,Closed / Delivered,24,Weijun Wang
+498,Warn upon Use of Memory-Access Methods in sun.misc.Unsafe,Closed / Delivered,24,Ron Pressler
+499,Structured Concurrency (Fourth Preview),Closed / Delivered,24,Alan Bateman
+500,Prepare to Make Final Mean Final,Closed / Delivered,26,Ron Pressler
+501,Deprecate the 32-bit x86 Port for Removal,Closed / Delivered,24,Aleksey Shipilev
+502,Stable Values (Preview),Closed / Delivered,25,Per-Ake Minborg
+503,Remove the 32-bit x86 Port,Closed / Delivered,25,Aleksey Shipilev
+504,Remove the Applet API,Closed / Delivered,26,Philip Race
+505,Structured Concurrency (Fifth Preview),Closed / Delivered,25,Alan Bateman
+506,Scoped Values,Closed / Delivered,25,Andrew Haley
+507,"Primitive Types in Patterns, instanceof, and switch (Third Preview)",Closed / Delivered,25,Angelos Bimpoudis
+508,Vector API (Tenth Incubator),Closed / Delivered,25,Ian Graves
+509,JFR CPU-Time Profiling (Experimental),Closed / Delivered,25,Johannes Bechberger
+510,Key Derivation Function API,Closed / Delivered,25,Kevin Driver
+511,Module Import Declarations,Closed / Delivered,25,Gavin Bierman
+512,Compact Source Files and Instance Main Methods,Closed / Delivered,25,Gavin Bierman
+513,Flexible Constructor Bodies,Closed / Delivered,25,Gavin Bierman
+514,Ahead-of-Time Command-Line Ergonomics,Closed / Delivered,25,John Rose
+515,Ahead-of-Time Method Profiling,Closed / Delivered,25,John Rose
+516,Ahead-of-Time Object Caching with Any GC,Closed / Delivered,26,Erik Österlund
+517,HTTP/3 for the HTTP Client API,Closed / Delivered,26,Daniel Fuchs
+518,JFR Cooperative Sampling,Closed / Delivered,25,Markus Grönlund
+519,Compact Object Headers,Closed / Delivered,25,Roman Kennke
+520,JFR Method Timing & Tracing,Closed / Delivered,25,Erik Gahlin
+521,Generational Shenandoah,Closed / Delivered,25,William Kemper
+522,G1 GC: Improve Throughput by Reducing Synchronization,Closed / Delivered,26,Ivan Walulya
+523,Make G1 the Default Garbage Collector in All Environments,Candidate,,Thomas Schatzl
+524,PEM Encodings of Cryptographic Objects (Second Preview),Closed / Delivered,26,Anthony Scarpino
+525,Structured Concurrency (Sixth Preview),Closed / Delivered,26,Alan Bateman
+526,Lazy Constants (Second Preview),Closed / Delivered,26,Per-Ake Minborg
+527,Post-Quantum Hybrid Key Exchange for TLS 1.3,Completed,27,Jamil Nimeh
+528,Post-Mortem Crash Analysis with jcmd,Candidate,,Kevin Walls
+529,Vector API (Eleventh Incubator),Closed / Delivered,26,Xueming Shen
+530,"Primitive Types in Patterns, instanceof, and switch (Fourth Preview)",Closed / Delivered,26,Angelos Bimpoudis
+531,Lazy Constants (Third Preview),Candidate,,Per-Ake Minborg
+8044507,JMX Specific Annotations for Registration of Managed Resources,Draft,tbd,Harsha Wardhana B
+8068562,"javadoc tags to distinguish API, implementation, specification, and notes",Draft,,Stuart Marks
+8132243,Optimize Final Field Loads In Generated Code,Draft,,Vladimir Ivanov
+8158765,Isolated Methods,Draft,,Maurizio Cimadamore
+8171275,Certificate Transparency,Draft,,Jamil Nimeh
+8179037,Improve IPv6 support,Draft,,Arthur Eubanks
+8179657,provide stable USDT probe points on JVM compiled methods,Draft,,John Rose
+8180647,Race exclusion for confined data,Draft,,John Rose
+8182862,unboxed argument lists for method handles,Draft,,John Rose
+8186473,special notation for the receiver helper pattern,Draft,,John Rose
+8191530,fluent postfix notation for statically scoped interface methods,Draft,,John Rose
+8201462,Better hash codes,Draft,,John Rose
+8204937,Type operator expressions in the JVM,Draft,,John Rose
+8208520,Java Thread Sanitizer,Draft,tbd,Jean Christophe Beyler
+8209434,Concise Method Bodies,Draft,,Brian Goetz
+8209964,Lazy Static Final Fields,Draft,,John Rose
+8214497,Guidelines for documenting system properties,Draft,,Jonathan Gibbons
+8221828,New Invoke Bindings,Draft,,Erik Österlund
+8223002,Keyword Management for the Java Language,Draft,,Alex Buckley
+8223220,JVMCI based JIT Compiler pre-compiled as shared library,Draft,,Vladimir Kozlov
+8248257,Simplified bootstrap method invocation,Draft,,John Rose
+8248259,Low-level classfile reflection,Draft,,John Rose
+8249196,Low-level Object layout introspection methods,Draft,,Aleksey Shipilev
+8258000,refactor per-instance metadata to be separate from ClassInfo metadata,Draft,,John Rose
+8260688,Predictable regex performance,Draft,,Martin Buchholz
+8261007,Frozen Arrays (Preview),Draft,,John Rose
+8261099,Internal Frozen Arrays,Draft,,John Rose
+8263697,Safer Process Launch by ProcessBuilder and Runtime.exec,Draft,tbd,Roger Riggs
+8279184,Instruction Issue Cache Hardware Accommodation,Draft,,Paul Hohensee
+8283227,JDK Source Structure,Draft,,Magnus Ihse Bursie
+8283291,Extended Opcodes,Draft,,Julian Waters
+8284453,Optionally Record Thread Context in JFR,Draft,,Jaroslav Bachorík
+8288293,Windows/gcc Port,Draft,tbd,Julian Waters
+8297156,low-level control of field initialization,Draft,,John Rose
+8297236,enhanced checkcast for Valhalla type unification,Draft,,John Rose
+8300604,"Preview Features: A Look Back, and A Look Ahead",Draft,,Alex Buckley
+8303099,Null-Restricted and Nullable Types (Preview),Draft,,Dan Smith
+8305968,Integrity by Default,Draft,,Ron Pressler
+8316779,Null-Restricted Value Class Types (Preview),Draft,,Dan Smith
+8323658,Exception handling in switch (Preview),Draft,,Angelos Bimpoudis
+8325511,Security Providers Filter,Draft,,Martin Balao Alonso
+8328186,Hot Code Heap,Draft,,Dmitry Chuyko
+8329758,Faster Startup and Warmup with ZGC,Submitted,,Erik Österlund
+8335368,Ahead-of-Time Code Compilation,Draft,,John Rose
+8336232,CDS Implementation Notes,Draft,,John Rose
+8344154,Convenience Methods for JSON Documents,Submitted,,Naoto Sato
+8349069,4-byte Object Headers (Experimental),Draft,,Roman Kennke
+8350152,Automatic Heap Sizing for the Serial Garbage Collector,Draft,,Kirk Pepperdine
+8350458,Strict Field Initialization in the JVM (Preview),Submitted,,Dan Smith
+8354416,Prepare for Native Memory Tracking in the JDK,Submitted,,Johan Sjölen
+8357464,Enhanced Local Variable Declarations (Preview),Draft,,Angelos Bimpoudis
+8357674,Classifier API to Map Finite Sets to Indexes,Draft,,John Rose
+8359211,Automatic Heap Sizing for G1,Submitted,,Thomas Schatzl
+8361105,Code reflection (Incubator),Submitted,,Paul Sandoz
+8361187,Compact Object Headers by Default,Draft,,Roman Kennke
+8363700,Rich Notes in Java API Documentation,Submitted,,Hannes Wallnoefer
+8371379,Deprecate the UTF-16-only String Representation,Draft,,Stuart Marks
+8372760,JFR: In-Process Data Redaction,Draft,,Erik Gahlin
+8373610,Structured Concurrency (Seventh Preview),Submitted,,Alan Bateman
+8376991,PEM Encodings of Cryptographic Objects,Submitted,,Anthony Scarpino
+8377081,Argon2 Password Hashing Algorithm,Submitted,,Artur Barashev
+8377305,Automatic Heap Sizing for ZGC,Submitted,,Erik Österlund
+8379682,Make Shenandoah's generational mode the default,Draft,,William Kemper
+8380294,JEP Draft: Unbiased Stack-Walk API,Draft,,Roman Kennke

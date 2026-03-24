@@ -1,0 +1,673 @@
+username,full_name,jdk_role,other_projects
+aaivanov,Anton Ivanov,Author,
+abaya,Anass Baya,Author,
+abhiscxk,Abhishek Kumar,Reviewer,
+abimpoudis,Aggelos Biboudis,Reviewer,amber: Author
+abobrov,Anton Bobrov,Author,
+aboldtch,Axel Boldt-Christmas,Reviewer,
+acorn,Karen Kinnear,Reviewer,hotspot: Member
+adev,Anupam Dev,Author,
+adinn,Andrew Dinn,Reviewer,"aarch32-port: Committer, aarch64-port: Committer, crac: Committer, galahad: Committer, vulnerability: Member, hotspot: Member"
+adityam,Aditya Mandaleeka,Author,
+aefimov,Aleksei Efimov,Reviewer,net: Member
+afarley,Adam Farley,Author,
+aghaisas,Ajit Ghaisas,Reviewer,
+ahayward,Alan Hayward,Author,
+ahenrie,Alex Henrie,Author,
+aivanov,Alexey Ivanov,Reviewer,client-libs: Member
+aj,Anto J,Author,
+akolarkunnu,Abdul Kolarkunnu,Committer,quality: Member
+akulyakh,Alexander Kulyakhtin,Author,
+alanb,Alan Bateman,Reviewer,"core-libs: Member, csr: Member"
+alanbur,Alan Burlison,Author,
+alans,Alan Snyder,Author,
+alblue,Alex Blewitt,Author,
+alexp,Alexander Potochkin,Reviewer,
+alexsch,Alexander Scherbatiy,Reviewer,client-libs: Member
+alitvinov,Anton Litvinov,Reviewer,
+allwin,Peter Allwin,Author,
+almatvee,Alexander Matveev,Reviewer,
+alundblad,Andreas Lundblad,Reviewer,
+amalloy,Alan Malloy,Author,
+amarsh,Ana Marsh,Author,
+amenkov,Alex Menkov,Reviewer,serviceability: Member
+amihalceanu,Ana-Maria Mihalceanu,Author,
+amitkumar,Amit Kumar,Committer,
+amjiang,Amanda Jiang,Committer,
+amlu,Amy Lu,Reviewer,
+amrsahu,Amresh Sahu,Author,
+amuhsin,Ahmed Muhsin,Author,
+amurillo,Alejandro Murillo,Committer,
+anashaty,Anton Nashatyrev,Committer,
+anazarov,Andrey Nazarov,Committer,
+andrew,Andrew John Hughes,Reviewer,"aarch64-port: Committer, cvmi: Lead, icedtea: Lead, vulnerability: Member"
+andrewlu,Andrew Lu,Committer,
+aniyogi,Avik Niyogi,Committer,
+anoll,Albert Noll,Committer,
+ant,Anton Tarasov,Reviewer,
+anthony,Anthony Petrov,Reviewer,
+aoqi,Ao Qi,Author,
+apangin,Andrei Pangin,Author,hotspot: Member
+apetcher,Adam Petcher,Reviewer,security: Member
+aph,Andrew Haley,Reviewer,"aarch32-port: Committer, aarch64-port: Committer, gb: Member, porters: Member, vulnerability: Member, hotspot: Member"
+arapte,Ambarish Rapte,Committer,
+arigal,Ayush Rigal,Author,
+art,Artem Ananiev,Reviewer,
+ascarpino,Anthony Scarpino,Reviewer,security: Member
+aseoane,Anton Seoane Ampudia,Author,
+asemenyuk,Alexey Semenyuk,Reviewer,
+asemenov,Artem Semenov,Committer,
+ashi,Amos Shi,Committer,
+asiebenborn,Axel Siebenborn,Committer,
+asmotrak,Artem Smotrakov,Reviewer,
+asmundak,Alexander Smundak,Author,
+asotona,Adam Sotona,Reviewer,amber: Committer
+asteiner,Andreas Steiner,Author,
+attila,Attila Szegedi,Reviewer,
+aveselov,Aleksandr Veselov,Author,
+avieiro,Antonio Vieiro,Committer,
+avoitylov,Aleksei Voitylov,Author,vulnerability: Member
+avorobye,Alexander Vorobyev,Author,
+avstepan,Alexander Stepanov,Committer,
+ayang,Albert Mingkun Yang,Reviewer,hotspot: Member
+azafari,Afshin Zafari,Reviewer,hotspot: Member
+azakharov,Andrey Zakharov,Author,
+azeemj,Azeem Jiva,Author,
+azeller,Arno Zeller,Author,
+azvegint,Alexander Zvegintsev,Reviewer,client-libs: Member
+bae,Andrew Brygin,Reviewer,
+bagiras,Oleg Pekhovskiy,Committer,
+bchristi,Brent Christian,Reviewer,core-libs: Member
+bcorso,Brad Corso,Author,
+bdelsart,Bertrand Delsart,Committer,
+bharadwaj,Bharadwaj Yadavalli,Committer,
+bmaram,Bhaktavatsal Maram,Author,
+bmoloden,Boris Molodenkov,Author,
+bobv,Bob Vandette,Reviewer,
+bokken,Brett Okken,Author,
+bpatel,Bhavesh Patel,Reviewer,
+bpb,Brian Burkhalter,Reviewer,core-libs: Member
+bpittore,Bill Pittore,Author,
+briangoetz,Brian Goetz,Reviewer,"amber: Lead, compiler: Member, core-libs: Member, csr: Member"
+bstafford,Brian Stafford,Author,
+btaylor,Ben Taylor,Committer,
+brutisso,Bengt Rutisson,Reviewer,hotspot: Member
+burban,Bernhard Urban-Forster,Author,
+bwalsh,Ben Walsh,Author,
+bzhang,Bo Zhang,Author,
+cashford,Corey Ashford,Author,
+ccheung,Calvin Cheung,Reviewer,hotspot: Member
+ceisserer,Clemens Eisserer,Author,
+cgo,Christoph Goettschkes,Author,
+cgracie,Charlie Gracie,Author,
+chagedorn,Christian Hagedorn,Reviewer,hotspot: Member
+chegar,Chris Hegarty,Reviewer,"amber: Committer, brisbane: Reviewer, core-libs: Member, detroit: Committer, net: Member"
+chrisphi,Chris Phillips,Author,hotspot: Member
+cjplummer,Chris Plummer,Reviewer,"hotspot: Member, serviceability: Member"
+cl,Christine Lu,Committer,
+clanger,Christoph Langer,Reviewer,"build: Member, vulnerability: Member"
+coffeys,Sean Coffey,Reviewer,
+coleenp,Coleen Phillimore,Reviewer,hotspot: Member
+collins,Gary Collins,Committer,
+cpeng,Chang Peng,Author,
+csahu,Cheleswer Sahu,Author,
+ctornqvi,Christian Tornqvist,Reviewer,hotspot: Member
+cvarming,Carsten Varming,Author,
+cverghese,Clive Verghese,Author,
+cwayne,Clifford Wayne,Author,
+darcy,Joe Darcy,Reviewer,"amber: Reviewer, coin: Lead, compiler: Member, core-libs: Member, csr: Lead"
+david,David Lindholm,Reviewer,
+dbriemann,David Briemann,Committer,
+dboyle,Dermot Boyle,Author,
+dbuck,David Buck,Committer,
+dcherepanov,Dmitry Cherepanov,Reviewer,
+dconway,Darragh Conway,Author,
+dcubed,Daniel D. Daugherty,Reviewer,"hotspot: Member, serviceability: Member"
+ddehaven,David Dehaven,Committer,
+ddmitriev,Dmitry Dmitriev,Committer,
+denis,Denis Fokin,Committer,
+dermashov,Dmitriy Ermashov,Committer,
+dfazunen,Dmitry Fazunenko,Committer,
+dfenacci,Damon Fenacci,Committer,
+dfuchs,Daniel Fuchs,Reviewer,"core-libs: Member, net: Member"
+dhanalla,Dhamoder Nalla,Author,
+dholmes,David Holmes,Reviewer,"core-libs: Member, csr: Member, hotspot: Member"
+diazhou,Jerry Zhou,Author,
+djelinski,Daniel Jelinski,Reviewer,net: Member
+dkulikov,Dmitry Kulikov,Author,
+dkumari,Deepa Kumari,Author,
+dl,Doug Lea,Reviewer,"core-libs: Member, csr: Member"
+dlemmond,Dan Lemmond,Author,
+dli,David Li,Author,
+dlong,Dean Long,Reviewer,hotspot: Member
+dlutker,Dan Lutker,Author,
+dmalav,Dinesh Malav,Author,
+dmarkov,Dmitry Markov,Reviewer,client-libs: Member
+dmlloyd,David Lloyd,Author,
+dmocek,Darryl Mocek,Author,
+dnguyen,Damon Nguyen,Reviewer,
+dnsimon,Doug Simon,Reviewer,"galahad: Lead, graal: Lead"
+doko,Matthias Klose,Author,
+dongbo,Dong Bo,Author,
+dongbohe,Dongbo He,Committer,
+dpochepk,Dmitrij Pochepko,Committer,
+dqu,Daohan Qu,Author,
+drchase,David Chase,Committer,
+drreta,Andriy Redko,Author,
+drwhite,Derek White,Committer,
+dsamersoff,Dmitry Samersoff,Reviewer,
+dsimms,David Simms,Author,
+dstadler,Dominik Stadler,Author,
+dstewart,Daniel Stewart,Author,
+dtabata,Daishi Tabata,Author,
+dthomson,Derek Thomson,Author,
+dtitov,Daniil Titov,Reviewer,
+duke,J. Duke,Author,
+dwanvik,Dag Wanvik,Committer,
+dxu,Dan Xu,Committer,
+dyama,Daisuke Yamazaki,Author,
+dzhou,Dora Zhou,Author,
+easlan,Elif Aslan,Author,
+ecaspole,Eric Caspole,Reviewer,
+egahlin,Erik Gahlin,Reviewer,hotspot: Member
+ehelin,Erik Duveblad,Reviewer,hotspot: Member
+eistepan,Evgeniya Stepanova,Author,
+emc,Eric McCorkle,Committer,
+emcmanus,Eamonn McManus,Reviewer,
+enevill,Ed Nevill,Committer,"aarch32-port: Lead, aarch64-port: Committer, porters: Member"
+enikitin,Evgeny Nikitin,Author,
+enothum,Eric Nothum,Author,
+eolivelli,Enrico Olivelli,Author,
+eosterlund,Erik Osterlund,Reviewer,hotspot: Member
+epeter,Emanuel Peter,Reviewer,"galahad: Committer, hotspot: Member"
+erfang,Eric Fang,Author,
+erikj,Erik Joelsson,Reviewer,"brisbane: Reviewer, build: Member, code-tools: Committer, detroit: Committer, galahad: Committer, guide: Committer"
+eushakov,Egor Ushakov,Author,
+evergizova,Ekaterina Vergizova,Committer,
+ewang,Eric Wang,Author,
+ewendeli,Edvard Wendelin,Committer,
+ewhelan,Evan Whelan,Author,
+farvidsson,Fredrik Arvidsson,Committer,
+fbredberg,Fredrik Bredberg,Reviewer,hotspot: Member
+fferrari,Francisco Ferrari Bihurriet,Committer,vulnerability: Member
+fitzsim,Thomas Fitzsimmons,Author,
+flar,Jim Graham,Reviewer,
+fmeum,Fabian Meumertzheim,Author,
+fparain,Frederic Parain,Reviewer,hotspot: Member
+fromano,Fabio Romano,Author,
+fweimer,Florian Weimer,Author,
+fyuan,Frank Yuan,Committer,
+fyang,Fei Yang,Reviewer,"aarch64-port: Committer, hotspot: Member"
+fzhinkin,Filipp Zhinkin,Committer,
+gbenson,Gary Benson,Committer,
+gcao,Gui Cao,Author,
+gchen,Gang Chen,Author,
+gdams,George Adams,Committer,
+gguo,Ge Guo,Author,
+ghan,Guanqiang Han,Author,
+ghaug,Gunter Haug,Author,
+gkrishnan,Gautham Krishnan,Author,
+gkrivoshein,Gennadiy Krivoshein,Author,
+gli,Guoxiong Li,Reviewer,
+godin,Evgeny Mandrikov,Author,
+goetz,Goetz Lindenmaier,Reviewer,"hotspot: Member, vulnerability: Member"
+gpatil,Gauri Patil,Author,
+gromero,Gustavo Romero,Committer,
+gsimon,Gustavo Simon,Author,
+gthornbr,Gerald Thornbrugh,Author,
+gtriantafill,George Triantafillou,Committer,
+gzhang,Gaofeng Zhang,Author,
+gziemski,Gerard Ziemski,Reviewer,hotspot: Member
+hannesw,Hannes Wallnoefer,Reviewer,amber: Committer
+haotang,Hao Tang,Author,
+haraldei,Harald Eilertsen,Author,
+hb,Harsha Wardhana B,Committer,
+hchao,Hai-May Chao,Reviewer,security: Member
+hdhiman,Harshit Dhiman,Author,
+henryjen,Henry Jen,Committer,
+herrick,Andy Herrick,Reviewer,
+heun,Hyunsu Eun,Author,
+hkabutz,Heinz Kabutz,Author,
+hlin,Henry Lin,Author,
+honkar,Harshitha Onkar,Reviewer,
+horii,Hiroshi Horii,Author,
+hschreiber,Hendrik Schreiber,Author,
+hseigel,Harold Seigel,Reviewer,amber: Committer
+huntch,Charlie Hunt,Author,
+iaberg,Ingemar Aberg,Author,
+igerasim,Ivan Gerasimov,Reviewer,
+igavrilin,Ilya Gavrilin,Author,
+ihse,Magnus Ihse Bursie,Reviewer,"build: Member, ide-support: Member"
+iignatyev,Igor Ignatyev,Reviewer,"code-tools: Committer, guide: Author, hotspot: Member"
+iklam,Ioi Lam,Reviewer,hotspot: Member
+imyers,Ian Myers,Author,
+inakonechnyy,Ilarion Nakonechnyy,Committer,
+iris,Iris Clark,Reviewer,"code-tools: Reviewer, compiler: Member, conformance: Member, core-libs: Member, guide: Reviewer"
+isipka,Ivan Sipka,Author,
+itakiguchi,Ichiroh Takiguchi,Committer,
+iveresov,Igor Veresov,Reviewer,"galahad: Committer, graal: Committer, hotspot: Member"
+iwalulya,Ivan Walulya,Reviewer,hotspot: Member
+jakvanek,Jakub Vanek,Author,
+jbachorik,Jaroslav Bachorik,Reviewer,
+jbechberger,Johannes Bechberger,Committer,
+jbhateja,Jatin Bhateja,Reviewer,
+jcao,Joshua Cao,Author,
+jcbeyler,Jean Christophe Beyler,Reviewer,
+jchen,Johnny Chen,Committer,
+jcivlin,Jan Civlin,Author,
+jcm,Jamsheed Mohammed C M,Committer,
+jcoomes,John Coomes,Reviewer,"hotspot: Member, vulnerability: Member"
+jdowland,Jonathan Dowland,Committer,
+jdv,Jayathirth D V,Reviewer,client-libs: Member
+jfranck,Joel Borggren-Franck,Reviewer,compiler: Member
+jgeorge,Jini George,Reviewer,
+jgodinez,Jennifer Godinez,Reviewer,
+jgraham,Johannes Graham,Author,
+jhungwse,Jeannette Hung,Author,
+jhuttana,Jayashree Huttanagoudar,Author,
+jiahuang,Jia Huang,Author,
+jiangli,Jiangli Zhou,Reviewer,hotspot: Member
+jianyesun,Sun Jianye,Author,
+jiefu,Jie Fu,Reviewer,
+jjg,Jonathan Gibbons,Reviewer,"code-tools: Reviewer, compiler: Member, conformance: Member, ide-support: Member"
+jjiang,John Jiang,Reviewer,
+jjoo,Jonathan Joo,Author,
+jkang,Jie Kang,Committer,
+jkuhn,Johannes Kuhn,Author,
+jlahoda,Jan Lahoda,Reviewer,"amber: Committer, code-tools: Lead, detroit: Committer, ide-support: Member"
+jlamperth,Jonathan Laszlo Lamperth,Author,
+jlaskey,Jim Laskey,Reviewer,"amber: Committer, detroit: Committer"
+jlu,Justin Lu,Reviewer,i18n: Member
+jmanson,Jeremy Manson,Author,
+jmasa,Jon Masamitsu,Reviewer,hotspot: Member
+jmelvin,James Melvin,Committer,hotspot: Member
+jnibedita,Nibedita Jena,Committer,
+jnimeh,Jamil Nimeh,Reviewer,security: Member
+joehw,Joe Wang,Reviewer,core-libs: Member
+jonghoonpark,Jonghoon Park,Author,
+jpai,Jaikiran Pai,Reviewer,"brisbane: Reviewer, code-tools: Reviewer, detroit: Committer, net: Member"
+jprovino,Joseph Provino,Committer,
+jqzuo,Qi Zuo,Committer,
+jrose,John R Rose,Reviewer,"amber: Reviewer, compiler: Member, galahad: Committer, hotspot: Member"
+jshivayogi,Peeyusha Shivayogi(Jenny),Author,
+jsingh,Jagjot Singh,Author,
+jsikstro,Joel Sikstrom,Reviewer,
+jsjolen,Johan Sjolen,Reviewer,hotspot: Member
+jtatton,Jason Tatton,Author,
+jtian,Jing Tian,Author,
+juh,Jason Uh,Committer,security: Member
+jvernee,Jorn Vernee,Reviewer,"brisbane: Reviewer, code-tools: Reviewer, detroit: Committer, galahad: Committer"
+jwha,Jungwoo Ha,Author,
+jwilhelm,Jesper Wilhelmsson,Reviewer,"hotspot: Member, vulnerability: Member"
+jwood,Jeremy Wood,Author,
+jwtang,Jiawei Tang,Author,
+jzhu,Joshua Zhu,Author,
+jziviani,Jose Ricardo Ziviani,Author,
+kabhishek,Kumar Abhishek,Author,
+kamg,Keith McGuigan,Reviewer,"hotspot: Member, serviceability: Member"
+katleman,David Katleman,Reviewer,build: Member
+kbarrett,Kim Barrett,Reviewer,hotspot: Member
+kboulanouare,Khalid Boulanouare,Author,
+kcr,Kevin Rushforth,Author,
+kdnilsen,Kelvin Nilsen,Reviewer,
+kevinw,Kevin Walls,Reviewer,"hotspot: Member, serviceability: Member"
+kfarrell,Kieran Farrell,Author,
+khazra,Kurchi Subhra Hazra,Committer,
+kkharbas,Kishor Kharbas,Author,
+kizune,Alexander Zuev,Reviewer,client-libs: Member
+kmo,Krystal Mo,Committer,
+korov,Lei Zhu,Author,
+kravikumar,Kiran Sidhartha Ravikumar,Committer,
+krk,Kerem Kat,Author,
+kshefov,Konstantin Shefov,Committer,
+ksrini,Kumar Srinivasan,Reviewer,compiler: Member
+kthirupattur,Koushik Thirupattur,Author,
+kvn,Vladimir Kozlov,Reviewer,"aarch64-port: Committer, galahad: Reviewer, graal: Author, hotspot: Lead"
+kwang,Kun Wang,Author,
+kwei,Kuai Wei,Author,
+kzhaldyb,Kirill Zhaldybin,Reviewer,
+lagergren,Marcus Lagergren,Reviewer,
+lana,Lana Steuck,Reviewer,
+lancea,Lance Andersen,Reviewer,core-libs: Member
+lbourges,Laurent Bourges,Committer,client-libs: Member
+leder,Lukas Eder,Author,
+leiz,Lei Zaakjyu,Author,
+leonidr,Leonid Romanov,Committer,
+lfoltan,Lois Foltan,Reviewer,"amber: Committer, galahad: Committer, hotspot: Member"
+liach,Chen Liang,Reviewer,
+linade,Yude Lin,Author,
+littlee,Charles Lee,Committer,
+lkorinth,Leo Korinth,Reviewer,hotspot: Member
+lliu,Liming Liu,Author,
+lmesnik,Leonid Mesnik,Reviewer,serviceability: Member
+lpriima,Lev Priima,Author,
+luchsh,Jonathan Lu,Committer,
+lucy,Lutz Schmidt,Reviewer,
+luoziyi,Ziyi Luo,Author,
+lyang,Long Yang,Author,
+mabbay,Mourad Abbay,Author,
+mablakatov,Mikhail Ablakatov,Author,
+macarte,Mat Carter,Author,vulnerability: Member
+malenkov,Sergey Malenkov,Reviewer,
+marchof,Marc R. Hoffmann,Author,
+mariasde,Maria Arias de Reyna Dominguez,Committer,
+markt,Mark Thomas,Author,
+martin,Martin Buchholz,Reviewer,core-libs: Member
+matsaave,Matias Saavedra Silva,Reviewer,
+mbaesken,Matthias Baesken,Reviewer,"build: Member, vulnerability: Member"
+mbalao,Martin Balao Alonso,Reviewer,security: Member
+mbankal,Mala Bankal,Author,
+mbeckwit,Monica Beckwith,Author,
+mbijman,Matthijs Bijman,Author,
+mbollapragad,Maheshkumar Bollapragada,Author,
+mbrandy,Matthew Brandyberry,Author,
+mcberg,Michael Berg,Committer,
+mcherkas,Mikhail Cherkasov,Committer,
+mchinnathamb,Muthusamy Chinnathambi,Author,
+mchernov,Michail Chernov,Committer,
+mchung,Mandy Chung,Reviewer,"core-libs: Member, galahad: Committer, hotspot: Member, serviceability: Member"
+mcimadamore,Maurizio Cimadamore,Reviewer,"amber: Reviewer, brisbane: Reviewer, code-tools: Reviewer, compiler: Lead, core-libs: Member, detroit: Committer, ide-support: Lead"
+mdoerr,Martin Doerr,Reviewer,hotspot: Member
+mduigou,Mike Duigou,Reviewer,core-libs: Member
+mfang,Michael Fang,Committer,i18n: Member
+mgerdin,Mikael Gerdin,Reviewer,hotspot: Member
+mgkwill,Marcus G K Williams,Author,
+mgrigorov,Martin Grigorov,Author,
+mgronlun,Markus Gronlund,Reviewer,hotspot: Member
+mhalder,Manajit Halder,Committer,
+mhaupt,Michael Haupt,Reviewer,
+michaelm,Michael McMahon,Reviewer,"core-libs: Member, net: Lead"
+mikael,Mikael Vidstedt,Reviewer,hotspot: Member
+minqi,Yumin Qi,Reviewer,hotspot: Member
+missa,Mohamed Issa,Author,
+mkarg,Markus KARG,Author,
+mkariya,Mitsuru Kariya,Author,
+mkos,Miroslav Kos,Committer,
+mlarsson,Marcus Larsson,Reviewer,
+mli,Hamlin Li,Reviewer,
+mmimica,Milan Mimica,Author,
+mnunez,Matherey Nunez,Author,
+mockner,Max Ockner,Committer,
+morris,Morris Meyer,Committer,
+mrkam,Alexander Kouznetsov,Committer,
+mseledtsov,Mikhailo Seledtsov,Committer,
+msheppar,Mark Sheppard,Reviewer,
+msobierski,Michal Sobierski,Author,
+mtobiass,Mattias Tobiasson,Author,
+mullan,Sean Mullan,Reviewer,"brisbane: Reviewer, security: Lead"
+mvala,Michal Vala,Author,
+mwalsh,Martin Walsh,Author,
+mzheng,Miao Zheng,Author,
+naoto,Naoto Sato,Reviewer,"core-libs: Member, i18n: Lead"
+nbenalla,Nizar Benalla,Reviewer,
+neliasso,Nils Eliasson,Reviewer,
+neugens,Mario Torre,Reviewer,adoption: Member
+never,Tom Rodriguez,Reviewer,"galahad: Reviewer, graal: Committer, hotspot: Member"
+ngasson,Nick Gasson,Reviewer,
+ngmr,Neil Richards,Committer,
+ngrcevski,Nikola Grcevski,Author,
+ngthomas,Thomas Ng,Reviewer,
+ngubarkov,Nikita Gubarkov,Author,
+nishjain,Nishit Jain,Committer,i18n: Member
+njoshi,Neha Joshi,Author,
+nloodin,Nils Loodin,Committer,
+nnanivadekar,Nikhil Nanivadekar,Author,
+nnguyen,Nhat Nguyen,Author,
+nprasad,Neethu Prasad,Author,
+nradomski,Niklas Radomski,Author,
+nrai,Nityanand Rai,Author,
+ntoda,Neil Toda,Author,
+ntv,Nadeesh TV,Committer,
+nwilliams,Nicolas Williams,Author,
+ogillespie,Oli Gillespie,Author,
+ohair,Kelly O'Hair,Reviewer,"build: Member, serviceability: Member"
+ohrstrom,Fredrik Ohrstrom,Committer,
+okutsu,Masayoshi Okutsu,Reviewer,i18n: Member
+olagneau,Olivier Lagneau,Author,
+omajid,Omair Majid,Reviewer,
+omikhaltcova,Olga Mikhaltsova,Committer,
+osakamoto,Osamu Sakamoto,Author,
+pbansal,Pankaj Bansal,Reviewer,client-libs: Member
+pbhat,Pranav Bhat,Author,
+pchelko,Petr Pchelko,Reviewer,
+pchistyakov,Pavel Chistyakov,Author,
+pchilanomate,Patricio Chilano Mateo,Reviewer,hotspot: Member
+pchopra,Pooja Chopra,Author,
+peytoia,Yuka Kamiya,Reviewer,i18n: Member
+pgovereau,Paul Govereau,Committer,
+phh,Paul Hohensee,Reviewer,"hotspot: Member, vulnerability: Member"
+pkbalakr,Prem Balakrishnan,Committer,
+pkoppula,Prasadrao Koppula,Author,
+plevart,Peter Levart,Reviewer,
+pliden,Per Liden,Reviewer,hotspot: Member
+pminborg,Per Minborg,Reviewer,"brisbane: Reviewer, core-libs: Member"
+poonam,Poonam Bajaj,Committer,hotspot: Member
+ppunegov,Pavel Punegov,Committer,
+prappo,Pavel Rappo,Reviewer,
+prr,Phil Race,Reviewer,"build: Member, client-libs: Lead, core-libs: Member, csr: Member, gb: Member"
+psadhukhan,Prasanta Sadhukhan,Reviewer,client-libs: Member
+psandoz,Paul Sandoz,Reviewer,"amber: Reviewer, babylon: Lead, core-libs: Member"
+psonal,Pallavi Sonal,Author,
+psoujanya,Pasam Soujanya,Author,
+pstrawderman,Patrick Strawderman,Author,
+ptbrunet,Pete Brunet,Committer,
+pxie,Peng Xie,Author,
+qamai,Quan Anh Mai,Reviewer,
+qfeng,Qi Feng,Author,
+qpzhang,Patrick Zhang,Author,
+qxing,Qizheng Xing,Author,
+rasbold,Chuck Rasbold,Reviewer,hotspot: Member
+ravipatel,Ravi Patel,Author,
+rbackman,Rickard Backman,Reviewer,hotspot: Member
+rcastanedalo,Roberto Castaneda Lozano,Reviewer,hotspot: Member
+rchamyal,Rajeev Chamyal,Committer,
+rdurbin,Ron Durbin,Author,
+redestad,Claes Redestad,Reviewer,"amber: Committer, code-tools: Committer, galahad: Committer"
+rehn,Robbin Ehn,Reviewer,hotspot: Member
+reinhapa,Patrick Reinhart,Author,
+rfield,Robert Field,Reviewer,serviceability: Member
+rfscholte,Robert Scholte,Author,
+rgoel,Rachna Goel,Committer,i18n: Member
+rgrigoriadi,Roman Grigoriadi,Author,
+rgiulietti,Raffaello Giulietti,Reviewer,core-libs: Member
+rgupta,Ravi Gupta,Author,
+rhalade,Rajan Halade,Reviewer,
+rhillegas,Rick Hillegas,Author,
+rjernst,Ryan Ernst,Author,
+rkannathpari,Renjith Kannath Pariyangad,Author,
+rkennke,Roman Kennke,Reviewer,"aarch64-port: Committer, galahad: Committer, hotspot: Member"
+rkkumar,Rohitash Kumar,Author,
+rmahajan,Rajat Mahajan,Committer,
+robilad,Dalibor Topic,Committer,"aarch32-port: Lead, aarch64-port: Lead, adoption: Lead, porters: Lead, vulnerability: Member"
+robm,Rob McKenna,Committer,
+roland,Roland Westrelin,Reviewer,"aarch64-port: Committer, galahad: Committer, hotspot: Member"
+ronsh,Ron Shapiro,Author,
+rpatil,Ramanand Patil,Committer,
+rpressler,Ron Pressler,Committer,hotspot: Member
+rprotacio,Rachel Protacio,Committer,
+rraghavan,Rahul Raghavan,Committer,
+rraj,Rohit Arul Raj,Author,
+rreddy,Ravi Reddy,Author,
+rrich,Richard Reingruber,Reviewer,hotspot: Member
+rriggs,Roger Riggs,Reviewer,core-libs: Member
+rschatz,Roland Schatz,Author,
+rschmelter,Ralf Schmelter,Reviewer,
+rschuenemann,Rene Schuenemann,Author,
+rsoumadipta,Soumadipta Roy,Author,
+rstevens,Robin Stevens,Author,
+rstupp,Robert Stupp,Author,
+rsunderbabu,Ramkumar Sunderbabu,Committer,
+ruili,Rui Li,Author,
+rvansa,Radim Vansa,Author,
+rwallace,Ryan Wallace,Author,
+rwestberg,Robin Westberg,Committer,ide-support: Member
+ryadav,Rahul Yadav,Committer,
+sacharya,Shruthi Acharya,Author,
+sadayapalam,Srikanth Adayapalam,Reviewer,amber: Committer
+sangheki,Sangheon Kim,Reviewer,hotspot: Member
+sballal,Sharath Ballal,Committer,
+sbordet,Simone Bordet,Author,
+sbrannen,Sam Brannen,Author,
+schernyshev,Sergey Chernyshev,Author,
+scolebourne,Stephen Colebourne,Author,
+sdama,Srinivas Dama,Committer,
+sdohrmann,Steve Dohrmann,Author,
+sdrach,Steve Drach,Committer,
+sebastian,Sebastian Sickelmann,Author,
+semery,Shawn Emery,Author,
+serb,Sergey Bylokhov,Reviewer,"client-libs: Member, vulnerability: Member"
+sgehwolf,Severin Gehwolf,Reviewer,ide-support: Member
+sgibbons,Scott Gibbons,Committer,
+sgrinovero,Sanne Grinovero,Author,
+sgroeger,Steve Groeger,Author,
+shade,Aleksey Shipilev,Reviewer,"aarch64-port: Committer, build: Member, code-tools: Committer, hotspot: Member"
+sherman,Xueming Shen,Reviewer,core-libs: Member
+shinyafox,Shinya Yoshida,Committer,
+shoubing,Shoubing Ma,Author,
+shshahma,Shafi Ahmad,Author,
+shurailine,Alexandre Iline,Committer,
+sguoyun,Sun Guoyun,Author,
+sgupta,Shobhit Gupta,Author,
+simonis,Volker Simonis,Reviewer,"aarch32-port: Committer, build: Member, crac: Committer, hotspot: Member, porters: Member, vulnerability: Member"
+sjiang,Shanliang Jiang,Committer,
+sjayagond,Sidraya Jayagond,Author,
+sjohanss,Stefan Johansson,Reviewer,"galahad: Committer, hotspot: Member"
+skodandarama,Suman Rajkumaar Kodandarama,Author,
+skovalev,Sergei Kovalev,Author,
+skuksenko,Sergey Kuksenko,Committer,
+sla,Staffan Larsen,Reviewer,serviceability: Member
+slugovoy,Sergey Lugovoy,Author,
+smahaliswamy,Sureshkumar Mahaliswamy,Author,
+smandalika,Srinivas Mandalika,Author,
+smarks,Stuart Marks,Reviewer,"core-libs: Member, guide: Committer"
+smonteith,Stuart Monteith,Author,
+snatarajan,Saranya Natarajan,Committer,
+snikandrova,Svetlana Nikandrova,Committer,
+sogoel,Sonali Goel,Committer,
+sparasa,Srinivas Vamsi Parasa,Committer,
+srastogi,Shilpi Rastogi,Author,
+srl,Steven Loomis,Committer,i18n: Member
+sroy,Suchismith Roy,Author,
+srukmannagar,Shravya Rukmannagari,Committer,
+ssachkov,Serhiy Sachkov,Author,
+ssahoo,Sibabrata Sahoo,Committer,
+ssarathi,Sorna Sarathi N,Author,
+ssides,Steve Sides,Committer,
+ssimonchik,Sergey Simonchik,Author,
+sspitsyn,Serguei Spitsyn,Reviewer,"galahad: Committer, hotspot: Member, serviceability: Lead"
+ssreedharan,Sreeprakash Sreedharan,Author,
+ssteiner,Simon Steiner,Author,
+sstenzel,Sebastian Stenzel,Author,
+ssubramaniam,Satyen Subramaniam,Author,
+stefank,Stefan Karlsson,Reviewer,"galahad: Committer, hotspot: Member"
+stn,Sharath TN,Author,
+stooke,Simon Tooke,Author,
+stsmirno,Stanislav Smirnov,Author,
+stuefe,Thomas Stuefe,Reviewer,hotspot: Member
+stsypanov,Sergey Tsypanov,Author,
+sundar,Athijegannathan Sundararajan,Reviewer,"code-tools: Committer, detroit: Lead"
+sveerabhadra,Shashidhara Veerabhadraiah,Committer,
+sviswanathan,Sandhya Viswanathan,Reviewer,
+svijayasekar,Saravana Kumar Vijayasekaran,Author,
+svkamath,Smita Kamath,Committer,
+swang,Shuai Wang,Author,
+swati,Swati Sharma,Author,
+swesonga,Saint Wesonga,Author,
+swen,Shaojin Wen,Committer,
+syan,SendaoYan,Committer,
+syaqi,Sun Yaqi,Author,
+szaldana,Sonia Zaldana Calles,Committer,
+tamao,Tao Mao,Committer,
+tbenson,Thomas Benson,Author,
+tbell,Tim Bell,Reviewer,"build: Member, serviceability: Member, web: Member"
+thartmann,Tobias Hartmann,Reviewer,"galahad: Committer, hotspot: Member"
+tholenstein,Tobias Holenstein,Reviewer,hotspot: Member
+thurka,Tomas Hurka,Committer,serviceability: Member
+tidu,Tim Du,Author,
+tilman,Tilman Hausherr,Author,
+tintin,Lehua Ding,Author,
+tkiriyama,Takuya Kiriyama,Committer,
+tjonker,Todd Jonker,Author,
+tnakamura,Toshio Nakamura,Committer,
+tobermeier,Thomas Obermeier,Author,
+tonyp,Antonios Printezis,Reviewer,hotspot: Member
+tpivovarova,Tatiana Pivovarova,Committer,
+tprinzing,Tim Prinzing,Author,
+tr,Tejesh R,Reviewer,
+trebari,Tejpal Rebari,Committer,
+tschatzl,Thomas Schatzl,Reviewer,hotspot: Member
+tsteele,Tyler Steele,Committer,
+tvaleev,Tagir F. Valeev,Committer,
+tvoniadka,Thejasvi Voniadka,Author,
+tweidmann,Theo Weidmann,Author,
+twisti,Christian Thalinger,Reviewer,hotspot: Member
+tyan,Tristan Yan,Committer,
+uschindler,Uwe Schindler,Author,
+uta,Alexey Utkin,Committer,
+uvangapally,Ujwal Vangapally,Committer,
+vadim,Vadim Pakhnushev,Reviewer,
+vaivanov,Vladimir Ivanov,Author,
+valeriep,Valerie Peng,Reviewer,security: Member
+van,Vivi An,Author,
+varadam,Varada M,Committer,
+vbp,Vanitha B P,Author,
+vdeshpande,Vivek Deshpande,Committer,
+vdyakov,Victor Dyakov,Author,
+vinnie,Vinnie Ryan,Reviewer,security: Member
+vkempik,Vladimir Kempik,Committer,
+vklang,Viktor Klang,Reviewer,core-libs: Member
+vlivanov,Vladimir Ivanov,Reviewer,"galahad: Committer, hotspot: Member"
+vpetko,Vladimir Petko,Author,
+vpaprotski,Volodymyr Paprotski,Committer,
+vromero,Vicente Romero,Reviewer,"amber: Reviewer, compiler: Member"
+vsharma,Vipin Sharma,Author,
+vtewari,Vyom Tewari,Committer,
+vyazici,Volkan Yazici,Reviewer,
+wangxue,Wang Xue,Author,
+wanghaomin,Wang Haomin,Author,
+wchao,Wang Chao,Author,
+weijun,Weijun Wang,Reviewer,"brisbane: Committer, security: Member"
+wenanjian,Anjian Wen,Committer,
+wetmore,Bradford Wetmore,Reviewer,security: Member
+whuang,Wang Huang,Author,
+winterhalter,Rafael Winterhalter,Author,
+wkemper,William Kemper,Reviewer,
+wkudla,Wojciech Kudla,Author,
+wmdietl,Werner Dietl,Author,
+wuyan,Wu Yan,Author,
+wxiao,Weibing Xiao,Author,
+xgong,Xiaohong Gong,Committer,
+xhe,Xuejin He,Author,
+xiaofeya,Felix Yang,Committer,
+xliu,Xin Liu,Committer,
+xpeng,Xiaolong Peng,Committer,
+xqoasis,Qing Xiao,Author,
+xuelei,Xue-Lei Andrew Fan,Reviewer,security: Member
+xwlu,Xiaowei Lu,Author,
+xyin,Chris Yin,Committer,
+yadongwang,Yadong Wang,Committer,
+yan,Yuri Nesterenko,Reviewer,
+yeren,Yagmur Eren,Author,
+yftsai,Yi-Fan Tsai,Author,
+yhuang,Yong Jeffrey Huang,Committer,i18n: Member
+ykantser,Katja Kantserova,Committer,
+ykubota,KUBOTA Yuji,Author,
+ylu,Yingqi Lu,Author,
+yongzhou,Yong Zhou,Author,
+yrodiere,Yoann Rodiere,Author,
+ysr,Y. Srinivas Ramakrishna,Reviewer,"hotspot: Member, vulnerability: Member"
+ysato,Yuta Sato,Author,
+ysuenaga,Yasumasa Suenaga,Reviewer,
+yyang,Yi Yang,Committer,
+yzhang,Yang Zhang,Author,
+yzheng,Yudi Zheng,Committer,
+yzhou,Daisy Zhou,Author,
+yzhu,Yanhong Zhu,Author,
+zcai,Zixian Cai,Author,
+zgu,Zhengyu Gu,Reviewer,jdk-updates: Reviewer
+zlin,Zihao Lin,Author,
+zmajo,Zoltan Majo,Reviewer,hotspot: Member
+zmiao,Zhuojun Miao,Author,
+zxie,Zhaokun Xie,Author,
+zyao,Zhongwei Yao,Author,
+zzambers,Zdenek Zambersky,Author,

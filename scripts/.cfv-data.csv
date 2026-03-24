@@ -1,0 +1,158 @@
+date,candidate_name,candidate_username,role,project,nominator,stats,areas,url
+2020-01-02,Jatin Bhateja,jbhateja,Committer,JDK,Vladimir Ivanov,,HotSpot compiler,https://mail.openjdk.org/pipermail/jdk-dev/2020-January/003833.html
+2020-02-12,John Jiang,jjiang,Reviewer,JDK,Rajan Halade,83 changesets,Security libs; networking; JAXP,https://mail.openjdk.org/pipermail/jdk-dev/2020-February/003892.html
+2020-02-17,Dmitry Batrak,,Committer,JDK,Anton Tarasov,8 significant fixes,Java 2D; font rendering,https://mail.openjdk.org/pipermail/jdk-dev/2020-February/003911.html
+2020-02-19,Lutz Schmidt,lucy,Reviewer,JDK,Christoph Langer,~50 commits,JIT compiler; s390/PPC ports,https://mail.openjdk.org/pipermail/jdk-dev/2020-February/003916.html
+2020-03-12,Chihiro Ito,cito,Committer,JDK,Andrew Haley,12 significant fixes,JFR; diagnostics; GC logging,https://mail.openjdk.org/pipermail/jdk-dev/2020-March/004044.html
+2020-03-16,Pankaj Bansal,pbansal,Reviewer,JDK,Sergey Bylokhov,45 contributions,Client libraries,https://mail.openjdk.org/pipermail/jdk-dev/2020-March/004058.html
+2020-03-16,Hamlin Li,mli,Reviewer,JDK,Roger Riggs,130+ contributions,Core libraries; NIO; RMI,https://mail.openjdk.org/pipermail/jdk-dev/2020-March/004069.html
+2020-03-18,Alexey Semenyuk,asemenyuk,Committer,JDK,Philip Race,12 fixes,jpackage; installers; build,https://mail.openjdk.org/pipermail/jdk-dev/2020-March/004092.html
+2020-03-20,Nick Gasson,,Committer,JDK,Ningsheng Jian,29 changes,AArch64; ARM32; C1/C2 compiler,https://mail.openjdk.org/pipermail/jdk-dev/2020-March/004111.html
+2020-03-20,Pengfei Li,pli,Committer,JDK,Ningsheng Jian,20 changes,AArch64; vectorization; intrinsics,https://mail.openjdk.org/pipermail/jdk-dev/2020-March/004112.html
+2020-04-15,Mark Sheppard,msheppar,Reviewer,JDK,Chris Hegarty,87+ contributions,Networking; security; core libraries,https://mail.openjdk.org/pipermail/jdk-dev/2020-April/004205.html
+2020-04-16,Amy Lu,almu,Reviewer,JDK,Roger Riggs,150+ contributions,java.nio; java.util; java.lang testing,https://mail.openjdk.org/pipermail/jdk-dev/2020-April/004222.html
+2020-05-27,Simon Tooke,stooke,Committer,OpenJDK,Andrew Hughes,,Main JDK project,https://mail.openjdk.org/pipermail/jdk-dev/2020-May/004337.html
+2020-06-04,Jorn Vernee,jvernee,Committer,OpenJDK,Claes Redestad,,Panama; skara; main JDK,https://mail.openjdk.org/pipermail/jdk-dev/2020-June/004351.html
+2020-06-11,Alexander Matveev,almatvee,Committer,JDK,Andy Herrick,15 fixes,jpackage; macOS signing,https://mail.openjdk.org/pipermail/jdk-dev/2020-June/004397.html
+2020-06-17,Anton Litvinov,alitvinov,Reviewer,JDK,Dmitry Markov,37 changes,Client libraries,https://mail.openjdk.org/pipermail/jdk-dev/2020-June/004433.html
+2020-06-30,Shravya Rukmannagari,srukmannagar,Committer,JDK,Vladimir Ivanov,8+ significant changes,Crypto; SHA; AES; CRC32; Vector API,https://mail.openjdk.org/pipermail/jdk-dev/2020-June/004454.html
+2020-07-03,Christian Hagedorn,chagedorn,Reviewer,JDK,Tobias Hartmann,47 changes,C1/C2 compilers; loop optimizations,https://mail.openjdk.org/pipermail/jdk-dev/2020-July/004474.html
+2020-08-19,Rahul Yadav,ryadav,Committer,JDK,Daniel Fuchs,14 fixes,Core libraries,https://mail.openjdk.org/pipermail/jdk-dev/2020-August/004629.html
+2020-09-10,Tejpal Rebari,trebari,Committer,JDK,Sergey Bylokhov,20 contributions,Client libraries,https://mail.openjdk.org/pipermail/jdk-dev/2020-September/004719.html
+2020-09-25,Bob Vandette,bobv,Reviewer,JDK,Harold Seigel,100+ changes,HotSpot runtime; container support; AArch64,https://mail.openjdk.org/pipermail/jdk-dev/2020-September/004759.html
+2020-11-06,Kiran Ravikumar,kravikumar,Committer,JDK,Sean Coffey,,Core libraries,https://mail.openjdk.org/pipermail/jdk-dev/2020-November/004897.html
+2020-11-09,Richard Reingruber,rrich,Reviewer,JDK,Goetz Lindenmaier,30+ contributions,JVMTI; compiler; GC; s390/PPC ports,https://mail.openjdk.org/pipermail/jdk-dev/2020-November/004911.html
+2020-11-24,Andrew Leonard,aleonard,Committer,JDK,Severin Gehwolf,12 contributions,Core libs; build,https://mail.openjdk.org/pipermail/jdk-dev/2020-November/004967.html
+2021-01-16,Roberto Castaneda Lozano,rcastanedalo,Committer,JDK,Vladimir Kozlov,20 fixes,HotSpot C2 compiler,https://mail.openjdk.org/pipermail/jdk-dev/2021-January/005002.html
+2021-01-21,Hai-May Chao,,Committer,JDK,Sean Mullan,13 fixes,TLS; OCSP; security tools,https://mail.openjdk.org/pipermail/jdk-dev/2021-January/005025.html
+2021-02-16,Albert Mingkun Yang,,Committer,OpenJDK,Thomas Schatzl,16 changesets,HotSpot GC,https://mail.openjdk.org/pipermail/jdk-dev/2021-February/005068.html
+2021-02-24,Arno Zeller,azeller,Committer,JDK,Christoph Langer,11 commits,QE; bug analysis; SAP JDK,https://mail.openjdk.org/pipermail/jdk-dev/2021-February/005096.html
+2021-02-24,Alexey Semenyuk,asemenyuk,Reviewer,JDK,Philip Race,43 contributions,jpackage; installer technologies,https://mail.openjdk.org/pipermail/jdk-dev/2021-February/005102.html
+2021-02-25,Adam Sotona,asotona,Committer,JDK,Jonathan Gibbons,14+ commits,javac; javap; lambda; records,https://mail.openjdk.org/pipermail/jdk-dev/2021-February/005130.html
+2021-04-19,Jorn Vernee,jvernee,Reviewer,JDK,Claes Redestad,133 commits (Panama) + 20+ JDK,Panama; Memory Access API; java.lang.invoke,https://mail.openjdk.org/pipermail/jdk-dev/2021-April/005313.html
+2021-04-20,Anton Kozlov,akozlov,Committer,JDK,Vladimir Kempik,18 changes,JDK; JEP-391,https://mail.openjdk.org/pipermail/jdk-dev/2021-April/005339.html
+2021-04-23,Ian Graves,igraves,Committer,JDK,Stuart Marks,15 commits,Core libraries; Vector; jlink,https://mail.openjdk.org/pipermail/jdk-dev/2021-April/005385.html
+2021-04-29,Alexey Ushakov,avu,Committer,JDK,Philip Race,10 commits,Java 2D; macOS pipeline; AWT/Swing,https://mail.openjdk.org/pipermail/jdk-dev/2021-April/005431.html
+2021-05-03,Jie Fu,jiefu,Reviewer,JDK,Ioi Lam,140+ contributions,JIT compiler; C2; Vector API; GC,https://mail.openjdk.org/pipermail/jdk-dev/2021-May/005457.html
+2021-05-05,Alexander Matveev,matvee,Reviewer,JDK,Philip Race,37 contributions,jpackage; media; client Java,https://mail.openjdk.org/pipermail/jdk-dev/2021-May/005495.html
+2021-05-13,Sandhya Viswanathan,sviswanathan,Reviewer,JDK,Paul Sandoz,32 commits,HotSpot x86 codegen; Vector API,https://mail.openjdk.org/pipermail/jdk-dev/2021-May/005528.html
+2021-05-19,Yi Yang,yyang,Committer,JDK,Tobias Hartmann,24 patches,Runtime; JFR; JIT compilers,https://mail.openjdk.org/pipermail/jdk-dev/2021-May/005563.html
+2021-06-01,Hui Shi,hshi,Committer,JDK,Jie Fu,23 changes,AArch64; C2 memory barriers,https://mail.openjdk.org/pipermail/jdk-dev/2021-June/005618.html
+2021-06-02,Guoxiong Li,lgxbslgx,Committer,JDK,Vicente Romero,39 patches,javac compiler,https://mail.openjdk.org/pipermail/jdk-dev/2021-June/005641.html
+2021-06-08,Xin Liu,xliu,Committer,JDK,Volker Simonis,42 patches,C2 JIT compiler; async logging,https://mail.openjdk.org/pipermail/jdk-dev/2021-June/005665.html
+2021-06-24,Leo Korinth,lkorinth,Reviewer,JDK,Thomas Schatzl,50 contributions,Parallel GC; G1; reference processing,https://mail.openjdk.org/pipermail/jdk-dev/2021-June/005710.html
+2021-07-13,Nick Gasson,nick-arm,Reviewer,JDK,Andrew Dinn,59 commits,AArch64; compilers; GC; runtime,https://mail.openjdk.org/pipermail/jdk-dev/2021-July/005753.html
+2021-08-04,Albert Mingkun Yang,ayang,Reviewer,JDK,Thomas Schatzl,60 contributions,G1; ZGC garbage collectors,https://mail.openjdk.org/pipermail/jdk-dev/2021-August/005857.html
+2021-08-06,Denghui Dong,ddong,Committer,JDK,Markus Gronlund,12+ contributions,JFR; GC; intrinsics; memory,https://mail.openjdk.org/pipermail/jdk-dev/2021-August/005896.html
+2021-08-22,Lin Zang,lzang,Committer,JDK,Chris Plummer,21 patches,Serviceability; heap dumps,https://mail.openjdk.org/pipermail/jdk-dev/2021-August/005967.html
+2021-09-10,Leonid Mesnik,lmesnik,Reviewer,JDK,Serguei Spitsyn,92 commits JDK + 95 Loom,JDK; Loom project,https://mail.openjdk.org/pipermail/jdk-dev/2021-September/006000.html
+2021-09-14,Ivan Walulya,iwalulya,Reviewer,JDK,Thomas Schatzl,35 contributions,G1; Parallel GC; remembered sets,https://mail.openjdk.org/pipermail/jdk-dev/2021-September/006041.html
+2021-09-22,Ralf Schmelter,rschmelter,Reviewer,JDK,Goetz Lindenmaier,32 contributions,GC; runtime; JVMTI; profiling,https://mail.openjdk.org/pipermail/jdk-dev/2021-September/006071.html
+2021-10-21,Patricio Chilano Mateo,pchilanomate,Reviewer,JDK,Coleen Phillimore,56 commits,Locking; safepoints; handshakes,https://mail.openjdk.org/pipermail/jdk-dev/2021-October/006167.html
+2021-11-01,Alexey Bakhtin,abakhtin,Committer,JDK,Yuri Nesterenko,,Security; TLS; PKCS11; Kerberos,https://mail.openjdk.org/pipermail/jdk-dev/2021-November/006198.html
+2021-11-02,Andrey Turbanov,aturbanov,Committer,JDK,Daniel Fuchs,30+ changesets,Code improvements; bug tracking,https://mail.openjdk.org/pipermail/jdk-dev/2021-November/006213.html
+2021-12-27,Artem Semenov,asemenov,Committer,JDK,Anton Tarasov,8+ commits,Accessibility; AWT; macOS,https://mail.openjdk.org/pipermail/jdk-dev/2021-December/006303.html
+2022-01-13,Fairoz Matte,fmatte,Committer,JDK,Poonam Parhar,,JVM Sustaining; JDK 8u Author,https://mail.openjdk.org/pipermail/jdk-dev/2022-January/006314.html
+2022-02-10,Masanori Yano,myano,Committer,JDK,David Buck,16 contributions,Graphics2D; ImageIO; regex; crypto,https://mail.openjdk.org/pipermail/jdk-dev/2022-February/006374.html
+2022-02-14,Daniel Jelinski,djelinski,Committer,JDK,Daniel Fuchs,16 changesets,Core libraries,https://mail.openjdk.org/pipermail/jdk-dev/2022-February/006389.html
+2022-03-09,Xiaohong Gong,xgong,Committer,JDK,Ningsheng Jian,29 changes,AArch64; Vector API; C2,https://mail.openjdk.org/pipermail/jdk-dev/2022-March/006435.html
+2022-03-28,Fei Yang,fyang,Reviewer,JDK,Aleksey Shipilev,,RISC-V port; C1/C2; AArch64,https://mail.openjdk.org/pipermail/jdk-dev/2022-March/006461.html
+2022-04-06,Manukumar V S,mvs,Committer,JDK,Aleksei Ivanov,20 changesets,QE,https://mail.openjdk.org/pipermail/jdk-dev/2022-April/006482.html
+2022-04-08,Mahendra Chhipa,mchhipa,Committer,JDK,Daniel Fuchs,12 changesets,QE,https://mail.openjdk.org/pipermail/jdk-dev/2022-April/006490.html
+2022-05-06,Tobias Holenstein,tobiasholenstein,Committer,JDK,Tobias Hartmann,15 contributions,HotSpot compiler,https://mail.openjdk.org/pipermail/jdk-dev/2022-May/006550.html
+2022-05-06,Emanuel Peter,eme64,Committer,JDK,Tobias Hartmann,15 contributions,HotSpot compiler,https://mail.openjdk.org/pipermail/jdk-dev/2022-May/006551.html
+2022-05-06,Jaikiran Pai,jpai,Reviewer,JDK,Daniel Fuchs,63 changesets,Core libraries; PR reviews,https://mail.openjdk.org/pipermail/jdk-dev/2022-May/006564.html
+2022-05-09,Tyler Steele,backwaterred,Committer,JDK,Martin Doerr,10 contributions,AIX; PPC64; s390,https://mail.openjdk.org/pipermail/jdk-dev/2022-May/006595.html
+2022-06-02,Ron Pressler,pron,Committer,JDK,Alan Bateman,900+ commits (Loom) + 12 JDK,Project Loom; virtual threads,https://mail.openjdk.org/pipermail/jdk-dev/2022-June/006648.html
+2022-06-02,Roberto Castaneda Lozano,rcastanedalo,Reviewer,JDK,Vladimir Kozlov,49 changes (39 significant),HotSpot compiler; C2; IGV,https://mail.openjdk.org/pipermail/jdk-dev/2022-June/006673.html
+2022-06-16,Conor Cleary,ccleary,Committer,JDK,Daniel Fuchs,28 changesets,Networking; HTTP/2,https://mail.openjdk.org/pipermail/jdk-dev/2022-June/006741.html
+2022-07-22,Jatin Bhateja,jbhateja,Reviewer,JDK,Sandhya Viswanathan,63+ contributions,AVX512; Vector API; auto-vectorization,https://mail.openjdk.org/pipermail/jdk-dev/2022-July/006804.html
+2022-07-27,Evgeny Astigeevich,eastigeevich,Committer,JDK,Volker Simonis,18 contributions,AArch64 performance,https://mail.openjdk.org/pipermail/jdk-dev/2022-July/006807.html
+2022-08-16,Ajit Ghaisas,aghaisas,Reviewer,JDK,Philip Race,35 commits,Java 2D; Metal pipeline; macOS,https://mail.openjdk.org/pipermail/jdk-dev/2022-August/006836.html
+2022-08-17,Raffaello Giulietti,rgiulietti,Committer,JDK,Joe Darcy,12+ changesets,Core libraries; numerics; HotSpot intrinsics,https://mail.openjdk.org/pipermail/jdk-dev/2022-August/006840.html
+2022-09-01,Toshio Nakamura,tnakamura,Committer,JDK,Tyler Steele,16 commits,Internationalization; non-ASCII text,https://mail.openjdk.org/pipermail/jdk-dev/2022-September/006881.html
+2022-09-05,Eric Liu,eliu,Committer,JDK,Ningsheng Jian,27 changes,AArch64; Vector API; C2,https://mail.openjdk.org/pipermail/jdk-dev/2022-September/006889.html
+2022-09-20,Axel Boldt-Christmas,,Committer,JDK,Stefan Karlsson,8+ commits,HotSpot GC; Generational ZGC,https://mail.openjdk.org/pipermail/jdk-dev/2022-September/006919.html
+2022-09-21,Christian Stein,sormuras,Committer,JDK,Jonathan Gibbons,18 changesets,Tooling; testing; jtreg,https://mail.openjdk.org/pipermail/jdk-dev/2022-September/006950.html
+2022-09-26,Johan Sjolen,jsjolen,Committer,JDK,Robbin Ehn,13 changesets,Unified Logging; HotSpot runtime,https://mail.openjdk.org/pipermail/jdk-dev/2022-September/006986.html
+2022-09-26,Quan Anh Mai,merykitty,Committer,JDK,Vladimir Kozlov,23 significant changes,HotSpot compiler,https://mail.openjdk.org/pipermail/jdk-dev/2022-September/006995.html
+2022-10-04,Tejesh R,tr,Committer,JDK,Philip Race,15 changes,Client libraries,https://mail.openjdk.org/pipermail/jdk-dev/2022-October/007028.html
+2022-10-04,Alisen Chung,achung,Committer,JDK,Philip Race,16 changes,Client libraries,https://mail.openjdk.org/pipermail/jdk-dev/2022-October/007029.html
+2022-10-11,Takuya Kiriyama,tkiriyama,Committer,JDK,Masanori Yano,16 patches,JFR; HotSpot options; troubleshooting,https://mail.openjdk.org/pipermail/jdk-dev/2022-October/007053.html
+2022-10-12,Bill Huang,bhuang,Committer,JDK,Joe Wang,12 changesets,XPath; XML,https://mail.openjdk.org/pipermail/jdk-dev/2022-October/007072.html
+2022-11-02,Julian Waters,TheShermanTanker,Committer,JDK,Erik Joelsson,21 contributions,Build; code quality,https://mail.openjdk.org/pipermail/jdk-dev/2022-November/007114.html
+2022-11-08,Harshitha Onkar,honkar,Committer,JDK,Philip Race,14 changes,Client libraries,https://mail.openjdk.org/pipermail/jdk-dev/2022-November/007133.html
+2022-11-11,Aleksei Efimov,aefimov,Reviewer,JDK,Daniel Fuchs,,Networking; JNDI/LDAP; JEP 418,https://mail.openjdk.org/pipermail/jdk-dev/2022-November/007147.html
+2022-11-14,Ludovic Henry,luhenry,Committer,JDK,Claes Redestad,12 significant changes,RISC-V; AArch64; HotSpot intrinsics,https://mail.openjdk.org/pipermail/jdk-dev/2022-November/007165.html
+2022-12-13,Fei Gao,fgao,Committer,JDK,Pengfei Li,18 changes,C2 JIT; AArch64; x86,https://mail.openjdk.org/pipermail/jdk-dev/2022-December/007234.html
+2022-12-13,Hao Sun,haosun,Committer,JDK,Pengfei Li,28 contributions,AArch64; NEON/SVE; HotSpot,https://mail.openjdk.org/pipermail/jdk-dev/2022-December/007235.html
+2022-12-13,Per-Ake Minborg,minborg,Committer,JDK,Alan Bateman,37 commits (Panama) + 14 JDK,Core libraries; Project Panama,https://mail.openjdk.org/pipermail/jdk-dev/2022-December/007250.html
+2023-01-10,Abhishek Kumar,abhiscxk,Committer,JDK,Philip Race,14 changes,Client libraries,https://mail.openjdk.org/pipermail/jdk-dev/2023-January/007289.html
+2023-01-18,Adam Sotona,asotona,Committer,Amber,Jim Laskey,~40 changes,javac; javap; jshell; classfile API,https://mail.openjdk.org/pipermail/amber-dev/2023-January/007700.html
+2023-01-25,Justin King,,Committer,JDK,Magnus Ihse Bursie,25 commits + 4 co-authored,Code cleanup; memory leaks; ASan,https://mail.openjdk.org/pipermail/jdk-dev/2023-January/007309.html
+2023-02-06,Koichi Sakata,jyukutyo,Committer,JDK,Tobias Holenstein,16 commits,Code cleanup; IGV improvements,https://mail.openjdk.org/pipermail/jdk-dev/2023-February/007330.html
+2023-02-07,Archie Cobbs,acobbs,Committer,Amber,Vicente Romero,~13 changes,javac; compiler bugs,https://mail.openjdk.org/pipermail/amber-dev/2023-February/007810.html
+2023-02-27,Damon Fenacci,dafedafe,Committer,JDK,Tobias Hartmann,13 contributions,HotSpot compiler; memory; GC,https://mail.openjdk.org/pipermail/jdk-dev/2023-February/007373.html
+2023-03-03,Daniel Jelinski,djelinski,Reviewer,JDK,Daniel Fuchs,60+ fixes,Networking; security libraries,https://mail.openjdk.org/pipermail/jdk-dev/2023-March/007417.html
+2023-03-10,Matias Saveedra Silva,matsaave,Committer,JDK,Coleen Phillimore,25 changesets,CDS; Constant Pool Cache,https://mail.openjdk.org/pipermail/jdk-dev/2023-March/007448.html
+2023-03-20,Frederic Parain,fparain,Reviewer,JDK,Coleen Phillimore,,HotSpot runtime; Valhalla; field layout,https://mail.openjdk.org/pipermail/jdk-dev/2023-March/007475.html
+2023-03-21,Afshin Zafari,azafari,Committer,JDK,Robbin Ehn,16 changesets,HotSpot runtime; JVMTI,https://mail.openjdk.org/pipermail/jdk-dev/2023-March/007499.html
+2023-03-31,Damon Nguyen,dnguyen,Committer,JDK,Philip Race,19 changes,Client libraries,https://mail.openjdk.org/pipermail/jdk-dev/2023-March/007544.html
+2023-04-04,Justin Lu,jlu,Committer,JDK,Naoto Sato,54 changes,Internationalization,https://mail.openjdk.org/pipermail/jdk-dev/2023-April/007567.html
+2023-04-13,Matthew Donovan,mpdonova,Committer,JDK,Rajan Halade,15 changesets,Security libraries,https://mail.openjdk.org/pipermail/jdk-dev/2023-April/007624.html
+2023-04-17,Adam Sotona,asotona,Reviewer,JDK,Vicente Romero,,javac; core-libs; classfile API,https://mail.openjdk.org/pipermail/jdk-dev/2023-April/007638.html
+2023-04-27,Johan Sjolen,jsjolen,Reviewer,JDK,Coleen Phillimore,78 changesets,HotSpot runtime; NMT; nullptr conversion,https://mail.openjdk.org/pipermail/jdk-dev/2023-April/007678.html
+2023-05-15,Johannes Bechberger,jbechberger,Committer,JDK,Christoph Langer,11 changes,JVM profiling; JEP 435,https://mail.openjdk.org/pipermail/jdk-dev/2023-May/007780.html
+2023-05-17,Darragh Clarke,dclarke,Committer,JDK,Daniel Fuchs,12 changesets,Networking; HttpURLConnection,https://mail.openjdk.org/pipermail/jdk-dev/2023-May/007797.html
+2023-05-25,Amit Kumar,offamitkumar,Committer,JDK,Tyler Steele,19 changes,s390 maintenance; dynamic invocation,https://mail.openjdk.org/pipermail/jdk-dev/2023-May/007829.html
+2023-05-26,Tobias Holenstein,tobiasholenstein,Reviewer,JDK,Tobias Hartmann,60 changes,IGV; AArch64; compiler control,https://mail.openjdk.org/pipermail/jdk-dev/2023-May/007846.html
+2023-05-26,Emanuel Peter,eme64,Reviewer,JDK,Tobias Hartmann,,HotSpot compiler,https://mail.openjdk.org/pipermail/jdk-dev/2023-May/007847.html
+2023-06-07,Feilong Jiang,,Committer,JDK,Fei Yang,,RISC-V port,https://mail.openjdk.org/pipermail/jdk-dev/2023-June/007916.html
+2023-06-07,Yadong Wang,,Committer,JDK,Fei Yang,,RISC-V; AArch64,https://mail.openjdk.org/pipermail/jdk-dev/2023-June/007917.html
+2023-06-14,Kevin Driver,,Committer,JDK,Sean Mullan,,Security libraries,https://mail.openjdk.org/pipermail/jdk-dev/2023-June/007930.html
+2023-06-28,Axel Boldt-Christmas,,Reviewer,JDK,Stefan Karlsson,,HotSpot GC; Generational ZGC,https://mail.openjdk.org/pipermail/jdk-dev/2023-June/007960.html
+2023-07-04,Doug Simon,dougxc,Reviewer,JDK,Andrew Dinn,86 PRs,JVMCI; jtreg; build; error handling,https://mail.openjdk.org/pipermail/jdk-dev/2023-July/007989.html
+2023-07-06,Zdenek Zambersky,zzambers,Committer,JDK,Thomas Stuefe,11 changes,PKCS11; testing,https://mail.openjdk.org/pipermail/jdk-dev/2023-July/008007.html
+2023-08-08,Ashutosh Mehra,asmehra,Committer,JDK,Thomas Stuefe,19 contributions,Shenandoah; CDS; SA,https://mail.openjdk.org/pipermail/jdk-dev/2023-August/008042.html
+2023-10-02,Mark Powers,,Committer,JDK,Sean Mullan,21 changes,Security libraries; HSS/LMS,https://mail.openjdk.org/pipermail/jdk-dev/2023-October/008289.html
+2023-10-09,Raffaello Giulietti,rgiulietti,Reviewer,JDK,Joe Darcy,40+ fixes,Core libraries; numerics; regex; HotSpot intrinsics,https://mail.openjdk.org/pipermail/jdk-dev/2023-October/008313.html
+2023-10-17,Per-Ake Minborg,pminborg,Reviewer,JDK,Alan Bateman,58 commits,FFM API; Leyden; JEP 454,https://mail.openjdk.org/pipermail/jdk-dev/2023-October/008360.html
+2023-10-23,Aggelos Biboudis,biboudis,Committer,JDK,Jan Lahoda,30 changes,Pattern matching; record patterns,https://mail.openjdk.org/pipermail/jdk-dev/2023-October/008397.html
+2023-11-30,Eirik Bjorsnos,eirbjo,Committer,JDK,Jaikiran Pai,31 commits,JAR/ZIP API; performance,https://mail.openjdk.org/pipermail/jdk-dev/2023-November/008474.html
+2023-12-13,Viktor Klang,vklang,Committer,JDK,Alan Bateman,JEP 461 + 19 changes,Streams API; java.util.concurrent,https://mail.openjdk.org/pipermail/jdk-dev/2023-December/008548.html
+2023-12-20,Markus Karg,mkarg,Committer,JDK,Roman Kennke,12+ improvements,NIO performance; Jakarta REST,https://mail.openjdk.org/pipermail/jdk-dev/2023-December/008598.html
+2024-01-09,Kevin Walls,kevinjwalls,Reviewer,JDK,Serguei Spitsyn,111 changesets,Serviceability; JMX; JCMD; SA,https://mail.openjdk.org/pipermail/jdk-dev/2024-January/008622.html
+2024-01-23,William Kemper,wkemper,Committer,JDK,Aleksey Shipilev,20 mainline changes,GC; Shenandoah,https://mail.openjdk.org/pipermail/jdk-dev/2024-January/008681.html
+2024-01-26,Harshitha Onkar,honkar,Reviewer,JDK,Philip Race,44 contributions,AWT; Swing; Java 2D,https://mail.openjdk.org/pipermail/jdk-dev/2024-January/008698.html
+2024-03-12,Ludvig Janiuk,LudwikJaniuk,Committer,JDK,Leo Korinth,24 PRs,Compiler; JFR; build; testing,https://mail.openjdk.org/pipermail/jdk-dev/2024-March/008749.html
+2024-03-13,Fredrik Bredberg,fbredberg,Committer,JDK,Jesper Wilhelmsson,17 patches,JVM Runtime; Loom stack frames,https://mail.openjdk.org/pipermail/jdk-dev/2024-March/008768.html
+2024-03-20,Matias Saveedra Silva,matsaave,Reviewer,JDK,Coleen Phillimore,48+ contributions,HotSpot runtime; CDS; Valhalla; Leyden,https://mail.openjdk.org/pipermail/jdk-dev/2024-March/008835.html
+2024-04-25,Guoxiong Li,lgxbslgx,Reviewer,JDK,Albert Yang,101 commits,javac; GC,https://mail.openjdk.org/pipermail/jdk-dev/2024-April/008899.html
+2024-05-06,Joachim Kern,jkern,Committer,JDK,Martin Doerr,20+ patches,AIX port,https://mail.openjdk.org/pipermail/jdk-dev/2024-May/008916.html
+2024-05-15,Chen Liang,liach,Committer,JDK,Adam Sotona,50+ patches,Core libraries; javadoc,https://mail.openjdk.org/pipermail/jdk-dev/2024-May/008964.html
+2024-05-16,Tejesh R,tr,Reviewer,JDK,Philip Race,63 contributions,AWT; Swing,https://mail.openjdk.org/pipermail/jdk-dev/2024-May/008988.html
+2024-05-17,Aggelos Biboudis,biboudis,Reviewer,JDK,Jan Lahoda,50+ changes,Pattern matching; unnamed variables,https://mail.openjdk.org/pipermail/jdk-dev/2024-May/008993.html
+2024-05-28,Yudi Zheng,mur47x111,Committer,JDK,Douglas Simon,14 PRs JDK + 818 Graal,JVMCI; Graal,https://mail.openjdk.org/pipermail/jdk-dev/2024-May/009029.html
+2024-06-10,Varada M,varadam,Committer,JDK,Martin Doerr,17 patches,AIX port,https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009081.html
+2024-06-12,Scott Gibbons,,Committer,JDK,Sandhya Viswanathan,17 patches,JVM optimizations; Intel,https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009088.html
+2024-06-14,Christian Hagedorn,chagedorn,Committer,Valhalla,Tobias Hartmann,218 JDK + 9 Valhalla contributions,HotSpot compiler; Valhalla,https://mail.openjdk.org/pipermail/valhalla-dev/2024-June/012567.html
+2024-06-17,Jasmine Karthikeyan,jaskarth,Committer,JDK,Tobias Hartmann,12 changes,C2 compiler; IGVN,https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009123.html
+2024-06-26,Archie Cobbs,acobbs,Committer,JDK,Vicente Romero,,javac; core-libs; XML; JEPs,https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009168.html
+2024-06-26,Chen Liang,liach,Reviewer,JDK,Adam Sotona,,Core libraries; classfile API,https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009049.html
+2024-07-05,Sonia Zaldana Calles,szaldana,Committer,JDK,Thomas Stuefe,25 patches,HotSpot runtime; porting; serviceability,https://mail.openjdk.org/pipermail/jdk-dev/2024-July/009203.html
+2024-07-29,Abhishek Kumar,abhiscxk,Reviewer,JDK,Philip Race,68 contributions,Swing; Accessibility; GTK; macOS L&F,https://mail.openjdk.org/pipermail/jdk-dev/2024-July/009263.html
+2024-07-31,Ben Perez,blperez01,Committer,JDK,Sean Mullan,16 fixes,Security; Post-Quantum Crypto,https://mail.openjdk.org/pipermail/jdk-dev/2024-July/009272.html
+2024-08-12,Daniel Lunden,dlunde,Committer,JDK,Roberto Castaneda Lozano,18 changes,HotSpot compiler; C2; code cache,https://mail.openjdk.org/pipermail/jdk-dev/2024-August/009294.html
+2024-08-20,Shaojin Wen,wenshao,Committer,JDK,Claes Redestad,25 PRs,String optimizations; formatting,https://mail.openjdk.org/pipermail/jdk-dev/2024-August/009326.html
+2024-08-29,Nizar Benella,,Committer,JDK,Jonathan Gibbons,30 contributions,Documentation; @since tag validation,https://mail.openjdk.org/pipermail/jdk-dev/2024-August/009362.html
+2024-09-03,Sendao Yan,SendaoYan,Committer,JDK,Yi Yang,36 PRs,Test case improvements; QA,https://mail.openjdk.org/pipermail/jdk-dev/2024-September/009380.html
+2024-09-24,Joel Sikstrom,jsikstro,Committer,JDK,Stefan Karlsson,9 patches,ZGC; remembered sets,https://mail.openjdk.org/pipermail/jdk-dev/2024-September/009402.html
+2024-10-04,Gerard Ziemski,gziemski,Reviewer,JDK,Johan Sjolen,100+ contributions,HotSpot runtime; NMT; macOS,https://mail.openjdk.org/pipermail/jdk-dev/2024-October/009434.html
+2024-10-08,Smita Kamath,,Committer,JDK,Sandhya Viswanathan,15 patches,JVM optimizations; Intel,https://mail.openjdk.org/pipermail/jdk-dev/2024-October/009462.html
+2024-10-18,Viktor Klang,vklang,Reviewer,JDK,Alan Bateman,~40 contributions,Core libraries; streams; j.u.concurrent,https://mail.openjdk.org/pipermail/jdk-dev/2024-October/009483.html
+2025-01-16,William Kemper,wkemper,Reviewer,JDK,Ramki Ramakrishna,50+ commits + 375 GenShen,Shenandoah; GenShen; G1 GC,https://mail.openjdk.org/pipermail/jdk-dev/2025-January/009676.html
+2025-01-16,Kelvin Nilsen,kdnilsen,Committer,JDK,Ramki Ramakrishna,10+ JDK + 100 GenShen,Shenandoah; GenShen,https://mail.openjdk.org/pipermail/jdk-dev/2025-January/009677.html
+2025-02-05,Fernando Guallini,fguallini,Committer,JDK,Rajan Halade,41 changesets,Core and security libraries,https://mail.openjdk.org/pipermail/jdk-dev/2025-February/009720.html
+2025-02-17,Francisco Ferrari Bihurriet,fferrari,Committer,JDK,Martin Balao,,Security; vulnerability fixes,https://mail.openjdk.org/pipermail/jdk-dev/2025-February/009750.html
+2025-03-14,Cesar Soares Lucas,cslucas,Committer,JDK,Aleksey Shipilev,30+ changes,C2 compiler; Shenandoah GC,https://mail.openjdk.org/pipermail/jdk-dev/2025-March/009817.html
+2025-03-14,Xiaolong Peng,xpeng,Committer,JDK,Aleksey Shipilev,19 changes,HotSpot; Shenandoah GC,https://mail.openjdk.org/pipermail/jdk-dev/2025-March/009819.html

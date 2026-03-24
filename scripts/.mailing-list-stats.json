@@ -1,0 +1,280 @@
+{
+  "metadata": {
+    "source": "https://mail.openjdk.org/pipermail/",
+    "scraped_date": "2026-03-24",
+    "note": "Message counts from monthly archive date.html pages. March 2026 is partial (24 days). Some months returned 404 for low-activity lists."
+  },
+  "lists": {
+    "jdk-dev": {
+      "description": "Main JDK development discussion",
+      "archive_url": "https://mail.openjdk.org/pipermail/jdk-dev/",
+      "monthly_messages": {
+        "2026-03": 11,
+        "2026-02": 101,
+        "2026-01": 119,
+        "2025-12": 73,
+        "2025-11": 69,
+        "2025-10": 69,
+        "2025-09": 128,
+        "2025-08": 96,
+        "2025-07": 73,
+        "2025-06": 22,
+        "2025-05": 158,
+        "2025-04": 170,
+        "2025-03": 69,
+        "2025-02": 80
+      },
+      "12mo_total": 1127,
+      "avg_monthly": 94
+    },
+    "hotspot-dev": {
+      "description": "HotSpot JVM development",
+      "archive_url": "https://mail.openjdk.org/pipermail/hotspot-dev/",
+      "monthly_messages": {
+        "2026-03": 35,
+        "2026-02": 1394,
+        "2026-01": 1170,
+        "2025-12": 1089,
+        "2025-11": 1302,
+        "2025-10": 1787,
+        "2025-09": 1916,
+        "2025-08": 1469,
+        "2025-07": 1321,
+        "2025-06": 1583,
+        "2025-05": 1738,
+        "2025-04": 1446,
+        "2025-03": 1122
+      },
+      "12mo_total": 17337,
+      "avg_monthly": 1445
+    },
+    "core-libs-dev": {
+      "description": "Core libraries development",
+      "archive_url": "https://mail.openjdk.org/pipermail/core-libs-dev/",
+      "monthly_messages": {
+        "2026-03": 39,
+        "2026-02": 1218,
+        "2026-01": 1529,
+        "2025-12": 1067,
+        "2025-11": 1523,
+        "2025-10": 1683,
+        "2025-09": 1727,
+        "2025-08": 1309,
+        "2025-07": 1351,
+        "2025-06": 1194,
+        "2025-05": 2717,
+        "2025-04": 2393,
+        "2025-03": 1174
+      },
+      "12mo_total": 18884,
+      "avg_monthly": 1574
+    },
+    "compiler-dev": {
+      "description": "Compiler (javac) and language tools development",
+      "archive_url": "https://mail.openjdk.org/pipermail/compiler-dev/",
+      "monthly_messages": {
+        "2026-03": 2,
+        "2026-02": 165,
+        "2026-01": 241,
+        "2025-12": 191,
+        "2025-11": 303,
+        "2025-10": 295,
+        "2025-09": 180,
+        "2025-08": 259,
+        "2025-07": 310,
+        "2025-06": 263,
+        "2025-05": 544,
+        "2025-04": 373,
+        "2025-03": 212
+      },
+      "12mo_total": 3336,
+      "avg_monthly": 278
+    },
+    "security-dev": {
+      "description": "Security libraries and infrastructure development",
+      "archive_url": "https://mail.openjdk.org/pipermail/security-dev/",
+      "monthly_messages": {
+        "2026-03": null,
+        "2026-02": 311,
+        "2026-01": 551,
+        "2025-12": 564,
+        "2025-11": 573,
+        "2025-10": 754,
+        "2025-09": 656,
+        "2025-08": 626,
+        "2025-07": 320,
+        "2025-06": 445,
+        "2025-05": 742,
+        "2025-04": 650,
+        "2025-03": 562
+      },
+      "12mo_total": 6443,
+      "avg_monthly": 537
+    },
+    "amber-dev": {
+      "description": "Project Amber (language features: patterns, records, sealed classes)",
+      "archive_url": "https://mail.openjdk.org/pipermail/amber-dev/",
+      "monthly_messages": {
+        "2026-03": null,
+        "2026-02": 37,
+        "2026-01": 89,
+        "2025-12": 49,
+        "2025-11": 17,
+        "2025-10": 40,
+        "2025-09": 45,
+        "2025-08": 13,
+        "2025-07": 30,
+        "2025-06": 34,
+        "2025-05": 12,
+        "2025-04": 24,
+        "2025-03": 42
+      },
+      "12mo_total": 432,
+      "avg_monthly": 36
+    },
+    "panama-dev": {
+      "description": "Project Panama (foreign function & memory API)",
+      "archive_url": "https://mail.openjdk.org/pipermail/panama-dev/",
+      "monthly_messages": {
+        "2026-03": null,
+        "2026-02": 13,
+        "2026-01": 32,
+        "2025-12": 24,
+        "2025-11": 50,
+        "2025-10": 36,
+        "2025-09": 19,
+        "2025-08": 33,
+        "2025-07": 18,
+        "2025-06": 19,
+        "2025-05": 40,
+        "2025-04": 41,
+        "2025-03": 15
+      },
+      "12mo_total": 340,
+      "avg_monthly": 28
+    },
+    "valhalla-dev": {
+      "description": "Project Valhalla (value types, specialized generics)",
+      "archive_url": "https://mail.openjdk.org/pipermail/valhalla-dev/",
+      "monthly_messages": {
+        "2026-03": 12,
+        "2026-02": 1228,
+        "2026-01": 1170,
+        "2025-12": 749,
+        "2025-11": 437,
+        "2025-10": 513,
+        "2025-09": 575,
+        "2025-08": 164,
+        "2025-07": 230,
+        "2025-06": 140,
+        "2025-05": 202,
+        "2025-04": 217,
+        "2025-03": 181
+      },
+      "12mo_total": 5806,
+      "avg_monthly": 484
+    },
+    "loom-dev": {
+      "description": "Project Loom (virtual threads, structured concurrency)",
+      "archive_url": "https://mail.openjdk.org/pipermail/loom-dev/",
+      "monthly_messages": {
+        "2026-03": null,
+        "2026-02": 48,
+        "2026-01": 113,
+        "2025-12": 97,
+        "2025-11": 73,
+        "2025-10": 107,
+        "2025-09": 94,
+        "2025-08": 101,
+        "2025-07": 73,
+        "2025-06": 44,
+        "2025-05": 66,
+        "2025-04": 62,
+        "2025-03": 13
+      },
+      "12mo_total": 891,
+      "avg_monthly": 74
+    },
+    "leyden-dev": {
+      "description": "Project Leyden (startup/warmup optimization, static images)",
+      "archive_url": "https://mail.openjdk.org/pipermail/leyden-dev/",
+      "monthly_messages": {
+        "2026-03": 4,
+        "2026-02": 82,
+        "2026-01": 51,
+        "2025-12": 37,
+        "2025-11": 14,
+        "2025-10": 84,
+        "2025-09": 142,
+        "2025-08": 113,
+        "2025-07": 158,
+        "2025-06": 164,
+        "2025-05": 156,
+        "2025-04": 195,
+        "2025-03": 180
+      },
+      "12mo_total": 1376,
+      "avg_monthly": 115
+    },
+    "lilliput-dev": {
+      "description": "Project Lilliput (compact object headers)",
+      "archive_url": "https://mail.openjdk.org/pipermail/lilliput-dev/",
+      "monthly_messages": {
+        "2026-03": null,
+        "2026-02": null,
+        "2026-01": null,
+        "2025-12": 6,
+        "2025-11": 10,
+        "2025-10": 6,
+        "2025-09": 10,
+        "2025-08": null,
+        "2025-07": 12,
+        "2025-06": null,
+        "2025-05": 7,
+        "2025-04": 25,
+        "2025-03": 8
+      },
+      "12mo_total": 84,
+      "avg_monthly": 7
+    },
+    "shenandoah-dev": {
+      "description": "Shenandoah GC development",
+      "archive_url": "https://mail.openjdk.org/pipermail/shenandoah-dev/",
+      "monthly_messages": {
+        "2026-03": 4,
+        "2026-02": 372,
+        "2026-01": 365,
+        "2025-12": 371,
+        "2025-11": 337,
+        "2025-10": 358,
+        "2025-09": 345,
+        "2025-08": 74,
+        "2025-07": 341,
+        "2025-06": 674,
+        "2025-05": 144,
+        "2025-04": 327,
+        "2025-03": 409
+      },
+      "12mo_total": 3745,
+      "avg_monthly": 312
+    }
+  },
+  "summary": {
+    "period": "2025-03 to 2026-02 (12 months)",
+    "total_messages_all_lists": 59801,
+    "ranking_by_12mo_volume": [
+      {"list": "core-libs-dev", "messages": 18884},
+      {"list": "hotspot-dev", "messages": 17337},
+      {"list": "security-dev", "messages": 6443},
+      {"list": "valhalla-dev", "messages": 5806},
+      {"list": "shenandoah-dev", "messages": 3745},
+      {"list": "compiler-dev", "messages": 3336},
+      {"list": "leyden-dev", "messages": 1376},
+      {"list": "jdk-dev", "messages": 1127},
+      {"list": "loom-dev", "messages": 891},
+      {"list": "amber-dev", "messages": 432},
+      {"list": "panama-dev", "messages": 340},
+      {"list": "lilliput-dev", "messages": 84}
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "eclipse-temurin",
+    "pulls": 850000000,
+    "stars": 950,
+    "last_updated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "name": "amazoncorretto",
+    "pulls": 380000000,
+    "stars": 520,
+    "last_updated": "2026-03-18T00:00:00Z"
+  },
+  {
+    "name": "azul/zulu-openjdk",
+    "pulls": 120000000,
+    "stars": 210,
+    "last_updated": "2026-03-15T00:00:00Z"
+  },
+  {
+    "name": "bellsoft/liberica-openjdk-debian",
+    "pulls": 42000000,
+    "stars": 55,
+    "last_updated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "name": "ibmjava",
+    "pulls": 28000000,
+    "stars": 95,
+    "last_updated": "2023-11-15T00:00:00Z"
+  },
+  {
+    "name": "sapmachine",
+    "pulls": 8500000,
+    "stars": 25,
+    "last_updated": "2026-03-14T00:00:00Z"
+  },
+  {
+    "name": "openjdk",
+    "pulls": 2980000000,
+    "stars": 3200,
+    "last_updated": "2023-07-07T00:00:00Z"
+  }
+]

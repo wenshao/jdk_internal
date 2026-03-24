@@ -1,0 +1,1086 @@
+{
+  "YaSuenag": {
+    "org": "NTT Data",
+    "country": "JP"
+  },
+  "turbanoff": {
+    "org": "Devexperts",
+    "country": "RU"
+  },
+  "jddarcy": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "mrserb": {
+    "org": "Oracle",
+    "country": "RU"
+  },
+  "prrace": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "jaikiran": {
+    "org": "Oracle",
+    "country": "IN"
+  },
+  "prsadhuk": {
+    "org": "Oracle",
+    "country": "IN"
+  },
+  "rgiulietti": {
+    "org": "Oracle",
+    "country": "IT"
+  },
+  "iignatev": {
+    "org": "Oracle",
+    "country": "RU"
+  },
+  "dougxc": {
+    "org": "Oracle",
+    "country": "CH"
+  },
+  "RealCLanger": {
+    "org": "SAP",
+    "country": "DE"
+  },
+  "dholmes-ora": {
+    "org": "Oracle",
+    "country": "AU"
+  },
+  "lahodaj": {
+    "org": "Oracle",
+    "country": "CZ"
+  },
+  "tschatzl": {
+    "org": "Oracle",
+    "country": "DE"
+  },
+  "lepestock": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "albertnetymk": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "shipilev": {
+    "org": "Amazon",
+    "country": "US"
+  },
+  "Michael-Mc-Mahon": {
+    "org": "Oracle",
+    "country": "IE"
+  },
+  "robehn": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "fisk": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "coffeys": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "dfuch": {
+    "org": "Oracle",
+    "country": "IE"
+  },
+  "kstefanj": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "jatin-bhateja": {
+    "org": "Intel",
+    "country": "IN"
+  },
+  "walulyai": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "jerboaa": {
+    "org": "Red Hat",
+    "country": "CA"
+  },
+  "DamonFool": {
+    "org": "Tencent",
+    "country": "CN"
+  },
+  "iklam": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "nick-arm": {
+    "org": "ARM",
+    "country": "GB"
+  },
+  "TobiHartmann": {
+    "org": "Oracle",
+    "country": "DE"
+  },
+  "RogerRiggs": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "pconcannon": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "calvinccheung": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "stuart-marks": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "vicente-romero-oracle": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "kimbarrett": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "mlchung": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "dcubed-ojdk": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "erikj79": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "JoeWang-Java": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "valeriepeng": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "GoeLin": {
+    "org": "SAP",
+    "country": ""
+  },
+  "robcasloz": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "JornVernee": {
+    "org": "Oracle",
+    "country": "NL"
+  },
+  "reinrich": {
+    "org": "SAP",
+    "country": "AT"
+  },
+  "pliden": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "jonathan-gibbons": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "lmesnik": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "TheRealMDoerr": {
+    "org": "SAP",
+    "country": "DE"
+  },
+  "JoshuaZhuwj": {
+    "org": "Alibaba",
+    "country": "CN"
+  },
+  "yminqi": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "sashamatveev": {
+    "org": "Oracle",
+    "country": "RU"
+  },
+  "andyherrick": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "pavelrappo": {
+    "org": "Oracle",
+    "country": "GB"
+  },
+  "c-cleary": {
+    "org": "Oracle",
+    "country": "IE"
+  },
+  "AntonKozlov": {
+    "org": "Azul",
+    "country": ""
+  },
+  "igraves": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "naotoj": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "JohnTortugo": {
+    "org": "Amazon",
+    "country": "US"
+  },
+  "FrauBoes": {
+    "org": "Independent",
+    "country": "DE"
+  },
+  "hns": {
+    "org": "Oracle",
+    "country": "AT"
+  },
+  "stefank": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "rwestrel": {
+    "org": "Red Hat",
+    "country": "FR"
+  },
+  "jayathirthrao": {
+    "org": "Oracle",
+    "country": "IN"
+  },
+  "zhengyu123": {
+    "org": "Oracle",
+    "country": "CA"
+  },
+  "bulasevich": {
+    "org": "BellSoft",
+    "country": "AR"
+  },
+  "plummercj": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "RealFYang": {
+    "org": "Huawei",
+    "country": "CN"
+  },
+  "hseigel": {
+    "org": "Oracle",
+    "country": "CA"
+  },
+  "alexmenkov": {
+    "org": "Oracle",
+    "country": "RU"
+  },
+  "stsypanov": {
+    "org": "Independent",
+    "country": "RU"
+  },
+  "andrew-m-leonard": {
+    "org": "IBM",
+    "country": "GB"
+  },
+  "wangweij": {
+    "org": "Oracle",
+    "country": "CN"
+  },
+  "MBaesken": {
+    "org": "SAP",
+    "country": "DE"
+  },
+  "AlekseiEfimov": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "vnkozlov": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "LanceAndersen": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "cl4es": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "navyxliu": {
+    "org": "Oracle",
+    "country": "CN"
+  },
+  "rkennke": {
+    "org": "Red Hat",
+    "country": "CH"
+  },
+  "ascarpino": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "simonis": {
+    "org": "Amazon",
+    "country": "DE"
+  },
+  "sandlerwang": {
+    "org": "Alibaba",
+    "country": "CN"
+  },
+  "coleenp": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "haimaychao": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "vidmik": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "tstuefe": {
+    "org": "Red Hat",
+    "country": "DE"
+  },
+  "chhagedorn": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "veresov": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "pchilano": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "mcimadamore": {
+    "org": "Oracle",
+    "country": "GB"
+  },
+  "shurymury": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "sormuras": {
+    "org": "Oracle",
+    "country": "DE"
+  },
+  "neliasso": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "bplb": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "fguallini": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "JimLaskey": {
+    "org": "Oracle",
+    "country": "CA"
+  },
+  "mur47x111": {
+    "org": "Independent",
+    "country": ""
+  },
+  "rhalade": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "gerard-ziemski": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "iwanowww": {
+    "org": "Oracle",
+    "country": "RU"
+  },
+  "theRealAph": {
+    "org": "Red Hat",
+    "country": "GB"
+  },
+  "e1iu": {
+    "org": "Independent",
+    "country": "CN"
+  },
+  "mgronlun": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "ericcaspole": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "azuev-java": {
+    "org": "Oracle",
+    "country": "RU"
+  },
+  "lgxbslgx": {
+    "org": "Oracle",
+    "country": "CN"
+  },
+  "tkrodriguez": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "sviswa7": {
+    "org": "Intel",
+    "country": ""
+  },
+  "bchristi-git": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "alexeysemenyukoracle": {
+    "org": "Oracle",
+    "country": "RU"
+  },
+  "magicus": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "JesperIRL": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "shqking": {
+    "org": "Nvidia",
+    "country": "CN"
+  },
+  "egahlin": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "earthling-amzn": {
+    "org": "Amazon",
+    "country": "US"
+  },
+  "jnimeh": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "seanjmullan": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "eastig": {
+    "org": "Amazon",
+    "country": "IE"
+  },
+  "AlanBateman": {
+    "org": "Oracle",
+    "country": "GB"
+  },
+  "XiaohongGong": {
+    "org": "ARM",
+    "country": "CN"
+  },
+  "bradfordwetmore": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "XueleiFan": {
+    "org": "Oracle",
+    "country": "CN"
+  },
+  "mseledts": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "dean-long": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "jyukutyo": {
+    "org": "Oracle",
+    "country": "JP"
+  },
+  "sspitsyn": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "jbachorik": {
+    "org": "Datadog",
+    "country": "CZ"
+  },
+  "y1yang0": {
+    "org": "Alibaba",
+    "country": "CN"
+  },
+  "liach": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "D-D-H": {
+    "org": "Alibaba",
+    "country": "CN"
+  },
+  "eirbjo": {
+    "org": "Independent",
+    "country": "NO"
+  },
+  "Hamlin-Li": {
+    "org": "Oracle",
+    "country": "CN"
+  },
+  "aivanov-jdk": {
+    "org": "Oracle",
+    "country": "RU"
+  },
+  "djelinski": {
+    "org": "Oracle",
+    "country": "PL"
+  },
+  "cushon": {
+    "org": "Google",
+    "country": "US"
+  },
+  "pfustc": {
+    "org": "Independent",
+    "country": "CN"
+  },
+  "johnshajiang": {
+    "org": "Tencent",
+    "country": "CN"
+  },
+  "lkorinth": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "DougLea": {
+    "org": "Independent",
+    "country": ""
+  },
+  "asotona": {
+    "org": "Oracle",
+    "country": "CZ"
+  },
+  "azvegint": {
+    "org": "Oracle",
+    "country": "RU"
+  },
+  "jianglizhou": {
+    "org": "Oracle",
+    "country": "CN"
+  },
+  "kuaiwei": {
+    "org": "Alibaba",
+    "country": "CN"
+  },
+  "kevinjwalls": {
+    "org": "Oracle",
+    "country": "GB"
+  },
+  "caoman": {
+    "org": "Google",
+    "country": "US"
+  },
+  "slowhog": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "casparcwang": {
+    "org": "Tencent",
+    "country": "CN"
+  },
+  "sunny868": {
+    "org": "Loongson",
+    "country": "CN"
+  },
+  "linade": {
+    "org": "Alibaba",
+    "country": "CN"
+  },
+  "savoptik": {
+    "org": "JetBrains",
+    "country": "RU"
+  },
+  "weixlu": {
+    "org": "Alibaba",
+    "country": "CN"
+  },
+  "lawrence-andrew": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "theaoqi": {
+    "org": "Loongson",
+    "country": "CN"
+  },
+  "tbzhang": {
+    "org": "Tencent",
+    "country": "CN"
+  },
+  "gredler": {
+    "org": "Independent",
+    "country": "US"
+  },
+  "matias9927": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "alisenchung": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "tobiasholenstein": {
+    "org": "Oracle",
+    "country": "CH"
+  },
+  "fg1417": {
+    "org": "ARM",
+    "country": "GB"
+  },
+  "vamsi-parasa": {
+    "org": "Intel",
+    "country": "US"
+  },
+  "LudwikJaniuk": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "merykitty": {
+    "org": "Independent",
+    "country": ""
+  },
+  "mickleness": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "tkiriyama": {
+    "org": "Fujitsu",
+    "country": "JP"
+  },
+  "yadongw": {
+    "org": "Huawei",
+    "country": "CN"
+  },
+  "TejeshR13": {
+    "org": "Oracle",
+    "country": "IN"
+  },
+  "Bhavana-Kilambi": {
+    "org": "ARM",
+    "country": "GB"
+  },
+  "backwaterred": {
+    "org": "IBM",
+    "country": ""
+  },
+  "eme64": {
+    "org": "Oracle",
+    "country": "CH"
+  },
+  "biboudis": {
+    "org": "Oracle",
+    "country": "CH"
+  },
+  "honkar-jdk": {
+    "org": "Oracle",
+    "country": "IN"
+  },
+  "TheShermanTanker": {
+    "org": "Independent",
+    "country": "SG"
+  },
+  "manukumarvs": {
+    "org": "Oracle",
+    "country": "IN"
+  },
+  "DamonGuy": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "srmandal": {
+    "org": "Oracle",
+    "country": "IN"
+  },
+  "adinn": {
+    "org": "IBM",
+    "country": "GB"
+  },
+  "haominw": {
+    "org": "Loongson",
+    "country": "CN"
+  },
+  "parttimenerd": {
+    "org": "SAP",
+    "country": "DE"
+  },
+  "mcpowers": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "zhengxiaolinX": {
+    "org": "Independent",
+    "country": "CN"
+  },
+  "feilongjiang": {
+    "org": "Huawei",
+    "country": "CN"
+  },
+  "Glavo": {
+    "org": "ISCAS",
+    "country": "CN"
+  },
+  "johan-sjolen": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "driverkt": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "kumarabhi006": {
+    "org": "Oracle",
+    "country": "IN"
+  },
+  "xmas92": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "rsunderbabu": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "jaskarth": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "DingliZhang": {
+    "org": "ISCAS",
+    "country": "CN"
+  },
+  "ashu-mehra": {
+    "org": "IBM",
+    "country": "CA"
+  },
+  "DarraghClarke": {
+    "org": "Oracle",
+    "country": "IE"
+  },
+  "caojoshua": {
+    "org": "Amazon",
+    "country": "US"
+  },
+  "fbredber": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "archiecobbs": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "justin-curtis-lu": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "viktorklang-ora": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "Renjithkannath": {
+    "org": "Oracle",
+    "country": "IN"
+  },
+  "vpaprotsk": {
+    "org": "Intel",
+    "country": "CA"
+  },
+  "zifeihan": {
+    "org": "Independent",
+    "country": ""
+  },
+  "sendaoYan": {
+    "org": "Alibaba",
+    "country": "CN"
+  },
+  "mpdonova": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "jcking": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "afshin-zafari": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "dafedafe": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "minborg": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "offamitkumar": {
+    "org": "IBM",
+    "country": "CA"
+  },
+  "olivergillespie": {
+    "org": "Amazon",
+    "country": "US"
+  },
+  "JoKern65": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "blperez01": {
+    "org": "Oracle",
+    "country": "US"
+  },
+  "wenshao": {
+    "org": "Alibaba",
+    "country": "CN"
+  },
+  "chadrako": {
+    "org": "Amazon",
+    "country": "US"
+  },
+  "dlunde": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "yanglong1010": {
+    "org": "Alibaba",
+    "country": "CN"
+  },
+  "SoniaZaldana": {
+    "org": "Independent",
+    "country": "CA"
+  },
+  "MaxXSoft": {
+    "org": "Alibaba",
+    "country": "CN"
+  },
+  "kdnilsen": {
+    "org": "Amazon",
+    "country": "US"
+  },
+  "nizarbenalla": {
+    "org": "Oracle",
+    "country": "FR"
+  },
+  "lingjun-cg": {
+    "org": "Alibaba",
+    "country": "CN"
+  },
+  "pengxiaolong": {
+    "org": "Amazon",
+    "country": "US"
+  },
+  "mmyxym": {
+    "org": "Alibaba",
+    "country": "CN"
+  },
+  "caspernorrbin": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "jsikstro": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "artur-oracle": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "theoweidmannoracle": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "vy": {
+    "org": "Oracle",
+    "country": "TR"
+  },
+  "myankelev": {
+    "org": "Oracle",
+    "country": "RU"
+  },
+  "koushikthirupattur": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "david-beaumont": {
+    "org": "Oracle",
+    "country": "CH"
+  },
+  "Anjian-Wen": {
+    "org": "ByteDance",
+    "country": "CN"
+  },
+  "marc-chevalier": {
+    "org": "Oracle",
+    "country": "CH"
+  },
+  "dbriemann": {
+    "org": "SAP",
+    "country": "DE"
+  },
+  "mhaessig": {
+    "org": "Oracle",
+    "country": "CH"
+  },
+  "toxaart": {
+    "org": "Oracle",
+    "country": "SE"
+  },
+  "benoitmaillard": {
+    "org": "Oracle",
+    "country": "CH"
+  },
+  "hgqxjj": {
+    "org": "Independent",
+    "country": "CN"
+  },
+  "fandreuz": {
+    "org": "Amazon",
+    "country": "IE"
+  },
+  "grfrost": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "MrSimms": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "kevinrushforth": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "satyenme": {
+    "org": "Amazon",
+    "country": ""
+  },
+  "andy-goryachev-oracle": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "fparain": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "rm-gh-8": {
+    "org": "Amazon",
+    "country": ""
+  },
+  "thegreystone": {
+    "org": "Datadog",
+    "country": ""
+  },
+  "PaulSandoz": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "gnu-andrew": {
+    "org": "Red Hat",
+    "country": ""
+  },
+  "sundararajana": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "arapte": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "sadayapalam": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "gdams": {
+    "org": "Microsoft",
+    "country": ""
+  },
+  "zzambers": {
+    "org": "Red Hat",
+    "country": ""
+  },
+  "jjfumero": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "Rudometov": {
+    "org": "Amazon",
+    "country": ""
+  },
+  "TimPushkin": {
+    "org": "Azul",
+    "country": ""
+  },
+  "jperedadnr": {
+    "org": "Gluon",
+    "country": ""
+  },
+  "johanvos": {
+    "org": "Gluon",
+    "country": ""
+  },
+  "jmtd": {
+    "org": "IBM",
+    "country": ""
+  },
+  "rvansa": {
+    "org": "Azul",
+    "country": ""
+  },
+  "jankratochvil": {
+    "org": "Azul",
+    "country": ""
+  },
+  "vieiro": {
+    "org": "Red Hat",
+    "country": ""
+  },
+  "hjohn": {
+    "org": "Independent",
+    "country": ""
+  },
+  "Suchitainf": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "mabbay": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "wkia": {
+    "org": "Azul",
+    "country": ""
+  },
+  "alexeybakhtin": {
+    "org": "Azul",
+    "country": ""
+  },
+  "phohensee": {
+    "org": "Oracle",
+    "country": ""
+  },
+  "kleopatra": {
+    "org": "Independent",
+    "country": ""
+  },
+  "aptmac": {
+    "org": "IBM",
+    "country": ""
+  },
+  "beldenfox": {
+    "org": "Independent",
+    "country": ""
+  },
+  "cost0much": {
+    "org": "Amazon",
+    "country": ""
+  }
+}
