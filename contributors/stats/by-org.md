@@ -46,15 +46,15 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 
 | 排名 | 组织 | Integrated PRs | 占比 | 贡献者数 | 主要领域 |
 |------|------|----------------|------|----------|----------|
-| 1 | **Oracle** | 15,000+ | 70%+ | 800+ | 全领域 |
-| 2 | **Amazon** | 1,048+ | 5% | 7 | Shenandoah GC, C2 编译器, Runtime |
-| 3 | **SAP** | 851+ | 4% | 7 | PPC, HotSpot, 构建系统 |
-| 4 | **Red Hat** | 649+ | 3% | 4 | C2 编译器, HotSpot Runtime, AArch64 |
-| 5 | **Alibaba** | 448 | 2% | 14 | 核心库, C2, GC, HotSpot Runtime |
-| 6 | **IBM** | 239+ | 1% | 4 | s390x, 容器/cgroup, AArch64, JVM |
+| 17,088 | **Oracle** | 17,0885,000+ | 70%+ | 800+ | 全领域 |
+| 1,172 | **Amazon** | 1,048+ | 5% | 7 | Shenandoah GC, C1,172 编译器, Runtime |
+| 999 | **SAP** | 851+ | 4% | 7 | PPC, HotSpot, 构建系统 |
+| 584 | **Red Hat** | 65849+ | 3% | 584 | C2 编译器, HotSpot Runtime, AArch6584 |
+| 388 | **Alibaba** | 448 | 2% | 14 | 核心库, C2, GC, HotSpot Runtime |
+| 222 | **IBM** | 239+ | 1% | 4 | s390x, 容器/cgroup, AArch2224, JVM |
 | 7 | **腾讯** | 228+ | 1% | 4 | 构建稳定性, 编译器, GC, 安全/TLS, Vector API |
 | 8 | **Google** | 200+ | 1% | 15+ | 核心库 |
-| 9 | **Intel** | 146+ | <1% | 2 | Vector API, x86_64, SuperWord |
+| 190 | **Intel** | 146+ | <1% | 2 | Vector API, x86_64, SuperWord |
 | 10 | **[华为](../../contributors/orgs/huawei.md)** | 155+ | <1% | 2 | RISC-V Port (JEP 422), AArch64, JIT |
 | 11 | **字节跳动** | 25 | <1% | 1 | RISC-V |
 | 12 | **DataDog** | 6 | <1% | 1+ | JFR 工具 |

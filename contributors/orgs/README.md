@@ -26,23 +26,23 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 
 | 组织 | Integrated PRs | Reviewer | Committer | Author | 主要领域 | JDK 发行版 |
 |------|----------------|----------|-----------|--------|----------|------------|
-| [Oracle](oracle.md) | 4,200+ | 30+ | 20+ | - | 全领域 | Oracle JDK |
-| [Amazon](amazon.md) | 1,048+ | 1 | 4 | 1 | Shenandoah GC, C2, Runtime | Corretto |
-| [SAP](sap.md) | 851+ | 3 | 4 | - | PPC, AIX, 构建 | SapMachine |
-| [Red Hat](redhat.md) | 649+ | 4 | - | - | C2 编译器, HotSpot Runtime | Red Hat OpenJDK |
-| [Alibaba](alibaba.md) | 448 | - | 5 | 6 | 核心库, C2, GC, Runtime | Dragonwell |
-| [IBM](ibm.md) | 239+ | 2 | 2 | - | s390x, 容器/cgroup, AArch64 | Semeru |
-| [Tencent](tencent.md) | 228+ | 2 | - | 2 | 构建稳定性, 编译器, GC, 安全 | Kona |
-| [Intel](intel.md) | 146+ | 1 | - | 1 | Vector API, x86_64, SuperWord | - |
-| [ARM](arm.md) | 31+ | 1 | - | 1 | AArch64, Build | - |
-| [Loongson](loongson.md) | 36+ | - | 1 | 2 | LoongArch | Loongson JDK |
-| [ByteDance](bytedance.md) | 25 | - | 1 | - | RISC-V 向量 | - |
-| [ISCAS PLCT](iscas-plct.md) | 64+ | - | 1 | 1 | RISC-V, 核心库 | - |
-| [Huawei](huawei.md) | 167+ | 1 | 2 | - | RISC-V Port (JEP 422), AArch64 | BiSheng JDK |
-| [BellSoft](bellsoft.md) | 40+ | - | 1 | - | ARM32, AArch64, RISC-V | Liberica JDK |
-| [Azul](azul.md) | 18+ | - | 1 | - | CRaC, Runtime | Zulu JDK |
-| [Google](google.md) | ~14 | - | - | ~3 | 构建系统, javac | - |
-| [Datadog](datadog.md) | 113+ | 1 | 1 | - | Compact Object Headers (JEP 519), JFR | - |
+| [Oracle](oracle.md) | 17,088  | 30+ | 20+ | - | 全领域 | Oracle JDK |
+| [Amazon](amazon.md) | 1,172  | 1 | 4 | 1 | Shenandoah GC, C2, Runtime | Corretto |
+| [SAP](sap.md) | 999  | 3 | 4 | - | PPC, AIX, 构建 | SapMachine |
+| [Red Hat](redhat.md) | 584  | 4 | - | - | C2 编译器, HotSpot Runtime | Red Hat OpenJDK |
+| [Alibaba](alibaba.md) | 388  | - | 5 | 6 | 核心库, C2, GC, Runtime | Dragonwell |
+| [IBM](ibm.md) | 222  | 2 | 2 | - | s390x, 容器/cgroup, AArch64 | Semeru |
+| [Tencent](tencent.md) | 223  | 2 | - | 2 | 构建稳定性, 编译器, GC, 安全 | Kona |
+| [Intel](intel.md) | 190  | 1 | - | 1 | Vector API, x86_64, SuperWord | - |
+| [ARM](arm.md) | 123  | 1 | - | 1 | AArch64, Build | - |
+| [Loongson](loongson.md) | 33  | - | 1 | 2 | LoongArch | Loongson JDK |
+| [ByteDance](bytedance.md) | 24  | - | 1 | - | RISC-V 向量 | - |
+| [ISCAS PLCT](iscas-plct.md) | 61  | - | 1 | 1 | RISC-V, 核心库 | - |
+| [Huawei](huawei.md) | 156  | 1 | 2 | - | RISC-V Port (JEP 422), AArch64 | BiSheng JDK |
+| [BellSoft](bellsoft.md) | 39  | - | 1 | - | ARM32, AArch64, RISC-V | Liberica JDK |
+| [Azul](azul.md) | 18  | - | 1 | - | CRaC, Runtime | Zulu JDK |
+| [Google](google.md) | 81  | - | - | ~3 | 构建系统, javac | - |
+| [Datadog](datadog.md) | 90  | 1 | 1 | - | Compact Object Headers (JEP 519), JFR | - |
 | [Microsoft](microsoft.md) | 少量 | - | - | ~3 | Azure 优化, Build | Microsoft Build of OpenJDK |
 | [独立贡献者](independent.md) | 500+ | 1 | 2 | 1 | 代码清理, C2, 安全 | - |
 
@@ -549,21 +549,21 @@ OpenJDK 核心贡献者在组织间的流动对技术方向有深远影响：
 |------|------|-----|--------|
 | **北美** | | | |
 | | [Oracle](oracle.md) (美国总部) | 4,200+ | Oracle JDK |
-| | [Amazon](amazon.md) | 1,048+ | Corretto |
-| | [IBM](ibm.md) | 113+ | Semeru |
-| | [Intel](intel.md) | 146+ | - |
+| | [Amazon](amazon.md) | 1,172  | Corretto |
+| | [IBM](ibm.md) | 222  | Semeru |
+| | [Intel](intel.md) | 190  | - |
 | | [Microsoft](microsoft.md) | 少量 | Microsoft Build of OpenJDK |
 | **欧洲** | | | |
 | | [SAP](sap.md) (德国) | 734+ | SapMachine |
-| | [Red Hat](redhat.md) | 668+ | Red Hat OpenJDK |
+| | [Red Hat](redhat.md) | 584  | Red Hat OpenJDK |
 | | [ARM](arm.md) (英国) | 50+ | - |
 | | Oracle 欧洲团队 | - | - |
 | **中国** | | | |
-| | [Alibaba](alibaba.md) | 380 | Dragonwell |
-| | [Loongson](loongson.md) | 30+ | Loongson JDK |
-| | [ByteDance](bytedance.md) | 25 | - |
-| | [ISCAS PLCT](iscas-plct.md) | 20+ | - |
-| | [Tencent](tencent.md) | 228+ | Kona |
+| | [Alibaba](alibaba.md) | 388  | Dragonwell |
+| | [Loongson](loongson.md) | 33  | Loongson JDK |
+| | [ByteDance](bytedance.md) | 24  | - |
+| | [ISCAS PLCT](iscas-plct.md) | 61  | - |
+| | [Tencent](tencent.md) | 223  | Kona |
 
 ### 中国企业特点
 
