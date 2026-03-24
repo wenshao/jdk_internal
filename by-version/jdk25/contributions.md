@@ -51,7 +51,7 @@
 | 16 | [archiecobbs](../../by-contributor/profiles/archie-cobbs.md) | 29 | [Oracle](../../contributors/orgs/oracle.md) |
 | 17 | [egahlin](../../by-contributor/profiles/erik-gahlin.md) | 29 | [Oracle](../../contributors/orgs/oracle.md) |
 | 18 | [bplb](../../by-contributor/profiles/brian-burkhalter.md) | 29 | [Oracle](../../contributors/orgs/oracle.md) |
-| 19 | justin-curtis-lu | 29 | [Oracle](../../contributors/orgs/oracle.md) |
+| 19 | [justin-curtis-lu](../../by-contributor/profiles/justin-lu-oracle.md) | 29 | [Oracle](../../contributors/orgs/oracle.md) |
 | 20 | [marc-chevalier](../../by-contributor/profiles/marc-chevalier.md) | 29 | [Oracle](../../contributors/orgs/oracle.md) |
 | 21 | [hns](../../by-contributor/profiles/hannes-wallnoefer.md) | 27 | [Oracle](../../contributors/orgs/oracle.md) |
 | 22 | [kevinjwalls](../../by-contributor/profiles/kevin-walls.md) | 27 | [Oracle](../../contributors/orgs/oracle.md) |
@@ -81,7 +81,7 @@
 | 46 | kumarabhi006 | 16 | [Oracle](../../contributors/orgs/oracle.md) |
 | 47 | honkar-jdk | 16 | [Oracle](../../contributors/orgs/oracle.md) |
 | 48 | [vnkozlov](../../by-contributor/profiles/vladimir-kozlov.md) | 16 | [Oracle](../../contributors/orgs/oracle.md) |
-| 49 | turbanoff | 15 | [Devexperts](../../contributors/orgs/independent.md) |
+| 49 | [turbanoff](../../by-contributor/profiles/andrey-turbanov.md) | 15 | [Devexperts](../../contributors/orgs/independent.md) |
 | 50 | [mrserb](../../by-contributor/profiles/sergey-bylokhov.md) | 15 | [Oracle](../../contributors/orgs/oracle.md) |
 
 ## 模块分布

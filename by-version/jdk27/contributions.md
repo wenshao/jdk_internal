@@ -61,7 +61,7 @@
 | 26 | [earthling-amzn](../../by-contributor/profiles/william-kemper.md) | 14 | [Amazon](../../contributors/orgs/amazon.md) |
 | 27 | sspitsyn | 13 | [Oracle](../../contributors/orgs/oracle.md) |
 | 28 | [naotoj](../../by-contributor/profiles/naoto-sato.md) | 12 | [Oracle](../../contributors/orgs/oracle.md) |
-| 29 | justin-curtis-lu | 12 | [Oracle](../../contributors/orgs/oracle.md) |
+| 29 | [justin-curtis-lu](../../by-contributor/profiles/justin-lu-oracle.md) | 12 | [Oracle](../../contributors/orgs/oracle.md) |
 | 30 | benty-amzn | 12 | [Amazon](../../contributors/orgs/amazon.md) |
 | 31 | [DingliZhang](../../by-contributor/profiles/dingli-zhang.md) | 12 | [ISCAS](../../contributors/orgs/iscas-plct.md) |
 | 32 | eirbjo | 12 | [Independent](../../contributors/orgs/independent.md) |
@@ -77,7 +77,7 @@
 | 42 | [RogerRiggs](../../by-contributor/profiles/roger-riggs.md) | 9 | [Oracle](../../contributors/orgs/oracle.md) |
 | 43 | [AlanBateman](../../by-contributor/profiles/alan-bateman.md) | 9 | [Oracle](../../contributors/orgs/oracle.md) |
 | 44 | [mgronlun](../../by-contributor/profiles/markus-gronlund.md) | 9 | [Oracle](../../contributors/orgs/oracle.md) |
-| 45 | hgqxjj | 9 | [Independent](../../contributors/orgs/independent.md) |
+| 45 | [hgqxjj](../../by-contributor/profiles/guanqiang-han.md) | 9 | [Independent](../../contributors/orgs/independent.md) |
 | 46 | [toxaart](../../by-contributor/profiles/anton-artemov.md) | 8 | [Oracle](../../contributors/orgs/oracle.md) |
 | 47 | [djelinski](../../by-contributor/profiles/daniel-jelinski.md) | 8 | [Oracle](../../contributors/orgs/oracle.md) |
 | 48 | [sormuras](../../by-contributor/profiles/christian-stein.md) | 8 | [Oracle](../../contributors/orgs/oracle.md) |

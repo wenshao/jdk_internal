@@ -42,7 +42,7 @@
 | 9 | [prrace](../../by-contributor/profiles/phil-race.md) | 42 | [Oracle](../../contributors/orgs/oracle.md) |
 | 10 | [prsadhuk](../../by-contributor/profiles/prasanta-sadhukhan.md) | 39 | [Oracle](../../contributors/orgs/oracle.md) |
 | 11 | [kevinjwalls](../../by-contributor/profiles/kevin-walls.md) | 38 | [Oracle](../../contributors/orgs/oracle.md) |
-| 12 | justin-curtis-lu | 32 | [Oracle](../../contributors/orgs/oracle.md) |
+| 12 | [justin-curtis-lu](../../by-contributor/profiles/justin-lu-oracle.md) | 32 | [Oracle](../../contributors/orgs/oracle.md) |
 | 13 | [egahlin](../../by-contributor/profiles/erik-gahlin.md) | 31 | [Oracle](../../contributors/orgs/oracle.md) |
 | 14 | [jddarcy](../../by-contributor/profiles/joe-darcy.md) | 30 | [Oracle](../../contributors/orgs/oracle.md) |
 | 15 | [dfuch](../../by-contributor/profiles/daniel-fuchs.md) | 30 | [Oracle](../../contributors/orgs/oracle.md) |

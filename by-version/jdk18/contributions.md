@@ -34,11 +34,11 @@
 | 排名 | 贡献者 | PRs | 组织 |
 |------|--------|-----|------|
 | 1 | [shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | 96 | [Amazon](../../contributors/orgs/amazon.md) |
-| 2 | turbanoff | 79 | [Devexperts](../../contributors/orgs/independent.md) |
+| 2 | [turbanoff](../../by-contributor/profiles/andrey-turbanov.md) | 79 | [Devexperts](../../contributors/orgs/independent.md) |
 | 3 | [tschatzl](../../by-contributor/profiles/thomas-schatzl.md) | 61 | [Oracle](../../contributors/orgs/oracle.md) |
 | 4 | [albertnetymk](../../by-contributor/profiles/albert-mingkun-yang.md) | 59 | [Oracle](../../contributors/orgs/oracle.md) |
 | 5 | [coleenp](../../by-contributor/profiles/coleen-phillimore.md) | 51 | [Oracle](../../contributors/orgs/oracle.md) |
-| 6 | dcubed-ojdk | 51 | [Oracle](../../contributors/orgs/oracle.md) |
+| 6 | [dcubed-ojdk](../../by-contributor/profiles/daniel-daugherty.md) | 51 | [Oracle](../../contributors/orgs/oracle.md) |
 | 7 | [jddarcy](../../by-contributor/profiles/joe-darcy.md) | 43 | [Oracle](../../contributors/orgs/oracle.md) |
 | 8 | [bplb](../../by-contributor/profiles/brian-burkhalter.md) | 37 | [Oracle](../../contributors/orgs/oracle.md) |
 | 9 | [iignatev](../../by-contributor/profiles/igor-ignatev.md) | 33 | [Oracle](../../contributors/orgs/oracle.md) |
@@ -64,7 +64,7 @@
 | 29 | [hseigel](../../by-contributor/profiles/harold-seigel.md) | 18 | [Oracle](../../contributors/orgs/oracle.md) |
 | 30 | [hns](../../by-contributor/profiles/hannes-wallnoefer.md) | 18 | [Oracle](../../contributors/orgs/oracle.md) |
 | 31 | [stsypanov](../../by-contributor/profiles/sergey-tsypanov.md) | 17 | [Independent](../../contributors/orgs/independent.md) |
-| 32 | FrauBoes | 17 | [Independent](../../contributors/orgs/independent.md) |
+| 32 | [FrauBoes](../../by-contributor/profiles/julia-boes.md) | 17 | [Independent](../../contributors/orgs/independent.md) |
 | 33 | [rkennke](../../by-contributor/profiles/roman-kennke.md) | 16 | [Datadog](../../contributors/orgs/datadog.md) |
 | 34 | [walulyai](../../by-contributor/profiles/ivan-walulya.md) | 16 | [Oracle](../../contributors/orgs/oracle.md) |
 | 35 | [yminqi](../../by-contributor/profiles/yumin-qi.md) | 15 | [Oracle](../../contributors/orgs/oracle.md) |

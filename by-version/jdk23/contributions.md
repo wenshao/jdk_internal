@@ -65,10 +65,10 @@
 | 35 | azvegint | 18 | [Oracle](../../contributors/orgs/oracle.md) |
 | 36 | [rwestrel](../../by-contributor/profiles/roland-westrelin.md) | 18 | [Red Hat](../../contributors/orgs/redhat.md) |
 | 37 | [AlanBateman](../../by-contributor/profiles/alan-bateman.md) | 17 | [Oracle](../../contributors/orgs/oracle.md) |
-| 38 | justin-curtis-lu | 17 | [Oracle](../../contributors/orgs/oracle.md) |
+| 38 | [justin-curtis-lu](../../by-contributor/profiles/justin-lu-oracle.md) | 17 | [Oracle](../../contributors/orgs/oracle.md) |
 | 39 | [zifeihan](../../by-contributor/profiles/zifei-han.md) | 17 | [Independent](../../contributors/orgs/independent.md) |
 | 40 | [calvinccheung](../../by-contributor/profiles/calvin-cheung.md) | 17 | [Oracle](../../contributors/orgs/oracle.md) |
-| 41 | dcubed-ojdk | 17 | [Oracle](../../contributors/orgs/oracle.md) |
+| 41 | [dcubed-ojdk](../../by-contributor/profiles/daniel-daugherty.md) | 17 | [Oracle](../../contributors/orgs/oracle.md) |
 | 42 | [vnkozlov](../../by-contributor/profiles/vladimir-kozlov.md) | 17 | [Oracle](../../contributors/orgs/oracle.md) |
 | 43 | [nizarbenalla](../../by-contributor/profiles/nizar-ben-alla.md) | 17 | [Oracle](../../contributors/orgs/oracle.md) |
 | 44 | [jonathan-gibbons](../../by-contributor/profiles/jonathan-gibbons.md) | 16 | [Oracle](../../contributors/orgs/oracle.md) |

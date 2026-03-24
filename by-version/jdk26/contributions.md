@@ -55,7 +55,7 @@
 | 20 | [eme64](../../by-contributor/profiles/emanuel-peter.md) | 31 | [Oracle](../../contributors/orgs/oracle.md) |
 | 21 | [mhaessig](../../by-contributor/profiles/martin-haessig.md) | 28 | [Oracle](../../contributors/orgs/oracle.md) |
 | 22 | [vy](../../by-contributor/profiles/volkan-yazici.md) | 27 | [Oracle](../../contributors/orgs/oracle.md) |
-| 23 | justin-curtis-lu | 26 | [Oracle](../../contributors/orgs/oracle.md) |
+| 23 | [justin-curtis-lu](../../by-contributor/profiles/justin-lu-oracle.md) | 26 | [Oracle](../../contributors/orgs/oracle.md) |
 | 24 | xmas92 | 26 | [Oracle](../../contributors/orgs/oracle.md) |
 | 25 | [lmesnik](../../by-contributor/profiles/leonid-mesnik.md) | 25 | [Oracle](../../contributors/orgs/oracle.md) |
 | 26 | [magicus](../../by-contributor/profiles/magnus-ihse-bursie.md) | 23 | [Oracle](../../contributors/orgs/oracle.md) |
@@ -76,7 +76,7 @@
 | 41 | [jddarcy](../../by-contributor/profiles/joe-darcy.md) | 17 | [Oracle](../../contributors/orgs/oracle.md) |
 | 42 | [AlanBateman](../../by-contributor/profiles/alan-bateman.md) | 16 | [Oracle](../../contributors/orgs/oracle.md) |
 | 43 | [kevinjwalls](../../by-contributor/profiles/kevin-walls.md) | 16 | [Oracle](../../contributors/orgs/oracle.md) |
-| 44 | hgqxjj | 16 | [Independent](../../contributors/orgs/independent.md) |
+| 44 | [hgqxjj](../../by-contributor/profiles/guanqiang-han.md) | 16 | [Independent](../../contributors/orgs/independent.md) |
 | 45 | [TheRealMDoerr](../../by-contributor/profiles/martin-doerr.md) | 15 | [SAP](../../contributors/orgs/sap.md) |
 | 46 | [tstuefe](../../by-contributor/profiles/thomas-stuefe.md) | 15 | [Red Hat](../../contributors/orgs/redhat.md) |
 | 47 | [rwestrel](../../by-contributor/profiles/roland-westrelin.md) | 14 | [Red Hat](../../contributors/orgs/redhat.md) |

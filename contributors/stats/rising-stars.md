@@ -16,7 +16,7 @@
 | 6 | [toxaart](../../by-contributor/profiles/anton-artemov.md) | 26 | [Oracle](../orgs/oracle.md) | 2025-04-15 | hotspot |
 | 7 | [benoitmaillard](../../by-contributor/profiles/benoit-maillard.md) | 26 | [Oracle](../orgs/oracle.md) | 2025-06-05 | compiler/c2 |
 | 8 | [david-beaumont](../../by-contributor/profiles/david-beaumont.md) | 25 | [Oracle](../orgs/oracle.md) | 2025-02-06 | test |
-| 9 | hgqxjj | 25 | [Independent](../orgs/independent.md) | 2025-07-03 | arch/x86 |
+| 9 | [hgqxjj](../../by-contributor/profiles/guanqiang-han.md) | 25 | [Independent](../orgs/independent.md) | 2025-07-03 | arch/x86 |
 | 10 | [Anjian-Wen](../../by-contributor/profiles/anjian-wen.md) | 24 | [ByteDance](../orgs/bytedance.md) | 2025-02-07 | arch/riscv |
 | 11 | koushikthirupattur | 22 | [Oracle](../orgs/oracle.md) | 2025-01-10 | core-libs/java.net |
 | 12 | Arraying | 18 |  | 2025-08-12 | client |

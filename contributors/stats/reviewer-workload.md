@@ -37,6 +37,6 @@
 | 27 | irisclark | 569 | ? | Oracle(517), Devexperts(15), Independent(4) |
 | 28 | [LanceAndersen](../../by-contributor/profiles/lance-andersen.md) | 562 | [Oracle](../orgs/oracle.md) | Oracle(468), Independent(39), Devexperts(12) |
 | 29 | [TheRealMDoerr](../../by-contributor/profiles/martin-doerr.md) | 555 | [SAP](../orgs/sap.md) | SAP(287), Oracle(109), IBM(48) |
-| 30 | turbanoff | 544 | [Devexperts](../orgs/independent.md) | Oracle(375), Devexperts(81), Independent(13) |
+| 30 | [turbanoff](../../by-contributor/profiles/andrey-turbanov.md) | 544 | [Devexperts](../orgs/independent.md) | Oracle(375), Devexperts(81), Independent(13) |
 
 > **数据来源**: by-pr/all-integrated-prs.csv (reviewers 字段)

@@ -29,14 +29,14 @@
 | JEP 380 | 1 | [Oracle](../orgs/oracle.md) | Michael-Mc-Mahon | 2020-11-02 ~ 2020-11-02 |
 | JEP 396 | 1 |  | [mbreinhold](../../by-contributor/profiles/mark-reinhold.md) | 2020-11-19 ~ 2020-11-19 |
 | JEP 390 | 1 |  | dansmithcode | 2020-12-05 ~ 2020-12-05 |
-| JEP 391 | 1 | [Azul](../orgs/azul.md) | AntonKozlov | 2021-01-22 ~ 2021-01-22 |
-| JEP 382 | 1 |  | aghaisas | 2021-02-04 ~ 2021-02-04 |
+| JEP 391 | 1 | [Azul](../orgs/azul.md) | [AntonKozlov](../../by-contributor/profiles/anton-kozlov.md) | 2021-01-22 ~ 2021-01-22 |
+| JEP 382 | 1 |  | [aghaisas](../../by-contributor/profiles/ajit-ghaisas.md) | 2021-02-04 ~ 2021-02-04 |
 | JEP 375 | 1 | [Oracle](../orgs/oracle.md) | [pconcannon](../../by-contributor/profiles/patrick-concannon.md) | 2021-02-12 ~ 2021-02-12 |
 | JEP 8265208: [JEP-356] : Splittabl | 1 | [Oracle](../orgs/oracle.md) | [JimLaskey](../../by-contributor/profiles/jim-laskey.md) | 2021-04-14 ~ 2021-04-14 |
 | JEP 309 | 1 | [Oracle](../orgs/oracle.md) | dougxc | 2021-04-19 ~ 2021-04-19 |
 | JEP JDK-8266877: Missing local deb | 1 |  | JaroslavTulach | 2021-05-09 ~ 2021-05-09 |
 | JEP 403 | 1 |  | [mbreinhold](../../by-contributor/profiles/mark-reinhold.md) | 2021-05-13 ~ 2021-05-13 |
-| JEP 408 | 1 | [Independent](../orgs/independent.md) | FrauBoes | 2021-09-14 ~ 2021-09-14 |
+| JEP 408 | 1 | [Independent](../orgs/independent.md) | [FrauBoes](../../by-contributor/profiles/julia-boes.md) | 2021-09-14 ~ 2021-09-14 |
 | JEP 418 | 1 | [Oracle](../orgs/oracle.md) | [AlekseiEfimov](../../by-contributor/profiles/aleksei-efimov.md) | 2021-10-05 ~ 2021-10-05 |
 | JEP 417 | 1 |  | [PaulSandoz](../../by-contributor/profiles/paul-sandoz.md) | 2021-10-08 ~ 2021-10-08 |
 | JEP 422 | 1 | [Huawei](../orgs/huawei.md) | [RealFYang](../../by-contributor/profiles/fei-yang.md) | 2021-11-08 ~ 2021-11-08 |
@@ -46,8 +46,8 @@
 | JEP 434 | 1 | [Oracle](../orgs/oracle.md) | [JornVernee](../../by-contributor/profiles/jorn-vernee.md) | 2022-11-07 ~ 2022-11-07 |
 | JEP 432 | 1 | [Oracle](../orgs/oracle.md) | [lahodaj](../../by-contributor/profiles/jan-lahoda.md) | 2022-12-01 ~ 2022-12-01 |
 | JEP 458 | 1 | [Oracle](../orgs/oracle.md) | [sormuras](../../by-contributor/profiles/christian-stein.md) | 2023-04-28 ~ 2023-04-28 |
-| JEP 449 | 1 |  | gdams | 2023-05-06 ~ 2023-05-06 |
-| JEP 400 | 1 |  | takiguc | 2023-05-11 ~ 2023-05-11 |
+| JEP 449 | 1 |  | [gdams](../../by-contributor/profiles/george-adams.md) | 2023-05-06 ~ 2023-05-06 |
+| JEP 400 | 1 |  | [takiguc](../../by-contributor/profiles/takuya-kiriyama.md) | 2023-05-11 ~ 2023-05-11 |
 
 > 共 91 个不同 JEP
 > **数据来源**: by-pr/all-integrated-prs.csv (is_jep=1)

@@ -37,7 +37,7 @@
 | 2 | [MBaesken](../../by-contributor/profiles/matthias-baesken.md) | 67 | [SAP](../../contributors/orgs/sap.md) |
 | 3 | [jddarcy](../../by-contributor/profiles/joe-darcy.md) | 60 | [Oracle](../../contributors/orgs/oracle.md) |
 | 4 | [tstuefe](../../by-contributor/profiles/thomas-stuefe.md) | 54 | [Red Hat](../../contributors/orgs/redhat.md) |
-| 5 | justin-curtis-lu | 50 | [Oracle](../../contributors/orgs/oracle.md) |
+| 5 | [justin-curtis-lu](../../by-contributor/profiles/justin-lu-oracle.md) | 50 | [Oracle](../../contributors/orgs/oracle.md) |
 | 6 | [plummercj](../../by-contributor/profiles/chris-plummer.md) | 44 | [Oracle](../../contributors/orgs/oracle.md) |
 | 7 | [tschatzl](../../by-contributor/profiles/thomas-schatzl.md) | 41 | [Oracle](../../contributors/orgs/oracle.md) |
 | 8 | [eme64](../../by-contributor/profiles/emanuel-peter.md) | 40 | [Oracle](../../contributors/orgs/oracle.md) |
@@ -51,7 +51,7 @@
 | 16 | [archiecobbs](../../by-contributor/profiles/archie-cobbs.md) | 33 | [Oracle](../../contributors/orgs/oracle.md) |
 | 17 | [fisk](../../by-contributor/profiles/erik-osterlund.md) | 31 | [Oracle](../../contributors/orgs/oracle.md) |
 | 18 | [dholmes-ora](../../by-contributor/profiles/david-holmes.md) | 28 | [Oracle](../../contributors/orgs/oracle.md) |
-| 19 | dcubed-ojdk | 27 | [Oracle](../../contributors/orgs/oracle.md) |
+| 19 | [dcubed-ojdk](../../by-contributor/profiles/daniel-daugherty.md) | 27 | [Oracle](../../contributors/orgs/oracle.md) |
 | 20 | [minborg](../../by-contributor/profiles/per-minborg.md) | 27 | [Oracle](../../contributors/orgs/oracle.md) |
 | 21 | [TheShermanTanker](../../by-contributor/profiles/julian-waters.md) | 26 | [Independent](../../contributors/orgs/independent.md) |
 | 22 | [kimbarrett](../../by-contributor/profiles/kim-barrett.md) | 26 | [Oracle](../../contributors/orgs/oracle.md) |
@@ -65,7 +65,7 @@
 | 30 | [naotoj](../../by-contributor/profiles/naoto-sato.md) | 23 | [Oracle](../../contributors/orgs/oracle.md) |
 | 31 | [egahlin](../../by-contributor/profiles/erik-gahlin.md) | 23 | [Oracle](../../contributors/orgs/oracle.md) |
 | 32 | matias9927 | 22 | [Oracle](../../contributors/orgs/oracle.md) |
-| 33 | turbanoff | 22 | [Devexperts](../../contributors/orgs/independent.md) |
+| 33 | [turbanoff](../../by-contributor/profiles/andrey-turbanov.md) | 22 | [Devexperts](../../contributors/orgs/independent.md) |
 | 34 | [asotona](../../by-contributor/profiles/adam-sotona.md) | 22 | [Oracle](../../contributors/orgs/oracle.md) |
 | 35 | [jaikiran](../../by-contributor/profiles/jaikiran-pai.md) | 21 | [Oracle](../../contributors/orgs/oracle.md) |
 | 36 | [mrserb](../../by-contributor/profiles/sergey-bylokhov.md) | 19 | [Oracle](../../contributors/orgs/oracle.md) |

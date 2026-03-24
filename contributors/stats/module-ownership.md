@@ -30,12 +30,12 @@
 | arch/aarch64 | 349 | [Oracle](../orgs/oracle.md) | 34% | [theRealAph](../../by-contributor/profiles/andrew-haley.md) |
 | runtime/cds | 308 | [Oracle](../orgs/oracle.md) | 87% | [iklam](../../by-contributor/profiles/ioi-lam.md) |
 | gc/zgc | 297 | [Oracle](../orgs/oracle.md) | 86% | [stefank](../../by-contributor/profiles/stefan-karlsson.md) |
-| core-libs/java.util | 268 | [Oracle](../orgs/oracle.md) | 72% | turbanoff |
-| core-libs/java.lang | 250 | [Oracle](../orgs/oracle.md) | 75% | turbanoff |
+| core-libs/java.util | 268 | [Oracle](../orgs/oracle.md) | 72% | [turbanoff](../../by-contributor/profiles/andrey-turbanov.md) |
+| core-libs/java.lang | 250 | [Oracle](../orgs/oracle.md) | 75% | [turbanoff](../../by-contributor/profiles/andrey-turbanov.md) |
 | compiler/jvmci | 237 | [Oracle](../orgs/oracle.md) | 80% | dougxc |
 | runtime/classloading | 189 | [Oracle](../orgs/oracle.md) | 83% | [calvinccheung](../../by-contributor/profiles/calvin-cheung.md) |
 | runtime/process | 154 | [Oracle](../orgs/oracle.md) | 74% | [albertnetymk](../../by-contributor/profiles/albert-mingkun-yang.md) |
-| core-libs/java.text | 152 | [Oracle](../orgs/oracle.md) | 88% | justin-curtis-lu |
+| core-libs/java.text | 152 | [Oracle](../orgs/oracle.md) | 88% | [justin-curtis-lu](../../by-contributor/profiles/justin-lu-oracle.md) |
 | arch/ppc | 141 | [SAP](../orgs/sap.md) | 87% | [TheRealMDoerr](../../by-contributor/profiles/martin-doerr.md) |
 | compiler/c1 | 126 | [Oracle](../orgs/oracle.md) | 47% | [shipilev](../../by-contributor/profiles/aleksey-shipilev.md) |
 

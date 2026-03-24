@@ -34,7 +34,7 @@
 | 1 | [shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | 87 | [Amazon](../../contributors/orgs/amazon.md) |
 | 2 | [jonathan-gibbons](../../by-contributor/profiles/jonathan-gibbons.md) | 62 | [Oracle](../../contributors/orgs/oracle.md) |
 | 3 | [iklam](../../by-contributor/profiles/ioi-lam.md) | 60 | [Oracle](../../contributors/orgs/oracle.md) |
-| 4 | dcubed-ojdk | 59 | [Oracle](../../contributors/orgs/oracle.md) |
+| 4 | [dcubed-ojdk](../../by-contributor/profiles/daniel-daugherty.md) | 59 | [Oracle](../../contributors/orgs/oracle.md) |
 | 5 | [tstuefe](../../by-contributor/profiles/thomas-stuefe.md) | 55 | [Red Hat](../../contributors/orgs/redhat.md) |
 | 6 | [prsadhuk](../../by-contributor/profiles/prasanta-sadhukhan.md) | 54 | [Oracle](../../contributors/orgs/oracle.md) |
 | 7 | [DamonFool](../../by-contributor/profiles/jie-fu.md) | 54 | [Tencent](../../contributors/orgs/tencent.md) |

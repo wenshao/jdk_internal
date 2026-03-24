@@ -36,13 +36,13 @@
 | 1 | [shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | 80 | [Amazon](../../contributors/orgs/amazon.md) |
 | 2 | [jddarcy](../../by-contributor/profiles/joe-darcy.md) | 71 | [Oracle](../../contributors/orgs/oracle.md) |
 | 3 | [albertnetymk](../../by-contributor/profiles/albert-mingkun-yang.md) | 68 | [Oracle](../../contributors/orgs/oracle.md) |
-| 4 | turbanoff | 55 | [Devexperts](../../contributors/orgs/independent.md) |
+| 4 | [turbanoff](../../by-contributor/profiles/andrey-turbanov.md) | 55 | [Devexperts](../../contributors/orgs/independent.md) |
 | 5 | [egahlin](../../by-contributor/profiles/erik-gahlin.md) | 48 | [Oracle](../../contributors/orgs/oracle.md) |
 | 6 | [tschatzl](../../by-contributor/profiles/thomas-schatzl.md) | 46 | [Oracle](../../contributors/orgs/oracle.md) |
 | 7 | [tstuefe](../../by-contributor/profiles/thomas-stuefe.md) | 45 | [Red Hat](../../contributors/orgs/redhat.md) |
 | 8 | [jonathan-gibbons](../../by-contributor/profiles/jonathan-gibbons.md) | 44 | [Oracle](../../contributors/orgs/oracle.md) |
 | 9 | [prsadhuk](../../by-contributor/profiles/prasanta-sadhukhan.md) | 39 | [Oracle](../../contributors/orgs/oracle.md) |
-| 10 | dcubed-ojdk | 38 | [Oracle](../../contributors/orgs/oracle.md) |
+| 10 | [dcubed-ojdk](../../by-contributor/profiles/daniel-daugherty.md) | 38 | [Oracle](../../contributors/orgs/oracle.md) |
 | 11 | [MBaesken](../../by-contributor/profiles/matthias-baesken.md) | 38 | [SAP](../../contributors/orgs/sap.md) |
 | 12 | [magicus](../../by-contributor/profiles/magnus-ihse-bursie.md) | 36 | [Oracle](../../contributors/orgs/oracle.md) |
 | 13 | [iklam](../../by-contributor/profiles/ioi-lam.md) | 33 | [Oracle](../../contributors/orgs/oracle.md) |

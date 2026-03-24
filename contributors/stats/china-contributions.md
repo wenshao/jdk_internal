@@ -51,7 +51,7 @@
 | 16 | [D-D-H](../../by-contributor/profiles/denghui-dong.md) | 32 | [Alibaba](../orgs/alibaba.md) | compiler/c1 |
 | 17 | [zhengxiaolinX](../../by-contributor/profiles/xiaolin-zheng.md) | 30 | [Independent](../orgs/independent.md) | arch/riscv |
 | 18 | [johnshajiang](../../by-contributor/profiles/john-jiang.md) | 27 | [Tencent](../orgs/tencent.md) | security |
-| 19 | hgqxjj | 25 | [Independent](../orgs/independent.md) | arch/x86 |
+| 19 | [hgqxjj](../../by-contributor/profiles/guanqiang-han.md) | 25 | [Independent](../orgs/independent.md) | arch/x86 |
 | 20 | e1iu | 24 | [Independent](../orgs/independent.md) | arch/aarch64 |
 
 > **数据来源**: by-pr/all-integrated-prs.csv (country=CN)

@@ -37,10 +37,10 @@
 | 2 | [tschatzl](../../by-contributor/profiles/thomas-schatzl.md) | 60 | [Oracle](../../contributors/orgs/oracle.md) |
 | 3 | [albertnetymk](../../by-contributor/profiles/albert-mingkun-yang.md) | 53 | [Oracle](../../contributors/orgs/oracle.md) |
 | 4 | [coleenp](../../by-contributor/profiles/coleen-phillimore.md) | 53 | [Oracle](../../contributors/orgs/oracle.md) |
-| 5 | turbanoff | 52 | [Devexperts](../../contributors/orgs/independent.md) |
+| 5 | [turbanoff](../../by-contributor/profiles/andrey-turbanov.md) | 52 | [Devexperts](../../contributors/orgs/independent.md) |
 | 6 | [iklam](../../by-contributor/profiles/ioi-lam.md) | 48 | [Oracle](../../contributors/orgs/oracle.md) |
 | 7 | [magicus](../../by-contributor/profiles/magnus-ihse-bursie.md) | 46 | [Oracle](../../contributors/orgs/oracle.md) |
-| 8 | dcubed-ojdk | 40 | [Oracle](../../contributors/orgs/oracle.md) |
+| 8 | [dcubed-ojdk](../../by-contributor/profiles/daniel-daugherty.md) | 40 | [Oracle](../../contributors/orgs/oracle.md) |
 | 9 | [prsadhuk](../../by-contributor/profiles/prasanta-sadhukhan.md) | 37 | [Oracle](../../contributors/orgs/oracle.md) |
 | 10 | [bplb](../../by-contributor/profiles/brian-burkhalter.md) | 37 | [Oracle](../../contributors/orgs/oracle.md) |
 | 11 | [plummercj](../../by-contributor/profiles/chris-plummer.md) | 36 | [Oracle](../../contributors/orgs/oracle.md) |

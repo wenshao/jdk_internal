@@ -50,7 +50,7 @@
 | 19 | [rwestrel](../../by-contributor/profiles/roland-westrelin.md) | 20 | [Red Hat](../../contributors/orgs/redhat.md) |
 | 20 | [coleenp](../../by-contributor/profiles/coleen-phillimore.md) | 20 | [Oracle](../../contributors/orgs/oracle.md) |
 | 21 | [lahodaj](../../by-contributor/profiles/jan-lahoda.md) | 19 | [Oracle](../../contributors/orgs/oracle.md) |
-| 22 | dcubed-ojdk | 17 | [Oracle](../../contributors/orgs/oracle.md) |
+| 22 | [dcubed-ojdk](../../by-contributor/profiles/daniel-daugherty.md) | 17 | [Oracle](../../contributors/orgs/oracle.md) |
 | 23 | [erikj79](../../by-contributor/profiles/erik-joelsson.md) | 15 | [Oracle](../../contributors/orgs/oracle.md) |
 | 24 | [robcasloz](../../by-contributor/profiles/roberto-castaneda-lozano.md) | 15 | [Oracle](../../contributors/orgs/oracle.md) |
 | 25 | [TobiHartmann](../../by-contributor/profiles/tobias-hartmann.md) | 14 | [Oracle](../../contributors/orgs/oracle.md) |

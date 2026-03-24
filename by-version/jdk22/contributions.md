@@ -34,7 +34,7 @@
 |------|--------|-----|------|
 | 1 | [albertnetymk](../../by-contributor/profiles/albert-mingkun-yang.md) | 64 | [Oracle](../../contributors/orgs/oracle.md) |
 | 2 | [shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | 59 | [Amazon](../../contributors/orgs/amazon.md) |
-| 3 | justin-curtis-lu | 43 | [Oracle](../../contributors/orgs/oracle.md) |
+| 3 | [justin-curtis-lu](../../by-contributor/profiles/justin-lu-oracle.md) | 43 | [Oracle](../../contributors/orgs/oracle.md) |
 | 4 | [tschatzl](../../by-contributor/profiles/thomas-schatzl.md) | 40 | [Oracle](../../contributors/orgs/oracle.md) |
 | 5 | [MBaesken](../../by-contributor/profiles/matthias-baesken.md) | 35 | [SAP](../../contributors/orgs/sap.md) |
 | 6 | [minborg](../../by-contributor/profiles/per-minborg.md) | 33 | [Oracle](../../contributors/orgs/oracle.md) |
@@ -59,11 +59,11 @@
 | 25 | [JornVernee](../../by-contributor/profiles/jorn-vernee.md) | 19 | [Oracle](../../contributors/orgs/oracle.md) |
 | 26 | [aivanov-jdk](../../by-contributor/profiles/alexander-ivanov.md) | 19 | [Oracle](../../contributors/orgs/oracle.md) |
 | 27 | [mlchung](../../by-contributor/profiles/mandy-chung.md) | 18 | [Oracle](../../contributors/orgs/oracle.md) |
-| 28 | dcubed-ojdk | 17 | [Oracle](../../contributors/orgs/oracle.md) |
+| 28 | [dcubed-ojdk](../../by-contributor/profiles/daniel-daugherty.md) | 17 | [Oracle](../../contributors/orgs/oracle.md) |
 | 29 | [chhagedorn](../../by-contributor/profiles/christian-hagedorn.md) | 17 | [Oracle](../../contributors/orgs/oracle.md) |
 | 30 | [lkorinth](../../by-contributor/profiles/leo-korinth.md) | 17 | [Oracle](../../contributors/orgs/oracle.md) |
 | 31 | [mgronlun](../../by-contributor/profiles/markus-gronlund.md) | 17 | [Oracle](../../contributors/orgs/oracle.md) |
-| 32 | turbanoff | 17 | [Devexperts](../../contributors/orgs/independent.md) |
+| 32 | [turbanoff](../../by-contributor/profiles/andrey-turbanov.md) | 17 | [Devexperts](../../contributors/orgs/independent.md) |
 | 33 | [Hamlin-Li](../../by-contributor/profiles/hamlin-li.md) | 17 | [Rivos](../../contributors/orgs/independent.md) |
 | 34 | [TheRealMDoerr](../../by-contributor/profiles/martin-doerr.md) | 16 | [SAP](../../contributors/orgs/sap.md) |
 | 35 | [RealCLanger](../../by-contributor/profiles/christoph-langer.md) | 16 | [SAP](../../contributors/orgs/sap.md) |

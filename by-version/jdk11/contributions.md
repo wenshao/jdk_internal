@@ -15,7 +15,7 @@
 | 排名 | 贡献者 | PRs | 组织 |
 |------|--------|-----|------|
 | 1 | svijayasekar | 1 |  |
-| 2 | JoeWang-Java | 1 | [Oracle](../../contributors/orgs/oracle.md) |
+| 2 | [JoeWang-Java](../../by-contributor/profiles/joewang-java.md) | 1 | [Oracle](../../contributors/orgs/oracle.md) |
 | 3 | [DamonGuy](../../by-contributor/profiles/damon-nguyen.md) | 1 | [Oracle](../../contributors/orgs/oracle.md) |
 
 ## 模块分布
