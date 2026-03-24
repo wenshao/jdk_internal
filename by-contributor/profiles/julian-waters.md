@@ -112,3 +112,17 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 - [GitHub Commits to openjdk/jdk](https://github.com/openjdk/jdk/commits?author=TheShermanTanker)
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3ATheShermanTanker+is%3Aclosed+label%3Aintegrated)
 - [OpenJDK Census](https://openjdk.org/census#jwaters)
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2022-11-02 | Committer | erik.joelsson | 15 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2022-November/007114.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 229 |
+| **活跃仓库数** | 1 |

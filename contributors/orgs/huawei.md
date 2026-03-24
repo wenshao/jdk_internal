@@ -158,6 +158,35 @@ Fei Yang 自 2015 年起也参与 AArch64 移植和优化工作。
 
 ---
 
+
+
+## 审查者网络
+
+> Huawei 的 PR 被以下审查者审查最多 (共 420 次审查)
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| RealFYang | Huawei | 93 |
+| feilongjiang | Huawei | 64 |
+| shipilev | Amazon | 40 |
+| Hamlin-Li | Oracle | 36 |
+| robehn | Oracle | 31 |
+| yadongw | Huawei | 25 |
+| luhenry | — | 10 |
+| theRealAph | Red Hat | 7 |
+
+### 审查组织分布
+
+| 审查者组织 | 次数 | 占比 |
+|-----------|------|------|
+| Huawei | 182 | 43% |
+| Oracle | 119 | 28% |
+| Amazon | 42 | 10% |
+| Red Hat | 12 | 3% |
+| Independent | 8 | 2% |
+
+---
+
 ## 6. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`

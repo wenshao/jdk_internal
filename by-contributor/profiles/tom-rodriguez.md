@@ -93,3 +93,11 @@ Tom Rodriguez 在 C2 和 Graal 之间架起桥梁：
 - [GitHub: tkrodriguez](https://github.com/tkrodriguez)
 - [OpenJDK Census - never](https://openjdk.org/census#never)
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 167 |
+| **活跃仓库数** | 1 |

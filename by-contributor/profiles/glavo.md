@@ -199,3 +199,11 @@
 > **数据来源**: [GitHub Profile](https://github.com/Glavo), [OpenJDK PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AGlavo+label%3Aintegrated), [PLCT Lab](https://plctlab.org/)
 >
 > **最后更新**: 2026-03-22
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 20 |
+| **活跃仓库数** | 2 |

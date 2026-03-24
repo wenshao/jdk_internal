@@ -9,7 +9,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Aggelos Biboudis (Angelos Bimpoudis) |
-| **当前组织** | [Oracle](/contributors/orgs/oracle.md) |
+| **当前组织** | [Oracle](../../contributors/orgs/oracle.md) |
 | **职位** | Principal Member of Technical Staff, Java Platform Group - 语言和工具 |
 | **位置** | 苏黎世, 瑞士 |
 | **学历** | PhD, University of Athens (导师: Yannis Smaragdakis) |
@@ -158,3 +158,18 @@ Aggelos Biboudis 是 Oracle Java Platform Group 的核心成员，专注于 Java
 
 > **文档版本**: 1.0 | **最后更新**: 2026-03-22
 > 基于 GitHub API 数据: 64 integrated PRs. JEP 530 (Primitive Types in Patterns) 为最具影响力的工作.
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2023-10-23 | Committer | Jan Lahoda | 20 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2023-October/008397.html) |
+| 2024-05-17 | Reviewer | Jan Lahoda | 17 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2024-May/008993.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 55 |
+| **活跃仓库数** | 2 |

@@ -33,13 +33,24 @@
 
 | 指标 | 值 |
 |------|------|
-| **Integrated PRs** | 246 (当前) + 202 (前员工测试) = **448** |
+| **主线 Integrated PRs** | 246 (当前) + 202 (前员工) = **448** |
+| **LTS 维护 PRs** | **559** |
+| **总计 PRs** | **1,007** |
 | **贡献者数** | 13 上游贡献者 (6 Committer + 7 Author) + 1 团队负责人 |
 | **活跃时间** | 2020 - 至今 |
-| **主要领域** | 核心库、C2 编译器、AArch64、ZGC、RISC-V、HotSpot Runtime |
+| **主要领域** | 核心库、C2 编译器、AArch64、ZGC、RISC-V、LTS 维护 |
 | **Dragonwell** | [Alibaba Dragonwell](https://github.com/dragonwell-project/dragonwell8), [Dragonwell Team](dragonwell.md) |
 
-> **统计说明**: 使用 GitHub Integrated PRs 统计，通过 GitHub API 逐人验证。
+### LTS 维护分支贡献
+
+| 贡献者 | jdk17u | jdk21u | jdk11u | jdk25u | jdk8u | 总计 |
+|--------|--------|--------|--------|--------|-------|------|
+| sendaoYan | 81 | 109 | 38 | 17 | 31 | **276** |
+| amosshi | 79 | 33 | 156 | 0 | 0 | **268** |
+| dongbohe | 0 | 0 | 1 | 0 | 14 | **15** |
+| **合计** | **160** | **142** | **195** | **17** | **45** | **559** |
+
+> **统计说明**: 主线使用 GitHub Integrated PRs 统计。LTS 维护数据来自 jdk17u-dev/jdk21u-dev/jdk11u-dev/jdk25u-dev/jdk8u-dev 五个仓库 CSV。统计时间: 2026-03-24。
 
 ---
 
@@ -759,6 +770,35 @@ JDK 21/22 时期的贡献主要集中在 GC 监控和架构支持。
 | 数组操作 | ArraysSupport 优化 | +3% | [8343962](../../by-pr/8343/8343962.md) |
 
 > **了解更多**: [JDK 性能优化](../../by-topic/core/performance/README.md)
+
+---
+
+
+
+## 审查者网络
+
+> Alibaba 的 PR 被以下审查者审查最多 (共 1,132 次审查)
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| liach | Oracle | 80 |
+| sendaoYan | Alibaba | 65 |
+| dholmes-ora | Oracle | 55 |
+| wenshao | Alibaba | 50 |
+| phohensee | Oracle | 46 |
+| TobiHartmann | Oracle | 42 |
+| RogerRiggs | Oracle | 32 |
+| cl4es | Oracle | 31 |
+
+### 审查组织分布
+
+| 审查者组织 | 次数 | 占比 |
+|-----------|------|------|
+| Oracle | 722 | 64% |
+| Alibaba | 184 | 16% |
+| Red Hat | 61 | 5% |
+| Amazon | 32 | 3% |
+| SAP | 23 | 2% |
 
 ---
 

@@ -111,3 +111,17 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 - [GitHub Commits to openjdk/jdk](https://github.com/openjdk/jdk/commits?author=RealLucy)
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3ARealLucy+is%3Aclosed+label%3Aintegrated)
 - [OpenJDK Census](https://openjdk.org/census#lucy)
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2020-02-19 | Reviewer | Langer, Christoph | 11 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2020-February/003916.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 422 |
+| **活跃仓库数** | 6 |

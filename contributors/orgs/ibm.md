@@ -2,7 +2,7 @@
 
 > JVM、s390x 和多平台支持的重要贡献者
 
-[← 返回组织索引](../../by-contributor/README.md)
+[← 返回组织索引](README.md)
 
 ---
 ## 目录
@@ -123,7 +123,36 @@ IBM 维护自己的 JVM 发行版 Semeru：
 
 > **注**: 2015-2020 年无 GitHub PR 数据 (OpenJDK 于 2020 年迁移至 GitHub)。
 >
-> **总计**: 93+ GitHub PRs (Amit Kumar); 时间线中的年度数据为估算，待核实
+> **总计**: 82 GitHub PRs (Amit Kumar, 截至 2026-03-24); 时间线中的年度数据为估算
+
+---
+
+
+
+## 审查者网络
+
+> IBM 的 PR 被以下审查者审查最多 (共 784 次审查)
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| RealLucy | — | 59 |
+| jerboaa | Red Hat | 58 |
+| TheRealMDoerr | SAP | 53 |
+| vnkozlov | Oracle | 47 |
+| offamitkumar | IBM | 39 |
+| thegreystone | Datadog | 39 |
+| tstuefe | Red Hat | 37 |
+| ashu-mehra | IBM | 27 |
+
+### 审查组织分布
+
+| 审查者组织 | 次数 | 占比 |
+|-----------|------|------|
+| Oracle | 265 | 34% |
+| Red Hat | 133 | 17% |
+| IBM | 124 | 16% |
+| SAP | 91 | 12% |
+| Datadog | 39 | 5% |
 
 ---
 
@@ -141,4 +170,4 @@ IBM 维护自己的 JVM 发行版 Semeru：
 - [IBM Research Labs](https://research.ibm.com/)
 - [IBM Z](https://www.ibm.com/it-infrastructure/z)
 
-[→ 返回组织索引](../../by-contributor/README.md)
+[→ 返回组织索引](README.md)

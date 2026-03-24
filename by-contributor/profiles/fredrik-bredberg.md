@@ -116,3 +116,18 @@ Fredrik Bredberg 是 HotSpot **ObjectMonitor** 的主要贡献者：
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
 - [GitHub: fbredber](https://github.com/fbredber)
 - [JEP 491: Synchronize Virtual Threads without Pinning](https://openjdk.org/jeps/491)
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2024-03-13 | Committer | Jesper Wilhelmsson | 34 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2024-March/008768.html) |
+| 2025-09-08 | Reviewer | coleen.phillimore | 27 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2025-September/010391.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 58 |
+| **活跃仓库数** | 1 |

@@ -378,7 +378,7 @@ Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一。Dragonwel
 - [C2 编译器](/by-topic/core/jit/) - JIT 编译优化
 - [RISC-V](/by-topic/platform/) - RISC-V 架构支持
 - 内存屏障 - 并发内存模型
-- [Alibaba](/contributors/orgs/alibaba.md) - 阿里巴巴贡献者
+- [Alibaba](../../contributors/orgs/alibaba.md) - 阿里巴巴贡献者
 - [中国贡献者](chinese-contributors.md) - 中国 OpenJDK 贡献者
 
 ---

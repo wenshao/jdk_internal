@@ -264,3 +264,10 @@ bool VTransform::transform_unsigned_compare(Node* n) {
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20mli)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=Hamlin-Li)
 - [RISC-V Port Project](https://openjdk.org/projects/riscv-port/)
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 302 |
+| **活跃仓库数** | 2 |

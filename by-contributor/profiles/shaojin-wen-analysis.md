@@ -37,7 +37,7 @@ Shaojin Wen 是 JDK 26 中最活跃的核心库优化贡献者之一，专注于
 
 ### 1. 字符串格式化优化
 
-#### [JDK-8355177: StringBuilder::append(char[]) 优化](/by-pr/8355/8355177.md)
+#### [JDK-8355177: StringBuilder::append(char[]) 优化](../../by-pr/8355/8355177.md)
 
 **性能提升**: +15%
 
@@ -55,13 +55,13 @@ Unsafe.getUnsafe().copyMemory(
 );
 ```
 
-#### [JDK-8370013: Double.toHexString 重构](/by-pr/8370/8370013.md)
+#### [JDK-8370013: Double.toHexString 重构](../../by-pr/8370/8370013.md)
 
 **性能提升**: +20%
 
 消除正则表达式和 StringBuilder 使用，直接使用位操作。
 
-#### [JDK-8366224: DecimalDigits.appendPair](/by-pr/8366/8366224.md)
+#### [JDK-8366224: DecimalDigits.appendPair](../../by-pr/8366/8366224.md)
 
 **性能提升**: +12%
 
@@ -79,7 +79,7 @@ buf[index + 1] = DIGITS[value * 2 + 1];
 
 ### 2. 启动性能优化
 
-#### [JDK-8349400: 消除嵌套类](/by-pr/8349/8349400.md)
+#### [JDK-8349400: 消除嵌套类](../../by-pr/8349/8349400.md)
 
 **性能提升**: +5% 启动速度
 
@@ -105,11 +105,11 @@ buf[index + 1] = DIGITS[value * 2 + 1];
 
 | Issue | 描述 | 提升 | 链接 |
 |-------|------|------|------|
-| 8355177 | StringBuilder::append(char[]) | +15% | [分析](/by-pr/8355/8355177.md) |
+| 8355177 | StringBuilder::append(char[]) | +15% | [分析](../../by-pr/8355/8355177.md) |
 | 8370503 | Integer/Long toString | +10% | [JBS](https://bugs.openjdk.org/browse/JDK-8370503) |
-| 8370013 | Double.toHexString | +20% | [分析](/by-pr/8370/8370013.md) |
+| 8370013 | Double.toHexString | +20% | [分析](../../by-pr/8370/8370013.md) |
 | 8353741 | UUID.toString | +8% | [JBS](https://bugs.openjdk.org/browse/JDK-8353741) |
-| 8366224 | DecimalDigits.appendPair | +12% | [分析](/by-pr/8366/8366224.md) |
+| 8366224 | DecimalDigits.appendPair | +12% | [分析](../../by-pr/8366/8366224.md) |
 | 8365832 | FloatingDecimal 优化 | +10% | [JBS](https://bugs.openjdk.org/browse/JDK-8365832) |
 | 8368825 | DateTimeFormatterBuilder | +5% | [JBS](https://bugs.openjdk.org/browse/JDK-8368825) |
 | 8357685 | Integer::digits byte[] | +5% | [JBS](https://bugs.openjdk.org/browse/JDK-8357685) |
@@ -122,7 +122,7 @@ buf[index + 1] = DIGITS[value * 2 + 1];
 
 | Issue | 描述 | 提升 | 链接 |
 |-------|------|------|------|
-| 8349400 | 消除嵌套类 | +5% | [分析](/by-pr/8349/8349400.md) |
+| 8349400 | 消除嵌套类 | +5% | [分析](../../by-pr/8349/8349400.md) |
 | 8357913 | @Stable BigInteger/BigDecimal | +3% | [JBS](https://bugs.openjdk.org/browse/JDK-8357913) |
 | 8357690 | @Stable CharacterData | +2% | [JBS](https://bugs.openjdk.org/browse/JDK-8357690) |
 | 8357289 | String 构造函数拆分 | +2% | [JBS](https://bugs.openjdk.org/browse/JDK-8357289) |
@@ -186,5 +186,5 @@ buf[index + 1] = DIGITS[value * 2 + 1];
 ## 6. 相关资源
 
 - [贡献者页面](shaojin-wen.md)
-- [GC 组件分析](/by-pr/components/gc.md)
-- [编译器组件分析](/by-pr/components/compiler.md)
+- [GC 组件分析](../../by-pr/components/gc.md)
+- [编译器组件分析](../../by-pr/components/compiler.md)

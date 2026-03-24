@@ -49,7 +49,7 @@ Roger Riggs 是 Oracle Java Core Libraries Team 的资深 JDK 工程师，专注
 
 | PR/Issue | 标题 | 角色 |
 |----------|------|------|
-| [JDK-8351443](/by-pr/8351/8351443.md) | 改进 StringBuilder 的健壮性 | Author |
+| [JDK-8351443](../../by-pr/8351/8351443.md) | 改进 StringBuilder 的健壮性 | Author |
 
 ### JEP 贡献
 
@@ -88,7 +88,7 @@ Roger Riggs 是 Oracle Java Core Libraries Team 的资深 JDK 工程师，专注
 - 检测并发修改导致的状态不一致
 - 抛出 `IllegalStateException` 而非静默错误
 
-**文档**: [详细分析](/by-pr/8351/8351443.md)
+**文档**: [详细分析](../../by-pr/8351/8351443.md)
 
 ---
 
@@ -115,3 +115,11 @@ Roger Riggs 是 Oracle Java Core Libraries Team 的资深 JDK 工程师，专注
 > - 添加 OpenJDK Wiki 链接
 > - 扩展核心领域: Serialization Filtering, Process API, Date/Time, Cleaners
 > - 修正概述以反映完整贡献范围
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 988 |
+| **活跃仓库数** | 5 |

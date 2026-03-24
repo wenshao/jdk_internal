@@ -130,3 +130,11 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 - [OpenJDK Census](https://openjdk.org/census#coffeys)
 - [FOSDEM 2013 Speaker Profile](https://archive.fosdem.org/2013/schedule/speaker/sean_coffey/)
 - [FOSDEM 2025 Speaker Profile](https://archive.fosdem.org/2025/schedule/speaker/sean_coffey/)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 116 |
+| **活跃仓库数** | 5 |

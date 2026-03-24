@@ -256,7 +256,7 @@
 - [JDK 22/23/24 Top Contributors](jdk22-23-24-top-contributors.md)
 - [JDK 21 Top Contributors](jdk21-top-contributors.md)
 - [JDK 8/11/17 Top Contributors](jdk8-11-17-top-contributors.md)
-- [By Organization](/contributors/stats/by-org.md)
+- [By Organization](../../contributors/stats/by-org.md)
 - [OpenJDK Census](https://openjdk.org/census)
 
 **Last Updated**: 2026-03-21

@@ -85,3 +85,11 @@ Liam Miller-Cushon 贡献于 javac：
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
 - [GitHub: cushon](https://github.com/cushon)
 - [Error Prone](https://github.com/google/error-prone)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 24 |
+| **活跃仓库数** | 1 |

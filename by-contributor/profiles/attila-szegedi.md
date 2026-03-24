@@ -124,9 +124,9 @@ Attila 维护 `javax.script` (Scripting API, JSR 223) 相关代码，负责 `Scr
 
 ### 相关贡献者
 
-- [Jim Laskey](/by-contributor/profiles/jim-laskey.md) - Nashorn 项目负责人，String Templates 作者
-- [Hannes Wallnoefer](/by-contributor/profiles/hannes-wallnoefer.md) - Nashorn 共同开发者，Javadoc 工具维护者
-- [Stuart Marks](/by-contributor/profiles/stuart-marks.md) - 核心库维护者
+- [Jim Laskey](jim-laskey.md) - Nashorn 项目负责人，String Templates 作者
+- [Hannes Wallnoefer](hannes-wallnoefer.md) - Nashorn 共同开发者，Javadoc 工具维护者
+- [Stuart Marks](stuart-marks.md) - 核心库维护者
 
 ### 相关主题
 
@@ -141,3 +141,11 @@ Attila 维护 `javax.script` (Scripting API, JSR 223) 相关代码，负责 `Scr
 > - GitHub API (`gh api users/szegedi`)
 > - GitHub PR 数据 (`gh pr list --repo openjdk/jdk --search "author:szegedi"`)
 > - OpenJDK JEP 数据库
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 24 |
+| **活跃仓库数** | 2 |

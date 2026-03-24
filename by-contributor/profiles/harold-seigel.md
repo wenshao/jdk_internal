@@ -69,3 +69,11 @@ Harold Seigel 贡献于 HotSpot 运行时系统：
 **Sources**:
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
 - [JEP 371: Hidden Classes](https://openjdk.org/jeps/371)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 174 |
+| **活跃仓库数** | 3 |

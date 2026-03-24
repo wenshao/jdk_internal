@@ -8,7 +8,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Swati Sharma |
-| **当前组织** | [Intel](/contributors/orgs/intel.md) |
+| **当前组织** | [Intel](../../contributors/orgs/intel.md) |
 | **GitHub** | [@sviswa7](https://github.com/sviswa7) |
 | **OpenJDK** | Author (swati) |
 | **PRs** | [37 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Asviswa7+is%3Aclosed+label%3Aintegrated) |
@@ -27,3 +27,11 @@ Swati 专注于 HotSpot 的 SuperWord 自动向量化和 Vector API x86 后端�
 
 > **文档等级**: L2
 > **创建时间**: 2026-03-23
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 221 |
+| **活跃仓库数** | 4 |

@@ -8,7 +8,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | George Adams |
-| **当前组织** | [Independent](/contributors/orgs/independent.md) |
+| **当前组织** | [Independent](../../contributors/orgs/independent.md) |
 | **GitHub** | [@gdams](https://github.com/gdams) |
 | **PRs** | [9 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Agdams+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | build |

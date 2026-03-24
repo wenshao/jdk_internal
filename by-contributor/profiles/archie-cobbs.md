@@ -216,3 +216,17 @@ Archie Cobbs 与 Project Amber 团队紧密合作：
 - [JEP 513: Flexible Constructor Bodies](https://openjdk.org/jeps/513)
 - [Permazen Wiki](https://github.com/permazen/permazen/wiki)
 - [amber-spec-experts Mailing List](https://www.mail-archive.com/amber-spec-experts@openjdk.org/)
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2024-06-26 | Committer | Vicente Romero | 14 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009168.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 76 |
+| **活跃仓库数** | 1 |

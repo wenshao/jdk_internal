@@ -97,3 +97,11 @@ Dean Long 贡献于 HotSpot JIT 编译器：
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
 - [LinkedIn - Dean Long](https://www.linkedin.com/in/dean-long-184645/)
 - [OpenJDK Census](https://openjdk.org/census#dlong)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 377 |
+| **活跃仓库数** | 2 |

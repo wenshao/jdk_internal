@@ -130,3 +130,17 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 - [ResearchGate Profile](https://www.researchgate.net/profile/Ivan-Walulya)
 - [Chalmers Research Profile](https://research.chalmers.se/en/person/ivanw)
 - [PhD Thesis: On Design and Applications of Practical Concurrent Data Structures](https://publications.lib.chalmers.se/records/fulltext/500027/500027.pdf)
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2021-09-14 | Reviewer | Thomas Schatzl | 10 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-September/006041.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 535 |
+| **活跃仓库数** | 2 |

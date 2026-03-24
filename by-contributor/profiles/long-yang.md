@@ -8,7 +8,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Long Yang (杨龙) |
-| **当前组织** | [阿里巴巴 (Alibaba)](/contributors/orgs/alibaba.md) |
+| **当前组织** | [阿里巴巴 (Alibaba)](../../contributors/orgs/alibaba.md) |
 | **GitHub** | [@yanglong1010](https://github.com/yanglong1010) |
 | **OpenJDK** | Author |
 | **PRs** | [3 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ayanglong1010+is%3Aclosed+label%3Aintegrated) |

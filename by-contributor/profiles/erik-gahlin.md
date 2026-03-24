@@ -322,3 +322,10 @@ Erik 的贡献特点:
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=Erik%20Gahlin)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20egahlin)
 - [JFR Documentation](https://docs.oracle.com/en/java/javase/26/jfapi/)
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 264 |
+| **活跃仓库数** | 3 |

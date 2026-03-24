@@ -94,77 +94,77 @@ Phil Race 是 Oracle 的 Consulting Member of Technical Staff，OpenJDK Client L
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
-| JDK-8369129 | Raster createPackedRaster methods specification clean up | [Link]([需要补充 PR 链接]) |
-| JDK-8368576 | PrintJob.getGraphics() does not specify behavior after PrintJob.end() | [Link]([需要补充 PR 链接]) |
-| JDK-8370637 | [Windows] Crash if use Graphics after PrintJob.end | [Link]([需要补充 PR 链接]) |
-| JDK-8371304 | mismatch in file name and class name for ByteInterleavedRasterOffsetsTest.java | [Link]([需要补充 PR 链接]) |
-| JDK-4954405 | Data buffers created with an offset are unusable | [Link]([需要补充 PR 链接]) |
-| JDK-8370719 | [Linux] Use /etc/os-release values for font configuration file names | [Link]([需要补充 PR 链接]) |
-| JDK-8357252 | sun/awt/font/TestArabicHebrew.java fails in OEL 9 and 10 x64 | [Link]([需要补充 PR 链接]) |
-| JDK-8364583 | ColorConvertOp fails for CMYK to RGB conversion | [Link]([需要补充 PR 链接]) |
-| JDK-8370141 | [macOS] Crash after PrinterJob ends when Graphics.create() is used | [Link]([需要补充 PR 链接]) |
-| JDK-8370160 | NumericShaper allows illegal ranges | [Link]([需要补充 PR 链接]) |
-| JDK-6453640 | BandedSampleModel.createCompatibleSampleModel() API docs are wrong | [Link]([需要补充 PR 链接]) |
-| JDK-8365077 | java.awt.font.NumericShaper violates equals/hashCode contract | [Link]([需要补充 PR 链接]) |
-| JDK-8369146 | java/awt/PrintJob/GetGraphicsTest.java Parse Exception | [Link]([需要补充 PR 链接]) |
-| JDK-8364673 | Remove duplicate font mapping for itcavantgarde in psfontj2d.properties | [Link]([需要补充 PR 链接]) |
-| JDK-8344918 | Unused private variables in SwingUtilities.java | [Link]([需要补充 PR 链接]) |
-| JDK-8369335 | Two sun/java2d/OpenGL tests fail on Windows after JDK-8358058 | [Link]([需要补充 PR 链接]) |
-| JDK-8369516 | Delete duplicate imaging test | [Link]([需要补充 PR 链接]) |
-| JDK-8366002 | Beans.instantiate needs to describe the lookup procedure | [Link]([需要补充 PR 链接]) |
-| JDK-8358058 | sun/java2d/OpenGL/DrawImageBg.java Test fails intermittently | [Link]([需要补充 PR 链接]) |
-| JDK-8367702 | PrintJob.getGraphics() should return null after PrintJob.end | [Link]([需要补充 PR 链接]) |
-| JDK-8221451 | PIT: sun/java2d/X11SurfaceData/SharedMemoryPixmapsTest fails | [Link]([需要补充 PR 链接]) |
-| JDK-7184899 | Test sun/java2d/X11SurfaceData/SharedMemoryPixmapsTest fail | [Link]([需要补充 PR 链接]) |
-| JDK-8361530 | Test javax/swing/GraphicsConfigNotifier/StalePreferredSize.java timed out | [Link]([需要补充 PR 链接]) |
-| JDK-8365569 | Remove finalize from JavaSoundAudioClip.java | [Link]([需要补充 PR 链接]) |
-| JDK-8365197 | javax.imageio.stream MemoryCache based streams no longer need a disposer | [Link]([需要补充 PR 链接]) |
-| JDK-8344333 | Spurious System.err.flush() in LWCToolkit.java | [Link]([需要补充 PR 链接]) |
-| JDK-8365291 | Remove finalize() method from sun/awt/X11InputMethodBase.java | [Link]([需要补充 PR 链接]) |
-| JDK-8365292 | Remove javax.imageio.spi.ServiceRegistry.finalize() | [Link]([需要补充 PR 链接]) |
-| JDK-8359391 | Remove ThreadGroup sandboxing from javax.imageio | [Link]([需要补充 PR 链接]) |
-| JDK-8364768 | JDK javax.imageio ImageWriters do not all flush the output stream | [Link]([需要补充 PR 链接]) |
-| JDK-8365180 | Remove sun.awt.windows.WInputMethod.finalize() | [Link]([需要补充 PR 链接]) |
-| JDK-8365389 | Remove static color fields from SwingUtilities3 and WindowsMenuItemUI | [Link]([需要补充 PR 链接]) |
-| JDK-8277585 | Remove the terminally deprecated finalize() method from javax.imageio.stream APIs | [Link]([需要补充 PR 链接]) |
-| JDK-8365198 | Remove unnecessary mention of finalize in ImageIO reader/writer docs | [Link]([需要补充 PR 链接]) |
-| JDK-8365416 | java.desktop no longer needs preview feature access | [Link]([需要补充 PR 链接]) |
-| JDK-8364230 | javax/swing/text/StringContent can be migrated away from using finalize | [Link]([需要补充 PR 链接]) |
-| JDK-8362898 | Remove finalize() methods from javax.imageio TIFF classes | [Link]([需要补充 PR 链接]) |
-| JDK-8210765 | Remove finalize method in CStrike.java | [Link]([需要补充 PR 链接]) |
-| JDK-8363889 | Update sun.print.PrintJob2D to use Disposer | [Link]([需要补充 PR 链接]) |
-| JDK-8362289 | [macOS] Remove finalize method in JRSUIControls.java | [Link]([需要补充 PR 链接]) |
-| JDK-8362452 | [macOS] Remove CPrinterJob.finalize() | [Link]([需要补充 PR 链接]) |
-| JDK-8362557 | [macOS] Remove CFont.finalize() | [Link]([需要补充 PR 链接]) |
-| JDK-8362291 | [macOS] Remove finalize method in CGraphicsEnvironment.java | [Link]([需要补充 PR 链接]) |
-| JDK-8362659 | Remove sun.print.PrintJob2D.finalize() | [Link]([需要补充 PR 链接]) |
-| JDK-8360147 | Better Glyph drawing redux | [Link]([需要补充 PR 链接]) |
-| JDK-8355884 | [macos] java/awt/Frame/I18NTitle.java fails on MacOS | [Link]([需要补充 PR 链接]) |
-| JDK-8348989 | Better Glyph drawing | [Link]([需要补充 PR 链接]) |
-| JDK-8359053 | Implement JEP 504 - Remove the Applet API | [Link]([需要补充 PR 链接]) |
-| JDK-8358526 | Clarify behavior of java.awt.HeadlessException constructed with no-args | [Link]([需要补充 PR 链接]) |
-| JDK-8358731 | Remove jdk.internal.access.JavaAWTAccess.java | [Link]([需要补充 PR 链接]) |
-| JDK-8357672 | Extreme font sizes can cause font substitution | [Link]([需要补充 PR 链接]) |
-| JDK-8356049 | Need a simple way to play back a sound clip | [Link]([需要补充 PR 链接]) |
-| JDK-8357176 | java.awt javadoc code examples still use Applet API | [Link]([需要补充 PR 链接]) |
-| JDK-8346683 | Problem list automated tests that fail on macOS15 | [Link]([需要补充 PR 链接]) |
-| JDK-8356208 | Remove obsolete code in PSPrinterJob for plugin printing | [Link]([需要补充 PR 链接]) |
-| JDK-8355333 | Some Problem list entries point to non-existent / wrong files | [Link]([需要补充 PR 链接]) |
-| JDK-8355002 | Clean up some mentions of "applet" in tests | [Link]([需要补充 PR 链接]) |
-| JDK-8354552 | Open source a few Swing tests | [Link]([需要补充 PR 链接]) |
-| JDK-8354451 | Open source some more Swing popup menu tests | [Link]([需要补充 PR 链接]) |
-| JDK-8353589 | Open source a few Swing menu-related tests | [Link]([需要补充 PR 链接]) |
-| JDK-8353483 | Open source some JProgressBar tests | [Link]([需要补充 PR 链接]) |
-| JDK-8353304 | Open source two JTabbedPane tests | [Link]([需要补充 PR 链接]) |
-| JDK-8353475 | Open source two Swing DefaultCaret tests | [Link]([需要补充 PR 链接]) |
-| JDK-8352997 | Open source several Swing JTabbedPane tests | [Link]([需要补充 PR 链接]) |
-| JDK-8353320 | Open source more Swing text tests | [Link]([需要补充 PR 链接]) |
-| JDK-8353309 | Open source several Swing text tests | [Link]([需要补充 PR 链接]) |
-| JDK-8353324 | Clean up of comments and import after 8319192 | [Link]([需要补充 PR 链接]) |
-| JDK-8347321 | [ubsan] CGGlyphImages.m runtime error | [Link]([需要补充 PR 链接]) |
-| JDK-8319192 | Remove javax.swing.plaf.synth.SynthLookAndFeel.load(URL url) | [Link]([需要补充 PR 链接]) |
-| JDK-8344146 | Remove temporary font file tracking code | [Link]([需要补充 PR 链接]) |
-| JDK-8346829 | Problem list com/sun/jdi/ReattachStressTest.java & ProcessAttachTest.java on Linux | [Link]([需要补充 PR 链接]) |
+| JDK-8369129 | Raster createPackedRaster methods specification clean up | [JBS](https://bugs.openjdk.org/browse/JDK-8369129) |
+| JDK-8368576 | PrintJob.getGraphics() does not specify behavior after PrintJob.end() | [JBS](https://bugs.openjdk.org/browse/JDK-8368576) |
+| JDK-8370637 | [Windows] Crash if use Graphics after PrintJob.end | [JBS](https://bugs.openjdk.org/browse/JDK-8370637) |
+| JDK-8371304 | mismatch in file name and class name for ByteInterleavedRasterOffsetsTest.java | [JBS](https://bugs.openjdk.org/browse/JDK-8371304) |
+| JDK-4954405 | Data buffers created with an offset are unusable | [JBS](https://bugs.openjdk.org/browse/JDK-4954405) |
+| JDK-8370719 | [Linux] Use /etc/os-release values for font configuration file names | [JBS](https://bugs.openjdk.org/browse/JDK-8370719) |
+| JDK-8357252 | sun/awt/font/TestArabicHebrew.java fails in OEL 9 and 10 x64 | [JBS](https://bugs.openjdk.org/browse/JDK-8357252) |
+| JDK-8364583 | ColorConvertOp fails for CMYK to RGB conversion | [JBS](https://bugs.openjdk.org/browse/JDK-8364583) |
+| JDK-8370141 | [macOS] Crash after PrinterJob ends when Graphics.create() is used | [JBS](https://bugs.openjdk.org/browse/JDK-8370141) |
+| JDK-8370160 | NumericShaper allows illegal ranges | [JBS](https://bugs.openjdk.org/browse/JDK-8370160) |
+| JDK-6453640 | BandedSampleModel.createCompatibleSampleModel() API docs are wrong | [JBS](https://bugs.openjdk.org/browse/JDK-6453640) |
+| JDK-8365077 | java.awt.font.NumericShaper violates equals/hashCode contract | [JBS](https://bugs.openjdk.org/browse/JDK-8365077) |
+| JDK-8369146 | java/awt/PrintJob/GetGraphicsTest.java Parse Exception | [JBS](https://bugs.openjdk.org/browse/JDK-8369146) |
+| JDK-8364673 | Remove duplicate font mapping for itcavantgarde in psfontj2d.properties | [JBS](https://bugs.openjdk.org/browse/JDK-8364673) |
+| JDK-8344918 | Unused private variables in SwingUtilities.java | [JBS](https://bugs.openjdk.org/browse/JDK-8344918) |
+| JDK-8369335 | Two sun/java2d/OpenGL tests fail on Windows after JDK-8358058 | [JBS](https://bugs.openjdk.org/browse/JDK-8369335) |
+| JDK-8369516 | Delete duplicate imaging test | [JBS](https://bugs.openjdk.org/browse/JDK-8369516) |
+| JDK-8366002 | Beans.instantiate needs to describe the lookup procedure | [JBS](https://bugs.openjdk.org/browse/JDK-8366002) |
+| JDK-8358058 | sun/java2d/OpenGL/DrawImageBg.java Test fails intermittently | [JBS](https://bugs.openjdk.org/browse/JDK-8358058) |
+| JDK-8367702 | PrintJob.getGraphics() should return null after PrintJob.end | [JBS](https://bugs.openjdk.org/browse/JDK-8367702) |
+| JDK-8221451 | PIT: sun/java2d/X11SurfaceData/SharedMemoryPixmapsTest fails | [JBS](https://bugs.openjdk.org/browse/JDK-8221451) |
+| JDK-7184899 | Test sun/java2d/X11SurfaceData/SharedMemoryPixmapsTest fail | [JBS](https://bugs.openjdk.org/browse/JDK-7184899) |
+| JDK-8361530 | Test javax/swing/GraphicsConfigNotifier/StalePreferredSize.java timed out | [JBS](https://bugs.openjdk.org/browse/JDK-8361530) |
+| JDK-8365569 | Remove finalize from JavaSoundAudioClip.java | [JBS](https://bugs.openjdk.org/browse/JDK-8365569) |
+| JDK-8365197 | javax.imageio.stream MemoryCache based streams no longer need a disposer | [JBS](https://bugs.openjdk.org/browse/JDK-8365197) |
+| JDK-8344333 | Spurious System.err.flush() in LWCToolkit.java | [JBS](https://bugs.openjdk.org/browse/JDK-8344333) |
+| JDK-8365291 | Remove finalize() method from sun/awt/X11InputMethodBase.java | [JBS](https://bugs.openjdk.org/browse/JDK-8365291) |
+| JDK-8365292 | Remove javax.imageio.spi.ServiceRegistry.finalize() | [JBS](https://bugs.openjdk.org/browse/JDK-8365292) |
+| JDK-8359391 | Remove ThreadGroup sandboxing from javax.imageio | [JBS](https://bugs.openjdk.org/browse/JDK-8359391) |
+| JDK-8364768 | JDK javax.imageio ImageWriters do not all flush the output stream | [JBS](https://bugs.openjdk.org/browse/JDK-8364768) |
+| JDK-8365180 | Remove sun.awt.windows.WInputMethod.finalize() | [JBS](https://bugs.openjdk.org/browse/JDK-8365180) |
+| JDK-8365389 | Remove static color fields from SwingUtilities3 and WindowsMenuItemUI | [JBS](https://bugs.openjdk.org/browse/JDK-8365389) |
+| JDK-8277585 | Remove the terminally deprecated finalize() method from javax.imageio.stream APIs | [JBS](https://bugs.openjdk.org/browse/JDK-8277585) |
+| JDK-8365198 | Remove unnecessary mention of finalize in ImageIO reader/writer docs | [JBS](https://bugs.openjdk.org/browse/JDK-8365198) |
+| JDK-8365416 | java.desktop no longer needs preview feature access | [JBS](https://bugs.openjdk.org/browse/JDK-8365416) |
+| JDK-8364230 | javax/swing/text/StringContent can be migrated away from using finalize | [JBS](https://bugs.openjdk.org/browse/JDK-8364230) |
+| JDK-8362898 | Remove finalize() methods from javax.imageio TIFF classes | [JBS](https://bugs.openjdk.org/browse/JDK-8362898) |
+| JDK-8210765 | Remove finalize method in CStrike.java | [JBS](https://bugs.openjdk.org/browse/JDK-8210765) |
+| JDK-8363889 | Update sun.print.PrintJob2D to use Disposer | [JBS](https://bugs.openjdk.org/browse/JDK-8363889) |
+| JDK-8362289 | [macOS] Remove finalize method in JRSUIControls.java | [JBS](https://bugs.openjdk.org/browse/JDK-8362289) |
+| JDK-8362452 | [macOS] Remove CPrinterJob.finalize() | [JBS](https://bugs.openjdk.org/browse/JDK-8362452) |
+| JDK-8362557 | [macOS] Remove CFont.finalize() | [JBS](https://bugs.openjdk.org/browse/JDK-8362557) |
+| JDK-8362291 | [macOS] Remove finalize method in CGraphicsEnvironment.java | [JBS](https://bugs.openjdk.org/browse/JDK-8362291) |
+| JDK-8362659 | Remove sun.print.PrintJob2D.finalize() | [JBS](https://bugs.openjdk.org/browse/JDK-8362659) |
+| JDK-8360147 | Better Glyph drawing redux | [JBS](https://bugs.openjdk.org/browse/JDK-8360147) |
+| JDK-8355884 | [macos] java/awt/Frame/I18NTitle.java fails on MacOS | [JBS](https://bugs.openjdk.org/browse/JDK-8355884) |
+| JDK-8348989 | Better Glyph drawing | [JBS](https://bugs.openjdk.org/browse/JDK-8348989) |
+| JDK-8359053 | Implement JEP 504 - Remove the Applet API | [JBS](https://bugs.openjdk.org/browse/JDK-8359053) |
+| JDK-8358526 | Clarify behavior of java.awt.HeadlessException constructed with no-args | [JBS](https://bugs.openjdk.org/browse/JDK-8358526) |
+| JDK-8358731 | Remove jdk.internal.access.JavaAWTAccess.java | [JBS](https://bugs.openjdk.org/browse/JDK-8358731) |
+| JDK-8357672 | Extreme font sizes can cause font substitution | [JBS](https://bugs.openjdk.org/browse/JDK-8357672) |
+| JDK-8356049 | Need a simple way to play back a sound clip | [JBS](https://bugs.openjdk.org/browse/JDK-8356049) |
+| JDK-8357176 | java.awt javadoc code examples still use Applet API | [JBS](https://bugs.openjdk.org/browse/JDK-8357176) |
+| JDK-8346683 | Problem list automated tests that fail on macOS15 | [JBS](https://bugs.openjdk.org/browse/JDK-8346683) |
+| JDK-8356208 | Remove obsolete code in PSPrinterJob for plugin printing | [JBS](https://bugs.openjdk.org/browse/JDK-8356208) |
+| JDK-8355333 | Some Problem list entries point to non-existent / wrong files | [JBS](https://bugs.openjdk.org/browse/JDK-8355333) |
+| JDK-8355002 | Clean up some mentions of "applet" in tests | [JBS](https://bugs.openjdk.org/browse/JDK-8355002) |
+| JDK-8354552 | Open source a few Swing tests | [JBS](https://bugs.openjdk.org/browse/JDK-8354552) |
+| JDK-8354451 | Open source some more Swing popup menu tests | [JBS](https://bugs.openjdk.org/browse/JDK-8354451) |
+| JDK-8353589 | Open source a few Swing menu-related tests | [JBS](https://bugs.openjdk.org/browse/JDK-8353589) |
+| JDK-8353483 | Open source some JProgressBar tests | [JBS](https://bugs.openjdk.org/browse/JDK-8353483) |
+| JDK-8353304 | Open source two JTabbedPane tests | [JBS](https://bugs.openjdk.org/browse/JDK-8353304) |
+| JDK-8353475 | Open source two Swing DefaultCaret tests | [JBS](https://bugs.openjdk.org/browse/JDK-8353475) |
+| JDK-8352997 | Open source several Swing JTabbedPane tests | [JBS](https://bugs.openjdk.org/browse/JDK-8352997) |
+| JDK-8353320 | Open source more Swing text tests | [JBS](https://bugs.openjdk.org/browse/JDK-8353320) |
+| JDK-8353309 | Open source several Swing text tests | [JBS](https://bugs.openjdk.org/browse/JDK-8353309) |
+| JDK-8353324 | Clean up of comments and import after 8319192 | [JBS](https://bugs.openjdk.org/browse/JDK-8353324) |
+| JDK-8347321 | [ubsan] CGGlyphImages.m runtime error | [JBS](https://bugs.openjdk.org/browse/JDK-8347321) |
+| JDK-8319192 | Remove javax.swing.plaf.synth.SynthLookAndFeel.load(URL url) | [JBS](https://bugs.openjdk.org/browse/JDK-8319192) |
+| JDK-8344146 | Remove temporary font file tracking code | [JBS](https://bugs.openjdk.org/browse/JDK-8344146) |
+| JDK-8346829 | Problem list com/sun/jdi/ReattachStressTest.java & ProcessAttachTest.java on Linux | [JBS](https://bugs.openjdk.org/browse/JDK-8346829) |
 
 ## 6. Key Contributions
 
@@ -337,3 +337,10 @@ public BufferedImage filter(BufferedImage src, BufferedImage dest) {
 > **文档版本**: 2.0
 > **最后更新**: 2026-03-20
 > **更新内容**: 补充职位（Client Libraries Lead、CMTS）、OpenJDK Governing Board 成员、FOSDEM 演讲、2D 图形行业背景
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 1219 |
+| **活跃仓库数** | 5 |

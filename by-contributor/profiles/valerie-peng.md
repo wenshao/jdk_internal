@@ -82,3 +82,11 @@ Valerie Peng 负责 Java 加密服务：
 - [GitHub: valeriepeng](https://github.com/valeriepeng)
 - [Inside.java Profile](https://inside.java/u/ValeriePeng/)
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 206 |
+| **活跃仓库数** | 1 |

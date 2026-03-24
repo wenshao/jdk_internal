@@ -8,7 +8,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Yi Yang (杨易) |
-| **当前组织** | [阿里巴巴 (Alibaba) - 云基础设施部](/contributors/orgs/alibaba.md) |
+| **当前组织** | [阿里巴巴 (Alibaba) - 云基础设施部](../../contributors/orgs/alibaba.md) |
 | **GitHub** | [@y1yang0](https://github.com/y1yang0) (2.3k followers) |
 | **OpenJDK** | Committer (yyang) — [CFV 2021-05](https://mail.openjdk.org/pipermail/jdk-dev/2021-May/) |
 | **PRs** | [57 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ay1yang0+is%3Aclosed+label%3Aintegrated) |
@@ -40,23 +40,23 @@
 
 | PR | Bug ID | 标题 | 类型 | 分析 |
 |----|--------|------|------|------|
-| [#13667](https://github.com/openjdk/jdk/pull/13667) | 8306441 | Two phase segmented heap dump | **核心功能** | [详情](/by-pr/8306/8306441.md) |
-| [#15245](https://github.com/openjdk/jdk/pull/15245) | 8314021 | Optimize segmented heap file merging | 性能优化 | [详情](/by-pr/8314/8314021.md) |
-| [#6096](https://github.com/openjdk/jdk/pull/6096) | 8273585 | String.charAt performance degrades | **回归修复** | [详情](/by-pr/8273/8273585.md) |
-| [#12680](https://github.com/openjdk/jdk/pull/12680) | 8143900 | OptimizeStringConcat opaque dependency | C2 优化 | [详情](/by-pr/8143/8143900.md) |
-| [#7105](https://github.com/openjdk/jdk/pull/7105) | 8275775 | Add jcmd VM.classes | 功能增强 | [详情](/by-pr/8275/8275775.md) |
-| [#7760](https://github.com/openjdk/jdk/pull/7760) | 8282883 | Use JVM_LEAF to avoid ThreadStateTransition | 性能优化 | [详情](/by-pr/8282/8282883.md) |
+| [#13667](https://github.com/openjdk/jdk/pull/13667) | 8306441 | Two phase segmented heap dump | **核心功能** | [详情](../../by-pr/8306/8306441.md) |
+| [#15245](https://github.com/openjdk/jdk/pull/15245) | 8314021 | Optimize segmented heap file merging | 性能优化 | [详情](../../by-pr/8314/8314021.md) |
+| [#6096](https://github.com/openjdk/jdk/pull/6096) | 8273585 | String.charAt performance degrades | **回归修复** | [详情](../../by-pr/8273/8273585.md) |
+| [#12680](https://github.com/openjdk/jdk/pull/12680) | 8143900 | OptimizeStringConcat opaque dependency | C2 优化 | [详情](../../by-pr/8143/8143900.md) |
+| [#7105](https://github.com/openjdk/jdk/pull/7105) | 8275775 | Add jcmd VM.classes | 功能增强 | [详情](../../by-pr/8275/8275775.md) |
+| [#7760](https://github.com/openjdk/jdk/pull/7760) | 8282883 | Use JVM_LEAF to avoid ThreadStateTransition | 性能优化 | [详情](../../by-pr/8282/8282883.md) |
 
 ### C2 编译器优化
 
 | PR | Bug ID | 标题 | 分析 |
 |----|--------|------|------|
-| [#5266](https://github.com/openjdk/jdk/pull/5266) | 8273021 | Improve Add and Xor ideal optimizations | [详情](/by-pr/8273/8273021.md) |
-| [#4920](https://github.com/openjdk/jdk/pull/4920) | 8271203 | assert failed in subtype check | [详情](/by-pr/8271/8271203.md) |
-| [#5705](https://github.com/openjdk/jdk/pull/5705) | 8274328 | Redundant CFG edges fixup | [详情](/by-pr/8274/8274328.md) |
-| [#9695](https://github.com/openjdk/jdk/pull/9695) | 8290432 | assert(node->_last_del == _last) | [详情](/by-pr/8290/8290432.md) |
-| [#9777](https://github.com/openjdk/jdk/pull/9777) | 8288204 | GVN Crash: correct memory chain | [详情](/by-pr/8288/8288204.md) |
-| [#7770](https://github.com/openjdk/jdk/pull/7770) | 8272493 | Suboptimal code around Preconditions.checkIndex | [详情](/by-pr/8272/8272493.md) |
+| [#5266](https://github.com/openjdk/jdk/pull/5266) | 8273021 | Improve Add and Xor ideal optimizations | [详情](../../by-pr/8273/8273021.md) |
+| [#4920](https://github.com/openjdk/jdk/pull/4920) | 8271203 | assert failed in subtype check | [详情](../../by-pr/8271/8271203.md) |
+| [#5705](https://github.com/openjdk/jdk/pull/5705) | 8274328 | Redundant CFG edges fixup | [详情](../../by-pr/8274/8274328.md) |
+| [#9695](https://github.com/openjdk/jdk/pull/9695) | 8290432 | assert(node->_last_del == _last) | [详情](../../by-pr/8290/8290432.md) |
+| [#9777](https://github.com/openjdk/jdk/pull/9777) | 8288204 | GVN Crash: correct memory chain | [详情](../../by-pr/8288/8288204.md) |
+| [#7770](https://github.com/openjdk/jdk/pull/7770) | 8272493 | Suboptimal code around Preconditions.checkIndex | [详情](../../by-pr/8272/8272493.md) |
 
 ### C1 编译器优化
 
@@ -99,3 +99,11 @@
 
 > **文档等级**: L2
 > **创建时间**: 2026-03-23
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 44 |
+| **活跃仓库数** | 1 |

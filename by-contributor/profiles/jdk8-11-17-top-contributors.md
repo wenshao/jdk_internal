@@ -100,7 +100,7 @@
 - [JDK 26 Top Contributors](jdk26-top-contributors.md) - Latest version
 - [JDK 25 Top Contributors](jdk25-top-contributors.md)
 - [JDK 21 Top Contributors](jdk21-top-contributors.md)
-- [By Organization](/contributors/stats/by-org.md)
+- [By Organization](../../contributors/stats/by-org.md)
 - [OpenJDK Census](https://openjdk.org/census)
 
 **Last Updated**: 2026-03-21

@@ -1,6 +1,6 @@
 # Dan Smith
 
-> **Organization**: [Oracle](/contributors/orgs/oracle.md) (Java Platform Group)
+> **Organization**: [Oracle](../../contributors/orgs/oracle.md) (Java Platform Group)
 > **Role**: Senior Developer, Programming Language Designer
 > **Inside.java**: [DanSmith](https://inside.java/u/DanSmith/)
 > **OpenJDK Wiki**: [dlsmith](https://wiki.openjdk.org/display/~dlsmith)
@@ -33,7 +33,7 @@ Dan Smith 同时也是 **Java Language Specification (JLS)** 和 **JVM Specifica
 |------|-----|
 | **姓名** | Dan Smith (Daniel Smith) |
 | **OpenJDK 用户名** | dlsmith |
-| **当前组织** | [Oracle](/contributors/orgs/oracle.md) (Java Platform Group) |
+| **当前组织** | [Oracle](../../contributors/orgs/oracle.md) (Java Platform Group) |
 | **职位** | Senior Developer, Programming Language Designer |
 | **专长领域** | 语言设计, JLS/JVMS 规范, Project Valhalla, 类型推断, javac 编译器 |
 | **个人网站** | [dlsmith.dev](https://dlsmith.dev/) |

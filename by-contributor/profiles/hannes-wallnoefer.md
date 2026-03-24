@@ -149,7 +149,7 @@ Hannes 进行了多次大规模的文档标签修复工作：
 
 ### 相关贡献者
 
-- [Jim Laskey](/by-contributor/profiles/jim-laskey.md) - Nashorn 项目负责人，String Templates 作者
+- [Jim Laskey](jim-laskey.md) - Nashorn 项目负责人，String Templates 作者
 
 ### 相关主题
 
@@ -170,3 +170,11 @@ Hannes 进行了多次大规模的文档标签修复工作：
 > - GitHub API (`gh api users/hns`)
 > - GitHub PR 数据 (`gh pr list --repo openjdk/jdk --search "author:hns"`)
 > - OpenJDK JEP 数据库
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 195 |
+| **活跃仓库数** | 3 |

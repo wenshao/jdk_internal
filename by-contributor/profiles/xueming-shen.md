@@ -135,11 +135,11 @@ Xueming 是 JDK 字符集编解码子系统的核心维护者：
 
 | 协作者 | 合作领域 |
 |--------|----------|
-| [Martin Buchholz](/by-contributor/profiles/martin-buchholz.md) | Core Libraries, 集合框架 |
-| [Stuart Marks](/by-contributor/profiles/stuart-marks.md) | Core Libraries API |
-| [Roger Riggs](/by-contributor/profiles/roger-riggs.md) | Core Libraries |
-| [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | Compact Strings 性能分析 |
-| [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | String 性能优化 |
+| [Martin Buchholz](martin-buchholz.md) | Core Libraries, 集合框架 |
+| [Stuart Marks](stuart-marks.md) | Core Libraries API |
+| [Roger Riggs](roger-riggs.md) | Core Libraries |
+| [Aleksey Shipilev](aleksey-shipilev.md) | Compact Strings 性能分析 |
+| [Claes Redestad](claes-redestad.md) | String 性能优化 |
 | Naoto Sato | i18n, Unicode, Charset |
 
 ---

@@ -164,3 +164,11 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Agnu-andrew+is%3Aclosed+label%3Aintegrated)
 - [IcedTea Project](https://icedtea.classpath.org/)
 - [Red Hat OpenJDK](https://github.com/rh-openjdk)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 320 |
+| **活跃仓库数** | 6 |

@@ -272,8 +272,8 @@ Volkan Yazıcı 与其他核心开发者紧密合作：
 
 | 协作者 | 合作领域 |
 |--------|----------|
-| [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | HttpClient API 改进 |
-| [Jaikiran Pai](/by-contributor/profiles/jaikiran-pai.md) | 网络栈 Bug 修复 |
+| [Daniel Fuchs](daniel-fuchs.md) | HttpClient API 改进 |
+| [Jaikiran Pai](jaikiran-pai.md) | 网络栈 Bug 修复 |
 | Michael McMahon | HttpClient 设计审查 |
 
 ---
@@ -313,3 +313,17 @@ Volkan's tests typically include:
 - Negative test cases for error conditions
 - Edge cases (empty input, large input, concurrent access)
 - JMH benchmarks for performance-critical code
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2025-05-15 | Committer | Jaikiran Pai | 16 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2025-May/010083.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 148 |
+| **活跃仓库数** | 1 |

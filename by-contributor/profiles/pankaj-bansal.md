@@ -64,3 +64,17 @@ Pankaj Bansal 贡献于 JDK 构建系统：
 
 **Sources**:
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2020-03-16 | Reviewer | Sergey Bylokhov | 9 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2020-March/004058.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 130 |
+| **活跃仓库数** | 2 |

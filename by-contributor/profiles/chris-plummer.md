@@ -136,3 +136,11 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Plumme
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aplummercj+is%3Aclosed+label%3Aintegrated)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20cjplummer)
 - [OpenJDK Census](https://openjdk.org/census#plummercj)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 741 |
+| **活跃仓库数** | 4 |

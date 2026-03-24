@@ -148,11 +148,11 @@ Vladimir 是 HotSpot 中 Method Handles 和 Invokedynamic 实现的核心维护�
 
 | 协作者 | 合作领域 |
 |--------|----------|
-| [Doug Simon](/by-contributor/profiles/doug-simon.md) | JVMCI / Graal 编译器集成 |
-| [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | C2 编译器 / JIT 优化 |
-| [John Rose](/by-contributor/profiles/john-rose.md) | Method Handles / Invokedynamic 架构设计 |
-| [Tobias Hartmann](/by-contributor/profiles/tobias-hartmann.md) | HotSpot 编译器 |
-| [Igor Veresov](/by-contributor/profiles/igor-veresov.md) | JVMCI / Graal |
+| [Doug Simon](doug-simon.md) | JVMCI / Graal 编译器集成 |
+| [Vladimir Kozlov](vladimir-kozlov.md) | C2 编译器 / JIT 优化 |
+| [John Rose](john-rose.md) | Method Handles / Invokedynamic 架构设计 |
+| [Tobias Hartmann](tobias-hartmann.md) | HotSpot 编译器 |
+| [Igor Veresov](igor-veresov.md) | JVMCI / Graal |
 
 ---
 
@@ -184,3 +184,11 @@ Vladimir 是 HotSpot 中 Method Handles 和 Invokedynamic 实现的核心维护�
 - [OpenJDK Wiki - Method handles and invokedynamic](https://wiki.openjdk.org/display/HotSpot/Method+handles+and+invokedynamic)
 - [Invokedynamic: Deep Dive (PDF)](https://cr.openjdk.org/~vlivanov/talks/2015-Indy_Deep_Dive.pdf)
 - [JVM JIT-compiler overview (PDF)](https://cr.openjdk.org/~vlivanov/talks/2015_JIT_Overview.pdf)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 394 |
+| **活跃仓库数** | 6 |

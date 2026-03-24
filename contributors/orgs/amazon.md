@@ -2,7 +2,7 @@
 
 > Corretto 团队，Shenandoah GC 和 AArch64 优化
 
-[← 返回组织索引](../../by-contributor/README.md)
+[← 返回组织索引](README.md)
 
 ---
 
@@ -71,13 +71,17 @@ Amazon 通过 Corretto 团队参与 OpenJDK 开发，专注于 Shenandoah GC、A
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 1,048+ |
+| **主线 Integrated PRs** | 1,048+ |
+| **LTS 维护 PRs** | **566+** (主要来自 shipilev) |
+| **Shenandoah 项目 PRs** | **482** (占 Shenandoah 仓库的 99%) |
+| **Leyden 项目 PRs** | **41+** (占 Leyden 仓库的 52%) |
+| **总计 PRs** | **2,137+** |
 | **贡献者数** | 7 |
 | **活跃时间** | 2020 - 至今 |
-| **主要领域** | Shenandoah GC, C2 编译器, AArch64, Runtime, 安全 |
+| **主要领域** | **Shenandoah GC 项目主导**, **Leyden 项目主导**, C2, AArch64, LTS 维护 |
 | **Corretto** | [Amazon Corretto](https://aws.amazon.com/corretto/) |
 
-> **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。OpenJDK Committer 使用 `@openjdk.org` 邮箱提交代码，因此 git commits 按邮箱统计不准确。
+> **统计说明**: 主线使用 GitHub Integrated PRs 统计。LTS 维护数据来自 jdk17u-dev (239), jdk21u-dev (149), jdk11u-dev (157), jdk25u-dev (21) — 主要贡献者为 [shipilev](../../by-contributor/profiles/aleksey-shipilev.md)。统计时间: 2026-03-24。
 
 ---
 
@@ -418,6 +422,35 @@ Amazon 维护自己的 JDK 发行版 Corretto：
 ### ~~AArch64 (Nick Gasson)~~ -- 已修正: Nick Gasson 属于 Arm
 
 > **注**: Nick Gasson 已确认为 **Arm** 员工，不属于 Amazon。
+
+---
+
+
+
+## 审查者网络
+
+> Amazon 的 PR 被以下审查者审查最多 (共 3,865 次审查)
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| shipilev | Amazon | 415 |
+| kdnilsen | Amazon | 313 |
+| ysramakrishna | — | 261 |
+| vnkozlov | Oracle | 224 |
+| earthling-amzn | Amazon | 207 |
+| phohensee | Oracle | 202 |
+| rkennke | Red Hat | 141 |
+| dholmes-ora | Oracle | 124 |
+
+### 审查组织分布
+
+| 审查者组织 | 次数 | 占比 |
+|-----------|------|------|
+| Oracle | 1807 | 47% |
+| Amazon | 1137 | 29% |
+| Red Hat | 345 | 9% |
+| SAP | 87 | 2% |
+| IBM | 38 | 1% |
 
 ---
 

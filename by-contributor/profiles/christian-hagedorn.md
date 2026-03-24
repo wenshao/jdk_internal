@@ -103,3 +103,9 @@ Christian Hagedorn 主导了 C2 编译器中 Assertion Predicates（前称 Skele
 
 > **文档版本**: 2.0
 > **最后更新**: 2026-03-22
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2020-07-03 | Reviewer | Tobias Hartmann | 20 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2020-July/004474.html) |

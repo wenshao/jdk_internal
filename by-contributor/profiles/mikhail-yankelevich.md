@@ -180,3 +180,17 @@ Mikhail Yankelevich 专注于 JDK 安全子系统的测试质量，特别是 PKC
 > - 基于 GitHub API 数据: 44 integrated PRs
 > - PKCS#11 和安全测试为最高频贡献领域
 > - P11Cipher BadPaddingException 修复为最具安全影响力的改进
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2025-08-19 | Committer | Rajan Halade | 18 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2025-August/010300.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 106 |
+| **活跃仓库数** | 1 |

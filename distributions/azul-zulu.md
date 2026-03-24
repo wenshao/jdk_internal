@@ -137,7 +137,28 @@ apt install zulu-21-jdk
 
 ---
 
-## 6. 相关链接
+## 6. 上游维护团队
+
+Azul 的上游贡献主要集中在 **CRaC (Coordinated Restore at Checkpoint)** 实验性项目，主线直接贡献较少。
+
+| 维度 | PRs | 说明 |
+|------|-----|------|
+| **CRaC 项目** | **251** (81%) | Azul 主导的检查点恢复项目 |
+| **主线** | 18 | Anton Kozlov (CRaC Runtime) |
+| **LTS 维护** | 4 | jdk17u/11u 少量 |
+| **总计** | **273** | |
+
+核心贡献者:
+- **TimPushkin** — 75 CRaC PRs
+- **[AntonKozlov](../by-contributor/profiles/anton-kozlov.md)** — 18 主线 PRs + CRaC 核心
+- **rvansa** — 63 CRaC PRs
+- **jankratochvil** — 36 CRaC PRs
+
+> 详情: [Azul 组织页面](../contributors/orgs/azul.md)
+
+---
+
+## 7. 相关链接
 
 ### 官方资源
 

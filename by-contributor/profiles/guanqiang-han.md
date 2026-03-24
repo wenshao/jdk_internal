@@ -8,7 +8,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Guanqiang Han |
-| **当前组织** | [Independent](/contributors/orgs/independent.md) |
+| **当前组织** | [Independent](../../contributors/orgs/independent.md) |
 | **GitHub** | [@hgqxjj](https://github.com/hgqxjj) |
 | **PRs** | [25 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ahgqxjj+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | arch/x86 |
@@ -19,3 +19,11 @@
 
 > **文档等级**: L1
 > **创建时间**: 2026-03-24
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 21 |
+| **活跃仓库数** | 1 |

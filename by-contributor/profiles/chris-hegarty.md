@@ -141,3 +141,11 @@ Chris Hegarty 在 Java 社区的影响力：
 > - 添加 Panama Vector API / Apache Lucene 集成贡献
 > - 添加 Elasticsearch Labs 作者页链接
 > - 修正 Organization 描述
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 175 |
+| **活跃仓库数** | 6 |

@@ -146,3 +146,11 @@ Stuart Marks 是 Java 集合框架的维护者：
 - [JEP 431: Sequenced Collections](https://openjdk.org/jeps/431)
 - [JEP 269: Convenience Factory Methods for Collections](https://openjdk.org/jeps/269)
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 151 |
+| **活跃仓库数** | 1 |

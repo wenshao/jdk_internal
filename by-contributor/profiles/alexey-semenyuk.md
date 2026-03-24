@@ -134,3 +134,18 @@
 > **文档版本**: 2.0
 > **最后更新**: 2026-03-21
 > **更新内容**: 添加 JDK 26 PRs、jpackage 重构详情
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2020-03-18 | Committer | Philip Race | 14 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2020-March/004092.html) |
+| 2021-02-24 | Reviewer | Philip Race | 15 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-February/005102.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 215 |
+| **活跃仓库数** | 3 |

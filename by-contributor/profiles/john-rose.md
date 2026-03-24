@@ -62,7 +62,7 @@ John Rose (OpenJDK 用户名：**jrose**) 是 Oracle 的 **JVM 高级架构师 (
 | **角色** | Author |
 | **状态** | Closed / Delivered |
 | **发布版本** | JDK 8 |
-| **文档** | [JEP 160](/jeps/language/jep-160.md) |
+| **文档** | [JEP 160](../../jeps/language/jep-160.md) |
 
 **影响**: 创建了名为 "lambda form" 的新中间表示，用于 method handles：
 - 可直接执行
@@ -77,7 +77,7 @@ John Rose (OpenJDK 用户名：**jrose**) 是 Oracle 的 **JVM 高级架构师 (
 | **角色** | Author |
 | **状态** | Closed / Delivered |
 | **发布版本** | JDK 11 |
-| **文档** | [JEP 309](/jeps/language/jep-309.md) |
+| **文档** | [JEP 309](../../jeps/language/jep-309.md) |
 
 **影响**: 扩展类文件常量池，支持运行时解析，提高引导性能。
 
@@ -88,7 +88,7 @@ John Rose (OpenJDK 用户名：**jrose**) 是 Oracle 的 **JVM 高级架构师 (
 | **角色** | Author |
 | **状态** | Closed / Delivered |
 | **发布版本** | JDK 25 |
-| **文档** | [JEP 514](/jeps/performance/jep-514.md) |
+| **文档** | [JEP 514](../../jeps/performance/jep-514.md) |
 
 **影响**: 改进 AOT 编译的命令行体验，启动时间提升 30-40%。
 
@@ -317,9 +317,9 @@ John Rose (jrose)
 - [X (Twitter): @JohnRose00](https://x.com/JohnRose00)
 
 ### JEP 文档
-- [JEP 160: Lambda-Form Representation](/jeps/language/jep-160.md)
-- [JEP 309: Dynamic Class-File Constants](/jeps/language/jep-309.md)
-- [JEP 514: AOT Command-Line Ergonomics](/jeps/performance/jep-514.md)
+- [JEP 160: Lambda-Form Representation](../../jeps/language/jep-160.md)
+- [JEP 309: Dynamic Class-File Constants](../../jeps/language/jep-309.md)
+- [JEP 514: AOT Command-Line Ergonomics](../../jeps/performance/jep-514.md)
 - [JEP 515: Ahead-of-Time Method Profiling](https://openjdk.org/jeps/515)
 
 ### 技术文档
@@ -341,9 +341,9 @@ John Rose (jrose)
 - [OpenJDK Census: jrose](https://openjdk.org/census#jrose)
 - [GitHub: rose00](https://github.com/rose00)
 - [Oracle Blog: jrose](https://blogs.oracle.com/jrose/)
-- [JEP 160](/jeps/language/jep-160.md)
-- [JEP 309](/jeps/language/jep-309.md)
-- [JEP 514](/jeps/performance/jep-514.md)
+- [JEP 160](../../jeps/language/jep-160.md)
+- [JEP 309](../../jeps/language/jep-309.md)
+- [JEP 514](../../jeps/performance/jep-514.md)
 - [JEP 515](https://openjdk.org/jeps/515)
 - [ACM Paper - invokedynamic](https://dl.acm.org/doi/10.1145/1711506.1711508)
 - [OpenJDK Wiki - Method handles and invokedynamic](https://wiki.openjdk.org/spaces/HotSpot/pages/11829269/Method+handles+and+invokedynamic)

@@ -1,39 +1,42 @@
-# 新星贡献者 (2025-2026)
+# 新星贡献者 (Rising Stars)
 
-> 2025 年以来首次贡献且有 3+ PRs 的新贡献者
+> 2025-2026 年活跃度最高的贡献者
 
 ---
 
-## Rising Stars
+| 排名 | 贡献者 | 组织 | 2025-26 PRs | 总 PRs | 仓库数 |
+|------|--------|------|------------|--------|--------|
+| 1 | GoeLin | SAP | 1572 | 3927 | 7 |
+| 2 | grfrost | Oracle | 299 | 428 | 1 |
+| 3 | sendaoYan | Alibaba | 276 | 501 | 10 |
+| 4 | MBaesken | SAP | 272 | 1085 | 8 |
+| 5 | shipilev | Amazon | 247 | 1471 | 14 |
+| 6 | satyenme | Amazon | 237 | 252 | 8 |
+| 7 | rm-gh-8 | Amazon | 177 | 177 | 4 |
+| 8 | tschatzl | Oracle | 157 | 532 | 5 |
+| 9 | earthling-amzn | Amazon | 155 | 702 | 10 |
+| 10 | liach | Oracle | 153 | 282 | 5 |
+| 11 | albertnetymk | Oracle | 144 | 706 | 1 |
+| 12 | iklam | Oracle | 133 | 424 | 3 |
+| 13 | mrserb | Oracle | 128 | 559 | 8 |
+| 14 | prrace | Oracle | 127 | 320 | 2 |
+| 15 | alexeysemenyukoracle | Oracle | 127 | 220 | 2 |
+| 16 | TobiHartmann | Oracle | 110 | 500 | 5 |
+| 17 | coleenp | Oracle | 107 | 463 | 5 |
+| 18 | vicente-romero-oracle | Oracle | 104 | 380 | 3 |
+| 19 | jaikiran | Oracle | 95 | 302 | 3 |
+| 20 | MrSimms | Oracle | 93 | 324 | 1 |
+| 21 | PaulSandoz | Oracle | 88 | 176 | 4 |
+| 22 | jjfumero | Oracle | 88 | 89 | 1 |
+| 23 | prsadhuk | Oracle | 82 | 417 | 3 |
+| 24 | kimbarrett | Oracle | 81 | 327 | 1 |
+| 25 | dholmes-ora | Oracle | 80 | 300 | 5 |
+| 26 | magicus | Oracle | 79 | 337 | 3 |
+| 27 | egahlin | Oracle | 79 | 302 | 1 |
+| 28 | marc-chevalier | Oracle | 79 | 79 | 2 |
+| 29 | bplb | Oracle | 78 | 341 | 1 |
+| 30 | TimPushkin | Azul | 76 | 84 | 5 |
 
-| 排名 | 贡献者 | PRs | 组织 | 首次贡献 | 主要领域 |
-|------|--------|-----|------|----------|----------|
-| 1 | fandreuz | 54 | [Amazon](../orgs/amazon.md) | 2025-07-18 | build |
-| 2 | [mhaessig](../../by-contributor/profiles/martin-haessig.md) | 52 | [Oracle](../orgs/oracle.md) | 2025-03-06 | compiler/c2 |
-| 3 | [marc-chevalier](../../by-contributor/profiles/marc-chevalier.md) | 42 | [Oracle](../orgs/oracle.md) | 2025-02-14 | compiler/c2 |
-| 4 | [myankelev](../../by-contributor/profiles/mikhail-yankelevich.md) | 41 | [Oracle](../orgs/oracle.md) | 2025-01-07 | core-libs/java.net |
-| 5 | [dbriemann](../../by-contributor/profiles/david-briemann.md) | 26 | [SAP](../orgs/sap.md) | 2025-02-18 | arch/ppc |
-| 6 | [toxaart](../../by-contributor/profiles/anton-artemov.md) | 26 | [Oracle](../orgs/oracle.md) | 2025-04-15 | hotspot |
-| 7 | [benoitmaillard](../../by-contributor/profiles/benoit-maillard.md) | 26 | [Oracle](../orgs/oracle.md) | 2025-06-05 | compiler/c2 |
-| 8 | [david-beaumont](../../by-contributor/profiles/david-beaumont.md) | 25 | [Oracle](../orgs/oracle.md) | 2025-02-06 | test |
-| 9 | [hgqxjj](../../by-contributor/profiles/guanqiang-han.md) | 25 | [Independent](../orgs/independent.md) | 2025-07-03 | arch/x86 |
-| 10 | [Anjian-Wen](../../by-contributor/profiles/anjian-wen.md) | 24 | [ByteDance](../orgs/bytedance.md) | 2025-02-07 | arch/riscv |
-| 11 | koushikthirupattur | 22 | [Oracle](../orgs/oracle.md) | 2025-01-10 | core-libs/java.net |
-| 12 | Arraying | 18 |  | 2025-08-12 | client |
-| 13 | krk | 18 |  | 2025-09-01 | compiler/c2 |
-| 14 | sarannat | 16 |  | 2025-03-06 | compiler/c2 |
-| 15 | missa-prime | 15 |  | 2025-02-06 | arch/x86 |
-| 16 | rgithubli | 12 |  | 2025-06-23 | gc/shenandoah |
-| 17 | erifan | 11 |  | 2025-04-16 | arch/aarch64 |
-| 18 | snake66 | 7 |  | 2025-03-06 | build |
-| 19 | smemery | 7 |  | 2025-07-13 | security |
-| 20 | Delawen | 7 |  | 2025-10-02 | runtime/cds |
-| 21 | linzihao1999 | 6 |  | 2025-03-22 | compiler/jvmci |
-| 22 | kieran-farrell | 6 |  | 2025-05-07 | core-libs |
-| 23 | dev-jonghoonpark | 6 |  | 2025-08-13 | test |
-| 24 | [j3graham](../../by-contributor/profiles/johannes-graham.md) | 5 |  | 2025-01-13 | core-libs/java.text |
-| 25 | xuemingshen-oracle | 5 |  | 2025-06-25 | core-libs/i18n |
+---
 
-共 39 位新星贡献者 (2025+, ≥3 PRs)
-
-> **数据来源**: by-pr/all-integrated-prs.csv
+> **统计时间**: 2026-03-24

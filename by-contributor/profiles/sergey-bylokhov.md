@@ -97,3 +97,11 @@ Sergey Bylokhov 是 AWT 的主要维护者：
 **Sources**:
 - [GitHub: mrserb](https://github.com/mrserb)
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 1082 |
+| **活跃仓库数** | 7 |

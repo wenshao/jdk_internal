@@ -171,3 +171,10 @@ Anjian-Wen 的贡献特点:
 
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=Anjian-Wen)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20Anjian-Wen)
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 18 |
+| **活跃仓库数** | 1 |

@@ -137,3 +137,11 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Langer
 - [OpenJDK Census](https://openjdk.org/census#clanger)
 - [FOSDEM 2020 Speaker Profile](https://archive.fosdem.org/2020/schedule/speaker/christoph_langer/)
 - [SapMachine](https://sapmachine.io/) - SAP's OpenJDK distribution
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 454 |
+| **活跃仓库数** | 5 |

@@ -74,3 +74,18 @@ Damon Nguyen 贡献于 Java 桌面功能：
 
 **Sources**:
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2023-04-03 | Committer | Roger Riggs | 15 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2023-April/007560.html) |
+| 2025-12-08 | Reviewer | Philip Race | 12 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2025-December/010663.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 263 |
+| **活跃仓库数** | 1 |

@@ -67,7 +67,31 @@ docker pull ccr.ccs.tencentyun.com/qcloud/tencentkona8:latest
 
 ---
 
-## 5. 相关链接
+## 5. 上游维护团队
+
+### 团队负责人
+
+**杨晓峰 (Yang Xiaofeng)** — 腾讯 JDK 团队技术领导，前 Oracle Java 核心工程师。
+
+### 维护分支贡献统计
+
+| 贡献者 | jdk17u | jdk21u | jdk11u | jdk8u | 总计 |
+|--------|--------|--------|--------|-------|------|
+| [DamonFool](https://github.com/DamonFool) (Jie Fu) | 5 | 0 | 20 | 0 | **25** |
+| johnshajiang | 1 | 1 | 2 | 1 | **5** |
+| **合计** | **6** | **1** | **22** | **1** | **30** |
+
+### 主线贡献
+
+Tencent 在 openjdk/jdk 主线有 **223+ PRs**，核心贡献者:
+- **[Jie Fu (傅杰)](https://github.com/DamonFool)** — 187 PRs, 编译器测试/修复, GC
+- **[John Jiang](https://github.com/johnshajiang)** — 30+ PRs, 安全/密码学
+
+> 详情: [Tencent 组织页面](../contributors/orgs/tencent.md)
+
+---
+
+## 6. 相关链接
 
 - [Tencent Kona GitHub](https://github.com/Tencent/TencentKona-8)
 

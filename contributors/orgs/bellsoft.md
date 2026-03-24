@@ -74,6 +74,35 @@ BellSoft 是 [Liberica JDK](https://bell-sw.com/libericajdk/) 的维护者，通
 
 ---
 
+
+
+## 审查者网络
+
+> BellSoft 的 PR 被以下审查者审查最多 (共 100 次审查)
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| phohensee | Oracle | 14 |
+| shipilev | Amazon | 13 |
+| vnkozlov | Oracle | 11 |
+| bulasevich | BellSoft | 10 |
+| theRealAph | Red Hat | 9 |
+| eastig | Amazon | 8 |
+| dean-long | Oracle | 6 |
+| adinn | IBM | 4 |
+
+### 审查组织分布
+
+| 审查者组织 | 次数 | 占比 |
+|-----------|------|------|
+| Oracle | 46 | 46% |
+| Amazon | 23 | 23% |
+| Red Hat | 10 | 10% |
+| BellSoft | 10 | 10% |
+| IBM | 4 | 4% |
+
+---
+
 ## 4. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:bulasevich type:pr label:integrated`

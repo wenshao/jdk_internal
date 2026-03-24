@@ -116,3 +116,11 @@ Anthony Scarpino 负责 Java 安全框架：
 **Sources**:
 - [JEP 524: PEM Encodings](https://openjdk.org/jeps/524)
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 119 |
+| **活跃仓库数** | 2 |

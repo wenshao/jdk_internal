@@ -85,3 +85,10 @@ Joel Sikström 是 **ZGC** 的核心贡献者：
 
 **Sources**:
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2024-09-24 | Committer | Stefan Karlsson | 15 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2024-September/009402.html) |
+| 2025-08-27 | Reviewer | Stefan Karlsson | 17 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2025-August/010345.html) |

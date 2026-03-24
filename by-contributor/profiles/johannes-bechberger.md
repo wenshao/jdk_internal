@@ -141,3 +141,17 @@ Johannes Bechberger 在其博客上分享关于：
 - [GitHub: parttimenerd](https://github.com/parttimenerd)
 - [SapMachine](https://sapmachine.io/)
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2023-05-15 | Committer | Langer, Christoph | 13 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2023-May/007780.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 29 |
+| **活跃仓库数** | 2 |

@@ -110,3 +110,11 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 - [GitHub Commits to openjdk/jdk](https://github.com/openjdk/jdk/commits?author=slowhog)
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aslowhog+is%3Aclosed+label%3Aintegrated)
 - [OpenJDK Census](https://openjdk.org/census#henryjen)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 42 |
+| **活跃仓库数** | 3 |

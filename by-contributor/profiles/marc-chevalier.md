@@ -23,7 +23,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Marc Chevalier |
-| **当前组织** | [Oracle](/contributors/orgs/oracle.md) |
+| **当前组织** | [Oracle](../../contributors/orgs/oracle.md) |
 | **职位** | Software Engineer (HotSpot JVM Compiler) |
 | **位置** | 苏黎世, 瑞士 |
 | **GitHub** | [@marc-chevalier](https://github.com/marc-chevalier) |
@@ -193,3 +193,17 @@ Marc Chevalier 于 2020 年在巴黎高等师范学院 (ENS Paris) 获得计算�
 > - 基于 GitHub API 数据: 45 integrated PRs
 > - C2 编译器和 IR Framework 为最高频贡献领域
 > - 内联优化随机化为最具创新性的改进
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2025-04-22 | Committer | Tobias Hartmann | 20 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2025-April/009978.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 84 |
+| **活跃仓库数** | 2 |

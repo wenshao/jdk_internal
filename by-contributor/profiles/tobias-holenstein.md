@@ -151,3 +151,18 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. IGV-re
 - [JDK Reviewer Vote Result](https://mail.openjdk.org/pipermail/jdk-dev/2023-June/007918.html)
 - [GitHub Commits to openjdk/jdk](https://github.com/openjdk/jdk/commits?author=tobiasholenstein)
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Atobiasholenstein+is%3Aclosed+label%3Aintegrated)
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2022-05-06 | Committer | Tobias Hartmann | 14 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2022-May/006550.html) |
+| 2023-05-26 | Reviewer | Tobias Hartmann | 17 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2023-May/007846.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 43 |
+| **活跃仓库数** | 1 |

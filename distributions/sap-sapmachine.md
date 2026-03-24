@@ -71,7 +71,34 @@ docker pull ghcr.io/sapmachine/sapmachine:21
 
 ---
 
-## 6. 相关链接
+## 6. 上游维护团队
+
+SAP 是 **OpenJDK LTS 维护分支最大的贡献组织**，在 jdk17u/21u/11u/25u 四个维护分支合计贡献 **5,187 个 Integrated PRs**。
+
+### 维护分支贡献统计
+
+| 贡献者 | 角色 | jdk17u | jdk21u | jdk11u | jdk25u | 总计 |
+|--------|------|--------|--------|--------|--------|------|
+| [GoeLin](../by-contributor/profiles/goetz-lindenmaier.md) | Lead Maintainer | 1,951 | 1,114 | 785 | 65 | **3,915** |
+| [MBaesken](../by-contributor/profiles/matthias-baesken.md) | Reviewer | 212 | 165 | 95 | 27 | **499** |
+| [TheRealMDoerr](../by-contributor/profiles/martin-doerr.md) | Committer | 187 | 89 | 149 | 4 | **429** |
+| [RealCLanger](../by-contributor/profiles/christoph-langer.md) | SapMachine Lead | 65 | 21 | 190 | 1 | **277** |
+| 其他 SAP | — | 31 | 17 | 11 | 8 | 67 |
+| **合计** | | **2,446** | **1,406** | **1,230** | **105** | **5,187** |
+
+> [GoeLin](../by-contributor/profiles/goetz-lindenmaier.md) (Götz Lindenmaier) 是 OpenJDK 历史上最大的 LTS 维护贡献者，一人贡献了 3,915 个 backport PR。
+
+### 主线上游贡献
+
+SAP 在 openjdk/jdk 主线也有 **999+ PRs**，主要领域: PPC 移植, AIX, 构建系统, HotSpot Runtime。
+
+SAP 在 JDK Mission Control (JMC) 项目中也有贡献 (RealCLanger 31 PRs)，但 JMC 主要由 Datadog 主导。
+
+> 详情: [SAP 组织页面](../contributors/orgs/sap.md)
+
+---
+
+## 7. 相关链接
 
 - [SAPMachine 官网](https://sap.github.io/SapMachine/)
 - [SAPMachine GitHub](https://github.com/SAP/SapMachine)

@@ -11,7 +11,7 @@
 | **GitHub** | [@sendaoYan](https://github.com/sendaoYan) |
 | **位置** | 上海 |
 | **职业** | Compiler Tester |
-| **曾任组织** | [Alibaba](/contributors/orgs/alibaba.md) (2022-2025) |
+| **曾任组织** | [Alibaba](../../contributors/orgs/alibaba.md) (2022-2025) |
 | **OpenJDK** | Committer (syan) |
 | **Integrated PRs** | [202](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AsendaoYan+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | 编译器测试, GC 测试, 构建修复, FFM 测试, 稳定性修复 |
@@ -87,3 +87,17 @@
 ---
 
 **最后更新**: 2026-03-22
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2024-09-03 | Committer | Yi Yang | 6 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2024-September/009380.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 239 |
+| **活跃仓库数** | 3 |

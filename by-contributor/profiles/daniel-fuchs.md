@@ -325,8 +325,8 @@ JEP 517 的主要协作者:
 
 | 主题 | 链接 |
 |------|------|
-| HTTP/3 实现原理 | [→](/by-version/jdk26/deep-dive/http3-implementation.md) |
-| JDK 26 JEP 汇总 | [→](/by-version/jdk26/jeps.md) |
+| HTTP/3 实现原理 | [→](../../by-version/jdk26/deep-dive/http3-implementation.md) |
+| JDK 26 JEP 汇总 | [→](../../by-version/jdk26/jeps.md) |
 
 ---
 
@@ -337,12 +337,19 @@ Daniel Fuchs 与其他核心开发者紧密合作：
 | 协作者 | 合作领域 |
 |--------|----------|
 | [Daniel Jeliński](https://github.com/djelinski) | JEP 517 HTTP/3、CUBIC 拥塞控制 |
-| [Volkan Yazici](/by-contributor/profiles/volkan-yazici.md) | HttpClient API 改进 |
-| [Jaikiran Pai](/by-contributor/profiles/jaikiran-pai.md) | 网络栈 Bug 修复 |
-| [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 提名其成为 OpenJDK Member |
+| [Volkan Yazici](volkan-yazici.md) | HttpClient API 改进 |
+| [Jaikiran Pai](jaikiran-pai.md) | 网络栈 Bug 修复 |
+| [Claes Redestad](claes-redestad.md) | 提名其成为 OpenJDK Member |
 
 ---
 
 > **文档版本**: 2.0
 > **最后更新**: 2026-03-22
 > **更新内容**: 修正 GitHub 用户名 (dfuch, 非 dfuchs)、添加 JDK 8 Reviewer (2013) 历史、添加 Inside.java Episode 16 (2021) podcast 链接、添加 Inside.java 作者页面链接
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 935 |
+| **活跃仓库数** | 2 |

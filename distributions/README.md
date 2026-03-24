@@ -86,6 +86,25 @@ OpenJDK 是 Java 的官方参考实现，各大厂商和组织基于 OpenJDK 构
 | **[Microsoft Build](microsoft-openjdk.md)** | Microsoft | ✅ (Azure) | GPLv2+CPEx | Azure/Windows 环境 |
 | **[Loongson](loongson-jdk.md)** | 龙芯 | ❌ | GPLv2+CPEx | 信创环境 (LoongArch) |
 
+### 上游 LTS 维护贡献
+
+各发行版组织对 OpenJDK LTS 维护分支 (jdk17u/21u/11u/25u/8u) 的 backport 贡献:
+
+| 组织 | 发行版 | jdk17u | jdk21u | jdk11u | jdk25u | jdk8u | 总计 |
+|------|--------|--------|--------|--------|--------|-------|------|
+| **[SAP](../contributors/orgs/sap.md)** | SapMachine | 2,446 | 1,406 | 1,230 | 105 | 0 | **5,187** |
+| **[Amazon](../contributors/orgs/amazon.md)** | Corretto | 297 | 187 | 188 | 28 | 13 | **713** |
+| **[Oracle](../contributors/orgs/oracle.md)** | Oracle JDK | 121 | 59 | 155 | 6 | 89 | **430** |
+| **[Alibaba](../contributors/orgs/alibaba.md)** | Dragonwell | 88 | 130 | 45 | 17 | 36 | **316** |
+| **[Red Hat](../contributors/orgs/redhat.md)** | Red Hat OpenJDK | 183 | 124 | 341 | 5 | 117 | **770** |
+| **[IBM](../contributors/orgs/ibm.md)** | Semeru | 32 | 17 | 9 | 0 | 1 | **59** |
+| **[Huawei](../contributors/orgs/huawei.md)** | BiSheng | 13 | 8 | 2 | 13 | 0 | **36** |
+| **[Tencent](../contributors/orgs/tencent.md)** | Kona | 6 | 1 | 22 | 0 | 1 | **30** |
+
+> **SAP 贡献了 LTS 维护的 74%**，其中 [GoeLin](../by-contributor/profiles/goetz-lindenmaier.md) 一人完成 3,915 个 backport PR。数据来源: 5 个维护分支仓库 CSV, 统计时间 2026-03-24。
+
+---
+
 ### 按特性分类
 
 #### 完全免费 (无商业限制)

@@ -542,3 +542,11 @@ Naoto Sato 是 International Unicode Conference (IUC) 的常驻演讲者：
 - [JDK-8265989 - native.encoding property](https://bugs.openjdk.org/browse/JDK-8265989)
 - [JDK-8222978 - Extended grapheme cluster support](https://bugs.openjdk.org/browse/JDK-8222978)
 - [ZoomInfo - Naoto Sato Profile](https://www.zoominfo.com/p/Naoto-Sato/186129467)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 779 |
+| **活跃仓库数** | 5 |

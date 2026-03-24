@@ -135,8 +135,8 @@ Aleksei 在 DNS 客户端和地址解析方面做出了多项改进：
 
 | 协作者 | 合作领域 |
 |--------|----------|
-| [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | JEP 517 HTTP/3 实现 |
-| [Daniel Jelinski](/by-contributor/profiles/daniel-jelinski.md) | HTTP/3 审查 |
+| [Daniel Fuchs](daniel-fuchs.md) | JEP 517 HTTP/3 实现 |
+| [Daniel Jelinski](daniel-jelinski.md) | HTTP/3 审查 |
 | Bradford Wetmore | 安全审查 |
 
 ---
@@ -157,3 +157,17 @@ Aleksei 在 DNS 客户端和地址解析方面做出了多项改进：
 > **文档版本**: 1.0
 > **最后更新**: 2026-03-22
 > **状态**: 初稿
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2022-11-11 | Reviewer | Daniel Fuchs | 23 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2022-November/007147.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 75 |
+| **活跃仓库数** | 1 |

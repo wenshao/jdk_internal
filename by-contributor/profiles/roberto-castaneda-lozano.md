@@ -23,7 +23,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Roberto Castañeda Lozano |
-| **当前组织** | [Oracle](/contributors/orgs/oracle.md) |
+| **当前组织** | [Oracle](../../contributors/orgs/oracle.md) |
 | **职位** | Software Engineer (HotSpot JVM Compiler) |
 | **位置** | 斯德哥尔摩, 瑞典 |
 | **GitHub** | [@robcasloz](https://github.com/robcasloz) |
@@ -214,3 +214,18 @@ Roberto Castañeda Lozano 在 C2 JIT 编译器与 GC 子系统的交叉领域具
 > - 基于 GitHub API 数据: 107 integrated PRs, 97 contributions
 > - C2 编译器和 IGV 为最高频贡献领域
 > - G1 Late Barrier Expansion 为最具影响力的架构改进
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2021-01-16 | Committer | Vladimir Kozlov | 19 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-January/005002.html) |
+| 2022-06-02 | Reviewer | Vladimir Kozlov | 19 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2022-June/006673.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 227 |
+| **活跃仓库数** | 2 |

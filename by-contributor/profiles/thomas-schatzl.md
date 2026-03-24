@@ -292,8 +292,8 @@ void write_ref_field_post(oop* field, oop new_val) {
 
 | 主题 | 链接 |
 |------|------|
-| G1 GC 吞吐量提升 | [→](/by-version/jdk26/deep-dive/g1-gc-throughput.md) |
-| JDK 26 JEP 汇总 | [→](/by-version/jdk26/jeps.md) |
+| G1 GC 吞吐量提升 | [→](../../by-version/jdk26/deep-dive/g1-gc-throughput.md) |
+| JDK 26 JEP 汇总 | [→](../../by-version/jdk26/jeps.md) |
 
 ### 2. 大对象急切回收 (JDK-8294178)
 
@@ -365,3 +365,10 @@ Thomas 的贡献特点:
 > - 添加教育背景: Johannes Kepler University
 > - 添加职业时间线
 > - 添加 JKU Staff Profile 链接
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 1405 |
+| **活跃仓库数** | 4 |

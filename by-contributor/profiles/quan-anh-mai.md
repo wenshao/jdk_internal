@@ -73,3 +73,11 @@ Quan Anh Mai 贡献于 HotSpot C2 编译器：
 **Sources**:
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
 - [CFV: New JDK Committer](https://mail.openjdk.org/pipermail/jdk-dev/2022-September/007010.html)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 209 |
+| **活跃仓库数** | 2 |

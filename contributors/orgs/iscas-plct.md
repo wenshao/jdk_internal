@@ -125,4 +125,4 @@ Glavo 是 PLCT 实验室成员 (GitHub @plctlab)，位于内蒙古。除了 Open
 - [2024 RISC-V China Summit](https://plctlab.org/zh/news/050/)
 - [OpenJDK RISC-V Port (JEP 422)](https://openjdk.org/jeps/422)
 
-[→ 返回组织索引](../../by-contributor/README.md)
+[→ 返回组织索引](README.md)

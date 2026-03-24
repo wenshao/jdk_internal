@@ -8,7 +8,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Chad Rakoczy |
-| **当前组织** | [Amazon - Corretto](/contributors/orgs/amazon.md) (Seattle, WA) |
+| **当前组织** | [Amazon - Corretto](../../contributors/orgs/amazon.md) (Seattle, WA) |
 | **GitHub** | [@chadrako](https://github.com/chadrako) |
 | **OpenJDK** | Committer (crakoczy) — [CFV 2026-02](https://mail.openjdk.org/pipermail/jdk-dev/2026-February/) |
 | **PRs** | [18 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Achadrako+is%3Aclosed+label%3Aintegrated) |

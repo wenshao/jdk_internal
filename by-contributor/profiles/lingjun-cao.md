@@ -20,7 +20,7 @@
 | **姓名** | Lingjun Cao (曹令军) |
 | **GitHub** | [@lingjun-cg](https://github.com/lingjun-cg) |
 | **邮箱** | lingjun.cg@alibaba-inc.com |
-| **当前组织** | [Alibaba](/contributors/orgs/alibaba.md) |
+| **当前组织** | [Alibaba](../../contributors/orgs/alibaba.md) |
 | **位置** | 杭州 |
 | **OpenJDK** | Author |
 | **PRs** | [2 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Alingjun-cg+is%3Aclosed+label%3Aintegrated) |

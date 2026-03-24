@@ -1,8 +1,8 @@
 # SAP
 
-> PPC 移植、AIX 平台和 HotSpot 调试支持的重要贡献者
+> PPC 移植、AIX 平台和 **OpenJDK LTS 维护最大贡献组织**
 
-[← 返回组织索引](../../by-contributor/README.md)
+[← 返回组织索引](README.md)
 
 ---
 
@@ -53,35 +53,54 @@
 
 ## 1. 概览
 
-SAP 是 OpenJDK 的长期贡献者，专注于 PowerPC (PPC) 移植、AIX 平台支持和 HotSpot 调试能力。
+SAP 是 OpenJDK 的长期贡献者，在**主线贡献**和 **LTS 维护**两个维度都有重要影响。SAP 团队在 LTS 维护分支 (jdk17u/21u/11u/25u/8u) 的贡献量位居所有组织之首。
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 700+ |
-| **贡献者数** | 5+ |
+| **主线 Integrated PRs** | 999+ |
+| **LTS 维护 PRs** | **5,264** |
+| **JMC 项目 PRs** | 34 (RealCLanger) |
+| **总计 PRs** | **6,297+** |
+| **贡献者数** | 9 |
 | **活跃时间** | 2010+ - 至今 |
-| **主要领域** | PPC 移植, AIX, HotSpot |
+| **主要领域** | **LTS 维护最大贡献组织**, PPC 移植, AIX, HotSpot |
 | **SapMachine** | [SAP SapMachine](https://sap.github.io/SapMachine/) |
+| **JMC 贡献** | RealCLanger (31 PRs) |
 
-> **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。OpenJDK Committer 使用 `@openjdk.org` 邮箱提交代码，因此 git commits 按邮箱统计不准确。
+> **统计说明**: 主线数据来自 `openjdk/jdk`，LTS 维护数据来自 `jdk17u-dev/jdk21u-dev/jdk11u-dev/jdk25u-dev/jdk8u-dev` 五个仓库。统计时间: 2026-03-24。
 
 ---
 
 ## 2. Top 贡献者
 
-| 排名 | 贡献者 | GitHub | PRs | 角色 | 领域 | 档案 |
-|------|--------|--------|-----|------|------|------|
-| 1 | Matthias Baesken | [@MBaesken](https://github.com/MBaesken) | 515 | Reviewer | 构建系统 | [详情](../../by-contributor/profiles/matthias-baesken.md) |
-| 2 | Martin Doerr | [@TheRealMDoerr](https://github.com/TheRealMDoerr) | 147 | Committer | PPC64/s390x, JIT 编译器 | [详情](../../by-contributor/profiles/martin-doerr.md) |
-| 3 | Christoph Langer | [@RealCLanger](https://github.com/RealCLanger) | 81 | Committer | 网络/AIX, SapMachine lead | [详情](../../by-contributor/profiles/christoph-langer.md) |
-| 4 | Richard Reingruber | [@reinrich](https://github.com/reinrich) | 76 | Reviewer | C2 编译器/PPC64 | [详情](../../by-contributor/profiles/richard-reingruber.md) |
-| 5 | Goetz Lindenmaier | [@GoeLin](https://github.com/GoeLin) | 6 | Reviewer | HotSpot Runtime | [详情](../../by-contributor/profiles/goetz-lindenmaier.md) |
-| 7 | David Briemann | — | 26 | Committer | PPC64 架构 | [详情](../../by-contributor/profiles/david-briemann.md) |
-| 8 | Lutz Schmidt | — | 17 | Committer | CodeCache/s390 (已退休) | [详情](../../by-contributor/profiles/lutz-schmidt.md) |
+### 主线 + LTS 维护综合统计
 
-**小计**: 851+ PRs
+| 排名 | 贡献者 | GitHub | 主线 PRs | LTS 维护 PRs | 总计 | 角色 | 档案 |
+|------|--------|--------|----------|-------------|------|------|------|
+| 1 | Goetz Lindenmaier | [@GoeLin](https://github.com/GoeLin) | 6 | **3,915** | **3,921** | Reviewer | [详情](../../by-contributor/profiles/goetz-lindenmaier.md) |
+| 2 | Matthias Baesken | [@MBaesken](https://github.com/MBaesken) | 492 | 499 | 991 | Reviewer | [详情](../../by-contributor/profiles/matthias-baesken.md) |
+| 3 | Martin Doerr | [@TheRealMDoerr](https://github.com/TheRealMDoerr) | 141 | 429 | 570 | Committer | [详情](../../by-contributor/profiles/martin-doerr.md) |
+| 4 | Christoph Langer | [@RealCLanger](https://github.com/RealCLanger) | 78 | 277 | 355 | Committer | [详情](../../by-contributor/profiles/christoph-langer.md) |
+| 5 | Richard Reingruber | [@reinrich](https://github.com/reinrich) | 72 | 30 | 102 | Reviewer | [详情](../../by-contributor/profiles/richard-reingruber.md) |
+| 6 | Thomas Stuefe | [@tstuefe](https://github.com/tstuefe) | 140 | 71 | 211 | Contributor | [详情](../../by-contributor/profiles/thomas-stuefe.md) |
+| 7 | Johannes Bechberger | [@parttimenerd](https://github.com/parttimenerd) | 28 | 27 | 55 | Contributor | — |
+| 8 | David Briemann | [@dbriemann](https://github.com/dbriemann) | 26 | 10 | 36 | Committer | [详情](../../by-contributor/profiles/david-briemann.md) |
+| 9 | Volker Simonis | [@simonis](https://github.com/simonis) | 16 | 6 | 22 | Contributor | — |
 
-> **修正**: Martin Haessig (@mhaessig, 57 PRs) 经核实实为 Manuel Hässig, **Oracle** 员工，已从列表移除。
+**总计**: 主线 999+ PRs + LTS 维护 5,264 PRs = **6,263 PRs**
+
+### LTS 维护分支分布
+
+| 贡献者 | jdk17u | jdk21u | jdk11u | jdk25u | jdk8u |
+|--------|--------|--------|--------|--------|-------|
+| [GoeLin](../../by-contributor/profiles/goetz-lindenmaier.md) | 1,951 | 1,114 | 785 | 65 | 0 |
+| [MBaesken](../../by-contributor/profiles/matthias-baesken.md) | 212 | 165 | 95 | 27 | 0 |
+| [TheRealMDoerr](../../by-contributor/profiles/martin-doerr.md) | 187 | 89 | 149 | 4 | 0 |
+| [RealCLanger](../../by-contributor/profiles/christoph-langer.md) | 65 | 21 | 190 | 1 | 0 |
+| 其他 | 78 | 23 | 29 | 8 | 6 |
+| **合计** | **2,493** | **1,412** | **1,248** | **105** | **6** |
+
+> **Goetz Lindenmaier** 一人承担了 SAP 维护贡献的 74%，是 OpenJDK 生态中最重要的 LTS 维护者。
 
 ---
 
@@ -131,12 +150,9 @@ SAP 主导 PowerPC 架构的 OpenJDK 移植：
 
 ## 5. 关键贡献
 
-### 构建系统 (Matthias Baesken)
+### 构建系统 (Matthias Baesken, 492 主线 PRs)
 
-| Issue | 标题 | 说明 |
-|-------|------|------|
-| — | 构建系统改进 | 跨平台支持; 具体 issue data pending |
-| — | Windows 构建修复 | 平台支持; 具体 issue data pending |
+代表性贡献: AIX 平台支持, 跨平台构建修复, clang 支持, Windows 构建改进。详见 [MBaesken 代表性 PR](#代表性-pr)。
 
 ### HotSpot Runtime (Goetz Lindenmaier)
 
@@ -168,27 +184,57 @@ SAP 维护自己的 JVM 发行版 SapMachine：
 
 ---
 
-## 7. 贡献时间线
+## 7. 贡献规模对比
 
-```
-2020: ████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 100 PRs
-2022: ████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 150 PRs
-2023: ████████████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 200 PRs
-2024: ███████████████████████████████████████░░░░░░░░░░░░░░░░░░░░░░░ 199 PRs
-2025: ██████████████████████████████████████████░░░░░░░░░░░░░░░░░░░░ 210 PRs
-2026: ████████████████████████████████████████████░░░░░░░░░░░░░░░░░░ 225 PRs
-```
+SAP 在 OpenJDK 生态中的角色独特——**主线创新 + LTS 维护**双轮驱动：
 
-> **注**: 2010-2018 年的贡献通过 Mercurial/邮件列表提交，无 GitHub PR 数据。
->
-> **总计**: 700+ GitHub PRs (2020-2026); pre-2020 data pending
+| 维度 | PRs | 说明 |
+|------|-----|------|
+| **主线 (openjdk/jdk)** | 999+ | PPC 移植, AIX, 构建系统, HotSpot |
+| **jdk17u-dev** | 2,493 | 最大 LTS 维护目标 |
+| **jdk21u-dev** | 1,412 | 当前 LTS |
+| **jdk11u-dev** | 1,248 | 历史 LTS |
+| **jdk25u-dev** | 105 | 新兴维护 |
+| **jdk8u-dev** | 6 | 少量 |
+
+> SAP 的 LTS 维护贡献 (5,264 PRs) 超过了 Red Hat (770) 和 Alibaba (559) 的总和。
+
+---
+
+
+
+## 审查者网络
+
+> SAP 的 PR 被以下审查者审查最多 (共 3,851 次审查)
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| TheRealMDoerr | SAP | 581 |
+| MBaesken | SAP | 476 |
+| RealLucy | — | 287 |
+| RealCLanger | SAP | 205 |
+| tstuefe | Red Hat | 197 |
+| dholmes-ora | Oracle | 176 |
+| reinrich | SAP | 160 |
+| phohensee | Oracle | 154 |
+
+### 审查组织分布
+
+| 审查者组织 | 次数 | 占比 |
+|-----------|------|------|
+| SAP | 1526 | 40% |
+| Oracle | 1261 | 33% |
+| Red Hat | 333 | 9% |
+| Amazon | 156 | 4% |
+| Datadog | 30 | 1% |
 
 ---
 
 ## 8. 数据来源
 
-- **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
-- **统计时间**: 2026-03-21
+- **主线**: GitHub PR search `repo:openjdk/jdk author:xxx label:integrated`
+- **LTS 维护**: CSV 数据 `jdk17u-dev/jdk21u-dev/jdk11u-dev/jdk25u-dev/jdk8u-dev`
+- **统计时间**: 2026-03-24
 
 ---
 
@@ -199,4 +245,4 @@ SAP 维护自己的 JVM 发行版 SapMachine：
 - [SapMachine Wiki](https://github.com/SAP/SapMachine/wiki)
 - [SAP OpenJDK](https://openjdk.org/groups/hotspot/)
 
-[→ 返回组织索引](../../by-contributor/README.md)
+[→ 返回组织索引](README.md)

@@ -58,3 +58,11 @@ Sergey Tsypanov 贡献于 Java 核心类库性能改进：
 **Sources**:
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
 - [GitHub: stsypanov](https://github.com/stsypanov)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 89 |
+| **活跃仓库数** | 2 |

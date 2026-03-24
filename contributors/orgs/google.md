@@ -2,7 +2,7 @@
 
 > OpenJDK 贡献者
 
-[← 返回组织索引](../../by-contributor/README.md)
+[← 返回组织索引](README.md)
 
 ---
 ## 目录
@@ -56,6 +56,35 @@ Google 对 OpenJDK 的贡献主要体现在：
 
 ---
 
+
+
+## 审查者网络
+
+> Google 的 PR 被以下审查者审查最多 (共 190 次审查)
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| vicente-romero-oracle | Oracle | 39 |
+| cushon | Google | 18 |
+| lahodaj | Oracle | 10 |
+| dholmes-ora | Oracle | 9 |
+| shipilev | Amazon | 7 |
+| mcimadamore | Oracle | 7 |
+| caoman | Google | 6 |
+| phohensee | Oracle | 6 |
+
+### 审查组织分布
+
+| 审查者组织 | 次数 | 占比 |
+|-----------|------|------|
+| Oracle | 141 | 74% |
+| Google | 24 | 13% |
+| Amazon | 7 | 4% |
+| SAP | 7 | 4% |
+| Red Hat | 5 | 3% |
+
+---
+
 ## 4. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk type:pr label:integrated`
@@ -72,4 +101,4 @@ Google 对 OpenJDK 的贡献主要体现在：
 
 **最后更新**: 2026-03-23
 
-[→ 返回组织索引](../../by-contributor/README.md)
+[→ 返回组织索引](README.md)

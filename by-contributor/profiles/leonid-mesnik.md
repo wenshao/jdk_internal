@@ -81,59 +81,59 @@ Leonid Mesnik 是 Oracle 的 Principal Member of Technical Staff，专注于 Hot
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
-| 8352654 | [REDO] nsk/jvmti/ tests should fail when nsk_jvmti_setFailStatus() is called | [PR]([需要补充 PR 链接]) |
-| 8371650 | Add CMakeLists.txt and compile_commands.json into .gitignore | [PR]([需要补充 PR 链接]) |
-| 8371749 | New test serviceability/jvmti/events/VMDeath/AllocatingInVMDeath fails with -Xcheck:jni | [PR]([需要补充 PR 链接]) |
-| 8367902 | Allocation after Universe::before_exit() in the VM shutdown sequence | [PR]([需要补充 PR 链接]) |
-| 8371103 | vmTestbase/nsk/jvmti/scenarios/events/EM02/em02t006/TestDescription.java failing | [PR]([需要补充 PR 链接]) |
-| 8371367 | Replace remaining JvmtiJavaThreadEventTransition with JVMTI_JAVA_THREAD_EVENT_CALLBACK_BLOCK | [PR]([需要补充 PR 链接]) |
-| 8371114 | Problemlist vmTestbase/nsk/jvmti/scenarios/events/EM02/em02t006/TestDescription.java | [PR]([需要补充 PR 链接]) |
-| 8370663 | Incorrect synchronization in nsk/jvmti/RedefineClasses when expected events are not received | [PR]([需要补充 PR 链接]) |
-| 8224852 | JVM crash on watched field access from native code | [PR]([需要补充 PR 链接]) |
-| 8370851 | Mark hotspot and jdk tests incompatible with test thread factory | [PR]([需要补充 PR 链接]) |
-| 8355631 | The events might be generated after VM_DEATH event | [PR]([需要补充 PR 链接]) |
-| 8370636 | com/sun/jdi/TwoThreadsTest.java should wait for completion of all threads | [PR]([需要补充 PR 链接]) |
-| 8321687 | Test vmTestbase/nsk/jvmti/scenarios/contention/TC03/tc03t002 failed: JVMTI_ERROR_THREAD_NOT_ALIVE | [PR]([需要补充 PR 链接]) |
-| 8348844 | Remove remaining JVMTI tests from ProblemList-Virtual, use requires instead | [PR]([需要补充 PR 链接]) |
-| 8368699 | nsk/jvmti/scenarios/events/EM04/em04t001/em04t001.cpp destroys jvmti monitor when VM is dead | [PR]([需要补充 PR 链接]) |
-| 8308027 | GetThreadListStackTraces/OneGetThreadListStackTraces.java should be skipped when thread factory is used | [PR]([需要补充 PR 链接]) |
-| 8367927 | Remove 8043571-related tests from problemlists | [PR]([需要补充 PR 链接]) |
-| 8367725 | Incorrect reading of oop in SuspendResumeManager::suspend while thread is blocked | [PR]([需要补充 PR 链接]) |
-| 8365192 | post_meth_exit should be in vm state when calling get_jvmti_thread_state | [PR]([需要补充 PR 链接]) |
-| 8365937 | post_method_exit might incorrectly set was_popped_by_exception and value | [PR]([需要补充 PR 链接]) |
-| 8364973 | Add JVMTI stress testing mode | [PR]([需要补充 PR 链接]) |
-| 8362203 | assert(state == nullptr || state->get_thread_oop() != nullptr) failed: incomplete state | [PR]([需要补充 PR 链接]) |
-| 8358004 | Delete applications/scimark/Scimark.java test | [PR]([需要补充 PR 链接]) |
-| 8359366 | RunThese30M.java EXCEPTION_ACCESS_VIOLATION in JvmtiBreakpoints::clearall_in_class_at_safepoint | [PR]([需要补充 PR 链接]) |
-| 8356193 | Remove tests from ProblemList-enable-preview.txt fixed by JDK-8344706 | [PR]([需要补充 PR 链接]) |
-| 8347004 | vmTestbase/metaspace/shrink_grow/ShrinkGrowTest/ShrinkGrowTest.java fails with CDS disabled | [PR]([需要补充 PR 链接]) |
-| 8356089 | java/lang/IO/IO.java fails with -XX:+AOTClassLinking | [PR]([需要补充 PR 链接]) |
-| 8355069 | Allocation::check_out_of_memory() should support CheckUnhandledOops mode | [PR]([需要补充 PR 链接]) |
-| 8355649 | Missing ResourceMark in ExceptionMark::check_no_pending_exception | [PR]([需要补充 PR 链接]) |
-| 8353214 | Add testing with --enable-preview | [PR]([需要补充 PR 链接]) |
-| 8355228 | Improve runtime/CompressedOops/CompressedClassPointersEncodingScheme.java | [PR]([需要补充 PR 链接]) |
-| 8354559 | gc/g1/TestAllocationFailure.java doesn't need WB API | [PR]([需要补充 PR 链接]) |
-| 8351375 | nsk/jvmti/ tests should fail when nsk_jvmti_setFailStatus() is called | [PR]([需要补充 PR 链接]) |
-| 8352096 | Test jdk/jfr/event/profiling/TestFullStackTrace.java shouldn't be executed with -XX:+DeoptimizeALot | [PR]([需要补充 PR 链接]) |
-| 8350818 | Improve OperatingSystemMXBean cpu load tests to not accept -1.0 by default | [PR]([需要补充 PR 链接]) |
-| 8350820 | OperatingSystemMXBean CpuLoad() methods return -1.0 on Windows | [PR]([需要补充 PR 链接]) |
-| 8339889 | Several compiler tests ignore vm flags and not marked as flagless | [PR]([需要补充 PR 链接]) |
-| 8348367 | Remove hotspot_not_fast_compiler and hotspot_slow_compiler test groups | [PR]([需要补充 PR 链接]) |
-| 8350151 | Support requires property to filter tests incompatible with --enable-preview | [PR]([需要补充 PR 链接]) |
-| 8350280 | The JDK-8346050 testlibrary changes break the build | [PR]([需要补充 PR 链接]) |
-| 8346050 | Update BuildTestLib.gmk to build whole testlibrary | [PR]([需要补充 PR 链接]) |
-| 8318098 | Update jfr tests to replace keyword jfr with vm.flagless | [PR]([需要补充 PR 链接]) |
-| 8338428 | Add logging of final VM flags while setting properties | [PR]([需要补充 PR 链接]) |
-| 8347840 | Fix testlibrary compilation warnings | [PR]([需要补充 PR 链接]) |
-| 8347302 | Mark test tools/jimage/JImageToolTest.java as flagless | [PR]([需要补充 PR 链接]) |
-| 8346998 | Test nsk/jvmti/ResourceExhausted/resexhausted003 fails with OOM when CDS is off | [PR]([需要补充 PR 链接]) |
-| 8346048 | test/lib/containers/docker/DockerRunOptions.java uses addJavaOpts() from ctor | [PR]([需要补充 PR 链接]) |
-| 8344453 | Test jdk/jfr/event/oldobject/TestSanityDefault.java timed out | [PR]([需要补充 PR 链接]) |
-| 8345700 | tier{1,2,3}_compiler don't cover all compiler tests | [PR]([需要补充 PR 链接]) |
-| 8345746 | Remove :resourcehogs/compiler from :hotspot_slow_compiler | [PR]([需要补充 PR 链接]) |
-| 8345698 | Remove tier1_compiler_not_xcomp from github actions | [PR]([需要补充 PR 链接]) |
-| 8340969 | jdk/jfr/startupargs/TestStartDuration.java should be marked as flagless | [PR]([需要补充 PR 链接]) |
-| 8345435 | Eliminate tier1_compiler_not_xcomp group | [PR]([需要补充 PR 链接]) |
+| 8352654 | [REDO] nsk/jvmti/ tests should fail when nsk_jvmti_setFailStatus() is called | [JBS](https://bugs.openjdk.org/browse/JDK-8352654) |
+| 8371650 | Add CMakeLists.txt and compile_commands.json into .gitignore | [JBS](https://bugs.openjdk.org/browse/JDK-8371650) |
+| 8371749 | New test serviceability/jvmti/events/VMDeath/AllocatingInVMDeath fails with -Xcheck:jni | [JBS](https://bugs.openjdk.org/browse/JDK-8371749) |
+| 8367902 | Allocation after Universe::before_exit() in the VM shutdown sequence | [JBS](https://bugs.openjdk.org/browse/JDK-8367902) |
+| 8371103 | vmTestbase/nsk/jvmti/scenarios/events/EM02/em02t006/TestDescription.java failing | [JBS](https://bugs.openjdk.org/browse/JDK-8371103) |
+| 8371367 | Replace remaining JvmtiJavaThreadEventTransition with JVMTI_JAVA_THREAD_EVENT_CALLBACK_BLOCK | [JBS](https://bugs.openjdk.org/browse/JDK-8371367) |
+| 8371114 | Problemlist vmTestbase/nsk/jvmti/scenarios/events/EM02/em02t006/TestDescription.java | [JBS](https://bugs.openjdk.org/browse/JDK-8371114) |
+| 8370663 | Incorrect synchronization in nsk/jvmti/RedefineClasses when expected events are not received | [JBS](https://bugs.openjdk.org/browse/JDK-8370663) |
+| 8224852 | JVM crash on watched field access from native code | [JBS](https://bugs.openjdk.org/browse/JDK-8224852) |
+| 8370851 | Mark hotspot and jdk tests incompatible with test thread factory | [JBS](https://bugs.openjdk.org/browse/JDK-8370851) |
+| 8355631 | The events might be generated after VM_DEATH event | [JBS](https://bugs.openjdk.org/browse/JDK-8355631) |
+| 8370636 | com/sun/jdi/TwoThreadsTest.java should wait for completion of all threads | [JBS](https://bugs.openjdk.org/browse/JDK-8370636) |
+| 8321687 | Test vmTestbase/nsk/jvmti/scenarios/contention/TC03/tc03t002 failed: JVMTI_ERROR_THREAD_NOT_ALIVE | [JBS](https://bugs.openjdk.org/browse/JDK-8321687) |
+| 8348844 | Remove remaining JVMTI tests from ProblemList-Virtual, use requires instead | [JBS](https://bugs.openjdk.org/browse/JDK-8348844) |
+| 8368699 | nsk/jvmti/scenarios/events/EM04/em04t001/em04t001.cpp destroys jvmti monitor when VM is dead | [JBS](https://bugs.openjdk.org/browse/JDK-8368699) |
+| 8308027 | GetThreadListStackTraces/OneGetThreadListStackTraces.java should be skipped when thread factory is used | [JBS](https://bugs.openjdk.org/browse/JDK-8308027) |
+| 8367927 | Remove 8043571-related tests from problemlists | [JBS](https://bugs.openjdk.org/browse/JDK-8367927) |
+| 8367725 | Incorrect reading of oop in SuspendResumeManager::suspend while thread is blocked | [JBS](https://bugs.openjdk.org/browse/JDK-8367725) |
+| 8365192 | post_meth_exit should be in vm state when calling get_jvmti_thread_state | [JBS](https://bugs.openjdk.org/browse/JDK-8365192) |
+| 8365937 | post_method_exit might incorrectly set was_popped_by_exception and value | [JBS](https://bugs.openjdk.org/browse/JDK-8365937) |
+| 8364973 | Add JVMTI stress testing mode | [JBS](https://bugs.openjdk.org/browse/JDK-8364973) |
+| 8362203 | assert(state == nullptr || state->get_thread_oop() != nullptr) failed: incomplete state | [JBS](https://bugs.openjdk.org/browse/JDK-8362203) |
+| 8358004 | Delete applications/scimark/Scimark.java test | [JBS](https://bugs.openjdk.org/browse/JDK-8358004) |
+| 8359366 | RunThese30M.java EXCEPTION_ACCESS_VIOLATION in JvmtiBreakpoints::clearall_in_class_at_safepoint | [JBS](https://bugs.openjdk.org/browse/JDK-8359366) |
+| 8356193 | Remove tests from ProblemList-enable-preview.txt fixed by JDK-8344706 | [JBS](https://bugs.openjdk.org/browse/JDK-8356193) |
+| 8347004 | vmTestbase/metaspace/shrink_grow/ShrinkGrowTest/ShrinkGrowTest.java fails with CDS disabled | [JBS](https://bugs.openjdk.org/browse/JDK-8347004) |
+| 8356089 | java/lang/IO/IO.java fails with -XX:+AOTClassLinking | [JBS](https://bugs.openjdk.org/browse/JDK-8356089) |
+| 8355069 | Allocation::check_out_of_memory() should support CheckUnhandledOops mode | [JBS](https://bugs.openjdk.org/browse/JDK-8355069) |
+| 8355649 | Missing ResourceMark in ExceptionMark::check_no_pending_exception | [JBS](https://bugs.openjdk.org/browse/JDK-8355649) |
+| 8353214 | Add testing with --enable-preview | [JBS](https://bugs.openjdk.org/browse/JDK-8353214) |
+| 8355228 | Improve runtime/CompressedOops/CompressedClassPointersEncodingScheme.java | [JBS](https://bugs.openjdk.org/browse/JDK-8355228) |
+| 8354559 | gc/g1/TestAllocationFailure.java doesn't need WB API | [JBS](https://bugs.openjdk.org/browse/JDK-8354559) |
+| 8351375 | nsk/jvmti/ tests should fail when nsk_jvmti_setFailStatus() is called | [JBS](https://bugs.openjdk.org/browse/JDK-8351375) |
+| 8352096 | Test jdk/jfr/event/profiling/TestFullStackTrace.java shouldn't be executed with -XX:+DeoptimizeALot | [JBS](https://bugs.openjdk.org/browse/JDK-8352096) |
+| 8350818 | Improve OperatingSystemMXBean cpu load tests to not accept -1.0 by default | [JBS](https://bugs.openjdk.org/browse/JDK-8350818) |
+| 8350820 | OperatingSystemMXBean CpuLoad() methods return -1.0 on Windows | [JBS](https://bugs.openjdk.org/browse/JDK-8350820) |
+| 8339889 | Several compiler tests ignore vm flags and not marked as flagless | [JBS](https://bugs.openjdk.org/browse/JDK-8339889) |
+| 8348367 | Remove hotspot_not_fast_compiler and hotspot_slow_compiler test groups | [JBS](https://bugs.openjdk.org/browse/JDK-8348367) |
+| 8350151 | Support requires property to filter tests incompatible with --enable-preview | [JBS](https://bugs.openjdk.org/browse/JDK-8350151) |
+| 8350280 | The JDK-8346050 testlibrary changes break the build | [JBS](https://bugs.openjdk.org/browse/JDK-8350280) |
+| 8346050 | Update BuildTestLib.gmk to build whole testlibrary | [JBS](https://bugs.openjdk.org/browse/JDK-8346050) |
+| 8318098 | Update jfr tests to replace keyword jfr with vm.flagless | [JBS](https://bugs.openjdk.org/browse/JDK-8318098) |
+| 8338428 | Add logging of final VM flags while setting properties | [JBS](https://bugs.openjdk.org/browse/JDK-8338428) |
+| 8347840 | Fix testlibrary compilation warnings | [JBS](https://bugs.openjdk.org/browse/JDK-8347840) |
+| 8347302 | Mark test tools/jimage/JImageToolTest.java as flagless | [JBS](https://bugs.openjdk.org/browse/JDK-8347302) |
+| 8346998 | Test nsk/jvmti/ResourceExhausted/resexhausted003 fails with OOM when CDS is off | [JBS](https://bugs.openjdk.org/browse/JDK-8346998) |
+| 8346048 | test/lib/containers/docker/DockerRunOptions.java uses addJavaOpts() from ctor | [JBS](https://bugs.openjdk.org/browse/JDK-8346048) |
+| 8344453 | Test jdk/jfr/event/oldobject/TestSanityDefault.java timed out | [JBS](https://bugs.openjdk.org/browse/JDK-8344453) |
+| 8345700 | tier{1,2,3}_compiler don't cover all compiler tests | [JBS](https://bugs.openjdk.org/browse/JDK-8345700) |
+| 8345746 | Remove :resourcehogs/compiler from :hotspot_slow_compiler | [JBS](https://bugs.openjdk.org/browse/JDK-8345746) |
+| 8345698 | Remove tier1_compiler_not_xcomp from github actions | [JBS](https://bugs.openjdk.org/browse/JDK-8345698) |
+| 8340969 | jdk/jfr/startupargs/TestStartDuration.java should be marked as flagless | [JBS](https://bugs.openjdk.org/browse/JDK-8340969) |
+| 8345435 | Eliminate tier1_compiler_not_xcomp group | [JBS](https://bugs.openjdk.org/browse/JDK-8345435) |
 
 > **JBS Link**: https://bugs.openjdk.org/browse/JDK-[Issue Number]
 
@@ -293,3 +293,10 @@ void Universe::before_exit() {
 - [OpenJDK Profile](https://openjdk.org/people/lmesnik)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=lmesnik)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20lmesnik)
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 539 |
+| **活跃仓库数** | 4 |

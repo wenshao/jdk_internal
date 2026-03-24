@@ -164,8 +164,8 @@ Volker Simonis 是 **Amazon Web Services Corretto 团队**的 Principal Software
 
 | 协作者 | 合作领域 |
 |--------|----------|
-| [Goetz Lindenmaier](/by-contributor/profiles/goetz-lindenmaier.md) | SAP OpenJDK 团队, PowerPC/AIX 移植 |
-| [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | Red Hat (formerly SAP) HotSpot, 诊断和调优 |
+| [Goetz Lindenmaier](goetz-lindenmaier.md) | SAP OpenJDK 团队, PowerPC/AIX 移植 |
+| [Thomas Stuefe](thomas-stuefe.md) | Red Hat (formerly SAP) HotSpot, 诊断和调优 |
 | Matthias Baesken | SAP JVM 团队, 构建系统 |
 | Steve Poole (IBM) | PowerPC/AIX 移植合作 |
 | Martin Doerr (SAP) | PowerPC/s390x 编译器后端 |
@@ -208,3 +208,11 @@ Volker Simonis 是 **Amazon Web Services Corretto 团队**的 Principal Software
 - [JEP 294: Linux/s390x Port](https://openjdk.org/jeps/294)
 - [Crunchbase - Volker Simonis](https://www.crunchbase.com/person/volker-simonis)
 - [progdoc.de Papers](http://www.progdoc.de/papers.htm)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 102 |
+| **活跃仓库数** | 6 |

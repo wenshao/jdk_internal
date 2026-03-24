@@ -69,7 +69,7 @@ Claes Redestad (OpenJDK 用户名：**redestad**) 是 Oracle 的 **Principal Mem
 | **角色** | Contributor |
 | **状态** | Closed / Delivered |
 | **发布版本** | JDK 9 (2017-09) |
-| **文档** | [JEP 254](/jeps/language/jep-254.md) |
+| **文档** | [JEP 254](../../jeps/language/jep-254.md) |
 
 **影响**: 将 String 内部表示从 UTF-16 `char[]` 改为 `byte[]` 加编码标识：
 - ASCII 字符串内存占用减少 **50%**
@@ -83,7 +83,7 @@ Claes Redestad (OpenJDK 用户名：**redestad**) 是 Oracle 的 **Principal Mem
 | **角色** | Contributor |
 | **状态** | Closed / Delivered |
 | **发布版本** | JDK 9 (2017-09) |
-| **文档** | [JEP 280](/jeps/language/jep-280.md) |
+| **文档** | [JEP 280](../../jeps/language/jep-280.md) |
 
 **影响**: 使用 `invokedynamic` 实现字符串拼接，为后续优化奠定基础。
 
@@ -95,11 +95,11 @@ Claes Redestad (OpenJDK 用户名：**redestad**) 是 Oracle 的 **Principal Mem
 
 | PR/Issue | 标题 | 角色 |
 |----------|------|------|
-| [JDK-8339799](/by-pr/8339/8339799.md) | 减少 java.lang.invoke 字节码生成器的工作量 | Author |
-| [JDK-8335182](/by-pr/8335/8335182.md) | 整合和简化字符串拼接代码形态 | Author |
-| [JDK-8327247](/by-pr/8327/8327247.md) | C2 编译复杂字符串拼接时内存占用高达 2GB | Author |
-| [JDK-8336856](/by-pr/8336/8336856.md) | Inline concat with InlineHiddenClassStrategy | Co-author / 架构设计 |
-| [JDK-8335802](/by-pr/8335/8335802.md) | HexFormat boolean instead of enum | Reviewer |
+| [JDK-8339799](../../by-pr/8339/8339799.md) | 减少 java.lang.invoke 字节码生成器的工作量 | Author |
+| [JDK-8335182](../../by-pr/8335/8335182.md) | 整合和简化字符串拼接代码形态 | Author |
+| [JDK-8327247](../../by-pr/8327/8327247.md) | C2 编译复杂字符串拼接时内存占用高达 2GB | Author |
+| [JDK-8336856](../../by-pr/8336/8336856.md) | Inline concat with InlineHiddenClassStrategy | Co-author / 架构设计 |
+| [JDK-8335802](../../by-pr/8335/8335802.md) | HexFormat boolean instead of enum | Reviewer |
 
 ### 关键优化
 
@@ -107,12 +107,12 @@ Claes Redestad (OpenJDK 用户名：**redestad**) 是 Oracle 的 **Principal Mem
    - 参与设计 `InlineHiddenClassStrategy`
    - 显著减少运行时生成的类数量（-50%）
    - 启动性能提升 +40%
-   - [详细分析](/by-pr/8336/8336856.md)
+   - [详细分析](../../by-pr/8336/8336856.md)
 
 2. **启动性能专项**
    - 多个 JDK 版本中的启动时间优化
    - 常量池和字符串去重优化
-   - HexFormat 启动优化（[JDK-8335802](/by-pr/8335/8335802.md)）
+   - HexFormat 启动优化（[JDK-8335802](../../by-pr/8335/8335802.md)）
 
 ---
 
@@ -159,7 +159,7 @@ Claes 在个人博客 [cl4es.github.io](https://cl4es.github.io) 分享了大量
 Claes 的工作特点是：
 - **数据驱动**: 所有优化都有详细的性能数据支持
 - **系统性**: 优化从底层机制到上层 API
-- **协作导向**: 常与其他开发者（如 [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md)、[Chen Liang](/by-contributor/profiles/chen-liang.md)）合作
+- **协作导向**: 常与其他开发者（如 [Shaojin Wen](shaojin-wen.md)、[Chen Liang](chen-liang.md)）合作
 
 ### 重要协作：String "+" 优化 (JDK-8336856)
 
@@ -167,15 +167,15 @@ Claes 的工作特点是：
 
 | 角色 | 姓名 | 贡献 |
 |------|------|------|
-| **Author** | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) (@wenshao) | 主要实现 |
+| **Author** | [Shaojin Wen](shaojin-wen.md) (@wenshao) | 主要实现 |
 | **Co-author** | Claes Redestad (@redestad) | 架构设计、性能优化指导 |
-| **Reviewer** | [Chen Liang](/by-contributor/profiles/chen-liang.md) (@liach) | 代码审查 |
+| **Reviewer** | [Chen Liang](chen-liang.md) (@liach) | 代码审查 |
 
 **项目成果**：
 - 启动性能提升 **+40%**
 - 类生成数量减少 **-50%**
 - 审查周期 26 天，Tier 1-5 测试全部通过
-- [详细分析](/by-pr/8336/8336856.md)
+- [详细分析](../../by-pr/8336/8336856.md)
 
 ---
 
@@ -200,29 +200,29 @@ Claes 的工作特点是：
 
 ### JEP 文档
 
-- [JEP 254: Compact Strings](/jeps/language/jep-254.md) - JDK 9 String 内存优化
-- [JEP 280: Indify String Concatenation](/jeps/language/jep-280.md) - JDK 9 字符串拼接
+- [JEP 254: Compact Strings](../../jeps/language/jep-254.md) - JDK 9 String 内存优化
+- [JEP 280: Indify String Concatenation](../../jeps/language/jep-280.md) - JDK 9 字符串拼接
 
 ### 相关 PR 分析
 
 **作为 Author 的核心优化**：
-- [JDK-8339799: 减少 java.lang.invoke 字节码生成器的工作量](/by-pr/8339/8339799.md) - Lambda/MethodHandle 字节码生成优化（启动性能 +1.5-2.5%）
-- [JDK-8335182: 整合和简化字符串拼接代码形态](/by-pr/8335/8335182.md) - 字符串拼接性能提升 +4-25%
-- [JDK-8327247: C2 编译复杂字符串拼接时内存占用高达 2GB](/by-pr/8327/8327247.md) - C2 内存爆炸修复（内存使用减少 183 倍）
-- [JDK-8316704: Formatter 正则解析优化](/by-pr/8316/8316704.md) - 消除正则表达式，性能提升 +50-100%
-- [JDK-8310929: Integer.toString 优化](/by-pr/8310/8310929.md) - 审查指导（性能提升 +13-23%）
+- [JDK-8339799: 减少 java.lang.invoke 字节码生成器的工作量](../../by-pr/8339/8339799.md) - Lambda/MethodHandle 字节码生成优化（启动性能 +1.5-2.5%）
+- [JDK-8335182: 整合和简化字符串拼接代码形态](../../by-pr/8335/8335182.md) - 字符串拼接性能提升 +4-25%
+- [JDK-8327247: C2 编译复杂字符串拼接时内存占用高达 2GB](../../by-pr/8327/8327247.md) - C2 内存爆炸修复（内存使用减少 183 倍）
+- [JDK-8316704: Formatter 正则解析优化](../../by-pr/8316/8316704.md) - 消除正则表达式，性能提升 +50-100%
+- [JDK-8310929: Integer.toString 优化](../../by-pr/8310/8310929.md) - 审查指导（性能提升 +13-23%）
 
 **作为 Co-author/Reviewer 的优化**：
-- [JDK-8336856: Inline concat with InlineHiddenClassStrategy](/by-pr/8336/8336856.md) - 字符串拼接重大优化（启动性能 +40%，类生成 -50%）
-- [JDK-8335802: HexFormat boolean instead of enum](/by-pr/8335/8335802.md) - 启动速度优化
-- [JDK-8341755: InnerClassLambdaMetafactory 优化](/by-pr/8341/8341755.md) - Reviewer（性能提升 +17-20%）
-- [JDK-8315970: 大端序修复](/by-pr/8315/8315970.md) - Reviewer（正确性修复）
-- [JDK-8343962: getChars 实现整合](/by-pr/8349/8343962.md) - Reviewer（溢出修复）
+- [JDK-8336856: Inline concat with InlineHiddenClassStrategy](../../by-pr/8336/8336856.md) - 字符串拼接重大优化（启动性能 +40%，类生成 -50%）
+- [JDK-8335802: HexFormat boolean instead of enum](../../by-pr/8335/8335802.md) - 启动速度优化
+- [JDK-8341755: InnerClassLambdaMetafactory 优化](../../by-pr/8341/8341755.md) - Reviewer（性能提升 +17-20%）
+- [JDK-8315970: 大端序修复](../../by-pr/8315/8315970.md) - Reviewer（正确性修复）
+- [JDK-8343962: getChars 实现整合](../../by-pr/8349/8343962.md) - Reviewer（溢出修复）
 
 **协作者**：
-- [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) - 多个性能优化 PR 的主要作者，2024 年 8 月提名其为 Committer
-- [Chen Liang](/by-contributor/profiles/chen-liang.md) - ClassFile API 核心开发者
-- [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) - OpenJDK Member Group 提名人
+- [Shaojin Wen](shaojin-wen.md) - 多个性能优化 PR 的主要作者，2024 年 8 月提名其为 Committer
+- [Chen Liang](chen-liang.md) - ClassFile API 核心开发者
+- [Daniel Fuchs](daniel-fuchs.md) - OpenJDK Member Group 提名人
 
 ---
 
@@ -239,3 +239,11 @@ Claes 的工作特点是：
 > - 添加本地 JEP 文档链接
 > - 添加 Daniel Fuchs 协作者链接
 > - 改进章节编号和格式
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 367 |
+| **活跃仓库数** | 1 |

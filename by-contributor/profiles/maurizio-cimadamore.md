@@ -249,3 +249,11 @@ try (Arena arena = Arena.ofConfined()) {
 - [JEP 394: Pattern Matching](https://openjdk.org/jeps/394)
 - [nipafx.dev Interview](https://nipafx.dev/maurizio-cimadamore-26h/)
 - [ResearchGate](https://www.researchgate.net/scientific-contributions/Maurizio-Cimadamore-70142914)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 812 |
+| **活跃仓库数** | 4 |

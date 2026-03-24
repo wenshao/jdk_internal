@@ -119,3 +119,40 @@
 
 ---
 > **数据来源**: by-pr/all-integrated-prs.csv
+
+---
+
+## LTS 维护分支 (jdk17u-dev)
+
+> 基于 openjdk/jdk17u-dev 仓库 4000 个 Integrated PRs
+
+### Top 维护贡献者
+
+| 排名 | 贡献者 | 组织 | PRs |
+|------|--------|------|-----|
+| 1 | GoeLin | SAP | 1951 |
+| 2 | shipilev | Amazon | 239 |
+| 3 | MBaesken | SAP | 212 |
+| 4 | TheRealMDoerr | SAP | 187 |
+| 5 | luchenlin | — | 140 |
+| 6 | satyenme | Amazon | 98 |
+| 7 | mrserb | Oracle | 82 |
+| 8 | sendaoYan | Alibaba | 81 |
+| 9 | amosshi | — | 79 |
+| 10 | RealCLanger | SAP | 65 |
+
+### 维护组织分布
+
+| 组织 | PRs | 占比 |
+|------|-----|------|
+| SAP | 2446 | 70.5% |
+| Amazon | 467 | 13.5% |
+| Oracle | 134 | 3.9% |
+| Red Hat | 118 | 3.4% |
+| Alibaba | 88 | 2.5% |
+| Microsoft | 48 | 1.4% |
+| IBM | 43 | 1.2% |
+| Azul | 39 | 1.1% |
+
+> **统计时间**: 2026-03-24
+

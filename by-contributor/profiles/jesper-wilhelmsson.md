@@ -181,3 +181,11 @@ Jesper Wilhelmsson 在学术研究阶段设计了 Mark and Split 算法：
 - [Erlang Factory 2012](https://www.erlang-factory.com/conference/ErlangUserConference2012/speakers/JesperWilhelmsson)
 - [InfoQ: Return of the OpenJDK Developers' Guide](https://www.infoq.com/news/2020/07/openjdk-dev-guide/)
 - [Mark and Split Algorithm](https://www.deepdyve.com/lp/association-for-computing-machinery/mark-and-split-jfBa4Ba0y0)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 11 |
+| **活跃仓库数** | 1 |

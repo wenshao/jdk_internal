@@ -184,7 +184,21 @@ RUN java -version
 
 ---
 
-## 8. 相关链接
+## 8. 上游维护团队
+
+Loongson 通过 LoongArch 架构移植参与 OpenJDK 上游贡献。
+
+| 维度 | PRs | 说明 |
+|------|-----|------|
+| **主线** | 33 | LoongArch 架构支持 |
+| **LTS 维护** | 15 | jdk17u(1), jdk11u(8), jdk8u(6) |
+| **核心贡献者** | theaoqi (14), sunny868 (15) | |
+
+> 详情: [Loongson 组织页面](../contributors/orgs/loongson.md)
+
+---
+
+## 9. 相关链接
 
 ### 官方资源
 

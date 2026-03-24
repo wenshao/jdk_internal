@@ -8,7 +8,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Caspar Wang (王超) |
-| **当前组织** | [腾讯 (Tencent)](/contributors/orgs/tencent.md) |
+| **当前组织** | [腾讯 (Tencent)](../../contributors/orgs/tencent.md) |
 | **GitHub** | [@casparcwang](https://github.com/casparcwang) |
 | **位置** | 杭州 |
 | **OpenJDK** | Author |

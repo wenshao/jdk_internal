@@ -2,7 +2,7 @@
 
 > Vector API 和 x86_64 优化的主要贡献者
 
-[← 返回组织索引](../../by-contributor/README.md)
+[← 返回组织索引](README.md)
 
 ---
 ## 目录
@@ -319,6 +319,35 @@ Intel 主导 Vector API 的开发：
 
 ---
 
+
+
+## 审查者网络
+
+> Intel 的 PR 被以下审查者审查最多 (共 636 次审查)
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| sviswa7 | Intel | 113 |
+| jatin-bhateja | Intel | 107 |
+| vnkozlov | Oracle | 67 |
+| TobiHartmann | Oracle | 41 |
+| eme64 | Oracle | 33 |
+| PaulSandoz | Oracle | 26 |
+| vamsi-parasa | Intel | 23 |
+| iwanowww | Oracle | 21 |
+
+### 审查组织分布
+
+| 审查者组织 | 次数 | 占比 |
+|-----------|------|------|
+| Oracle | 271 | 43% |
+| Intel | 260 | 41% |
+| ARM | 25 | 4% |
+| Independent | 24 | 4% |
+| Amazon | 8 | 1% |
+
+---
+
 ## 7. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:jatin-bhateja type:pr label:integrated`
@@ -348,4 +377,4 @@ Intel 主导 Vector API 的开发：
 - 添加协作深度分析 (Vector API 案例)
 - 新增知识传承网络分析
 
-[→ 返回组织索引](../../by-contributor/README.md)
+[→ 返回组织索引](README.md)

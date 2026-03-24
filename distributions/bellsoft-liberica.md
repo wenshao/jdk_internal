@@ -79,7 +79,20 @@ docker pull bellsoft/liberica-runtime-container:jre-21-alpine
 
 ---
 
-## 6. 相关链接
+## 6. 上游维护团队
+
+BellSoft 通过 Boris Ulasevich (@bulasevich) 参与上游贡献，专注 ARM32/AArch64/RISC-V 架构。
+
+| 维度 | PRs | 说明 |
+|------|-----|------|
+| **主线** | 40+ | ARM32, AArch64, RISC-V |
+| **LTS 维护** | 13 | jdk17u(5), jdk21u(7), jdk11u(1) |
+
+> 详情: [BellSoft 组织页面](../contributors/orgs/bellsoft.md)
+
+---
+
+## 7. 相关链接
 
 - [BellSoft 官网](https://bell-sw.com/)
 - [Liberica 下载](https://bell-sw.com/pages/downloads/)

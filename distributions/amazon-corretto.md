@@ -236,7 +236,39 @@ Resources:
 
 ---
 
-## 8. 相关链接
+## 8. 上游维护团队
+
+Amazon 通过 Corretto 团队积极参与 OpenJDK **主线开发**和 **LTS 维护**，同时主导 **Shenandoah GC** 和 **Leyden** 两个实验性项目。
+
+### 维护分支贡献统计
+
+| 贡献者 | jdk17u | jdk21u | jdk11u | jdk25u | jdk8u | 总计 |
+|--------|--------|--------|--------|--------|-------|------|
+| [shipilev](../by-contributor/profiles/aleksey-shipilev.md) | 239 | 149 | 157 | 21 | 0 | **566** |
+| earthling-amzn | 14 | 9 | 4 | 6 | 0 | **33** |
+| pengxiaolong | 11 | 15 | 0 | 0 | 0 | **26** |
+| caojoshua | 0 | 0 | 21 | 0 | 7 | **28** |
+| 其他 | 33 | 14 | 6 | 1 | 6 | **60** |
+| **合计** | **297** | **187** | **188** | **28** | **13** | **713** |
+
+> [shipilev](../by-contributor/profiles/aleksey-shipilev.md) (Aleksey Shipilev) 是 Amazon 的核心维护者，跨 **14 个仓库** 活跃，是 OpenJDK 分布最广的贡献者。
+
+### 实验性项目
+
+| 项目 | PRs | 核心贡献者 | 说明 |
+|------|-----|-----------|------|
+| **Shenandoah** | 482 (99%) | earthling-amzn (337) | Amazon 主导的低停顿 GC |
+| **Leyden** | 41+ (52%) | shipilev (41) | Amazon 主导的启动优化项目 |
+
+### 主线上游贡献
+
+Amazon 在 openjdk/jdk 主线有 **1,048+ PRs**，主要领域: Shenandoah GC, C2 编译器, AArch64, Runtime。
+
+> 详情: [Amazon 组织页面](../contributors/orgs/amazon.md)
+
+---
+
+## 9. 相关链接
 
 ### 官方资源
 

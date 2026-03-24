@@ -75,7 +75,7 @@ Joe Darcy 领导的 Project Coin 为 JDK 7 引入了多项小型语言改进:
 
 | PR/Issue | 标题 | 角色 |
 |----------|------|------|
-| [JDK-8362376](/by-pr/8362/8362376.md) | 在 Java FDLIBM 实现中使用 @Stable 注解 | Author |
+| [JDK-8362376](../../by-pr/8362/8362376.md) | 在 Java FDLIBM 实现中使用 @Stable 注解 | Author |
 
 ### 核心优化领域
 
@@ -110,7 +110,7 @@ Joe Darcy 领导的 Project Coin 为 JDK 7 引入了多项小型语言改进:
 - 指数/对数: +3-8%
 - 密集计算: +10-15%
 
-**文档**: [详细分析](/by-pr/8362/8362376.md)
+**文档**: [详细分析](../../by-pr/8362/8362376.md)
 
 ---
 
@@ -139,3 +139,11 @@ Joe Darcy 领导的 Project Coin 为 JDK 7 引入了多项小型语言改进:
 > - 添加 GitHub 统计: 1,194+ commits, 351 integrated PRs
 > - 添加 Inside.java, Oracle Blog, ResearchGate 链接
 > - 添加 GitHub handle @jddarcy
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 481 |
+| **活跃仓库数** | 2 |

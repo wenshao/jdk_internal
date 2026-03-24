@@ -9,7 +9,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | David Linus Briemann |
-| **当前组织** | [SAP](/contributors/orgs/sap.md) |
+| **当前组织** | [SAP](../../contributors/orgs/sap.md) |
 | **位置** | 德国 |
 | **GitHub** | [@dbriemann](https://github.com/dbriemann) |
 | **OpenJDK** | [@dbriemann](https://openjdk.org/census#dbriemann) |
@@ -120,3 +120,17 @@ David Briemann 专注于 HotSpot 在 PPC64 架构上的优化和维护。
 
 > **文档版本**: 1.0 | **最后更新**: 2026-03-22
 > 基于 GitHub API 数据: 26 integrated PRs. PPC64 架构为最高频贡献领域.
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2025-09-09 | Committer | Doerr, Martin | 11 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2025-September/010448.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 21 |
+| **活跃仓库数** | 1 |

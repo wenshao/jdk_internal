@@ -149,8 +149,8 @@ CUBIC 拥塞窗口增长 (三次函数):
 
 | 协作者 | 合作领域 |
 |--------|----------|
-| [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | JEP 517 HTTP/3 实现 |
-| [Aleksei Efimov](/by-contributor/profiles/aleksei-efimov.md) | HTTP/3 安全审查 |
+| [Daniel Fuchs](daniel-fuchs.md) | JEP 517 HTTP/3 实现 |
+| [Aleksei Efimov](aleksei-efimov.md) | HTTP/3 安全审查 |
 | Jaikiran Pai | 网络栈 Bug 修复 |
 
 ---
@@ -172,3 +172,11 @@ CUBIC 拥塞窗口增长 (三次函数):
 > **文档版本**: 1.0
 > **最后更新**: 2026-03-22
 > **状态**: 初稿
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 306 |
+| **活跃仓库数** | 3 |

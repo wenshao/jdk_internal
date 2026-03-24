@@ -94,7 +94,30 @@ docker pull ibm-semeru-runtimes:open-21-jre-alpine
 
 ---
 
-## 6. 相关链接
+## 6. 上游维护团队
+
+IBM 通过 Semeru 团队参与 OpenJDK 上游贡献和 LTS 维护，同时维护 Eclipse OpenJ9 VM。
+
+### 维护分支贡献统计
+
+| 贡献者 | jdk17u | jdk21u | jdk11u | jdk8u | 总计 |
+|--------|--------|--------|--------|-------|------|
+| andrew-m-leonard | 15 | 3 | 0 | 0 | **18** |
+| [offamitkumar](../by-contributor/profiles/amit-kumar.md) | 0 | 12 | 1 | 0 | **13** |
+| backwaterred | 5 | 0 | 8 | 1 | **14** |
+| adinn | 7 | 0 | 0 | 0 | **7** |
+| 其他 | 5 | 2 | 0 | 0 | **7** |
+| **合计** | **32** | **17** | **9** | **1** | **59** |
+
+### 主线贡献
+
+IBM 在 openjdk/jdk 主线有 **222 PRs**，主要领域: s390x 架构, 容器/cgroup 支持, AArch64。
+
+> 详情: [IBM 组织页面](../contributors/orgs/ibm.md)
+
+---
+
+## 7. 相关链接
 
 - [IBM Semeru](https://developer.ibm.com/languages/java/semeru-runtimes/)
 - [OpenJ9 GitHub](https://github.com/eclipse-openj9/openj9)

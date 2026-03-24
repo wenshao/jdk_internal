@@ -310,3 +310,10 @@ Windows static builds require special handling:
 - JNI_OnLoad for library initialization
 - Proper relauncher executables
 - Static library linking order
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 592 |
+| **活跃仓库数** | 1 |

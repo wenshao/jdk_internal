@@ -46,7 +46,7 @@ Sanhong Li (李三红) 是 **Java Champion**，阿里巴巴云智能基础产品
 | **论文** | 10+ 篇 (ICSE ×3, USENIX ATC, EuroSys, ASE, DAC, ICPE ×2, IEEE TC) |
 | **专利** | 20+ 项技术专利 |
 | **社区** | Java Champion, JCP EC, GraalVM Advisory Board, GreenTeaJUG 联合负责人 |
-| **组织** | [Alibaba](/contributors/orgs/alibaba.md) |
+| **组织** | [Alibaba](../../contributors/orgs/alibaba.md) |
 
 ---
 
@@ -111,7 +111,7 @@ Sanhong Li (李三红) 是 **Java Champion**，阿里巴巴云智能基础产品
 | **2018** | ICPE | Cloud-Scale Java Profiling at Alibaba | **Denghui Dong, Tongbao Zhang** |
 | **2017** | ICPE | Developing Software Performance Training at Alibaba | **Tongbao Zhang** |
 
-> **注**: 加粗的合著者是本项目中记录的 OpenJDK 上游贡献者。李三红与 [Denghui Dong](/by-contributor/profiles/denghui-dong.md)、[Kuai Wei](/by-contributor/profiles/kuai-wei.md)、[Tongbao Zhang](/by-contributor/profiles/tongbao-zhang.md)、[Liang Mao](/by-contributor/profiles/liang-mao.md)、[Yude Lin](/by-contributor/profiles/yude-lin.md)、[Xiaowei Lu](/by-contributor/profiles/xiaowei-lu.md) 均有学术合作。
+> **注**: 加粗的合著者是本项目中记录的 OpenJDK 上游贡献者。李三红与 [Denghui Dong](denghui-dong.md)、[Kuai Wei](kuai-wei.md)、[Tongbao Zhang](tongbao-zhang.md)、[Liang Mao](liang-mao.md)、[Yude Lin](yude-lin.md)、[Xiaowei Lu](xiaowei-lu.md) 均有学术合作。
 
 ---
 
@@ -152,7 +152,7 @@ Sanhong Li (李三红) 是 **Java Champion**，阿里巴巴云智能基础产品
 | [Liang Mao (毛亮)](liang-mao.md) | 2 | EuroSys 2024 | GC, Compact Object Headers |
 | [SendaoYan](sendaoyan.md) | 202 | - | 编译器/GC 测试 (前员工) |
 
-> 跨组织合作: Platinum GC (USENIX ATC 2020) 论文与 **[Tongbao Zhang](/by-contributor/profiles/tongbao-zhang.md)** (Tencent) 合作。
+> 跨组织合作: Platinum GC (USENIX ATC 2020) 论文与 **[Tongbao Zhang](tongbao-zhang.md)** (Tencent) 合作。
 
 ---
 
@@ -171,8 +171,8 @@ Sanhong Li (李三红) 是 **Java Champion**，阿里巴巴云智能基础产品
 - [Adoptium Summit 2025 Program Committee](https://www.eclipse.org/events/2025/adoptium-summit/program-committee/)
 
 ### 组织
-- [Alibaba 组织页面](/contributors/orgs/alibaba.md)
-- [Dragonwell 团队](/contributors/orgs/dragonwell.md)
+- [Alibaba 组织页面](../../contributors/orgs/alibaba.md)
+- [Dragonwell 团队](../../contributors/orgs/dragonwell.md)
 - [GreenTeaJUG (上海 JUG)](http://greenteajug.cn/)
 - [中国贡献者索引](chinese-contributors.md)
 

@@ -1,42 +1,221 @@
-# Reviewer 负载分析
+# 跨仓库审查网络分析
 
-> 谁审查最多？谁是社区瓶颈？
+> 基于 25 仓库 43,394 PRs 的完整 reviewer 数据 (72,789 次审查)
 
 ---
 
-## Top 30 Reviewers
+## 1. Top 50 审查者 (全仓库)
 
-| 排名 | Reviewer | 审查次数 | 所属组织 | 审查的组织分布 |
-|------|----------|----------|----------|---------------|
-| 1 | [dholmes-ora](../../by-contributor/profiles/david-holmes.md) | 2527 | [Oracle](../orgs/oracle.md) | Oracle(1730), SAP(175), Amazon(124) |
-| 2 | [AlanBateman](../../by-contributor/profiles/alan-bateman.md) | 1862 | [Oracle](../orgs/oracle.md) | Oracle(1388), SAP(65), Independent(65) |
-| 3 | [vnkozlov](../../by-contributor/profiles/vladimir-kozlov.md) | 1845 | [Oracle](../orgs/oracle.md) | Oracle(1066), Amazon(187), Red Hat(133) |
-| 4 | [shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | 1606 | [Amazon](../orgs/amazon.md) | Oracle(708), Amazon(360), Red Hat(93) |
-| 5 | [tschatzl](../../by-contributor/profiles/thomas-schatzl.md) | 1391 | [Oracle](../orgs/oracle.md) | Oracle(1196), Amazon(53), SAP(18) |
-| 6 | [TobiHartmann](../../by-contributor/profiles/tobias-hartmann.md) | 1314 | [Oracle](../orgs/oracle.md) | Oracle(774), Red Hat(136), Amazon(85) |
-| 7 | [prrace](../../by-contributor/profiles/phil-race.md) | 1177 | [Oracle](../orgs/oracle.md) | Oracle(929), Independent(43), SAP(26) |
-| 8 | [coleenp](../../by-contributor/profiles/coleen-phillimore.md) | 1097 | [Oracle](../orgs/oracle.md) | Oracle(855), Amazon(86), SAP(51) |
-| 9 | [mrserb](../../by-contributor/profiles/sergey-bylokhov.md) | 1014 | [Oracle](../orgs/oracle.md) | Oracle(761), Devexperts(56), Independent(26) |
-| 10 | [erikj79](../../by-contributor/profiles/erik-joelsson.md) | 968 | [Oracle](../orgs/oracle.md) | Oracle(639), SAP(62), Amazon(54) |
-| 11 | [kimbarrett](../../by-contributor/profiles/kim-barrett.md) | 961 | [Oracle](../orgs/oracle.md) | Oracle(777), SAP(38), Amazon(37) |
-| 12 | [dfuch](../../by-contributor/profiles/daniel-fuchs.md) | 934 | [Oracle](../orgs/oracle.md) | Oracle(692), Independent(55), Devexperts(38) |
-| 13 | [jaikiran](../../by-contributor/profiles/jaikiran-pai.md) | 932 | [Oracle](../orgs/oracle.md) | Oracle(723), Devexperts(35), Independent(34) |
-| 14 | [chhagedorn](../../by-contributor/profiles/christian-hagedorn.md) | 927 | [Oracle](../orgs/oracle.md) | Oracle(612), Red Hat(108), Amazon(42) |
-| 15 | [albertnetymk](../../by-contributor/profiles/albert-mingkun-yang.md) | 915 | [Oracle](../orgs/oracle.md) | Oracle(762), Amazon(56), SAP(14) |
-| 16 | [tstuefe](../../by-contributor/profiles/thomas-stuefe.md) | 907 | [Red Hat](../orgs/redhat.md) | Oracle(372), SAP(153), Red Hat(95) |
-| 17 | [RogerRiggs](../../by-contributor/profiles/roger-riggs.md) | 887 | [Oracle](../orgs/oracle.md) | Oracle(652), Alibaba(30), Independent(29) |
-| 18 | [iklam](../../by-contributor/profiles/ioi-lam.md) | 880 | [Oracle](../orgs/oracle.md) | Oracle(719), SAP(31), Red Hat(27) |
-| 19 | sspitsyn | 859 | [Oracle](../orgs/oracle.md) | Oracle(702), SAP(29), Devexperts(26) |
-| 20 | [liach](../../by-contributor/profiles/chen-liang.md) | 854 | [Oracle](../orgs/oracle.md) | Oracle(629), Alibaba(80), Independent(21) |
-| 21 | [naotoj](../../by-contributor/profiles/naoto-sato.md) | 773 | [Oracle](../orgs/oracle.md) | Oracle(653), Devexperts(24), Alibaba(19) |
-| 22 | [plummercj](../../by-contributor/profiles/chris-plummer.md) | 730 | [Oracle](../orgs/oracle.md) | Oracle(517), NTT Data(40), SAP(26) |
-| 23 | [stefank](../../by-contributor/profiles/stefan-karlsson.md) | 687 | [Oracle](../orgs/oracle.md) | Oracle(546), Amazon(36), SAP(20) |
-| 24 | [aivanov-jdk](../../by-contributor/profiles/alexander-ivanov.md) | 675 | [Oracle](../orgs/oracle.md) | Oracle(522), Devexperts(40), SAP(12) |
-| 25 | [bplb](../../by-contributor/profiles/brian-burkhalter.md) | 625 | [Oracle](../orgs/oracle.md) | Oracle(506), Devexperts(30), Independent(14) |
-| 26 | [magicus](../../by-contributor/profiles/magnus-ihse-bursie.md) | 592 | [Oracle](../orgs/oracle.md) | Oracle(346), Amazon(56), SAP(38) |
-| 27 | irisclark | 569 | ? | Oracle(517), Devexperts(15), Independent(4) |
-| 28 | [LanceAndersen](../../by-contributor/profiles/lance-andersen.md) | 562 | [Oracle](../orgs/oracle.md) | Oracle(468), Independent(39), Devexperts(12) |
-| 29 | [TheRealMDoerr](../../by-contributor/profiles/martin-doerr.md) | 555 | [SAP](../orgs/sap.md) | SAP(287), Oracle(109), IBM(48) |
-| 30 | [turbanoff](../../by-contributor/profiles/andrey-turbanov.md) | 544 | [Devexperts](../orgs/independent.md) | Oracle(375), Devexperts(81), Independent(13) |
+| 排名 | 审查者 | 组织 | 审查次数 | 活跃仓库数 | 主要仓库 |
+|------|--------|------|---------|-----------|----------|
+| 1 | dholmes-ora | Oracle | 2534 | 6 | by-pr |
+| 2 | vnkozlov | Oracle | 1915 | 10 | by-pr |
+| 3 | shipilev | Amazon | 1890 | 16 | by-pr |
+| 4 | AlanBateman | Oracle | 1889 | 4 | by-pr |
+| 5 | TobiHartmann | Oracle | 1548 | 4 | by-pr |
+| 6 | tschatzl | Oracle | 1405 | 4 | by-pr |
+| 7 | prrace | Oracle | 1219 | 5 | by-pr |
+| 8 | coleenp | Oracle | 1180 | 8 | by-pr |
+| 9 | kevinrushforth | Oracle | 1114 | 5 | jfx |
+| 10 | mrserb | Oracle | 1082 | 7 | by-pr |
+| 11 | tstuefe | Red Hat | 1034 | 8 | by-pr |
+| 12 | TheRealMDoerr | SAP | 993 | 6 | by-pr |
+| 13 | RogerRiggs | Oracle | 988 | 5 | by-pr |
+| 14 | chhagedorn | Oracle | 977 | 7 | by-pr |
+| 15 | erikj79 | Oracle | 972 | 4 | by-pr |
+| 16 | kimbarrett | Oracle | 962 | 2 | by-pr |
+| 17 | liach | Oracle | 945 | 3 | by-pr |
+| 18 | dfuch | Oracle | 935 | 2 | by-pr |
+| 19 | jaikiran | Oracle | 933 | 2 | by-pr |
+| 20 | albertnetymk | Oracle | 916 | 2 | by-pr |
+| 21 | iklam | Oracle | 899 | 5 | by-pr |
+| 22 | sspitsyn | Oracle | 873 | 3 | by-pr |
+| 23 | phohensee | Oracle | 858 | 11 | jdk11u-dev |
+| 24 | mcimadamore | Oracle | 812 | 4 | by-pr |
+| 25 | naotoj | Oracle | 779 | 5 | by-pr |
+| 26 | plummercj | Oracle | 741 | 4 | by-pr |
+| 27 | MBaesken | SAP | 718 | 7 | by-pr |
+| 28 | stefank | Oracle | 716 | 8 | by-pr |
+| 29 | RealFYang | Huawei | 697 | 9 | by-pr |
+| 30 | bplb | Oracle | 629 | 4 | by-pr |
+| 31 | magicus | Oracle | 602 | 2 | by-pr |
+| 32 | JornVernee | Oracle | 593 | 2 | panama-foreign |
+| 33 | irisclark | — | 592 | 8 | by-pr |
+| 34 | LanceAndersen | Oracle | 574 | 5 | by-pr |
+| 35 | turbanoff | Devexperts | 545 | 2 | by-pr |
+| 36 | vicente-romero-oracle | Oracle | 543 | 6 | by-pr |
+| 37 | lmesnik | Oracle | 539 | 4 | by-pr |
+| 38 | prsadhuk | Oracle | 535 | 2 | by-pr |
+| 39 | walulyai | Oracle | 535 | 2 | by-pr |
+| 40 | theRealAph | Red Hat | 528 | 7 | by-pr |
+| 41 | jerboaa | Red Hat | 498 | 7 | jdk8u-dev |
+| 42 | jonathan-gibbons | Oracle | 483 | 2 | by-pr |
+| 43 | jddarcy | Oracle | 481 | 2 | by-pr |
+| 44 | PaulSandoz | Oracle | 472 | 4 | by-pr |
+| 45 | azvegint | Oracle | 463 | 2 | by-pr |
+| 46 | seanjmullan | Oracle | 457 | 2 | by-pr |
+| 47 | RealCLanger | SAP | 454 | 5 | by-pr |
+| 48 | mlchung | Oracle | 446 | 6 | by-pr |
+| 49 | eme64 | Oracle | 445 | 3 | by-pr |
+| 50 | RealLucy | — | 422 | 6 | by-pr |
 
-> **数据来源**: by-pr/all-integrated-prs.csv (reviewers 字段)
+## 2. 跨组织审查模式
+
+哪个组织的 PR 被哪个组织的人审查：
+
+| PR 作者组织 | 审查者 Top 3 |
+|------------|-------------|
+| Oracle | dholmes-ora(1733), AlanBateman(1404), tschatzl(1207) |
+| Amazon | shipilev(414), kdnilsen(347), ysramakrishna(289) |
+| SAP | TheRealMDoerr(581), MBaesken(476), RealLucy(287) |
+| Red Hat | shipilev(169), TobiHartmann(151), vnkozlov(134) |
+| Alibaba | liach(80), sendaoYan(65), dholmes-ora(55) |
+| IBM | RealLucy(59), jerboaa(55), TheRealMDoerr(53) |
+| Tencent | DamonFool(45), vnkozlov(43), dholmes-ora(38) |
+| Intel | sviswa7(113), jatin-bhateja(107), vnkozlov(67) |
+| Huawei | RealFYang(127), feilongjiang(66), shipilev(44) |
+| Datadog | aptmac(69), Gunde(55), guruhb(33) |
+| Azul | rvansa(104), AntonKozlov(67), TimPushkin(35) |
+
+## 3. 项目级审查者
+
+### Valhalla
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| TobiHartmann | Oracle | 232 |
+| fparain | Oracle | 188 |
+| RogerRiggs | Oracle | 93 |
+| liach | Oracle | 90 |
+| MrSimms | Oracle | 86 |
+
+### JavaFX
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| kevinrushforth | Oracle | 1032 |
+| andy-goryachev-oracle | Oracle | 402 |
+| arapte | Oracle | 378 |
+| johanvos | Gluon | 229 |
+| aghaisas | — | 219 |
+
+### JMC
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| thegreystone | Datadog | 348 |
+| aptmac | IBM | 147 |
+| Gunde | — | 80 |
+| guruhb | — | 51 |
+| RealCLanger | SAP | 47 |
+
+### Babylon
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| PaulSandoz | Oracle | 150 |
+| mcimadamore | Oracle | 65 |
+| asotona | Oracle | 18 |
+| mabbay | Oracle | 2 |
+| jjfumero | Oracle | 2 |
+
+### Panama
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| JornVernee | Oracle | 309 |
+| mcimadamore | Oracle | 307 |
+| sundararajana | Oracle | 120 |
+| PaulSandoz | Oracle | 83 |
+| slowhog | Oracle | 22 |
+
+### Shenandoah
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| kdnilsen | Amazon | 208 |
+| ysramakrishna | — | 136 |
+| earthling-amzn | Amazon | 96 |
+| rkennke | Red Hat | 64 |
+| shipilev | Amazon | 41 |
+
+### Lilliput
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| shipilev | Amazon | 55 |
+| rkennke | Red Hat | 40 |
+| tstuefe | Red Hat | 22 |
+| xmas92 | Oracle | 7 |
+| stefank | Oracle | 5 |
+
+### CRaC
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| rvansa | Azul | 119 |
+| AntonKozlov | Azul | 69 |
+| TimPushkin | Azul | 43 |
+| DanHeidinga | — | 10 |
+| wkia | Azul | 4 |
+
+### Loom
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| pron | — | 33 |
+| AlanBateman | Oracle | 23 |
+| fisk | Oracle | 19 |
+| coleenp | Oracle | 12 |
+| lmesnik | Oracle | 10 |
+
+### Leyden
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| vnkozlov | Oracle | 49 |
+| adinn | IBM | 13 |
+| iklam | Oracle | 12 |
+| iwanowww | Oracle | 10 |
+| shipilev | Amazon | 10 |
+
+## 4. 最强协作对 (Author↔Reviewer)
+
+| Author | Reviewer | 合作次数 | Author 组织 | Reviewer 组织 |
+|--------|----------|---------|------------|---------------|
+| albertnetymk | tschatzl | 524 | Oracle | Oracle  |
+| tschatzl | albertnetymk | 304 | Oracle | Oracle  |
+| earthling-amzn | kdnilsen | 290 | Amazon | Amazon  |
+| egahlin | mgronlun | 282 | Oracle | Oracle  |
+| mcimadamore | JornVernee | 262 | Oracle | Oracle  |
+| bplb | AlanBateman | 259 | Oracle | Oracle  |
+| tschatzl | walulyai | 244 | Oracle | Oracle  |
+| magicus | erikj79 | 244 | Oracle | Oracle  |
+| earthling-amzn | ysramakrishna | 216 | Amazon | —  |
+| alexeysemenyukoracle | sashamatveev | 209 | Oracle | Oracle  |
+| justin-curtis-lu | naotoj | 208 | Oracle | Oracle  |
+| shipilev | shipilev | 205 | Amazon | Amazon  |
+| MBaesken | TheRealMDoerr | 202 | SAP | SAP  |
+| iklam | iklam | 200 | Oracle | Oracle  |
+| coleenp | coleenp | 199 | Oracle | Oracle  |
+| bplb | bplb | 198 | Oracle | Oracle  |
+| coleenp | dholmes-ora | 195 | Oracle | Oracle  |
+| GoeLin | TheRealMDoerr | 194 | SAP | SAP  |
+| lahodaj | vicente-romero-oracle | 191 | Oracle | Oracle  |
+| JornVernee | mcimadamore | 180 | Oracle | Oracle  |
+| shipilev | vnkozlov | 179 | Amazon | Oracle 🔀 |
+| GoeLin | MBaesken | 178 | SAP | SAP  |
+| tschatzl | kimbarrett | 171 | Oracle | Oracle  |
+| prsadhuk | prsadhuk | 168 | Oracle | Oracle  |
+| iklam | calvinccheung | 167 | Oracle | Oracle  |
+| chhagedorn | TobiHartmann | 164 | Oracle | Oracle  |
+| plummercj | sspitsyn | 162 | Oracle | Oracle  |
+| prrace | mrserb | 157 | Oracle | Oracle  |
+| albertnetymk | walulyai | 157 | Oracle | Oracle  |
+| albertnetymk | kimbarrett | 155 | Oracle | Oracle  |
+
+> 🔀 = 跨组织协作
+
+---
+
+> **统计时间**: 2026-03-25

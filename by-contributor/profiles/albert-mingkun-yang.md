@@ -307,3 +307,18 @@ Albert 的贡献特点:
 - [OpenJDK Changesets](https://hg.openjdk.org/jdk/jdk/user?user=ayang)
 - [GitHub Commits](https://github.com/openjdk/jdk/commits?author=Albert%20Mingkun%20Yang)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20ayang)
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2021-03-04 | Committer | Thomas Schatzl | 0 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-March/005162.html) |
+| 2021-08-04 | Reviewer | Thomas Schatzl | 20 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-August/005857.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 916 |
+| **活跃仓库数** | 2 |

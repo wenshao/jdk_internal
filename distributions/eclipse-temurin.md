@@ -189,7 +189,22 @@ java -version
 
 ---
 
-## 7. 相关链接
+## 7. 上游维护生态
+
+Eclipse Temurin 本身不直接贡献上游代码，而是依赖 **Adoptium Working Group** 成员组织的上游贡献。主要上游贡献来自：
+
+| 组织 | 上游角色 | LTS 维护贡献 |
+|------|---------|-------------|
+| [SAP](../contributors/orgs/sap.md) | LTS 维护最大贡献者 | 5,187 PRs |
+| [Amazon](../contributors/orgs/amazon.md) | Shenandoah + LTS | 713 PRs |
+| [Red Hat](../contributors/orgs/redhat.md) | C2, Lilliput, LTS | 770 PRs |
+| [IBM](../contributors/orgs/ibm.md) | s390x, OpenJ9 | 59 PRs |
+
+> Temurin 的质量取决于整个 OpenJDK 生态的上游贡献。
+
+---
+
+## 8. 相关链接
 
 ### 官方资源
 

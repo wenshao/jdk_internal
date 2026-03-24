@@ -115,3 +115,11 @@ Martin Buchholz 是 java.util.concurrent 的维护者：
 
 **Sources**:
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 33 |
+| **活跃仓库数** | 2 |

@@ -198,3 +198,11 @@ Stefan Karlsson 是 ZGC 从实验性特性到生产就绪的关键贡献者：
 > - 添加 Jfokus 2018 和 FOSDEM 2018 演讲
 > - 添加 PermGen Removal 和 G1 Class Unloading 贡献
 > - 添加提名 Axel Boldt-Christmas (2020)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 716 |
+| **活跃仓库数** | 8 |

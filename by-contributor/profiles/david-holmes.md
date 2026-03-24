@@ -164,3 +164,11 @@ David Holmes 是 JVM 运行时和并发领域的资深专家，Director of DLTeC
 > **文档版本**: 2.0
 > **最后更新**: 2026-03-22
 > **更新内容**: 修正位置 (Brisbane, Australia, 非 USA)、添加 GitHub (@dholmes-ora)、添加著作 (Java Concurrency in Practice, The Java Programming Language)、添加 DLTeCH Pty Ltd 背景、添加 RTSJ 贡献
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 2533 |
+| **活跃仓库数** | 5 |

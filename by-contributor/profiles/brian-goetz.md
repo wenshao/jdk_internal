@@ -28,7 +28,7 @@ Brian Goetz 是 Oracle 的 Java Language Architect，是 Java 语言演进的核
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Brian Goetz |
-| **组织** | [Oracle](/contributors/orgs/oracle.md) |
+| **组织** | [Oracle](../../contributors/orgs/oracle.md) |
 | **角色** | Java Language Architect |
 | **教育背景** | 数学学位 (当时许多学校尚无计算机科学专业) [未经验证] |
 | **位置** | Williston, Vermont, 美国 |

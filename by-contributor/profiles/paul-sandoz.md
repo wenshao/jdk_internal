@@ -1,6 +1,6 @@
 # Paul Sandoz
 
-> **Organization**: [Oracle](/contributors/orgs/oracle.md) (Java Platform Group)
+> **Organization**: [Oracle](../../contributors/orgs/oracle.md) (Java Platform Group)
 > **Role**: Architect, Java Platform Group
 > **Inside.java**: [PaulSandoz](https://inside.java/u/PaulSandoz/)
 > **GitHub**: [@PaulSandoz](https://github.com/PaulSandoz)
@@ -33,7 +33,7 @@ Paul Sandoz 是 Oracle Java Platform Group 的 **架构师 (Architect)**，是 J
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Paul Sandoz |
-| **当前组织** | [Oracle](/contributors/orgs/oracle.md) (Java Platform Group) |
+| **当前组织** | [Oracle](../../contributors/orgs/oracle.md) (Java Platform Group) |
 | **职位** | Architect, Java Platform Group |
 | **前雇主** | Sun Microsystems, CloudBees |
 | **专长领域** | Stream API, Vector API, VarHandle, Code Reflection, JAX-RS/Jersey |
@@ -163,3 +163,11 @@ VarHandle 提供了替代 `sun.misc.Unsafe` 的标准化内存访问 API，支�
 
 > **数据调查时间**: 2026-03-22
 > **文档版本**: 1.0
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 472 |
+| **活跃仓库数** | 4 |

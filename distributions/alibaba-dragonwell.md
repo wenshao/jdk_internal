@@ -232,16 +232,34 @@ ENTRYPOINT ["java", "-jar", "myapp.jar"]
 
 ---
 
-## 9. 贡献者
+## 9. 上游维护团队
 
-Dragonwell 由阿里巴巴 JDK 团队维护：
+### 团队负责人
 
-- **Wei Wu (吴一)** - JDK 8 维护者
-- **Luo Chun (罗秦)** - GC 优化
-- **Shaojin Wen (温少进)** - 性能优化
-- **Fei Yang** - 核心库
+**[Sanhong Li (李三红)](../contributors/orgs/alibaba.md)** — 阿里巴巴 JVM 团队技术领导，指导所有上游贡献工作。
 
-[阿里巴巴贡献者](../contributors/orgs/alibaba.md)
+### 维护分支贡献统计
+
+| 贡献者 | jdk17u | jdk21u | jdk11u | jdk25u | jdk8u | 总计 |
+|--------|--------|--------|--------|--------|-------|------|
+| [sendaoYan](../by-contributor/profiles/sendaoyan.md) | 81 | 109 | 38 | 17 | 31 | **276** |
+| amosshi | 0 | 0 | 0 | 0 | 0 | — |
+| mmyxym | 3 | 16 | 0 | 0 | 0 | **19** |
+| 其他 | 4 | 5 | 7 | 0 | 5 | **21** |
+| **合计** | **88** | **130** | **45** | **17** | **36** | **316** |
+
+> [sendaoYan](../by-contributor/profiles/sendaoyan.md) 是 Alibaba 的核心维护者，跨 **10 个仓库** 活跃，覆盖所有 LTS 版本。
+
+### 主线上游贡献
+
+Alibaba 在 openjdk/jdk 主线有 **448 PRs** (13 贡献者)，主要领域: 核心库性能优化, C2 编译器, GC, RISC-V。
+
+核心贡献者:
+- [Shaojin Wen (温少)](../by-contributor/profiles/shaojin-wen.md) (@wenshao) — 97 PRs, ClassFile API/String 优化
+- [D-D-H](https://github.com/D-D-H) (董登辉) — 56 PRs, GC/Runtime
+- [Yi Yang](../by-contributor/profiles/yi-yang.md) — 57 PRs, C2 编译器
+
+> 详情: [Alibaba 组织页面](../contributors/orgs/alibaba.md)
 
 ---
 

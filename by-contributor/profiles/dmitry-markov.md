@@ -126,3 +126,11 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 - [GitHub Profile](https://github.com/dmarkov20)
 - [GitHub Commits to openjdk/jdk](https://github.com/openjdk/jdk/commits?author=dmarkov20)
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Admarkov20+is%3Aclosed+label%3Aintegrated)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 49 |
+| **活跃仓库数** | 2 |

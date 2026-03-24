@@ -8,7 +8,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | John Jiang |
-| **当前组织** | [腾讯 (Tencent) - Kona JDK Team](/contributors/orgs/tencent.md) (北京) |
+| **当前组织** | [腾讯 (Tencent) - Kona JDK Team](../../contributors/orgs/tencent.md) (北京) |
 | **GitHub** | [@johnshajiang](https://github.com/johnshajiang) |
 | **OpenJDK** | Reviewer (jjiang) |
 | **PRs** | [30 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ajohnshajiang+is%3Aclosed+label%3Aintegrated) |
@@ -29,3 +29,17 @@ John Jiang 是 Tencent Kona JDK 安全领域的核心开发者。他维护 Tence
 
 > **文档等级**: L2
 > **创建时间**: 2026-03-23
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2020-02-12 | Reviewer | Rajan Halade | 12 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2020-February/003892.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 15 |
+| **活跃仓库数** | 1 |

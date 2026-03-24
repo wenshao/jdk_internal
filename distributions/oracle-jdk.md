@@ -302,7 +302,43 @@ java -version
 
 ---
 
-## 9. 相关链接
+## 9. 上游维护团队
+
+Oracle 是 OpenJDK 的最大贡献者，主导主线开发和多个实验性项目。
+
+### 贡献规模
+
+| 维度 | PRs | 说明 |
+|------|-----|------|
+| **openjdk/jdk 主线** | **17,088** | 占主线 68.7% |
+| **实验性项目** | **5,700+** | Valhalla, Panama, Babylon, Loom, JFX |
+| **LTS 维护** | 430 | jdk17u/21u/11u/25u/8u |
+
+### 主导的实验性项目
+
+| 项目 | PRs | 核心贡献者 |
+|------|-----|-----------|
+| **Valhalla** | 2,082 (90%) | TobiHartmann (331), MrSimms (322) |
+| **Babylon** | 910 (100%) | grfrost (428) |
+| **Panama-Foreign** | 817 (97%) | [mcimadamore](../by-contributor/profiles/maurizio-cimadamore.md) (312) |
+| **JFX** | 1,782 (97%) | kevinrushforth (297) |
+| **Loom** | 146 (69%) | [coleenp](../by-contributor/profiles/coleen-phillimore.md) (33) |
+
+### Top 审查者
+
+| 审查者 | 审查次数 | 领域 |
+|--------|---------|------|
+| dholmes-ora | 2,527 | HotSpot Runtime |
+| [AlanBateman](../by-contributor/profiles/alan-bateman.md) | 1,862 | 核心库 |
+| vnkozlov | 1,845 | C2 编译器 |
+| tschatzl | 1,391 | G1 GC |
+| [TobiHartmann](../by-contributor/profiles/tobias-hartmann.md) | 1,314 | C2, Valhalla |
+
+> 详情: [Oracle 组织页面](../contributors/orgs/oracle.md)
+
+---
+
+## 10. 相关链接
 
 ### 官方资源
 

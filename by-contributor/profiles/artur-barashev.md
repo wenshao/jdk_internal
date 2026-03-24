@@ -54,3 +54,9 @@ Artur Barashev 贡献于 Java 安全功能：
 
 **Sources**:
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2025-05-06 | Committer | Sean Mullan | 16 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2025-May/010032.html) |

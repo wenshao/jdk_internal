@@ -124,3 +124,11 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Most c
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Azifeihan+is%3Aclosed+label%3Aintegrated)
 - [vector-api-test-rvv](https://github.com/zifeihan/vector-api-test-rvv) - RISC-V Vector API performance benchmarks
 - [State of OpenJDK on RISC-V (JCP, April 2024)](https://jcp.org/aboutJava/communityprocess/ec-public/materials/2024-04-24/JCP-State_of_OpenJDK_on_RISC-V.pdf)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 38 |
+| **活跃仓库数** | 1 |

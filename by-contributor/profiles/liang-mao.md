@@ -8,7 +8,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Liang Mao (毛亮) |
-| **当前组织** | [阿里巴巴 (Alibaba)](/contributors/orgs/alibaba.md) |
+| **当前组织** | [阿里巴巴 (Alibaba)](../../contributors/orgs/alibaba.md) |
 | **GitHub** | [@mmyxym](https://github.com/mmyxym) (Arctic Code Vault Contributor) |
 | **OpenJDK** | Author |
 | **PRs** | [2 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Ammyxym+is%3Aclosed+label%3Aintegrated) |

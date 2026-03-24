@@ -189,3 +189,17 @@ Ian Graves 在 2016 年 JVM Language Summit 上展示了 Vector API 的早期设
 - [JEP 338: Vector API (Incubator)](https://openjdk.org/jeps/338)
 - [JVMLS 2016: Vector APIs for Java](https://www.oracle.com/technetwork/java/jvmls2016-graves-3125549.pptx)
 - [Inside.java: Beyond the Vector API](https://inside.java/2025/11/16/jvmls-vector-api/)
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2021-04-23 | Committer | Stuart Marks | 35 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-April/005385.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 22 |
+| **活跃仓库数** | 1 |

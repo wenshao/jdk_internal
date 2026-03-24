@@ -6,16 +6,17 @@
 ## 目录
 
 1. [概览](#1-概览)
-2. [按专业领域](#2-按专业领域)
-3. [按 JDK 版本贡献](#3-按-jdk-版本贡献)
-4. [贡献趋势](#4-贡献趋势)
-5. [组织发行版](#5-组织发行版)
-6. [JEP 主导组织](#6-jep-主导组织)
-7. [组织特点](#7-组织特点)
-8. [贡献者流动](#8-贡献者流动)
-9. [地区分布](#9-地区分布)
-10. [数据来源](#10-数据来源)
-11. [相关链接](#11-相关链接)
+2. [实验性项目主导组织](#2-实验性项目主导组织)
+3. [按专业领域](#3-按专业领域)
+4. [按 JDK 版本贡献](#4-按-jdk-版本贡献)
+5. [贡献趋势](#5-贡献趋势)
+6. [组织发行版](#6-组织发行版)
+7. [JEP 主导组织](#7-jep-主导组织)
+8. [组织特点](#8-组织特点)
+9. [贡献者流动](#9-贡献者流动)
+10. [地区分布](#10-地区分布)
+11. [数据来源](#11-数据来源)
+12. [相关链接](#12-相关链接)
 
 ---
 
@@ -24,36 +25,57 @@
 
 OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了各主要贡献组织的工作领域、版本贡献和专业方向。
 
-| 组织 | Integrated PRs | Reviewer | Committer | Author | 主要领域 | JDK 发行版 |
-|------|----------------|----------|-----------|--------|----------|------------|
-| [Oracle](oracle.md) | 17,088  | 30+ | 20+ | - | 全领域 | Oracle JDK |
-| [Amazon](amazon.md) | 1,172  | 1 | 4 | 1 | Shenandoah GC, C2, Runtime | Corretto |
-| [SAP](sap.md) | 999  | 3 | 4 | - | PPC, AIX, 构建 | SapMachine |
-| [Red Hat](redhat.md) | 584  | 4 | - | - | C2 编译器, HotSpot Runtime | Red Hat OpenJDK |
-| [Alibaba](alibaba.md) | 388  | - | 5 | 6 | 核心库, C2, GC, Runtime | Dragonwell |
-| [IBM](ibm.md) | 222  | 2 | 2 | - | s390x, 容器/cgroup, AArch64 | Semeru |
-| [Tencent](tencent.md) | 223  | 2 | - | 2 | 构建稳定性, 编译器, GC, 安全 | Kona |
-| [Intel](intel.md) | 190  | 1 | - | 1 | Vector API, x86_64, SuperWord | - |
-| [ARM](arm.md) | 123  | 1 | - | 1 | AArch64, Build | - |
-| [Loongson](loongson.md) | 33  | - | 1 | 2 | LoongArch | Loongson JDK |
-| [ByteDance](bytedance.md) | 24  | - | 1 | - | RISC-V 向量 | - |
-| [ISCAS PLCT](iscas-plct.md) | 61  | - | 1 | 1 | RISC-V, 核心库 | - |
-| [Huawei](huawei.md) | 156  | 1 | 2 | - | RISC-V Port (JEP 422), AArch64 | BiSheng JDK |
-| [BellSoft](bellsoft.md) | 39  | - | 1 | - | ARM32, AArch64, RISC-V | Liberica JDK |
-| [Azul](azul.md) | 18  | - | 1 | - | CRaC, Runtime | Zulu JDK |
-| [Google](google.md) | 81  | - | - | ~3 | 构建系统, javac | - |
-| [Datadog](datadog.md) | 90  | 1 | 1 | - | Compact Object Headers (JEP 519), JFR | - |
-| [Microsoft](microsoft.md) | 少量 | - | - | ~3 | Azure 优化, Build | Microsoft Build of OpenJDK |
-| [独立贡献者](independent.md) | 500+ | 1 | 2 | 1 | 代码清理, C2, 安全 | - |
+| 组织 | 主线 PRs | LTS 维护 PRs | 总计 | 主要领域 | JDK 发行版 |
+|------|----------|-------------|------|----------|------------|
+| [Oracle](oracle.md) | 17,088  | — | — | 全领域 | Oracle JDK |
+| [Amazon](amazon.md) | 1,172  | — | — | Shenandoah GC, C2, Runtime | Corretto |
+| [SAP](sap.md) | 999  | **5,264** | **6,263** | LTS 维护, PPC, AIX | SapMachine |
+| [Red Hat](redhat.md) | 584  | 770 | 1,354 | C2 编译器, LTS 维护 | Red Hat OpenJDK |
+| [Alibaba](alibaba.md) | 388  | 559 | 947 | 核心库, C2, GC, LTS 维护 | Dragonwell |
+| [IBM](ibm.md) | 222  | — | — | s390x, 容器/cgroup, AArch64 | Semeru |
+| [Tencent](tencent.md) | 223  | — | — | 构建稳定性, 编译器, GC, 安全 | Kona |
+| [Intel](intel.md) | 190  | — | — | Vector API, x86_64, SuperWord | - |
+| [Huawei](huawei.md) | 156  | — | — | RISC-V Port (JEP 422), AArch64 | BiSheng JDK |
+| [ARM](arm.md) | 123  | — | — | AArch64, Build | - |
+| [Datadog](datadog.md) | 90  | — | — | Lilliput, **JMC 主导 (55%)**, JFR | - |
+| [Google](google.md) | 81  | — | — | 构建系统, javac | - |
+| [ISCAS PLCT](iscas-plct.md) | 61  | — | — | RISC-V, 核心库 | - |
+| [BellSoft](bellsoft.md) | 39  | — | — | ARM32, AArch64, RISC-V | Liberica JDK |
+| [Loongson](loongson.md) | 33  | — | — | LoongArch | Loongson JDK |
+| [ByteDance](bytedance.md) | 24  | — | — | RISC-V 向量 | - |
+| [Azul](azul.md) | 18  | — | — | CRaC, Runtime | Zulu JDK |
+| [Microsoft](microsoft.md) | 少量 | — | — | 下游发行版维护 | Microsoft Build of OpenJDK |
+| [Gluon](gluon.md) | 0 | — | — | **JavaFX Co-Lead** (163 JFX PRs) | GluonFX |
+| [独立贡献者](independent.md) | 500+ | — | — | 代码清理, C2, 安全 | - |
 
-> **统计时间**: 2026-03-23 | **统计方法**: GitHub Integrated PRs
+> **统计时间**: 2026-03-24 | **统计方法**: GitHub Integrated PRs
+> **主线**: `openjdk/jdk` | **LTS 维护**: `jdk17u-dev/jdk21u-dev/jdk11u-dev/jdk25u-dev/jdk8u-dev`
 > **角色来源**: [OpenJDK Census](https://openjdk.org/census) JDK Project 部分
 >
-> **注**: PR 数据为各组织详情页面中记录的值，部分组织的统计范围仅限近几年活跃贡献者。完整历史数据参见 [按组织统计](../stats/by-org.md)。
+> **注**: LTS 维护 PRs 列 "—" 表示该组织的维护分支贡献尚未统计（仅统计了 SAP、Red Hat、Alibaba）。
 
 ---
 
-## 2. 按专业领域
+## 2. 实验性项目主导组织
+
+基于 10 个实验性项目仓库的完整 PR 数据 (2026-03-24 采集)：
+
+| 项目 | PRs | 主导组织 | 占比 | 核心贡献者 | 目标 |
+|------|-----|---------|------|-----------|------|
+| [Valhalla](../../valhalla/contributors.md) | 2,082 | [Oracle](oracle.md) | 90% | TobiHartmann, MrSimms | Value Types |
+| [Babylon](../../babylon/all-integrated-prs.csv) | 910 | [Oracle](oracle.md) | 100% | grfrost (428) | GPU/Code Reflection |
+| [Panama-Foreign](../../panama-foreign/all-integrated-prs.csv) | 817 | [Oracle](oracle.md) | 97% | mcimadamore (312) | FFM API |
+| [Shenandoah](../../shenandoah/all-integrated-prs.csv) | 482 | [Amazon](amazon.md) | 99% | earthling-amzn (337) | Low-pause GC |
+| [CRaC](../../crac/all-integrated-prs.csv) | 251 | [Azul](azul.md) | 81% | TimPushkin (75) | 检查点恢复 |
+| [Lilliput](../../lilliput/all-integrated-prs.csv) | 147 | [Red Hat](redhat.md)/[Datadog](datadog.md) | 72%/63% | rkennke (92, 现 Datadog) | Compact Headers |
+| [Loom](../../loom/all-integrated-prs.csv) | 146 | [Oracle](oracle.md) | 69% | coleenp (33) | Virtual Threads |
+| [Leyden](../../leyden/all-integrated-prs.csv) | 83 | [Amazon](amazon.md) | 52% | shipilev (41) | 启动优化/AOT |
+
+> 详细分析见 [跨仓库贡献全景](../stats/cross-repo-overview.md)
+
+---
+
+## 3. 按专业领域
 
 ### 垃圾收集 (GC)
 
@@ -116,7 +138,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 
 ---
 
-## 3. 按 JDK 版本贡献
+## 4. 按 JDK 版本贡献
 
 ### JDK 26 (GA 2026-03)
 
@@ -223,7 +245,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 
 ---
 
-## 4. 贡献趋势
+## 5. 贡献趋势
 
 ### 年度 PR 统计 (2021-2025)
 
@@ -260,7 +282,7 @@ IBM        ██                                                          3%
 
 ---
 
-## 5. 组织发行版
+## 6. 组织发行版
 
 | 组织 | 发行版 | 基于 | 特点 | 链接 |
 |------|--------|------|------|------|
@@ -276,7 +298,7 @@ IBM        ██                                                          3%
 
 ---
 
-## 6. JEP 主导组织
+## 7. JEP 主导组织
 
 ### GC 相关 JEP
 
@@ -337,7 +359,7 @@ IBM        ██                                                          3%
 
 ---
 
-## 7. 组织特点
+## 8. 组织特点
 
 ### Oracle
 
@@ -514,7 +536,7 @@ IBM        ██                                                          3%
 
 ---
 
-## 8. 贡献者流动
+## 9. 贡献者流动
 
 ### 跨组织流动
 
@@ -541,7 +563,7 @@ OpenJDK 核心贡献者在组织间的流动对技术方向有深远影响：
 
 ---
 
-## 9. 地区分布
+## 10. 地区分布
 
 ### 按地区组织分布
 
@@ -576,7 +598,7 @@ OpenJDK 核心贡献者在组织间的流动对技术方向有深远影响：
 
 ---
 
-## 10. 数据来源
+## 11. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
 - **统计时间**: 2026-03-23
@@ -587,7 +609,7 @@ OpenJDK 核心贡献者在组织间的流动对技术方向有深远影响：
 
 ---
 
-## 11. 相关链接
+## 12. 相关链接
 
 - [OpenJDK Census](https://openjdk.org/census) - 官方贡献者组织归属
 - [OpenJDK Groups](https://openjdk.org/groups/) - 技术工作组

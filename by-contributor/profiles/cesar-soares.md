@@ -8,7 +8,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Divino Cesar Soares Lucas |
-| **当前组织** | [Amazon LLC](/contributors/orgs/amazon.md) (Seattle, WA) |
+| **当前组织** | [Amazon LLC](../../contributors/orgs/amazon.md) (Seattle, WA) |
 | **GitHub** | [@JohnTortugo](https://github.com/JohnTortugo) |
 | **个人网站** | [jtortugo.com](http://jtortugo.com/) |
 | **OpenJDK** | Committer (cslucas) — [CFV 2025-03](https://mail.openjdk.org/pipermail/jdk-dev/2025-March/) |
@@ -32,3 +32,11 @@ Cesar 专注于 C2 编译器的逃逸分析和标量替换优化, 也贡献 Runt
 
 > **文档等级**: L2
 > **创建时间**: 2026-03-23
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 59 |
+| **活跃仓库数** | 3 |

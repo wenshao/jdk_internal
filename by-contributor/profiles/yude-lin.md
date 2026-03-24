@@ -19,7 +19,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Yude Lin (林育德) |
-| **当前组织** | [阿里巴巴 (Alibaba)](/contributors/orgs/alibaba.md) |
+| **当前组织** | [阿里巴巴 (Alibaba)](../../contributors/orgs/alibaba.md) |
 | **GitHub** | [@linade](https://github.com/linade) |
 | **OpenJDK** | Author (linade) |
 | **Integrated PRs** | [8](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Alinade+is%3Aclosed+label%3Aintegrated) |

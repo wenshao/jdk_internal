@@ -2,7 +2,7 @@
 
 > AArch64 架构支持和构建系统
 
-[← 返回组织索引](../../by-contributor/README.md)
+[← 返回组织索引](README.md)
 
 ---
 ## 目录
@@ -294,6 +294,35 @@ ARM 参与构建系统开发：
 
 ---
 
+
+
+## 审查者网络
+
+> ARM 的 PR 被以下审查者审查最多 (共 393 次审查)
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| theRealAph | Red Hat | 37 |
+| TobiHartmann | Oracle | 30 |
+| XiaohongGong | ARM | 29 |
+| vnkozlov | Oracle | 28 |
+| nick-arm | ARM | 27 |
+| jatin-bhateja | Intel | 26 |
+| eme64 | Oracle | 17 |
+| nsjian | — | 15 |
+
+### 审查组织分布
+
+| 审查者组织 | 次数 | 占比 |
+|-----------|------|------|
+| Oracle | 157 | 40% |
+| ARM | 84 | 21% |
+| Red Hat | 41 | 10% |
+| Intel | 31 | 8% |
+| Independent | 19 | 5% |
+
+---
+
 ## 7. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:pankaj-bansal-arm type:pr label:integrated`
@@ -320,4 +349,4 @@ ARM 参与构建系统开发：
 - 添加协作深度分析 (AArch64 构建支持案例)
 - 新增知识传承网络分析
 
-[→ 返回组织索引](../../by-contributor/README.md)
+[→ 返回组织索引](README.md)

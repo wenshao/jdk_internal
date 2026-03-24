@@ -119,3 +119,17 @@ Fernando Guallini 专注于 Java 安全子系统的测试质量和现代化。
 
 > **文档版本**: 1.0 | **最后更新**: 2026-03-22
 > 基于 GitHub API 数据: 47 integrated PRs. 安全测试和 PEM API 为最高频贡献领域.
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2025-02-05 | Committer | Rajan Halade | 13 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2025-February/009720.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 22 |
+| **活跃仓库数** | 1 |

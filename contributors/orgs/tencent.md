@@ -338,6 +338,35 @@ Tongbao Zhang 专注于 G1 GC 正确性修复：
 
 ---
 
+
+
+## 审查者网络
+
+> Tencent 的 PR 被以下审查者审查最多 (共 454 次审查)
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| DamonFool | Tencent | 45 |
+| vnkozlov | Oracle | 43 |
+| dholmes-ora | Oracle | 38 |
+| shipilev | Amazon | 32 |
+| TobiHartmann | Oracle | 28 |
+| XueleiFan | Oracle | 17 |
+| iklam | Oracle | 16 |
+| tstuefe | Red Hat | 13 |
+
+### 审查组织分布
+
+| 审查者组织 | 次数 | 占比 |
+|-----------|------|------|
+| Oracle | 306 | 67% |
+| Tencent | 56 | 12% |
+| Amazon | 32 | 7% |
+| Red Hat | 28 | 6% |
+| SAP | 6 | 1% |
+
+---
+
 ## 9. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`

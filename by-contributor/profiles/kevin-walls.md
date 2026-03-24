@@ -128,3 +128,17 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Akevinjwalls+is%3Aclosed+label%3Aintegrated)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=assignee%20%3D%20kevinw)
 - [OpenJDK Census](https://openjdk.org/census#kevinw)
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2024-01-09 | Reviewer | Serguei Spitsyn | 36 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2024-January/008622.html) |
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 356 |
+| **活跃仓库数** | 4 |

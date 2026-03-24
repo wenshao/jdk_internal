@@ -8,7 +8,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Denghui Dong (董登辉) |
-| **当前组织** | [阿里巴巴 (Alibaba) - JVM Team](/contributors/orgs/alibaba.md) (2017 年加入) |
+| **当前组织** | [阿里巴巴 (Alibaba) - JVM Team](../../contributors/orgs/alibaba.md) (2017 年加入) |
 | **GitHub** | [@D-D-H](https://github.com/D-D-H) |
 | **OpenJDK** | Committer (ddong) — [CFV 2021-08 "Alibaba JVM Team"](https://mail.openjdk.org/pipermail/jdk-dev/2021-August/005899.html), [JDK 8u Committer 2019](https://mail.openjdk.org/pipermail/jdk8u-dev/2019-November/010565.html) |
 | **PRs** | [36 integrated](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3AD-D-H+is%3Aclosed+label%3Aintegrated) |
@@ -42,24 +42,24 @@
 |----|--------|------|------|------|
 | [#5153](https://github.com/openjdk/jdk/pull/5153) | 8272609 | Add string deduplication support to SerialGC | **核心功能** | - |
 | [#4550](https://github.com/openjdk/jdk/pull/4550) | 8261441 | JFR: Filename expansion | **JFR 增强** | - |
-| [#16976](https://github.com/openjdk/jdk/pull/16976) | 8321404 | Limit heap dumps triggered by HeapDumpBeforeFullGC | 功能增强 | [详情](/by-pr/8321/8321404.md) |
-| [#17674](https://github.com/openjdk/jdk/pull/17674) | 8325144 | C1: Optimize CriticalEdgeFinder | **C1 优化** | [详情](/by-pr/8325/8325144.md) |
-| [#17191](https://github.com/openjdk/jdk/pull/17191) | 8322694 | C1: Handle Constant and IfOp in NullCheckEliminator | **C1 优化** | [详情](/by-pr/8322/8322694.md) |
+| [#16976](https://github.com/openjdk/jdk/pull/16976) | 8321404 | Limit heap dumps triggered by HeapDumpBeforeFullGC | 功能增强 | [详情](../../by-pr/8321/8321404.md) |
+| [#17674](https://github.com/openjdk/jdk/pull/17674) | 8325144 | C1: Optimize CriticalEdgeFinder | **C1 优化** | [详情](../../by-pr/8325/8325144.md) |
+| [#17191](https://github.com/openjdk/jdk/pull/17191) | 8322694 | C1: Handle Constant and IfOp in NullCheckEliminator | **C1 优化** | [详情](../../by-pr/8322/8322694.md) |
 | [#3470](https://github.com/openjdk/jdk/pull/3470) | 8265129 | Add intrinsic support for JVM.getClassId | JFR 性能 | - |
 
 ### C1 编译器优化 (2023-2024)
 
 | PR | Bug ID | 标题 | 分析 |
 |----|--------|------|------|
-| [#17191](https://github.com/openjdk/jdk/pull/17191) | 8322694 | C1: Handle Constant and IfOp in NullCheckEliminator | [详情](/by-pr/8322/8322694.md) |
-| [#17674](https://github.com/openjdk/jdk/pull/17674) | 8325144 | C1: Optimize CriticalEdgeFinder | [详情](/by-pr/8325/8325144.md) |
+| [#17191](https://github.com/openjdk/jdk/pull/17191) | 8322694 | C1: Handle Constant and IfOp in NullCheckEliminator | [详情](../../by-pr/8322/8322694.md) |
+| [#17674](https://github.com/openjdk/jdk/pull/17674) | 8325144 | C1: Optimize CriticalEdgeFinder | [详情](../../by-pr/8325/8325144.md) |
 | [#17499](https://github.com/openjdk/jdk/pull/17499) | 8324213 | C1: Canonicalizer doesn't need to handle IfOp | - |
 | [#17553](https://github.com/openjdk/jdk/pull/17553) | 8324630 | C1: Canonicalizer::do_LookupSwitch optimization | - |
 | [#17204](https://github.com/openjdk/jdk/pull/17204) | 8322779 | C1: Remove unused counter 'totalInstructionNodes' | - |
 | [#17205](https://github.com/openjdk/jdk/pull/17205) | 8322781 | C1: Debug build crash in GraphBuilder::vmap() | - |
-| [#18125](https://github.com/openjdk/jdk/pull/18125) | 8327379 | Make TimeLinearScan a develop flag | [详情](/by-pr/8327/8327379.md) |
-| [#18170](https://github.com/openjdk/jdk/pull/18170) | 8327693 | C1: LIRGenerator assertion only | [详情](/by-pr/8327/8327693.md) |
-| [#21007](https://github.com/openjdk/jdk/pull/21007) | 8340144 | C1: remove unused Compilation::_max_spills | [详情](/by-pr/8340/8340144.md) |
+| [#18125](https://github.com/openjdk/jdk/pull/18125) | 8327379 | Make TimeLinearScan a develop flag | [详情](../../by-pr/8327/8327379.md) |
+| [#18170](https://github.com/openjdk/jdk/pull/18170) | 8327693 | C1: LIRGenerator assertion only | [详情](../../by-pr/8327/8327693.md) |
+| [#21007](https://github.com/openjdk/jdk/pull/21007) | 8340144 | C1: remove unused Compilation::_max_spills | [详情](../../by-pr/8340/8340144.md) |
 
 ### JFR 贡献
 
@@ -94,3 +94,11 @@ D-D-H 作为 Committer 为以下 Alibaba Author 的 PR 提供 /sponsor:
 
 > **文档等级**: L2
 > **创建时间**: 2026-03-23
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 20 |
+| **活跃仓库数** | 1 |

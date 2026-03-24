@@ -170,9 +170,9 @@ Michael 主导了从 JDK 9 到 JDK 11 的 HTTP Client API 完整演进：
 
 | 协作者 | 合作领域 |
 |--------|----------|
-| [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | HTTP/3 实现, HttpClient 维护, JEP 517 |
-| [Chris Hegarty](/by-contributor/profiles/chris-hegarty.md) | 网络栈, Core Libraries |
-| [Alan Bateman](/by-contributor/profiles/alan-bateman.md) | NIO, 虚拟线程与网络集成 |
+| [Daniel Fuchs](daniel-fuchs.md) | HTTP/3 实现, HttpClient 维护, JEP 517 |
+| [Chris Hegarty](chris-hegarty.md) | 网络栈, Core Libraries |
+| [Alan Bateman](alan-bateman.md) | NIO, 虚拟线程与网络集成 |
 | Daniel Jelinski | HTTP/3 CUBIC 拥塞控制 |
 
 ---

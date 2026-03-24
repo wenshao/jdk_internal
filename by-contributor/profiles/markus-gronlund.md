@@ -100,3 +100,11 @@ Markus Grönlund 是 **JFR** 的核心贡献者：
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
 - [JEP 349: JFR Event Streaming](https://openjdk.org/jeps/349)
 - [Inside Java Podcast Episode 13](https://inside.java/2021/02/22/podcast-013/)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 411 |
+| **活跃仓库数** | 4 |

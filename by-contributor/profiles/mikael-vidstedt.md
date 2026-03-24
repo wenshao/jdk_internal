@@ -105,3 +105,11 @@ Mikael Vidstedt 贡献于 HotSpot 运行时：
 - [JDK 26 Top Contributors](./jdk26-top-contributors.md)
 - [JDK Project Leads](https://openjdk.org/projects/jdk/leads)
 - [Inside.java Podcast](https://inside.java/u/MikaelVidstedt/)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 115 |
+| **活跃仓库数** | 1 |

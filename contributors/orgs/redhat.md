@@ -2,7 +2,7 @@
 
 > Shenandoah GC 和 AArch64 的主要贡献者
 
-[← 返回组织索引](../../by-contributor/README.md)
+[← 返回组织索引](README.md)
 
 ---
 
@@ -54,17 +54,30 @@
 
 ## 1. 概览
 
-Red Hat 是 OpenJDK 的重要贡献者，尤其在 Shenandoah GC、AArch64 移植和 Project Leyden 方面有深厚积累。
+Red Hat 是 OpenJDK 的重要贡献者，尤其在 Shenandoah GC、AArch64 移植和 Project Leyden 方面有深厚积累。Red Hat 同时积极参与 **LTS 维护分支**的 backport 工作，特别是在 JDK 11 和 JDK 8 等较老版本。
 
 | 指标 | 值 |
 |------|-----|
-| **Integrated PRs** | 649+ (当前) |
+| **主线 Integrated PRs** | 584+ |
+| **LTS 维护 PRs** | **770** |
+| **总计 PRs** | **1,354** |
 | **贡献者数** | 4 (当前) + 4 (前员工) |
 | **活跃时间** | 2010+ - 至今 |
-| **主要领域** | C2 编译器, HotSpot Runtime, AArch64 |
+| **主要领域** | C2 编译器, **Lilliput 项目** (72%, 由前 Red Hat 的 rkennke 主导), HotSpot Runtime, LTS 维护 |
 | **OpenJDK** | [Red Hat OpenJDK](https://developers.redhat.com/products/openjdk) |
 
-> **统计说明**: 使用 GitHub Integrated PRs 作为贡献指标。
+### LTS 维护分支贡献
+
+| 贡献者 | jdk17u | jdk21u | jdk11u | jdk25u | jdk8u | 总计 |
+|--------|--------|--------|--------|--------|-------|------|
+| luchenlin | 140 | 109 | 250 | 0 | 0 | **499** |
+| gnu-andrew | 18 | 4 | 42 | 2 | 85 | **151** |
+| jerboaa | 25 | 11 | 49 | 3 | 32 | **120** |
+| **合计** | **183** | **124** | **341** | **5** | **117** | **770** |
+
+> **注**: zhengyu123 (89 PRs) 经核实属于 **Oracle/Datadog**，已从 Red Hat 列表移除。
+
+> Red Hat 的 LTS 维护重心在 **JDK 11** (404 PRs) 和 **JDK 8** (120 PRs)，反映其企业客户对较老 LTS 版本的持续需求。
 
 ---
 
@@ -244,6 +257,35 @@ Red Hat 维护 OpenJDK 发行版：
 
 ---
 
+
+
+## 审查者网络
+
+> Red Hat 的 PR 被以下审查者审查最多 (共 2,095 次审查)
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| shipilev | Amazon | 172 |
+| TobiHartmann | Oracle | 151 |
+| vnkozlov | Oracle | 135 |
+| jerboaa | Red Hat | 131 |
+| rwestrel | Red Hat | 128 |
+| tstuefe | Red Hat | 128 |
+| chhagedorn | Oracle | 110 |
+| dholmes-ora | Oracle | 86 |
+
+### 审查组织分布
+
+| 审查者组织 | 次数 | 占比 |
+|-----------|------|------|
+| Oracle | 1027 | 49% |
+| Red Hat | 576 | 27% |
+| Amazon | 191 | 9% |
+| SAP | 86 | 4% |
+| IBM | 70 | 3% |
+
+---
+
 ## 10. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
@@ -271,4 +313,4 @@ Red Hat 维护 OpenJDK 发行版：
 - 添加协作深度分析 (JEP 519 案例)
 - 新增知识传承网络分析
 
-[→ 返回组织索引](../../by-contributor/README.md)
+[→ 返回组织索引](README.md)

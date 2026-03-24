@@ -147,3 +147,11 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 - [JDK 8u Committer Nomination](https://mail.openjdk.org/pipermail/jdk8u-dev/2015-April/003427.html)
 - [GitHub Commits to openjdk/jdk](https://github.com/openjdk/jdk/commits?author=aivanov-jdk)
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aaivanov-jdk+is%3Aclosed+label%3Aintegrated)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 675 |
+| **活跃仓库数** | 1 |

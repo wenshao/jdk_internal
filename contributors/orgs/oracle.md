@@ -677,6 +677,35 @@ Oracle 贡献者担任以下 Group 的 Lead：
 
 ---
 
+
+
+## 审查者网络
+
+> Oracle 的 PR 被以下审查者审查最多 (共 46,403 次审查)
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| dholmes-ora | Oracle | 1738 |
+| AlanBateman | Oracle | 1423 |
+| tschatzl | Oracle | 1208 |
+| vnkozlov | Oracle | 1080 |
+| prrace | Oracle | 957 |
+| TobiHartmann | Oracle | 927 |
+| coleenp | Oracle | 920 |
+| kimbarrett | Oracle | 779 |
+
+### 审查组织分布
+
+| 审查者组织 | 次数 | 占比 |
+|-----------|------|------|
+| Oracle | 40234 | 87% |
+| Amazon | 875 | 2% |
+| Red Hat | 849 | 2% |
+| Devexperts | 377 | 1% |
+| Independent | 363 | 1% |
+
+---
+
 ## 11. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`

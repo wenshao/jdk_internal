@@ -19,8 +19,8 @@
 
 | 页面 | 说明 |
 |------|------|
-| [统计概览](/contributors/orgs/README.md) | 总体数据、年度趋势、组织分布 |
-| [Top 50 贡献者](/contributors/orgs/README.md) | 历史贡献排名 |
+| [统计概览](../../contributors/orgs/README.md) | 总体数据、年度趋势、组织分布 |
+| [Top 50 贡献者](../../contributors/orgs/README.md) | 历史贡献排名 |
 | [按领域分类](/by-topic/) | GC、编译器、核心库等 |
 | [按组织分类](#按组织) | Oracle、Red Hat、SAP 等 |
 | [中国贡献者](chinese-contributors.md) | 中国开发者专题 |
@@ -55,7 +55,7 @@
 | 9 | Alexey Semenyuk | 233 | Oracle | AOT |
 | 10 | Jan Lahoda | 324 | Oracle | javac |
 
-👉 [查看完整 Top 50](/contributors/orgs/README.md)
+👉 [查看完整 Top 50](../../contributors/orgs/README.md)
 
 ---
 
@@ -78,16 +78,16 @@
 
 | 组织 | Integrated PRs | 主要领域 | 详情 |
 |------|----------------|----------|------|
-| [Oracle](/contributors/orgs/oracle.md) | 4,000+ | 全领域 | [查看详情](/contributors/orgs/oracle.md) |
-| [SAP](/contributors/orgs/sap.md) | 700+ | PPC, AIX | [查看详情](/contributors/orgs/sap.md) |
-| [Google](/contributors/orgs/google.md) | 170+ | 核心库，编译器 | [查看详情](/contributors/orgs/google.md) |
-| [Amazon](/contributors/orgs/amazon.md) | 165+ | AArch64, 编译器 | [查看详情](/contributors/orgs/amazon.md) |
-| [阿里巴巴](/contributors/orgs/alibaba.md) | 380 | 核心库, C2, GC, HotSpot Runtime | [查看详情](/contributors/orgs/alibaba.md) |
-| [Red Hat](/contributors/orgs/redhat.md) | 668+ | C2 编译器, HotSpot Runtime, AArch64 | [查看详情](/contributors/orgs/redhat.md) |
-| [字节跳动](/contributors/orgs/bytedance.md) | 25 | RISC-V | [查看详情](/contributors/orgs/bytedance.md) |
-| [龙芯](/contributors/orgs/loongson.md) | 50+ | LoongArch | [查看详情](/contributors/orgs/loongson.md) |
-| [腾讯](/contributors/orgs/tencent.md) | 228+ | 构建稳定性, 编译器, GC, 安全/TLS, Vector API | [查看详情](/contributors/orgs/tencent.md) |
-| [IBM](/contributors/orgs/ibm.md) | 50+ | JVM, 测试 | [查看详情](/contributors/orgs/ibm.md) |
+| [Oracle](../../contributors/orgs/oracle.md) | 4,000+ | 全领域 | [查看详情](../../contributors/orgs/oracle.md) |
+| [SAP](../../contributors/orgs/sap.md) | 700+ | PPC, AIX | [查看详情](../../contributors/orgs/sap.md) |
+| [Google](../../contributors/orgs/google.md) | 170+ | 核心库，编译器 | [查看详情](../../contributors/orgs/google.md) |
+| [Amazon](../../contributors/orgs/amazon.md) | 165+ | AArch64, 编译器 | [查看详情](../../contributors/orgs/amazon.md) |
+| [阿里巴巴](../../contributors/orgs/alibaba.md) | 380 | 核心库, C2, GC, HotSpot Runtime | [查看详情](../../contributors/orgs/alibaba.md) |
+| [Red Hat](../../contributors/orgs/redhat.md) | 668+ | C2 编译器, HotSpot Runtime, AArch64 | [查看详情](../../contributors/orgs/redhat.md) |
+| [字节跳动](../../contributors/orgs/bytedance.md) | 25 | RISC-V | [查看详情](../../contributors/orgs/bytedance.md) |
+| [龙芯](../../contributors/orgs/loongson.md) | 50+ | LoongArch | [查看详情](../../contributors/orgs/loongson.md) |
+| [腾讯](../../contributors/orgs/tencent.md) | 228+ | 构建稳定性, 编译器, GC, 安全/TLS, Vector API | [查看详情](../../contributors/orgs/tencent.md) |
+| [IBM](../../contributors/orgs/ibm.md) | 50+ | JVM, 测试 | [查看详情](../../contributors/orgs/ibm.md) |
 
 ---
 

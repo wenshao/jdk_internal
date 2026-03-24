@@ -190,3 +190,11 @@ Andrew Haley 是 OpenJDK **AArch64 Port Project** 的发起者和 Project Lead�
 - [OpenJDK Governing Board](https://openjdk.org/groups/gb/)
 - [QCon London Speaker Profile](https://archive.qconlondon.com/speakers/andrew-haley)
 - [Red Hat Press Release - JDK 8/11 Leadership](https://www.redhat.com/en/about/press-releases/leadership-openjdk-8-and-openjdk-11-transitions-red-hat)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 528 |
+| **活跃仓库数** | 7 |

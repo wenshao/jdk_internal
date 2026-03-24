@@ -166,10 +166,10 @@ Sandhya 领导了 Intel SVML (Short Vector Math Library) 与 OpenJDK 的集成�
 
 | 协作者 | 合作领域 |
 |--------|----------|
-| [Vladimir Ivanov](/by-contributor/profiles/vladimir-kozlov.md) | Vector API JIT 后端 |
+| [Vladimir Ivanov](vladimir-kozlov.md) | Vector API JIT 后端 |
 | Paul Sandoz | Vector API 设计 |
 | Razvan Lupusoru | Vector API Intel 实现 |
-| [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | C2 编译器优化 |
+| [Emanuel Peter](emanuel-peter.md) | C2 编译器优化 |
 
 ---
 
@@ -188,3 +188,9 @@ Sandhya 领导了 Intel SVML (Short Vector Math Library) 与 OpenJDK 的集成�
 > **文档版本**: 1.0
 > **最后更新**: 2026-03-22
 > **状态**: 初稿
+
+## 角色晋升 (CFV)
+
+| 日期 | 角色 | 提名者 | 投票数 | 链接 |
+|------|------|--------|--------|------|
+| 2021-05-13 | Reviewer | Paul Sandoz | 13 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-May/005528.html) |

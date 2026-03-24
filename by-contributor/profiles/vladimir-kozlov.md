@@ -164,3 +164,11 @@ Vladimir 是 C2 编译器循环优化领域的权威：
 - [OpenJDK Wiki - Vladimir Kozlov](https://wiki.openjdk.org/display/~kvn)
 - [JEP 338: Vector API](https://openjdk.org/jeps/338)
 - [JEP 519: Compact Object Headers](https://openjdk.org/jeps/519)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 1915 |
+| **活跃仓库数** | 10 |

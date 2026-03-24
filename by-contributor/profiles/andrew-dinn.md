@@ -238,3 +238,10 @@ Andrew Dinn 是 OpenJDK 中 AArch64 移植的核心维护者，专注于 ARM 架
 > - 添加演讲和会议信息
 > - 修正 GitHub 用户名: earthling-amzn → adinn
 > - 添加 GraalVM 和 Project Leyden 相关工作
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 219 |
+| **活跃仓库数** | 7 |

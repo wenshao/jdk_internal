@@ -124,6 +124,35 @@
 
 ---
 
+
+
+## 审查者网络
+
+> Loongson 的 PR 被以下审查者审查最多 (共 99 次审查)
+
+| 审查者 | 组织 | 审查次数 |
+|--------|------|----------|
+| TobiHartmann | Oracle | 8 |
+| sunny868 | Loongson | 7 |
+| DamonFool | Tencent | 7 |
+| vnkozlov | Oracle | 6 |
+| erikj79 | Oracle | 4 |
+| shipilev | Amazon | 4 |
+| theaoqi | Loongson | 4 |
+| AlanBateman | Oracle | 4 |
+
+### 审查组织分布
+
+| 审查者组织 | 次数 | 占比 |
+|-----------|------|------|
+| Oracle | 54 | 55% |
+| Loongson | 14 | 14% |
+| Tencent | 7 | 7% |
+| Amazon | 4 | 4% |
+| Red Hat | 4 | 4% |
+
+---
+
 ## 8. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
@@ -144,4 +173,4 @@
 **更新内容**:
 - 新增贡献时间线章节
 
-[→ 返回组织索引](../../by-contributor/README.md)
+[→ 返回组织索引](README.md)

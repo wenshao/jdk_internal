@@ -164,3 +164,11 @@ HotSpot testing team at Oracle.
 - [Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aiignatev+is%3Aclosed+label%3Aintegrated)
 - [JBS Issues](https://bugs.openjdk.org/issues/?jql=reporter%20%3D%20iignatev)
 - [OpenJDK Census](https://openjdk.org/census)
+
+
+## 审查统计
+
+| 指标 | 值 |
+|------|-----|
+| **总审查次数** | 84 |
+| **活跃仓库数** | 1 |

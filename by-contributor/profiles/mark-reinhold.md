@@ -32,7 +32,7 @@ Mark Reinhold 是 Oracle 的 **Java Platform Group 首席架构师 (Chief Archit
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Mark Reinhold |
-| **组织** | [Oracle](/contributors/orgs/oracle.md) (Java Platform Group) |
+| **组织** | [Oracle](../../contributors/orgs/oracle.md) (Java Platform Group) |
 | **角色** | Chief Architect, Java Platform Group |
 | **教育背景** | Ph.D. Computer Science, MIT (垃圾回收、编译技术、类型系统) |
 | **主要领域** | 平台架构、模块系统、发布策略、核心库 |

@@ -82,62 +82,62 @@ Justin Lu 是 Oracle 的 Software Engineer，专注于 Java 核心库开发，�
 
 | Issue | Title | PR Link |
 |-------|-------|---------|
-| 8368001 | java/text/Format/NumberFormat/NumberRoundTrip.java timed out | [PR]([需要补充 PR 链接]) |
-| 8370420 | HostLocaleProviderAdapter_md.c can use GetLocaleInfoEx directly | [PR]([需要补充 PR 链接]) |
-| 8370250 | Locale should mention the behavior for duplicate subtags | [PR]([需要补充 PR 链接]) |
-| 8369590 | LocaleEnhanceTest has incorrectly passing test case | [PR]([需要补充 PR 链接]) |
-| 8369452 | Locale.Builder.setLanguageTag(String) does not clear on empty or null String | [PR]([需要补充 PR 链接]) |
-| 8369050 | DecimalFormat Rounding Errors for Fractional Ties Near Zero | [PR]([需要补充 PR 链接]) |
-| 8369078 | Fix faulty test conversion in IllegalCharsetName.java | [PR]([需要补充 PR 链接]) |
-| 8368981 | Case Fold Locale Legacy Tags On Demand | [PR]([需要补充 PR 链接]) |
-| 6177299 | [Fmt-Nu] NumberFormat.getPercentInstance() does not work correctly | [PR]([需要补充 PR 链接]) |
-| 8368498 | Use JUnit instead of TestNG for jdk_text tests | [PR]([需要补充 PR 链接]) |
-| 8368335 | Refactor the rest of Locale TestNG based tests to JUnit | [PR]([需要补充 PR 链接]) |
-| 8368308 | ISO 4217 Amendment 180 Update | [PR]([需要补充 PR 链接]) |
-| 8367901 | Calendar.roll(hour, 24) returns wrong result | [PR]([需要补充 PR 链接]) |
-| 8367237 | Thread-Safety Usage Warning for java.text.Collator Classes | [PR]([需要补充 PR 链接]) |
-| 8367271 | Add parsing tests to DateFormat JMH benchmark | [PR]([需要补充 PR 链接]) |
-| 8366733 | Re-examine older java.text NF, DF, and DFS serialization tests | [PR]([需要补充 PR 链接]) |
-| 8366400 | JCK test api/java_text/DecimalFormat/Parse.html fails after JDK-8363972 | [PR]([需要补充 PR 链接]) |
-| 8366401 | JCK test api/java_text/DecimalFormatSymbols/serial/InputTests.html fails | [PR]([需要补充 PR 链接]) |
-| 8365175 | Replace Unicode extension anchor elements with link tag | [PR]([需要补充 PR 链接]) |
-| 8364780 | Unicode extension clarifications for NumberFormat/DecimalFormatSymbols | [PR]([需要补充 PR 链接]) |
-| 8364781 | Re-examine DigitList digits resizing during parsing | [PR]([需要补充 PR 链接]) |
-| 8364370 | java.text.DecimalFormat specification indentation correction | [PR]([需要补充 PR 链接]) |
-| 8360416 | Incorrect l10n test case in sun/security/tools/keytool/i18n.java | [PR]([需要补充 PR 链接]) |
-| 8361303 | L10n comment for javac.opt.Xlint.desc.synchronization in javac.properties | [PR]([需要补充 PR 链接]) |
-| 8358729 | jdk/internal/loader/URLClassPath/ClassnameCharTest.java depends on Applet | [PR]([需要补充 PR 链接]) |
-| 8358426 | Improve lazy computation in Locale | [PR]([需要补充 PR 链接]) |
-| 8358170 | Repurpose testCompat in test/jdk/java/util/TimeZone/Bug8167143.java | [PR]([需要补充 PR 链接]) |
-| 8358449 | Locale.getISOCountries does not specify the returned set is unmodifiable | [PR]([需要补充 PR 链接]) |
-| 8358095 | Cleanup tests with explicit locale provider set to only CLDR | [PR]([需要补充 PR 链接]) |
-| 8358089 | Remove the GenerateKeyList.java test tool | [PR]([需要补充 PR 链接]) |
-| 8357275 | Locale.Builder.setLanguageTag should mention conversions made on language tag | [PR]([需要补充 PR 链接]) |
-| 8348328 | Update IANA Language Subtag Registry to Version 2025-05-15 | [PR]([需要补充 PR 链接]) |
-| 8357281 | sun.util.Locale.LanguageTag should be immutable | [PR]([需要补充 PR 链接]) |
-| 8352755 | Misconceptions about j.text.DecimalFormat digits during parsing | [PR]([需要补充 PR 链接]) |
-| 8348351 | Improve lazy initialization of the available currencies set | [PR]([需要补充 PR 链接]) |
-| 8356096 | ISO 4217 Amendment 179 Update | [PR]([需要补充 PR 链接]) |
-| 8356040 | java/util/PluggableLocale/LocaleNameProviderTest.java timed out | [PR]([需要补充 PR 链接]) |
-| 8354343 | Hardening of Currency tests for not yet defined future ISO 4217 currency | [PR]([需要补充 PR 链接]) |
-| 8354344 | Test behavior after cut-over for future ISO 4217 currency | [PR]([需要补充 PR 链接]) |
-| 8353713 | Improve Currency.getInstance exception handling | [PR]([需要补充 PR 链接]) |
-| 8353585 | Provide ChoiceFormat#parse(String, ParsePosition) tests | [PR]([需要补充 PR 链接]) |
-| 8353322 | Specification of ChoiceFormat#parse(String, ParsePosition) is inadequate | [PR]([需要补充 PR 链接]) |
-| 5061061 | SimpleDateFormat: unspecified behavior for reserved pattern letter | [PR]([需要补充 PR 链接]) |
-| 8351223 | Update localized resources in keytool and jarsigner | [PR]([需要补充 PR 链接]) |
-| 8351074 | Disallow null prefix and suffix in DecimalFormat | [PR]([需要补充 PR 链接]) |
-| 4745837 | Make grouping usage during parsing apparent in relevant NumberFormat methods | [PR]([需要补充 PR 链接]) |
-| 8350646 | Calendar.Builder.build() Throws ArrayIndexOutOfBoundsException | [PR]([需要补充 PR 链接]) |
-| 8349883 | Locale.LanguageRange.parse("-") throws ArrayIndexOutOfBoundsException | [PR]([需要补充 PR 链接]) |
-| 8349493 | Replace sun.util.locale.ParseStatus usage with java.text.ParsePosition | [PR]([需要补充 PR 链接]) |
-| 8349000 | Performance improvement for Currency.isPastCutoverDate(String) | [PR]([需要补充 PR 链接]) |
-| 8347949 | Currency method to stream available Currencies | [PR]([需要补充 PR 链接]) |
-| 8347955 | TimeZone methods to stream the available timezone IDs | [PR]([需要补充 PR 链接]) |
-| 8348205 | Improve cutover time selection when building available currencies set | [PR]([需要补充 PR 链接]) |
-| 8347498 | JDK 24 RDP2 L10n resource files update | [PR]([需要补充 PR 链接]) |
-| 8347613 | Remove leftover doPrivileged call in Currency test | [PR]([需要补充 PR 链接]) |
-| 8345327 | JDK 24 RDP1 L10n resource files update | [PR]([需要补充 PR 链接]) |
+| 8368001 | java/text/Format/NumberFormat/NumberRoundTrip.java timed out | [JBS](https://bugs.openjdk.org/browse/JDK-8368001) |
+| 8370420 | HostLocaleProviderAdapter_md.c can use GetLocaleInfoEx directly | [JBS](https://bugs.openjdk.org/browse/JDK-8370420) |
+| 8370250 | Locale should mention the behavior for duplicate subtags | [JBS](https://bugs.openjdk.org/browse/JDK-8370250) |
+| 8369590 | LocaleEnhanceTest has incorrectly passing test case | [JBS](https://bugs.openjdk.org/browse/JDK-8369590) |
+| 8369452 | Locale.Builder.setLanguageTag(String) does not clear on empty or null String | [JBS](https://bugs.openjdk.org/browse/JDK-8369452) |
+| 8369050 | DecimalFormat Rounding Errors for Fractional Ties Near Zero | [JBS](https://bugs.openjdk.org/browse/JDK-8369050) |
+| 8369078 | Fix faulty test conversion in IllegalCharsetName.java | [JBS](https://bugs.openjdk.org/browse/JDK-8369078) |
+| 8368981 | Case Fold Locale Legacy Tags On Demand | [JBS](https://bugs.openjdk.org/browse/JDK-8368981) |
+| 6177299 | [Fmt-Nu] NumberFormat.getPercentInstance() does not work correctly | [JBS](https://bugs.openjdk.org/browse/JDK-6177299) |
+| 8368498 | Use JUnit instead of TestNG for jdk_text tests | [JBS](https://bugs.openjdk.org/browse/JDK-8368498) |
+| 8368335 | Refactor the rest of Locale TestNG based tests to JUnit | [JBS](https://bugs.openjdk.org/browse/JDK-8368335) |
+| 8368308 | ISO 4217 Amendment 180 Update | [JBS](https://bugs.openjdk.org/browse/JDK-8368308) |
+| 8367901 | Calendar.roll(hour, 24) returns wrong result | [JBS](https://bugs.openjdk.org/browse/JDK-8367901) |
+| 8367237 | Thread-Safety Usage Warning for java.text.Collator Classes | [JBS](https://bugs.openjdk.org/browse/JDK-8367237) |
+| 8367271 | Add parsing tests to DateFormat JMH benchmark | [JBS](https://bugs.openjdk.org/browse/JDK-8367271) |
+| 8366733 | Re-examine older java.text NF, DF, and DFS serialization tests | [JBS](https://bugs.openjdk.org/browse/JDK-8366733) |
+| 8366400 | JCK test api/java_text/DecimalFormat/Parse.html fails after JDK-8363972 | [JBS](https://bugs.openjdk.org/browse/JDK-8366400) |
+| 8366401 | JCK test api/java_text/DecimalFormatSymbols/serial/InputTests.html fails | [JBS](https://bugs.openjdk.org/browse/JDK-8366401) |
+| 8365175 | Replace Unicode extension anchor elements with link tag | [JBS](https://bugs.openjdk.org/browse/JDK-8365175) |
+| 8364780 | Unicode extension clarifications for NumberFormat/DecimalFormatSymbols | [JBS](https://bugs.openjdk.org/browse/JDK-8364780) |
+| 8364781 | Re-examine DigitList digits resizing during parsing | [JBS](https://bugs.openjdk.org/browse/JDK-8364781) |
+| 8364370 | java.text.DecimalFormat specification indentation correction | [JBS](https://bugs.openjdk.org/browse/JDK-8364370) |
+| 8360416 | Incorrect l10n test case in sun/security/tools/keytool/i18n.java | [JBS](https://bugs.openjdk.org/browse/JDK-8360416) |
+| 8361303 | L10n comment for javac.opt.Xlint.desc.synchronization in javac.properties | [JBS](https://bugs.openjdk.org/browse/JDK-8361303) |
+| 8358729 | jdk/internal/loader/URLClassPath/ClassnameCharTest.java depends on Applet | [JBS](https://bugs.openjdk.org/browse/JDK-8358729) |
+| 8358426 | Improve lazy computation in Locale | [JBS](https://bugs.openjdk.org/browse/JDK-8358426) |
+| 8358170 | Repurpose testCompat in test/jdk/java/util/TimeZone/Bug8167143.java | [JBS](https://bugs.openjdk.org/browse/JDK-8358170) |
+| 8358449 | Locale.getISOCountries does not specify the returned set is unmodifiable | [JBS](https://bugs.openjdk.org/browse/JDK-8358449) |
+| 8358095 | Cleanup tests with explicit locale provider set to only CLDR | [JBS](https://bugs.openjdk.org/browse/JDK-8358095) |
+| 8358089 | Remove the GenerateKeyList.java test tool | [JBS](https://bugs.openjdk.org/browse/JDK-8358089) |
+| 8357275 | Locale.Builder.setLanguageTag should mention conversions made on language tag | [JBS](https://bugs.openjdk.org/browse/JDK-8357275) |
+| 8348328 | Update IANA Language Subtag Registry to Version 2025-05-15 | [JBS](https://bugs.openjdk.org/browse/JDK-8348328) |
+| 8357281 | sun.util.Locale.LanguageTag should be immutable | [JBS](https://bugs.openjdk.org/browse/JDK-8357281) |
+| 8352755 | Misconceptions about j.text.DecimalFormat digits during parsing | [JBS](https://bugs.openjdk.org/browse/JDK-8352755) |
+| 8348351 | Improve lazy initialization of the available currencies set | [JBS](https://bugs.openjdk.org/browse/JDK-8348351) |
+| 8356096 | ISO 4217 Amendment 179 Update | [JBS](https://bugs.openjdk.org/browse/JDK-8356096) |
+| 8356040 | java/util/PluggableLocale/LocaleNameProviderTest.java timed out | [JBS](https://bugs.openjdk.org/browse/JDK-8356040) |
+| 8354343 | Hardening of Currency tests for not yet defined future ISO 4217 currency | [JBS](https://bugs.openjdk.org/browse/JDK-8354343) |
+| 8354344 | Test behavior after cut-over for future ISO 4217 currency | [JBS](https://bugs.openjdk.org/browse/JDK-8354344) |
+| 8353713 | Improve Currency.getInstance exception handling | [JBS](https://bugs.openjdk.org/browse/JDK-8353713) |
+| 8353585 | Provide ChoiceFormat#parse(String, ParsePosition) tests | [JBS](https://bugs.openjdk.org/browse/JDK-8353585) |
+| 8353322 | Specification of ChoiceFormat#parse(String, ParsePosition) is inadequate | [JBS](https://bugs.openjdk.org/browse/JDK-8353322) |
+| 5061061 | SimpleDateFormat: unspecified behavior for reserved pattern letter | [JBS](https://bugs.openjdk.org/browse/JDK-5061061) |
+| 8351223 | Update localized resources in keytool and jarsigner | [JBS](https://bugs.openjdk.org/browse/JDK-8351223) |
+| 8351074 | Disallow null prefix and suffix in DecimalFormat | [JBS](https://bugs.openjdk.org/browse/JDK-8351074) |
+| 4745837 | Make grouping usage during parsing apparent in relevant NumberFormat methods | [JBS](https://bugs.openjdk.org/browse/JDK-4745837) |
+| 8350646 | Calendar.Builder.build() Throws ArrayIndexOutOfBoundsException | [JBS](https://bugs.openjdk.org/browse/JDK-8350646) |
+| 8349883 | Locale.LanguageRange.parse("-") throws ArrayIndexOutOfBoundsException | [JBS](https://bugs.openjdk.org/browse/JDK-8349883) |
+| 8349493 | Replace sun.util.locale.ParseStatus usage with java.text.ParsePosition | [JBS](https://bugs.openjdk.org/browse/JDK-8349493) |
+| 8349000 | Performance improvement for Currency.isPastCutoverDate(String) | [JBS](https://bugs.openjdk.org/browse/JDK-8349000) |
+| 8347949 | Currency method to stream available Currencies | [JBS](https://bugs.openjdk.org/browse/JDK-8347949) |
+| 8347955 | TimeZone methods to stream the available timezone IDs | [JBS](https://bugs.openjdk.org/browse/JDK-8347955) |
+| 8348205 | Improve cutover time selection when building available currencies set | [JBS](https://bugs.openjdk.org/browse/JDK-8348205) |
+| 8347498 | JDK 24 RDP2 L10n resource files update | [JBS](https://bugs.openjdk.org/browse/JDK-8347498) |
+| 8347613 | Remove leftover doPrivileged call in Currency test | [JBS](https://bugs.openjdk.org/browse/JDK-8347613) |
+| 8345327 | JDK 24 RDP1 L10n resource files update | [JBS](https://bugs.openjdk.org/browse/JDK-8345327) |
 
 > **JBS Link**: https://bugs.openjdk.org/browse/JDK-[Issue Number]
 
