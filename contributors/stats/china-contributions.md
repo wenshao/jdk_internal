@@ -17,41 +17,41 @@
 
 | 组织 | PRs | 贡献者数 | 占中国总量 |
 |------|-----|----------|-----------|
-| Oracle | 503 | 5 | 28% |
-| Independent | 282 | 5 | 15% |
-| Alibaba | 228 | 12 | 12% |
-| Tencent | 223 | 4 | 12% |
-| Rivos | 196 | 1 | 10% |
-| Huawei | 156 | 3 | 8% |
-| ISCAS | 61 | 2 | 3% |
-| ARM | 43 | 1 | 2% |
-| Nvidia | 38 | 1 | 2% |
-| Loongson | 33 | 3 | 1% |
-| ByteDance | 24 | 1 | 1% |
+| [Oracle](../orgs/oracle.md) | 503 | 5 | 28% |
+| [Independent](../orgs/independent.md) | 282 | 5 | 15% |
+| [Alibaba](../orgs/alibaba.md) | 228 | 12 | 12% |
+| [Tencent](../orgs/tencent.md) | 223 | 4 | 12% |
+| [Rivos](../orgs/independent.md) | 196 | 1 | 10% |
+| [Huawei](../orgs/huawei.md) | 156 | 3 | 8% |
+| [ISCAS](../orgs/iscas-plct.md) | 61 | 2 | 3% |
+| [ARM](../orgs/arm.md) | 43 | 1 | 2% |
+| [Nvidia](../orgs/independent.md) | 38 | 1 | 2% |
+| [Loongson](../orgs/loongson.md) | 33 | 3 | 1% |
+| [ByteDance](../orgs/bytedance.md) | 24 | 1 | 1% |
 
 ## Top 中国贡献者
 
 | 排名 | 贡献者 | PRs | 组织 | 主要领域 |
 |------|--------|-----|------|----------|
-| 1 | wangweij | 196 | Oracle | security |
-| 2 | Hamlin-Li | 196 | Rivos | arch/riscv |
-| 3 | DamonFool | 185 | Tencent | test |
-| 4 | sendaoYan | 181 | Independent | test |
-| 5 | lgxbslgx | 98 | Oracle | tools |
-| 6 | RealFYang | 93 | Huawei | arch/riscv |
-| 7 | wenshao | 90 | Alibaba | core-libs |
-| 8 | XueleiFan | 89 | Oracle | security |
-| 9 | jianglizhou | 62 | Oracle | test |
-| 10 | navyxliu | 58 | Oracle | hotspot |
-| 11 | y1yang0 | 57 | Alibaba | compiler/c2 |
-| 12 | feilongjiang | 52 | Huawei | arch/riscv |
-| 13 | DingliZhang | 52 | ISCAS | arch/riscv |
-| 14 | XiaohongGong | 43 | ARM | core-libs/vector-api |
-| 15 | shqking | 38 | Nvidia | arch/aarch64 |
-| 16 | D-D-H | 32 | Alibaba | compiler/c1 |
-| 17 | zhengxiaolinX | 30 | Independent | arch/riscv |
-| 18 | johnshajiang | 27 | Tencent | security |
-| 19 | hgqxjj | 25 | Independent | arch/x86 |
-| 20 | e1iu | 24 | Independent | arch/aarch64 |
+| 1 | wangweij | 196 | [Oracle](../orgs/oracle.md) | security |
+| 2 | Hamlin-Li | 196 | [Rivos](../orgs/independent.md) | arch/riscv |
+| 3 | [DamonFool](../../by-contributor/profiles/jie-fu.md) | 185 | [Tencent](../orgs/tencent.md) | test |
+| 4 | [sendaoYan](../../by-contributor/profiles/sendaoyan.md) | 181 | [Independent](../orgs/independent.md) | test |
+| 5 | lgxbslgx | 98 | [Oracle](../orgs/oracle.md) | tools |
+| 6 | [RealFYang](../../by-contributor/profiles/fei-yang.md) | 93 | [Huawei](../orgs/huawei.md) | arch/riscv |
+| 7 | [wenshao](../../by-contributor/profiles/shaojin-wen.md) | 90 | [Alibaba](../orgs/alibaba.md) | core-libs |
+| 8 | XueleiFan | 89 | [Oracle](../orgs/oracle.md) | security |
+| 9 | jianglizhou | 62 | [Oracle](../orgs/oracle.md) | test |
+| 10 | navyxliu | 58 | [Oracle](../orgs/oracle.md) | hotspot |
+| 11 | [y1yang0](../../by-contributor/profiles/yi-yang.md) | 57 | [Alibaba](../orgs/alibaba.md) | compiler/c2 |
+| 12 | [feilongjiang](../../by-contributor/profiles/feilong-jiang.md) | 52 | [Huawei](../orgs/huawei.md) | arch/riscv |
+| 13 | DingliZhang | 52 | [ISCAS](../orgs/iscas-plct.md) | arch/riscv |
+| 14 | XiaohongGong | 43 | [ARM](../orgs/arm.md) | core-libs/vector-api |
+| 15 | shqking | 38 | [Nvidia](../orgs/independent.md) | arch/aarch64 |
+| 16 | [D-D-H](../../by-contributor/profiles/denghui-dong.md) | 32 | [Alibaba](../orgs/alibaba.md) | compiler/c1 |
+| 17 | zhengxiaolinX | 30 | [Independent](../orgs/independent.md) | arch/riscv |
+| 18 | [johnshajiang](../../by-contributor/profiles/john-jiang.md) | 27 | [Tencent](../orgs/tencent.md) | security |
+| 19 | hgqxjj | 25 | [Independent](../orgs/independent.md) | arch/x86 |
+| 20 | e1iu | 24 | [Independent](../orgs/independent.md) | arch/aarch64 |
 
 > **数据来源**: by-pr/all-integrated-prs.csv (country=CN)

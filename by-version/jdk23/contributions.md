@@ -8,76 +8,76 @@
 
 | 排名 | 组织 | PRs | 占比 |
 |------|------|-----|------|
-| 1 | Oracle | 1511 | 73% |
-| 2 | Amazon | 86 | 4% |
-| 3 | SAP | 86 | 4% |
-| 4 | Independent | 59 | 2% |
-| 5 | Red Hat | 44 | 2% |
-| 6 | Alibaba | 42 | 2% |
-| 7 | Datadog | 18 | 0% |
-| 8 | Intel | 16 | 0% |
-| 9 | IBM | 14 | 0% |
-| 10 | Tencent | 9 | 0% |
-| 11 | Google | 5 | 0% |
-| 12 | ARM | 4 | 0% |
-| 13 | Huawei | 3 | 0% |
-| 14 | BellSoft | 2 | 0% |
-| 15 | ISCAS | 1 | 0% |
+| 1 | [Oracle](../../contributors/orgs/oracle.md) | 1511 | 73% |
+| 2 | [Amazon](../../contributors/orgs/amazon.md) | 86 | 4% |
+| 3 | [SAP](../../contributors/orgs/sap.md) | 86 | 4% |
+| 4 | [Independent](../../contributors/orgs/independent.md) | 59 | 2% |
+| 5 | [Red Hat](../../contributors/orgs/redhat.md) | 44 | 2% |
+| 6 | [Alibaba](../../contributors/orgs/alibaba.md) | 42 | 2% |
+| 7 | [Datadog](../../contributors/orgs/datadog.md) | 18 | 0% |
+| 8 | [Intel](../../contributors/orgs/intel.md) | 16 | 0% |
+| 9 | [IBM](../../contributors/orgs/ibm.md) | 14 | 0% |
+| 10 | [Tencent](../../contributors/orgs/tencent.md) | 9 | 0% |
+| 11 | [Google](../../contributors/orgs/google.md) | 5 | 0% |
+| 12 | [ARM](../../contributors/orgs/arm.md) | 4 | 0% |
+| 13 | [Huawei](../../contributors/orgs/huawei.md) | 3 | 0% |
+| 14 | [BellSoft](../../contributors/orgs/bellsoft.md) | 2 | 0% |
+| 15 | [ISCAS](../../contributors/orgs/iscas-plct.md) | 1 | 0% |
 
 ## Top 50 贡献者
 
 | 排名 | 贡献者 | PRs | 组织 |
 |------|--------|-----|------|
-| 1 | albertnetymk | 147 | Oracle |
-| 2 | magicus | 59 | Oracle |
-| 3 | MBaesken | 59 | SAP |
-| 4 | lgxbslgx | 41 | Oracle |
-| 5 | kimbarrett | 35 | Oracle |
-| 6 | eme64 | 34 | Oracle |
-| 7 | tschatzl | 33 | Oracle |
-| 8 | jaikiran | 33 | Oracle |
-| 9 | lahodaj | 31 | Oracle |
-| 10 | Hamlin-Li | 30 | Rivos |
-| 11 | asotona | 30 | Oracle |
-| 12 | shipilev | 27 | Amazon |
-| 13 | naotoj | 26 | Oracle |
-| 14 | jddarcy | 26 | Oracle |
-| 15 | dholmes-ora | 25 | Oracle |
-| 16 | prsadhuk | 23 | Oracle |
-| 17 | tstuefe | 23 | Red Hat |
-| 18 | egahlin | 22 | Oracle |
-| 19 | sspitsyn | 21 | Oracle |
-| 20 | stefank | 21 | Oracle |
-| 21 | eirbjo | 20 | Independent |
-| 22 | alexmenkov | 20 | Oracle |
-| 23 | cl4es | 20 | Oracle |
-| 24 | xmas92 | 19 | Oracle |
-| 25 | iklam | 19 | Oracle |
-| 26 | prrace | 19 | Oracle |
-| 27 | TejeshR13 | 19 | Oracle |
-| 28 | alisenchung | 19 | Oracle |
-| 29 | earthling-amzn | 19 | Amazon |
-| 30 | chhagedorn | 18 | Oracle |
-| 31 | bplb | 18 | Oracle |
-| 32 | kumarabhi006 | 18 | Oracle |
-| 33 | dougxc | 18 | Oracle |
-| 34 | lmesnik | 18 | Oracle |
-| 35 | azvegint | 18 | Oracle |
-| 36 | rwestrel | 18 | Red Hat |
-| 37 | AlanBateman | 17 | Oracle |
-| 38 | justin-curtis-lu | 17 | Oracle |
-| 39 | zifeihan | 17 | Independent |
-| 40 | calvinccheung | 17 | Oracle |
-| 41 | dcubed-ojdk | 17 | Oracle |
-| 42 | vnkozlov | 17 | Oracle |
-| 43 | nizarbenalla | 17 | Oracle |
-| 44 | jonathan-gibbons | 16 | Oracle |
-| 45 | aivanov-jdk | 16 | Oracle |
-| 46 | plummercj | 15 | Oracle |
-| 47 | caojoshua | 15 | Amazon |
-| 48 | honkar-jdk | 15 | Oracle |
-| 49 | hns | 15 | Oracle |
-| 50 | biboudis | 14 | Oracle |
+| 1 | albertnetymk | 147 | [Oracle](../../contributors/orgs/oracle.md) |
+| 2 | magicus | 59 | [Oracle](../../contributors/orgs/oracle.md) |
+| 3 | [MBaesken](../../by-contributor/profiles/matthias-baesken.md) | 59 | [SAP](../../contributors/orgs/sap.md) |
+| 4 | lgxbslgx | 41 | [Oracle](../../contributors/orgs/oracle.md) |
+| 5 | kimbarrett | 35 | [Oracle](../../contributors/orgs/oracle.md) |
+| 6 | eme64 | 34 | [Oracle](../../contributors/orgs/oracle.md) |
+| 7 | tschatzl | 33 | [Oracle](../../contributors/orgs/oracle.md) |
+| 8 | jaikiran | 33 | [Oracle](../../contributors/orgs/oracle.md) |
+| 9 | lahodaj | 31 | [Oracle](../../contributors/orgs/oracle.md) |
+| 10 | Hamlin-Li | 30 | [Rivos](../../contributors/orgs/independent.md) |
+| 11 | asotona | 30 | [Oracle](../../contributors/orgs/oracle.md) |
+| 12 | [shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | 27 | [Amazon](../../contributors/orgs/amazon.md) |
+| 13 | naotoj | 26 | [Oracle](../../contributors/orgs/oracle.md) |
+| 14 | jddarcy | 26 | [Oracle](../../contributors/orgs/oracle.md) |
+| 15 | dholmes-ora | 25 | [Oracle](../../contributors/orgs/oracle.md) |
+| 16 | prsadhuk | 23 | [Oracle](../../contributors/orgs/oracle.md) |
+| 17 | [tstuefe](../../by-contributor/profiles/thomas-stuefe.md) | 23 | [Red Hat](../../contributors/orgs/redhat.md) |
+| 18 | egahlin | 22 | [Oracle](../../contributors/orgs/oracle.md) |
+| 19 | sspitsyn | 21 | [Oracle](../../contributors/orgs/oracle.md) |
+| 20 | stefank | 21 | [Oracle](../../contributors/orgs/oracle.md) |
+| 21 | eirbjo | 20 | [Independent](../../contributors/orgs/independent.md) |
+| 22 | alexmenkov | 20 | [Oracle](../../contributors/orgs/oracle.md) |
+| 23 | cl4es | 20 | [Oracle](../../contributors/orgs/oracle.md) |
+| 24 | xmas92 | 19 | [Oracle](../../contributors/orgs/oracle.md) |
+| 25 | iklam | 19 | [Oracle](../../contributors/orgs/oracle.md) |
+| 26 | prrace | 19 | [Oracle](../../contributors/orgs/oracle.md) |
+| 27 | TejeshR13 | 19 | [Oracle](../../contributors/orgs/oracle.md) |
+| 28 | alisenchung | 19 | [Oracle](../../contributors/orgs/oracle.md) |
+| 29 | earthling-amzn | 19 | [Amazon](../../contributors/orgs/amazon.md) |
+| 30 | chhagedorn | 18 | [Oracle](../../contributors/orgs/oracle.md) |
+| 31 | bplb | 18 | [Oracle](../../contributors/orgs/oracle.md) |
+| 32 | kumarabhi006 | 18 | [Oracle](../../contributors/orgs/oracle.md) |
+| 33 | dougxc | 18 | [Oracle](../../contributors/orgs/oracle.md) |
+| 34 | lmesnik | 18 | [Oracle](../../contributors/orgs/oracle.md) |
+| 35 | azvegint | 18 | [Oracle](../../contributors/orgs/oracle.md) |
+| 36 | [rwestrel](../../by-contributor/profiles/roland-westrelin.md) | 18 | [Red Hat](../../contributors/orgs/redhat.md) |
+| 37 | AlanBateman | 17 | [Oracle](../../contributors/orgs/oracle.md) |
+| 38 | justin-curtis-lu | 17 | [Oracle](../../contributors/orgs/oracle.md) |
+| 39 | zifeihan | 17 | [Independent](../../contributors/orgs/independent.md) |
+| 40 | calvinccheung | 17 | [Oracle](../../contributors/orgs/oracle.md) |
+| 41 | dcubed-ojdk | 17 | [Oracle](../../contributors/orgs/oracle.md) |
+| 42 | vnkozlov | 17 | [Oracle](../../contributors/orgs/oracle.md) |
+| 43 | nizarbenalla | 17 | [Oracle](../../contributors/orgs/oracle.md) |
+| 44 | jonathan-gibbons | 16 | [Oracle](../../contributors/orgs/oracle.md) |
+| 45 | aivanov-jdk | 16 | [Oracle](../../contributors/orgs/oracle.md) |
+| 46 | plummercj | 15 | [Oracle](../../contributors/orgs/oracle.md) |
+| 47 | caojoshua | 15 | [Amazon](../../contributors/orgs/amazon.md) |
+| 48 | honkar-jdk | 15 | [Oracle](../../contributors/orgs/oracle.md) |
+| 49 | hns | 15 | [Oracle](../../contributors/orgs/oracle.md) |
+| 50 | biboudis | 14 | [Oracle](../../contributors/orgs/oracle.md) |
 
 ## 模块分布
 

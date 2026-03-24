@@ -8,17 +8,17 @@
 
 | 排名 | 贡献者 | PRs | 组织 | 首次贡献 | 主要领域 |
 |------|--------|-----|------|----------|----------|
-| 1 | fandreuz | 54 | Amazon | 2025-07-18 | build |
-| 2 | mhaessig | 52 | Oracle | 2025-03-06 | compiler/c2 |
-| 3 | marc-chevalier | 42 | Oracle | 2025-02-14 | compiler/c2 |
-| 4 | myankelev | 41 | Oracle | 2025-01-07 | core-libs/java.net |
-| 5 | dbriemann | 26 | SAP | 2025-02-18 | arch/ppc |
-| 6 | toxaart | 26 | Oracle | 2025-04-15 | hotspot |
-| 7 | benoitmaillard | 26 | Oracle | 2025-06-05 | compiler/c2 |
-| 8 | david-beaumont | 25 | Oracle | 2025-02-06 | test |
-| 9 | hgqxjj | 25 | Independent | 2025-07-03 | arch/x86 |
-| 10 | Anjian-Wen | 24 | ByteDance | 2025-02-07 | arch/riscv |
-| 11 | koushikthirupattur | 22 | Oracle | 2025-01-10 | core-libs/java.net |
+| 1 | fandreuz | 54 | [Amazon](../orgs/amazon.md) | 2025-07-18 | build |
+| 2 | mhaessig | 52 | [Oracle](../orgs/oracle.md) | 2025-03-06 | compiler/c2 |
+| 3 | marc-chevalier | 42 | [Oracle](../orgs/oracle.md) | 2025-02-14 | compiler/c2 |
+| 4 | myankelev | 41 | [Oracle](../orgs/oracle.md) | 2025-01-07 | core-libs/java.net |
+| 5 | dbriemann | 26 | [SAP](../orgs/sap.md) | 2025-02-18 | arch/ppc |
+| 6 | toxaart | 26 | [Oracle](../orgs/oracle.md) | 2025-04-15 | hotspot |
+| 7 | benoitmaillard | 26 | [Oracle](../orgs/oracle.md) | 2025-06-05 | compiler/c2 |
+| 8 | david-beaumont | 25 | [Oracle](../orgs/oracle.md) | 2025-02-06 | test |
+| 9 | hgqxjj | 25 | [Independent](../orgs/independent.md) | 2025-07-03 | arch/x86 |
+| 10 | [Anjian-Wen](../../by-contributor/profiles/anjian-wen.md) | 24 | [ByteDance](../orgs/bytedance.md) | 2025-02-07 | arch/riscv |
+| 11 | koushikthirupattur | 22 | [Oracle](../orgs/oracle.md) | 2025-01-10 | core-libs/java.net |
 | 12 | Arraying | 18 |  | 2025-08-12 | client |
 | 13 | krk | 18 |  | 2025-09-01 | compiler/c2 |
 | 14 | sarannat | 16 |  | 2025-03-06 | compiler/c2 |

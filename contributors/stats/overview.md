@@ -92,12 +92,12 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author:{username}+label%3Aintegra
 
 | 组织 | Commits | 占比 | 主要贡献者 |
 |------|---------|------|-----------|
-| Oracle | 60,000+ | 70%+ | Katleman, Gibbons, Race... |
-| Red Hat | 4,000+ | 5% | Shipilev, Westrelin, Stuefe... |
-| SAP | 2,000+ | 2% | Baesken, Lindenmaier... |
-| IBM | 1,500+ | 2% | Stoodley... |
-| Amazon | 1,000+ | 1% | Peng, Kemper, Nilsen... |
-| Google | 800+ | 1% | Miller-Cushon... |
+| [Oracle](../orgs/oracle.md) | 60,000+ | 70%+ | Katleman, Gibbons, Race... |
+| [Red Hat](../orgs/redhat.md) | 4,000+ | 5% | Shipilev, Westrelin, Stuefe... |
+| [SAP](../orgs/sap.md) | 2,000+ | 2% | Baesken, Lindenmaier... |
+| [IBM](../orgs/ibm.md) | 1,500+ | 2% | Stoodley... |
+| [Amazon](../orgs/amazon.md) | 1,000+ | 1% | Peng, Kemper, Nilsen... |
+| [Google](../orgs/google.md) | 800+ | 1% | Miller-Cushon... |
 | 中国企业 | 500+ | <1% | Wen, Zhang... |
 
 ---

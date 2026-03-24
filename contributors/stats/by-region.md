@@ -58,24 +58,24 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 
 | 贡献者 | Integrated PRs | 组织 | 领域 |
 |--------|----------------|------|------|
-| [Phil Race](/by-contributor/profiles/phil-race.md) | 200+ | Oracle | 图形 |
-| [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 90+ | Oracle | HotSpot |
-| [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 150+ | Oracle | G1 GC |
-| [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | 100+ | Oracle | C2 编译器 |
-| [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md) | 100+ | Oracle | 构建系统 |
-| [Brian Burkhalter](/by-contributor/profiles/brian-burkhalter.md) | 100+ | Oracle | NIO |
-| [David Holmes](/by-contributor/profiles/david-holmes.md) | 80+ | Oracle | 并发 |
-| [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | 50+ | Oracle | HTTP/JMX |
-| [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | 50+ | Oracle | JFR |
+| [Phil Race](/by-contributor/profiles/phil-race.md) | 200+ | [Oracle](../orgs/oracle.md) | 图形 |
+| [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 90+ | [Oracle](../orgs/oracle.md) | HotSpot |
+| [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 150+ | [Oracle](../orgs/oracle.md) | G1 GC |
+| [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | 100+ | [Oracle](../orgs/oracle.md) | C2 编译器 |
+| [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md) | 100+ | [Oracle](../orgs/oracle.md) | 构建系统 |
+| [Brian Burkhalter](/by-contributor/profiles/brian-burkhalter.md) | 100+ | [Oracle](../orgs/oracle.md) | NIO |
+| [David Holmes](/by-contributor/profiles/david-holmes.md) | 80+ | [Oracle](../orgs/oracle.md) | 并发 |
+| [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | 50+ | [Oracle](../orgs/oracle.md) | HTTP/JMX |
+| [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | 50+ | [Oracle](../orgs/oracle.md) | JFR |
 
 ### 城市/地区分布
 
 | 地区 | 贡献者数 | 主要组织 |
 |------|----------|----------|
 | 加州硅谷 | 300+ | Oracle HQ, Google |
-| 华盛顿州 | 40+ | Amazon |
+| 华盛顿州 | 40+ | [Amazon](../orgs/amazon.md) |
 | 马萨诸塞州 | 60+ | Oracle, Red Hat |
-| 德克萨斯州 | 30+ | Oracle |
+| 德克萨斯州 | 30+ | [Oracle](../orgs/oracle.md) |
 | 加拿大 | 20+ | 独立贡献者 |
 
 ---
@@ -86,12 +86,12 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 
 | 贡献者 | Integrated PRs | 组织 | 国家 |
 |--------|----------------|------|------|
-| [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 803+ | Amazon | 俄罗斯/荷兰 |
-| [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 200+ | Oracle | 瑞士 |
-| [Tobias Hartmann](/by-contributor/profiles/tobias-hartmann.md) | 150+ | Oracle | 瑞典 |
-| [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | 100+ | SAP | 德国 |
-| [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | Red Hat | 德国 |
-| [Stefan Karlsson](/by-contributor/profiles/stefan-karlsson.md) | 50+ | Oracle | 瑞典 |
+| [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 803+ | [Amazon](../orgs/amazon.md) | 俄罗斯/荷兰 |
+| [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 200+ | [Oracle](../orgs/oracle.md) | 瑞士 |
+| [Tobias Hartmann](/by-contributor/profiles/tobias-hartmann.md) | 150+ | [Oracle](../orgs/oracle.md) | 瑞典 |
+| [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | 100+ | [SAP](../orgs/sap.md) | 德国 |
+| [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | [Red Hat](../orgs/redhat.md) | 德国 |
+| [Stefan Karlsson](/by-contributor/profiles/stefan-karlsson.md) | 50+ | [Oracle](../orgs/oracle.md) | 瑞典 |
 | [Jaroslav Bachorik](/by-contributor/profiles/jaroslav-bachorik.md) | 6 | DataDog | 捷克 |
 
 ### 国家分布
@@ -99,10 +99,10 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 | 国家 | 贡献者数 | Integrated PRs | 主要组织 |
 |------|----------|----------------|----------|
 | 德国 | 60+ | 500+ | SAP, Oracle |
-| 瑞典 | 40+ | 400+ | Oracle |
+| 瑞典 | 40+ | 400+ | [Oracle](../orgs/oracle.md) |
 | 英国 | 35+ | 300+ | Oracle, Red Hat |
 | 法国 | 30+ | 250+ | Red Hat, Oracle |
-| 瑞士 | 25+ | 300+ | Oracle |
+| 瑞士 | 25+ | 300+ | [Oracle](../orgs/oracle.md) |
 | 捷克 | 10+ | 50+ | Oracle, DataDog |
 | 荷兰 | 20+ | 200+ | 独立贡献者 |
 
@@ -116,9 +116,9 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 |--------|----------------|------|------|
 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 97 | 阿里巴巴 | 核心库/性能 |
 | [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) | 70+ | Oracle 中国 | G1 GC |
-| [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | Huawei | RISC-V |
+| [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | [Huawei](../orgs/huawei.md) | RISC-V |
 | Weijun Wang | 50+ | Oracle 中国 | 安全/工具 |
-| Zhengyu Gu | 30+ | Datadog | G1 GC |
+| Zhengyu Gu | 30+ | [Datadog](../orgs/datadog.md) | G1 GC |
 | Naoto Sato | 20+ | Oracle 中国 | 国际化 |
 | Xue-Lei Andrew Fan | 20+ | Oracle 中国 | 安全 |
 
@@ -128,7 +128,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 |------|----------|----------------|----------|
 | Oracle 中国 | 15+ | 200+ | GC, 安全，国际化 |
 | 阿里巴巴 | 5+ | 100+ | 性能优化 |
-| ISCAS | 3+ | 10+ | RISC-V |
+| [ISCAS](../orgs/iscas-plct.md) | 3+ | 10+ | RISC-V |
 | 腾讯 | 3+ | 20+ | GC |
 | 华为 | 5+ | 15+ | JIT/AOT |
 | 字节跳动 | 3+ | 10+ | RISC-V |
@@ -162,8 +162,8 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 
 | 贡献者 | Integrated PRs | 组织 | 领域 |
 |--------|----------------|------|------|
-| (Oracle 印度团队) | 100+ | Oracle | 测试，QA |
-| (Amazon 印度团队) | 50+ | Amazon | GC |
+| (Oracle 印度团队) | 100+ | [Oracle](../orgs/oracle.md) | 测试，QA |
+| (Amazon 印度团队) | 50+ | [Amazon](../orgs/amazon.md) | GC |
 
 ### 组织分布
 
@@ -198,9 +198,9 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 
 | 贡献者 | Integrated PRs | 组织 | 地区 |
 |--------|----------------|------|------|
-| [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | Huawei | 中国 |
-| Anjian-Wen | 10+ | 字节跳动 | 中国 |
-| Dingli Zhang | 10+ | ISCAS | 中国 |
+| [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | [Huawei](../orgs/huawei.md) | 中国 |
+| [Anjian-Wen](../../by-contributor/profiles/anjian-wen.md) | 10+ | 字节跳动 | 中国 |
+| Dingli Zhang | 10+ | [ISCAS](../orgs/iscas-plct.md) | 中国 |
 
 ### LoongArch
 
@@ -213,7 +213,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 
 | 贡献者 | Integrated PRs | 组织 | 地区 |
 |--------|----------------|------|------|
-| [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | 50+ | Red Hat | 英国 |
+| [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | 50+ | [Red Hat](../orgs/redhat.md) | 英国 |
 | [Nick Gasson](/by-contributor/profiles/nick-gasson.md) | 30+ | Arm | 欧洲 |
 
 ---

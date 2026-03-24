@@ -29,28 +29,28 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 1,320 | Amazon |
-| [William Kemper](/by-contributor/profiles/william-kemper.md) | 34 | Amazon |
+| [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 1,320 | [Amazon](../orgs/amazon.md) |
+| [William Kemper](/by-contributor/profiles/william-kemper.md) | 34 | [Amazon](../orgs/amazon.md) |
 
 ### G1 GC
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 1,113 | Oracle |
-| [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) | 747 | Oracle |
-| Zhengyu Gu | 582 | Datadog |
+| [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 1,113 | [Oracle](../orgs/oracle.md) |
+| [Albert Mingkun Yang](/by-contributor/profiles/albert-mingkun-yang.md) | 747 | [Oracle](../orgs/oracle.md) |
+| Zhengyu Gu | 582 | [Datadog](../orgs/datadog.md) |
 
 ### ZGC
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| Stefan Karlsson | 692 | Oracle |
+| Stefan Karlsson | 692 | [Oracle](../orgs/oracle.md) |
 
 ### 并发 GC
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | 680 | Oracle |
+| [Kim Barrett](/by-contributor/profiles/kim-barrett.md) | 680 | [Oracle](../orgs/oracle.md) |
 
 ---
 
@@ -60,24 +60,24 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| Vladimir Kozlov | 942 | Oracle |
-| Roland Westrelin | 676 | Red Hat |
-| [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 42 | Oracle |
+| Vladimir Kozlov | 942 | [Oracle](../orgs/oracle.md) |
+| Roland Westrelin | 676 | [Red Hat](../orgs/redhat.md) |
+| [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 42 | [Oracle](../orgs/oracle.md) |
 
 ### Graal
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| Tobias Hartmann | 563 | Oracle |
-| Tom Rodriguez | 460 | Oracle |
-| Vladimir Ivanov | 448 | Oracle |
+| Tobias Hartmann | 563 | [Oracle](../orgs/oracle.md) |
+| Tom Rodriguez | 460 | [Oracle](../orgs/oracle.md) |
+| Vladimir Ivanov | 448 | [Oracle](../orgs/oracle.md) |
 | Christian Thalinger | 335 | Twitter/X (formerly Oracle) |
 
 ### C1 编译器
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| John Rose | 200+ | Oracle |
+| John Rose | 200+ | [Oracle](../orgs/oracle.md) |
 
 ---
 
@@ -87,31 +87,31 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| Joe Darcy | 1,194 | Oracle |
-| Claes Redestad | 688 | Oracle |
+| Joe Darcy | 1,194 | [Oracle](../orgs/oracle.md) |
+| Claes Redestad | 688 | [Oracle](../orgs/oracle.md) |
 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 27 | 阿里巴巴 |
 
 ### 模块系统
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| Alan Bateman | 867 | Oracle |
-| Mandy Chung | 687 | Oracle |
-| Harold Seigel | 451 | Oracle |
+| Alan Bateman | 867 | [Oracle](../orgs/oracle.md) |
+| Mandy Chung | 687 | [Oracle](../orgs/oracle.md) |
+| Harold Seigel | 451 | [Oracle](../orgs/oracle.md) |
 
 ### 反射
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| Roger Riggs | 461 | Oracle |
-| [Chen Liang](/by-contributor/profiles/chen-liang.md) | 36 | Oracle |
+| Roger Riggs | 461 | [Oracle](../orgs/oracle.md) |
+| [Chen Liang](/by-contributor/profiles/chen-liang.md) | 36 | [Oracle](../orgs/oracle.md) |
 
 ### ClassFile API
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Chen Liang](/by-contributor/profiles/chen-liang.md) | 36 | Oracle |
-| Adam Sotona | 100+ | Oracle |
+| [Chen Liang](/by-contributor/profiles/chen-liang.md) | 36 | [Oracle](../orgs/oracle.md) |
+| Adam Sotona | 100+ | [Oracle](../orgs/oracle.md) |
 
 ---
 
@@ -119,10 +119,10 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| Jonathan Gibbons | 1,320 | Oracle |
-| [Jan Lahoda](/by-contributor/profiles/jan-lahoda.md) | 785 | Oracle |
-| Maurizio Cimadamore | 670 | Oracle |
-| Vicente Romero | 480 | Oracle |
+| Jonathan Gibbons | 1,320 | [Oracle](../orgs/oracle.md) |
+| [Jan Lahoda](/by-contributor/profiles/jan-lahoda.md) | 785 | [Oracle](../orgs/oracle.md) |
+| Maurizio Cimadamore | 670 | [Oracle](../orgs/oracle.md) |
+| Vicente Romero | 480 | [Oracle](../orgs/oracle.md) |
 
 ---
 
@@ -130,11 +130,11 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| David Katleman | 1,487 | Oracle |
-| Erik Joelsson | 956 | Oracle |
-| [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md) | 925 | Oracle |
-| [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | 742 | SAP |
-| Kelly O'Hair | 523 | Oracle |
+| David Katleman | 1,487 | [Oracle](../orgs/oracle.md) |
+| Erik Joelsson | 956 | [Oracle](../orgs/oracle.md) |
+| [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md) | 925 | [Oracle](../orgs/oracle.md) |
+| [Matthias Baesken](/by-contributor/profiles/matthias-baesken.md) | 742 | [SAP](../orgs/sap.md) |
+| Kelly O'Hair | 523 | [Oracle](../orgs/oracle.md) |
 
 ---
 
@@ -144,20 +144,20 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| Sergey Bylokhov | 953 | Oracle |
-| Prasanta Sadhukhan | 772 | Oracle |
+| Sergey Bylokhov | 953 | [Oracle](../orgs/oracle.md) |
+| Prasanta Sadhukhan | 772 | [Oracle](../orgs/oracle.md) |
 
 ### 图形 / 打印
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Phil Race](/by-contributor/profiles/phil-race.md) | 1,313 | Oracle |
+| [Phil Race](/by-contributor/profiles/phil-race.md) | 1,313 | [Oracle](../orgs/oracle.md) |
 
 ### Swing
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| Prasanta Sadhukhan | 772 | Oracle |
+| Prasanta Sadhukhan | 772 | [Oracle](../orgs/oracle.md) |
 
 ---
 
@@ -167,15 +167,15 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Brian Burkhalter](/by-contributor/profiles/brian-burkhalter.md) | 779 | Oracle |
-| Chris Hegarty | 812 | Oracle |
+| [Brian Burkhalter](/by-contributor/profiles/brian-burkhalter.md) | 779 | [Oracle](../orgs/oracle.md) |
+| Chris Hegarty | 812 | [Oracle](../orgs/oracle.md) |
 
 ### HTTP Client
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | 492 | Oracle |
-| [Jaikiran Pai](/by-contributor/profiles/jaikiran-pai.md) | 111 | Oracle |
+| [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | 492 | [Oracle](../orgs/oracle.md) |
+| [Jaikiran Pai](/by-contributor/profiles/jaikiran-pai.md) | 111 | [Oracle](../orgs/oracle.md) |
 
 ---
 
@@ -183,10 +183,10 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 1,209 | Oracle |
-| [David Holmes](/by-contributor/profiles/david-holmes.md) | 720 | Oracle |
-| Thomas Stuefe | 548 | Red Hat |
-| Chris Plummer | 437 | Oracle |
+| [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 1,209 | [Oracle](../orgs/oracle.md) |
+| [David Holmes](/by-contributor/profiles/david-holmes.md) | 720 | [Oracle](../orgs/oracle.md) |
+| Thomas Stuefe | 548 | [Red Hat](../orgs/redhat.md) |
+| Chris Plummer | 437 | [Oracle](../orgs/oracle.md) |
 
 ---
 
@@ -194,7 +194,7 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | 481 | Oracle |
+| [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | 481 | [Oracle](../orgs/oracle.md) |
 
 ---
 
@@ -202,8 +202,8 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 661 | Oracle |
-| Jiangli Zhou | 251 | Oracle |
+| [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 661 | [Oracle](../orgs/oracle.md) |
+| Jiangli Zhou | 251 | [Oracle](../orgs/oracle.md) |
 
 ---
 
@@ -211,8 +211,8 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| Naoto Sato | 569 | Oracle |
-| Justin Lu | 100+ | Oracle |
+| Naoto Sato | 569 | [Oracle](../orgs/oracle.md) |
+| Justin Lu | 100+ | [Oracle](../orgs/oracle.md) |
 
 ---
 
@@ -220,9 +220,9 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| Weijun Wang | 954 | Oracle |
-| Xue-Lei Andrew Fan | 412 | Oracle |
-| Sean Mullan | 421 | Oracle |
+| Weijun Wang | 954 | [Oracle](../orgs/oracle.md) |
+| Xue-Lei Andrew Fan | 412 | [Oracle](../orgs/oracle.md) |
+| Sean Mullan | 421 | [Oracle](../orgs/oracle.md) |
 
 ---
 
@@ -230,10 +230,10 @@
 
 | 贡献者 | Commits | 组织 |
 |--------|---------|------|
-| Hamlin Li | 301 | Oracle |
-| Anjian-Wen | 12 | 字节跳动 |
-| Dingli Zhang | 11 | ISCAS |
-| Fei Yang | 6 | Huawei |
+| Hamlin Li | 301 | [Oracle](../orgs/oracle.md) |
+| [Anjian-Wen](../../by-contributor/profiles/anjian-wen.md) | 12 | 字节跳动 |
+| Dingli Zhang | 11 | [ISCAS](../orgs/iscas-plct.md) |
+| Fei Yang | 6 | [Huawei](../orgs/huawei.md) |
 
 ---
 

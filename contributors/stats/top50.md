@@ -17,34 +17,34 @@
 
 | 排名 | 贡献者 | Integrated PRs | 领域 | 组织 | 详情 |
 |------|--------|----------------|------|------|------|
-| 1 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 803+ | GC, JMH | Amazon | [详情](/by-contributor/profiles/aleksey-shipilev.md) |
-| 2 | [Hannes Wallnoefer](/by-contributor/profiles/hannes-wallnoefer.md) | 201 | Javadoc | Oracle | [详情](/by-contributor/profiles/hannes-wallnoefer.md) |
-| 3 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 200+ | C2 编译器 | Oracle | [详情](/by-contributor/profiles/emanuel-peter.md) |
-| 4 | [Phil Race](/by-contributor/profiles/phil-race.md) | 200+ | 图形/打印 | Oracle | [详情](/by-contributor/profiles/phil-race.md) |
-| 5 | [Kevin Walls](/by-contributor/profiles/kevin-walls.md) | 167 | JMX/JFR | Oracle | [详情](/by-contributor/profiles/kevin-walls.md) |
-| 6 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 150+ | 核心库/性能 | Oracle | [详情](/by-contributor/profiles/claes-redestad.md) |
-| 7 | [Tobias Hartmann](/by-contributor/profiles/tobias-hartmann.md) | 150+ | JIT 编译器 | Oracle | [详情](/by-contributor/profiles/tobias-hartmann.md) |
-| 8 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 150+ | G1 GC | Oracle | [详情](/by-contributor/profiles/thomas-schatzl.md) |
-| 9 | [Martin Doerr](/by-contributor/profiles/martin-doerr.md) | 147 | PPC64 | SAP | [详情](/by-contributor/profiles/martin-doerr.md) |
-| 10 | [Alexander Ivanov](/by-contributor/profiles/alexander-ivanov.md) | 133 | AWT | Oracle | [详情](/by-contributor/profiles/alexander-ivanov.md) |
-| 11 | [Roberto Castaneda Lozano](/by-contributor/profiles/roberto-castaneda-lozano.md) | 107 | C2 | Oracle | [详情](/by-contributor/profiles/roberto-castaneda-lozano.md) |
-| 12 | [Guoxiong Li](/by-contributor/profiles/guoxiong-li.md) | 102 | GC | Oracle | [详情](/by-contributor/profiles/guoxiong-li.md) |
-| 13 | [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | 100+ | C2 架构 | Oracle | [详情](/by-contributor/profiles/vladimir-kozlov.md) |
-| 14 | [Brian Burkhalter](/by-contributor/profiles/brian-burkhalter.md) | 100+ | NIO/网络 | Oracle | [详情](/by-contributor/profiles/brian-burkhalter.md) |
-| 15 | [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md) | 100+ | 构建系统 | Oracle | [详情](/by-contributor/profiles/magnus-ihse-bursie.md) |
-| 16 | [Nizar Ben Alla](/by-contributor/profiles/nizar-ben-alla.md) | 98 | Javadoc | Oracle | [详情](/by-contributor/profiles/nizar-ben-alla.md) |
-| 17 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 97 | 核心库/性能 | Alibaba | [详情](/by-contributor/profiles/shaojin-wen.md) |
-| 18 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 90+ | HotSpot VM | Oracle | [详情](/by-contributor/profiles/coleen-phillimore.md) |
-| 19 | [Ivan Walulya](/by-contributor/profiles/ivan-walulya.md) | 90 | G1 GC | Oracle | [详情](/by-contributor/profiles/ivan-walulya.md) |
-| 20 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 80+ | 线程/并发 | Oracle | [详情](/by-contributor/profiles/david-holmes.md) |
-| 21 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 68 | CDS, AOT | Oracle | [详情](/by-contributor/profiles/ioi-lam.md) |
-| 22 | [William Kemper](/by-contributor/profiles/william-kemper.md) | 50+ | Shenandoah GC | Amazon | [详情](/by-contributor/profiles/william-kemper.md) |
-| 23 | [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | 50+ | HTTP/JMX | Oracle | [详情](/by-contributor/profiles/daniel-fuchs.md) |
-| 24 | [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | 50+ | JFR | Oracle | [详情](/by-contributor/profiles/erik-gahlin.md) |
-| 25 | [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | 50+ | AArch64 | Red Hat | [详情](/by-contributor/profiles/andrew-dinn.md) |
-| 26 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | HotSpot, CDS | Red Hat | [详情](/by-contributor/profiles/thomas-stuefe.md) |
-| 27 | [Amit Kumar](/by-contributor/profiles/amit-kumar.md) | 50+ | s390x, Compiler | IBM | [详情](/by-contributor/profiles/amit-kumar.md) |
-| 28 | [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | RISC-V | Huawei | [详情](/by-contributor/profiles/fei-yang.md) |
+| 1 | [Aleksey Shipilev](/by-contributor/profiles/aleksey-shipilev.md) | 803+ | GC, JMH | [Amazon](../orgs/amazon.md) | [详情](/by-contributor/profiles/aleksey-shipilev.md) |
+| 2 | [Hannes Wallnoefer](/by-contributor/profiles/hannes-wallnoefer.md) | 201 | Javadoc | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/hannes-wallnoefer.md) |
+| 3 | [Emanuel Peter](/by-contributor/profiles/emanuel-peter.md) | 200+ | C2 编译器 | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/emanuel-peter.md) |
+| 4 | [Phil Race](/by-contributor/profiles/phil-race.md) | 200+ | 图形/打印 | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/phil-race.md) |
+| 5 | [Kevin Walls](/by-contributor/profiles/kevin-walls.md) | 167 | JMX/JFR | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/kevin-walls.md) |
+| 6 | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | 150+ | 核心库/性能 | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/claes-redestad.md) |
+| 7 | [Tobias Hartmann](/by-contributor/profiles/tobias-hartmann.md) | 150+ | JIT 编译器 | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/tobias-hartmann.md) |
+| 8 | [Thomas Schatzl](/by-contributor/profiles/thomas-schatzl.md) | 150+ | G1 GC | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/thomas-schatzl.md) |
+| 9 | [Martin Doerr](/by-contributor/profiles/martin-doerr.md) | 147 | PPC64 | [SAP](../orgs/sap.md) | [详情](/by-contributor/profiles/martin-doerr.md) |
+| 10 | [Alexander Ivanov](/by-contributor/profiles/alexander-ivanov.md) | 133 | AWT | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/alexander-ivanov.md) |
+| 11 | [Roberto Castaneda Lozano](/by-contributor/profiles/roberto-castaneda-lozano.md) | 107 | C2 | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/roberto-castaneda-lozano.md) |
+| 12 | [Guoxiong Li](/by-contributor/profiles/guoxiong-li.md) | 102 | GC | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/guoxiong-li.md) |
+| 13 | [Vladimir Kozlov](/by-contributor/profiles/vladimir-kozlov.md) | 100+ | C2 架构 | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/vladimir-kozlov.md) |
+| 14 | [Brian Burkhalter](/by-contributor/profiles/brian-burkhalter.md) | 100+ | NIO/网络 | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/brian-burkhalter.md) |
+| 15 | [Magnus Ihse Bursie](/by-contributor/profiles/magnus-ihse-bursie.md) | 100+ | 构建系统 | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/magnus-ihse-bursie.md) |
+| 16 | [Nizar Ben Alla](/by-contributor/profiles/nizar-ben-alla.md) | 98 | Javadoc | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/nizar-ben-alla.md) |
+| 17 | [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | 97 | 核心库/性能 | [Alibaba](../orgs/alibaba.md) | [详情](/by-contributor/profiles/shaojin-wen.md) |
+| 18 | [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md) | 90+ | HotSpot VM | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/coleen-phillimore.md) |
+| 19 | [Ivan Walulya](/by-contributor/profiles/ivan-walulya.md) | 90 | G1 GC | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/ivan-walulya.md) |
+| 20 | [David Holmes](/by-contributor/profiles/david-holmes.md) | 80+ | 线程/并发 | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/david-holmes.md) |
+| 21 | [Ioi Lam](/by-contributor/profiles/ioi-lam.md) | 68 | CDS, AOT | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/ioi-lam.md) |
+| 22 | [William Kemper](/by-contributor/profiles/william-kemper.md) | 50+ | Shenandoah GC | [Amazon](../orgs/amazon.md) | [详情](/by-contributor/profiles/william-kemper.md) |
+| 23 | [Daniel Fuchs](/by-contributor/profiles/daniel-fuchs.md) | 50+ | HTTP/JMX | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/daniel-fuchs.md) |
+| 24 | [Erik Gahlin](/by-contributor/profiles/erik-gahlin.md) | 50+ | JFR | [Oracle](../orgs/oracle.md) | [详情](/by-contributor/profiles/erik-gahlin.md) |
+| 25 | [Andrew Dinn](/by-contributor/profiles/andrew-dinn.md) | 50+ | AArch64 | [Red Hat](../orgs/redhat.md) | [详情](/by-contributor/profiles/andrew-dinn.md) |
+| 26 | [Thomas Stuefe](/by-contributor/profiles/thomas-stuefe.md) | 50+ | HotSpot, CDS | [Red Hat](../orgs/redhat.md) | [详情](/by-contributor/profiles/thomas-stuefe.md) |
+| 27 | [Amit Kumar](/by-contributor/profiles/amit-kumar.md) | 50+ | s390x, Compiler | [IBM](../orgs/ibm.md) | [详情](/by-contributor/profiles/amit-kumar.md) |
+| 28 | [Fei Yang](/by-contributor/profiles/fei-yang.md) | 20+ | RISC-V | [Huawei](../orgs/huawei.md) | [详情](/by-contributor/profiles/fei-yang.md) |
 
 ---
 

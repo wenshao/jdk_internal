@@ -243,7 +243,7 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 
 | 贡献者 | Integrated PRs | 领域 |
 |--------|----------------|------|
-| Anjian-Wen | 10+ | RISC-V |
+| [Anjian-Wen](../../by-contributor/profiles/anjian-wen.md) | 10+ | RISC-V |
 
 ---
 

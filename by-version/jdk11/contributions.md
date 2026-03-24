@@ -8,15 +8,15 @@
 
 | 排名 | 组织 | PRs | 占比 |
 |------|------|-----|------|
-| 1 | Oracle | 2 | 66% |
+| 1 | [Oracle](../../contributors/orgs/oracle.md) | 2 | 66% |
 
 ## Top 50 贡献者
 
 | 排名 | 贡献者 | PRs | 组织 |
 |------|--------|-----|------|
 | 1 | svijayasekar | 1 |  |
-| 2 | JoeWang-Java | 1 | Oracle |
-| 3 | DamonGuy | 1 | Oracle |
+| 2 | JoeWang-Java | 1 | [Oracle](../../contributors/orgs/oracle.md) |
+| 3 | DamonGuy | 1 | [Oracle](../../contributors/orgs/oracle.md) |
 
 ## 模块分布
 

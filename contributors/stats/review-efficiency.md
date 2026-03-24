@@ -18,15 +18,15 @@
 
 | 组织 | PRs | 中位数 | 平均 |
 |------|-----|--------|------|
-| Oracle | 17087 | 3天 | 9天 |
-| Amazon | 1172 | 3天 | 8天 |
-| Red Hat | 584 | 6天 | 17天 |
-| SAP | 999 | 3天 | 6天 |
-| Alibaba | 388 | 4天 | 16天 |
-| Tencent | 223 | 1天 | 2天 |
-| IBM | 222 | 4天 | 14天 |
-| Intel | 190 | 8天 | 18天 |
-| Huawei | 156 | 2天 | 5天 |
+| [Oracle](../orgs/oracle.md) | 17087 | 3天 | 9天 |
+| [Amazon](../orgs/amazon.md) | 1172 | 3天 | 8天 |
+| [Red Hat](../orgs/redhat.md) | 584 | 6天 | 17天 |
+| [SAP](../orgs/sap.md) | 999 | 3天 | 6天 |
+| [Alibaba](../orgs/alibaba.md) | 388 | 4天 | 16天 |
+| [Tencent](../orgs/tencent.md) | 223 | 1天 | 2天 |
+| [IBM](../orgs/ibm.md) | 222 | 4天 | 14天 |
+| [Intel](../orgs/intel.md) | 190 | 8天 | 18天 |
+| [Huawei](../orgs/huawei.md) | 156 | 2天 | 5天 |
 
 ## 按模块 (Top 15)
 

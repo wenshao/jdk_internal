@@ -8,7 +8,7 @@
 
 哪些组织的 PR 被其他组织审查？（数字 = 审查次数）
 
-| 作者组织 \ 审查组织 | Oracle | Amazon | Red Hat | SAP | Alibaba | Tencent | IBM | Intel | Huawei |
+| 作者组织 \ 审查组织 | [Oracle](../orgs/oracle.md) | [Amazon](../orgs/amazon.md) | [Red Hat](../orgs/redhat.md) | [SAP](../orgs/sap.md) | [Alibaba](../orgs/alibaba.md) | [Tencent](../orgs/tencent.md) | [IBM](../orgs/ibm.md) | [Intel](../orgs/intel.md) | [Huawei](../orgs/huawei.md) |
 |---------------------|--------|--------|---------|-----|---------|---------|-----|-------|--------|
 | **Oracle** | - | 828 | 605 | 249 | 42 | 63 | 141 | 45 | 139 |
 | **Amazon** | 1422 | - | 140 | 42 | 3 | 20 | 42 | 1 | 19 |
@@ -24,26 +24,26 @@
 
 | 排名 | PR 作者组织 | 审查者组织 | 审查次数 |
 |------|-----------|-----------|----------|
-| 1 | Amazon | Oracle | 1422 |
-| 2 | SAP | Oracle | 1036 |
-| 3 | Independent | Oracle | 956 |
-| 4 | Red Hat | Oracle | 874 |
-| 5 | Oracle | Amazon | 828 |
-| 6 | Alibaba | Oracle | 643 |
-| 7 | Oracle | Red Hat | 605 |
-| 8 | Devexperts | Oracle | 546 |
-| 9 | Oracle | Devexperts | 375 |
-| 10 | Oracle | Independent | 357 |
-| 11 | Tencent | Oracle | 297 |
-| 12 | Intel | Oracle | 259 |
-| 13 | Oracle | SAP | 249 |
-| 14 | IBM | Oracle | 231 |
-| 15 | Oracle | Datadog | 185 |
-| 16 | NTT Data | Oracle | 184 |
-| 17 | SAP | Red Hat | 171 |
-| 18 | Oracle | Rivos | 161 |
-| 19 | Oracle | IBM | 141 |
-| 20 | Amazon | Red Hat | 140 |
+| 1 | [Amazon](../orgs/amazon.md) | [Oracle](../orgs/oracle.md) | 1422 |
+| 2 | [SAP](../orgs/sap.md) | [Oracle](../orgs/oracle.md) | 1036 |
+| 3 | [Independent](../orgs/independent.md) | [Oracle](../orgs/oracle.md) | 956 |
+| 4 | [Red Hat](../orgs/redhat.md) | [Oracle](../orgs/oracle.md) | 874 |
+| 5 | [Oracle](../orgs/oracle.md) | [Amazon](../orgs/amazon.md) | 828 |
+| 6 | [Alibaba](../orgs/alibaba.md) | [Oracle](../orgs/oracle.md) | 643 |
+| 7 | [Oracle](../orgs/oracle.md) | [Red Hat](../orgs/redhat.md) | 605 |
+| 8 | [Devexperts](../orgs/independent.md) | [Oracle](../orgs/oracle.md) | 546 |
+| 9 | [Oracle](../orgs/oracle.md) | [Devexperts](../orgs/independent.md) | 375 |
+| 10 | [Oracle](../orgs/oracle.md) | [Independent](../orgs/independent.md) | 357 |
+| 11 | [Tencent](../orgs/tencent.md) | [Oracle](../orgs/oracle.md) | 297 |
+| 12 | [Intel](../orgs/intel.md) | [Oracle](../orgs/oracle.md) | 259 |
+| 13 | [Oracle](../orgs/oracle.md) | [SAP](../orgs/sap.md) | 249 |
+| 14 | [IBM](../orgs/ibm.md) | [Oracle](../orgs/oracle.md) | 231 |
+| 15 | [Oracle](../orgs/oracle.md) | [Datadog](../orgs/datadog.md) | 185 |
+| 16 | [NTT Data](../orgs/independent.md) | [Oracle](../orgs/oracle.md) | 184 |
+| 17 | [SAP](../orgs/sap.md) | [Red Hat](../orgs/redhat.md) | 171 |
+| 18 | [Oracle](../orgs/oracle.md) | [Rivos](../orgs/independent.md) | 161 |
+| 19 | [Oracle](../orgs/oracle.md) | [IBM](../orgs/ibm.md) | 141 |
+| 20 | [Amazon](../orgs/amazon.md) | [Red Hat](../orgs/redhat.md) | 140 |
 
 > **数据来源**: by-pr/all-integrated-prs.csv (24,868 PRs)
 > **统计时间**: 2026-03-23

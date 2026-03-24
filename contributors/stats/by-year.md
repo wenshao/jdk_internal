@@ -165,15 +165,15 @@ Integrated PRs
 | JDK 版本 | 开发期间 | Integrated PRs | 主要贡献者 |
 |----------|----------|----------------|-----------|
 | JDK 17 | 2021 | ~4,900 | Oracle, Red Hat, Amazon |
-| JDK 18 | 2021-2022 | ~2,200 | Oracle |
-| JDK 19 | 2022 | ~2,300 | Oracle |
-| JDK 20 | 2022-2023 | ~2,300 | Oracle |
+| JDK 18 | 2021-2022 | ~2,200 | [Oracle](../orgs/oracle.md) |
+| JDK 19 | 2022 | ~2,300 | [Oracle](../orgs/oracle.md) |
+| JDK 20 | 2022-2023 | ~2,300 | [Oracle](../orgs/oracle.md) |
 | JDK 21 | 2023 | ~2,400 | Oracle, Red Hat |
-| JDK 22 | 2023-2024 | ~2,400 | Oracle |
-| JDK 23 | 2024 | ~2,400 | Oracle |
+| JDK 22 | 2023-2024 | ~2,400 | [Oracle](../orgs/oracle.md) |
+| JDK 23 | 2024 | ~2,400 | [Oracle](../orgs/oracle.md) |
 | JDK 24 | 2024-2025 | ~2,600 | Oracle, Alibaba |
 | JDK 25 | 2025 | ~2,500 | Oracle, Alibaba |
-| JDK 26 | 2025-2026 | ~1,000* | Oracle |
+| JDK 26 | 2025-2026 | ~1,000* | [Oracle](../orgs/oracle.md) |
 
 *进行中
 

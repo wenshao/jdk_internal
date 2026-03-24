@@ -6,7 +6,7 @@
 
 ## 年度总量
 
-| 年份 | 总 PRs | Oracle | Amazon | Red Hat | SAP | Alibaba | Tencent | Huawei | Intel |
+| 年份 | 总 PRs | [Oracle](../orgs/oracle.md) | [Amazon](../orgs/amazon.md) | [Red Hat](../orgs/redhat.md) | [SAP](../orgs/sap.md) | [Alibaba](../orgs/alibaba.md) | [Tencent](../orgs/tencent.md) | [Huawei](../orgs/huawei.md) | [Intel](../orgs/intel.md) |
 |------|--------|--------|--------|---------|-----|---------|---------|--------|-------|
 | 2020 | 1667 | 1121 | 130 | 54 | 76 | 3 | 29 | 2 | 8 |
 | 2021 | 4389 | 2953 | 194 | 94 | 160 | 70 | 92 | 5 | 38 |
@@ -18,7 +18,7 @@
 
 ## 中国企业年度趋势
 
-| 年份 | Alibaba | Tencent | Huawei | ISCAS | ByteDance | Loongson | 合计 |
+| 年份 | [Alibaba](../orgs/alibaba.md) | [Tencent](../orgs/tencent.md) | [Huawei](../orgs/huawei.md) | [ISCAS](../orgs/iscas-plct.md) | [ByteDance](../orgs/bytedance.md) | [Loongson](../orgs/loongson.md) | 合计 |
 |------|---------|---------|--------|-------|-----------|----------|------|
 | 2020 | 3 | 29 | 2 | 0 | 0 | 0 | 34 |
 | 2021 | 70 | 92 | 5 | 0 | 0 | 10 | 177 |
