@@ -33,56 +33,56 @@
 
 | 排名 | 贡献者 | PRs | 组织 |
 |------|--------|-----|------|
-| 1 | tschatzl | 65 | [Oracle](../../contributors/orgs/oracle.md) |
-| 2 | prrace | 64 | [Oracle](../../contributors/orgs/oracle.md) |
-| 3 | alexeysemenyukoracle | 43 | [Oracle](../../contributors/orgs/oracle.md) |
+| 1 | [tschatzl](../../by-contributor/profiles/thomas-schatzl.md) | 65 | [Oracle](../../contributors/orgs/oracle.md) |
+| 2 | [prrace](../../by-contributor/profiles/phil-race.md) | 64 | [Oracle](../../contributors/orgs/oracle.md) |
+| 3 | [alexeysemenyukoracle](../../by-contributor/profiles/alexey-semenyuk.md) | 43 | [Oracle](../../contributors/orgs/oracle.md) |
 | 4 | [MBaesken](../../by-contributor/profiles/matthias-baesken.md) | 42 | [SAP](../../contributors/orgs/sap.md) |
-| 5 | jaikiran | 31 | [Oracle](../../contributors/orgs/oracle.md) |
-| 6 | mrserb | 31 | [Oracle](../../contributors/orgs/oracle.md) |
-| 7 | albertnetymk | 29 | [Oracle](../../contributors/orgs/oracle.md) |
-| 8 | kimbarrett | 29 | [Oracle](../../contributors/orgs/oracle.md) |
-| 9 | dfuch | 28 | [Oracle](../../contributors/orgs/oracle.md) |
+| 5 | [jaikiran](../../by-contributor/profiles/jaikiran-pai.md) | 31 | [Oracle](../../contributors/orgs/oracle.md) |
+| 6 | [mrserb](../../by-contributor/profiles/sergey-bylokhov.md) | 31 | [Oracle](../../contributors/orgs/oracle.md) |
+| 7 | [albertnetymk](../../by-contributor/profiles/albert-mingkun-yang.md) | 29 | [Oracle](../../contributors/orgs/oracle.md) |
+| 8 | [kimbarrett](../../by-contributor/profiles/kim-barrett.md) | 29 | [Oracle](../../contributors/orgs/oracle.md) |
+| 9 | [dfuch](../../by-contributor/profiles/daniel-fuchs.md) | 28 | [Oracle](../../contributors/orgs/oracle.md) |
 | 10 | [sendaoYan](../../by-contributor/profiles/sendaoyan.md) | 27 | [Independent](../../contributors/orgs/independent.md) |
-| 11 | iklam | 26 | [Oracle](../../contributors/orgs/oracle.md) |
+| 11 | [iklam](../../by-contributor/profiles/ioi-lam.md) | 26 | [Oracle](../../contributors/orgs/oracle.md) |
 | 12 | [shipilev](../../by-contributor/profiles/aleksey-shipilev.md) | 25 | [Amazon](../../contributors/orgs/amazon.md) |
 | 13 | xmas92 | 23 | [Oracle](../../contributors/orgs/oracle.md) |
-| 14 | prsadhuk | 22 | [Oracle](../../contributors/orgs/oracle.md) |
-| 15 | YaSuenag | 19 | [NTT Data](../../contributors/orgs/independent.md) |
-| 16 | bplb | 18 | [Oracle](../../contributors/orgs/oracle.md) |
+| 14 | [prsadhuk](../../by-contributor/profiles/prasanta-sadhukhan.md) | 22 | [Oracle](../../contributors/orgs/oracle.md) |
+| 15 | [YaSuenag](../../by-contributor/profiles/yasumasa-suenaga.md) | 19 | [NTT Data](../../contributors/orgs/independent.md) |
+| 16 | [bplb](../../by-contributor/profiles/brian-burkhalter.md) | 18 | [Oracle](../../contributors/orgs/oracle.md) |
 | 17 | [merykitty](../../by-contributor/profiles/quan-anh-mai.md) | 18 | [Oracle](../../contributors/orgs/oracle.md) |
 | 18 | [rwestrel](../../by-contributor/profiles/roland-westrelin.md) | 17 | [Red Hat](../../contributors/orgs/redhat.md) |
-| 19 | eme64 | 17 | [Oracle](../../contributors/orgs/oracle.md) |
-| 20 | dholmes-ora | 17 | [Oracle](../../contributors/orgs/oracle.md) |
-| 21 | liach | 16 | [Oracle](../../contributors/orgs/oracle.md) |
-| 22 | DamonGuy | 15 | [Oracle](../../contributors/orgs/oracle.md) |
-| 23 | lahodaj | 14 | [Oracle](../../contributors/orgs/oracle.md) |
-| 24 | coleenp | 14 | [Oracle](../../contributors/orgs/oracle.md) |
-| 25 | vy | 14 | [Oracle](../../contributors/orgs/oracle.md) |
-| 26 | earthling-amzn | 14 | [Amazon](../../contributors/orgs/amazon.md) |
+| 19 | [eme64](../../by-contributor/profiles/emanuel-peter.md) | 17 | [Oracle](../../contributors/orgs/oracle.md) |
+| 20 | [dholmes-ora](../../by-contributor/profiles/david-holmes.md) | 17 | [Oracle](../../contributors/orgs/oracle.md) |
+| 21 | [liach](../../by-contributor/profiles/chen-liang.md) | 16 | [Oracle](../../contributors/orgs/oracle.md) |
+| 22 | [DamonGuy](../../by-contributor/profiles/damon-nguyen.md) | 15 | [Oracle](../../contributors/orgs/oracle.md) |
+| 23 | [lahodaj](../../by-contributor/profiles/jan-lahoda.md) | 14 | [Oracle](../../contributors/orgs/oracle.md) |
+| 24 | [coleenp](../../by-contributor/profiles/coleen-phillimore.md) | 14 | [Oracle](../../contributors/orgs/oracle.md) |
+| 25 | [vy](../../by-contributor/profiles/volkan-yazici.md) | 14 | [Oracle](../../contributors/orgs/oracle.md) |
+| 26 | [earthling-amzn](../../by-contributor/profiles/william-kemper.md) | 14 | [Amazon](../../contributors/orgs/amazon.md) |
 | 27 | sspitsyn | 13 | [Oracle](../../contributors/orgs/oracle.md) |
-| 28 | naotoj | 12 | [Oracle](../../contributors/orgs/oracle.md) |
+| 28 | [naotoj](../../by-contributor/profiles/naoto-sato.md) | 12 | [Oracle](../../contributors/orgs/oracle.md) |
 | 29 | justin-curtis-lu | 12 | [Oracle](../../contributors/orgs/oracle.md) |
 | 30 | benty-amzn | 12 | [Amazon](../../contributors/orgs/amazon.md) |
-| 31 | DingliZhang | 12 | [ISCAS](../../contributors/orgs/iscas-plct.md) |
+| 31 | [DingliZhang](../../by-contributor/profiles/dingli-zhang.md) | 12 | [ISCAS](../../contributors/orgs/iscas-plct.md) |
 | 32 | eirbjo | 12 | [Independent](../../contributors/orgs/independent.md) |
-| 33 | kdnilsen | 11 | [Amazon](../../contributors/orgs/amazon.md) |
-| 34 | caspernorrbin | 11 | [Oracle](../../contributors/orgs/oracle.md) |
+| 33 | [kdnilsen](../../by-contributor/profiles/kelvin-nilsen.md) | 11 | [Amazon](../../contributors/orgs/amazon.md) |
+| 34 | [caspernorrbin](../../by-contributor/profiles/casper-norrbin.md) | 11 | [Oracle](../../contributors/orgs/oracle.md) |
 | 35 | krk | 11 |  |
 | 36 | afshin-zafari | 10 | [Oracle](../../contributors/orgs/oracle.md) |
-| 37 | jddarcy | 10 | [Oracle](../../contributors/orgs/oracle.md) |
-| 38 | kevinjwalls | 10 | [Oracle](../../contributors/orgs/oracle.md) |
+| 37 | [jddarcy](../../by-contributor/profiles/joe-darcy.md) | 10 | [Oracle](../../contributors/orgs/oracle.md) |
+| 38 | [kevinjwalls](../../by-contributor/profiles/kevin-walls.md) | 10 | [Oracle](../../contributors/orgs/oracle.md) |
 | 39 | [jatin-bhateja](../../by-contributor/profiles/jatin-bhateja.md) | 10 | [Intel](../../contributors/orgs/intel.md) |
-| 40 | plummercj | 9 | [Oracle](../../contributors/orgs/oracle.md) |
-| 41 | lkorinth | 9 | [Oracle](../../contributors/orgs/oracle.md) |
-| 42 | RogerRiggs | 9 | [Oracle](../../contributors/orgs/oracle.md) |
-| 43 | AlanBateman | 9 | [Oracle](../../contributors/orgs/oracle.md) |
-| 44 | mgronlun | 9 | [Oracle](../../contributors/orgs/oracle.md) |
+| 40 | [plummercj](../../by-contributor/profiles/chris-plummer.md) | 9 | [Oracle](../../contributors/orgs/oracle.md) |
+| 41 | [lkorinth](../../by-contributor/profiles/leo-korinth.md) | 9 | [Oracle](../../contributors/orgs/oracle.md) |
+| 42 | [RogerRiggs](../../by-contributor/profiles/roger-riggs.md) | 9 | [Oracle](../../contributors/orgs/oracle.md) |
+| 43 | [AlanBateman](../../by-contributor/profiles/alan-bateman.md) | 9 | [Oracle](../../contributors/orgs/oracle.md) |
+| 44 | [mgronlun](../../by-contributor/profiles/markus-gronlund.md) | 9 | [Oracle](../../contributors/orgs/oracle.md) |
 | 45 | hgqxjj | 9 | [Independent](../../contributors/orgs/independent.md) |
-| 46 | toxaart | 8 | [Oracle](../../contributors/orgs/oracle.md) |
-| 47 | djelinski | 8 | [Oracle](../../contributors/orgs/oracle.md) |
-| 48 | sormuras | 8 | [Oracle](../../contributors/orgs/oracle.md) |
-| 49 | stefank | 8 | [Oracle](../../contributors/orgs/oracle.md) |
-| 50 | chhagedorn | 8 | [Oracle](../../contributors/orgs/oracle.md) |
+| 46 | [toxaart](../../by-contributor/profiles/anton-artemov.md) | 8 | [Oracle](../../contributors/orgs/oracle.md) |
+| 47 | [djelinski](../../by-contributor/profiles/daniel-jelinski.md) | 8 | [Oracle](../../contributors/orgs/oracle.md) |
+| 48 | [sormuras](../../by-contributor/profiles/christian-stein.md) | 8 | [Oracle](../../contributors/orgs/oracle.md) |
+| 49 | [stefank](../../by-contributor/profiles/stefan-karlsson.md) | 8 | [Oracle](../../contributors/orgs/oracle.md) |
+| 50 | [chhagedorn](../../by-contributor/profiles/christian-hagedorn.md) | 8 | [Oracle](../../contributors/orgs/oracle.md) |
 
 ## 模块分布
 

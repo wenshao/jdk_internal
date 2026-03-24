@@ -9,13 +9,13 @@
 | 排名 | 贡献者 | PRs | 组织 | 首次贡献 | 主要领域 |
 |------|--------|-----|------|----------|----------|
 | 1 | fandreuz | 54 | [Amazon](../orgs/amazon.md) | 2025-07-18 | build |
-| 2 | mhaessig | 52 | [Oracle](../orgs/oracle.md) | 2025-03-06 | compiler/c2 |
-| 3 | marc-chevalier | 42 | [Oracle](../orgs/oracle.md) | 2025-02-14 | compiler/c2 |
-| 4 | myankelev | 41 | [Oracle](../orgs/oracle.md) | 2025-01-07 | core-libs/java.net |
-| 5 | dbriemann | 26 | [SAP](../orgs/sap.md) | 2025-02-18 | arch/ppc |
-| 6 | toxaart | 26 | [Oracle](../orgs/oracle.md) | 2025-04-15 | hotspot |
-| 7 | benoitmaillard | 26 | [Oracle](../orgs/oracle.md) | 2025-06-05 | compiler/c2 |
-| 8 | david-beaumont | 25 | [Oracle](../orgs/oracle.md) | 2025-02-06 | test |
+| 2 | [mhaessig](../../by-contributor/profiles/martin-haessig.md) | 52 | [Oracle](../orgs/oracle.md) | 2025-03-06 | compiler/c2 |
+| 3 | [marc-chevalier](../../by-contributor/profiles/marc-chevalier.md) | 42 | [Oracle](../orgs/oracle.md) | 2025-02-14 | compiler/c2 |
+| 4 | [myankelev](../../by-contributor/profiles/mikhail-yankelevich.md) | 41 | [Oracle](../orgs/oracle.md) | 2025-01-07 | core-libs/java.net |
+| 5 | [dbriemann](../../by-contributor/profiles/david-briemann.md) | 26 | [SAP](../orgs/sap.md) | 2025-02-18 | arch/ppc |
+| 6 | [toxaart](../../by-contributor/profiles/anton-artemov.md) | 26 | [Oracle](../orgs/oracle.md) | 2025-04-15 | hotspot |
+| 7 | [benoitmaillard](../../by-contributor/profiles/benoit-maillard.md) | 26 | [Oracle](../orgs/oracle.md) | 2025-06-05 | compiler/c2 |
+| 8 | [david-beaumont](../../by-contributor/profiles/david-beaumont.md) | 25 | [Oracle](../orgs/oracle.md) | 2025-02-06 | test |
 | 9 | hgqxjj | 25 | [Independent](../orgs/independent.md) | 2025-07-03 | arch/x86 |
 | 10 | [Anjian-Wen](../../by-contributor/profiles/anjian-wen.md) | 24 | [ByteDance](../orgs/bytedance.md) | 2025-02-07 | arch/riscv |
 | 11 | koushikthirupattur | 22 | [Oracle](../orgs/oracle.md) | 2025-01-10 | core-libs/java.net |
@@ -31,7 +31,7 @@
 | 21 | linzihao1999 | 6 |  | 2025-03-22 | compiler/jvmci |
 | 22 | kieran-farrell | 6 |  | 2025-05-07 | core-libs |
 | 23 | dev-jonghoonpark | 6 |  | 2025-08-13 | test |
-| 24 | j3graham | 5 |  | 2025-01-13 | core-libs/java.text |
+| 24 | [j3graham](../../by-contributor/profiles/johannes-graham.md) | 5 |  | 2025-01-13 | core-libs/java.text |
 | 25 | xuemingshen-oracle | 5 |  | 2025-06-25 | core-libs/i18n |
 
 共 39 位新星贡献者 (2025+, ≥3 PRs)
