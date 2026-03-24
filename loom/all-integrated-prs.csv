@@ -1,0 +1,147 @@
+bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,reviewers
+,1,Initial scoped locals implementation,theRealAph,2020-02-10,2020-02-14,integrated,Red Hat,GB,4,
+,6,Replace fibers by virtual threads in the test summary,lmesnik,2020-03-18,2020-03-23,integrated|sponsor,Oracle,US,5,
+8241331,8,8241331: Implement basic support of test execution using vthread wrapper ,lmesnik,2020-03-23,2020-03-23,integrated,Oracle,US,0,
+8240914,9,"8240914: java_lang_Throwable::fill_in_stack_trace should use Handler for ""cont""",lmesnik,2020-03-23,2020-03-24,integrated,Oracle,US,1,
+,11,Fixes of vmTestbase tests for loom ,lmesnik,2020-04-07,2020-04-09,integrated,Oracle,US,2,
+,12,JVMTI GetThreadInfo fixed to return NULL when Thread is TERMINATED,lmesnik,2020-04-08,2020-04-08,integrated,Oracle,US,0,
+,14,ZGC support for loom,fisk,2020-07-28,2020-07-29,integrated,Oracle,SE,1,
+8250887,15,8250887: Crash adjusting weak references during GC,fisk,2020-08-05,2020-08-05,integrated,Oracle,SE,0,
+,20,OSX build fails with Xcode 12 due to missing parantheses around sizeo…,kabutz,2020-10-14,2020-10-14,integrated,,,0,
+,21,Fix movptr with movl in ContinuationEntry fill/cleanup,huishi-hs,2020-10-27,2020-10-27,integrated,,,0,
+,23,Add test case for detecting the bug where singlestep events are delivered for a vthread when enabled on the cthread,plummercj,2020-12-02,2020-12-02,integrated,Oracle,US,0,
+,26,"Scope locals, Mark II.",theRealAph,2021-01-19,2021-01-21,integrated,Red Hat,GB,2,
+,29,Implement ShenandoahHeap::requires_barriers(),rkennke,2021-02-12,2021-02-12,integrated,Red Hat,CH,0,pron
+,30,Adjustments to derived-pointer handling to make it work with Shenandoah GC,rkennke,2021-02-12,2021-02-12,integrated,Red Hat,CH,0,pron
+,31,Fix merge error in ShenandoahFullGC,rkennke,2021-02-12,2021-02-15,integrated,Red Hat,CH,3,pron
+,34,Scope locals next,theRealAph,2021-03-12,2021-03-15,integrated,Red Hat,GB,3,
+,35,update microbenchmarks,kuksenko,2021-04-15,2021-04-16,integrated,,,1,
+,36,Fix typo in HotSpotDiagnostic,octylFractal,2021-04-20,2021-04-21,integrated,,,1,AlanBateman
+,37,Whitespaces,coleenp,2021-04-29,2021-04-30,integrated,Oracle,US,1,tstuefe
+,38,Loom support for RedefineClasses,coleenp,2021-05-04,2021-05-05,integrated,Oracle,US,1,
+,39,Latest version of scope locals,theRealAph,2021-05-05,2021-05-05,integrated,Red Hat,GB,0,
+,40,Replace BacktraceBuilder and allocation safepoints in async_get_stack_trace,coleenp,2021-05-05,2021-05-06,integrated,Oracle,US,1,sspitsyn
+,41,Remove _keepalive WeakHandle remnants.,coleenp,2021-05-10,2021-05-10,integrated,Oracle,US,0,fisk
+,46,Latest scope locals changes.,theRealAph,2021-06-09,2021-06-10,integrated,Red Hat,GB,1,
+,47,Fix held_monitor_count calculation,huishi-hs,2021-06-12,2021-06-15,integrated,,,3,"rickard,pron"
+,48,Loom preempt3,coleenp,2021-06-16,2021-06-24,integrated,Oracle,US,8,
+,49,Fix linkage failure due to missing frame::oops_interpreted_do template instantiation,shipilev,2021-06-21,2021-06-22,integrated,Amazon,US,1,
+,50,Left in debug code.,coleenp,2021-06-24,2021-06-24,integrated,Oracle,US,0,
+,51,ContMirror::allocate_stack_chunk was using the wrong thread for allocation,coleenp,2021-06-25,2021-06-25,integrated,Oracle,US,0,
+,54,Inject jvmti state into Thread.,coleenp,2021-07-22,2021-07-22,integrated,Oracle,US,0,sspitsyn
+,55,Add Handle arguments and fix OopHandle,coleenp,2021-07-26,2021-07-29,integrated,Oracle,US,3,lmesnik
+,56,Add preempt logging to find bug.,coleenp,2021-08-04,2021-08-05,integrated,Oracle,US,1,
+,58,Stripped down scope locals,theRealAph,2021-08-06,2021-08-06,integrated,Red Hat,GB,0,
+,59,avoid extra park of vthread when using fixed thread pool,miao-zheng,2021-08-26,2021-08-30,integrated,,,4,AlanBateman
+,60,Ensure vthread has connected to server,miao-zheng,2021-09-06,2021-09-06,integrated,,,0,AlanBateman
+,61,Added VTMT timeout handler,lmesnik,2021-09-08,2021-09-13,integrated,Oracle,US,5,
+,63,fixed to print when thread is not blocked,lmesnik,2021-09-18,2021-09-18,integrated,Oracle,US,0,sspitsyn
+,64,updated int JvmtiThreadState::count_frames(),lmesnik,2021-09-24,2021-09-25,integrated,Oracle,US,1,
+,65,Make Loom buildable on x86_32,shipilev,2021-09-24,2021-10-11,integrated,Amazon,US,17,pron
+,66,Stop compiling old oopMapStubGenerator,shipilev,2021-09-27,2021-09-27,integrated,Amazon,US,0,
+,67,Fix Minimal VM build failures,shipilev,2021-09-27,2021-10-01,integrated,Amazon,US,4,"plummercj,sspitsyn"
+,68,Fix Windows builds after oopMapStubGenerator change,shipilev,2021-09-27,2021-09-27,integrated,Amazon,US,0,pron
+,69,Fix Optimized builds,shipilev,2021-09-27,2021-09-30,integrated,Amazon,US,3,vnkozlov
+,70,Fix Windows aarch64 builds,shipilev,2021-09-27,2021-09-30,integrated,Amazon,US,3,theRealAph
+,72,"Loom: PPC64, S390, ARM32, Zero stubs",shipilev,2021-10-05,2021-10-12,integrated,Amazon,US,7,pron
+,73,Remove the remaining mentions of AOT,shipilev,2021-10-08,2021-10-11,integrated,Amazon,US,3,AlanBateman
+,74,Loom test groups for development/porting use,shipilev,2021-10-11,2021-10-12,integrated,Amazon,US,1,AlanBateman
+,75,Fix non-supported platforms release builds,shipilev,2021-10-14,2021-10-14,integrated,Amazon,US,0,pron
+,77,Drop x86_32 code from x86_64-specific files,shipilev,2021-10-14,2021-10-15,integrated,Amazon,US,1,pron
+,78,Harmonize actual and expected signature of Continuation.doYield,shipilev,2021-10-14,2021-10-15,integrated,Amazon,US,1,pron
+,79,Fix problem of copyright header,miao-zheng,2021-10-18,2021-10-18,integrated,,,0,AlanBateman
+,81,Add flag to prevent multiple deopts on the same nmethod.,coleenp,2021-11-09,2022-01-14,integrated,Oracle,US,66,"rickard,pron"
+,82,Scope locals tng,theRealAph,2021-12-09,2021-12-10,integrated,Red Hat,GB,1,
+,84,Scope locals cleanups,theRealAph,2022-01-07,2022-01-07,integrated,Red Hat,GB,0,
+,86,Loom: non-PCH build without C2 fails,shqking,2022-01-25,2022-01-27,integrated,Nvidia,CN,2,pron
+,87,"Loom: Add missing stubs to fix build failures on PPC64, S390, ARM32 and Zero",shqking,2022-01-27,2022-01-28,integrated,Nvidia,CN,1,"shipilev,AlanBateman"
+,89,Strip out TWR scope locals,theRealAph,2022-02-16,2022-02-16,integrated,Red Hat,GB,0,
+,90,"Loom: [TESTBUG] HumongousStack.java fails with ""-XX:-UseCompressedOops""",shqking,2022-02-17,2022-02-26,integrated,Nvidia,CN,9,pron
+8282468,92,"8282468: Loom: Fix build failures for PPC64, S390, ARM32 and Zero",shqking,2022-03-01,2022-03-07,integrated,Nvidia,CN,6,"pron,AlanBateman"
+8281681,93,8281681: compiler/profiling/spectrapredefineclass_classloaders/Launcher.java crash when CodeCache is full,dean-long,2022-03-01,2022-03-02,integrated,Oracle,US,1,"pron,AlanBateman"
+,94,Fix unloading tests to not have extra full GCs.,coleenp,2022-03-03,2022-03-03,integrated,Oracle,US,0,AlanBateman
+,95,Inject StackChunk fields.,coleenp,2022-03-03,2022-03-03,integrated,Oracle,US,0,pron
+,97,Better jdb support for vthreads. Improved jdb vthread testing support.,plummercj,2022-03-07,2022-03-18,integrated,Oracle,US,11,
+8282792,98,8282792: Loom: Fix optimized build after commit 4d2710,shqking,2022-03-09,2022-03-24,integrated,Nvidia,CN,15,fisk
+,100,Make addressing mode a property of the C++ frame type,coleenp,2022-03-14,2022-03-14,integrated,Oracle,US,0,
+,101,Revert non-const ref from leftover from prior change.,coleenp,2022-03-15,2022-03-15,integrated,Oracle,US,0,
+8282209,102,8282209: G1: Use synchronous concurrent marking for the code cache,lkorinth,2022-03-15,2022-03-16,integrated,Oracle,SE,1,"tschatzl,fisk"
+,103,"Fix includes, braces, and whitespaces",stefank,2022-03-16,2022-03-16,integrated,Oracle,SE,0,fisk
+,105,Loom compile times minimal,stefank,2022-03-16,2022-03-16,integrated,Oracle,SE,0,fisk
+,106,"Note frames that are on the heap, rather than addressing mode",coleenp,2022-03-16,2022-03-17,integrated,Oracle,US,1,pron
+,107,Remove space after asserts,stefank,2022-03-16,2022-03-16,integrated,Oracle,SE,0,tschatzl
+,109,Fix compilation with gcc 11.2,tschatzl,2022-03-21,2022-03-21,integrated,Oracle,DE,0,pron
+,111,Make compile on other platforms.,coleenp,2022-03-21,2022-03-22,integrated,Oracle,US,1,AlanBateman
+,112,Simplify G1CodeBlobClosure,stefank,2022-03-22,2022-03-23,integrated,Oracle,SE,1,"tschatzl,fisk"
+,113,Fix SerialGC bug in full_process_roots,stefank,2022-03-22,2022-03-22,integrated,Oracle,SE,0,"tschatzl,fisk"
+,114,Small fixes - shipment one,robehn,2022-03-22,2022-03-22,integrated,Oracle,SE,0,"coleenp,fisk"
+,115,Move back BacktraceBuilder,coleenp,2022-03-22,2022-03-22,integrated,Oracle,US,0,tschatzl
+,116,Garbage collectors explicitly transform stack chunk,tschatzl,2022-03-23,2022-03-24,integrated,Oracle,DE,1,"stefank,fisk"
+,118,Use single-condition instance type checks,stefank,2022-03-23,2022-03-24,integrated,Oracle,SE,1,"tschatzl,coleenp,fisk"
+,119,Loom checked stack chunk casts,stefank,2022-03-24,2022-03-24,integrated,Oracle,SE,0,fisk
+,120,vthreads don't support the reserved stack zone,dean-long,2022-03-24,2022-03-26,integrated,Oracle,US,2,"coleenp,pron,fisk"
+,121,"Renamed ContMirror ContinuationWrapper, make cont variable names into…",coleenp,2022-03-24,2022-03-24,integrated,Oracle,US,0,"pchilano,pron"
+,122,Lower case verify calls,coleenp,2022-03-24,2022-03-25,integrated,Oracle,US,1,robehn
+,124,Assorted minor things,robehn,2022-03-25,2022-03-25,integrated,Oracle,SE,0,coleenp
+,125,Make sure nsk debugger tests launch the debuggee with --enable-preview,plummercj,2022-03-29,2022-03-29,integrated,Oracle,US,0,lmesnik
+,126,"Reverted unrelated, wrong or unused changes",robehn,2022-03-30,2022-03-30,integrated,Oracle,SE,0,"tschatzl,fisk"
+,129,"Renamed a plain 'relativize' function to be more precise, and added some comments",coleenp,2022-03-31,2022-04-01,integrated,Oracle,US,1,"pron,fisk"
+,130,Split && asserts,stefank,2022-04-01,2022-04-01,integrated,Oracle,SE,0,
+,131,Remove not SafepointSynchronize::is_at_safepoint() checks in verification code,stefank,2022-04-01,2022-04-04,integrated,Oracle,SE,3,fisk
+,132,rename relativize_derived_oops_internal to relativize_derived_oops_in_frame,coleenp,2022-04-01,2022-04-01,integrated,Oracle,US,0,"tschatzl,fisk"
+,133,Revert refactoring frame::oops_interpreted_do,coleenp,2022-04-01,2022-04-01,integrated,Oracle,US,0,pron
+,134,Retry only when not JT,robehn,2022-04-04,2022-04-04,integrated,Oracle,SE,0,pron
+,136,Minor cosmetic cleanups from code reading continuation.cpp,coleenp,2022-04-04,2022-04-05,integrated,Oracle,US,1,pron
+,137,Tschatzl cleanups,tschatzl,2022-04-05,2022-04-05,integrated,Oracle,DE,0,stefank
+,138,"Small patch for thread alignment gap, formatting and forward declaration",coleenp,2022-04-05,2022-04-05,integrated,Oracle,US,0,pron
+,139,"Some more descriptive names, removed redundant asserts.  Request for comments.",coleenp,2022-04-05,2022-04-08,integrated,Oracle,US,3,
+,140,dcubed - misc cleanups of jvm.cpp and JVM/TI files.,dcubed-ojdk,2022-04-07,2022-04-09,integrated,Oracle,US,2,sspitsyn
+,142,Minor changes to `StructuredTaskScope`,PaulSandoz,2022-04-11,2022-04-13,integrated,Oracle,,2,AlanBateman
+,144,Use one future,PaulSandoz,2022-04-13,2022-04-15,integrated,Oracle,,2,AlanBateman
+,145,Split out ContinuationEntry and ContinuationWrapper classes,coleenp,2022-04-14,2022-04-14,integrated,Oracle,US,0,pron
+,146,Debugger changes to support JVMTI now returning JVMTI_ERROR_UNSUPPORTED_OPERATION for Thread.stop() of a virtual thread.,plummercj,2022-04-14,2022-04-15,integrated,Oracle,US,1,sspitsyn
+,149,Alex Menkov review,plummercj,2022-04-15,2022-04-15,integrated,Oracle,US,0,"alexmenkov,AlanBateman"
+,150,Loom: RISCV stubs,RealFYang,2022-04-15,2022-04-15,integrated,Huawei,CN,0,AlanBateman
+,151,"use a staic final for ""old-m-a-i-n"" thread name",plummercj,2022-04-15,2022-04-15,integrated,Oracle,US,0,"lmesnik,alexmenkov"
+,152,Cleanup ProcessTool.createJavaProcessBuilder(),plummercj,2022-04-15,2022-04-15,integrated,Oracle,US,0,lmesnik
+,153,"dcubed - cleanup2 changes (JVM/TI, JDI, JDWP)",dcubed-ojdk,2022-04-15,2022-04-16,integrated,Oracle,US,1,"plummercj,sspitsyn"
+,154,Deleted some commented out debugging code.,plummercj,2022-04-15,2022-04-15,integrated,Oracle,US,0,
+,155,Remove is_owning_locks() call from freeze slow path ,pchilano,2022-04-18,2022-04-21,integrated,Oracle,US,3,"coleenp,pron"
+,158,First refactoring (thaw_fast),fparain,2022-04-20,2022-04-25,integrated,Oracle,,5,"robehn,coleenp"
+,159,Fix location of transform call in oop_promotion_failed,stefank,2022-04-21,2022-04-27,integrated,Oracle,SE,6,"tschatzl,fisk"
+,160,Get rid of import of nsk.share.MainWrapper. It is no longer referenced.,plummercj,2022-04-21,2022-04-22,integrated,Oracle,US,1,lmesnik
+,161,Update problem lists to include newly created CRs,plummercj,2022-04-22,2022-04-22,integrated,Oracle,US,0,
+,162,Extent local rename,theRealAph,2022-04-22,2022-04-22,integrated,Red Hat,GB,0,
+,163,StackChunk only special in null loader.,coleenp,2022-04-22,2022-04-23,integrated,Oracle,US,1,"stefank,pron,fisk"
+8284402,165,8284402: serviceability/jvmti/events/MonitorContendedEntered/mcontent…,sspitsyn,2022-04-25,2022-04-25,integrated,Oracle,US,0,lmesnik
+8284233,169,8284233: serviceability/jvmti/vthread/InterruptThreadTest/InterruptThreadTest.java failing in loom repo,sspitsyn,2022-04-25,2022-04-25,integrated,Oracle,US,0,
+,170,Renaming cleanup on slow path,pchilano,2022-04-25,2022-04-26,integrated,Oracle,US,1,"fparain,coleenp"
+,171,Changes and cleanups after review comments,pron,2022-04-26,2022-04-26,integrated,,,0,"robehn,coleenp,fisk"
+,172,Don't check access during vmerror reporting.,lmesnik,2022-04-26,2022-04-26,integrated,Oracle,US,0,coleenp
+8285196,173,8285196: Deadlock reporting prints carrier thread when virtual thread is in deadlock cycle ,pron,2022-04-27,2022-04-27,integrated,,,0,"coleenp,AlanBateman"
+,174,thaw_kind cleanup,fparain,2022-04-27,2022-04-28,integrated,Oracle,,1,"coleenp,pron"
+,175,Minor comments on Loom PR,coleenp,2022-04-27,2022-04-27,integrated,Oracle,US,0,pron
+8279663,176,8279663: serviceability/jvmti/GetLocalVariable/GetLocalWithoutSuspend…,coleenp,2022-04-28,2022-04-28,integrated,Oracle,US,0,AlanBateman
+8285863,177,8285863: ProblemList this test for Loom,coleenp,2022-04-28,2022-04-28,integrated,Oracle,US,0,lmesnik
+8276713,178,"8276713: breakpointOtherStratum/Test.java tests failing with ""Stratum mismatch""",plummercj,2022-04-29,2022-04-29,integrated,Oracle,US,0,"lmesnik,AlanBateman"
+,179,frame::describe: fix stack parameter location.,reinrich,2022-04-29,2022-05-04,integrated,SAP,AT,5,"robehn,pron"
+8283610,180,8283610: runtime/Thread/StopAtExit.java failing in loom repo,dcubed-ojdk,2022-05-03,2022-05-03,integrated,Oracle,US,0,lmesnik
+,181,Don't assert for getting the name of thread->threadObj() if debugging.,coleenp,2022-05-04,2022-05-05,integrated,Oracle,US,1,pron
+,182,Help GHA,coleenp,2022-05-05,2022-05-05,integrated,Oracle,US,0,pron
+,185,Help some ports build,pron,2022-05-06,2022-05-06,integrated,,,0,coleenp
+8286859,187,8286859: NullPointerException on extent-local variables,theRealAph,2022-05-24,2022-05-24,integrated,Red Hat,GB,0,
+,189,ProblemList failing JMX tests that fail with the wrapper.,plummercj,2022-08-01,2022-08-02,integrated,Oracle,US,1,lmesnik
+,190,Robust take 3,theRealAph,2022-09-15,2022-09-23,integrated,Red Hat,GB,8,
+,192,The Grand ScopedValue renaming,theRealAph,2022-10-19,2022-10-19,integrated,Red Hat,GB,0,
+,206,C2 changes to support Java Object Monitors with Interpreter,ahmedmuhsin,2023-10-12,2023-10-12,integrated,,,0,
+,207,fix for casLockState intrinsic,dean-long,2023-10-16,2023-10-16,integrated,Oracle,US,0,
+,211,"Export JavaThread::_lock_id, ObjectMonitor::_stack_locker and markWord::marked_value.",mur47x111,2024-07-22,2024-08-02,integrated,Independent,,11,AlanBateman
+,212,RISC-V vthread support for JVM intrinsic monitors,RealFYang,2024-08-28,2024-08-30,integrated,Huawei,CN,2,pchilano
+,213,RISC-V: Fix typo in InterpreterMacroAssembler::call_VM_preemptable,RealFYang,2024-10-08,2024-10-08,integrated,Huawei,CN,0,pchilano
+,214,RISC-V: Reserve one extra temp register for C2_MacroAssembler::fast_lock,RealFYang,2024-10-09,2024-10-09,integrated,Huawei,CN,0,pchilano
+,217,bad oop with JvmtiVTMSTransitionDisabler,alexmenkov,2025-04-21,2025-04-25,integrated,Oracle,RU,4,AlanBateman
+,218,ThreadSnapshot: create objects in VM,alexmenkov,2025-04-30,2025-05-01,integrated,Oracle,RU,1,AlanBateman
+,219,ThreadDumper: wrong LOCKED,alexmenkov,2025-05-03,2025-05-06,integrated,Oracle,RU,3,AlanBateman
+,220,ThreadSnapshot: redesign and cleanup,alexmenkov,2025-05-16,2025-05-19,integrated,Oracle,RU,3,AlanBateman
+,221,eliminated monitors,alexmenkov,2025-05-22,2025-05-22,integrated,Oracle,RU,0,
+,222,RISC-V: Allow virtual thread preemption on some common class initialization paths,RealFYang,2025-10-13,2025-10-14,integrated,Huawei,CN,1,pchilano

@@ -1,0 +1,911 @@
+bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,reviewers
+,1,Initial code reflection prototype,PaulSandoz,2024-01-16,2024-01-16,integrated,Oracle,,0,
+,2,throw instead returning when erasing checked to unchecked exception,SirYwell,2024-01-17,2024-01-18,integrated,,,1,PaulSandoz
+,4,Update readme,PaulSandoz,2024-01-17,2024-01-17,integrated,Oracle,,0,
+,5,Support array type constants in code model,SirYwell,2024-01-19,2024-01-22,integrated,,,3,"mcimadamore,PaulSandoz"
+,7,Clean up some examples,PaulSandoz,2024-01-24,2024-01-25,integrated,Oracle,,1,
+,8,Make sure method parameters keep their slots when lowering,SirYwell,2024-01-26,2024-01-29,integrated,,,3,PaulSandoz
+,10,Test break statements within try statements,PaulSandoz,2024-01-30,2024-01-31,integrated,Oracle,,1,
+,11,Simple model testing when lowering,PaulSandoz,2024-01-30,2024-01-31,integrated,Oracle,,1,
+,12,Exception regions fix,asotona,2024-01-31,2024-02-02,integrated,Oracle,CZ,2,PaulSandoz
+,13,Hide implementation computing global names,PaulSandoz,2024-01-31,2024-02-07,integrated,Oracle,,7,
+,14,Correct computation of block indexes,PaulSandoz,2024-02-01,2024-02-02,integrated,Oracle,,1,asotona
+,15,More block checks,PaulSandoz,2024-02-02,2024-02-03,integrated,Oracle,,1,
+,16,Remove bytecode dialect,asotona,2024-02-06,2024-02-12,integrated,Oracle,CZ,6,
+,17,PoC of Triton programming in Java,PaulSandoz,2024-02-06,2024-02-07,integrated,Oracle,,1,
+,18,Extensible types in the code model,PaulSandoz,2024-02-12,2024-02-12,integrated,Oracle,,0,
+,19,Review FieldLoadOp,mabbay,2024-02-12,2024-02-14,integrated,Oracle,,2,PaulSandoz
+,20,Update linq example.,PaulSandoz,2024-02-12,2024-02-13,integrated,Oracle,,1,
+,21,Add and/or/xor operations to code model,SirYwell,2024-02-13,2024-02-14,integrated,,,1,PaulSandoz
+,22,Replace use of MethodTypeDesc with FunctionType,PaulSandoz,2024-02-14,2024-02-14,integrated,Oracle,,0,
+,23,Structured type definition,PaulSandoz,2024-02-15,2024-02-15,integrated,Oracle,,0,mcimadamore
+,24,Testing BytecodeLift and BytecodeGenerator roundtrip stability,asotona,2024-02-15,2024-02-15,integrated,Oracle,CZ,0,PaulSandoz
+,25,Test remove final vars,mabbay,2024-02-15,2024-03-20,integrated,Oracle,,34,PaulSandoz
+,26,Invokable block parameters,PaulSandoz,2024-02-15,2024-02-16,integrated,Oracle,,1,
+,27,Stream code elements,PaulSandoz,2024-02-16,2024-02-17,integrated,Oracle,,1,
+,28,Fix compilation issue with CodeElement.elements,PaulSandoz,2024-02-23,2024-02-23,integrated,Oracle,,0,
+,29,Separate TypeElement from Type.,PaulSandoz,2024-02-26,2024-02-26,integrated,Oracle,,0,
+,30,Model String Template,mabbay,2024-02-26,2024-03-11,integrated,Oracle,,14,"PaulSandoz,mcimadamore"
+,31,Remove MethodTypeDesc,PaulSandoz,2024-02-29,2024-03-01,integrated,Oracle,,1,mcimadamore
+,32,Assert code modeling,igraves,2024-03-01,2024-03-02,integrated,Oracle,,1,PaulSandoz
+,33,Descriptor to reference,PaulSandoz,2024-03-04,2024-03-05,integrated,Oracle,,1,mcimadamore
+,34,Code model from method reference,PaulSandoz,2024-03-05,2024-03-06,integrated,Oracle,,1,mcimadamore
+,35,Obtain parent code element from code element,PaulSandoz,2024-03-06,2024-03-07,integrated,Oracle,,1,
+,36,Assertion Interpreter Implementation,igraves,2024-03-08,2024-03-14,integrated,Oracle,,6,PaulSandoz
+,37,A transformer of code models to models that build them.,PaulSandoz,2024-03-11,2024-03-14,integrated,Oracle,,3,
+,38,Example use of code reflection in translating Java to SPIR-V,steveatgh,2024-03-12,2024-03-14,integrated,,,2,PaulSandoz
+,39,Lower StringTemplateOp,mabbay,2024-03-13,2024-03-20,integrated,Oracle,,7,PaulSandoz
+,40,More systematic binary op tests,SirYwell,2024-03-16,2024-04-08,integrated,,,23,PaulSandoz
+,41,Fix unbox invocation,PaulSandoz,2024-03-18,2024-03-18,integrated,Oracle,,0,
+,42,Generate bytecode from an invokable op.,PaulSandoz,2024-03-18,2024-03-19,integrated,Oracle,,1,
+,43,Uncomment a String Template Test,mabbay,2024-03-20,2024-03-25,integrated,Oracle,,5,PaulSandoz
+,44,"BytecodeGenerator, BytecodeLift and TestBytecode improvements",asotona,2024-03-22,2024-03-28,integrated,Oracle,CZ,6,PaulSandoz
+,45,Lower SwitchExpressionOp,mabbay,2024-04-03,2024-06-03,integrated,Oracle,,61,PaulSandoz
+,46,Refactor JavaType,mcimadamore,2024-04-08,2024-04-09,integrated,Oracle,GB,1,PaulSandoz
+,48,BytecodeGenerator support of lambdas,asotona,2024-04-09,2024-04-15,integrated,Oracle,CZ,6,PaulSandoz
+,49,Implement shift ops,SirYwell,2024-04-10,2024-04-15,integrated,,,5,PaulSandoz
+,50,Erase receiver type before calling Gen::binaryQualifier,mcimadamore,2024-04-12,2024-04-15,integrated,Oracle,GB,3,PaulSandoz
+,51,Add support for more types,mcimadamore,2024-04-15,2024-04-26,integrated,Oracle,GB,11,PaulSandoz
+,52,InnerClassLambdaMetafactory fix of hidden classes handling,asotona,2024-04-17,2024-04-18,integrated,Oracle,CZ,1,PaulSandoz
+,53,Issues with captures in quotable lambdas,mcimadamore,2024-04-17,2024-04-17,integrated,Oracle,GB,0,PaulSandoz
+8324789,54,8324789: Add line number information to code models,PaulSandoz,2024-04-17,2024-04-25,integrated,Oracle,,8,mcimadamore
+,55,Missing conversion for some unary operators,mcimadamore,2024-04-18,2024-04-18,integrated,Oracle,GB,0,PaulSandoz
+,57,Refine support for captured values.,PaulSandoz,2024-04-18,2024-04-22,integrated,Oracle,,4,
+,58,BytecodeGenerator cleanup and and types handling fixes,asotona,2024-04-19,2024-04-22,integrated,Oracle,CZ,3,PaulSandoz
+,59,Temporarily disable TestSmallCorpus tests,PaulSandoz,2024-04-22,2024-04-22,integrated,Oracle,,0,asotona
+,60,Determine if lambda operation originates from a method reference,PaulSandoz,2024-04-22,2024-04-23,integrated,Oracle,,1,mcimadamore
+,61,Preserve order of captured value,PaulSandoz,2024-04-23,2024-04-24,integrated,Oracle,,1,
+,62,Externalizable operations,PaulSandoz,2024-04-25,2024-05-01,integrated,Oracle,,6,mcimadamore
+,63,Fix test failure after PR/51,mcimadamore,2024-04-26,2024-04-26,integrated,Oracle,GB,0,PaulSandoz
+,64,Enable pattern matching for JavaType hierarchy,mcimadamore,2024-04-26,2024-04-29,integrated,Oracle,GB,3,PaulSandoz
+,65,Make jdk.compiler build depend on code model API in java.base,mcimadamore,2024-04-29,2024-04-29,integrated,Oracle,GB,0,PaulSandoz
+,66,Add common supertype for type-variable owners,mcimadamore,2024-04-29,2024-04-29,integrated,Oracle,GB,0,PaulSandoz
+,67,Clean up support for boxing,mcimadamore,2024-04-30,2024-04-30,integrated,Oracle,GB,0,PaulSandoz
+,68,Merge master,PaulSandoz,2024-04-30,2024-05-01,integrated,Oracle,,1,
+,69,Fix test,PaulSandoz,2024-05-01,2024-05-01,integrated,Oracle,,0,
+,71,Cleanup JavaType factories,mcimadamore,2024-05-02,2024-05-03,integrated,Oracle,GB,1,PaulSandoz
+,72,Refactor TypeDefinition to ExternalizedTypeElement,PaulSandoz,2024-05-02,2024-05-03,integrated,Oracle,,1,mcimadamore
+,73,"CoreOps to CoreOp, ExtendedOps to ExtendedOp",PaulSandoz,2024-05-02,2024-05-03,integrated,Oracle,,1,mcimadamore
+,74,Fix test,PaulSandoz,2024-05-03,2024-05-03,integrated,Oracle,,0,
+,75,Lowering transformer,PaulSandoz,2024-05-03,2024-05-07,integrated,Oracle,,4,
+,76,Sealed interfaces marking operations that model a Java language construct,PaulSandoz,2024-05-10,2024-05-17,integrated,Oracle,,7,mcimadamore
+,77,Implement bitwise/shift assignment operations,SirYwell,2024-05-15,2024-05-16,integrated,,,1,PaulSandoz
+,78,Fix triton example.,PaulSandoz,2024-05-15,2024-05-15,integrated,Oracle,,0,
+,79,Enhance OpWriter,PaulSandoz,2024-05-16,2024-05-17,integrated,Oracle,,1,
+,80,BytecodeLift implementation progress + SlotOp,asotona,2024-05-20,2024-05-24,integrated,Oracle,CZ,4,PaulSandoz
+,81,Test for creating a module of functions from invocations,PaulSandoz,2024-05-21,2024-05-28,integrated,Oracle,,7,
+,82,HAT needs public access to TranslateToSpirvModel,grfrost,2024-05-22,2024-05-22,integrated,Oracle,,0,
+,83,Hat initial implementation and build infrastructure,grfrost,2024-05-22,2024-05-22,integrated,Oracle,,0,
+,84,Added Clion CMakefile to backends reformated cpp/h files,grfrost,2024-05-23,2024-05-23,integrated,Oracle,,0,
+,85,Add CUDA Clion artifacts and cleanup cuda backend,grfrost,2024-05-23,2024-05-23,integrated,Oracle,,0,
+,86,Fixed Race Condition in PTX nvcc compiler. Also atomicInc->atomicAdd,grfrost,2024-05-23,2024-05-23,integrated,Oracle,,0,
+,87,fix opencl buffer created by last cuda fix..,grfrost,2024-05-23,2024-05-23,integrated,Oracle,,0,
+,88,add cmake opencl stanza for non Apple machines,grfrost,2024-05-24,2024-05-24,integrated,Oracle,,0,
+,89,Ubuntu opencl cmake fix for opencl shared libs and execs,grfrost,2024-05-24,2024-05-24,integrated,Oracle,,0,
+,90,Clion CMakeLists.txt updates for ubuntu opencl,grfrost,2024-05-24,2024-05-24,integrated,Oracle,,0,
+,91,OpWriter block naming align with block indexes,asotona,2024-05-24,2024-05-27,integrated,Oracle,CZ,3,PaulSandoz
+,92,Hat opencl cuda mergees,grfrost,2024-05-24,2024-05-24,integrated,Oracle,,0,
+,93,Hat find cuda ill access,grfrost,2024-05-25,2024-05-25,integrated,Oracle,,0,
+,94,Hat sync with cuda changes,grfrost,2024-05-25,2024-05-25,integrated,Oracle,,0,
+,95,Hat sync with cuda changes,grfrost,2024-05-25,2024-05-25,integrated,Oracle,,0,
+,96,added some examples to migrate to hat,grfrost,2024-05-26,2024-05-26,integrated,Oracle,,0,
+,97,Clearly mark which AST nodes are unsupported in ReflectMethods,mcimadamore,2024-05-27,2024-05-28,integrated,Oracle,GB,1,PaulSandoz
+,98,initial work dumping schema from native,grfrost,2024-05-27,2024-05-27,integrated,Oracle,,0,
+,99,create cuda version of new squares demo,grfrost,2024-05-27,2024-05-27,integrated,Oracle,,0,
+,100,At least one element in 'flexible array members' for some OpenCL comp…,grfrost,2024-05-28,2024-05-28,integrated,Oracle,,0,
+,101,Updated code for dumping schema (debugging cuda violajones),grfrost,2024-05-29,2024-05-29,integrated,Oracle,,0,
+,102,added 16 byte alignment of buffers and tail markers to help detect ar…,grfrost,2024-05-29,2024-05-29,integrated,Oracle,,0,
+,103,Found CUDA issue.  This is the fix part1,grfrost,2024-05-29,2024-05-29,integrated,Oracle,,0,
+,104,Fixed up ptx backend (native) so that PTX work can begin,grfrost,2024-05-30,2024-05-30,integrated,Oracle,,0,
+,105,cuda fixes for violajones,grfrost,2024-05-30,2024-05-30,integrated,Oracle,,0,
+,106,fix std::string to char * for kernel names,grfrost,2024-05-30,2024-05-30,integrated,Oracle,,0,
+,107,Add support for enclosing class types,mcimadamore,2024-05-30,2024-05-31,integrated,Oracle,GB,1,PaulSandoz
+,108,Converting healing brush to use HAT also offered a headless variant f…,grfrost,2024-05-30,2024-05-30,integrated,Oracle,,0,
+,109,Bytecode round 6 - lifting lambdas,asotona,2024-05-31,2024-06-01,integrated,Oracle,CZ,1,PaulSandoz
+,110,Improve JavaType::toString,mcimadamore,2024-05-31,2024-06-05,integrated,Oracle,GB,5,PaulSandoz
+,111,Add support for local classes,mcimadamore,2024-06-04,2024-06-05,integrated,Oracle,GB,1,PaulSandoz
+,112,Null check only when selector expression of switch expression is of reference type,mabbay,2024-06-04,2024-06-05,integrated,Oracle,,1,PaulSandoz
+,113,Updates to healing brush demo conversion to hat - ongoing,grfrost,2024-06-05,2024-06-05,integrated,Oracle,,0,
+,114,attempt to mavenize hat starting with opencl targets - ongoing,grfrost,2024-06-05,2024-06-05,integrated,Oracle,,0,
+,115,cmake tidyup and access with maven build,grfrost,2024-06-05,2024-06-05,integrated,Oracle,,0,
+,116,Fix cuda cmake errors,grfrost,2024-06-06,2024-06-06,integrated,Oracle,,0,
+,117,Use more generic location for nvcc,grfrost,2024-06-06,2024-06-06,integrated,Oracle,,0,
+,118,Found the violajones off by one error,grfrost,2024-06-06,2024-06-06,integrated,Oracle,,0,
+,119,Mavenize the repo. Mostly file moves to maven layout form,grfrost,2024-06-07,2024-06-07,integrated,Oracle,,0,
+,120,Mavenized backend building,grfrost,2024-06-09,2024-06-09,integrated,Oracle,,0,
+,121,Fixed up schema parsing from the backend.  Mostly for debug,grfrost,2024-06-10,2024-06-10,integrated,Oracle,,0,
+,122,Introduced cuda error with last push.  This fixes it,grfrost,2024-06-10,2024-06-10,integrated,Oracle,,0,
+,123,Allow schema decoding from native code,grfrost,2024-06-11,2024-06-11,integrated,Oracle,,0,
+,124,Experiments with HatPtrOp,grfrost,2024-06-11,2024-06-11,integrated,Oracle,,0,
+,125,Experiments with HatPtrOp,grfrost,2024-06-11,2024-06-11,integrated,Oracle,,0,
+,126,Discovered some properties are inherited in maven,grfrost,2024-06-11,2024-06-11,integrated,Oracle,,0,
+,127,Example code for article,PaulSandoz,2024-06-11,2024-06-11,integrated,Oracle,,0,
+,128,Switch to using maven as primary build,grfrost,2024-06-12,2024-06-12,integrated,Oracle,,0,
+,129,updates README.md to include fix for backend cmake,grfrost,2024-06-12,2024-06-12,integrated,Oracle,,0,
+,130,Allow FuncOpWrapper to wrap SSA lowered funcOps,grfrost,2024-06-13,2024-06-13,integrated,Oracle,,0,
+,131,Remove need for manual initial creation of backends/cmake-debug-build,grfrost,2024-06-13,2024-06-13,integrated,Oracle,,0,
+,132,Documenting SPIRV dependencies,grfrost,2024-06-13,2024-06-13,integrated,Oracle,,0,
+,133,Add relative paths to spirv iml fileso we can build with intellij,grfrost,2024-06-13,2024-06-13,integrated,Oracle,,0,
+,134,SPIRV backend needs extra dependencies make it optional,grfrost,2024-06-13,2024-06-13,integrated,Oracle,,0,
+,135,Committing a Concatenation transformation to StringBuilder,igraves,2024-06-13,2024-06-14,integrated,Oracle,,1,PaulSandoz
+,136,Adding intellij test infrastructure and seeding with code from exampl…,grfrost,2024-06-14,2024-06-14,integrated,Oracle,,0,
+,137,Allow static access to layouts of iface mapped segments,grfrost,2024-06-14,2024-06-14,integrated,Oracle,,0,
+,138,Decouple iface segment mapper allocation from Acclerator,grfrost,2024-06-14,2024-06-14,integrated,Oracle,,0,
+,139,ComputeContext can now implement BufferAllocator,grfrost,2024-06-14,2024-06-14,integrated,Oracle,,0,
+,140,Cloned CUDA backend native code to PTX backend,grfrost,2024-06-14,2024-06-14,integrated,Oracle,,0,
+,141,Some HAT cleanups,PaulSandoz,2024-06-14,2024-06-15,integrated,Oracle,,1,
+,142,Removed heal and view examples - will return when working,grfrost,2024-06-15,2024-06-15,integrated,Oracle,,0,
+,143,Switching to maven build,grfrost,2024-06-15,2024-06-15,integrated,Oracle,,0,
+,144,Fixup babylon location property and remove spirv backend from default,grfrost,2024-06-15,2024-06-15,integrated,Oracle,,0,
+,145,Hat ptr op and type experiments,grfrost,2024-06-16,2024-06-16,integrated,Oracle,,0,
+,146,More HatOp.Ptr experiments,grfrost,2024-06-17,2024-06-17,integrated,Oracle,,0,
+,147,Experimenting using Schema to hide layouts and interface with ptrs,grfrost,2024-06-17,2024-06-17,integrated,Oracle,,0,
+,148,"Computes the VarOp's result type from its operand type, if not overridden",PaulSandoz,2024-06-17,2024-06-18,integrated,Oracle,,1,
+,149,Concat Transform Optimizations,igraves,2024-06-18,2024-06-28,integrated,Oracle,,10,PaulSandoz
+,150,Report no attribute present when extracting attribute value from externalized op,PaulSandoz,2024-06-18,2024-06-20,integrated,Oracle,,2,
+,151,Experiments - considering replacing Layout with Schema,grfrost,2024-06-20,2024-06-20,integrated,Oracle,,0,
+,152,HAT more experiments replacing layout with schema,grfrost,2024-06-22,2024-06-22,integrated,Oracle,,0,
+,153,"Schema builder seems to recreate simple layouts, close with Cascade",grfrost,2024-06-23,2024-06-23,integrated,Oracle,,0,
+,154,Hat move schema into hat,grfrost,2024-06-24,2024-06-24,integrated,Oracle,,0,
+,155,Apologies - I checked in broken Result and Scale tables,grfrost,2024-06-24,2024-06-24,integrated,Oracle,,0,
+,156,Merge master,PaulSandoz,2024-06-24,2024-06-24,integrated|clean,Oracle,,0,
+,157,Fix JavaDoc typos,PaulSandoz,2024-06-24,2024-06-24,integrated,Oracle,,0,
+,158,Allow us to bind arbitary data to iface mapping.,grfrost,2024-06-25,2024-06-25,integrated,Oracle,,0,
+,159,Bump version check in sanity.java to 24,grfrost,2024-06-25,2024-06-25,integrated,Oracle,,0,
+,160,Hat doc markdown cleanup and ptr schema experiments,grfrost,2024-06-27,2024-06-27,integrated,Oracle,,0,
+,161,Conversion of java.lang.invoke to Class-File API,asotona,2024-06-27,2024-06-28,integrated,Oracle,CZ,1,PaulSandoz
+,162,Conflicting code reflection fields for method overrides,asotona,2024-06-28,2024-06-28,integrated,Oracle,CZ,0,"PaulSandoz,mcimadamore"
+,163,Simplify creation of BoundSchema from Schema,grfrost,2024-06-28,2024-06-28,integrated,Oracle,,0,
+,164,Allow mandel example to run without UI,grfrost,2024-06-29,2024-06-29,integrated,Oracle,,0,
+,165,Bytecode round 7,asotona,2024-07-01,2024-07-02,integrated,Oracle,CZ,1,PaulSandoz
+,166,Simplifying InvokePtr example,grfrost,2024-07-01,2024-07-01,integrated,Oracle,,0,
+,167,Another step towards lowering Ptrs through SSA,grfrost,2024-07-02,2024-07-02,integrated,Oracle,,0,
+,168,Rationalised HatPtr and Types.  Moved from experiments to hat,grfrost,2024-07-03,2024-07-03,integrated,Oracle,,0,
+,169,Test Switch Expression lowering when case is constant,mabbay,2024-07-04,2024-07-29,integrated,Oracle,,25,mcimadamore
+,170,Hat move schema to ifacemapper and switch ViolaJones  buffers to used schema,grfrost,2024-07-04,2024-07-04,integrated,Oracle,,0,
+,171,All examples now using schema,grfrost,2024-07-04,2024-07-04,integrated,Oracle,,0,
+,172,Reuse some iface mapper types in Schema and remove unused methods,grfrost,2024-07-05,2024-07-05,integrated,Oracle,,0,
+,173,ArgBuffer now using schema,grfrost,2024-07-05,2024-07-05,integrated,Oracle,,0,
+,174,KernelContext now using schema,grfrost,2024-07-05,2024-07-05,integrated,Oracle,,0,
+,175,Bytecode round 8,asotona,2024-07-09,2024-07-19,integrated,Oracle,CZ,10,PaulSandoz
+,176,Binding Schame to iface mappinsg an switched C99 codegen to use Schema for Typedefs,grfrost,2024-07-11,2024-07-11,integrated,Oracle,,0,
+,177,Moved BoundSchema to its own interface,grfrost,2024-07-11,2024-07-11,integrated,Oracle,,0,
+,178,Hat schema cleanup,grfrost,2024-07-12,2024-07-12,integrated,Oracle,,0,
+,179,Accidently checked in my local pom.xml,grfrost,2024-07-12,2024-07-12,integrated,Oracle,,0,
+,180,Migrating HatPtr to use schema,grfrost,2024-07-13,2024-07-13,integrated,Oracle,,0,
+,181,Fix modeling if statements,PaulSandoz,2024-07-15,2024-07-15,integrated,Oracle,,0,
+,182,Hat fix c99 handling of byte,grfrost,2024-07-16,2024-07-16,integrated,Oracle,,0,
+,183,We previously disalowed all field accesses. Static final primitives are safe,grfrost,2024-07-17,2024-07-17,integrated,Oracle,,0,
+,184,"Implementing Healing brush demo, highlighted some missing unary(and binary<<,>> operators)",grfrost,2024-07-17,2024-07-17,integrated,Oracle,,0,
+,185,Correct bytecode gen for lambda capture,PaulSandoz,2024-07-17,2024-07-17,integrated,Oracle,,0,
+,186,SSA transform with capturing lambdas,PaulSandoz,2024-07-17,2024-07-17,integrated,Oracle,,0,
+,187,Immediate dominator map should be unmodifiable,PaulSandoz,2024-07-18,2024-07-18,integrated,Oracle,,0,
+,188,PTX backend implementation for HAT,rbrchen,2024-07-19,2024-07-24,integrated,,,5,
+,189,"Only allow allocation via accelerator, and simplify schema binding",grfrost,2024-07-20,2024-07-20,integrated,Oracle,,0,
+,190,Hat more schema optimizations,grfrost,2024-07-21,2024-07-21,integrated,Oracle,,0,
+,191,Test Switch Expression lowering when case is pattern,mabbay,2024-07-22,2024-07-29,integrated,Oracle,,7,
+,192,Bytecode round 9,asotona,2024-07-22,2024-08-12,integrated,Oracle,CZ,21,PaulSandoz
+8337155,193,8337155: Support expressions returning boxed booleans for the condition blocks of if/do/while,mabbay,2024-07-25,2024-08-03,integrated,Oracle,,9,"PaulSandoz,mcimadamore"
+8337157,194,8337157: Second operand to array.load should be an int,mabbay,2024-07-25,2024-08-03,integrated,Oracle,,9,"PaulSandoz,mcimadamore"
+8337156,195,8337156: Generate code model for switch expression that throws when no label applies,mabbay,2024-07-25,2024-08-15,integrated,Oracle,,21,PaulSandoz
+,196,BoundSchema was walking through the tree. Now we just walk the BoundArray fields,grfrost,2024-07-25,2024-07-25,integrated,Oracle,,0,
+,197,Create a new example for BlackScholes. Reintroduce Heal and Life examples,grfrost,2024-07-25,2024-07-25,integrated,Oracle,,0,
+,198,Some files had missing license headers,grfrost,2024-07-25,2024-07-25,integrated,Oracle,,0,
+,199,Now longer allow cmake builds from hat root dir,grfrost,2024-07-25,2024-07-25,integrated,Oracle,,0,
+,200,Improve sanity checking,grfrost,2024-07-25,2024-07-25,integrated,Oracle,,0,
+,201,Hat initial attempt minimize copies,grfrost,2024-07-26,2024-07-26,integrated,Oracle,,0,
+,202,Convey dirty java buffer status to native code,grfrost,2024-07-26,2024-07-26,integrated,Oracle,,0,
+,203,"Simplified injection of Pre/Post calls Mutate,Access and Escape",grfrost,2024-07-28,2024-07-28,integrated,Oracle,,0,
+,204,Simplified hatrun.bash. All examples now <package>.Main,grfrost,2024-07-28,2024-07-28,integrated,Oracle,,0,
+,205,Pom fixes for life and heal examples,grfrost,2024-07-29,2024-07-29,integrated,Oracle,,0,
+,206,Hat cleanup heal example,grfrost,2024-07-29,2024-07-29,integrated,Oracle,,0,
+,207,Align code with JVMLS slides,grfrost,2024-07-30,2024-07-30,integrated,Oracle,,0,
+,208,Added menu bar to heal.  To report timing,grfrost,2024-07-31,2024-07-31,integrated,Oracle,,0,
+,209,Changed image to match JVMLS deck,grfrost,2024-07-31,2024-07-31,integrated,Oracle,,0,
+,210,"Heal and Life Viewers were similar, now they are more so.",grfrost,2024-07-31,2024-07-31,integrated,Oracle,,0,
+8337158,211,8337158: Modeling and lowering of switch statement,mabbay,2024-08-06,2024-08-20,integrated,Oracle,,14,"PaulSandoz,mcimadamore"
+,212,Implementing Black Scholes HAT Example,rbrchen,2024-08-08,2024-08-09,integrated,,,1,
+,213,Unary plus,PaulSandoz,2024-08-14,2024-08-14,integrated,Oracle,,0,mcimadamore
+,214,Experiment: Alternative SSA construction algorithm,SirYwell,2024-08-14,2024-10-29,integrated,,,76,PaulSandoz
+,215,Bytecode round 10,asotona,2024-08-14,2024-08-16,integrated,Oracle,CZ,2,PaulSandoz
+,216,Bitwise complement op,PaulSandoz,2024-08-14,2024-08-15,integrated,Oracle,,1,mcimadamore
+,217,Model synchronized statements,PaulSandoz,2024-08-20,2024-08-23,integrated,Oracle,,3,mcimadamore
+,218,BytecodeLift directly calculating local variables + related BytecodeGenerator fixes,asotona,2024-08-23,2024-08-27,integrated,Oracle,CZ,4,PaulSandoz
+,219,Bytecode round 12,asotona,2024-08-30,2024-09-05,integrated,Oracle,CZ,6,PaulSandoz
+,220,Unify code that generates code model of switch statement and expression,mabbay,2024-09-04,2024-09-06,integrated,Oracle,,2,"PaulSandoz,mcimadamore"
+,221,Super expressions,PaulSandoz,2024-09-05,2024-09-06,integrated,Oracle,,1,mcimadamore
+,222,Unify common code of SwitchStatementOp and SwitchExpressionOp,mabbay,2024-09-06,2024-09-11,integrated,Oracle,,5,PaulSandoz
+,223,Change the model of the default label of switch,mabbay,2024-09-06,2024-09-07,integrated,Oracle,,1,PaulSandoz
+,224,Bytecode locals compaction,asotona,2024-09-09,2024-09-11,integrated,Oracle,CZ,2,PaulSandoz
+,225,Invocation to vararg methods,PaulSandoz,2024-09-10,2024-09-18,integrated,Oracle,,8,
+,226,Avoid boxing when concatenating a string with a primitive,mabbay,2024-09-10,2024-09-11,integrated,Oracle,,1,"PaulSandoz,mcimadamore"
+,227,Update the model of pattern matching when pattern variable identifier is underscore,mabbay,2024-09-10,2024-09-18,integrated,Oracle,,8,PaulSandoz
+,228,"Bytecode cleanup, renames and javadoc",asotona,2024-09-11,2024-09-18,integrated,Oracle,CZ,7,PaulSandoz
+,229,Implementation of a HAT Spirv backend,steveatgh,2024-09-11,2024-09-18,integrated,,,7,grfrost
+,230,Support match all pattern,mabbay,2024-09-12,2024-09-18,integrated,Oracle,,6,PaulSandoz
+,231,Hat fixes to support chess,grfrost,2024-09-12,2024-09-12,integrated,Oracle,,0,
+,232,Include boolean in primitive type conversions.,asotona,2024-09-17,2024-09-18,integrated,Oracle,CZ,1,PaulSandoz
+,233,Updated babylon and hat build docs,grfrost,2024-09-17,2024-09-17,integrated,Oracle,,0,
+,234,Fix failing cases in SwitchStatementTest,mabbay,2024-09-19,2024-09-19,integrated,Oracle,,0,"PaulSandoz,mcimadamore"
+,235,Address var name,mabbay,2024-09-19,2024-09-25,integrated,Oracle,,6,PaulSandoz
+,236,Initial prep for swapping callgraphs for Op.Module,grfrost,2024-09-19,2024-09-19,integrated,Oracle,,0,
+,238,Normalize blocks transformer,PaulSandoz,2024-09-20,2024-09-25,integrated|clean,Oracle,,5,
+,239,ANF Experimental Code Model,igraves,2024-09-23,2024-10-29,integrated,Oracle,,36,PaulSandoz
+8337161,240,8337161: Support record pattern for generic records,mabbay,2024-09-24,2024-10-03,integrated,Oracle,,9,"PaulSandoz,mcimadamore"
+,241,Integrate Java Triton example with Intel Triton Backend,hanklo6,2024-09-25,2024-12-12,integrated,,,78,PaulSandoz
+,242,BytecodeLift with NormalizerBlockTransformer + fix + ExceptionTableCompactor,asotona,2024-09-27,2024-09-30,integrated,Oracle,CZ,3,PaulSandoz
+,243,Fix method resolution on invoke op wrapper,PaulSandoz,2024-09-27,2024-09-27,integrated,Oracle,,0,
+,244,"Working on spirv integration, need to exclude from intellij imls temp…",grfrost,2024-09-28,2024-09-28,integrated,Oracle,,0,
+,245,add a pure java (no maven) build option,grfrost,2024-09-28,2024-09-28,integrated,Oracle,,0,
+8337162,246,8337162: Support primitives in patterns,mabbay,2024-10-02,2024-10-22,integrated,Oracle,,20,PaulSandoz
+,248,Merge master,mcimadamore,2024-10-02,2024-10-02,integrated,Oracle,GB,0,
+,249,Simplify code generation for quotable lambdas not to require duplicate capture argument lists,mcimadamore,2024-10-04,2024-10-07,integrated,Oracle,GB,3,PaulSandoz
+,250,Captured constants in variables,PaulSandoz,2024-10-07,2024-10-07,integrated,Oracle,,0,mcimadamore
+,251,Cleanup cmake handoff from maven and from bldr,grfrost,2024-10-08,2024-10-08,integrated,Oracle,,0,
+,252,Ensure exception region exits are generated,PaulSandoz,2024-10-09,2024-10-10,integrated,Oracle,,1,"asotona,mcimadamore"
+,253,Bldr provides access to jextract,grfrost,2024-10-14,2024-10-14,integrated,Oracle,,0,
+,254,HIP HAT backend,iotamudelta,2024-10-14,2024-11-27,integrated,,,44,
+,255,Added OpWrapper for CoreOp.NegOp (needed for blackscholes),grfrost,2024-10-16,2024-10-16,integrated,Oracle,,0,
+,256,Exception regions patch,asotona,2024-10-17,2024-10-21,integrated,Oracle,CZ,4,PaulSandoz
+,257,Unreachable method or lambda exit,PaulSandoz,2024-10-17,2024-10-18,integrated,Oracle,,1,mcimadamore
+,258,Aggregated work on Verifier and BytecodeLift deconstruction,asotona,2024-10-18,2024-11-08,integrated,Oracle,CZ,21,PaulSandoz
+,259,Simplified maven copy to build dir,grfrost,2024-10-22,2024-10-22,integrated,Oracle,,0,
+,260,Unreachable switch expression block,PaulSandoz,2024-10-22,2024-10-23,integrated,Oracle,,1,mcimadamore
+,261,Add env.bash error tracking and update build scripts and docs,grfrost,2024-10-23,2024-10-23,integrated,Oracle,,0,
+,262,Bld fixes needed for cuda linux,grfrost,2024-10-23,2024-10-23,integrated,Oracle,,0,
+,264,Uninitialized variables,PaulSandoz,2024-10-24,2024-10-25,integrated,Oracle,,1,mcimadamore
+,265,Support conversions of primitives in testing context,mabbay,2024-10-25,2024-10-31,integrated,Oracle,,6,PaulSandoz
+,266,bld script and bldr tools cleanup,grfrost,2024-10-27,2024-10-27,integrated,Oracle,,0,
+,267,Fixed env.bash issue found on Linux (Mac ok?),grfrost,2024-10-28,2024-10-28,integrated,Oracle,,0,
+,268,Dont use hashbang for launcher scripts,grfrost,2024-10-28,2024-10-28,integrated,Oracle,,0,
+,269,restoring older versions of CoreOp and Interpreter,igraves,2024-10-29,2024-10-29,integrated,Oracle,,0,
+,270,Simplified bld script and added stricter file types,grfrost,2024-10-31,2024-10-31,integrated,Oracle,,0,
+,271,Simplify Interpreter invocation,PaulSandoz,2024-10-31,2024-11-05,integrated,Oracle,,5,mcimadamore
+,272,Support bytecode generation for invocation of varArg method,mabbay,2024-11-06,2024-12-10,integrated,Oracle,,34,PaulSandoz
+,273,Move code reflection API into incubating module,mcimadamore,2024-11-07,2024-11-14,integrated,Oracle,GB,7,"asotona,PaulSandoz"
+,275,Turn compiler plugin into simple SPI,mcimadamore,2024-11-18,2024-11-18,integrated,Oracle,GB,0,PaulSandoz
+,276,1D Matrix Multiplication example for HAT,jjfumero,2024-11-19,2025-07-21,integrated,Oracle,,244,
+,277,Fixed race condition in C99HatKernelBuilder.java and cleaned build,grfrost,2024-11-21,2024-11-21,integrated,Oracle,,0,
+,278,Regression: compiler SPI does not work with exploded build,mcimadamore,2024-11-21,2024-11-22,integrated,Oracle,GB,1,
+,279,bld/hatrun fixes after PR 278,grfrost,2024-11-22,2024-11-22,integrated,Oracle,,0,
+,280,Simplify pom.xml and maven build doc,grfrost,2024-11-24,2024-11-24,integrated,Oracle,,0,
+,281,using auto generated poms also a fix for CustomOpTest,grfrost,2024-11-26,2024-11-26,integrated,Oracle,,0,
+,283,Some build fixups after merging hip backend,grfrost,2024-11-27,2024-11-27,integrated,Oracle,,0,
+,284,Added mkpoms script - updated bldr/XMLNode,grfrost,2024-11-28,2024-11-28,integrated,Oracle,,0,
+,285,mkpoms cleanup + .gitignore target dirs,grfrost,2024-11-28,2024-11-28,integrated,Oracle,,0,
+,286,More bld simplifications.  Prep for adding jextract,grfrost,2024-11-29,2024-11-29,integrated,Oracle,,0,
+,287,More jextract prep,grfrost,2024-12-01,2024-12-01,integrated,Oracle,,0,
+,288,Added hatless nbody example,grfrost,2024-12-02,2024-12-02,integrated,Oracle,,0,
+,289,Added hat nbody opengl example,grfrost,2024-12-02,2024-12-02,integrated,Oracle,,0,
+,291,Hat add jextract to maven,grfrost,2024-12-04,2024-12-04,integrated,Oracle,,0,
+,292,Add platform capability checks to bld and mkpoms,grfrost,2024-12-06,2024-12-06,integrated,Oracle,,0,
+,293,Removed hard coded jextract path,grfrost,2024-12-06,2024-12-06,integrated,Oracle,,0,
+,295,Revert change,PaulSandoz,2024-12-10,2024-12-10,integrated,Oracle,,0,
+,297,Hat bld and dir changes in prep for separating native ffi and jextracted backends,grfrost,2024-12-16,2024-12-16,integrated,Oracle,,0,
+,299,Replace opField with opMethod for identified methods,mabbay,2024-12-19,2024-12-25,integrated,Oracle,,6,mcimadamore
+,300,Fix typos,mabbay,2024-12-19,2024-12-19,integrated,Oracle,,0,PaulSandoz
+,301,Replace opField with opMethod for lambdas.,mabbay,2024-12-25,2025-01-07,integrated,Oracle,,13,"PaulSandoz,mcimadamore"
+,302,Make Quotable a marker interface,mabbay,2024-12-31,2025-01-17,integrated,Oracle,,17,PaulSandoz
+,303,Re organized code builder hierarchy,grfrost,2025-01-08,2025-01-08,integrated,Oracle,,0,
+,304,Use Op.ofQuoted,PaulSandoz,2025-01-17,2025-01-17,integrated,Oracle,,0,
+,305,Support storing the code that builds the code model,mabbay,2025-01-22,2025-04-04,integrated,Oracle,,72,mcimadamore
+,306,Onnx,PaulSandoz,2025-02-03,2025-02-03,integrated,Oracle,,0,
+,307,Updating the ONNX CNNTest,Craigacp,2025-02-05,2025-02-10,integrated,,,5,PaulSandoz
+,308,Very basic ONNX transformer,PaulSandoz,2025-02-05,2025-02-05,integrated,Oracle,,0,
+,309,"Cleanup of HAT env.bash, bld and hatrun scripts",grfrost,2025-02-06,2025-02-06,integrated,Oracle,,0,
+,310,Ensure array attributes are serialized correctly,PaulSandoz,2025-02-06,2025-02-06,integrated,Oracle,,0,
+,311,ONNX FFM Runtime initial work,asotona,2025-02-09,2025-02-12,integrated,Oracle,CZ,3,
+,312,Hat cleanup jextraction,grfrost,2025-02-10,2025-02-10,integrated,Oracle,,0,
+,313,Added inversion of control pattern so capabilities can coordinate with jextract,grfrost,2025-02-10,2025-02-10,integrated,Oracle,,0,
+,314,Hat jextracted backend infra,grfrost,2025-02-11,2025-02-11,integrated,Oracle,,0,
+,315,Remove redundant type variables,PaulSandoz,2025-02-11,2025-02-11,integrated,Oracle,,0,
+,316,OnnxRuntime and OnnxProtoBuilder continuation,asotona,2025-02-12,2025-02-17,integrated,Oracle,CZ,5,
+,317,Hat mark buffers,grfrost,2025-02-13,2025-02-13,integrated,Oracle,,0,
+,318,Hat mark buffers 1,grfrost,2025-02-14,2025-02-14,integrated,Oracle,,0,
+,319,MNISTDemo fix,asotona,2025-02-17,2025-02-17,integrated,Oracle,CZ,0,
+,320,OnnxRuntime and OnnxProtoBuilder continuation,asotona,2025-02-17,2025-02-18,integrated,Oracle,CZ,1,
+,321,Hat ongoing buffer marking,grfrost,2025-02-17,2025-02-17,integrated,Oracle,,0,
+,322,Make downcall method handles for ORT API functions static,mcimadamore,2025-02-18,2025-02-18,integrated,Oracle,GB,0,asotona
+,323,Split OnnxRuntime into high-level and low-level generated code,mcimadamore,2025-02-20,2025-02-24,integrated,Oracle,GB,4,
+,324,OnnxProtoBuilder simplifications,asotona,2025-02-20,2025-02-21,integrated,Oracle,CZ,1,
+,325,Hat testing buffer marking 1,grfrost,2025-02-21,2025-02-21,integrated,Oracle,,0,
+,326,"Onnx subgraphs, lambda execution and BB removal",asotona,2025-02-24,2025-02-26,integrated,Oracle,CZ,2,
+,327,MNISTDemo UI tweak,asotona,2025-02-24,2025-02-25,integrated,Oracle,CZ,1,PaulSandoz
+,329,Short cut for single method execution,PaulSandoz,2025-02-26,2025-02-27,integrated,Oracle,,1,"asotona,mcimadamore"
+,331,Adjusted tests to use execution of a method and implementation of the execution model cache,asotona,2025-02-27,2025-02-28,integrated,Oracle,CZ,1,PaulSandoz
+,332,Model lifetimes of onnx session-related objects more explicitly,mcimadamore,2025-02-28,2025-03-03,integrated,Oracle,GB,3,"asotona,PaulSandoz"
+,333,MNISTDemo split,asotona,2025-03-03,2025-03-03,integrated,Oracle,CZ,0,PaulSandoz
+,334,Tweak order of arena parameter in OnnxRuntime::execute,mcimadamore,2025-03-04,2025-03-04,integrated,Oracle,GB,0,
+,336,Hat sync jextract and hat nbody and life demos,grfrost,2025-03-04,2025-03-04,integrated,Oracle,,0,
+,337,Explicit Arena passing to Tensor construction and Session execution,asotona,2025-03-04,2025-03-05,integrated,Oracle,CZ,1,
+,340,Initializers through arguments,asotona,2025-03-07,2025-03-10,integrated,Oracle,CZ,3,
+,341,Hat cleanup extracted examples,grfrost,2025-03-07,2025-03-07,integrated,Oracle,,0,
+,342,Hat implement buffer minimization,grfrost,2025-03-09,2025-03-09,integrated,Oracle,,0,
+,343,Updated UIs for heal and violajones to use seven seg display widget,grfrost,2025-03-10,2025-03-10,integrated,Oracle,,0,
+,344,synced up maven and bld artifact names,grfrost,2025-03-10,2025-03-10,integrated,Oracle,,0,
+,345,Use debug system property,PaulSandoz,2025-03-11,2025-03-11,integrated,Oracle,,0,
+,346,Hat UI updates and iml fixes,grfrost,2025-03-11,2025-03-11,integrated,Oracle,,0,
+,347,Shape auto-dimension calculation from data size,asotona,2025-03-12,2025-03-25,integrated,Oracle,CZ,13,
+,348,Hat performance minimize buffer copy tweaking,grfrost,2025-03-12,2025-03-12,integrated,Oracle,,0,
+,349,"fixup hatrun for life dependencies, allow nbody to default to HAT",grfrost,2025-03-12,2025-03-12,integrated,Oracle,,0,
+,350,Removed annotation references ValueBased and Stable and cleaned bld a…,grfrost,2025-03-12,2025-03-12,integrated,Oracle,,0,
+,351,Represents literals of type byte/short as permitted in the Java language,mabbay,2025-03-12,2025-04-03,integrated,Oracle,,22,"PaulSandoz,mcimadamore"
+,352,Removed unneeded MethodHandles.lookup(),grfrost,2025-03-12,2025-03-12,integrated,Oracle,,0,
+,353,ExplicitOnnxOps.If implementation of captured values and initializers,asotona,2025-03-12,2025-03-14,integrated,Oracle,CZ,2,
+,354,More lookup cleanup,grfrost,2025-03-13,2025-03-13,integrated,Oracle,,0,
+,355,We should be able to select platform/device via env var,grfrost,2025-03-13,2025-03-13,integrated,Oracle,,0,
+,356,Fixed bug selecting opencl device,grfrost,2025-03-13,2025-03-13,integrated,Oracle,,0,
+,357,Fixed bug selecting opencl device - really this time,grfrost,2025-03-13,2025-03-13,integrated,Oracle,,0,
+,358,Revert ExplicitOnnxOps.If implementation of captured values and initializers,asotona,2025-03-14,2025-03-14,integrated,Oracle,CZ,0,
+,359,ExplicitOnnxOps.If implementation of captured values and initializers,asotona,2025-03-14,2025-03-24,integrated,Oracle,CZ,10,
+,360,We are switching to use hat subdir (instead of bldr) for scripts,grfrost,2025-03-15,2025-03-15,integrated,Oracle,,0,
+,361,Finalize switch to using hat subdir insteaf of bldr subdir,grfrost,2025-03-15,2025-03-15,integrated,Oracle,,0,
+,362,Hat fix min buffer state machine,grfrost,2025-03-15,2025-03-15,integrated,Oracle,,0,
+,364,updates demos for j1,grfrost,2025-03-17,2025-03-17,integrated,Oracle,,0,
+,365,Rearrange the source for better display.,PaulSandoz,2025-03-17,2025-03-17,integrated,Oracle,,0,
+,366,Hat replace bitfield min bufffer with state machine,grfrost,2025-03-20,2025-03-20,integrated,Oracle,,0,
+,367,Onnx loop op work continuation + WalkTheMazeTest,asotona,2025-03-25,2025-03-28,integrated,Oracle,CZ,3,
+,368,Fixed nbody state init issue. Split out ffi-shared java code as separate module.,grfrost,2025-03-26,2025-03-26,integrated,Oracle,,0,
+,369,Sync ONNX code gen,PaulSandoz,2025-03-26,2025-03-26,integrated,Oracle,,0,
+,370,Hat prep for cuda sync,grfrost,2025-03-28,2025-03-28,integrated,Oracle,,0,
+,371,IAE catch fix for recurrent inlining,asotona,2025-03-28,2025-03-28,integrated,Oracle,CZ,0,
+,372,more prep for cuda refactor.,grfrost,2025-03-29,2025-03-29,integrated,Oracle,,0,
+,373,Hat sync cuda,grfrost,2025-03-30,2025-03-30,integrated,Oracle,,0,
+,374,CUDA backend now compiles at least,grfrost,2025-03-31,2025-03-31,integrated,Oracle,,0,
+,375,Onnx direct reflection over records as tuples,asotona,2025-03-31,2025-04-02,integrated,Oracle,CZ,2,
+,376,Ensure this capture is noted for use in argument of JCNewClass,PaulSandoz,2025-03-31,2025-03-31,integrated,Oracle,,0,
+,377,Hat merge cuda ptx ffi backends,grfrost,2025-04-02,2025-04-02,integrated,Oracle,,0,
+,378,Support for Onnx functions,asotona,2025-04-04,2025-04-15,integrated,Oracle,CZ,11,
+,379,Synchronizing all the ffi backend native code,grfrost,2025-04-04,2025-04-04,integrated,Oracle,,0,
+,380,Finally found and fixed cuda side CUstream bug,grfrost,2025-04-04,2025-04-04,integrated,Oracle,,0,
+,381,switch all uses of runtime API cudaXXX for device API cuXXX - to trac…,grfrost,2025-04-05,2025-04-05,integrated,Oracle,,0,
+,382,removed jextracted opencl dependency on life example,grfrost,2025-04-05,2025-04-05,integrated,Oracle,,0,
+,384,Moved PTX backend functionality to CUDA backend,grfrost,2025-04-06,2025-04-06,integrated,Oracle,,0,
+,385,Removed ptx backend,grfrost,2025-04-06,2025-04-06,integrated,Oracle,,0,
+,386,Cleanup `CodeModelToAST` to use `Resolve`,mcimadamore,2025-04-07,2025-04-08,integrated,Oracle,GB,1,
+,387,Remove the code model transformation: addVarsWhenNecessary.,mabbay,2025-04-08,2025-04-09,integrated,Oracle,,1,mcimadamore
+,388,Hat merge cuda opencl backend common code 1,grfrost,2025-04-09,2025-04-09,integrated,Oracle,,0,
+,389,replaced common ffi-cuda code with ffi-shared,grfrost,2025-04-09,2025-04-09,integrated,Oracle,,0,
+,390,Add return values to setArg kernel methods,grfrost,2025-04-09,2025-04-09,integrated,Oracle,,0,
+,391,Improve resolution of types in `CodeModelToAST`,mcimadamore,2025-04-10,2025-04-11,integrated,Oracle,GB,1,
+,392,Enabled MINIMIZE_COPIES for ffi-cuda backend,grfrost,2025-04-10,2025-04-10,integrated,Oracle,,0,
+,395,Add ConstructorRef,mabbay,2025-04-14,2025-04-18,integrated,Oracle,,4,PaulSandoz
+,396,Removal of OnnxType.Initializer type,asotona,2025-04-16,2025-04-16,integrated,Oracle,CZ,0,PaulSandoz
+,397,Hat separate jextract builds,grfrost,2025-04-16,2025-04-16,integrated,Oracle,,0,
+,398,updated cuda build to use cmake extractions,grfrost,2025-04-16,2025-04-16,integrated,Oracle,,0,
+,399,OnnxProtoModel implementation ,asotona,2025-04-16,2025-04-22,integrated,Oracle,CZ,6,
+,400,Git use cmake jextract in maven,grfrost,2025-04-17,2025-04-17,integrated,Oracle,,0,
+,401,Merge master,PaulSandoz,2025-04-17,2025-04-18,integrated|clean,Oracle,,1,
+,402,Hat more maven pom cleanup,grfrost,2025-04-18,2025-04-18,integrated,Oracle,,0,
+,405,Cleanup bld.java and Script.java Reconstructed - from failed merge,grfrost,2025-04-19,2025-04-19,integrated,Oracle,,0,
+,406,Automatically detect which event helper to exclude in glwrap,grfrost,2025-04-20,2025-04-20,integrated,Oracle,,0,
+,407,Immutble ExternalizedOp.attributes,PaulSandoz,2025-04-20,2025-04-21,integrated,Oracle,,1,
+,408,For bld.java added javac diagnostics to JavaResult,grfrost,2025-04-21,2025-04-21,integrated,Oracle,,0,
+,409,Onnx proto model test,asotona,2025-04-23,2025-04-28,integrated,Oracle,CZ,5,
+,410,Reduce number of local variables when transforming code model builder to AST,mabbay,2025-04-23,2025-04-25,integrated,Oracle,,2,PaulSandoz
+,411,Define JavaRef top-type for all Java refs,PaulSandoz,2025-04-24,2025-04-25,integrated,Oracle,,1,
+,412,merged changes needed to get opencl + opengl on linux to work,grfrost,2025-04-26,2025-04-26,integrated,Oracle,,0,
+,413,Drop unused local variables from generated op method,mcimadamore,2025-04-28,2025-04-29,integrated,Oracle,GB,1,PaulSandoz
+,414,Onnx model and protobuf model improvements,asotona,2025-04-29,2025-05-06,integrated,Oracle,CZ,7,
+,415,Method code model uniquness,mabbay,2025-04-29,2025-05-02,integrated,Oracle,,3,"PaulSandoz,mcimadamore"
+,416,JavaRef extends TypeElement,PaulSandoz,2025-04-29,2025-04-30,integrated,Oracle,,1,mcimadamore
+,417,Rename TypeVarRef to TypeVariableType,PaulSandoz,2025-04-30,2025-04-30,integrated,Oracle,,0,mcimadamore
+,418,Build ref attributes from externalized type elems,PaulSandoz,2025-05-02,2025-05-02,integrated,Oracle,,0,mcimadamore
+,419,Build extern type element tree,PaulSandoz,2025-05-02,2025-05-02,integrated,Oracle,,0,mcimadamore
+,420,Lambda model uniqueness,mabbay,2025-05-03,2025-05-07,integrated,Oracle,,4,PaulSandoz
+,421,"Fixes required for maven/cmake on ubuntu - note cuda ptx working, cud…",grfrost,2025-05-07,2025-05-07,integrated,Oracle,,0,
+,424,Replace the use of Interpreter to create Quoted instance with specialized code,mabbay,2025-05-12,2025-06-26,integrated,Oracle,,45,
+,425,Enable sealing of an operation,mabbay,2025-05-12,2025-08-29,integrated,Oracle,,109,PaulSandoz
+,426,Removed hardcoded nvcc path,grfrost,2025-05-13,2025-05-13,integrated,Oracle,,0,
+,427,Update JSON API,PaulSandoz,2025-05-14,2025-05-14,integrated,Oracle,,0,
+,429,Onnx fixes to support LLM + Onnx GenAI Runtime,asotona,2025-05-15,2025-06-03,integrated,Oracle,CZ,19,
+,430,Add rocm/hip cmake rules -  hip backend work in progress,grfrost,2025-05-16,2025-05-16,integrated,Oracle,,0,
+,431,Partial evaluator transform,PaulSandoz,2025-05-20,2025-06-10,integrated,Oracle,,21,
+,432,Regularize support for Java types/references,mcimadamore,2025-05-21,2025-05-26,integrated,Oracle,GB,5,PaulSandoz
+,433,Regularize parsing of refs/types in op attributes,mcimadamore,2025-05-26,2025-05-28,integrated,Oracle,GB,2,
+,434,add extern C and minize square output,grfrost,2025-05-26,2025-05-26,integrated,Oracle,,0,
+,435,Enhance grammar of op attributes,mcimadamore,2025-05-28,2025-05-29,integrated,Oracle,GB,1,PaulSandoz
+,436,Debug appropriate code element toString,PaulSandoz,2025-05-28,2025-05-28,integrated,Oracle,,0,mcimadamore
+,437,Post dominator functionality,PaulSandoz,2025-05-30,2025-06-03,integrated,Oracle,,4,
+,438,Merge master,PaulSandoz,2025-06-11,2025-06-11,integrated,Oracle,,0,
+,439,Juan Fumero reported this issue on Linux/OpenCL,grfrost,2025-06-11,2025-06-11,integrated,Oracle,,0,
+,440,Rearrange ops/types into dialects,PaulSandoz,2025-06-12,2025-06-13,integrated,Oracle,,1,
+,441,Dialect factory,PaulSandoz,2025-06-13,2025-06-17,integrated,Oracle,,4,mcimadamore
+,442,Regularize dialect factory use,PaulSandoz,2025-06-16,2025-06-18,integrated,Oracle,,2,
+,443,Enhance JavaType::type to deal with inner classes,mcimadamore,2025-06-17,2025-06-18,integrated,Oracle,GB,1,PaulSandoz
+,444,Move ANF code to test code,PaulSandoz,2025-06-17,2025-06-18,integrated,Oracle,,1,mcimadamore
+,445,Move verifier into bytecode tests,PaulSandoz,2025-06-17,2025-06-18,integrated,Oracle,,1,asotona
+,446,Remove tools packages.,PaulSandoz,2025-06-17,2025-06-18,integrated,Oracle,,1,mcimadamore
+,447,Remove export of package from java.base.,PaulSandoz,2025-06-17,2025-06-18,integrated,Oracle,,1,asotona
+,448,SSA cleanup,PaulSandoz,2025-06-17,2025-06-18,integrated,Oracle,,1,mcimadamore
+,449,Move certain classes into non-exportable packages,PaulSandoz,2025-06-18,2025-06-18,integrated,Oracle,,0,
+,451,ffi apply clang tidy hints to ffi cuda/opencl common code,grfrost,2025-06-20,2025-06-20,integrated,Oracle,,0,
+,452,"After previous linux (clang tidy) changes, mac c++ wanted a few tweaks",grfrost,2025-06-20,2025-06-20,integrated,Oracle,,0,
+,453,move ffi cpp and include files under ./src/main/native,grfrost,2025-06-20,2025-06-20,integrated,Oracle,,0,
+,454,Create CoreType,PaulSandoz,2025-06-20,2025-06-23,integrated,Oracle,,3,mcimadamore
+,455,Fix up experiment module. Also autogen config.h,grfrost,2025-06-21,2025-06-21,integrated,Oracle,,0,
+,456,Towards a cleaner hat bld run script,grfrost,2025-06-23,2025-06-23,integrated,Oracle,,0,
+,457,Update test with return value,PaulSandoz,2025-06-23,2025-06-23,integrated,Oracle,,0,
+,458,Create extern package,PaulSandoz,2025-06-23,2025-06-23,integrated,Oracle,,0,mcimadamore
+,459,Remove packages,PaulSandoz,2025-06-23,2025-06-23,integrated,Oracle,,0,
+,460,Adjust factory constants,PaulSandoz,2025-06-23,2025-06-23,integrated,Oracle,,0,
+,462,Integrated PartialEvaluator into Onnx,asotona,2025-06-24,2025-06-26,integrated,Oracle,CZ,2,
+,463,Cleanups,PaulSandoz,2025-06-24,2025-06-24,integrated,Oracle,,0,
+,464,Remove ExternalizableOp,PaulSandoz,2025-06-25,2025-06-26,integrated,Oracle,,1,mcimadamore
+,465,Move OpBuilder to internal package.,PaulSandoz,2025-06-26,2025-06-26,integrated,Oracle,,0,
+,466,Revert changes to Interpreter following PR 424,mabbay,2025-06-26,2025-06-26,integrated,Oracle,,0,PaulSandoz
+,467,Explicit op factory implementations,PaulSandoz,2025-06-26,2025-06-27,integrated,Oracle,,1,mcimadamore
+,468,Cleanup and consolidate `ReflectMethods`,mcimadamore,2025-06-27,2025-06-27,integrated,Oracle,GB,0,PaulSandoz
+,470,Simplify OpFactory,PaulSandoz,2025-06-27,2025-06-30,integrated,Oracle,,3,
+,471,Cleanup compiler code gen,PaulSandoz,2025-06-27,2025-06-30,integrated,Oracle,,3,
+,472,Renamed hat-core -> core and wrap to wraps,grfrost,2025-06-28,2025-06-28,integrated,Oracle,,0,
+,473,Missed some import issues (experiments) from latest babylon changes,grfrost,2025-06-28,2025-06-28,integrated,Oracle,,0,
+,474,Hat Linux fixes to new build,grfrost,2025-06-28,2025-06-28,integrated,Oracle,,0,
+,475,Move OpDeclaration to internal package,PaulSandoz,2025-06-30,2025-07-01,integrated,Oracle,,1,
+,476,Remove Java prefix from Java ops,PaulSandoz,2025-07-01,2025-07-01,integrated,Oracle,,0,
+,477,Onnx Record to tuple types conversion moved to TypeConverter,asotona,2025-07-02,2025-07-07,integrated,Oracle,CZ,5,
+,478,Block.Reference implements CodeItem,PaulSandoz,2025-07-03,2025-07-03,integrated,Oracle,,0,
+,479,CodeElement ancestor functionality,PaulSandoz,2025-07-03,2025-07-08,integrated,Oracle,,5,
+,480,Sync with babylon changes and moved/renamed dirs for consistency,grfrost,2025-07-05,2025-07-05,integrated,Oracle,,0,
+,481,"Added example-experiments to hat/bld and maven poms""",grfrost,2025-07-05,2025-07-05,integrated,Oracle,,0,
+,482,Sadly opengl wrap had hardcoded package name this is fixed now,grfrost,2025-07-05,2025-07-05,integrated,Oracle,,0,
+,483,renamed pom artifacts to align with docs and java @hat/bld,grfrost,2025-07-06,2025-07-06,integrated,Oracle,,0,
+,484,We can now build jextracted artifacts from maven,grfrost,2025-07-07,2025-07-07,integrated,Oracle,,0,
+,485,Missed a project rename in hat/bld.java,grfrost,2025-07-07,2025-07-07,integrated,Oracle,,0,
+,486,Issue errors when quotable constructs are found inside inner classes,mcimadamore,2025-07-07,2025-07-08,integrated,Oracle,GB,1,PaulSandoz
+,487,Added a Java code builder ,grfrost,2025-07-07,2025-07-07,integrated,Oracle,,0,
+,488,Reduce Op writing to text methods.,PaulSandoz,2025-07-07,2025-07-08,integrated,Oracle,,1,mcimadamore
+,489,Disallow `null` return expressions in quoted lambdas,mcimadamore,2025-07-08,2025-07-08,integrated,Oracle,GB,0,PaulSandoz
+,490,Remove Op::traverseOperands,PaulSandoz,2025-07-09,2025-07-09,integrated,Oracle,,0,
+,491,Single method to append an operation to a block builder,PaulSandoz,2025-07-09,2025-07-10,integrated,Oracle,,1,
+,492,Lowering passes on transformer,PaulSandoz,2025-07-10,2025-07-10,integrated,Oracle,,0,
+,493,Move Block.Builder.inline to analysis package,PaulSandoz,2025-07-10,2025-07-11,integrated,Oracle,,1,
+,494,Transformation API changes,PaulSandoz,2025-07-14,2025-08-01,integrated,Oracle,,18,
+,495,ONNX LLM example implementation,asotona,2025-07-21,2025-07-23,integrated,Oracle,CZ,2,
+,496,[feature][HAT] 2D and 3D ranges for the NDRange API,jjfumero,2025-07-23,2025-07-24,integrated,Oracle,,1,
+,497,Some documentation updates,grfrost,2025-07-24,2025-07-24,integrated,Oracle,,0,
+,498,Added some hat tooling from my secret stash,grfrost,2025-07-26,2025-07-26,integrated,Oracle,,0,
+,499,Add line number gutter to op viewer,grfrost,2025-07-27,2025-07-27,integrated,Oracle,,0,
+,500,[hat] mxm example with loop interchange,jjfumero,2025-07-29,2025-07-29,integrated,Oracle,,0,
+,501,Hat remove unused tool classes,grfrost,2025-07-29,2025-07-29,integrated,Oracle,,0,
+,502,Added a pair of jsplitpanes to FuncOpViewer,grfrost,2025-07-30,2025-07-30,integrated,Oracle,,0,
+,503,[docs][hat] Notes for building and running with the CUDA backend,jjfumero,2025-07-30,2025-07-31,integrated,Oracle,,1,
+,504,[hat][cuda] 2D/3D NDrange supported for CUDA,jjfumero,2025-07-30,2025-07-31,integrated,Oracle,,1,
+,505,Add back code for highlighting SSA id references,grfrost,2025-07-30,2025-07-30,integrated,Oracle,,0,
+,506,Mistakenly left some debug code in last PR,grfrost,2025-07-30,2025-07-30,integrated,Oracle,,0,
+,508,[hat][cuda] Add check errors for all CUDA calls,jjfumero,2025-07-31,2025-07-31,integrated,Oracle,,0,
+,509,Validate arguments types when interpreting an operation,mabbay,2025-07-31,2025-08-05,integrated,Oracle,,5,"PaulSandoz,mcimadamore"
+,510,[hat][opencl] Check errors macro added,jjfumero,2025-08-01,2025-08-01,integrated,Oracle,,0,
+,511,Add SSA id dependency viewer tool + DotViewer infra,grfrost,2025-08-02,2025-08-02,integrated,Oracle,,0,
+,512,Document quoteOp and quotedOp methods,mabbay,2025-08-05,2025-08-27,integrated,Oracle,,22,PaulSandoz
+,513,New example suite for code reflection,jjfumero,2025-08-06,2025-08-12,integrated,Oracle,,6,PaulSandoz
+,514,HAT simplify tool text styling,grfrost,2025-08-07,2025-08-07,integrated,Oracle,,0,
+,516,"[hat][proposal] ComputeRange and ThreadMesh API for defining 1D, 2D and 3D Ranges",jjfumero,2025-08-08,2025-08-14,integrated,Oracle,,6,
+,519,[fix][hat] Codegen fixed when passing the kernel context to multiple invoke functions,jjfumero,2025-08-12,2025-08-12,integrated,Oracle,,0,
+,520,HAT remove trailing  eol ws from pom.xml files,grfrost,2025-08-12,2025-08-12,integrated,Oracle,,0,
+,521,Minor logging changes for HAT ModuleOp support,rbrchen,2025-08-12,2025-08-13,integrated,,,1,
+,522,Added an experiment to investigate Quoted Constant Args,grfrost,2025-08-13,2025-08-13,integrated,Oracle,,0,
+,523,Added more quoted experiments,grfrost,2025-08-13,2025-08-13,integrated,Oracle,,0,
+,524,Fix interpreter arg checking,PaulSandoz,2025-08-13,2025-08-13,integrated,Oracle,,0,
+,525,Expand the example suite with Inlining and Bytecode generation,jjfumero,2025-08-14,2025-08-14,integrated,Oracle,,0,
+,526,Use existing code for creating KernelContext_s from its iface buffer schema,grfrost,2025-08-17,2025-08-17,integrated,Oracle,,0,
+,527,[hat][proposal] Adding notion of local thread ids and local group sizes int HAT,jjfumero,2025-08-18,2025-08-19,integrated,Oracle,,1,
+,528,[samples] Apply type conversion for the int-shift function after the new result op has been built,jjfumero,2025-08-20,2025-08-20,integrated,Oracle,,0,
+,529,Rearrange lowering.,PaulSandoz,2025-08-21,2025-08-22,integrated,Oracle,,1,
+,530,Stop intellij red-squiggling lambda parms called value,grfrost,2025-08-22,2025-08-22,integrated,Oracle,,0,
+,531,[proposal][hat] Enabling local/shared memory and local barriers within compute methods,jjfumero,2025-08-22,2025-09-04,integrated,Oracle,,13,
+,532,Fix lambda bugs,mabbay,2025-08-25,2025-08-29,integrated,Oracle,,4,PaulSandoz
+,533,Rename quoteOp and quotedOp,mabbay,2025-08-27,2025-08-29,integrated,Oracle,,2,
+,534,[hat] Enable padding in the codegen as an option for the iFace types and Schemas,jjfumero,2025-08-27,2025-08-27,integrated,Oracle,,0,
+,535,Removing OpWrappers 1 of many,grfrost,2025-08-29,2025-08-29,integrated,Oracle,,0,
+,536,Update ReflectMethods.BodyScanner.coerce to handle null targetType,mabbay,2025-08-29,2025-09-04,integrated,Oracle,,6,mcimadamore
+,537,hat opwrapper removal round 2,grfrost,2025-08-30,2025-08-30,integrated,Oracle,,0,
+,538,HAT remove OpWrapper round 3,grfrost,2025-08-30,2025-08-30,integrated,Oracle,,0,
+,539,Hat remove opwrapper 4,grfrost,2025-09-01,2025-09-01,integrated,Oracle,,0,
+,540,Hat remove opwrapper 5,grfrost,2025-09-01,2025-09-01,integrated,Oracle,,0,
+,541,All OpWrappers now removed.  ,grfrost,2025-09-02,2025-09-02,integrated,Oracle,,0,
+,542,Fix SSABraun bug and add SSA tests,rbrchen,2025-09-02,2025-09-11,integrated,,,9,PaulSandoz
+,543,[hat][fix] create context with v4 function,jjfumero,2025-09-03,2025-09-03,integrated,Oracle,,0,
+,544,hat cleanup after removing OpWrappers,grfrost,2025-09-03,2025-09-03,integrated,Oracle,,0,
+,545,Add isQuotable attribute to LambdaOp,mabbay,2025-09-03,2025-09-15,integrated,Oracle,,12,PaulSandoz
+,547,"Post OpWrapper cleanup, removed some experiments and fixed Violajones…",grfrost,2025-09-04,2025-09-04,integrated,Oracle,,0,
+,548,Add buffer tagging and opt-out moduleOp backend,rbrchen,2025-09-04,2025-09-08,integrated,,,4,
+,549,New Examples: Dialects and Dynamic Function Builds,jjfumero,2025-09-05,2025-09-12,integrated,Oracle,,7,
+,550,The OpWrapper removal caused a regression extracting nested ifaces,grfrost,2025-09-05,2025-09-05,integrated,Oracle,,0,
+,551,Patch to cleanup code gen issue foo.bar vs foo->bar for nested ifaces,grfrost,2025-09-05,2025-09-05,integrated,Oracle,,0,
+,552,Hat cleanup codegen,grfrost,2025-09-06,2025-09-06,integrated,Oracle,,0,
+,553,Hat more codegen cleanup,grfrost,2025-09-07,2025-09-07,integrated,Oracle,,0,
+,554,Add sample annotation processor using code models,mcimadamore,2025-09-08,2025-09-12,integrated,Oracle,GB,4,PaulSandoz
+,555,HAT more consistent use of scoped code builder context + removed initialization of KernelContext in kernels,grfrost,2025-09-08,2025-09-08,integrated,Oracle,,0,
+,557,Fixes for cuda codegen issues,grfrost,2025-09-09,2025-09-09,integrated,Oracle,,0,
+,558,Initial Testing Framework for HAT,jjfumero,2025-09-09,2025-09-10,integrated,Oracle,,1,
+,559,Add local array support to BufferTagger,rbrchen,2025-09-09,2025-09-10,integrated,,,1,
+,562,More codegen tweaks,grfrost,2025-09-11,2025-09-11,integrated,Oracle,,0,
+,563,more codegen cleanup,grfrost,2025-09-11,2025-09-11,integrated,Oracle,,0,
+,564,added tests to pom and intellij builds,grfrost,2025-09-11,2025-09-11,integrated,Oracle,,0,
+,565,ONNX fixes,asotona,2025-09-12,2025-09-15,integrated,Oracle,CZ,3,PaulSandoz
+,566,Update compiler tests to use JUnit instead of TestNG,mabbay,2025-09-12,2025-09-22,integrated,Oracle,,10,"PaulSandoz,mcimadamore"
+,567,"Align build artifacts maven, @hat/bld and  hat/job.jar",grfrost,2025-09-14,2025-09-14,integrated,Oracle,,0,
+,568,add ability to run tests from job.jar,grfrost,2025-09-14,2025-09-14,integrated,Oracle,,0,
+,569,cleaned up test stanza of hat.java test,grfrost,2025-09-15,2025-09-15,integrated,Oracle,,0,
+,571,ArrayView support for HAT kernels,rbrchen,2025-09-17,2025-09-26,integrated,,,9,
+,572,added Emanuel Peter's normal mapping demo - not hatified yet,grfrost,2025-09-17,2025-09-17,integrated,Oracle,,0,
+,574,Allow hat.java run to pass -DXXXX options when running,grfrost,2025-09-17,2025-09-17,integrated,Oracle,,0,
+,577,Remove op name state from Op,PaulSandoz,2025-09-18,2025-09-23,integrated,Oracle,,5,mcimadamore
+,578,Transform runtime test to JUnit,mabbay,2025-09-19,2025-09-26,integrated,Oracle,,7,"asotona,PaulSandoz"
+,581,Remove the Op copy methods,PaulSandoz,2025-09-23,2025-09-30,integrated,Oracle,,7,
+,582,[hat] Clean-up and formatting for HAT Dialect,jjfumero,2025-09-25,2025-09-25,integrated,Oracle,,0,
+,583,[hat] Testing framework expanded ,jjfumero,2025-09-25,2025-09-26,integrated,Oracle,,1,
+,584,"Replace methods ""create"" in Op subclasses by constructors",mabbay,2025-09-26,2025-10-30,integrated,Oracle,,34,PaulSandoz
+,585,"Fixup maven, hat.java and hat/bld.java to include arrayview example",grfrost,2025-09-29,2025-09-29,integrated,Oracle,,0,
+,586,Hat move config out from ffi backend so we can use from any hat program,grfrost,2025-09-29,2025-09-29,integrated,Oracle,,0,
+,587,HAT - New examples for optimizing matmul,jjfumero,2025-09-30,2025-09-30,integrated,Oracle,,0,
+,588,[hat][testing] Remote testing framework to pull all branches,jjfumero,2025-09-30,2025-09-30,integrated,Oracle,,0,
+,589,Hat move config to core,grfrost,2025-10-01,2025-10-01,integrated,Oracle,,0,
+,590,[hat] Example of HAT for 2D Matmul with register tiling,jjfumero,2025-10-01,2025-10-01,integrated,Oracle,,0,
+,591,[hat] Fix cuda set context,jjfumero,2025-10-01,2025-10-01,integrated,Oracle,,0,
+,592,[hat] rollback CUDA specific scheduler,jjfumero,2025-10-01,2025-10-01,integrated,Oracle,,0,
+,593,initial prototype of prefix sum experiment,grfrost,2025-10-01,2025-10-01,integrated,Oracle,,0,
+,594,[hat] clean-up - removed duplicated sample,jjfumero,2025-10-01,2025-10-01,integrated,Oracle,,0,
+,595,[hat] testing framework updated to use the new scripts,jjfumero,2025-10-02,2025-10-02,integrated,Oracle,,0,
+,596,[hat] Remote tests script fixed + add ArrayViews,jjfumero,2025-10-02,2025-10-02,integrated,Oracle,,0,
+,597,config now accessible from all backends,grfrost,2025-10-02,2025-10-02,integrated,Oracle,,0,
+,598,hat.java now scans the tests.jar for tests to run,grfrost,2025-10-02,2025-10-02,integrated,Oracle,,0,
+,599,Remove noModuleOp and bufferTagging flags,rbrchen,2025-10-02,2025-10-03,integrated,,,1,
+,600,implemented preprocessor hook for OpenCL code gen,grfrost,2025-10-03,2025-10-03,integrated,Oracle,,0,
+,601,cuda now also leverages c99 preprocessor,grfrost,2025-10-03,2025-10-03,integrated,Oracle,,0,
+,602,converging cuda/opencl code gen using preprocessor,grfrost,2025-10-04,2025-10-04,integrated,Oracle,,0,
+,603,CUDA and OpenCL C99 code now identical except for handling of atomics,grfrost,2025-10-04,2025-10-04,integrated,Oracle,,0,
+,604,[hat][docs] Some useful links added,jjfumero,2025-10-06,2025-10-06,integrated,Oracle,,0,
+,606,Proposal for Vector Types for GPUs (OpenCL and CUDA backends),jjfumero,2025-10-09,2025-10-14,integrated,Oracle,,5,
+,607,Add private and local arrayView support,rbrchen,2025-10-10,2025-10-14,integrated,,,4,
+,608,Decouple example-experiments from opencl + add example_arrayview to intellij,grfrost,2025-10-15,2025-10-15,integrated,Oracle,,0,
+,609,Updated Config,grfrost,2025-10-15,2025-10-15,integrated,Oracle,,0,
+,610,Update buffer tagging with arrayview support,rbrchen,2025-10-15,2025-10-24,integrated,,,9,
+,611,[hat] KernelContext from the hat.buffer package renamed to KernelBufferContext,jjfumero,2025-10-16,2025-10-16,integrated,Oracle,,0,
+,612,Hat add kernel code annotation,grfrost,2025-10-16,2025-10-16,integrated,Oracle,,0,
+,613,Fixed merge issues from last PR,grfrost,2025-10-16,2025-10-16,integrated,Oracle,,0,
+,614,OnnxProtoBuilder fixes,asotona,2025-10-16,2025-10-17,integrated,Oracle,CZ,1,
+,615,Moved  dialect and arrayview transforms to KernelCallGraph constructor,grfrost,2025-10-16,2025-10-16,integrated,Oracle,,0,
+,616,[hat] Testing framework moved to hat.test,jjfumero,2025-10-17,2025-10-17,integrated,Oracle,,0,
+,617,[hat] Runner for a single test,jjfumero,2025-10-17,2025-10-17,integrated,Oracle,,0,
+,618,Add support for other onnx providers (CoreML),ammbra,2025-10-17,2025-10-21,integrated,,,4,asotona
+,619,Added @hat/help and @hat/test-suite,grfrost,2025-10-17,2025-10-17,integrated,Oracle,,0,
+,620,Added simple map transformer to OpTk + Config convenience methods,grfrost,2025-10-19,2025-10-19,integrated,Oracle,,0,
+,621,first pass at mapping HATOp phase Transformers to us  OpTk form,grfrost,2025-10-20,2025-10-20,integrated,Oracle,,0,
+,622,Quick hack to allow us to override codegen with annotation,grfrost,2025-10-20,2025-10-20,integrated,Oracle,,0,
+,623,BytecodeLift and related tests move under tests bytecode/lift,asotona,2025-10-20,2025-10-21,integrated,Oracle,CZ,1,PaulSandoz
+,624,[hat] Initial support for 16-bits float types (half),jjfumero,2025-10-21,2025-10-21,integrated,Oracle,,0,
+,625,[hat] clean-up non-necessary methods for vector types,jjfumero,2025-10-21,2025-10-21,integrated,Oracle,,0,
+,626,Refactored MemoryPhases to innerclasses,grfrost,2025-10-21,2025-10-21,integrated,Oracle,,0,
+,627,more phase transform refctoring and a fix to hat.java for props,grfrost,2025-10-21,2025-10-21,integrated,Oracle,,0,
+,628,Added  opencl-jextracted-backend to bld,grfrost,2025-10-21,2025-10-21,integrated,Oracle,,0,
+,629,[hat] F16 object creation within device code via F16.of,jjfumero,2025-10-22,2025-10-22,integrated,Oracle,,0,
+,630,[hat] CPU Implementation for F16,jjfumero,2025-10-22,2025-10-22,integrated,Oracle,,0,
+,631,Phase tranform refactoring and fixed before/after CallSite tracking,grfrost,2025-10-22,2025-10-22,integrated,Oracle,,0,
+,632,Added non-hatified view 3d perspective example,grfrost,2025-10-23,2025-10-23,integrated,Oracle,,0,
+,633,Allow arbritrary text to be injected using annotations,grfrost,2025-10-23,2025-10-23,integrated,Oracle,,0,
+,635,Update JDK version in opgen project,ammbra,2025-10-23,2025-10-23,integrated,,,0,asotona
+,636,Simplify parsing of view data,grfrost,2025-10-23,2025-10-23,integrated,Oracle,,0,
+,637,[hat] TestMul 1D thread-block and test f16 improved,jjfumero,2025-10-24,2025-10-24,integrated,Oracle,,0,
+,638,OnnxLift prototype,asotona,2025-10-24,2025-10-29,integrated,Oracle,CZ,5,
+,639,[hat] Enable PROFILE_CUDA_KERNEL option,jjfumero,2025-10-24,2025-10-24,integrated,Oracle,,0,
+,640,[hat] config.h in sync with the auto-generator,jjfumero,2025-10-24,2025-10-24,integrated,Oracle,,0,
+,641,Hat util regex,grfrost,2025-10-24,2025-10-24,integrated,Oracle,,0,
+,642,Proposal for supporting Float4.of for CPU host code and GPU device code,jjfumero,2025-10-24,2025-10-31,integrated,Oracle,,7,
+,643,Coverted enum base view parser to iface based,grfrost,2025-10-24,2025-10-24,integrated,Oracle,,0,
+,645,Upgrade ONNX runtime to use API version 1.23.1,ammbra,2025-10-27,2025-10-29,integrated,,,2,asotona
+,646,Float4 arrayView support,rbrchen,2025-10-27,2025-11-08,integrated,,,12,
+,647,Second Proposal to generalize handling of Vector Types based on 644,jjfumero,2025-10-28,2025-10-31,integrated,Oracle,,3,
+,648,Fixed BytecodeGenerator INDY calls with invalid interface method type,asotona,2025-10-29,2025-10-29,integrated,Oracle,CZ,0,PaulSandoz
+,649,Hat refactor view,grfrost,2025-10-29,2025-10-29,integrated,Oracle,,0,
+,650,Hat view more tinkering,grfrost,2025-10-30,2025-10-30,integrated,Oracle,,0,
+,651,Moved job src into hat project,grfrost,2025-10-30,2025-10-30,integrated,Oracle,,0,
+,652,Merge master,PaulSandoz,2025-10-30,2025-10-30,integrated,Oracle,,0,
+,653,Added TLDR  build+run instructions to README and simplified hat.java,grfrost,2025-10-31,2025-10-31,integrated,Oracle,,0,
+,656,Deprecated APIs for accessing GPU global thread information removed. ,jjfumero,2025-11-03,2025-11-03,integrated,Oracle,,0,
+,657,[hat][API] ComputeRange moved to NDRange ,jjfumero,2025-11-04,2025-11-04,integrated,Oracle,,0,
+,658,Hat fix vj parsing,grfrost,2025-11-04,2025-11-04,integrated,Oracle,,0,
+,659,allow -Dconstraint.scale.[start|stop] and -Dconstraint.inc properties,grfrost,2025-11-04,2025-11-04,integrated,Oracle,,0,
+,660,Retired some config bits and added some new ones. ,grfrost,2025-11-04,2025-11-04,integrated,Oracle,,0,
+,661,Fix modeling of expressions with record symbols,PaulSandoz,2025-11-04,2025-11-04,integrated,Oracle,,0,
+,662,[hat] NDRange API using marking interfaces,jjfumero,2025-11-05,2025-11-05,integrated,Oracle,,0,
+,663,[hat] Extensions of F16 (API and codegen),jjfumero,2025-11-05,2025-11-07,integrated,Oracle,,2,
+,664,Improve runtime invocation,ammbra,2025-11-05,2025-11-06,integrated,,,1,PaulSandoz
+,665,Hat view example even more tinkering,grfrost,2025-11-05,2025-11-05,integrated,Oracle,,0,
+,666,[hat] Float2 supported,jjfumero,2025-11-06,2025-11-07,integrated,Oracle,,1,
+,667,Drop support for quoted structural lambdas,mcimadamore,2025-11-06,2025-11-06,integrated,Oracle,GB,0,PaulSandoz
+,668,Drop ClosureOp and ClosureOpCall,mcimadamore,2025-11-07,2025-11-07,integrated,Oracle,GB,0,PaulSandoz
+,669,[hat] Fix C99 codegen parenthesis when having inner iface interfaces,jjfumero,2025-11-07,2025-11-07,integrated,Oracle,,0,
+,670,[HAT] Test Engine Improved,jjfumero,2025-11-07,2025-11-07,integrated,Oracle,,0,
+,671,Hat view simplification of types,grfrost,2025-11-09,2025-11-09,integrated,Oracle,,0,
+,672,Fix array view tests and force factory creation of ranges,grfrost,2025-11-09,2025-11-09,integrated,Oracle,,0,
+,673,A less clumsey way of forcing range factories,grfrost,2025-11-09,2025-11-09,integrated,Oracle,,0,
+,674,[hat] F16 decoupled from Buffer type,jjfumero,2025-11-10,2025-11-10,integrated,Oracle,,0,
+,675,Experimenting factories from pools,grfrost,2025-11-11,2025-11-11,integrated,Oracle,,0,
+,676,Fix arrayview tests,rbrchen,2025-11-11,2025-11-12,integrated,,,1,
+,677,Lump constructor reference with method reference,mcimadamore,2025-11-12,2025-11-12,integrated,Oracle,GB,0,PaulSandoz
+,678,[hat] DeviceType interface definition for private/local data structures,jjfumero,2025-11-12,2025-11-13,integrated,Oracle,,1,
+,679,OpBuilder optimizations - part 1.,asotona,2025-11-12,2025-11-19,integrated,Oracle,CZ,7,mabbay
+,680,Regression: HAT tests broken after pull/677,mcimadamore,2025-11-13,2025-11-13,integrated,Oracle,GB,0,
+,681,Hat view more experiments,grfrost,2025-11-13,2025-11-13,integrated,Oracle,,0,
+,682,Beef up reference resolution code and test,mcimadamore,2025-11-13,2025-11-14,integrated,Oracle,GB,1,PaulSandoz
+,683,[hat] javadoc for TestDeviceType,jjfumero,2025-11-14,2025-11-14,integrated,Oracle,,0,
+,684,Ensure HAT executes with Babylon JDK images build,PaulSandoz,2025-11-18,2025-11-19,integrated,Oracle,,1,"jjfumero,asotona,mcimadamore"
+,685,Drop Quotable type,mcimadamore,2025-11-19,2025-11-20,integrated,Oracle,GB,1,PaulSandoz
+,687,Optimize type construction in OpBuilder,mabbay,2025-11-19,2025-11-20,integrated,Oracle,,1,asotona
+,688,Split support for reflectable lambdas from lambda metafactory,mcimadamore,2025-11-20,2025-11-20,integrated,Oracle,GB,0,PaulSandoz
+,689,Code reflection synthetic class generation moved to JavaCompiler::genCode,asotona,2025-11-20,2025-11-21,integrated,Oracle,CZ,1,mcimadamore
+,690,Code transformer,PaulSandoz,2025-11-20,2025-11-21,integrated,Oracle,,1,"asotona,mcimadamore"
+,691,ModuleOp generation from LambdaOp and FuncOp,rbrchen,2025-11-21,2025-12-19,integrated,,,28,PaulSandoz
+,693,Rename @CodeReflection to @Reflect,mcimadamore,2025-11-21,2025-11-21,integrated,Oracle,GB,0,PaulSandoz
+,694,[hat] Reduces the number of threads in thread-block for small kernels,jjfumero,2025-11-21,2025-11-21,integrated,Oracle,,0,
+,695,jextract 25 import fix,grfrost,2025-11-21,2025-11-21,integrated,Oracle,,0,
+,696,Hat view face culling,grfrost,2025-11-21,2025-11-21,integrated,Oracle,,0,
+,697,Merge master,PaulSandoz,2025-11-21,2025-11-21,integrated|clean,Oracle,,0,
+,698,Added some NDRange helpers to simplify N dim ranges,grfrost,2025-11-22,2025-11-22,integrated,Oracle,,0,
+,699,switch examples and tests to new NDRange helpers,grfrost,2025-11-22,2025-11-22,integrated,Oracle,,0,
+,700,removed unnecessary methods,grfrost,2025-11-22,2025-11-22,integrated,Oracle,,0,
+,701,added a nbody vector kernel,grfrost,2025-11-23,2025-11-23,integrated,Oracle,,0,
+,702,Hat move javac and java opts from job builder,grfrost,2025-11-23,2025-11-23,integrated,Oracle,,0,
+,703,[hat] Global and Local ranges to be constructed with `of` methods,jjfumero,2025-11-24,2025-11-24,integrated,Oracle,,0,
+,704,[hat] Use of C99CodeBuilder to build the IR for a deviceType,jjfumero,2025-11-24,2025-11-24,integrated,Oracle,,0,
+,705,Adding empty string to java's ProcessBuilder seeems problematic,grfrost,2025-11-24,2025-11-24,integrated,Oracle,,0,
+,706,BytecodeGenerator cleanup and switch support ,asotona,2025-11-25,2025-12-04,integrated,Oracle,CZ,9,
+,707,Refactor code for computing denotable projection of types,mcimadamore,2025-11-25,2025-12-01,integrated,Oracle,GB,6,PaulSandoz
+,708,Samples fixed after refactoring,jjfumero,2025-11-25,2025-11-25,integrated,Oracle,,0,
+,709,[hat] varStoreOp extended for dialect varOp Types,jjfumero,2025-11-26,2025-11-26,integrated,Oracle,,0,
+,711,Remove minor unnecessary changes from main javac codebase,mcimadamore,2025-11-26,2025-12-01,integrated,Oracle,GB,5,PaulSandoz
+,712,[docs] Babylon and HAT builds and with HAT testing updated,jjfumero,2025-11-28,2025-11-28,integrated,Oracle,,0,
+,713,[hat] Compilation phases formatted with sub-phase,jjfumero,2025-11-28,2025-11-28,integrated,Oracle,,0,
+,714,Make java @hat/bld less noisy by default,grfrost,2025-11-28,2025-11-28,integrated,Oracle,,0,
+,715,Fix javadoc issues,mcimadamore,2025-11-28,2025-12-01,integrated,Oracle,GB,3,PaulSandoz
+,716,[hat] Proposal for bfloat16 ,jjfumero,2025-11-28,2025-12-03,integrated,Oracle,,5,
+,717,[hat] Cleanup F16 name impl,jjfumero,2025-12-01,2025-12-01,integrated,Oracle,,0,
+,718,Make it easier to create simple schemas,grfrost,2025-12-01,2025-12-01,integrated,Oracle,,0,
+,719,Replace string literals with class names with references to Class apis,grfrost,2025-12-01,2025-12-01,integrated,Oracle,,0,
+,720,[hat] Testing suite - avoid log duplications,jjfumero,2025-12-01,2025-12-01,integrated,Oracle,,0,
+,722,[hat] Testing suite - cleanup,jjfumero,2025-12-01,2025-12-01,integrated,Oracle,,0,
+,723,Fix issues with local class creation from reflectable constructs,mcimadamore,2025-12-03,2025-12-03,integrated,Oracle,GB,0,PaulSandoz
+,724,Simplify C99 codegen,grfrost,2025-12-03,2025-12-03,integrated,Oracle,,0,
+,725,[hat] bfloat16 codegen for C99 conversion fixed,jjfumero,2025-12-04,2025-12-04,integrated,Oracle,,0,
+,726,Make @Reflect a use-site annotation,mcimadamore,2025-12-04,2025-12-04,integrated,Oracle,GB,0,PaulSandoz
+,727,Job builder was dropping javac jvmopts,grfrost,2025-12-04,2025-12-04,integrated,Oracle,,0,
+,728,Simplify CodeElement.elements,PaulSandoz,2025-12-05,2025-12-05,integrated,Oracle,,0,
+,729,Cleaned up NDRange and initialization of KernelBufferContext,grfrost,2025-12-06,2025-12-06,integrated,Oracle,,0,
+,730,More C99 code gen cleanup,grfrost,2025-12-06,2025-12-06,integrated,Oracle,,0,
+,731,Fixed the class heiarchy of codegen builders,grfrost,2025-12-07,2025-12-07,integrated,Oracle,,0,
+,732,Add DeviceType support for array views,rbrchen,2025-12-08,2025-12-12,integrated,,,4,
+,733,Hat fix java codebuilder,grfrost,2025-12-08,2025-12-08,integrated,Oracle,,0,
+,734,last pr caused grief.  Mac os filename change case,grfrost,2025-12-08,2025-12-08,integrated,Oracle,,0,
+,735,switch text tools to use Regex,grfrost,2025-12-08,2025-12-08,integrated,Oracle,,0,
+,736,moved c99 codegen out of base class,grfrost,2025-12-08,2025-12-08,integrated,Oracle,,0,
+,737,Remove CodeElement.transform,PaulSandoz,2025-12-08,2025-12-10,integrated,Oracle,,2,
+,738,Fails if code model was compiled by a feature version different from the current,mabbay,2025-12-08,2025-12-11,integrated,Oracle,,3,PaulSandoz
+,739,Rename compute/kernel interfaces.,PaulSandoz,2025-12-08,2025-12-10,integrated,Oracle,,2,
+,740,[hat] Type transform between bfloat16 <-> float improved,jjfumero,2025-12-09,2025-12-09,integrated,Oracle,,0,
+,741,Fix balanced parenthesis and structs for the CUDA backend,jjfumero,2025-12-09,2025-12-09,integrated,Oracle,,0,
+,742,HAT Test Report improved,jjfumero,2025-12-09,2025-12-09,integrated,Oracle,,0,
+,743,More C99 code gen fixes,grfrost,2025-12-09,2025-12-09,integrated,Oracle,,0,
+,744,[hat] Assert moved to hat.test.exceptions package,jjfumero,2025-12-10,2025-12-10,integrated,Oracle,,0,
+,746,HAT memory mallocs and copies improved,jjfumero,2025-12-12,2025-12-12,integrated,Oracle,,0,
+8373576,747,8373576: BytecodeGenerator fails with AssertionError on InvokeOp with varargs,asotona,2025-12-12,2025-12-15,integrated,Oracle,CZ,3,
+,748,Test java version check we do in op building methods,mabbay,2025-12-12,2025-12-19,integrated,Oracle,,7,"PaulSandoz,mcimadamore"
+,749,Config parsing was not capturing PLATFORM:n or DEVICE:n,grfrost,2025-12-15,2025-12-15,integrated,Oracle,,0,
+8373571,750,8373571: Code model of JavaOp.ForOp does not handle (un)boxing correctly,mcimadamore,2025-12-15,2025-12-16,integrated,Oracle,GB,1,"asotona,PaulSandoz"
+,751,[hat] Remove device custom data types that inherit from Buffer,jjfumero,2025-12-15,2025-12-15,integrated,Oracle,,0,
+8373572,752,8373572: BytecodeGenerator throws UnsupportedOperationException for JavaOp.InvokeOp when invoke kind is SUPER.,asotona,2025-12-15,2025-12-16,integrated,Oracle,CZ,1,
+,753,Streamlining OpTk and preparing to move out of HAT core,grfrost,2025-12-16,2025-12-16,integrated,Oracle,,0,
+,754,[hat] CUDA Backend Codegen fixed,jjfumero,2025-12-17,2025-12-17,integrated,Oracle,,0,
+,755,Added HatVarOp marker interface and OpTk helpers,grfrost,2025-12-17,2025-12-17,integrated,Oracle,,0,
+,756,Fix regression in last PR,grfrost,2025-12-17,2025-12-17,integrated,Oracle,,0,
+,757,Removing opencl and cuda warnings nvidia,grfrost,2025-12-17,2025-12-17,integrated,Oracle,,0,
+,758,Created optkl subproject containing  tooling that does not depend on HAT,grfrost,2025-12-17,2025-12-17,integrated,Oracle,,0,
+,759,[hat] Rollback specific buffer-accessor for OpenCL buffer allocation,jjfumero,2025-12-18,2025-12-18,integrated,Oracle,,0,
+,760,Isolating iface mapper so it can be used outside of HAT,grfrost,2025-12-18,2025-12-18,integrated,Oracle,,0,
+,761,Codebuilders are useful in some common optkl tooling,grfrost,2025-12-18,2025-12-18,integrated,Oracle,,0,
+,762,Unreflect tests,asotona,2025-12-18,2026-01-02,integrated,Oracle,CZ,15,
+,763,Moved the generation of random suffix for schema padding to codegen,grfrost,2025-12-18,2025-12-18,integrated,Oracle,,0,
+,764,switching to new transformer pattern - ThreadsPhase,grfrost,2025-12-18,2025-12-18,integrated,Oracle,,0,
+,765,Add HATPtrOps to array view,rbrchen,2025-12-18,2025-12-19,integrated,,,1,
+,766,Fix some typos and doc improvement,deleSerna,2025-12-18,2025-12-19,integrated,,,1,jjfumero
+,767,Rationalizing use of MethodHandles.Lookup and Arena passing,grfrost,2025-12-19,2025-12-19,integrated,Oracle,,0,
+,768,Moved the ifacemapper out of HAT core to optlk,grfrost,2025-12-19,2025-12-19,integrated,Oracle,,0,
+,769,Lazily invoke lambda op building method,mabbay,2025-12-19,2025-12-23,integrated,Oracle,,4,PaulSandoz
+,770,Hat cleanup phases,grfrost,2025-12-19,2025-12-19,integrated,Oracle,,0,
+,771,Fix the bug of pattern variable initialized with conversion,mabbay,2025-12-19,2025-12-19,integrated,Oracle,,0,PaulSandoz
+,772,Fix lowering type pattern,mabbay,2025-12-19,2025-12-23,integrated,Oracle,,4,PaulSandoz
+,773,Slight cleanup of HatPtOp and added copyright to enum,grfrost,2025-12-20,2025-12-20,integrated,Oracle,,0,
+,774,Throw an exception if the compute method is not annotated with @Reflect,deleSerna,2025-12-21,2025-12-23,integrated,,,2,
+,775,Seal NDRange interfaces anc simplify HATThreadOp and phases,grfrost,2025-12-21,2025-12-21,integrated,Oracle,,0,
+,776,Cleanup of HAT Cuda codegen,grfrost,2025-12-21,2025-12-21,integrated,Oracle,,0,
+,777,I messed up prev PR blockId vs blockIdx,grfrost,2025-12-21,2025-12-21,integrated,Oracle,,0,
+,778,Sealed the HATOp/dialect hierarchy,grfrost,2025-12-21,2025-12-21,integrated,Oracle,,0,
+,779,Moved scopebuilder down to optkl,grfrost,2025-12-21,2025-12-21,integrated,Oracle,,0,
+,780,"We were needlessly passing accelerator around, as a Lookup carrier",grfrost,2025-12-21,2025-12-21,integrated,Oracle,,0,
+,781,Moved common code to optkl,grfrost,2025-12-22,2025-12-22,integrated,Oracle,,0,
+,782,Sealed HATPhases (transformer) heierarchy and provided access to Kern…,grfrost,2025-12-23,2025-12-23,integrated,Oracle,,0,
+,783,Missing import in TestMissingReflectAnnotation,grfrost,2025-12-23,2025-12-23,integrated,Oracle,,0,
+,784,Resolving quotable target seems to be broken - this patch fixes HAT,grfrost,2025-12-23,2025-12-23,integrated,Oracle,,0,
+8373573,785,8373573: JavaOp.SwitchExpressionOp with unconditional pattern lowers to an invalid code model,mabbay,2025-12-23,2025-12-29,integrated,Oracle,,6,asotona
+,786,Cache kernel call sites based on lambdaOp location,grfrost,2025-12-24,2025-12-24,integrated,Oracle,,0,
+,787,Hat switch from pattern to regex,grfrost,2025-12-24,2025-12-24,integrated,Oracle,,0,
+,789,"More phase refactoring, created common op pattern matchers",grfrost,2025-12-26,2025-12-26,integrated,Oracle,,0,
+,790,Switched to using schema dsl rather than annotions for field order,grfrost,2025-12-27,2025-12-27,integrated,Oracle,,0,
+,791,Move hat annotations back to core.  Some groupied of common classes,grfrost,2025-12-27,2025-12-27,integrated,Oracle,,0,
+,792,Hat simplify phases,grfrost,2025-12-27,2025-12-27,integrated,Oracle,,0,
+,793,Moved some 'util' helpers into nested phase classes,grfrost,2025-12-27,2025-12-27,integrated,Oracle,,0,
+,794,New dsl style schema extended to support 2D arrays bound by width*height,grfrost,2025-12-28,2025-12-28,integrated,Oracle,,0,
+,795,added some experiments for testing JavaCodeBuilder and Txfmr,grfrost,2025-12-29,2025-12-29,integrated,Oracle,,0,
+,796,Cleaning up HAT/Optkl transformers. Also removed dead transformer code,grfrost,2025-12-30,2025-12-30,integrated,Oracle,,0,
+,797,Previous PR was generating extras spaces and unused expression wanings,grfrost,2025-12-30,2025-12-30,integrated,Oracle,,0,
+,799,Unified access type info.. also removed dead optkl.Trxfmr  code,grfrost,2025-12-31,2025-12-31,integrated,Oracle,,0,
+,800,Migrated BufferTagger to use InvokeOpHelper for common tasks,grfrost,2025-12-31,2025-12-31,integrated,Oracle,,0,
+,801,Cleanup of FP16Phase removing duplicate code and leaning on InvokHelper,grfrost,2026-01-01,2026-01-01,integrated,Oracle,,0,
+,802,fix of TestJavaVersionCheckerForLambdas and TestJavaVersionCheckerForMethods,asotona,2026-01-02,2026-01-02,integrated,Oracle,CZ,0,
+,803,More FP16Phase cleanup. Leveraging Invoke helper,grfrost,2026-01-02,2026-01-02,integrated,Oracle,,0,
+,804,Switch lowering fixes,asotona,2026-01-02,2026-01-05,integrated,Oracle,CZ,3,mabbay
+,805,Removed previous transformer patter experiments,grfrost,2026-01-02,2026-01-02,integrated,Oracle,,0,
+,806,Refactored VectorSelectPhase and ArrayViewPhase  using InvokeOpHelper,grfrost,2026-01-03,2026-01-03,integrated,Oracle,,0,
+,807,Finally got rid of RefactorMe utils....,grfrost,2026-01-03,2026-01-03,integrated,Oracle,,0,
+,808,Hat simplify vector select phase,grfrost,2026-01-04,2026-01-04,integrated,Oracle,,0,
+,809,Switch to using optkl.Txfrmr where possible,grfrost,2026-01-04,2026-01-04,integrated,Oracle,,0,
+,810,"Avoid Trxfmr constructor, use  static factory of method",grfrost,2026-01-05,2026-01-05,integrated,Oracle,,0,
+,812,Added some more common OpHelpers,grfrost,2026-01-05,2026-01-05,integrated,Oracle,,0,
+,813,Allow Trxfmr to rename func,grfrost,2026-01-05,2026-01-05,integrated,Oracle,,0,
+,814,Array view and PtrOp changes,rbrchen,2026-01-05,2026-01-21,integrated,,,16,
+8374550,816,8374550: API for casting Value to Op.Result and Block.Parameter,rbrchen,2026-01-05,2026-01-08,integrated,,,3,PaulSandoz
+,817,Improve coverage of JavaCodeBuilder and moved to optkl,grfrost,2026-01-06,2026-01-06,integrated,Oracle,,0,
+,818,Moved C99 kernel specific building to KernelCodeBuilder,grfrost,2026-01-06,2026-01-06,integrated,Oracle,,0,
+,819,Added field store and load to JavaCodeBuilder,grfrost,2026-01-06,2026-01-06,integrated,Oracle,,0,
+,820,Adding more support to the JavaCodeBuilder,grfrost,2026-01-07,2026-01-07,integrated,Oracle,,0,
+,821,More OpHelper maintenance,grfrost,2026-01-07,2026-01-07,integrated,Oracle,,0,
+,822,Implementation of -XDreflectAll switch,asotona,2026-01-08,2026-01-09,integrated,Oracle,CZ,1,mcimadamore
+,823,Added config bit help also forced txfmr to take a lookup,grfrost,2026-01-08,2026-01-08,integrated,Oracle,,0,
+,824,JavaDoc fix.,PaulSandoz,2026-01-09,2026-01-09,integrated,Oracle,,0,
+,825,Refactor/Simpliy Thread Ops and Phases,grfrost,2026-01-09,2026-01-09,integrated,Oracle,,0,
+,826,Add BlockGroup experiment,grfrost,2026-01-09,2026-01-09,integrated,Oracle,,0,
+,827,Refactored Blockgroup also renamed some helper functs,grfrost,2026-01-09,2026-01-09,integrated,Oracle,,0,
+,828,Hat query experiments,grfrost,2026-01-11,2026-01-11,integrated,Oracle,,0,
+,829,Improved NormalizeBlocksTransformer and its application in BytecodeGenerator.,asotona,2026-01-12,2026-01-15,integrated,Oracle,CZ,3,PaulSandoz
+,830,[hat][bfloat16] round-to-nearest-even implemented,jjfumero,2026-01-12,2026-01-13,integrated,Oracle,,1,
+,831,Some more phase cleanup also added a few Query experiments,grfrost,2026-01-12,2026-01-12,integrated,Oracle,,0,
+,832,Derived Vector ops were shadowing fields in the base class,grfrost,2026-01-12,2026-01-12,integrated,Oracle,,0,
+,833,OpBuilder splitting into lambdas based on OP_LIMIT,asotona,2026-01-12,2026-01-14,integrated,Oracle,CZ,2,
+,834,Use SequencedSet,PaulSandoz,2026-01-12,2026-01-12,integrated,Oracle,,0,
+,835,Move liveness analysis to test,PaulSandoz,2026-01-12,2026-01-12,integrated,Oracle,,0,
+,836,Move Patterns to tests and examples.,PaulSandoz,2026-01-12,2026-01-12,integrated,Oracle,,0,
+,837,Added experiment mapping fluent op calls to BinaryOps,grfrost,2026-01-13,2026-01-13,integrated,Oracle,,0,
+,838,Forgot to add the actual experiment to previous PR,grfrost,2026-01-13,2026-01-13,integrated,Oracle,,0,
+,839,Hat lanewise binary op extraction experiment,grfrost,2026-01-13,2026-01-13,integrated,Oracle,,0,
+,840,More lanewise binary op experiments,grfrost,2026-01-14,2026-01-14,integrated,Oracle,,0,
+,841,More refactoring of HAT transformers and phases to use new helpers,grfrost,2026-01-14,2026-01-14,integrated,Oracle,,0,
+,842,Factory methods should return concrete op,PaulSandoz,2026-01-14,2026-01-14,integrated,Oracle,,0,
+,843,Rename Op.ofQuotable to Op.ofLambda.,PaulSandoz,2026-01-14,2026-01-14,integrated,Oracle,,0,
+,844,Replace the term quotable with reflectable lambda,PaulSandoz,2026-01-14,2026-01-14,integrated,Oracle,,0,
+,845,Make Quoted generic,PaulSandoz,2026-01-14,2026-01-15,integrated,Oracle,,1,mcimadamore
+,846,Catching and logging exceptions from BodyScanner::scanLambda when reflectAll enabled,asotona,2026-01-15,2026-01-15,integrated,Oracle,CZ,0,PaulSandoz
+,847,Hat make all c99 and java code builders scope aware,grfrost,2026-01-15,2026-01-15,integrated,Oracle,,0,
+,848,Simplify LanewiseBinaryOpExtraction now we have concrete types to check,grfrost,2026-01-15,2026-01-15,integrated,Oracle,,0,
+,849,Break infinite recursion in ReflectMethods::typeToTypeElement,asotona,2026-01-15,2026-01-16,integrated,Oracle,CZ,1,mcimadamore
+,850,Compare code elements and values.,PaulSandoz,2026-01-16,2026-01-20,integrated,Oracle,,4,
+,851,Experiments focused on injecting buffer tracking on statement boundaries,grfrost,2026-01-18,2026-01-18,integrated,Oracle,,0,
+,852,Cleaned up InjectBufferTracking experiment,grfrost,2026-01-18,2026-01-18,integrated,Oracle,,0,
+,853,HATVectorPhase cleanup/refactoring,grfrost,2026-01-19,2026-01-19,integrated,Oracle,,0,
+,854,[hat] Flash-Attention example added,jjfumero,2026-01-20,2026-01-21,integrated,Oracle,,1,
+,855,Simplified DeviceSchema creation and OpHelper + Vector Phase refactoring,grfrost,2026-01-20,2026-01-20,integrated,Oracle,,0,
+,856,[hat][api] Number of blocks introduced with kernelContext.bs[xyz],jjfumero,2026-01-21,2026-01-21,integrated,Oracle,,0,
+,857,"Queries turned out to be overly complex, so I  removed them",grfrost,2026-01-21,2026-01-21,integrated,Oracle,,0,
+,858,[hat] HATThreadOp simplified,jjfumero,2026-01-21,2026-01-22,integrated,Oracle,,1,
+,859,Refactor of device schema collection before I unify schema building,grfrost,2026-01-21,2026-01-21,integrated,Oracle,,0,
+,860,[hat] gitignore updated,jjfumero,2026-01-22,2026-01-22,integrated,Oracle,,0,
+,861,Reinstate SHOW_COMPILATION_PHASES,grfrost,2026-01-22,2026-01-22,integrated,Oracle,,0,
+,862,Pass comparator to TreeSet,PaulSandoz,2026-01-23,2026-01-23,integrated,Oracle,,0,
+,863,ReflectLambdaTest fix to avoid lambdas in local classes,asotona,2026-01-23,2026-01-23,integrated,Oracle,CZ,0,mcimadamore
+,864,Hat incrementally separate schema building from allocation,grfrost,2026-01-23,2026-01-23,integrated,Oracle,,0,
+,865,Fixes an issue with FP16 and BF16 types I pushed in previous PR,grfrost,2026-01-23,2026-01-23,integrated,Oracle,,0,
+,866,Replace class.getName() string compares with class.isAssignableFrom,grfrost,2026-01-23,2026-01-23,integrated,Oracle,,0,
+,867,Consistently use builder as the parameter name.,PaulSandoz,2026-01-23,2026-01-23,integrated,Oracle,,0,
+,868,HAT VevctorPhase refactoring ,grfrost,2026-01-25,2026-01-25,integrated,Oracle,,0,
+,869,Hat remove vector private shared state use interface instead,grfrost,2026-01-25,2026-01-25,integrated,Oracle,,0,
+,870,Simplify location copying and invoke regex name matching,grfrost,2026-01-26,2026-01-26,integrated,Oracle,,0,
+,871,Temporarily add varname back into binary ops to fix CUDA,grfrost,2026-01-26,2026-01-26,integrated,Oracle,,0,
+,872,fix of FerModel and MNISTModel demos,asotona,2026-01-26,2026-01-26,integrated,Oracle,CZ,0,
+,873,Some OpHelper additions based on vector phase use cases,grfrost,2026-01-27,2026-01-27,integrated,Oracle,,0,
+,874,Use buffer tagger for minimizing copies,rbrchen,2026-01-27,2026-02-10,integrated,,,14,
+,875,Mandel and Heal examples were broken. Here we add callsite caching,grfrost,2026-01-28,2026-01-28,integrated,Oracle,,0,
+,876,ONNX Update,asotona,2026-01-28,2026-02-07,integrated,Oracle,CZ,10,
+,877,Leverage OpHelper stream gatherer to simplify vector phase,grfrost,2026-01-29,2026-01-29,integrated,Oracle,,0,
+,878,Hat refactor callgraphs and entrypoints,grfrost,2026-01-29,2026-01-29,integrated,Oracle,,0,
+,879,Forgot to add MethodCall iface in last PR,grfrost,2026-01-29,2026-01-29,integrated,Oracle,,0,
+,881,Updates to CodeItem and subtypes.,PaulSandoz,2026-01-29,2026-01-30,integrated,Oracle,,1,
+,882,Move Location to Op.Location.,PaulSandoz,2026-01-30,2026-01-30,integrated,Oracle,,0,
+,883,Fixup ComputeContext import after recent Location refactoring,grfrost,2026-01-31,2026-01-31,integrated,Oracle,,0,
+,884,Refactor/Simplify  CallGraph using OpHelpers,grfrost,2026-01-31,2026-01-31,integrated,Oracle,,0,
+,885,Hat add shade example,grfrost,2026-02-01,2026-02-01,integrated,Oracle,,0,
+,886,Raster performance tests for example-shade,grfrost,2026-02-01,2026-02-01,integrated,Oracle,,0,
+,887,Make CodeContext a final class,PaulSandoz,2026-02-02,2026-02-03,integrated,Oracle,,1,
+,888,HAT shade buildout,grfrost,2026-02-03,2026-02-03,integrated,Oracle,,0,
+,889,Moved/Cloned nbody -> nbodygl and nbody now glfree,grfrost,2026-02-03,2026-02-03,integrated,Oracle,,0,
+,890,Terminology updates,PaulSandoz,2026-02-03,2026-02-03,integrated,Oracle,,0,
+,891,Updated Quoted,PaulSandoz,2026-02-03,2026-02-03,integrated,Oracle,,0,
+,892,Update reflect doc.,PaulSandoz,2026-02-04,2026-02-04,integrated,Oracle,,0,
+,893,Moved raster code from shade to experiments and de-dupped typedefs,grfrost,2026-02-04,2026-02-04,integrated,Oracle,,0,
+,894,Hat shade toy UI,grfrost,2026-02-05,2026-02-05,integrated,Oracle,,0,
+,895,Make Shader a functional interface and separate components,grfrost,2026-02-05,2026-02-05,integrated,Oracle,,0,
+,896,Fixed fragCoord and add iMouse and iResolution uniforms,grfrost,2026-02-05,2026-02-05,integrated,Oracle,,0,
+,897,Fix javadoc warnings in JavaType hierarchy,mcimadamore,2026-02-05,2026-02-06,integrated,Oracle,GB,1,
+,898,Move classes in analysis pkg to dilect pkgs,PaulSandoz,2026-02-05,2026-02-06,integrated,Oracle,,1,mcimadamore
+,899,Add missing diagnostics to examples.not-yet.txt,mcimadamore,2026-02-06,2026-02-06,integrated,Oracle,GB,0,
+,900,Address javadoc warnings -- part 1,mcimadamore,2026-02-06,2026-02-06,integrated,Oracle,GB,0,PaulSandoz
+,901,"Added F32Math mat2 and mod,mix and step funcs",grfrost,2026-02-06,2026-02-06,integrated,Oracle,,0,
+,902,Address javadoc warnings -- part 2,mcimadamore,2026-02-06,2026-02-06,integrated,Oracle,GB,0,PaulSandoz
+,903,Detaching Interpreter from bytecode.impl package,asotona,2026-02-06,2026-02-06,integrated,Oracle,CZ,0,PaulSandoz
+,904,Added random/hash shader examples,grfrost,2026-02-06,2026-02-06,integrated,Oracle,,0,
+,905,Add package-info.java to runtime package,mcimadamore,2026-02-06,2026-02-06,integrated,Oracle,GB,0,
+,906,Remove duplication in ReflectableLambdaMetafactory javadoc,mcimadamore,2026-02-06,2026-02-06,integrated,Oracle,GB,0,PaulSandoz
+,907,Remove use of Interpreter for the samples,PaulSandoz,2026-02-06,2026-02-06,integrated,Oracle,,0,
+,908,Quoted.extractOp fails when passed an array containing a null element,PaulSandoz,2026-02-06,2026-02-07,integrated,Oracle,,1,
+,909,Clarify javadoc of Java operations,mcimadamore,2026-02-09,2026-02-13,integrated,Oracle,GB,4,PaulSandoz
+,910,Added mat3 and fleshed out vec ops,grfrost,2026-02-10,2026-02-10,integrated,Oracle,,0,
+,911,[hat] Initial version of a Math Library ,jjfumero,2026-02-12,2026-02-20,integrated,Oracle,,8,
+,912,Hat move shade vecs to core,grfrost,2026-02-12,2026-02-12,integrated,Oracle,,0,
+,913,Unify marker interface usage for vector and matrix types,grfrost,2026-02-12,2026-02-12,integrated,Oracle,,0,
+,914,Initial HAT implementation of example-shade,grfrost,2026-02-13,2026-02-13,integrated,Oracle,,0,
+,915,Make javadoc of factories in JavaOp consistent,mcimadamore,2026-02-13,2026-02-13,integrated,Oracle,GB,0,
+,916,"Replace usages of ""descriptor"" with ""reference"" in JavaOp",mcimadamore,2026-02-13,2026-02-18,integrated,Oracle,GB,5,PaulSandoz
+,917,Hat separate shaders,grfrost,2026-02-14,2026-02-14,integrated,Oracle,,0,
+,918,Use existing optkl textmodel to parse GLSL shaders,grfrost,2026-02-15,2026-02-15,integrated,Oracle,,0,
+,919,Hat remove fluent style vec and mat operations,grfrost,2026-02-15,2026-02-15,integrated,Oracle,,0,
+,920,HAT fix shade wave example,grfrost,2026-02-17,2026-02-17,integrated,Oracle,,0,
+,921,Tidied up previous shade examples,grfrost,2026-02-17,2026-02-17,integrated,Oracle,,0,
+,922,Parameterized test methods should be non-static.,PaulSandoz,2026-02-17,2026-02-17,integrated,Oracle,,0,
+,923,Refactor array view,rbrchen,2026-02-17,2026-03-04,integrated,,,15,
+,924,Hat itime should be float,grfrost,2026-02-18,2026-02-18,integrated,Oracle,,0,
+,925,Improve dialect FMA example,jjfumero,2026-02-18,2026-02-20,integrated,Oracle,,2,PaulSandoz
+,926,Update SPIRV to pom,PaulSandoz,2026-02-18,2026-02-18,integrated,Oracle,,0,
+,927,ONNX debug logging,asotona,2026-02-18,2026-02-23,integrated,Oracle,CZ,5,
+,928,Rename `BinaryTestOp` to `CompareOp`,PaulSandoz,2026-02-18,2026-02-19,integrated,Oracle,,1,
+8376974,929,8376974: Evaluate constant expressions,mabbay,2026-02-19,2026-03-03,integrated,Oracle,,12,
+,930,Hat automate creation of vec and mat methods,grfrost,2026-02-20,2026-02-20,integrated,Oracle,,0,
+,931,[hat] F16 dialect refactored,jjfumero,2026-02-20,2026-03-04,integrated,Oracle,,12,
+,932,Add .iml dependency example-shared for flashattention,grfrost,2026-02-20,2026-02-20,integrated,Oracle,,0,
+,933,Generating javadoc for OnnxOperators,asotona,2026-02-23,2026-02-23,integrated,Oracle,CZ,0,
+,934,Hat auto generate c99 vec mappings using codebuilders,grfrost,2026-02-24,2026-02-24,integrated,Oracle,,0,
+,935,Clean up doc of OpWriter and OpParser,PaulSandoz,2026-02-24,2026-02-24,integrated,Oracle,,0,
+,936,[hat] Fix for private/shared memory of UDT,jjfumero,2026-02-25,2026-03-04,integrated,Oracle,,7,
+,937,Hat add useful codebuilder shortcuts,grfrost,2026-02-25,2026-02-25,integrated,Oracle,,0,
+,938,BytecodeGenerator: replace OpParser call with OpBuilder-generated code for reflectable lambdas,asotona,2026-02-25,2026-02-26,integrated,Oracle,CZ,1,
+,939,Turn Reflect warnings into errors,asotona,2026-02-26,2026-02-26,integrated,Oracle,CZ,0,PaulSandoz
+,940,Hat add step vec function and new shaders,grfrost,2026-02-27,2026-02-27,integrated,Oracle,,0,
+,941,Added simple Square experiment,grfrost,2026-02-28,2026-02-28,integrated,Oracle,,0,
+,942,Fixed truchet shader. Was matmul typo. Also new Shaders,grfrost,2026-03-01,2026-03-01,integrated,Oracle,,0,
+,943,[hat] CUDA backend chores,jjfumero,2026-03-02,2026-03-04,integrated,Oracle,,2,
+,944,[hat] Mixed float/f16 operations from globalMemory,jjfumero,2026-03-02,2026-03-03,integrated,Oracle,,1,
+,945,Split buffer access and inliner gave codegen access to callgraph data,grfrost,2026-03-02,2026-03-02,integrated,Oracle,,0,
+,946,[hat] Improves the testing framework report,jjfumero,2026-03-03,2026-03-03,integrated,Oracle,,0,
+,947,Removed dangling value->result elses in cl codegen and added helpers ,grfrost,2026-03-03,2026-03-03,integrated,Oracle,,0,
+,948,Hat remove dead code from callgraphs and entrypoints,grfrost,2026-03-04,2026-03-04,integrated,Oracle,,0,
+,949,Hat use vec builder to generate c99 methods,grfrost,2026-03-04,2026-03-04,integrated,Oracle,,0,
+,950,Buffer tagger cleanup,rbrchen,2026-03-04,2026-03-13,integrated,,,9,
+,951,Update the modeling of switch label,mabbay,2026-03-05,2026-03-13,integrated,Oracle,,8,PaulSandoz
+,952,Hat kernel callgraph was missing reachable methods,grfrost,2026-03-06,2026-03-06,integrated,Oracle,,0,
+,953,Hat fix shader app stutter and add hat enabled shaders,grfrost,2026-03-08,2026-03-08,integrated,Oracle,,0,
+,956,[hat] Debug information improved,jjfumero,2026-03-09,2026-03-09,integrated,Oracle,,0,
+,958,"[hat][docs] installation, setup and testing updated",jjfumero,2026-03-10,2026-03-11,integrated,Oracle,,1,
+,959,Move runtime tests,mabbay,2026-03-10,2026-03-12,integrated,Oracle,,2,PaulSandoz
+,960,Hat convert all shaders to use virtual image,grfrost,2026-03-10,2026-03-10,integrated,Oracle,,0,
+,961,Vectorized nbody and mapped mat3 opencl methods,grfrost,2026-03-11,2026-03-11,integrated,Oracle,,0,
+,962,Improvements to constant expression evaluation,mabbay,2026-03-11,2026-03-12,integrated,Oracle,,1,PaulSandoz
+,963,[hat] update README file,jjfumero,2026-03-11,2026-03-11,integrated,Oracle,,0,
+,964,Fix JavaType::equals implementation,mcimadamore,2026-03-11,2026-03-12,integrated,Oracle,GB,1,PaulSandoz
+,965,Remove extra @Reflect flashattention demo,jjfumero,2026-03-12,2026-03-12,integrated,Oracle,,0,
+,966,Fixed kernel callgraph ordering using DAG,grfrost,2026-03-13,2026-03-13,integrated,Oracle,,0,
+,967,Hat more vec and mat func mappings,grfrost,2026-03-13,2026-03-13,integrated,Oracle,,0,
+,968,Remove babylon interpreter dependency,grfrost,2026-03-13,2026-03-13,integrated,Oracle,,0,
+,970,Fix IntroShader and tidyup vec and mat mappings for opencl,grfrost,2026-03-14,2026-03-14,integrated,Oracle,,0,
+,971,Added shader viewer controls as well as FPS and shader time,grfrost,2026-03-14,2026-03-14,integrated,Oracle,,0,
+,972,ONNX LlamaModel example fix,asotona,2026-03-16,2026-03-16,integrated,Oracle,CZ,0,
+,973,Various fixes to java side and opencl mapped vecs and mats,grfrost,2026-03-16,2026-03-16,integrated,Oracle,,0,
+,974,[hat] fix flag to show kernel model,jjfumero,2026-03-18,2026-03-18,integrated,Oracle,,0,
+,975,fix step and allow width/height to differ - galaxy shader,grfrost,2026-03-18,2026-03-18,integrated,Oracle,,0,

@@ -1,0 +1,252 @@
+bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,reviewers
+8273607,1,8273607: Import crac/jdk,AntonKozlov,2021-09-03,2021-09-14,integrated,Azul,,11,simonis
+,3,Decouple JVM and CRIU,AntonKozlov,2021-10-28,2021-11-10,integrated,Azul,,13,DanHeidinga
+,6,Disable recursive checkpoint,alexeybakhtin,2021-12-07,2022-01-11,integrated,Azul,,35,AntonKozlov
+,7,Reseed secure random on checkpoint restore,alexeybakhtin,2021-12-17,2022-01-31,integrated,Azul,,45,AntonKozlov
+,8,JDKResource priorities,alexeybakhtin,2021-12-20,2022-01-08,integrated,Azul,,19,"DanHeidinga,AntonKozlov"
+,9,Reseed NativePRNG on checkpoint restore,alexeybakhtin,2021-12-23,2022-01-28,integrated,Azul,,36,AntonKozlov
+,10,Report checkpoint processing to jcmd,Larry-N,2022-01-25,2022-11-10,integrated,,,289,AntonKozlov
+,11,Run native CRaC checks after failed beforeCheckpoint,AntonKozlov,2022-01-28,2022-02-10,integrated,Azul,,13,Larry-N
+,12,Get tracing properties lazily,AntonKozlov,2022-01-28,2022-01-31,integrated,Azul,,3,DanHeidinga
+,13,Ensure empty Reference Handler and Cleaners queues,AntonKozlov,2022-01-31,2022-02-01,integrated,Azul,,1,DanHeidinga
+,14,Clear JarFileFactory cache on checkpoint,AntonKozlov,2022-02-01,2022-02-10,integrated,Azul,,9,alexeybakhtin
+,15,[TEST] check if some j.l.* methods time out on restore immediately,stepanov17,2022-02-04,2022-03-16,integrated,,,40,AntonKozlov
+,16,Provide arguments for restore,AntonKozlov,2022-02-11,2022-04-08,integrated,Azul,,56,alexeybakhtin
+,17,Fix NPE on ZipFile$Source access,AntonKozlov,2022-03-03,2022-04-11,integrated,Azul,,39,DanHeidinga
+,18,Collect CREngine child,AntonKozlov,2022-04-07,2022-04-22,integrated,Azul,,15,DanHeidinga
+,20,Disable non-buildable platforms in GHA,AntonKozlov,2022-04-12,2022-04-18,integrated,Azul,,6,DanHeidinga
+,21,Allow users to pass new properties on restore,ashu-mehra,2022-04-14,2022-05-30,integrated,IBM,CA,46,AntonKozlov
+,23,Fix crash after shm_open failure,AntonKozlov,2022-06-07,2022-06-10,integrated,Azul,,3,DanHeidinga
+,25,Don't crash the VM if checkpointing fails,simonis,2022-06-29,2022-06-29,integrated,Amazon,DE,0,AntonKozlov
+,26,Support extra criu flags from the environment,simonis,2022-06-29,2022-07-04,integrated,Amazon,DE,5,AntonKozlov
+,27,Block RESTORE_SIGNAL in all threads,simonis,2022-07-05,2022-07-06,integrated,Amazon,DE,1,AntonKozlov
+,29,API for restore time,AntonKozlov,2022-09-12,2022-09-28,integrated,Azul,,16,snazarkin
+,30,Environment vars propagation into restored process,wkia,2022-09-29,2022-10-24,integrated,Azul,,25,AntonKozlov
+,32,Add CRAC_CRIU_LEAVE_RUNNING option,AntonKozlov,2022-10-11,2022-10-12,integrated,Azul,,1,simonis
+,34,Backout new API to sync with Reference Handler,AntonKozlov,2022-11-10,2023-05-03,integrated,Azul,,174,
+,35,Assume module jars persistent,AntonKozlov,2022-11-29,2022-12-01,integrated,Azul,,2,DanHeidinga
+,36,Fix [ASSERT] compilation error after fdf4eb8dd5c2a11176eb1ec8f40b3f4133a872aa,jankratochvil,2022-12-01,2022-12-01,integrated,Azul,,0,AntonKozlov
+,38,Print peristent JAR assumptions,AntonKozlov,2022-12-09,2022-12-19,integrated,Azul,,10,DanHeidinga
+,40,DNS cache maintenance,rvansa,2023-01-05,2023-02-21,integrated,Azul,,47,AntonKozlov
+,41,RFC: -XX:CPUFeatures=0xnumber for CPU migration,jankratochvil,2023-01-30,2023-06-26,integrated,Azul,,147,
+,43,Improved open file descriptors tracking,rvansa,2023-01-31,2023-05-11,integrated,Azul,,100,AntonKozlov
+,44,Fix failures in testsuite,rvansa,2023-02-02,2023-02-14,integrated,Azul,,12,AntonKozlov
+,45,Close extraneous file descriptors,rvansa,2023-02-16,2023-02-28,integrated,Azul,,12,AntonKozlov
+,46,CRaC may exit before image dump is completed,wkia,2023-02-21,2023-03-15,integrated,Azul,,22,AntonKozlov
+,47,Fix failing CRaC tests,rvansa,2023-02-22,2023-03-01,integrated,Azul,,7,AntonKozlov
+,48,Add CRaC-specific tests to GHA,rvansa,2023-02-22,2023-03-24,integrated,Azul,,30,AntonKozlov
+,49,Document CRaCCheckpointTo and CRaCRestoreFrom in java(1) man page,jankratochvil,2023-02-23,2023-03-02,integrated,Azul,,7,AntonKozlov
+,50,Convert CRaC tests from shell scripts to Java,rvansa,2023-02-24,2023-03-20,integrated,Azul,,24,AntonKozlov
+,51,CRaC related documentation in JDK classes using custom tag,rvansa,2023-02-28,2023-07-19,integrated,Azul,,141,AntonKozlov
+,52,Implement CRaC exit codes,wkia,2023-03-20,2023-03-24,integrated,Azul,,4,
+,53,Correct System.nanotime() value after restore,rvansa,2023-03-23,2023-06-19,integrated,Azul,,88,
+,55,Let ReseedTest use stdout rather than exit codes,rvansa,2023-03-24,2023-03-24,integrated,Azul,,0,AntonKozlov
+,56,Harden criuengine cppath reading,AntonKozlov,2023-03-24,2023-04-13,integrated,Azul,,20,rvansa
+,59,Improve modules handling in initial FD bookkeeping,AntonKozlov,2023-04-20,2023-04-21,integrated,Azul,,1,rvansa
+,60,Fix ordering of invocation on Resources,rvansa,2023-04-21,2023-05-10,integrated,Azul,,19,
+,61,Support updating MANAGEABLE JVM options during restore,rvansa,2023-04-28,2023-05-18,integrated,Azul,,20,AntonKozlov
+,62,Ensure all notifications finish even if only daemon threads remain,AntonKozlov,2023-05-04,2023-05-25,integrated,Azul,,21,rvansa
+,63,Support passing extra options in CREngine,rvansa,2023-05-10,2023-06-15,integrated,Azul,,36,AntonKozlov
+,64,Make CheckpointException/RestoreException aggregate-only,rvansa,2023-05-10,2023-06-09,integrated,Azul,,30,AntonKozlov
+,66,Register CallSite cleaners with higher priority,rvansa,2023-05-12,2023-05-12,integrated,Azul,,0,AntonKozlov
+,67,List open FDs through reading /proc/self/fd,rvansa,2023-05-12,2023-05-26,integrated,Azul,,14,AntonKozlov
+,69,Handle open file descriptors with configurable policies,rvansa,2023-05-12,2023-07-19,integrated,Azul,,68,
+,73,Active cleanup by CleanerImpl on checkpoint,rvansa,2023-05-16,2023-06-08,integrated,Azul,,23,AntonKozlov
+,74,Introduce per-Priority Context with different policies,AntonKozlov,2023-05-17,2023-06-06,integrated,Azul,,20,rvansa
+,75,Remove code trigger register during checkpointRestore,j0826,2023-05-25,2023-05-25,integrated,,,0,"rvansa,AntonKozlov"
+,76,Do not register MethodHandleNatives,AntonKozlov,2023-05-25,2023-05-26,integrated,Azul,,1,rvansa
+,79,Move more FD tracking to java layer,AntonKozlov,2023-06-07,2023-06-13,integrated,Azul,,6,rvansa
+,80,Do not add generic native checkpoint error in dry runs,rvansa,2023-06-12,2023-06-12,integrated,Azul,,0,AntonKozlov
+,81,Fixing VMOptionsTest.java,wkia,2023-06-13,2023-06-15,integrated,Azul,,2,rvansa
+,82,Win/Mac build for CRaC,wkia,2023-06-15,2023-07-10,integrated,Azul,,25,AntonKozlov
+,83,Fix recursiveCheckpoint/Test passing extra comma,rvansa,2023-06-16,2023-06-16,integrated,Azul,,0,wkia
+,84,Extract crac functionality into OS-agnostic files,wkia,2023-06-16,2023-07-03,integrated,Azul,,17,"rvansa,AntonKozlov"
+,85,Wake up all TIMED_WAITING threads after restore,rvansa,2023-06-19,2023-06-30,integrated,Azul,,11,AntonKozlov
+,86,PID adjustment on checkpoint,wkia,2023-06-20,2023-07-03,integrated,Azul,,13,
+,87,Selectable Global Context implementation,AntonKozlov,2023-06-26,2023-07-04,integrated,Azul,,8,rvansa
+,88,Fix JVMCI after #41,AntonKozlov,2023-06-28,2023-06-29,integrated,Azul,,1,wkia
+,89,Workaround JDK-8311164: CPU_HT is set randomly on hybrid CPUs like Alder Lake,jankratochvil,2023-06-30,2023-06-30,integrated,Azul,,0,"rvansa,AntonKozlov"
+,90,Implement: -XX:+UseZGC is currently unsupported for -XX:CRaCCheckpointTo,jankratochvil,2023-07-15,2023-07-18,integrated,Azul,,3,"rvansa,AntonKozlov"
+,91,Adapted some FileDescriptor tests for Win,wkia,2023-07-24,2023-08-16,integrated,Azul,,23,"rvansa,AntonKozlov"
+,92,macOS build fixes,wkia,2023-07-24,2023-07-25,integrated,Azul,,1,rvansa
+,93,Ensure G1 GC is completed before creating a snapshot,jankratochvil,2023-07-25,2023-09-04,integrated,Azul,,41,AntonKozlov
+,94,Fix wrong if conditional braces hidden by wrong indentation.,jankratochvil,2023-07-27,2023-07-28,integrated,Azul,,1,AntonKozlov
+,97,Print better diagnostics for spawning CRIU,jankratochvil,2023-07-31,2023-08-10,integrated,Azul,,10,AntonKozlov
+,98,C++ize criuengine,jankratochvil,2023-08-03,2023-08-03,integrated,Azul,,0,AntonKozlov
+,100,Support -XX:+IgnoreCPUFeatures during -XX:CRaCRestoreFrom,jankratochvil,2023-08-09,2023-08-21,integrated,Azul,,12,AntonKozlov
+,102,Fix missing include file.,jankratochvil,2023-08-11,2023-08-12,integrated,Azul,,1,AntonKozlov
+,103,Keep _features the same after CRaC restore,jankratochvil,2023-08-11,2023-08-17,integrated,Azul,,6,AntonKozlov
+,104,Fix builds,AntonKozlov,2023-08-12,2023-08-15,integrated,Azul,,3,jankratochvil
+,105,Synchronize CPUFeatures with JDK trunk,jankratochvil,2023-08-13,2023-08-15,integrated,Azul,,2,AntonKozlov
+,106,Prevent an assertion: Attempting to acquire lock PeriodicTask_lock...,jankratochvil,2023-08-20,2023-08-25,integrated,Azul,,5,"rvansa,AntonKozlov"
+,107,Remove a needless whitespace change and a needless #include file,jankratochvil,2023-09-02,2023-09-04,integrated,Azul,,2,rvansa
+,109,Fix ArchivedEnumTest.java testsuite regression,jankratochvil,2023-09-03,2023-09-05,integrated,Azul,,2,"rvansa,AntonKozlov"
+,110,Fix lock usage in ReferenceQueue,rvansa,2023-09-07,2023-09-13,integrated,Azul,,6,AntonKozlov
+,111,Remove criuengine dependency on libstdc++,jankratochvil,2023-09-16,2023-09-19,integrated,Azul,,3,"rvansa,AntonKozlov"
+,113,CRaC: Fix fds opened for logging,jankratochvil,2023-09-19,2023-10-06,integrated,Azul,,17,rvansa
+,114,CRaC: criuengine.c: Use asprintf(),jankratochvil,2023-09-19,2023-09-20,integrated,Azul,,1,rvansa
+,115,"Fix: docker: Error response from daemon: Conflict. The container name ""/crac-test"" is already in use",jankratochvil,2023-09-20,2023-09-26,integrated,Azul,,6,rvansa
+,116,Close files opened by Decoder before checkpoint,rvansa,2023-09-25,2023-10-27,integrated,Azul,,32,AntonKozlov
+,117,Fix clang compilation error,jankratochvil,2023-09-25,2023-09-26,integrated,Azul,,1,rvansa
+,118,Improved classpath matching,rvansa,2023-09-26,2023-09-29,integrated,Azul,,3,AntonKozlov
+,119,Drop perfdata and cppath,rvansa,2023-09-27,2023-10-23,integrated,Azul,,26,AntonKozlov
+,120,Fix compilation error on OSX,jankratochvil,2023-09-29,2023-09-29,integrated,Azul,,0,rvansa
+,121,Fix OSX x86_64 CRaC crash,jankratochvil,2023-09-29,2023-10-02,integrated,Azul,,3,rvansa
+,122,Fix compilation with clang,jankratochvil,2023-10-05,2023-10-06,integrated,Azul,,1,rvansa
+,123,Fix OSX failure in SunMiscSignalTest,rvansa,2023-10-06,2023-11-16,integrated,Azul,,41,"wkia,AntonKozlov"
+,124,Handle C/R in BasicImageReader (via reflection),rvansa,2023-10-06,2023-11-16,integrated,Azul,,41,AntonKozlov
+,125,Stabilize GHA testsuite,rvansa,2023-10-06,2023-11-16,integrated,Azul,,41,AntonKozlov
+,126,"Update the ""modified criu"" link to the latest release",pushkarnk,2023-10-16,2023-10-17,integrated,,,1,rvansa
+,127,-XX:+ShowCPUFeatures: Fix double 0x (0x0x),jankratochvil,2023-10-16,2023-10-17,integrated,Azul,,1,rvansa
+,128,Fix test when running as root,rvansa,2023-10-17,2023-11-16,integrated,Azul,,30,AntonKozlov
+,129,Fixing crash on restore when user name is not set,wkia,2023-10-17,2023-10-18,integrated,Azul,,1,rvansa
+,130,Reset JVM start time and up time on restore (CRaCResetStartTime),wkia,2023-10-17,2023-10-24,integrated,Azul,,7,rvansa
+,135,Changing CRaCResetStartTime flag defaults,wkia,2023-10-27,2023-11-09,integrated,Azul,,13,AntonKozlov
+,136,Remove INCLUDE_LD_SO_LIST_DIAGNOSTICS,jankratochvil,2023-10-31,2023-11-10,integrated,Azul,,10,rvansa
+,137,Ignore open files in /var/lib/sss/mc,rvansa,2023-11-02,2023-11-09,integrated,Azul,,7,AntonKozlov
+,138,Fix Windows build of Decoder,rvansa,2023-11-09,2023-11-16,integrated,Azul,,7,AntonKozlov
+,139,GLIBC->CPU flags optimization,jankratochvil,2023-11-10,2024-03-28,integrated,Azul,,139,rvansa
+,140,More robust classpath parsing,rvansa,2023-11-15,2023-11-23,integrated,Azul,,8,"wkia,AntonKozlov"
+,142,Print additional info for socket which still opened on checkpoint,wkia,2023-11-21,2023-11-22,integrated,Azul,,1,rvansa
+,144,Adjusting CRaC tests,wkia,2023-11-22,2023-12-22,integrated,Azul,,30,rvansa
+8321660,148,8321660: [CRaC] Trim native heap before checkpoint to decrease image size,simonis,2023-12-10,2023-12-13,integrated,Amazon,DE,3,rvansa
+8328344,153,8328344: [CRaC] Avoid error when running with -XX:+PerfDisableSharedMem,simonis,2024-03-18,2024-03-28,integrated,Amazon,DE,10,AntonKozlov
+,155,Portable C/R,TimPushkin,2024-06-04,2024-07-11,integrated,Azul,,37,AntonKozlov
+,157,Merge jdk17u:jdk-17.0.12+7,rvansa,2024-08-30,2024-12-06,integrated,Azul,,98,AntonKozlov
+8346907,158,8346907: [CRaC] Print RESTORE_SETTABLE marker,jankratochvil,2024-11-07,2025-01-07,integrated,Azul,,61,"TimPushkin,rvansa"
+,160,Merge jdk:jdk-24+20,dimitryc,2024-12-05,2024-12-06,integrated,,,1,rvansa
+8346178,161,8346178: [CRaC] Failure in com/sun/management/DiagnosticCommandMBean/DcmdMBeanPermissionsTest.java,TimPushkin,2024-12-13,2024-12-17,integrated,Azul,,4,rvansa
+8346387,163,8346387: [CRaC] Add --with-criu configure option,TimPushkin,2024-12-17,2024-12-17,integrated,Azul,,0,rvansa
+8346386,164,8346386: [CRaC] Move CRaC’s Java code out of restricted packages,TimPushkin,2024-12-17,2024-12-20,integrated,Azul,,3,rvansa
+,165,Merge jdk:jdk-24+21,dimitryc,2024-12-17,2024-12-19,integrated,,,2,rvansa
+8346765,166,8346765: [CRaC] Could not find criuengine on Windows and Mac,TimPushkin,2024-12-23,2024-12-23,integrated,Azul,,0,rvansa
+8346766,167,8346766: [CRaC] tools/launcher/HelpFlagsTest.java and tools/launcher/VersionCheck.java tests fail on Windows,TimPushkin,2024-12-23,2024-12-23,integrated,Azul,,0,rvansa
+8346768,168,8346768: [CRaC] Ignore errors parsing classpath,TimPushkin,2024-12-23,2024-12-30,integrated,Azul,,7,rvansa
+8346796,169,8346796: [CRaC] Initialize clock before restore on Mac,TimPushkin,2024-12-24,2024-12-30,integrated,Azul,,6,AntonKozlov
+,170,Merge jdk:jdk-24+22,dimitryc,2025-01-03,2025-01-03,integrated,,,0,AntonKozlov
+8347055,171,8347055: [CRaC] Remote JMX support,TimPushkin,2025-01-06,2025-01-06,integrated,Azul,,0,rvansa
+8347056,172,8347056: [CRaC] Propagating CRaC events to JVMTI agents,TimPushkin,2025-01-06,2025-01-06,integrated,Azul,,0,rvansa
+8347060,173,8347060: [CRaC] Some tests cannot run in parallel,TimPushkin,2025-01-07,2025-01-07,integrated,Azul,,0,rvansa
+8347062,174,8347062: [CRaC] Support checkpoint/restore in JDWP,TimPushkin,2025-01-08,2025-01-09,integrated,Azul,,1,
+8347257,175,8347257: [CRaC] Checkpoint call may sometimes hang,TimPushkin,2025-01-08,2025-01-09,integrated,Azul,,1,rvansa
+8347290,176,8347290: [CRaC] JVM log prevents checkpoint,TimPushkin,2025-01-08,2025-01-09,integrated,Azul,,1,rvansa
+8347350,177,8347350: [CRaC] Support JRT FS FD,TimPushkin,2025-01-09,2025-01-09,integrated,Azul,,0,rvansa
+8347355,178,8347355: [CRaC] Restore errors are not visible,TimPushkin,2025-01-09,2025-01-09,integrated,Azul,,0,rvansa
+8347430,179,8347430: [CRaC] ContainerPidAdjustmentTest fails on WSL,TimPushkin,2025-01-10,2025-01-13,integrated,Azul,,3,rvansa
+,180,Merge jdk:jdk-24+24,dimitryc,2025-01-10,2025-01-13,integrated,,,3,rvansa
+8347514,181,8347514: [CRaC] Checkpoint fails with CheckUnhandledOops,TimPushkin,2025-01-13,2025-01-13,integrated,Azul,,0,rvansa
+8347532,182,8347532: [CRaC] CRaCResetStartTime breaks cgroups caching,TimPushkin,2025-01-13,2025-01-13,integrated,Azul,,0,rvansa
+8347551,183,8347551: [CRaC] CRaC-related VM options are not consistent,TimPushkin,2025-01-13,2025-01-14,integrated,Azul,,1,
+,184,Merge jdk:jdk-24+25,dimitryc,2025-01-14,2025-01-17,integrated,,,3,rvansa
+8347993,185,8347993: [CRaC] Assertion error in os::cleanup_memory(),TimPushkin,2025-01-17,2025-01-20,integrated,Azul,,3,
+8347991,186,8347991: [CRaC] ContainerPidAdjustmentTest takes too long to run,TimPushkin,2025-01-17,2025-01-20,integrated,Azul,,3,rvansa
+,187,Merge jdk:jdk-24+26,dimitryc,2025-01-20,2025-01-20,integrated,,,0,rvansa
+,188,Merge jdk:jdk-24+27,dimitryc,2025-01-22,2025-02-12,integrated,,,21,TimPushkin
+8348650,189,8348650: [CRaC] Limit heap size before checkpoint,TimPushkin,2025-01-27,2025-01-27,integrated,Azul,,0,rvansa
+8348666,190,8348666: [CRaC] sun.nio.ch.Pollers does not handle checkpoint,TimPushkin,2025-01-27,2025-01-28,integrated,Azul,,1,rvansa
+8348670,191,8348670: [CRaC] VirtualAllocCommitUncommitRecommit.java sometimes hangs,TimPushkin,2025-01-27,2025-01-28,integrated,Azul,,1,rvansa
+8348674,192,8348674: [CRaC] Check whether CRaCRestoreFrom does exist,TimPushkin,2025-01-27,2025-01-28,integrated,Azul,,1,rvansa
+8348869,193,8348869: [CRaC] Restore args are split by whitespaces incorrectly,TimPushkin,2025-01-28,2025-02-03,integrated,Azul,,6,rvansa
+8348867,194,8348867: [CRaC] Simplify CPUFeatures code,TimPushkin,2025-01-28,2025-01-30,integrated,Azul,,2,rvansa
+8348925,195,8348925: [CRaC] Automatic CRaC support for LinuxWatchService,TimPushkin,2025-01-29,2025-01-29,integrated,Azul,,0,rvansa
+8348927,196,8348927: [CRaC] Handle boot-id not ending with newline,TimPushkin,2025-01-29,2025-02-03,integrated,Azul,,5,rvansa
+8348929,197,8348929: [CRaC] Use /tmp for restore parameters storage,TimPushkin,2025-01-29,2025-01-30,integrated,Azul,,1,rvansa
+8348934,198,8348934: [CRaC] Drop CRTrace VM option,TimPushkin,2025-01-29,2025-01-30,integrated,Azul,,1,rvansa
+8349071,199,8349071: [CRaC] Disable rseq in libc on checkpoint and restore,TimPushkin,2025-01-30,2025-02-01,integrated,Azul,,2,"rvansa,AntonKozlov"
+8349131,200,8349131: [CRaC] Internal error on old glibc with pre-set GLIBC_TUNABLES and CPUFeatures restriction,TimPushkin,2025-01-31,2025-02-03,integrated,Azul,,3,rvansa
+8349365,201,8349365: [CRaC] Handle javaagent adding jars to boostrap/system classpath,rvansa,2025-02-05,2025-02-10,integrated,Azul,,5,TimPushkin
+8349560,202,8349560: [CRaC] Close EPoll FDs when FD policies close registered sockets,rvansa,2025-02-06,2025-02-13,integrated,Azul,,7,TimPushkin
+8350088,203,8350088: [CRaC] Stop & restart JFR recording on checkpoint,rvansa,2025-02-14,2025-02-20,integrated,Azul,,6,TimPushkin
+8349819,204,8349819: [CRaC] Support FD policy reopen on listening socket,rvansa,2025-02-14,2025-02-20,integrated,Azul,,6,TimPushkin
+8350569,205,8350569: [CRaC] Log level of 'crac' cannot be changed on checkpoint,TimPushkin,2025-02-24,2025-02-25,integrated,Azul,,1,rvansa
+,206,Merge jdk:jdk-25+1,dimitryc,2025-02-25,2025-03-06,integrated,,,9,AntonKozlov
+8350845,207,8350845: [CRaC] Support C/R engines in form of a library,TimPushkin,2025-02-27,2025-03-06,integrated,Azul,,7,rvansa
+,208,Merge jdk:jdk-25+2,dimitryc,2025-03-07,2025-03-25,integrated,,,18,rvansa
+8351695,210,8351695: [CRaC] Cannot restore immediately without default restore data,TimPushkin,2025-03-11,2025-03-11,integrated,Azul,,0,rvansa
+8351701,211,8351701: [CRaC] CRaCEngineOptions=help cannot be used with CRaCRestoreFrom,TimPushkin,2025-03-11,2025-03-12,integrated,Azul,,1,rvansa
+8351923,212,8351923: [CRaC] Engine help message may be truncated,TimPushkin,2025-03-13,2025-03-13,integrated,Azul,,0,rvansa
+8352408,214,8352408: [CRaC] Minor CRE API improvements,TimPushkin,2025-03-19,2025-03-24,integrated,Azul,,5,rvansa
+8352410,215,8352410: [CRaC] Invalid description API log is incorrect,TimPushkin,2025-03-19,2025-03-24,integrated,Azul,,5,rvansa
+8352412,216,8352412: [CRaC] Direct mapping default changed,TimPushkin,2025-03-19,2025-03-25,integrated,Azul,,6,rvansa
+8352413,217,8352413: [CRaC] crexec fails to pass some options when CRAC_CRIU_OPTS is already used,TimPushkin,2025-03-19,2025-04-02,integrated,Azul,,14,rvansa
+8353064,218,8353064: [CRaC] ProblemList jdk/crac/LinkedCleanableRefTest,TimPushkin,2025-03-27,2025-03-31,integrated,Azul,,4,rvansa
+8353241,219,8353241: [CRaC] Support ZGC,rvansa,2025-03-31,2025-04-15,integrated,Azul,,15,TimPushkin
+8353243,220,8353243: [CRaC] Show all options in engine help,TimPushkin,2025-03-31,2025-04-08,integrated,Azul,,8,rvansa
+8354432,221,8354432: [CRaC] Timed waiting finishes early w.r.t. wall clock time,TimPushkin,2025-04-11,2025-04-14,integrated,Azul,,3,rvansa
+8354514,222,8354514: [CRaC] Remove new methods from AbstractInterruptibleChannel and SocketImpl,rvansa,2025-04-14,2025-04-15,integrated,Azul,,1,TimPushkin
+,224,Merge jdk:jdk-25+3,dimitryc,2025-04-15,2025-04-23,integrated|clean,,,8,rvansa
+8354679,225,8354679: [CRaC] jdk.crac.management makes JdkManagementCheckSince fail,TimPushkin,2025-04-16,2025-05-28,integrated,Azul,,42,rvansa
+8355974,227,8355974: [CRaC] Move CPUFeatures verification to the parent process of JVM,jankratochvil,2025-04-27,2025-05-20,integrated,Azul,,23,
+,228,Merge jdk:jdk-25+4,dimitryc,2025-05-19,2025-05-19,integrated|clean,,,0,rvansa
+8357641,229,8357641: [CRaC] Support PID change during checkpoint-restore,TimPushkin,2025-05-23,2025-05-26,integrated,Azul,,3,rvansa
+8357645,230,8357645: [CRaC] Use Alpine-based images when executing tests on musl,TimPushkin,2025-05-23,2025-05-26,integrated,Azul,,3,rvansa
+,231,Merge jdk:jdk-25+10,dimitryc,2025-05-26,2025-05-27,integrated|clean,,,1,rvansa
+8357977,232,8357977: [CRaC] Unused imports in CRaC's classes,TimPushkin,2025-05-28,2025-05-29,integrated,Azul,,1,rvansa
+8357984,233,8357984: [CRaC] Improve new properties installation code,TimPushkin,2025-05-28,2025-05-29,integrated,Azul,,1,rvansa
+8358063,234,8358063: [CRaC] Excessive PosixAttachListener-related availability and references,TimPushkin,2025-05-29,2025-05-29,integrated,Azul,,0,rvansa
+8358161,235,8358161: [CRaC] Make VM-controlled options engine-dependent,TimPushkin,2025-05-30,2025-06-04,integrated,Azul,,5,rvansa
+,236,Merge jdk:jdk-25+14,dimitryc,2025-06-03,2025-06-06,integrated|clean,,,3,rvansa
+8358956,237,8358956: [CRaC] Fix NULL usage in hotspot,dimitryc,2025-06-09,2025-06-09,integrated,,,0,rvansa
+,238,Merge jdk:jdk-25+18,dimitryc,2025-06-16,2025-06-30,integrated|clean,,,14,TimPushkin
+8361090,239,8361090: [CRaC] Make dev engines less confusing,TimPushkin,2025-06-30,2025-07-02,integrated,Azul,,2,rvansa
+8361124,240,8361124: [CRaC] Move recursive checkpoint test to simengine,TimPushkin,2025-07-01,2025-07-02,integrated,Azul,,1,rvansa
+8364737,241,8364737: [CRaC] Support checkpointing with --patch-module by treating patch JARs as persistent,mz1999,2025-07-10,2025-08-07,integrated,,,28,rvansa
+,242,Merge jdk:jdk-25+19,dimitryc,2025-07-11,2025-07-15,integrated,,,4,TimPushkin
+8362418,243,8362418: [CRaC] Leave unused G1 heap regions committed for C/R,TimPushkin,2025-07-16,2025-07-18,integrated,Azul,,2,rvansa
+,244,Merge jdk:jdk-25+22,dimitryc,2025-07-16,2025-07-17,integrated|clean,,,1,TimPushkin
+8362837,246,8362837: [CRaC] jdk/crac/MXBean.java can fail on macOS,jankratochvil,2025-07-19,2025-07-23,integrated,Azul,,4,TimPushkin
+,248,Merge jdk:jdk-25+26,dimitryc,2025-07-23,2025-07-28,integrated|clean,,,5,TimPushkin
+8364078,249,8364078: [CRaC] CracTest mishandles NoSuchMethodException,TimPushkin,2025-07-24,2025-07-25,integrated,Azul,,1,rvansa
+8364156,251,8364156: [CRaC] Recompile methods decompiled during or shortly after C/R,TimPushkin,2025-07-28,2025-07-29,integrated,Azul,,1,rvansa
+8364272,252,8364272: [CRaC] Make inclusion of crac.hpp in os_posix.cpp conditional,TimPushkin,2025-07-29,2025-07-30,integrated,Azul,,1,rvansa
+8364449,253,8364449: [CRaC] Launch new main outside of the core C/R body,TimPushkin,2025-07-31,2025-08-08,integrated,Azul,,8,rvansa
+8364456,254,8364456: [CRaC] Extend error logging of waitForCheckpointed,TimPushkin,2025-07-31,2025-08-08,integrated,Azul,,8,rvansa
+8364538,255,8364538: [CRaC] Test CRaCIgnoreRestoreIfUnavailable,TimPushkin,2025-08-01,2025-08-07,integrated,Azul,,6,rvansa
+8364554,256,8364554: [CRaC] Improve CRaC VM options' docs,TimPushkin,2025-08-01,2025-08-11,integrated,Azul,,10,rvansa
+8364624,257,8364624: [CRaC] Resolve startup failures with static JDK build,dimitryc,2025-08-04,2025-08-04,integrated,,,0,TimPushkin
+8364662,258,8364662: [CRaC] Process restore options in the common arguments parser,TimPushkin,2025-08-04,2025-08-08,integrated,Azul,,4,rvansa
+8364931,259,8364931: [CRaC] Stabilize recompiler tests,TimPushkin,2025-08-06,2025-08-08,integrated,Azul,,2,rvansa
+8365143,260,8365143: [CRaC] CRaCIgnoreRestoreIfUnavailable tests do not check exit value,TimPushkin,2025-08-08,2025-08-11,integrated,Azul,,3,rvansa
+8365241,261,8365241: [CRaC] Ignore new arguments when CRaCIgnoreRestoreIfUnavailable is true,TimPushkin,2025-08-11,2025-08-22,integrated,Azul,,11,AntonKozlov
+8365380,262,8365380: [CRaC] Require non-static JDK for EngineFailureTest,TimPushkin,2025-08-12,2025-08-18,integrated,Azul,,6,dimitryc
+8365484,263,8365484: [CRaC] Support IgnoreUnrecognizedVMOptions on restore,TimPushkin,2025-08-13,2025-08-22,integrated,Azul,,9,AntonKozlov
+8367975,264,8367975: [CRaC] Pattern in CRaCCheckpointTo,rvansa,2025-09-18,2025-10-08,integrated,Azul,,20,TimPushkin
+8368570,265,8368570: [CRaC] Improve JdwpTransportTest,wkia,2025-09-24,2025-10-02,integrated,Azul,,8,TimPushkin
+8368929,266,8368929: [CRaC] Move CPUFeatures check to C/R engine,rvansa,2025-09-30,2025-10-13,integrated,Azul,,13,TimPushkin
+8369394,267,8369394: [CRaC] java.nio.channels.ClosedSelectorException in sun.nio.ch.SelectorImpl.ensureOpen,wkia,2025-10-08,2025-10-09,integrated,Azul,,1,rvansa
+8369729,268,8369729: [CRaC] CRaC restore fails with different CPUs,jankratochvil,2025-10-13,2025-10-21,integrated,Azul,,8,rvansa
+8369566,269,8369566: CRaC: Record metrics during checkpoint,rvansa,2025-10-14,2025-10-24,integrated,Azul,,10,TimPushkin
+8370483,270,8370483: [CRaC] java/nio/file/spi/SetDefaultProvider.java test fails because of incorrect toFile() usage,antonvoznia,2025-10-24,2025-10-30,integrated,,,6,TimPushkin
+8370888,271,8370888: [CRaC] Use better source of random for UUID generation in checkpoint path,rvansa,2025-10-30,2025-11-03,integrated,Azul,,4,TimPushkin
+8370873,272,8370873: [CRaC] Launcher does not parse CRaC VM options from JDK_JAVA_OPTIONS,rvansa,2025-10-30,2025-11-03,integrated,Azul,,4,TimPushkin
+8371250,273,8371250: [CRaC] Remove old pid file in ImageScoreTest,rvansa,2025-11-04,2025-11-05,integrated,Azul,,1,TimPushkin
+8371337,274,8371337: [CRaC] Fastdebug build fails when calling OperatingSystemMxBean.getProcessCpuLoad after restore,rvansa,2025-11-05,2025-11-24,integrated,Azul,,19,TimPushkin
+8371462,275,8371462: [CRaC] Improve listening socket reopen through FD policies,rvansa,2025-11-07,2025-11-28,integrated,Azul,,21,TimPushkin
+8371549,276,8371549: [CRaC] Implement C/R in Selector on non-Linux,rvansa,2025-11-28,2026-01-09,integrated,Azul,,42,TimPushkin
+8372863,277,8372863: [CRaC] Fix glibc IFUNC for AVX_Fast_Unaligned_Load,jankratochvil,2025-12-02,2025-12-08,integrated,Azul,,6,rvansa
+8372933,278,"8372933: [CRaC] Restore failed due to incompatible or missing CPU features, try using -XX:CPUFeatures=0xfoo,0xbar on checkpoint",jankratochvil,2025-12-02,2026-02-04,integrated,Azul,,64,rvansa
+8373027,279,"8373027: [CRaC] [CRIU] x86: FPU xsave area present, but host cpu doesn't support it",jankratochvil,2025-12-03,2025-12-18,integrated,Azul,,15,rvansa
+8373043,280,8373043: [CRaC] remove CPUFeatures qemu-kvm test,jankratochvil,2025-12-03,2025-12-22,integrated,Azul,,19,TimPushkin
+8373687,281,8373687: [CRaC] Add metrics through jcmd,rvansa,2025-12-15,2025-12-23,integrated,Azul,,8,TimPushkin
+8373781,282,8373781: [CRaC] Permit -XX:CPUFeatures on other platforms,rvansa,2025-12-17,2026-01-06,integrated,Azul,,20,TimPushkin
+8374491,283,8374491: CPUFeatures: check performance regression of AVX_Fast_Unaligned_Load,jankratochvil,2026-01-04,2026-01-08,integrated,Azul,,4,TimPushkin
+8374614,284,8374614: [CRaC] Remove defunct fdinfo marking,rvansa,2026-01-06,2026-01-09,integrated,Azul,,3,TimPushkin
+8373784,285,8373784: [CRaC] VM Option to require perfect CPU fit,rvansa,2026-01-06,2026-01-09,integrated,Azul,,3,"jankratochvil,TimPushkin"
+8375044,286,8375044: [CRaC] Structured engine options info,rvansa,2026-01-12,2026-01-26,integrated,Azul,,14,TimPushkin
+8375286,287,8375286: [CRaC] Crash with empty CRaCCheckpointTo,rvansa,2026-01-14,2026-01-19,integrated,Azul,,5,TimPushkin
+,288,Merge jdk:jdk-27+5,TimPushkin,2026-01-28,2026-02-02,integrated|clean,Azul,,5,rvansa
+8376959,289,8376959: [CRaC] Turn simengine into shared library,rvansa,2026-02-02,2026-02-13,integrated,Azul,,11,TimPushkin
+,290,Merge jdk:jdk-27+7,TimPushkin,2026-02-03,2026-02-04,integrated,Azul,,1,rvansa
+8377177,291,8377177: [CRaC] Clarify engine use in the testsuite,rvansa,2026-02-05,2026-02-05,integrated,Azul,,0,TimPushkin
+8377173,292,8377173: [CRaC] Don't set direct_map=true on checkpoint,rvansa,2026-02-05,2026-02-05,integrated,Azul,,0,TimPushkin
+8362238,293,8362238: [CRaC] crac/fileDescriptors/FileWatcherThreadTest should wait for events with timeout,snazarkin,2026-02-05,2026-02-06,integrated,,,1,TimPushkin
+8377546,294,8377546: [CRaC] Make CheckpointRestorePathTest.testRestoreNoImage platform-dependent,TimPushkin,2026-02-10,2026-02-10,integrated,Azul,,0,rvansa
+8377562,295,8377562: [CRaC] Add better logging to RemoteJmxTest,TimPushkin,2026-02-10,2026-02-24,integrated,Azul,,14,rvansa
+8378259,296,8378259: [CRaC] Tests using CRIU fail in GitHub Actions,TimPushkin,2026-02-19,2026-02-23,integrated,Azul,,4,rvansa
+8378446,297,8378446: [CRaC] Replace libcrexec with libcriuengine,rvansa,2026-02-24,2026-02-27,integrated,Azul,,3,TimPushkin
+8378857,298,8378857: [CRaC] Expose checkpoint method in CRaCMXBean,rvansa,2026-02-27,2026-03-09,integrated,Azul,,10,TimPushkin
+8378821,299,8378821: [CRaC] Record & check CRaC engine,rvansa,2026-03-02,2026-03-09,integrated,Azul,,7,TimPushkin
+,300,Merge jdk:jdk-27+11,TimPushkin,2026-03-03,2026-03-06,integrated|clean,Azul,,3,rvansa
+8378978,301,8378978: [CRaC] Use CRIU from PATH,rvansa,2026-03-05,2026-03-13,integrated,Azul,,8,TimPushkin
+8379664,302,8379664: [CRaC] Deprecate Core.getGlobalContext(),rvansa,2026-03-10,2026-03-16,integrated,Azul,,6,TimPushkin
+8380284,303,8380284: [CRaC] Deprecate Core.checkpointRestore(),rvansa,2026-03-17,2026-03-17,integrated,Azul,,0,TimPushkin

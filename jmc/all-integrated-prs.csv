@@ -1,0 +1,627 @@
+bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,reviewers
+,1,6631: Updating version to 8.0.0,thegreystone,2019-11-14,2019-11-14,integrated,Datadog,,0,"aptmac,Gunde"
+,2,6604: Adding EA splash for JMC 8,thegreystone,2019-11-14,2019-11-15,integrated,Datadog,,1,Gunde
+,3,6632: Tighten up english rule messages,dbenamydd,2019-11-15,2019-11-22,integrated,,,7,"thegreystone,Gunde"
+,5,6636: Adding spotless for core,thegreystone,2019-11-15,2019-11-22,integrated,Datadog,,7,Gunde
+,6,6617: Make return value its own element,jessyec-s,2019-11-22,2019-12-05,integrated,,,13,thegreystone
+,7,6642: Ignoring dependency reduced poms and js-libraries,thegreystone,2019-11-23,2019-11-24,integrated,Datadog,,1,Gunde
+,8,6639: Adding spotless for the rest of the java code,thegreystone,2019-11-27,2019-11-28,integrated,Datadog,,1,Gunde
+,9,6639: Fixing whitespace error on Mac,thegreystone,2019-11-28,2019-11-28,integrated,Datadog,,0,Gunde
+,11,6650: Autoboxing rule breaks on allocation outside TLAB,Gunde,2019-12-03,2019-12-03,integrated,,,0,thegreystone
+,12,5721: Reintroduce the Percentage column,dmnm,2019-12-07,2020-01-13,integrated,,,37,Gunde
+,13,6651: Exposing the magic bytes for the compressed formats supported,thegreystone,2019-12-10,2019-12-11,integrated,Datadog,,1,"jiekang,Gunde"
+,15,5660: Lazy initialize timestamp unit description,Gunde,2019-12-11,2019-12-11,integrated,,,0,thegreystone
+,16,6652: Relaxing issue number verification,thegreystone,2019-12-11,2019-12-11,integrated,Datadog,,0,"rwestberg,Gunde"
+,17,6655: Ignoring test files,thegreystone,2019-12-11,2019-12-12,integrated,Datadog,,1,Gunde
+,18,6651: Securing exposed public static array,thegreystone,2019-12-11,2019-12-12,integrated,Datadog,,1,egahlin
+,19,6554: Support JFR in OpenJDK 8,thegreystone,2019-12-14,2019-12-16,integrated,Datadog,,2,Gunde
+,20,6656: Allow capturing field values with path syntax,tabjy,2019-12-17,2020-02-13,integrated,,,58,thegreystone
+,21,6657: Add allocation pressure column to Memory and TLAB views,jiekang,2019-12-18,2020-03-04,integrated,,,77,thegreystone
+,22,6583: Add filter and search table actions to EventBrowser page,jessyec-s,2019-12-18,2019-12-24,integrated,,,6,thegreystone
+,23,6658: Remove unnecessary storing of pre-instrumented bytecode,jessyec-s,2019-12-19,2020-01-10,integrated,,,22,thegreystone
+,24,6662: Updating to Eclipse 2019-12 (4.14),thegreystone,2019-12-23,2019-12-29,integrated,Datadog,,6,"jiekang,Gunde"
+,25,6665: .project files still exist for removed platform definitions,jiekang,2020-01-06,2020-01-07,integrated,,,1,thegreystone
+,26,6663: Reloading the Flame Chart View in Linux displays file browser,jiekang,2020-01-06,2020-01-07,integrated,,,1,thegreystone
+,27,6364: Improvements to the Thread Graph,aptmac,2020-01-08,2020-11-16,integrated|outdated,IBM,,313,guruhb
+,28,6659: Remove 'Showing X of Y events...' table message when not applicable,jessyec-s,2020-01-10,2020-01-14,integrated,,,4,thegreystone
+,29,6549: Color flame chart based on package name,mirage22,2020-01-12,2020-01-15,integrated,,,3,thegreystone
+,30,6671: Eagerly convert end time to the same unit as start time,Gunde,2020-01-13,2020-01-13,integrated,,,0,thegreystone
+,31,6674: Optimize finding of first start time and first & last end times,Gunde,2020-01-14,2020-01-27,rfr|integrated,,,13,thegreystone
+,32,6660: Make JMX API not return classes,jessyec-s,2020-01-15,2020-01-17,integrated,,,2,thegreystone
+,33,6674: Use try-with-resource in more places and close un-closed resources,Gunde,2020-01-15,2020-01-17,integrated,,,2,thegreystone
+,34,6668: Move org.openjdk.jmc.jdp bundle from application to core,jiekang,2020-01-15,2020-01-16,integrated,,,1,Gunde
+,36,6672: JavaScript formatting template,thegreystone,2020-01-17,2020-01-20,integrated,Datadog,,3,Gunde
+,37,6661: Simplify Agent JMX tests,jessyec-s,2020-01-17,2020-01-20,integrated,,,3,thegreystone
+,38,6670: Harmonize ~ Unclassifiable ~ across Flame View and Stacktrace View,mirage22,2020-01-19,2020-01-24,integrated,,,5,thegreystone
+,39,6572: Make mbean functions protected by permission checks,jessyec-s,2020-01-20,2020-01-23,integrated,,,3,thegreystone
+,40,6673: Upgrading to Tycho 1.6.0,thegreystone,2020-01-20,2020-01-20,integrated,Datadog,,0,Gunde
+,42,6643: Make VM Operations rule consider close consecutive events in score,jessyec-s,2020-01-30,2020-02-27,integrated,,,28,Gunde
+,45,6677: Search to highlight cells in the flame view,mirage22,2020-02-01,2020-02-11,integrated,,,10,"thegreystone,aptmac"
+,46,6684: Adding CONTRIBUTING.md file,thegreystone,2020-02-05,2020-02-11,integrated,Datadog,,6,Gunde
+,47,6685: Parse more fields directly to primitive values,Gunde,2020-02-07,2020-02-10,integrated,,,3,thegreystone
+,48,6686: Adding FAQ to wiki/readme,thegreystone,2020-02-10,2020-02-10,integrated,Datadog,,0,"jiekang,Gunde"
+,49,6688: Adding project file for the 2019-12 platform,RealCLanger,2020-02-10,2020-02-11,integrated,SAP,DE,1,thegreystone
+,50,6687: Add icon to the flame view to render as icicle graph,mirage22,2020-02-11,2020-02-13,integrated,,,2,thegreystone
+,51,6693: Eclipse projects core/org.openjdk.jmc.jdp* should have the correct JRE target level,RealCLanger,2020-02-13,2020-02-13,integrated,SAP,DE,0,thegreystone
+,52,6694: JDK8 RCP launch configurations should set -XX:+IgnoreUnrecognizedVMOptions,RealCLanger,2020-02-13,2020-02-13,integrated,SAP,DE,0,thegreystone
+,53,6692: JMC is asking to unlock Commercial Features on JFR enabled OpenJDK8,aptmac,2020-02-13,2020-02-18,integrated,IBM,,5,thegreystone
+,54,6534: String deduplication rule assumes only G1 has feature,jiekang,2020-02-18,2020-02-20,integrated,,,2,thegreystone
+,55,6698: SAPJVM not recognized as known (hotspot) VM,RealCLanger,2020-02-19,2020-02-20,integrated,SAP,DE,1,thegreystone
+,56,6689: Export (and print?) the flame graph,tabjy,2020-02-20,2020-03-09,integrated,,,18,"thegreystone,aptmac"
+,57,6697: Moving the agent to a top level directory,thegreystone,2020-02-21,2020-02-24,integrated,Datadog,,3,"jiekang,Gunde"
+,58,6702: Sanitize more data,Gunde,2020-02-21,2020-02-21,integrated,,,0,thegreystone
+,59,6708: Add santiy check when allocating Object arrays in parser,Gunde,2020-02-26,2020-02-26,integrated,,,0,thegreystone
+,60,6712: Make agent retransform classes when loaded dynamically,jessyec-s,2020-02-28,2020-03-03,integrated,,,4,thegreystone
+,61,6700: Make Flame Graph compile on Photon,mirage22,2020-03-02,2020-03-03,integrated,,,1,thegreystone
+,62,6704: More information when opening an LZ4 compressed recording,thegreystone,2020-03-07,2020-03-10,integrated,Datadog,,3,Gunde
+,63,6724: Agent argument as a path to a probe definition XML should be optional,tabjy,2020-03-09,2020-03-25,integrated,,,16,thegreystone
+,64,6729: Remove instance variables from VMOperation rule,Gunde,2020-03-11,2020-03-11,integrated,,,0,thegreystone
+,65,6701: Supporting LZ4 compressed recordings,thegreystone,2020-03-11,2020-03-12,integrated,Datadog,,1,Gunde
+,66,6725: Formalize agent probe definition XML schema and enforce validations,tabjy,2020-03-13,2020-04-27,integrated,,,45,"thegreystone,aptmac"
+,67,6691: The root of the flame graph could be improved,mirage22,2020-03-15,2020-03-27,integrated,,,12,thegreystone
+,68,6715: Create MXBean retrieveCurrentTransforms function,jessyec-s,2020-03-19,2020-03-25,integrated,,,6,thegreystone
+,69,6744: Adding Eclipse RCP 2020-03 platform,thegreystone,2020-03-24,2020-04-01,integrated,Datadog,,8,"jiekang,Gunde"
+,70,6745: Add isHidden() method to IMCMethod interface,Gunde,2020-03-25,2020-03-25,integrated,,,0,"thegreystone,egahlin"
+,72,6767: Empty filter regex should not be compiled,Gunde,2020-04-17,2020-04-20,integrated,,,3,thegreystone
+,73,6778: Removing dependency on OPS4j maven repo and javax.mail:dsn,thegreystone,2020-05-06,2020-05-07,integrated,Datadog,,1,"jiekang,guruhb,Gunde"
+,74,6784: Getting rid of compiler warnings in the agent,thegreystone,2020-05-07,2020-05-08,integrated,Datadog,,1,Gunde
+,75,6785: Compiler warning cleanup,thegreystone,2020-05-08,2020-05-18,integrated,Datadog,,10,Gunde
+,76,6801: Improve stackdepth setting rule,Gunde,2020-05-20,2020-05-22,integrated,,,2,thegreystone
+,77,6810: Create treemap viewer for JOverflow,tabjy,2020-05-27,2020-07-03,integrated,,,37,aptmac
+,79,6819: Agent instrumentation causing stack map frame verification error,tabjy,2020-06-03,2020-06-09,integrated,,,6,thegreystone
+,80,6825: JMX defineEventProbes fails when no events in XMLDescriptor,jessyec-s,2020-06-05,2020-06-09,integrated,,,4,thegreystone
+,81,6831: Add chunk ranges to IItemCollection,Gunde,2020-06-09,2020-06-12,integrated,,,3,thegreystone
+,82,6835: Adding developer guide for getting started with development,thegreystone,2020-06-10,2020-06-21,integrated,Datadog,,11,guruhb
+,84,6988: Initial implementation of JFR binary format writer,jbachorik,2020-06-19,2021-01-15,integrated,Datadog,CZ,210,thegreystone
+,85,6847: Upgrading to the Eclipse 2020-06 platform,thegreystone,2020-06-22,2020-06-24,integrated,Datadog,,2,Gunde
+,86,6833: Tolerate exceptions when loading images,cimi,2020-06-23,2020-06-24,integrated,,,1,thegreystone
+,87,6852: Extracted layout for the JMC RCP binaries look not the same for Linux/Windows,reinhapa,2020-06-24,2020-07-03,rfr|ready|integrated|sponsor,,,9,"guruhb,neugens"
+,88,6699: Remove the photon platform,thegreystone,2020-06-24,2020-06-26,integrated,Datadog,,2,"hdafgard,Gunde"
+,89,6710: Add rule to detect if an old version of Lucene is in use,Gunde,2020-06-26,2020-06-26,integrated,,,0,thegreystone
+,90,6858: Thread dump does not show complete call stack based for all threads (grouped by time),Suchitainf,2020-06-29,2020-07-03,integrated,Oracle,,4,guruhb
+,91,6855: Should add information about where to get builds to README,thegreystone,2020-06-29,2020-07-15,integrated,Datadog,,16,"guruhb,neugens"
+,92,6805: Event emission only on exceptions,Josh-Matsuoka,2020-06-29,2020-07-02,integrated,,,3,thegreystone
+,94,"6864: Schema definition doesn't have optional ReturnValue ""name"" property",jessyec-s,2020-07-13,2020-07-15,integrated,,,2,thegreystone
+,95,6869: Fix formatting error,thegreystone,2020-07-14,2020-07-15,integrated,Datadog,,1,aptmac
+,96,6871: Upgrade to ASM 8.0.1,thegreystone,2020-07-19,2020-07-21,integrated,Datadog,,2,guruhb
+,97,6870: defineEventProbes is incorrect when probes occupy different classes,jessyec-s,2020-07-21,2020-08-18,integrated,,,28,"thegreystone,aptmac"
+,98,6873: Too many unnecessary missing resource exceptions thrown,thegreystone,2020-07-24,2020-07-24,integrated,Datadog,,0,Gunde
+,99,6875: Add agent MXBean operation to return instrumented xml configuration,jessyec-s,2020-07-24,2020-08-20,integrated,,,27,thegreystone
+,100,6889: Provide build script for making it easier to build JMC,Schalli1987,2020-07-25,2020-09-19,integrated,,,56,thegreystone
+,101,6885: VM_OPERATION_DURATION aggregator does not filter on type,jpbempel,2020-07-31,2020-08-13,integrated,,,13,thegreystone
+,102,6487: The TOPIC word in topic constants should either be the first word or removed,thegreystone,2020-07-31,2020-09-07,integrated,Datadog,,38,Gunde
+,103,6000: Get rid of build warnings in the JMC agent,guruhb,2020-08-04,2020-08-21,integrated,,,17,thegreystone
+,104,6886: Agent ASM components are constructed with the wrong version of …,Josh-Matsuoka,2020-08-05,2020-08-07,integrated,,,2,guruhb
+,105,6887: Agent instrumentation fails silently if method descriptors don't match,Josh-Matsuoka,2020-08-19,2020-08-20,integrated,,,1,thegreystone
+,106,6897: Remove unused javax imports,jiekang,2020-08-26,2020-09-02,integrated,,,7,thegreystone
+,107,6898: Installing from IDE update site complains about missing LZ4 plug-in,thegreystone,2020-09-02,2020-09-02,integrated,Datadog,,0,guruhb
+,108,6902: Console plug-ins with icons not found will fail,thegreystone,2020-09-02,2020-09-07,integrated,Datadog,,5,Gunde
+,109,6882: Method Profiling lacks icon in the Java Application View,guruhb,2020-09-14,2020-09-15,integrated,,,1,thegreystone
+,110,6913: Add daemon thread information to the console threads view,jpstotz,2020-09-17,2020-10-27,integrated|hacktoberfest-accepted,,,40,"guruhb,aptmac"
+,111,6909: Upgrade to Eclipse 2020-09,thegreystone,2020-09-21,2020-10-01,integrated|hacktoberfest-accepted,Datadog,,10,"guruhb,neugens,aptmac"
+,112,6766: Add heap usage before and after GC to the Garbage Collections table,jpbempel,2020-09-28,2020-10-02,integrated|hacktoberfest-accepted,,,4,thegreystone
+,113,6905: Add rule for heap dumps,jpbempel,2020-10-01,2020-10-04,integrated|hacktoberfest-accepted,,,3,thegreystone
+,114,6914: Fix windows check formatting script,jpbempel,2020-10-02,2020-10-06,integrated|hacktoberfest-accepted,,,4,"guruhb,thegreystone"
+,115,6915: JMC dev launchers do not include JOverflow,thegreystone,2020-10-02,2020-10-06,integrated|hacktoberfest-accepted,Datadog,,4,"guruhb,aptmac"
+,116,6916: JOverflow treemap listener depending on internal SWT class,thegreystone,2020-10-02,2020-10-06,integrated|hacktoberfest-accepted,Datadog,,4,"guruhb,aptmac"
+,117,6917: Clean warnings in the agent project,thegreystone,2020-10-02,2020-10-06,integrated|hacktoberfest-accepted,Datadog,,4,guruhb
+,118,6837: More formal tone in the agent settings,thegreystone,2020-10-02,2020-10-06,integrated|hacktoberfest-accepted,Datadog,,4,guruhb
+,120,6899: Upgrade core to 8,thegreystone,2020-10-04,2020-10-06,integrated|hacktoberfest-accepted,Datadog,,2,guruhb
+,121,6908: Rule for warning about the starting of processes,jpbempel,2020-10-04,2020-10-06,integrated|hacktoberfest-accepted,,,2,thegreystone
+,122,6910: Missing manifest prevents agent jar from running,gunnarmorling,2020-10-05,2020-10-08,integrated|hacktoberfest-accepted,,,3,"guruhb,aptmac"
+,123,6173: jmc -open requires full path,jpbempel,2020-10-07,2020-10-08,integrated|hacktoberfest-accepted,,,1,thegreystone
+,124,6925: Cache the local maven repo between runs,gunnarmorling,2020-10-08,2020-10-09,integrated|hacktoberfest-accepted,,,1,thegreystone
+,125,6929: Remove obsolete .hgignore file,dreis2211,2020-10-09,2020-10-09,integrated|hacktoberfest-accepted,,,0,thegreystone
+,126,6900: Switch from IPredicate to Predicate,thegreystone,2020-10-10,2020-10-11,integrated|hacktoberfest-accepted,Datadog,,1,guruhb
+,127,6695: Build agent as part of checkin tests,thegreystone,2020-10-12,2020-10-15,integrated|hacktoberfest-accepted,Datadog,,3,Gunde
+,128,6846: Parser needs to skip events with no metadata,thegreystone,2020-10-12,2020-10-14,integrated|hacktoberfest-accepted,Datadog,,2,egahlin
+,129,6940: build.sh test arguments wrong,reinhapa,2020-10-15,2020-10-15,integrated|hacktoberfest-accepted,,,0,thegreystone
+,130,6941: build.sh does not terminate jetty after executing '--packageJmc',reinhapa,2020-10-15,2020-10-16,integrated|hacktoberfest-accepted,,,1,thegreystone
+,132,6942: The README is showing the wrong syntax for the build script,felipe-alves-moraes,2020-10-17,2020-10-19,integrated|hacktoberfest-accepted,,,2,thegreystone
+,133,6542: Improve calls to render in the flame view,mirage22,2020-10-18,2020-10-20,integrated|hacktoberfest-accepted,,,2,thegreystone
+,134,6911: Third Party Upgrade to HdrHistogram 2.1.12,Suchitainf,2020-10-19,2020-10-20,integrated|hacktoberfest-accepted,Oracle,,1,thegreystone
+,135,6669: FlameGraphView tree calculation should (probably) be interruptable,mirage22,2020-10-20,2020-10-26,integrated|hacktoberfest-accepted,,,6,thegreystone
+,136,6944: build.sh does not correctly run UI tests due to not running p2 site,reinhapa,2020-10-21,2020-10-22,integrated|hacktoberfest-accepted,,,1,thegreystone
+,137,6947: Allow executable name to show up in JPS,alblue,2020-10-21,2020-10-28,integrated|hacktoberfest-accepted,,,7,thegreystone
+,138,5700: Improve file and socket IO rule result texts,jpbempel,2020-10-25,2020-10-27,integrated|hacktoberfest-accepted,,,2,thegreystone
+,139,5067: Content assist uses too much screen area,mirage22,2020-10-26,2020-10-27,integrated|hacktoberfest-accepted,,,1,thegreystone
+,140,4819: Improved tooltips and context menus for Stack Trace View,mirage22,2020-10-26,2020-11-01,integrated|hacktoberfest-accepted,,,6,thegreystone
+,141,6951: [core] Missing license.txt in core artifacts,guruhb,2020-10-27,2020-10-27,integrated|hacktoberfest-accepted,,,0,thegreystone
+,142,6895: Agent Instrumentation fails to emit events when the instrumented class has a different/custom ClassLoader,Josh-Matsuoka,2020-10-27,2020-10-28,integrated|hacktoberfest-accepted,,,1,thegreystone
+,143,"4454: Other JMC launched after this JMC is listed as ""-XX:+UseG1GC"" in JVM Browser",jpbempel,2020-10-27,2020-10-29,integrated|hacktoberfest-accepted,,,2,thegreystone
+,144,5709: Improve Biased lock revocation result text,jpbempel,2020-10-28,2020-10-29,integrated|hacktoberfest-accepted,,,1,thegreystone
+,145,6878: Update Spotbugs latest version in jmc 8.0.0 source,Suchitainf,2020-10-28,2020-11-04,integrated,Oracle,,7,thegreystone
+,146,6959: Fix agent tests,gunnarmorling,2020-10-30,2020-10-31,integrated|hacktoberfest-accepted,,,1,thegreystone
+,147,6945: Create build script for Windows,jpbempel,2020-10-30,2020-11-02,integrated,,,3,guruhb
+,149,6960: Update Copyright year and Welcome page,guruhb,2020-10-31,2020-11-01,integrated|hacktoberfest-accepted,,,1,thegreystone
+,150,6948: Add union to QuantityRange,jpbempel,2020-10-31,2020-11-04,integrated,,,4,Gunde
+,151,6961: Fix rules test,thegreystone,2020-10-31,2020-11-02,integrated|hacktoberfest-accepted,Datadog,,2,guruhb
+,152,6964: [Agent] Automatically open base module for accessing Unsafe on JDK 11+,gunnarmorling,2020-11-01,2020-11-30,integrated,,,29,thegreystone
+,153,5604: Check bytecode verification flags,jpbempel,2020-11-01,2020-11-03,integrated,,,2,"guruhb,thegreystone"
+,154,"6965: Thirdparty licenses missing in core, Maven plugins version update",guruhb,2020-11-03,2020-11-03,integrated,,,0,thegreystone
+,156,5707: Add excludes for password checking rules,jpbempel,2020-11-05,2020-11-10,integrated,,,5,thegreystone
+,157,5734: Overflow in stacktrace tooltips on Mac,guruhb,2020-11-08,2020-11-10,integrated,,,2,thegreystone
+,158,5603: Version specific help links in event type missing result,jpbempel,2020-11-10,2020-11-11,integrated,,,1,thegreystone
+,159,6787: Simplified stack trace tree model,cimi,2020-11-11,2020-12-11,integrated,,,30,"guruhb,thegreystone"
+,160,6974: Try to use the chromium SWT browser by default on windows,guruhb,2020-11-13,2020-11-15,integrated,,,2,thegreystone
+,161,4984: Label missing for Focus Selection combobox,Suchitainf,2020-11-16,2020-11-23,integrated,Oracle,,7,thegreystone
+,162,6507: Use GraphViz to render stack traces,thegreystone,2020-11-16,2020-11-25,integrated,Datadog,,9,"guruhb,mirage22"
+,163,6812: Rules 2.0,Gunde,2020-11-19,2020-12-09,integrated,,,20,guruhb
+,164,6982: CoreLibs: Add license and TPL info to sources and javadocs,guruhb,2020-11-23,2020-11-24,integrated,,,1,thegreystone
+,165,6973: New Method Profiling Page for JMC,jpbempel,2020-11-23,2021-01-09,integrated,,,47,"guruhb,thegreystone"
+,166,7001: Missing chromium binary message on MacOS X,guruhb,2020-11-24,2020-11-24,integrated,,,0,thegreystone
+,167,6690: Find a home for the Flame View in the JMC perspective,thegreystone,2020-11-24,2020-11-25,integrated,Datadog,,1,Gunde
+,168,6996: Properly support converters,thegreystone,2020-11-25,2020-12-01,integrated,Datadog,,6,guruhb
+,169,7027: Avoid NPE for callers of TransformRegistry#getTransformData,gunnarmorling,2020-11-29,2020-12-04,integrated,,,5,thegreystone
+,170,7033: Allow overriding the id (name) of the event type,gunnarmorling,2020-11-30,2021-01-06,integrated,,,37,thegreystone
+,171,7028: The ids are wrong in the agent tests,thegreystone,2020-12-01,2020-12-02,integrated,Datadog,,1,Gunde
+,172,7029: In the event configuration the event name should be renamed label,thegreystone,2020-12-01,2020-12-02,integrated,Datadog,,1,Gunde
+,173,7032: The banner is missing from help page,Suchitainf,2020-12-02,2021-01-10,integrated,Oracle,,39,thegreystone
+,174,7036: Invoke converters/stringify for event fields and return values,gunnarmorling,2020-12-04,2021-01-06,integrated,,,33,thegreystone
+,176,7016: JAWS only read “link” on letter small A and big A for welcome page,Suchitainf,2020-12-06,2020-12-11,integrated,Oracle,,5,thegreystone
+,177,"6840: [Accessibility, JAWS] 'Start Using JMC' link in Welcome Page is not traversable using Keyboard",Suchitainf,2020-12-06,2020-12-11,integrated,Oracle,,5,thegreystone
+,178,"7048: No matter how funny java.rmi.server.hostname resolves, you should alway be able to connect to yourself",thegreystone,2020-12-09,2020-12-11,integrated,Datadog,,2,guruhb
+,179,7052: The link to BellSoft LMC should be updated,den1ska,2020-12-11,2020-12-17,integrated,,,6,thegreystone
+,180,7055: Flameview manifest is exporting non-existent package,thegreystone,2020-12-14,2020-12-14,integrated,Datadog,,0,guruhb
+,181,"6986: ""Flight Recorder"" is not working as expected for localhost Connection",guruhb,2020-12-14,2020-12-14,integrated,,,0,thegreystone
+,182,7057: Update Copyright year in About dialog and update site landing page,guruhb,2020-12-14,2020-12-14,integrated,,,0,thegreystone
+,183,6946: There should be an option to build the agent in the build script,mirage22,2020-12-14,2021-01-14,integrated,,,31,
+,185,7062: Update to the Eclipse 2020-12 platform,thegreystone,2020-12-16,2020-12-31,integrated,Datadog,,15,"jiekang,guruhb"
+,186,7000: Update third party library used in flightrecorder.flameview,guruhb,2020-12-20,2020-12-22,integrated,,,2,thegreystone
+,187,7073: Exceptions in FlameGraph,cimi,2020-12-21,2021-01-05,integrated,,,15,thegreystone
+,188,7078: Update the p2-maven-plugin to 1.5.0,thegreystone,2021-01-01,2021-01-05,integrated,Datadog,,4,"guruhb,gunnarmorling"
+,189,7076: Rules and Analysis code has exceptions during uitests,Gunde,2021-01-06,2021-01-12,integrated,,,6,thegreystone
+,190,"7081: Update Copyright year to 2021, Validate and update license attributes",guruhb,2021-01-07,2021-01-12,integrated,,,5,thegreystone
+,191,7079: Numeric values in automated analysis summary is not resolved,Gunde,2021-01-09,2021-01-12,integrated,,,3,thegreystone
+,192,7008: Agent should properly support Class and Thread,thegreystone,2021-01-10,2021-01-18,integrated,Datadog,,8,"Josh-Matsuoka,guruhb"
+,193,7002: Too large graphs will freeze JMC,cimi,2021-01-10,2021-01-13,integrated,,,3,thegreystone
+,194,6588: Move JMC core to JDK 8,thegreystone,2021-01-11,2021-01-20,integrated,Datadog,,9,"aptmac,jbachorik,Gunde"
+,195,7063: JfrThreadsPageTest (UI-test) fails,aptmac,2021-01-11,2021-01-13,integrated,IBM,,2,thegreystone
+,197,6859: Correction in JMC welcome page,Suchitainf,2021-01-12,2021-01-18,integrated,Oracle,,6,thegreystone
+,198,"4167: ""Copy Column Headers"" in stack trace view has no effect",jpbempel,2021-01-15,2021-01-17,integrated,,,2,thegreystone
+,199,7093: Wrong copyright year,thegreystone,2021-01-18,2021-01-19,integrated,Datadog,,1,"jiekang,guruhb"
+,200,JMC-7090: [JFR Writer] Make constant pool optional when registering a new type,jbachorik,2021-01-18,2021-01-20,integrated,Datadog,CZ,2,thegreystone
+,201,7039: Timestamp granularity too coarse,Suchitainf,2021-01-19,2021-02-03,integrated,Oracle,,15,thegreystone
+,202,7104: The PDE wizard does not work with Rules 2.0,Gunde,2021-01-20,2021-01-20,integrated,,,0,thegreystone
+,204,7107: Update to the early access 8.1 splash in master,thegreystone,2021-01-20,2021-01-21,integrated,Datadog,,1,Gunde
+,205,7106: Update to the release splash screen for JMC 8,thegreystone,2021-01-20,2021-01-21,integrated,Datadog,,1,Gunde
+,206,7116: Update version to 8.1.0 in master,thegreystone,2021-01-22,2021-01-26,integrated,Datadog,,4,"jiekang,guruhb"
+,207,7117: JMC with Eclipse 2020-06 fails to launch in simplified Chinese language,guruhb,2021-01-22,2021-01-23,integrated,,,1,thegreystone
+,208,7088: Show concurrent option showing lesser number of records.,Gunde,2021-02-03,2021-02-04,integrated,,,1,thegreystone
+,209,7130: JfrThreadsPageTest (UI-test) fails (part 2),aptmac,2021-02-04,2021-02-05,integrated,IBM,,1,thegreystone
+,210,7121: Unhandled exception while working with Thread Graphs,aptmac,2021-02-04,2021-02-05,integrated,IBM,,1,thegreystone
+,211,7120: Charts in custom pages are not auto refreshed,aptmac,2021-02-04,2021-02-05,integrated,IBM,,1,thegreystone
+,212,6753: JMC Help Documentation requires corrections,Suchitainf,2021-02-05,2021-02-08,integrated,Oracle,,3,thegreystone
+,213,7040: Event list is not updated and Stack trace stale upon Set as Focused Selection,Suchitainf,2021-02-05,2021-02-08,integrated,Oracle,,3,"oscerd,thegreystone"
+,214,6907: Upgrade Jacoco to 0.8.6,oscerd,2021-02-08,2021-02-08,integrated,,,0,thegreystone
+,215,7133: Update the build script help to include the installCore option,oscerd,2021-02-08,2021-02-08,integrated,,,0,thegreystone
+,216,7205: Correct URL for Oracle's JMC production binaries,aureliogrb,2021-02-09,2021-03-25,integrated,,,44,thegreystone
+,217,7136: Restrict local management agent for own process,guruhb,2021-02-10,2021-02-12,integrated,,,2,thegreystone
+,218,7131: Uitests failing on Windows,thegreystone,2021-02-11,2021-02-12,integrated,Datadog,,1,"guruhb,aptmac"
+,219,6936: Parser should track statistics during parsing,jpbempel,2021-02-23,2021-03-02,integrated,,,7,thegreystone
+,220,7139: Prepare new and noteworthy for JMC 8.0.0,thegreystone,2021-02-26,2021-03-12,integrated,Datadog,,14,guruhb
+,221,JMC-7154: [JFR Writer] Improve lazy evaluation of the type defining block,jbachorik,2021-03-01,2021-03-15,integrated,Datadog,CZ,14,thegreystone
+,222,JMC-7155: [JFR Writer] Complete the annotation handling code,jbachorik,2021-03-01,2021-03-16,integrated,Datadog,CZ,15,thegreystone
+,223,JMC-7156: [JFR Writer] Allow providing extra recording settings,jbachorik,2021-03-01,2021-03-16,integrated,Datadog,CZ,15,thegreystone
+,224,JMC-7158: [JFR Writer] Improve single-value types handling,jbachorik,2021-03-01,2021-03-16,integrated,Datadog,CZ,15,thegreystone
+,226,7167: Agent Plugin,Josh-Matsuoka,2021-03-10,2021-07-07,integrated,,,119,"thegreystone,bric3"
+,227,6890: defineEventProbes should throw exception on malformed probe definitions,Josh-Matsuoka,2021-03-11,2021-03-18,integrated,,,7,thegreystone
+,228,7031: Build a constant pool explorer page,jpbempel,2021-03-11,2021-04-06,integrated,,,26,"thegreystone,Gunde"
+,229,7191: The release notes tool should be using JDK 8,thegreystone,2021-03-17,2021-03-31,integrated,Datadog,,14,Gunde
+,230,7195: GC confguration with GC Flags,bric3,2021-03-18,2021-05-18,integrated,,,61,thegreystone
+,232,7194 : No local JVMs found message could be more helpful,docwarems,2021-03-19,2021-04-12,integrated,,,24,thegreystone
+,233,7225: Add workflow badge to the readme,thegreystone,2021-03-31,2021-04-06,integrated,Datadog,,6,Gunde
+,234,7162: Stop using the chromium library based browser component,guruhb,2021-04-01,2021-04-02,integrated,,,1,thegreystone
+,235,7046: Update to the 2021-03 platform,thegreystone,2021-04-02,2021-04-03,integrated,Datadog,,1,guruhb
+,236,7236: Adding project specific settings to ignore forbidden references,thegreystone,2021-04-08,2021-05-17,integrated,Datadog,,39,"bric3,Gunde"
+,237,7235: Some writer cleanup,thegreystone,2021-04-08,2021-05-17,integrated,Datadog,,39,"bric3,jbachorik,Gunde"
+,238,6939: Time range indicator isn't updated when setting the time range,aptmac,2021-04-09,2021-04-13,integrated,IBM,,4,thegreystone
+,239,7105: Unable to open graph-view if JMC is booted with JDK 8,aptmac,2021-04-09,2021-04-13,integrated,IBM,,4,thegreystone
+,241,7241: Adjust main pom.xml to more align for 3th party builds,reinhapa,2021-04-14,2021-05-06,integrated,,,22,guruhb
+,243,7246: ClassCastException when opening heap dump,tobiasstadler,2021-04-21,2021-04-25,integrated,,,4,thegreystone
+,244,7124: Support the new JDK 16 allocation profiling event,jpbempel,2021-04-27,2021-05-03,integrated,,,6,thegreystone
+,245,7242: Adding new JDK Events to core API,Suchitainf,2021-05-02,2021-06-02,integrated,Oracle,,31,thegreystone
+,246,7201: JdkAttributes.OS_SWITCH_RATE does not work consistently across JFRs from different JDK versions.,Suchitainf,2021-05-05,2021-05-11,integrated,Oracle,,6,thegreystone
+,247,7164: Add support for hidden classes,Gunde,2021-05-06,2021-05-06,integrated,,,0,thegreystone
+,249,7256: Use .jcheck/conf property to control version,thegreystone,2021-05-13,2021-05-13,integrated,Datadog,,0,guruhb
+,250,7070: Allow JMC to open compressed recordings with the extension .lz4,aptmac,2021-05-20,2021-05-21,integrated,IBM,,1,"bric3,thegreystone"
+,251,7259: README.md should mention that the build script works for Mac OS,gunnarmorling,2021-05-24,2021-05-27,integrated,,,3,"thegreystone,bric3"
+,252,JMC-7258: Use the public XLST classes for the release notes,reinhapa,2021-05-27,2021-05-28,integrated,,,1,thegreystone
+,253,7261: Enhance agent pom.xml for future library deployment,reinhapa,2021-05-27,2021-06-02,integrated,,,6,guruhb
+,254,7260: Create a new serializers bundle,thegreystone,2021-05-28,2021-06-02,integrated,Datadog,,5,"aptmac,jbachorik,Gunde"
+,256,7262: Add rule for when the JVM version is < OpenJDK 8u302,ojung,2021-06-01,2021-06-02,integrated,,,1,"bric3,thegreystone"
+,257,7041: Add Percentage column based on Duration in stack trace view,Suchitainf,2021-06-01,2021-06-02,integrated,Oracle,,1,"bric3,aptmac"
+,258,7060: [WLS] Rule result formatting update w.r.t Rule 2.0,Suchitainf,2021-06-02,2021-06-02,integrated,Oracle,,0,Gunde
+,259,6923: Retain treeview stack trace while switching between JFRs,guruhb,2021-06-03,2021-06-10,integrated,,,7,"bric3,aptmac"
+,260,6967: Add Percentage Column w.r.t 'Profiling Samples' in Thread table,guruhb,2021-06-09,2021-06-21,integrated,,,12,"bric3,aptmac"
+,261,"7267: Change artifact id from ""org.openjdk.jmc.agent"" to ""agent""",reinhapa,2021-06-09,2021-06-11,integrated,,,2,guruhb
+,262,7266: Context Switch event handling breaks if JMC has old and new types parsed simultaneously,Gunde,2021-06-09,2021-06-10,integrated,,,1,"guruhb,thegreystone"
+,263,7266: Context Switch event handling breaks if JMC has old and new types parsed simultaneously,Gunde,2021-06-10,2021-06-10,integrated,,,0,guruhb
+,264,7268: Show icons for modifiers in the method profiling page,thegreystone,2021-06-10,2021-06-16,integrated,Datadog,,6,guruhb
+,265,6204: Flight recorder launcher tab bugs out,mirage22,2021-06-11,2021-07-07,integrated,,,26,"bric3,aptmac"
+,266,7264: Improve the performance of the JFR parser,jpbempel,2021-06-14,2021-06-16,integrated,,,2,egahlin
+,267,7272: Method profiling page should show the frame type,thegreystone,2021-06-16,2021-06-18,integrated,Datadog,,2,"jpbempel,aptmac"
+,268,7299: Accessibility Issue - Too low contrast on rule result values,Suchitainf,2021-06-16,2021-06-20,integrated,Oracle,,4,thegreystone
+,269,7042: Bring back summary screen for Statistics on Object Allocation outside TLAB.,Suchitainf,2021-06-18,2021-07-05,integrated,Oracle,,17,"thegreystone,aptmac"
+,270,JMC-6141: JMC logs warnings when creating recordings,aptmac,2021-06-23,2021-06-25,integrated,IBM,,2,"jpbempel,thegreystone"
+,271,5904: Merge org.openjdk.jmc.ui.celleditors with org.openjdk.jmc.rjmx.ui.celleditors,aptmac,2021-06-29,2021-11-25,integrated,IBM,,149,thegreystone
+,272,4792: Stop using System.out/err.println and e.printStackTrace,jpbempel,2021-07-05,2021-07-22,integrated,,,17,thegreystone
+,273,7327: Constant Pool optimizations,jpbempel,2021-07-08,2021-07-08,integrated,,,0,thegreystone
+,274,7338: Add parser support for frame types generated by async-profiler,jbachorik,2021-07-09,2021-09-09,integrated,Datadog,CZ,62,thegreystone
+,275,6922: Reintroduce GC summary screen,Suchitainf,2021-07-09,2021-07-22,integrated,Oracle,,13,"guruhb,aptmac"
+,276,7328: Incorrect sort order in method profiling page,thegreystone,2021-07-10,2021-07-12,integrated,Datadog,,2,"jpbempel,aptmac"
+,277,7329: Exception while opening Method Profile page.,Suchitainf,2021-07-14,2021-07-15,integrated,Oracle,,1,thegreystone
+,278,7324: Update eclipse version and Min JDK required in Update Site landing pages,guruhb,2021-07-15,2021-07-16,integrated,,,1,thegreystone
+,279,7393: Add vanilla Java JSON serializer for IItemCollections,cimi,2021-07-21,2021-09-09,integrated,,,50,"jpbempel,thegreystone"
+,280,7344: Unhandled exception in rule evaluation,guruhb,2021-07-21,2021-07-22,integrated,,,1,thegreystone
+,281,7353: JMC fails to build because it can't download babel dependency,aptmac,2021-07-23,2021-07-23,integrated,IBM,,0,thegreystone
+,282,7357: Double-Checked Locking in Agent Plugin code,guruhb,2021-07-26,2021-07-30,integrated,,,4,"jpbempel,thegreystone"
+,283,7362: Reference wrong in agent plug-in.xml,thegreystone,2021-07-26,2021-07-26,integrated,Datadog,,0,"guruhb,aptmac"
+,284,7358: Rename Agent Plug-in in the JVM Browser,thegreystone,2021-07-26,2021-07-26,integrated,Datadog,,0,"guruhb,aptmac"
+,285,7265: Update Release Notes for 8.1.0,thegreystone,2021-07-26,2021-07-30,integrated,Datadog,,4,"jpbempel,guruhb"
+,286,6817: AutoBoxing rule can crash due to null dereference,thegreystone,2021-07-26,2021-07-26,integrated,Datadog,,0,guruhb
+,287,7349: JFR Parser struct types hashcode is not stable,jbachorik,2021-07-27,2021-07-28,integrated,Datadog,CZ,1,thegreystone
+,288,7366: Agent Plugin Object Contributions to Methods,Josh-Matsuoka,2021-07-27,2021-07-30,integrated,,,3,"thegreystone,aptmac"
+,289,7348: JMC preference options are duplicated,guruhb,2021-07-28,2021-07-28,integrated,,,0,thegreystone
+,290,7369: Update THIRDPARTYREADME.TXT and its license attribute,guruhb,2021-07-28,2021-07-28,integrated,,,0,thegreystone
+,291,7122: Rules evaluation never complete,aptmac,2021-07-28,2021-07-29,integrated,IBM,,1,"jpbempel,thegreystone,Gunde"
+,292,7360: Provider Name missing for Agent Plugin,guruhb,2021-07-30,2021-07-30,integrated,,,0,"jpbempel,thegreystone"
+,293,7337: JMC fails to parse JFR with events from WebLogic Server,guruhb,2021-07-30,2021-07-30,integrated,,,0,thegreystone
+,294,7006: CoreLibs: Review TPL info in all archives,guruhb,2021-07-30,2021-07-30,integrated,,,0,thegreystone
+,296,7368: Update the 8.1 splash to release splash,thegreystone,2021-07-31,2021-08-02,integrated,Datadog,,2,"jpbempel,Gunde"
+,297,7371: Make Skara realize master is now 8.2,thegreystone,2021-07-31,2021-08-02,integrated,Datadog,,2,"jpbempel,Gunde"
+,298,7377: Update master to 8.2,thegreystone,2021-08-04,2021-08-05,integrated,Datadog,,1,"jpbempel,guruhb"
+,300,7308: Move non-Eclipse dependant classes from org.openjdk.jmc.ui.common to org.openjdk.jmc.common,aptmac,2021-08-09,2023-05-23,integrated,IBM,,652,"bric3,RealCLanger"
+,301,7378: Update platform to 2021-06,thegreystone,2021-08-09,2021-09-09,integrated,Datadog,,31,guruhb
+,303,7384: Add option to enable STARTTLS encryption for mail server in communication preference,Suchitainf,2021-08-10,2021-10-04,integrated,Oracle,,55,thegreystone
+,304,7386: Remove reference to Fedora in the readme,aptmac,2021-08-17,2021-08-18,integrated,IBM,,1,thegreystone
+,305,7332: Show stacktraces for constant values from stacktrace pool,jpbempel,2021-09-06,2021-09-07,integrated,,,1,thegreystone
+,306,7198: Add websocket server that pushes data on selection updates,cimi,2021-09-09,2021-11-29,integrated,,,81,"bric3,thegreystone,aptmac"
+,307,7336: Add support for new JFR event systemGC,jpbempel,2021-09-15,2021-09-27,integrated,,,12,"thegreystone,aptmac"
+,308,7420: Update Japanese translation for rules,mohno007,2021-09-20,2022-02-15,integrated|hacktoberfest-accepted,,,148,"thegreystone,aptmac"
+,309,7417: Fix incorrect identifier in result for biased locking revocation rule,mohno007,2021-09-20,2022-01-25,integrated|hacktoberfest-accepted,,,127,"thegreystone,aptmac"
+,310,7421: Update Japanese translation for pages,mohno007,2021-09-20,2022-01-25,integrated|hacktoberfest-accepted,,,127,"thegreystone,aptmac"
+,311,7231: JMC createReport for JMC8 Automated Analysis fails to evaluate several rules,aptmac,2021-09-24,2021-10-14,integrated|hacktoberfest-accepted,IBM,,20,"thegreystone,Gunde"
+,312,7409: Update the spotless maven plugin,thegreystone,2021-10-01,2021-10-05,integrated|hacktoberfest-accepted,Datadog,,4,"jpbempel,Gunde"
+,313,7403: Fix JFR Parser struct types hashcode,thegreystone,2021-10-02,2021-10-04,integrated|hacktoberfest-accepted,Datadog,,2,"jpbempel,jbachorik"
+,314,7411: GPG signing in Github action fails,reinhapa,2021-10-02,2021-10-04,integrated|hacktoberfest-accepted,,,2,"bric3,thegreystone"
+,315,7414: Avoid volatile writes from Atomics default values,dreis2211,2021-10-02,2021-10-04,integrated|hacktoberfest-accepted,,,2,thegreystone
+,316,7412: Update the jacoco maven plugin,reinhapa,2021-10-02,2021-10-04,integrated|hacktoberfest-accepted,,,2,"jpbempel,thegreystone"
+,317,7413: Fix building JMC with Docker,dreis2211,2021-10-02,2021-10-04,integrated|hacktoberfest-accepted,,,2,thegreystone
+,318,7415: Fix Maven prerequisite in README,dreis2211,2021-10-04,2021-10-04,integrated|hacktoberfest-accepted,,,0,thegreystone
+,319,7418: Stop using Collections sort method,thegreystone,2021-10-08,2021-10-26,integrated|hacktoberfest-accepted,Datadog,,18,"aptmac,Gunde"
+,320,7419: Update XML parsing,eastig,2021-10-12,2021-10-13,integrated|hacktoberfest-accepted,Amazon,IE,1,thegreystone
+,321,7425: Make jmc8 branch 8.1.1,thegreystone,2021-10-13,2021-10-14,integrated|hacktoberfest-accepted,Datadog,,1,Gunde
+,322,7091: JOverflow Instance View table should be sortable by clicking headers,aptmac,2021-10-15,2021-10-18,integrated|hacktoberfest-accepted,IBM,,3,thegreystone
+,323,7247: Alternate for Twitter4J to support twitter plug-in,Suchitainf,2021-10-16,2021-11-28,integrated|hacktoberfest-accepted,Oracle,,43,"thegreystone,aptmac"
+,324,7432: Update the spotbugs maven plugin,reinhapa,2021-10-18,2021-12-23,integrated|hacktoberfest-accepted,,,66,thegreystone
+,325,7433: Update the spotless maven plugin,reinhapa,2021-10-18,2021-10-18,integrated|hacktoberfest-accepted,,,0,thegreystone
+,326,7434: Update the maven download plugin,reinhapa,2021-10-19,2021-10-19,integrated|hacktoberfest-accepted,,,0,thegreystone
+,327,7435: Update the maven enforcer plugin,reinhapa,2021-10-19,2021-10-21,integrated|hacktoberfest-accepted,,,2,thegreystone
+,330,7436: Update version to 8.1.1 in the jmc8 branch,thegreystone,2021-10-22,2021-10-26,integrated|hacktoberfest-accepted,Datadog,,4,Gunde
+,331,7437: Fix require bundle error in Eclipse,thegreystone,2021-10-22,2021-10-26,integrated|hacktoberfest-accepted,Datadog,,4,"aptmac,Gunde"
+,333,7439: Introduced IConstantPoolExtension for Constant Pools,jpbempel,2021-10-29,2021-12-01,integrated|hacktoberfest-accepted,,,33,thegreystone
+,334,7440: JMC fails on Apple M1,omikhaltsova,2021-11-20,2021-11-24,integrated,,,4,thegreystone
+,335,7447: Add serializers and writer modules to core test coverage,aptmac,2021-11-22,2021-11-25,integrated,IBM,,3,thegreystone
+,336,7446: Add Maven profile for enabling test coverage,aptmac,2021-11-22,2021-11-25,integrated,IBM,,3,thegreystone
+,337,7451: Add heat map view,cimi,2021-11-24,2021-12-06,integrated,,,12,thegreystone
+,338,7463: JfrEditor instances are kept in memory by NavigationHistory,jpbempel,2021-11-30,2021-12-02,integrated,,,2,thegreystone
+,339,7456: Remove the JDK 8 Eclipse launchers,aptmac,2021-12-03,2021-12-03,integrated,IBM,,0,thegreystone
+,340,7468: Fix jdp test coverage,aptmac,2021-12-03,2021-12-06,integrated,IBM,,3,thegreystone
+,341,7469: Upgrade third parties to latest versions,Suchitainf,2021-12-04,2021-12-06,integrated,Oracle,,2,thegreystone
+,343,7480: Trim method descriptor value,gunnarmorling,2021-12-18,2021-12-21,integrated,,,3,thegreystone
+,344,7482: Confusing display of stack traces when selecting event types with no events,jpbempel,2021-12-29,2022-01-10,integrated,,,12,aptmac
+,345,7492: Update org.owasp.encoder to version 1.2.3,bhopatil,2022-01-03,2022-01-13,integrated,,,10,thegreystone
+,346,7493: Update versions and copyright on Update site pages,Suchitainf,2022-01-05,2022-01-21,integrated,Oracle,,16,thegreystone
+,347,7494: Unable to view JMC Help Contents,cimi,2022-01-09,2022-01-10,integrated,,,1,"thegreystone,aptmac"
+,348,7473: Unable to view constants in constant pool page.,aptmac,2022-01-10,2022-01-12,integrated,IBM,,2,"jpbempel,thegreystone"
+,349,7074: Smart pruning of graphs to make it possible to sensibly render larger graphs,jpbempel,2022-01-11,2022-09-16,integrated,,,248,thegreystone
+,350,"7485: JMC Application, Plugins and License Copyright year requires update",Suchitainf,2022-01-11,2022-01-12,integrated,Oracle,,1,thegreystone
+,351,7503: Fix serializers.test dependency,bric3,2022-01-12,2022-01-12,integrated,,,0,thegreystone
+,352,7504: Fix flightrecorder.writer.test project setup,thegreystone,2022-01-12,2022-01-12,integrated,Datadog,,0,aptmac
+,353,7505: Cannot reset websocket server port to default,aptmac,2022-01-12,2022-01-12,integrated,IBM,,0,thegreystone
+,354,7508: Use preferred way for test-jars,jpbempel,2022-01-13,2022-04-13,integrated,,,90,"bric3,thegreystone,RealCLanger"
+,355,7507: Fixing project setup,thegreystone,2022-01-13,2022-01-14,integrated,Datadog,,1,"bric3,aptmac"
+,356,7512: Update lz4-java and remove the osgi bundle name override,bric3,2022-01-13,2022-01-28,integrated,,,15,thegreystone
+,357,7509: Add 2021-09 target platform,thegreystone,2022-01-14,2022-01-14,integrated,Datadog,,0,"bric3,aptmac"
+,358,7510: Remove 2020-06 platform,thegreystone,2022-01-14,2022-01-14,integrated,Datadog,,0,"bric3,aptmac"
+,360,7511: Add 2021-12 target platform,thegreystone,2022-01-16,2022-01-17,integrated,Datadog,,1,"jpbempel,bric3,aptmac"
+,362,7056: Fix dark mode,bric3,2022-01-16,2024-01-23,integrated,,,737,aptmac
+,364,7531: Update jetty websocket third party,Suchitainf,2022-01-18,2022-01-20,integrated,Oracle,,2,thegreystone
+,365,6757: Selector for attribute in the flame graph,jpbempel,2022-01-19,2022-09-03,integrated,,,227,thegreystone
+,366,7537: Build script assumes that Darwin always targets x86_64,parttimenerd,2022-01-20,2022-01-21,integrated,SAP,DE,1,thegreystone
+,367,7477: JMC8.2 does not build with eclipse 4.19 (21-03),thegreystone,2022-01-20,2022-01-21,integrated,Datadog,,1,aptmac
+,368,7538: Check in launcher for JVMKeepAlive,thegreystone,2022-01-21,2022-10-24,integrated,Datadog,,276,aptmac
+,369,7539: JDP Tests failing in VPN environments,parttimenerd,2022-01-21,2022-01-24,integrated,SAP,DE,3,"thegreystone,RealCLanger"
+,370,7540: IItemCollectionJsonSerializerTest.java might fail on Windows due to line endings,RealCLanger,2022-01-21,2022-01-22,integrated,SAP,DE,1,thegreystone
+,371,7541: Switch to using 2021-09 by default,thegreystone,2022-01-21,2022-01-24,integrated,Datadog,,3,"jpbempel,bric3,Gunde,RealCLanger"
+,372,7467: Only use one version of d3,thegreystone,2022-01-31,2022-02-04,integrated,Datadog,,4,"bric3,aptmac"
+,373,6792: Outline shows as not available when starting up with open recording,viragpurnam,2022-02-01,2022-02-09,integrated,,,8,"thegreystone,aptmac"
+,375,7532: Delay in realtime rendering of graphs  in JMX Console,viragpurnam,2022-02-04,2022-02-09,integrated,,,5,thegreystone
+,377,7486: Unable to install Eclipse IDE Plugin,viragpurnam,2022-02-14,2022-02-15,integrated,,,1,thegreystone
+,378,7568: Support parsing char fields in jfr events,gunnarmorling,2022-02-18,2022-03-07,integrated,,,17,thegreystone
+,380,7561: Update to the release splash screen for JMC 8.2,thegreystone,2022-02-19,2022-02-19,integrated,Datadog,,0,Gunde
+,381,7562: Make Skara realize master is now 8.3,thegreystone,2022-02-19,2022-02-19,integrated,Datadog,,0,Gunde
+,382,7564: Early access splash for 8.3,thegreystone,2022-02-19,2022-02-19,integrated,Datadog,,0,Gunde
+,383,7565: Update master to 8.3,thegreystone,2022-02-19,2022-02-20,integrated,Datadog,,1,Gunde
+,384,7569: Improve the implementation of Twitter plugin,Suchitainf,2022-03-04,2022-03-07,integrated,Oracle,,3,thegreystone
+,385,7443: Wrong version in THIRDPARTYREADME,Suchitainf,2022-03-04,2022-03-07,integrated,Oracle,,3,thegreystone
+,389,7573: Release notes for 8.2.0,thegreystone,2022-03-18,2022-03-21,integrated,Datadog,,3,aptmac
+,390,6972: Naming and Version Numbering Issues with Plugins,viragpurnam,2022-03-23,2022-04-13,integrated,,,21,thegreystone
+,393,7581: Missing required plugins in JMC-RCP and JMC-RCP-plug-ins launcher,viragpurnam,2022-03-31,2022-04-01,integrated,,,1,"jpbempel,thegreystone"
+,394,7589: Add 2022-03 target platform,thegreystone,2022-04-05,2022-04-06,integrated,Datadog,,1,aptmac
+,395,7765: Bump some Maven plugins,RealCLanger,2022-04-12,2022-04-13,integrated,SAP,DE,1,thegreystone
+,396,7767: Fix handling of version qualifier in core plugins,RealCLanger,2022-04-12,2022-04-27,integrated,SAP,DE,15,thegreystone
+,397,7794: Update the link to the adoptium download site,ecki,2022-04-13,2022-05-19,integrated,,,36,"thegreystone,RealCLanger"
+,398,7769: Cleanup pom and project files for JMC core,RealCLanger,2022-04-13,2022-05-04,integrated,SAP,DE,21,thegreystone
+,399,7796: Remove workflow status indicator in the readme,thegreystone,2022-05-16,2022-05-19,integrated,Datadog,,3,"jpbempel,aptmac,RealCLanger"
+,400,7797: Update pom.xml to download latest js files for graphview,viragpurnam,2022-05-16,2022-05-24,integrated,,,8,"thegreystone,RealCLanger"
+,401,JMC-7798: Make the frame type extensible,jbachorik,2022-05-17,2022-05-31,integrated,Datadog,CZ,14,RealCLanger
+,402,7801: Fix GHA that is broken due to OpenJDK Update 11.0.15,RealCLanger,2022-05-19,2022-05-19,integrated,SAP,DE,0,thegreystone
+,403,7827: Update to Eclipse 2022-06,thegreystone,2022-06-18,2022-06-20,integrated,Datadog,,2,"jpbempel,bric3"
+,404,7832: Refresh dev guide,bric3,2022-06-28,2022-06-28,integrated,,,0,thegreystone
+,405,7831: Add new view for hierarchical edge bundling,bric3,2022-06-28,2022-08-07,integrated,,,40,thegreystone
+,406,7820: Add validations for master password,Suchitainf,2022-06-29,2022-08-05,integrated,Oracle,,37,"thegreystone,RealCLanger"
+,407,7834: Improve GitHub Actions validation workflow,RealCLanger,2022-07-05,2022-07-07,integrated,SAP,DE,2,thegreystone
+,408,7894: Provide an alternative Java based flamegraph visualization,bric3,2022-07-06,2023-06-15,integrated,,,344,"thegreystone,aptmac,RealCLanger"
+,409,7806: Add an export option for Stacktraces in collapsed format,jpbempel,2022-07-08,2023-10-26,integrated,,,475,thegreystone
+,410,7842: JMC agent: policy file is missing entry for test on Windows,schmelter-sap,2022-07-12,2022-07-14,integrated,,,2,RealCLanger
+,411,7243: Resolve discrepancy between JDK attributes coming from different JDK versions,Suchitainf,2022-07-13,2022-07-22,integrated,Oracle,,9,"thegreystone,RealCLanger"
+,412,7855: JFR Writer incorrectly uses epoch nanoseconds as the start ticks,jbachorik,2022-07-14,2022-10-11,integrated,Datadog,CZ,89,RealCLanger
+,413,7856: Fix errors in Eclipse projects after JMC-7769,RealCLanger,2022-07-15,2022-07-20,integrated,SAP,DE,5,thegreystone
+,414,7858: Upgrade jetty.project in github to 10.0.11,viragpurnam,2022-07-27,2022-07-27,integrated,,,0,"bric3,RealCLanger"
+,415,7861: Bump Agent build to Java 11 compliance and cleanup POM,RealCLanger,2022-07-27,2022-10-25,integrated|hacktoberfest-accepted,SAP,DE,90,thegreystone
+,416,7860: Upgrade d3-flame-graph in github to 4.1.3,viragpurnam,2022-07-27,2022-07-29,integrated,,,2,thegreystone
+,417,7862: Platform-definitions-2022-06.target file has space in pde version,bhopatil,2022-07-29,2022-07-29,integrated,,,0,thegreystone
+,418,"7872: Adding artifacts to third-party pom file, which are not getting resolved by maven",viragpurnam,2022-08-09,2022-08-16,integrated,,,7,thegreystone
+,419,7879: Automated Analysis taking very long time to produce results for Class Leak Rule and showing wrong results.,Suchitainf,2022-08-20,2023-01-19,integrated,Oracle,,152,"bric3,Gunde"
+,420,7096: Bring back Object statistics table for heap.,viragpurnam,2022-08-23,2022-09-01,integrated,,,9,thegreystone
+,421,7877: Update the jmc version in jmc8 branch to 8.2.1,thegreystone,2022-08-24,2022-08-25,integrated,Datadog,,1,"aptmac,RealCLanger"
+,422,7874: Update thirdpartyreadme.txt file for upgraded third party libraries,viragpurnam,2022-08-26,2022-09-01,integrated,,,6,thegreystone
+,424,7896: Merge changes of 8.2.1 into master branch,viragpurnam,2022-09-16,2022-09-16,integrated,,,0,"thegreystone,Suchitainf"
+,425,7812: Unable to open links from Automated Result analysis page,viragpurnam,2022-09-16,2022-09-16,integrated,,,0,thegreystone
+,426,7870: JMC 8.3.0 Update Site Pages require changes,viragpurnam,2022-09-19,2022-09-21,integrated,,,2,thegreystone
+,427,7892: JMC Automated UI MasterPasswordTests is failing,Suchitainf,2022-09-21,2022-09-21,integrated,Oracle,,0,thegreystone
+,428,7813: Unable to open Help page in macOS M1 when JMC started with JDK11,viragpurnam,2022-09-22,2022-09-25,integrated,,,3,thegreystone
+,430,"7350: [Accessibility, JAWS] [Misc] Deadlinks in Help Page",Suchitainf,2022-09-27,2022-10-11,integrated,Oracle,,14,thegreystone
+,431,7903: FastAccessNumberMap is slow for sparse values,richardstartin,2022-09-27,2022-09-28,integrated,,,1,Gunde
+,432,7902: UseCompressedOopsRule has flipped comparison,Gunde,2022-09-28,2022-09-29,integrated,,,1,"bric3,RealCLanger"
+,433,7910: Fix spotless finding after JMC-7903,RealCLanger,2022-09-29,2022-09-29,integrated,SAP,DE,0,Gunde
+,435,7933: Avoid volatile writes for default field values,dreis2211,2022-10-01,2022-10-20,integrated|hacktoberfest-accepted,,,19,thegreystone
+,436,7944: Reduce allocations of Double during chunk loading,richardstartin,2022-10-08,2022-11-09,integrated|hacktoberfest-accepted,,,32,Gunde
+,437,7921: Create 8.3 release notes,thegreystone,2022-10-11,2022-10-11,integrated|hacktoberfest-accepted,Datadog,,0,"jpbempel,bric3,RealCLanger"
+,438,7923: Cleanup warnings in core,thegreystone,2022-10-11,2022-10-11,integrated|hacktoberfest-accepted,Datadog,,0,"jpbempel,RealCLanger"
+,439,7922: Issue using attribute selections in the stack trace view,jpbempel,2022-10-11,2022-10-11,integrated|hacktoberfest-accepted,,,0,thegreystone
+,440,Merge jmc:master,thegreystone,2022-10-12,2022-10-13,integrated|hacktoberfest-accepted,Datadog,,1,"aptmac,RealCLanger"
+,441,7929: Add release splash for 8.3,thegreystone,2022-10-13,2022-10-13,integrated|hacktoberfest-accepted,Datadog,,0,aptmac
+,442,7930: Upgrade to Eclipse 2022-09,thegreystone,2022-10-18,2022-10-20,integrated|hacktoberfest-accepted,Datadog,,2,aptmac
+,443,7935: Upgrade the trunk to 9,thegreystone,2022-10-20,2022-10-20,integrated|hacktoberfest-accepted,Datadog,,0,"jpbempel,RealCLanger"
+,444,7939: Cleanup of JDK dependencies in JMC tycho build,RealCLanger,2022-10-20,2022-10-21,integrated|hacktoberfest-accepted,SAP,DE,1,thegreystone
+,445,7940: Fix manifest making the Eclipse IDE unhappy,thegreystone,2022-10-20,2022-10-21,integrated|hacktoberfest-accepted,Datadog,,1,"aptmac,RealCLanger"
+,446,JMC-7941 Fixes for Graphview and Flameview projects,RealCLanger,2022-10-21,2022-10-23,integrated|hacktoberfest-accepted,SAP,DE,2,thegreystone
+,447,7945: Avoid throwing NoSuchFieldException in ValueReaders$ReflectiveReader,richardstartin,2022-10-25,2022-10-26,integrated|hacktoberfest-accepted,,,1,"thegreystone,jbachorik"
+,448,7946: core/common.test is not running any tests,RealCLanger,2022-10-25,2022-10-26,integrated,SAP,DE,1,"richardstartin,thegreystone"
+,449,7950: Better DisjointBuilder performance for events not ordered by event end attribute,richardstartin,2022-10-30,2022-11-19,integrated,,,20,"jbachorik,Gunde"
+,451,7951: Factor out commonly used test helper classes from org.openjdk.jmc.common.test into dedicated test library module,RealCLanger,2022-11-03,2023-02-24,integrated,SAP,DE,113,thegreystone
+,452,7977: Maximum Young Gen Size is displaying the min in GC config Page,jpbempel,2022-11-16,2022-11-18,integrated,,,2,aptmac
+,454,7978: Add new metric prefixes,Gunde,2022-11-19,2022-11-20,integrated,,,1,thegreystone
+,455,7979: Reduce allocation rate in ParserStats,richardstartin,2022-11-21,2022-11-23,integrated,,,2,jpbempel
+,456,7514: Rule for FinalizationStatistics,PyvesB,2022-11-30,2023-01-17,integrated,,,48,thegreystone
+,457,7992: Add API to easily write annotated Java JFR events,jbachorik,2022-12-07,2024-08-20,integrated,Datadog,CZ,622,thegreystone
+,458,7993: Support checkpoint event sizes beyond u4 limit,thegreystone,2022-12-08,2023-05-15,integrated,Datadog,,158,"aptmac,egahlin"
+,460,7996: Upgrade to 2022-12,thegreystone,2022-12-20,2022-12-21,integrated,Datadog,,1,"bric3,aptmac"
+,461,7998: Upgrading spifly and jetty project version,viragpurnam,2022-12-21,2022-12-22,integrated,,,1,thegreystone
+,462,8006: GcFreedRatio rule doesn't have all preferences in preferences list,PyvesB,2023-01-16,2023-01-17,integrated,,,1,thegreystone
+,463,7952: JfrRulesReport -format xml produce incorrect results,viragpurnam,2023-01-23,2023-01-26,integrated,,,3,"jpbempel,thegreystone"
+,464,8031: Remove the Twitter plug-in,thegreystone,2023-02-16,2023-02-16,integrated,Datadog,,0,aptmac
+,465,8035: Update Java version in GHA workflow to 11.0.18,RealCLanger,2023-02-17,2023-02-20,integrated,SAP,DE,3,"bric3,thegreystone"
+,466,8037: Cleanups in configuration.test and graphview.test,RealCLanger,2023-02-20,2023-03-07,integrated,SAP,DE,15,thegreystone
+,467,8036: Upgrading Jakarta Mail in JMC,viragpurnam,2023-02-21,2023-02-22,integrated,,,1,thegreystone
+,468,8041: JfrRulesReport -format json produce incomplete results,Suchitainf,2023-02-22,2023-02-26,integrated,Oracle,,4,"thegreystone,RealCLanger"
+,469,7307: Move org.openjdk.jmc.flightrecorder.configuration bundle from application to core,Josh-Matsuoka,2023-02-23,2023-12-01,integrated,,,281,thegreystone
+,470,8043: Upgrading D3 from v6 to v7,viragpurnam,2023-02-25,2023-02-27,integrated,,,2,thegreystone
+,471,8045: retransformClasses() doesn't retransform all needed classes,schmelter-sap,2023-02-27,2023-03-07,integrated,,,8,thegreystone
+,472,8046: build.bat --packageAgent doesn't detect failed builds,schmelter-sap,2023-02-27,2023-04-18,integrated,,,50,"thegreystone,RealCLanger"
+,473,8048: Agent throws exceptions on missing or empty descriptions,schmelter-sap,2023-02-28,2023-03-07,integrated,,,7,"thegreystone,RealCLanger"
+,474,8064: Typo in agent wizard,MariusVolkhart,2023-03-02,2023-08-28,integrated,,,179,"Gunde,RealCLanger"
+,475,8055: Improvement in stacktrace view for Duration,Suchitainf,2023-03-09,2023-06-06,integrated,Oracle,,89,"bric3,viragpurnam,aptmac,RealCLanger"
+,476,8063: IMCFrame Type cache not synchronized,PyvesB,2023-04-06,2023-04-11,integrated,,,5,Gunde
+,477,8057: Upgrade to 2023-03,thegreystone,2023-04-12,2023-04-24,integrated,Datadog,,12,viragpurnam
+,478,8065: Remove socket read illegal value,xpbob,2023-04-13,2023-04-26,integrated,,,13,thegreystone
+,479,8067: JMC Automated Analysis Page shows blank,viragpurnam,2023-04-20,2023-04-21,integrated,,,1,thegreystone
+,481,8050: JMC Automated Analysis should improve the messages when ignoring to evaluate some rules.,Suchitainf,2023-04-24,2023-05-18,integrated,Oracle,,24,thegreystone
+,482,8068: Move JMC 9 to JDK 17,bric3,2023-04-28,2023-05-16,integrated,,,18,"viragpurnam,RealCLanger"
+,483,8070: Move to JDK 17 leftovers,bric3,2023-05-17,2023-05-22,integrated,,,5,RealCLanger
+,484,7457: Unnecessary imports should fail the build,aptmac,2023-05-18,2023-05-19,integrated,IBM,,1,thegreystone
+,485,8071: Cleanup after latest refactorings,RealCLanger,2023-05-23,2023-05-24,integrated,SAP,DE,1,"viragpurnam,bric3,aptmac"
+,486,8072: Bump some maven plugins and fix warnings,RealCLanger,2023-05-24,2023-05-24,integrated,SAP,DE,0,"viragpurnam,bric3,aptmac"
+,487,8073: Rule result visibility not always toggleable in Results Page,aptmac,2023-05-25,2023-05-26,integrated,IBM,,1,thegreystone
+,488,5641: Rule that looks at G1 MMU Information,aptmac,2023-05-26,2023-06-12,integrated,IBM,,17,Gunde
+,489,8075: Improve Eclipse development experience,RealCLanger,2023-05-26,2023-05-30,integrated,SAP,DE,4,aptmac
+,490,8079: Issue in Dev environment due to maven-checkstyle-plugin,viragpurnam,2023-06-02,2023-06-06,integrated,,,4,"aptmac,RealCLanger"
+,491,8080: Add support for enabling jfr on native images,aptmac,2023-06-08,2023-06-20,integrated,IBM,,12,"bric3,RealCLanger"
+,492,7004: ThreadView : arrow up/down doesn't work,aptmac,2023-06-09,2023-06-12,integrated,IBM,,3,thegreystone
+,493,8082: Add ctrl+a keyboard shortcut to select all lanes on jfr threads page,aptmac,2023-06-09,2023-06-12,integrated,IBM,,3,thegreystone
+,494,8083: Updates for releng projects,RealCLanger,2023-06-09,2023-06-11,integrated,SAP,DE,2,thegreystone
+,495,8086: Some refactoring for jmc/core,RealCLanger,2023-06-11,2023-06-20,integrated,SAP,DE,9,"bric3,aptmac"
+,496,8090: Enhancements for agent pom,RealCLanger,2023-06-14,2023-06-15,integrated,SAP,DE,1,"bric3,aptmac"
+,497,8091: Refactoring for jmc/application,RealCLanger,2023-06-14,2023-06-29,integrated,SAP,DE,15,aptmac
+,498,8093: Rules dependant on GarbageCollectionInfoRule throw NPE if there is no gcInfo,aptmac,2023-06-16,2023-06-19,integrated,IBM,,3,"thegreystone,RealCLanger"
+,500,8095: Update org.openjdk.jmc.flightrecorder.rules.test/.classpath after JMC-8086,RealCLanger,2023-06-20,2023-06-22,integrated,SAP,DE,2,aptmac
+,501,8096: EventTemplateTest fails for JDKs with custom jfr profiles,RealCLanger,2023-06-20,2023-06-22,integrated,SAP,DE,2,aptmac
+,502,8112: Flamegraph model creation performance improvements,grandmasterpixel,2023-06-27,2023-09-04,integrated,,,69,"aptmac,RealCLanger"
+,503,8097: Fix project setup of uitests/org.openjdk.jmc.test.jemmy,RealCLanger,2023-06-29,2023-06-30,integrated,SAP,DE,1,aptmac
+,504,8098: Remove obsolete checkformatting step in GHA,RealCLanger,2023-06-29,2023-07-06,integrated,SAP,DE,7,aptmac
+,505,7441: JVM System information tables do not scroll horizontally,aptmac,2023-07-14,2023-07-14,integrated,IBM,,0,thegreystone
+,506,8101: Add ignore icon to automated analysis table,aptmac,2023-07-14,2023-07-15,integrated,IBM,,1,"viragpurnam,Suchitainf"
+,507,8102: Automated analysis page does not expand the results for Windows,viragpurnam,2023-07-18,2023-07-19,integrated,,,1,aptmac
+,508,8103: Add user configuration for local JVM refresh interval,aptmac,2023-07-20,2023-07-22,integrated,IBM,,2,thegreystone
+,509,8113: Make JfrWizardTest.verifyMinimalRecordingEventSettings work again,grandmasterpixel,2023-07-25,2023-07-27,integrated,,,2,"aptmac,RealCLanger"
+,510,"8116: build{.sh,.bat} fail to detect started p2 jetty process",reinhapa,2023-08-01,2023-08-01,integrated,,,0,"viragpurnam,RealCLanger"
+,511,7885: Graphical rendering of dependency view fails due to heap memory drain,viragpurnam,2023-08-02,2023-10-03,integrated,,,62,thegreystone
+,512,8117: mvn clean install on JMC Core fails if path contains space,viragpurnam,2023-08-17,2023-08-18,integrated,,,1,aptmac
+,513,8118: Add user configuration for delay between JVM discovery and attachment,aptmac,2023-08-28,2023-10-12,integrated,IBM,,45,thegreystone
+,514,8120: Build JMC for Linux aarch64,thegreystone,2023-09-08,2023-10-16,integrated,Datadog,,38,RealCLanger
+,516,8121: JMC should fail properly when executed with <17 JDK,parttimenerd,2023-09-28,2023-09-28,integrated,SAP,DE,0,aptmac
+,517,8122: Fix typos,dreis2211,2023-10-02,2023-10-07,integrated|hacktoberfest-accepted,,,5,thegreystone
+,518,8123: Use StandardCharsets where possible,dreis2211,2023-10-03,2023-10-13,integrated|hacktoberfest-accepted,,,10,thegreystone
+,519,407: Clean up the swing initialization code,thegreystone,2023-10-06,2023-10-06,integrated|hacktoberfest-accepted,Datadog,,0,aptmac
+,520,8124: Fix the release notes generator,thegreystone,2023-10-06,2023-10-13,integrated|hacktoberfest-accepted,Datadog,,7,aptmac
+,521,8125: Update the developer guide for latest Eclipse,thegreystone,2023-10-06,2023-10-13,integrated|hacktoberfest-accepted,Datadog,,7,viragpurnam
+,522,8127: Use ProcessHandle API to get PIDs,dreis2211,2023-10-08,2023-10-16,integrated|hacktoberfest-accepted,,,8,RealCLanger
+,523,8128: Remove redundant semicolons,dreis2211,2023-10-09,2023-10-14,integrated,,,5,thegreystone
+,524,8129: Add tool to simplify platform upgrades,thegreystone,2023-10-14,2023-11-08,integrated|hacktoberfest-accepted,Datadog,,25,"viragpurnam,aptmac"
+,525,8126: Update to Eclipse 2023-09,thegreystone,2023-10-14,2023-10-16,integrated|hacktoberfest-accepted,Datadog,,2,RealCLanger
+,527,7192: Event browser should be able to search and show event type ids,aptmac,2023-10-30,2023-11-20,integrated|hacktoberfest-accepted,IBM,,21,thegreystone
+,528,8144: Add rule to detect GC Inverted Parallelism,aptmac,2023-10-30,2023-12-01,integrated|hacktoberfest-accepted,IBM,,32,thegreystone
+,529,4262: Duplicate headers when copying thread dump text to clipboard,aptmac,2023-10-30,2023-12-01,integrated|hacktoberfest-accepted,IBM,,32,thegreystone
+,530,7449: Add GitHub action to verify copyright year,aptmac,2023-11-01,2023-12-01,integrated,IBM,,30,"thegreystone,RealCLanger"
+,531,7069: Move rjmx bundle from application to core,aptmac,2023-11-03,2023-12-07,integrated,IBM,,34,RealCLanger
+,532,8145: Upgrade Jetty to version 10.0.17,viragpurnam,2023-11-08,2023-11-14,integrated,,,6,"bric3,aptmac"
+,533,5560: Support new nio events in JDK 10.,Suchitainf,2023-11-13,2023-12-15,integrated,Oracle,,32,Gunde
+,534,8149: Cleanup project files after JMC-7307,RealCLanger,2023-12-01,2023-12-03,integrated,SAP,DE,2,aptmac
+,535,8150: SpotBugs entry in .gitignore hides flightrecorder.configuration files,aptmac,2023-12-04,2023-12-05,integrated,IBM,,1,RealCLanger
+,536,8154: Some JMX attributes are missing unit specifications in the Console,thegreystone,2023-12-07,2023-12-08,integrated,Datadog,,1,RealCLanger
+,538,4263: Support monitor inflation event in JMC,Suchitainf,2023-12-11,2023-12-15,integrated,Oracle,,4,Gunde
+,539,8159: openUncompressedStream supports compressed inputs on all streams,carterkozak,2023-12-11,2024-01-03,integrated,,,23,"bric3,thegreystone"
+,540,8156: JfrRulesReport.printReport does not respect verbosity for text and json,thegreystone,2023-12-13,2023-12-14,integrated,Datadog,,1,Gunde
+,541,8160: Fix test failure in core due to missing new File Force rule in newly added JFRs,Suchitainf,2023-12-17,2023-12-18,integrated,Oracle,,1,Gunde
+,542,8162: Update OptionsCheckRule to JDK21,Gunde,2024-01-13,2024-01-23,integrated,,,10,"thegreystone,aptmac"
+,543,8054: Support the new JPLIS agent events,thegreystone,2024-01-18,2024-01-19,integrated,Datadog,,1,aptmac
+,545,8163: Fix update-site not working,RoiSoleil,2024-01-18,2024-01-23,integrated,,,5,"bric3,thegreystone"
+,546,8155 Upgrade to Eclipse 2023-12,viragpurnam,2024-01-18,2024-01-30,integrated,,,12,aptmac
+,547,8167: [Accessibility]: 'Click here to start using JDK Mission Control' button does not have any function to open JDK mission control,Suchitainf,2024-01-25,2024-01-29,integrated,Oracle,,4,aptmac
+,548,7455: Add support for jolokia JMX service connection,skarsaune,2024-01-25,2024-07-02,integrated,,,159,aptmac
+,549,8172: Update to release splash,thegreystone,2024-02-01,2024-02-01,integrated,Datadog,,0,aptmac
+,550,8173: 2023-12 target platform needs update to take org.eclipse.ui.themes,viragpurnam,2024-02-01,2024-02-01,integrated,,,0,aptmac
+,552,8174: Check license year script may check files not changed by a PR,aptmac,2024-02-12,2024-02-26,integrated,IBM,,14,"bric3,RealCLanger"
+,553,8175: Flightrecorder UI-tests are failing,aptmac,2024-02-14,2024-02-20,integrated,IBM,,6,"thegreystone,viragpurnam"
+,554,8204 : Keyboard traps in flamegraph view for search option,viragpurnam,2024-02-23,2024-03-04,integrated,,,10,aptmac
+,555,8202: JMC 9 release notes,thegreystone,2024-03-11,2024-03-13,integrated,Datadog,,2,aptmac
+,556,8210: Update devguide to mention Protocol Rules for Eclipse 2023-06 onward,aptmac,2024-03-12,2024-03-14,integrated,IBM,,2,thegreystone
+,558,8212: Update trunk to 9.1.0,thegreystone,2024-03-25,2024-03-26,integrated,Datadog,,1,aptmac
+,561,7948: Update ASM version in the Agent,Josh-Matsuoka,2024-05-01,2024-05-02,integrated,,,1,"aptmac,RealCLanger"
+,562,8219: Missing coverage in application reports,aptmac,2024-05-03,2024-11-04,integrated,IBM,,185,"thegreystone,RealCLanger"
+,563,8220: Make LocalJVMToolkit reflective,thegreystone,2024-05-08,2024-05-14,integrated,Datadog,,6,aptmac
+,564,7263: JMC displaying long value in scientific notation,Suchitainf,2024-05-25,2024-05-28,integrated,Oracle,,3,"thegreystone,viragpurnam"
+,565,7506: Incorrect numeric formatting of PID by JMC,Suchitainf,2024-05-25,2024-06-14,integrated,Oracle,,20,"bric3,viragpurnam,thegreystone"
+,566,8215: Update platform to 2024-03,thegreystone,2024-05-28,2024-06-13,integrated,Datadog,,16,aptmac
+,567,8229: Remove unsupported platforms,thegreystone,2024-06-21,2024-06-25,integrated,Datadog,,4,aptmac
+,568,8231: Add version to build tarball names,aptmac,2024-06-26,2024-06-27,integrated,IBM,,1,RealCLanger
+,569,8223: Copyright script is failing,aptmac,2024-06-26,2024-06-27,integrated,IBM,,1,RealCLanger
+,570,8236: Add support for Jolokia discovery,skarsaune,2024-07-02,2024-08-03,integrated,,,32,aptmac
+,571,8240: Upgrade HdrHistogram to 2.2.2,viragpurnam,2024-07-09,2024-07-10,integrated,,,1,thegreystone
+,572,8244: Turn off scientific notation in JMC for attributes with long data type,Suchitainf,2024-07-28,2024-08-24,integrated,Oracle,,27,"bric3,thegreystone"
+,574,8245: Improve XML processing,viragpurnam,2024-07-30,2024-08-07,integrated,,,8,aptmac
+,575,8114: Verify fixed uitests in ControlRecordingsTest on jdk 17,aptmac,2024-07-30,2024-08-26,integrated,IBM,,27,"thegreystone,viragpurnam"
+,578,8238: Update to Eclipse 2024-06,thegreystone,2024-08-21,2024-09-07,integrated,Datadog,,17,"viragpurnam,aptmac"
+,579,8249: Add support for the new allocation profiler in rules,carterkozak,2024-08-22,2024-09-25,integrated,,,34,thegreystone
+,580,8248: [Accessibility] Low Contrast in High Contrast mode on Stacktrace View,Suchitainf,2024-08-26,2024-09-16,integrated,Oracle,,21,"bric3,aptmac"
+,581,7490: Trigger action does not return error message on failure.,viragpurnam,2024-09-03,2024-09-17,integrated,,,14,thegreystone
+,582,8250: Should show Resident Set Size,thegreystone,2024-09-05,2024-09-25,integrated,Datadog,,20,aptmac
+,583,8251: Add missing hook in plugin from Jolokia discovery,skarsaune,2024-09-05,2024-09-06,integrated,,,1,aptmac
+,584,8254: Allow primitive types in converters,schmelter-sap,2024-09-09,2024-09-11,integrated,,,2,thegreystone
+,585,8255: Update toolchain and base images to support building with Java21 in docker,skarsaune,2024-09-10,2024-09-17,integrated,,,7,aptmac
+,587,8252: JMC localization does not work as expected for Chinese locale ,viragpurnam,2024-09-11,2024-09-17,integrated,,,6,"thegreystone,aptmac"
+,589,8257: Stacktrace Percentage Column Tooltip throwing Exception,Suchitainf,2024-09-15,2024-09-17,integrated,Oracle,,2,aptmac
+,590,8259: Several JFR pages throwing exceptions after JMC-8244,Suchitainf,2024-09-26,2024-09-26,integrated,Oracle,,0,aptmac
+,591,8266: Upgrade third party libraries for JMC 9.1.0,viragpurnam,2024-09-26,2024-09-27,integrated,,,1,aptmac
+,592,8260: Warnings and errors logged during XML processing,viragpurnam,2024-10-11,2024-10-14,integrated|hacktoberfest-accepted,,,3,thegreystone
+,593,6683: Mouse over for Event Thread should show the various thread IDs,viragpurnam,2024-10-18,2024-11-05,integrated|hacktoberfest-accepted,,,18,"thegreystone,aptmac"
+,594,8276: UI tests failing on Windows,thegreystone,2024-10-21,2024-10-27,integrated|hacktoberfest-accepted,Datadog,,6,"viragpurnam,aptmac"
+,595,8277: List ARM first ,thegreystone,2024-10-29,2024-10-31,integrated|hacktoberfest-accepted,Datadog,,2,aptmac
+,596,6626: The halt rule result should have a table of the VM operations,Suchitainf,2024-10-30,2024-11-04,integrated|hacktoberfest-accepted,Oracle,,5,aptmac
+,597,8284: Fix Jolokia discovery issues,skarsaune,2024-10-30,2024-11-07,integrated|hacktoberfest-accepted,,,8,aptmac
+,598,8282: Spotbugs errors,thegreystone,2024-10-30,2024-10-31,integrated|hacktoberfest-accepted,Datadog,,1,aptmac
+,599,8285: Documentation fix,thegreystone,2024-10-31,2024-10-31,integrated|hacktoberfest-accepted,Datadog,,0,aptmac
+,600,8274: Add thread counts to the Java Application page,thegreystone,2024-11-01,2024-11-05,integrated|hacktoberfest-accepted,Datadog,,4,aptmac
+,601,8286: Fix broken launcher,thegreystone,2024-11-01,2024-11-05,integrated|hacktoberfest-accepted,Datadog,,4,aptmac
+,602,8287: Fix the JMX protocol extenders,aptmac,2024-11-01,2024-11-04,integrated,IBM,,3,thegreystone
+,604,8288: Clean up warnings,thegreystone,2024-11-04,2024-11-04,integrated,Datadog,,0,aptmac
+,605,"8278: Update COPYRIGHT, LICENSE.txt and THIRDPARTYREADME.txt files",viragpurnam,2024-11-05,2024-11-05,integrated,,,0,thegreystone
+,606,8290: Handle resources warnings,thegreystone,2024-11-05,2024-11-06,integrated,Datadog,,1,aptmac
+,607,6607: Better descriptions for the code cache rule,Suchitainf,2024-11-08,2024-11-11,integrated,Oracle,,3,thegreystone
+,608,8291: JVM PID is shown as N/A however the value is present in JFR,Suchitainf,2024-11-12,2024-11-12,integrated,Oracle,,0,aptmac
+,609,"8294: Missing plugins in JMC-Eclipse-plug-ins, JMC-Eclipse and JMC-RCP-plug-ins launchers",viragpurnam,2024-11-15,2024-11-17,integrated,,,2,thegreystone
+,611,8299: JDP Tests in core fail if multicast is not possible,skarsaune,2024-11-24,2025-01-11,integrated,,,48,thegreystone
+,612,8298: Update to Eclipse 2024-09,viragpurnam,2024-11-25,2024-12-05,integrated,,,10,thegreystone
+,613,8296: No Java process should ever be PID 1,ky0n,2024-11-30,2024-12-11,integrated|hack-commit-push,,,11,thegreystone
+,614,8295: Shutdown event type id is not properly translated for Oracle JDK 8,thegreystone,2024-12-03,2024-12-09,integrated,Datadog,,6,viragpurnam
+,615,8300: Update to Eclipse 2024-12,viragpurnam,2024-12-09,2024-12-10,integrated,,,1,thegreystone
+,616,8303: NPE at org.openjdk.jmc.flightrecorder.rules.report.JfrRulesReport.addReport,Suchitainf,2024-12-12,2024-12-19,integrated,Oracle,,7,thegreystone
+,617,8306: Missing plugins while installing JMC 9.1.0 in Eclipse IDE,viragpurnam,2024-12-13,2024-12-16,integrated,,,3,thegreystone
+,618,8310: Fix connections over RMI and Jolokia - undo rjmx change for 8287,skarsaune,2024-12-28,2025-01-07,integrated,,,10,aptmac
+,620,8313: 9.1.0 release splash,thegreystone,2025-01-11,2025-01-12,integrated,Datadog,,1,aptmac
+,621,8314: Update some important copyrights,thegreystone,2025-01-11,2025-01-15,integrated,Datadog,,4,"viragpurnam,aptmac"
+,622,8315: Temporary EA splash for JMC 10,thegreystone,2025-01-12,2025-01-12,integrated,Datadog,,0,aptmac
+,623,8316: Update to 10,thegreystone,2025-01-12,2025-01-15,integrated,Datadog,,3,aptmac
+,626,8349: JMC Copyright year and some http links require update,Suchitainf,2025-01-29,2025-01-31,integrated,Oracle,,2,viragpurnam
+,628,8356: Cherry pick copyright changes,thegreystone,2025-02-07,2025-02-07,integrated,Datadog,,0,viragpurnam
+,629,8358: Create release notes for JMC 9.1.0,thegreystone,2025-02-11,2025-03-26,integrated,Datadog,,43,viragpurnam
+,630,8364: Fix JULONG handling to set stackdepth value,RoiSoleil,2025-03-03,2025-03-18,integrated,,,15,aptmac
+,631,8366: Jolokia - Display warning when enabling Jolokia discovery about only using the discovery feature in a trusted environment.,skarsaune,2025-03-13,2025-04-07,integrated,,,25,"thegreystone,viragpurnam"
+,633,8297: Update OptionsCheckRule for new JDK releases,ky0n,2025-03-26,2025-03-29,integrated,,,3,thegreystone
+,634,8372: Add UnitLookup.TIMESPAN to AttributeSelection to be able to use the attribute in FlameGraph for IO,RoiSoleil,2025-03-27,2025-04-07,integrated,,,11,thegreystone
+,635,8373: Fix tooltip on Flamegraph not showing after switching to Stack Trace view,RoiSoleil,2025-03-28,2025-04-08,integrated,,,11,bric3
+,636,8370: HDR Histogram View,thegreystone,2025-04-01,2025-04-09,integrated,Datadog,,8,aptmac
+,637,8378: Update version in jcheck conf file,viragpurnam,2025-04-03,2025-04-06,integrated,,,3,thegreystone
+,638,8382: Update to Eclipse 2025-03,viragpurnam,2025-04-15,2025-04-17,integrated,,,2,thegreystone
+,639,8380: Support dark mode in graphs,thegreystone,2025-04-17,2025-04-22,integrated,Datadog,,5,aptmac
+,641,8385: Upgrade hashing algorithm,Suchitainf,2025-04-21,2025-05-21,integrated,Oracle,,30,thegreystone
+,642,8289: Remove security manager related code,thegreystone,2025-04-23,2025-04-24,integrated,Datadog,,1,aptmac
+,643,8390: Wrong target platform name,thegreystone,2025-04-24,2025-04-24,integrated,Datadog,,0,aptmac
+,644,8391: Dark theme support for dials,thegreystone,2025-04-24,2025-04-25,integrated,Datadog,,1,bric3
+,646,8396: OptionsCheckRule has doesn't recognize HeapDumpOnOutOfMemoryError,ivoanjo,2025-05-01,2025-07-02,integrated,,,62,"thegreystone,Gunde"
+,647,8392: Memory view on MacOS keeps reverting to aggregate trace list,thegreystone,2025-05-01,2025-05-13,integrated,Datadog,,12,Gunde
+,648,8395: Thread ID is not properly visible on hover for Mac,viragpurnam,2025-05-06,2025-05-08,integrated,,,2,thegreystone
+,649,8394: Views should not be named view,thegreystone,2025-05-19,2025-05-21,integrated,Datadog,,2,Gunde
+,650,8399: IOPageTest fails,thegreystone,2025-05-19,2025-05-22,integrated,Datadog,,3,Gunde
+,651,8401: Remove weak cipher usages in JMC Secure Store,Suchitainf,2025-05-25,2025-05-29,integrated,Oracle,,4,thegreystone
+,652,8400: Add more show options for JMX Console graphs,thegreystone,2025-05-31,2025-07-21,integrated,Datadog,,51,aptmac
+,653,8389: JMC must stop using finalizers,thegreystone,2025-06-07,2025-06-26,integrated,Datadog,,19,aptmac
+,654,5705: Explain metaspace in rule results,Suchitainf,2025-06-08,2025-06-20,integrated,Oracle,,12,Gunde
+,655,8404: Update to Eclipse 2025-06,viragpurnam,2025-06-24,2025-06-25,integrated,,,1,aptmac
+,656,8404: Update to Eclipse 2025-06,viragpurnam,2025-06-24,2025-06-25,integrated,,,1,aptmac
+,657,8371: Stacktrace should hide hidden frames,thegreystone,2025-06-28,2025-07-12,integrated,Datadog,,14,Suchitainf
+,658,8409: Create 9.1.1 release notes,thegreystone,2025-07-03,2025-07-04,integrated,Datadog,,1,viragpurnam
+,659,8410: Update version for 9.1.1 release,viragpurnam,2025-07-04,2025-07-04,integrated,,,0,thegreystone
+,661,8415: Spotless error in the main branch,thegreystone,2025-07-07,2025-07-08,integrated,Datadog,,1,aptmac
+,662,8406: Chinese Rule strings are out of date,youngledo,2025-07-08,2025-08-27,integrated,,,50,aptmac
+,663,8416: Better Eclipse classpath entry defaults,thegreystone,2025-07-09,2025-07-18,integrated,Datadog,,9,viragpurnam
+,664,6203: Add ZGC allocation stall rule,Suchitainf,2025-07-09,2025-09-06,integrated,Oracle,,59,thegreystone
+,665,"8365: Jolokia - Additional support for security mechanisms related to SSL / authentication, discovery restrictions",skarsaune,2025-07-12,2025-10-14,integrated,,,94,aptmac
+,666,6515: Show virtualization information in JMC,Suchitainf,2025-07-17,2025-07-17,integrated,Oracle,,0,"thegreystone,aptmac"
+,667,8421: Missing Eclipse classpath entry defaults,Suchitainf,2025-07-19,2025-07-21,integrated,Oracle,,2,viragpurnam
+,668,8425: Problem importing in Eclipse due to missing awatility 3rd party artifact,skarsaune,2025-07-27,2025-10-14,integrated,,,79,aptmac
+,669,8436: Formatting of rule descriptions with manual bullets / line breaks is gone on revisit,aymane-harmaz,2025-09-01,2025-09-15,integrated,,,14,thegreystone
+,672,8437: JDP Tests are failing on macOS-15 Github Actions runner due to local network privacy restrictions,aymane-harmaz,2025-09-04,2025-09-05,integrated,,,1,"thegreystone,Suchitainf"
+,673,8438: Update the version of JMC to 10.0.0,aymane-harmaz,2025-09-08,2025-09-15,integrated,,,7,thegreystone
+,674,5608: Include top stack trace frames in errors and exceptions rules,aymane-harmaz,2025-09-17,2025-09-22,integrated,,,5,thegreystone
+,675,8439: ArithmeticException thrown when plotting event count histogram with maxDuration set to 0,aymane-harmaz,2025-09-23,2025-10-08,integrated,,,15,thegreystone
+,678,8427: Text getting overlapped on graph of Processes screen,aymane-harmaz,2025-10-10,2025-12-02,integrated,,,53,thegreystone
+,679,6004: Should add tenuring summary to the GC visualization,aymane-harmaz,2025-10-17,2025-12-03,integrated,,,47,thegreystone
+,681,8451: Should make the Event Type the first column of event types tree table,aymane-harmaz,2025-10-27,2025-12-03,integrated,,,37,thegreystone
+,682,8450: Improve usability of selectable action items by supporting keyboard and double-click interactions,aymane-harmaz,2025-10-29,2025-12-03,integrated,,,35,thegreystone
+,683,8469: Should make rules and page heading accessible through keyboard in JFR overview page,aymane-harmaz,2025-11-07,2025-12-03,integrated,,,26,thegreystone
+,684,8470: Unresolved placeholders shown in JFR result overview's table mode,aymane-harmaz,2025-11-10,2025-12-02,integrated,,,22,Gunde
+,685,8335: Duplicate values in tooltip for RSS and RSS (Peak) in memory tab,aymane-harmaz,2025-11-12,2025-12-02,integrated,,,20,Gunde
+,687,8474: Eclipse platform upgrade to 2025_09,viragpurnam123,2025-11-24,2025-12-08,integrated,,,14,thegreystone
+,688,6832: Should allow plotting line charts for all quantities,aymane-harmaz,2025-11-24,2026-03-12,integrated,,,108,thegreystone
+,689,8473: JMC silently connects to its own runtime if target runtime does not include management modules,aymane-harmaz,2025-11-27,2025-12-04,integrated,,,7,thegreystone
+,690,8475: Writing events with fields not explicitly set can corrupt the recording,jbachorik,2025-12-03,2026-02-02,integrated,Datadog,CZ,61,thegreystone
+,692,8432: Better exception handling for Email Trigger failure,aymane-harmaz,2025-12-08,2026-01-03,integrated,,,26,Gunde
+,693,6872: Add butterfly/sandwich view to JMC,thegreystone,2025-12-08,2026-03-05,integrated,Datadog,,87,aptmac
+,695,8479: Update jolokia third party for JMC 10.0.0,skarsaune,2025-12-15,2026-01-22,integrated,,,38,Suchitainf
+,697,8489: Inaccurate Chinese translations on TLAB page,youngledo,2026-01-01,2026-01-09,integrated,,,8,aptmac
+,698,8476: Websocket server is tied to JfrEditor,aptmac,2026-01-07,2026-02-02,integrated,IBM,,26,thegreystone
+,700,8512: Fixing various minor typos and nits,thegreystone,2026-01-23,2026-01-29,integrated,Datadog,,6,"aptmac,RealCLanger"
+,701,8523: Update version to 9.1.2,Suchitainf,2026-01-28,2026-01-29,integrated,Oracle,,1,thegreystone
+,702,8524: Update third parties for 9.1.2,Suchitainf,2026-01-28,2026-01-29,integrated,Oracle,,1,aptmac
+,703,8525: Update 9.1 splash copyright year,thegreystone,2026-01-29,2026-01-29,integrated,Datadog,,0,Suchitainf
+,704,8527: Add AGENTS.md file,thegreystone,2026-01-29,2026-01-29,integrated,Datadog,,0,aptmac
+,705,8526: Update third parties for 10.0.0,Suchitainf,2026-01-29,2026-01-29,integrated,Oracle,,0,aptmac
+,706,8528: UI tests fail after platform upgrade,thegreystone,2026-01-30,2026-02-02,integrated,Datadog,,3,aptmac
+,707,8531: UI tests fail on Mac OS,thegreystone,2026-02-11,2026-02-16,integrated,Datadog,,5,aptmac
+,709,8537: Minor discrepancies between Oracle JMC and Open JMC,Suchitainf,2026-02-16,2026-02-19,integrated,Oracle,,3,aptmac
+,710,8543: Minor discrepancies between Oracle JMC and Open JMC,Suchitainf,2026-02-19,2026-02-19,integrated,Oracle,,0,aptmac
+,711,"8544: Update third parties OWASP, lz4-java, Radiance, hpcc-js-wasm, Font Awesome and ASM",Suchitainf,2026-03-04,2026-03-11,integrated,Oracle,,7,thegreystone

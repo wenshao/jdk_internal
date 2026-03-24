@@ -1,0 +1,148 @@
+bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,reviewers
+8264311,1,8264311: Heap object statistics,rkennke,2021-05-05,2021-05-10,integrated,Red Hat,CH,5,shipilev
+,2,Back out hashcode trimming,rkennke,2021-05-10,2021-05-10,integrated,Red Hat,CH,0,shipilev
+,3,Trim identity-hashcode to 25bit,rkennke,2021-05-10,2021-05-11,integrated,Red Hat,CH,1,shipilev
+,4,Disable biased locking altogether,rkennke,2021-05-11,2021-05-12,integrated,Red Hat,CH,1,shipilev
+,5,Enforce +UseCompressedClassPointers,rkennke,2021-05-17,2021-05-18,integrated,Red Hat,CH,1,shipilev
+,7,Store (narrow) klass in object header,rkennke,2021-05-21,2021-05-26,integrated,Red Hat,CH,5,shipilev
+,8,Implement sliding forwarding scheme that preserves upper header bits,rkennke,2021-06-10,2021-07-09,integrated,Red Hat,CH,29,shipilev
+,10,Implement self-forwarding of objects that preserves header bits,rkennke,2021-06-28,2021-07-09,integrated,Red Hat,CH,11,shipilev
+,12,Read class from object header,rkennke,2021-07-13,2021-09-16,integrated,Red Hat,CH,65,shipilev
+,13,Smaller class pointers,tstuefe,2021-09-17,2021-12-16,integrated,Red Hat,DE,90,rkennke
+,15,Load Klass* from header in interpreter (x86),rkennke,2021-09-27,2021-10-12,integrated,Red Hat,CH,15,shipilev
+,16,Resolve displaced header in CDS dumping,rkennke,2021-10-07,2021-10-12,integrated,Red Hat,CH,5,shipilev
+,17,Fix use of Klass* in GC JFR reporting,rkennke,2021-10-12,2021-10-12,integrated,Red Hat,CH,0,shipilev
+,19,Fix some tests to work with +UseCompressedClassPointers,rkennke,2021-10-12,2021-10-13,integrated,Red Hat,CH,1,shipilev
+,20,"Load Klass from header, C1",rkennke,2021-10-12,2022-01-12,integrated,Red Hat,CH,92,shipilev
+,21,Preserve Klass* in leak profiler,rkennke,2021-10-13,2021-10-19,integrated,Red Hat,CH,6,shipilev
+,22,Jump/stub length failures in x86_64 release builds,shipilev,2021-10-14,2021-10-14,integrated,Amazon,US,0,rkennke
+,23,Fix self-forwarding on 32 bit platforms,rkennke,2021-10-15,2021-10-15,integrated,Red Hat,CH,0,shipilev
+,24,Fix windows build,rkennke,2021-10-18,2021-10-19,integrated,Red Hat,CH,1,shipilev
+,25,Load Klass* without causing monitor inflation,rkennke,2021-10-19,2021-11-18,integrated,Red Hat,CH,30,shipilev
+,26,aarch64: init Klass* in markword in C1 & template interpreter,tstuefe,2021-10-22,2021-10-23,integrated,Red Hat,DE,1,rkennke
+,27,Rendezvous GC threads under STS for monitor deflation,rkennke,2021-10-26,2021-10-28,integrated,Red Hat,CH,2,"shipilev,fisk"
+,28,Deflate monitors of dead objects before they become unreachable,rkennke,2021-11-17,2021-12-01,integrated,Red Hat,CH,14,shipilev
+,29,"Load Klass* from header, C2 implementation",rkennke,2021-11-25,2022-02-16,integrated,Red Hat,CH,83,shipilev
+,31,Remaining changes to load_[n]klass implementation in x86 assembly,rkennke,2021-12-14,2022-02-04,integrated,Red Hat,CH,52,shipilev
+,32,Implement Shenandoah support,rkennke,2021-12-17,2022-05-02,integrated,Red Hat,CH,136,zhengyu123
+,33,Fix 32-bit Zero builds,shipilev,2022-01-06,2022-01-10,integrated,Amazon,US,4,rkennke
+,34,Fix loading Klass* in C1 on AArch64,rkennke,2022-01-18,2022-01-24,integrated,Red Hat,CH,6,shipilev
+,35,"Load narrowKlass from runtime, decode in generated code",rkennke,2022-01-25,2022-01-27,integrated,Red Hat,CH,2,shipilev
+,36,"Load narrowKlass from header, AArch64 assembler implementation",rkennke,2022-01-26,2022-02-02,integrated,Red Hat,CH,7,
+,38,Fix CDS LotsOfClasses tests on 32-bit,tstuefe,2022-02-04,2022-02-04,integrated,Red Hat,DE,0,rkennke
+,40,Eliminate Klass* word,rkennke,2022-02-17,2022-02-23,integrated,Red Hat,CH,6,shipilev
+,41,Relax array elements alignment,rkennke,2022-02-23,2022-04-29,integrated,Red Hat,CH,65,tstuefe
+,44,Implement ZGC support,rkennke,2022-03-08,2022-03-17,integrated,Red Hat,CH,9,fisk
+,46,Simplify stable_mark() routine,rkennke,2022-03-30,2022-04-14,integrated,Red Hat,CH,15,"tstuefe,zhengyu123"
+,53,Merge jdk,rkennke,2022-08-02,2022-08-08,integrated,Red Hat,CH,6,tstuefe
+,55,Merge jdk,rkennke,2022-10-05,2022-10-06,integrated,Red Hat,CH,1,tstuefe
+,56,Replace stack-locking with fast-locking,rkennke,2022-10-06,2022-10-18,integrated,Red Hat,CH,12,"shipilev,tstuefe"
+8299594,60,"8299594: [Lilliput] Revert ""Replace stack-locking with fast-locking""",rkennke,2023-01-04,2023-01-04,integrated,Red Hat,CH,0,shipilev
+,61,Merge jdk:jdk-21+4,rkennke,2023-01-09,2023-01-10,integrated,Red Hat,CH,1,shipilev
+8300440,62,8300440: [Lilliput] Implement alternative fast-locking scheme,rkennke,2023-01-18,2023-01-18,integrated,Red Hat,CH,0,shipilev
+8300573,63,8300573: [Lilliput] Properly set ZF on anon-check path; avoid some conditional branches,rkennke,2023-01-18,2023-01-23,integrated,Red Hat,CH,5,shipilev
+8300733,64,8300733: [Lilliput] Enable fast-locking for Lilliput,rkennke,2023-01-20,2023-01-23,integrated,Red Hat,CH,3,shipilev
+8300735,65,8300735: [Lilliput] Adjust GHA and jcheck config,rkennke,2023-01-20,2023-01-20,integrated,Red Hat,CH,0,shipilev
+8300527,66,8300527: [Lilliput] Simplify and optimize loading of Klass*,rkennke,2023-01-23,2023-01-27,integrated,Red Hat,CH,4,shipilev
+8300888,67,8300888: [Lilliput] Remaining missing parts in the SA,rkennke,2023-01-24,2023-01-27,integrated,Red Hat,CH,3,shipilev
+8301545,68,8301545: [Lilliput] Fix aarch64 interpreter load_nklass(),rkennke,2023-01-31,2023-01-31,integrated,Red Hat,CH,0,shipilev
+8301514,69,8301514: [Lilliput] Enable fast-locking with ZGC,rkennke,2023-01-31,2023-01-31,integrated,Red Hat,CH,0,shipilev
+8301562,70,8301562: [Lilliput] Runtime flag to enable Lilliput,rkennke,2023-02-02,2023-03-10,integrated,Red Hat,CH,36,tstuefe
+,71,Merge jdk:jdk-21+8,rkennke,2023-02-03,2023-02-03,integrated,Red Hat,CH,0,shipilev
+8301786,72,JDK-8301786: [Lilliput] Failing CompressedClassPointerEncoding.java,tstuefe,2023-02-06,2023-02-07,integrated,Red Hat,DE,1,shipilev
+8302065,73,8302065: [Lilliput] Cleanups and touch-ups,rkennke,2023-02-08,2023-02-10,integrated,Red Hat,CH,2,shipilev
+8302209,74,8302209: [Lilliput] Optimize fix-anon monitor owner path,rkennke,2023-02-10,2023-03-08,integrated,Red Hat,CH,26,tstuefe
+,75,Merge jdk:jdk-21+12,rkennke,2023-03-02,2023-03-06,integrated,Red Hat,CH,4,tstuefe
+8303769,76,8303769: [Lilliput] Fix interpreter asymmetric fast-locking,rkennke,2023-03-07,2023-03-09,integrated,Red Hat,CH,2,tstuefe
+8303813,78,8303813: [Lilliput] (AArch64) Use tbz instead of tst and br in load_klass(),rkennke,2023-03-08,2023-03-09,integrated,Red Hat,CH,1,"phohensee,tstuefe"
+8303823,80,JDK-8303823: [Lilliput] Inline initial LockStack stack,tstuefe,2023-03-08,2023-03-08,integrated,Red Hat,DE,0,rkennke
+8304690,82,8304690: [Lilliput] Increase size of C2HandleAnonOMOwnerStub on x86,rkennke,2023-03-21,2023-03-21,integrated,Red Hat,CH,0,tstuefe
+8305926,84,8305926: [Lilliput] Revert some ZGC changes,rkennke,2023-04-12,2023-04-12,integrated,Red Hat,CH,0,shipilev
+8306122,85,8306122: [Lilliput] Refactor full GC forwarding,rkennke,2023-04-17,2023-04-18,integrated,Red Hat,CH,1,shipilev
+8307002,86,JDK-8307002: [Lilliput] [Metaspace] Make use of Klass alignment gaps,tstuefe,2023-04-26,2023-05-05,integrated,Red Hat,DE,9,rkennke
+,87,Merge jdk:jdk-21+20,tstuefe,2023-04-27,2023-05-02,integrated|clean,Red Hat,DE,5,rkennke
+8307392,88,8307392: [Lilliput] Revert deflation of dead object's monitors,rkennke,2023-05-03,2023-05-04,integrated,Red Hat,CH,1,shipilev
+8307737,92,JDK-8307737: [Lilliput] Reduce number of loads used for Klass decoding in static code,tstuefe,2023-05-09,2023-05-11,integrated,Red Hat,DE,2,rkennke
+8307991,93,8307991: [Lilliput] Use narrow i-hash only when +UseCompactObjectHeaders,rkennke,2023-05-12,2023-05-12,integrated,Red Hat,CH,0,shipilev
+,94,Merge jdk:jdk-21+22,rkennke,2023-05-15,2023-05-15,integrated,Red Hat,CH,0,tstuefe
+8308900,95,8308900: [Lilliput] Cherry-pick C2 prototype header improvements,shipilev,2023-05-25,2023-05-26,integrated,Amazon,US,1,rkennke
+8310010,96,8310010: [Lilliput] SA: Fix oop array element alignment,rkennke,2023-06-14,2023-07-17,integrated,Red Hat,CH,33,shipilev
+,97,Merge jdk,rkennke,2023-06-14,2023-06-14,integrated|clean,Red Hat,CH,0,shipilev
+8310167,98,8310167: [Lilliput] Properly deal with flag mismatch in CDS,shipilev,2023-06-15,2023-06-16,integrated,Amazon,US,1,rkennke
+8310214,99,8310214: [Lilliput] Disable compact headers by default,shipilev,2023-06-16,2023-06-19,integrated,Amazon,US,3,rkennke
+8310528,100,8310528: [Lilliput] Provide infrastructure for Lilliput-specific ProblemList,shipilev,2023-06-21,2023-06-21,integrated,Amazon,US,0,rkennke
+8311875,101,8311875: [Lilliput] Disallow accessing oop metadata vmStructs with +UCOH,shipilev,2023-07-11,2023-07-19,integrated,Amazon,US,8,rkennke
+8314130,102,8314130: [Lilliput] Make loadNKlassCompactHeaders not use a TEMP register,rkennke,2023-08-10,2023-08-11,integrated,Red Hat,CH,1,shipilev
+,104,Merge jdk,tstuefe,2023-08-15,2023-08-17,integrated|clean,Red Hat,DE,2,
+8314863,107,"8314863: [Lilliput] Revert changes in zRelocate, prevent ZGC with Lilliput",rkennke,2023-08-23,2023-08-23,integrated,Red Hat,CH,0,shipilev
+8317352,110,8317352: [Lilliput] Sync with upstreaming PRs,rkennke,2023-10-09,2023-10-11,integrated,Red Hat,CH,2,shipilev
+8317812,111,8317812: [Lilliput] Make C2 LoadNKlassCompactHeader more robust,rkennke,2023-10-10,2023-10-12,integrated,Red Hat,CH,2,shipilev
+8318011,112,8318011: [Lilliput] Fix CDS narrowKlass encoding,rkennke,2023-10-12,2023-10-16,integrated,Red Hat,CH,4,"shipilev,tstuefe"
+,113,Merge jdk:jdk-22+19,rkennke,2023-10-17,2023-10-17,integrated,Red Hat,CH,0,
+8319135,114,8319135: [Lilliput] Fix objArrayOop gtest,rkennke,2023-10-30,2023-11-01,integrated,Red Hat,CH,2,shipilev
+8319524,115,8319524: [Lilliput] Only warn when compact headers are explicitly enabled,rkennke,2023-11-06,2023-11-06,integrated,Red Hat,CH,0,shipilev
+8319724,116,8319724: [Lilliput] ParallelGC: Forwarded objects found during heap inspection,rkennke,2023-11-08,2023-11-09,integrated,Red Hat,CH,1,shipilev
+,119,Merge jdk:jdk-22+25,rkennke,2023-11-22,2023-11-22,integrated,Red Hat,CH,0,
+,120,Merge jdk:jdk-23+1,rkennke,2023-12-13,2023-12-15,integrated,Red Hat,CH,2,
+8324523,124,"JDK-8324523: Lilliput: if +UseCOH, always use the archive's encoding base and shift",tstuefe,2024-01-23,2024-01-24,integrated,Red Hat,DE,1,rkennke
+8319185,125,8319185: [Lilliput] Enable and fix vectorization tests,rkennke,2024-01-23,2024-01-30,integrated,Red Hat,CH,7,shipilev
+,126,Merge jdk:jdk-23+7,rkennke,2024-01-25,2024-01-26,integrated,Red Hat,CH,1,
+,130,Merge jdk:jdk-23+8,rkennke,2024-02-06,2024-02-07,integrated|clean,Red Hat,CH,1,
+,131,Merge jdk:jdk-23+10,rkennke,2024-02-20,2024-02-21,integrated,Red Hat,CH,1,tstuefe
+,133,Merge 18cea823a173e1b8b48d276daeca67b2a5cf3584,xmas92,2024-02-22,2024-02-23,integrated,Oracle,SE,1,
+,135,Merge jdk:jdk-23+11,rkennke,2024-02-22,2024-02-23,integrated|clean,Red Hat,CH,1,
+,136,Merge lilliput:omworld-jdk,xmas92,2024-02-23,2024-02-27,integrated,Oracle,SE,4,
+8326761,138,8326761: Lilliput: OMWorld: Fix invalid markWord transition,xmas92,2024-02-27,2024-02-27,integrated,Oracle,SE,0,rkennke
+8326752,139,8326752: Lilliput: OMCache: Add cache lookup unrolling,xmas92,2024-02-27,2024-02-27,integrated,Oracle,SE,0,rkennke
+,140,8326753 Lilliput: OMCache: Use AoS,xmas92,2024-02-27,2024-02-28,integrated,Oracle,SE,1,rkennke
+8326823,141,8326823: Lilliput: OMWorld: Separate NMT category,rkennke,2024-02-27,2024-02-27,integrated,Red Hat,CH,0,xmas92
+,142,Merge jdk:jdk-23+12,rkennke,2024-03-04,2024-03-04,integrated,Red Hat,CH,0,
+,143,Merge jdk:jdk-23+12,rkennke,2024-03-05,2024-03-05,integrated,Red Hat,CH,0,
+,144,Merge jdk:jdk-23+12,rkennke,2024-03-05,2024-03-07,integrated,Red Hat,CH,2,
+8328886,145,JDK-8328886: Lilliput: Build COH archives,tstuefe,2024-03-25,2024-03-26,integrated,Red Hat,DE,1,rkennke
+,147,Parallel: fix checks for forwarded objects,stefank,2024-04-19,2024-04-19,integrated,Oracle,SE,0,rkennke
+,150,SA: Remove !hasMonitor() assert in getKlass(),stefank,2024-04-19,2024-04-22,integrated,Oracle,SE,3,rkennke
+,151,JVMCI: Don't call CompressedKlassPointers functions with -UCCP,stefank,2024-04-22,2024-04-22,integrated,Oracle,SE,0,rkennke
+8319185,152,8319185: [Lilliput] Enable and fix vectorization tests,rkennke,2024-04-22,2024-04-23,integrated,Red Hat,CH,1,stefank
+,153,OMWorld: Remove JavaThread Sync Deflation Code,xmas92,2024-04-22,2024-04-23,integrated,Oracle,SE,1,rkennke
+,154,OMWorld: Cleanup ObjectSynchronizer::exit,xmas92,2024-04-22,2024-04-23,integrated,Oracle,SE,1,rkennke
+,155,OMWorld: Cleanup inflate,xmas92,2024-04-22,2024-04-23,integrated,Oracle,SE,1,rkennke
+,156,OMWorld: Cleanup ObjectSynchronizer::enter_fast_impl,xmas92,2024-04-22,2024-04-23,integrated,Oracle,SE,1,rkennke
+,157,OMWorld: Cleanup quick_enter,xmas92,2024-04-22,2024-04-23,integrated,Oracle,SE,1,rkennke
+,158,OMWorld: Fix javaVFrame::print_lock_info_on,xmas92,2024-04-22,2024-04-23,integrated,Oracle,SE,1,rkennke
+,159,OMWorld: ObjectMonitor:enter,xmas92,2024-04-22,2024-04-23,integrated,Oracle,SE,1,rkennke
+,160,OMWorld: Remove BasicLock* restrictions,xmas92,2024-04-22,2024-04-23,integrated,Oracle,SE,1,rkennke
+,161,OMWorld: Cleanup ObjectMonitor::_header,xmas92,2024-04-22,2024-04-25,integrated,Oracle,SE,3,rkennke
+,162,OMWorld: Cleanup BasicLock header,xmas92,2024-04-22,2024-04-25,integrated,Oracle,SE,3,stefank
+,163,Parallel: fix size_given_klass,stefank,2024-04-23,2024-04-23,integrated,Oracle,SE,0,"xmas92,rkennke"
+,164,Fix CompressedClassPointersEncodingScheme for aarch64 with -UseCOH,tstuefe,2024-04-23,2024-04-24,integrated,Red Hat,DE,1,"stefank,rkennke"
+,165,Don't warn when UCOH is on by default,stefank,2024-04-24,2024-04-25,integrated,Oracle,SE,1,rkennke
+,166,Disable UseCompressedOops tests for 32-bits JVMs,stefank,2024-04-24,2024-04-24,integrated,Oracle,SE,0,rkennke
+8330631,167,8330631: Lilliput: Modify runtime/CompressedOops/CompressedClassPointers for tinycp,rkennke,2024-04-24,2024-04-26,integrated,Red Hat,CH,2,"stefank,tstuefe"
+,168,OMWorld: Fix enter_for is_value_based bug,stefank,2024-04-24,2024-04-25,integrated,Oracle,SE,1,xmas92
+,169,OMWorld: Add LightweightSynchronizer::quick_enter - fix incorrectly setup cache,xmas92,2024-04-24,2024-04-25,integrated,Oracle,SE,1,stefank
+,170,Fix arrays-equals intrinsic on AArch64,rkennke,2024-04-24,2024-04-25,integrated,Red Hat,CH,1,xmas92
+,172,Prepare for smaller-than-22-bit class pointers,tstuefe,2024-04-27,2024-06-19,integrated,Red Hat,DE,53,rkennke
+,173,Exclude some tests from Lilliput which rely on array alignment,rkennke,2024-05-14,2024-05-16,integrated,Red Hat,CH,2,shipilev
+,175,OMWorld: Decouple deflation and table sizing,xmas92,2024-05-23,2024-06-05,integrated,Oracle,SE,13,coleenp
+,176,OMWorld: Remove OMRecursiveFastPath,xmas92,2024-05-23,2024-05-28,integrated,Oracle,SE,5,coleenp
+,177,OMWorld: Spin Changes,xmas92,2024-05-23,2024-05-29,integrated,Oracle,SE,6,coleenp
+,178,OMWorld: Cleanups,xmas92,2024-05-23,2024-05-28,integrated,Oracle,SE,5,coleenp
+,179,Remove a couple LIGHTWEIGHT things from the legacy/monitor version of FastHashCode,coleenp,2024-05-25,2024-05-28,integrated,Oracle,US,3,xmas92
+,181,Lilliput om world,coleenp,2024-05-31,2024-06-13,integrated,Oracle,US,13,xmas92
+,183,"OMWorld: Removal of flags, general cleanups",xmas92,2024-06-20,2024-06-24,integrated,Oracle,SE,4,coleenp
+,187,Add some inlining and avoid CAS for quick_enter for lightweight locking.,coleenp,2024-07-01,2024-07-02,integrated,Oracle,US,1,xmas92
+,189,Merge jdk:jdk-24+9,rkennke,2024-12-05,2024-12-05,integrated|clean,Red Hat,CH,0,tstuefe
+,190,Merge jdk:jdk-25+1,rkennke,2024-12-09,2024-12-10,integrated|clean,Red Hat,CH,1,
+8346011,191,8346011: [Lilliput] Compact Full-GC Forwarding,rkennke,2024-12-11,2025-01-22,integrated,Red Hat,CH,42,tstuefe
+8320761,192,8320761: [Lilliput] Implement compact identity hashcode,rkennke,2024-12-17,2025-01-22,integrated,Red Hat,CH,36,tstuefe
+8347710,193,8347710: [Lilliput] Implement 4 byte headers,rkennke,2025-01-21,2025-01-24,integrated,Red Hat,CH,3,tstuefe
+8347711,195,8347711: [Lilliput] Parallel GC support for compact identity hashcode,rkennke,2025-03-14,2025-04-10,integrated,Red Hat,CH,27,tstuefe
+8353849,196,8353849: [Lilliput] Avoid race in compact identity hashcode,rkennke,2025-04-07,2025-04-08,integrated,Red Hat,CH,1,"earthling-amzn,zhengyu123"
+,201,Merge jdk:jdk-26+6,rkennke,2025-07-17,2025-07-17,integrated|clean,Red Hat,CH,0,
+8368755,203,8368755: [Lilliput] Fix CompressedClassSpaceSize handling,rkennke,2025-09-26,2025-09-26,integrated,Red Hat,CH,0,tstuefe
+8370258,204,8370258: Lilliput2: java/lang/instrument/GetObjectSizeIntrinsicsTest fails,ysramakrishna,2025-10-21,2025-10-23,integrated,,,2,"tstuefe,rkennke"
+8371186,205,8371186: Lilliput2: Disable JFR Leak Profiler & related tests until it's fixed with +UseCompactObjectHeaders,ysramakrishna,2025-11-04,2025-11-06,integrated,,,2,rkennke
+,206,Merge jdk:jdk-26+26,rkennke,2025-12-15,2025-12-29,integrated|clean,Red Hat,CH,14,ysramakrishna
+8379810,208,8379810: [Lilliput2] Crash in Parallel heap inspection,olivergillespie,2026-03-11,2026-03-17,integrated,Amazon,US,6,rkennke
+8379910,209,8379910: [Lilliput2] Crash in Parallel GC copy_unmarked_to_survivor_space,olivergillespie,2026-03-12,2026-03-17,integrated,Amazon,US,5,rkennke

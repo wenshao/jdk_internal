@@ -1,0 +1,38 @@
+bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,reviewers
+8244947,4,8244947: fix ios/android build for static libs,johanvos,2020-05-13,2020-05-15,build|core-libs|sponsor|integrated,Gluon,,2,bobvandette
+8245112,5,8245112: fix jcheck conf for Mobile project,johanvos,2020-05-15,2020-05-15,integrated,Gluon,,0,rwestberg
+,6,Merge jdk:master,openjdk-bot,2020-05-21,2020-05-28,hotspot-runtime|build|jfr|core-libs|integrated|failed-auto-merge|hotspot-serviceability|2d|hotspot|hotspot-compiler|hotspot-gc,,,7,
+,7,Merge jdk:master,openjdk-bot,2020-05-28,2020-05-28,hotspot-runtime|build|jfr|core-libs|integrated|failed-auto-merge|hotspot-serviceability|hotspot|hotspot-compiler|hotspot-gc|compiler,,,0,
+,8,Merge jdk:master,openjdk-bot,2020-07-02,2020-07-02,hotspot-runtime|build|core-libs|integrated|failed-auto-merge|2d|hotspot-compiler|hotspot-gc,,,0,
+,9,Merge jdk:master,openjdk-bot,2020-09-07,2020-10-08,build|integrated|failed-auto-merge,,,31,
+,11,Merge jdk:master,openjdk-bot,2020-12-07,2020-12-29,integrated|failed-auto-merge,,,22,
+,12,Merge jdk:master,openjdk-bot,2021-01-11,2021-03-22,integrated|failed-auto-merge,,,70,
+,13,Merge jdk:master,openjdk-bot,2021-03-25,2021-06-04,integrated|failed-auto-merge|auto,,,71,
+,15,Merge jdk:master,openjdk-bot,2022-04-26,2023-02-10,integrated|failed-auto-merge|auto,,,290,
+,16,Merge jdk:master,openjdk-bot,2023-02-10,2023-02-10,integrated|failed-auto-merge|auto,,,0,
+,17,Merge jdk:master,openjdk-bot,2023-04-17,2023-07-18,integrated|failed-auto-merge|auto,,,92,
+,18,Merge jdk:master,openjdk-bot,2024-03-15,2024-03-18,integrated|failed-auto-merge|auto,,,3,
+,19,Merge jdk:master,openjdk-bot,2024-03-22,2024-03-23,integrated|failed-auto-merge|auto|clean,,,1,
+,21,Merge jdk:master,openjdk-bot,2024-03-25,2024-03-25,integrated|failed-auto-merge|auto,,,0,
+,24,Merge jdk:master,openjdk-bot,2024-04-26,2024-04-27,integrated|auto,,,1,
+8333357,25,8333357: revert current mobile changes,johanvos,2024-05-31,2024-06-03,integrated,Gluon,,3,magicus
+8333795,26,8333795: [mobile] allow building jdk native libs for ios/android,johanvos,2024-06-07,2024-06-15,integrated,Gluon,,8,magicus
+,28,Merge jdk:master,openjdk-bot,2024-09-03,2024-09-19,integrated|auto,,,16,
+8340467,29,8340467: [mobile] duplicate symbols in libprefs.a on iOS,johanvos,2024-09-19,2024-09-20,integrated,Gluon,,1,"dholmes-ora,jperedadnr"
+,31,Merge jdk:master,openjdk-bot,2024-11-07,2024-12-09,integrated|auto,,,32,
+8346233,32,8346233: [mobile] enable static-libs-image for iOS,johanvos,2024-12-14,2024-12-15,integrated,Gluon,,1,magicus
+,33,Merge jdk:master,openjdk-bot,2025-01-21,2025-02-06,integrated|auto,,,16,
+8347033,34,8347033: [mobile] add ios-specific build docs,abhinayagarwal,2025-02-18,2025-02-27,integrated,,,9,"magicus,johanvos"
+8357119,35,8357119: Make Zero the default variant of HotSpot for iOS,TheShermanTanker,2025-05-16,2025-05-26,integrated,Independent,SG,10,"magicus,johanvos"
+,36,Merge jdk:master,openjdk-bot,2025-06-10,2025-06-10,integrated|auto|clean,,,0,
+,37,Merge jdk:master,openjdk-bot,2025-06-26,2025-07-18,integrated|auto,,,22,
+8359163,39,8359163: Fix path to current module on ios,johanvos,2025-07-29,2025-08-14,integrated,Gluon,,16,magicus
+8370659,40,8370659: [mobile] enable static-libs-image for Android,johanvos,2025-10-26,2026-01-08,integrated,Gluon,,74,"magicus,TheShermanTanker"
+,41,Merge jdk:master,openjdk-bot,2025-12-12,2025-12-22,integrated|auto,,,10,
+,42,Merge jdk:master,openjdk-bot,2025-12-22,2025-12-22,integrated|auto,,,0,
+8374535,43,8374535: IOS uses different path for modules,KolbyML,2025-12-27,2026-02-02,integrated,,,37,magicus
+8374522,44,8374522: Mobile: Add iOS as a platform in OperatingSystem.java,KolbyML,2025-12-27,2026-02-02,integrated,,,37,"magicus,johanvos"
+,45,Merge jdk:master,openjdk-bot,2026-02-04,2026-02-09,integrated|auto,,,5,
+,46,Merge jdk:master,openjdk-bot,2026-02-09,2026-03-15,integrated|auto,,,34,
+8380088,47,8380088: IOS: jit_write_protect_np not allowed,johanvos,2026-03-15,2026-03-16,integrated,Gluon,,1,magicus
+,48,Merge jdk:master,openjdk-bot,2026-03-19,2026-03-23,integrated|auto,,,4,

@@ -1,0 +1,37 @@
+bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,reviewers
+8276799,3,8276799: Implementation of JEP 422: Linux/RISC-V Port,kuaiwei,2023-08-04,2024-02-21,integrated|backport,Alibaba,CN,201,RealFYang
+8283929,6,8283929: GHA: Add RISC-V build config,zifeihan,2024-02-21,2024-02-23,integrated|backport,Independent,,2,"luhenry,RealFYang"
+8290496,7,8290496: riscv: Fix build warnings-as-errors with GCC 11,zifeihan,2024-03-03,2024-03-06,integrated|backport|clean,Independent,,3,RealFYang
+8327284,9,JDK-8327284: Use correct register in riscv_enc_fast_unlock(),zifeihan,2024-03-05,2024-03-11,integrated,Independent,,6,RealFYang
+8316645,10,8316645: RISC-V: Remove dependency on libatomic by adding cmpxchg 1b,robehn,2024-03-07,2024-03-13,integrated|backport,Oracle,SE,6,"luhenry,RealFYang"
+8328065,11,8328065: RISC-V: Add isolation for shared code changes,zifeihan,2024-03-13,2024-03-20,integrated,Independent,,7,RealFYang
+8328580,12,8328580: Remove trivial shared code changes which are leftover from riscv port,zifeihan,2024-03-20,2024-03-21,integrated,Independent,,1,RealFYang
+8283865,13,8283865: riscv: Break down -XX:+UseRVB into seperate options for each bitmanip extension,zifeihan,2024-03-21,2024-03-26,integrated|backport,Independent,,5,RealFYang
+8326960,14,8326960: GHA: RISC-V sysroot cannot be debootstrapped due to ongoing Debian t64 transition,RealFYang,2024-03-25,2024-03-25,integrated|backport|clean,Huawei,CN,0,shipilev
+8328948,15,8328948: GHA: Restoring sysroot from cache skips the build after JDK-8326960,RealFYang,2024-03-26,2024-03-26,integrated|backport|clean,Huawei,CN,0,shipilev
+8291893,16,8291893: riscv: remove fence.i used in user space,zifeihan,2024-03-26,2024-03-29,integrated|backport,Independent,,3,"luhenry,RealFYang"
+8284937,17,8284937: riscv: should not allocate special register for temp,zifeihan,2024-03-28,2024-04-01,integrated|backport,Independent,,4,RealFYang
+8285303,18,8285303: riscv: Incorrect register mask in call_native_base,zifeihan,2024-04-01,2024-04-03,integrated|backport|clean,Independent,,2,RealFYang
+8297697,19,8297697: RISC-V: Add support for SATP mode detection,zifeihan,2024-04-08,2024-04-10,integrated|backport,Independent,,2,"feilongjiang,RealFYang"
+8297715,21,8297715: RISC-V: C2: Use single-bit instructions from the Zbs extension,zifeihan,2024-04-10,2024-04-12,integrated|backport,Independent,,2,"luhenry,RealFYang"
+8333261,23,8333261: [repo-riscv-port-11] sun/jvm/hotspot/debugger/risv64 should be riscv64,sendaoYan,2024-05-30,2024-06-01,integrated,Alibaba,CN,2,"RealFYang,zifeihan"
+8299847,24,8299847: RISC-V: Improve PrintOptoAssembly output of CMoveI/L nodes,DingliZhang,2024-08-08,2024-08-08,integrated|backport,ISCAS,CN,0,"RealFYang,zifeihan,Hamlin-Li"
+8301313,25,8301313: RISC-V: C2: assert(false) failed: bad AD file due to missing match rule,DingliZhang,2024-08-08,2024-08-09,integrated|backport,ISCAS,CN,1,"RealFYang,zifeihan"
+8337780,26,8337780: RISC-V: C2: Change C calling convention for sp to NS,zifeihan,2024-08-25,2024-09-03,integrated|backport|clean,Independent,,9,RealFYang
+8339248,27,8339248: RISC-V: Remove li64 macro assembler routine and related code,zifeihan,2024-09-03,2024-09-05,integrated|backport,Independent,,2,RealFYang
+8339548,28,8339548: GHA: RISC-V: Use Debian snapshot archive for bootstrap,zifeihan,2024-09-10,2024-09-11,integrated|backport|clean,Independent,,1,RealFYang
+8287552,29,8287552: riscv: Fix comment typo in li64,DingliZhang,2024-09-11,2024-09-12,integrated|backport,ISCAS,CN,1,"RealFYang,zifeihan"
+8290137,30,8290137: riscv: small refactoring for add_memory_int32/64,DingliZhang,2024-09-11,2024-09-12,integrated|backport,ISCAS,CN,1,"RealFYang,zifeihan"
+8292867,31,8292867: RISC-V: Simplify weak CAS return value handling,DingliZhang,2024-09-13,2024-09-14,integrated|backport|clean,ISCAS,CN,1,"RealFYang,zifeihan"
+8293050,32,8293050: RISC-V: Remove redundant non-null assertions about macro-assembler,DingliZhang,2024-09-18,2024-09-19,integrated|backport|clean,ISCAS,CN,1,"RealFYang,zifeihan"
+8293474,33,8293474: RISC-V: Unify the way of moving function pointer,DingliZhang,2024-09-27,2024-10-09,integrated|backport,ISCAS,CN,12,"RealFYang,zifeihan"
+8293524,34,8293524: RISC-V: Use macro-assembler functions as appropriate,DingliZhang,2024-09-27,2024-10-09,integrated|backport,ISCAS,CN,12,"RealFYang,zifeihan"
+8339741,35,8339741: RISC-V: C ABI breakage for integer on stack,DingliZhang,2024-09-29,2024-10-01,integrated|backport,ISCAS,CN,2,RealFYang
+8293566,36,8293566: RISC-V: Clean up push and pop registers,zifeihan,2024-10-08,2024-10-10,integrated|backport,Independent,,2,"DingliZhang,RealFYang"
+8294012,37,8294012: RISC-V: get/put_native_u8 missing the case when address&7 is 6,DingliZhang,2024-10-11,2024-10-14,integrated|backport|clean,ISCAS,CN,3,"RealFYang,zifeihan"
+8294086,38,8294086: RISC-V: Cleanup InstructionMark usages in the backend,DingliZhang,2024-10-11,2024-10-14,integrated|backport,ISCAS,CN,3,"RealFYang,zifeihan"
+8294187,39,8294187: RISC-V: Unify all relocations for the backend into AbstractAssembler::relocate(),DingliZhang,2024-10-14,2024-10-16,integrated|backport,ISCAS,CN,2,"RealFYang,zifeihan"
+8294087,40,8294087: RISC-V: RVC: Fix a potential alignment issue and add more alignment assertions for the patchable calls/nops,DingliZhang,2024-10-14,2024-10-16,integrated|backport,ISCAS,CN,2,"RealFYang,zifeihan"
+8299168,42,8299168: RISC-V: Fix MachNode size mismatch for MacroAssembler::_verify_oops*,DingliZhang,2024-10-16,2024-10-17,integrated|backport,ISCAS,CN,1,RealFYang
+8294366,43,8294366: RISC-V: Partially mark out incompressible regions,DingliZhang,2024-10-16,2024-10-17,integrated|backport,ISCAS,CN,1,RealFYang
+8342578,44,8342578: GHA: RISC-V: Bootstrap using Debian snapshot is still failing,DingliZhang,2024-11-01,2024-11-04,integrated|backport|clean,ISCAS,CN,3,RealFYang

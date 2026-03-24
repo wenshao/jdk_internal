@@ -1,0 +1,214 @@
+bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,reviewers
+8320913,1,8320913: GenShen: Bootstrap 21u backports repo,earthling-amzn,2023-11-27,2023-11-29,integrated|clean,Amazon,US,2,"ysramakrishna,kdnilsen"
+,2,Merge openjdk/jdk21u:master,earthling-amzn,2023-11-29,2023-12-13,integrated|clean,Amazon,US,14,
+8321123,3,8321123: [Shenandoah/JDK21] Fix repo permissions,rkennke,2023-11-30,2023-11-30,integrated,Red Hat,CH,0,shipilev
+8321937,4,8321937: GenShen: Sync up 21u based repo,earthling-amzn,2023-12-08,2023-12-14,integrated|clean,Amazon,US,6,kdnilsen
+8323630,5,8323630: GenShen: Control thread may (still) ignore requests to start concurrent GC,earthling-amzn,2024-01-12,2024-01-12,integrated|clean|backport,Amazon,US,0,
+8321939,6,8321939: [GenShen] ShenandoahOldEvacRatioPercent=100 fails with divide-by-zero,earthling-amzn,2024-01-12,2024-01-12,integrated|clean|backport,Amazon,US,0,
+8322219,7,8322219: GenShen: GHA for shenandoah repo should run all shenandoah jtreg tests,earthling-amzn,2024-01-12,2024-01-12,integrated|clean|backport,Amazon,US,0,
+8322242,8,"8322242: [GenShen] TestAllocObjects#generational fails with ""Unrecognized VM option 'ShenandoahSuspendibleWorkers'""",earthling-amzn,2024-01-12,2024-01-12,integrated|clean|backport,Amazon,US,0,
+8322875,9,8322875: [GenShen] Unused/obsolete method parameter consumed_by_advance_promotion,earthling-amzn,2024-01-12,2024-01-12,integrated|clean|backport,Amazon,US,0,
+8323023,10,8323023: GenShen: Region logging test fails intermittently,earthling-amzn,2024-01-12,2024-01-12,integrated|clean|backport,Amazon,US,0,
+8323083,11,"8323083: [GenShen] Alloca avoidance, const-safety, interface decluttering in promotion budgeting",earthling-amzn,2024-01-12,2024-01-13,integrated|clean|backport,Amazon,US,1,
+8321816,14,8321816: GenShen: Provide a minimum amount of time for an old collection to run,earthling-amzn,2024-01-13,2024-01-13,integrated|backport,Amazon,US,0,ysramakrishna
+8322347,15,8322347: GenShen: Run shenandoah tier2 and tier3 tests separately in GHA,earthling-amzn,2024-01-13,2024-01-13,integrated|clean|backport,Amazon,US,0,
+8321605,16,8321605: GenShen: Old generation reference process is never reset,earthling-amzn,2024-01-13,2024-01-13,integrated|clean|backport,Amazon,US,0,
+8324173,17,8324173: GenShen: Fix error that could cause young gcs to fail when old marking is running,earthling-amzn,2024-01-19,2024-01-19,integrated|clean|backport,Amazon,US,0,
+,18,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-01-30,2024-01-30,integrated|clean,Amazon,US,0,
+,19,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-02-01,2024-02-08,integrated|clean,Amazon,US,7,
+,20,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-02-08,2024-02-15,integrated|clean,Amazon,US,7,
+8325670,24,8325670: GenShen: Allow old to expand at end of each GC,earthling-amzn,2024-03-01,2024-03-01,integrated|clean|backport,Amazon,US,0,
+8326626,25,8326626: GenShen: Remove dead code associated with non-elastic TLABS,kdnilsen,2024-03-01,2024-03-01,integrated|clean|backport,Amazon,US,0,
+,26,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-03-07,2024-03-11,integrated|clean,Amazon,US,4,
+,27,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-03-21,2024-03-25,integrated|clean,Amazon,US,4,
+,30,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-03-29,2024-03-29,integrated,Amazon,US,0,
+8329342,31,8329342: GenShen: Synchronize shenandoah-jdk21u:master with shenandoah:master,earthling-amzn,2024-03-29,2024-04-01,integrated,Amazon,US,3,"ysramakrishna,kdnilsen"
+8328626,32,8328626: GenShen: Combine old generation surplus/deficit fields into a single balance field,earthling-amzn,2024-04-01,2024-04-02,integrated|backport,Amazon,US,1,"ysramakrishna,kdnilsen"
+8327097,33,8327097: GenShen: Align PLAB sizes down rather than up,kdnilsen,2024-04-02,2024-04-02,integrated|clean|backport,Amazon,US,0,
+8329789,34,8329789: GenShen: Over assertive assert when scanning remembered set,earthling-amzn,2024-04-11,2024-04-12,integrated|clean|backport,Amazon,US,1,
+8330071,35,8330071: GenShen: Allow old to expand again at end of each GC,kdnilsen,2024-04-17,2024-04-22,integrated|clean|backport,Amazon,US,5,
+,36,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-04-18,2024-04-29,integrated|clean,Amazon,US,11,
+8329350,37,8329350: GenShen: Do not reset mark bitmaps on a safepoint,earthling-amzn,2024-04-23,2024-04-24,integrated|clean|backport,Amazon,US,1,
+8329790,38,8329790: GenShen: Old regions that are pinned during final mark are not made parseable,earthling-amzn,2024-04-29,2024-04-29,integrated|clean|backport,Amazon,US,0,
+8329699,39,8329699: GenShen: Move promotion logic out of shHeap and shHeapRegion,earthling-amzn,2024-04-29,2024-04-29,integrated|clean|backport,Amazon,US,0,
+8330414,40,8330414: GenShen: Class unloading requires old regions be made parseable,earthling-amzn,2024-04-29,2024-04-29,integrated|clean|backport,Amazon,US,0,
+8328307,41,8328307: GenShen: Re-enable old-has-grown trigger for old-generation GC,kdnilsen,2024-04-30,2024-05-01,integrated,Amazon,US,1,earthling-amzn
+,42,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-05-02,2024-05-08,integrated|clean,Amazon,US,6,
+,43,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-05-09,2024-05-15,integrated|clean,Amazon,US,6,
+8332331,44,8332331: Shenandoah: Change jcheck configuration for fix version to match project repo,earthling-amzn,2024-05-15,2024-05-17,integrated,Amazon,US,2,ysramakrishna
+,45,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-05-16,2024-05-17,integrated|clean,Amazon,US,1,
+8331609,46,8331609: GenShen: Refactor generational mode allocations,earthling-amzn,2024-05-17,2024-05-17,integrated|clean|backport,Amazon,US,0,
+8332094,47,8332094: GenShen: Reuse existing code to verify usage before rebuilding free set,earthling-amzn,2024-05-17,2024-05-17,integrated|clean|backport,Amazon,US,0,
+8332254,48,8332254: GenShen: Remove obsolete comments and revert unnecessary formatting changes,earthling-amzn,2024-05-17,2024-05-17,integrated|clean|backport,Amazon,US,0,
+8332081,49,8332081: GenShen: Disentangle generational mode update references,earthling-amzn,2024-05-17,2024-05-17,integrated|clean|backport,Amazon,US,0,
+8332095,50,8332095: GenShen: Move more generational mode members out of shHeap,earthling-amzn,2024-05-17,2024-05-18,integrated|clean|backport,Amazon,US,1,
+,51,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-05-23,2024-05-28,integrated|clean,Amazon,US,5,
+,52,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-05-30,2024-06-18,integrated,Amazon,US,19,
+8332913,53,8332913: GenShen: Restore shared update refs iterator,earthling-amzn,2024-06-17,2024-06-17,integrated|clean|backport,Amazon,US,0,
+8333109,54,8333109: GenShen: Factor generational mode out of gc helpers (redo),earthling-amzn,2024-06-17,2024-06-17,integrated|clean|backport,Amazon,US,0,
+8333825,55,8333825: GenShen: Revert/Remove ShenandoahMaxEvacLABRatio,earthling-amzn,2024-06-17,2024-06-17,integrated|clean|backport,Amazon,US,0,
+8333930,56,8333930: GenShen: Check for cancellation of old mark after final mark,earthling-amzn,2024-06-17,2024-06-17,integrated|clean|backport,Amazon,US,0,
+8327388,57,8327388: GenShen: census during marking is partial,earthling-amzn,2024-06-18,2024-06-18,integrated|clean|backport,Amazon,US,0,
+8333457,58,8333457: GenShen: Move remembered set into new generational code,earthling-amzn,2024-06-18,2024-06-18,integrated|backport,Amazon,US,0,"ysramakrishna,kdnilsen"
+8333750,59,8333750: GenShen: Only instantiate young/old generations in generational mode,earthling-amzn,2024-06-18,2024-06-18,integrated|clean|backport,Amazon,US,0,
+8334681,60,8334681: GenShen: Do not use gtest skip test feature,earthling-amzn,2024-06-21,2024-06-21,integrated|clean|backport,Amazon,US,0,
+,61,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-06-27,2024-07-12,integrated|clean,Amazon,US,15,
+8327000,62,8327000: GenShen: Integrate updated Shenandoah implementation of FreeSet into GenShen,kdnilsen,2024-06-27,2024-08-15,integrated|backport,Amazon,US,49,"ysramakrishna,earthling-amzn"
+8335289,63,8335289: GenShen: Whitebox breakpoint GC requests may cause assertions,earthling-amzn,2024-06-28,2024-07-01,integrated|clean|backport,Amazon,US,3,
+8335932,64,8335932: GenShen: Fix old heuristic unit test,earthling-amzn,2024-07-09,2024-07-09,integrated|clean|backport,Amazon,US,0,
+8336106,65,8336106: Genshen: Fix use of missing API in Shenandoah Old Heuristic test,earthling-amzn,2024-07-10,2024-07-10,integrated,Amazon,US,0,kdnilsen
+8334491,66,8334491: GenShen: Revert changes to Shenandoah defaults,earthling-amzn,2024-07-12,2024-07-12,integrated|clean|backport,Amazon,US,0,
+8335347,67,8335347: GenShen: Revert change that has adaptive heuristic ignore abbreviated cycles,earthling-amzn,2024-07-12,2024-07-12,integrated|clean|backport,Amazon,US,0,
+8328235,68,8328235: GenShen: Robustify ShenandoahGCSession and fix missing use,ysramakrishna,2024-07-13,2024-07-16,integrated|clean|backport,,,3,kdnilsen
+8335126,69,8335126: Shenandoah: Improve OOM handling,earthling-amzn,2024-07-31,2024-08-01,integrated|backport,Amazon,US,1,ysramakrishna
+,71,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-08-08,2024-08-15,integrated,Amazon,US,7,
+,72,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-08-15,2024-08-19,integrated|clean,Amazon,US,4,
+8335930,73,8335930: GenShen: Reserve regions within each generation's freeset until available is sufficient,kdnilsen,2024-08-15,2024-08-16,integrated|clean|backport,Amazon,US,1,
+,74,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-08-22,2024-08-22,integrated|clean,Amazon,US,0,
+,75,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-08-29,2024-08-30,integrated,Amazon,US,1,
+,77,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-09-12,2024-09-12,integrated|clean,Amazon,US,0,
+8337242,78,8337242: GenShen: Remove unnecessary copyright changes,earthling-amzn,2024-09-12,2024-09-12,integrated|clean|backport,Amazon,US,0,
+8337847,79,8337847: [GenShen] jdk.test.whitebox.Whitebox.isObjectInOldGen misreports,earthling-amzn,2024-09-12,2024-09-12,integrated|clean|backport,Amazon,US,0,
+8338341,80,"8338341: GenShen: Cleanup headers, unreachable code and unintentional changes",earthling-amzn,2024-09-13,2024-09-13,integrated|backport,Amazon,US,0,"ysramakrishna,kdnilsen"
+8339197,81,8339197: GenShen: Adding Generation and Evacuation Information JFR Logging,kdnilsen,2024-09-13,2024-09-16,integrated|clean|backport,Amazon,US,3,
+8338336,82,8338336: GenShen: Cleanup stale TODOs,earthling-amzn,2024-09-13,2024-09-13,integrated|backport,Amazon,US,0,kdnilsen
+8338420,83,8338420: GenShen: Forward declare card table for Shenandoah barrier set,earthling-amzn,2024-09-13,2024-09-13,integrated|clean|backport,Amazon,US,0,
+8338473,84,"8338473: GenShen: Cleanup access levels, whitespace, typos and unused code",earthling-amzn,2024-09-13,2024-09-13,integrated|clean|backport,Amazon,US,0,
+8338479,85,8338479: GenShen: Detemplatize ShenandoahScanRemembered,earthling-amzn,2024-09-13,2024-09-13,integrated|clean|backport,Amazon,US,0,
+8338477,86,8338477: GenShen: Cleanup generational heap,earthling-amzn,2024-09-13,2024-09-13,integrated|clean|backport,Amazon,US,0,
+8338535,87,8338535: GenShen: some style improvements to source code implementation,earthling-amzn,2024-09-13,2024-09-13,integrated|clean|backport,Amazon,US,0,
+8338528,88,8338528: GenShen: Cleanup shenandoahHeapRegion,earthling-amzn,2024-09-14,2024-09-14,integrated|clean|backport,Amazon,US,0,
+8339611,89,8339611: GenShen: Simplify ShenandoahOldHeuristics::trigger_collection_if_fragmented,kdnilsen,2024-09-14,2024-09-16,integrated|backport,Amazon,US,2,"shipilev,earthling-amzn"
+8339960,90,8339960: GenShen: Fix inconsistencies in generational Shenandoah behavior,kdnilsen,2024-09-14,2024-09-19,integrated|backport,Amazon,US,5,ysramakrishna
+8338620,91,8338620: GenShen: Distinguish between young and old collector in GC configuration,earthling-amzn,2024-09-16,2024-09-16,integrated|clean|backport,Amazon,US,0,
+8338717,92,8338717: GenShen: Fix up some assertions,earthling-amzn,2024-09-16,2024-09-16,integrated|clean|backport,Amazon,US,0,
+8338695,93,8338695: GenShen: Clean up jtreg tests,earthling-amzn,2024-09-16,2024-09-16,integrated|backport,Amazon,US,0,kdnilsen
+8338779,94,8338779: GenShen: Prefer log_develop_debug in performance critical code,earthling-amzn,2024-09-16,2024-09-16,integrated|clean|backport,Amazon,US,0,
+8338780,95,8338780: GenShen: Fix up some comments,earthling-amzn,2024-09-16,2024-09-16,integrated|clean|backport,Amazon,US,0,
+8338763,96,8338763: GenShen: Global GC should not swap remembered sets for the verifier,earthling-amzn,2024-09-16,2024-09-16,integrated|clean|backport,Amazon,US,0,
+8338881,97,8338881: GenShen: Use explicit third temp register for post barrier,earthling-amzn,2024-09-16,2024-09-16,integrated|backport,Amazon,US,0,kdnilsen
+8339094,98,8339094: Shenandoah: Fix up test output from ShenandoahNumberSeqTest,earthling-amzn,2024-09-16,2024-09-16,integrated|clean|backport,Amazon,US,0,
+8339127,99,8339127: GenShen: Restore completed mark context assertion during class unloading,earthling-amzn,2024-09-16,2024-09-16,integrated|clean|backport,Amazon,US,0,
+8339346,100,8339346: GenShen: Remove even more stale TODOs,earthling-amzn,2024-09-16,2024-09-16,integrated|clean|backport,Amazon,US,0,
+8339695,101,8339695: GenShen: Concurrent reset performance has regressed,earthling-amzn,2024-09-16,2024-09-16,integrated|clean|backport,Amazon,US,0,
+8339870,102,8339870: Remove yet more stale TODOs,earthling-amzn,2024-09-16,2024-09-16,integrated|clean|backport,Amazon,US,0,
+8340137,103,8340137: GenShen: Reset mark bitmaps when a region is recycled,earthling-amzn,2024-09-16,2024-09-16,integrated|clean|backport,Amazon,US,0,
+,104,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-09-19,2024-09-19,integrated|clean,Amazon,US,0,
+8339616,105,8339616: GenShen: Introduce new state to distinguish promote-in-place phase as distinct from concurrent evacuation,earthling-amzn,2024-09-25,2024-09-25,integrated|backport,Amazon,US,0,kdnilsen
+8335356,106,8335356: Shenandoah: Improve concurrent cleanup locking,earthling-amzn,2024-09-26,2024-09-26,integrated|backport,Amazon,US,0,ysramakrishna
+8341042,107,8341042: GenShen: Reset mark bitmaps for unaffiliated regions when preparing for a cycle,earthling-amzn,2024-09-26,2024-09-26,integrated|backport,Amazon,US,0,kdnilsen
+8336640,108,8336640: Shenandoah: Parallel worker use in parallel_heap_region_iterate,earthling-amzn,2024-09-27,2024-09-27,integrated|clean|backport,Amazon,US,0,
+8334315,109,8334315: Shenandoah: reduce GC logging noise,earthling-amzn,2024-09-30,2024-09-30,integrated|backport,Amazon,US,0,ysramakrishna
+8340490,110,8340490: Shenandoah: Optimize ShenandoahPacer,earthling-amzn,2024-09-30,2024-09-30,integrated|backport,Amazon,US,0,ysramakrishna
+8337241,111,8337241: Shenandoah: Normalize include guards,earthling-amzn,2024-09-30,2024-09-30,integrated|backport,Amazon,US,0,ysramakrishna
+8340395,112,8340395: GenShen: Remove unnecessary check on card barrier flag,earthling-amzn,2024-09-30,2024-09-30,integrated|clean|backport,Amazon,US,0,
+8334147,113,8334147: Shenandoah: Avoid taking lock for disabled free set logging,earthling-amzn,2024-10-01,2024-10-07,integrated|backport,Amazon,US,6,"ysramakrishna,kdnilsen"
+,114,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-10-03,2024-10-04,integrated|clean,Amazon,US,1,
+8332697,115,8332697: ubsan: shenandoahSimpleBitMap.inline.hpp:68:23: runtime error: signed integer overflow: -9223372036854775808 - 1 cannot be represented in type 'long int',earthling-amzn,2024-10-04,2024-10-04,integrated|clean|backport,Amazon,US,0,
+8333728,116,8333728: ubsan: shenandoahFreeSet.cpp:1347:24: runtime error: division by zero,earthling-amzn,2024-10-07,2024-10-08,integrated|clean|backport,Amazon,US,1,
+8341485,117,8341485: GenShen: Make evac tracker a non-product feature and confine it to generational mode,earthling-amzn,2024-10-08,2024-10-08,integrated|backport,Amazon,US,0,ysramakrishna
+8341099,118,8341099: GenShen: assert(HAS_FWD == _heap->has_forwarded_objects()) failed: Forwarded object status is sane,earthling-amzn,2024-10-08,2024-10-08,integrated|clean|backport,Amazon,US,0,
+8341379,119,8341379: Shenandoah: Improve lock contention during cleanup,earthling-amzn,2024-10-08,2024-10-09,integrated|backport,Amazon,US,1,kdnilsen
+8337213,120,8337213: Shenandoah: Add verification for class mirrors,earthling-amzn,2024-10-08,2024-10-09,integrated|clean|backport,Amazon,US,1,
+8338444,121,8338444: Shenandoah: Remove ShenandoahHumongousThreshold tunable,earthling-amzn,2024-10-08,2024-10-09,integrated|backport,Amazon,US,1,ysramakrishna
+8341668,122,8341668: Shenandoah: assert(tail_bits < (idx_t)BitsPerWord) failed: precondition,earthling-amzn,2024-10-08,2024-10-08,integrated|clean|backport,Amazon,US,0,
+8340408,123,8340408: Shenandoah: Remove redundant task stats printing code in ShenandoahTaskQueue,earthling-amzn,2024-10-09,2024-10-09,integrated|clean|backport,Amazon,US,0,
+8340183,124,8340183: Shenandoah: Incorrect match for clone barrier in is_gc_barrier_node,earthling-amzn,2024-10-09,2024-10-11,integrated|backport,Amazon,US,2,ysramakrishna
+8335865,125,8335865: Shenandoah: Improve THP pretouch after JDK-8315923,earthling-amzn,2024-10-09,2024-10-09,integrated|clean|backport,Amazon,US,0,
+8336742,126,8336742: Shenandoah: Add more verbose logging/stats for mark termination attempts,earthling-amzn,2024-10-11,2024-10-15,integrated|clean|backport,Amazon,US,4,
+8338688,128,8338688: Shenandoah: Avoid calling java_lang_Class accessors in asserts/verifier,earthling-amzn,2024-10-15,2024-10-17,integrated|backport,Amazon,US,2,ysramakrishna
+8338662,129,8338662: Shenandoah: Remove excessive ShenandoahVerifier::verify_during_evacuation,earthling-amzn,2024-10-15,2024-10-17,integrated|backport,Amazon,US,2,ysramakrishna
+,130,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-10-17,2024-10-18,integrated|clean,Amazon,US,1,
+8342044,131,8342044: Increase timeout of gc/shenandoah/oom/TestClassLoaderLeak.java,earthling-amzn,2024-10-17,2024-10-17,integrated|clean|backport,Amazon,US,0,
+8342927,132,8342927: GenShen: Guarantee slices of time for coalesce and filling,earthling-amzn,2024-10-24,2024-10-24,integrated|clean|backport,Amazon,US,0,
+8342861,133,8342861: GenShen: Old generation in unexpected state when abandoning mixed gc candidates,earthling-amzn,2024-10-29,2024-10-29,integrated|clean|backport,Amazon,US,0,
+,134,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-10-31,2024-11-06,integrated|clean,Amazon,US,6,
+8343649,135,8343649: Shenandoah: ShenandoahEvacInfo event does not follow JFR guidelines,earthling-amzn,2024-11-06,2024-11-06,integrated|clean|backport,Amazon,US,0,
+,136,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-11-07,2024-11-12,integrated|clean,Amazon,US,5,
+,137,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-11-14,2024-11-18,integrated|clean,Amazon,US,4,
+,138,Merge openjdk/jdk21u-dev:master,earthling-amzn,2024-11-21,2024-11-21,integrated|clean,Amazon,US,0,
+,139,Merge openjdk/jdk21u:master,earthling-amzn,2024-11-28,2024-12-03,integrated|clean,Amazon,US,5,
+,140,Merge openjdk/jdk21u:master,earthling-amzn,2024-12-05,2024-12-06,integrated|clean,Amazon,US,1,
+8341992,141,"8341992: GenShen:  Fix formatting, remove unreachable code, unused imports and unnecessary comments",earthling-amzn,2024-12-06,2024-12-06,integrated|clean|backport,Amazon,US,0,
+8342001,142,8342001: GenShen: Factor cases for allocation type into separate methods,earthling-amzn,2024-12-06,2024-12-07,integrated|backport,Amazon,US,1,kdnilsen
+8342214,143,8342214: GenShen: Reduce code duplication in shFreeSet with iterator abstraction,earthling-amzn,2024-12-11,2024-12-13,integrated|backport,Amazon,US,2,ysramakrishna
+8346044,144,8346044: GenShen: ShenandoahGenerationalHeap entry missing from Universe.java,earthling-amzn,2024-12-11,2024-12-11,integrated,Amazon,US,0,ysramakrishna
+8345970,145,8345970: pthread_getcpuclockid related crashes in shenandoah tests,earthling-amzn,2024-12-13,2024-12-17,integrated|backport,Amazon,US,4,ysramakrishna
+8346051,146,8346051: MemoryTest fails when Shenandoah's generational mode is enabled,earthling-amzn,2024-12-13,2024-12-13,integrated|clean|backport,Amazon,US,0,
+8346681,147,8346681: Shenandoah: Does not throw OOME when EATests expects it,earthling-amzn,2024-12-19,2024-12-19,integrated,Amazon,US,0,kdnilsen
+8346690,148,8346690: Shenandoah: Fix log message for end of GC usage report,earthling-amzn,2024-12-20,2024-12-20,integrated|clean|backport,Amazon,US,0,
+8346688,149,8346688: GenShen: Missing metadata trigger log message,earthling-amzn,2024-12-20,2024-12-20,integrated|clean|backport,Amazon,US,0,
+8346737,150,8346737: GenShen: Generational memory pools should not report zero for maximum capacity,earthling-amzn,2024-12-21,2024-12-21,integrated|clean|backport,Amazon,US,0,
+8345750,151,8345750: Shenandoah: Test TestJcmdHeapDump.java#aggressive intermittent assert(gc_cause() == GCCause::_no_gc) failed: Over-writing cause,earthling-amzn,2025-01-21,2025-01-21,integrated|clean|backport,Amazon,US,0,
+,152,Merge openjdk/jdk21u:master,earthling-amzn,2025-01-23,2025-01-24,integrated|clean,Amazon,US,1,
+8349002,153,8349002: GenShen: Deadlock during shutdown,earthling-amzn,2025-02-03,2025-02-05,integrated|clean|backport,Amazon,US,2,
+,154,Merge openjdk/jdk21u:master,earthling-amzn,2025-02-06,2025-02-07,integrated|clean,Amazon,US,1,
+,155,Merge openjdk/jdk21u:master,earthling-amzn,2025-02-13,2025-02-13,integrated|clean,Amazon,US,0,
+,156,Merge openjdk/jdk21u:master,earthling-amzn,2025-02-20,2025-02-24,integrated|clean,Amazon,US,4,
+,157,Merge openjdk/jdk21u:master,earthling-amzn,2025-02-27,2025-02-27,integrated|clean,Amazon,US,0,
+8346569,158,8346569: Shenandoah: Worker initializes ShenandoahThreadLocalData twice results in memory leak,earthling-amzn,2025-03-14,2025-03-14,integrated|clean|backport,Amazon,US,0,
+8347620,159,8347620: Shenandoah: Use 'free' tag for free set related logging,earthling-amzn,2025-03-17,2025-03-18,integrated|backport,Amazon,US,1,kdnilsen
+8336685,160,8336685: Shenandoah: Remove experimental incremental update mode,earthling-amzn,2025-03-20,2025-03-24,integrated|backport,Amazon,US,4,kdnilsen
+8344049,161,8344049: Shenandoah: Eliminate init-update-refs safepoint,earthling-amzn,2025-03-24,2025-03-28,integrated|backport,Amazon,US,4,kdnilsen
+,162,Merge openjdk/jdk21u:master,earthling-amzn,2025-03-27,2025-03-27,integrated|clean,Amazon,US,0,
+8347617,163,8347617: Shenandoah: Use consistent name for update references phase,earthling-amzn,2025-03-28,2025-04-01,integrated|backport,Amazon,US,4,kdnilsen
+8348610,164,8348610: GenShen: TestShenandoahEvacuationInformationEvent failed with setRegions >= regionsFreed: expected 1 >= 57,earthling-amzn,2025-04-01,2025-04-03,integrated|backport,Amazon,US,2,kdnilsen
+8348594,165,8348594: Shenandoah: Do not penalize for degeneration when not the fault of triggering heuristic,earthling-amzn,2025-04-01,2025-04-03,integrated|backport,Amazon,US,2,kdnilsen
+8348595,166,8348595: GenShen: Fix generational free-memory no-progress check,earthling-amzn,2025-04-03,2025-04-03,integrated|clean|backport,Amazon,US,0,
+8350285,167,8350285: Shenandoah: Regression caused by ShenandoahLock under extreme contention,earthling-amzn,2025-04-03,2025-04-03,integrated|clean|backport,Amazon,US,0,
+8350314,168,8350314: Shenandoah: Capture thread state sync times in GC timings,earthling-amzn,2025-04-03,2025-04-04,integrated|clean|backport,Amazon,US,1,
+8349766,169,8349766: GenShen: Bad progress after degen does not always need full gc,earthling-amzn,2025-04-04,2025-04-04,integrated|clean|backport,Amazon,US,0,
+8347804,170,8347804: GenShen: Crash with small GCCardSizeInBytes and small Java heap,earthling-amzn,2025-04-04,2025-04-07,integrated|backport,Amazon,US,3,kdnilsen
+8342444,171,"8342444: Shenandoah: Uncommit regions from a separate, STS aware thread",earthling-amzn,2025-04-08,2025-04-09,integrated|backport,Amazon,US,1,"ysramakrishna,kdnilsen"
+8345423,172,8345423: Shenandoah: Parallelize concurrent cleanup,earthling-amzn,2025-04-09,2025-04-11,integrated|backport,Amazon,US,2,"pengxiaolong,ysramakrishna,kdnilsen"
+8338737,173,8338737: Shenandoah: Reset marking bitmaps after the cycle,earthling-amzn,2025-04-11,2025-04-11,integrated|clean|backport,Amazon,US,0,
+8349094,174,8349094: GenShen: Race between control and regulator threads may violate assertions,earthling-amzn,2025-04-11,2025-04-14,integrated|backport,Amazon,US,3,kdnilsen
+8351077,175,8351077: Shenandoah: Update comments in ShenandoahConcurrentGC::op_reset_after_collect,earthling-amzn,2025-04-11,2025-04-11,integrated|clean|backport,Amazon,US,0,
+8351081,176,8351081: Off-by-one error in ShenandoahCardCluster,earthling-amzn,2025-04-11,2025-04-11,integrated|clean|backport,Amazon,US,0,
+8351444,177,8351444: Shenandoah: Class Unloading may encounter recycled oops,earthling-amzn,2025-04-11,2025-04-14,integrated|backport,Amazon,US,3,kdnilsen
+8350905,178,8350905: Shenandoah: Releasing a WeakHandle's referent may extend its lifetime,earthling-amzn,2025-04-11,2025-04-11,integrated|clean|backport,Amazon,US,0,
+8350898,179,8350898: Shenandoah: Eliminate final roots safepoint,earthling-amzn,2025-04-15,2025-04-23,integrated|backport,Amazon,US,8,kdnilsen
+,180,Merge openjdk/jdk21u:master,earthling-amzn,2025-04-17,2025-04-21,integrated|clean,Amazon,US,4,
+8337981,181,8337981: ShenandoahHeap::is_in should check for alive regions,earthling-amzn,2025-04-18,2025-04-21,integrated|backport,Amazon,US,3,kdnilsen
+8352588,182,8352588: GenShen: Enabling JFR asserts when getting GCId,earthling-amzn,2025-04-23,2025-04-23,integrated|clean|backport,Amazon,US,0,
+8353596,183,8353596: GenShen: Test TestClone.java#generational-no-coops intermittent timed out,earthling-amzn,2025-04-23,2025-04-23,integrated|clean|backport,Amazon,US,0,
+8348400,184,8348400: GenShen: assert(ShenandoahHeap::heap()->is_full_gc_in_progress() || (used_regions_size() <= _max_capacity)) failed: Cannot use more than capacity #,earthling-amzn,2025-04-23,2025-04-25,integrated|backport,Amazon,US,2,"ysramakrishna,kdnilsen"
+8353218,185,8353218: Shenandoah: Out of date comment references Brooks pointers,earthling-amzn,2025-04-24,2025-04-24,integrated|clean|backport,Amazon,US,0,
+8343468,186,8343468: GenShen: Enable relocation of remembered set card tables,earthling-amzn,2025-04-25,2025-04-29,integrated|backport,Amazon,US,4,"ysramakrishna,kdnilsen"
+8354452,187,8354452: Shenandoah: Enforce range checks on parameters controlling heuristic sleep times,earthling-amzn,2025-04-25,2025-04-25,integrated|clean|backport,Amazon,US,0,
+8352185,188,8352185: Shenandoah: Invalid logic for remembered set verification,earthling-amzn,2025-04-30,2025-04-30,integrated|clean|backport,Amazon,US,0,
+8351091,190,8351091: Shenandoah: global marking context completeness is  not accurately maintained,earthling-amzn,2025-04-30,2025-04-30,integrated|backport,Amazon,US,0,"pengxiaolong,kdnilsen"
+,191,Merge openjdk/jdk21u:master,earthling-amzn,2025-05-01,2025-05-02,integrated,Amazon,US,1,
+8354541,192,8354541: Remove Shenandoah post barrier expand loop opts,earthling-amzn,2025-05-01,2025-05-01,integrated|backport,Amazon,US,0,"JohnTortugo,ysramakrishna"
+,193,Merge openjdk/jdk21u:master,earthling-amzn,2025-05-08,2025-05-12,integrated|clean,Amazon,US,4,
+,194,Merge openjdk/jdk21u:master,earthling-amzn,2025-05-15,2025-05-15,integrated|clean,Amazon,US,0,
+,195,Merge openjdk/jdk21u:master,earthling-amzn,2025-05-22,2025-05-22,integrated|clean,Amazon,US,0,
+,196,Merge openjdk/jdk21u:master,earthling-amzn,2025-05-29,2025-05-29,integrated|clean,Amazon,US,0,
+8358102,197,8358102: GenShen: Age tables could be seeded with cumulative values,earthling-amzn,2025-06-02,2025-06-12,integrated|clean|backport,Amazon,US,10,
+,198,Merge openjdk/jdk21u:master,earthling-amzn,2025-06-12,2025-06-12,integrated|clean,Amazon,US,0,
+,199,Merge openjdk/jdk21u:master,earthling-amzn,2025-06-19,2025-06-19,integrated|clean,Amazon,US,0,
+8357550,200,8357550: GenShen crashes during freeze: assert(!chunk->requires_barriers()) failed,earthling-amzn,2025-06-20,2025-06-20,integrated|clean|backport,Amazon,US,0,
+,201,Merge openjdk/jdk21u:master,earthling-amzn,2025-06-26,2025-06-30,integrated|clean,Amazon,US,4,
+8358529,202,8358529: GenShen: Heuristics do not respond to changes in SoftMaxHeapSize,earthling-amzn,2025-07-08,2025-07-08,integrated|clean|backport,Amazon,US,0,
+8361529,203,8361529: GenShen: Fix bad assert in swap card tables,earthling-amzn,2025-07-08,2025-07-10,integrated|clean|backport,Amazon,US,2,
+8357976,204,8357976: GenShen crash in swap_card_tables: Should be clean,earthling-amzn,2025-07-09,2025-07-09,integrated|clean|backport,Amazon,US,0,
+8359868,205,8359868: Shenandoah: Free threshold heuristic does not use SoftMaxHeapSize,earthling-amzn,2025-07-10,2025-07-10,integrated|clean|backport,Amazon,US,0,
+8360288,206,8360288: Shenandoah crash at size_given_klass in op_degenerated,earthling-amzn,2025-07-16,2025-07-17,integrated|clean|backport,Amazon,US,1,
+,207,Merge openjdk/jdk21u:master,earthling-amzn,2025-07-17,2025-07-21,integrated|clean,Amazon,US,4,
+,210,Merge openjdk/jdk21u:master,earthling-amzn,2025-08-14,2025-08-25,integrated,Amazon,US,11,
+8361948,213,8361948: Shenandoah: region free capacity unit mismatch,earthling-amzn,2025-08-18,2025-08-18,integrated|clean|backport,Amazon,US,0,
+8365571,214,8365571: GenShen: PLAB promotions may remain disabled for evacuation threads,earthling-amzn,2025-08-18,2025-08-18,integrated|clean|backport,Amazon,US,0,
+,216,Merge openjdk/jdk21u:master,earthling-amzn,2025-08-28,2025-08-28,integrated|clean,Amazon,US,0,
+,217,Merge openjdk/jdk21u:master,earthling-amzn,2025-09-04,2025-09-08,integrated|clean,Amazon,US,4,
+8364936,218,8364936: Shenandoah: Switch nmethod entry barriers to conc_instruction_and_data_patch,JohnTortugo,2025-09-10,2025-09-29,integrated|backport,Amazon,US,19,earthling-amzn
+,219,Merge openjdk/jdk21u:master,earthling-amzn,2025-09-11,2025-09-11,integrated|clean,Amazon,US,0,
+8367378,220,8367378: GenShen: Missing timing stats when old mark buffers are flushed during final update refs,earthling-amzn,2025-09-12,2025-09-12,integrated|clean|backport,Amazon,US,0,
+8365956,221,8365956: GenShen: Adaptive tenuring threshold algorithm may raise threshold prematurely,earthling-amzn,2025-09-12,2025-09-16,integrated|backport,Amazon,US,4,"phohensee,kdnilsen"
+8368152,222,8368152: Shenandoah: Incorrect behavior at end of degenerated cycle,earthling-amzn,2025-09-24,2025-09-25,integrated|backport,Amazon,US,1,kdnilsen
+,223,Merge openjdk/jdk21u:master,earthling-amzn,2025-09-25,2025-09-26,integrated|clean,Amazon,US,1,
+,224,Merge openjdk/jdk21u:master,earthling-amzn,2025-10-02,2025-10-02,integrated|clean,Amazon,US,0,
+,225,Merge openjdk/jdk21u:master,earthling-amzn,2025-10-23,2025-10-23,integrated|clean,Amazon,US,0,
+,228,Merge openjdk/jdk21u:master,earthling-amzn,2025-11-20,2025-11-24,integrated|clean,Amazon,US,4,
+,229,Merge openjdk/jdk21u:master,earthling-amzn,2025-11-27,2025-12-02,integrated|clean,Amazon,US,5,
+,230,Merge openjdk/jdk21u:master,earthling-amzn,2025-12-04,2025-12-10,integrated|clean,Amazon,US,6,
+,231,Merge openjdk/jdk21u:master,earthling-amzn,2025-12-25,2026-01-08,integrated|clean,Amazon,US,14,

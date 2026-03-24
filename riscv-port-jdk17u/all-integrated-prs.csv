@@ -1,0 +1,34 @@
+bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,reviewers
+8305006,27,8305006: Use correct register in riscv_enc_fast_unlock(),zifeihan,2023-03-24,2023-03-28,integrated,Independent,,4,VladimirKempik
+8294492,37,8294492: RISC-V: Use li instead of patchable movptr at non-patchable callsites,zifeihan,2023-04-07,2023-04-08,integrated|backport|clean,Independent,,1,"RealFYang,zhengxiaolinX"
+8295270,38,8295270: RISC-V: Clean up and refactoring for assembler functions,zifeihan,2023-04-08,2023-04-10,integrated|backport,Independent,,2,"RealFYang,zhengxiaolinX"
+8295968,39,8295968: RISC-V: Rename some assembler intrinsic functions for RVV 1.0,DingliZhang,2023-04-11,2023-04-12,integrated|backport|clean,ISCAS,CN,1,RealFYang
+8293050,40,8293050: RISC-V: Remove redundant non-null assertions about macro-assembler,zifeihan,2023-04-11,2023-04-12,integrated|backport|clean,Independent,,1,RealFYang
+8296447,41,8296447: RISC-V: Make the operands order of vrsub_vx/vrsub_vi consistent with RVV 1.0 spec,DingliZhang,2023-04-12,2023-04-13,integrated|backport,ISCAS,CN,1,"feilongjiang,RealFYang"
+8302776,42,8302776: RISC-V: Fix typo CSR_INSTERT to CSR_INSTRET,zifeihan,2023-04-12,2023-04-13,integrated|backport|clean,Independent,,1,RealFYang
+8292867,43,8292867: RISC-V: Simplify weak CAS return value handling,DingliZhang,2023-04-15,2023-04-17,integrated|backport|clean,ISCAS,CN,2,RealFYang
+8293524,44,8293524: RISC-V: Use macro-assembler functions as appropriate,DingliZhang,2023-04-18,2023-04-19,integrated|backport,ISCAS,CN,1,RealFYang
+8293566,45,8293566: RISC-V: Clean up push and pop registers,DingliZhang,2023-04-19,2023-04-20,integrated|backport|clean,ISCAS,CN,1,"feilongjiang,RealFYang"
+8294012,46,8294012: RISC-V: get/put_native_u8 missing the case when address&7 is 6,zifeihan,2023-04-20,2023-04-21,integrated|backport|clean,Independent,,1,"RealFYang,VladimirKempik"
+8294679,47,8294679: RISC-V: Misc crash dump improvements,zifeihan,2023-04-22,2023-04-25,integrated|backport|clean,Independent,,3,RealFYang
+8296435,48,8296435: RISC-V: Small refactoring for increment/decrement,DingliZhang,2023-04-25,2023-05-15,integrated|backport,ISCAS,CN,20,"feilongjiang,RealFYang"
+8297359,49,8297359: RISC-V: improve performance of floating Max Min intrinsics,VladimirKempik,2023-04-28,2023-05-15,integrated|backport|clean,,,17,RealFYang
+8296916,50,8296916: RISC-V: Move some small macro-assembler functions to header file,DingliZhang,2023-05-15,2023-05-18,integrated|backport,ISCAS,CN,3,RealFYang
+8306667,51,8306667: RISC-V: Fix storeImmN0 matching rule by using zr register,zhengxiaolinX,2023-05-15,2023-05-16,integrated|backport|clean,Independent,CN,1,RealFYang
+8308089,52,8308089: [riscv-port-jdk17u] Intrinsify Unsafe.storeStoreFence,zhengxiaolinX,2023-05-15,2023-05-16,integrated,Independent,CN,1,RealFYang
+8297697,53,8297697: RISC-V: Add support for SATP mode detection,zifeihan,2023-05-18,2023-05-22,integrated|backport,Independent,,4,"feilongjiang,RealFYang"
+8301036,54,8301036: RISC-V: Factor out functions baseOffset & baseOffset32 from MacroAssembler,DingliZhang,2023-05-19,2023-05-22,integrated|backport,ISCAS,CN,3,RealFYang
+8307150,55,8307150: RISC-V: Remove remaining StoreLoad barrier with UseCondCardMark for Serial/Parallel GC,feilongjiang,2023-05-22,2023-05-23,integrated|backport|clean,Huawei,CN,1,RealFYang
+8307651,56,8307651: RISC-V: stringL_indexof_char instruction has wrong format string,feilongjiang,2023-05-22,2023-05-23,integrated|backport|clean,Huawei,CN,1,RealFYang
+8307446,57,8307446: RISC-V: Improve performance of floating point to integer conversion,feilongjiang,2023-05-22,2023-05-24,integrated|backport|clean,Huawei,CN,2,RealFYang
+8308277,58,8308277: RISC-V: Improve vectorization of Match.sqrt() on floats,feilongjiang,2023-05-22,2023-05-25,integrated|backport|clean,Huawei,CN,3,RealFYang
+8301628,59,8301628: RISC-V: c2 fix pipeline class for several instructions,DingliZhang,2023-05-23,2023-05-24,integrated|backport,ISCAS,CN,1,RealFYang
+8301852,60,8301852: RISC-V: Optimize class atomic when order is memory_order_relaxed,DingliZhang,2023-05-24,2023-05-26,integrated|backport|clean,ISCAS,CN,2,RealFYang
+8301153,61,8301153: RISC-V: pipeline class for several instructions is not set correctly,zifeihan,2023-05-24,2023-05-26,integrated|backport|clean,Independent,,2,"feilongjiang,RealFYang"
+8301818,62,8301818: RISC-V: Factor out function mvw from MacroAssembler,zifeihan,2023-05-26,2023-06-01,integrated|backport,Independent,,6,RealFYang
+8305008,63,8305008: RISC-V: Factor out immediate checking functions from assembler_riscv.inline.hpp,DingliZhang,2023-05-29,2023-06-01,integrated|backport,ISCAS,CN,3,RealFYang
+8302289,64,8302289: RISC-V: Use bgez instruction in arraycopy_simple_check when possible,zifeihan,2023-05-31,2023-06-01,integrated|backport|clean,Independent,,1,RealFYang
+8305728,65,8305728: RISC-V: Use bexti instruction to do single-bit testing,DingliZhang,2023-06-01,2023-06-05,integrated|backport,ISCAS,CN,4,"feilongjiang,RealFYang"
+8301033,66,8301033: RISC-V: Handle special cases for MinI/MaxI nodes for Zbb,DingliZhang,2023-06-02,2023-06-05,integrated|backport|clean,ISCAS,CN,3,RealFYang
+8308997,67,8308997: RISC-V: Sign extend when comparing 32-bit value with zero instead of testing the sign bit,zifeihan,2023-06-05,2023-06-09,integrated|backport,Independent,,4,RealFYang
+8309427,68,8309427: [riscv-port-jdk17u] Remove unused RoundDoubleModeV C2 node,zifeihan,2023-06-05,2023-06-09,integrated,Independent,,4,RealFYang

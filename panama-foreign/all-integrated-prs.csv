@@ -1,0 +1,818 @@
+bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,reviewers
+8237360,1,8237360: Add tests that test binding recipe generation directly,JornVernee,2020-02-04,2020-02-05,sponsor|integrated,Oracle,NL,1,mcimadamore
+,2,Update jcheck conf,JornVernee,2020-02-04,2020-02-04,integrated,Oracle,NL,0,"openjdk-bot,edvbld,mcimadamore"
+8238494,4,8238494: Odd behavior when using VarHandle::toMethodHandle on a memory access handle,mcimadamore,2020-02-04,2020-02-05,integrated,Oracle,GB,1,JornVernee
+8237360,5,8237360: Add tests that test binding recipe generation directly,JornVernee,2020-02-05,2020-02-05,integrated,Oracle,NL,0,mcimadamore
+8238549,6,8238549: Add explicit cast to correct implementation type in VarHandle implementation methods,mcimadamore,2020-02-06,2020-02-06,integrated,Oracle,GB,0,JornVernee
+8238556,7,8238556: jextract command line option cleanup,sundararajana,2020-02-06,2020-02-06,integrated,Oracle,,0,mcimadamore
+8238320,8,8238320: What is the alignment of padding layouts?,mcimadamore,2020-02-06,2020-02-07,integrated,Oracle,GB,1,"JornVernee,PaulSandoz"
+,10,Merge openjdk/panama-foreign:master,mcimadamore,2020-02-07,2020-02-07,integrated,Oracle,GB,0,JornVernee
+8237359,12,8237359: Clean up Binding,JornVernee,2020-02-10,2020-02-10,integrated,Oracle,NL,0,mcimadamore
+8238837,13,8238837: AArch64: TestUpcall failures after JDK-8237358,nick-arm,2020-02-11,2020-02-11,integrated,ARM,GB,0,JornVernee
+,14,Merge openjdk/panama-foreign:foreign-memaccess,JornVernee,2020-02-11,2020-02-11,integrated,Oracle,NL,0,mcimadamore
+8238226,15,8238226: Revisit FunctionDescriptor,JornVernee,2020-02-11,2020-02-12,integrated,Oracle,NL,1,mcimadamore
+8238712,16,8238712: ConcurrentModificationException thrown when forward reference to record type in function prototype,slowhog,2020-02-11,2020-02-12,integrated,Oracle,US,1,mcimadamore
+8238951,17,8238951: Update jextract after JDK-8238226,JornVernee,2020-02-12,2020-02-12,integrated,Oracle,NL,0,mcimadamore
+8238192,19,8238192: Reimplement MemoryAddress memory access handles on top of var handle combinators,mcimadamore,2020-02-13,2020-02-13,integrated,Oracle,GB,0,JornVernee
+8239079,20,8239079: Add a benchmark for concurrent use of memory access API,mcimadamore,2020-02-14,2020-02-14,integrated,Oracle,GB,0,"JornVernee,PaulSandoz"
+8239128,21,8239128: Macro defines constant pointers can crash VM via jextract API,slowhog,2020-02-16,2020-02-21,integrated,Oracle,US,5,mcimadamore
+8239345,24,8239345: need an enum for standard C types and a way to get a memory layout for those C types,sundararajana,2020-02-19,2020-02-20,integrated,Oracle,,1,"JornVernee,mcimadamore"
+8238316,25,8238316: jextract emits a C_BOOL when source says char,sundararajana,2020-02-21,2020-02-24,integrated,Oracle,,3,"JornVernee,mcimadamore"
+8239784,26,8239784: Circular initialization causes C_XXX constants to be null,JornVernee,2020-02-21,2020-02-21,integrated,Oracle,NL,0,sundararajana
+,27,Use Windows and Aarch64 LongDouble constants in LayoutUtils,JornVernee,2020-02-24,2020-02-24,integrated,Oracle,NL,0,mcimadamore
+8239491,28,8239491: Missing CursorKind and TypeKind constants for LLVM 9,JornVernee,2020-02-24,2020-02-25,integrated,Oracle,NL,1,mcimadamore
+8239918,30,8239918: jextract generates uncompilable code for no argument C function,sundararajana,2020-02-25,2020-02-25,integrated,Oracle,,0,mcimadamore
+8239809,33,8239809: Need API to access attributes,slowhog,2020-02-25,2020-02-27,integrated,Oracle,US,2,mcimadamore
+8240173,34,8240173: Confusing overflow error when trying to dereference a nothing segment,mcimadamore,2020-02-27,2020-02-27,integrated,Oracle,GB,0,"JornVernee,PaulSandoz"
+8240181,35,8240181: jextract does not generate constants for anonymous enum fields,sundararajana,2020-02-27,2020-02-28,integrated,Oracle,,1,mcimadamore
+8239490,36,"8239490: jextract throws ""No matching declaration found for bitfield"" because wrong bitfield content is found",mcimadamore,2020-02-28,2020-03-02,integrated|build|core-libs,Oracle,GB,3,sundararajana
+8240300,37,8240300: jextract produces non compilable code with repeated declarations,sundararajana,2020-03-02,2020-03-03,integrated|core-libs,Oracle,,1,"slowhog,mcimadamore"
+8240372,38,8240372: TypeTranslator can not handle plain function types,JornVernee,2020-03-03,2020-03-03,integrated,Oracle,NL,0,sundararajana
+8240602,39,8240602: port more tests from old jextract tests,sundararajana,2020-03-05,2020-03-05,integrated,Oracle,,0,JornVernee
+,40,Improve jextract error reporting,JornVernee,2020-03-05,2020-03-06,integrated,Oracle,NL,1,sundararajana
+8240657,41,"8240657: when Java keywords are used as identifiers in C header, jextract generates non-compilable java code",sundararajana,2020-03-06,2020-03-06,integrated,Oracle,,0,JornVernee
+8240752,42,8240752: jextract generates non-compilable code for special floating point values,sundararajana,2020-03-09,2020-03-09,integrated,Oracle,,0,slowhog
+8240853,43,8240853: Declaration.union() method sets wrong kind for the declaration object created,sundararajana,2020-03-11,2020-03-11,integrated,Oracle,,0,mcimadamore
+8240811,44,8240811: jextract generates non-compilable code for name collision between a struct and a global variable,sundararajana,2020-03-11,2020-03-11,integrated,Oracle,,0,mcimadamore
+8240874,45,8240874: Add finer-grained access control for memory segments,mcimadamore,2020-03-11,2020-03-12,integrated,Oracle,GB,1,"JornVernee,PaulSandoz"
+,50,Merge openjdk/panama-foreign:foreign-memaccess,mcimadamore,2020-03-13,2020-03-13,integrated,Oracle,GB,0,JornVernee
+,51,"Update the README with Panama specific information, and information about the repo",JornVernee,2020-03-13,2020-03-13,integrated,Oracle,NL,0,mcimadamore
+8241011,52,8241011: Internal access modes should be filtered,mcimadamore,2020-03-13,2020-03-13,integrated,Oracle,GB,0,JornVernee
+8241017,53,"8241017: Enhance AllocationScope to support ""unbounded"" mode",mcimadamore,2020-03-13,2020-03-16,integrated,Oracle,GB,3,"JornVernee,sundararajana"
+8241148,55,8241148: need a way to create MemorySegment with contents from java String and a way to read a C char* as java String,sundararajana,2020-03-18,2020-03-19,integrated,Oracle,,1,mcimadamore
+8237585,56,8237585: Dismantle ForeignUnsafe,JornVernee,2020-03-19,2020-03-19,integrated,Oracle,NL,0,mcimadamore
+8237585,57,8237585: Dismantle ForeignUnsafe (foreign-jextract part),JornVernee,2020-03-19,2020-03-19,integrated,Oracle,NL,0,sundararajana
+8241309,58,8241309: foreign-abi branch has javadoc errors,mcimadamore,2020-03-19,2020-03-19,integrated,Oracle,GB,0,sundararajana
+,59,Miscellaneous cleanups,JornVernee,2020-03-19,2020-03-19,integrated,Oracle,NL,0,slowhog
+8241334,60,8241334: panama foreign-jextract branch fails to build,sundararajana,2020-03-20,2020-03-20,integrated,Oracle,,0,slowhog
+8241349,61,8241349: initial version of panama_jextract.md,sundararajana,2020-03-20,2020-03-20,integrated,Oracle,,0,mcimadamore
+8241442,62,8241442: jextract spuriously crashes,mcimadamore,2020-03-23,2020-03-23,integrated,Oracle,GB,0,sundararajana
+8241504,64,8241504: Expose MemoryLayout annotations/attributes in the public API,JornVernee,2020-03-24,2020-03-26,integrated,Oracle,NL,2,mcimadamore
+8237573,65,8237573: Add a basic call overhead benchmark,JornVernee,2020-03-25,2020-03-26,integrated,Oracle,NL,1,mcimadamore
+8241650,66,8241650: jextract module should be mapped to application class loader,sundararajana,2020-03-26,2020-03-26,integrated,Oracle,,0,mcimadamore
+,67,Backport 8237573 to foreign-abi,JornVernee,2020-03-26,2020-03-26,integrated,Oracle,NL,0,"mcimadamore,sundararajana"
+8241504,69,8241504: Expose MemoryLayout annotations/attributes in the public API (foreign-jextract part),JornVernee,2020-03-26,2020-03-26,integrated,Oracle,NL,0,mcimadamore
+8241712,70,8241712: AArch64: TestDowncall fails with IllegalArgumentException: No ABI attribute present,nick-arm,2020-03-27,2020-03-30,integrated,ARM,GB,3,JornVernee
+8241772,71,JDK-8241772: MemorySegment should offer a spliterator,mcimadamore,2020-03-27,2020-03-30,integrated,Oracle,GB,3,PaulSandoz
+8241816,72,8241816: foreign-abi and foreign-jextract panama branches fail to build and test,sundararajana,2020-03-30,2020-03-30,integrated,Oracle,,0,mcimadamore
+8241849,73,JDK-8241849: Add unsafe way to create unconfined memory segment view,mcimadamore,2020-03-30,2020-03-30,integrated,Oracle,GB,0,sundararajana
+8241866,75,JDK-8241866:Add API to reshape sequence layouts,mcimadamore,2020-03-30,2020-04-01,integrated,Oracle,GB,2,"JornVernee,PaulSandoz"
+,76,Merge foreign-memaccess,mcimadamore,2020-03-30,2020-03-31,integrated,Oracle,GB,1,"JornVernee,sundararajana"
+,77,Backport misc changes from foreign-abi,JornVernee,2020-03-31,2020-03-31,integrated,Oracle,NL,0,"PaulSandoz,mcimadamore"
+8241925,78,"8241925: jextract should generate simple allocation, access API for C primitive types",sundararajana,2020-03-31,2020-04-01,integrated,Oracle,,1,"JornVernee,mcimadamore"
+,80,Merge foreign-memaccess,JornVernee,2020-03-31,2020-03-31,integrated,Oracle,NL,0,
+8241998,81,JDK-8241998: Revisit Foreign::ofNativeUnchecked,mcimadamore,2020-04-01,2020-04-02,integrated,Oracle,GB,1,sundararajana
+8241994,82,8241994: Missing SystemABI.layoutFor mappings for LONG_DOUBLE,JornVernee,2020-04-01,2020-04-01,integrated,Oracle,NL,0,"mcimadamore,sundararajana"
+,83,Add missing libclang dependencies to jib-profiles,JornVernee,2020-04-01,2020-04-01,integrated,Oracle,NL,0,slowhog
+8242011,84,JDK-8242011: Add support for memory address combinator,mcimadamore,2020-04-02,2020-04-02,integrated,Oracle,GB,0,JornVernee
+8242028,85,8242028: Remove C string to/from Java string utilities from Foreign class,sundararajana,2020-04-02,2020-04-02,integrated,Oracle,,0,mcimadamore
+8242046,86,JDK-8242046: Add a predicate to determine if MemoryLayout is a padding layout,mcimadamore,2020-04-02,2020-04-02,integrated,Oracle,GB,0,JornVernee
+8242048,88,JDK-8242048: Add API point to get raw long value out of a MemoryAddress,mcimadamore,2020-04-02,2020-04-02,integrated,Oracle,GB,0,"PaulSandoz,sundararajana"
+,89,Merge foreign-memaccess,mcimadamore,2020-04-02,2020-04-02,integrated,Oracle,GB,0,JornVernee
+8242051,90,JDK-8242051: Clarify difference between checked and unchecked addresses,mcimadamore,2020-04-02,2020-04-02,integrated,Oracle,GB,0,JornVernee
+,91,Backport Foreign methods from foreign-abi back to foreign-memaccess,mcimadamore,2020-04-02,2020-04-02,integrated,Oracle,GB,0,slowhog
+8242061,93,JDK-8242061: AllocationScope is too general,mcimadamore,2020-04-02,2020-04-03,integrated,Oracle,GB,1,JornVernee
+,94,Merge foreign-memaccess,mcimadamore,2020-04-02,2020-04-03,integrated,Oracle,GB,1,
+8242045,95,JDK-8242045: adjust foreign-jextract code for recent Foreign interface changes,mcimadamore,2020-04-03,2020-04-03,integrated,Oracle,GB,0,sundararajana
+8242102,96,JDK-8242102: foreign-abi build is broken,mcimadamore,2020-04-03,2020-04-03,integrated,Oracle,GB,0,sundararajana
+8242127,97,JDK-8242127: reorganize ABI-dependent layout constants,mcimadamore,2020-04-03,2020-04-06,integrated,Oracle,GB,3,"JornVernee,sundararajana"
+,98,Fix javadoc in jdk.incubator.foreign.Foreign,mcimadamore,2020-04-06,2020-04-06,integrated,Oracle,GB,0,JornVernee
+,99,"Revert ""JDK-8242127: reorganize ABI-dependent layout constants""",mcimadamore,2020-04-06,2020-04-06,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+,100,Tweak JextractToolRunner to use file helper routines in FileUtils library,mcimadamore,2020-04-06,2020-04-07,integrated,Oracle,GB,1,slowhog
+8242253,101,JDK-8242253: Clarify bulk of addresses backed by same storage,PaulSandoz,2020-04-07,2020-04-07,integrated,Oracle,,0,mcimadamore
+8239493,102,8239493: Add classfile generation to jextract,JornVernee,2020-04-07,2020-04-07,integrated,Oracle,NL,0,"mcimadamore,sundararajana"
+8242276,103,8242276: tools/launcher/VersionCheck.java fails for jextract,JornVernee,2020-04-07,2020-04-07,integrated,Oracle,NL,0,mcimadamore
+,104,Fix failing TestClassGeneration,JornVernee,2020-04-07,2020-04-07,integrated,Oracle,NL,0,sundararajana
+8242288,105,8242288: Sample code has to be adjusted after recent changes in jextract generated code,sundararajana,2020-04-07,2020-04-07,integrated,Oracle,,0,JornVernee
+8242376,106,8242376: update jextract samples to avoid --filter option,sundararajana,2020-04-08,2020-04-08,integrated,Oracle,,0,mcimadamore
+,107,Add JMH test for loop over sliced segment,mcimadamore,2020-04-08,2020-04-08,integrated,Oracle,GB,0,JornVernee
+8242465,108,8242465: jextract should skip variables and struct fields with types that cannot be handled ,sundararajana,2020-04-10,2020-04-10,integrated,Oracle,,0,mcimadamore
+8242495,109,JDK-8242495: Restructure implementation of memory segments,mcimadamore,2020-04-10,2020-04-15,integrated,Oracle,GB,5,"JornVernee,PaulSandoz"
+,111,Memory access implementation rewrite - post cleanup,mcimadamore,2020-04-15,2020-04-15,integrated,Oracle,GB,0,"JornVernee,PaulSandoz"
+,112,Merge foreign-memaccess,openjdk-bot,2020-04-15,2020-04-16,integrated|failed-auto-merge,,,1,
+,113,Preserve memory scope for buffer segments,mcimadamore,2020-04-16,2020-04-16,integrated,Oracle,GB,0,JornVernee
+,114,Merge master,openjdk-bot,2020-04-17,2020-04-17,integrated|failed-auto-merge,,,0,
+8243064,115,JDK-8243064: Add more support for mapped memory segments,mcimadamore,2020-04-17,2020-04-21,integrated,Oracle,GB,4,"JornVernee,PaulSandoz"
+,116,Merge foreign-abi,openjdk-bot,2020-04-17,2020-04-17,integrated|failed-auto-merge,,,0,
+8243073,117,JDK-8243073: Add support for serial confinement,mcimadamore,2020-04-17,2020-04-22,integrated,Oracle,GB,5,JornVernee
+8243089,118,JDK-8243089: Foreign address manipulation always fails with exception,mcimadamore,2020-04-17,2020-04-17,integrated,Oracle,GB,0,JornVernee
+,119,Fix bad merge of java.base/module-info.java,mcimadamore,2020-04-17,2020-04-20,integrated,Oracle,GB,3,JornVernee
+,120,Do not try to resize constant string segments in TestClassGeneration.java,JornVernee,2020-04-20,2020-04-20,integrated,Oracle,NL,0,"sundararajana,mcimadamore"
+,121,Fix Cstring not to call withSize on already bound addresses,mcimadamore,2020-04-20,2020-04-20,integrated,Oracle,GB,0,JornVernee
+8243284,122,JDK-8243284: Remove Foreign class,mcimadamore,2020-04-21,2020-04-22,integrated,Oracle,GB,1,"JornVernee,slowhog,sundararajana"
+8243300,123,JDK-8243300: Move var handle combinators into foreign incubator module,mcimadamore,2020-04-21,2020-04-22,integrated,Oracle,GB,1,JornVernee
+,124,Merge foreign-memaccess,openjdk-bot,2020-04-22,2020-04-22,integrated|failed-auto-merge,,,0,sundararajana
+,125,Fix bad use of MemorySegment::spliterator in TestSharedAccess,mcimadamore,2020-04-22,2020-04-22,integrated,Oracle,GB,0,JornVernee
+,128,Merge foreign-abi,openjdk-bot,2020-04-22,2020-04-23,integrated|failed-auto-merge,,,1,
+,129,Fix issues caused by removal of the Foreign class,mcimadamore,2020-04-23,2020-04-23,integrated,Oracle,GB,0,JornVernee
+8243485,130,8243485: adjust panama_jextract.md samples after recent foreign-abi changes,sundararajana,2020-04-23,2020-04-23,integrated,Oracle,,0,slowhog
+,131,Merge foreign-memaccess,openjdk-bot,2020-04-24,2020-04-24,integrated|failed-auto-merge,,,0,
+8243669,132,JDK-8243669: Improve library loading for Panama libraries,mcimadamore,2020-04-27,2020-04-30,integrated,Oracle,GB,3,"JornVernee,sundararajana,mlchung"
+8243978,133,"8243978: jextract should generate separate classes with static util methods for each struct, union",sundararajana,2020-04-28,2020-04-28,integrated,Oracle,,0,JornVernee
+8244055,134,8244055: jextract should generate struct and union classes as nested classes of header file class,sundararajana,2020-04-29,2020-04-29,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8244127,135,"8244127: ""memory stomping error"" when running java/foreign/TestNative.java on a debug build",JornVernee,2020-04-29,2020-04-29,integrated,Oracle,NL,0,PaulSandoz
+8244128,136,8244128: Allocations larger than MAX_ALIGN can fail to be sliced to proper size.,JornVernee,2020-04-29,2020-04-29,integrated,Oracle,NL,0,mcimadamore
+8244244,137,8244244: Better representing typedef in jextract API,slowhog,2020-04-30,2020-05-01,integrated,Oracle,US,1,"mcimadamore,sundararajana"
+8244172,138,8244172: jextract should generate upcall stub creating helper in the functional interface class,sundararajana,2020-04-30,2020-04-30,integrated,Oracle,,0,mcimadamore
+,139,Fix foreign-jextract after latest library lookup changes,mcimadamore,2020-04-30,2020-05-01,integrated,Oracle,GB,1,slowhog
+,140,Merge foreign-abi,openjdk-bot,2020-05-01,2020-05-01,integrated|failed-auto-merge,,,0,
+8244270,141,JDK-8244270: reorganize ABI-dependent layout constants (second attempt),mcimadamore,2020-05-01,2020-05-06,integrated,Oracle,GB,5,JornVernee
+,142,Alternative scalable MemoryScope,plevart,2020-05-03,2020-05-08,integrated,,,5,"PaulSandoz,mcimadamore"
+8244337,143,8244337: jextract generates struct static utils class for typedef names only if struct name is empty,sundararajana,2020-05-04,2020-05-04,integrated,Oracle,,0,slowhog
+8244412,144,8244412: jextract should generate static utils class for primitive typedefs,sundararajana,2020-05-05,2020-05-05,integrated,Oracle,,0,mcimadamore
+8244425,145,8244425: primitive typedef names differing only in case mapped to nested classes with names differing only in case,sundararajana,2020-05-05,2020-05-05,integrated,Oracle,,0,mcimadamore
+8244512,146,8244512: jextract throws NPE for a nested struct declaration,sundararajana,2020-05-06,2020-05-06,integrated,Oracle,,0,mcimadamore
+8244270,147,JDK-8244270: reorganize ABI-dependent layout constants (second attempt),mcimadamore,2020-05-06,2020-05-06,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+,149,Merge foreign-abi,openjdk-bot,2020-05-06,2020-05-06,integrated|failed-auto-merge,,,0,
+,150,Fix some jextract test failures on Windows,JornVernee,2020-05-06,2020-05-08,integrated,Oracle,NL,2,mcimadamore
+,151,Workaround JDK-8239083,JornVernee,2020-05-06,2020-05-06,integrated,Oracle,NL,0,sundararajana
+8244601,154,JDK-8244601: Cleanup support for upcall handles,mcimadamore,2020-05-07,2020-05-07,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+8244601,155,JDK-8244601: Cleanup support for upcall handles (jextract part),mcimadamore,2020-05-07,2020-05-07,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+,156,Alternative scalable MemoryScope (followup),mcimadamore,2020-05-08,2020-05-08,integrated,Oracle,GB,0,PaulSandoz
+,157,Add MemoryLayout::byteOffset,ChrisHegarty,2020-05-11,2020-05-11,integrated,,,0,"JornVernee,mcimadamore"
+8244720,158,8244720: Check MethodType and FunctionDescritpor used when linking,JornVernee,2020-05-11,2020-05-11,integrated,Oracle,NL,0,mcimadamore
+8244728,159,8244728: jextract generates separate nested class for struct and union typedefs,sundararajana,2020-05-11,2020-05-11,integrated,Oracle,,0,"JornVernee,mcimadamore"
+,161,Add MemorySegment::fill,ChrisHegarty,2020-05-13,2020-05-15,integrated,,,2,"JornVernee,mcimadamore,JimLaskey,PaulSandoz"
+8244938,162,8244938: Crash in foreign ABI CallArranger class when a test native function returns a nested struct,mcimadamore,2020-05-13,2020-05-14,integrated,Oracle,GB,1,JornVernee
+,163,Simplify MemoryScope implementation to use StampedLock,mcimadamore,2020-05-13,2020-05-13,integrated,Oracle,GB,0,PaulSandoz
+8244959,164,8244959: Jextract's VarargsInvoker fails to link functions when passing integer types other than long,slowhog,2020-05-13,2020-05-14,integrated,Oracle,US,1,"JornVernee,mcimadamore,sundararajana"
+8245003,165,8245003: jextract does not generate accessor for MemorySegement typed values,sundararajana,2020-05-14,2020-05-14,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8245066,166,8245066: struct/union/array address accessor should be x$ADDR() for consistency,sundararajana,2020-05-15,2020-05-15,integrated,Oracle,,0,mcimadamore
+,167,"Move ""owner"" field and thread-confinement checks to MemoryScope",plevart,2020-05-15,2020-05-15,integrated,,,0,mcimadamore
+,168,Merge foreign-memaccess,openjdk-bot,2020-05-15,2020-05-15,integrated|failed-auto-merge,,,0,
+,169,Move MemoryAddress::copy,mcimadamore,2020-05-15,2020-05-15,integrated,Oracle,GB,0,"ChrisHegarty,JornVernee"
+,170,Move MemoryAddress::copy (ABI version),mcimadamore,2020-05-15,2020-05-15,integrated,Oracle,GB,0,JornVernee
+,171,Move MemoryAddress::copy (jextract version),mcimadamore,2020-05-15,2020-05-15,integrated,Oracle,GB,0,JornVernee
+,172,Move MemoryAddress::copy (more review feedback),mcimadamore,2020-05-15,2020-05-15,integrated,Oracle,GB,0,PaulSandoz
+,173,Add unsigned adapter handles,ChrisHegarty,2020-05-16,2020-05-19,integrated,,,3,"JornVernee,mcimadamore"
+,174,"Rename SystemABI to ForeignLinker, and move C support to a separate class.",JornVernee,2020-05-18,2020-05-18,integrated,Oracle,NL,0,mcimadamore
+,175,Add benchmark to measure performance of VH adapters,mcimadamore,2020-05-18,2020-05-18,integrated,Oracle,GB,0,"JornVernee,PaulSandoz"
+,176,Jextract changes needed after SystemABI -> ForeignLinker rename,JornVernee,2020-05-18,2020-05-18,integrated,Oracle,NL,0,mcimadamore
+8245227,177,8245227: VarHandle adaptation fails when non-crackable direct method handles are used as adapters,mcimadamore,2020-05-18,2020-05-18,integrated,Oracle,GB,0,PaulSandoz
+,178,Clarify exception behaviour for MemorySegment::toByteArray when the segment does not feature the READ access mode.,ChrisHegarty,2020-05-19,2020-05-20,integrated,,,1,JornVernee
+8245459,179,8245459: Add support for complex filter value var handle adaptation,mcimadamore,2020-05-20,2020-05-21,integrated,Oracle,GB,1,PaulSandoz
+,180,Add MemorySegment::mismatch,ChrisHegarty,2020-05-20,2020-05-25,integrated,,,5,"mcimadamore,PaulSandoz"
+8245767,181,8245767: jextract crashes with typedef on a opaque struct or union,sundararajana,2020-05-26,2020-05-26,integrated,Oracle,,0,JornVernee
+,182,adding libgit2 sample.,sundararajana,2020-05-27,2020-05-27,integrated,Oracle,,0,mcimadamore
+,183,Merge master,openjdk-bot,2020-05-27,2020-05-28,integrated|failed-auto-merge,,,1,
+8245988,184,8245988: Add a special VaList carrier,JornVernee,2020-05-27,2020-06-04,integrated,Oracle,NL,8,mcimadamore
+,185,Merge foreign-abi,openjdk-bot,2020-05-28,2020-05-28,integrated|failed-auto-merge,,,0,
+8246040,186,8246040: java/foreign/TestAddressHandle fails on big endian platforms ,mcimadamore,2020-05-28,2020-05-28,integrated,Oracle,GB,0,"JornVernee,sundararajana,ChrisHegarty"
+8246052,187,8246052: MemorySegment::mapFromPath should take an offset,mcimadamore,2020-05-28,2020-05-28,integrated,Oracle,GB,0,"ChrisHegarty,sundararajana"
+8246053,188,8246053: Add a mask for default access modesAdd a default access mode flag,mcimadamore,2020-05-28,2020-05-28,integrated,Oracle,GB,0,"ChrisHegarty,sundararajana"
+8246052,189,8246052: MemorySegment::mapFromPath should take an offset,mcimadamore,2020-05-28,2020-05-28,integrated,Oracle,GB,0,PaulSandoz
+,190,configure should fail if libclang path is not specified,sundararajana,2020-05-29,2020-05-29,integrated,Oracle,,0,"ChrisHegarty,mcimadamore"
+8246341,191,8246341: jextract should generate Cpointer utilities class,sundararajana,2020-06-02,2020-06-02,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8246400,192,8246400: jextract should generate a utility to manage mutliple MemorySegments,sundararajana,2020-06-03,2020-06-03,integrated,Oracle,,0,mcimadamore
+,193,adding sqlite3 sample,sundararajana,2020-06-03,2020-06-03,integrated,Oracle,,0,"JornVernee,mcimadamore"
+,194,Merge master,openjdk-bot,2020-06-04,2020-06-04,integrated|failed-auto-merge,,,0,
+8246611,196,8246611: jextract generated allocate methods should accept CScope and callback allocate should auto-register,sundararajana,2020-06-05,2020-06-05,integrated,Oracle,,0,mcimadamore
+8246693,197,8246693: Restricted native operations should be spelled out clearly,sundararajana,2020-06-08,2020-06-08,integrated,Oracle,,0,mcimadamore
+,198,CSupport::getSystemLinker should not be called from internal API points,mcimadamore,2020-06-09,2020-06-09,integrated,Oracle,GB,0,sundararajana
+8247439,199,8247439: NativeAllocationScope should have a way to register existing segments onto it,mcimadamore,2020-06-12,2020-06-12,integrated,Oracle,GB,0,sundararajana
+8247488,200,8247488: Add support for string helpers in CSupport,mcimadamore,2020-06-12,2020-06-12,integrated,Oracle,GB,0,sundararajana
+8247439,201,8247439: NativeAllocationScope should have a way to register existing segments onto it,sundararajana,2020-06-12,2020-06-12,integrated,Oracle,,0,mcimadamore
+8247439,202,8247439: NativeAllocationScope should have a way to register existing segments onto it (followup),mcimadamore,2020-06-12,2020-06-12,integrated,Oracle,GB,0,PaulSandoz
+8247488,203,8247488: Add support for string helpers in CSupport,mcimadamore,2020-06-12,2020-06-12,integrated,Oracle,GB,0,slowhog
+8247547,204,8247547: jextract generated Cstring should use foreign.CSupport string utility methods,sundararajana,2020-06-15,2020-06-15,integrated,Oracle,,0,mcimadamore
+,205,Add test for vprintf,mcimadamore,2020-06-15,2020-06-15,integrated,Oracle,GB,0,sundararajana
+,206,Tweak API and javadoc for VaList,mcimadamore,2020-06-15,2020-06-15,integrated,Oracle,GB,0,JornVernee
+8247488,207,8247488: Add support for string helpers in CSupport (decoding support),mcimadamore,2020-06-15,2020-06-16,integrated,Oracle,GB,1,"JornVernee,slowhog"
+8247678,208,8247678: StdLibTest fails to create an empty VaList on Windows,JornVernee,2020-06-16,2020-06-16,integrated,Oracle,NL,0,mcimadamore
+8247924,209,8247924: Improve javadoc of Foreign Memory Access API (part one),mcimadamore,2020-06-19,2020-06-19,integrated,Oracle,GB,0,JornVernee
+,210,* Fixed include path to be OS/SDK version independent,sundararajana,2020-06-19,2020-06-19,integrated,Oracle,,0,mcimadamore
+8247924,211,8247924: Improve javadoc of Foreign Memory Access API (part two),mcimadamore,2020-06-19,2020-06-19,integrated,Oracle,GB,0,JornVernee
+8247937,212,8247937: Specialize downcall binding recipes using MethodHandle combinators,JornVernee,2020-06-19,2020-06-23,integrated,Oracle,NL,4,mcimadamore
+8247924,213,8247924: Improve javadoc of Foreign Memory Access API (part three),mcimadamore,2020-06-19,2020-06-19,integrated,Oracle,GB,0,JornVernee
+8248237,214,8248237: VarHandleByteArrayView nioAccess field should be static final,PaulSandoz,2020-06-25,2020-06-25,integrated,Oracle,,0,"slowhog,mcimadamore"
+,215,Merge master,openjdk-bot,2020-06-26,2020-06-26,integrated|failed-auto-merge,,,0,
+8248415,216,8248415: Create VarHandles for pointer fields through the MemoryHandles API,krakowski,2020-06-27,2020-07-08,integrated,,,11,JornVernee
+8248458,217,8248458: CSupport.toJavaStringInternal should be moved SharedUtils,sundararajana,2020-06-29,2020-06-29,ready|integrated,Oracle,,0,mcimadamore
+8248474,218,8248474: jextract uses header file name as part of identifier,sundararajana,2020-06-29,2020-06-29,integrated,Oracle,,0,mcimadamore
+8248331,219,8248331: Intrinsify downcall handles in C2,JornVernee,2020-06-29,2020-07-01,integrated,Oracle,NL,2,
+8248484,220,8248484: jextract should use raw names for generated identifiers as much as possible,sundararajana,2020-06-29,2020-06-29,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8248487,221,8248487: Add static helpers to access segments,mcimadamore,2020-06-29,2020-07-01,integrated,Oracle,GB,2,"JornVernee,slowhog,sundararajana,ChrisHegarty"
+8248499,222,8248499: Add methods to allocate off heap arrays from Java arrays,mcimadamore,2020-06-29,2020-07-01,integrated,Oracle,GB,2,"JornVernee,PaulSandoz,sundararajana,slowhog"
+8247993,224,8247993: AArch64: add support for VaList,nick-arm,2020-07-01,2020-07-03,integrated,ARM,GB,2,JornVernee
+,225,Improve StdLibTest to use new helpers,mcimadamore,2020-07-01,2020-07-01,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+,226,Fix several failing jdk_jextract tests on Windows,JornVernee,2020-07-02,2020-07-09,integrated,Oracle,NL,7,sundararajana
+,227,Copy stubs from Compile arena to nmethod stub array,JornVernee,2020-07-02,2020-07-02,integrated,Oracle,NL,0,slowhog
+8248710,228,"8248710: jextract should not generate Cstring, Cpointer, Cint C-X utility classes",sundararajana,2020-07-02,2020-07-03,integrated,Oracle,,1,mcimadamore
+,229,Turn off down call intrinsics by default,JornVernee,2020-07-02,2020-07-02,integrated,Oracle,NL,0,mcimadamore
+,230,Fix javadoc issues in foreign-abi,mcimadamore,2020-07-02,2020-07-02,integrated,Oracle,GB,0,JornVernee
+8248480,231,8248480: Switch isVarArg layout attribute to Boolean,JornVernee,2020-07-02,2020-07-02,integrated,Oracle,NL,0,mcimadamore
+8248487,232,8248487: Add static helpers to access segments (continued),mcimadamore,2020-07-03,2020-07-03,integrated,Oracle,GB,0,JornVernee
+8248487,233,8248487: Add static helpers to access segments (continued) - benchmark fix,mcimadamore,2020-07-03,2020-07-03,integrated,Oracle,GB,0,JornVernee
+8248487,234,8248487: Add static helpers to access segments (continued),mcimadamore,2020-07-03,2020-07-03,integrated,Oracle,GB,0,JornVernee
+8248487,235,8248487: Add static helpers to access segments (continued),mcimadamore,2020-07-03,2020-07-03,integrated,Oracle,GB,0,JornVernee
+,236,updating samples for recent MemoryAccess changes.,sundararajana,2020-07-06,2020-07-06,integrated,Oracle,,0,JornVernee
+8248420,237,8248420: Add a variant of VaList::make which takes a NativeScope,JornVernee,2020-07-09,2020-07-16,integrated,Oracle,NL,7,"PaulSandoz,mcimadamore"
+,238,AArch64 build fixes,JornVernee,2020-07-09,2020-07-10,integrated,Oracle,NL,1,PaulSandoz
+,239,Merge foreign-memaccess,openjdk-bot,2020-07-10,2020-07-10,integrated|failed-auto-merge,,,0,
+,240,reduce specific exports from jdk.incubator.foreign to jdk.incubator.jextract,sundararajana,2020-07-10,2020-07-10,integrated,Oracle,,0,JornVernee
+8249228,241,8249228: get rid of specific exports from jdk.incubator.foreign to jdk.incubator.jextract,sundararajana,2020-07-13,2020-07-13,integrated,Oracle,,0,JornVernee
+,242,Add missing codeCache.hpp include to upcallStubs.cpp,JornVernee,2020-07-13,2020-07-13,integrated,Oracle,NL,0,PaulSandoz
+8249290,243,8249290: jextract does not handle void typedef in function pointer argument,sundararajana,2020-07-14,2020-07-14,integrated,Oracle,,0,JornVernee
+8249300,244,8249300: jextract does not handle empty parameter list of a function pointer parameters,sundararajana,2020-07-14,2020-07-15,integrated,Oracle,,1,"JornVernee,slowhog"
+8249301,245,8249301: jextract fails with CCE when encountering a typedefdecl whose type is FunctionProto,JornVernee,2020-07-14,2020-07-14,integrated,Oracle,NL,0,sundararajana
+8249536,246,8249536: jextract throw IllegalStateException for bitfields in nested anonymous structs,JornVernee,2020-07-15,2020-07-21,integrated,Oracle,NL,6,sundararajana
+,247,Test the Java VaList implementation on every platform,JornVernee,2020-07-16,2020-07-17,integrated,Oracle,NL,1,PaulSandoz
+,248,Test the Java VaList implementation on every platform,JornVernee,2020-07-17,2020-07-17,integrated,Oracle,NL,0,mcimadamore
+8249753,249,JDK-8249753: Add restricted factory to access everything segment,mcimadamore,2020-07-20,2020-07-20,integrated,Oracle,GB,0,JornVernee
+8249757,250,8249757: jextract should expose a way to load library from a given absolute path,sundararajana,2020-07-20,2020-07-20,integrated,Oracle,,0,mcimadamore
+,251,"jextract thin tool, maximum api - initial refactoring",sundararajana,2020-07-21,2020-07-21,integrated,Oracle,,0,mcimadamore
+8249790,252,8249790: Add Addressable abstraction,mcimadamore,2020-07-21,2020-07-21,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+,253,Merge foreign-memaccess,openjdk-bot,2020-07-21,2020-07-21,integrated|failed-auto-merge,,,0,
+8249790,254,8249790: Add Addressable abstraction,mcimadamore,2020-07-21,2020-07-21,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+8249790,255,8249790: Add Addressable abstraction (followup),mcimadamore,2020-07-21,2020-07-21,integrated,Oracle,GB,0,JornVernee
+8249803,256,8249803: Add LibraryLookup.Symbol,mcimadamore,2020-07-21,2020-07-22,integrated,Oracle,GB,1,"JornVernee,PaulSandoz"
+8249810,257,8249810: Jextract should generate parameter types with Addressable type,mcimadamore,2020-07-21,2020-07-22,integrated,Oracle,GB,1,"JornVernee,sundararajana"
+8249803,258,8249803: Add LibraryLookup.Symbol,mcimadamore,2020-07-22,2020-07-22,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+8249803,259,8249803: Add LibraryLookup.Symbol (javadoc followup),mcimadamore,2020-07-22,2020-07-22,integrated,Oracle,GB,0,JornVernee
+8249879,260,8249879: Split MemorySegment and MemoryAddress,mcimadamore,2020-07-22,2020-07-27,integrated,Oracle,GB,5,"JornVernee,slowhog,PaulSandoz"
+8249949,261,8249949: jextract libclang Cursor children iteration creates a new up call stub every time,sundararajana,2020-07-23,2020-07-23,integrated,Oracle,,0,mcimadamore
+8249954,262,8249954: get rid of cursor to declaration caching in jextract,sundararajana,2020-07-23,2020-07-23,integrated,Oracle,,0,mcimadamore
+8250222,263,8250222: ConstantsTest is broken,mcimadamore,2020-07-23,2020-07-23,integrated,Oracle,GB,0,slowhog
+8250518,264,8250518: Jextract should process macros in bulk,mcimadamore,2020-07-24,2020-07-27,integrated,Oracle,GB,3,"JornVernee,sundararajana"
+,266,Merge foreign-memaccess,openjdk-bot,2020-07-27,2020-07-27,integrated|failed-auto-merge,,,0,JornVernee
+8249879,267,8249879: Split MemorySegment and MemoryAddress (jextract edition),mcimadamore,2020-07-27,2020-07-28,integrated,Oracle,GB,1,sundararajana
+,268,Samples update after 8249879. Added opengl sample,sundararajana,2020-07-28,2020-07-28,integrated,Oracle,,0,mcimadamore
+,269,Fix wrong ret_addr_offset value for some native calls.,JornVernee,2020-07-28,2020-07-28,integrated,Oracle,NL,0,mcimadamore
+8249879,270,8249879: Split MemorySegment and MemoryAddress (minor javadoc tweak),mcimadamore,2020-07-29,2020-07-29,integrated,Oracle,GB,0,JornVernee
+8250774,271,8250774: jextract does not close all files,mcimadamore,2020-07-29,2020-07-29,integrated,Oracle,GB,0,sundararajana
+8249879,272,8249879: Split MemorySegment and MemoryAddress (test fix),mcimadamore,2020-07-29,2020-07-29,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+,273,Change error handling strategy in MacroParserImpl's constructor,JornVernee,2020-07-29,2020-07-29,integrated,Oracle,NL,0,mcimadamore
+8250798,274,8250798: [Test] Cleanup @modules jtreg directives for jdk_foreign tests,slowhog,2020-07-29,2020-07-30,integrated,Oracle,US,1,sundararajana
+,275,Merge foreign-abi,openjdk-bot,2020-07-31,2020-07-31,integrated|failed-auto-merge,,,0,
+8251044,276,8251044: JextractTool API refactoring parse/filter/generate/write static methods in the same tool main class,sundararajana,2020-08-04,2020-08-04,integrated,Oracle,,0,mcimadamore
+8251048,277,8251048: Add some upcall benchmarks,JornVernee,2020-08-04,2020-08-04,integrated,Oracle,NL,0,mcimadamore
+8251047,279,8251047: GC stackwalking doesn't work when intrinsics are enabled,JornVernee,2020-08-05,2020-08-24,integrated,Oracle,NL,19,mcimadamore
+8251256,280,"8251256: jextrac code generated for nested structs, unions is incorrect",mcimadamore,2020-08-06,2020-08-07,integrated,Oracle,GB,1,sundararajana
+8248421,281,8248421: CSupport should have a way to free memory allocated outside Java,sundararajana,2020-08-10,2020-08-10,integrated,Oracle,,0,mcimadamore
+8251049,282,8251049: revisit address accessors for struct fields/global variables,sundararajana,2020-08-13,2020-08-13,integrated,Oracle,,0,mcimadamore
+8251893,283,8251893: jextract does not generate source for ConstantHelper even when --source is used,sundararajana,2020-08-17,2020-08-17,integrated,Oracle,,0,mcimadamore
+8251943,284,"8251943: jextract should not generate MemorySegment typed fields for variables, struct fields if layout size info is not available",sundararajana,2020-08-18,2020-08-18,integrated,Oracle,,0,mcimadamore
+8252016,285,8252016: jextract should handle va_list,sundararajana,2020-08-19,2020-08-19,integrated,Oracle,,0,mcimadamore
+8252047,286,8252047: jextract generates uncompilable code with --source option,sundararajana,2020-08-19,2020-08-20,integrated,Oracle,,1,mcimadamore
+8252121,287,8252121: jextract generated code fails with ABI for typedefed array type parameters,sundararajana,2020-08-20,2020-08-20,integrated,Oracle,,0,mcimadamore
+,288,Unsafe ParallelSum test is broken,mcimadamore,2020-08-24,2020-08-24,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+,289,Fix implicit default constructor linting warnings,JornVernee,2020-08-24,2020-08-24,integrated,Oracle,NL,0,sundararajana
+8252247,290,8252247: regenerate jdk.internal.clang.libclang sources using jextract,sundararajana,2020-08-24,2020-08-25,integrated,Oracle,,1,JornVernee
+8252302,291,8252302: jextract should compile generated java code with -parameters and -g:lines option,sundararajana,2020-08-25,2020-08-25,integrated,Oracle,,0,JornVernee
+,292,updating samples. changed constants class to use package constructor,sundararajana,2020-08-25,2020-08-25,integrated,Oracle,,0,JornVernee
+,293,Fix some tests failing jextract on Windows,JornVernee,2020-08-25,2020-08-25,integrated,Oracle,NL,0,sundararajana
+8251047,294,8251047: GC stackwalking doesn't work when intrinsics are enabled (followup),JornVernee,2020-08-25,2020-09-02,integrated,Oracle,NL,8,iwanowww
+8252465,295,8252465: jextract generates wrong layout and varhandle when different structs have same named field,sundararajana,2020-08-27,2020-08-27,integrated,Oracle,,0,mcimadamore
+,296,Merge foreign-memaccess,openjdk-bot,2020-08-28,2020-09-01,integrated|failed-auto-merge,,,4,
+8252563,297,8252563: Field VarHandle generation in --source mode is missing the PathElement.groupElement argument,JornVernee,2020-09-01,2020-09-01,integrated,Oracle,NL,0,sundararajana
+,298,Merge foreign-abi,openjdk-bot,2020-09-01,2020-09-01,integrated|failed-auto-merge,,,0,
+8252634,300,8252634: jextract should generate type annotations for C types,sundararajana,2020-09-02,2020-09-02,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8252686,301,8252686: All jextract tests should be run in both classes and sources mode,sundararajana,2020-09-02,2020-09-02,integrated,Oracle,,0,JornVernee
+8252704,302,8252704: Absolute library paths are not properly quoted,JornVernee,2020-09-02,2020-09-02,integrated,Oracle,NL,0,sundararajana
+8252705,303,8252705: private static final constants lead to compilation errors,sundararajana,2020-09-02,2020-09-02,integrated,Oracle,,0,mcimadamore
+8252757,304,JDK-8252757: Add support for shared segments,mcimadamore,2020-09-03,2020-09-10,integrated,Oracle,GB,7,PaulSandoz
+8252756,305,8252756: jextract does not handle VLAs/Incomplete Arrays/Flexible arrays,JornVernee,2020-09-03,2020-09-03,integrated,Oracle,NL,0,mcimadamore
+8252770,306,8252770: MemorySegment::allocateNative should honor direct memory limits,mcimadamore,2020-09-03,2020-09-04,integrated,Oracle,GB,1,PaulSandoz
+8252700,307,8252700: jextract ignores typedef to undefined structs,sundararajana,2020-09-04,2020-09-04,integrated,Oracle,,0,mcimadamore
+8248809,308,JDK-8248809: Consider supporting address dereference/allocation for platforms where pointers are not 64 bits,mcimadamore,2020-09-04,2020-09-07,integrated,Oracle,GB,3,"JornVernee,PaulSandoz"
+8252838,309,8252838: Panama foreign-abi branch fails to build,sundararajana,2020-09-07,2020-09-07,integrated,Oracle,,0,JornVernee
+8252866,310,"8252866: MemoryAccess.setAddress should take Addressable, not MemoryAddress",mcimadamore,2020-09-07,2020-09-07,integrated,Oracle,GB,0,sundararajana
+8252872,311,8252872: NativeScope should take Addressable instead of MemoryAddress,mcimadamore,2020-09-07,2020-09-07,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+,312,adding tensorflow sample,sundararajana,2020-09-08,2020-09-08,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8252899,313,"8252899: jextract can't handle multiple extern declarations that have the same name, but a different type name",JornVernee,2020-09-08,2020-09-08,integrated,Oracle,NL,0,sundararajana
+8252931,314,8252931: Extend multiple constant classes support to ClassConstantHelper,JornVernee,2020-09-09,2020-09-09,integrated,Oracle,NL,0,sundararajana
+8252866,315,"8252866: MemoryAccess.setAddress should take Addressable, not MemoryAddress (follow up)",mcimadamore,2020-09-09,2020-09-09,integrated,Oracle,GB,0,sundararajana
+8253003,316,8253003: jextract clang wrapper code should avoid Addressable.address() call as much as possible,sundararajana,2020-09-10,2020-09-10,integrated,Oracle,,0,JornVernee
+8252757,318,JDK-8252757: Add support for shared segments (followup),mcimadamore,2020-09-10,2020-09-10,integrated,Oracle,GB,0,JornVernee
+,319,Merge foreign-memaccess,openjdk-bot,2020-09-10,2020-09-10,integrated|failed-auto-merge,,,0,
+8253025,320,8253025: Add support for registering a segment with a Cleaner,mcimadamore,2020-09-10,2020-09-14,integrated,Oracle,GB,4,"JornVernee,PaulSandoz"
+,321,Merge jdk:master,openjdk-bot,2020-09-11,2020-09-14,integrated|failed-auto-merge,,,3,
+8253055,322,8253055: ScopedAccessException should be an Error,mcimadamore,2020-09-11,2020-09-11,integrated,Oracle,GB,0,PaulSandoz
+8253063,323,8253063: ScopedAccessError is sometimes thrown spuriously,mcimadamore,2020-09-11,2020-09-14,integrated,Oracle,GB,3,"PaulSandoz,fisk"
+8253102,324,8253102: jextract should emit address to segment utility method on struct classes,sundararajana,2020-09-14,2020-09-14,integrated,Oracle,,0,"JornVernee,mcimadamore"
+,325,Merge foreign-memaccess,openjdk-bot,2020-09-14,2020-09-14,integrated|failed-auto-merge,,,0,
+8253159,326,8253159: RuntimeHelper.asArrayRestricted should create noncloseable segment,sundararajana,2020-09-15,2020-09-15,integrated,Oracle,,0,JornVernee
+8248560,327,8248560: Specify the behaviour of the ForeignLinker returned by CSupport::getSystemLinker,JornVernee,2020-09-15,2020-09-16,integrated,Oracle,NL,1,sundararajana
+8253243,328,8253243: Investigate ways to make MemorySegment::ofNativeRestricted more composable,mcimadamore,2020-09-16,2020-09-17,integrated,Oracle,GB,1,"JornVernee,PaulSandoz,sundararajana"
+8248560,329,8248560: Specify the behaviour of the ForeignLinker returned by CSupport::getSystemLinker (jextract part),JornVernee,2020-09-16,2020-09-16,integrated,Oracle,NL,0,mcimadamore
+8239780,330,8239780: FunctionDescriptor factories and combinators should check whether return layout is null,JornVernee,2020-09-17,2020-09-17,integrated,Oracle,NL,0,sundararajana
+,331,Merge foreign-memaccess,openjdk-bot,2020-09-17,2020-09-17,integrated|failed-auto-merge,,,0,
+8253287,332,8253287: jcheck merge check is too strict,mcimadamore,2020-09-17,2020-09-17,integrated,Oracle,GB,0,JornVernee
+8253290,335,8253290: Tweak jextract code to use new MemoryAddress::asSegmentRestricted,mcimadamore,2020-09-17,2020-09-17,integrated,Oracle,GB,0,sundararajana
+,336,updating samples for CSupport->CLinker,sundararajana,2020-09-17,2020-09-18,integrated,Oracle,,1,mcimadamore
+8253305,337,8253305: The threshold for the shared segment handshake stackwalk is too low,mcimadamore,2020-09-17,2020-09-17,integrated,Oracle,GB,0,PaulSandoz
+8253306,338,8253306: jcheck should not be too picky about PR messages on panama-foreign,mcimadamore,2020-09-17,2020-09-17,integrated,Oracle,GB,0,slowhog
+8253307,339,8253307: Simplify code in RuntimeHelper::lookupGlobalVariable,mcimadamore,2020-09-17,2020-09-18,integrated,Oracle,GB,1,"JornVernee,slowhog,sundararajana"
+,340,Merge master,openjdk-bot,2020-09-18,2020-09-18,integrated|failed-auto-merge,,,0,
+8253355,341,8253355: Add some overloads to memory access API,mcimadamore,2020-09-18,2020-09-18,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+8233007,342,8233007: Add upcall tests that test stack arguments on Windows,JornVernee,2020-09-18,2020-09-18,integrated,Oracle,NL,0,mcimadamore
+,344,Merge foreign-memaccess,openjdk-bot,2020-09-18,2020-09-18,integrated|failed-auto-merge,,,0,
+8253360,345,8253360: LibraryLookup javadoc should be clearer about how to create restricted segments,mcimadamore,2020-09-18,2020-09-18,integrated,Oracle,GB,0,"PaulSandoz,sundararajana"
+8253373,346,8253373: Add package-level javadoc for foreign linker support,mcimadamore,2020-09-18,2020-09-21,integrated,Oracle,GB,3,"JornVernee,sundararajana"
+8253419,347,8253419: jextract should generate RuntimeHelper as a package private class,sundararajana,2020-09-21,2020-09-21,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8253430,348,8253430: Improve the LibraryLookup API,mcimadamore,2020-09-21,2020-09-21,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+8253430,349,8253430: Improve the LibraryLookup API (jextract version),mcimadamore,2020-09-21,2020-09-21,integrated,Oracle,GB,0,sundararajana
+8253390,351,8253390: jextract should quote string literals,sundararajana,2020-09-21,2020-09-21,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8253465,352,8253465: jextract should generate constant classes as package private,sundararajana,2020-09-22,2020-09-22,integrated,Oracle,,0,JornVernee
+8253472,353,8253472: Hotspot code should special case ScopedAccessError,mcimadamore,2020-09-22,2020-09-22,integrated,Oracle,GB,0,"JornVernee,sundararajana,fisk"
+,354,Turn on downcall intrinsics by default,JornVernee,2020-09-22,2020-09-22,integrated,Oracle,NL,0,mcimadamore
+,355,Consolidate all the various documents in the repository.,mcimadamore,2020-09-23,2020-09-24,integrated,Oracle,GB,1,sundararajana
+,356,Transition back to java on safepoint poll slow-path when returning from an optimized native call,JornVernee,2020-09-28,2020-09-28,integrated,Oracle,NL,0,mcimadamore
+8253725,357,8253725: Jextract fails to extract big monolithic headers,mcimadamore,2020-09-28,2020-09-28,integrated,Oracle,GB,0,JornVernee
+8253255,358,8253255: Investigate replacing ABI layout attributes with custom subtypes of ValueLayout,JornVernee,2020-09-28,2020-09-29,integrated,Oracle,NL,1,mcimadamore
+8253796,359,8253796: Consider making CValueLayout public.,JornVernee,2020-09-29,2020-09-29,integrated,Oracle,NL,0,mcimadamore
+8253798,360,8253798: Simplify ClassConstantHelper,JornVernee,2020-09-29,2020-09-29,integrated,Oracle,NL,0,mcimadamore
+8253823,361,8253823: Investigate ways to make handoff-like operation more explicit,mcimadamore,2020-09-29,2020-10-01,integrated,Oracle,GB,2,"JornVernee,PaulSandoz"
+8253841,362,8253841: jextract --source mode is broken,sundararajana,2020-09-30,2020-09-30,integrated,Oracle,,0,mcimadamore
+,363,Investigate ways to make handoff-like operation more explicit (foreign-memacess edition),mcimadamore,2020-10-01,2020-10-01,integrated,Oracle,GB,0,JornVernee
+,364,Merge foreign-memaccess,openjdk-bot,2020-10-01,2020-10-01,integrated|failed-auto-merge,,,0,
+,365,Update jib-profiles.js to point to signed libclang.dylib,JornVernee,2020-10-01,2020-10-01,integrated,Oracle,NL,0,mcimadamore
+,366,Investigate ways to make handoff-like operation more explicit,mcimadamore,2020-10-01,2020-10-01,integrated,Oracle,GB,0,JornVernee
+,367,Update documents to reflect latest API changes,mcimadamore,2020-10-01,2020-10-01,integrated,Oracle,GB,0,sundararajana
+,368,Merge master,openjdk-bot,2020-10-02,2020-10-02,integrated|failed-auto-merge,,,0,
+8253937,369,8253937: Simplify support for shared memory segment,mcimadamore,2020-10-02,2020-10-02,integrated,Oracle,GB,0,PaulSandoz
+,370,Update intrinsic annotation on linkToNative,PaulSandoz,2020-10-02,2020-10-04,integrated,Oracle,,2,mcimadamore
+8254156,371,8254156: Simplify ABI classification logic,mcimadamore,2020-10-07,2020-10-07,integrated,Oracle,GB,0,JornVernee
+8254156,372,8254156: Simplify ABI classification logic,mcimadamore,2020-10-07,2020-10-07,integrated,Oracle,GB,0,JornVernee
+,373,Misc javadoc fixes,mcimadamore,2020-10-08,2020-10-08,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+,374,Misc javadoc fixes (take two),mcimadamore,2020-10-08,2020-10-08,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+8254260,375,8254260: Consider splitting binding recipe operators that serve a dual role,JornVernee,2020-10-08,2020-10-09,integrated,Oracle,NL,1,mcimadamore
+,376,Merge foreign-memaccess,openjdk-bot,2020-10-09,2020-10-09,integrated|failed-auto-merge,,,0,
+8254343,378,8254343: Revisit API for supporting mapped memory segments,mcimadamore,2020-10-12,2020-10-12,integrated,Oracle,GB,0,PaulSandoz
+8254682,379,8254682: Close MemorySegments passed to upcalls after the upcall is done,JornVernee,2020-10-13,2020-10-13,integrated,Oracle,NL,0,mcimadamore
+8254682,380,8254682: Close MemorySegments passed to upcalls after the upcall is done,JornVernee,2020-10-13,2020-10-13,integrated,Oracle,NL,0,sundararajana
+,381,Merge master,openjdk-bot,2020-10-16,2020-10-16,integrated|failed-auto-merge,,,0,
+,382,Merge foreign-memaccess,openjdk-bot,2020-10-16,2020-10-16,integrated|failed-auto-merge,,,0,
+,383,Merge foreign-abi,openjdk-bot,2020-10-16,2020-10-16,integrated|failed-auto-merge,,,0,
+8254983,384,8254983: jextract fails to hande layout paths nested structs/union,mcimadamore,2020-10-19,2020-10-20,integrated,Oracle,GB,1,"JornVernee,sundararajana"
+,385,Merge foreign-memaccess,openjdk-bot,2020-10-23,2020-10-28,integrated|failed-auto-merge,,,5,
+,386,Add benchmark for floating point memory access var handle performance,mcimadamore,2020-10-28,2020-10-28,integrated,Oracle,GB,0,"JornVernee,PaulSandoz"
+,387,Merge master,openjdk-bot,2020-10-30,2020-10-30,integrated|failed-auto-merge,,,0,
+,388,Merge foreign-memaccess,openjdk-bot,2020-11-06,2020-11-06,integrated|failed-auto-merge,,,0,
+,389,Merge foreign-abi,openjdk-bot,2020-11-06,2020-11-06,integrated|failed-auto-merge,,,0,
+,390,Fix Aarch64 build failure,mcimadamore,2020-11-09,2020-11-09,integrated,Oracle,GB,0,JornVernee
+8256080,391,8256080: AArch64: fatal error with unexpected intrinsic id _linkToNative,nick-arm,2020-11-10,2020-11-12,integrated,ARM,GB,2,JornVernee
+8256247,392,8256247: TestUpcallHighArity fails on AArch64,nick-arm,2020-11-13,2020-11-16,integrated,ARM,GB,3,JornVernee
+,393,Merge master,openjdk-bot,2020-11-13,2020-11-13,integrated|failed-auto-merge,,,0,
+,394,Merge foreign-memaccess,openjdk-bot,2020-11-13,2020-11-13,integrated|failed-auto-merge,,,0,
+8256466,395,8256466: MemoryLayout factories do not guard against null layouts,mcimadamore,2020-11-18,2020-11-19,integrated,Oracle,GB,1,JornVernee
+8252504,396,8252504: Add a method to MemoryLayout which returns a offset-computing method handle,JornVernee,2020-11-19,2020-11-24,integrated,Oracle,NL,5,"ChrisHegarty,mcimadamore"
+8256466,397,8256466: MemoryLayout factories do not guard against null layouts,mcimadamore,2020-11-19,2020-11-20,integrated,Oracle,GB,1,"JornVernee,ChrisHegarty"
+,398,Merge master,openjdk-bot,2020-11-20,2020-11-20,integrated|failed-auto-merge,,,0,
+8256466,399,8256466: MemoryLayout factories do not guard against null layouts,mcimadamore,2020-11-20,2020-11-23,integrated,Oracle,GB,3,JornVernee
+,400,Merge foreign-memaccess,openjdk-bot,2020-11-24,2020-11-25,integrated|failed-auto-merge,,,1,
+8257075,401,8257075: MemoryAcccess methods are missing @ForceInline annotations,mcimadamore,2020-11-25,2020-11-25,integrated,Oracle,GB,0,"JornVernee,ChrisHegarty"
+8257599,404,"8257599: foreign-jextract branch build, test failures",sundararajana,2020-12-02,2020-12-02,integrated,Oracle,,0,JornVernee
+,405,Update README,mcimadamore,2020-12-02,2020-12-02,integrated,Oracle,GB,0,JornVernee
+,406,Fix discrepancies between master and foreign-memaccess+abi,JornVernee,2020-12-02,2020-12-02,integrated,Oracle,NL,0,mcimadamore
+8257892,409,8257892: long double not handled by jextract,sundararajana,2020-12-08,2020-12-09,integrated,Oracle,,1,"JornVernee,mcimadamore"
+,411,The test LibUnsupportedTest fails on Linux,sundararajana,2020-12-10,2020-12-10,integrated,Oracle,,0,mcimadamore
+,412,Merge master,openjdk-bot,2020-12-11,2020-12-11,integrated|failed-auto-merge,,,0,
+8257692,413,8257692: Using both heap and native segments can degrade performance,mcimadamore,2020-12-11,2020-12-11,integrated,Oracle,GB,0,"JornVernee,iwanowww,PaulSandoz"
+,415,Merge foreign-memaccess+abi,openjdk-bot,2020-12-11,2020-12-14,integrated,,,3,
+8258223,416,8258223: jextract throws exception when unsupport type is used in anonymous struct,sundararajana,2020-12-14,2020-12-14,integrated,Oracle,,0,mcimadamore
+8258238,417,"8258238: Some jextract samples crash with: ""updating map that does not need updating""",JornVernee,2020-12-14,2020-12-14,integrated,Oracle,NL,0,mcimadamore
+8258248,419,8258248: jextract should generate jdk 16 compatible code,sundararajana,2020-12-14,2020-12-14,integrated,Oracle,,0,JornVernee
+,420,Add libclang dependency to docs jib task,mcimadamore,2020-12-14,2020-12-15,integrated,Oracle,GB,1,JornVernee
+8258388,421,8258388: jextract should avoid $ in class name used with inheritance,sundararajana,2020-12-15,2020-12-15,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8258405,422,8258405: functional interfaces are not generated for struct fields/global variables with function pointers,sundararajana,2020-12-16,2020-12-16,integrated,Oracle,,0,"JornVernee,mcimadamore"
+,423,Add stack walk test case that doesn't verify oops,JornVernee,2020-12-16,2021-01-29,integrated,Oracle,NL,44,iwanowww
+8258605,424,8258605: regression: jextract can not handle function prototypes as function arguments,sundararajana,2020-12-17,2020-12-17,integrated,Oracle,,0,mcimadamore
+,425,Merge foreign-memaccess+abi,openjdk-bot,2020-12-18,2020-12-18,integrated|failed-auto-merge,,,0,
+,427,Removed duplicate profile_memory_access function from methodData.cpp,BlueGoliath,2021-01-02,2021-01-06,integrated,,,4,mcimadamore
+8259226,430,8259226: jextract should differentiate between clang errors vs other runtime issues,sundararajana,2021-01-05,2021-01-05,integrated,Oracle,,0,mcimadamore
+8259473,432,"8259473: jextract generated code should throw exception for unfound native symbols from calls, variable access, set immediately",sundararajana,2021-01-08,2021-01-08,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8258516,433,8258516: Allow passing a target address as an argument to a native MethodHandle ,JornVernee,2021-01-11,2021-01-29,integrated,Oracle,NL,18,"iwanowww,mcimadamore"
+8252759,434,8252759: Jextract flattens nested anonymous structs and unions when computing layouts,JornVernee,2021-01-14,2021-01-15,integrated,Oracle,NL,1,mcimadamore
+,436,Make `UNSAFE` variable static final,rsmogura,2021-01-14,2021-01-20,integrated,,,6,mcimadamore
+,438,Merge foreign-memaccess+abi,openjdk-bot,2021-01-15,2021-01-15,integrated|failed-auto-merge,,,0,
+8260344,439,8260344: jextract crashes with exception for log.h from libdebian-installer4-dev ,sundararajana,2021-01-25,2021-01-25,integrated,Oracle,,0,mcimadamore
+8260583,440,8260583: jextract generates redundant constant files,mcimadamore,2021-01-28,2021-01-28,integrated,Oracle,GB,0,sundararajana
+8258238,441,"8258238: Some jextract samples crash with: ""updating map that does not need updating""",JornVernee,2021-01-28,2021-02-01,integrated,Oracle,NL,4,"nick-arm,mcimadamore"
+8260602,442,8260602: jextract generates redundant functional interafces,mcimadamore,2021-01-28,2021-01-29,integrated,Oracle,GB,1,sundararajana
+8260705,443,8260705: jextract crash with libbart's types.h,sundararajana,2021-02-01,2021-02-01,integrated,Oracle,,0,JornVernee
+8260717,445,8260717: jextract crashes with 'Crossing storage unit boundaries' for libcoap's block.h,sundararajana,2021-02-03,2021-02-03,integrated,Oracle,,0,mcimadamore
+8240373,446,"8240373: Jextract assigns type ""Void"" to enum macros",sundararajana,2021-02-04,2021-02-04,integrated,Oracle,,0,mcimadamore
+8261073,447,8261073: Remove @C annotations from jextracted code,sundararajana,2021-02-04,2021-02-04,integrated,Oracle,,0,mcimadamore
+8261337,448,8261337: jextract error message when directory is passed as header file argument,sundararajana,2021-02-08,2021-02-08,integrated,Oracle,,0,mcimadamore
+8261498,449,8261498: jextract struct layout computer exceptions should include struct name for debugging,sundararajana,2021-02-10,2021-02-10,integrated,Oracle,,0,mcimadamore
+8261642,450,8261642: improve jextract source generation mode and remove class generation,mcimadamore,2021-02-12,2021-02-15,integrated,Oracle,GB,3,"JornVernee,sundararajana"
+8261578,451,8261578: jextract crashes with Crossing storage unit boundaries,mcimadamore,2021-02-15,2021-02-15,integrated,Oracle,GB,0,sundararajana
+8261879,452,8261879: jextract javac compilation errors should not result in OUTPUT_ERROR exit code,sundararajana,2021-02-17,2021-02-17,integrated,Oracle,,0,mcimadamore
+8261893,453,8261893: jextract generates class names that are restricted type names,sundararajana,2021-02-17,2021-02-17,integrated,Oracle,,0,mcimadamore
+,454,Add a benchmark for strlen using Foreign Linker API,mcimadamore,2021-02-17,2021-02-17,integrated,Oracle,GB,0,JornVernee
+8261950,455,8261950: jextract should warn and proceed on unsupported types rather than crashing,sundararajana,2021-02-18,2021-02-18,integrated,Oracle,,0,mcimadamore
+8261906,456,8261906: Improve jextract support for virtual functions,mcimadamore,2021-02-18,2021-03-06,integrated,Oracle,GB,16,JornVernee
+8262118,457,8262118: Specialize upcalls,JornVernee,2021-02-22,2021-03-01,integrated,Oracle,NL,7,"iwanowww,mcimadamore"
+8262117,458,"8262117: jextract crashes with javac compilation error ""class u is already defined""",sundararajana,2021-02-23,2021-02-23,integrated,Oracle,,0,mcimadamore
+8262198,459,8262198: Overhaul bitfield parsing logic,mcimadamore,2021-02-23,2021-02-23,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+8262263,460,8262263: BadBitfieldTest fails on Windows,JornVernee,2021-02-23,2021-02-23,integrated,Oracle,NL,0,mcimadamore
+8262733,462,8262733: jextract generates clashing names which results in compilation error with javac,sundararajana,2021-03-01,2021-03-01,integrated,Oracle,,0,mcimadamore
+8262825,463,8262825: jextract crashes when Java type names like String are used as identifiers in C header,sundararajana,2021-03-02,2021-03-02,integrated,Oracle,,0,mcimadamore
+8262851,464,"8262851: jextract crashes with ""Cannot compute size of a layout which is, or depends on a sequence layout with unspecified size""",sundararajana,2021-03-02,2021-03-04,integrated,Oracle,,2,mcimadamore
+8263019,465,8263019: libclang binding has to be refreshed after recent jextract update,sundararajana,2021-03-04,2021-03-04,integrated,Oracle,,0,mcimadamore
+8263018,466,8263018: Improve API for lifecycle of native resources,mcimadamore,2021-03-04,2021-03-24,integrated,Oracle,GB,20,
+,467,Merge master,openjdk-bot,2021-03-05,2021-03-05,integrated|failed-auto-merge,,,0,
+8261511,468,8261511: jextract fails to handle name clashes between unrelated constants,sundararajana,2021-03-10,2021-03-10,integrated,Oracle,,0,mcimadamore
+8260976,469,8260976: investigate ways to filter jextract output,mcimadamore,2021-03-12,2021-04-08,integrated,Oracle,GB,27,JornVernee
+8263515,470,8263515: Generate flatter bindings,mcimadamore,2021-03-12,2021-04-09,integrated,Oracle,GB,28,"JornVernee,sundararajana"
+8263459,472,8263459: Add better support for restricted methods,sundararajana,2021-03-23,2021-03-29,integrated,Oracle,,6,mcimadamore
+,473,Merge foreign-memaccess+abi,openjdk-bot,2021-03-24,2021-03-24,integrated|failed-auto-merge,,,0,
+8263018,474,8263018: Improve API for lifecycle of native resources,mcimadamore,2021-03-24,2021-03-24,integrated,Oracle,GB,0,JornVernee
+,475,Update memory access and linker documents,mcimadamore,2021-03-24,2021-03-26,integrated,Oracle,GB,2,JornVernee
+8264176,476,8264176: ResourceScope handles should keep parent scope reachable,mcimadamore,2021-03-25,2021-03-25,integrated,Oracle,GB,0,"JornVernee,PaulSandoz"
+8264187,477,8264187: Add a method for creating a slicing MethodHandle,JornVernee,2021-03-26,2021-03-26,integrated,Oracle,NL,0,mcimadamore
+8264280,478,8264280: Foreign linker should be more friendly with implicit scopes,mcimadamore,2021-03-26,2021-03-26,integrated,Oracle,GB,0,"JornVernee,PaulSandoz"
+8264187,479,8264187: Add a method for creating a slicing MethodHandle,JornVernee,2021-03-26,2021-03-26,integrated,Oracle,NL,0,mcimadamore
+8264386,480,8264386: LibraryLookup should be more friendly with implicit unloading,mcimadamore,2021-03-29,2021-03-29,integrated,Oracle,GB,0,"JornVernee,PaulSandoz"
+,481,Fix assert on jdk.module.enable.native.access,JornVernee,2021-03-29,2021-03-29,integrated,Oracle,NL,0,"mcimadamore,PaulSandoz"
+8264422,482,8264422: SpliteratorTest fails after ResourceScope integration,mcimadamore,2021-03-30,2021-03-30,integrated,Oracle,GB,0,sundararajana
+8264402,483,"8264402: drop ""Restricted"" suffix for methods enabled by enable-native-access and add fine grained native-access for CLinker",sundararajana,2021-03-30,2021-03-30,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8264280,484,8264280: Foreign linker should be more friendly with implicit scopes,mcimadamore,2021-03-30,2021-03-31,integrated,Oracle,GB,1,JornVernee
+8264434,485,8264434: Remove ResourceScope-less overload from API,mcimadamore,2021-03-30,2021-03-30,integrated,Oracle,GB,0,"JornVernee,PaulSandoz"
+8264397,486,8264397: Use the blessed modifier order in jdk.incubator.foreign,alblue,2021-03-30,2021-03-31,integrated,,,1,mcimadamore
+8264515,487,8264515: Rename static factory methods in the foreign API,mcimadamore,2021-03-31,2021-04-01,integrated,Oracle,GB,1,"JornVernee,PaulSandoz"
+,488,Merge master,openjdk-bot,2021-04-02,2021-04-03,integrated|failed-auto-merge,,,1,
+8264763,489,8264763: Add support for extended map modes in mapped segments,mcimadamore,2021-04-06,2021-04-08,integrated,Oracle,GB,2,sundararajana
+8264787,490,8264787: update jextract for foreign-memory-abi API changes and --enable-native-access option,sundararajana,2021-04-06,2021-04-07,integrated,Oracle,,1,mcimadamore
+8264825,491,8264825: update libclang bindings after recent jextract changes,sundararajana,2021-04-07,2021-04-07,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8264887,492,8264887: Implicit scope objects are used with resource try,sundararajana,2021-04-08,2021-04-08,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8260976,493,8260976: investigate ways to filter jextract output,mcimadamore,2021-04-08,2021-04-08,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+8264933,494,8264933: Improve stream support in memory segments,mcimadamore,2021-04-08,2021-04-23,integrated,Oracle,GB,15,"JornVernee,PaulSandoz"
+8264515,495,8264515: Rename static factory methods in the foreign API,mcimadamore,2021-04-08,2021-04-09,integrated,Oracle,GB,1,"JornVernee,sundararajana"
+8261032,496,8261032: jextract should have an option to specify main header class name,sundararajana,2021-04-12,2021-04-12,integrated,Oracle,,0,mcimadamore
+8265072,497,8265072: Use MemoryAddress instead of MemorySegment in CLinker::upcallStub,mcimadamore,2021-04-12,2021-04-12,integrated,Oracle,GB,0,JornVernee
+8265069,498,8265069: Fix javadoc for restricted methods,sundararajana,2021-04-12,2021-04-12,integrated,Oracle,,0,mcimadamore
+8265072,499,8265072: Use MemoryAddress instead of MemorySegment in CLinker::upcallStub,mcimadamore,2021-04-12,2021-04-12,integrated,Oracle,GB,0,JornVernee
+8265211,500,8265211: Print specific error message when an option parsing error occurs,JornVernee,2021-04-14,2021-04-20,integrated,Oracle,NL,6,mcimadamore
+8265185,501,8265185: make sure all code snippets in jdk.incubator.foreign javadoc comments are proper,sundararajana,2021-04-14,2021-04-14,integrated,Oracle,,0,mcimadamore
+8265185,502,8265185: make sure all code snippets in jdk.incubator.foreign javadoc comments are proper,sundararajana,2021-04-14,2021-04-14,integrated,Oracle,,0,mcimadamore
+,503,Add test for resource scope acquire with bulk operation,mcimadamore,2021-04-14,2021-04-14,integrated,Oracle,GB,0,ChrisHegarty
+,504,Add exhaustive test for resource scope handle,mcimadamore,2021-04-14,2021-04-14,integrated,Oracle,GB,0,ChrisHegarty
+,505,Fix another slip up in spliterator test,mcimadamore,2021-04-15,2021-04-15,integrated,Oracle,GB,0,PaulSandoz
+,506,Fix bad call to segment factory in VarHandleExactTest,mcimadamore,2021-04-15,2021-04-15,integrated,Oracle,GB,0,PaulSandoz
+,507,Merge master,openjdk-bot,2021-04-16,2021-04-23,integrated|failed-auto-merge,,,7,
+,508,Add benchmark on ResourceScope::close,mcimadamore,2021-04-16,2021-04-20,integrated,Oracle,GB,4,JornVernee
+,510,Improve ResourceScope javadoc,mcimadamore,2021-04-19,2021-04-20,integrated,Oracle,GB,1,"ChrisHegarty,PaulSandoz"
+,511,Investigate alternate strategy to acquire resource scopes,mcimadamore,2021-04-20,2021-04-21,integrated,Oracle,GB,1,"ChrisHegarty,PaulSandoz"
+,512,Improve NIO channel support for buffer views over segments,ChrisHegarty,2021-04-21,2021-04-22,integrated,,,1,mcimadamore
+8265751,513,8265751: MemoryAddress should have a scope accessor,mcimadamore,2021-04-22,2021-04-23,integrated,Oracle,GB,1,PaulSandoz
+8265760,514,8265760: Memory segments/addresses should have an isNative predicate,mcimadamore,2021-04-22,2021-04-23,integrated,Oracle,GB,1,PaulSandoz
+,515,Misc javadoc fixes,mcimadamore,2021-04-22,2021-04-22,integrated,Oracle,GB,0,ChrisHegarty
+,516,Merge foreign-memaccess+abi,openjdk-bot,2021-04-23,2021-04-23,integrated|failed-auto-merge,,,0,
+,517,Make TestHandshake more tolerant to spurious failures,mcimadamore,2021-04-23,2021-04-23,integrated,Oracle,GB,0,ChrisHegarty
+,518,Fix NativeScope,mcimadamore,2021-04-23,2021-04-23,integrated,Oracle,GB,0,sundararajana
+8265974,520,8265974: ResourceScope code does not handle close vs. add races well,mcimadamore,2021-04-26,2021-04-26,integrated,Oracle,GB,0,PaulSandoz
+,522,"Clarify IllegalArgumentException on MemorySegment::[spliterator,elements]",mcimadamore,2021-04-26,2021-04-27,integrated,Oracle,GB,1,PaulSandoz
+,523,Simplify ResourceScope::acquire for implicit scopes,mcimadamore,2021-04-27,2021-04-27,integrated,Oracle,GB,0,PaulSandoz
+8266371,524,8266371: Memory segment bound check fails because of small segment optimizations,mcimadamore,2021-04-30,2021-04-30,integrated,Oracle,GB,0,"ChrisHegarty,sundararajana"
+8266414,525,8266414: jextract should not generate NativeScope,sundararajana,2021-05-03,2021-05-03,integrated,Oracle,,0,JornVernee
+8265222,526,8265222: revisit foreign library loading,sundararajana,2021-05-05,2021-05-06,integrated,Oracle,,1,mcimadamore
+8266627,527,"8266627: CLinker allocateMemory, freeMemory implementation should not use default lookup",mcimadamore,2021-05-06,2021-05-06,integrated,Oracle,GB,0,JornVernee
+,528,Minor Windows build fixes,JornVernee,2021-05-06,2021-05-07,integrated,Oracle,NL,1,mcimadamore
+8266682,529,8266682: sync jextract for LibraryLookup removal,sundararajana,2021-05-07,2021-05-07,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8266626,530,8266626: Check that the target address of a native call is not NULL,JornVernee,2021-05-07,2021-05-10,integrated,Oracle,NL,3,mcimadamore
+8266814,531,8266814: Improve library loading with SymbolLookup abstraction,mcimadamore,2021-05-10,2021-05-11,integrated,Oracle,GB,1,"JornVernee,sundararajana"
+8266814,532,8266814: Improve library loading with SymbolLookup abstraction,mcimadamore,2021-05-11,2021-05-11,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+8266916,533,8266916: Simplify logic for creating libSysLookup,mcimadamore,2021-05-11,2021-05-11,integrated,Oracle,GB,0,sundararajana
+8266911,534,8266911: On Windows the system lookup should load ucrtbase if possible,JornVernee,2021-05-11,2021-05-11,integrated,Oracle,NL,0,mcimadamore
+,535,Refresh panama documents to reflect API changes,mcimadamore,2021-05-12,2021-05-12,integrated,Oracle,GB,0,JornVernee
+,536,Remove printf and vprintf tests,JornVernee,2021-05-14,2021-05-14,integrated,Oracle,NL,0,mcimadamore
+8267240,537,8267240: Bounded arena allocator doesn't work if bounded size > BLOCK_SIZE,mcimadamore,2021-05-17,2021-05-17,integrated,Oracle,GB,0,JornVernee
+8267305,538,8267305: regenerate clang jextract binding,sundararajana,2021-05-18,2021-05-18,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8267504,539,8267504: jextract should report unsupported language and exit rather than generating partial nonworking code,sundararajana,2021-05-20,2021-05-21,integrated,Oracle,,1,mcimadamore
+8267536,541,8267536: Many tests fail on Windows because of recent jextract changes to CursorKind,sundararajana,2021-05-21,2021-05-21,integrated,Oracle,,0,JornVernee
+8267989,543,8267989: Exceptions thrown during upcalls should be handled,JornVernee,2021-05-31,2021-06-02,integrated,Oracle,NL,2,mcimadamore
+,544,Merge jdk:master,JornVernee,2021-06-02,2021-06-02,integrated,Oracle,NL,0,
+,545,Merge master,openjdk-bot,2021-06-02,2021-06-02,integrated|failed-auto-merge|auto,,,0,
+8268160,546,8268160: jextract tool provider should avoid security manager usage,sundararajana,2021-06-03,2021-06-03,integrated,Oracle,,0,mcimadamore
+8268169,547,8268169: The system lookup can not find stdio functions such as printf on Windows 10,JornVernee,2021-06-03,2021-06-04,integrated,Oracle,NL,1,mcimadamore
+8268183,548,8268183: tools/launcher/VersionCheck.java fails for jextract,sundararajana,2021-06-03,2021-06-03,integrated,Oracle,,0,mcimadamore
+,549,Merge master,openjdk-bot,2021-06-04,2021-06-04,integrated|failed-auto-merge|auto,,,0,
+,550,Merge jdk:master,JornVernee,2021-06-04,2021-06-04,integrated,Oracle,NL,0,
+,551,Merge master,openjdk-bot,2021-06-04,2021-06-04,integrated|failed-auto-merge|auto,,,0,
+8268319,552,8268319: VersionCheck test fails for jextract on Windows,JornVernee,2021-06-07,2021-06-07,integrated,Oracle,NL,0,sundararajana
+8268266,553,8268266: Investigate way to lazily customize upcall lambda forms,JornVernee,2021-06-10,2021-06-11,integrated,Oracle,NL,1,mcimadamore
+8268230,554,8268230: Foreign Linker API & Windows user32/kernel32: String conversion seems broken,JornVernee,2021-06-10,2021-06-15,integrated,Oracle,NL,5,mcimadamore
+,555,Add support for high-level functions to copy to and from Java arrays,mcimadamore,2021-06-10,2021-06-25,integrated,Oracle,GB,15,"JornVernee,uschindler,leerho"
+,556,Merge master,openjdk-bot,2021-06-11,2021-06-15,integrated|failed-auto-merge|auto,,,4,
+8268673,558,8268673: Stack walk across optimized entry frame on fresh native thread fails,JornVernee,2021-06-14,2021-06-14,integrated,Oracle,NL,0,mcimadamore
+8268633,559,8268633: CLinker::toJavaString doesn't check for NULL address ,mcimadamore,2021-06-14,2021-06-14,integrated,Oracle,GB,0,JornVernee
+,561,Fix a couple of CI build problems,JornVernee,2021-06-16,2021-06-16,integrated,Oracle,NL,0,mcimadamore
+,562,Merge jdk:master,JornVernee,2021-06-16,2021-06-16,integrated,Oracle,NL,0,
+,563,Merge master,openjdk-bot,2021-06-25,2021-06-25,integrated|failed-auto-merge|auto,,,0,
+,564,Add var handle support for boolean and MemoryAddress carrier,mcimadamore,2021-06-29,2021-08-03,integrated,Oracle,GB,35,"JornVernee,PaulSandoz"
+8269807,565,8269807: Implement the fix for JDK-8269240 in the panama-foreign repo,JornVernee,2021-07-07,2021-07-08,integrated,Oracle,NL,1,mcimadamore
+8261972,567,8261972: CLinker.C_VA_LIST layout does not match platform layout for va_list,mcimadamore,2021-07-13,2021-07-13,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+,569,Merge master,openjdk-bot,2021-07-16,2021-07-16,integrated|failed-auto-merge|auto,,,0,
+8270851,570,8270851: Logic for attaching/detaching native threads could be improved,mcimadamore,2021-07-16,2022-03-29,integrated,Oracle,GB,256,"JornVernee,dholmes-ora"
+8270898,571,8270898: update panama_jextract.md and panama_jextract.html files,sundararajana,2021-07-19,2021-07-19,integrated,Oracle,,0,JornVernee
+,572,Merge master,openjdk-bot,2021-07-23,2021-07-23,integrated|failed-auto-merge|auto,,,0,
+8271922,574,8271922: After var handle support for boolean and MemoryAddress carrier jextract fails to compile,sundararajana,2021-08-05,2021-08-05,integrated,Oracle,,0,mcimadamore
+8273382,575,8273382: jextract should generete alias layout for pointer typedefs,sundararajana,2021-09-08,2021-09-08,integrated,Oracle,,0,mcimadamore
+8273905,576,8273905: Foreign API refresh,mcimadamore,2021-09-16,2021-09-22,integrated,Oracle,GB,6,"uschindler,PaulSandoz"
+,577,8274155  Foreign API refresh - jextract update,mcimadamore,2021-09-22,2021-09-23,integrated,Oracle,GB,1,sundararajana
+,578,Refresh panama documents to reflect API changes,mcimadamore,2021-09-23,2021-09-23,integrated,Oracle,GB,0,sundararajana
+8274219,579,8274219: Add back generic factory to create value layouts,mcimadamore,2021-09-23,2021-09-23,integrated,Oracle,GB,0,"JornVernee,PaulSandoz"
+8274280,580,8274280: regenarate libclang binding in jextract module,sundararajana,2021-09-24,2021-09-24,integrated,Oracle,,0,mcimadamore
+8274285,581,8274285: By reference parameters should be kept alive during downcalls,mcimadamore,2021-09-24,2021-09-24,integrated,Oracle,GB,0,JornVernee
+,582,Fix VarHandleTestExact,mcimadamore,2021-09-24,2021-09-24,integrated,Oracle,GB,0,JornVernee
+8274287,583,8274287: Add a way to specify block size of unbounded arena allocator,mcimadamore,2021-09-24,2021-09-24,integrated,Oracle,GB,0,JornVernee
+,584,Fix jextract test after arena allocator API change,mcimadamore,2021-09-24,2021-09-24,integrated,Oracle,GB,0,sundararajana
+8274157,585,8274157: java.foreign: Add method MemorySegment::asOverlappingSlice,FrauBoes,2021-09-28,2021-10-05,integrated,Independent,DE,7,mcimadamore
+,586,Make Addressable sealed again,mcimadamore,2021-09-28,2021-09-29,integrated,Oracle,GB,1,JornVernee
+,587,TestScopedOperations does not work as expected,mcimadamore,2021-09-29,2021-09-30,integrated,Oracle,GB,1,JornVernee
+8274592,588,8274592: Performance regression in upcalls,mcimadamore,2021-09-30,2021-09-30,integrated,Oracle,GB,0,JornVernee
+8274602,589,8274602: Generalize UpcallStub into NativeSymbol,mcimadamore,2021-09-30,2021-10-05,integrated,Oracle,GB,5,"JornVernee,sundararajana"
+8274648,590,8274648: Improve logic for acquiring by reference parameters in downcall handles,mcimadamore,2021-10-01,2021-10-05,integrated,Oracle,GB,4,JornVernee
+,591,API refresh - part two,mcimadamore,2021-10-05,2021-10-07,integrated,Oracle,GB,2,PaulSandoz
+,592,Generalize UpcallStub into NativeSymbol (jextract version),mcimadamore,2021-10-06,2021-10-06,integrated,Oracle,GB,0,sundararajana
+8274912,593,8274912: Eagerly generate native invokers,JornVernee,2021-10-07,2021-10-15,integrated,Oracle,NL,8,"nick-arm,mcimadamore"
+,594,API refresh - part two (jextract edition),mcimadamore,2021-10-07,2021-10-08,integrated,Oracle,GB,1,JornVernee
+8274978,595,8274978: Add implicit allocator factory,mcimadamore,2021-10-08,2021-10-08,integrated,Oracle,GB,0,PaulSandoz
+8275054,596,8275054: Racy updates when releasing confined scopes,mcimadamore,2021-10-11,2021-10-11,integrated,Oracle,GB,0,JornVernee
+8275061,597,8275061: Exceptions thrown from non-void upcalls are not handled,JornVernee,2021-10-11,2021-10-11,integrated,Oracle,NL,0,mcimadamore
+8275111,598,8275111: update libclang bindings after recent jextract changes,sundararajana,2021-10-12,2021-10-12,integrated,Oracle,,0,"JornVernee,mcimadamore"
+8275382,599,8275382: foreign-memaccess+abi branch fails to build with error Undefined symbol: “typeArrayOopDesc::long_at(int) const”,sundararajana,2021-10-18,2021-10-18,integrated,Oracle,,0,JornVernee
+8255902,600,8255902: Enable stack arguments for native invokers & optimized upcall stubs,JornVernee,2021-10-18,2021-10-20,integrated,Oracle,NL,2,mcimadamore
+8275332,601,8275332: Variadic functions don't work on Linux/AArch64,nick-arm,2021-10-19,2021-10-22,integrated,ARM,GB,3,"JornVernee,mcimadamore"
+,602,Address failures in jdk.incubator.foreign benchmarks,FrauBoes,2021-10-20,2021-10-20,integrated,Independent,DE,0,mcimadamore
+8255903,603,8255903: Enable multi-register return values for native invokers,JornVernee,2021-10-21,2021-11-02,integrated,Oracle,NL,12,mcimadamore
+8275875,604,8275875: jextract branch fails to build due to javac serialization warning,sundararajana,2021-10-25,2021-10-28,integrated,Oracle,,3,mcimadamore
+8276136,605,8276136: functional interface extraction broken after API refresh,mcimadamore,2021-10-28,2021-10-29,integrated,Oracle,GB,1,JornVernee
+,606,Merge master,openjdk-bot,2021-10-29,2021-10-29,integrated|failed-auto-merge|auto,,,0,
+8276169,607,8276169: --with-libclang=no jextract module is still built and jextract tool is generated,sundararajana,2021-10-29,2021-10-29,integrated,Oracle,,0,JornVernee
+8275647,608,8275647: Enable multi-register return values for optimized upcall stubs,JornVernee,2021-11-02,2021-11-18,integrated,Oracle,NL,16,"nick-arm,mcimadamore"
+8276647,609,8276647: Remove C2 trivial call intrinsification support,JornVernee,2021-11-04,2022-01-31,integrated,Oracle,NL,88,mcimadamore
+8275646,610,8275646: Implement optimized upcall stubs on AArch64,nick-arm,2021-11-05,2021-11-09,integrated,ARM,GB,4,JornVernee
+8276987,611,8276987: Optimized upcall stub should be printed with -XX:+PrintStubCode,nick-arm,2021-11-12,2021-11-15,integrated,ARM,GB,3,JornVernee
+,612,Merge master,openjdk-bot,2021-11-12,2021-11-12,integrated|failed-auto-merge|auto,,,0,
+8277070,613,8277070: Regularize logic for cursor -> position conversion,mcimadamore,2021-11-12,2021-11-12,integrated,Oracle,GB,0,JornVernee
+,614,Add missing include for Linux,JornVernee,2021-11-18,2021-11-18,integrated,Oracle,NL,0,mcimadamore
+,615,Merge master,openjdk-bot,2021-11-19,2021-11-19,integrated|failed-auto-merge|auto,,,0,
+8277645,616,8277645: TreeMaker should not call type() on pointer types too early,mcimadamore,2021-11-23,2021-11-23,integrated,Oracle,GB,0,JornVernee
+8277657,617,8277657: OptimizedEntryBlob should extend RuntimeBlob directly,JornVernee,2021-11-25,2021-11-25,integrated,Oracle,NL,0,mcimadamore
+,618,Merge master,openjdk-bot,2021-11-26,2021-11-26,integrated|failed-auto-merge|auto,,,0,
+,619,Replace `ofAddressNative` with `ofAddress`,mcimadamore,2021-11-26,2021-11-26,integrated,Oracle,GB,0,JornVernee
+8277830,620,8277830: jextract generated code should not depend on Java layouts,mcimadamore,2021-11-29,2021-11-29,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+8277945,621,8277945: Use snippets in jdk.incubator.foreign API documentation ,FrauBoes,2021-11-29,2021-12-02,integrated,Independent,DE,3,"mcimadamore,sundararajana,PaulSandoz"
+8278151,622,8278151: Heap segments should handle alignment constraints in a deterministic fashion,mcimadamore,2021-12-02,2021-12-15,integrated,Oracle,GB,13,"JornVernee,PaulSandoz"
+,623,Merge master,openjdk-bot,2021-12-03,2021-12-03,integrated|failed-auto-merge|auto,,,0,
+,624,Merge foreign-memaccess+abi,openjdk-bot,2021-12-03,2021-12-03,integrated|failed-auto-merge|auto,,,0,
+,625,Remove workarounds for issue surrounding upcalls and deoptimizations.,JornVernee,2021-12-07,2022-01-31,integrated,Oracle,NL,55,mcimadamore
+,626,Merge master,openjdk-bot,2021-12-10,2021-12-10,integrated|failed-auto-merge|auto,,,0,
+8278962,627,8278962: Support for _Bool not working correctly,mcimadamore,2021-12-17,2021-12-17,integrated,Oracle,GB,0,sundararajana
+,628,Merge master,openjdk-bot,2022-01-07,2022-01-07,integrated|failed-auto-merge|auto,,,0,
+8277845,629,8277845: Clean up use if ProgrammableInvoker/UpcallHandler.USE_INTRINSICS in tests.,JornVernee,2022-01-10,2022-01-18,integrated,Oracle,NL,8,mcimadamore
+,630,Refresh docs to reflect Java 18 API changes,mcimadamore,2022-01-18,2022-01-18,integrated,Oracle,GB,0,JornVernee
+8280527,633,8280527: Move jdk.incubator.foreign to java.lang.foreign,FrauBoes,2022-01-24,2022-01-31,integrated,Independent,DE,7,"JornVernee,mcimadamore"
+8280721,634,8280721: Rewrite binding of foreign classes to use javaClasses.h/cpp,JornVernee,2022-01-31,2022-02-21,integrated,Oracle,NL,21,mcimadamore
+8278414,635,8278414: Replace binding recipe customization using MH combinators with bytecode spinning,JornVernee,2022-01-31,2022-02-02,integrated,Oracle,NL,2,mcimadamore
+8281147,636,8281147: Other tests that use the foreign API are missing --enable-preview,FrauBoes,2022-02-02,2022-02-03,integrated,Independent,DE,1,mcimadamore
+8280596,637,8280596: ScopedMemoryAccess_closeScope: remove exception parameter,FrauBoes,2022-02-03,2022-02-04,integrated,Independent,DE,1,mcimadamore
+8281228,638,8281228: Preview branch's CLinker.downcallHandle crashes inside asm,mcimadamore,2022-02-03,2022-02-04,integrated,Oracle,GB,1,"JornVernee,sundararajana"
+8281334,639,8281334: MemorySegment.ofBuffer does not keep byte buffer alive,mcimadamore,2022-02-07,2022-02-07,integrated,Oracle,GB,0,"JornVernee,PaulSandoz"
+8281595,640,8281595: ASM-ify scope acquire/release for down call parameters,JornVernee,2022-02-11,2022-02-15,integrated,Oracle,NL,4,mcimadamore
+8281855,641,8281855: Rename ResourceScope to MemorySession,mcimadamore,2022-02-15,2022-02-21,integrated,Oracle,GB,6,"JornVernee,PaulSandoz"
+8282026,642,8282026: Remove support for unbound sequence layouts,mcimadamore,2022-02-17,2022-02-21,integrated,Oracle,GB,4,JornVernee
+8282061,643,8282061: Improve support for deterministic closure of shared scopes,mcimadamore,2022-02-17,2022-02-25,integrated,Oracle,GB,8,"JornVernee,PaulSandoz"
+8282070,644,8282070: Drop workaround from memory segment implementation,mcimadamore,2022-02-17,2022-02-18,integrated,Oracle,GB,1,"JornVernee,PaulSandoz"
+,645,Merge master,openjdk-bot,2022-02-18,2022-02-18,integrated|auto,,,0,
+8281764,646,8281764: jextract does not generate parameter names for function pointer typedefs,sundararajana,2022-02-18,2022-02-22,integrated,Oracle,,4,mcimadamore
+8282069,647,8282069: Set correct alignment constraints on ValueLayout constants,mcimadamore,2022-02-18,2022-02-21,integrated,Oracle,GB,3,"JornVernee,PaulSandoz"
+,648,Remove unused functions and includes,JornVernee,2022-02-21,2022-02-21,integrated,Oracle,NL,0,mcimadamore
+8282215,649,8282215: Handle failures when initializing SystemLookup,mcimadamore,2022-02-22,2022-02-22,integrated,Oracle,GB,0,JornVernee
+8280460,650,8280460: MemorySegment::allocateNative should be tolerant of zero-sized allocation requests,mcimadamore,2022-02-22,2022-02-22,integrated,Oracle,GB,0,JornVernee
+8276648,651,8276648: Downcall stubs are never freed,JornVernee,2022-02-22,2022-02-22,integrated,Oracle,NL,0,mcimadamore
+8277601,652,8277601: OptimizedEntryBlob should implement preserve_callee_argument_oops,JornVernee,2022-02-22,2022-02-22,integrated,Oracle,NL,0,mcimadamore
+8282235,653,8282235: jextract crashes when a Java keyword is used in as a function pointer typedef parameter name,sundararajana,2022-02-22,2022-02-22,integrated,Oracle,,0,mcimadamore
+8275648,654,8275648: Linker naming bikeshed,JornVernee,2022-02-22,2022-02-23,integrated,Oracle,NL,1,mcimadamore
+8282210,655,8282210: Relax policy for restricted method invocation,FrauBoes,2022-02-24,2022-02-25,integrated,Independent,DE,1,"JornVernee,sundararajana,ChrisHegarty"
+,656,Merge master,openjdk-bot,2022-02-25,2022-02-25,integrated|failed-auto-merge|auto,,,0,
+,657,Merge master,openjdk-bot,2022-02-25,2022-02-25,integrated|failed-auto-merge|auto,,,0,
+8282476,658,8282476: Drop NativeSymbol,mcimadamore,2022-03-01,2022-03-02,integrated,Oracle,GB,1,"JornVernee,PaulSandoz"
+,659,nativeEntryPoint.cpp is missing an include,mcimadamore,2022-03-01,2022-03-01,integrated,Oracle,GB,0,JornVernee
+,660,Tweak warning text for restricted method access,mcimadamore,2022-03-02,2022-03-07,integrated,Oracle,GB,5,sundararajana
+8282626,661,8282626: Revert semantic of session accessors,mcimadamore,2022-03-03,2022-03-08,integrated,Oracle,GB,5,PaulSandoz
+8280597,663,8280597: Refactor java.lang.invoke.MethodHandles::memoryAccessVarHandle,mcimadamore,2022-03-07,2022-03-08,integrated,Oracle,GB,1,sundararajana
+8282211,664,8282211: SegmentAllocator array factories should use varargs,mcimadamore,2022-03-07,2022-03-08,integrated,Oracle,GB,1,PaulSandoz
+8282805,665,8282805: Javadoc for restricted method does not reflect updates to --enable-native-access,mcimadamore,2022-03-08,2022-03-08,integrated,Oracle,GB,0,sundararajana
+8282873,666,8282873: Bring back SymbolLookup,mcimadamore,2022-03-09,2022-03-11,integrated,Oracle,GB,2,"PaulSandoz,sundararajana"
+8282953,667,8282953: Drop MemoryLayout::map,mcimadamore,2022-03-10,2022-03-11,integrated,Oracle,GB,1,PaulSandoz
+8281412,668,8281412: MemorySegment::map should live in FileChannel,FrauBoes,2022-03-10,2022-03-11,integrated,Independent,DE,1,mcimadamore
+8283042,669,8283042: Polish java.lang.foreign javadoc,mcimadamore,2022-03-11,2022-03-14,integrated,Oracle,GB,3,FrauBoes
+,670,More javadoc cleanup.,mcimadamore,2022-03-14,2022-03-15,integrated,Oracle,GB,1,FrauBoes
+8283175,671,8283175: Add equals/hashcode to MemorySegment,mcimadamore,2022-03-15,2022-03-15,integrated,Oracle,GB,0,sundararajana
+8283863,672,8283863: Drop support for Constable in MemoryLayout and FunctionDescriptor,mcimadamore,2022-03-29,2022-03-29,integrated,Oracle,GB,0,JornVernee
+,673,Switch to daemon threads for async upcalls,mcimadamore,2022-03-29,2022-03-29,integrated,Oracle,GB,0,JornVernee
+8284072,674,8284072: foreign/StdLibTest.java randomly crashes on MacOS/AArch64,nick-arm,2022-04-01,2022-04-01,integrated,ARM,GB,0,"JornVernee,mcimadamore"
+,675,Merge master,openjdk-bot,2022-04-01,2022-04-04,integrated|failed-auto-merge|auto,,,3,
+8284041,676,8284041: Explicitly reject unsupported call shapes on macos-aarch64,JornVernee,2022-04-01,2022-04-04,integrated,Oracle,NL,3,"nick-arm,mcimadamore"
+8284306,677,8284306: TestVarArgs silently passes,JornVernee,2022-04-04,2022-04-05,integrated,Oracle,NL,1,mcimadamore
+,678,Merge master,openjdk-bot,2022-04-22,2022-04-27,integrated|failed-auto-merge|auto,,,5,
+8286306,679,8286306: Upcall wrapper class sharing,JornVernee,2022-05-06,2022-05-06,integrated,Oracle,NL,0,mcimadamore
+,684,Merge jdk:master,JornVernee,2022-05-23,2022-05-23,integrated,Oracle,NL,0,
+,685,Merge master,openjdk-bot,2022-05-23,2022-05-23,integrated|failed-auto-merge|auto,,,0,
+,686,Merge master,openjdk-bot,2022-05-23,2022-05-23,integrated|failed-auto-merge|auto,,,0,
+,687,Merge foreign-memaccess+abi,openjdk-bot,2022-05-23,2022-05-23,integrated|failed-auto-merge|auto,,,0,
+,688,Update docs,mcimadamore,2022-05-25,2022-05-25,integrated,Oracle,GB,0,JornVernee
+8289285,690,8289285: Use records for binding classes,JornVernee,2022-06-28,2022-07-11,integrated,Oracle,NL,13,mcimadamore
+8290880,691,8290880: Add static MemorySegment::mismatch method,mcimadamore,2022-07-22,2022-07-26,integrated,Oracle,GB,4,JornVernee
+8291286,693,8291286: Improve JavaDocs for static constructors in MemorySession,minborg,2022-07-28,2022-08-05,integrated,Oracle,SE,8,mcimadamore
+8291473,694,8291473: Unify MemorySegment and MemoryAddress,mcimadamore,2022-07-28,2022-07-29,integrated,Oracle,GB,1,JornVernee
+,696,Cleanup class issues,minborg,2022-08-04,2022-08-05,integrated,Oracle,SE,1,mcimadamore
+,697,Revert changes to ValueLayout.OfAddress::toString,mcimadamore,2022-08-04,2022-08-04,integrated,Oracle,GB,0,JornVernee
+8291913,698,8291913: Remove the TraceOptimizedUpcallStubs flag,JornVernee,2022-08-04,2022-08-05,integrated,Oracle,NL,1,mcimadamore
+8275644,699,8275644: Replace VMReg in shuffling code with something more fine grained.,JornVernee,2022-08-05,2022-09-07,integrated,Oracle,NL,33,"nick-arm,mcimadamore"
+,701,Fix bug in hashCode after JDK-8291473,mcimadamore,2022-08-09,2022-08-10,integrated,Oracle,GB,1,JornVernee
+8292078,702,8292078: Thread-safety issues in AbstractLinker implementations,minborg,2022-08-09,2022-08-09,integrated,Oracle,SE,0,JornVernee
+,703,Rename and fix issues around CABI,minborg,2022-08-09,2022-08-12,integrated,Oracle,SE,3,mcimadamore
+8292038,704,8292038: Split factories to create sequence layouts,minborg,2022-08-10,2022-08-12,integrated,Oracle,SE,2,mcimadamore
+8292174,705,8292174: Add unaligned layouts to ValueLayout,minborg,2022-08-10,2022-08-18,integrated,Oracle,SE,8,"PaulSandoz,mcimadamore"
+,706,Rename layout variable and parameter names to be consistent,minborg,2022-08-11,2022-08-12,integrated,Oracle,SE,1,"JornVernee,mcimadamore"
+,707,Fix regression,minborg,2022-08-17,2022-08-18,integrated,Oracle,SE,1,PaulSandoz
+,708,Micro optimizations and tidy,minborg,2022-08-18,2022-08-22,integrated,Oracle,SE,4,PaulSandoz
+,709,Tighten up sealed/final classes,minborg,2022-08-18,2022-08-19,integrated,Oracle,SE,1,PaulSandoz
+8291826,710,8291826: Rework MemoryLayout Sealed Hierarchy,minborg,2022-08-18,2022-08-24,integrated,Oracle,SE,6,PaulSandoz
+8292851,712,8292851: MemorySegment arithmetics performed with int accuracy where long is required,minborg,2022-08-24,2022-08-24,integrated,Oracle,SE,0,sundararajana
+8292918,713,8292918: Split FunctionDescriptor into an interface and implementation(s),minborg,2022-08-25,2022-08-26,integrated,Oracle,SE,1,sundararajana
+8292957,714,8292957: Remove redundant MemoryLayout::is* methods,minborg,2022-08-26,2022-08-26,integrated,Oracle,SE,0,sundararajana
+,715,Add an internal MemoryInspection class,minborg,2022-09-07,2022-09-22,integrated,Oracle,SE,15,"sundararajana,mcimadamore"
+8293495,716,8293495: Revisit name of SymbolLookup::lookup,mcimadamore,2022-09-07,2022-09-08,integrated,Oracle,GB,1,sundararajana
+8292037,717,8292037: Consider moving Linker::methodType as FunctionDescriptor::toMethodType,JornVernee,2022-09-07,2022-09-13,integrated,Oracle,NL,6,mcimadamore
+8293400,718,8293400: Modify static constructors in MemorySegment,minborg,2022-09-12,2022-09-14,integrated,Oracle,SE,2,mcimadamore
+8291873,720,8291873: Implement return value normalization in Java,JornVernee,2022-09-14,2022-09-15,integrated,Oracle,NL,1,mcimadamore
+,722,Fix tests using stale `SymbolLookup::lookup`,mcimadamore,2022-09-16,2022-09-16,integrated,Oracle,GB,0,sundararajana
+,723,Fix imports,minborg,2022-09-19,2022-09-20,integrated,Oracle,SE,1,mcimadamore
+,724,"Split Stream operations, fix final and class properties",minborg,2022-09-19,2022-09-21,integrated,Oracle,SE,2,mcimadamore
+,726,Rename parameter names,minborg,2022-09-19,2022-09-20,integrated,Oracle,SE,1,mcimadamore
+8284300,728,8284300: Explicitly reject layouts that don't have the correct alignment during linking,JornVernee,2022-09-19,2022-09-21,integrated,Oracle,NL,2,mcimadamore
+8293367,729,8293367: Enable native access for modules not in the boot layer,sundararajana,2022-09-20,2022-09-26,integrated,Oracle,,6,mcimadamore
+8292034,730,8292034: Improve javadoc after memory segment/memory address unification,mcimadamore,2022-09-21,2022-09-27,integrated,Oracle,GB,6,JornVernee
+,731,Convert classes into records,minborg,2022-09-22,2022-09-22,integrated,Oracle,SE,0,"JornVernee,sundararajana"
+,732,Break out functionality to internal class,minborg,2022-09-22,2022-09-23,integrated,Oracle,SE,1,mcimadamore
+,733,Fix style and remove redundant method,minborg,2022-09-22,2022-09-23,integrated,Oracle,SE,1,mcimadamore
+8292047,734,8292047: Consider ways to add linkage parameters to downcall handles,JornVernee,2022-09-22,2022-09-22,integrated,Oracle,NL,0,mcimadamore
+,735,Add @sealedGraph tag to MemoryLayout,minborg,2022-09-26,2022-10-25,integrated,Oracle,SE,29,mcimadamore
+8294365,736,8294365: LoopOverOfAddress.java benchmark fails to compile,sundararajana,2022-09-26,2022-09-26,integrated,Oracle,,0,JornVernee
+8294309,737,8294309: Downcall and Upcall unboxing code should reject heap segments,JornVernee,2022-10-03,2022-10-04,integrated,Oracle,NL,1,mcimadamore
+,738,Merge master,openjdk-bot,2022-10-07,2022-10-07,integrated|failed-auto-merge|auto,,,0,
+8294986,739,8294986: Possible mismatched acquire/release in binding specializer,JornVernee,2022-10-11,2022-10-11,integrated,Oracle,NL,0,mcimadamore
+8295265,740,8295265: Refactor handling of special values passed to stubs,JornVernee,2022-10-13,2022-10-14,integrated,Oracle,NL,1,mcimadamore
+8294621,741,8294621: [Panama] Copying from a StringCharBuffer-backed MemorySegment results in crash,minborg,2022-10-14,2022-10-18,integrated,Oracle,SE,4,mcimadamore
+8294970,742,8294970: Add linker option for saving thread-locals that the VM can overwrite,JornVernee,2022-10-14,2022-10-26,integrated,Oracle,NL,12,mcimadamore
+8295353,743,8295353: Mark Register v24 as Volatile in Foreign Function & Memory C ABI Definition,swesonga,2022-10-14,2022-11-01,integrated,,,18,JornVernee
+,744,Merge master,openjdk-bot,2022-10-21,2022-10-21,integrated|failed-auto-merge|auto,,,0,
+8275584,746,8275584: Incorrect stack spilling in CallArranger on MacOS/AArch64 ,nick-arm,2022-10-21,2022-10-26,integrated,ARM,GB,5,JornVernee
+8295780,748,"8295780: API doc enhancement needed for MemorySegment.get/setUtf8String, MemoryAddress.ofLong",minborg,2022-10-25,2022-10-25,integrated,Oracle,SE,0,mcimadamore
+8294871,749,8294871: The spec on the method MemorySegment::segmentOffset() should be corrected,minborg,2022-10-25,2022-10-25,integrated,Oracle,SE,0,mcimadamore
+8296417,750,8296417: Make memory session a pure lifetime abstraction,mcimadamore,2022-11-04,2022-11-07,integrated,Oracle,GB,3,"JornVernee,minborg"
+8296973,753,8296973: saving errno on a value-returning function crashes the JVM,JornVernee,2022-11-17,2022-11-18,integrated,Oracle,NL,1,mcimadamore
+8295290,754,8295290: Add Windows ARM64 ABI support to the Foreign Function & Memory API,swesonga,2022-11-22,2023-01-11,integrated,,,50,JornVernee
+,755,Move Linux & MacOs CallArranger tests into separate files,swesonga,2022-12-02,2022-12-02,integrated,,,0,JornVernee
+,756,Merge master,openjdk-bot,2022-12-02,2022-12-02,integrated|failed-auto-merge|auto,,,0,
+,757,Merge master,openjdk-bot,2022-12-09,2022-12-09,integrated|failed-auto-merge|auto,,,0,
+,758,Update foreign memory doc,mcimadamore,2022-12-09,2022-12-13,integrated,Oracle,GB,4,JornVernee
+,759,Update foreign linker doc,mcimadamore,2022-12-09,2022-12-13,integrated,Oracle,GB,4,JornVernee
+8298532,760,8298532: Declare private constructors for FFM internal Architecture implementations,minborg,2022-12-13,2022-12-13,integrated,Oracle,SE,0,JornVernee
+,761,Add benchmark,minborg,2022-12-16,2023-01-02,integrated,Oracle,SE,17,mcimadamore
+,762,Add benchmarks to MemorySegmentVsBits,minborg,2023-01-02,2023-01-04,integrated,Oracle,SE,2,"uschindler,mcimadamore"
+8299736,763,8299736: Drop VaList,mcimadamore,2023-01-06,2023-01-06,integrated,Oracle,GB,0,JornVernee
+,764,Update linker docs to reflect valist removal,mcimadamore,2023-01-09,2023-01-10,integrated,Oracle,GB,1,JornVernee
+8299911,765,8299911: Refactor struct handling in AArch64 CallArranger,JornVernee,2023-01-11,2023-01-11,integrated,Oracle,NL,0,mcimadamore
+8299181,766,8299181: PaddingLayout unable to return byteAlignment value,minborg,2023-01-11,2023-01-17,integrated,Oracle,SE,6,mcimadamore
+,767,Clean up Utils,minborg,2023-01-11,2023-01-11,integrated,Oracle,SE,0,mcimadamore
+,768,Fix build problem on linux-x86,minborg,2023-01-11,2023-01-12,integrated,Oracle,SE,1,JornVernee
+,769,Merge master,openjdk-bot,2023-01-13,2023-01-13,integrated|failed-auto-merge|auto,,,0,
+8287516,770,8287516: Implement fallback Linker,JornVernee,2023-01-17,2023-01-23,integrated,Oracle,NL,6,mcimadamore
+8299730,771,8299730: Add trivial call linker option,JornVernee,2023-01-19,2023-01-31,integrated,Oracle,NL,12,mcimadamore
+,772,Merge master,openjdk-bot,2023-01-20,2023-01-23,integrated|failed-auto-merge|auto,,,3,
+8300785,773,8300785: Add way to select group element paths by index,mcimadamore,2023-01-20,2023-01-20,integrated,Oracle,GB,0,JornVernee
+8300201,774,"8300201: When storing MemoryAddress.ofLong(0x0000000080000000L), MemorySegment.get is not equal to MemorySegment.set because of the expanded sign",minborg,2023-01-23,2023-02-02,integrated,Oracle,SE,10,JornVernee
+8301228,775,8301228: Add more ways to resize zero-length memory segments,mcimadamore,2023-01-26,2023-01-27,integrated,Oracle,GB,1,JornVernee
+8301360,776,8301360: Add dereference layout paths to memory layout API,mcimadamore,2023-01-30,2023-01-31,integrated,Oracle,GB,1,JornVernee
+8301261,777,8301261: Add linker option for specifying uncaught exception handler,JornVernee,2023-02-01,2023-02-03,integrated,Oracle,NL,2,mcimadamore
+8301262,778,8301262: Simplify the CaptureCallState support,JornVernee,2023-02-02,2023-02-03,integrated,Oracle,NL,1,mcimadamore
+,779,"Fix javadoc ""highest-order"" rather than ""upper""",minborg,2023-02-02,2023-02-03,integrated,Oracle,SE,1,mcimadamore
+8300294,780,8300294: Add tests for by-value unions and structs with nested fixed-length arrays,JornVernee,2023-02-03,2023-02-09,integrated,Oracle,NL,6,mcimadamore
+8301801,781,8301801: Implement arena-centric API,mcimadamore,2023-02-07,2023-02-10,integrated,Oracle,GB,3,JornVernee
+,782,Fix test failures following 8300201,mcimadamore,2023-02-07,2023-02-07,integrated,Oracle,GB,0,JornVernee
+8302098,783,8302098: Fix initialization order in NativeMemorySegmentImpl,mcimadamore,2023-02-08,2023-02-08,integrated,Oracle,GB,0,JornVernee
+,784,Add `final` to AbstractMemorySegmentImpl::asUnbounded,mcimadamore,2023-02-08,2023-02-08,integrated,Oracle,GB,0,JornVernee
+,785,Merge master,openjdk-bot,2023-02-10,2023-02-10,integrated|failed-auto-merge|auto,,,0,
+,786,ValueLayouts: Improve test coverage and more,minborg,2023-02-10,2023-02-13,integrated,Oracle,SE,3,JornVernee
+8301806,787,8301806: TestNulls does not cover all API classes,JornVernee,2023-02-10,2023-02-10,integrated,Oracle,NL,0,mcimadamore
+,788,Generalize PointerInvoke to benchmark by-ref segment return,mcimadamore,2023-02-10,2023-02-10,integrated,Oracle,GB,0,JornVernee
+,789,Fix typo in vector test template,mcimadamore,2023-02-13,2023-02-13,integrated,Oracle,GB,0,JornVernee
+,790,Improve test coverage in the jdk.internal.layout package,minborg,2023-02-13,2023-02-14,integrated,Oracle,SE,1,JornVernee
+8302346,791,8302346: Lift upcall sharing mechanism to AbstractLinker,JornVernee,2023-02-14,2023-02-19,integrated,Oracle,NL,5,mcimadamore
+,792,"Remove dead code, add tests and fixes",minborg,2023-02-14,2023-02-14,integrated,Oracle,SE,0,JornVernee
+,793,Remove specialized zero-lenght mapped segment,minborg,2023-02-14,2023-02-15,integrated,Oracle,SE,1,mcimadamore
+,794,Remove PlatformLayout,minborg,2023-02-14,2023-02-16,integrated,Oracle,SE,2,"JornVernee,mcimadamore"
+,796,Simplify code now that bitSize is always aligned to byte boundaries,minborg,2023-02-15,2023-02-16,integrated,Oracle,SE,1,mcimadamore
+8302556,797,8302556: Find better way to create unsafe native segments,mcimadamore,2023-02-15,2023-02-16,integrated,Oracle,GB,1,JornVernee
+,798,Simplify ValueLayouts,minborg,2023-02-15,2023-02-16,integrated,Oracle,SE,1,mcimadamore
+,799,Fix failing test,minborg,2023-02-17,2023-02-17,integrated,Oracle,SE,0,mcimadamore
+,800,Add tests,minborg,2023-02-17,2023-02-17,integrated,Oracle,SE,0,mcimadamore
+,801,Add additional tests,minborg,2023-02-17,2023-02-20,integrated,Oracle,SE,3,mcimadamore
+8302885,802,8302885: Implementations of MemorySegment::reinterpret should be final,mcimadamore,2023-02-20,2023-02-20,integrated,Oracle,GB,0,"JornVernee,sundararajana"
+,803,Fix typo in TestLayouts,mcimadamore,2023-02-21,2023-02-21,integrated,Oracle,GB,0,JornVernee
+8302990,804,8302990: Reduce duplication in test code,JornVernee,2023-02-21,2023-02-23,integrated,Oracle,NL,2,mcimadamore
+,805,Refresh FFM API documents,mcimadamore,2023-02-24,2023-03-14,integrated,Oracle,GB,18,JornVernee
+8303017,806,8303017: Passing by-value structs whose size is not power of 2 doesn't work on all platforms,JornVernee,2023-02-24,2023-03-02,integrated,Oracle,NL,6,mcimadamore
+8303519,807,8303519: Replace Binding.Context with an arena,mcimadamore,2023-03-02,2023-03-02,integrated,Oracle,GB,0,JornVernee
+,808,Merge master,openjdk-bot,2023-03-03,2023-03-03,integrated|failed-auto-merge|auto,,,0,
+8301803,809,8301803: Rename MemorySegment::array,mcimadamore,2023-03-06,2023-03-07,integrated,Oracle,GB,1,JornVernee
+8303667,810,8303667: Drop MemoryLayout::valueLayout factory,mcimadamore,2023-03-06,2023-03-07,integrated,Oracle,GB,1,JornVernee
+8303666,811,8303666: Move address layout outside of ValueLayout namespace,mcimadamore,2023-03-06,2023-03-07,integrated,Oracle,GB,1,JornVernee
+8303757,812,8303757: MemorySegment::reinterpret should accept an Arena,mcimadamore,2023-03-07,2023-03-07,integrated,Oracle,GB,0,JornVernee
+8303835,813,8303835: Remove uncaught exception handler linker option,JornVernee,2023-03-08,2023-03-10,integrated,Oracle,NL,2,mcimadamore
+8303879,814,8303879: Add MemoryLayout.withoutName(),minborg,2023-03-09,2023-03-09,integrated,Oracle,SE,0,mcimadamore
+8303888,815,8303888: Add AddressLayout.withoutTargetLayout,minborg,2023-03-09,2023-03-09,integrated,Oracle,SE,0,mcimadamore
+,816,Fix override in ValueLayout,minborg,2023-03-10,2023-03-10,integrated,Oracle,SE,0,mcimadamore
+,817,Merge master,openjdk-bot,2023-03-10,2023-03-10,integrated|failed-auto-merge|auto,,,0,
+8296315,818,"8296315: Add get/set-AtIndex methods for byte, boolean",minborg,2023-03-13,2023-03-13,integrated,Oracle,SE,0,mcimadamore
+,819,Fix minor typos in ffi document,mcimadamore,2023-03-14,2023-03-14,integrated,Oracle,GB,0,JornVernee
+8298096,820,8298096: Refine javadoc for Linker,mcimadamore,2023-03-16,2023-03-16,integrated,Oracle,GB,0,JornVernee
+8304276,821,8304276: Add javadoc for custom arena,mcimadamore,2023-03-16,2023-03-16,integrated,Oracle,GB,0,JornVernee
+,822,Fix issue in custom arena code,mcimadamore,2023-03-17,2023-03-17,integrated,Oracle,GB,0,JornVernee
+,823,Merge master,openjdk-bot,2023-03-17,2023-03-17,integrated|failed-auto-merge|auto,,,0,
+8305087,824,8305087: MemoryLayout API checks should be more eager,mcimadamore,2023-03-28,2023-03-31,integrated,Oracle,GB,3,"JornVernee,minborg"
+8305369,825,8305369: Issues in zero-length memory segment javadoc section,mcimadamore,2023-03-31,2023-03-31,integrated,Oracle,GB,0,JornVernee
+,826,Merge master,openjdk-bot,2023-03-31,2023-03-31,integrated|failed-auto-merge|auto,,,0,
+8303831,827,8303831: TestSegmentCopy times out,JornVernee,2023-04-13,2023-04-14,integrated,Oracle,NL,1,mcimadamore
+8306668,828,8306668: Some foreign tests fail on x86,mcimadamore,2023-04-21,2023-04-21,integrated,Oracle,GB,0,JornVernee
+,829,Merge master,openjdk-bot,2023-04-28,2023-05-01,integrated|failed-auto-merge|auto|clean,,,3,
+8307253,830,8307253: Make FunctionDescriptor::toMethodType an instance method of Linker,mcimadamore,2023-05-02,2023-05-08,integrated,Oracle,GB,6,JornVernee
+8307461,831,8307461: Linker::nativeLinker should not be restricted,mcimadamore,2023-05-04,2023-05-05,integrated,Oracle,GB,1,JornVernee
+,832,Merge master,openjdk-bot,2023-05-12,2023-05-12,integrated|failed-auto-merge|auto|clean,,,0,
+,834,Fix build issue with MemoryInspectionUtil,mcimadamore,2023-05-29,2023-05-29,integrated,Oracle,GB,0,minborg
+,835,Use switch instead of if-statements in MemoryInspection classes,minborg,2023-05-29,2023-05-29,integrated,Oracle,SE,0,mcimadamore
+8308858,836,8308858: FFM API and strings,mcimadamore,2023-06-02,2023-06-14,integrated,Oracle,GB,12,JornVernee
+,837,Merge jdk:master,JornVernee,2023-06-14,2023-06-14,integrated|clean,Oracle,NL,0,
+8310048,838,8310048: Drop sequence layout factory with inferred count,mcimadamore,2023-06-14,2023-06-14,integrated,Oracle,GB,0,JornVernee
+8308293,839,8308293: A linker should expose the layouts it supports,mcimadamore,2023-06-15,2023-06-19,integrated,Oracle,GB,4,JornVernee
+8310362,840,8310362: Improve composability of handle derived from layouts,JornVernee,2023-06-20,2023-06-23,integrated,Oracle,NL,3,mcimadamore
+8310820,841,8310820: Remove MemorySegment::segmentOffset,mcimadamore,2023-06-23,2023-06-26,integrated,Oracle,GB,3,JornVernee
+8310893,842,8310893: VarHandleTestExact fails,JornVernee,2023-06-26,2023-06-26,integrated,Oracle,NL,0,mcimadamore
+8310659,843,8310659: The jar tool should support allowing access to restricted methods from executable jars,JornVernee,2023-06-26,2023-06-28,integrated,Oracle,NL,2,mcimadamore
+8311533,845,8311533: SegmentAllocator::allocateArray call can be ambiguous,mcimadamore,2023-07-12,2023-07-12,integrated,Oracle,GB,0,JornVernee
+8312059,846,8312059: Clarify the documention for variadic functions,JornVernee,2023-07-13,2023-07-14,integrated,Oracle,NL,1,mcimadamore
+8312186,847,8312186: TestStringEncodingFails for UTF-32,JornVernee,2023-07-17,2023-07-17,integrated,Oracle,NL,0,mcimadamore
+8312473,848,8312473: Return value corrupted when using CCS + isTrivial,JornVernee,2023-07-20,2023-07-20,integrated,Oracle,NL,0,mcimadamore
+8312615,849,8312615: Ensure jdk_foreign tests pass on linux-x86,JornVernee,2023-07-24,2023-07-25,integrated,Oracle,NL,1,mcimadamore
+8312981,850,8312981: Make the linker API required,JornVernee,2023-07-25,2023-07-25,integrated,Oracle,NL,0,mcimadamore
+8313005,851,8313005: Ensure native access check can fold away,JornVernee,2023-07-25,2023-07-25,integrated,Oracle,NL,0,mcimadamore
+8313265,853,8313265: Move the FFM API out of preview,JornVernee,2023-07-27,2023-07-28,integrated,Oracle,NL,1,mcimadamore
+8314292,855,8314292: Improve performance of Arena::allocateFrom,mcimadamore,2023-08-01,2023-08-16,integrated,Oracle,GB,15,JornVernee
+8313680,856,8313680: Disallow combining caputreCallState with isTrivial,JornVernee,2023-08-03,2023-08-07,integrated,Oracle,NL,4,mcimadamore
+8313238,857,8313238: Improve the performance of strlen for null-terminated strings,minborg,2023-08-03,2023-08-07,integrated,Oracle,SE,4,JornVernee
+,858,Fix so that heap segments work,minborg,2023-08-07,2023-08-07,integrated,Oracle,SE,0,JornVernee
+8313894,859,8313894: Rename isTrivial linker option to critical,JornVernee,2023-08-07,2023-08-08,integrated,Oracle,NL,1,"minborg,mcimadamore"
+,860,Fix test with strcat,minborg,2023-08-07,2023-08-07,integrated,Oracle,SE,0,JornVernee
+,862,Improve strlen performance,minborg,2023-08-14,2023-08-17,integrated,Oracle,SE,3,mcimadamore
+,863,Clean up StringSupport,minborg,2023-08-14,2023-08-15,integrated,Oracle,SE,1,JornVernee
+,864,Avoid using StandardCharset in Java code,minborg,2023-08-14,2023-08-15,integrated,Oracle,SE,1,mcimadamore
+,867,Fix TestSegmentAllocators,mcimadamore,2023-08-17,2023-08-17,integrated,Oracle,GB,0,JornVernee
+,868,Revert SegmentAllocator API changes,mcimadamore,2023-08-17,2023-08-18,integrated,Oracle,GB,1,JornVernee
+,869,Clarify javadoc w.r.t. exceptions thrown by a memory access var handle,mcimadamore,2023-08-18,2023-08-18,integrated,Oracle,GB,0,JornVernee
+,870,Add AllocTest benchmark,mcimadamore,2023-08-18,2023-08-18,integrated,Oracle,GB,0,JornVernee
+,872,Clarify javadoc w.r.t. exceptions thrown by a memory access var handle (part two),mcimadamore,2023-08-21,2023-08-21,integrated,Oracle,GB,0,minborg
+,873,Fix misc typos in FFM API javadoc,mcimadamore,2023-08-21,2023-09-04,integrated,Oracle,GB,14,JornVernee
+,874,Benchmark Java to/from C string conversions,mcimadamore,2023-08-23,2023-08-28,integrated,Oracle,GB,5,"minborg,Victimabue"
+8315041,875,8315041: Optimize Java to C string conversion by avoiding double copy,mcimadamore,2023-08-25,2023-08-28,integrated,Oracle,GB,3,minborg
+8315096,876,8315096: Allowed access modes in memory segment should depend on layout alignment,mcimadamore,2023-08-28,2023-08-30,integrated,Oracle,GB,2,PaulSandoz
+,877,Add missing @implSpec to AddressLayout,mcimadamore,2023-09-01,2023-09-01,integrated,Oracle,GB,0,minborg
+8315769,878,8315769: Add support for sliced allocation,mcimadamore,2023-09-06,2023-09-07,integrated,Oracle,GB,1,JornVernee
+,879,Fix javadoc issues in MemorySegment::copy,mcimadamore,2023-09-06,2023-09-06,integrated,Oracle,GB,0,JornVernee
+,880,Split long throws clauses in `MemorySegment` javadoc,mcimadamore,2023-09-07,2023-09-07,integrated,Oracle,GB,0,JornVernee
+8315917,881,8315917: Passing struct by values seems under specified,JornVernee,2023-09-11,2023-09-11,integrated,Oracle,NL,0,mcimadamore
+,882,Merge master,openjdk-bot,2023-09-12,2023-09-12,integrated|failed-auto-merge|auto,,,0,
+,883,Add missing canonicalLayouts to PPC64 and s390 linkers,JornVernee,2023-09-12,2023-09-15,integrated,Oracle,NL,3,minborg
+,884,Merge master,openjdk-bot,2023-09-15,2023-09-15,integrated|failed-auto-merge|auto,,,0,
+8316196,885,8316196: Use hexadecimal form for address outputs in java.lang.foreign,minborg,2023-09-15,2023-09-15,integrated,Oracle,SE,0,JornVernee
+,886,Improve exception messages and simplify LayoutPath,minborg,2023-09-18,2023-09-20,integrated,Oracle,SE,2,JornVernee
+,887,Merge master,openjdk-bot,2023-09-22,2023-09-22,integrated|failed-auto-merge|auto,,,0,
+,888,Remove unused imports,minborg,2023-09-22,2023-09-22,integrated,Oracle,SE,0,mcimadamore
+,889,Fix the use of final and static,minborg,2023-09-22,2023-09-22,integrated,Oracle,SE,0,mcimadamore
+,890,Fix broken link in JavaDoc,minborg,2023-09-22,2023-09-22,integrated,Oracle,SE,0,mcimadamore
+,891,Fix visibility issues,minborg,2023-09-22,2023-09-26,integrated,Oracle,SE,4,mcimadamore
+,892,Remove redundant supression,minborg,2023-09-22,2023-09-22,integrated,Oracle,SE,0,mcimadamore
+,893,Fix typos,minborg,2023-09-22,2023-09-25,integrated,Oracle,SE,3,mcimadamore
+,894,Modernize code,minborg,2023-09-22,2023-09-25,integrated,Oracle,SE,3,mcimadamore
+,895,Reintroduce suppression,minborg,2023-09-25,2023-09-25,integrated,Oracle,SE,0,mcimadamore
+,896,Tweak support for restricted methods,mcimadamore,2023-09-25,2023-09-25,integrated,Oracle,GB,0,"JornVernee,minborg"
+,897,Rename max alignment constants for heap segments,mcimadamore,2023-09-26,2023-09-26,integrated,Oracle,GB,0,JornVernee
+8317050,898,8317050: Scope should reflect lifetime of underying resource,mcimadamore,2023-09-27,2023-09-27,integrated,Oracle,GB,0,JornVernee
+,899,Merge master,openjdk-bot,2023-09-29,2023-09-29,integrated|failed-auto-merge|auto,,,0,
+,901,Beef up javadoc for base offset in var handles derived from layouts,mcimadamore,2023-10-03,2023-10-06,integrated,Oracle,GB,3,JornVernee
+,903,Fix arithmetic bug in SegmentAllocator,minborg,2023-10-09,2023-10-10,integrated,Oracle,SE,1,mcimadamore
+,906,Fix sonar issues and thread safety bug,minborg,2023-10-10,2023-10-10,integrated,Oracle,SE,0,mcimadamore
+8317137,908,8317137: Time out in TestStringEncoding,minborg,2023-10-10,2023-10-11,integrated,Oracle,SE,1,JornVernee
+,910,Do not run a lengthy test on zero machines,minborg,2023-10-12,2023-10-12,integrated,Oracle,SE,0,JornVernee
+,912,Merge jdk:master,JornVernee,2023-10-23,2023-10-23,integrated|clean,Oracle,NL,0,
+,913,Merge master,openjdk-bot,2023-10-23,2023-10-23,integrated|failed-auto-merge|auto|clean,,,0,
+,914,Refresh FFM documents,mcimadamore,2023-12-19,2024-01-10,integrated,Oracle,GB,22,"JornVernee,minborg"
+,915,Merge master,openjdk-bot,2024-05-10,2024-05-21,integrated|auto|clean,,,11,
+,916,Merge master,openjdk-bot,2024-06-28,2024-07-02,integrated|auto,,,4,
+,917,Merge master,openjdk-bot,2024-12-20,2024-12-20,integrated|auto,,,0,

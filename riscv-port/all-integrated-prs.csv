@@ -1,0 +1,60 @@
+bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,reviewers
+8276792,1,8276792: RISC-V Port: Initial support for RV64GV,RealFYang,2021-11-08,2021-11-08,integrated,Huawei,CN,0,shipilev
+8276988,2,8276988: riscv: Fix a register name string: lr to x5,zhengxiaolinX,2021-11-11,2021-11-15,integrated,Independent,CN,4,"shipilev,RealFYang"
+8276989,3,"8276989: riscv: C1 should not allocate x3, which is the gp register",zhengxiaolinX,2021-11-11,2021-11-15,integrated,Independent,CN,4,"shipilev,RealFYang"
+8277167,6,8277167: riscv: Remove unnecessary register declaration for lr,yhzhu20,2021-11-18,2021-11-19,integrated,,,1,RealFYang
+8277391,7,8277391: riscv: Remove the USE_LIBRARY_BASED_TLS_ONLY macro to use tls instead of pthread_getspecific,zhengxiaolinX,2021-11-18,2021-11-23,integrated,Independent,CN,5,RealFYang
+8277392,8,8277392: riscv: Port missing trampoline logic from AArch64 platform,zhengxiaolinX,2021-11-18,2021-11-19,integrated,Independent,CN,1,RealFYang
+8277036,10,8277036: riscv: Get CPU features from the auxiliary vector on Linux,yhzhu20,2021-11-19,2021-11-19,integrated,,,0,RealFYang
+8277440,11,8277440: riscv: Move UseVExt from product to experimental,yhzhu20,2021-11-19,2021-11-19,integrated,,,0,"RealFYang,yadongw"
+8277430,12,8277430: riscv: Refactor interpreter native wrappers,yadongw,2021-11-22,2021-11-23,integrated,Huawei,CN,1,RealFYang
+8277431,13,8277431: riscv: Intrinsify recursive ObjectMonitor locking for C2,yadongw,2021-11-23,2021-11-23,integrated,Huawei,CN,0,RealFYang
+8277877,14,8277877: C2 fast_unlock intrinsic on riscv has unnecessary ownership check,yadongw,2021-11-27,2021-11-29,integrated,Huawei,CN,2,RealFYang
+8277884,15,8277884: riscv: Fix cmpxchg_narrow_value that needs to sign-extend non-bool results,zhengxiaolinX,2021-11-29,2021-11-29,integrated,Independent,CN,0,RealFYang
+8277883,16,8277883: riscv: Fix a temp register usage in eden_allocate,zhengxiaolinX,2021-11-29,2021-11-29,integrated,Independent,CN,0,RealFYang
+8277890,17,8277890: riscv: fix the infinite LR/SC loop in BarrierSetAssembler::eden_allocate,yadongw,2021-11-29,2021-11-30,integrated,Huawei,CN,1,RealFYang
+8278033,19,8278033: riscv: Fix MacroAssembler::atomic_incw: store condition instruction has wrong operand order,zhengxiaolinX,2021-12-01,2021-12-01,integrated,Independent,CN,0,RealFYang
+8278034,20,8278034: riscv: Fix callee-saved float register definitions: should be SOE,zhengxiaolinX,2021-12-01,2021-12-01,integrated,Independent,CN,0,RealFYang
+8278192,22,8278192: riscv: remove unnecessary instruct of DecodeNKlass in C2,yadongw,2021-12-03,2021-12-07,integrated,Huawei,CN,4,RealFYang
+8276832,23,8276832: riscv: typo in LIR_Assembler::check_no_conflict,yhzhu20,2021-12-06,2021-12-07,integrated,,,1,shipilev
+8278337,25,8278337: riscv: remove unnecessary ld/sd zr around calls,kuaiwei,2021-12-07,2021-12-09,integrated,Alibaba,CN,2,RealFYang
+8278387,26,8278387: riscv: Implement UseHeavyMonitors consistently,yadongw,2021-12-08,2021-12-09,integrated,Huawei,CN,1,RealFYang
+8278474,27,8278474: riscv: Enable two more jtreg hotspot tests,feilongjiang,2021-12-09,2021-12-09,integrated,Huawei,CN,0,RealFYang
+8278531,28,8278531: riscv: Remove duplicate code bitset_to_fregs,feilongjiang,2021-12-10,2021-12-10,integrated,Huawei,CN,0,RealFYang
+8278743,29,8278743: riscv: Remove the x4 register saving logic in Java frames,zhengxiaolinX,2021-12-14,2021-12-14,integrated,Independent,CN,0,RealFYang
+8278832,30,8278832: riscv: Inconsistency of Java frame offset definition in jdk.hotspot.agent,feilongjiang,2021-12-15,2021-12-15,integrated,Huawei,CN,0,"RealFYang,yadongw,yhzhu20"
+8278833,31,8278833: riscv: Remove the x3 and x4 register saving logic in register savers,zhengxiaolinX,2021-12-15,2021-12-16,integrated,Independent,CN,1,"feilongjiang,RealFYang,yadongw"
+8278547,32,8278547: riscv: Refactor moving assembler functions for vector instructions into separate file,yhzhu20,2021-12-15,2021-12-16,integrated,,,1,"RealFYang,yadongw"
+8278895,33,8278895: riscv: Rename Riscv64 to RISCV64,yhzhu20,2021-12-16,2021-12-20,integrated,,,4,"RealFYang,guotaiping1"
+8278994,34,8278994: riscv: RVC support,zhengxiaolinX,2021-12-20,2022-01-18,integrated,Independent,CN,29,
+8278890,35,8278890: riscv: Missing features string in VM_Version,yadongw,2021-12-20,2021-12-21,integrated,Huawei,CN,1,RealFYang
+8278644,36,8278644: riscv: Intrinsify mulAdd,feilongjiang,2021-12-21,2021-12-21,integrated,Huawei,CN,0,RealFYang
+8279213,37,8279213: riscv: RVB: Add zero/sign extend instructions,feilongjiang,2021-12-25,2021-12-25,integrated,Huawei,CN,0,RealFYang
+8279292,38,8279292: riscv: Intrinsify multiplyToLen and squareToLen,feilongjiang,2021-12-27,2021-12-29,integrated,Huawei,CN,2,RealFYang
+8279344,39,8279344: riscv: RVB: Add bitwise rotation instructions,feilongjiang,2021-12-31,2022-01-04,integrated,Huawei,CN,4,RealFYang
+8279346,40,8279346: riscv: Unnecessary sign extension in BigInteger intrinsics,yhzhu20,2021-12-31,2022-01-04,integrated,,,4,RealFYang
+8279487,41,8279487: riscv: Fix bad AD file when UseRVB is disabled,feilongjiang,2022-01-05,2022-01-05,integrated,Huawei,CN,0,RealFYang
+8279565,42,8279565: riscv: RVB: Add byte reverse instruction,feilongjiang,2022-01-07,2022-01-07,integrated,Huawei,CN,0,RealFYang
+8279827,43,8279827: riscv: RVB: Add shift and add instructions,feilongjiang,2022-01-11,2022-01-12,integrated,Huawei,CN,1,"RealFYang,yhzhu20"
+8279914,44,8279914: riscv: Wrong result caused by incorrect use of iregL2I operand in some c2 match rules,feilongjiang,2022-01-12,2022-01-12,integrated,Huawei,CN,0,RealFYang
+8279996,45,8279996: riscv: RVB: Add zeros/population count instructions,feilongjiang,2022-01-14,2022-01-14,integrated,Huawei,CN,0,RealFYang
+8279826,46,8279826: riscv: Preserve result in native wrapper with +UseHeavyMonitors,yadongw,2022-01-15,2022-01-17,integrated,Huawei,CN,2,"feilongjiang,RealFYang"
+8280116,47,"8280116: riscv: RVB: Add rest instructions of zba, zbb, and bitwise rotation",feilongjiang,2022-01-18,2022-01-18,integrated,Huawei,CN,0,RealFYang
+8280236,48,8280236: riscv: Minimal build failed after JDK-8279565,feilongjiang,2022-01-19,2022-01-20,integrated,Huawei,CN,1,RealFYang
+8279664,49,8279664: riscv: JFR crashes at 0x0,zhengxiaolinX,2022-01-20,2022-01-21,integrated,Independent,CN,1,"RealFYang,yadongw"
+8280423,51,8280423: riscv: Unnecessary i2l conversion in LIRGenerator::emit_array_address,feilongjiang,2022-01-21,2022-01-21,integrated,Huawei,CN,0,"RealFYang,yhzhu20"
+8280424,52,8280424: riscv: fix saved_fp for compiled frame in frame::safe_for_sender,yhzhu20,2022-01-22,2022-01-22,integrated,,,0,RealFYang
+8280497,53,8280497: riscv: Undefined Behaviour in class Assembler,yadongw,2022-01-26,2022-01-27,integrated,Huawei,CN,1,"feilongjiang,RealFYang"
+8278847,54,8278847: riscv: Intrinsify BigInteger.montgomeryMultiply,yhzhu20,2022-01-27,2022-01-28,integrated,,,1,RealFYang
+8280683,55,8280683: riscv: Remove uses of long and unsigned long,yadongw,2022-01-28,2022-01-28,integrated,Huawei,CN,0,RealFYang
+8280845,56,8280845: riscv: Intrinsify BigInteger.montgomerySquare,yhzhu20,2022-01-28,2022-01-29,integrated,,,1,RealFYang
+8281731,57,8281731: riscv: Refactor instruction extraction code in nativeInst_riscv.h/cpp,zhengxiaolinX,2022-02-14,2022-02-16,integrated,Independent,CN,2,"RealFYang,yadongw"
+8281632,58,8281632: riscv: Improve interpreter stack banging,yadongw,2022-02-22,2022-03-08,integrated,Huawei,CN,14,"shipilev,RealFYang"
+8282331,59,8282331: riscv: is_wide_vector should not depend on specific vector size,feilongjiang,2022-02-24,2022-02-24,integrated,Huawei,CN,0,RealFYang
+8282415,60,8282415: riscv: Rename StubRoutines::riscv64 to StubRoutines::riscv,feilongjiang,2022-02-26,2022-02-26,integrated,Huawei,CN,0,"RealFYang,yhzhu20"
+8281967,61,8281967: riscv: Intrinsify bigIntegerLeftShift,guotaiping1,2022-02-28,2022-03-02,integrated,,,2,"RealFYang,yhzhu20"
+8282466,62,8282466: riscv: Remove unused code in linux_riscv,feilongjiang,2022-03-01,2022-03-01,integrated,Huawei,CN,0,"RealFYang,yhzhu20"
+8282328,63,8282328: riscv: Intrinsify bigIntegerRightShift,guotaiping1,2022-03-02,2022-03-02,integrated,,,0,"RealFYang,yhzhu20"
+8282436,64,8282436: riscv: pd_disjoint_words_atomic() needs to be atomic,guotaiping1,2022-03-02,2022-03-02,integrated,,,0,"RealFYang,yhzhu20"
+8283020,66,8283020: riscv: Fix configure integration,magicus,2022-03-11,2022-03-14,integrated,Oracle,SE,3,"feilongjiang,RealFYang"
+8283364,67,8283364: riscv: Intrinsify countPositives,feilongjiang,2022-03-18,2022-03-21,integrated,Huawei,CN,3,"RealFYang,yhzhu20"

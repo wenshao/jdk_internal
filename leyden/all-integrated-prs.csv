@@ -1,0 +1,84 @@
+bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,reviewers
+,8,Enable 1-step workflow with Shenandoah GC,shipilev,2024-07-22,2024-10-09,integrated,Amazon,US,79,iklam
+,13,Fix SCCache closing races,shipilev,2024-09-04,2024-09-05,integrated,Amazon,US,1,vnkozlov
+,14,"Mark Leyden tests that require artifacts with ""external-dep""",shipilev,2024-09-05,2024-09-10,integrated,Amazon,US,5,iklam
+,16,Rework rich PrintCompilation logs,shipilev,2024-09-06,2024-09-06,integrated,Amazon,US,0,vnkozlov
+,17,Prefer to take AOT method from the SC queue faster,shipilev,2024-09-06,2024-09-08,integrated,Amazon,US,2,vnkozlov
+,18,Reformat internal profiling stats,shipilev,2024-09-09,2024-09-16,integrated,Amazon,US,7,vnkozlov
+8335358,21,8335358: [premain] Explore alternative ways to trigger the end of training run,macarte,2024-09-11,2024-11-23,integrated,,,73,iklam
+,22,Method name AOTClassInitializer::has_non_default_static_fields  should be has_default_static_fields,ashu-mehra,2024-09-17,2024-09-18,integrated,IBM,CA,1,iklam
+8340559,23,8340559: [premain] java process crash with -XX:+PrintTrainingInfo,dhanalla,2024-09-20,2024-09-23,integrated,,,3,veresov
+,24,FileMapInfo::write_bitmap_region bug after premain merge,shipilev,2024-09-27,2024-09-27,integrated,Amazon,US,0,iklam
+,25,Save/load i2c2i adapters,ashu-mehra,2024-10-23,2025-02-05,integrated,IBM,CA,105,"iklam,vnkozlov"
+,27,Save/load nmethod without going through CodeBuffer,ashu-mehra,2024-12-11,2025-03-31,integrated,IBM,CA,110,"vnkozlov,adinn"
+8348858,28,8348858: [leyden] Bump the default code buffer sizes to store more generated code,shipilev,2025-01-28,2025-01-31,integrated,Amazon,US,3,vnkozlov
+8348957,29,8348957: [leyden] Excess PrintCompilation printing on compile task start,shipilev,2025-01-29,2025-01-29,integrated,Amazon,US,0,"vnkozlov,adinn"
+8348960,30,8348960: [leyden] compiler/c1/TestConcurrentPatching.java is stuck,shipilev,2025-01-29,2025-02-04,integrated,Amazon,US,6,"iwanowww,adinn"
+8349181,31,8349181: [leyden] tools/sincechecker/modules/java.base/JavaBaseCheckSince.java fails,shipilev,2025-02-01,2025-02-06,integrated,Amazon,US,5,iklam
+8349457,32,8349457: [leyden] Workaround Leyden problems with -XX:-TieredCompilation,shipilev,2025-02-05,2025-02-11,integrated,Amazon,US,6,"iwanowww,ashu-mehra,veresov"
+8349539,33,8349539: [leyden] Allow dumping nmethods that reference archived hidden klasses,shipilev,2025-02-06,2025-02-11,integrated,Amazon,US,5,"iwanowww,vnkozlov"
+8349713,34,8349713: [leyden] Memory map the cached code file,shipilev,2025-02-10,2025-02-12,integrated,Amazon,US,2,"iklam,vnkozlov"
+8349717,35,8349717: [leyden] compiler/inlining/LateInlinePrinting.java is failing,shipilev,2025-02-10,2025-02-10,integrated,Amazon,US,0,vnkozlov
+8349722,36,8349722: [leyden] Option to block until preloading is complete,shipilev,2025-02-10,2025-02-11,integrated,Amazon,US,1,"iwanowww,vnkozlov"
+8349748,37,8349748: [leyden] ciEnv::register_method should lock the correct queue lock,shipilev,2025-02-10,2025-02-11,integrated,Amazon,US,1,"iwanowww,vnkozlov"
+8349814,38,8349814: [leyden] Reduce uncommon traps in preload code,shipilev,2025-02-11,2025-04-02,integrated,Amazon,US,50,"iwanowww,vnkozlov"
+,39,Store AOT code in cached code region of AOT cache,ashu-mehra,2025-02-11,2025-02-13,integrated,IBM,CA,2,"iklam,vnkozlov"
+8349905,40,8349905: [leyden] Make SCCache depend on CDS build feature,shipilev,2025-02-12,2025-02-12,integrated,Amazon,US,0,vnkozlov
+8341587,41,8341587: [premain] Support Soft/Weak Reference in AOT cache,macarte,2025-02-12,2025-02-24,integrated,,,12,iklam
+,42,Fix SCCache stats logged on exit,ashu-mehra,2025-02-14,2025-02-21,integrated,IBM,CA,7,vnkozlov
+8350115,43,8350115: [leyden] Clean up name_and_sig_as_C_string uses,shipilev,2025-02-14,2025-02-14,integrated,Amazon,US,0,"ashu-mehra,vnkozlov"
+8350488,44,8350488: [leyden] Experimental AOT-only mode,shipilev,2025-02-21,2025-02-21,integrated,Amazon,US,0,vnkozlov
+8351004,45,8351004: [leyden] Add test cases for cached Reference objects,iklam,2025-03-02,2025-03-13,integrated,Oracle,US,11,rose00
+8347755,46,8347755: Support static library in jmod,slowhog,2025-03-04,2025-04-22,integrated,Oracle,US,49,"jerboaa,pron"
+8351493,47,8351493: Revert build changes that are no longer needed,magicus,2025-03-06,2025-03-20,integrated,Oracle,SE,14,"shipilev,jianglizhou"
+8352042,49,8352042: [leyden] Parallel precompilation,shipilev,2025-03-14,2025-03-17,integrated,Amazon,US,3,iwanowww
+,50,Fix ARM builds after incomplete merge,shipilev,2025-03-19,2025-03-19,integrated,Amazon,US,0,adinn
+,51,Missing nmethod preload bit after #27,shipilev,2025-04-01,2025-04-01,integrated,Amazon,US,0,ashu-mehra
+8356572,52,8356572: [premain] Add management MXBean for AOT,macarte,2025-04-02,2025-05-08,integrated,,,36,vnkozlov
+8354289,53,8354289: [leyden] Improve parallel recompilation parallelism,shipilev,2025-04-10,2025-04-11,integrated,Amazon,US,1,vnkozlov
+8354291,54,8354291: [leyden] ciEnv::register_aot_method should lock the correct queue lock,shipilev,2025-04-10,2025-04-10,integrated,Amazon,US,0,adinn
+8354330,56,8354330: [leyden] Crash inside AdapterHandlerEntry::metaspace_pointers_do,iklam,2025-04-12,2025-04-14,integrated,Oracle,US,2,vnkozlov
+8355296,57,8355296: [leyden] Some methods are stuck at level=0 with -XX:-TieredCompilation,shipilev,2025-04-22,2025-04-23,integrated,Amazon,US,1,veresov
+,58,Fix Minimal build,shipilev,2025-04-22,2025-04-22,integrated,Amazon,US,0,vnkozlov
+8355334,59,8355334: [leyden] Missing type profile info in archived training data,iwanowww,2025-04-22,2025-04-23,integrated,Oracle,RU,1,"shipilev,veresov,iklam"
+8355368,61,8355368: [hermetic-java-runtime] Update jcheck config for branch,jerboaa,2025-04-23,2025-04-23,integrated,Red Hat,CA,0,"shipilev,jianglizhou"
+8355352,62,8355352: [premain] rename AOT Code classes and logging tags,vnkozlov,2025-04-23,2025-04-24,integrated,Oracle,US,1,"shipilev,ashu-mehra"
+,63,Cleaner GHA build of hermetic-java-runtime branch,jerboaa,2025-04-28,2025-05-05,integrated,Red Hat,CA,7,jianglizhou
+8355915,64,8355915: [leyden] Crash in MDO clearing the unloaded array type,shipilev,2025-04-29,2025-05-01,integrated,Amazon,US,2,"iwanowww,veresov"
+8355514,65,8355514: [premain] rename AOT code flags and adjust their ergonomic settings,vnkozlov,2025-05-02,2025-05-07,integrated,Oracle,US,5,shipilev
+,66,Some AOTCodeCache cleanup after merge from mainline,ashu-mehra,2025-05-14,2025-05-14,integrated,IBM,CA,0,vnkozlov
+8347830,67,8347830: [premain] UseCompatibleCompressedOops is broken after merging with mainline,vnkozlov,2025-05-16,2025-05-19,integrated,Oracle,US,3,"ashu-mehra,adinn"
+8357060,68,8357060: [premain] assert(left >= right) failed: avoid underflow,ashu-mehra,2025-05-16,2025-05-20,integrated,IBM,CA,4,"vnkozlov,adinn"
+8340474,69,8340474: [premain] Revert ArchiveRelocationMode back to 1,shipilev,2025-05-19,2025-05-20,integrated,Amazon,US,1,"ashu-mehra,vnkozlov"
+,71,Update nmethod caching and clean up unused/duplicate methods,ashu-mehra,2025-06-02,2025-06-16,integrated,IBM,CA,14,"vnkozlov,adinn"
+,72,Fix recent merge errors,shipilev,2025-06-02,2025-06-03,integrated,Amazon,US,1,"vnkozlov,veresov"
+8358344,73,8358344: [leyden] Enable UseSecondarySupersTable support,shipilev,2025-06-03,2025-06-03,integrated,Amazon,US,0,"ashu-mehra,vnkozlov"
+8358693,75,8358693: [leyden] Bootstrapping circularity leads to never starting preload threads,shipilev,2025-06-05,2025-06-05,integrated,Amazon,US,0,vnkozlov
+8358707,76,8358707: [leyden] Flip AOTCompileEagerly back on,shipilev,2025-06-05,2025-06-05,integrated,Amazon,US,0,vnkozlov
+8358722,77,8358722: [leyden] Revert whitespace/comment diffs against mainline,shipilev,2025-06-05,2025-06-05,integrated,Amazon,US,0,vnkozlov
+8358546,78,8358546: [premain] AOT code generation should support UseCompactObjectHeaders,vnkozlov,2025-06-06,2025-06-06,integrated,Oracle,US,0,shipilev
+8359107,79,"8359107: [leyden] Pick up JDK-8357481, JDK-8357473 and rework precompilation waits",shipilev,2025-06-10,2025-06-20,integrated,Amazon,US,10,"iwanowww,vnkozlov"
+,80,Cleanup unused _decompile and _ignore_decompile fields in AOTCodeEntry,ashu-mehra,2025-06-19,2025-06-19,integrated,IBM,CA,0,vnkozlov
+,82,[leyden] Do not enable -XX:AOTMode=on by default,iklam,2025-06-27,2025-07-11,integrated,Oracle,US,14,shipilev
+,83,Remove Leyden experimental workflow,iklam,2025-06-27,2025-07-11,integrated,Oracle,US,14,ashu-mehra
+,84,Store cpu features in AOTCodeCache header,ashu-mehra,2025-07-04,2025-08-08,integrated,IBM,CA,35,"vnkozlov,adinn"
+8362534,85,8362534: [Leyden] assert(comp != nullptr) failed: Ensure we have a compiler,ashu-mehra,2025-07-17,2025-07-17,integrated,IBM,CA,0,vnkozlov
+8362657,86,8362657: Make tables used in AOT assembly phase GC-safe,iklam,2025-07-18,2025-07-22,integrated,Oracle,US,4,"shipilev,ashu-mehra,vnkozlov"
+8362558,87,8362558: [Leyden] fatal error: New workflow: should not compile code for unarchived class: UnsupportedBSMs$$Lambda/0...,iklam,2025-07-21,2025-07-22,integrated,Oracle,US,1,vnkozlov
+8362559,88,8362559: [leyden] assert(!InstanceKlass::cast(receiver_klass)->is_not_initialized()) failed: receiver_klass must be initialized,vnkozlov,2025-07-23,2025-07-24,integrated,Oracle,US,1,"shipilev,iklam"
+8364372,89,8364372: [Leyden] Set UseAOTCodeLoadThread ergonomically,ashu-mehra,2025-07-30,2025-08-01,integrated,IBM,CA,2,vnkozlov
+,90,Restore Method pointer for every AOTCodeEntry,ashu-mehra,2025-08-07,2025-08-12,integrated,IBM,CA,5,vnkozlov
+,91,Use method offset as the hash for storing nmethods,ashu-mehra,2025-08-13,2025-08-20,integrated,IBM,CA,7,vnkozlov
+,92,Update README.md to be used as Release Notes for Leyden EA 2,iklam,2025-08-27,2025-08-27,integrated,Oracle,US,0,"DanHeidinga,vnkozlov"
+8366811,94,8366811: [leyden] Expose nmethod AOT entry in VMStructs,shipilev,2025-09-03,2025-09-03,integrated,Amazon,US,0,vnkozlov
+,95,Refactor AOTCodeCache layout to store preload entries separately,ashu-mehra,2025-09-03,2025-09-19,integrated,IBM,CA,16,"vnkozlov,adinn"
+8368095,97,8368095: [leyden] Fix klass dependency recording,shipilev,2025-09-19,2025-09-23,integrated,Amazon,US,4,iwanowww
+8368289,98,8368289: [leyden] Expose AOTCodeEntry::_for_preload in VMStructs,shipilev,2025-09-22,2025-09-22,integrated,Amazon,US,0,adinn
+8368465,99,8368465: [leyden] Improve precompiler method selection code,shipilev,2025-09-23,2025-12-05,integrated,Amazon,US,73,vnkozlov
+,101,Minor cleanup and refactoring,ashu-mehra,2025-09-26,2025-09-29,integrated,IBM,CA,3,vnkozlov
+8368811,102,8368811: [Leyden] Use AOTRuntimeConstants table for card_table::_byte_map_base,vnkozlov,2025-09-27,2025-10-03,integrated,Oracle,US,6,adinn
+8369735,103,8369735: [Leyden] AOT compiled methods have lower peak performance,shipilev,2025-10-16,2025-10-17,integrated,Amazon,US,1,"vnkozlov,adinn"
+8371159,104,8371159: [Leyden] assert(false) failed: Attempting to acquire lock,veresov,2025-11-12,2025-11-13,integrated,Oracle,,1,vnkozlov
+8377339,108,8377339: Implement AOTCacheAccess::get_archived_object using heap roots,iklam,2026-02-06,2026-02-10,integrated,Oracle,US,4,"fisk,vnkozlov"
+8377597,110,8377597: [Leyden] Improve peak performance when AOT code is used,vnkozlov,2026-02-10,2026-02-12,integrated,Oracle,US,2,shipilev
+8378150,111,8378150: Clean up C++ iterator style in compactHashtable.hpp and trainingData.hpp,iklam,2026-02-18,2026-02-20,integrated,Oracle,US,2,veresov
