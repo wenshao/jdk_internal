@@ -34,7 +34,7 @@ Strings    Blocks    Templates  Variables  Classes     Patterns
 
 | JEP | 标题 | 作者 | 状态 |
 |-----|------|------|------|
-| [JEP 254](jep-254.md) | Compact Strings | [Claes Redestad](/by-contributor/profiles/claes-redestad.md) | ✅ 正式 |
+| [JEP 254](jep-254.md) | Compact Strings | [Claes Redestad](../../by-contributor/profiles/claes-redestad.md) | ✅ 正式 |
 
 **核心改进**: 将 String 内部表示从 `char[]` 改为 `byte[]`，ASCII 字符串节省 50% 内存。
 
@@ -175,5 +175,5 @@ void main() {
 
 ## 7. 相关链接
 
-- [语言特性演进时间线](/by-topic/language/)
+- [语言特性演进时间线](../../by-topic/language/)
 - [Java Language Updates](https://openjdk.org/projects/jdk/)

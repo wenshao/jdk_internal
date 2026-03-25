@@ -173,5 +173,5 @@ USER_ID.where("user123", () -> {
 
 ## 6. 相关链接
 
-- [并发主题时间线](/by-topic/concurrency/)
+- [并发主题时间线](../../by-topic/concurrency/)
 - Virtual Threads 最佳实践 

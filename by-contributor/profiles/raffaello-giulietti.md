@@ -163,8 +163,8 @@
 
 ## 相关文档
 
-- [核心库优化](/by-topic/language/string/) - 字符串处理
-- [数学库](/by-topic/math/) - java.math 模块
+- [核心库优化](../../by-topic/language/string/) - 字符串处理
+- [数学库](../../by-topic/math/) - java.math 模块
 - 测试框架 - JUnit 测试指南
 
 ---

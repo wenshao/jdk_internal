@@ -130,8 +130,8 @@ Attila 维护 `javax.script` (Scripting API, JSR 223) 相关代码，负责 `Scr
 
 ### 相关主题
 
-- [Nashorn](/by-topic/nashorn/) - Nashorn JavaScript 引擎
-- [Scripting API](/by-topic/scripting/) - javax.script 脚本 API
+- [Nashorn](../../by-topic/nashorn/) - Nashorn JavaScript 引擎
+- [Scripting API](../../by-topic/scripting/) - javax.script 脚本 API
 
 ---
 

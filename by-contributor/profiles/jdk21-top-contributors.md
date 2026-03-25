@@ -151,5 +151,5 @@ https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3A{username}+label%3Ainteg
 - [JDK 26 Top Contributors](jdk26-top-contributors.md)
 - [JDK 25 Top Contributors](jdk25-top-contributors.md)
 - [JDK 17 Top Contributors](jdk17-top-contributors.md)
-- [All Contributors](/by-contributor/)
+- [All Contributors](../../by-contributor/)
 - [By Organization](../../contributors/stats/by-org.md)

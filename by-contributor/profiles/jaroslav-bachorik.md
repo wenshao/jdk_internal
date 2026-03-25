@@ -144,7 +144,7 @@ Jaroslav 是 JFR 核心贡献者之一，专注于：
 
 - [Erik Gahlin](erik-gahlin.md) - JFR 架构师 (Oracle)
 - [Markus Grönlund](markus-gronlund.md) - JFR 事件系统 (Oracle)
-- [性能优化](/by-topic/core/performance/) - JFR 性能分析
+- [性能优化](../../by-topic/core/performance/) - JFR 性能分析
 
 ---
 
