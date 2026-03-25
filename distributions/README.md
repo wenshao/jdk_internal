@@ -459,7 +459,7 @@ jdeps --jdk-intro myapp.jar
 
 ---
 
-**最后更新**: 2026-03-20
+**最后更新**: 2026-03-25
 
 **Sources**:
 - [WhichJDK.com](https://whichjdk.com/)

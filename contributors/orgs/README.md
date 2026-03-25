@@ -48,7 +48,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 | [Gluon](gluon.md) | 0 | — | — | **JavaFX Co-Lead** (163 JFX PRs) | GluonFX |
 | [独立贡献者](independent.md) | 500+ | — | — | 代码清理, C2, 安全 | - |
 
-> **统计时间**: 2026-03-24 | **统计方法**: GitHub Integrated PRs
+> **统计时间**: 2026-03-25 | **统计方法**: GitHub Integrated PRs
 > **主线**: `openjdk/jdk` | **LTS 维护**: `jdk17u-dev/jdk21u-dev/jdk11u-dev/jdk25u-dev/jdk8u-dev`
 > **角色来源**: [OpenJDK Census](https://openjdk.org/census) JDK Project 部分
 >
@@ -58,7 +58,7 @@ OpenJDK 是一个由多个组织共同维护的开源项目。本文档汇总了
 
 ## 2. 实验性项目主导组织
 
-基于 10 个实验性项目仓库的完整 PR 数据 (2026-03-24 采集)：
+基于 10 个实验性项目仓库的完整 PR 数据 (2026-03-25 采集)：
 
 | 项目 | PRs | 主导组织 | 占比 | 核心贡献者 | 目标 |
 |------|-----|---------|------|-----------|------|
@@ -601,7 +601,7 @@ OpenJDK 核心贡献者在组织间的流动对技术方向有深远影响：
 ## 11. 数据来源
 
 - **统计方法**: GitHub PR search `repo:openjdk/jdk author:xxx type:pr label:integrated`
-- **统计时间**: 2026-03-23
+- **统计时间**: 2026-03-25
 - **验证方式**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+is%3Aclosed+label%3Aintegrated)
 - **组织归属**: [OpenJDK Census](https://openjdk.org/census) 验证
 

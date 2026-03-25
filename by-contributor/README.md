@@ -27,6 +27,29 @@
 
 ---
 
+## 数据规模
+
+| 指标 | 值 |
+|------|-----|
+| **贡献者档案** | 260 |
+| **组织页面** | [21 个](../contributors/orgs/) (含 LTS 维护 + 审查网络) |
+| **统计报告** | [26 个](../contributors/stats/) (全量 43,394 PRs) |
+| **Census 成员** | 672 (219 Reviewer + 151 Committer + 302 Author) |
+| **CFV 提名追踪** | 193 (含投票者网络) |
+| **Org 映射** | 271 人 |
+
+### 重点报告
+
+| 报告 | 说明 |
+|------|------|
+| [Top 50 贡献者](../contributors/stats/top50.md) | 全仓库排名 |
+| [跨仓库全景](../contributors/stats/cross-repo-overview.md) | 25 仓库组织分工 |
+| [审查网络](../contributors/stats/reviewer-workload.md) | 72,789 次审查 / 856 人 |
+| [角色晋升](../contributors/stats/role-promotions.md) | CFV 投票信任网络 |
+| [LTS 维护](../contributors/stats/lts-maintenance.md) | SAP 5,264 PRs 主导 |
+| [回归分析](../contributors/stats/regression-analysis.md) | 863 个回归 bug |
+
+
 
 ## 1. 快速导航
 
@@ -722,7 +745,7 @@ JDK 26 开发周期内的贡献者排名。
 
 ### JDK 26 (2025-2026)
 
-已发布版本 (GA 2026-03-17)。
+已发布版本 (GA 2026-03-25)。
 
 | 查看 | 说明 |
 |------|------|
