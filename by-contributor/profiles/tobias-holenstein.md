@@ -157,12 +157,6 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. IGV-re
 | 日期 | 角色 | 提名者 | 投票数 | 链接 |
 |------|------|--------|--------|------|
 | 2022-05-06 | Committer | Tobias Hartmann | 14 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2022-May/006550.html) |
-| 2023-05-26 | Reviewer | Tobias Hartmann | 17 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2023-May/007846.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 43 |
-| **活跃仓库数** | 1 |
+**提名时统计**: 15 changes
+**贡献领域**: d parallel

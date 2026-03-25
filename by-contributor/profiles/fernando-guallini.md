@@ -126,10 +126,5 @@ Fernando Guallini 专注于 Java 安全子系统的测试质量和现代化。
 |------|------|--------|--------|------|
 | 2025-02-05 | Committer | Rajan Halade | 13 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2025-February/009720.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 22 |
-| **活跃仓库数** | 1 |
+**提名时统计**: 41 changesets
+**贡献领域**: Core and security libraries

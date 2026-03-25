@@ -176,12 +176,6 @@
 | 日期 | 角色 | 提名者 | 投票数 | 链接 |
 |------|------|--------|--------|------|
 | 2022-08-17 | Committer | Joe Darcy | 23 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2022-August/006840.html) |
-| 2023-10-09 | Reviewer | Joe Darcy | 27 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2023-October/008313.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 149 |
-| **活跃仓库数** | 2 |
+**提名时统计**: 40+ fixes
+**贡献领域**: Core libraries; numerics; regex; HotSpot intrinsics

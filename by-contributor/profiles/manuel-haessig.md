@@ -70,3 +70,5 @@ Manuel Hässig 贡献于 OpenJDK 测试：
 | 日期 | 角色 | 提名者 | 投票数 | 链接 |
 |------|------|--------|--------|------|
 | 2025-05-22 | Committer | Tobias Hartmann | 18 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2025-May/010136.html) |
+
+**提名时统计**: 16 changes

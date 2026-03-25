@@ -71,10 +71,5 @@ Pankaj Bansal 贡献于 JDK 构建系统：
 |------|------|--------|--------|------|
 | 2020-03-16 | Reviewer | Sergey Bylokhov | 9 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2020-March/004058.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 130 |
-| **活跃仓库数** | 2 |
+**提名时统计**: 45 contributions
+**贡献领域**: Client libraries

@@ -135,10 +135,5 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 |------|------|--------|--------|------|
 | 2024-01-09 | Reviewer | Serguei Spitsyn | 36 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2024-January/008622.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 356 |
-| **活跃仓库数** | 4 |
+**提名时统计**: 111 changesets
+**贡献领域**: Serviceability; JMX; JCMD; SA

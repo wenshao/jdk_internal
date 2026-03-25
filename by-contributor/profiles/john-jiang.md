@@ -36,10 +36,5 @@ John Jiang 是 Tencent Kona JDK 安全领域的核心开发者。他维护 Tence
 |------|------|--------|--------|------|
 | 2020-02-12 | Reviewer | Rajan Halade | 12 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2020-February/003892.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 15 |
-| **活跃仓库数** | 1 |
+**提名时统计**: 83 changesets
+**贡献领域**: Security libs; networking; JAXP

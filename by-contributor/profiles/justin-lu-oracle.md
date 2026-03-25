@@ -25,12 +25,6 @@
 | 日期 | 角色 | 提名者 | 投票数 | 链接 |
 |------|------|--------|--------|------|
 | 2023-04-04 | Committer | Naoto Sato | 11 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2023-April/007567.html) |
-| 2025-11-12 | Reviewer | Naoto Sato | 23 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2025-November/010601.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 245 |
-| **活跃仓库数** | 3 |
+**提名时统计**: 54 changes
+**贡献领域**: Internationalization

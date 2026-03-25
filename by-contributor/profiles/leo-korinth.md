@@ -140,10 +140,5 @@ Leo Korinth 的贡献特点:
 |------|------|--------|--------|------|
 | 2021-06-24 | Reviewer | Thomas Schatzl | 22 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-June/005710.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 71 |
-| **活跃仓库数** | 1 |
+**提名时统计**: 50 contributions
+**贡献领域**: Parallel GC; G1; reference processing

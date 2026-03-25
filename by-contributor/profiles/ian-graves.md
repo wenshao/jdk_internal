@@ -196,10 +196,5 @@ Ian Graves 在 2016 年 JVM Language Summit 上展示了 Vector API 的早期设
 |------|------|--------|--------|------|
 | 2021-04-23 | Committer | Stuart Marks | 35 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-April/005385.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 22 |
-| **活跃仓库数** | 1 |
+**提名时统计**: 15 commits
+**贡献领域**: and synchronized*

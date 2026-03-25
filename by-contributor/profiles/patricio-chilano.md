@@ -153,3 +153,6 @@ Patricio Chilano Mateo 的贡献特点:
 | 日期 | 角色 | 提名者 | 投票数 | 链接 |
 |------|------|--------|--------|------|
 | 2021-10-21 | Reviewer | coleen.phillimore | 21 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-October/006167.html) |
+
+**提名时统计**: 56 commits
+**贡献领域**: Locking; safepoints; handshakes

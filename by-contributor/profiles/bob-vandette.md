@@ -123,10 +123,5 @@ Bob Vandette 的贡献特点:
 |------|------|--------|--------|------|
 | 2020-09-25 | Reviewer | Harold Seigel | 46 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2020-September/004759.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 10 |
-| **活跃仓库数** | 1 |
+**提名时统计**: 100+ changes
+**贡献领域**: HotSpot runtime; container support; AArch64

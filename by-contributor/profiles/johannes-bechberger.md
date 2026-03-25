@@ -148,10 +148,5 @@ Johannes Bechberger 在其博客上分享关于：
 |------|------|--------|--------|------|
 | 2023-05-15 | Committer | Langer, Christoph | 13 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2023-May/007780.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 29 |
-| **活跃仓库数** | 2 |
+**提名时统计**: 11 changes
+**贡献领域**: JVM profiling; JEP 435

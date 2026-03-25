@@ -172,10 +172,5 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 |------|------|--------|--------|------|
 | 2022-09-21 | Committer | Jonathan Gibbons | 21 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2022-September/006950.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 90 |
-| **活跃仓库数** | 1 |
+**提名时统计**: 18 changesets
+**贡献领域**: updates

@@ -94,10 +94,5 @@
 |------|------|--------|--------|------|
 | 2024-09-03 | Committer | Yi Yang | 6 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2024-September/009380.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 239 |
-| **活跃仓库数** | 3 |
+**提名时统计**: 36 PRs
+**贡献领域**: Test case improvements; QA

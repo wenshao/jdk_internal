@@ -320,10 +320,5 @@ Volkan's tests typically include:
 |------|------|--------|--------|------|
 | 2025-05-15 | Committer | Jaikiran Pai | 16 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2025-May/010083.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 148 |
-| **活跃仓库数** | 1 |
+**提名时统计**: 29 changes
+**贡献领域**: reasonably bigger sized enhancements to the java.net.http.HttpClient

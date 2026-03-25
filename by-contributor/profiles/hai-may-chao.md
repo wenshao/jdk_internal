@@ -104,12 +104,6 @@ Hai-May Chao 贡献于 Java 安全通信：
 | 日期 | 角色 | 提名者 | 投票数 | 链接 |
 |------|------|--------|--------|------|
 | 2021-01-21 | Committer | sean.mullan | 22 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-January/005025.html) |
-| 2025-05-13 | Reviewer | Sean Mullan | 14 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2025-May/010058.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 116 |
-| **活跃仓库数** | 1 |
+**提名时统计**: 13 fixes
+**贡献领域**: TLS; OCSP; security tools

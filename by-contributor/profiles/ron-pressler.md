@@ -169,3 +169,6 @@ Ron 还在 [Inside.java](https://inside.java/u/RonPressler/) 持续发表 Loom �
 | 日期 | 角色 | 提名者 | 投票数 | 链接 |
 |------|------|--------|--------|------|
 | 2022-06-02 | Committer | Alan Bateman | 55 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2022-June/006648.html) |
+
+**提名时统计**: 900 commits
+**贡献领域**: Project Loom; virtual threads

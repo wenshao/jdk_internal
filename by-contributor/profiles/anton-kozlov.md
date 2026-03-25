@@ -26,10 +26,5 @@
 |------|------|--------|--------|------|
 | 2021-04-20 | Committer | Vladimir Kempik | 24 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-April/005339.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 88 |
-| **活跃仓库数** | 5 |
+**提名时统计**: 13 contributions; 18 changes
+**贡献领域**: JDK; JEP-391

@@ -26,10 +26,5 @@
 |------|------|--------|--------|------|
 | 2021-11-02 | Committer | Daniel Fuchs | 12 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-November/006213.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 545 |
-| **活跃仓库数** | 2 |
+**提名时统计**: 30+ changesets
+**贡献领域**: daniel

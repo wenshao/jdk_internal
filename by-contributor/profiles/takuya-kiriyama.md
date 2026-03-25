@@ -25,3 +25,6 @@
 | 日期 | 角色 | 提名者 | 投票数 | 链接 |
 |------|------|--------|--------|------|
 | 2022-10-11 | Committer | yano-masanori | 11 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2022-October/007053.html) |
+
+**提名时统计**: 16 patches
+**贡献领域**: JFR; HotSpot options; troubleshooting

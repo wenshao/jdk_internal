@@ -234,12 +234,6 @@ Jorn Vernee 在 Oracle Java Platform Group 工作：
 | 日期 | 角色 | 提名者 | 投票数 | 链接 |
 |------|------|--------|--------|------|
 | 2020-06-04 | Committer | Claes Redestad | 36 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2020-June/004351.html) |
-| 2021-04-19 | Reviewer | Claes Redestad | 26 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-April/005313.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 593 |
-| **活跃仓库数** | 2 |
+**提名时统计**: 133 commits (Panama) + 20+ JDK
+**贡献领域**: Panama; Memory Access API; java.lang.invoke

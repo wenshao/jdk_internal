@@ -164,12 +164,6 @@ Aggelos Biboudis 是 Oracle Java Platform Group 的核心成员，专注于 Java
 | 日期 | 角色 | 提名者 | 投票数 | 链接 |
 |------|------|--------|--------|------|
 | 2023-10-23 | Committer | Jan Lahoda | 20 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2023-October/008397.html) |
-| 2024-05-17 | Reviewer | Jan Lahoda | 17 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2024-May/008993.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 55 |
-| **活跃仓库数** | 2 |
+**提名时统计**: 30 changes
+**贡献领域**: Pattern matching; unnamed variables

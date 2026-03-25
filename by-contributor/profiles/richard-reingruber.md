@@ -120,10 +120,5 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Platfo
 |------|------|--------|--------|------|
 | 2020-11-09 | Reviewer | Lindenmaier, Goetz | 20 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2020-November/004911.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 220 |
-| **活跃仓库数** | 5 |
+**提名时统计**: 30 changes
+**贡献领域**: JVMTI; compiler; GC; s390/PPC ports

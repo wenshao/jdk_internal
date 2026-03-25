@@ -26,10 +26,5 @@
 |------|------|--------|--------|------|
 | 2022-08-16 | Reviewer | Philip Race | 9 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2022-August/006836.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 241 |
-| **活跃仓库数** | 2 |
+**提名时统计**: 35 contributions
+**贡献领域**: Java 2D; Metal pipeline; macOS

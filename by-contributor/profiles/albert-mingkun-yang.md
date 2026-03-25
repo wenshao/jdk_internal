@@ -313,12 +313,6 @@ Albert 的贡献特点:
 | 日期 | 角色 | 提名者 | 投票数 | 链接 |
 |------|------|--------|--------|------|
 | 2021-03-04 | Committer | Thomas Schatzl | 0 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-March/005162.html) |
-| 2021-08-04 | Reviewer | Thomas Schatzl | 20 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-August/005857.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 916 |
-| **活跃仓库数** | 2 |
+**提名时统计**: 60 contributions
+**贡献领域**: https://bugs.openjdk.java.net/browse/JDK-8259668

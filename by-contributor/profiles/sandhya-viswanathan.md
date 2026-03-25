@@ -194,3 +194,6 @@ Sandhya 领导了 Intel SVML (Short Vector Math Library) 与 OpenJDK 的集成�
 | 日期 | 角色 | 提名者 | 投票数 | 链接 |
 |------|------|--------|--------|------|
 | 2021-05-13 | Reviewer | Paul Sandoz | 13 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-May/005528.html) |
+
+**提名时统计**: 32 commits
+**贡献领域**: HotSpot x86 codegen; Vector API

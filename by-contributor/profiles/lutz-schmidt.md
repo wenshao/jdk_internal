@@ -118,10 +118,5 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 |------|------|--------|--------|------|
 | 2020-02-19 | Reviewer | Langer, Christoph | 11 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2020-February/003916.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 422 |
-| **活跃仓库数** | 6 |
+**提名时统计**: 50 commits
+**贡献领域**: JIT compiler; s390/PPC ports

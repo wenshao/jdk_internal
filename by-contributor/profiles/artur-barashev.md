@@ -60,3 +60,5 @@ Artur Barashev 贡献于 Java 安全功能：
 | 日期 | 角色 | 提名者 | 投票数 | 链接 |
 |------|------|--------|--------|------|
 | 2025-05-06 | Committer | Sean Mullan | 16 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2025-May/010032.html) |
+
+**提名时统计**: 15 changes

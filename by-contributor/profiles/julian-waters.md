@@ -119,10 +119,5 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 |------|------|--------|--------|------|
 | 2022-11-02 | Committer | erik.joelsson | 15 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2022-November/007114.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 229 |
-| **活跃仓库数** | 1 |
+**提名时统计**: 21 changes
+**贡献领域**: Build; code quality

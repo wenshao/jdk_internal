@@ -137,10 +137,5 @@ Commits follow the standard OpenJDK format: `JDK-NNNNNNN: <description>`. Messag
 |------|------|--------|--------|------|
 | 2021-09-14 | Reviewer | Thomas Schatzl | 10 | [CFV](https://mail.openjdk.org/pipermail/jdk-dev/2021-September/006041.html) |
 
-
-## 审查统计
-
-| 指标 | 值 |
-|------|-----|
-| **总审查次数** | 535 |
-| **活跃仓库数** | 2 |
+**提名时统计**: 35 changes
+**贡献领域**: G1; Parallel GC; remembered sets
