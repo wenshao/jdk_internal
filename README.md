@@ -2,7 +2,7 @@
 
 > 分析 OpenJDK 源码、Issue、PR，沉淀便于人类和 AI 阅读的文档
 
-> **🎉 最新动态**: 新增 JDK 26 GA 分析，覆盖 JDK 8-26 全版本文档
+> **数据规模**: 43,394 PRs / 25 仓库 / 22,560 PR 分析 / 387 JEP / 260 贡献者档案 / 21 组织 / 13 发行版
 
 ---
 
@@ -83,7 +83,48 @@
 
 ---
 
-## 3. 快速导航
+## 3. 贡献者与组织分析
+
+### 数据资产
+
+| 数据 | 规模 | 入口 |
+|------|------|------|
+| **PR 分析** | 22,560 文档 (P1-P4 含描述/文件/评论) | [by-pr/](by-pr/) |
+| **JEP 分析** | 387 文档 (含关联 PR) | [jeps/](jeps/) |
+| **贡献者档案** | 260 人 (含审查统计/CFV 晋升) | [by-contributor/profiles/](by-contributor/profiles/) |
+| **组织页面** | 21 个 (含 LTS 维护/审查网络) | [contributors/orgs/](contributors/orgs/) |
+| **发行版文档** | 17 个 (含维护团队/Docker 统计) | [distributions/](distributions/) |
+| **统计报告** | 23 个 (全量 43K 数据) | [contributors/stats/](contributors/stats/) |
+
+### 实验性项目
+
+| 项目 | 主导 | PRs | 目标 | 文档 |
+|------|------|-----|------|------|
+| [Valhalla](valhalla/contributors.md) | Oracle | 2,082 | Value Types | [分析](valhalla/contributors.md) |
+| [Panama](panama-foreign/contributors.md) | Oracle | 817 | FFM API | [分析](panama-foreign/contributors.md) |
+| [Babylon](babylon/contributors.md) | Oracle | 910 | GPU/Code Reflection | [分析](babylon/contributors.md) |
+| [Shenandoah](shenandoah/contributors.md) | Amazon | 482 | Low-pause GC | [分析](shenandoah/contributors.md) |
+| [CRaC](crac/contributors.md) | Azul | 251 | 检查点恢复 | [分析](crac/contributors.md) |
+| [Lilliput](lilliput/contributors.md) | Datadog | 147 | Compact Headers | [分析](lilliput/contributors.md) |
+| [JFX](jfx/contributors.md) | Oracle | 1,782 | JavaFX GUI | [分析](jfx/contributors.md) |
+| [JMC](jmc/contributors.md) | Datadog | 626 | Mission Control | [分析](jmc/contributors.md) |
+
+### 重点报告
+
+| 报告 | 说明 |
+|------|------|
+| [跨仓库全景](contributors/stats/cross-repo-overview.md) | 25 仓库 43,394 PRs 完整分析 |
+| [组织间审查矩阵](contributors/stats/cross-org-collaboration.md) | 谁审查谁的代码 |
+| [Top 50 贡献者](contributors/stats/top50.md) | 全仓库排名 (GoeLin 3,927 居首) |
+| [LTS 维护分析](contributors/stats/lts-maintenance.md) | SAP 5,264 PRs 主导 LTS 维护 |
+| [角色晋升网络](contributors/stats/role-promotions.md) | 193 CFV 提名 + 投票者分析 |
+| [JEP 领导力](contributors/stats/jep-tracking.md) | 500 JEPs / 161 owners |
+| [Docker 下载量](distributions/docker-popularity.md) | Temurin 8.5 亿次居首 |
+| [GitHub 社区热度](distributions/github-popularity.md) | Dragonwell 4,319 stars 居首 |
+
+---
+
+## 4. 快速导航
 
 ### 按浏览方式
 
@@ -214,6 +255,11 @@ jdk_internal/
 ├── contributors/          # 贡献者统计
 │   ├── orgs/              # 组织页面
 │   └── stats/             # 统计数据
+├── distributions/          # JDK 发行版分析 (Docker 统计/维护团队)
+├── valhalla/              # Valhalla 项目数据 (2,082 PRs)
+├── shenandoah/            # Shenandoah 项目数据 (482 PRs)
+├── jfx/                   # JavaFX 项目数据 (1,782 PRs)
+├── jmc/                   # JMC 项目数据 (626 PRs)
 ├── modules/               # 模块/组件分析
 ├── scripts/               # 数据获取脚本
 └── talks/                 # 技术演讲 (JVMLS 等)
@@ -221,7 +267,7 @@ jdk_internal/
 
 ---
 
-## 4. ⭐ 精选 PR 分析
+## 5. 精选 PR 分析
 
 ### 性能优化系列
 
@@ -238,7 +284,7 @@ jdk_internal/
 
 ---
 
-## 5. 数据来源
+## 6. 数据来源
 
 - **GitHub PRs**: [openjdk/jdk](https://github.com/openjdk/jdk) - 代码变更和讨论
 - **JBS Issues**: [bugs.openjdk.org](https://bugs.openjdk.org/) - 问题追踪
@@ -248,10 +294,11 @@ jdk_internal/
 
 ---
 
-## 6. 更新日志
+## 7. 更新日志
 
 | 日期 | 更新内容 |
 |------|----------|
+| 2026-03-25 | 📊 **重大更新**: 43,394 PRs/25 仓库完整采集, 22,560 PR 深度分析, 387 JEP 文档, 72,789 审查记录, CFV 投票网络, Docker/GitHub 统计 |
 | 2026-03-22 | 📊 统计更新: 856 文档 / 17,505+ 链接，一致性扫描修正 |
 | 2026-03-21 | 📊 统计更新: 733 文档 / 17,505 链接，完善目录结构文档 |
 | 2026-03-20 | ✨ **重大更新**: 28 个主题文档增强，新增 4215+ 行 PR 分析和最佳实践 |
