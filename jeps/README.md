@@ -12,7 +12,7 @@
 | **Delivered/Completed** | 382 |
 | **分析文档** | 395 |
 | **关联实现 PR** | 130+ |
-| **JEP 数据库** | [jep-database.md](jep-database.md) |
+| **JEP 数据库** | [database.md](database.md) |
 
 ## 按主题浏览
 
