@@ -69,36 +69,36 @@
 
 | Bug ID | 标题 | Author | 组织 | 优先级 | backport 到 |
 |--------|------|--------|------|--------|-------------|
-| [8375063](../by-pr/8375/8375063.md) | Update Libpng to 1.6.54 | jayathirthrao | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 25u, JDK 8u |
-| [8369282](../by-pr/8369/8369282.md) | Distrust TLS server certificates anchored by Chung | mcpowers | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 25u, JDK 8u |
-| [8373476](../by-pr/8373/8373476.md) | (tz) Update Timezone Data to 2025c | johnyjose30 |  | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 25u, JDK 8u |
-| [8377526](../by-pr/8377/8377526.md) | Update Libpng to 1.6.55 | jayathirthrao | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 25u, JDK 8u |
-| [8301310](../by-pr/8301/8301310.md) | The SendRawSysexMessage test may cause a JVM crash | AlecJY |  | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8318410](../by-pr/8318/8318410.md) | jdk/java/lang/instrument/BootClassPath/BootClassPa | yukikimmura |  | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8322725](../by-pr/8322/8322725.md) | (tz) Update Timezone Data to 2023d | johnyjose30 |  | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8323640](../by-pr/8323/8323640.md) | [TESTBUG]testMemoryFailCount in jdk/internal/platf | sendaoYan | Alibaba | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8321480](../by-pr/8321/8321480.md) | ISO 4217 Amendment 176 Update | justin-curtis-lu | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8325096](../by-pr/8325/8325096.md) | Test java/security/cert/CertPathBuilder/akiExt/AKI | coffeys | Oracle | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8325150](../by-pr/8325/8325150.md) | (tz) Update Timezone Data to 2024a | johnyjose30 |  | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8318039](../by-pr/8318/8318039.md) | GHA: Bump macOS and Xcode versions | vidmik | Oracle | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8324723](../by-pr/8324/8324723.md) | GHA: Upgrade some actions to avoid deprecated Node | shipilev | Amazon | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8326529](../by-pr/8326/8326529.md) | JFR: Test for CompilerCompile events fails due to  | roberttoyonaga |  | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8328825](../by-pr/8328/8328825.md) | Google CAInterop test failures | rhalade | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8305931](../by-pr/8305/8305931.md) | jdk/jfr/jcmd/TestJcmdDumpPathToGCRoots.java failed | egahlin | Oracle | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8326521](../by-pr/8326/8326521.md) | JFR: CompilerPhase event test fails on windows 32  | roberttoyonaga |  | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8316138](../by-pr/8316/8316138.md) | Add GlobalSign 2 TLS root certificates | rhalade | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8316328](../by-pr/8316/8316328.md) | Test jdk/jfr/event/oldobject/TestSanityDefault.jav | mrserb | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8311666](../by-pr/8311/8311666.md) | Disabled tests in test/jdk/sun/java2d/marlin | cushon | Google | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8305072](../by-pr/8305/8305072.md) | Win32ShellFolder2.compareTo is inconsistent | aivanov-jdk | Oracle | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8333724](../by-pr/8333/8333724.md) | Problem list security/infra/java/security/cert/Cer | RealCLanger | SAP | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8334653](../by-pr/8334/8334653.md) | ISO 4217 Amendment 177 Update | justin-curtis-lu | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8336928](../by-pr/8336/8336928.md) | GHA: Bundle artifacts removal broken | zzambers |  | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8316193](../by-pr/8316/8316193.md) | jdk/jfr/event/oldobject/TestListenerLeak.java java | egahlin | Oracle | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8338402](../by-pr/8338/8338402.md) | GHA: some of bundles may not get removed | zzambers |  | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8339644](../by-pr/8339/8339644.md) | Improve parsing of Day/Month in tzdata rules | naotoj | Oracle | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8340815](../by-pr/8340/8340815.md) | Add SECURITY.md file | gdams |  | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8340387](../by-pr/8340/8340387.md) | Update OS detection code to recognize Windows Serv | MBaesken | SAP | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
-| [8335912](../by-pr/8335/8335912.md) | Add an operation mode to the jar command when extr | slowhog | Oracle | P5 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8375063](../../by-pr/8375/8375063.md) | Update Libpng to 1.6.54 | jayathirthrao | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 25u, JDK 8u |
+| [8369282](../../by-pr/8369/8369282.md) | Distrust TLS server certificates anchored by Chung | mcpowers | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 25u, JDK 8u |
+| [8373476](../../by-pr/8373/8373476.md) | (tz) Update Timezone Data to 2025c | johnyjose30 |  | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 25u, JDK 8u |
+| [8377526](../../by-pr/8377/8377526.md) | Update Libpng to 1.6.55 | jayathirthrao | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 25u, JDK 8u |
+| [8301310](../../by-pr/8301/8301310.md) | The SendRawSysexMessage test may cause a JVM crash | AlecJY |  | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8318410](../../by-pr/8318/8318410.md) | jdk/java/lang/instrument/BootClassPath/BootClassPa | yukikimmura |  | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8322725](../../by-pr/8322/8322725.md) | (tz) Update Timezone Data to 2023d | johnyjose30 |  | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8323640](../../by-pr/8323/8323640.md) | [TESTBUG]testMemoryFailCount in jdk/internal/platf | sendaoYan | Alibaba | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8321480](../../by-pr/8321/8321480.md) | ISO 4217 Amendment 176 Update | justin-curtis-lu | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8325096](../../by-pr/8325/8325096.md) | Test java/security/cert/CertPathBuilder/akiExt/AKI | coffeys | Oracle | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8325150](../../by-pr/8325/8325150.md) | (tz) Update Timezone Data to 2024a | johnyjose30 |  | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8318039](../../by-pr/8318/8318039.md) | GHA: Bump macOS and Xcode versions | vidmik | Oracle | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8324723](../../by-pr/8324/8324723.md) | GHA: Upgrade some actions to avoid deprecated Node | shipilev | Amazon | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8326529](../../by-pr/8326/8326529.md) | JFR: Test for CompilerCompile events fails due to  | roberttoyonaga |  | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8328825](../../by-pr/8328/8328825.md) | Google CAInterop test failures | rhalade | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8305931](../../by-pr/8305/8305931.md) | jdk/jfr/jcmd/TestJcmdDumpPathToGCRoots.java failed | egahlin | Oracle | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8326521](../../by-pr/8326/8326521.md) | JFR: CompilerPhase event test fails on windows 32  | roberttoyonaga |  | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8316138](../../by-pr/8316/8316138.md) | Add GlobalSign 2 TLS root certificates | rhalade | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8316328](../../by-pr/8316/8316328.md) | Test jdk/jfr/event/oldobject/TestSanityDefault.jav | mrserb | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8311666](../../by-pr/8311/8311666.md) | Disabled tests in test/jdk/sun/java2d/marlin | cushon | Google | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8305072](../../by-pr/8305/8305072.md) | Win32ShellFolder2.compareTo is inconsistent | aivanov-jdk | Oracle | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8333724](../../by-pr/8333/8333724.md) | Problem list security/infra/java/security/cert/Cer | RealCLanger | SAP | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8334653](../../by-pr/8334/8334653.md) | ISO 4217 Amendment 177 Update | justin-curtis-lu | Oracle | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8336928](../../by-pr/8336/8336928.md) | GHA: Bundle artifacts removal broken | zzambers |  | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8316193](../../by-pr/8316/8316193.md) | jdk/jfr/event/oldobject/TestListenerLeak.java java | egahlin | Oracle | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8338402](../../by-pr/8338/8338402.md) | GHA: some of bundles may not get removed | zzambers |  | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8339644](../../by-pr/8339/8339644.md) | Improve parsing of Day/Month in tzdata rules | naotoj | Oracle | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8340815](../../by-pr/8340/8340815.md) | Add SECURITY.md file | gdams |  | P4 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8340387](../../by-pr/8340/8340387.md) | Update OS detection code to recognize Windows Serv | MBaesken | SAP | P3 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
+| [8335912](../../by-pr/8335/8335912.md) | Add an operation mode to the jar command when extr | slowhog | Oracle | P5 | JDK 11u, JDK 17u, JDK 21u, JDK 8u |
 
 ---
 

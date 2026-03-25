@@ -75,26 +75,26 @@
 
 | Bug ID | 标题 | Author | 组织 | 优先级 | 版本 |
 |--------|------|--------|------|--------|------|
-| [8352728](../by-pr/8352/8352728.md) | InternalError loading java.security due t | franferrax |  | P3 | JDK 26 |
-| [8352728](../by-pr/8352/8352728.md) | InternalError loading java.security due t | franferrax |  | P3 | JDK 25 |
-| [8369150](../by-pr/8369/8369150.md) | NMethodRelocationTest fails when JVMTI ev | chadrako | Amazon | P3 | JDK 26 |
-| [8371603](../by-pr/8371/8371603.md) | C2: Missing Ideal optimizations for load  | XiaohongGong | ARM | P3 | JDK 26 |
-| [8371603](../by-pr/8371/8371603.md) | C2: Missing Ideal optimizations for load  | XiaohongGong | ARM | P3 | JDK 26 |
-| [8371046](../by-pr/8371/8371046.md) | Segfault in compiler/whitebox/StressNMeth | chadrako | Amazon | P4 | JDK 26 |
-| [8372757](../by-pr/8372/8372757.md) | MacOS; Accessibility: Crash in [MenuAcces | azuev-java | Oracle | P3 | JDK 26 |
-| [8372756](../by-pr/8372/8372756.md) | Mouse additional buttons and horizontal s | azvegint | Oracle | P3 | JDK 26 |
-| [8373046](../by-pr/8373/8373046.md) | Method::get_c2i_unverified_entry() and ge | ashu-mehra | IBM | P4 | JDK 26 |
-| [8371306](../by-pr/8371/8371306.md) | JDK-8367002 behavior might not match exis | dean-long | Oracle | P3 | JDK 26 |
-| [8372703](../by-pr/8372/8372703.md) | Test compiler/arguments/TestCodeEntryAlig | vpaprotsk | Intel | P3 | JDK 26 |
-| [8372862](../by-pr/8372/8372862.md) | AArch64: Fix GetAndSet-acquire costs afte | shipilev | Amazon | P4 | JDK 26 |
-| [8371964](../by-pr/8371/8371964.md) | C2 compilation asserts with "Unexpected l | merykitty | Oracle | P2 | JDK 26 |
-| [8370766](../by-pr/8370/8370766.md) | JVM crashes when running compiler/excepti | dean-long | Oracle | P3 | JDK 26 |
-| [8372451](../by-pr/8372/8372451.md) | C2 SuperWord: "endless loop" assert. Need | eme64 | Oracle | P3 | JDK 26 |
-| [8371464](../by-pr/8371/8371464.md) | C2: assert(no_dead_loop) failed: dead loo | rwestrel | Red Hat | P3 | JDK 26 |
-| [8372708](../by-pr/8372/8372708.md) | Javadoc ignores "-locale" and uses defaul | hns | Oracle | P3 | JDK 26 |
-| [8372461](../by-pr/8372/8372461.md) | [IR Framework] Multiple test failures aft | chhagedorn | Oracle | P3 | JDK 26 |
-| [8371740](../by-pr/8371/8371740.md) | LinkedTransferQueue.poll() returns null  | viktorklang-ora | Oracle | P3 | JDK 26 |
-| [8366888](../by-pr/8366/8366888.md) | C2: incorrect assertion predicate with sh | rwestrel | Red Hat | P3 | JDK 26 |
+| [8352728](../../by-pr/8352/8352728.md) | InternalError loading java.security due t | franferrax |  | P3 | JDK 26 |
+| [8352728](../../by-pr/8352/8352728.md) | InternalError loading java.security due t | franferrax |  | P3 | JDK 25 |
+| [8369150](../../by-pr/8369/8369150.md) | NMethodRelocationTest fails when JVMTI ev | chadrako | Amazon | P3 | JDK 26 |
+| [8371603](../../by-pr/8371/8371603.md) | C2: Missing Ideal optimizations for load  | XiaohongGong | ARM | P3 | JDK 26 |
+| [8371603](../../by-pr/8371/8371603.md) | C2: Missing Ideal optimizations for load  | XiaohongGong | ARM | P3 | JDK 26 |
+| [8371046](../../by-pr/8371/8371046.md) | Segfault in compiler/whitebox/StressNMeth | chadrako | Amazon | P4 | JDK 26 |
+| [8372757](../../by-pr/8372/8372757.md) | MacOS; Accessibility: Crash in [MenuAcces | azuev-java | Oracle | P3 | JDK 26 |
+| [8372756](../../by-pr/8372/8372756.md) | Mouse additional buttons and horizontal s | azvegint | Oracle | P3 | JDK 26 |
+| [8373046](../../by-pr/8373/8373046.md) | Method::get_c2i_unverified_entry() and ge | ashu-mehra | IBM | P4 | JDK 26 |
+| [8371306](../../by-pr/8371/8371306.md) | JDK-8367002 behavior might not match exis | dean-long | Oracle | P3 | JDK 26 |
+| [8372703](../../by-pr/8372/8372703.md) | Test compiler/arguments/TestCodeEntryAlig | vpaprotsk | Intel | P3 | JDK 26 |
+| [8372862](../../by-pr/8372/8372862.md) | AArch64: Fix GetAndSet-acquire costs afte | shipilev | Amazon | P4 | JDK 26 |
+| [8371964](../../by-pr/8371/8371964.md) | C2 compilation asserts with "Unexpected l | merykitty | Oracle | P2 | JDK 26 |
+| [8370766](../../by-pr/8370/8370766.md) | JVM crashes when running compiler/excepti | dean-long | Oracle | P3 | JDK 26 |
+| [8372451](../../by-pr/8372/8372451.md) | C2 SuperWord: "endless loop" assert. Need | eme64 | Oracle | P3 | JDK 26 |
+| [8371464](../../by-pr/8371/8371464.md) | C2: assert(no_dead_loop) failed: dead loo | rwestrel | Red Hat | P3 | JDK 26 |
+| [8372708](../../by-pr/8372/8372708.md) | Javadoc ignores "-locale" and uses defaul | hns | Oracle | P3 | JDK 26 |
+| [8372461](../../by-pr/8372/8372461.md) | [IR Framework] Multiple test failures aft | chhagedorn | Oracle | P3 | JDK 26 |
+| [8371740](../../by-pr/8371/8371740.md) | LinkedTransferQueue.poll() returns null  | viktorklang-ora | Oracle | P3 | JDK 26 |
+| [8366888](../../by-pr/8366/8366888.md) | C2: incorrect assertion predicate with sh | rwestrel | Red Hat | P3 | JDK 26 |
 
 ---
 
