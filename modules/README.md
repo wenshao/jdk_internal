@@ -8,7 +8,7 @@
 
 JDK 源码 `src/` 目录下共有 **72 个顶层目录**（含 `hotspot`、`demo`、`utils`），其中约 **68 个为 Java 模块**（以 `java.*` 或 `jdk.*` 命名）。
 
-本目录分析最重要的核心模块与 HotSpot 组件，共 **13 篇分析文档**。
+本目录分析最重要的核心模块与 HotSpot 组件，共 **16 篇分析文档**。
 
 ---
 
@@ -32,6 +32,9 @@ JDK 源码 `src/` 目录下共有 **72 个顶层目录**（含 `hotspot`、`demo
 | [java.net.http.md](java.net.http.md) | java.net.http — HTTP Client | - | `src/java.net.http/` |
 | [java.xml.md](java.xml.md) | java.xml — XML 处理 (JAXP) | - | `src/java.xml/` |
 | [jdk.compiler.md](jdk.compiler.md) | jdk.compiler — javac 编译器 | - | `src/jdk.compiler/` |
+| [jdk.jfr.md](jdk.jfr.md) | jdk.jfr — JDK Flight Recorder | - | `src/jdk.jfr/` |
+| [jdk.jlink.md](jdk.jlink.md) | jdk.jlink — Java Linker (自定义运行时) | - | `src/jdk.jlink/` |
+| [java.instrument.md](java.instrument.md) | java.instrument — Java Agent / Instrumentation API | - | `src/java.instrument/` |
 
 ### HotSpot JVM 组件
 
@@ -53,7 +56,7 @@ JDK 源码 `src/` 目录下共有 **72 个顶层目录**（含 `hotspot`、`demo
 | `java.compiler` | javax.lang.model 编译器接口 | - |
 | `java.datatransfer` | 数据传输 (剪贴板) | - |
 | `java.desktop` | AWT/Swing/2D/Accessibility | - |
-| `java.instrument` | Java Agent / Instrumentation | - |
+| `java.instrument` | Java Agent / Instrumentation | [已分析](java.instrument.md) |
 | `java.logging` | JUL 日志 | [已分析](java.logging.md) |
 | `java.management` | JMX 管理 | [已分析](java.management.md) |
 | `java.management.rmi` | JMX RMI 连接器 | - |
@@ -103,8 +106,8 @@ JDK 源码 `src/` 目录下共有 **72 个顶层目录**（含 `hotspot`、`demo
 | `jdk.jdeps` | jdeps 依赖分析 | - |
 | `jdk.jdi` | JDI (调试接口) | - |
 | `jdk.jdwp.agent` | JDWP 调试协议代理 | - |
-| `jdk.jfr` | JDK Flight Recorder | - |
-| `jdk.jlink` | jlink 自定义运行时 | - |
+| `jdk.jfr` | JDK Flight Recorder | [已分析](jdk.jfr.md) |
+| `jdk.jlink` | jlink 自定义运行时 | [已分析](jdk.jlink.md) |
 | `jdk.jpackage` | jpackage 打包工具 | - |
 | `jdk.jshell` | JShell REPL | - |
 | `jdk.jstatd` | jstatd 远程统计 | - |

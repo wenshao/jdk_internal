@@ -130,3 +130,46 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) {
 - [JDK 21 发布说明](https://openjdk.org/projects/jdk/21/)
 - [虚拟线程指南](https://docs.oracle.com/en/java/javase/21/core/virtual-threads.html)
 - [从 JDK 17 迁移](https://docs.oracle.com/en/java/javase/21/migrate/)
+
+### 深入分析
+
+| 主题 | 链接 |
+|------|------|
+| Virtual Thread 实现 | [→](/deep-dive/virtual-thread-implementation.md) |
+| Generational ZGC 实现 | [→](/deep-dive/jep-439-implementation.md) |
+| FFM API (Preview2) | [→](/jeps/ffi/jep-442.md) |
+
+### 相关主题
+
+| 主题 | 链接 |
+|------|------|
+| 虚拟线程 | [并发编程](/by-topic/concurrency/concurrency/) |
+| GC 演进 | [GC 时间线](/by-topic/core/gc/) |
+| Pattern Matching | [模式匹配](/by-topic/core/patterns/) |
+| Sequenced Collections | [集合 API](/by-topic/api/collections/) |
+| String 处理 | [String 优化](/by-topic/language/string/) |
+
+### 实战案例
+
+| 案例 | 关键词 | 链接 |
+|------|-------|------|
+| 虚拟线程迁移 | Spring Boot→VT | [→](/cases/virtual-threads-migration.md) |
+| VT Pinning 排查 | synchronized pinning | [→](/cases/virtual-thread-pinning.md) |
+| GC 调优实战 | G1→Gen ZGC | [→](/cases/gc-tuning-case.md) |
+| ZGC 调优 | G1→Gen ZGC | [→](/cases/zgc-tuning.md) |
+| Full GC 抖动 | G1 Full GC | [→](/cases/gc-fullgc-jitter.md) |
+| 内存泄漏诊断 | JFR+NMT+MAT | [→](/cases/memory-leak-diagnosis.md) |
+| 死锁诊断 | Lock ordering | [→](/cases/deadlock-diagnosis.md) |
+| JIT 编译回退 | C2 too big | [→](/cases/jit-compilation-fallback.md) |
+
+### 相关 JEP
+
+| JEP | 链接 |
+|-----|------|
+| JEP 444: Virtual Threads | [→](/jeps/concurrency/jep-444.md) |
+| JEP 439: Generational ZGC | [→](/jeps/gc/jep-439.md) |
+| JEP 431: Sequenced Collections | [→](/jeps/language/jep-431.md) |
+| JEP 440: Record Patterns | [→](/jeps/language/jep-440.md) |
+| JEP 441: Pattern Matching switch | [→](/jeps/language/jep-441.md) |
+| JEP 442: FFM API (Preview2) | [→](/jeps/ffi/jep-442.md) |
+| JEP 453: Structured Concurrency | [→](/jeps/concurrency/jep-453.md) |
