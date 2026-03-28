@@ -149,7 +149,7 @@ java -Djdk.tracePinnedThreads=full -jar app.jar
 | Profile before optimizing ("measure, don't guess") | Optimize based on intuition alone |
 | Use JMH for micro-benchmarks | Write hand-rolled micro-benchmarks without JMH |
 | Enable CDS for faster startup (`-Xshare:on`) | Ignore startup time for CLI tools and serverless |
-| Use `StringBuilder` for string concatenation in loops (relevant for JDK 8; JDK 9+ uses `StringConcatFactory` but complex loop patterns still benefit) | Use `+` operator in tight loops expecting high throughput |
+| Use `StringBuilder` for string concatenation **in loops** (applies to all JDK versions; `StringConcatFactory` in JDK 9+ only optimizes single-expression concatenation, not loop accumulation) | Use `+=` for string concatenation in loops expecting high throughput |
 | Prefer `ArrayList` over `LinkedList` in most cases | Use `LinkedList` for indexed access patterns |
 | Warm up JIT before measuring performance | Benchmark in the first few seconds of JVM execution |
 | Use `ConcurrentHashMap` over `Collections.synchronizedMap` | Use `Hashtable` (legacy, fully synchronized) |
@@ -195,7 +195,7 @@ java -Djdk.tracePinnedThreads=full -jar app.jar
 | JDK 8 -> 11 | Modules, removed APIs, javax -> jakarta | High |
 | JDK 11 -> 17 | Sealed classes, pattern matching preview, SecurityManager deprecation | Medium |
 | JDK 17 -> 21 | Virtual Threads, pattern matching final, Generational ZGC | Low-Medium |
-| JDK 21 -> 25 | Scoped Values final, string templates (preview) | Low |
+| JDK 21 -> 25 | Scoped Values final (JEP 506), Primitive Types in Patterns (JEP 455), Flexible Constructor Bodies (JEP 482) | Low |
 | JDK 25 -> 26 | HTTP/3 (JEP 517, final), Value Classes (JEP 401, preview) | Low |
 
 ### 6.3 Essential Migration Tools
