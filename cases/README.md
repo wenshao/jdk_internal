@@ -18,28 +18,30 @@
 
 | 案例 | 场景 | JDK 版本 | 关键工具 | 难度 |
 |------|------|----------|----------|------|
-| GC 停顿分析 *(计划中)* | Full GC 频繁导致延迟抖动 | JDK 17 | JFR, GC 日志, GCViewer | 中 |
-| ZGC 调优 *(计划中)* | 从 G1 迁移到 ZGC 的调优过程 | JDK 21 | JFR, -Xlog:gc | 中 |
+| [GC 调优实战](gc-tuning-case.md) | G1→ZGC 迁移, P99 200ms→5ms | JDK 21 | GC 日志, JFR, ZGC | 中高 |
+| [GC Full GC 抖动](gc-fullgc-jitter.md) | Full GC 频繁导致延迟抖动 | JDK 17 | JFR, GC 日志, GCViewer | 中 |
+| [ZGC 调优实战](zgc-tuning.md) | 从 G1 迁移到 Generational ZGC | JDK 21 | JFR, -Xlog:gc | 中 |
 
 ### 线程问题
 
 | 案例 | 场景 | JDK 版本 | 关键工具 | 难度 |
 |------|------|----------|----------|------|
-| 死锁诊断 *(计划中)* | 多线程竞争导致服务挂起 | JDK 17 | jstack, JFR, ThreadMXBean | 中 |
-| 虚拟线程 pinning *(计划中)* | Virtual Thread 阻塞平台线程 | JDK 21 | JFR, -Djdk.tracePinnedThreads | 中 |
+| [死锁诊断](deadlock-diagnosis.md) | 多线程竞争导致服务挂起 | JDK 21 | jstack, JFR, ThreadMXBean | 中 |
+| [虚拟线程迁移](virtual-threads-migration.md) | Spring Boot 线程池→虚拟线程 | JDK 25 | JFR, Semaphore, ReentrantLock | 中高 |
+| [虚拟线程 Pinning](virtual-thread-pinning.md) | Virtual Thread 阻塞 carrier thread | JDK 21 | JFR, jcmd Thread.vthread_scheduler | 中 |
 
 ### 性能问题
 
 | 案例 | 场景 | JDK 版本 | 关键工具 | 难度 |
 |------|------|----------|----------|------|
-| 启动时间优化 *(计划中)* | 微服务冷启动慢 | JDK 21 | AppCDS, JFR, async-profiler | 中 |
-| JIT 编译回退 *(计划中)* | C2 编译失败导致性能下降 | JDK 17 | JFR, -XX:+PrintCompilation | 高 |
+| [启动时间优化](startup-optimization.md) | 微服务冷启动慢 | JDK 26 | AppCDS, AOT Cache, JFR | 中 |
+| [JIT 编译回退](jit-compilation-fallback.md) | C2 编译失败导致性能下降 | JDK 21 | async-profiler, -XX:+PrintCompilation | 高 |
 
 ### 类加载问题
 
 | 案例 | 场景 | JDK 版本 | 关键工具 | 难度 |
 |------|------|----------|----------|------|
-| Metaspace OOM *(计划中)* | 动态类加载导致 Metaspace 溢出 | JDK 11 | NMT, jcmd, JFR | 中 |
+| [Metaspace OOM](metaspace-oom.md) | 动态类加载导致 Metaspace 溢出 | JDK 17 | NMT, jcmd, JFR | 中 |
 | 模块化迁移 *(计划中)* | JPMS 迁移中的反射访问问题 | JDK 17 | --add-opens, jdeps | 中 |
 
 ---

@@ -139,6 +139,11 @@
 | **技术演讲** | JVMLS 等会议演讲 | [浏览演讲](talks/) |
 | **实战案例** | GC 调优、虚拟线程迁移等 | [浏览案例](cases/) |
 | **源码深入** | JEP 实现源码分析 | [浏览深入分析](deep-dive/) |
+| **Issue 分析** | 性能/稳定性问题深度分析 | [浏览 Issue](issues/) |
+| **性能基准** | Benchmark 方法论与结果 | [浏览基准](benchmarks/) |
+| **故障排查** | JVM 问题诊断与修复 | [浏览排查指南](troubleshooting/) |
+| **最佳实践** | 生产环境实践建议 | [浏览最佳实践](best-practices/) |
+| **技术对比** | 锁/CDS/Profiler/IO 对比 | [浏览对比](guides/comparisons/) |
 
 ### 按角色
 
@@ -244,13 +249,18 @@ jdk_internal/
 │
 ├── cases/                 # 实战案例 (GC 调优/虚拟线程/启动优化)
 ├── deep-dive/             # 源码深入分析 (JEP 实现细节)
+├── issues/                # Issue 深度分析 (性能/稳定性)
+├── benchmarks/            # 性能基准测试方法论
+├── troubleshooting/       # 故障排查指南
+├── best-practices/        # 最佳实践
 │
 ├── guides/                # 通用指南
 │   ├── learning-path.md   # 学习路径
 │   ├── migration-guide.md # 迁移指南
 │   ├── faq.md             # 常见问题
 │   ├── cheat-sheet.md     # 速查表
-│   └── jdk-distributions.md # JDK 发行版
+│   ├── jdk-distributions.md # JDK 发行版
+│   └── comparisons/       # 技术对比 (锁/CDS/Profiler/IO)
 │
 ├── contributors/          # 贡献者统计
 │   ├── orgs/              # 组织页面
@@ -298,6 +308,7 @@ jdk_internal/
 
 | 日期 | 更新内容 |
 |------|----------|
+| 2026-03-28 | ✨ 新增 issues/ 深度分析 (5 篇)、benchmarks/、troubleshooting/、best-practices/ 目录，4 篇技术对比指南，3 篇模块分析，3 篇 JEP 深度分析，6 篇案例研究；清理 prs/ 过时目录 |
 | 2026-03-25 | 📊 **重大更新**: 43,394 PRs/25 仓库完整采集, 22,560 PR 深度分析, 387 JEP 文档, 72,789 审查记录, CFV 投票网络, Docker/GitHub 统计 |
 | 2026-03-22 | 📊 统计更新: 856 文档 / 17,505+ 链接，一致性扫描修正 |
 | 2026-03-21 | 📊 统计更新: 733 文档 / 17,505 链接，完善目录结构文档 |
@@ -316,6 +327,6 @@ jdk_internal/
 
 > **项目状态**: 持续更新中
 >
-> **最后更新**: 2026-03-22
+> **最后更新**: 2026-03-28
 >
 > **文档统计**: 1016 个文档文件 | 17,505+ 个链接 | 覆盖 JDK 8/11/17/21/25/26

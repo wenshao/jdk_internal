@@ -1,1 +1,6 @@
 QWEN.md
+# Auto-generated cache files from data scripts
+.pr-cache.json
+.reviewer-cache.json
+.cfv-cache.json
+__pycache__/

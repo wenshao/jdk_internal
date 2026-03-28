@@ -1,8 +1,8 @@
 # JDK 内部文档分析仪表板
 
-> **最后更新**: 2026-03-23 | **数据状态**: 实时更新 | [刷新数据](#)
+> **最后更新**: 2026-03-28 | **数据状态**: 实时更新 | [刷新数据](#)
 
-> **最新动态**: ✨ 28 个主题文档增强完成，新增 4215+ 行 PR 分析和最佳实践内容
+> **最新动态**: ✨ 5 个 issue 分析文档新增、3 个新目录（benchmarks/troubleshooting/best-practices）、6 个 case study 补全、模块文档扩展
 
 ---
 ## 目录
@@ -26,12 +26,15 @@
 
 | 指标 | 值 | 趋势 | 状态 |
 |------|-----|------|------|
-| **总文档文件** | 826+ 个 | 📈 +18% | ✅ 健康 |
-| **总链接数** | 17,505+ 个 | 📈 +8% | ⚠️ 需关注 |
-| **损坏链接** | ~45 个 (实际) | 📉 -97% | ✅ 良好 |
-| **覆盖 JDK 版本** | 8/11/17/21/25/26 | 📈 新增 2 个 | ✅ 良好 |
-| **贡献者档案** | 50+ 个 | 📈 +15% | ✅ 良好 |
-| **自动化脚本** | 15 个 | 📈 +3 个 | ✅ 优秀 |
+| **总 Integrated PRs** | 43,394 | 📈 | ✅ 健康 |
+| **覆盖仓库** | 25 个 | 📈 | ✅ 良好 |
+| **唯一贡献者** | 898 人 | 📈 | ✅ 良好 |
+| **贡献者 Profiles** | 260 个 | 📈 | ✅ 良好 |
+| **组织页面** | 22 个 | 📈 | ✅ 良好 |
+| **覆盖 JDK 版本** | 8/11/17/21/25/26 | 📈 | ✅ 良好 |
+| **JEP 分析** | 397 个 | 📈 | ✅ 优秀 |
+| **PR 分析文档** | 22,560 个 | 📈 | ✅ 优秀 |
+| **自动化脚本** | 49 个 | 📈 | ✅ 优秀 |
 
 ---
 
@@ -98,11 +101,10 @@ JDK 8 (2014) → JDK 11 (2018) → JDK 17 (2021) → JDK 21 (2023) → JDK 25 (2
 
 | 指标 | 值 |
 |------|-----|
-| **总贡献者** | 50+ |
-| **组织覆盖** | 15+ |
-| **Top 5 组织** | Oracle, Red Hat, Amazon, Microsoft, SAP |
-| **平均 PR 数** | 97 |
-| **最高产贡献者** | [Shaojin Wen](by-contributor/profiles/shaojin-wen.md) ([Alibaba](contributors/orgs/alibaba.md)) |
+| **总贡献者** | 898 (Profiles: 260) |
+| **组织覆盖** | 22 |
+| **Top 5 组织** | Oracle, Red Hat, Amazon, Alibaba, SAP |
+| **最高产贡献者** | [Aleksey Shipilev](by-contributor/profiles/aleksey-shipilev.md) (803+ PRs, [Amazon](contributors/orgs/amazon.md)) |
 
 ### 组织分布
 
@@ -162,7 +164,7 @@ gantt
 GitHub API → PR 数据 → 分类分析 → 文档生成 → 链接验证 → 仪表板更新
 ```
 
-**下次计划运行**: 2026-03-21 02:00 UTC
+**下次计划运行**: 2026-04-01 02:00 UTC
 
 ---
 
@@ -186,7 +188,10 @@ GitHub API → PR 数据 → 分类分析 → 文档生成 → 链接验证 → 
 - [x] 完善 JDK 25 文档：breaking-changes、known-issues、performance、3 篇 deep-dive
 - [x] 完善 JDK 26 文档：breaking-changes、known-issues
 - [x] 清理占位符内容 (Google/Microsoft org pages, contributor index)
-- [ ] 修复剩余 ~45 个无意断链
+- [x] 修复剩余 ~45 个无意断链
+- [x] 补全 5 个 issue 分析文档
+- [x] 新增 6 个 case study 文档
+- [ ] 扩展模块文档（jdk.jfr, jdk.jlink 等）
 - [ ] 添加更多贡献者档案
 
 ---
@@ -268,6 +273,16 @@ GitHub API → PR 数据 → 分类分析 → 文档生成 → 链接验证 → 
 ---
 
 ## 11. 更新日志
+
+### 2026-03-28
+- ✅ 修复 dashboard 数据（更新为 43,394 PRs / 898 贡献者 / 260 Profiles）
+- ✅ 补全 5 个 issue 分析文档（Virtual Thread Starvation, CUBIC, NUMA 等）
+- ✅ 新增 6 个 case study（GC Full GC 抖动、ZGC 调优、死锁诊断等）
+- ✅ 新增 3 个模块文档（jdk.jfr, jdk.jlink, java.instrument）
+- ✅ 新增 3 个 deep-dive（JEP 439 Gen ZGC, JEP 454 FFM, JEP 401 Value Classes）
+- ✅ 新增 4 个对比指南（Lock 对比、CDS vs AOT、JFR vs async-profiler、IO 演进）
+- ✅ 新增 troubleshooting/、benchmarks/、best-practices/ 目录
+- ✅ 改进 JDK 8/11/17/21 README 交叉引用
 
 ### 2026-03-20
 - ✅ 增强主题文档：添加 PR 分析和最佳实践 (28 files, +4215 lines)

@@ -193,3 +193,47 @@ JDK 17 是继 JDK 11 之后的 LTS 版本，包含多项重要新特性：
 - [JDK 17 发布说明](https://openjdk.org/projects/jdk/17/)
 - [JDK 17 新特性](https://openjdk.org/projects/jdk/17/features)
 - [Sealed Classes 指南](https://openjdk.org/jeps/409)
+
+### 相关主题
+
+| 主题 | 链接 |
+|------|------|
+| Records | [Records 主题](/by-topic/core/records/) |
+| Sealed Classes | [Sealed Classes](/by-topic/language/syntax/) |
+| Pattern Matching | [模式匹配](/by-topic/core/patterns/) |
+| GC 演进 | [GC 时间线](/by-topic/core/gc/) |
+| ZGC/Shenandoah | [GC 详解](/jeps/gc/jep-377.md) |
+| 安全特性 | [安全主题](/by-topic/security/security/) |
+| Foreign Function | [FFM API](/by-topic/core/panama/) |
+| 内存管理 | [内存主题](/by-topic/core/memory/) |
+| JIT 编译 | [JIT 主题](/by-topic/core/jit/) |
+
+### 实战案例
+
+| 案例 | 关键词 | 链接 |
+|------|-------|------|
+| GC 调优实战 | G1→ZGC | [→](/cases/gc-tuning-case.md) |
+| Full GC 抖动 | G1 Full GC | [→](/cases/gc-fullgc-jitter.md) |
+| ZGC 调优 | Gen ZGC | [→](/cases/zgc-tuning.md) |
+| 死锁诊断 | synchronized/ReentrantLock | [→](/cases/deadlock-diagnosis.md) |
+| JIT 编译回退 | C2 编译 | [→](/cases/jit-compilation-fallback.md) |
+| Metaspace OOM | 类加载泄漏 | [→](/cases/metaspace-oom.md) |
+
+### 迁移指南
+
+| 来源 | 链接 |
+|------|------|
+| 从 JDK 11 迁移 | [→](migration/from-11.md) |
+| 迁移到 JDK 21 | [→](migration/to-21.md) |
+
+### 相关 JEP 深度分析
+
+| JEP | 链接 |
+|-----|------|
+| JEP 395: Records | [→](/jeps/language/jep-395.md) |
+| JEP 409: Sealed Classes | [→](/jeps/language/jep-409.md) |
+| JEP 394: Pattern Matching instanceof | [→](/jeps/language/jep-394.md) |
+| JEP 377: ZGC Production | [→](/jeps/gc/jep-377.md) |
+| JEP 387: Elastic Metaspace | [→](/jeps/performance/jep-387.md) |
+| JEP 412: FFM API (Incubator) | [→](/jeps/ffi/jep-412.md) |
+| JEP 378: Text Blocks | [→](/jeps/language/jep-378.md) |

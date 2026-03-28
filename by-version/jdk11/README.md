@@ -116,3 +116,22 @@ JDK 11 是继 JDK 8 之后的首个 LTS 版本，包含多项重要改进：
 - [JDK 11 发布说明](https://openjdk.org/projects/jdk/11/)
 - [从 JDK 8 迁移](https://docs.oracle.com/en/java/javase/11/migrate/)
 - [ZGC 文档](https://openjdk.org/jeps/333)
+
+### 相关主题
+
+| 主题 | 链接 |
+|------|------|
+| HTTP 客户端 | [HTTP 演进](/by-topic/concurrency/http/) |
+| GC 演进 | [GC 时间线](/by-topic/core/gc/) |
+| 安全/TLS | [安全特性](/by-topic/security/security/) |
+| 字符串处理 | [String 优化](/by-topic/language/string/) |
+| 模块系统 | [JPMS](/by-topic/core/modules/) |
+| Lambda/Stream | [Lambda](/by-topic/language/lambda/) |
+
+### 实战案例
+
+| 案例 | 链接 |
+|------|------|
+| GC 调优 | [G1→ZGC 迁移](/cases/gc-tuning-case.md) |
+| GC Full GC 抖动 | [Full GC 排查](/cases/gc-fullgc-jitter.md) |
+| 内存泄漏 | [OOM 诊断](/cases/memory-leak-diagnosis.md) |

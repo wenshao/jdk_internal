@@ -229,3 +229,15 @@ JDK 8 引入的特性在以下主题中有跨版本演进追踪：
 - [JDK 8 发布说明](https://openjdk.org/projects/jdk8/)
 - [JDK 8 文档](https://docs.oracle.com/javase/8/)
 - [Lambda 指南](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)
+
+### 相关主题
+
+| 主题 | 链接 |
+|------|------|
+| Lambda 表达式深入 | [Lambda 主题](/by-topic/language/lambda/) |
+| Stream API | [Stream 主题](/by-topic/language/streams/) |
+| String 优化 | [字符串处理](/by-topic/language/string/) |
+| GC 演进 | [GC 时间线](/by-topic/core/gc/) |
+| 内存管理 | [内存主题](/by-topic/core/memory/) |
+| 并发编程 | [并发主题](/by-topic/concurrency/concurrency/) |
+| 从 JDK 7 迁移 | [迁移指南](migration/from-7.md) |
