@@ -36,7 +36,7 @@ Curated best practices for JDK development, deployment, and operations, organize
 | Monitor GC metrics with JFR in production | Ignore `GC overhead limit exceeded` warnings |
 | Test with production-like data volumes | Assume GC behavior on small heaps predicts production |
 | Use `-XX:MaxGCPauseMillis` as a hint for G1 | Set `-XX:MaxGCPauseMillis` to an unreasonably low value |
-| Consider ZGC for latency-sensitive services | Use CMS in JDK 11+ (removed in JDK 14) |
+| Consider ZGC for latency-sensitive services | Use CMS (deprecated in JDK 9 via JEP 291, removed in JDK 14 via JEP 363) |
 
 ### 1.3 Key Flags Reference
 
@@ -149,7 +149,7 @@ java -Djdk.tracePinnedThreads=full -jar app.jar
 | Profile before optimizing ("measure, don't guess") | Optimize based on intuition alone |
 | Use JMH for micro-benchmarks | Write hand-rolled micro-benchmarks without JMH |
 | Enable CDS for faster startup (`-Xshare:on`) | Ignore startup time for CLI tools and serverless |
-| Use `StringBuilder` for string concatenation in loops | Use `+` operator in tight loops |
+| Use `StringBuilder` for string concatenation in loops (relevant for JDK 8; JDK 9+ uses `StringConcatFactory` but complex loop patterns still benefit) | Use `+` operator in tight loops expecting high throughput |
 | Prefer `ArrayList` over `LinkedList` in most cases | Use `LinkedList` for indexed access patterns |
 | Warm up JIT before measuring performance | Benchmark in the first few seconds of JVM execution |
 | Use `ConcurrentHashMap` over `Collections.synchronizedMap` | Use `Hashtable` (legacy, fully synchronized) |
@@ -196,7 +196,7 @@ java -Djdk.tracePinnedThreads=full -jar app.jar
 | JDK 11 -> 17 | Sealed classes, pattern matching preview, SecurityManager deprecation | Medium |
 | JDK 17 -> 21 | Virtual Threads, pattern matching final, Generational ZGC | Low-Medium |
 | JDK 21 -> 25 | Scoped Values final, string templates (preview) | Low |
-| JDK 25 -> 26 | HTTP/3, Value Classes preview | Low |
+| JDK 25 -> 26 | HTTP/3 (JEP 517, final), Value Classes (JEP 401, preview) | Low |
 
 ### 6.3 Essential Migration Tools
 

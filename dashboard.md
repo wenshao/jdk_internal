@@ -2,7 +2,7 @@
 
 > **最后更新**: 2026-03-28 | **数据状态**: 实时更新 | [刷新数据](#)
 
-> **最新动态**: ✨ 6 个 issue 分析文档新增、3 个新目录（benchmarks/troubleshooting/best-practices）、6 个 case study 补全、模块文档扩展
+> **最新动态**: ✨ 5 个 issue 分析文档新增、3 个新目录（benchmarks/troubleshooting/best-practices）、6 个 case study 补全、模块文档扩展
 
 ---
 ## 目录
@@ -189,7 +189,7 @@ GitHub API → PR 数据 → 分类分析 → 文档生成 → 链接验证 → 
 - [x] 完善 JDK 26 文档：breaking-changes、known-issues
 - [x] 清理占位符内容 (Google/Microsoft org pages, contributor index)
 - [x] 修复剩余 ~45 个无意断链
-- [x] 补全 6 个缺失 issue 分析文档
+- [x] 补全 5 个 issue 分析文档
 - [x] 新增 6 个 case study 文档
 - [ ] 扩展模块文档（jdk.jfr, jdk.jlink 等）
 - [ ] 添加更多贡献者档案
@@ -276,7 +276,7 @@ GitHub API → PR 数据 → 分类分析 → 文档生成 → 链接验证 → 
 
 ### 2026-03-28
 - ✅ 修复 dashboard 数据（更新为 43,394 PRs / 898 贡献者 / 260 Profiles）
-- ✅ 补全 6 个 issue 分析文档（Virtual Thread Starvation, CUBIC, NUMA 等）
+- ✅ 补全 5 个 issue 分析文档（Virtual Thread Starvation, CUBIC, NUMA 等）
 - ✅ 新增 6 个 case study（GC Full GC 抖动、ZGC 调优、死锁诊断等）
 - ✅ 新增 3 个模块文档（jdk.jfr, jdk.jlink, java.instrument）
 - ✅ 新增 3 个 deep-dive（JEP 439 Gen ZGC, JEP 454 FFM, JEP 401 Value Classes）

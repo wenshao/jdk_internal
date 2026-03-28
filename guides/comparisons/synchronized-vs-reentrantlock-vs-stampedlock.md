@@ -2,6 +2,10 @@
 
 # Java 锁机制对比: synchronized vs ReentrantLock vs StampedLock
 
+> ⚠️ **Template / Example Document**: This is an illustrative example document with synthetic data for reference purposes. The scenarios, performance figures, and diagnostic data shown are **not from real production environments**. Use this as a template for documenting real cases.
+>
+> ⚠️ **模板/示例文档**: 本文为示意性模板文档，包含合成的示意数据。所描述的场景、性能指标和诊断数据**并非来自真实生产环境**。请将其作为记录真实案例的模板使用。
+
 ---
 
 ## 目录

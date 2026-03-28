@@ -224,7 +224,7 @@ JDK 17 是继 JDK 11 之后的 LTS 版本，包含多项重要新特性：
 | 来源 | 链接 |
 |------|------|
 | 从 JDK 11 迁移 | [→](migration/from-11.md) |
-| 从 JDK 8 直接迁移 | [→](migration/from-8.md) |
+| 迁移到 JDK 21 | [→](migration/to-21.md) |
 
 ### 相关 JEP 深度分析
 

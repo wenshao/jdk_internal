@@ -50,31 +50,11 @@ Every benchmark result in this repository must satisfy the following criteria:
 
 ## 2. Key Results
 
-### 2.1 GC Performance
+> **Note**: Benchmark results are populated as verified data becomes available. See Section 4 for the template to contribute results. Results must reference a verifiable source (JBS issue, PR, mailing list post).
 
-| Benchmark | JDK | GC | Metric | Result | Source |
-|-----------|-----|----|--------|--------|--------|
-| *placeholder* | | | | | |
+### Contributing Results
 
-### 2.2 Core Library Performance
-
-| Benchmark | JDK | Metric | Result | Source |
-|-----------|-----|--------|--------|--------|
-| *placeholder* | | | | |
-
-### 2.3 Compiler (JIT) Performance
-
-| Benchmark | JDK | Metric | Result | Source |
-|-----------|-----|--------|--------|--------|
-| *placeholder* | | | | |
-
-### 2.4 Virtual Threads
-
-| Benchmark | JDK | Metric | Result | Source |
-|-----------|-----|--------|--------|--------|
-| *placeholder* | | | | |
-
-> **Contributing**: To add benchmark results, create a subdirectory (e.g., `benchmarks/gc/`) with detailed Markdown files following the template in Section 4.
+To add benchmark results, create a subdirectory (e.g., `benchmarks/gc/`) with detailed Markdown files following the template in Section 4.
 
 ---
 

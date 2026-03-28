@@ -2,7 +2,9 @@
 
 # Metaspace OOM：动态类加载导致的元空间溢出
 
-> **声明**：本文中所有监控数据、性能指标均为 **示意数据（illustrative data）**，实际结果取决于工作负载、硬件环境和 JVM 版本。
+> ⚠️ **Template / Example Document**: This is an illustrative example document with synthetic data for reference purposes. The scenarios, performance figures, and diagnostic data shown are **not from real production environments**. Use this as a template for documenting real cases.
+>
+> ⚠️ **模板/示例文档**: 本文为示意性模板文档，包含合成的示意数据。所描述的场景、性能指标和诊断数据**并非来自真实生产环境**。请将其作为记录真实案例的模板使用。
 
 ---
 
