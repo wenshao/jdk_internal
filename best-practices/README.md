@@ -195,7 +195,7 @@ java -Djdk.tracePinnedThreads=full -jar app.jar
 | JDK 8 -> 11 | Modules, removed APIs, javax -> jakarta | High |
 | JDK 11 -> 17 | Sealed classes, pattern matching preview, SecurityManager deprecation | Medium |
 | JDK 17 -> 21 | Virtual Threads, pattern matching final, Generational ZGC | Low-Medium |
-| JDK 21 -> 25 | Scoped Values final (JEP 506), Primitive Types in Patterns (JEP 455), Flexible Constructor Bodies (JEP 482) | Low |
+| JDK 21 -> 25 | Scoped Values final (JEP 506), Flexible Constructor Bodies final (JEP 513), Primitive Types in Patterns (JEP 507, preview) | Low |
 | JDK 25 -> 26 | HTTP/3 (JEP 517, final), Value Classes (JEP 401, preview) | Low |
 
 ### 6.3 Essential Migration Tools
