@@ -170,10 +170,10 @@ java -XshowSettings:system 2>&1 | grep "Memory"
 
 ## 7. 相关链接
 
-- [JDK 25 主页](../README.md)
-- [JDK 25 破坏性变更](../breaking-changes.md)
-- [JDK 25 性能调优](../performance.md)
-- [JDK 25 迁移指南](../migration/from-21.md)
+- [JDK 25 主页](./README.md)
+- [JDK 25 破坏性变更](./breaking-changes.md)
+- [JDK 25 性能调优](./performance.md)
+- [JDK 25 迁移指南](./migration/from-21.md)
 - [Oracle JDK 25 Release Notes](https://www.oracle.com/java/technologies/javase/25-relnote-issues.html)
 
 ---

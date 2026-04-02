@@ -532,7 +532,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 贡献者 | 组织 | 领域 | Census | 档案 |
 |--------|------|------|--------|------|
 | [Prasanta Sadhukhan](profiles/prasanta-sadhukhan.md) | Oracle | Swing/AWT | [@psadhukhan](https://openjdk.org/census#psadhukhan) | [详情](profiles/prasanta-sadhukhan.md) |
-| [Sergey Bylokhov](profiles/mrserb.md) | Oracle | AWT/2D | [@serb](https://openjdk.org/census#serb) | [详情](profiles/mrserb.md) |
+| [Sergey Bylokhov](profiles/sergey-bylokhov.md) | Oracle | AWT/2D | [@serb](https://openjdk.org/census#serb) | [详情](profiles/sergey-bylokhov.md) |
 
 #### JFR (Java Flight Recorder)
 
@@ -590,7 +590,7 @@ OpenJDK 的主要维护组织，涵盖全领域开发。
 | 6 | [Jan Lahoda](profiles/jan-lahoda.md) | [Oracle](../contributors/orgs/oracle.md) | 324 | javac | [详情](profiles/jan-lahoda.md) |
 | 7 | [Jaikiran Pai](profiles/jaikiran-pai.md) | [Oracle](../contributors/orgs/oracle.md) | 322 | 构建系统 | [详情](profiles/jaikiran-pai.md) |
 | 8 | [Naoto Sato](profiles/naoto-sato.md) | [Oracle](../contributors/orgs/oracle.md) | 273 | 国际化 | [详情](profiles/naoto-sato.md) |
-| 9 | [Sergey Bylokhov](profiles/mrserb.md) | [Oracle](../contributors/orgs/oracle.md) | 273 | AWT/2D | [详情](profiles/mrserb.md) |
+| 9 | [Sergey Bylokhov](profiles/sergey-bylokhov.md) | [Oracle](../contributors/orgs/oracle.md) | 273 | AWT/2D | [详情](profiles/sergey-bylokhov.md) |
 | 10 | [Chen Liang](profiles/chen-liang.md) | [Oracle](../contributors/orgs/oracle.md) | 237 | ClassFile API | [详情](profiles/chen-liang.md) |
 | 11 | [Alexey Semenyuk](profiles/alexey-semenyuk.md) | [Oracle](../contributors/orgs/oracle.md) | 233 | AOT | [详情](profiles/alexey-semenyuk.md) |
 | 12 | [SendaoYan](profiles/sendaoyan.md) | Independent | 202 | 测试 | [详情](profiles/sendaoyan.md) |

@@ -214,7 +214,7 @@ Andrew Dinn 是 OpenJDK 中 AArch64 移植的核心维护者，专注于 ARM 架
 | **GitHub** | [@adinn](https://github.com/adinn) |
 | **OpenJDK Census** | [adinn](https://openjdk.org/census#adinn) |
 | **Red Hat Developer** | [Andrew Dinn](https://developers.redhat.com/author/andrew-dinn) |
-| **邮件列表** | [adinn@redhat.com](mailto:adinn@redhat.com) |
+| **邮件列表** | adinn@redhat.com |
 | **JBoss Byteman** | [Project Page](https://github.com/bytemanproject/byteman) |
 
 ---

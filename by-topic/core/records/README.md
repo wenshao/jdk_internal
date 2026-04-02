@@ -806,8 +806,8 @@ employees.stream()
 ### 内部文档
 
 - [模式匹配](../patterns/) - 模式匹配详解
-- [语法演进](../language/syntax/) - 语法演进历程
-- [注解与元编程](../language/annotations/) - 注解处理器
+- [语法演进](/by-topic/language/syntax/) - 语法演进历程
+- [注解与元编程](/by-topic/language/annotations/) - 注解处理器
 
 ### 外部资源
 

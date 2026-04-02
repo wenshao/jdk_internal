@@ -33,7 +33,7 @@
 | 1 | Albert Mingkun Yang | [Albert Mingkun Yang](albert-mingkun-yang.md) | 744 | GC |
 | 2 | Naoto Sato | [Naoto Sato](naoto-sato.md) | 273 | 国际化 |
 | 3 | [Chen Liang](chen-liang.md) | [Chen Liang](chen-liang.md) | 237 | ClassFile API |
-| 4 | Sendao Yan | [Sendaoyan Yan](sendaoyan.md) | 202 | 测试稳定性 |
+| 4 | Sendao Yan | [Sendaoyan Yan](sendaoyan-yan.md) | 202 | 测试稳定性 |
 | 5 | Yasumasa Suenaga | [Yasumasa Suenaga](yasumasa-suenaga.md) | 113 | HotSpot |
 | 6 | [Hamlin Li](hamlin-li.md) | [Hamlin Li](hamlin-li.md) | 74 | RISC-V |
 
@@ -64,10 +64,10 @@
 - ZGC 性能优化
 
 **Dragonwell 团队成员**:
-- [Sanhong Li](../../by-contributor/profiles/sanhong.md) - ASE 2021 论文作者
-- [Long Yang](../../by-contributor/profiles/yanglong1010.md) - JVM 团队，杭州
-- [Sendaoyan Yan](../../by-contributor/profiles/sendaoyan.md) - 编译器测试工程师
-- [Joshua Zhu](../../by-contributor/profiles/joshua-zhu.md) - 上海团队
+- [Sanhong Li](sanhong-li.md) - ASE 2021 论文作者
+- [Long Yang](#) - JVM 团队，杭州
+- [Sendaoyan Yan](sendaoyan-yan.md) - 编译器测试工程师
+- [Joshua Zhu](joshua-zhu.md) - 上海团队
 
 ---
 

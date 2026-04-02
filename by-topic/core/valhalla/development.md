@@ -535,12 +535,12 @@ PR 创建
 
 ### 贡献者档案
 
-- [完整贡献者列表](../../by-contributor/)
-- [Chen Liang](../../../by-contributor/profiles/chen-liang.md)
-- [David Holmes](../../../by-contributor/profiles/david-holmes.md)
-- [Roger Riggs](../../../by-contributor/profiles/roger-riggs.md)
-- [Coleen Phillimore](../../../by-contributor/profiles/coleen-phillimore.md)
-- [David Beaumont](../../../by-contributor/profiles/david-beaumont.md)
+- [完整贡献者列表](/by-contributor/)
+- [Chen Liang](/by-contributor/profiles/chen-liang.md)
+- [David Holmes](/by-contributor/profiles/david-holmes.md)
+- [Roger Riggs](/by-contributor/profiles/roger-riggs.md)
+- [Coleen Phillimore](/by-contributor/profiles/coleen-phillimore.md)
+- [David Beaumont](/by-contributor/profiles/david-beaumont.md)
 
 ---
 

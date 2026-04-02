@@ -304,8 +304,8 @@ src.transferTo(0, src.size(), dst);
 
 ### 本地文档
 
-- [NIO 专题](/by-topic/api/nio/)
-- [JDK 1.4 新特性](/by-version/jdk1.4/)
+- [NIO 专题](/by-topic/nio/)
+- [JDK 1.4 新特性](/by-version/jdk8/)
 - [JSR 203 (NIO.2)](/jsr/api/jsr-203.md)
 
 ---

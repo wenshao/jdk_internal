@@ -192,7 +192,7 @@ Amit Kumar 是 OpenJDK 中 s390x 移植的核心维护者，专注于 IBM Z 平�
 | **OpenJDK Census** | [amitkumar](https://openjdk.org/census#amitkumar) |
 | **CFV: JDK Committer** | [2023-05 Nomination](https://mail.openjdk.org/pipermail/jdk-dev/2023-May/007840.html) |
 | **CFV: JDK Updates** | [2024-11 Nomination](https://mail.openjdk.org/pipermail/jdk-updates-dev/2024-November/006355.html) |
-| **邮件列表** | [amitkumar@openjdk.org](mailto:amitkumar@openjdk.org) |
+| **邮件列表** | amitkumar@openjdk.org |
 
 ---
 

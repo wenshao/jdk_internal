@@ -431,7 +431,7 @@ jobs:
 ### 社区支持
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/graalvm)
 - [GraalVM Slack](https://graalvm.slack.com/)
-- [Mailing List](mailto:graalvm-dev@openjdk.org)
+- graalvm-dev@openjdk.org
 
 ### 学习资源
 - [GraalVM 参考手册](https://www.graalvm.org/latest/reference-manual/)

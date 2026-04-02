@@ -613,7 +613,7 @@ inline void ZBarrier::store_barrier_on_heap_oop_field(volatile zpointer* p,
                                                        bool heal) {
   const zpointer prev = load_atomic(p);
 
-  auto slow_path = [=](zaddress addr) -> zaddress {
+  auto slow_path = `[=](zaddress addr)` -> zaddress {
     return ZBarrier::heap_store_slow_path(p, addr, prev, heal);
   };
 

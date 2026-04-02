@@ -180,7 +180,7 @@ Erik Joelsson 是 OpenJDK 构建系统和测试框架的核心贡献者，专注
 | **OpenJDK Wiki** | [erikj](https://wiki.openjdk.org/display/~erikj) |
 | **CFV: build-infra Committer** | [Nomination](https://mail.openjdk.org/archives/list/build-infra-dev@openjdk.org/message/7KVZVKLJL4GLKTHNDEQDT475DCJOPFHL/) |
 | **CFV: Code Tools Committer** | [Nomination (2018)](https://mail.openjdk.org/pipermail/code-tools-dev/2018-June/000406.html) |
-| **邮件列表** | [erikj@openjdk.org](mailto:erikj@openjdk.org) |
+| **邮件列表** | erikj@openjdk.org |
 
 ---
 

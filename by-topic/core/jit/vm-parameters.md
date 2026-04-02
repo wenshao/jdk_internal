@@ -667,7 +667,7 @@
 
 - [诊断工具](./diagnostics.md) - 如何使用这些参数
 - [C2 优化阶段](./c2-phases.md) - 参数影响哪些阶段
-- [JVM 调优](../../jvm/) - 更多 JVM 参数
+- [性能调优](../performance/) - 更多 JVM 参数
 - [分层编译](./tiered-compilation.md) - 分层编译详解
 - [内联优化](./inlining.md) - 内联策略详解
 

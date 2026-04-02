@@ -10,7 +10,7 @@
 |------|-----|
 | **姓名** | Kuai Wei |
 | **GitHub** | [@kuaiwei](https://github.com/kuaiwei) |
-| **组织** | [Alibaba](../../contributors/orgs/alibaba.md) |
+| **组织** | [Alibaba](/contributors/orgs/alibaba.md) |
 | **邮箱** | kuaiwei.kw@alibaba-inc.com, wei.kuai@gmail.com |
 | **OpenJDK Census** | ✅ [Committer, JDK Project](https://openjdk.org/census#kwei) (username: `kwei`) |
 | **Integrated PRs** | 13 |
@@ -94,13 +94,13 @@
 | 关联类型 | 用户 | 真实姓名 | 位置 | 组织 | 推断 |
 |----------|------|----------|------|------|------|
 | **论文合著者** | [sanhong](sanhong.md) | Sanhong Li | - | - | ASE 2021 论文合著者，互相关注 |
-| **阿里巴巴同事** | [JoshuaZhuwj](joshua-zhu.md) | Joshua Zhu | 上海 | [Alibaba](../../contributors/orgs/alibaba.md) | 互相关注 |
-| **阿里巴巴同事** | [sendaoYan](sendaoyan.md) | Sendaoyan Yan | 上海 | - | Kuai Wei 的 follower, compiler tester |
-| **阿里巴巴同事** | [yanglong1010](yanglong1010.md) | Long Yang | 杭州 | [Alibaba](../../contributors/orgs/alibaba.md) | 互相关注 |
+| **阿里巴巴同事** | [JoshuaZhuwj](joshua-zhu.md) | Joshua Zhu | 上海 | [Alibaba](/contributors/orgs/alibaba.md) | 互相关注 |
+| **阿里巴巴同事** | [sendaoYan](sendaoyan-yan.md) | Sendaoyan Yan | 上海 | - | Kuai Wei 的 follower, compiler tester |
+| **阿里巴巴同事** | [yanglong1010](#) | Long Yang | 杭州 | [Alibaba](/contributors/orgs/alibaba.md) | 互相关注 |
 | **社区联系** | [luchsh](luchsh.md) | Jonathan Lu | 上海 | - | 互相关注 |
-| **社区联系** | [tanghaoth90](tanghaoth90.md) | Hao Tang | 杭州 | [ByteDance](../../contributors/orgs/bytedance.md) | 互相关注 |
+| **社区联系** | [tanghaoth90](tanghaoth90.md) | Hao Tang | 杭州 | [ByteDance](/contributors/orgs/bytedance.md) | 互相关注 |
 | **社区联系** | [XHao](xhao.md) | shako | 上海 | - | 互相关注 |
-| **龙芯联系** | [xiangzhai](xiangzhai.md) | Leslie Zhai | 北京 | [Loongson](../../contributors/orgs/loongson.md) | Kuai Wei 的 follower |
+| **龙芯联系** | [xiangzhai](xiangzhai.md) | Leslie Zhai | 北京 | [Loongson](/contributors/orgs/loongson.md) | Kuai Wei 的 follower |
 | **JDK 社区** | [alijvm](alijvm.md) | Sanhong Li | - | - | 阿里巴巴 JVM 团队账号 |
 | **JDK 社区** | [Aitozi](aitozi.md) | WenjunMin | - | - | 互相关注 |
 | **JDK 社区** | [headius](headius.md) | Charles Nutter | - | - | Kuai Wei 关注 (JRuby 创始人) |
@@ -349,7 +349,7 @@ Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一。Dragonwel
 - [JEP 422: Linux/RISC-V Port](https://openjdk.org/jeps/422) - Co-author ([commit 5905b02](https://github.com/openjdk/jdk/commit/5905b02c0e2643ae8d097562f181953f6c88fc89))
 
 **Dragonwell 相关**:
-- [Dragonwell 团队](../../contributors/orgs/dragonwell.md) - 核心团队成员和社交网络
+- [Dragonwell 团队](/contributors/orgs/dragonwell.md) - 核心团队成员和社交网络
 - [Dragonwell 8](https://github.com/dragonwell-project/dragonwell8)
 - [Dragonwell 11](https://github.com/dragonwell-project/dragonwell11)
 - [Dragonwell 21](https://github.com/dragonwell-project/dragonwell21)
@@ -361,8 +361,8 @@ Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一。Dragonwel
 
 ### 阿里巴巴 JVM 团队
 - [Sanhong Li](sanhong.md) - ASE 2021 论文作者，阿里巴巴 JVM 团队
-- [Long Yang](yanglong1010.md) - 阿里巴巴 JVM 团队，杭州
-- [Sendaoyan Yan](sendaoyan.md) - 编译器测试工程师，上海
+- [Long Yang](#) - 阿里巴巴 JVM 团队，杭州
+- [Sendaoyan Yan](sendaoyan-yan.md) - 编译器测试工程师，上海
 - [Joshua Zhu](joshua-zhu.md) - 阿里巴巴上海团队
 - [alijvm](alijvm.md) - 阿里巴巴 JVM 团队账号
 
@@ -376,9 +376,9 @@ Kuai Wei 是阿里巴巴 **Dragonwell JDK** 的核心贡献者之一。Dragonwel
 
 ### 技术主题
 - [C2 编译器](../../by-topic/core/jit/) - JIT 编译优化
-- [RISC-V](../../by-topic/platform/) - RISC-V 架构支持
+- [RISC-V](/by-topic/platform/) - RISC-V 架构支持
 - 内存屏障 - 并发内存模型
-- [Alibaba](../../contributors/orgs/alibaba.md) - 阿里巴巴贡献者
+- [Alibaba](/contributors/orgs/alibaba.md) - 阿里巴巴贡献者
 - [中国贡献者](chinese-contributors.md) - 中国 OpenJDK 贡献者
 
 ---

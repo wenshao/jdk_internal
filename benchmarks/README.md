@@ -183,6 +183,6 @@ Before running benchmarks, verify:
 
 ## Related
 
-- [Performance topic](/by-topic/performance/) - JDK performance analysis
-- [GC timeline](/by-topic/gc/) - Garbage collector evolution
+- [性能优化](/by-topic/core/performance/) - JDK performance analysis
+- [GC 演进](/by-topic/core/gc/) - Garbage collector evolution
 - [Cases](/cases/) - Real-world performance case studies

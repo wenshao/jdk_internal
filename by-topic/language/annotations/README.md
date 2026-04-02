@@ -735,9 +735,9 @@ public boolean process(Set<? extends TypeElement> annotations,
 
 ### 本地文档
 
-- [反射](../reflection/) - 注解反射
-- [语法演进](../syntax/) - 注解语法
-- [Record](../record/) - 注解支持
+- [反射](/by-topic/language/reflection/) - 注解反射
+- [语法演进](/by-topic/language/syntax/) - 注解语法
+- [Record](/by-topic/core/records/) - 注解支持
 
 ### 外部参考
 
