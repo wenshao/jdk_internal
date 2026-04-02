@@ -925,7 +925,7 @@ public String describeBad(Object obj) {
 ### 内部文档
 
 - [Record 类型](../records/) - Record 详解
-- [语法演进](../language/syntax/) - 语法演进历程
+- [语法演进](../../language/syntax/) - 语法演进历程
 
 ### 外部资源
 

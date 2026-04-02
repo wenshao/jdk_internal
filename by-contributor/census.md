@@ -103,7 +103,7 @@ OpenJDK 社区有三种主要角色，权限和职责各不相同：
 | 贡献者 | 组织 | Census | 档案 |
 |--------|------|--------|------|
 | [Prasanta Sadhukhan](profiles/prasanta-sadhukhan.md) | Oracle | [@psadhukhan](https://openjdk.org/census#psadhukhan) | [详情](profiles/prasanta-sadhukhan.md) |
-| [Sergey Bylokhov](profiles/mrserb.md) | Oracle | [@serb](https://openjdk.org/census#serb) | [详情](profiles/mrserb.md) |
+| [Sergey Bylokhov](profiles/sergey-bylokhov.md) | Oracle | [@serb](https://openjdk.org/census#serb) | [详情](profiles/sergey-bylokhov.md) |
 
 ### JFR (Java Flight Recorder) - 1 位
 

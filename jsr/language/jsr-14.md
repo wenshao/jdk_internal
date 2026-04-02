@@ -352,9 +352,9 @@ public class Favorites {
 
 ### 本地文档
 
-- [泛型深入分析](/by-topic/language/generics/)
-- [JDK 5 新特性](/by-version/jdk5/)
-- [Project Valhalla](/projects/valhalla/)
+- [泛型深入分析](/by-topic/core/generics/)
+- [JDK 5 新特性](/by-version/jdk8/)
+- [Project Valhalla](/valhalla/contributors.md)
 
 ---
 

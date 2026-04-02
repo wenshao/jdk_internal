@@ -335,8 +335,8 @@ cheerpjRunMain("com.example.Main", "/app.jar");
 
 - [JDK 发行版对比](README.md)
 - [GraalVM 详细文档](graalvm.md)
-- [性能优化指南](../by-topic/core/performance/)
-- [云原生 Java](../by-topic/core/cloud-native/)
+- [性能优化指南](/by-topic/core/performance/)
+- [容器化部署](/by-topic/platform/containers/)
 
 ---
 

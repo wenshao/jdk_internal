@@ -116,7 +116,7 @@ Content here...
 ```markdown
 # JDK-XXXXXXX: Short Title
 
-> **Issue**: [link] | **Author**: [Name](profile.md) | **Impact**: ⭐⭐⭐⭐
+> **Issue**: [link] | **Author**: [Shaojin Wen](/by-contributor/profiles/shaojin-wen.md) | **Impact**: ⭐⭐⭐⭐
 
 ## Overview
 One-sentence description
@@ -219,7 +219,7 @@ gh pr list --repo openjdk/jdk --limit 1000 \
 | **Main Focus** | xxx |
 | **Avg Merge Time** | x.x days |
 
-> **Source**: [GitHub Integrated PRs](link)
+> **Source**: [GitHub Integrated PRs](https://github.com/openjdk/jdk/pulls?q=is%3Apr+label%3Aintegrated+is%3Aclosed)
 ```
 
 ### Contributor Discovery & Organization Verification (2026-03-23 沉淀)

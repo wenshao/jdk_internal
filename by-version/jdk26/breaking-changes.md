@@ -147,8 +147,8 @@ echo "=== 检查完成 ==="
 
 ## 6. 相关链接
 
-- [JDK 26 主页](../README.md)
-- [JDK 26 迁移指南](../migration/from-21.md)
+- [JDK 26 主页](./README.md)
+- [JDK 26 迁移指南](./migration/from-21.md)
 - [JEP 504: Remove the Applet API](https://openjdk.org/jeps/504)
 - [JEP 500: Prepare to Make Final Mean Final](https://openjdk.org/jeps/500)
 

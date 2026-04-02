@@ -153,8 +153,8 @@ Hannes 进行了多次大规模的文档标签修复工作：
 
 ### 相关主题
 
-- [Javadoc 工具](../../by-topic/tools/javadoc/) - javadoc 工具演进
-- [Nashorn](../../by-topic/nashorn/) - Nashorn JavaScript 引擎
+- [Javadoc 工具](/guides/learning-path.md) - javadoc 工具演进
+- [Nashorn](/by-topic/language/lambda/) - Nashorn JavaScript 引擎
 
 ### 外部资源
 

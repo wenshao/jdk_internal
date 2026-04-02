@@ -955,7 +955,7 @@ public enum HttpHeader {
 
 ### 内部文档
 
-- [语法演进](../language/syntax/) - 语法演进历程
+- [语法演进](../../language/syntax/) - 语法演进历程
 - [记录类型](../records/) - Record 类型
 - [模式匹配](../patterns/) - 模式匹配
 

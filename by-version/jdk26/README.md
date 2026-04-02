@@ -563,7 +563,7 @@ Oracle 特别感谢以下个人和项目对 JDK 26 质量保证的贡献：
 
 - [JDK 26 JEP 汇总](./jeps.md) - 所有 JEP 详细列表
 - [JDK 26 Release Notes](./release-notes.md) - 完整发布说明
-- [JDK 26 Top 50 Commits](/prs/jdk26-top-prs.md) - 重要的代码变更
+- [JDK 26 贡献者统计](/by-contributor/profiles/jdk26-top-contributors.md) - 重要的代码变更
 - [从 JDK 21 迁移](./migration/from-21.md) - 升级指南
 
 ### 深度分析

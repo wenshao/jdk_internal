@@ -36,7 +36,7 @@
 |------|--------|------|------|
 | **Sanhong Li** | [sanhong](../../by-contributor/profiles/sanhong.md), [alijvm](../../by-contributor/profiles/alijvm.md) | - | ASE 2021 论文作者，JVM 团队 |
 | **Kuai Wei** | [kuaiwei](../../by-contributor/profiles/kuai-wei.md) | 上海/杭州 | C2 编译器专家 |
-| **Long Yang** | [yanglong1010](../../by-contributor/profiles/yanglong1010.md) | 杭州 | JVM 团队 |
+| **Long Yang** | [yanglong1010](#) | 杭州 | JVM 团队 |
 | **Sendaoyan Yan** | [sendaoyan](../../by-contributor/profiles/sendaoyan.md) | 上海 | Compiler Tester |
 | **Joshua Zhu** | [joshua-zhu](../../by-contributor/profiles/joshua-zhu.md) | 上海 | JVM 团队 |
 
@@ -64,7 +64,7 @@
 | 领域 | 说明 | 代表贡献者 |
 |------|------|------------|
 | **C2 编译器** | JIT 编译器优化 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) |
-| **GC 优化** | G1, ZGC 调优 | [Long Yang](../../by-contributor/profiles/yanglong1010.md) |
+| **GC 优化** | G1, ZGC 调优 | [Long Yang](#) |
 | **性能优化** | 电商场景优化 | JVM 团队 |
 | **编译器测试** | 测试框架 | [Sendaoyan Yan](../../by-contributor/profiles/sendaoyan.md) |
 | **RISC-V/LoongArch** | 架构移植 | [Leslie Zhai](../../by-contributor/profiles/xiangzhai.md) |
@@ -94,7 +94,7 @@
 |------|------|--------|
 | **龙芯** | Loongson | [Leslie Zhai](../../by-contributor/profiles/xiangzhai.md) |
 | **字节跳动** | ByteDance | [Hao Tang](../../by-contributor/profiles/tanghaoth90.md) |
-| **JDK 社区** | JRuby | [Charles Nutter](../../by-contributor/profiles/headius.md) |
+| **JDK 社区** | JRuby | [Charles Nutter](../../by-contributor/profiles/charles-nutter.md) |
 
 ---
 
@@ -107,7 +107,7 @@
 | 贡献者 | OpenJDK PRs | 主要领域 |
 |--------|-------------|----------|
 | [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) | 13 | C2 IR, RISC-V, 内存屏障 |
-| [Long Yang](../../by-contributor/profiles/yanglong1010.md) | - | JVM, 核心库 |
+| [Long Yang](#) | - | JVM, 核心库 |
 | [Sendaoyan Yan](../../by-contributor/profiles/sendaoyan.md) | - | 编译器测试 |
 
 ### 贡献时间线
@@ -140,7 +140,7 @@
 ### 团队成员
 - [Sanhong Li](../../by-contributor/profiles/sanhong.md) - ASE 2021 论文作者
 - [Kuai Wei](../../by-contributor/profiles/kuai-wei.md) - C2 编译器专家
-- [Long Yang](../../by-contributor/profiles/yanglong1010.md) - JVM 团队，杭州
+- [Long Yang](#) - JVM 团队，杭州
 - [Sendaoyan Yan](../../by-contributor/profiles/sendaoyan.md) - 编译器测试工程师
 - [Joshua Zhu](../../by-contributor/profiles/joshua-zhu.md) - 上海团队
 
@@ -150,7 +150,7 @@
 - [shako](../../by-contributor/profiles/xhao.md) - 上海 JVM 社区
 - [WenjunMin](../../by-contributor/profiles/aitozi.md) - JVM 社区
 - [Leslie Zhai](../../by-contributor/profiles/xiangzhai.md) - 龙芯，北京
-- [Charles Nutter](../../by-contributor/profiles/headius.md) - JRuby 创始人
+- [Charles Nutter](../../by-contributor/profiles/charles-nutter.md) - JRuby 创始人
 
 ### 组织
 - [Alibaba OpenJDK 贡献](alibaba.md) - 阿里巴巴 OpenJDK 上游贡献统计

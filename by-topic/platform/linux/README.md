@@ -879,7 +879,7 @@ jcmd <pid> Thread.print
 
 ## 13. 相关链接
 
-- [容器支持](containers/)
+- [容器支持](/by-topic/platform/containers/)
 - [性能优化](/by-topic/core/performance/)
 - [GC 调优](/by-topic/core/gc/)
 - [JDK 版本文档](/by-version/)

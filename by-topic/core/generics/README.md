@@ -1014,7 +1014,7 @@ names.stream()
 
 ### 内部文档
 
-- [语法演进](../language/syntax/) - 语法演进历程
+- [语法演进](../../language/syntax/) - 语法演进历程
 - [集合框架](../../api/collections/) - 集合框架详解
 
 ### 外部资源
