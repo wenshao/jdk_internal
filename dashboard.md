@@ -1,8 +1,8 @@
 # JDK 内部文档分析仪表板
 
-> **最后更新**: 2026-03-28 | **数据状态**: 实时更新 | [刷新数据](#)
+> **最后更新**: 2026-04-12 | **数据状态**: 实时更新 | [刷新数据](#)
 
-> **最新动态**: ✨ 5 个 issue 分析文档新增、3 个新目录（benchmarks/troubleshooting/best-practices）、6 个 case study 补全、模块文档扩展
+> **最新动态**: PR 数据更新至 2026-04-12（+1,539 PRs），JDK 27 文档补全，7 个子仓库数据刷新
 
 ---
 ## 目录
@@ -26,15 +26,15 @@
 
 | 指标 | 值 | 趋势 | 状态 |
 |------|-----|------|------|
-| **总 Integrated PRs** | 43,394 | 📈 | ✅ 健康 |
-| **覆盖仓库** | 25 个 | 📈 | ✅ 良好 |
-| **唯一贡献者** | 898 人 | 📈 | ✅ 良好 |
-| **贡献者 Profiles** | 260 个 | 📈 | ✅ 良好 |
-| **组织页面** | 22 个 | 📈 | ✅ 良好 |
-| **覆盖 JDK 版本** | 8/11/17/21/25/26 | 📈 | ✅ 良好 |
-| **JEP 分析** | 397 个 | 📈 | ✅ 优秀 |
-| **PR 分析文档** | 22,560 个 | 📈 | ✅ 优秀 |
-| **自动化脚本** | 49 个 | 📈 | ✅ 优秀 |
+| **总 Integrated PRs** | 45,132 | 📈 +1,738 | ✅ 健康 |
+| **覆盖仓库** | 25 个 | — | ✅ 良好 |
+| **唯一贡献者** | 741 人 (主仓库) | 📈 | ✅ 良好 |
+| **贡献者 Profiles** | 260 个 | — | ✅ 良好 |
+| **组织页面** | 22 个 | — | ✅ 良好 |
+| **覆盖 JDK 版本** | 8/11/17/21/25/26/27 | 📈 +JDK 27 | ✅ 良好 |
+| **JEP 分析** | 387 个 | — | ✅ 优秀 |
+| **PR 分析文档** | 22,560 个 | — | ✅ 优秀 |
+| **自动化脚本** | 36 个 | 📈 +1 | ✅ 良好 |
 
 ---
 
@@ -50,10 +50,11 @@
 | **JDK 21** | ✅ 完成 | ✅ 完整 | ✅ from-17 | ✅ 完整 | ✅ 完整 | 95% |
 | **JDK 25** | ✅ 完成 | ✅ 完整 | ✅ from-21 | ✅ 完整 | ✅ 完整 | 75% |
 | **JDK 26** | ✅ 完成 | ✅ 完整 | ✅ from-21 | ✅ 完整 | ✅ 完整 | 90% |
+| **JDK 27** | 🔨 开发中 | ✅ 基础 | — | — | — | 40% |
 
 **版本演进时间线**:
 ```
-JDK 8 (2014) → JDK 11 (2018) → JDK 17 (2021) → JDK 21 (2023) → JDK 25 (2025) → JDK 26 (2026)
+JDK 8 (2014) → JDK 11 (2018) → JDK 17 (2021) → JDK 21 (2023) → JDK 25 (2025) → JDK 26 (2026) → JDK 27 (2026-09)
 ```
 
 ---
@@ -101,7 +102,7 @@ JDK 8 (2014) → JDK 11 (2018) → JDK 17 (2021) → JDK 21 (2023) → JDK 25 (2
 
 | 指标 | 值 |
 |------|-----|
-| **总贡献者** | 898 (Profiles: 260) |
+| **总贡献者** | 741+ (Profiles: 260) |
 | **组织覆盖** | 22 |
 | **Top 5 组织** | Oracle, Red Hat, Amazon, Alibaba, SAP |
 | **最高产贡献者** | [Aleksey Shipilev](by-contributor/profiles/aleksey-shipilev.md) (803+ PRs, [Amazon](contributors/orgs/amazon.md)) |
@@ -164,7 +165,7 @@ gantt
 GitHub API → PR 数据 → 分类分析 → 文档生成 → 链接验证 → 仪表板更新
 ```
 
-**下次计划运行**: 2026-04-01 02:00 UTC
+**下次计划运行**: 2026-04-26 02:00 UTC
 
 ---
 
@@ -174,13 +175,12 @@ GitHub API → PR 数据 → 分类分析 → 文档生成 → 链接验证 → 
 
 | 时间 | 文件 | 变更类型 | 贡献者 |
 |------|------|----------|--------|
-| 2026-03-20 | `by-topic/` (28 files) | 增强主题文档+PR分析 | Claude Code |
-| 2026-03-20 | `by-topic/language/syntax/` | Enum/Lambda优化PR分析 | Claude Code |
-| 2026-03-20 | `by-topic/language/lambda/` | invokedynamic字节码分析 | Claude Code |
-| 2026-03-20 | `by-topic/language/streams/` | Spliterator/Gatherers | Claude Code |
-| 2026-03-20 | `by-version/jdk21/` | 新增完整文档结构 | Qwen Code |
-| 2026-03-20 | `by-version/jdk17/` | 新增完整文档结构 | Qwen Code |
-| 2026-03-20 | `by-version/jdk11/` | 完善迁移指南 | Qwen Code |
+| 2026-04-12 | `by-pr/all-integrated-prs.csv` | PR 数据更新 +1,539 | Claude Code |
+| 2026-04-12 | `by-version/jdk27/` | JDK 27 文档补全 (README/jeps/contributions) | Claude Code |
+| 2026-04-12 | 7 个子仓库 CSV | 子仓库 PR 数据刷新 | Claude Code |
+| 2026-04-12 | `scripts/merge-new-prs.py` | 新增 PR 合并工具 | Claude Code |
+| 2026-04-02 | 断链修复 (94 个) | 链接健康度提升至 99.96% | Claude Code |
+| 2026-03-28 | `dashboard.md` | 数据指标刷新 | Claude Code |
 
 ### 待办事项
 
@@ -202,13 +202,13 @@ GitHub API → PR 数据 → 分类分析 → 文档生成 → 链接验证 → 
 
 | 维度 | 分数 | 说明 |
 |------|------|------|
-| **版本覆盖** | 92/100 | 全部 LTS + JDK 26 已覆盖，JDK 25 补充完成 |
+| **版本覆盖** | 95/100 | 全部 LTS + JDK 26/27 已覆盖 |
 | **内容深度** | 85/100 | 核心主题深入，10 篇 deep-dive |
-| **链接健康** | 95/100 | 实际断链 <50 个 |
-| **数据时效** | 90/100 | 定期更新，保持最新信息 |
-| **工具支持** | 90/100 | 自动化工具完善，已修复误报问题 |
+| **链接健康** | 98/100 | 94 个断链已修复，健康度 99.96% |
+| **数据时效** | 95/100 | 2026-04-12 更新，PR 数据最新 |
+| **工具支持** | 92/100 | 新增 merge-new-prs.py，流水线更完善 |
 
-**总体评分**: █████████░ 90/100
+**总体评分**: █████████▌ 93/100
 
 ### 改进建议
 
@@ -238,6 +238,7 @@ GitHub API → PR 数据 → 分类分析 → 文档生成 → 链接验证 → 
 - [JDK 21 文档](/by-version/jdk21/) - LTS 2023
 - [JDK 25 文档](/by-version/jdk25/) - GA 2025
 - [JDK 26 文档](/by-version/jdk26/) - GA 2026
+- [JDK 27 文档](/by-version/jdk27/) - 开发中 (GA 2026-09)
 
 ### 主题浏览
 - [垃圾收集演进](/by-topic/core/gc/)
@@ -274,8 +275,15 @@ GitHub API → PR 数据 → 分类分析 → 文档生成 → 链接验证 → 
 
 ## 11. 更新日志
 
+### 2026-04-12
+- ✅ PR 数据更新至 2026-04-12（主仓库 26,407 PRs，+1,539）
+- ✅ 子仓库数据刷新（jdk25u-dev +48, jdk21u-dev +89, jdk17u-dev +43, jdk11u-dev +12, jdk8u-dev +7）
+- ✅ JDK 27 文档补全（README.md, jeps.md, contributions.md 更新至 1,547 PRs）
+- ✅ 新增 `scripts/merge-new-prs.py` PR 合并工具
+- ✅ Dashboard 数据刷新（45,132 PRs / 741+ 贡献者）
+
 ### 2026-03-28
-- ✅ 修复 dashboard 数据（更新为 43,394 PRs / 898 贡献者 / 260 Profiles）
+- ✅ 修��� dashboard 数据（更新为 43,394 PRs / 898 贡献者 / 260 Profiles）
 - ✅ 补全 5 个 issue 分析文档（Virtual Thread Starvation, CUBIC, NUMA 等）
 - ✅ 新增 6 个 case study（GC Full GC 抖动、ZGC 调优、死锁诊断等）
 - ✅ 新增 3 个模块文档（jdk.jfr, jdk.jlink, java.instrument）

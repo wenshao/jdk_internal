@@ -31,6 +31,7 @@
 
 | 版本 | 发布时间 | 主要特性 |
 |------|----------|----------|
+| **JDK 27** | 2026-09-16 (预计) | Post-Quantum TLS (开发中) |
 | **JDK 26** | 2026-03-17 | HTTP/3、G1 吞吐量提升、Lazy Constants (预览) |
 | **JDK 24** | 2025-03 | Primitive Types in Patterns (预览) |
 | **JDK 23** | 2024-09 | Markdown 文档注释 |
@@ -126,6 +127,11 @@
 - [版本详情](jdk8/README.md) | [发布说明](jdk8/release-notes.md)
 
 ### Feature 版本
+
+#### [JDK 27](jdk27/) - 2026-09 (开发中)
+- 新特性：Post-Quantum Hybrid Key Exchange for TLS 1.3
+- 更多 JEP 待确定
+- [版本详情](jdk27/README.md) | [JEP 汇总](jdk27/jeps.md)
 
 #### [JDK 26](jdk26/) - 2026-03
 - 新特性：HTTP/3 (正式版)、G1 吞吐量提升

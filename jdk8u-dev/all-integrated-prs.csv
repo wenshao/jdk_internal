@@ -1,602 +1,609 @@
-bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,reviewers
-8282552,1,8282552: Bump update version of OpenJDK: 8u342,jerboaa,2022-03-02,2022-03-03,integrated,Red Hat,CA,1,"erikj79,gnu-andrew"
-8282458,2,8282458: Update .jcheck/conf file for 8u move to git,gnu-andrew,2022-03-02,2022-03-02,integrated,Red Hat,,0,jerboaa
-8253424,3,8253424: Add support for running pre-submit testing using GitHub Actions,gnu-andrew,2022-03-05,2022-04-06,integrated|backport,Red Hat,,32,jerboaa
-8129572,4,8129572: Cleanup usage of getResourceAsStream in jaxp,akashche,2022-03-09,2022-03-22,integrated|backport,,,13,gnu-andrew
-8132256,5,8132256: jaxp: Investigate removal of com/sun/org/apache/bcel/internal/util/ClassPath.java,akashche,2022-03-09,2022-03-22,integrated|backport,,,13,gnu-andrew
-8279669,6,8279669: test/jdk/com/sun/jdi/TestScaffold.java uses wrong condition,zzambers,2022-03-14,2022-03-15,integrated|backport,Red Hat,,1,"phohensee,jerboaa"
-8194154,8,8194154: System property user.dir should not be changed,dongbohe,2022-03-17,2022-03-21,integrated|backport,,,4,jerboaa
-8173361,9,8173361: various crashes in JvmtiExport::post_compiled_method_load,dongbohe,2022-03-17,2022-06-29,integrated|backport,,,104,gnu-andrew
-8202142,10,8202142: jfr/event/io/TestInstrumentation is unstable,dongbohe,2022-03-17,2022-05-25,integrated|backport,,,69,"phohensee,zhengyu123"
-8076190,12,8076190: Customizing the generation of a PKCS12 keystore,alexeybakhtin,2022-03-17,2022-03-17,integrated|backport,Azul,,0,martinuy
-8223396,14,8223396: [TESTBUG] several jfr tests do not clean up files created in /tmp,dongbohe,2022-03-18,2022-03-22,integrated|backport|clean,,,4,gnu-andrew
-8230865,16,8230865: [TESTBUG] jdk/jfr/event/io/EvilInstrument.java fails at-run shell MakeJAR.sh target,dongbohe,2022-03-18,2022-03-22,integrated|backport|clean,,,4,
-8190753,17,8190753: (zipfs): Accessing a large entry (> 2^31 bytes) leads to a negative initial size for ByteArrayOutputStream,apavlyutkin,2022-03-18,2022-04-08,integrated|backport,,,21,"phohensee,gnu-andrew"
-8214427,18,8214427: probable bug in logic of ConcurrentHashMap.addCount(),tianshuang,2022-03-19,2022-08-20,integrated|backport,,,154,"phohensee,gnu-andrew"
-8235218,19,8235218: Minimal VM is broken after JDK-8173361,dongbohe,2022-03-21,2022-07-10,integrated|backport,,,111,"jerboaa,gnu-andrew"
-8255239,20,8255239: The timezone of the hs_err_pid log file is corrupted in Japanese locale,ktakakuri,2022-03-22,2022-04-02,integrated|backport,,,11,gnu-andrew
-8261107,21,8261107: ArrayIndexOutOfBoundsException in the ICC_Profile.getInstance(InputStream),mrserb,2022-03-24,2022-04-07,integrated|backport,Oracle,RU,14,phohensee
-8274751,23,8274751: Drag And Drop hangs on Windows,mrserb,2022-03-28,2022-03-30,integrated|backport|clean,Oracle,RU,2,
-8274658,24,8274658: ISO 4217 Amendment 170 Update,gnu-andrew,2022-03-28,2022-03-29,integrated|backport,Red Hat,,1,jerboaa
-8278138,25,8278138: OpenJDK8 fails to start on Windows 8.1 after upgrading compiler to VS2017,ktakakuri,2022-03-29,2022-05-19,integrated|backport,,,51,"jaokim,erikj79"
-8281814,26,8281814: Debuginfo.diz contains redundant build path after backport JDK-8025936,dongbohe,2022-03-30,2022-04-06,integrated,,,7,jerboaa
-8170530,28,8170530: bash configure output contains a typo in a suggested library name,dongbohe,2022-04-01,2022-05-10,integrated|backport,,,39,jerboaa
-8235385,30,8235385: Crash on aarch64 JDK due to long offset,apavlyutkin,2022-04-04,2022-05-31,integrated|backport,,,57,"theRealAph,gnu-andrew"
-8235211,32,8235211: serviceability/attach/RemovingUnixDomainSocketTest.java fails with AttachNotSupportedException: Unable to open socket file,navyxliu,2022-04-05,2022-05-09,integrated|backport,Oracle,CN,34,"phohensee,gnu-andrew"
-8221988,33,8221988: add possibility to build with Visual Studio 2019,apavlyutkin,2022-04-07,2022-05-12,integrated|backport,,,35,"jerboaa,gnu-andrew"
-8256722,34,8256722: handle VC++:1927 VS2019 in  abstract_vm_version,apavlyutkin,2022-04-08,2022-07-11,integrated|backport|clean,,,94,
-8284772,35,JDK-8284772: 8u GHA: Use GCC Major Version Dependencies Only,gnu-andrew,2022-04-12,2022-04-28,integrated,Red Hat,,16,mrserb
-8260589,36,8260589: Crash in JfrTraceIdLoadBarrier::load(_jclass*),yanglong1010,2022-04-18,2022-06-27,integrated|backport,Alibaba,CN,70,zhengyu123
-8150669,37,8150669: C1 intrinsic for Class.isPrimitive,dongbohe,2022-04-19,2022-07-08,integrated|backport,,,80,phohensee
-8266187,42,8266187: Memory leak in appendBootClassPath(),zhengyu123,2022-04-19,2022-05-24,integrated|backport|clean,Oracle,CA,35,
-8233019,43,8233019: java.lang.Class.isPrimitive() (C1) returns wrong result if Klass* is aligned to 32bit,dongbohe,2022-04-20,2022-07-11,integrated|backport,,,82,phohensee
-8280963,45,8280963: Incorrect PrintFlags formatting on Windows,akashche,2022-04-20,2022-06-15,integrated,,,56,gnu-andrew
-8248876,47,8248876: LoadObject with bad base address created for exec file on linux,ktakakuri,2022-04-25,2022-05-19,integrated|backport|clean,,,24,phohensee
-,48,Merge jdk8u:master,gnu-andrew,2022-04-28,2022-04-28,integrated,Red Hat,,0,
-8285445,49,"8285445: cannot open file ""NUL:""",mrserb,2022-04-28,2022-04-29,integrated|backport|clean,Oracle,RU,1,
-,51,Merge jdk8u:master,gnu-andrew,2022-05-02,2022-05-02,integrated,Red Hat,,0,
-8284620,52,8284620: CodeBuffer may leak _overflow_arena,zhengyu123,2022-05-02,2022-05-24,integrated|backport,Oracle,CA,22,phohensee
-8168926,53,8168926: C2: Bytecode escape analyzer crashes due to stack overflow,caojoshua,2022-05-05,2022-05-16,integrated,Amazon,US,11,phohensee
-8130895,57,8130895: Test javax/swing/system/6799345/TestShutdown.java fails on Solaris11 Sparcv9,ktakakuri,2022-05-11,2022-07-12,integrated|backport|clean,,,62,
-8285523,59,8285523: Improve test java/io/FileOutputStream/OpenNUL.java,mrserb,2022-05-16,2022-05-24,integrated|backport|clean,Oracle,RU,8,gnu-andrew
-8194873,60,8194873: right ALT key hotkeys no longer work in Swing components,omikhaltsova,2022-05-17,2022-07-11,integrated|backport,,,55,"yan-too,mrserb,alitvinv"
-8286989,61,8286989: Build failure on macOS after 8281814,zzambers,2022-05-18,2022-05-24,integrated,Red Hat,,6,jerboaa
-8031567,62,8031567: Better model for storing source revision information,gnu-andrew,2022-05-23,2022-05-26,integrated|backport,Red Hat,,3,jerboaa
-8283350,63,8283350: (tz) Update Timezone Data to 2022a,dimitryc,2022-05-23,2022-05-24,integrated|backport,,,1,jerboaa
-8285727,64,"8285727: [11u, 17u] Unify fix for JDK-8284920 with version from head",yan-too,2022-05-23,2022-05-24,integrated|backport|clean,,,1,
-8173339,66,8173339: AArch64: Fix minimum stack size computations,dongbohe,2022-05-30,2022-08-26,integrated|backport,,,88,theRealAph
-8087283,67,8087283: Add support for the XML Signature here() function to the JDK XPath implementation,yan-too,2022-05-30,2022-06-30,integrated|backport,,,31,gnu-andrew
-8287521,68,8287521: Bump update version of OpenJDK: 8u352,gnu-andrew,2022-05-30,2022-05-30,integrated,Red Hat,,0,jerboaa
-8067941,71,8067941: [TESTBUG] Fix tests for OS with 64K page size.,dongbohe,2022-06-01,2022-09-01,integrated|backport,,,92,gnu-andrew
-8283849,73,8283849: AsyncGetCallTrace may crash JVM on guarantee,jbachorik,2022-06-15,2022-07-08,integrated|backport,Datadog,CZ,23,phohensee
-8282538,76,8282538: PKCS11 tests fail on CentOS Stream 9,omikhaltsova,2022-06-21,2022-07-11,integrated|backport|clean,,,20,
-8197859,77,8197859: VS2017 Complains about UINTPTR_MAX definition in globalDefinitions_VisCPP.hpp,apavlyutkin,2022-06-22,2022-11-17,integrated|backport,,,148,phohensee
-8136354,78,8136354: [TEST_BUG] Test  java/awt/image/RescaleOp/RescaleAlphaTest.java with Bad action for script,ktakakuri,2022-06-23,2022-07-07,integrated|backport|clean,,,14,
-8139668,79,8139668: Generate README-build.html from markdown,gnu-andrew,2022-06-24,2022-08-26,integrated|backport,Red Hat,,63,phohensee
-8286582,80,8286582: Build fails on macos aarch64 when using --with-zlib=bundled,mrserb,2022-06-27,2022-11-16,integrated|backport,Oracle,RU,142,"phohensee,jerboaa"
-8288928,81,8288928: Incorrect GPL header in pnglibconf.h (backport of JDK-8185041),mrserb,2022-06-28,2022-09-07,integrated,Oracle,RU,71,"phohensee,gnu-andrew"
-8273176,82,8273176: handle latest VS2019 in abstract_vm_version,apavlyutkin,2022-07-11,2022-09-01,integrated|backport|clean,,,52,gnu-andrew
-8254178,83,8254178: Remove .hgignore,gdams,2022-07-11,2022-08-22,integrated|backport,Microsoft,,42,"phohensee,gnu-andrew"
-8288865,84,8288865: [aarch64] LDR instructions must use legitimized addresses,apavlyutkin,2022-07-20,2022-08-04,integrated|backport,,,15,adinn
-,85,Merge jdk8u:master,gnu-andrew,2022-07-20,2022-07-21,integrated,Red Hat,,1,
-8288763,86,8288763: Pack200 extraction failure with invalid size,backwaterred,2022-07-20,2022-08-17,integrated|backport,IBM,,28,phohensee
-8290000,87,8290000: Bump macOS GitHub actions to macOS 11,gdams,2022-07-21,2022-08-04,integrated|backport,Microsoft,,14,jerboaa
-8071530,91,8071530: Update OS detection code to reflect Windows 10 version change,rgithubli,2022-07-26,2022-08-30,integrated|backport|clean,,,35,
-8287132,92,8287132: Retire Runtime.runFinalizersOnExit so that it always throws UOE,dholmes-ora,2022-07-29,2022-08-05,integrated|backport,Oracle,AU,7,"irisclark,gnu-andrew,hseigel"
-8274840,93,8274840: Update OS detection code to recognize Windows 11,rgithubli,2022-07-29,2022-08-30,integrated|backport,,,32,"phohensee,eastig"
-8071507,94,8071507: (ref) Clear phantom reference as soft and weak references do,poonamparhar,2022-08-01,2022-08-11,integrated|backport,,,10,"mlchung,dholmes-ora,irisclark,gnu-andrew"
-,95,Merge jdk8u:master,gnu-andrew,2022-08-01,2022-08-01,integrated,Red Hat,,0,
-8245263,96,8245263: Enable TLSv1.3 by default on JDK 8u for Client roles,alexeybakhtin,2022-08-09,2022-08-16,integrated|backport,Azul,,7,martinuy
-8148005,97,8148005: One byte may be corrupted by get_datetime_string(),Roo4L,2022-08-11,2022-10-11,integrated|backport|clean,,,61,phohensee
-8183107,98,8183107: PKCS11 regression regarding checkKeySize,zzambers,2022-08-11,2022-08-22,integrated|backport,Red Hat,,11,"phohensee,gnu-andrew"
-8175797,99,8175797: (ref) Reference::enqueue method should clear the reference object before enqueuing,poonamparhar,2022-08-11,2022-08-22,integrated|backport|clean,,,11,"mlchung,dholmes-ora,irisclark,gnu-andrew"
-8285497,100,8285497: Add system property for Java SE specification maintenance version,jddarcy,2022-08-11,2022-08-24,integrated|backport,Oracle,US,13,"mlchung,dholmes-ora,irisclark,gnu-andrew"
-8201793,102,8201793: (ref) Reference object should not support cloning,poonamparhar,2022-08-15,2022-08-22,integrated|backport|clean,,,7,"mlchung,irisclark,gnu-andrew"
-8285400,103,8285400: Add '@apiNote' to the APIs defined in Java SE 8 MR 3,poonamparhar,2022-08-15,2022-08-22,integrated|backport,,,7,"mlchung,irisclark,gnu-andrew"
-7131823,104,7131823: bug in GIFImageReader,lutkerd,2022-08-16,2022-08-26,integrated|backport,,,10,phohensee
-8283903,105,8283903: GetContainerCpuLoad does not return the correct result in share mode,xpbob,2022-08-18,2022-09-01,integrated|backport|clean,,,14,gnu-andrew
-8195607,106,"8195607: sun/security/pkcs11/Secmod/TestNssDbSqlite.java failed with ""NSS initialization failed"" on NSS 3.34.1",martinuy,2022-08-19,2022-09-09,integrated|backport|clean,,,21,gnu-andrew
-8292688,107,JDK-8292688: Support Security properties in security.testlibrary.Proc,martinuy,2022-08-20,2022-08-26,integrated,,,6,jerboaa
-8254318,108,8254318: Remove .hgtags,gdams,2022-08-22,2022-08-24,integrated|backport,Microsoft,,2,gnu-andrew
-8232950,109,8232950: SUNPKCS11 Provider incorrectly check key length for PSS Signatures.,zzambers,2022-08-22,2022-08-24,integrated|backport|clean,Red Hat,,2,gnu-andrew
-8292762,110,8292762: Remove .jcheck directories from jdk8u subcomponents,gdams,2022-08-23,2022-08-30,integrated,Microsoft,,7,phohensee
-8271459,111,8271459: C2: Missing NegativeArraySizeException when creating StringBuilder with negative capacity,apavlyutkin,2022-08-23,2022-10-14,integrated|backport|clean,,,52,rwestrel
-8039955,112,"8039955: [TESTBUG] jdk/lambda/LambdaTranslationTest1 - java.lang.AssertionError: expected [d:1234.000000] but found [d:1234,000000]",zzambers,2022-08-23,2022-08-24,integrated|backport|clean,Red Hat,,1,
-8049228,113,8049228: Improve multithreaded scalability of InetAddress cache,lusou-zhangquan,2022-08-25,2022-08-26,integrated|backport,,,1,"phohensee,gnu-andrew"
-8293181,116,8293181: Bump update version of OpenJDK: 8u362,gnu-andrew,2022-08-31,2022-08-31,integrated,Red Hat,,0,jerboaa
-8293461,118,8293461: Add a test for JDK-8290832,mrserb,2022-09-07,2022-09-28,integrated,Oracle,RU,21,phohensee
-8274563,120,8274563: jfr/event/oldobject/TestClassLoaderLeak.java fails when GC cycles are not happening,caojoshua,2022-09-21,2022-10-11,integrated|backport,Amazon,US,20,phohensee
-8231111,121,8231111: Cgroups v2: Rework Metrics in java.base so as to recognize unified hierarchy,jmtd,2022-09-21,2022-12-05,integrated|backport,IBM,,75,"jerboaa,gnu-andrew"
-8293828,122,8293828: JFR: jfr/event/oldobject/TestClassLoaderLeak.java still fails when GC cycles are not happening,Rudometov,2022-09-21,2022-10-11,integrated|backport,Amazon,,20,phohensee
-8206456,123,8206456: [TESTBUG] docker jtreg tests fail on systems without cpuset.effective_cpus / cpuset.effective_mems,jmtd,2022-09-22,2022-10-21,integrated|backport,IBM,,29,jerboaa
-8240189,124,8240189: [TESTBUG] Some cgroup tests are failing after JDK-8231111,jmtd,2022-09-26,2022-12-13,integrated|backport,IBM,,78,jerboaa
-8253702,125,"8253702: BigSur version number reported as 10.16, should be 11.nn",omikhaltsova,2022-09-29,2022-10-13,integrated|backport|clean,,,14,
-8269850,126,8269850: Most JDK releases report macOS version 12 as 10.16 instead of 12.0,omikhaltsova,2022-09-30,2022-10-13,integrated|backport|clean,,,13,
-8230305,127,8230305: Cgroups v2: Container awareness,jmtd,2022-10-03,2022-11-30,integrated|backport,IBM,,58,"jerboaa,gnu-andrew"
-8237479,128,8237479: 8230305 causes slowdebug build failure,jmtd,2022-10-04,2022-12-08,integrated|backport|clean,IBM,,65,"jerboaa,gnu-andrew"
-8294767,129,"8294767: 8u contains two copies of test/../FileUtils.java, one uses JDK9+ features",jmtd,2022-10-04,2022-12-06,integrated,IBM,,63,"jerboaa,gnu-andrew"
-8253714,130,8253714: [cgroups v2] Soft memory limit incorrectly using memory.high,jmtd,2022-10-05,2022-12-07,integrated|backport|clean,IBM,,63,gnu-andrew
-8294863,131,8294863: Enable partial tier1 testing in GHA for JDK8,zzambers,2022-10-05,2022-10-11,integrated,Red Hat,,6,jerboaa
-8284690,132,8284690: [macos] VoiceOver : Getting java.lang.IllegalArgumentException: Invalid location on Editable JComboBox,mrserb,2022-10-10,2022-12-06,integrated|backport|clean,Oracle,RU,57,
-8295164,133,8295164: JDK 8 jdi tests should not use tasklist command on Windows,zzambers,2022-10-11,2022-10-13,integrated,Red Hat,,2,jerboaa
-8159599,134,8159599: [TEST_BUG] java/awt/Modal/ModalInternalFrameTest/ModalInternalFrameTest.java,caojoshua,2022-10-11,2022-11-11,integrated|backport,Amazon,US,31,phohensee
-8239785,135,8239785: Cgroups: Incorrect detection logic on old systems in hotspot,jmtd,2022-10-12,2022-12-12,integrated|backport,IBM,,61,jerboaa
-8239559,136,8239559: Cgroups: Incorrect detection logic on some systems,jmtd,2022-10-13,2022-12-13,integrated|backport,IBM,,61,jerboaa
-,137,Merge jdk8u:master,gnu-andrew,2022-10-14,2022-10-15,integrated,Red Hat,,1,
-8294357,138,8294357: (tz) Update Timezone Data to 2022d,gnu-andrew,2022-10-16,2022-11-02,integrated|backport,Red Hat,,17,jerboaa
-8295173,139,8295173: (tz) Update Timezone Data to 2022e,gnu-andrew,2022-10-16,2022-11-02,integrated|backport,Red Hat,,17,jerboaa
-8079255,140,8079255: [TEST_BUG] [macosx] Test closed/java/awt/Robot/RobotWheelTest/RobotWheelTest fails for Mac only,caojoshua,2022-10-16,2022-11-18,integrated|backport|clean,Amazon,US,33,
-8129827,141,8129827: [TEST_BUG] Test java/awt/Robot/RobotWheelTest/RobotWheelTest.java fails,caojoshua,2022-10-16,2022-11-18,integrated|backport,Amazon,US,33,phohensee
-8244500,142,8244500: jtreg test error in test/hotspot/jtreg/containers/docker/TestMemoryAwareness.java,jmtd,2022-10-17,2022-12-12,integrated|backport,IBM,,56,jerboaa
-8054066,143,8054066: com/sun/jdi/DoubleAgentTest.java fails with timeout,zzambers,2022-10-18,2022-10-19,integrated|backport,Red Hat,,1,"dsamersoff,jerboaa"
-,144,Merge jdk8u:master,gnu-andrew,2022-10-19,2022-10-19,integrated,Red Hat,,0,
-6829250,145,6829250: Reg test: java/awt/Toolkit/ScreenInsetsTest/ScreenInsetsTest.java fails in Windows,caojoshua,2022-10-20,2022-12-05,integrated|backport,Amazon,US,46,phohensee
-8265527,146,8265527: tools/javac/diags/CheckExamples.java fails after JDK-8078024 8u backport,petermz,2022-10-21,2022-10-26,integrated,,,5,jerboaa
-8295288,147,8295288: Some vm_flags tests associate with a wrong BugID,caojoshua,2022-10-25,2022-11-09,integrated|backport|clean,Amazon,US,15,
-8295915,148,8295915: Problemlist compiler/rtm failures specific to 8u,zzambers,2022-10-25,2022-11-08,integrated,Red Hat,,14,"phohensee,jerboaa"
-8295950,149,8295950: Enable langtools/tier1 in GHA for 8u,zzambers,2022-10-26,2022-11-03,integrated,Red Hat,,8,jerboaa
-8295982,150,8295982: Failure in sun/security/tools/keytool/WeakAlg.java - ks: The process cannot access the file because it is being used by another process,wkia,2022-10-29,2022-12-01,integrated,Azul,,33,dimitryc
-8270344,151,8270344: Session resumption errors,alexeybakhtin,2022-10-31,2022-11-07,integrated|backport,Azul,,7,martinuy
-8295322,152,8295322: Tests for JDK-8271459 were not backported to 11u,apavlyutkin,2022-11-01,2022-12-01,integrated|backport,,,30,phohensee
-8257620,153,8257620: Do not use objc_msgSend_stret to get macOS version,benty-amzn,2022-11-01,2022-12-05,integrated|backport,,,34,"phohensee,omikhaltsova,AntonKozlov"
-8269039,154,8269039: Disable SHA-1 Signed JARs,alexeybakhtin,2022-11-03,2022-11-23,integrated|backport,Azul,,20,martinuy
-8278951,155,8278951: containers/cgroup/PlainRead.java fails on Ubuntu 21.10,jmtd,2022-11-04,2022-12-15,integrated|backport,IBM,,41,jerboaa
-8224506,156,8224506: [TESTBUG] TestDockerMemoryMetrics.java fails with exitValue = 137,jerboaa,2022-11-04,2022-11-08,integrated|backport|clean,Red Hat,CA,4,
-8252359,157,8252359: HotSpot Not Identifying it is Running in a Container,jmtd,2022-11-07,2022-12-15,integrated|backport|clean,IBM,,38,
-8253435,158,8253435: Cgroup: 'stomping of _mount_path' crash if manually mounted cpusets exist,jmtd,2022-11-07,2022-12-15,integrated|backport,IBM,,38,jerboaa
-8245543,159,8245543: Cgroups: Incorrect detection logic on some systems (still reproducible),jmtd,2022-11-07,2022-12-15,integrated|backport,IBM,,38,jerboaa
-7124218,160,7124218: [TEST_BUG] [macosx] Space should select cell in the JTable,Rudometov,2022-11-08,2022-11-09,integrated|backport|clean,Amazon,,1,
-8159720,161,8159720: Failure of C2 compilation with tiered prevents some C1 compilations,y1yang0,2022-11-08,2022-11-09,integrated|backport|clean,Alibaba,CN,1,phohensee
-8233551,162,8233551: [TESTBUG] SelectEditTableCell.java fails on MacOS,Rudometov,2022-11-08,2022-11-09,integrated|backport,Amazon,,1,phohensee
-8296555,163,8296555: Enable hotspot/tier1 for 64-bit builds in GHA for 8u,zzambers,2022-11-08,2022-11-08,integrated,Red Hat,,0,"phohensee,jerboaa"
-8197408,164,8197408: Bad pointer comparison and small cleanup in os_linux.cpp,jmtd,2022-11-09,2022-12-13,integrated|backport,IBM,,34,jerboaa
-8255559,165,8255559: Leak File Descriptors Because of ResolverLocalFilesystem#engineResolveURI(),gnu-andrew,2022-11-09,2022-11-25,integrated|backport|clean,Red Hat,,16,
-8221529,166,8221529: [TESTBUG] Docker tests use old/deprecated image on AArch64,lutkerd,2022-11-09,2022-11-11,integrated|backport,,,2,jerboaa
-8284622,167,8284622: Update versions of some Github Actions used in JDK workflow,zzambers,2022-11-09,2022-11-10,integrated|backport,Red Hat,,1,jerboaa
-8253727,168,8253727: [cgroups v2] Memory and swap limits reported incorrectly,jerboaa,2022-11-10,2022-12-07,integrated|backport|clean,Red Hat,CA,27,gnu-andrew
-8253939,169,8253939: [TESTBUG] Increase coverage of the cgroups detection code,jmtd,2022-11-14,2022-12-15,integrated|backport,IBM,,31,jerboaa
-8254001,170,8254001: [Metrics] Enhance parsing of cgroup interface files for version detection,jmtd,2022-11-14,2022-12-16,integrated|backport,IBM,,32,jerboaa
-8262379,171,8262379: Add regression test for JDK-8257746,jmtd,2022-11-14,2022-12-16,integrated|backport,IBM,,32,jerboaa
-8295714,172,8295714: GHA ::set-output is deprecated and will be removed,zzambers,2022-11-14,2022-11-14,integrated|backport,Red Hat,,0,jerboaa
-8296959,173,8296959: Fix hotspot shell tests of 8u on multilib systems,zzambers,2022-11-14,2022-11-15,integrated,Red Hat,,1,jerboaa
-8284389,174,8284389: Improve stability of GHA Pre-submit testing by caching cygwin installer,zzambers,2022-11-14,2022-11-15,integrated|backport,Red Hat,,1,jerboaa
-8291570,175,8291570: [TESTBUG] Part of JDK-8250984 absent from 11u,jmtd,2022-11-15,2022-12-16,integrated|backport|clean,IBM,,31,gnu-andrew
-8252957,176,8252957: Wrong comment in CgroupV1Subsystem::cpu_quota,jmtd,2022-11-16,2022-12-16,integrated|backport|clean,IBM,,30,
-8266391,177,8266391: Replace use of reflection in jdk.internal.platform.Metrics,jmtd,2022-11-16,2022-12-16,integrated|backport,IBM,,30,jerboaa
-8284756,178,8284756: [11u] Remove unused isUseContainerSupport in CgroupV1Subsystem,jmtd,2022-11-16,2022-12-19,integrated|backport|clean,IBM,,33,
-8284102,179,8284102: [TESTBUG] [11u] Retroactively add regression test for JDK-8272124,jmtd,2022-11-16,2022-12-19,integrated|backport,IBM,,33,jerboaa
-8292083,180,8292083: Detected container memory limit may exceed physical machine memory,jmtd,2022-11-16,2022-12-19,integrated|backport,IBM,,33,jerboaa
-8297141,181,8297141: Fix hotspot/test/runtime/SharedArchiveFile/DefaultUseWithClient.java for 8u,zzambers,2022-11-16,2022-11-22,integrated,Red Hat,,6,jerboaa
-8241086,182,8241086: Test runtime/NMT/HugeArenaTracking.java is failing on 32bit Windows,zzambers,2022-11-16,2022-11-22,integrated|backport,Red Hat,,6,jerboaa
-6885993,183,6885993: Named Thread: introduce print() and print_on(outputStream* st) methods,simonis,2022-11-17,2022-11-25,integrated|backport|clean,Amazon,DE,8,"phohensee,gnu-andrew"
-8073464,184,8073464: GC workers do not have thread names,simonis,2022-11-17,2022-11-25,integrated|backport,Amazon,DE,8,"phohensee,gnu-andrew"
-8253797,185,8253797: [cgroups v2] Account for the fact that swap accounting is disabled on some systems,jmtd,2022-11-18,2022-12-15,integrated|backport|clean,IBM,,27,
-8229182,186,8229182: [TESTBUG] runtime/containers/docker/TestMemoryAwareness.java test fails on SLES12,lutkerd,2022-11-18,2022-12-27,integrated|backport,,,39,phohensee
-8297329,187,8297329: [8u] hotspot needs to recognise VS2019,apavlyutkin,2022-11-21,2022-12-01,integrated,,,10,phohensee
-8296485,188,8296485: BuildEEBasicConstraints.java test fails with SunCertPathBuilderException,theaoqi,2022-11-21,2022-12-05,integrated|backport,Loongson,CN,14,phohensee
-8296480,189,8296480: java/security/cert/pkix/policyChanges/TestPolicy.java is failing,theaoqi,2022-11-21,2022-12-05,integrated|backport|clean,Loongson,CN,14,
-8241087,190,8241087: Build failure with VS 2019 (16.5.0) due to C2039 and C2873,apavlyutkin,2022-11-22,2022-12-01,integrated|backport|clean,,,9,
-8295952,191,8295952: Problemlist existing compiler/rtm tests also on x86,zzambers,2022-11-23,2022-12-06,integrated|backport,Red Hat,,13,jerboaa
-8226236,192,8226236: win32: gc/metaspace/TestCapacityUntilGCWrapAround.java fails,zzambers,2022-11-23,2022-12-02,integrated|backport|clean,Red Hat,,9,
-8242468,193,8242468: VS2019 build missing vcruntime140_1.dll,apavlyutkin,2022-11-23,2022-12-01,integrated|backport,,,8,phohensee
-8296496,194,8296496: Overzealous check in sizecalc.h prevents large memory allocation,mrserb,2022-11-24,2022-12-06,integrated|backport|clean,Oracle,RU,12,
-8247676,195,8247676: vcruntime140_1.dll is not needed on 32-bit Windows,apavlyutkin,2022-11-28,2022-12-01,integrated|backport,,,3,phohensee
-8296957,196,8296957: One more cast in SAFE_SIZE_NEW_ARRAY2,mrserb,2022-11-28,2022-12-06,integrated|backport|clean,Oracle,RU,8,
-8296632,198,8296632: Write a test to verify the content change of TextArea sends TextEvent,Rudometov,2022-11-29,2022-12-05,integrated|backport|clean,Amazon,,6,
-8286624,199,8286624: Regression Test CoordinateTruncationBug.java fails on OL8.3,Rudometov,2022-11-29,2022-12-01,integrated|backport|clean,Amazon,,2,
-8297739,201,8297739: Bump update version of OpenJDK: 8u372,gnu-andrew,2022-11-30,2022-11-30,integrated,Red Hat,,0,jerboaa
-8283277,202,8283277: ISO 4217 Amendment 171 Update,dimitryc,2022-12-02,2023-01-05,integrated|backport,,,34,"phohensee,gnu-andrew"
-8297996,203,8297996: [8u] generated images are broken due to renaming of MSVC runtime DLL's,apavlyutkin,2022-12-05,2022-12-23,integrated,,,18,phohensee
-8298307,204,8298307: Enable hotspot/tier1 for 32-bit builds in GHA for 8u,zzambers,2022-12-07,2022-12-12,integrated,Red Hat,,5,jerboaa
-8065422,205,8065422: Trailing dot in hostname causes TLS handshake to fail with SNI disabled,wkia,2022-12-09,2023-01-19,integrated|backport|clean,Azul,,41,"yan-too,gnu-andrew"
-8282398,206,8282398: EndingDotHostname.java test fails because SSL cert expired,wkia,2022-12-09,2023-01-19,integrated|backport|clean,Azul,,41,"yan-too,gnu-andrew"
-8282511,207,8282511: Use fixed certificate validation date in SSLExampleCert template,wkia,2022-12-09,2023-02-13,integrated|backport,Azul,,66,"yan-too,gnu-andrew"
-8203485,208,8203485: [freetype] text rotated on 180 degrees is too narrow,xiangzhai,2022-12-12,2023-01-17,integrated|backport,,,36,mrserb
-8072770,209,8072770: [TESTBUG] Some Introspector tests fail with a Java heap bigger than 4GB,theaoqi,2022-12-13,2022-12-13,integrated|backport|clean,Loongson,CN,0,
-8196196,210,8196196: Headful tests should not be run in headless mode,xiangzhai,2022-12-13,2022-12-14,integrated|backport,,,1,jerboaa
-8254717,211,8254717: isAssignableFrom checks in KeyFactorySpi.engineGetKeySpec appear to be backwards,phohensee,2022-12-14,2022-12-18,integrated|backport,Oracle,,4,gnu-andrew
-8234484,213,8234484: Add ability to configure third port for remote JMX,vyommani,2022-12-16,2022-12-19,integrated|backport,,,3,kusrinivasan
-8284977,215,8284977: MetricsTesterCgroupV2.getLongValueEntryFromFile fails when named value doesn't exist,kurashige23,2022-12-20,2022-12-23,integrated|backport|clean,,,3,
-8293472,216,8293472: Incorrect container resource limit detection if manual cgroup fs mounts present,jmtd,2022-12-20,2023-01-09,integrated|backport,IBM,,20,jerboaa
-8289695,217,8289695: [TESTBUG] TestMemoryAwareness.java fails on cgroups v2 and crun,jerboaa,2022-12-20,2023-01-11,integrated|backport|clean,Red Hat,CA,22,gnu-andrew
-8287107,218,8287107: CgroupSubsystemFactory.setCgroupV2Path asserts with freezer controller,jerboaa,2022-12-20,2023-01-30,integrated|backport,Red Hat,CA,41,"phohensee,gnu-andrew"
-8287741,219,8287741: Fix of JDK-8287107 (unused cgv1 freezer controller) was incomplete,jerboaa,2022-12-20,2023-01-30,integrated|backport|clean,Red Hat,CA,41,
-8292541,220,8292541: [Metrics] Reported memory limit may exceed physical machine memory,jmtd,2023-01-03,2023-01-19,integrated|backport,IBM,,16,jerboaa
-8293540,221,8293540: [Metrics] Incorrectly detected resource limits with additional cgroup fs mounts,jmtd,2023-01-03,2023-01-24,integrated|backport,IBM,,21,jerboaa
-8299548,222,8299548: Fix hotspot/test/runtime/Metaspace/MaxMetaspaceSizeTest.java in 8u,zzambers,2023-01-03,2023-01-09,integrated,Red Hat,,6,phohensee
-8283606,223,8283606: Tests may fail with zh locale on MacOS,Nagata-Haruhito,2023-01-06,2023-01-30,integrated|backport,,,24,jerboaa
-8289549,224,8289549: ISO 4217 Amendment 172 Update,gnu-andrew,2023-01-06,2023-01-10,integrated|backport,Red Hat,,4,dimitryc
-8294307,225,8294307: ISO 4217 Amendment 173 Update,gnu-andrew,2023-01-06,2023-01-10,integrated|backport,Red Hat,,4,dimitryc
-8296239,226,8296239: ISO 4217 Amendment 174 Update,gnu-andrew,2023-01-06,2023-01-10,integrated|backport,Red Hat,,4,dimitryc
-8299804,227,8299804: Fix non-portable code in hotspot shell tests in 8u ,zzambers,2023-01-09,2023-01-11,integrated,Red Hat,,2,"phohensee,jerboaa"
-8299439,228,8299439: java/text/Format/NumberFormat/CurrencyFormat.java fails for hr_HR,gnu-andrew,2023-01-11,2023-01-12,integrated|backport,Red Hat,,1,"jerboaa,dimitryc"
-8300014,229,8300014: Some backports placed the tests in the wrong location,mrserb,2023-01-12,2023-01-18,integrated,Oracle,RU,6,"phohensee,jerboaa"
-,230,Merge jdk8u:master,gnu-andrew,2023-01-18,2023-01-18,integrated,Red Hat,,0,
-8185736,231,8185736: missing default exception handler in calls to rethrow_Stub,dongbohe,2023-01-18,2023-03-06,integrated|backport|clean,,,47,rwestrel
-,232,Merge jdk8u:master,gnu-andrew,2023-01-18,2023-01-18,integrated,Red Hat,,0,
-8282947,234,8282947: JFR: Dump on shutdown live-locks in some conditions,judovana,2023-01-19,2023-02-15,integrated|backport,,,27,phohensee
-8301143,235,8301143: [TESTBUG] jfr/event/sampling/TestNative was backported to JDK8u without proper native wrapper,judovana,2023-01-24,2023-02-16,integrated,,,23,"phohensee,jerboaa"
-8293767,236,8293767: AWT test TestSinhalaChar.java has old SCCS markings,mrserb,2023-01-25,2023-01-27,integrated|backport|clean,Oracle,RU,2,
-8159135,237,8159135: [PIT] javax/swing/JMenuItem/8152981/MenuItemIconTest.java always fail,mrserb,2023-01-25,2023-01-27,integrated|backport|clean,Oracle,RU,2,
-8196467,238,8196467: javax/swing/JInternalFrame/Test6325652.java fails,mrserb,2023-01-25,2023-01-27,integrated|backport|clean,Oracle,RU,2,
-8039888,239,8039888: [TEST_BUG] keyboard garbage after javax/swing/plaf/windows/WindowsRootPaneUI/WrongAltProcessing/WrongAltProcessing.java,mrserb,2023-01-25,2023-01-27,integrated|backport|clean,Oracle,RU,2,
-8301122,240,8301122: [8u] Fix unreliable vs2010 download link,zzambers,2023-01-25,2023-01-27,integrated,Red Hat,,2,phohensee
-7001973,241,7001973: java/awt/Graphics2D/CopyAreaOOB.java fails,mrserb,2023-01-25,2023-01-27,integrated|backport|clean,Oracle,RU,2,
-8042098,242,8042098: [TESTBUG] Test sun/java2d/AcceleratedXORModeTest.java fails on Windows,mrserb,2023-01-25,2023-01-27,integrated|backport|clean,Oracle,RU,2,
-8239827,243,8239827: The test OpenByUNCPathNameTest.java should be changed to be manual,mrserb,2023-01-26,2023-01-27,integrated|backport|clean,Oracle,RU,1,
-8275650,244,8275650: Problemlist java/io/File/createTempFile/SpecialTempFile.java for Windows 11,ktakakuri,2023-01-26,2023-01-30,integrated|backport,,,4,"phohensee,jerboaa"
-8075964,245,8075964: Test java/awt/Mouse/TitleBarDoubleClick/TitleBarDoubleClick.html fails intermittently with timeout error,mrserb,2023-01-26,2023-01-27,integrated|backport|clean,Oracle,RU,1,
-8301246,246,8301246: NPE in FcFontManager.getDefaultPlatformFont() on Linux without installed fontconfig,AlexanderScherbatiy,2023-01-27,2023-02-17,integrated,,,21,mrserb
-8233570,247,8233570: [TESTBUG] HTMLEditorKit test bug5043626.java is failing on macos,mrserb,2023-01-27,2023-01-30,integrated|backport|clean,Oracle,RU,3,
-8280048,248,8280048: Missing comma in copyright header,mrserb,2023-01-27,2023-01-30,integrated|backport|clean,Oracle,RU,3,
-8156581,250,8156581: Cleanup of ProblemList.txt,mrserb,2023-01-28,2023-02-12,integrated|backport,Oracle,RU,15,"jerboaa,gnu-andrew"
-8177560,251,8177560: @headful key can be removed from the tests for JavaSound,mrserb,2023-01-29,2023-01-30,integrated|backport|clean,Oracle,RU,1,
-8301332,252,8301332: [8u] Fix writing of test files after the cgroups v2 backport,jerboaa,2023-01-30,2023-01-30,integrated,Red Hat,CA,0,gnu-andrew
-8270317,253,8270317: Large Allocation in CipherSuite,phohensee,2023-01-30,2023-02-16,integrated|backport,Oracle,,17,"martinuy,simonis"
-8301550,254,8301550: [8u] Enable additional linux build testing in GitHub,zzambers,2023-01-31,2023-02-01,integrated,Red Hat,,1,gnu-andrew
-8287463,255,8287463: JFR: Disable TestDevNull.java on Windows,judovana,2023-01-31,2023-02-15,integrated|backport,,,15,jerboaa
-7124381,256,7124381: DragSourceListener.dragDropEnd() never been called on completion of dnd operation,mrserb,2023-02-01,2023-02-01,integrated|backport|clean,Oracle,RU,0,
-6734341,257,6734341: REGTEST fails: SelectionAutoscrollTest.html,mrserb,2023-02-01,2023-02-13,integrated|backport|clean,Oracle,RU,12,gnu-andrew
-8287109,258,8287109: Distrust.java failed with CertificateExpiredException,theaoqi,2023-02-01,2023-02-08,integrated|backport,Loongson,CN,7,jerboaa
-8301620,260,8301620: [8u] some shell tests are passed but have unexpected operator errors,theaoqi,2023-02-01,2023-02-08,integrated,Loongson,CN,7,jerboaa
-7124238,262,7124238: [macosx] Font in BasicHTML document is bigger than it should be,mrserb,2023-02-02,2023-02-13,integrated|backport|clean,Oracle,RU,11,gnu-andrew
-8137101,263,8137101: [TEST_BUG] javax/swing/plaf/basic/BasicHTML/4251579/bug4251579.java failure due to timing,mrserb,2023-02-03,2023-02-13,integrated|backport|clean,Oracle,RU,10,gnu-andrew
-8298027,264,8298027: Remove SCCS id's from awt jtreg tests,mrserb,2023-02-06,2023-02-11,integrated|backport|clean,Oracle,RU,5,"phohensee,gnu-andrew"
-8301760,265,8301760: Fix possible leak in SpNegoContext dispose,yan-too,2023-02-06,2023-02-16,integrated|backport,,,10,phohensee
-8142540,266,8142540: [TEST_BUG] Test sun/awt/dnd/8024061/bug8024061.java fails on ubuntu,mrserb,2023-02-06,2023-02-13,integrated|backport|clean,Oracle,RU,7,gnu-andrew
-8205959,267,8205959: Do not restart close if errno is EINTR,gnu-andrew,2023-02-09,2023-02-11,integrated|backport,Red Hat,,2,mrserb
-8275535,268,8275535: Retrying a failed authentication on multiple LDAP servers can lead to users blocked,alexeybakhtin,2023-02-16,2023-02-17,integrated|backport,Azul,,1,phohensee
-8298108,269,8298108: Add a regression test for JDK-8297684,jerboaa,2023-02-27,2023-05-25,integrated|backport,Red Hat,CA,87,"phohensee,gnu-andrew"
-8303462,275,8303462: Bump update version of OpenJDK: 8u382,gnu-andrew,2023-03-01,2023-03-03,integrated,Red Hat,,2,jerboaa
-8263059,276,8263059: security/infra/java/security/cert/CertPathValidator/certification/ComodoCA.java fails due to revoked cert,gnu-andrew,2023-03-03,2023-04-04,integrated|backport,Red Hat,,32,jerboaa
-8295530,277,8295530: Update Zlib Data Compression Library to Version 1.2.13,sxa,2023-03-03,2023-03-27,integrated|backport,,,24,"jerboaa,gnu-andrew"
-,278,Merge jdk8u:master,gnu-andrew,2023-03-07,2023-03-08,integrated,Red Hat,,1,
-8278851,282,8278851: Correct signer logic for jars signed with multiple digest algorithms,jerboaa,2023-03-10,2023-04-07,integrated|backport,Red Hat,CA,28,"gnu-andrew,martinuy"
-8293815,283,8293815: P11PSSSignature.engineUpdate should not print debug messages during normal operation,zzambers,2023-03-14,2023-03-14,integrated|backport|clean,Red Hat,,0,
-8282600,284,8282600: SSLSocketImpl should not use user_canceled workaround when not necessary,zzambers,2023-03-14,2023-03-14,integrated|backport|clean,Red Hat,,0,
-8154043,285,"8154043: Fields not reachable anymore by tab-key, because of new tabbing behaviour of radio button groups.",ktakakuri,2023-03-15,2025-09-08,integrated|backport,,,908,"phohensee,gnu-andrew"
-8152432,286,"8152432: Implement setting jtreg @requires properties vm.flavor, vm.bits, vm.compMode",zzambers,2023-03-15,2023-03-21,integrated|backport,Red Hat,,6,"phohensee,jerboaa"
-8289301,287,8289301: P11Cipher should not throw out of bounds exception during padding,zzambers,2023-03-15,2023-03-21,integrated|backport,Red Hat,,6,phohensee
-8293232,288,8293232: Fix race condition in pkcs11 SessionManager,zzambers,2023-03-15,2023-03-21,integrated|backport|clean,Red Hat,,6,
-8302791,290,8302791: Add specific ClassLoader object to Proxy IllegalArgumentException message,yathamravali,2023-03-17,2023-03-27,integrated|backport,,,10,phohensee
-8202952,291,8202952: C2: Unexpected dead nodes after matching,dongbohe,2023-03-24,2023-08-24,integrated|backport,,,153,"rwestrel,gnu-andrew"
-,292,Merge jdk8u:master,gnu-andrew,2023-03-28,2023-03-28,integrated,Red Hat,,0,jerboaa
-8305165,293,8305165: [8u] ServiceThread::nmethods_do is not called to keep nmethods from being zombied while in the queue,JoshuaZhuwj,2023-03-29,2023-04-25,integrated,Alibaba,CN,27,phohensee
-8305329,294,8305329: [8u] Unify test libraries into single test library - step 1,zzambers,2023-03-30,2023-11-08,integrated,Red Hat,,223,gnu-andrew
-8276841,295,8276841: Add support for Visual Studio 2022,AlexanderScherbatiy,2023-03-31,2023-04-20,integrated|backport,,,20,jerboaa
-8271199,296,8271199: Mutual TLS handshake fails signing client certificate with custom sensitive PKCS11 key,alexeybakhtin,2023-04-03,2023-04-04,integrated|backport,Azul,,1,"martinuy,gnu-andrew"
-8215105,297,8215105: java/awt/Robot/HiDPIScreenCapture/ScreenCaptureTest.java: Wrong Pixel Color,mrserb,2023-04-04,2023-04-19,integrated|backport,Oracle,RU,15,phohensee
-8282345,299,8282345: handle latest VS2022 in abstract_vm_version,AlexanderScherbatiy,2023-04-10,2023-04-20,integrated|backport,,,10,jerboaa
-8277881,300,8277881: Missing SessionID in TLS1.3 resumption in compatibility mode,lutkerd,2023-04-10,2023-04-19,integrated|backport|clean,,,9,
-8151460,301,8151460: Metaspace counters can have inconsistent values,tstuefe,2023-04-11,2023-04-19,integrated|backport,Red Hat,DE,8,"phohensee,jerboaa"
-8263404,302,8263404: RsaPrivateKeySpec is always recognized as RSAPrivateCrtKeySpec in RSAKeyFactory.engineGetKeySpec,phohensee,2023-04-12,2023-04-13,integrated|backport,Oracle,,1,"gnu-andrew,martinuy,simonis"
-8285515,303,"8285515: (dc) DatagramChannel.disconnect fails with ""Invalid argument"" on macOS 12.4",benty-amzn,2023-04-13,2023-05-24,integrated|backport,,,41,"phohensee,shipilev"
-8305113,305,8305113: (tz) Update Timezone Data to 2023c,Rudometov,2023-04-13,2023-04-17,integrated|backport,Amazon,,4,gnu-andrew
-8159690,306,8159690: [TESTBUG] Mark headful tests with @key headful.,yaqsun,2023-04-20,2024-02-26,integrated|backport,,,312,"mrserb,gnu-andrew"
-,307,Merge jdk8u:master ,gnu-andrew,2023-04-20,2023-04-20,integrated|clean,Red Hat,,0,
-8268558,308,8268558: [TESTBUG] Case 2 in TestP11KeyFactoryGetRSAKeySpec is skipped,mrserb,2023-04-21,2023-05-24,integrated|backport,Oracle,RU,33,phohensee
-8072678,309,8072678: Wrong exception messages in java.awt.color.ICC_ColorSpace,mrserb,2023-05-02,2023-05-25,integrated|backport|clean,Oracle,RU,23,
-8307310,310,8307310: Backport the tests for JDK-8058969 and JDK-8039271 to the OpenJDK8,mrserb,2023-05-02,2023-05-24,integrated,Oracle,RU,22,phohensee
-8253269,311,8253269: The CheckCommonColors test should provide more info on failure,mrserb,2023-05-02,2023-05-31,integrated|backport|clean,Oracle,RU,29,
-8139348,312,8139348: Deprecate 3DES and RC4 in Kerberos,kvergizova,2023-05-04,2023-06-02,integrated|backport,,,29,gnu-andrew
-8307531,313,8307531: [aarch64] JDK8 single-step debugging is extremely slow,snazarkin,2023-05-05,2023-05-12,integrated,,,7,theRealAph
-8301400,314,8301400: Allow additional characters for GB18030-2022 support,naotoj,2023-05-08,2023-05-10,integrated|backport,Oracle,US,2,"RogerRiggs,irisclark,LanceAndersen"
-8305681,315,8305681: Allow additional characters for GB18030-2022 (Level 2) support,naotoj,2023-05-09,2023-05-10,integrated|backport,Oracle,US,1,"RogerRiggs,irisclark,LanceAndersen"
-8303028,316,8303028: Update system property for Java SE specification maintenance version,justin-curtis-lu,2023-05-09,2023-05-11,integrated|backport|clean,Oracle,US,2,"RogerRiggs,irisclark,naotoj,LanceAndersen"
-8307837,317,8307837: [8u] Check step in GHA should also print errors,zzambers,2023-05-10,2023-10-02,integrated,Red Hat,,145,gnu-andrew
-8305975,319,8305975: Add TWCA Global Root CA,jerboaa,2023-05-24,2023-05-25,integrated|backport|clean,Red Hat,CA,1,gnu-andrew
-8304760,320,8304760: Add 2 Microsoft TLS roots,jerboaa,2023-05-25,2023-05-26,integrated|backport|clean,Red Hat,CA,1,gnu-andrew
-8307134,321,8307134: Add GTS root CAs,jerboaa,2023-05-25,2023-05-26,integrated|backport|clean,Red Hat,CA,1,gnu-andrew
-8308788,322,8308788: [8u] Remove duplicate HaricaCA.java test,jerboaa,2023-05-26,2023-08-11,integrated,Red Hat,CA,77,"phohensee,gnu-andrew"
-8287663,323,8287663: Add a regression test for JDK-8287073,jerboaa,2023-05-26,2023-08-14,integrated|backport,Red Hat,CA,80,"phohensee,gnu-andrew"
-8287073,324,8287073: NPE from CgroupV2Subsystem.getInstance(),jerboaa,2023-05-26,2023-08-11,integrated|backport|clean,Red Hat,CA,77,gnu-andrew
-8205399,325,8205399: Set node color on pinned HashMap.TreeNode deletion,shipilev,2023-05-30,2023-07-07,integrated|backport|clean,Amazon,US,38,
-8309122,326,8309122: Bump update version of OpenJDK: 8u392,gnu-andrew,2023-05-30,2023-05-31,integrated,Red Hat,,1,"mrserb,jerboaa"
-8309143,327,8309143: [8u] fix archiving inconsistencies in GHA,zzambers,2023-05-30,2023-07-10,integrated,Red Hat,,41,"phohensee,jerboaa"
-8200468,335,8200468: Port the native GSS-API bridge to Windows,alexeybakhtin,2023-06-12,2023-07-03,integrated|backport,Azul,,21,gnu-andrew
-8310026,336,8310026: [8u] make java_lang_String::hash_code consistent across platforms,zzambers,2023-06-14,2023-07-10,integrated,Red Hat,,26,"phohensee,tstuefe,adinn"
-8219804,337,8219804: java/net/MulticastSocket/Promiscuous.java fails intermittently due to NumberFormatException,sendaoYan,2023-07-07,2023-08-09,integrated|backport,Alibaba,CN,33,phohensee
-,338,Merge jdk8u:master,gnu-andrew,2023-07-12,2023-07-12,integrated|clean,Red Hat,,0,
-8301119,339,8301119: Support for GB18030-2022,gnu-andrew,2023-07-12,2023-07-13,integrated|backport,Red Hat,,1,"tstuefe,jerboaa"
-6722928,340,6722928: Provide a default native GSS-API library on Windows,alexeybakhtin,2023-07-13,2023-08-11,integrated|backport,Azul,,29,"phohensee,gnu-andrew"
-8214046,341,8214046: [macosx] Undecorated Frame does not Iconify when set to,gesellix,2023-07-14,2023-08-07,integrated|backport,,,24,"phohensee,mrserb"
-,343,Merge jdk8u:master,gnu-andrew,2023-07-19,2023-07-19,integrated|clean,Red Hat,,0,
-8212677,345,8212677: X11 default visual support for IM status window on VNC,mrserb,2023-07-24,2023-08-28,integrated|backport,Oracle,RU,35,"phohensee,gnu-andrew"
-8232225,346,8232225: Rework the fix for JDK-8071483,mrserb,2023-07-25,2023-08-09,integrated|backport,Oracle,RU,15,phohensee
-8207404,347,8207404: MulticastSocket tests failing on AIX,Larry-N,2023-07-25,2023-10-16,integrated|backport,,,83,phohensee
-8239365,348,8239365: ProcessBuilder test modifications for AIX execution,Larry-N,2023-07-25,2023-09-06,integrated|backport|clean,,,43,
-8173072,349,"8173072: zipfs fails to handle incorrect info-zip ""extended timestamp extra field""",navyxliu,2023-07-31,2023-08-24,integrated|backport,Oracle,CN,24,"phohensee,mrserb,gnu-andrew"
-8040887,351,8040887: [TESTBUG] Remove test/runtime/6925573/SortMethodsTest.java,benty-amzn,2023-08-04,2023-08-09,integrated|backport,,,5,phohensee
-8206179,352,8206179: com/sun/management/OperatingSystemMXBean/GetCommittedVirtualMemorySize.java fails with Committed virtual memory size illegal value,benty-amzn,2023-08-04,2023-08-30,integrated|backport,,,26,"phohensee,gnu-andrew"
-6528710,354,6528710: sRGB-ColorSpace to sRGB-ColorSpace Conversion,mrserb,2023-08-12,2023-08-28,integrated|backport|clean,Oracle,RU,16,gnu-andrew
-8042726,355,8042726: [TESTBUG] TEST.groups file was not updated after runtime/6925573/SortMethodsTest.java removal,benty-amzn,2023-08-14,2023-08-16,integrated|backport|clean,,,2,jerboaa
-8285398,356,8285398: Cache the results of constraint checks,alexeybakhtin,2023-08-23,2023-10-17,integrated|backport,Azul,,55,phohensee
-8281096,357,8281096: Flags introduced by configure script are not passed to ADLC build,gnu-andrew,2023-08-23,2024-08-14,integrated,Red Hat,,357,"zzambers,tstuefe,jerboaa"
-8159156,358,8159156: [TESTBUG] ReserveMemory test is not useful on Aix.,Larry-N,2023-08-25,2023-09-06,integrated|backport|clean,,,12,
-8312535,359,8312535: MidiSystem.getSoundbank() throws unexpected SecurityException,mrserb,2023-08-28,2023-10-18,integrated|backport|clean,Oracle,RU,51,
-8315280,360,8315280: Bump update version of OpenJDK: 8u402,gnu-andrew,2023-08-30,2023-08-31,integrated,Red Hat,,1,mrserb
-8315135,361,8315135: Memory leak in the native implementation of Pack200.Unpacker.unpack(),simonis,2023-08-30,2023-09-01,integrated|backport|clean,Amazon,DE,2,gnu-andrew
-8315506,362,8315506: C99 compatibility issue in LinuxNativeDispatcher,fweimer-rh,2023-09-01,2023-09-04,integrated,,,3,"jerboaa,gnu-andrew"
-8271838,364,8271838: AmazonCA.java interop test fails,jerboaa,2023-09-05,2023-09-06,integrated|backport|clean,Red Hat,CA,1,gnu-andrew
-8309088,365,8309088: security/infra/java/security/cert/CertPathValidator/certification/AmazonCA.java fails,jerboaa,2023-09-05,2023-09-11,integrated|backport,Red Hat,CA,6,"phohensee,gnu-andrew"
-8029995,367,8029995: accept yes/no for boolean krb5.conf settings,alexeybakhtin,2023-09-05,2023-09-20,integrated|backport,Azul,,15,gnu-andrew
-8315757,368,8315757: [8u] Add cacerts JTREG tests to GHA tier1 test set,jerboaa,2023-09-06,2023-12-05,integrated,Red Hat,CA,90,"phohensee,gnu-andrew"
-8311813,369,8311813: C1: Uninitialized PhiResolver::_loop field,chadrako,2023-09-06,2023-10-16,integrated|backport|clean,Amazon,US,40,
-8176509,370,8176509: Use pandoc for converting build readme to html,zzambers,2023-09-07,2023-11-14,integrated|backport,Red Hat,,68,gnu-andrew
-8209115,371,8209115: adjust libsplashscreen linux ppc64le builds for easier libpng update,martinuy,2023-09-14,2023-09-19,integrated|backport,,,5,"phohensee,gnu-andrew"
-8295685,372,8295685: Update Libpng to 1.6.38,martinuy,2023-09-14,2023-09-19,integrated|backport,,,5,gnu-andrew
-8305815,373,8305815: Update Libpng to 1.6.39,martinuy,2023-09-14,2023-09-26,integrated|backport,,,12,"phohensee,gnu-andrew"
-,375,Merge jdk8u:master,gnu-andrew,2023-09-20,2023-09-20,integrated|clean,Red Hat,,0,
-8283441,376,8283441: C2: segmentation fault in ciMethodBlocks::make_block_at(int),judovana,2023-09-22,2023-09-25,integrated|backport,,,3,martinuy
-8021961,377,8021961: setAlwaysOnTop doesn't behave correctly in Linux/Solaris under certain scenarios,kurashige23,2023-09-28,2023-11-29,integrated|backport,,,62,gnu-andrew
-8222323,378,"8222323: ChildAlwaysOnTopTest.java fails with ""RuntimeException: Failed to unset alwaysOnTop""",kurashige23,2023-09-28,2023-11-29,integrated|backport,,,62,jerboaa
-8317291,379,8317291: Missing null check for nmethod::is_native_method(),tkiriyama,2023-09-29,2023-11-13,integrated,Fujitsu,JP,45,"phohensee,gnu-andrew"
-8242330,380,8242330: Arrays should be cloned in several JAAS Callback classes,yan-too,2023-09-29,2023-10-05,integrated|backport,,,6,gnu-andrew
-8312489,381,8312489: Increase jdk.jar.maxSignatureFileSize default which is too low for JARs such as WhiteSource/Mend unified agent jar,gnu-andrew,2023-10-11,2023-11-24,integrated|backport,Red Hat,,44,jerboaa
-8285696,382,8285696: AlgorithmConstraints:permits not throwing IllegalArgumentException when 'alg'  is null,alexeybakhtin,2023-10-11,2023-10-17,integrated|backport,Azul,,6,jerboaa
-,384,Merge jdk8u:master,gnu-andrew,2023-10-31,2023-10-31,integrated|clean,Red Hat,,0,
-8319405,385,JDK-8319405: [s390] [jdk8] Increase javac default stack size for s390x zero,tstuefe,2023-11-03,2023-11-08,integrated,Red Hat,DE,5,"phohensee,jerboaa"
-8198321,386,8198321: javax/swing/JEditorPane/5076514/bug5076514.java fails,yaqsun,2023-11-10,2024-02-26,integrated|backport,,,108,"mrserb,gnu-andrew"
-8208655,387,8208655: use JTreg skipped status in hotspot tests,gnu-andrew,2023-11-22,2023-11-28,integrated|backport,Red Hat,,6,"tstuefe,jerboaa"
-8297955,388,8297955: LDAP CertStore should use LdapName and not String for DNs,gnu-andrew,2023-11-24,2023-11-28,integrated|backport,Red Hat,,4,jerboaa
-8312126,389,8312126: NullPointerException in CertStore.getCRLs after 8297955,gnu-andrew,2023-11-24,2023-11-28,integrated|backport,Red Hat,,4,jerboaa
-8308592,390,8308592: Framework for CA interoperability testing,gnu-andrew,2023-11-24,2023-12-02,integrated|backport,Red Hat,,8,jerboaa
-8320713,391,8320713: Bump update version of OpenJDK: 8u412,gnu-andrew,2023-11-25,2023-11-27,integrated,Red Hat,,2,jerboaa
-8304074,392,8304074: [JMX] Add an approximation of total bytes allocated on the Java heap by the JVM,phohensee,2023-11-26,2024-02-26,integrated|backport,Oracle,,92,"gnu-andrew,simonis"
-8251551,394,8251551: Use .md filename extension for README,zzambers,2023-11-27,2023-11-28,integrated|backport,Red Hat,,1,phohensee
-8301310,395,8301310: The SendRawSysexMessage test may cause a JVM crash,mrserb,2023-11-28,2023-12-08,integrated|backport|clean,Oracle,RU,10,gnu-andrew
-8317373,397,8317373: Add Telia Root CA v2,jerboaa,2023-11-28,2023-12-11,integrated|backport,Red Hat,CA,13,"phohensee,gnu-andrew"
-8317374,398,8317374: Add Let's Encrypt ISRG Root X2,jerboaa,2023-11-28,2023-12-11,integrated|backport,Red Hat,CA,13,"phohensee,gnu-andrew"
-8318759,399,8318759: Add four DigiCert root certificates,jerboaa,2023-11-28,2023-12-11,integrated|backport,Red Hat,CA,13,"phohensee,gnu-andrew"
-8320964,400,8320964: sun/tools/native2ascii/Native2AsciiTests.sh fails on Japanese,ktakakuri,2023-11-29,2024-07-18,integrated,,,232,"phohensee,gnu-andrew"
-8319187,401,8319187: Add three eMudhra emSign roots,jerboaa,2023-12-11,2023-12-13,integrated|backport,Red Hat,CA,2,gnu-andrew
-8302017,403,8302017: Allocate BadPaddingException only if it will be thrown,alexeybakhtin,2023-12-14,2023-12-15,integrated|backport,Azul,,1,"gnu-andrew,martinuy"
-8320597,404,8320597: RSA signature verification fails on signed data that does not encode params correctly,alexeybakhtin,2023-12-14,2023-12-16,integrated|backport,Azul,,2,"jerboaa,gnu-andrew,martinuy"
-8159454,405,8159454: [TEST_BUG] javax/swing/ToolTipManager/7123767/bug7123767.java: number of checked graphics configurations should be limited,ktakakuri,2023-12-14,2024-04-17,integrated|backport,,,125,"mrserb,gnu-andrew"
-8268916,406,8268916: Tests for AffirmTrust roots,jerboaa,2023-12-14,2024-02-28,integrated|backport,Red Hat,CA,76,"phohensee,gnu-andrew"
-8155590,407,8155590: Dubious collection management in sun.net.www.http.KeepAliveCache,dhanalla,2023-12-15,2024-02-08,integrated|backport,,,55,jerboaa
-,408,Merge jdk8u:master,gnu-andrew,2023-12-18,2023-12-18,integrated|clean,Red Hat,,0,
-8293562,409,8293562: KeepAliveCache Blocks Threads while Closing Connections,dhanalla,2023-12-18,2024-05-14,integrated|backport,,,148,"phohensee,jerboaa,gnu-andrew"
-8312065,410,8312065: Socket.connect does not timeout when profiling,yanglong1010,2023-12-21,2025-06-26,integrated|backport,Alibaba,CN,553,phohensee
-8276139,411,"8276139: TestJpsHostName.java not reliable, better to expand HostIdentifierCreate.java test",yaqsun,2024-01-02,2024-02-19,integrated|backport,,,48,phohensee
-8321060,412,8321060: [8u] hotspot needs to recognise VS2022,mrserb,2024-01-03,2024-02-07,integrated,Oracle,RU,35,phohensee
-8270517,413,8270517: Add Zero support for LoongArch,xiangzhai,2024-01-05,2024-02-17,integrated|backport,,,43,"theaoqi,gnu-andrew"
-8322725,414,8322725: (tz) Update Timezone Data to 2023d,lutkerd,2024-01-05,2024-02-06,integrated|backport,,,32,jerboaa
-8315042,415,8315042: NPE in PKCS7.parseOldSignedData,mrserb,2024-01-07,2024-02-08,integrated|backport|clean,Oracle,RU,32,
-8323202,417,8323202: [8u] Remove get_source.sh and hgforest.sh,zzambers,2024-01-08,2024-02-12,integrated,Red Hat,,35,"phohensee,gnu-andrew"
-8168518,418,8168518: rcache interop with krb5-1.15,alexeybakhtin,2024-01-11,2024-02-15,integrated|backport,Azul,,35,gnu-andrew
-8248001,420,8248001: javadoc generates invalid HTML pages whose ftp:// links are broken,ktakakuri,2024-01-16,2025-05-20,integrated|backport,,,490,phohensee
-,421,Merge jdk8u:master,gnu-andrew,2024-01-17,2024-01-18,integrated|clean,Red Hat,,1,
-8324185,422,8324185: [8u] Accept Xcode 12+ builds on macOS,mrserb,2024-01-19,2024-04-16,integrated,Oracle,RU,88,"phohensee,gnu-andrew"
-8192931,423,8192931: Regression test java/awt/font/TextLayout/CombiningPerf.java fails,mrserb,2024-01-21,2024-02-06,integrated|backport|clean,Oracle,RU,16,
-8324530,424,JDK-8324530: Build error with gcc 10,tstuefe,2024-01-23,2024-02-22,integrated,Red Hat,DE,30,gnu-andrew
-8323640,426,8323640: [TESTBUG]testMemoryFailCount in jdk/internal/platform/docker/TestDockerMemoryMetrics.java always fail because OOM killed,sendaoYan,2024-01-24,2024-02-22,integrated|backport,Alibaba,CN,29,phohensee
-8238274,427,8238274: (sctp) JDK-7118373 is not fixed for SctpChannel,ktakakuri,2024-01-24,2024-06-27,integrated|backport,,,155,"phohensee,gnu-andrew"
-8035395,429,8035395: sun/management/jmxremote/startstop/JMXStartStopTest.java fails intermittently: Port already in use,ktakakuri,2024-01-25,2024-06-17,integrated|backport,,,144,"phohensee,gnu-andrew"
-8066708,430,8066708: JMXStartStopTest fails to connect to port 38112,ktakakuri,2024-01-25,2024-09-19,integrated|backport,,,238,"phohensee,gnu-andrew"
-8137329,434,"8137329: [windows] Build broken on VS2010 after  ""8046148: JEP 158: Unified JVM Logging""",ktakakuri,2024-01-26,2024-06-27,integrated|backport,,,153,"tstuefe,gnu-andrew"
-8324184,435,"8324184: Windows VS2010 build failed with ""error C2275: 'int64_t'""",gnu-andrew,2024-01-31,2024-01-31,integrated|backport,Red Hat,,0,jerboaa
-8325096,436,8325096: Test java/security/cert/CertPathBuilder/akiExt/AKISerialNumber.java is failing,sendaoYan,2024-02-01,2024-03-13,integrated|backport,Alibaba,CN,41,jerboaa
-8278067,437,8278067: Make HttpURLConnection default keep alive timeout configurable,dhanalla,2024-02-07,2024-03-19,integrated|backport,,,41,"jerboaa,gnu-andrew"
-8011180,438,8011180: Delete obsolete scripts,zzambers,2024-02-08,2024-02-12,integrated|backport|clean,Red Hat,,4,
-8325150,439,8325150: (tz) Update Timezone Data to 2024a,lutkerd,2024-02-08,2024-02-21,integrated|backport,,,13,"jerboaa,gnu-andrew"
-8318410,440,8318410: jdk/java/lang/instrument/BootClassPath/BootClassPathTest.sh fails on Japanese Windows,ktakakuri,2024-02-13,2024-04-17,integrated|backport,,,64,phohensee
-8240756,441,8240756: [macos] SwingSet2:TableDemo:Printed Japanese characters were garbled,mrserb,2024-02-14,2024-02-26,integrated|backport|clean,Oracle,RU,12,gnu-andrew
-8025439,442,8025439: [TEST BUG] [macosx] PrintServiceLookup.lookupPrintServices doesn't work properly since jdk8b105,mrserb,2024-02-14,2024-02-26,integrated|backport|clean,Oracle,RU,12,gnu-andrew
-8325927,444,8325927: [8u] Backport of JDK-8170552 missed part of the test,mrserb,2024-02-15,2024-03-31,integrated,Oracle,RU,45,jerboaa
-8069389,446,8069389: CompilerOracle prefix wildcarding is broken for long strings,wkia,2024-02-16,2024-04-10,integrated|backport|clean,Azul,,54,gnu-andrew
-8326110,447,8326110: [8u] The Marlin tests should be updated after JDK-8241307,mrserb,2024-02-18,2024-12-02,integrated,Oracle,RU,288,"phohensee,bourgesl,gnu-andrew"
-8079441,448,"8079441: Intermittent failures on Windows with ""Unexpected exit from test [exit code: 1080890248]"" (0x406d1388)",fthevenet,2024-02-19,2024-02-20,integrated|backport|clean,,,1,"tstuefe,gnu-andrew"
-8074860,449,8074860: Structured Exception Catcher missing around CreateJavaVM on Windows,fthevenet,2024-02-20,2024-02-21,integrated|backport,,,1,"tstuefe,gnu-andrew"
-8186199,451,8186199: [windows] JNI_DestroyJavaVM not covered by SEH,fthevenet,2024-02-20,2024-02-22,integrated|backport,,,2,"tstuefe,gnu-andrew"
-8291226,453,8291226: Create Test Cases to cover scenarios for JDK-8278067,dhanalla,2024-02-21,2024-04-05,integrated|backport,,,44,jerboaa
-8291638,454,8291638: Keep-Alive timeout of 0 should close connection immediately,dhanalla,2024-02-21,2024-04-08,integrated|backport,,,47,jerboaa
-8016451,455,8016451: Scary messages emitted by build.tools.generatenimbus.PainterGenerator during build,fthevenet,2024-02-22,2024-02-22,integrated|backport|clean,,,0,gnu-andrew
-8326686,456,8326686: Bump update version of OpenJDK: 8u422,gnu-andrew,2024-02-26,2024-02-26,integrated,Red Hat,,0,jerboaa
-8298887,457,8298887: On the latest macOS+XCode the Robot API may report wrong colors,mrserb,2024-02-26,2024-08-30,integrated|backport,Oracle,RU,186,"phohensee,gnu-andrew"
-8299677,459,8299677: Formatter.format might take a long time to format an integer or floating-point,chadrako,2024-02-26,2024-07-08,integrated|backport,Amazon,US,133,"phohensee,shipilev,gnu-andrew"
-8185500,464,8185500: [TESTBUG] Add keywords headful/printer in java/awt and javax tests.,yaqsun,2024-03-04,2025-08-26,integrated|backport,,,540,mrserb
-8327440,465,"8327440: Fix ""bad source file"" error during beaninfo generation",fitzsim,2024-03-04,2024-03-19,integrated,,,15,gnu-andrew
-8291637,466,8291637: HttpClient default keep alive timeout not followed if server sends invalid value,dhanalla,2024-03-04,2024-03-26,integrated|backport,,,22,jerboaa
-8256152,468,8256152: tests fail because of ambiguous method resolution,zzambers,2024-03-18,2024-03-25,integrated|backport|clean,Red Hat,,7,
-8265019,469,8265019: Update tests for additional TestNG test permissions,zzambers,2024-03-19,2025-01-29,integrated|backport,Red Hat,,316,phohensee
-8317507,470,"8317507: C2 compilation fails with ""Exceeded _node_regs array""",martinuy,2024-03-22,2024-03-27,integrated|backport,,,5,"rwestrel,gnu-andrew"
-8328809,471,8328809: [8u] Problem list some CA tests,jerboaa,2024-03-22,2024-03-27,integrated,Red Hat,CA,5,gnu-andrew
-8320005,473,8320005: Allow loading of shared objects with .a extension on AIX,suchismith1993,2024-03-25,2024-04-08,integrated|backport,,,14,jerboaa
-,474,Merge jdk8u:master,gnu-andrew,2024-03-27,2024-03-27,integrated|clean,Red Hat,,0,
-8313081,475,8313081: MonitoringSupport_lock should be unconditionally initialized after 8304074,phohensee,2024-03-27,2024-04-05,integrated|backport,Oracle,,9,simonis
-8235834,476,8235834: IBM-943 charset encoder needs updating,psawant19,2024-04-01,2024-05-22,integrated|backport,,,51,jerboaa
-8203691,477,8203691: [TESTBUG] Test /runtime/containers/cgroup/PlainRead.java fails,mrserb,2024-04-02,2024-04-05,integrated|backport|clean,Oracle,RU,3,
-8329544,478,8329544: [8u] sun/security/krb5/auto/ReplayCacheTestProc.java cannot find the testlibrary,ianrichr,2024-04-02,2024-04-15,integrated,,,13,"shipilev,gnu-andrew"
-8258855,481,8258855: Two tests sun/security/krb5/auto/ReplayCacheTestProc.java and ReplayCacheTestProcWithMD5.java failed on OL8.3,gnu-andrew,2024-04-16,2024-04-18,integrated|backport,Red Hat,,2,"mrserb,martinuy"
-,482,Merge jdk8u:master,gnu-andrew,2024-04-17,2024-04-17,integrated|clean,Red Hat,,0,
-8326529,484,8326529: JFR: Test for CompilerCompile events fails due to time out,roberttoyonaga,2024-04-19,2024-05-29,integrated|backport,,,40,jerboaa
-8305931,490,"8305931: jdk/jfr/jcmd/TestJcmdDumpPathToGCRoots.java failed with ""Expected chains but found none""",roberttoyonaga,2024-05-03,2024-07-09,integrated|backport,,,67,tstuefe
-8331730,491,8331730: [8u] GHA: update sysroot for cross builds to Debian bullseye,zzambers,2024-05-06,2024-06-06,integrated,Red Hat,,31,mrserb
-8331791,494,8331791: [8u] AIX build break from JDK-8320005 backport,suchismith1993,2024-05-08,2024-05-15,integrated,,,7,jerboaa
-8331980,495,8331980: [8u] Problem list CAInterop.java#certignarootca test,mrserb,2024-05-09,2024-05-13,integrated,Oracle,RU,4,jerboaa
-4660158,496,4660158: TTY: NumberFormatException while trying to set values by 'set' command,ktakakuri,2024-05-13,2024-06-13,integrated|backport|clean,,,31,gnu-andrew
-8030204,497,"8030204: com/sun/jdi/JdbExprTest.sh: Required output ""Can\\'t convert 2147483648 to int"" not found",ktakakuri,2024-05-13,2024-06-25,integrated|backport|clean,,,43,"zzambers,gnu-andrew"
-8046883,498,"8046883: com/sun/jdi/ProcessAttachTest.sh gets ""java.io.IOException: Invalid process identifier"" on windows",ktakakuri,2024-05-13,2025-05-20,integrated|backport,,,372,phohensee
-8239965,500,"8239965: XMLEncoder/Test4625418.java fails due to ""Error: Cp943 - can't read properly""",psawant19,2024-05-16,2024-05-22,integrated|backport,,,6,jerboaa
-8316138,502,8316138: Add GlobalSign 2 TLS root certificates,zzambers,2024-05-20,2024-05-22,integrated|backport,Red Hat,,2,gnu-andrew
-8328825,503,8328825: Google CAInterop test failures,zzambers,2024-05-21,2024-05-21,integrated|backport|clean,Red Hat,,0,jerboaa
-8048215,504,8048215: [TESTBUG] java/lang/management/ManagementFactory/ThreadMXBeanProxy.java Expected non-null LockInfo,sendaoYan,2024-05-23,2025-01-30,integrated|backport,Alibaba,CN,252,phohensee
-8316328,506,8316328: Test jdk/jfr/event/oldobject/TestSanityDefault.java times out for some heap sizes,mrserb,2024-05-24,2024-08-30,integrated|backport,Oracle,RU,98,"phohensee,gnu-andrew"
-8311666,507,8311666: Disabled tests in test/jdk/sun/java2d/marlin,mrserb,2024-05-24,2024-06-17,integrated|backport|clean,Oracle,RU,24,gnu-andrew
-8333126,509,8333126: Bump update version of OpenJDK: 8u432,gnu-andrew,2024-05-29,2024-05-31,integrated,Red Hat,,2,jerboaa
-8318951,510,8318951: Additional negative value check in JPEG decoding,mrserb,2024-05-30,2024-08-21,integrated|backport|clean,Oracle,RU,83,jerboaa
-8324632,511,8324632: Update Zlib Data Compression Library to Version 1.3.1,fitzsim,2024-06-04,2024-06-12,integrated|backport,,,8,"jerboaa,gnu-andrew"
-8326521,512,8326521: JFR: CompilerPhase event test fails on windows 32 bit,roberttoyonaga,2024-06-04,2024-06-06,integrated|backport,,,2,jerboaa
-8333669,513,8333669: [8u] GHA: Dead VS2010 download link,zzambers,2024-06-05,2024-06-06,integrated,Red Hat,,1,jerboaa
-8333724,514,8333724: Problem list security/infra/java/security/cert/CertPathValidator/certification/CAInterop.java#teliasonerarootcav1,sendaoYan,2024-06-07,2024-06-07,integrated|backport,Alibaba,CN,0,jerboaa
-7188098,515,7188098: TEST_BUG: closed/javax/sound/midi/Synthesizer/Receiver/bug6186488.java fails,mrserb,2024-06-09,2024-08-21,integrated|backport|clean,Oracle,RU,73,
-8315731,516,8315731: Open source several Swing Text related tests,mrserb,2024-06-10,2024-09-10,integrated|backport|clean,Oracle,RU,92,
-8268457,517,8268457: XML Transformer outputs Unicode supplementary character incorrectly to HTML,ktakakuri,2024-06-11,2024-12-03,integrated|backport,,,175,"phohensee,gnu-andrew"
-8274606,518,8274606: Fix jaxp/javax/xml/jaxp/unittest/transform/SurrogateTest.java test,ktakakuri,2024-06-11,2025-05-21,integrated|backport,,,344,phohensee
-8279164,519,8279164: Disable TLS_ECDH_* cipher suites,zzambers,2024-06-11,2024-06-24,integrated|backport,Red Hat,,13,"martinuy,jerboaa,gnu-andrew"
-8266248,520,8266248: Compilation failure in PLATFORM_API_MacOSX_MidiUtils.c with Xcode 12.5,mrserb,2024-06-12,2024-08-21,integrated|backport|clean,Oracle,RU,70,jerboaa
-8330415,521,8330415: Update system property for Java SE specification maintenance version,justin-curtis-lu,2024-06-17,2024-07-18,integrated|backport|clean,Oracle,US,31,"irisclark,LanceAndersen"
-8305072,522,8305072: Win32ShellFolder2.compareTo is inconsistent,mrserb,2024-06-18,2025-11-12,integrated|backport,Oracle,RU,512,phohensee
-8275303,523,8275303: sun/java2d/pipe/InterpolationQualityTest.java fails with D3D basic render driver,mrserb,2024-06-22,2025-06-02,integrated|backport,Oracle,RU,345,theRealAph
-6544871,524,6544871: java/awt/event/KeyEvent/KeyTyped/CtrlASCII.html fails from jdk b09 on windows.,mrserb,2024-06-24,2024-08-21,integrated|backport|clean,Oracle,RU,58,
-8334905,525,8334905: [8u] The test java/awt/Mixing/AWT_Mixing/JButtonOverlapping.java started to fail after 8159690,mrserb,2024-06-24,2024-08-21,integrated,Oracle,RU,58,phohensee
-8152207,527,8152207: Perform array bound checks while getting a length of bytecode instructions,martinuy,2024-06-26,2024-08-13,integrated|backport,,,48,"phohensee,jerboaa"
-8262017,528,8262017: C2: assert(n != __null) failed: Bad immediate dominator info.,franferrax,2024-06-26,2024-06-28,integrated|backport,,,2,"rwestrel,martinuy"
-8303466,529,8303466: C2: failed: malformed control flow. Limit type made precise with MaxL/MinL,martinuy,2024-06-27,2024-07-01,integrated|backport,,,4,"rwestrel,gnu-andrew"
-8327007,530,8327007: javax/swing/JSpinner/8008657/bug8008657.java fails,mrserb,2024-06-28,2024-08-21,integrated|backport|clean,Oracle,RU,54,jerboaa
-8239312,531,8239312: [macOS] javax/swing/JFrame/NSTexturedJFrame/NSTexturedJFrame.java,mrserb,2024-06-30,2024-09-09,integrated|backport|clean,Oracle,RU,71,"theRealAph,gnu-andrew"
-8335552,532,8335552: [8u] JDK-8303466 backport to 8u requires 3 ::Identity signature fixes,franferrax,2024-07-02,2024-07-03,integrated|backport,,,1,"gnu-andrew,rwestrel,martinuy"
-8030795,533,8030795: java/nio/file/Files/probeContentType/ForceLoad.java failing with ServiceConfigurationError without jtreg -agentvm option,mrserb,2024-07-03,2024-08-28,integrated|backport|clean,Oracle,RU,56,"theRealAph,gnu-andrew"
-8075511,534,8075511: Enable -Woverloaded-virtual C++ warning for HotSpot build,franferrax,2024-07-03,2024-07-05,integrated|backport|clean,,,2,gnu-andrew
-8264328,535,8264328: Broken license in javax/swing/JComboBox/8072767/bug8072767.java,mrserb,2024-07-06,2024-08-21,integrated|backport|clean,Oracle,RU,46,jerboaa
-8255466,536,8255466: C2 crashes at ciObject::get_oop() const+0x0,sendaoYan,2024-07-07,2025-02-20,integrated|backport,Alibaba,CN,228,"phohensee,gnu-andrew"
-8221903,537,8221903: PIT: javax/swing/RepaintManager/IconifyTest/IconifyTest.java fails on ubuntu18.04,mrserb,2024-07-08,2024-08-21,integrated|backport|clean,Oracle,RU,44,theRealAph
-8309138,538,8309138: Fix container tests for jdks with symlinked conf dir,sendaoYan,2024-07-08,2024-08-21,integrated|backport,Alibaba,CN,44,"phohensee,jerboaa"
-8335851,541,8335851: [8u] Test JMXStartStopTest.java fails after JDK-8334415,sendaoYan,2024-07-08,2024-08-16,integrated,Alibaba,CN,39,mrserb
-8335894,542,8335894: [8u] Fix SupplementalJapaneseEraTest.java for jdks with symlinked conf dir,sendaoYan,2024-07-08,2024-08-16,integrated,Alibaba,CN,39,mrserb
-8335978,543,8335978: [8u] incorrect include file name in semaphore.inline.hpp,sendaoYan,2024-07-09,2025-07-22,integrated,Alibaba,CN,378,phohensee
-8318039,544,8318039: GHA: Bump macOS and Xcode versions,zzambers,2024-07-09,2024-07-22,integrated|backport,Red Hat,,13,"jerboaa,gnu-andrew"
-8021775,545,"8021775: compiler/8009761/Test8009761.java  ""Failed: init recursive calls: 51. After deopt 50""",adamfarley,2024-07-10,2024-08-21,integrated|backport,,,42,jerboaa
-8324723,546,8324723: GHA: Upgrade some actions to avoid deprecated Node 16,gdams,2024-07-12,2024-08-13,integrated|backport,Microsoft,,32,"zzambers,jerboaa"
-8145919,547,8145919: sun/management/jmxremote/bootstrap/RmiSslBootstrapTest failed with Connection failed for no credentials,alexeybakhtin,2024-07-15,2024-08-13,integrated|backport,Azul,,29,phohensee
-8307779,549,8307779: Relax the java.awt.Robot specification,azvegint,2024-07-16,2024-07-23,integrated|backport,Oracle,RU,7,prrace
-8337110,551,8337110: [8u] TestNoEagerReclaimOfHumongousRegions.java should be in gc/g1 directory,zzambers,2024-07-24,2024-08-26,integrated,Red Hat,,33,phohensee
-8250825,552,8250825: C2 crashes with assert(field != __null) failed: missing field,sendaoYan,2024-07-24,2025-01-30,integrated|backport,Alibaba,CN,190,phohensee
-8186787,553,8186787: clang-4.0 SIGSEGV in Unsafe_PutByte,zzambers,2024-07-25,2025-03-06,integrated|backport,Red Hat,,224,"adinn,gnu-andrew"
-,554,Merge jdk8u:master,gnu-andrew,2024-07-27,2024-07-27,integrated|clean,Red Hat,,0,
-8337312,555,8337312: [8u] Windows x86 VS2010 build broken by JDK-8320097,gnu-andrew,2024-07-27,2024-08-14,integrated,Red Hat,,18,phohensee
-8244966,556,8244966: Add .vscode to .hgignore and .gitignore,sendaoYan,2024-07-30,2025-02-25,integrated|backport|clean,Alibaba,CN,210,mrserb
-8338144,557,8338144: [8u] Remove duplicate license files,gnu-andrew,2024-08-10,2024-08-17,integrated,Red Hat,,7,"phohensee,mrserb"
-8193682,558,8193682: Infinite loop in ZipOutputStream.close(),yan-too,2024-08-13,2024-08-21,integrated|backport,,,8,jerboaa
-8305400,559,8305400: ISO 4217 Amendment 175 Update,Karm,2024-08-13,2024-08-19,integrated|backport,,,6,jerboaa
-8336928,560,8336928: GHA: Bundle artifacts removal broken,zzambers,2024-08-14,2024-08-19,integrated|backport,Red Hat,,5,jerboaa
-8321480,561,8321480: ISO 4217 Amendment 176 Update,Karm,2024-08-14,2024-08-20,integrated|backport,,,6,jerboaa
-8334653,562,8334653: ISO 4217 Amendment 177 Update,Karm,2024-08-14,2024-08-23,integrated|backport,,,9,gnu-andrew
-8260380,563,8260380: Upgrade to LittleCMS 2.12,mrserb,2024-08-17,2024-09-09,integrated|backport,Oracle,RU,23,"phohensee,gnu-andrew"
-8189687,564,8189687: Swing: Invalid position of candidate pop-up of InputMethod in Hi-DPI on Windows,ktakakuri,2024-08-20,2024-11-05,integrated|backport,,,77,phohensee
-8278794,565,8278794: Infinite loop in DeflaterOutputStream.finish(),yan-too,2024-08-21,2024-08-26,integrated|backport,,,5,"phohensee,jerboaa"
-8266881,567,8266881: Enable debug log for SSLEngineExplorerMatchedSNI.java,sendaoYan,2024-08-26,2025-01-30,integrated|backport,Alibaba,CN,157,phohensee
-8339133,568,8339133: [8u] Profiler crashes at guarantee(is_result_safe || is_in_asgct()): unsafe access to zombie method,apangin,2024-08-28,2024-10-29,integrated,,,62,"tstuefe,shipilev"
-8133287,570,8133287: (fs) java/nio/file/Files/probeContentType/ParallelProbes.java should use othervm mode,mrserb,2024-08-28,2024-10-29,integrated|backport|clean,Oracle,RU,62,
-8339394,572,8339394: Bump update version of OpenJDK: 8u442,gnu-andrew,2024-09-02,2024-09-04,integrated,Red Hat,,2,"mrserb,jerboaa"
-8316193,574,8316193: jdk/jfr/event/oldobject/TestListenerLeak.java java.lang.Exception: Could not find leak,cost0much,2024-09-03,2025-02-04,integrated|backport,Amazon,,154,mrserb
-8068305,575,8068305: [TEST_BUG] Test java/awt/Mixing/HWDisappear.java fails with GTKL&F,mrserb,2024-09-06,2024-12-03,integrated|backport|clean,Oracle,RU,88,gnu-andrew
-8339882,576,8339882: Replace ThreadLocalStorage::thread with Thread::current_or_null in jdk8 backport of JDK-8183925,benty-amzn,2024-09-10,2024-11-19,integrated,,,70,"phohensee,gnu-andrew"
-8233364,577,8233364: Fix undefined behavior in Canonicalizer::do_ShiftOp,martinuy,2024-09-12,2024-09-17,integrated|backport,,,5,"jerboaa,rwestrel"
-8228658,578,8228658: test GetTotalSafepointTime.java fails on fast Linux machines with Total safepoint time 0 ms,sendaoYan,2024-09-14,2025-06-24,integrated|backport,Alibaba,CN,283,phohensee
-8340660,580,8340660: [8u] Test com/sun/jdi/PrivateTransportTest.sh fails on MacOS,zzambers,2024-09-23,2025-02-25,integrated,Red Hat,,155,mrserb
-8313626,581,8313626: C2 crash due to unexpected exception control flow,mrserb,2024-09-26,2024-09-26,integrated|backport,Oracle,RU,0,"yan-too,gnu-andrew"
-8196770,583,8196770: Add JNDI test com/sun/jndi/ldap/blits/AddTests/AddNewEntry.java,mrserb,2024-09-27,2024-09-29,integrated|backport,Oracle,RU,2,"yan-too,gnu-andrew"
-8340815,584,8340815: Add SECURITY.md file,gdams,2024-09-27,2024-10-02,integrated|backport|clean,Microsoft,,5,gnu-andrew
-8251188,585,8251188: Update LDAP tests not to use wildcard addresses,mrserb,2024-09-30,2024-10-03,integrated|backport,Oracle,RU,3,"yan-too,gnu-andrew,martinuy"
-8338402,586,8338402: GHA: some of bundles may not get removed,zzambers,2024-10-01,2024-10-03,integrated|backport,Red Hat,,2,gnu-andrew
-,587,Merge jdk8u:master,gnu-andrew,2024-10-01,2024-10-02,integrated|clean,Red Hat,,1,
-8341059,588,"8341059: Change Entrust TLS distrust date to November 12, 2024",gnu-andrew,2024-10-02,2024-10-03,integrated|backport,Red Hat,,1,jerboaa
-8341057,589,8341057: Add 2 SSL.com TLS roots,gnu-andrew,2024-10-02,2024-10-04,integrated|backport,Red Hat,,2,jerboaa
-8209023,590,8209023: fix 2 compiler tests to avoid JDK-8208690,zzambers,2024-10-02,2024-10-03,integrated|backport,Red Hat,,1,jerboaa
-8048003,591,"8048003: test/compiler/8009761/Test8009761.java failed with: java.lang.RuntimeException: static java.lang.Object Test8009761.m3(boolean,boolean) not compiled",zzambers,2024-10-03,2024-10-22,integrated|backport|clean,Red Hat,,19,
-8058322,592,8058322: Zero name_index item of MethodParameters attribute cause MalformedParameterException.,liach,2024-10-08,2024-10-24,integrated|backport|clean,Oracle,US,16,
-8341946,594,8341946: [8u] sun/security/pkcs11/ec/ tests fail on RHEL9,kurashige23,2024-10-11,2025-03-11,integrated,,,151,phohensee
-8342841,596,8342841: [8u] Separate jdk_security_infra tests from jdk_tier1,zzambers,2024-10-22,2024-11-07,integrated,Red Hat,,16,"mrserb,jerboaa"
-,598,Merge jdk8u:master,gnu-andrew,2024-10-25,2024-10-25,integrated|clean,Red Hat,,0,
-8261020,602,8261020: Wrong format parameter in create_emergency_chunk_path,lingjun-cg,2024-11-06,2025-02-26,integrated|backport,Alibaba,CN,112,jerboaa
-8037013,604,8037013: [TESTBUG] Fix test/java/lang/ClassLoader/Assert.sh on AIX,sophia-guo,2024-11-15,2024-12-02,integrated|backport|clean,,,17,gnu-andrew
-8335912,608,8335912: Add an operation mode to the jar command when extracting to not overwriting existing files,alexeybakhtin,2024-11-26,2024-12-06,integrated|backport,Azul,,10,"gnu-andrew,martinuy"
-8345504,609,8345504: Bump update version of OpenJDK: 8u452,gnu-andrew,2024-12-04,2024-12-05,integrated,Red Hat,,1,jerboaa
-8345358,611,8345358: Some DLL Files are missing Windows Properties,alexeybakhtin,2024-12-10,2025-09-15,integrated,Azul,,279,"mrserb,gnu-andrew"
-8346140,612,8346140: [8u] tools/jar/ExtractFilesTest.java and tools/jar/MultipleManifestTest.java fails with jtreg5.1,alexeybakhtin,2024-12-12,2025-02-25,integrated,Azul,,75,"sendaoYan,jerboaa"
-8346887,614,8346887: DrawFocusRect() may cause an assertion failure,satyenme,2025-01-10,2025-03-12,integrated|backport,Amazon,,61,"phohensee,mrserb"
-8339644,615,8339644: Improve parsing of Day/Month in tzdata rules,dimitryc,2025-01-13,2025-02-20,integrated|backport,,,38,gnu-andrew
-8348211,616,8348211: [8u] sun/management/jmxremote/startstop/JMXStartStopTest.java fails after backport of JDK-8066708,zzambers,2025-01-21,2025-02-25,integrated,Red Hat,,35,mrserb
-,617,Merge jdk8u:master,gnu-andrew,2025-01-22,2025-01-22,integrated|clean,Red Hat,,0,
-8285756,618,8285756: clean up use of bad arguments for `@clean` in langtools tests,satyenme,2025-01-28,2025-02-26,integrated|backport,Amazon,,29,phohensee
-8349166,619,8349166: Bad indentation in backport of JDK-8250825,sendaoYan,2025-02-01,2025-02-20,integrated,Alibaba,CN,19,gnu-andrew
-8340552,623,8340552: Harden TzdbZoneRulesCompiler against missing zone names,dimitryc,2025-02-20,2025-02-26,integrated|backport,,,6,mrserb
-8205653,625,8205653: test/jdk/sun/management/jmxremote/bootstrap/RmiRegistrySslTest.java and RmiSslBootstrapTest.sh fail with handshake_failure,sendaoYan,2025-02-23,2025-06-24,integrated|backport,Alibaba,CN,121,phohensee
-8293107,628,8293107: GHA: Bump to Ubuntu 22.04,zzambers,2025-02-25,2025-04-17,integrated|backport,Red Hat,,51,"jerboaa,gnu-andrew"
-8186143,629,8186143: keytool -ext option doesn't accept wildcards for DNS subject alternative names,alexeybakhtin,2025-02-25,2025-05-16,integrated|backport,Azul,,80,yan-too
-8350816,630,8350816: [8u] Update TzdbZoneRulesCompiler to ignore HST/EST/MST links,dimitryc,2025-02-26,2025-02-28,integrated,,,2,"mrserb,jerboaa"
-8351098,633,8351098: Bump update version of OpenJDK: 8u462,gnu-andrew,2025-03-04,2025-03-05,integrated,Red Hat,,1,mrserb
-8351439,634,8351439: [8u] test/java/util/TimeZone/tools/share/Makefile use wrong path to tzdb,mrserb,2025-03-07,2025-04-08,integrated,Oracle,RU,32,"jerboaa,dimitryc"
-8309841,635,8309841: Jarsigner should print a warning if an entry is removed,wkia,2025-03-10,2025-03-27,integrated|backport,Azul,,17,gnu-andrew
-8351624,636,8351624: [8u] Xerces-J version wrong in THIRD_PARTY_README after JDK-7150324,kurashige23,2025-03-11,2025-06-10,integrated,,,91,jerboaa
-8160767,637,8160767: [TEST_BUG] java/awt/Frame/MaximizedToIconified/MaximizedToIconified.java,kurashige23,2025-03-13,2025-08-28,integrated|backport,,,168,phohensee
-,638,Merge jdk8u:master,gnu-andrew,2025-03-18,2025-03-19,integrated|clean,Red Hat,,1,
-8339810,639,8339810: Clean up the code in sun.tools.jar.Main to properly close resources and use ZipFile during extract,martinuy,2025-03-22,2025-03-27,integrated|backport,,,5,"yan-too,gnu-andrew"
-8240235,640,8240235: jdk.test.lib.util.JarUtils updates jar files incorrectly,wkia,2025-03-24,2025-03-26,integrated|backport,Azul,,2,gnu-andrew
-8352302,642,8352302: Test sun/security/tools/jarsigner/TimestampCheck.java is failing,sendaoYan,2025-03-31,2025-06-24,integrated|backport,Alibaba,CN,85,phohensee
-8026976,643,"8026976: ECParameters, Point does not match field size",kurashige23,2025-03-31,2025-05-08,integrated|backport,,,38,"phohensee,martinuy"
-8352716,644,8352716: (tz) Update Timezone Data to 2025b,satyenme,2025-03-31,2025-05-20,integrated|backport,Amazon,,50,mrserb
-8345133,645,8345133: Test sun/security/tools/jarsigner/TsacertOptionTest.java failed: Warning found in stdout,phohensee,2025-04-08,2025-05-20,integrated|backport,Oracle,,42,rkennke
-8353433,646,8353433: XCG currency code not recognized in JDK 8u,gnu-andrew,2025-04-11,2025-04-11,integrated|backport,Red Hat,,0,"sendaoYan,martinuy"
-,647,Merge jdk8u:master,gnu-andrew,2025-04-16,2025-04-16,integrated|clean,Red Hat,,0,
-8278472,648,8278472: Invalid value set to CANDIDATEFORM structure,kurashige23,2025-04-25,2025-05-19,integrated|backport,,,24,phohensee
-8071996,649,8071996: split_if accesses NULL region of ConstraintCast,rwestrel,2025-05-09,2025-05-13,integrated|backport|clean,Red Hat,FR,4,
-8159694,652,"8159694: HiDPI, Unity, java/awt/dnd/DropTargetEnterExitTest/MissedDragExitTest.java",kurashige23,2025-05-14,2025-05-21,integrated|backport,,,7,phohensee
-8274597,653,8274597: Some of the dnd tests time out and fail intermittently,kurashige23,2025-05-14,2025-05-22,integrated|backport,,,8,phohensee
-8296631,654,8296631: NSS tests failing on OL9 linux-aarch64 hosts,kurashige23,2025-05-14,2025-05-19,integrated|backport,,,5,phohensee
-8340387,655,8340387: Update OS detection code to recognize Windows Server 2025,dimitryc,2025-05-21,2025-06-02,integrated|backport,,,12,phohensee
-8185348,656,8185348: Major performance regression in GetMethodDeclaringClass and other JVMTI Method functions,zhengyu123,2025-05-30,2025-08-05,integrated|backport,Oracle,CA,67,phohensee
-8358328,658,8358328: Bump update version of OpenJDK: 8u472,gnu-andrew,2025-06-03,2025-06-04,integrated,Red Hat,,1,jerboaa
-7102969,660,7102969: currency.properties supercede not working correctly,jerboaa,2025-06-04,2025-08-13,integrated|backport,Red Hat,CA,70,gnu-andrew
-8339414,661,8339414: Fix JDK-8202369 incorrect backport for 8u,fitzsim,2025-06-04,2025-06-16,integrated,,,12,gnu-andrew
-8044051,662,8044051: Test jdk/lambda/vm/InterfaceAccessFlagsTest.java gets IOException during compilation,theaoqi,2025-06-09,2025-06-26,integrated|backport|clean,Loongson,CN,17,
-8358538,665,8358538: Update GHA Windows runner to 2025,vieiro,2025-07-03,2025-07-07,integrated|backport,Red Hat,,4,jerboaa
-8081734,666,"8081734: ConcurrentHashMap/ConcurrentAssociateTest.java, times out 90% of time on sparc with 256 cpu.",sendaoYan,2025-07-07,2025-07-08,integrated|backport|clean,Alibaba,CN,1,
-8362208,668,8362208: [8u] Buffer overflow in g1GCPhaseTimes.cpp::LineBuffer::_buffer,sendaoYan,2025-07-15,2025-09-26,integrated,Alibaba,CN,73,"phohensee,tstuefe"
-8056283,669,8056283: @ignore tools/javac/defaultMethods/Assertions.java until JDK-8047675 is fixed,sendaoYan,2025-07-15,2025-08-28,integrated|backport|clean,Alibaba,CN,44,
-8041924,670,8041924: [TESTBUG] sun/net/www/http/ChunkedOutputStream/checkError.java fails on some systems,sendaoYan,2025-07-17,2025-08-28,integrated|backport,Alibaba,CN,42,phohensee
-,671,Merge jdk8u:master,gnu-andrew,2025-07-17,2025-07-18,integrated|clean,Red Hat,,1,
-8363965,672,8363965: GHA: Switch cross-compiling sysroots to Debian bookworm,jerboaa,2025-08-07,2025-08-08,integrated|backport,Red Hat,CA,1,"shipilev,gnu-andrew"
-8345414,673,8345414: Google CAInterop test failures,gnu-andrew,2025-08-08,2025-08-13,integrated|backport,Red Hat,,5,jerboaa
-8212155,674,8212155: Race condition when posting dynamic_code_generated event leads to JVM crash,krk,2025-08-14,2025-09-03,integrated|backport,,,20,"phohensee,shipilev"
-8365560,675,8365560: [8u] ppc64le MaxRAM default is too low at 4GiB,jmtd,2025-08-14,2025-08-18,integrated,IBM,,4,tstuefe
-8365811,676,"8365811: test/jdk/java/net/CookieHandler/B6644726.java failure - ""Should have 5 cookies. Got only 4, expires probably didn't parse correctly""",sendaoYan,2025-08-20,2025-08-27,integrated|backport,Alibaba,CN,7,jerboaa
-8297088,677,8297088: Update LCMS to 2.14,kvergizova,2025-08-21,2025-09-17,integrated|backport,,,27,"alexeybakhtin,gnu-andrew"
-8303482,678,8303482: Update LCMS to 2.15,kvergizova,2025-08-21,2026-01-13,integrated|backport,,,145,gnu-andrew
-8366112,681,8366112: [8u] GHA: Fix broken installation of Windows SDK,zzambers,2025-08-25,2025-08-26,integrated,Red Hat,,1,jerboaa
-8157758,682,8157758: JDK9 does not compile on Linux with GCC 6.1 because left-shifting a negative number has undefined behavior,mrserb,2025-08-25,2026-01-08,integrated|backport|clean,Oracle,RU,136,
-8186149,683,8186149: quarantine gc/survivorAlignment/TestPromotionFromSurvivorToTenuredAfterMinorGC.java,sendaoYan,2025-08-27,2026-01-15,integrated|backport,Alibaba,CN,141,phohensee
-8361212,684,8361212: Remove AffirmTrust root CAs,jerboaa,2025-08-27,2025-09-01,integrated|backport,Red Hat,CA,5,gnu-andrew
-8353657,685,8353657: [8u] Test tools/launcher/VersionCheck.java fails with debug build,sendaoYan,2025-08-29,2026-02-08,integrated,Alibaba,CN,163,"jerboaa,theRealAph"
-8274893,686,8274893: Update java.desktop classes to use try-with-resources,TimPushkin,2025-09-01,2026-02-18,integrated|backport,Azul,,170,gnu-andrew
-8347911,687,8347911: Limit the length of inflated text chunks,TimPushkin,2025-09-01,2026-02-18,integrated|backport,Azul,,170,jerboaa
-8366574,688,8366574: Bump update version of OpenJDK: 8u482,gnu-andrew,2025-09-01,2025-09-03,integrated,Red Hat,,2,jerboaa
-8364597,689,8364597: Replace THL A29 Limited with Tencent,johnshajiang,2025-09-03,2025-09-15,integrated|backport,Tencent,CN,12,gnu-andrew
-8312518,694,8312518: [macos13] setFullScreenWindow() shows black screen on macOS 13 & above,mrserb,2025-09-08,2026-01-18,integrated|backport,Oracle,RU,132,shipilev
-8367115,695,8367115: [8u] Problem list CAInterop.java#actalisauthenticationrootca test,jerboaa,2025-09-08,2025-09-17,integrated,Red Hat,CA,9,gnu-andrew
-8367257,696,8367257: [8u] Problem list CAInterop.java#entrustrootcag4 test,jerboaa,2025-09-09,2025-10-06,integrated,Red Hat,CA,27,gnu-andrew
-8360869,697,8360869: jcstress is able to crash jdk8 on aarch64 with jfr on,judovana,2025-09-15,2026-01-27,integrated,,,134,theRealAph
-8339280,699,8339280: jarsigner -verify performs cross-checking between CEN and LOC,franferrax,2025-09-19,2025-11-27,integrated|backport,,,69,"alexeybakhtin,jerboaa,gnu-andrew"
-8219006,700,8219006: AArch64: Register corruption in slow subtype check,theRealAph,2025-09-19,2025-09-22,integrated|backport,Red Hat,GB,3,"phohensee,shipilev"
-8350813,702,8350813: Rendering of bulky sound bank from MIDI sequence can cause OutOfMemoryError,wkia,2025-09-23,2026-01-22,integrated|backport,Azul,,121,jerboaa
-8153147,703,8153147: Mark java/net/BindException/Test.java as intermittently failing,sendaoYan,2025-09-30,2026-02-03,integrated|backport|clean,Alibaba,CN,126,theRealAph
-8132786,704,8132786: java/security/cert/CertPathValidator/OCSP/AIACheck.java fails intermittently,sendaoYan,2025-10-13,2026-01-13,integrated|backport|clean,Alibaba,CN,92,
-8277159,705,8277159: Fix java/nio/file/FileStore/Basic.java test by ignoring /run/user/* mount points,sendaoYan,2025-10-16,2026-01-13,integrated|backport,Alibaba,CN,89,phohensee
-8212678,706,8212678: Windows IME related patch,tkiriyama,2025-10-21,2025-11-26,integrated|backport,Fujitsu,JP,36,gnu-andrew
-8223145,707,8223145: Replace wildcard address with loopback or local host in tests - part 1,sendaoYan,2025-10-22,2026-01-15,integrated|backport,Alibaba,CN,85,phohensee
-8264524,708,8264524: jdk/internal/platform/docker/TestDockerMemoryMetrics.java fails due to swapping not working,sendaoYan,2025-10-24,2026-02-01,integrated|backport,Alibaba,CN,100,phohensee
-8193017,709,8193017: Import freetype sources into OpenJDK source tree,judovana,2025-10-28,2025-11-12,integrated|backport,,,15,gnu-andrew
-,710,Merge jdk8u:master,gnu-andrew,2025-11-01,2025-11-02,integrated|clean,Red Hat,,1,
-8354941,711,8354941: Build failure with glibc 2.42 due to uabs() name collision,gnu-andrew,2025-11-03,2025-12-05,integrated|backport,Red Hat,,32,jerboaa
-8371334,712,8371334: [8u] GHA: installation of VS2010 hangs,zzambers,2025-11-05,2025-11-11,integrated,Red Hat,,6,gnu-andrew
-8371352,713,8371352: [8u] Fix VS2010 build issue in check_code.c,zzambers,2025-11-05,2025-11-11,integrated,Red Hat,,6,"phohensee,gnu-andrew"
-8371387,714,8371387: [8u] hotspot needs to recognise latest VS2022,ktakakuri,2025-11-06,2025-11-18,integrated,,,12,phohensee
-8258805,716,8258805: Japanese characters not entered by mouse click on Windows 10,tkiriyama,2025-11-07,2025-11-28,integrated|backport,Fujitsu,JP,21,gnu-andrew
-8313770,717,8313770: jdk/internal/platform/docker/TestSystemMetrics.java fails on Ubuntu,sendaoYan,2025-11-11,2025-12-13,integrated|backport|clean,Alibaba,CN,32,
-8269668,719,8269668: [aarch64] java.library.path not including /usr/lib64,gnu-andrew,2025-11-11,2025-11-17,integrated|backport,Red Hat,,6,"jerboaa,theRealAph"
-8261170,720,8261170: Upgrade to FreeType 2.10.4,judovana,2025-11-14,2025-11-27,integrated|backport,,,13,gnu-andrew
-8285836,721,"8285836: sun/net/www/http/KeepAliveCache/KeepAliveProperty.java failed with ""RuntimeException: Failed in server""",sxa,2025-11-19,2025-12-26,integrated|backport,,,37,jerboaa
-8211804,722,8211804: Constant AO_UNUSED_MBZ uses left shift of negative value,zzambers,2025-11-19,2025-11-24,integrated|backport,Red Hat,,5,"phohensee,jerboaa"
-8220658,723,8220658: Improve the readability of container information in the error log,jmtd,2025-11-20,2026-01-08,integrated|backport,IBM,,49,jerboaa
-8284758,724,8284758: [linux] improve print_container_info,jmtd,2025-11-20,2026-01-13,integrated|backport,IBM,,54,"phohensee,jerboaa"
-8287011,725,8287011: Improve container information,jmtd,2025-11-21,2026-01-15,integrated|backport,IBM,,55,"phohensee,jerboaa"
-8372660,727,8372660: [8u] ProblemList TestCPUAwareness until 8370492 is addressed,jmtd,2025-11-27,2025-12-11,integrated,IBM,,14,"sendaoYan,gnu-andrew"
-8348596,728,8348596: Update FreeType to 2.13.3,judovana,2025-11-28,2025-12-05,integrated|backport,,,7,gnu-andrew
-8373250,732,8373250: Bump update version of OpenJDK: 8u492,gnu-andrew,2025-12-08,2025-12-09,integrated,Red Hat,,1,jerboaa
-8074840,733,8074840: Resolve disabled warnings for libjli and libjli_static,zzambers,2025-12-08,2026-01-12,integrated|backport,Red Hat,,35,"phohensee,gnu-andrew"
-8174734,734,8174734: Safepoint sync time did not increase,sendaoYan,2025-12-10,2026-01-14,integrated|backport,Alibaba,CN,35,phohensee
-8364660,735,8364660: ClassVerifier::ends_in_athrow() should be removed,gnu-andrew,2025-12-17,2025-12-18,integrated|backport,Red Hat,,1,jerboaa
-8056039,736,8056039: Hotspot does not compile with clang 3.4 on Linux,vieiro,2025-12-22,2026-01-13,integrated|backport,Red Hat,,22,"phohensee,gnu-andrew"
-8369226,738,8369226: GHA: Switch to MacOS 15,gnu-andrew,2026-01-08,2026-02-03,integrated|backport,Red Hat,,26,"mrserb,jerboaa"
-,739,Merge jdk8u:master,gnu-andrew,2026-01-09,2026-01-09,integrated|clean,Red Hat,,0,
-8374899,740,8374899: [8u] Fully handle clang as the toolchain in flags.m4,gnu-andrew,2026-01-09,2026-01-31,integrated,Red Hat,,22,"mrserb,jerboaa"
-8374917,741,8374917: [8u] C++ flags get passed to C compiles in the HotSpot build,gnu-andrew,2026-01-09,2026-01-12,integrated,Red Hat,,3,jerboaa
-8374948,742,8374948: [8u] saproc & jsig builds add duplicate linker flags on Darwin/MacOS,gnu-andrew,2026-01-10,2026-02-03,integrated,Red Hat,,24,jerboaa
-,743,Merge jdk8u:master,gnu-andrew,2026-01-13,2026-01-13,integrated|clean,Red Hat,,0,
-8375189,744,8375189: [8u] Problem list CAInterop.java#microsoftrsa2017,jerboaa,2026-01-13,2026-01-15,integrated,Red Hat,CA,2,gnu-andrew
-8251189,747,8251189: com/sun/jndi/ldap/LdapDnsProviderTest.java failed due to timeout,tkiriyama,2026-01-19,2026-02-03,integrated|backport,Fujitsu,JP,15,phohensee
-8376225,748,8376225: [8u] GHA: Apply work-around for missing JNF for MacOSX builds,jerboaa,2026-01-23,2026-01-28,integrated,Red Hat,CA,5,gnu-andrew
-,750,Merge jdk8u:master,gnu-andrew,2026-01-24,2026-01-24,integrated|clean,Red Hat,,0,
-8376338,751,8376338: Test7005594.sh fails when given a memory value with decimals,adamfarley,2026-01-26,2026-01-28,integrated,,,2,jerboaa
-8376352,752,8376352: [8u] Build failure on Windows 32-bit after JDK-8362308,jerboaa,2026-01-26,2026-01-28,integrated,Red Hat,CA,2,gnu-andrew
-8170464,755,8170464: Remove shell script from compiler/c2/cr7005594/Test7005594.java,gnu-andrew,2026-02-02,2026-02-12,integrated|backport,Red Hat,,10,jerboaa
-8237834,756,8237834: com/sun/jndi/ldap/LdapDnsProviderTest.java failing with LDAP response read timeout,tkiriyama,2026-02-04,2026-02-23,integrated|backport,Fujitsu,JP,19,jerboaa
-8361748,757,8361748: Enforce limits on the size of an XBM image,franferrax,2026-02-04,2026-02-22,integrated|backport,,,18,"jerboaa,gnu-andrew"
-8377344,758,8377344: [8u] Compilation failure on Windows for Linux-specific platform metric tests,tkiriyama,2026-02-06,2026-02-10,integrated,Fujitsu,JP,4,phohensee
-8375063,760,8375063: Update Libpng to 1.6.54,mrserb,2026-02-15,2026-02-18,integrated|backport,Oracle,RU,3,"phohensee,gnu-andrew"
-8369282,764,8369282: Distrust TLS server certificates anchored by Chunghwa ePKI Root CA,gnu-andrew,2026-02-27,2026-03-06,integrated|backport,Red Hat,,7,"franferrax,jerboaa"
-8377526,765,8377526: Update Libpng to 1.6.55,mrserb,2026-03-01,2026-03-04,integrated|backport,Oracle,RU,3,gnu-andrew
-8373476,766,8373476: (tz) Update Timezone Data to 2025c,TheMangovnik,2026-03-02,2026-03-06,integrated|backport,,,4,gnu-andrew
-8379684,771,8379684: Bump update version of OpenJDK: 8u502,gnu-andrew,2026-03-10,2026-03-12,integrated,Red Hat,,2,jerboaa
+bug_id,pr_number,title,author,created,closed,labels
+8282552,1,8282552: Bump update version of OpenJDK: 8u342,jerboaa,2022-03-02,2022-03-03,integrated
+8282458,2,8282458: Update .jcheck/conf file for 8u move to git,gnu-andrew,2022-03-02,2022-03-02,integrated
+8253424,3,8253424: Add support for running pre-submit testing using GitHub Actions,gnu-andrew,2022-03-05,2022-04-06,integrated|backport
+8129572,4,8129572: Cleanup usage of getResourceAsStream in jaxp,akashche,2022-03-09,2022-03-22,integrated|backport
+8132256,5,8132256: jaxp: Investigate removal of com/sun/org/apache/bcel/internal/util/ClassPath.java,akashche,2022-03-09,2022-03-22,integrated|backport
+8279669,6,8279669: test/jdk/com/sun/jdi/TestScaffold.java uses wrong condition,zzambers,2022-03-14,2022-03-15,integrated|backport
+8194154,8,8194154: System property user.dir should not be changed,dongbohe,2022-03-17,2022-03-21,integrated|backport
+8173361,9,8173361: various crashes in JvmtiExport::post_compiled_method_load,dongbohe,2022-03-17,2022-06-29,integrated|backport
+8202142,10,8202142: jfr/event/io/TestInstrumentation is unstable,dongbohe,2022-03-17,2022-05-25,integrated|backport
+8076190,12,8076190: Customizing the generation of a PKCS12 keystore,alexeybakhtin,2022-03-17,2022-03-17,integrated|backport
+8223396,14,8223396: [TESTBUG] several jfr tests do not clean up files created in /tmp,dongbohe,2022-03-18,2022-03-22,integrated|backport|clean
+8230865,16,8230865: [TESTBUG] jdk/jfr/event/io/EvilInstrument.java fails at-run shell MakeJAR.sh target,dongbohe,2022-03-18,2022-03-22,integrated|backport|clean
+8190753,17,8190753: (zipfs): Accessing a large entry (> 2^31 bytes) leads to a negative initial size for ByteArrayOutputStream,apavlyutkin,2022-03-18,2022-04-08,integrated|backport
+8214427,18,8214427: probable bug in logic of ConcurrentHashMap.addCount(),tianshuang,2022-03-19,2022-08-20,integrated|backport
+8235218,19,8235218: Minimal VM is broken after JDK-8173361,dongbohe,2022-03-21,2022-07-10,integrated|backport
+8255239,20,8255239: The timezone of the hs_err_pid log file is corrupted in Japanese locale,ktakakuri,2022-03-22,2022-04-02,integrated|backport
+8261107,21,8261107: ArrayIndexOutOfBoundsException in the ICC_Profile.getInstance(InputStream),mrserb,2022-03-24,2022-04-07,integrated|backport
+8274751,23,8274751: Drag And Drop hangs on Windows,mrserb,2022-03-28,2022-03-30,integrated|backport|clean
+8274658,24,8274658: ISO 4217 Amendment 170 Update,gnu-andrew,2022-03-28,2022-03-29,integrated|backport
+8278138,25,8278138: OpenJDK8 fails to start on Windows 8.1 after upgrading compiler to VS2017,ktakakuri,2022-03-29,2022-05-19,integrated|backport
+8281814,26,8281814: Debuginfo.diz contains redundant build path after backport JDK-8025936,dongbohe,2022-03-30,2022-04-06,integrated
+8170530,28,8170530: bash configure output contains a typo in a suggested library name,dongbohe,2022-04-01,2022-05-10,integrated|backport
+8235385,30,8235385: Crash on aarch64 JDK due to long offset,apavlyutkin,2022-04-04,2022-05-31,integrated|backport
+8235211,32,8235211: serviceability/attach/RemovingUnixDomainSocketTest.java fails with AttachNotSupportedException: Unable to open socket file,navyxliu,2022-04-05,2022-05-09,integrated|backport
+8221988,33,8221988: add possibility to build with Visual Studio 2019,apavlyutkin,2022-04-07,2022-05-12,integrated|backport
+8256722,34,8256722: handle VC++:1927 VS2019 in  abstract_vm_version,apavlyutkin,2022-04-08,2022-07-11,integrated|backport|clean
+8284772,35,JDK-8284772: 8u GHA: Use GCC Major Version Dependencies Only,gnu-andrew,2022-04-12,2022-04-28,integrated
+8260589,36,8260589: Crash in JfrTraceIdLoadBarrier::load(_jclass*),yanglong1010,2022-04-18,2022-06-27,integrated|backport
+8150669,37,8150669: C1 intrinsic for Class.isPrimitive,dongbohe,2022-04-19,2022-07-08,integrated|backport
+8266187,42,8266187: Memory leak in appendBootClassPath(),zhengyu123,2022-04-19,2022-05-24,integrated|backport|clean
+8233019,43,8233019: java.lang.Class.isPrimitive() (C1) returns wrong result if Klass* is aligned to 32bit,dongbohe,2022-04-20,2022-07-11,integrated|backport
+8280963,45,8280963: Incorrect PrintFlags formatting on Windows,akashche,2022-04-20,2022-06-15,integrated
+8248876,47,8248876: LoadObject with bad base address created for exec file on linux,ktakakuri,2022-04-25,2022-05-19,integrated|backport|clean
+,48,Merge jdk8u:master,gnu-andrew,2022-04-28,2022-04-28,integrated
+8285445,49,"8285445: cannot open file ""NUL:""",mrserb,2022-04-28,2022-04-29,integrated|backport|clean
+,51,Merge jdk8u:master,gnu-andrew,2022-05-02,2022-05-02,integrated
+8284620,52,8284620: CodeBuffer may leak _overflow_arena,zhengyu123,2022-05-02,2022-05-24,integrated|backport
+8168926,53,8168926: C2: Bytecode escape analyzer crashes due to stack overflow,caojoshua,2022-05-05,2022-05-16,integrated
+8130895,57,8130895: Test javax/swing/system/6799345/TestShutdown.java fails on Solaris11 Sparcv9,ktakakuri,2022-05-11,2022-07-12,integrated|backport|clean
+8285523,59,8285523: Improve test java/io/FileOutputStream/OpenNUL.java,mrserb,2022-05-16,2022-05-24,integrated|backport|clean
+8194873,60,8194873: right ALT key hotkeys no longer work in Swing components,omikhaltsova,2022-05-17,2022-07-11,integrated|backport
+8286989,61,8286989: Build failure on macOS after 8281814,zzambers,2022-05-18,2022-05-24,integrated
+8031567,62,8031567: Better model for storing source revision information,gnu-andrew,2022-05-23,2022-05-26,integrated|backport
+8283350,63,8283350: (tz) Update Timezone Data to 2022a,dimitryc,2022-05-23,2022-05-24,integrated|backport
+8285727,64,"8285727: [11u, 17u] Unify fix for JDK-8284920 with version from head",yan-too,2022-05-23,2022-05-24,integrated|backport|clean
+8173339,66,8173339: AArch64: Fix minimum stack size computations,dongbohe,2022-05-30,2022-08-26,integrated|backport
+8087283,67,8087283: Add support for the XML Signature here() function to the JDK XPath implementation,yan-too,2022-05-30,2022-06-30,integrated|backport
+8287521,68,8287521: Bump update version of OpenJDK: 8u352,gnu-andrew,2022-05-30,2022-05-30,integrated
+8067941,71,8067941: [TESTBUG] Fix tests for OS with 64K page size.,dongbohe,2022-06-01,2022-09-01,integrated|backport
+8283849,73,8283849: AsyncGetCallTrace may crash JVM on guarantee,jbachorik,2022-06-15,2022-07-08,integrated|backport
+8282538,76,8282538: PKCS11 tests fail on CentOS Stream 9,omikhaltsova,2022-06-21,2022-07-11,integrated|backport|clean
+8197859,77,8197859: VS2017 Complains about UINTPTR_MAX definition in globalDefinitions_VisCPP.hpp,apavlyutkin,2022-06-22,2022-11-17,integrated|backport
+8136354,78,8136354: [TEST_BUG] Test  java/awt/image/RescaleOp/RescaleAlphaTest.java with Bad action for script,ktakakuri,2022-06-23,2022-07-07,integrated|backport|clean
+8139668,79,8139668: Generate README-build.html from markdown,gnu-andrew,2022-06-24,2022-08-26,integrated|backport
+8286582,80,8286582: Build fails on macos aarch64 when using --with-zlib=bundled,mrserb,2022-06-27,2022-11-16,integrated|backport
+8288928,81,8288928: Incorrect GPL header in pnglibconf.h (backport of JDK-8185041),mrserb,2022-06-28,2022-09-07,integrated
+8273176,82,8273176: handle latest VS2019 in abstract_vm_version,apavlyutkin,2022-07-11,2022-09-01,integrated|backport|clean
+8254178,83,8254178: Remove .hgignore,gdams,2022-07-11,2022-08-22,integrated|backport
+8288865,84,8288865: [aarch64] LDR instructions must use legitimized addresses,apavlyutkin,2022-07-20,2022-08-04,integrated|backport
+,85,Merge jdk8u:master,gnu-andrew,2022-07-20,2022-07-21,integrated
+8288763,86,8288763: Pack200 extraction failure with invalid size,backwaterred,2022-07-20,2022-08-17,integrated|backport
+8290000,87,8290000: Bump macOS GitHub actions to macOS 11,gdams,2022-07-21,2022-08-04,integrated|backport
+8071530,91,8071530: Update OS detection code to reflect Windows 10 version change,rgithubli,2022-07-26,2022-08-30,integrated|backport|clean
+8287132,92,8287132: Retire Runtime.runFinalizersOnExit so that it always throws UOE,dholmes-ora,2022-07-29,2022-08-05,integrated|backport
+8274840,93,8274840: Update OS detection code to recognize Windows 11,rgithubli,2022-07-29,2022-08-30,integrated|backport
+8071507,94,8071507: (ref) Clear phantom reference as soft and weak references do,poonamparhar,2022-08-01,2022-08-11,integrated|backport
+,95,Merge jdk8u:master,gnu-andrew,2022-08-01,2022-08-01,integrated
+8245263,96,8245263: Enable TLSv1.3 by default on JDK 8u for Client roles,alexeybakhtin,2022-08-09,2022-08-16,integrated|backport
+8148005,97,8148005: One byte may be corrupted by get_datetime_string(),Roo4L,2022-08-11,2022-10-11,integrated|backport|clean
+8183107,98,8183107: PKCS11 regression regarding checkKeySize,zzambers,2022-08-11,2022-08-22,integrated|backport
+8175797,99,8175797: (ref) Reference::enqueue method should clear the reference object before enqueuing,poonamparhar,2022-08-11,2022-08-22,integrated|backport|clean
+8285497,100,8285497: Add system property for Java SE specification maintenance version,jddarcy,2022-08-11,2022-08-24,integrated|backport
+8201793,102,8201793: (ref) Reference object should not support cloning,poonamparhar,2022-08-15,2022-08-22,integrated|backport|clean
+8285400,103,8285400: Add '@apiNote' to the APIs defined in Java SE 8 MR 3,poonamparhar,2022-08-15,2022-08-22,integrated|backport
+7131823,104,7131823: bug in GIFImageReader,lutkerd,2022-08-16,2022-08-26,integrated|backport
+8283903,105,8283903: GetContainerCpuLoad does not return the correct result in share mode,xpbob,2022-08-18,2022-09-01,integrated|backport|clean
+8195607,106,"8195607: sun/security/pkcs11/Secmod/TestNssDbSqlite.java failed with ""NSS initialization failed"" on NSS 3.34.1",martinuy,2022-08-19,2022-09-09,integrated|backport|clean
+8292688,107,JDK-8292688: Support Security properties in security.testlibrary.Proc,martinuy,2022-08-20,2022-08-26,integrated
+8254318,108,8254318: Remove .hgtags,gdams,2022-08-22,2022-08-24,integrated|backport
+8232950,109,8232950: SUNPKCS11 Provider incorrectly check key length for PSS Signatures.,zzambers,2022-08-22,2022-08-24,integrated|backport|clean
+8292762,110,8292762: Remove .jcheck directories from jdk8u subcomponents,gdams,2022-08-23,2022-08-30,integrated
+8271459,111,8271459: C2: Missing NegativeArraySizeException when creating StringBuilder with negative capacity,apavlyutkin,2022-08-23,2022-10-14,integrated|backport|clean
+8039955,112,"8039955: [TESTBUG] jdk/lambda/LambdaTranslationTest1 - java.lang.AssertionError: expected [d:1234.000000] but found [d:1234,000000]",zzambers,2022-08-23,2022-08-24,integrated|backport|clean
+8049228,113,8049228: Improve multithreaded scalability of InetAddress cache,lusou-zhangquan,2022-08-25,2022-08-26,integrated|backport
+8293181,116,8293181: Bump update version of OpenJDK: 8u362,gnu-andrew,2022-08-31,2022-08-31,integrated
+8293461,118,8293461: Add a test for JDK-8290832,mrserb,2022-09-07,2022-09-28,integrated
+8274563,120,8274563: jfr/event/oldobject/TestClassLoaderLeak.java fails when GC cycles are not happening,caojoshua,2022-09-21,2022-10-11,integrated|backport
+8231111,121,8231111: Cgroups v2: Rework Metrics in java.base so as to recognize unified hierarchy,jmtd,2022-09-21,2022-12-05,integrated|backport
+8293828,122,8293828: JFR: jfr/event/oldobject/TestClassLoaderLeak.java still fails when GC cycles are not happening,Rudometov,2022-09-21,2022-10-11,integrated|backport
+8206456,123,8206456: [TESTBUG] docker jtreg tests fail on systems without cpuset.effective_cpus / cpuset.effective_mems,jmtd,2022-09-22,2022-10-21,integrated|backport
+8240189,124,8240189: [TESTBUG] Some cgroup tests are failing after JDK-8231111,jmtd,2022-09-26,2022-12-13,integrated|backport
+8253702,125,"8253702: BigSur version number reported as 10.16, should be 11.nn",omikhaltsova,2022-09-29,2022-10-13,integrated|backport|clean
+8269850,126,8269850: Most JDK releases report macOS version 12 as 10.16 instead of 12.0,omikhaltsova,2022-09-30,2022-10-13,integrated|backport|clean
+8230305,127,8230305: Cgroups v2: Container awareness,jmtd,2022-10-03,2022-11-30,integrated|backport
+8237479,128,8237479: 8230305 causes slowdebug build failure,jmtd,2022-10-04,2022-12-08,integrated|backport|clean
+8294767,129,"8294767: 8u contains two copies of test/../FileUtils.java, one uses JDK9+ features",jmtd,2022-10-04,2022-12-06,integrated
+8253714,130,8253714: [cgroups v2] Soft memory limit incorrectly using memory.high,jmtd,2022-10-05,2022-12-07,integrated|backport|clean
+8294863,131,8294863: Enable partial tier1 testing in GHA for JDK8,zzambers,2022-10-05,2022-10-11,integrated
+8284690,132,8284690: [macos] VoiceOver : Getting java.lang.IllegalArgumentException: Invalid location on Editable JComboBox,mrserb,2022-10-10,2022-12-06,integrated|backport|clean
+8295164,133,8295164: JDK 8 jdi tests should not use tasklist command on Windows,zzambers,2022-10-11,2022-10-13,integrated
+8159599,134,8159599: [TEST_BUG] java/awt/Modal/ModalInternalFrameTest/ModalInternalFrameTest.java,caojoshua,2022-10-11,2022-11-11,integrated|backport
+8239785,135,8239785: Cgroups: Incorrect detection logic on old systems in hotspot,jmtd,2022-10-12,2022-12-12,integrated|backport
+8239559,136,8239559: Cgroups: Incorrect detection logic on some systems,jmtd,2022-10-13,2022-12-13,integrated|backport
+,137,Merge jdk8u:master,gnu-andrew,2022-10-14,2022-10-15,integrated
+8294357,138,8294357: (tz) Update Timezone Data to 2022d,gnu-andrew,2022-10-16,2022-11-02,integrated|backport
+8295173,139,8295173: (tz) Update Timezone Data to 2022e,gnu-andrew,2022-10-16,2022-11-02,integrated|backport
+8079255,140,8079255: [TEST_BUG] [macosx] Test closed/java/awt/Robot/RobotWheelTest/RobotWheelTest fails for Mac only,caojoshua,2022-10-16,2022-11-18,integrated|backport|clean
+8129827,141,8129827: [TEST_BUG] Test java/awt/Robot/RobotWheelTest/RobotWheelTest.java fails,caojoshua,2022-10-16,2022-11-18,integrated|backport
+8244500,142,8244500: jtreg test error in test/hotspot/jtreg/containers/docker/TestMemoryAwareness.java,jmtd,2022-10-17,2022-12-12,integrated|backport
+8054066,143,8054066: com/sun/jdi/DoubleAgentTest.java fails with timeout,zzambers,2022-10-18,2022-10-19,integrated|backport
+,144,Merge jdk8u:master,gnu-andrew,2022-10-19,2022-10-19,integrated
+6829250,145,6829250: Reg test: java/awt/Toolkit/ScreenInsetsTest/ScreenInsetsTest.java fails in Windows,caojoshua,2022-10-20,2022-12-05,integrated|backport
+8265527,146,8265527: tools/javac/diags/CheckExamples.java fails after JDK-8078024 8u backport,petermz,2022-10-21,2022-10-26,integrated
+8295288,147,8295288: Some vm_flags tests associate with a wrong BugID,caojoshua,2022-10-25,2022-11-09,integrated|backport|clean
+8295915,148,8295915: Problemlist compiler/rtm failures specific to 8u,zzambers,2022-10-25,2022-11-08,integrated
+8295950,149,8295950: Enable langtools/tier1 in GHA for 8u,zzambers,2022-10-26,2022-11-03,integrated
+8295982,150,8295982: Failure in sun/security/tools/keytool/WeakAlg.java - ks: The process cannot access the file because it is being used by another process,wkia,2022-10-29,2022-12-01,integrated
+8270344,151,8270344: Session resumption errors,alexeybakhtin,2022-10-31,2022-11-07,integrated|backport
+8295322,152,8295322: Tests for JDK-8271459 were not backported to 11u,apavlyutkin,2022-11-01,2022-12-01,integrated|backport
+8257620,153,8257620: Do not use objc_msgSend_stret to get macOS version,benty-amzn,2022-11-01,2022-12-05,integrated|backport
+8269039,154,8269039: Disable SHA-1 Signed JARs,alexeybakhtin,2022-11-03,2022-11-23,integrated|backport
+8278951,155,8278951: containers/cgroup/PlainRead.java fails on Ubuntu 21.10,jmtd,2022-11-04,2022-12-15,integrated|backport
+8224506,156,8224506: [TESTBUG] TestDockerMemoryMetrics.java fails with exitValue = 137,jerboaa,2022-11-04,2022-11-08,integrated|backport|clean
+8252359,157,8252359: HotSpot Not Identifying it is Running in a Container,jmtd,2022-11-07,2022-12-15,integrated|backport|clean
+8253435,158,8253435: Cgroup: 'stomping of _mount_path' crash if manually mounted cpusets exist,jmtd,2022-11-07,2022-12-15,integrated|backport
+8245543,159,8245543: Cgroups: Incorrect detection logic on some systems (still reproducible),jmtd,2022-11-07,2022-12-15,integrated|backport
+7124218,160,7124218: [TEST_BUG] [macosx] Space should select cell in the JTable,Rudometov,2022-11-08,2022-11-09,integrated|backport|clean
+8159720,161,8159720: Failure of C2 compilation with tiered prevents some C1 compilations,y1yang0,2022-11-08,2022-11-09,integrated|backport|clean
+8233551,162,8233551: [TESTBUG] SelectEditTableCell.java fails on MacOS,Rudometov,2022-11-08,2022-11-09,integrated|backport
+8296555,163,8296555: Enable hotspot/tier1 for 64-bit builds in GHA for 8u,zzambers,2022-11-08,2022-11-08,integrated
+8197408,164,8197408: Bad pointer comparison and small cleanup in os_linux.cpp,jmtd,2022-11-09,2022-12-13,integrated|backport
+8255559,165,8255559: Leak File Descriptors Because of ResolverLocalFilesystem#engineResolveURI(),gnu-andrew,2022-11-09,2022-11-25,integrated|backport|clean
+8221529,166,8221529: [TESTBUG] Docker tests use old/deprecated image on AArch64,lutkerd,2022-11-09,2022-11-11,integrated|backport
+8284622,167,8284622: Update versions of some Github Actions used in JDK workflow,zzambers,2022-11-09,2022-11-10,integrated|backport
+8253727,168,8253727: [cgroups v2] Memory and swap limits reported incorrectly,jerboaa,2022-11-10,2022-12-07,integrated|backport|clean
+8253939,169,8253939: [TESTBUG] Increase coverage of the cgroups detection code,jmtd,2022-11-14,2022-12-15,integrated|backport
+8254001,170,8254001: [Metrics] Enhance parsing of cgroup interface files for version detection,jmtd,2022-11-14,2022-12-16,integrated|backport
+8262379,171,8262379: Add regression test for JDK-8257746,jmtd,2022-11-14,2022-12-16,integrated|backport
+8295714,172,8295714: GHA ::set-output is deprecated and will be removed,zzambers,2022-11-14,2022-11-14,integrated|backport
+8296959,173,8296959: Fix hotspot shell tests of 8u on multilib systems,zzambers,2022-11-14,2022-11-15,integrated
+8284389,174,8284389: Improve stability of GHA Pre-submit testing by caching cygwin installer,zzambers,2022-11-14,2022-11-15,integrated|backport
+8291570,175,8291570: [TESTBUG] Part of JDK-8250984 absent from 11u,jmtd,2022-11-15,2022-12-16,integrated|backport|clean
+8252957,176,8252957: Wrong comment in CgroupV1Subsystem::cpu_quota,jmtd,2022-11-16,2022-12-16,integrated|backport|clean
+8266391,177,8266391: Replace use of reflection in jdk.internal.platform.Metrics,jmtd,2022-11-16,2022-12-16,integrated|backport
+8284756,178,8284756: [11u] Remove unused isUseContainerSupport in CgroupV1Subsystem,jmtd,2022-11-16,2022-12-19,integrated|backport|clean
+8284102,179,8284102: [TESTBUG] [11u] Retroactively add regression test for JDK-8272124,jmtd,2022-11-16,2022-12-19,integrated|backport
+8292083,180,8292083: Detected container memory limit may exceed physical machine memory,jmtd,2022-11-16,2022-12-19,integrated|backport
+8297141,181,8297141: Fix hotspot/test/runtime/SharedArchiveFile/DefaultUseWithClient.java for 8u,zzambers,2022-11-16,2022-11-22,integrated
+8241086,182,8241086: Test runtime/NMT/HugeArenaTracking.java is failing on 32bit Windows,zzambers,2022-11-16,2022-11-22,integrated|backport
+6885993,183,6885993: Named Thread: introduce print() and print_on(outputStream* st) methods,simonis,2022-11-17,2022-11-25,integrated|backport|clean
+8073464,184,8073464: GC workers do not have thread names,simonis,2022-11-17,2022-11-25,integrated|backport
+8253797,185,8253797: [cgroups v2] Account for the fact that swap accounting is disabled on some systems,jmtd,2022-11-18,2022-12-15,integrated|backport|clean
+8229182,186,8229182: [TESTBUG] runtime/containers/docker/TestMemoryAwareness.java test fails on SLES12,lutkerd,2022-11-18,2022-12-27,integrated|backport
+8297329,187,8297329: [8u] hotspot needs to recognise VS2019,apavlyutkin,2022-11-21,2022-12-01,integrated
+8296485,188,8296485: BuildEEBasicConstraints.java test fails with SunCertPathBuilderException,theaoqi,2022-11-21,2022-12-05,integrated|backport
+8296480,189,8296480: java/security/cert/pkix/policyChanges/TestPolicy.java is failing,theaoqi,2022-11-21,2022-12-05,integrated|backport|clean
+8241087,190,8241087: Build failure with VS 2019 (16.5.0) due to C2039 and C2873,apavlyutkin,2022-11-22,2022-12-01,integrated|backport|clean
+8295952,191,8295952: Problemlist existing compiler/rtm tests also on x86,zzambers,2022-11-23,2022-12-06,integrated|backport
+8226236,192,8226236: win32: gc/metaspace/TestCapacityUntilGCWrapAround.java fails,zzambers,2022-11-23,2022-12-02,integrated|backport|clean
+8242468,193,8242468: VS2019 build missing vcruntime140_1.dll,apavlyutkin,2022-11-23,2022-12-01,integrated|backport
+8296496,194,8296496: Overzealous check in sizecalc.h prevents large memory allocation,mrserb,2022-11-24,2022-12-06,integrated|backport|clean
+8247676,195,8247676: vcruntime140_1.dll is not needed on 32-bit Windows,apavlyutkin,2022-11-28,2022-12-01,integrated|backport
+8296957,196,8296957: One more cast in SAFE_SIZE_NEW_ARRAY2,mrserb,2022-11-28,2022-12-06,integrated|backport|clean
+8296632,198,8296632: Write a test to verify the content change of TextArea sends TextEvent,Rudometov,2022-11-29,2022-12-05,integrated|backport|clean
+8286624,199,8286624: Regression Test CoordinateTruncationBug.java fails on OL8.3,Rudometov,2022-11-29,2022-12-01,integrated|backport|clean
+8297739,201,8297739: Bump update version of OpenJDK: 8u372,gnu-andrew,2022-11-30,2022-11-30,integrated
+8283277,202,8283277: ISO 4217 Amendment 171 Update,dimitryc,2022-12-02,2023-01-05,integrated|backport
+8297996,203,8297996: [8u] generated images are broken due to renaming of MSVC runtime DLL's,apavlyutkin,2022-12-05,2022-12-23,integrated
+8298307,204,8298307: Enable hotspot/tier1 for 32-bit builds in GHA for 8u,zzambers,2022-12-07,2022-12-12,integrated
+8065422,205,8065422: Trailing dot in hostname causes TLS handshake to fail with SNI disabled,wkia,2022-12-09,2023-01-19,integrated|backport|clean
+8282398,206,8282398: EndingDotHostname.java test fails because SSL cert expired,wkia,2022-12-09,2023-01-19,integrated|backport|clean
+8282511,207,8282511: Use fixed certificate validation date in SSLExampleCert template,wkia,2022-12-09,2023-02-13,integrated|backport
+8203485,208,8203485: [freetype] text rotated on 180 degrees is too narrow,xiangzhai,2022-12-12,2023-01-17,integrated|backport
+8072770,209,8072770: [TESTBUG] Some Introspector tests fail with a Java heap bigger than 4GB,theaoqi,2022-12-13,2022-12-13,integrated|backport|clean
+8196196,210,8196196: Headful tests should not be run in headless mode,xiangzhai,2022-12-13,2022-12-14,integrated|backport
+8254717,211,8254717: isAssignableFrom checks in KeyFactorySpi.engineGetKeySpec appear to be backwards,phohensee,2022-12-14,2022-12-18,integrated|backport
+8234484,213,8234484: Add ability to configure third port for remote JMX,vyommani,2022-12-16,2022-12-19,integrated|backport
+8284977,215,8284977: MetricsTesterCgroupV2.getLongValueEntryFromFile fails when named value doesn't exist,kurashige23,2022-12-20,2022-12-23,integrated|backport|clean
+8293472,216,8293472: Incorrect container resource limit detection if manual cgroup fs mounts present,jmtd,2022-12-20,2023-01-09,integrated|backport
+8289695,217,8289695: [TESTBUG] TestMemoryAwareness.java fails on cgroups v2 and crun,jerboaa,2022-12-20,2023-01-11,integrated|backport|clean
+8287107,218,8287107: CgroupSubsystemFactory.setCgroupV2Path asserts with freezer controller,jerboaa,2022-12-20,2023-01-30,integrated|backport
+8287741,219,8287741: Fix of JDK-8287107 (unused cgv1 freezer controller) was incomplete,jerboaa,2022-12-20,2023-01-30,integrated|backport|clean
+8292541,220,8292541: [Metrics] Reported memory limit may exceed physical machine memory,jmtd,2023-01-03,2023-01-19,integrated|backport
+8293540,221,8293540: [Metrics] Incorrectly detected resource limits with additional cgroup fs mounts,jmtd,2023-01-03,2023-01-24,integrated|backport
+8299548,222,8299548: Fix hotspot/test/runtime/Metaspace/MaxMetaspaceSizeTest.java in 8u,zzambers,2023-01-03,2023-01-09,integrated
+8283606,223,8283606: Tests may fail with zh locale on MacOS,Nagata-Haruhito,2023-01-06,2023-01-30,integrated|backport
+8289549,224,8289549: ISO 4217 Amendment 172 Update,gnu-andrew,2023-01-06,2023-01-10,integrated|backport
+8294307,225,8294307: ISO 4217 Amendment 173 Update,gnu-andrew,2023-01-06,2023-01-10,integrated|backport
+8296239,226,8296239: ISO 4217 Amendment 174 Update,gnu-andrew,2023-01-06,2023-01-10,integrated|backport
+8299804,227,8299804: Fix non-portable code in hotspot shell tests in 8u ,zzambers,2023-01-09,2023-01-11,integrated
+8299439,228,8299439: java/text/Format/NumberFormat/CurrencyFormat.java fails for hr_HR,gnu-andrew,2023-01-11,2023-01-12,integrated|backport
+8300014,229,8300014: Some backports placed the tests in the wrong location,mrserb,2023-01-12,2023-01-18,integrated
+,230,Merge jdk8u:master,gnu-andrew,2023-01-18,2023-01-18,integrated
+8185736,231,8185736: missing default exception handler in calls to rethrow_Stub,dongbohe,2023-01-18,2023-03-06,integrated|backport|clean
+,232,Merge jdk8u:master,gnu-andrew,2023-01-18,2023-01-18,integrated
+8282947,234,8282947: JFR: Dump on shutdown live-locks in some conditions,judovana,2023-01-19,2023-02-15,integrated|backport
+8301143,235,8301143: [TESTBUG] jfr/event/sampling/TestNative was backported to JDK8u without proper native wrapper,judovana,2023-01-24,2023-02-16,integrated
+8293767,236,8293767: AWT test TestSinhalaChar.java has old SCCS markings,mrserb,2023-01-25,2023-01-27,integrated|backport|clean
+8159135,237,8159135: [PIT] javax/swing/JMenuItem/8152981/MenuItemIconTest.java always fail,mrserb,2023-01-25,2023-01-27,integrated|backport|clean
+8196467,238,8196467: javax/swing/JInternalFrame/Test6325652.java fails,mrserb,2023-01-25,2023-01-27,integrated|backport|clean
+8039888,239,8039888: [TEST_BUG] keyboard garbage after javax/swing/plaf/windows/WindowsRootPaneUI/WrongAltProcessing/WrongAltProcessing.java,mrserb,2023-01-25,2023-01-27,integrated|backport|clean
+8301122,240,8301122: [8u] Fix unreliable vs2010 download link,zzambers,2023-01-25,2023-01-27,integrated
+7001973,241,7001973: java/awt/Graphics2D/CopyAreaOOB.java fails,mrserb,2023-01-25,2023-01-27,integrated|backport|clean
+8042098,242,8042098: [TESTBUG] Test sun/java2d/AcceleratedXORModeTest.java fails on Windows,mrserb,2023-01-25,2023-01-27,integrated|backport|clean
+8239827,243,8239827: The test OpenByUNCPathNameTest.java should be changed to be manual,mrserb,2023-01-26,2023-01-27,integrated|backport|clean
+8275650,244,8275650: Problemlist java/io/File/createTempFile/SpecialTempFile.java for Windows 11,ktakakuri,2023-01-26,2023-01-30,integrated|backport
+8075964,245,8075964: Test java/awt/Mouse/TitleBarDoubleClick/TitleBarDoubleClick.html fails intermittently with timeout error,mrserb,2023-01-26,2023-01-27,integrated|backport|clean
+8301246,246,8301246: NPE in FcFontManager.getDefaultPlatformFont() on Linux without installed fontconfig,AlexanderScherbatiy,2023-01-27,2023-02-17,integrated
+8233570,247,8233570: [TESTBUG] HTMLEditorKit test bug5043626.java is failing on macos,mrserb,2023-01-27,2023-01-30,integrated|backport|clean
+8280048,248,8280048: Missing comma in copyright header,mrserb,2023-01-27,2023-01-30,integrated|backport|clean
+8156581,250,8156581: Cleanup of ProblemList.txt,mrserb,2023-01-28,2023-02-12,integrated|backport
+8177560,251,8177560: @headful key can be removed from the tests for JavaSound,mrserb,2023-01-29,2023-01-30,integrated|backport|clean
+8301332,252,8301332: [8u] Fix writing of test files after the cgroups v2 backport,jerboaa,2023-01-30,2023-01-30,integrated
+8270317,253,8270317: Large Allocation in CipherSuite,phohensee,2023-01-30,2023-02-16,integrated|backport
+8301550,254,8301550: [8u] Enable additional linux build testing in GitHub,zzambers,2023-01-31,2023-02-01,integrated
+8287463,255,8287463: JFR: Disable TestDevNull.java on Windows,judovana,2023-01-31,2023-02-15,integrated|backport
+7124381,256,7124381: DragSourceListener.dragDropEnd() never been called on completion of dnd operation,mrserb,2023-02-01,2023-02-01,integrated|backport|clean
+6734341,257,6734341: REGTEST fails: SelectionAutoscrollTest.html,mrserb,2023-02-01,2023-02-13,integrated|backport|clean
+8287109,258,8287109: Distrust.java failed with CertificateExpiredException,theaoqi,2023-02-01,2023-02-08,integrated|backport
+8301620,260,8301620: [8u] some shell tests are passed but have unexpected operator errors,theaoqi,2023-02-01,2023-02-08,integrated
+7124238,262,7124238: [macosx] Font in BasicHTML document is bigger than it should be,mrserb,2023-02-02,2023-02-13,integrated|backport|clean
+8137101,263,8137101: [TEST_BUG] javax/swing/plaf/basic/BasicHTML/4251579/bug4251579.java failure due to timing,mrserb,2023-02-03,2023-02-13,integrated|backport|clean
+8298027,264,8298027: Remove SCCS id's from awt jtreg tests,mrserb,2023-02-06,2023-02-11,integrated|backport|clean
+8301760,265,8301760: Fix possible leak in SpNegoContext dispose,yan-too,2023-02-06,2023-02-16,integrated|backport
+8142540,266,8142540: [TEST_BUG] Test sun/awt/dnd/8024061/bug8024061.java fails on ubuntu,mrserb,2023-02-06,2023-02-13,integrated|backport|clean
+8205959,267,8205959: Do not restart close if errno is EINTR,gnu-andrew,2023-02-09,2023-02-11,integrated|backport
+8275535,268,8275535: Retrying a failed authentication on multiple LDAP servers can lead to users blocked,alexeybakhtin,2023-02-16,2023-02-17,integrated|backport
+8298108,269,8298108: Add a regression test for JDK-8297684,jerboaa,2023-02-27,2023-05-25,integrated|backport
+8303462,275,8303462: Bump update version of OpenJDK: 8u382,gnu-andrew,2023-03-01,2023-03-03,integrated
+8263059,276,8263059: security/infra/java/security/cert/CertPathValidator/certification/ComodoCA.java fails due to revoked cert,gnu-andrew,2023-03-03,2023-04-04,integrated|backport
+8295530,277,8295530: Update Zlib Data Compression Library to Version 1.2.13,sxa,2023-03-03,2023-03-27,integrated|backport
+,278,Merge jdk8u:master,gnu-andrew,2023-03-07,2023-03-08,integrated
+8278851,282,8278851: Correct signer logic for jars signed with multiple digest algorithms,jerboaa,2023-03-10,2023-04-07,integrated|backport
+8293815,283,8293815: P11PSSSignature.engineUpdate should not print debug messages during normal operation,zzambers,2023-03-14,2023-03-14,integrated|backport|clean
+8282600,284,8282600: SSLSocketImpl should not use user_canceled workaround when not necessary,zzambers,2023-03-14,2023-03-14,integrated|backport|clean
+8154043,285,"8154043: Fields not reachable anymore by tab-key, because of new tabbing behaviour of radio button groups.",ktakakuri,2023-03-15,2025-09-08,integrated|backport
+8152432,286,"8152432: Implement setting jtreg @requires properties vm.flavor, vm.bits, vm.compMode",zzambers,2023-03-15,2023-03-21,integrated|backport
+8289301,287,8289301: P11Cipher should not throw out of bounds exception during padding,zzambers,2023-03-15,2023-03-21,integrated|backport
+8293232,288,8293232: Fix race condition in pkcs11 SessionManager,zzambers,2023-03-15,2023-03-21,integrated|backport|clean
+8302791,290,8302791: Add specific ClassLoader object to Proxy IllegalArgumentException message,yathamravali,2023-03-17,2023-03-27,integrated|backport
+8202952,291,8202952: C2: Unexpected dead nodes after matching,dongbohe,2023-03-24,2023-08-24,integrated|backport
+,292,Merge jdk8u:master,gnu-andrew,2023-03-28,2023-03-28,integrated
+8305165,293,8305165: [8u] ServiceThread::nmethods_do is not called to keep nmethods from being zombied while in the queue,JoshuaZhuwj,2023-03-29,2023-04-25,integrated
+8305329,294,8305329: [8u] Unify test libraries into single test library - step 1,zzambers,2023-03-30,2023-11-08,integrated
+8276841,295,8276841: Add support for Visual Studio 2022,AlexanderScherbatiy,2023-03-31,2023-04-20,integrated|backport
+8271199,296,8271199: Mutual TLS handshake fails signing client certificate with custom sensitive PKCS11 key,alexeybakhtin,2023-04-03,2023-04-04,integrated|backport
+8215105,297,8215105: java/awt/Robot/HiDPIScreenCapture/ScreenCaptureTest.java: Wrong Pixel Color,mrserb,2023-04-04,2023-04-19,integrated|backport
+8282345,299,8282345: handle latest VS2022 in abstract_vm_version,AlexanderScherbatiy,2023-04-10,2023-04-20,integrated|backport
+8277881,300,8277881: Missing SessionID in TLS1.3 resumption in compatibility mode,lutkerd,2023-04-10,2023-04-19,integrated|backport|clean
+8151460,301,8151460: Metaspace counters can have inconsistent values,tstuefe,2023-04-11,2023-04-19,integrated|backport
+8263404,302,8263404: RsaPrivateKeySpec is always recognized as RSAPrivateCrtKeySpec in RSAKeyFactory.engineGetKeySpec,phohensee,2023-04-12,2023-04-13,integrated|backport
+8285515,303,"8285515: (dc) DatagramChannel.disconnect fails with ""Invalid argument"" on macOS 12.4",benty-amzn,2023-04-13,2023-05-24,integrated|backport
+8305113,305,8305113: (tz) Update Timezone Data to 2023c,Rudometov,2023-04-13,2023-04-17,integrated|backport
+8159690,306,8159690: [TESTBUG] Mark headful tests with @key headful.,yaqsun,2023-04-20,2024-02-26,integrated|backport
+,307,Merge jdk8u:master ,gnu-andrew,2023-04-20,2023-04-20,integrated|clean
+8268558,308,8268558: [TESTBUG] Case 2 in TestP11KeyFactoryGetRSAKeySpec is skipped,mrserb,2023-04-21,2023-05-24,integrated|backport
+8072678,309,8072678: Wrong exception messages in java.awt.color.ICC_ColorSpace,mrserb,2023-05-02,2023-05-25,integrated|backport|clean
+8307310,310,8307310: Backport the tests for JDK-8058969 and JDK-8039271 to the OpenJDK8,mrserb,2023-05-02,2023-05-24,integrated
+8253269,311,8253269: The CheckCommonColors test should provide more info on failure,mrserb,2023-05-02,2023-05-31,integrated|backport|clean
+8139348,312,8139348: Deprecate 3DES and RC4 in Kerberos,kvergizova,2023-05-04,2023-06-02,integrated|backport
+8307531,313,8307531: [aarch64] JDK8 single-step debugging is extremely slow,snazarkin,2023-05-05,2023-05-12,integrated
+8301400,314,8301400: Allow additional characters for GB18030-2022 support,naotoj,2023-05-08,2023-05-10,integrated|backport
+8305681,315,8305681: Allow additional characters for GB18030-2022 (Level 2) support,naotoj,2023-05-09,2023-05-10,integrated|backport
+8303028,316,8303028: Update system property for Java SE specification maintenance version,justin-curtis-lu,2023-05-09,2023-05-11,integrated|backport|clean
+8307837,317,8307837: [8u] Check step in GHA should also print errors,zzambers,2023-05-10,2023-10-02,integrated
+8305975,319,8305975: Add TWCA Global Root CA,jerboaa,2023-05-24,2023-05-25,integrated|backport|clean
+8304760,320,8304760: Add 2 Microsoft TLS roots,jerboaa,2023-05-25,2023-05-26,integrated|backport|clean
+8307134,321,8307134: Add GTS root CAs,jerboaa,2023-05-25,2023-05-26,integrated|backport|clean
+8308788,322,8308788: [8u] Remove duplicate HaricaCA.java test,jerboaa,2023-05-26,2023-08-11,integrated
+8287663,323,8287663: Add a regression test for JDK-8287073,jerboaa,2023-05-26,2023-08-14,integrated|backport
+8287073,324,8287073: NPE from CgroupV2Subsystem.getInstance(),jerboaa,2023-05-26,2023-08-11,integrated|backport|clean
+8205399,325,8205399: Set node color on pinned HashMap.TreeNode deletion,shipilev,2023-05-30,2023-07-07,integrated|backport|clean
+8309122,326,8309122: Bump update version of OpenJDK: 8u392,gnu-andrew,2023-05-30,2023-05-31,integrated
+8309143,327,8309143: [8u] fix archiving inconsistencies in GHA,zzambers,2023-05-30,2023-07-10,integrated
+8200468,335,8200468: Port the native GSS-API bridge to Windows,alexeybakhtin,2023-06-12,2023-07-03,integrated|backport
+8310026,336,8310026: [8u] make java_lang_String::hash_code consistent across platforms,zzambers,2023-06-14,2023-07-10,integrated
+8219804,337,8219804: java/net/MulticastSocket/Promiscuous.java fails intermittently due to NumberFormatException,sendaoYan,2023-07-07,2023-08-09,integrated|backport
+,338,Merge jdk8u:master,gnu-andrew,2023-07-12,2023-07-12,integrated|clean
+8301119,339,8301119: Support for GB18030-2022,gnu-andrew,2023-07-12,2023-07-13,integrated|backport
+6722928,340,6722928: Provide a default native GSS-API library on Windows,alexeybakhtin,2023-07-13,2023-08-11,integrated|backport
+8214046,341,8214046: [macosx] Undecorated Frame does not Iconify when set to,gesellix,2023-07-14,2023-08-07,integrated|backport
+,343,Merge jdk8u:master,gnu-andrew,2023-07-19,2023-07-19,integrated|clean
+8212677,345,8212677: X11 default visual support for IM status window on VNC,mrserb,2023-07-24,2023-08-28,integrated|backport
+8232225,346,8232225: Rework the fix for JDK-8071483,mrserb,2023-07-25,2023-08-09,integrated|backport
+8207404,347,8207404: MulticastSocket tests failing on AIX,Larry-N,2023-07-25,2023-10-16,integrated|backport
+8239365,348,8239365: ProcessBuilder test modifications for AIX execution,Larry-N,2023-07-25,2023-09-06,integrated|backport|clean
+8173072,349,"8173072: zipfs fails to handle incorrect info-zip ""extended timestamp extra field""",navyxliu,2023-07-31,2023-08-24,integrated|backport
+8040887,351,8040887: [TESTBUG] Remove test/runtime/6925573/SortMethodsTest.java,benty-amzn,2023-08-04,2023-08-09,integrated|backport
+8206179,352,8206179: com/sun/management/OperatingSystemMXBean/GetCommittedVirtualMemorySize.java fails with Committed virtual memory size illegal value,benty-amzn,2023-08-04,2023-08-30,integrated|backport
+6528710,354,6528710: sRGB-ColorSpace to sRGB-ColorSpace Conversion,mrserb,2023-08-12,2023-08-28,integrated|backport|clean
+8042726,355,8042726: [TESTBUG] TEST.groups file was not updated after runtime/6925573/SortMethodsTest.java removal,benty-amzn,2023-08-14,2023-08-16,integrated|backport|clean
+8285398,356,8285398: Cache the results of constraint checks,alexeybakhtin,2023-08-23,2023-10-17,integrated|backport
+8281096,357,8281096: Flags introduced by configure script are not passed to ADLC build,gnu-andrew,2023-08-23,2024-08-14,integrated
+8159156,358,8159156: [TESTBUG] ReserveMemory test is not useful on Aix.,Larry-N,2023-08-25,2023-09-06,integrated|backport|clean
+8312535,359,8312535: MidiSystem.getSoundbank() throws unexpected SecurityException,mrserb,2023-08-28,2023-10-18,integrated|backport|clean
+8315280,360,8315280: Bump update version of OpenJDK: 8u402,gnu-andrew,2023-08-30,2023-08-31,integrated
+8315135,361,8315135: Memory leak in the native implementation of Pack200.Unpacker.unpack(),simonis,2023-08-30,2023-09-01,integrated|backport|clean
+8315506,362,8315506: C99 compatibility issue in LinuxNativeDispatcher,fweimer-rh,2023-09-01,2023-09-04,integrated
+8271838,364,8271838: AmazonCA.java interop test fails,jerboaa,2023-09-05,2023-09-06,integrated|backport|clean
+8309088,365,8309088: security/infra/java/security/cert/CertPathValidator/certification/AmazonCA.java fails,jerboaa,2023-09-05,2023-09-11,integrated|backport
+8029995,367,8029995: accept yes/no for boolean krb5.conf settings,alexeybakhtin,2023-09-05,2023-09-20,integrated|backport
+8315757,368,8315757: [8u] Add cacerts JTREG tests to GHA tier1 test set,jerboaa,2023-09-06,2023-12-05,integrated
+8311813,369,8311813: C1: Uninitialized PhiResolver::_loop field,chadrako,2023-09-06,2023-10-16,integrated|backport|clean
+8176509,370,8176509: Use pandoc for converting build readme to html,zzambers,2023-09-07,2023-11-14,integrated|backport
+8209115,371,8209115: adjust libsplashscreen linux ppc64le builds for easier libpng update,martinuy,2023-09-14,2023-09-19,integrated|backport
+8295685,372,8295685: Update Libpng to 1.6.38,martinuy,2023-09-14,2023-09-19,integrated|backport
+8305815,373,8305815: Update Libpng to 1.6.39,martinuy,2023-09-14,2023-09-26,integrated|backport
+,375,Merge jdk8u:master,gnu-andrew,2023-09-20,2023-09-20,integrated|clean
+8283441,376,8283441: C2: segmentation fault in ciMethodBlocks::make_block_at(int),judovana,2023-09-22,2023-09-25,integrated|backport
+8021961,377,8021961: setAlwaysOnTop doesn't behave correctly in Linux/Solaris under certain scenarios,kurashige23,2023-09-28,2023-11-29,integrated|backport
+8222323,378,"8222323: ChildAlwaysOnTopTest.java fails with ""RuntimeException: Failed to unset alwaysOnTop""",kurashige23,2023-09-28,2023-11-29,integrated|backport
+8317291,379,8317291: Missing null check for nmethod::is_native_method(),tkiriyama,2023-09-29,2023-11-13,integrated
+8242330,380,8242330: Arrays should be cloned in several JAAS Callback classes,yan-too,2023-09-29,2023-10-05,integrated|backport
+8312489,381,8312489: Increase jdk.jar.maxSignatureFileSize default which is too low for JARs such as WhiteSource/Mend unified agent jar,gnu-andrew,2023-10-11,2023-11-24,integrated|backport
+8285696,382,8285696: AlgorithmConstraints:permits not throwing IllegalArgumentException when 'alg'  is null,alexeybakhtin,2023-10-11,2023-10-17,integrated|backport
+,384,Merge jdk8u:master,gnu-andrew,2023-10-31,2023-10-31,integrated|clean
+8319405,385,JDK-8319405: [s390] [jdk8] Increase javac default stack size for s390x zero,tstuefe,2023-11-03,2023-11-08,integrated
+8198321,386,8198321: javax/swing/JEditorPane/5076514/bug5076514.java fails,yaqsun,2023-11-10,2024-02-26,integrated|backport
+8208655,387,8208655: use JTreg skipped status in hotspot tests,gnu-andrew,2023-11-22,2023-11-28,integrated|backport
+8297955,388,8297955: LDAP CertStore should use LdapName and not String for DNs,gnu-andrew,2023-11-24,2023-11-28,integrated|backport
+8312126,389,8312126: NullPointerException in CertStore.getCRLs after 8297955,gnu-andrew,2023-11-24,2023-11-28,integrated|backport
+8308592,390,8308592: Framework for CA interoperability testing,gnu-andrew,2023-11-24,2023-12-02,integrated|backport
+8320713,391,8320713: Bump update version of OpenJDK: 8u412,gnu-andrew,2023-11-25,2023-11-27,integrated
+8304074,392,8304074: [JMX] Add an approximation of total bytes allocated on the Java heap by the JVM,phohensee,2023-11-26,2024-02-26,integrated|backport
+8251551,394,8251551: Use .md filename extension for README,zzambers,2023-11-27,2023-11-28,integrated|backport
+8301310,395,8301310: The SendRawSysexMessage test may cause a JVM crash,mrserb,2023-11-28,2023-12-08,integrated|backport|clean
+8317373,397,8317373: Add Telia Root CA v2,jerboaa,2023-11-28,2023-12-11,integrated|backport
+8317374,398,8317374: Add Let's Encrypt ISRG Root X2,jerboaa,2023-11-28,2023-12-11,integrated|backport
+8318759,399,8318759: Add four DigiCert root certificates,jerboaa,2023-11-28,2023-12-11,integrated|backport
+8320964,400,8320964: sun/tools/native2ascii/Native2AsciiTests.sh fails on Japanese,ktakakuri,2023-11-29,2024-07-18,integrated
+8319187,401,8319187: Add three eMudhra emSign roots,jerboaa,2023-12-11,2023-12-13,integrated|backport
+8302017,403,8302017: Allocate BadPaddingException only if it will be thrown,alexeybakhtin,2023-12-14,2023-12-15,integrated|backport
+8320597,404,8320597: RSA signature verification fails on signed data that does not encode params correctly,alexeybakhtin,2023-12-14,2023-12-16,integrated|backport
+8159454,405,8159454: [TEST_BUG] javax/swing/ToolTipManager/7123767/bug7123767.java: number of checked graphics configurations should be limited,ktakakuri,2023-12-14,2024-04-17,integrated|backport
+8268916,406,8268916: Tests for AffirmTrust roots,jerboaa,2023-12-14,2024-02-28,integrated|backport
+8155590,407,8155590: Dubious collection management in sun.net.www.http.KeepAliveCache,dhanalla,2023-12-15,2024-02-08,integrated|backport
+,408,Merge jdk8u:master,gnu-andrew,2023-12-18,2023-12-18,integrated|clean
+8293562,409,8293562: KeepAliveCache Blocks Threads while Closing Connections,dhanalla,2023-12-18,2024-05-14,integrated|backport
+8312065,410,8312065: Socket.connect does not timeout when profiling,yanglong1010,2023-12-21,2025-06-26,integrated|backport
+8276139,411,"8276139: TestJpsHostName.java not reliable, better to expand HostIdentifierCreate.java test",yaqsun,2024-01-02,2024-02-19,integrated|backport
+8321060,412,8321060: [8u] hotspot needs to recognise VS2022,mrserb,2024-01-03,2024-02-07,integrated
+8270517,413,8270517: Add Zero support for LoongArch,xiangzhai,2024-01-05,2024-02-17,integrated|backport
+8322725,414,8322725: (tz) Update Timezone Data to 2023d,lutkerd,2024-01-05,2024-02-06,integrated|backport
+8315042,415,8315042: NPE in PKCS7.parseOldSignedData,mrserb,2024-01-07,2024-02-08,integrated|backport|clean
+8323202,417,8323202: [8u] Remove get_source.sh and hgforest.sh,zzambers,2024-01-08,2024-02-12,integrated
+8168518,418,8168518: rcache interop with krb5-1.15,alexeybakhtin,2024-01-11,2024-02-15,integrated|backport
+8248001,420,8248001: javadoc generates invalid HTML pages whose ftp:// links are broken,ktakakuri,2024-01-16,2025-05-20,integrated|backport
+,421,Merge jdk8u:master,gnu-andrew,2024-01-17,2024-01-18,integrated|clean
+8324185,422,8324185: [8u] Accept Xcode 12+ builds on macOS,mrserb,2024-01-19,2024-04-16,integrated
+8192931,423,8192931: Regression test java/awt/font/TextLayout/CombiningPerf.java fails,mrserb,2024-01-21,2024-02-06,integrated|backport|clean
+8324530,424,JDK-8324530: Build error with gcc 10,tstuefe,2024-01-23,2024-02-22,integrated
+8323640,426,8323640: [TESTBUG]testMemoryFailCount in jdk/internal/platform/docker/TestDockerMemoryMetrics.java always fail because OOM killed,sendaoYan,2024-01-24,2024-02-22,integrated|backport
+8238274,427,8238274: (sctp) JDK-7118373 is not fixed for SctpChannel,ktakakuri,2024-01-24,2024-06-27,integrated|backport
+8035395,429,8035395: sun/management/jmxremote/startstop/JMXStartStopTest.java fails intermittently: Port already in use,ktakakuri,2024-01-25,2024-06-17,integrated|backport
+8066708,430,8066708: JMXStartStopTest fails to connect to port 38112,ktakakuri,2024-01-25,2024-09-19,integrated|backport
+8137329,434,"8137329: [windows] Build broken on VS2010 after  ""8046148: JEP 158: Unified JVM Logging""",ktakakuri,2024-01-26,2024-06-27,integrated|backport
+8324184,435,"8324184: Windows VS2010 build failed with ""error C2275: 'int64_t'""",gnu-andrew,2024-01-31,2024-01-31,integrated|backport
+8325096,436,8325096: Test java/security/cert/CertPathBuilder/akiExt/AKISerialNumber.java is failing,sendaoYan,2024-02-01,2024-03-13,integrated|backport
+8278067,437,8278067: Make HttpURLConnection default keep alive timeout configurable,dhanalla,2024-02-07,2024-03-19,integrated|backport
+8011180,438,8011180: Delete obsolete scripts,zzambers,2024-02-08,2024-02-12,integrated|backport|clean
+8325150,439,8325150: (tz) Update Timezone Data to 2024a,lutkerd,2024-02-08,2024-02-21,integrated|backport
+8318410,440,8318410: jdk/java/lang/instrument/BootClassPath/BootClassPathTest.sh fails on Japanese Windows,ktakakuri,2024-02-13,2024-04-17,integrated|backport
+8240756,441,8240756: [macos] SwingSet2:TableDemo:Printed Japanese characters were garbled,mrserb,2024-02-14,2024-02-26,integrated|backport|clean
+8025439,442,8025439: [TEST BUG] [macosx] PrintServiceLookup.lookupPrintServices doesn't work properly since jdk8b105,mrserb,2024-02-14,2024-02-26,integrated|backport|clean
+8325927,444,8325927: [8u] Backport of JDK-8170552 missed part of the test,mrserb,2024-02-15,2024-03-31,integrated
+8069389,446,8069389: CompilerOracle prefix wildcarding is broken for long strings,wkia,2024-02-16,2024-04-10,integrated|backport|clean
+8326110,447,8326110: [8u] The Marlin tests should be updated after JDK-8241307,mrserb,2024-02-18,2024-12-02,integrated
+8079441,448,"8079441: Intermittent failures on Windows with ""Unexpected exit from test [exit code: 1080890248]"" (0x406d1388)",fthevenet,2024-02-19,2024-02-20,integrated|backport|clean
+8074860,449,8074860: Structured Exception Catcher missing around CreateJavaVM on Windows,fthevenet,2024-02-20,2024-02-21,integrated|backport
+8186199,451,8186199: [windows] JNI_DestroyJavaVM not covered by SEH,fthevenet,2024-02-20,2024-02-22,integrated|backport
+8291226,453,8291226: Create Test Cases to cover scenarios for JDK-8278067,dhanalla,2024-02-21,2024-04-05,integrated|backport
+8291638,454,8291638: Keep-Alive timeout of 0 should close connection immediately,dhanalla,2024-02-21,2024-04-08,integrated|backport
+8016451,455,8016451: Scary messages emitted by build.tools.generatenimbus.PainterGenerator during build,fthevenet,2024-02-22,2024-02-22,integrated|backport|clean
+8326686,456,8326686: Bump update version of OpenJDK: 8u422,gnu-andrew,2024-02-26,2024-02-26,integrated
+8298887,457,8298887: On the latest macOS+XCode the Robot API may report wrong colors,mrserb,2024-02-26,2024-08-30,integrated|backport
+8299677,459,8299677: Formatter.format might take a long time to format an integer or floating-point,chadrako,2024-02-26,2024-07-08,integrated|backport
+8185500,464,8185500: [TESTBUG] Add keywords headful/printer in java/awt and javax tests.,yaqsun,2024-03-04,2025-08-26,integrated|backport
+8327440,465,"8327440: Fix ""bad source file"" error during beaninfo generation",fitzsim,2024-03-04,2024-03-19,integrated
+8291637,466,8291637: HttpClient default keep alive timeout not followed if server sends invalid value,dhanalla,2024-03-04,2024-03-26,integrated|backport
+8256152,468,8256152: tests fail because of ambiguous method resolution,zzambers,2024-03-18,2024-03-25,integrated|backport|clean
+8265019,469,8265019: Update tests for additional TestNG test permissions,zzambers,2024-03-19,2025-01-29,integrated|backport
+8317507,470,"8317507: C2 compilation fails with ""Exceeded _node_regs array""",martinuy,2024-03-22,2024-03-27,integrated|backport
+8328809,471,8328809: [8u] Problem list some CA tests,jerboaa,2024-03-22,2024-03-27,integrated
+8320005,473,8320005: Allow loading of shared objects with .a extension on AIX,suchismith1993,2024-03-25,2024-04-08,integrated|backport
+,474,Merge jdk8u:master,gnu-andrew,2024-03-27,2024-03-27,integrated|clean
+8313081,475,8313081: MonitoringSupport_lock should be unconditionally initialized after 8304074,phohensee,2024-03-27,2024-04-05,integrated|backport
+8235834,476,8235834: IBM-943 charset encoder needs updating,psawant19,2024-04-01,2024-05-22,integrated|backport
+8203691,477,8203691: [TESTBUG] Test /runtime/containers/cgroup/PlainRead.java fails,mrserb,2024-04-02,2024-04-05,integrated|backport|clean
+8329544,478,8329544: [8u] sun/security/krb5/auto/ReplayCacheTestProc.java cannot find the testlibrary,ianrichr,2024-04-02,2024-04-15,integrated
+8258855,481,8258855: Two tests sun/security/krb5/auto/ReplayCacheTestProc.java and ReplayCacheTestProcWithMD5.java failed on OL8.3,gnu-andrew,2024-04-16,2024-04-18,integrated|backport
+,482,Merge jdk8u:master,gnu-andrew,2024-04-17,2024-04-17,integrated|clean
+8326529,484,8326529: JFR: Test for CompilerCompile events fails due to time out,roberttoyonaga,2024-04-19,2024-05-29,integrated|backport
+8305931,490,"8305931: jdk/jfr/jcmd/TestJcmdDumpPathToGCRoots.java failed with ""Expected chains but found none""",roberttoyonaga,2024-05-03,2024-07-09,integrated|backport
+8331730,491,8331730: [8u] GHA: update sysroot for cross builds to Debian bullseye,zzambers,2024-05-06,2024-06-06,integrated
+8331791,494,8331791: [8u] AIX build break from JDK-8320005 backport,suchismith1993,2024-05-08,2024-05-15,integrated
+8331980,495,8331980: [8u] Problem list CAInterop.java#certignarootca test,mrserb,2024-05-09,2024-05-13,integrated
+4660158,496,4660158: TTY: NumberFormatException while trying to set values by 'set' command,ktakakuri,2024-05-13,2024-06-13,integrated|backport|clean
+8030204,497,"8030204: com/sun/jdi/JdbExprTest.sh: Required output ""Can\\'t convert 2147483648 to int"" not found",ktakakuri,2024-05-13,2024-06-25,integrated|backport|clean
+8046883,498,"8046883: com/sun/jdi/ProcessAttachTest.sh gets ""java.io.IOException: Invalid process identifier"" on windows",ktakakuri,2024-05-13,2025-05-20,integrated|backport
+8239965,500,"8239965: XMLEncoder/Test4625418.java fails due to ""Error: Cp943 - can't read properly""",psawant19,2024-05-16,2024-05-22,integrated|backport
+8316138,502,8316138: Add GlobalSign 2 TLS root certificates,zzambers,2024-05-20,2024-05-22,integrated|backport
+8328825,503,8328825: Google CAInterop test failures,zzambers,2024-05-21,2024-05-21,integrated|backport|clean
+8048215,504,8048215: [TESTBUG] java/lang/management/ManagementFactory/ThreadMXBeanProxy.java Expected non-null LockInfo,sendaoYan,2024-05-23,2025-01-30,integrated|backport
+8316328,506,8316328: Test jdk/jfr/event/oldobject/TestSanityDefault.java times out for some heap sizes,mrserb,2024-05-24,2024-08-30,integrated|backport
+8311666,507,8311666: Disabled tests in test/jdk/sun/java2d/marlin,mrserb,2024-05-24,2024-06-17,integrated|backport|clean
+8333126,509,8333126: Bump update version of OpenJDK: 8u432,gnu-andrew,2024-05-29,2024-05-31,integrated
+8318951,510,8318951: Additional negative value check in JPEG decoding,mrserb,2024-05-30,2024-08-21,integrated|backport|clean
+8324632,511,8324632: Update Zlib Data Compression Library to Version 1.3.1,fitzsim,2024-06-04,2024-06-12,integrated|backport
+8326521,512,8326521: JFR: CompilerPhase event test fails on windows 32 bit,roberttoyonaga,2024-06-04,2024-06-06,integrated|backport
+8333669,513,8333669: [8u] GHA: Dead VS2010 download link,zzambers,2024-06-05,2024-06-06,integrated
+8333724,514,8333724: Problem list security/infra/java/security/cert/CertPathValidator/certification/CAInterop.java#teliasonerarootcav1,sendaoYan,2024-06-07,2024-06-07,integrated|backport
+7188098,515,7188098: TEST_BUG: closed/javax/sound/midi/Synthesizer/Receiver/bug6186488.java fails,mrserb,2024-06-09,2024-08-21,integrated|backport|clean
+8315731,516,8315731: Open source several Swing Text related tests,mrserb,2024-06-10,2024-09-10,integrated|backport|clean
+8268457,517,8268457: XML Transformer outputs Unicode supplementary character incorrectly to HTML,ktakakuri,2024-06-11,2024-12-03,integrated|backport
+8274606,518,8274606: Fix jaxp/javax/xml/jaxp/unittest/transform/SurrogateTest.java test,ktakakuri,2024-06-11,2025-05-21,integrated|backport
+8279164,519,8279164: Disable TLS_ECDH_* cipher suites,zzambers,2024-06-11,2024-06-24,integrated|backport
+8266248,520,8266248: Compilation failure in PLATFORM_API_MacOSX_MidiUtils.c with Xcode 12.5,mrserb,2024-06-12,2024-08-21,integrated|backport|clean
+8330415,521,8330415: Update system property for Java SE specification maintenance version,justin-curtis-lu,2024-06-17,2024-07-18,integrated|backport|clean
+8305072,522,8305072: Win32ShellFolder2.compareTo is inconsistent,mrserb,2024-06-18,2025-11-12,integrated|backport
+8275303,523,8275303: sun/java2d/pipe/InterpolationQualityTest.java fails with D3D basic render driver,mrserb,2024-06-22,2025-06-02,integrated|backport
+6544871,524,6544871: java/awt/event/KeyEvent/KeyTyped/CtrlASCII.html fails from jdk b09 on windows.,mrserb,2024-06-24,2024-08-21,integrated|backport|clean
+8334905,525,8334905: [8u] The test java/awt/Mixing/AWT_Mixing/JButtonOverlapping.java started to fail after 8159690,mrserb,2024-06-24,2024-08-21,integrated
+8152207,527,8152207: Perform array bound checks while getting a length of bytecode instructions,martinuy,2024-06-26,2024-08-13,integrated|backport
+8262017,528,8262017: C2: assert(n != __null) failed: Bad immediate dominator info.,franferrax,2024-06-26,2024-06-28,integrated|backport
+8303466,529,8303466: C2: failed: malformed control flow. Limit type made precise with MaxL/MinL,martinuy,2024-06-27,2024-07-01,integrated|backport
+8327007,530,8327007: javax/swing/JSpinner/8008657/bug8008657.java fails,mrserb,2024-06-28,2024-08-21,integrated|backport|clean
+8239312,531,8239312: [macOS] javax/swing/JFrame/NSTexturedJFrame/NSTexturedJFrame.java,mrserb,2024-06-30,2024-09-09,integrated|backport|clean
+8335552,532,8335552: [8u] JDK-8303466 backport to 8u requires 3 ::Identity signature fixes,franferrax,2024-07-02,2024-07-03,integrated|backport
+8030795,533,8030795: java/nio/file/Files/probeContentType/ForceLoad.java failing with ServiceConfigurationError without jtreg -agentvm option,mrserb,2024-07-03,2024-08-28,integrated|backport|clean
+8075511,534,8075511: Enable -Woverloaded-virtual C++ warning for HotSpot build,franferrax,2024-07-03,2024-07-05,integrated|backport|clean
+8264328,535,8264328: Broken license in javax/swing/JComboBox/8072767/bug8072767.java,mrserb,2024-07-06,2024-08-21,integrated|backport|clean
+8255466,536,8255466: C2 crashes at ciObject::get_oop() const+0x0,sendaoYan,2024-07-07,2025-02-20,integrated|backport
+8221903,537,8221903: PIT: javax/swing/RepaintManager/IconifyTest/IconifyTest.java fails on ubuntu18.04,mrserb,2024-07-08,2024-08-21,integrated|backport|clean
+8309138,538,8309138: Fix container tests for jdks with symlinked conf dir,sendaoYan,2024-07-08,2024-08-21,integrated|backport
+8335851,541,8335851: [8u] Test JMXStartStopTest.java fails after JDK-8334415,sendaoYan,2024-07-08,2024-08-16,integrated
+8335894,542,8335894: [8u] Fix SupplementalJapaneseEraTest.java for jdks with symlinked conf dir,sendaoYan,2024-07-08,2024-08-16,integrated
+8335978,543,8335978: [8u] incorrect include file name in semaphore.inline.hpp,sendaoYan,2024-07-09,2025-07-22,integrated
+8318039,544,8318039: GHA: Bump macOS and Xcode versions,zzambers,2024-07-09,2024-07-22,integrated|backport
+8021775,545,"8021775: compiler/8009761/Test8009761.java  ""Failed: init recursive calls: 51. After deopt 50""",adamfarley,2024-07-10,2024-08-21,integrated|backport
+8324723,546,8324723: GHA: Upgrade some actions to avoid deprecated Node 16,gdams,2024-07-12,2024-08-13,integrated|backport
+8145919,547,8145919: sun/management/jmxremote/bootstrap/RmiSslBootstrapTest failed with Connection failed for no credentials,alexeybakhtin,2024-07-15,2024-08-13,integrated|backport
+8307779,549,8307779: Relax the java.awt.Robot specification,azvegint,2024-07-16,2024-07-23,integrated|backport
+8337110,551,8337110: [8u] TestNoEagerReclaimOfHumongousRegions.java should be in gc/g1 directory,zzambers,2024-07-24,2024-08-26,integrated
+8250825,552,8250825: C2 crashes with assert(field != __null) failed: missing field,sendaoYan,2024-07-24,2025-01-30,integrated|backport
+8186787,553,8186787: clang-4.0 SIGSEGV in Unsafe_PutByte,zzambers,2024-07-25,2025-03-06,integrated|backport
+,554,Merge jdk8u:master,gnu-andrew,2024-07-27,2024-07-27,integrated|clean
+8337312,555,8337312: [8u] Windows x86 VS2010 build broken by JDK-8320097,gnu-andrew,2024-07-27,2024-08-14,integrated
+8244966,556,8244966: Add .vscode to .hgignore and .gitignore,sendaoYan,2024-07-30,2025-02-25,integrated|backport|clean
+8338144,557,8338144: [8u] Remove duplicate license files,gnu-andrew,2024-08-10,2024-08-17,integrated
+8193682,558,8193682: Infinite loop in ZipOutputStream.close(),yan-too,2024-08-13,2024-08-21,integrated|backport
+8305400,559,8305400: ISO 4217 Amendment 175 Update,Karm,2024-08-13,2024-08-19,integrated|backport
+8336928,560,8336928: GHA: Bundle artifacts removal broken,zzambers,2024-08-14,2024-08-19,integrated|backport
+8321480,561,8321480: ISO 4217 Amendment 176 Update,Karm,2024-08-14,2024-08-20,integrated|backport
+8334653,562,8334653: ISO 4217 Amendment 177 Update,Karm,2024-08-14,2024-08-23,integrated|backport
+8260380,563,8260380: Upgrade to LittleCMS 2.12,mrserb,2024-08-17,2024-09-09,integrated|backport
+8189687,564,8189687: Swing: Invalid position of candidate pop-up of InputMethod in Hi-DPI on Windows,ktakakuri,2024-08-20,2024-11-05,integrated|backport
+8278794,565,8278794: Infinite loop in DeflaterOutputStream.finish(),yan-too,2024-08-21,2024-08-26,integrated|backport
+8266881,567,8266881: Enable debug log for SSLEngineExplorerMatchedSNI.java,sendaoYan,2024-08-26,2025-01-30,integrated|backport
+8339133,568,8339133: [8u] Profiler crashes at guarantee(is_result_safe || is_in_asgct()): unsafe access to zombie method,apangin,2024-08-28,2024-10-29,integrated
+8133287,570,8133287: (fs) java/nio/file/Files/probeContentType/ParallelProbes.java should use othervm mode,mrserb,2024-08-28,2024-10-29,integrated|backport|clean
+8339394,572,8339394: Bump update version of OpenJDK: 8u442,gnu-andrew,2024-09-02,2024-09-04,integrated
+8316193,574,8316193: jdk/jfr/event/oldobject/TestListenerLeak.java java.lang.Exception: Could not find leak,cost0much,2024-09-03,2025-02-04,integrated|backport
+8068305,575,8068305: [TEST_BUG] Test java/awt/Mixing/HWDisappear.java fails with GTKL&F,mrserb,2024-09-06,2024-12-03,integrated|backport|clean
+8339882,576,8339882: Replace ThreadLocalStorage::thread with Thread::current_or_null in jdk8 backport of JDK-8183925,benty-amzn,2024-09-10,2024-11-19,integrated
+8233364,577,8233364: Fix undefined behavior in Canonicalizer::do_ShiftOp,martinuy,2024-09-12,2024-09-17,integrated|backport
+8228658,578,8228658: test GetTotalSafepointTime.java fails on fast Linux machines with Total safepoint time 0 ms,sendaoYan,2024-09-14,2025-06-24,integrated|backport
+8340660,580,8340660: [8u] Test com/sun/jdi/PrivateTransportTest.sh fails on MacOS,zzambers,2024-09-23,2025-02-25,integrated
+8313626,581,8313626: C2 crash due to unexpected exception control flow,mrserb,2024-09-26,2024-09-26,integrated|backport
+8196770,583,8196770: Add JNDI test com/sun/jndi/ldap/blits/AddTests/AddNewEntry.java,mrserb,2024-09-27,2024-09-29,integrated|backport
+8340815,584,8340815: Add SECURITY.md file,gdams,2024-09-27,2024-10-02,integrated|backport|clean
+8251188,585,8251188: Update LDAP tests not to use wildcard addresses,mrserb,2024-09-30,2024-10-03,integrated|backport
+8338402,586,8338402: GHA: some of bundles may not get removed,zzambers,2024-10-01,2024-10-03,integrated|backport
+,587,Merge jdk8u:master,gnu-andrew,2024-10-01,2024-10-02,integrated|clean
+8341059,588,"8341059: Change Entrust TLS distrust date to November 12, 2024",gnu-andrew,2024-10-02,2024-10-03,integrated|backport
+8341057,589,8341057: Add 2 SSL.com TLS roots,gnu-andrew,2024-10-02,2024-10-04,integrated|backport
+8209023,590,8209023: fix 2 compiler tests to avoid JDK-8208690,zzambers,2024-10-02,2024-10-03,integrated|backport
+8048003,591,"8048003: test/compiler/8009761/Test8009761.java failed with: java.lang.RuntimeException: static java.lang.Object Test8009761.m3(boolean,boolean) not compiled",zzambers,2024-10-03,2024-10-22,integrated|backport|clean
+8058322,592,8058322: Zero name_index item of MethodParameters attribute cause MalformedParameterException.,liach,2024-10-08,2024-10-24,integrated|backport|clean
+8341946,594,8341946: [8u] sun/security/pkcs11/ec/ tests fail on RHEL9,kurashige23,2024-10-11,2025-03-11,integrated
+8342841,596,8342841: [8u] Separate jdk_security_infra tests from jdk_tier1,zzambers,2024-10-22,2024-11-07,integrated
+,598,Merge jdk8u:master,gnu-andrew,2024-10-25,2024-10-25,integrated|clean
+8261020,602,8261020: Wrong format parameter in create_emergency_chunk_path,lingjun-cg,2024-11-06,2025-02-26,integrated|backport
+8037013,604,8037013: [TESTBUG] Fix test/java/lang/ClassLoader/Assert.sh on AIX,sophia-guo,2024-11-15,2024-12-02,integrated|backport|clean
+8335912,608,8335912: Add an operation mode to the jar command when extracting to not overwriting existing files,alexeybakhtin,2024-11-26,2024-12-06,integrated|backport
+8345504,609,8345504: Bump update version of OpenJDK: 8u452,gnu-andrew,2024-12-04,2024-12-05,integrated
+8345358,611,8345358: Some DLL Files are missing Windows Properties,alexeybakhtin,2024-12-10,2025-09-15,integrated
+8346140,612,8346140: [8u] tools/jar/ExtractFilesTest.java and tools/jar/MultipleManifestTest.java fails with jtreg5.1,alexeybakhtin,2024-12-12,2025-02-25,integrated
+8346887,614,8346887: DrawFocusRect() may cause an assertion failure,satyenme,2025-01-10,2025-03-12,integrated|backport
+8339644,615,8339644: Improve parsing of Day/Month in tzdata rules,dimitryc,2025-01-13,2025-02-20,integrated|backport
+8348211,616,8348211: [8u] sun/management/jmxremote/startstop/JMXStartStopTest.java fails after backport of JDK-8066708,zzambers,2025-01-21,2025-02-25,integrated
+,617,Merge jdk8u:master,gnu-andrew,2025-01-22,2025-01-22,integrated|clean
+8285756,618,8285756: clean up use of bad arguments for `@clean` in langtools tests,satyenme,2025-01-28,2025-02-26,integrated|backport
+8349166,619,8349166: Bad indentation in backport of JDK-8250825,sendaoYan,2025-02-01,2025-02-20,integrated
+8340552,623,8340552: Harden TzdbZoneRulesCompiler against missing zone names,dimitryc,2025-02-20,2025-02-26,integrated|backport
+8205653,625,8205653: test/jdk/sun/management/jmxremote/bootstrap/RmiRegistrySslTest.java and RmiSslBootstrapTest.sh fail with handshake_failure,sendaoYan,2025-02-23,2025-06-24,integrated|backport
+8293107,628,8293107: GHA: Bump to Ubuntu 22.04,zzambers,2025-02-25,2025-04-17,integrated|backport
+8186143,629,8186143: keytool -ext option doesn't accept wildcards for DNS subject alternative names,alexeybakhtin,2025-02-25,2025-05-16,integrated|backport
+8350816,630,8350816: [8u] Update TzdbZoneRulesCompiler to ignore HST/EST/MST links,dimitryc,2025-02-26,2025-02-28,integrated
+8351098,633,8351098: Bump update version of OpenJDK: 8u462,gnu-andrew,2025-03-04,2025-03-05,integrated
+8351439,634,8351439: [8u] test/java/util/TimeZone/tools/share/Makefile use wrong path to tzdb,mrserb,2025-03-07,2025-04-08,integrated
+8309841,635,8309841: Jarsigner should print a warning if an entry is removed,wkia,2025-03-10,2025-03-27,integrated|backport
+8351624,636,8351624: [8u] Xerces-J version wrong in THIRD_PARTY_README after JDK-7150324,kurashige23,2025-03-11,2025-06-10,integrated
+8160767,637,8160767: [TEST_BUG] java/awt/Frame/MaximizedToIconified/MaximizedToIconified.java,kurashige23,2025-03-13,2025-08-28,integrated|backport
+,638,Merge jdk8u:master,gnu-andrew,2025-03-18,2025-03-19,integrated|clean
+8339810,639,8339810: Clean up the code in sun.tools.jar.Main to properly close resources and use ZipFile during extract,martinuy,2025-03-22,2025-03-27,integrated|backport
+8240235,640,8240235: jdk.test.lib.util.JarUtils updates jar files incorrectly,wkia,2025-03-24,2025-03-26,integrated|backport
+8352302,642,8352302: Test sun/security/tools/jarsigner/TimestampCheck.java is failing,sendaoYan,2025-03-31,2025-06-24,integrated|backport
+8026976,643,"8026976: ECParameters, Point does not match field size",kurashige23,2025-03-31,2025-05-08,integrated|backport
+8352716,644,8352716: (tz) Update Timezone Data to 2025b,satyenme,2025-03-31,2025-05-20,integrated|backport
+8345133,645,8345133: Test sun/security/tools/jarsigner/TsacertOptionTest.java failed: Warning found in stdout,phohensee,2025-04-08,2025-05-20,integrated|backport
+8353433,646,8353433: XCG currency code not recognized in JDK 8u,gnu-andrew,2025-04-11,2025-04-11,integrated|backport
+,647,Merge jdk8u:master,gnu-andrew,2025-04-16,2025-04-16,integrated|clean
+8278472,648,8278472: Invalid value set to CANDIDATEFORM structure,kurashige23,2025-04-25,2025-05-19,integrated|backport
+8071996,649,8071996: split_if accesses NULL region of ConstraintCast,rwestrel,2025-05-09,2025-05-13,integrated|backport|clean
+8159694,652,"8159694: HiDPI, Unity, java/awt/dnd/DropTargetEnterExitTest/MissedDragExitTest.java",kurashige23,2025-05-14,2025-05-21,integrated|backport
+8274597,653,8274597: Some of the dnd tests time out and fail intermittently,kurashige23,2025-05-14,2025-05-22,integrated|backport
+8296631,654,8296631: NSS tests failing on OL9 linux-aarch64 hosts,kurashige23,2025-05-14,2025-05-19,integrated|backport
+8340387,655,8340387: Update OS detection code to recognize Windows Server 2025,dimitryc,2025-05-21,2025-06-02,integrated|backport
+8185348,656,8185348: Major performance regression in GetMethodDeclaringClass and other JVMTI Method functions,zhengyu123,2025-05-30,2025-08-05,integrated|backport
+8358328,658,8358328: Bump update version of OpenJDK: 8u472,gnu-andrew,2025-06-03,2025-06-04,integrated
+7102969,660,7102969: currency.properties supercede not working correctly,jerboaa,2025-06-04,2025-08-13,integrated|backport
+8339414,661,8339414: Fix JDK-8202369 incorrect backport for 8u,fitzsim,2025-06-04,2025-06-16,integrated
+8044051,662,8044051: Test jdk/lambda/vm/InterfaceAccessFlagsTest.java gets IOException during compilation,theaoqi,2025-06-09,2025-06-26,integrated|backport|clean
+8358538,665,8358538: Update GHA Windows runner to 2025,vieiro,2025-07-03,2025-07-07,integrated|backport
+8081734,666,"8081734: ConcurrentHashMap/ConcurrentAssociateTest.java, times out 90% of time on sparc with 256 cpu.",sendaoYan,2025-07-07,2025-07-08,integrated|backport|clean
+8362208,668,8362208: [8u] Buffer overflow in g1GCPhaseTimes.cpp::LineBuffer::_buffer,sendaoYan,2025-07-15,2025-09-26,integrated
+8056283,669,8056283: @ignore tools/javac/defaultMethods/Assertions.java until JDK-8047675 is fixed,sendaoYan,2025-07-15,2025-08-28,integrated|backport|clean
+8041924,670,8041924: [TESTBUG] sun/net/www/http/ChunkedOutputStream/checkError.java fails on some systems,sendaoYan,2025-07-17,2025-08-28,integrated|backport
+,671,Merge jdk8u:master,gnu-andrew,2025-07-17,2025-07-18,integrated|clean
+8363965,672,8363965: GHA: Switch cross-compiling sysroots to Debian bookworm,jerboaa,2025-08-07,2025-08-08,integrated|backport
+8345414,673,8345414: Google CAInterop test failures,gnu-andrew,2025-08-08,2025-08-13,integrated|backport
+8212155,674,8212155: Race condition when posting dynamic_code_generated event leads to JVM crash,krk,2025-08-14,2025-09-03,integrated|backport
+8365560,675,8365560: [8u] ppc64le MaxRAM default is too low at 4GiB,jmtd,2025-08-14,2025-08-18,integrated
+8365811,676,"8365811: test/jdk/java/net/CookieHandler/B6644726.java failure - ""Should have 5 cookies. Got only 4, expires probably didn't parse correctly""",sendaoYan,2025-08-20,2025-08-27,integrated|backport
+8297088,677,8297088: Update LCMS to 2.14,kvergizova,2025-08-21,2025-09-17,integrated|backport
+8303482,678,8303482: Update LCMS to 2.15,kvergizova,2025-08-21,2026-01-13,integrated|backport
+8366112,681,8366112: [8u] GHA: Fix broken installation of Windows SDK,zzambers,2025-08-25,2025-08-26,integrated
+8157758,682,8157758: JDK9 does not compile on Linux with GCC 6.1 because left-shifting a negative number has undefined behavior,mrserb,2025-08-25,2026-01-08,integrated|backport|clean
+8186149,683,8186149: quarantine gc/survivorAlignment/TestPromotionFromSurvivorToTenuredAfterMinorGC.java,sendaoYan,2025-08-27,2026-01-15,integrated|backport
+8361212,684,8361212: Remove AffirmTrust root CAs,jerboaa,2025-08-27,2025-09-01,integrated|backport
+8353657,685,8353657: [8u] Test tools/launcher/VersionCheck.java fails with debug build,sendaoYan,2025-08-29,2026-02-08,integrated
+8274893,686,8274893: Update java.desktop classes to use try-with-resources,TimPushkin,2025-09-01,2026-02-18,integrated|backport
+8347911,687,8347911: Limit the length of inflated text chunks,TimPushkin,2025-09-01,2026-02-18,integrated|backport
+8366574,688,8366574: Bump update version of OpenJDK: 8u482,gnu-andrew,2025-09-01,2025-09-03,integrated
+8364597,689,8364597: Replace THL A29 Limited with Tencent,johnshajiang,2025-09-03,2025-09-15,integrated|backport
+8312518,694,8312518: [macos13] setFullScreenWindow() shows black screen on macOS 13 & above,mrserb,2025-09-08,2026-01-18,integrated|backport
+8367115,695,8367115: [8u] Problem list CAInterop.java#actalisauthenticationrootca test,jerboaa,2025-09-08,2025-09-17,integrated
+8367257,696,8367257: [8u] Problem list CAInterop.java#entrustrootcag4 test,jerboaa,2025-09-09,2025-10-06,integrated
+8360869,697,8360869: jcstress is able to crash jdk8 on aarch64 with jfr on,judovana,2025-09-15,2026-01-27,integrated
+8339280,699,8339280: jarsigner -verify performs cross-checking between CEN and LOC,franferrax,2025-09-19,2025-11-27,integrated|backport
+8219006,700,8219006: AArch64: Register corruption in slow subtype check,theRealAph,2025-09-19,2025-09-22,integrated|backport
+8351359,701,8351359: OperatingSystemMXBean: values from getCpuLoad and getProcessCpuLoad are stale after 24.8 days (Windows),antonvoznia,2025-09-23,2026-04-09,integrated|backport
+8350813,702,8350813: Rendering of bulky sound bank from MIDI sequence can cause OutOfMemoryError,wkia,2025-09-23,2026-01-22,integrated|backport
+8153147,703,8153147: Mark java/net/BindException/Test.java as intermittently failing,sendaoYan,2025-09-30,2026-02-03,integrated|backport|clean
+8132786,704,8132786: java/security/cert/CertPathValidator/OCSP/AIACheck.java fails intermittently,sendaoYan,2025-10-13,2026-01-13,integrated|backport|clean
+8277159,705,8277159: Fix java/nio/file/FileStore/Basic.java test by ignoring /run/user/* mount points,sendaoYan,2025-10-16,2026-01-13,integrated|backport
+8212678,706,8212678: Windows IME related patch,tkiriyama,2025-10-21,2025-11-26,integrated|backport
+8223145,707,8223145: Replace wildcard address with loopback or local host in tests - part 1,sendaoYan,2025-10-22,2026-01-15,integrated|backport
+8264524,708,8264524: jdk/internal/platform/docker/TestDockerMemoryMetrics.java fails due to swapping not working,sendaoYan,2025-10-24,2026-02-01,integrated|backport
+8193017,709,8193017: Import freetype sources into OpenJDK source tree,judovana,2025-10-28,2025-11-12,integrated|backport
+,710,Merge jdk8u:master,gnu-andrew,2025-11-01,2025-11-02,integrated|clean
+8354941,711,8354941: Build failure with glibc 2.42 due to uabs() name collision,gnu-andrew,2025-11-03,2025-12-05,integrated|backport
+8371334,712,8371334: [8u] GHA: installation of VS2010 hangs,zzambers,2025-11-05,2025-11-11,integrated
+8371352,713,8371352: [8u] Fix VS2010 build issue in check_code.c,zzambers,2025-11-05,2025-11-11,integrated
+8371387,714,8371387: [8u] hotspot needs to recognise latest VS2022,ktakakuri,2025-11-06,2025-11-18,integrated
+8258805,716,8258805: Japanese characters not entered by mouse click on Windows 10,tkiriyama,2025-11-07,2025-11-28,integrated|backport
+8313770,717,8313770: jdk/internal/platform/docker/TestSystemMetrics.java fails on Ubuntu,sendaoYan,2025-11-11,2025-12-13,integrated|backport|clean
+8269668,719,8269668: [aarch64] java.library.path not including /usr/lib64,gnu-andrew,2025-11-11,2025-11-17,integrated|backport
+8261170,720,8261170: Upgrade to FreeType 2.10.4,judovana,2025-11-14,2025-11-27,integrated|backport
+8285836,721,"8285836: sun/net/www/http/KeepAliveCache/KeepAliveProperty.java failed with ""RuntimeException: Failed in server""",sxa,2025-11-19,2025-12-26,integrated|backport
+8211804,722,8211804: Constant AO_UNUSED_MBZ uses left shift of negative value,zzambers,2025-11-19,2025-11-24,integrated|backport
+8220658,723,8220658: Improve the readability of container information in the error log,jmtd,2025-11-20,2026-01-08,integrated|backport
+8284758,724,8284758: [linux] improve print_container_info,jmtd,2025-11-20,2026-01-13,integrated|backport
+8287011,725,8287011: Improve container information,jmtd,2025-11-21,2026-01-15,integrated|backport
+8372660,727,8372660: [8u] ProblemList TestCPUAwareness until 8370492 is addressed,jmtd,2025-11-27,2025-12-11,integrated
+8348596,728,8348596: Update FreeType to 2.13.3,judovana,2025-11-28,2025-12-05,integrated|backport
+8373250,732,8373250: Bump update version of OpenJDK: 8u492,gnu-andrew,2025-12-08,2025-12-09,integrated
+8074840,733,8074840: Resolve disabled warnings for libjli and libjli_static,zzambers,2025-12-08,2026-01-12,integrated|backport
+8174734,734,8174734: Safepoint sync time did not increase,sendaoYan,2025-12-10,2026-01-14,integrated|backport
+8364660,735,8364660: ClassVerifier::ends_in_athrow() should be removed,gnu-andrew,2025-12-17,2025-12-18,integrated|backport
+8056039,736,8056039: Hotspot does not compile with clang 3.4 on Linux,vieiro,2025-12-22,2026-01-13,integrated|backport
+8369226,738,8369226: GHA: Switch to MacOS 15,gnu-andrew,2026-01-08,2026-02-03,integrated|backport
+,739,Merge jdk8u:master,gnu-andrew,2026-01-09,2026-01-09,integrated|clean
+8374899,740,8374899: [8u] Fully handle clang as the toolchain in flags.m4,gnu-andrew,2026-01-09,2026-01-31,integrated
+8374917,741,8374917: [8u] C++ flags get passed to C compiles in the HotSpot build,gnu-andrew,2026-01-09,2026-01-12,integrated
+8374948,742,8374948: [8u] saproc & jsig builds add duplicate linker flags on Darwin/MacOS,gnu-andrew,2026-01-10,2026-02-03,integrated
+,743,Merge jdk8u:master,gnu-andrew,2026-01-13,2026-01-13,integrated|clean
+8375189,744,8375189: [8u] Problem list CAInterop.java#microsoftrsa2017,jerboaa,2026-01-13,2026-01-15,integrated
+8251189,747,8251189: com/sun/jndi/ldap/LdapDnsProviderTest.java failed due to timeout,tkiriyama,2026-01-19,2026-02-03,integrated|backport
+8376225,748,8376225: [8u] GHA: Apply work-around for missing JNF for MacOSX builds,jerboaa,2026-01-23,2026-01-28,integrated
+,750,Merge jdk8u:master,gnu-andrew,2026-01-24,2026-01-24,integrated|clean
+8376338,751,8376338: Test7005594.sh fails when given a memory value with decimals,adamfarley,2026-01-26,2026-01-28,integrated
+8376352,752,8376352: [8u] Build failure on Windows 32-bit after JDK-8362308,jerboaa,2026-01-26,2026-01-28,integrated
+8170464,755,8170464: Remove shell script from compiler/c2/cr7005594/Test7005594.java,gnu-andrew,2026-02-02,2026-02-12,integrated|backport
+8237834,756,8237834: com/sun/jndi/ldap/LdapDnsProviderTest.java failing with LDAP response read timeout,tkiriyama,2026-02-04,2026-02-23,integrated|backport
+8361748,757,8361748: Enforce limits on the size of an XBM image,franferrax,2026-02-04,2026-02-22,integrated|backport
+8377344,758,8377344: [8u] Compilation failure on Windows for Linux-specific platform metric tests,tkiriyama,2026-02-06,2026-02-10,integrated
+8375063,760,8375063: Update Libpng to 1.6.54,mrserb,2026-02-15,2026-02-18,integrated|backport
+8369282,764,8369282: Distrust TLS server certificates anchored by Chunghwa ePKI Root CA,gnu-andrew,2026-02-27,2026-03-06,integrated|backport
+8377526,765,8377526: Update Libpng to 1.6.55,mrserb,2026-03-01,2026-03-04,integrated|backport
+8373476,766,8373476: (tz) Update Timezone Data to 2025c,TheMangovnik,2026-03-02,2026-03-06,integrated|backport
+8369996,768,"8369996: Testcase java/net/Socket/B8312065.java fails on Mac, AIX and Solaris",yanglong1010,2026-03-06,2026-04-07,integrated
+8343622,769,8343622: AesDkCrypto.stringToKey should not return null,alexeybakhtin,2026-03-09,2026-04-06,integrated|backport
+8345578,770,8345578: New test in JDK-8343622 fails with a promoted build,alexeybakhtin,2026-03-09,2026-04-08,integrated|backport
+8379684,771,8379684: Bump update version of OpenJDK: 8u502,gnu-andrew,2026-03-10,2026-03-12,integrated
+8380377,775,8380377: [8u] Problem list CAInterop.java#teliarootcav2,jerboaa,2026-03-18,2026-03-24,integrated
+8380689,778,8380689: distrust/Chunghwa.java test fails with a compilation error,alexeybakhtin,2026-03-23,2026-04-09,integrated
+,782,Merge jdk8u:master,jerboaa,2026-04-08,2026-04-09,integrated|clean

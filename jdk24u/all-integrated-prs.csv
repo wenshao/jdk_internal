@@ -1,182 +1,182 @@
-bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,reviewers
-8346014,1,8346014: Bump version numbers for 24.0.1,robm-openjdk,2024-12-11,2024-12-11,integrated,,,0,"irisclark,kevinrushforth"
-8345684,4,8345684: OperatingSystemMXBean.getSystemCpuLoad() throws NPE,fmeum,2024-12-16,2025-01-08,integrated|backport|clean,,,23,
-8346688,5,8346688: GenShen: Missing metadata trigger log message,earthling-amzn,2024-12-20,2024-12-23,integrated|backport|clean,Amazon,US,3,ysramakrishna
-8346690,6,8346690: Shenandoah: Fix log message for end of GC usage report,earthling-amzn,2024-12-20,2024-12-23,integrated|backport|clean,Amazon,US,3,ysramakrishna
-8346713,8,8346713: [testsuite] NeverActAsServerClassMachine breaks TestPLABAdaptToMinTLABSize.java TestPinnedHumongousFragmentation.java TestPinnedObjectContents.java,jankratochvil,2024-12-21,2025-01-14,integrated|backport|clean,Azul,,24,
-8346712,10,8346712: Remove com/sun/net/httpserver/TcpNoDelayNotRequired.java test,MBaesken,2024-12-30,2025-01-07,integrated|backport|clean,SAP,DE,8,
-8343224,11,8343224: print/Dialog/PaperSizeError.java fails with MediaSizeName is not A4: A4,mrserb,2025-01-02,2025-03-12,integrated|backport|clean,Oracle,RU,69,
-8346324,12,8346324: javax/swing/JScrollBar/4865918/bug4865918.java fails in CI,mrserb,2025-01-04,2025-01-29,integrated|backport|clean,Oracle,RU,25,
-8346239,13,8346239: Improve memory efficiency of JimageDiffGenerator,jerboaa,2025-01-08,2025-01-13,integrated|backport|clean,Red Hat,CA,5,
-8346887,14,8346887: DrawFocusRect() may cause an assertion failure,satyenme,2025-01-09,2025-01-13,integrated|backport|clean,Amazon,,4,
-8346868,15,8346868: RISC-V: compiler/sharedstubs tests fail after JDK-8332689,RealFYang,2025-01-10,2025-01-11,integrated|backport|clean,Huawei,CN,1,
-8346082,16,8346082: Output JVMTI agent information in hserr files,MBaesken,2025-01-10,2025-01-13,integrated|backport|clean,SAP,DE,3,
-8211851,17,8211851: (ch) java/nio/channels/AsynchronousSocketChannel/StressLoopback.java times out (aix),varada1110,2025-01-14,2025-01-27,integrated|backport|clean,,,13,
-8347124,18,8347124: Clean tests with --enable-linkable-runtime,jerboaa,2025-01-14,2025-01-16,integrated|backport|clean,Red Hat,CA,2,
-8345614,20,8345614: Improve AnnotationFormatError message for duplicate annotation interfaces,liach,2025-01-16,2025-01-22,integrated|backport|clean,Oracle,US,6,
-8347334,21,8347334: JimageDiffGenerator code clean-ups,jerboaa,2025-01-16,2025-01-22,integrated|backport|clean,Red Hat,CA,6,
-8347496,22,8347496: Test jdk/jfr/jvm/TestModularImage.java fails after JDK-8347124: No javac,jerboaa,2025-01-16,2025-01-22,integrated|backport|clean,Red Hat,CA,6,
-8347424,23,8347424: Fix and rewrite sun/security/x509/DNSName/LeadingPeriod.java test,shipilev,2025-01-20,2025-01-22,integrated|backport|clean,Amazon,US,2,
-8347129,24,8347129: cpuset cgroups controller is required for no good reason,jerboaa,2025-01-21,2025-01-27,integrated|backport|clean,Red Hat,CA,6,
-8347256,25,8347256: Epsilon: Demote heap size and AlwaysPreTouch warnings to info level,shipilev,2025-01-21,2025-01-22,integrated|backport|clean,Amazon,US,1,
-8290043,26,"8290043: serviceability/attach/ConcAttachTest.java failed ""guarantee(!CheckJNICalls) failed: Attached JNI thread exited without being detached""",dholmes-ora,2025-01-22,2025-01-24,integrated|backport|clean,Oracle,AU,2,
-8347911,27,8347911: Limit the length of inflated text chunks,jayathirthrao,2025-01-23,2025-01-28,integrated|backport|clean,Oracle,IN,5,
-,28,Merge jdk:jdk24,robm-openjdk,2025-01-24,2025-01-24,integrated|clean,,,0,
-8347299,29,8347299: Add annotations to test cases in LicenseTest,Shivangi-aa,2025-01-24,2025-01-28,integrated|backport|clean,,,4,
-8347965,30,8347965: (tz) Update Timezone Data to 2025a,johnyjose30,2025-01-24,2025-01-31,integrated|backport,,,7,naotoj
-8344361,31,8344361: Restore null return for invalid services from legacy providers,coffeys,2025-01-24,2025-01-28,integrated|backport|clean,Oracle,,4,
-8346581,32,8346581: JRadioButton/ButtonGroupFocusTest.java fails in CI on Linux,aivanov-jdk,2025-01-24,2025-02-04,integrated|backport|clean,Oracle,RU,11,
-8347427,33,8347427: JTabbedPane/8134116/Bug8134116.java has no license header,aivanov-jdk,2025-01-24,2025-02-04,integrated|backport|clean,Oracle,RU,11,
-8348299,34,8348299: Update List/ItemEventTest/ItemEventTest.java,aivanov-jdk,2025-01-24,2025-02-04,integrated|backport|clean,Oracle,RU,11,
-,36,Merge jdk:jdk24,robm-openjdk,2025-01-27,2025-01-27,integrated|clean,,,0,
-8345185,37,8345185: Update jpackage to not include service bindings by default,jerboaa,2025-01-28,2025-02-05,integrated|backport|clean,Red Hat,CA,8,
-8345959,38,8345959: Make JVM_IsStaticallyLinked JVM_LEAF,jianglizhou,2025-01-28,2025-01-28,integrated|backport|clean,Oracle,CN,0,
-8347506,39,8347506: Compatible OCSP readtimeout property with OCSP timeout,jnimeh,2025-01-28,2025-02-03,integrated|backport|clean,Oracle,US,6,alexeybakhtin
-8346587,40,8346587: Distrust TLS server certificates anchored by Camerfirma Root CAs,vieiro,2025-01-29,2025-02-06,integrated|backport|clean,Red Hat,,8,
-8344453,42,8344453: Test jdk/jfr/event/oldobject/TestSanityDefault.java timed out,pawanchawdhary1,2025-02-03,2025-02-24,integrated|backport|clean,,,21,
-8339356,43,8339356: Test javax/net/ssl/SSLSocket/Tls13PacketSize.java failed with java.net.SocketException: An established connection was aborted by the software in your host machine,Shivangi-aa,2025-02-03,2025-02-04,integrated|backport|clean,,,1,
-,44,Merge jdk:jdk24,robm-openjdk,2025-02-03,2025-02-03,integrated|clean,,,0,
-8349370,45,8349370: Bump version numbers for 24.0.2,robm-openjdk,2025-02-04,2025-02-04,integrated,,,0,coffeys
-8340784,46,8340784: Remove PassFailJFrame constructor with screenshots,aivanov-jdk,2025-02-04,2025-03-03,integrated|backport|clean,Oracle,RU,27,
-8347038,47,8347038: [JMH] jdk.incubator.vector.SpiltReplicate fails NoClassDefFoundError,sendaoYan,2025-02-05,2025-02-07,integrated|backport|clean,Alibaba,CN,2,
-8346671,48,8346671: java/nio/file/Files/probeContentType/Basic.java fails on Windows 2025,GoeLin,2025-02-05,2025-02-07,integrated|backport|clean,SAP,,2,
-8345368,49,8345368: java/io/File/createTempFile/SpecialTempFile.java fails on Windows Server 2025,GoeLin,2025-02-05,2025-02-07,integrated|backport|clean,SAP,,2,
-8347740,50,8347740: java/io/File/createTempFile/SpecialTempFile.java failing,GoeLin,2025-02-05,2025-02-07,integrated|backport|clean,SAP,,2,
-8345590,51,8345590: AIX 'make all' fails after JDK-8339480,MBaesken,2025-02-05,2025-02-11,integrated|backport|clean,SAP,DE,6,
-8347267,52,8347267: [macOS]: UnixOperatingSystem.c:67:40: runtime error: division by zero,MBaesken,2025-02-05,2025-02-17,integrated|backport|clean,SAP,DE,12,
-8345569,53,8345569: [ubsan] adjustments to filemap.cpp and virtualspace.cpp for macOS aarch64,MBaesken,2025-02-05,2025-02-11,integrated|backport|clean,SAP,DE,6,
-8346705,54,8346705: SNI not sent with Java 22+ using java.net.http.HttpClient.Builder#sslParameters,kieran-farrell,2025-02-05,2025-02-07,integrated|backport|clean,,,2,
-8347997,55,8347997: assert(false) failed: EA: missing memory path,vnkozlov,2025-02-05,2025-02-06,integrated|backport|clean,Oracle,US,1,
-8349002,56,8349002: GenShen: Deadlock during shutdown,earthling-amzn,2025-02-05,2025-02-10,integrated|backport|clean,Amazon,US,5,
-8347576,57,8347576: Error output in libjsound has non matching format strings,MBaesken,2025-02-07,2025-02-11,integrated|backport|clean,SAP,DE,4,
-8346881,58,8346881: [ubsan] logSelection.cpp:154:24  / logSelectionList.cpp:72:94 : runtime error: applying non-zero offset 1 to null pointer,MBaesken,2025-02-07,2025-02-11,integrated|backport|clean,SAP,DE,4,
-8348582,59,8348582: Set -fstack-protector when building with clang,MBaesken,2025-02-07,2025-03-11,integrated|backport|clean,SAP,DE,32,
-8346972,60,8346972: Test java/nio/channels/FileChannel/LoopingTruncate.java fails sometimes with IOException: There is not enough space on the disk,sendaoYan,2025-02-07,2025-02-11,integrated|backport|clean,Alibaba,CN,4,
-8347171,61,8347171: (dc) java/nio/channels/DatagramChannel/InterruptibleOrNot.java fails with virtual thread factory,sendaoYan,2025-02-07,2025-02-11,integrated|backport|clean,Alibaba,CN,4,
-8347302,62,8347302: Mark test tools/jimage/JImageToolTest.java as flagless,sendaoYan,2025-02-07,2025-02-10,integrated|backport|clean,Alibaba,CN,3,
-8343882,63,8343882: BasicAnnoTests doesn't handle multiple annotations at the same position,sendaoYan,2025-02-07,2025-02-11,integrated|backport|clean,Alibaba,CN,4,
-8344316,64,8344316: security/auth/callback/TextCallbackHandler/Password.java make runnable with JTReg and add the UI,Shivangi-aa,2025-02-10,2025-02-10,integrated|backport|clean,,,0,
-8347718,65,8347718: Unexpected NullPointerException in C2 compiled code due to ReduceAllocationMerges,TobiHartmann,2025-02-10,2025-02-17,integrated|backport|clean,Oracle,DE,7,
-8347018,66,8347018: C2: Insertion of Assertion Predicates ignores the effects of PhaseIdealLoop::clone_up_backedge_goo(),chhagedorn,2025-02-10,2025-02-13,integrated|backport|clean,Oracle,SE,3,vnkozlov
-8347564,67,8347564: ZGC: Crash in DependencyContext::clean_unloading_dependents,xmas92,2025-02-10,2025-02-18,integrated|backport|clean,Oracle,SE,8,
-8345676,68,8345676: [ubsan] ProcessImpl_md.c:561:40: runtime error: applying zero offset to null pointer on macOS aarch64,MBaesken,2025-02-11,2025-02-17,integrated|backport|clean,SAP,DE,6,
-8349058,69,8349058: 'internal proprietary API' warnings make javac warnings unusable,cushon,2025-02-11,2025-02-13,integrated|backport|clean,Google,US,2,
-8343978,70,8343978: Update the default value of CodeEntryAlignment for Ampere-1A and 1B,limingliu-ampere,2025-02-12,2025-02-13,integrated|backport|clean,,,1,
-8347268,71,8347268: [ubsan] logOutput.cpp:357:21: runtime error: applying non-zero offset 1 to null pointer,MBaesken,2025-02-12,2025-02-13,integrated|backport|clean,SAP,DE,1,
-8338303,72,8338303: Linux ppc64le with toolchain clang - detection failure in early JVM startup,MBaesken,2025-02-12,2025-02-13,integrated|backport|clean,SAP,DE,1,
-8344925,73,8344925: translet-name ignored when package-name is also set,galderz,2025-02-13,2025-02-18,integrated|backport|clean,,,5,
-8322983,74,8322983: Virtual Threads: exclude 2 tests,sendaoYan,2025-02-13,2025-02-14,integrated|backport|clean,Alibaba,CN,1,
-8346880,75,"8346880: [aix] java/lang/ProcessHandle/InfoTest.java still fails: ""reported cputime less than expected""",MBaesken,2025-02-13,2025-02-14,integrated|backport|clean,SAP,DE,1,
-8348600,76,8348600: Update PipeWire to 1.3.81,azvegint,2025-02-13,2025-02-14,integrated|backport|clean,Oracle,RU,1,
-8349787,77,8349787: java/lang/Thread/virtual/ThreadPollOnYield.java#default passes unexpectedly without libVThreadPinner.so,sendaoYan,2025-02-14,2025-02-21,integrated|backport|clean,Alibaba,CN,7,
-8348675,78,8348675: TrayIcon tests fail in Ubuntu 24.10 Wayland,azvegint,2025-02-14,2025-02-17,integrated|backport|clean,Oracle,RU,3,
-8349751,79,8349751: AIX build failure after upgrade pipewire to 1.3.81,TheRealMDoerr,2025-02-14,2025-02-18,integrated|backport|clean,SAP,DE,4,
-8349150,80,8349150: Support precompiled headers on AIX,MBaesken,2025-02-19,2025-02-25,integrated|backport|clean,SAP,DE,6,
-,81,Merge jdk:jdk24,coffeys,2025-02-19,2025-02-19,integrated|clean,Oracle,,0,
-8347377,82,8347377: Add validation checks for ICC_Profile header fields,honkar-jdk,2025-02-19,2025-02-24,integrated|backport|clean,Oracle,IN,5,
-8349943,83,8349943: [JMH] Use jvmArgs consistently,sendaoYan,2025-02-20,2025-02-26,integrated|backport|clean,Alibaba,CN,6,
-8348102,84,8348102: java/net/httpclient/HttpClientSNITest.java fails intermittently,kieran-farrell,2025-02-20,2025-02-26,integrated|backport|clean,,,6,
-8348936,85,"8348936: [Accessibility,macOS,VoiceOver] VoiceOver doesn't announce untick on toggling the checkbox with ""space"" key on macOS",kumarabhi006,2025-02-21,2025-02-24,integrated|backport|clean,Oracle,IN,3,
-8349039,86,8349039: Adjust exception No type named <ThreadType> in database,MBaesken,2025-02-21,2025-02-24,integrated|backport|clean,SAP,DE,3,
-8349753,87,8349753: Incorrect use of CodeBlob::is_buffer_blob() in few places,vnkozlov,2025-02-21,2025-02-21,integrated|backport|clean,Oracle,US,0,
-8350137,89,"8350137: After JDK-8348975, Linux builds contain man pages for windows only tools",nizarbenalla,2025-02-24,2025-02-26,integrated|backport|clean,Oracle,FR,2,
-8346832,90,8346832: runtime/CompressedOops/CompressedCPUSpecificClassSpaceReservation.java fails on RISC-V,RealFYang,2025-02-25,2025-02-26,integrated|backport|clean,Huawei,CN,1,
-8349200,91,8349200: [JMH] time.format.ZonedDateTimeFormatterBenchmark fails,sendaoYan,2025-02-25,2025-03-01,integrated|backport|clean,Alibaba,CN,4,
-8350499,92,8350499: Minimal build fails with slowdebug builds,theaoqi,2025-02-25,2025-02-26,integrated|backport|clean,Loongson,CN,1,
-8348323,93,8348323: Corrupted timezone string in JVM crash log,dhanalla,2025-02-25,2025-02-26,integrated|backport|clean,,,1,
-8339889,94,8339889: Several compiler tests ignore vm flags and not marked as flagless,sendaoYan,2025-02-26,2025-03-01,integrated|backport|clean,Alibaba,CN,3,
-8314840,95,8314840: 3 gc/epsilon tests ignore external vm options,sendaoYan,2025-02-27,2025-03-01,integrated|backport|clean,Alibaba,CN,2,
-8276995,96,8276995: Bug in jdk.jfr.event.gc.collection.TestSystemGC,sendaoYan,2025-02-27,2025-03-04,integrated|backport|clean,Alibaba,CN,5,
-8347629,97,8347629: Test FailOverDirectExecutionControlTest.java fails with -Xcomp,sendaoYan,2025-02-27,2025-03-01,integrated|backport|clean,Alibaba,CN,2,
-8294155,98,8294155: Exception thrown before awaitAndCheck hangs PassFailJFrame,aivanov-jdk,2025-03-03,2025-03-03,integrated|backport|clean,Oracle,RU,0,
-8350260,99,8350260: Improve HTML instruction formatting in PassFailJFrame,aivanov-jdk,2025-03-03,2025-03-03,integrated|backport|clean,Oracle,RU,0,
-8334644,100,8334644: Automate javax/print/attribute/PageRangesException.java,aivanov-jdk,2025-03-03,2025-03-03,integrated|backport|clean,Oracle,RU,0,
-8350483,101,8350483: AArch64: turn on signum intrinsics by default on Ampere CPUs,cnqpzhang,2025-03-04,2025-03-07,integrated|backport|clean,,,3,
-8350682,102,8350682: [JMH] vector.IndexInRangeBenchmark failed with IndexOutOfBoundsException for size=1024,sendaoYan,2025-03-04,2025-03-11,integrated|backport|clean,Alibaba,CN,7,
-8350820,103,8350820: OperatingSystemMXBean CpuLoad() methods return -1.0 on Windows,rsunderbabu,2025-03-04,2025-03-04,integrated|backport|clean,Oracle,,0,kevinjwalls
-8351033,105,8351033: RISC-V: TestFloat16ScalarOperations asserts with offset (4210) is too large to be patched in one beq/bge/bgeu/blt/bltu/bne instruction!,Hamlin-Li,2025-03-04,2025-03-05,integrated|backport|clean,Oracle,CN,1,
-8344581,106,8344581: [TESTBUG] java/awt/Robot/ScreenCaptureRobotTest.java failing on macOS,Naveenam-Oracle,2025-03-04,2025-03-06,integrated|backport|clean,,,2,
-8348596,107,8348596: Update FreeType to 2.13.3,alisenchung,2025-03-04,2025-03-11,integrated|backport|clean,Oracle,US,7,
-8342775,108,8342775: [Graal] java/util/concurrent/locks/Lock/OOMEInAQS.java fails OOME  thrown from the UncaughtExceptionHandler,pawanchawdhary1,2025-03-05,2025-03-11,integrated|backport|clean,,,6,
-8349213,109,8349213: G1: Clearing bitmaps during collection set merging not claimed by region,tschatzl,2025-03-05,2025-03-11,integrated|backport,Oracle,DE,6,kimbarrett
-8350546,110,8350546: Several java/net/InetAddress tests fails UnknownHostException,sendaoYan,2025-03-05,2025-03-11,integrated|backport|clean,Alibaba,CN,6,
-8280991,111,8280991: [XWayland] No displayChanged event after setDisplayMode call,azvegint,2025-03-05,2025-03-10,integrated|backport|clean,Oracle,RU,5,
-8342524,112,8342524: Use latch in AbstractButton/bug6298940.java instead of delay,aivanov-jdk,2025-03-05,2025-03-06,integrated|backport|clean,Oracle,RU,1,
-8343191,113,8343191: Cgroup v1 subsystem fails to set subsystem path,sercher,2025-03-05,2025-03-12,integrated|backport|clean,,,7,
-8347126,114,8347126: gc/stress/TestStressG1Uncommit.java gets OOM-killed,satyenme,2025-03-06,2025-03-10,integrated|backport|clean,Amazon,,4,
-8349358,115,8349358: [JMH] Cannot access class jdk.internal.vm.ContinuationScope,sendaoYan,2025-03-06,2025-03-11,integrated|backport|clean,Alibaba,CN,5,
-8351223,116,8351223: Update localized resources in keytool and jarsigner,justin-curtis-lu,2025-03-06,2025-03-10,integrated|backport|clean,Oracle,US,4,"irisclark,naotoj"
-8346264,117,"8346264: ""Total compile time"" counter should include time spent in failing/bailout compiles",satyenme,2025-03-06,2025-03-11,integrated|backport|clean,Amazon,,5,
-8349637,118,8349637: Integer.numberOfLeadingZeros outputs incorrectly in certain cases,TobiHartmann,2025-03-07,2025-03-10,integrated|backport|clean,Oracle,DE,3,
-8350202,119,8350202: Tune for Power10 CPUs on Linux ppc64le,MBaesken,2025-03-07,2025-03-10,integrated|backport|clean,SAP,DE,3,
-8350201,120,8350201: Out of bounds access on Linux aarch64 in os::print_register_info,MBaesken,2025-03-07,2025-03-10,integrated|backport|clean,SAP,DE,3,
-8281511,121,8281511: java/net/ipv6tests/UdpTest.java fails with checkTime failed,sendaoYan,2025-03-08,2025-03-12,integrated|backport|clean,Alibaba,CN,4,
-8349623,122,8349623: [ASAN] Gtest os_linux.glibc_mallinfo_wrapper_vm fails,sendaoYan,2025-03-08,2025-03-10,integrated|backport|clean,Alibaba,CN,2,
-8349375,123,8349375: Cleanup AIX special file build settings,MBaesken,2025-03-10,2025-03-11,integrated|backport|clean,SAP,DE,1,
-8349214,124,8349214: Improve size optimization flags for MSVC builds,MBaesken,2025-03-10,2025-03-13,integrated|backport|clean,SAP,DE,3,
-8348110,125,8348110: Update LCMS to 2.17,alisenchung,2025-03-10,2025-03-11,integrated|backport|clean,Oracle,US,1,
-8349378,126,8349378: Build splashscreen lib with SIZE optimization,MBaesken,2025-03-11,2025-03-24,integrated|backport|clean,SAP,DE,13,
-8350103,127,8350103: Test containers/systemd/SystemdMemoryAwarenessTest.java fails on Linux ppc64le SLES15 SP6,MBaesken,2025-03-11,2025-03-11,integrated|backport|clean,SAP,DE,0,
-8286204,128,"8286204: [Accessibility,macOS,VoiceOver] VoiceOver reads the spinner value 10 as 1 when user iterates to 10 for the first time on macOS",kumarabhi006,2025-03-11,2025-03-12,integrated|backport|clean,Oracle,IN,1,
-8350786,129,8350786: Some java/lang jtreg tests miss requires vm.hasJFR,MBaesken,2025-03-12,2025-03-18,integrated|backport,SAP,DE,6,TheRealMDoerr
-8347286,130,8347286: (fs) Remove some extensions from java/nio/file/Files/probeContentType/Basic.java,kieran-farrell,2025-03-12,2025-03-20,integrated|backport|clean,,,8,
-8303770,131,8303770: Remove Baltimore root certificate expiring in May 2025,rhalade,2025-03-12,2025-03-13,integrated|backport|clean,Oracle,US,1,
-8348597,132,8348597: Update HarfBuzz to 10.4.0,honkar-jdk,2025-03-12,2025-03-18,integrated|backport|clean,Oracle,IN,6,
-8349492,133,8349492: Update sun/security/pkcs12/KeytoolOpensslInteropTest.java to use a recent Openssl version,rgangadhar,2025-03-13,2025-03-19,integrated|backport|clean,,,6,
-8345133,134,8345133: Test sun/security/tools/jarsigner/TsacertOptionTest.java failed: Warning found in stdout,rgangadhar,2025-03-13,2025-03-19,integrated|backport|clean,,,6,
-8346285,135,8346285: Update jarsigner compatibility test for change in default digest algorithm,nibjen,2025-03-13,2025-03-26,integrated|backport|clean,,,13,
-8351639,137,8351639: Improve debuggability of test/langtools/jdk/jshell/JdiHangingListenExecutionControlTest.java test,sendaoYan,2025-03-14,2025-03-19,integrated|backport|clean,Alibaba,CN,5,
-8351500,138,8351500: G1: NUMA migrations cause crashes in region allocation,tstuefe,2025-03-14,2025-03-19,integrated|backport|clean,Red Hat,DE,5,
-8345134,139,8345134: Test sun/security/tools/jarsigner/ConciseJarsigner.java failed: unable to find valid certification path to requested target,nibjen,2025-03-14,2025-03-28,integrated|backport|clean,,,14,
-8346049,140,8346049: jdk/test/lib/security/timestamp/TsaServer.java warnings,ksreenath-ora,2025-03-17,2025-03-26,integrated|backport|clean,,,9,
-8351382,141,8351382: New test containers/docker/TestMemoryWithSubgroups.java is failing,sercher,2025-03-18,2025-03-24,integrated|backport|clean,,,6,
-8350683,142,8350683: Non-C2 / minimal JVM crashes in the build on ppc64 platforms,MBaesken,2025-03-18,2025-03-24,integrated|backport|clean,SAP,DE,6,
-8348261,143,8348261: assert(n->is_Mem()) failed: memory node required,vnkozlov,2025-03-18,2025-03-21,integrated|backport|clean,Oracle,US,3,"eme64,chhagedorn"
-8352302,145,8352302: Test sun/security/tools/jarsigner/TimestampCheck.java is failing,sendaoYan,2025-03-19,2025-03-22,integrated|backport|clean,Alibaba,CN,3,
-8349501,147,8349501: Relocate supporting classes in security/testlibrary to test/lib/jdk tree,ksreenath-ora,2025-03-19,2025-04-03,integrated|backport|clean,,,15,
-8351933,148,8351933: Inaccurate masking of TC subfield decrement in ForkJoinPool,dchuyko,2025-03-19,2025-03-24,integrated|backport|clean,,,5,
-8348598,149,8348598: Update Libpng to 1.6.47,honkar-jdk,2025-03-19,2025-03-24,integrated|backport|clean,Oracle,IN,5,
-8305010,151,8305010: Test vmTestbase/nsk/jvmti/scenarios/sampling/SP05/sp05t003/TestDescription.java timed out: thread not suspended,shyamkishororacle,2025-03-20,2025-03-28,integrated|backport|clean,,,8,
-8347995,152,8347995: Race condition in jdk/java/net/httpclient/offline/FixedResponseHttpClient.java,kieran-farrell,2025-03-20,2025-03-21,integrated|backport|clean,,,1,
-8352512,153,8352512: TestVectorZeroCount: counter not reset between iterations,TheRealMDoerr,2025-03-21,2025-03-26,integrated|backport|clean,SAP,DE,5,
-8343607,155,8343607: C2: Shenandoah crashes during barrier expansion in Continuation::enter,rwestrel,2025-03-24,2025-03-31,integrated|backport|clean,Red Hat,FR,7,
-8336042,156,8336042: Caller/callee param size mismatch in deoptimization causes crash,TobiHartmann,2025-03-24,2025-03-27,integrated|backport|clean,Oracle,DE,3,dean-long
-8347173,157,8347173: java/net/DatagramSocket/InterruptibleDatagramSocket.java fails with virtual thread factory,govsrini,2025-03-25,2025-03-31,integrated|backport|clean,,,6,
-8347296,158,8347296: WinInstallerUiTest fails in local test runs if the path to test work directory is longer that regular,ankhunti,2025-03-25,2025-04-01,integrated|backport|clean,,,7,
-8217914,159,8217914: java/net/httpclient/ConnectTimeoutHandshakeSync.java failed on connection refused while doing POST,HamzaBenyazid,2025-03-26,2025-04-21,integrated|backport|clean,,,26,
-8352716,161,8352716: (tz) Update Timezone Data to 2025b,gnu-andrew,2025-03-27,2025-04-04,integrated|backport,Red Hat,,8,mrserb
-8351233,164,8351233: [ASAN] avx2-emu-funcs.hpp:151:20: error: ‘D.82188’ is used uninitialized,sendaoYan,2025-03-30,2025-04-04,integrated|backport|clean,Alibaba,CN,5,
-8352866,167,8352866: TestLogJIT.java runs wrong test class,sendaoYan,2025-03-30,2025-04-24,integrated|backport|clean,Alibaba,CN,25,
-8350386,168,8350386: Test TestCodeCacheFull.java fails with option -XX:-UseCodeCacheFlushing,sendaoYan,2025-04-01,2025-04-04,integrated|backport|clean,Alibaba,CN,3,
-8347000,170,8347000: Bug in com/sun/net/httpserver/bugs/B6361557.java test,govsrini,2025-04-02,2025-04-02,integrated|backport|clean,,,0,
-8351277,171,8351277: Remove pipewire from AIX build,MBaesken,2025-04-02,2025-04-04,integrated|backport|clean,SAP,DE,2,
-8347298,172,8347298: Bug in JPackageCommand.ignoreFakeRuntime(),ankhunti,2025-04-02,2025-04-17,integrated|backport|clean,,,15,
-8351665,174,8351665: Remove unused UseNUMA in os_aix.cpp,MBaesken,2025-04-02,2025-04-04,integrated|backport|clean,SAP,DE,2,
-8352946,175,8352946: SEGV_BND signal code of SIGSEGV missing from our signal-code table,MBaesken,2025-04-02,2025-04-04,integrated|backport|clean,SAP,DE,2,
-8330936,176,8330936: [ubsan] exclude function BilinearInterp and ShapeSINextSpan in libawt java2d from ubsan checks,MBaesken,2025-04-02,2025-04-04,integrated|backport|clean,SAP,DE,2,
-8346888,177,8346888: [ubsan] block.cpp:1617:30: runtime error: 9.97582e+36 is outside the range of representable values of type 'int',MBaesken,2025-04-03,2025-04-04,integrated|backport|clean,SAP,DE,1,
-8353274,178,8353274: [PPC64] Bug related to -XX:+UseCompactObjectHeaders -XX:-UseSIGTRAP in JDK-8305895,TheRealMDoerr,2025-04-04,2025-04-08,integrated|backport|clean,SAP,DE,4,
-8347300,179,"8347300: Don't exclude the ""PATH"" var from the environment when running app launchers in jpackage tests",ankhunti,2025-04-04,2025-04-15,integrated|backport|clean,,,11,
-8353053,180,8353053: (fs) Add support for UserDefinedFileAttributeView on AIX,varada1110,2025-04-04,2025-04-08,integrated|backport|clean,,,4,
-8353066,181,8353066: Properly detect Windows/aarch64 as build platform,MBaesken,2025-04-04,2025-04-08,integrated|backport|clean,SAP,DE,4,
-8330598,183,8330598: java/net/httpclient/Http1ChunkedTest.java fails with java.util.MissingFormatArgumentException: Format specifier '%s',govsrini,2025-04-07,2025-04-09,integrated|backport|clean,,,2,
-8352706,184,8352706: httpclient HeadTest does not run on HTTP2,govsrini,2025-04-07,2025-04-09,integrated|backport|clean,,,2,
-8353709,185,8353709: Debug symbols bundle should contain full debug files when building --with-external-symbols-in-bundles=public,RealCLanger,2025-04-07,2025-04-10,integrated|backport|clean,SAP,DE,3,
-8350313,186,8350313: Include timings for leaving safepoint in safepoint logging,pengxiaolong,2025-04-09,2025-04-18,integrated|backport|clean,Amazon,US,9,
-8353787,187,8353787: Increased number of SHA-384-Digest java.util.jar.Attributes$Name instances leading to higher memory footprint,kieran-farrell,2025-04-11,2025-04-17,integrated|backport|clean,,,6,
-8344629,188,8344629: SSLSocketNoServerHelloClientShutdown test timeout,RealCLanger,2025-04-14,2025-04-15,integrated|backport|clean,SAP,DE,1,
-8344892,189,8344892: beans/finder/MethodFinder.findMethod incorrectly returns null,RealCLanger,2025-04-14,2025-04-15,integrated|backport|clean,SAP,DE,1,
-8353329,192,8353329: Small memory leak when create GrowableArray with initial size 0,sendaoYan,2025-04-15,2025-04-21,integrated|backport|clean,Alibaba,CN,6,zhengyu123
-8353946,193,8353946: Incorrect WINDOWS ifdef in os::build_agent_function_name,dholmes-ora,2025-04-15,2025-04-15,integrated|backport|clean,Oracle,AU,0,
-8350211,194,8350211: CTW: Attempt to preload all classes in constant pool,shyamkishororacle,2025-04-15,2025-04-18,integrated|backport,,,3,phohensee
-8350924,196,8350924: javax/swing/JMenu/4213634/bug4213634.java fails,kboulanou,2025-04-15,2025-04-18,integrated|backport|clean,,,3,
-,197,Merge a9cfe9e82ac0bb22b1027210fd3ca926d93a809a,robm-openjdk,2025-04-15,2025-04-15,integrated|clean,,,0,
-8353185,199,8353185: Introduce the concept of upgradeable files in context of JEP 493,jerboaa,2025-04-16,2025-04-17,integrated|backport|clean,Red Hat,CA,1,
-8349348,200,8349348: Refactor ClassLoaderDeadlock.sh and Deadlock.sh to run fully in java,Shivangi-aa,2025-04-16,2025-04-17,integrated|backport|clean,,,1,
-8352109,201,8352109: java/awt/Desktop/MailTest.java fails in platforms where Action.MAIL is not supported,kboulanou,2025-04-17,2025-04-18,integrated|backport|clean,,,1,
-8355524,207,8355524: Only every second line in upgradeable files is being used,jerboaa,2025-04-25,2025-05-06,integrated|backport|clean,Red Hat,CA,11,
-8352508,210,8352508: [Redo] G1: Pinned regions with pinned objects only reachable by native code crash VM,tschatzl,2025-04-28,2025-04-28,integrated|backport|clean,Oracle,DE,0,
-8350498,213,8350498: Remove two Camerfirma root CA certificates,rhalade,2025-04-30,2025-05-06,integrated|backport|clean,Oracle,US,6,
-8356096,222,8356096: ISO 4217 Amendment 179 Update,weibxiao,2025-05-20,2025-05-20,integrated|backport,,,0,coffeys
-8359170,231,8359170: Add 2 TLS and 2 CS Sectigo roots,Shivangi-aa,2025-06-11,2025-06-11,integrated|backport|clean,,,0,
-,237,Merge 5175965a949c2b1f1dedf2eaac714397eb5526ed,robm-openjdk,2025-07-15,2025-07-15,integrated|clean,,,0,
+bug_id,pr_number,title,author,created,closed,labels
+8346014,1,8346014: Bump version numbers for 24.0.1,robm-openjdk,2024-12-11,2024-12-11,integrated
+8345684,4,8345684: OperatingSystemMXBean.getSystemCpuLoad() throws NPE,fmeum,2024-12-16,2025-01-08,integrated|backport|clean
+8346688,5,8346688: GenShen: Missing metadata trigger log message,earthling-amzn,2024-12-20,2024-12-23,integrated|backport|clean
+8346690,6,8346690: Shenandoah: Fix log message for end of GC usage report,earthling-amzn,2024-12-20,2024-12-23,integrated|backport|clean
+8346713,8,8346713: [testsuite] NeverActAsServerClassMachine breaks TestPLABAdaptToMinTLABSize.java TestPinnedHumongousFragmentation.java TestPinnedObjectContents.java,jankratochvil,2024-12-21,2025-01-14,integrated|backport|clean
+8346712,10,8346712: Remove com/sun/net/httpserver/TcpNoDelayNotRequired.java test,MBaesken,2024-12-30,2025-01-07,integrated|backport|clean
+8343224,11,8343224: print/Dialog/PaperSizeError.java fails with MediaSizeName is not A4: A4,mrserb,2025-01-02,2025-03-12,integrated|backport|clean
+8346324,12,8346324: javax/swing/JScrollBar/4865918/bug4865918.java fails in CI,mrserb,2025-01-04,2025-01-29,integrated|backport|clean
+8346239,13,8346239: Improve memory efficiency of JimageDiffGenerator,jerboaa,2025-01-08,2025-01-13,integrated|backport|clean
+8346887,14,8346887: DrawFocusRect() may cause an assertion failure,satyenme,2025-01-09,2025-01-13,integrated|backport|clean
+8346868,15,8346868: RISC-V: compiler/sharedstubs tests fail after JDK-8332689,RealFYang,2025-01-10,2025-01-11,integrated|backport|clean
+8346082,16,8346082: Output JVMTI agent information in hserr files,MBaesken,2025-01-10,2025-01-13,integrated|backport|clean
+8211851,17,8211851: (ch) java/nio/channels/AsynchronousSocketChannel/StressLoopback.java times out (aix),varada1110,2025-01-14,2025-01-27,integrated|backport|clean
+8347124,18,8347124: Clean tests with --enable-linkable-runtime,jerboaa,2025-01-14,2025-01-16,integrated|backport|clean
+8345614,20,8345614: Improve AnnotationFormatError message for duplicate annotation interfaces,liach,2025-01-16,2025-01-22,integrated|backport|clean
+8347334,21,8347334: JimageDiffGenerator code clean-ups,jerboaa,2025-01-16,2025-01-22,integrated|backport|clean
+8347496,22,8347496: Test jdk/jfr/jvm/TestModularImage.java fails after JDK-8347124: No javac,jerboaa,2025-01-16,2025-01-22,integrated|backport|clean
+8347424,23,8347424: Fix and rewrite sun/security/x509/DNSName/LeadingPeriod.java test,shipilev,2025-01-20,2025-01-22,integrated|backport|clean
+8347129,24,8347129: cpuset cgroups controller is required for no good reason,jerboaa,2025-01-21,2025-01-27,integrated|backport|clean
+8347256,25,8347256: Epsilon: Demote heap size and AlwaysPreTouch warnings to info level,shipilev,2025-01-21,2025-01-22,integrated|backport|clean
+8290043,26,"8290043: serviceability/attach/ConcAttachTest.java failed ""guarantee(!CheckJNICalls) failed: Attached JNI thread exited without being detached""",dholmes-ora,2025-01-22,2025-01-24,integrated|backport|clean
+8347911,27,8347911: Limit the length of inflated text chunks,jayathirthrao,2025-01-23,2025-01-28,integrated|backport|clean
+,28,Merge jdk:jdk24,robm-openjdk,2025-01-24,2025-01-24,integrated|clean
+8347299,29,8347299: Add annotations to test cases in LicenseTest,Shivangi-aa,2025-01-24,2025-01-28,integrated|backport|clean
+8347965,30,8347965: (tz) Update Timezone Data to 2025a,johnyjose30,2025-01-24,2025-01-31,integrated|backport
+8344361,31,8344361: Restore null return for invalid services from legacy providers,coffeys,2025-01-24,2025-01-28,integrated|backport|clean
+8346581,32,8346581: JRadioButton/ButtonGroupFocusTest.java fails in CI on Linux,aivanov-jdk,2025-01-24,2025-02-04,integrated|backport|clean
+8347427,33,8347427: JTabbedPane/8134116/Bug8134116.java has no license header,aivanov-jdk,2025-01-24,2025-02-04,integrated|backport|clean
+8348299,34,8348299: Update List/ItemEventTest/ItemEventTest.java,aivanov-jdk,2025-01-24,2025-02-04,integrated|backport|clean
+,36,Merge jdk:jdk24,robm-openjdk,2025-01-27,2025-01-27,integrated|clean
+8345185,37,8345185: Update jpackage to not include service bindings by default,jerboaa,2025-01-28,2025-02-05,integrated|backport|clean
+8345959,38,8345959: Make JVM_IsStaticallyLinked JVM_LEAF,jianglizhou,2025-01-28,2025-01-28,integrated|backport|clean
+8347506,39,8347506: Compatible OCSP readtimeout property with OCSP timeout,jnimeh,2025-01-28,2025-02-03,integrated|backport|clean
+8346587,40,8346587: Distrust TLS server certificates anchored by Camerfirma Root CAs,vieiro,2025-01-29,2025-02-06,integrated|backport|clean
+8344453,42,8344453: Test jdk/jfr/event/oldobject/TestSanityDefault.java timed out,pawanchawdhary1,2025-02-03,2025-02-24,integrated|backport|clean
+8339356,43,8339356: Test javax/net/ssl/SSLSocket/Tls13PacketSize.java failed with java.net.SocketException: An established connection was aborted by the software in your host machine,Shivangi-aa,2025-02-03,2025-02-04,integrated|backport|clean
+,44,Merge jdk:jdk24,robm-openjdk,2025-02-03,2025-02-03,integrated|clean
+8349370,45,8349370: Bump version numbers for 24.0.2,robm-openjdk,2025-02-04,2025-02-04,integrated
+8340784,46,8340784: Remove PassFailJFrame constructor with screenshots,aivanov-jdk,2025-02-04,2025-03-03,integrated|backport|clean
+8347038,47,8347038: [JMH] jdk.incubator.vector.SpiltReplicate fails NoClassDefFoundError,sendaoYan,2025-02-05,2025-02-07,integrated|backport|clean
+8346671,48,8346671: java/nio/file/Files/probeContentType/Basic.java fails on Windows 2025,GoeLin,2025-02-05,2025-02-07,integrated|backport|clean
+8345368,49,8345368: java/io/File/createTempFile/SpecialTempFile.java fails on Windows Server 2025,GoeLin,2025-02-05,2025-02-07,integrated|backport|clean
+8347740,50,8347740: java/io/File/createTempFile/SpecialTempFile.java failing,GoeLin,2025-02-05,2025-02-07,integrated|backport|clean
+8345590,51,8345590: AIX 'make all' fails after JDK-8339480,MBaesken,2025-02-05,2025-02-11,integrated|backport|clean
+8347267,52,8347267: [macOS]: UnixOperatingSystem.c:67:40: runtime error: division by zero,MBaesken,2025-02-05,2025-02-17,integrated|backport|clean
+8345569,53,8345569: [ubsan] adjustments to filemap.cpp and virtualspace.cpp for macOS aarch64,MBaesken,2025-02-05,2025-02-11,integrated|backport|clean
+8346705,54,8346705: SNI not sent with Java 22+ using java.net.http.HttpClient.Builder#sslParameters,kieran-farrell,2025-02-05,2025-02-07,integrated|backport|clean
+8347997,55,8347997: assert(false) failed: EA: missing memory path,vnkozlov,2025-02-05,2025-02-06,integrated|backport|clean
+8349002,56,8349002: GenShen: Deadlock during shutdown,earthling-amzn,2025-02-05,2025-02-10,integrated|backport|clean
+8347576,57,8347576: Error output in libjsound has non matching format strings,MBaesken,2025-02-07,2025-02-11,integrated|backport|clean
+8346881,58,8346881: [ubsan] logSelection.cpp:154:24  / logSelectionList.cpp:72:94 : runtime error: applying non-zero offset 1 to null pointer,MBaesken,2025-02-07,2025-02-11,integrated|backport|clean
+8348582,59,8348582: Set -fstack-protector when building with clang,MBaesken,2025-02-07,2025-03-11,integrated|backport|clean
+8346972,60,8346972: Test java/nio/channels/FileChannel/LoopingTruncate.java fails sometimes with IOException: There is not enough space on the disk,sendaoYan,2025-02-07,2025-02-11,integrated|backport|clean
+8347171,61,8347171: (dc) java/nio/channels/DatagramChannel/InterruptibleOrNot.java fails with virtual thread factory,sendaoYan,2025-02-07,2025-02-11,integrated|backport|clean
+8347302,62,8347302: Mark test tools/jimage/JImageToolTest.java as flagless,sendaoYan,2025-02-07,2025-02-10,integrated|backport|clean
+8343882,63,8343882: BasicAnnoTests doesn't handle multiple annotations at the same position,sendaoYan,2025-02-07,2025-02-11,integrated|backport|clean
+8344316,64,8344316: security/auth/callback/TextCallbackHandler/Password.java make runnable with JTReg and add the UI,Shivangi-aa,2025-02-10,2025-02-10,integrated|backport|clean
+8347718,65,8347718: Unexpected NullPointerException in C2 compiled code due to ReduceAllocationMerges,TobiHartmann,2025-02-10,2025-02-17,integrated|backport|clean
+8347018,66,8347018: C2: Insertion of Assertion Predicates ignores the effects of PhaseIdealLoop::clone_up_backedge_goo(),chhagedorn,2025-02-10,2025-02-13,integrated|backport|clean
+8347564,67,8347564: ZGC: Crash in DependencyContext::clean_unloading_dependents,xmas92,2025-02-10,2025-02-18,integrated|backport|clean
+8345676,68,8345676: [ubsan] ProcessImpl_md.c:561:40: runtime error: applying zero offset to null pointer on macOS aarch64,MBaesken,2025-02-11,2025-02-17,integrated|backport|clean
+8349058,69,8349058: 'internal proprietary API' warnings make javac warnings unusable,cushon,2025-02-11,2025-02-13,integrated|backport|clean
+8343978,70,8343978: Update the default value of CodeEntryAlignment for Ampere-1A and 1B,limingliu-ampere,2025-02-12,2025-02-13,integrated|backport|clean
+8347268,71,8347268: [ubsan] logOutput.cpp:357:21: runtime error: applying non-zero offset 1 to null pointer,MBaesken,2025-02-12,2025-02-13,integrated|backport|clean
+8338303,72,8338303: Linux ppc64le with toolchain clang - detection failure in early JVM startup,MBaesken,2025-02-12,2025-02-13,integrated|backport|clean
+8344925,73,8344925: translet-name ignored when package-name is also set,galderz,2025-02-13,2025-02-18,integrated|backport|clean
+8322983,74,8322983: Virtual Threads: exclude 2 tests,sendaoYan,2025-02-13,2025-02-14,integrated|backport|clean
+8346880,75,"8346880: [aix] java/lang/ProcessHandle/InfoTest.java still fails: ""reported cputime less than expected""",MBaesken,2025-02-13,2025-02-14,integrated|backport|clean
+8348600,76,8348600: Update PipeWire to 1.3.81,azvegint,2025-02-13,2025-02-14,integrated|backport|clean
+8349787,77,8349787: java/lang/Thread/virtual/ThreadPollOnYield.java#default passes unexpectedly without libVThreadPinner.so,sendaoYan,2025-02-14,2025-02-21,integrated|backport|clean
+8348675,78,8348675: TrayIcon tests fail in Ubuntu 24.10 Wayland,azvegint,2025-02-14,2025-02-17,integrated|backport|clean
+8349751,79,8349751: AIX build failure after upgrade pipewire to 1.3.81,TheRealMDoerr,2025-02-14,2025-02-18,integrated|backport|clean
+8349150,80,8349150: Support precompiled headers on AIX,MBaesken,2025-02-19,2025-02-25,integrated|backport|clean
+,81,Merge jdk:jdk24,coffeys,2025-02-19,2025-02-19,integrated|clean
+8347377,82,8347377: Add validation checks for ICC_Profile header fields,honkar-jdk,2025-02-19,2025-02-24,integrated|backport|clean
+8349943,83,8349943: [JMH] Use jvmArgs consistently,sendaoYan,2025-02-20,2025-02-26,integrated|backport|clean
+8348102,84,8348102: java/net/httpclient/HttpClientSNITest.java fails intermittently,kieran-farrell,2025-02-20,2025-02-26,integrated|backport|clean
+8348936,85,"8348936: [Accessibility,macOS,VoiceOver] VoiceOver doesn't announce untick on toggling the checkbox with ""space"" key on macOS",kumarabhi006,2025-02-21,2025-02-24,integrated|backport|clean
+8349039,86,8349039: Adjust exception No type named <ThreadType> in database,MBaesken,2025-02-21,2025-02-24,integrated|backport|clean
+8349753,87,8349753: Incorrect use of CodeBlob::is_buffer_blob() in few places,vnkozlov,2025-02-21,2025-02-21,integrated|backport|clean
+8350137,89,"8350137: After JDK-8348975, Linux builds contain man pages for windows only tools",nizarbenalla,2025-02-24,2025-02-26,integrated|backport|clean
+8346832,90,8346832: runtime/CompressedOops/CompressedCPUSpecificClassSpaceReservation.java fails on RISC-V,RealFYang,2025-02-25,2025-02-26,integrated|backport|clean
+8349200,91,8349200: [JMH] time.format.ZonedDateTimeFormatterBenchmark fails,sendaoYan,2025-02-25,2025-03-01,integrated|backport|clean
+8350499,92,8350499: Minimal build fails with slowdebug builds,theaoqi,2025-02-25,2025-02-26,integrated|backport|clean
+8348323,93,8348323: Corrupted timezone string in JVM crash log,dhanalla,2025-02-25,2025-02-26,integrated|backport|clean
+8339889,94,8339889: Several compiler tests ignore vm flags and not marked as flagless,sendaoYan,2025-02-26,2025-03-01,integrated|backport|clean
+8314840,95,8314840: 3 gc/epsilon tests ignore external vm options,sendaoYan,2025-02-27,2025-03-01,integrated|backport|clean
+8276995,96,8276995: Bug in jdk.jfr.event.gc.collection.TestSystemGC,sendaoYan,2025-02-27,2025-03-04,integrated|backport|clean
+8347629,97,8347629: Test FailOverDirectExecutionControlTest.java fails with -Xcomp,sendaoYan,2025-02-27,2025-03-01,integrated|backport|clean
+8294155,98,8294155: Exception thrown before awaitAndCheck hangs PassFailJFrame,aivanov-jdk,2025-03-03,2025-03-03,integrated|backport|clean
+8350260,99,8350260: Improve HTML instruction formatting in PassFailJFrame,aivanov-jdk,2025-03-03,2025-03-03,integrated|backport|clean
+8334644,100,8334644: Automate javax/print/attribute/PageRangesException.java,aivanov-jdk,2025-03-03,2025-03-03,integrated|backport|clean
+8350483,101,8350483: AArch64: turn on signum intrinsics by default on Ampere CPUs,cnqpzhang,2025-03-04,2025-03-07,integrated|backport|clean
+8350682,102,8350682: [JMH] vector.IndexInRangeBenchmark failed with IndexOutOfBoundsException for size=1024,sendaoYan,2025-03-04,2025-03-11,integrated|backport|clean
+8350820,103,8350820: OperatingSystemMXBean CpuLoad() methods return -1.0 on Windows,rsunderbabu,2025-03-04,2025-03-04,integrated|backport|clean
+8351033,105,8351033: RISC-V: TestFloat16ScalarOperations asserts with offset (4210) is too large to be patched in one beq/bge/bgeu/blt/bltu/bne instruction!,Hamlin-Li,2025-03-04,2025-03-05,integrated|backport|clean
+8344581,106,8344581: [TESTBUG] java/awt/Robot/ScreenCaptureRobotTest.java failing on macOS,Naveenam-Oracle,2025-03-04,2025-03-06,integrated|backport|clean
+8348596,107,8348596: Update FreeType to 2.13.3,alisenchung,2025-03-04,2025-03-11,integrated|backport|clean
+8342775,108,8342775: [Graal] java/util/concurrent/locks/Lock/OOMEInAQS.java fails OOME  thrown from the UncaughtExceptionHandler,pawanchawdhary1,2025-03-05,2025-03-11,integrated|backport|clean
+8349213,109,8349213: G1: Clearing bitmaps during collection set merging not claimed by region,tschatzl,2025-03-05,2025-03-11,integrated|backport
+8350546,110,8350546: Several java/net/InetAddress tests fails UnknownHostException,sendaoYan,2025-03-05,2025-03-11,integrated|backport|clean
+8280991,111,8280991: [XWayland] No displayChanged event after setDisplayMode call,azvegint,2025-03-05,2025-03-10,integrated|backport|clean
+8342524,112,8342524: Use latch in AbstractButton/bug6298940.java instead of delay,aivanov-jdk,2025-03-05,2025-03-06,integrated|backport|clean
+8343191,113,8343191: Cgroup v1 subsystem fails to set subsystem path,sercher,2025-03-05,2025-03-12,integrated|backport|clean
+8347126,114,8347126: gc/stress/TestStressG1Uncommit.java gets OOM-killed,satyenme,2025-03-06,2025-03-10,integrated|backport|clean
+8349358,115,8349358: [JMH] Cannot access class jdk.internal.vm.ContinuationScope,sendaoYan,2025-03-06,2025-03-11,integrated|backport|clean
+8351223,116,8351223: Update localized resources in keytool and jarsigner,justin-curtis-lu,2025-03-06,2025-03-10,integrated|backport|clean
+8346264,117,"8346264: ""Total compile time"" counter should include time spent in failing/bailout compiles",satyenme,2025-03-06,2025-03-11,integrated|backport|clean
+8349637,118,8349637: Integer.numberOfLeadingZeros outputs incorrectly in certain cases,TobiHartmann,2025-03-07,2025-03-10,integrated|backport|clean
+8350202,119,8350202: Tune for Power10 CPUs on Linux ppc64le,MBaesken,2025-03-07,2025-03-10,integrated|backport|clean
+8350201,120,8350201: Out of bounds access on Linux aarch64 in os::print_register_info,MBaesken,2025-03-07,2025-03-10,integrated|backport|clean
+8281511,121,8281511: java/net/ipv6tests/UdpTest.java fails with checkTime failed,sendaoYan,2025-03-08,2025-03-12,integrated|backport|clean
+8349623,122,8349623: [ASAN] Gtest os_linux.glibc_mallinfo_wrapper_vm fails,sendaoYan,2025-03-08,2025-03-10,integrated|backport|clean
+8349375,123,8349375: Cleanup AIX special file build settings,MBaesken,2025-03-10,2025-03-11,integrated|backport|clean
+8349214,124,8349214: Improve size optimization flags for MSVC builds,MBaesken,2025-03-10,2025-03-13,integrated|backport|clean
+8348110,125,8348110: Update LCMS to 2.17,alisenchung,2025-03-10,2025-03-11,integrated|backport|clean
+8349378,126,8349378: Build splashscreen lib with SIZE optimization,MBaesken,2025-03-11,2025-03-24,integrated|backport|clean
+8350103,127,8350103: Test containers/systemd/SystemdMemoryAwarenessTest.java fails on Linux ppc64le SLES15 SP6,MBaesken,2025-03-11,2025-03-11,integrated|backport|clean
+8286204,128,"8286204: [Accessibility,macOS,VoiceOver] VoiceOver reads the spinner value 10 as 1 when user iterates to 10 for the first time on macOS",kumarabhi006,2025-03-11,2025-03-12,integrated|backport|clean
+8350786,129,8350786: Some java/lang jtreg tests miss requires vm.hasJFR,MBaesken,2025-03-12,2025-03-18,integrated|backport
+8347286,130,8347286: (fs) Remove some extensions from java/nio/file/Files/probeContentType/Basic.java,kieran-farrell,2025-03-12,2025-03-20,integrated|backport|clean
+8303770,131,8303770: Remove Baltimore root certificate expiring in May 2025,rhalade,2025-03-12,2025-03-13,integrated|backport|clean
+8348597,132,8348597: Update HarfBuzz to 10.4.0,honkar-jdk,2025-03-12,2025-03-18,integrated|backport|clean
+8349492,133,8349492: Update sun/security/pkcs12/KeytoolOpensslInteropTest.java to use a recent Openssl version,rgangadhar,2025-03-13,2025-03-19,integrated|backport|clean
+8345133,134,8345133: Test sun/security/tools/jarsigner/TsacertOptionTest.java failed: Warning found in stdout,rgangadhar,2025-03-13,2025-03-19,integrated|backport|clean
+8346285,135,8346285: Update jarsigner compatibility test for change in default digest algorithm,nibjen,2025-03-13,2025-03-26,integrated|backport|clean
+8351639,137,8351639: Improve debuggability of test/langtools/jdk/jshell/JdiHangingListenExecutionControlTest.java test,sendaoYan,2025-03-14,2025-03-19,integrated|backport|clean
+8351500,138,8351500: G1: NUMA migrations cause crashes in region allocation,tstuefe,2025-03-14,2025-03-19,integrated|backport|clean
+8345134,139,8345134: Test sun/security/tools/jarsigner/ConciseJarsigner.java failed: unable to find valid certification path to requested target,nibjen,2025-03-14,2025-03-28,integrated|backport|clean
+8346049,140,8346049: jdk/test/lib/security/timestamp/TsaServer.java warnings,ksreenath-ora,2025-03-17,2025-03-26,integrated|backport|clean
+8351382,141,8351382: New test containers/docker/TestMemoryWithSubgroups.java is failing,sercher,2025-03-18,2025-03-24,integrated|backport|clean
+8350683,142,8350683: Non-C2 / minimal JVM crashes in the build on ppc64 platforms,MBaesken,2025-03-18,2025-03-24,integrated|backport|clean
+8348261,143,8348261: assert(n->is_Mem()) failed: memory node required,vnkozlov,2025-03-18,2025-03-21,integrated|backport|clean
+8352302,145,8352302: Test sun/security/tools/jarsigner/TimestampCheck.java is failing,sendaoYan,2025-03-19,2025-03-22,integrated|backport|clean
+8349501,147,8349501: Relocate supporting classes in security/testlibrary to test/lib/jdk tree,ksreenath-ora,2025-03-19,2025-04-03,integrated|backport|clean
+8351933,148,8351933: Inaccurate masking of TC subfield decrement in ForkJoinPool,dchuyko,2025-03-19,2025-03-24,integrated|backport|clean
+8348598,149,8348598: Update Libpng to 1.6.47,honkar-jdk,2025-03-19,2025-03-24,integrated|backport|clean
+8305010,151,8305010: Test vmTestbase/nsk/jvmti/scenarios/sampling/SP05/sp05t003/TestDescription.java timed out: thread not suspended,shyamkishororacle,2025-03-20,2025-03-28,integrated|backport|clean
+8347995,152,8347995: Race condition in jdk/java/net/httpclient/offline/FixedResponseHttpClient.java,kieran-farrell,2025-03-20,2025-03-21,integrated|backport|clean
+8352512,153,8352512: TestVectorZeroCount: counter not reset between iterations,TheRealMDoerr,2025-03-21,2025-03-26,integrated|backport|clean
+8343607,155,8343607: C2: Shenandoah crashes during barrier expansion in Continuation::enter,rwestrel,2025-03-24,2025-03-31,integrated|backport|clean
+8336042,156,8336042: Caller/callee param size mismatch in deoptimization causes crash,TobiHartmann,2025-03-24,2025-03-27,integrated|backport|clean
+8347173,157,8347173: java/net/DatagramSocket/InterruptibleDatagramSocket.java fails with virtual thread factory,govsrini,2025-03-25,2025-03-31,integrated|backport|clean
+8347296,158,8347296: WinInstallerUiTest fails in local test runs if the path to test work directory is longer that regular,ankhunti,2025-03-25,2025-04-01,integrated|backport|clean
+8217914,159,8217914: java/net/httpclient/ConnectTimeoutHandshakeSync.java failed on connection refused while doing POST,HamzaBenyazid,2025-03-26,2025-04-21,integrated|backport|clean
+8352716,161,8352716: (tz) Update Timezone Data to 2025b,gnu-andrew,2025-03-27,2025-04-04,integrated|backport
+8351233,164,8351233: [ASAN] avx2-emu-funcs.hpp:151:20: error: ‘D.82188’ is used uninitialized,sendaoYan,2025-03-30,2025-04-04,integrated|backport|clean
+8352866,167,8352866: TestLogJIT.java runs wrong test class,sendaoYan,2025-03-30,2025-04-24,integrated|backport|clean
+8350386,168,8350386: Test TestCodeCacheFull.java fails with option -XX:-UseCodeCacheFlushing,sendaoYan,2025-04-01,2025-04-04,integrated|backport|clean
+8347000,170,8347000: Bug in com/sun/net/httpserver/bugs/B6361557.java test,govsrini,2025-04-02,2025-04-02,integrated|backport|clean
+8351277,171,8351277: Remove pipewire from AIX build,MBaesken,2025-04-02,2025-04-04,integrated|backport|clean
+8347298,172,8347298: Bug in JPackageCommand.ignoreFakeRuntime(),ankhunti,2025-04-02,2025-04-17,integrated|backport|clean
+8351665,174,8351665: Remove unused UseNUMA in os_aix.cpp,MBaesken,2025-04-02,2025-04-04,integrated|backport|clean
+8352946,175,8352946: SEGV_BND signal code of SIGSEGV missing from our signal-code table,MBaesken,2025-04-02,2025-04-04,integrated|backport|clean
+8330936,176,8330936: [ubsan] exclude function BilinearInterp and ShapeSINextSpan in libawt java2d from ubsan checks,MBaesken,2025-04-02,2025-04-04,integrated|backport|clean
+8346888,177,8346888: [ubsan] block.cpp:1617:30: runtime error: 9.97582e+36 is outside the range of representable values of type 'int',MBaesken,2025-04-03,2025-04-04,integrated|backport|clean
+8353274,178,8353274: [PPC64] Bug related to -XX:+UseCompactObjectHeaders -XX:-UseSIGTRAP in JDK-8305895,TheRealMDoerr,2025-04-04,2025-04-08,integrated|backport|clean
+8347300,179,"8347300: Don't exclude the ""PATH"" var from the environment when running app launchers in jpackage tests",ankhunti,2025-04-04,2025-04-15,integrated|backport|clean
+8353053,180,8353053: (fs) Add support for UserDefinedFileAttributeView on AIX,varada1110,2025-04-04,2025-04-08,integrated|backport|clean
+8353066,181,8353066: Properly detect Windows/aarch64 as build platform,MBaesken,2025-04-04,2025-04-08,integrated|backport|clean
+8330598,183,8330598: java/net/httpclient/Http1ChunkedTest.java fails with java.util.MissingFormatArgumentException: Format specifier '%s',govsrini,2025-04-07,2025-04-09,integrated|backport|clean
+8352706,184,8352706: httpclient HeadTest does not run on HTTP2,govsrini,2025-04-07,2025-04-09,integrated|backport|clean
+8353709,185,8353709: Debug symbols bundle should contain full debug files when building --with-external-symbols-in-bundles=public,RealCLanger,2025-04-07,2025-04-10,integrated|backport|clean
+8350313,186,8350313: Include timings for leaving safepoint in safepoint logging,pengxiaolong,2025-04-09,2025-04-18,integrated|backport|clean
+8353787,187,8353787: Increased number of SHA-384-Digest java.util.jar.Attributes$Name instances leading to higher memory footprint,kieran-farrell,2025-04-11,2025-04-17,integrated|backport|clean
+8344629,188,8344629: SSLSocketNoServerHelloClientShutdown test timeout,RealCLanger,2025-04-14,2025-04-15,integrated|backport|clean
+8344892,189,8344892: beans/finder/MethodFinder.findMethod incorrectly returns null,RealCLanger,2025-04-14,2025-04-15,integrated|backport|clean
+8353329,192,8353329: Small memory leak when create GrowableArray with initial size 0,sendaoYan,2025-04-15,2025-04-21,integrated|backport|clean
+8353946,193,8353946: Incorrect WINDOWS ifdef in os::build_agent_function_name,dholmes-ora,2025-04-15,2025-04-15,integrated|backport|clean
+8350211,194,8350211: CTW: Attempt to preload all classes in constant pool,shyamkishororacle,2025-04-15,2025-04-18,integrated|backport
+8350924,196,8350924: javax/swing/JMenu/4213634/bug4213634.java fails,kboulanou,2025-04-15,2025-04-18,integrated|backport|clean
+,197,Merge a9cfe9e82ac0bb22b1027210fd3ca926d93a809a,robm-openjdk,2025-04-15,2025-04-15,integrated|clean
+8353185,199,8353185: Introduce the concept of upgradeable files in context of JEP 493,jerboaa,2025-04-16,2025-04-17,integrated|backport|clean
+8349348,200,8349348: Refactor ClassLoaderDeadlock.sh and Deadlock.sh to run fully in java,Shivangi-aa,2025-04-16,2025-04-17,integrated|backport|clean
+8352109,201,8352109: java/awt/Desktop/MailTest.java fails in platforms where Action.MAIL is not supported,kboulanou,2025-04-17,2025-04-18,integrated|backport|clean
+8355524,207,8355524: Only every second line in upgradeable files is being used,jerboaa,2025-04-25,2025-05-06,integrated|backport|clean
+8352508,210,8352508: [Redo] G1: Pinned regions with pinned objects only reachable by native code crash VM,tschatzl,2025-04-28,2025-04-28,integrated|backport|clean
+8350498,213,8350498: Remove two Camerfirma root CA certificates,rhalade,2025-04-30,2025-05-06,integrated|backport|clean
+8356096,222,8356096: ISO 4217 Amendment 179 Update,weibxiao,2025-05-20,2025-05-20,integrated|backport
+8359170,231,8359170: Add 2 TLS and 2 CS Sectigo roots,Shivangi-aa,2025-06-11,2025-06-11,integrated|backport|clean
+,237,Merge 5175965a949c2b1f1dedf2eaac714397eb5526ed,robm-openjdk,2025-07-15,2025-07-15,integrated|clean
