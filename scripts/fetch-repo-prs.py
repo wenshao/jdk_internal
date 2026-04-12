@@ -159,7 +159,7 @@ def generate_date_ranges(start_year=2019, end_year=2026):
 
 
 def extract_bug_id(title):
-    m = re.match(r'^(\d{7,8}):', title)
+    m = re.match(r'^(\d{7,8})\s*[:\-\s]', title)
     if m:
         return m.group(1)
     m = re.match(r'^JDK-(\d{7,8})', title)
