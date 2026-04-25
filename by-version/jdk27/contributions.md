@@ -8,27 +8,25 @@
 
 | 排名 | 组织 | PRs | 占比 |
 |------|------|-----|------|
-| 1 | [Oracle](../../contributors/orgs/oracle.md) | 1,089 | 64% |
-| 2 | [Independent](../../contributors/orgs/independent.md) | 278 | 16% |
-| 3 | [Amazon](../../contributors/orgs/amazon.md) | 83 | 4% |
+| 1 | [Oracle](../../contributors/orgs/oracle.md) | 1,076 | 63% |
+| 2 | [Independent](../../contributors/orgs/independent.md) | 262 | 15% |
+| 3 | [Amazon](../../contributors/orgs/amazon.md) | 96 | 5% |
 | 4 | [SAP](../../contributors/orgs/sap.md) | 71 | 4% |
-| 5 | [Red Hat](../../contributors/orgs/redhat.md) | 29 | 1% |
-| 6 | [NTT Data](../../contributors/orgs/independent.md) | 26 | 1% |
-| 7 | [IBM](../../contributors/orgs/ibm.md) | 21 | 1% |
-| 8 | [Intel](../../contributors/orgs/intel.md) | 18 | 1% |
-| 9 | [ISCAS](../../contributors/orgs/iscas-plct.md) | 18 | 1% |
-| 10 | [Alibaba](../../contributors/orgs/alibaba.md) | 15 | 0% |
+| 5 | [Alibaba](../../contributors/orgs/alibaba.md) | 36 | 2% |
+| 6 | [Red Hat](../../contributors/orgs/redhat.md) | 30 | 1% |
+| 7 | [NTT Data](../../contributors/orgs/independent.md) | 26 | 1% |
+| 8 | [IBM](../../contributors/orgs/ibm.md) | 20 | 1% |
+| 9 | [Intel](../../contributors/orgs/intel.md) | 18 | 1% |
+| 10 | [ISCAS](../../contributors/orgs/iscas-plct.md) | 18 | 1% |
 | 11 | [Google](../../contributors/orgs/google.md) | 10 | 0% |
 | 12 | [ARM](../../contributors/orgs/arm.md) | 7 | 0% |
 | 13 | [ByteDance](../../contributors/orgs/bytedance.md) | 5 | 0% |
-| 14 | [Rivos](../../contributors/orgs/independent.md) | 4 | 0% |
-| 15 | [Tencent](../../contributors/orgs/tencent.md) | 4 | 0% |
-| 16 | [Huawei](../../contributors/orgs/huawei.md) | 3 | 0% |
-| 17 | [BellSoft](../../contributors/orgs/bellsoft.md) | 2 | 0% |
-| 18 | [Nvidia](../../contributors/orgs/independent.md) | 2 | 0% |
-| 19 | [Loongson](../../contributors/orgs/loongson.md) | 2 | 0% |
-| 20 | [Azul](../../contributors/orgs/independent.md) | 1 | 0% |
-| 21 | [Datadog](../../contributors/orgs/datadog.md) | 1 | 0% |
+| 14 | [Tencent](../../contributors/orgs/tencent.md) | 4 | 0% |
+| 15 | [Huawei](../../contributors/orgs/huawei.md) | 3 | 0% |
+| 16 | [BellSoft](../../contributors/orgs/bellsoft.md) | 2 | 0% |
+| 17 | [Nvidia](../../contributors/orgs/independent.md) | 2 | 0% |
+| 18 | [Loongson](../../contributors/orgs/loongson.md) | 2 | 0% |
+| 19 | [Azul](../../contributors/orgs/independent.md) | 1 | 0% |
 
 ## Top 50 贡献者
 
@@ -82,7 +80,7 @@
 | 46 | [kevinjwalls](../../by-contributor/profiles/kevin-walls.md) | 11 | [Oracle](../../contributors/orgs/oracle.md) |
 | 47 | [chhagedorn](../../by-contributor/profiles/christian-hagedorn.md) | 11 | [Oracle](../../contributors/orgs/oracle.md) |
 | 48 | [TheRealMDoerr](../../by-contributor/profiles/martin-doerr.md) | 11 | [SAP](../../contributors/orgs/sap.md) |
-| 49 | mhaessig | 11 | [Oracle](../../contributors/orgs/oracle.md) |
+| 49 | [mhaessig](../../by-contributor/profiles/martin-haessig.md) | 11 | [Oracle](../../contributors/orgs/oracle.md) |
 | 50 | afshin-zafari | 10 | [Oracle](../../contributors/orgs/oracle.md) |
 
 ## 模块分布

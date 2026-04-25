@@ -3,6 +3,10 @@
     "org": "NTT Data",
     "country": "JP"
   },
+  "benty-amzn": {
+    "org": "Amazon",
+    "country": "US"
+  },
   "turbanoff": {
     "org": "Devexperts",
     "country": "RU"
