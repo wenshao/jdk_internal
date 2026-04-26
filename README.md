@@ -2,7 +2,7 @@
 
 > 分析 OpenJDK 源码、Issue、PR，沉淀便于人类和 AI 阅读的文档
 
-> **数据规模**: 43,394 PRs / 25 仓库 / 22,560 PR 分析 / 387 JEP / 260 贡献者档案 / 21 组织 / 13 发行版
+> **数据规模**: 45,132 PRs / 25 仓库 / 22,560 PR 分析 / 387 JEP / 260 贡献者档案 / 21 组织 / 13 发行版
 
 ---
 
@@ -113,7 +113,7 @@
 
 | 报告 | 说明 |
 |------|------|
-| [跨仓库全景](contributors/stats/cross-repo-overview.md) | 25 仓库 43,394 PRs 完整分析 |
+| [跨仓库全景](contributors/stats/cross-repo-overview.md) | 25 仓库 45,132 PRs 完整分析 |
 | [组织间审查矩阵](contributors/stats/cross-org-collaboration.md) | 谁审查谁的代码 |
 | [Top 50 贡献者](contributors/stats/top50.md) | 全仓库排名 (GoeLin 3,927 居首) |
 | [LTS 维护分析](contributors/stats/lts-maintenance.md) | SAP 5,264 PRs 主导 LTS 维护 |
@@ -308,6 +308,7 @@ jdk_internal/
 
 | 日期 | 更新内容 |
 |------|----------|
+| 2026-04-12 | 📊 **数据刷新**: 45,132 PRs (+1,738), JBS 元数据 100% 可达覆盖，新增 JDK 27 文档 (README/jeps/contributions)，重新生成 12 个版本贡献统计 |
 | 2026-03-28 | ✨ 新增 issues/ 深度分析 (5 篇)、benchmarks/、troubleshooting/、best-practices/ 目录，4 篇技术对比指南，3 篇模块分析，3 篇 JEP 深度分析，6 篇案例研究；清理 prs/ 过时目录 |
 | 2026-03-25 | 📊 **重大更新**: 43,394 PRs/25 仓库完整采集, 22,560 PR 深度分析, 387 JEP 文档, 72,789 审查记录, CFV 投票网络, Docker/GitHub 统计 |
 | 2026-03-22 | 📊 统计更新: 856 文档 / 17,505+ 链接，一致性扫描修正 |
