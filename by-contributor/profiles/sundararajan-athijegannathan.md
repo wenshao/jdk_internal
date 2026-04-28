@@ -117,7 +117,7 @@ Sundar 维护了 JDK 的 jrt 文件系统实现，修复了多个关键问题：
 ### 相关主题
 
 - [jlink 工具](/guides/learning-path.md) - 模块化运行时镜像工具
-- [Nashorn](/by-topic/language/lambda/nashorn/) - JavaScript 引擎历史
+- [JEP 174: Nashorn JavaScript 引擎](/jeps/language/jep-174.md) - JavaScript 引擎实现
 
 ### 外部资源
 

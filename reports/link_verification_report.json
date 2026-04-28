@@ -1,9 +1,9 @@
 {
   "stats": {
-    "files_checked": 23683,
-    "links_found": 161013,
-    "links_checked": 161013,
-    "broken_links": 62
+    "files_checked": 23688,
+    "links_found": 161074,
+    "links_checked": 161074,
+    "broken_links": 51
   },
   "broken_links": [
     {
@@ -19,14 +19,6 @@
       "line_number": 616,
       "link_text": "=",
       "url": "zaddress addr",
-      "reason": "本地文件不存在",
-      "type": "local"
-    },
-    {
-      "source_file": "jsr/language/jsr-201.md",
-      "line_number": 484,
-      "link_text": "枚举详解",
-      "url": "/by-topic/language/enums/",
       "reason": "本地文件不存在",
       "type": "local"
     },
@@ -419,86 +411,6 @@
       "line_number": 31,
       "link_text": "&",
       "url": "outputStream* st",
-      "reason": "本地文件不存在",
-      "type": "local"
-    },
-    {
-      "source_file": "by-contributor/profiles/alijvm.md",
-      "line_number": 32,
-      "link_text": "Sendaoyan Yan",
-      "url": "sendaoyan-yan.md",
-      "reason": "本地文件不存在",
-      "type": "local"
-    },
-    {
-      "source_file": "by-contributor/profiles/joshua-zhu.md",
-      "line_number": 57,
-      "link_text": "Sendaoyan Yan",
-      "url": "sendaoyan-yan.md",
-      "reason": "本地文件不存在",
-      "type": "local"
-    },
-    {
-      "source_file": "by-contributor/profiles/chinese-contributors.md",
-      "line_number": 36,
-      "link_text": "Sendaoyan Yan",
-      "url": "sendaoyan-yan.md",
-      "reason": "本地文件不存在",
-      "type": "local"
-    },
-    {
-      "source_file": "by-contributor/profiles/chinese-contributors.md",
-      "line_number": 67,
-      "link_text": "Sanhong Li",
-      "url": "sanhong-li.md",
-      "reason": "本地文件不存在",
-      "type": "local"
-    },
-    {
-      "source_file": "by-contributor/profiles/chinese-contributors.md",
-      "line_number": 69,
-      "link_text": "Sendaoyan Yan",
-      "url": "sendaoyan-yan.md",
-      "reason": "本地文件不存在",
-      "type": "local"
-    },
-    {
-      "source_file": "by-contributor/profiles/kuai-wei.md",
-      "line_number": 98,
-      "link_text": "sendaoYan",
-      "url": "sendaoyan-yan.md",
-      "reason": "本地文件不存在",
-      "type": "local"
-    },
-    {
-      "source_file": "by-contributor/profiles/kuai-wei.md",
-      "line_number": 106,
-      "link_text": "headius",
-      "url": "headius.md",
-      "reason": "本地文件不存在",
-      "type": "local"
-    },
-    {
-      "source_file": "by-contributor/profiles/kuai-wei.md",
-      "line_number": 365,
-      "link_text": "Sendaoyan Yan",
-      "url": "sendaoyan-yan.md",
-      "reason": "本地文件不存在",
-      "type": "local"
-    },
-    {
-      "source_file": "by-contributor/profiles/kuai-wei.md",
-      "line_number": 375,
-      "link_text": "Charles Nutter",
-      "url": "headius.md",
-      "reason": "本地文件不存在",
-      "type": "local"
-    },
-    {
-      "source_file": "by-contributor/profiles/sundararajan-athijegannathan.md",
-      "line_number": 120,
-      "link_text": "Nashorn",
-      "url": "/by-topic/language/lambda/nashorn/",
       "reason": "本地文件不存在",
       "type": "local"
     }

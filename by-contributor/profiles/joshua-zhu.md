@@ -54,7 +54,7 @@
 
 - [Kuai Wei](kuai-wei.md) - 阿里巴巴 C2 编译器专家
 - [Long Yang](#) - 阿里巴巴 JVM 团队
-- [Sendaoyan Yan](sendaoyan-yan.md) - 编译器测试工程师
+- [Sendaoyan Yan](sendaoyan.md) - 编译器测试工程师
 - [中国贡献者](chinese-contributors.md) - 中国 OpenJDK 贡献者
 
 ---

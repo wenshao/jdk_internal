@@ -1,10 +1,10 @@
 # 链接验证报告
 
 ## 统计
-- 检查的文件: 23683
-- 找到的链接: 161013
-- 检查的链接: 161013
-- 损坏的链接: 62
+- 检查的文件: 23688
+- 找到的链接: 161074
+- 检查的链接: 161074
+- 损坏的链接: 51
 
 ## 损坏链接详情
 
@@ -15,11 +15,6 @@
 
 ### by-topic/core/gc/zgc.md:616
 - **链接**: [=](zaddress addr)
-- **原因**: 本地文件不存在
-- **类型**: 本地链接
-
-### jsr/language/jsr-201.md:484
-- **链接**: [枚举详解](/by-topic/language/enums/)
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
@@ -272,62 +267,12 @@
 - **原因**: 本地文件不存在
 - **类型**: 本地链接
 
-### by-contributor/profiles/alijvm.md:32
-- **链接**: [Sendaoyan Yan](sendaoyan-yan.md)
-- **原因**: 本地文件不存在
-- **类型**: 本地链接
-
-### by-contributor/profiles/joshua-zhu.md:57
-- **链接**: [Sendaoyan Yan](sendaoyan-yan.md)
-- **原因**: 本地文件不存在
-- **类型**: 本地链接
-
-### by-contributor/profiles/chinese-contributors.md:36
-- **链接**: [Sendaoyan Yan](sendaoyan-yan.md)
-- **原因**: 本地文件不存在
-- **类型**: 本地链接
-
-### by-contributor/profiles/chinese-contributors.md:67
-- **链接**: [Sanhong Li](sanhong-li.md)
-- **原因**: 本地文件不存在
-- **类型**: 本地链接
-
-### by-contributor/profiles/chinese-contributors.md:69
-- **链接**: [Sendaoyan Yan](sendaoyan-yan.md)
-- **原因**: 本地文件不存在
-- **类型**: 本地链接
-
-### by-contributor/profiles/kuai-wei.md:98
-- **链接**: [sendaoYan](sendaoyan-yan.md)
-- **原因**: 本地文件不存在
-- **类型**: 本地链接
-
-### by-contributor/profiles/kuai-wei.md:106
-- **链接**: [headius](headius.md)
-- **原因**: 本地文件不存在
-- **类型**: 本地链接
-
-### by-contributor/profiles/kuai-wei.md:365
-- **链接**: [Sendaoyan Yan](sendaoyan-yan.md)
-- **原因**: 本地文件不存在
-- **类型**: 本地链接
-
-### by-contributor/profiles/kuai-wei.md:375
-- **链接**: [Charles Nutter](headius.md)
-- **原因**: 本地文件不存在
-- **类型**: 本地链接
-
-### by-contributor/profiles/sundararajan-athijegannathan.md:120
-- **链接**: [Nashorn](/by-topic/language/lambda/nashorn/)
-- **原因**: 本地文件不存在
-- **类型**: 本地链接
-
 
 ## 链接类型统计
-- 本地链接: 9395
+- 本地链接: 9433
 - GitHub原始URL: 1
-- 外部链接: 145839
-- 锚点链接: 5778
+- 外部链接: 145855
+- 锚点链接: 5785
 
 ## 建议
 1. 修复损坏的本地链接

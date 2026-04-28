@@ -325,7 +325,7 @@ public void add(String item) {
 - [JEP 502: Stable Values](https://openjdk.org/jeps/502)
 - [JDK 25 主页](../README.md)
 - [JIT 编译优化](/by-topic/core/jit/)
-- [内存模型](/by-topic/concurrency/memory-model/)
+- [synchronized 内部实现](/by-topic/concurrency/concurrency/synchronized-internals.md)
 
 ---
 
