@@ -115,7 +115,7 @@
 |------|------|
 | [跨仓库全景](contributors/stats/cross-repo-overview.md) | 25 仓库 45,132 PRs 完整分析 |
 | [组织间审查矩阵](contributors/stats/cross-org-collaboration.md) | 谁审查谁的代码 |
-| [Top 50 贡献者](contributors/stats/top50.md) | 全仓库排名 (GoeLin 3,927 居首) |
+| [Top 50 贡献者](contributors/stats/top50.md) | 全仓库排名 (GoeLin 3,993 居首) |
 | [LTS 维护分析](contributors/stats/lts-maintenance.md) | SAP 5,264 PRs 主导 LTS 维护 |
 | [角色晋升网络](contributors/stats/role-promotions.md) | 193 CFV 提名 + 投票者分析 |
 | [JEP 领导力](contributors/stats/jep-tracking.md) | 500 JEPs / 161 owners |
