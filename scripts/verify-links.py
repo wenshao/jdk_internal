@@ -48,6 +48,48 @@ class LinkVerifier:
                     md_files.append(f)
         return md_files
     
+    def _strip_code_blocks(self, content: str) -> str:
+        """Replace fenced code blocks (```...```) and inline code (`...`) with
+        same-length whitespace, preserving line numbers and offsets so that
+        markdown link patterns inside code do not produce false positives."""
+        def blank_replace(m):
+            text = m.group(0)
+            return ''.join('\n' if c == '\n' else ' ' for c in text)
+
+        # Fenced code blocks (must come before inline)
+        content = re.sub(r'```.*?```', blank_replace, content, flags=re.DOTALL)
+        # Inline code (single backticks, no newline inside)
+        content = re.sub(r'`[^`\n]+`', blank_replace, content)
+        return content
+
+    # Schemes that are not local files but also not http(s); skip local check
+    NON_LOCAL_SCHEMES = ('mailto:', 'javascript:', 'tel:', 'ftp:', 'file:', 'data:', 'irc:', 'ssh:', 'git:')
+
+    def _looks_like_path(self, url: str) -> bool:
+        """Heuristic: does this URL look like it could be a real local path/URL?
+
+        Returns False for obvious code fragments like `length=1`, `5`, `outputStream* st`.
+        """
+        # Empty or whitespace
+        if not url.strip():
+            return False
+        # Contains whitespace (not a valid URL/path)
+        if any(c in url for c in [' ', '\t']):
+            return False
+        # key=value patterns (no slashes/dots) - likely code, not path
+        if re.match(r'^[a-zA-Z_]+=\S+$', url) and '/' not in url and '.' not in url:
+            return False
+        # Pure number or single special char like `5`, `=`, `&` - code fragment
+        if re.match(r'^[\d\W]+$', url):
+            return False
+        # Contains C/C++ pointer syntax markers
+        if '*' in url and ('* ' in url or '*' == url[-1]):
+            return False
+        # Contains template/generic angle brackets
+        if '<' in url or '>' in url:
+            return False
+        return True
+
     def extract_links(self, file_path: Path) -> List[Link]:
         """从markdown文件中提取链接"""
         links = []
@@ -56,24 +98,36 @@ class LinkVerifier:
         except UnicodeDecodeError:
             print(f"警告: 无法解码文件 {file_path}")
             return links
-            
+
+        # Strip code blocks/inline code so markdown patterns inside them don't trigger
+        content = self._strip_code_blocks(content)
+
         # Markdown链接模式: [text](url) 或 [text](url "title")
         pattern = r'\[([^\]]+)\]\(([^)"\']+)(?:\s+["\']([^"\']+)["\'])?\)'
-        
+
         for match in re.finditer(pattern, content, re.MULTILINE):
             line_number = content[:match.start()].count('\n') + 1
             link_text = match.group(1)
             url = match.group(2).strip()
-            
+
             # 跳过空URL
             if not url:
                 continue
-                
+
+            # 跳过明显不是 URL/路径的代码片段
+            if not self._looks_like_path(url):
+                continue
+
             # 判断链接类型
             is_external = url.startswith(('http://', 'https://'))
             is_github_raw = 'raw.githubusercontent.com' in url
             is_anchor = url.startswith('#')
-            
+            is_non_local_scheme = url.startswith(self.NON_LOCAL_SCHEMES)
+
+            # mailto: 等非 http(s) scheme 视为外部，不做本地文件检查
+            if is_non_local_scheme:
+                is_external = True
+
             link = Link(
                 source_file=str(file_path.relative_to(self.root_dir)),
                 line_number=line_number,
@@ -84,7 +138,7 @@ class LinkVerifier:
                 is_anchor=is_anchor
             )
             links.append(link)
-            
+
         return links
     
     def resolve_local_path(self, source_file: str, url: str) -> Path:
