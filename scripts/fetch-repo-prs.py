@@ -169,7 +169,8 @@ def extract_bug_id(title):
 
 
 def write_csv(repo, all_prs):
-    """Write CSV output."""
+    """Write CSV output. Preserves any existing enrichment columns (org, country,
+    review_days, reviewers, etc.) by reading the existing CSV first and merging."""
     repo_short = repo.split("/")[1]  # e.g., "valhalla", "jdk21u-dev"
     output_dir = os.path.join(BASE_DIR, repo_short)
     os.makedirs(output_dir, exist_ok=True)
@@ -180,6 +181,22 @@ def write_csv(repo, all_prs):
     # Save cache
     with open(cache_path, "w") as f:
         json.dump(all_prs, f)
+
+    BASE_FIELDS = ["bug_id", "pr_number", "title", "author", "created", "closed", "labels"]
+
+    # Load existing CSV to preserve enrichment columns
+    existing_rows = {}
+    existing_fields = BASE_FIELDS
+    if os.path.exists(csv_path):
+        with open(csv_path) as f:
+            reader = csv.DictReader(f)
+            existing_fields = list(reader.fieldnames or BASE_FIELDS)
+            for row in reader:
+                existing_rows[row.get("pr_number", "")] = row
+
+    # Determine fieldnames - keep existing schema if richer
+    fieldnames = existing_fields if len(existing_fields) > len(BASE_FIELDS) else BASE_FIELDS
+    extra_fields = [f for f in fieldnames if f not in BASE_FIELDS]
 
     # Build rows
     rows = []
@@ -195,7 +212,7 @@ def write_csv(repo, all_prs):
         if isinstance(item.get("labels"), list):
             labels = [l.get("name", "") for l in item["labels"] if isinstance(l, dict)]
 
-        rows.append({
+        row = {
             "bug_id": bug_id,
             "pr_number": pr_num,
             "title": title,
@@ -203,11 +220,18 @@ def write_csv(repo, all_prs):
             "created": created,
             "closed": closed,
             "labels": "|".join(labels),
-        })
+        }
+        # Preserve any enrichment columns from existing CSV
+        if pr_num in existing_rows:
+            for f in extra_fields:
+                row[f] = existing_rows[pr_num].get(f, "")
+        else:
+            # New PR - leave enrichment fields empty
+            for f in extra_fields:
+                row[f] = ""
+        rows.append(row)
 
     rows.sort(key=lambda x: int(x["pr_number"]))
-
-    fieldnames = ["bug_id", "pr_number", "title", "author", "created", "closed", "labels"]
 
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
