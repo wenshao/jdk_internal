@@ -243,14 +243,14 @@ Chen Liang 是 Project Valhalla (openjdk/valhalla) 的活跃贡献者，2025-05 
 
 | 审查者 | 组织 | 审查次数 | 主要领域 |
 |--------|------|----------|----------|
-| [Adam Sotona](adam-sotona.md) (@asotona) | [Oracle](../../contributors/orgs/oracle.md) | 98 | ClassFile API |
+| [Adam Sotona](adam-sotona.md) (@asotona) | [Oracle](../../contributors/orgs/oracle.md) | 99 | ClassFile API |
 | [Jorn Vernee](jorn-vernee.md) (@JornVernee) | [Oracle](../../contributors/orgs/oracle.md) | 30 | Panama/FFM |
 | [Mandy Chung](mandy-chung.md) (@mlchung) | [Oracle](../../contributors/orgs/oracle.md) | 29 | 核心反射, MethodHandles |
-| ExE-Boss | 社区 | 27 | 核心库 |
+| ExE-Boss | 社区 | 28 | 核心库 |
 | [Roger Riggs](roger-riggs.md) (@RogerRiggs) | [Oracle](../../contributors/orgs/oracle.md) | 21 | 核心库 |
-| [Alan Bateman](alan-bateman.md) (@AlanBateman) | [Oracle](../../contributors/orgs/oracle.md) | 18 | 核心库 |
+| [Alan Bateman](alan-bateman.md) (@AlanBateman) | [Oracle](../../contributors/orgs/oracle.md) | 19 | 核心库 |
 | [Claes Redestad](claes-redestad.md) (@cl4es) | [Oracle](../../contributors/orgs/oracle.md) | 18 | 性能优化 |
-| [Joe Darcy](joe-darcy.md) (@jddarcy) | [Oracle](../../contributors/orgs/oracle.md) | 12 | 核心反射, 语言 |
+| [Joe Darcy](joe-darcy.md) (@jddarcy) | [Oracle](../../contributors/orgs/oracle.md) | 13 | 核心反射, 语言 |
 
 ### Chen Liang 审查的外部贡献者
 

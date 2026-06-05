@@ -384,7 +384,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8269426,436,8269426: Rename test/jdk/java/lang/invoke/t8150782 to accessClassAndFindClass,GoeLin,2021-09-28,2021-09-30,backport|integrated,SAP,,2,TheRealMDoerr
 8274056,437,8274056: JavaAccessibilityUtilities leaks JNI objects,TheRealMDoerr,2021-09-28,2021-09-29,backport|clean|integrated,SAP,DE,1,
 8269768,438,8269768: JFR Terminology Refresh,GoeLin,2021-09-28,2021-09-30,backport|clean|integrated,SAP,,2,
-,439,8265524 Upgrading JSZip from v3.2.2 to v3.6.0,GoeLin,2021-09-28,2021-10-01,integrated,SAP,,3,TheRealMDoerr
+8265524,439,8265524 Upgrading JSZip from v3.2.2 to v3.6.0,GoeLin,2021-09-28,2021-10-01,integrated,SAP,,3,TheRealMDoerr
 ,440,Merge jdk11u:master,GoeLin,2021-09-29,2021-09-29,integrated,SAP,,0,
 8211171,441,8211171: move JarUtils to top-level testlibrary,GoeLin,2021-09-29,2021-10-01,backport|integrated,SAP,,2,TheRealMDoerr
 8223137,442,8223137: Rename predicate 'do_unroll_only()' to 'is_unroll_only()'.,GoeLin,2021-09-29,2021-09-30,backport|clean|integrated,SAP,,1,
@@ -710,7 +710,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8280786,799,8280786: Build failure on Solaris after 8262392,dimitryc,2022-01-27,2022-01-27,integrated,,,0,"shipilev,bae"
 8177814,801,8177814: jdk/editpad is not in jdk TEST.groups,GoeLin,2022-01-30,2022-02-01,backport|integrated,SAP,,2,MBaesken
 8279702,802,8279702: [macosx] ignore xcodebuild warnings on M1,lewurm,2022-01-31,2022-01-31,backport|integrated,,,0,RealCLanger
-,803,8280999  array_bounds should be array-bounds after 8278507,lutkerd,2022-01-31,2022-02-01,integrated,,,1,"jerboaa,phohensee"
+8280999,803,8280999  array_bounds should be array-bounds after 8278507,lutkerd,2022-01-31,2022-02-01,integrated,,,1,"jerboaa,phohensee"
 8278381,804,8278381: [GCC 11] Address::make_raw() does not initialize rspec,phohensee,2022-02-01,2022-02-08,backport|clean|integrated,Oracle,,7,
 8255410,805,8255410: Add ChaCha20 and Poly1305 support to SunPKCS11 provider,GoeLin,2022-02-03,2022-03-01,backport|integrated,SAP,,26,TheRealMDoerr
 8264650,807,8264650: Cross-compilation to macos/aarch64,VladimirKempik,2022-02-04,2022-02-08,backport|clean|integrated,,,4,lewurm
@@ -1122,7 +1122,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8266461,1252,8266461: tools/jmod/hashes/HashesTest.java fails: static @Test methods,gdams,2022-07-21,2022-07-24,backport|integrated,Microsoft,,3,RealCLanger
 8266250,1253,"8266250: WebSocketTest and WebSocketProxyTest call assertEquals(List<byte[]>, List<byte[]>)",gdams,2022-07-21,2022-07-21,backport|clean|integrated,Microsoft,,0,
 8266460,1254,8266460: java.io tests fail on null stream with upgraded jtreg/TestNG,gdams,2022-07-21,2022-07-21,backport|integrated,Microsoft,,0,GoeLin
-,1255,8290813 jdk/nashorn/api/scripting/test/ScriptObjectMirrorTest.java fails: assertEquals is ambiguous,gdams,2022-07-21,2022-07-22,integrated,Microsoft,,1,"szegedi,RealCLanger"
+8290813,1255,8290813 jdk/nashorn/api/scripting/test/ScriptObjectMirrorTest.java fails: assertEquals is ambiguous,gdams,2022-07-21,2022-07-22,integrated,Microsoft,,1,"szegedi,RealCLanger"
 8235870,1256,8235870: C2 crashes in IdealLoopTree::est_loop_flow_merge_sz(),GoeLin,2022-07-21,2022-07-25,backport|clean|integrated,SAP,,4,
 8186143,1257,8186143: keytool -ext option doesn't accept wildcards for DNS subject alternative names,GoeLin,2022-07-21,2022-07-25,backport|clean|integrated,SAP,,4,
 8255724,1258,8255724: [XRender] the BlitRotateClippedArea test fails on Linux in the XR pipeline,GoeLin,2022-07-21,2022-07-25,backport|clean|integrated,SAP,,4,
@@ -1132,7 +1132,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8282548,1262,8282548: Create a regression test for JDK-4330998,GoeLin,2022-07-22,2022-07-25,backport|clean|integrated,SAP,,3,
 6854300,1263,6854300: [TEST_BUG] java/awt/event/MouseEvent/SpuriousExitEnter/SpuriousExitEnter_3.java fails in jdk6u14 & jdk7,GoeLin,2022-07-22,2022-07-25,backport|clean|integrated,SAP,,3,
 8169468,1264,8169468: NoResizeEventOnDMChangeTest.java fails because FS Window didn't receive all resizes!,GoeLin,2022-07-22,2022-07-25,backport|clean|integrated,SAP,,3,
-,1265,8290886 [11u]: Backport of JDK-8266250 introduced test failures,gdams,2022-07-22,2022-07-25,integrated,Microsoft,,3,RealCLanger
+8290886,1265,8290886 [11u]: Backport of JDK-8266250 introduced test failures,gdams,2022-07-22,2022-07-25,integrated,Microsoft,,3,RealCLanger
 8283087,1266,8283087: Create a test or JDK-4715503,GoeLin,2022-07-22,2022-07-25,backport|clean|integrated,SAP,,3,
 8282860,1267,8282860: Write a regression test for JDK-4164779,GoeLin,2022-07-22,2022-07-26,backport|clean|integrated,SAP,,4,
 8239379,1268,8239379: ProblemList serviceability/sa/sadebugd/DebugdConnectTest.java on OSX,RealCLanger,2022-07-22,2022-07-26,backport|integrated,SAP,DE,4,GoeLin
@@ -1850,12 +1850,12 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8306133,2076,8306133: Open source few AWT Drag & Drop related tests,luchenlin,2023-08-14,2023-08-16,backport|integrated,,,2,phohensee
 8238157,2077,8238157: security/infra/java/security/cert/CertPathValidator/certification/AmazonCA.java test failures because of revocation date,MBaesken,2023-08-14,2023-08-14,backport|clean|integrated,SAP,DE,0,
 8271838,2078,8271838: AmazonCA.java interop test fails,MBaesken,2023-08-14,2023-08-16,backport|clean|integrated,SAP,DE,2,
-8313796,2079,8313796: AsyncGetCallTrace crash on unreadable interpreter method pointer,benty-amzn,2023-08-15,2023-08-18,backport|integrated,,,3,phohensee
+8313796,2079,8313796: AsyncGetCallTrace crash on unreadable interpreter method pointer,benty-amzn,2023-08-15,2023-08-18,backport|integrated,Amazon,US,3,phohensee
 8307080,2080,8307080: Open source some more JComboBox jtreg tests,luchenlin,2023-08-16,2023-08-24,backport|clean|integrated,,,8,
 8309088,2081,8309088: security/infra/java/security/cert/CertPathValidator/certification/AmazonCA.java fails,MBaesken,2023-08-16,2023-08-16,backport|clean|integrated,SAP,DE,0,
 8301269,2082,8301269: Update Commons BCEL to Version 6.7.0,RealLucy,2023-08-16,2023-08-18,backport|integrated,,,2,TheRealMDoerr
 8307078,2083,8307078: Opensource and clean up five more AWT Focus related tests,luchenlin,2023-08-17,2023-08-24,backport|clean|integrated,,,7,
-8313765,2084,8313765: Invalid CEN header (invalid zip64 extra data field size),benty-amzn,2023-08-17,2023-08-21,backport|integrated,,,4,"gnu-andrew,mrserb"
+8313765,2084,8313765: Invalid CEN header (invalid zip64 extra data field size),benty-amzn,2023-08-17,2023-08-21,backport|integrated,Amazon,US,4,"gnu-andrew,mrserb"
 8306718,2085,8306718: Optimize and opensource some old AWT tests,luchenlin,2023-08-17,2023-08-24,backport|clean|integrated,,,7,
 8284772,2087,8284772: GHA: Use GCC Major Version Dependencies Only,gnu-andrew,2023-08-17,2023-08-18,backport|integrated,Red Hat,,1,"simonis,mrserb"
 8306575,2088,8306575: Clean up and open source four Dialog related tests,luchenlin,2023-08-18,2023-09-13,backport|integrated,,,26,TheRealMDoerr
@@ -2343,11 +2343,11 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8270199,2616,8270199: Most SA tests are skipped on macosx-aarch64 because all executables are signed,luchenlin,2024-03-21,2024-03-25,backport|integrated,,,4,RealLucy
 8317507,2617,"8317507: C2 compilation fails with ""Exceeded _node_regs array""",martinuy,2024-03-22,2024-03-27,backport|clean|integrated,,,5,"gnu-andrew,rwestrel"
 8324632,2618,8324632: Update Zlib Data Compression Library to Version 1.3.1,GoeLin,2024-03-22,2024-03-25,backport|clean|integrated,SAP,,3,
-8319436,2619,8319436: Proxy.newProxyInstance throws NPE if loader is null and interface not visible from class loader,benty-amzn,2024-03-22,2024-03-25,backport|clean|integrated,,,3,
+8319436,2619,8319436: Proxy.newProxyInstance throws NPE if loader is null and interface not visible from class loader,benty-amzn,2024-03-22,2024-03-25,backport|clean|integrated,Amazon,US,3,
 8310380,2620,8310380: Handle problems in core-related tests on macOS when codesign tool does not work,luchenlin,2024-03-25,2024-04-01,backport|integrated,,,7,RealLucy
 8328705,2621,8328705: GHA: Cross-compilation jobs do not require build JDK,shipilev,2024-03-25,2024-03-25,backport|clean|integrated,Amazon,US,0,
 8320005,2622,8320005: Allow loading of shared objects with .a extension on AIX,suchismith1993,2024-03-25,2024-04-03,backport|clean|integrated,,,9,
-8273831,2623,"8273831: PrintServiceLookup spawns 2 threads in the current classloader, getting orphaned",benty-amzn,2024-03-25,2024-03-27,backport|clean|integrated,,,2,
+8273831,2623,"8273831: PrintServiceLookup spawns 2 threads in the current classloader, getting orphaned",benty-amzn,2024-03-25,2024-03-27,backport|clean|integrated,Amazon,US,2,
 8328825,2624,8328825: Google CAInterop test failures,sendaoYan,2024-03-26,2024-05-13,backport|clean|integrated,Alibaba,CN,48,
 8326661,2626,8326661: sun/java2d/cmm/ColorConvertOp/ColConvTest.java assumes profiles were generated by LCMS,luchenlin,2024-03-27,2024-03-28,backport|clean|integrated,,,1,
 8243010,2627,8243010: Test support: Customizable Hex Printer,GoeLin,2024-03-27,2024-03-28,backport|integrated,SAP,,1,MBaesken
@@ -2718,6 +2718,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8286694,3092,8286694: Incorrect argument processing in java launcher,zzambers,2025-09-10,2026-02-04,backport|clean|integrated,Red Hat,,147,gnu-andrew
 8366359,3093,8366359: Test should throw SkippedException when there is no lpstat,sendaoYan,2025-09-11,2025-10-22,backport|clean|integrated,Alibaba,CN,41,
 8337102,3094,8337102: JITTester: Fix breaks in static initialization blocks,kirill-shirokov,2025-09-13,2026-01-14,backport|clean|integrated,,,123,
+8367766,3095,8367766: [11u] src/jdk.crypto.ec/share/native/libsunec/impl/mpi.c:321:3: error: 'tmp.dp' may be used uninitialized,zzambers,2025-09-16,2026-05-27,integrated,Red Hat,,253,
 8299748,3097,8299748: java/util/zip/Deinflate.java failing on s390x,johnshajiang,2025-09-19,2025-09-23,backport|clean|integrated,Tencent,CN,4,
 8339280,3098,8339280: jarsigner -verify performs cross-checking between CEN and LOC,franferrax,2025-09-19,2025-11-06,backport|integrated,,,48,"jerboaa,alexeybakhtin"
 8350813,3099,8350813: Rendering of bulky sound bank from MIDI sequence can cause OutOfMemoryError,wkia,2025-09-19,2025-10-27,backport|clean|integrated,Azul,,38,
@@ -2741,6 +2742,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8336451,3122,8336451: [11u] GHA macos-13 and macos-15 builders are unable to resolve local hostname,vieiro,2025-11-18,2025-11-19,integrated,Red Hat,,1,jerboaa
 8341964,3123,8341964: Add mechanism to disable different parts of TLS cipher suite,TheMangovnik,2025-11-20,2025-11-26,backport|clean|integrated,,,6,
 8245545,3124,8245545: Disable TLS_RSA cipher suites,TheMangovnik,2025-11-20,2025-12-03,backport|integrated,,,13,gnu-andrew
+8365098,3125,8365098: make/RunTests.gmk generates a wrong path to test artifacts on Alpine,wkia,2025-11-21,2026-04-30,backport|integrated,Azul,,160,
 8263188,3126,8263188: JSSE should fail fast if there isn't supported signature algorithm,vieiro,2025-11-27,2025-12-22,backport|integrated,Red Hat,,25,jerboaa
 8301379,3128,8301379: Verify TLS_ECDH_* cipher suites cannot be negotiated,RadekCap,2025-12-03,2025-12-12,backport|integrated,,,9,phohensee
 8372857,3129,8372857: Improve debuggability of java/rmi/server/RemoteServer/AddrInUse.java test,sendaoYan,2025-12-04,2026-02-23,backport|clean|integrated,Alibaba,CN,81,
@@ -2764,6 +2766,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8298730,3149,8298730: Refactor subsystem_file_line_contents and add docs and tests,jmtd,2026-02-12,2026-03-19,backport|integrated,IBM,,35,jerboaa
 8209362,3150,"8209362: sun/security/ssl/SSLSocketImpl/ReuseAddr.java failed due to ""BindException: Address already in use (Bind failed)""",vieiro,2026-02-12,2026-02-16,backport|integrated,Red Hat,,4,gnu-andrew
 8284047,3151,8284047: Harmonize/Standardize the SSLSocket/SSLEngine/SSLSocketSSLEngine test templates,vieiro,2026-02-12,2026-02-18,backport|integrated,Red Hat,,6,jerboaa
+8369506,3152,8369506: Bytecode rewriting causes Java heap corruption on AArch64,TheMangovnik,2026-02-12,2026-05-15,backport|integrated,,,92,
 8306014,3153,8306014: Update javax.net.ssl TLS tests to use SSLContextTemplate or SSLEngineTemplate,vieiro,2026-02-12,2026-02-19,backport|clean|integrated,Red Hat,,7,
 8306015,3154,8306015: Update sun.security.ssl TLS tests to use SSLContextTemplate or SSLEngineTemplate,vieiro,2026-02-12,2026-03-06,backport|integrated,Red Hat,,22,gnu-andrew
 8337669,3155,8337669: [17u] Backport of JDK-8284047 missed to delete a file,vieiro,2026-02-13,2026-03-06,backport|clean|integrated,Red Hat,,21,gnu-andrew
@@ -2774,11 +2777,37 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8378218,3162,8378218: MSYS2 reports cygwin triplet causing bash configure failure,tabata-d,2026-02-26,2026-03-25,backport|clean|integrated,,,27,
 8377526,3163,8377526: Update Libpng to 1.6.55,mrserb,2026-02-26,2026-03-03,backport|clean|integrated,Oracle,RU,5,gnu-andrew
 8373476,3164,8373476: (tz) Update Timezone Data to 2025c,TheMangovnik,2026-03-02,2026-03-02,backport|clean|integrated,,,0,
+8200566,3165,8200566: DistributionPointFetcher fails to fetch CRLs if the DistributionPoints field contains more than one DistributionPoint and the first one fails,TheMangovnik,2026-03-03,2026-06-01,backport|integrated,,,90,
 8343622,3168,8343622: AesDkCrypto.stringToKey should not return null,alexeybakhtin,2026-03-06,2026-04-02,backport|integrated,Azul,,27,
 8345578,3169,8345578: New test in JDK-8343622 fails with a promoted build,alexeybakhtin,2026-03-07,2026-04-07,backport|clean|integrated,Azul,,31,
 8379685,3170,8379685: Bump update version of OpenJDK: 11.0.32,gnu-andrew,2026-03-11,2026-03-13,integrated,Red Hat,,2,jerboaa
 8369032,3173,8369032: Add test to ensure serialized ICC_Profile stores only necessary optional data,mrserb,2026-03-16,2026-03-28,backport|clean|integrated,Oracle,RU,12,
 8242314,3174,8242314: use reproducible random in vmTestbase shared code,yaqsun,2026-03-16,2026-03-25,backport|clean|integrated,,,9,
+8377167,3175,8377167: javax/imageio/ReadAbortTest.java throw NPE when x11 unavailable,sendaoYan,2026-03-16,2026-05-18,backport|clean|integrated,Alibaba,CN,63,
 8327071,3176,8327071: [Testbug] g-tests for cgroup leave files in /tmp on linux,jmtd,2026-03-20,2026-03-20,backport|clean|integrated,IBM,,0,jerboaa
+8349988,3177,8349988: Change cgroup version detection logic to not depend on /proc/cgroups,jmtd,2026-03-23,2026-04-24,backport|integrated,IBM,,32,
 8355077,3178,8355077: Compiler error at splashscreen_gif.c due to unterminated string initialization,zzambers,2026-03-23,2026-04-08,backport|clean|integrated,Red Hat,,16,
 8324243,3179,8324243: Compilation failures in java.desktop module with gcc 14,fthevenet,2026-03-23,2026-04-03,backport|integrated,,,11,
+,3180,Merge jdk11u:master,jerboaa,2026-04-09,2026-04-15,clean|integrated,Red Hat,CA,6,
+8380947,3181,8380947: Add pull request template,gnu-andrew,2026-04-14,2026-04-15,backport|clean|integrated,Red Hat,,1,
+8336498,3182,8336498: [macos] [build]: install-file macro may run into permission denied error,mrserb,2026-04-15,2026-06-05,backport|clean|integrated,Oracle,RU,51,
+8314555,3183,8314555: Build with mawk fails on Windows,mrserb,2026-04-15,2026-04-17,backport|clean|integrated,Oracle,RU,2,
+8382047,3184,8382047: Update Libpng to 1.6.57,gnu-andrew,2026-04-16,2026-04-16,backport|clean|integrated,Red Hat,,0,
+8323672,3185,8323672: Suppress unwanted autoconf added flags in CC and CXX,jmtd,2026-04-21,2026-04-24,backport|integrated,IBM,,3,
+,3186,Merge jdk11u:master,gnu-andrew,2026-04-22,2026-04-22,clean|integrated,Red Hat,,0,
+8374888,3190,8374888: Implement internal test cache to help UserIterCount test performance,alexeybakhtin,2026-05-01,2026-05-05,backport|clean|integrated,Azul,,4,
+8366159,3191,"8366159: SkippedException is treated as a pass for pkcs11/KeyStore, pkcs11/SecretKeyFactory and pkcs11/SecureRandom",tkiriyama,2026-05-08,2026-06-02,backport|integrated,Fujitsu,JP,25,
+8365660,3192,8365660: test/jdk/sun/security/pkcs11/KeyAgreement/ tests skipped without SkipExceprion,tkiriyama,2026-05-08,2026-06-02,backport|clean|integrated,Fujitsu,JP,25,
+8347740,3193,8347740: java/io/File/createTempFile/SpecialTempFile.java failing,sophia-guo,2026-05-08,2026-05-26,backport|integrated,,,18,
+8363966,3196,8363966: GHA: Switch cross-compiling sysroots to Debian trixie,zzambers,2026-05-12,2026-06-01,backport|integrated,Red Hat,,20,
+8381551,3197,8381551: DisabledCurve test fails on Windows after disabling SHA1,raneashay,2026-05-12,2026-05-22,integrated,,,10,
+8375065,3198,8375065: Update LCMS to 2.18,alexeybakhtin,2026-05-19,2026-05-20,backport|clean|integrated,Azul,,1,
+8383354,3199,8383354: Update LCMS to 2.19.1,alexeybakhtin,2026-05-19,2026-05-25,backport|clean|integrated,Azul,,6,
+8372351,3200,8372351: Add 2 WISeKey roots,vieiro,2026-05-21,2026-05-31,backport|integrated,Red Hat,,10,
+8378631,3201,8378631: Update Zlib Data Compression Library to Version 1.3.2,vieiro,2026-05-21,2026-05-27,backport|clean|integrated,Red Hat,,6,
+8378823,3204,8378823: AIX build fails after zlib updated by JDK-8378631,vieiro,2026-05-21,2026-05-27,backport|clean|integrated,Red Hat,,6,
+8384495,3207,8384495: Update Libpng to 1.6.58,vieiro,2026-05-27,2026-05-29,backport|clean|integrated,Red Hat,,2,
+8350749,3208,8350749: Upgrade JLine to 3.29.0,vieiro,2026-05-28,2026-06-02,backport|clean|integrated,Red Hat,,5,
+8383175,3209,8383175: (tz) Update Timezone Data to 2026b,vieiro,2026-05-28,2026-05-29,backport|clean|integrated,Red Hat,,1,
+8368670,3215,8368670: Deadlock in JFR on event register + class load,vieiro,2026-06-02,2026-06-02,backport|clean|integrated,Red Hat,,0,
+8384902,3218,8384902: Update GIFlib to 6.1.3,vieiro,2026-06-02,2026-06-05,backport|clean|integrated,Red Hat,,3,

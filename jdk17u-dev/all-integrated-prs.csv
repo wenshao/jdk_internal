@@ -849,11 +849,11 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8296945,911,8296945: PublicMethodsTest is slow due to dependency verification with debug builds,MBaesken,2022-11-21,2022-11-23,integrated|backport|clean,SAP,DE,2,
 8283999,912,8283999: Update JMH devkit to 1.35,shipilev,2022-11-21,2022-11-22,integrated|backport|clean,Amazon,US,1,
 8271834,913,8271834: TestStringDeduplicationAgeThreshold intermittent failures on Shenandoah,shipilev,2022-11-21,2022-11-22,integrated|backport|clean,Amazon,US,1,
-8273497,914,8273497: building.md should link to both md and html,benty-amzn,2022-11-22,2022-11-29,integrated|backport|clean,,,7,
-8285093,915,8285093: Introduce UTIL_ARG_WITH,benty-amzn,2022-11-22,2022-11-30,integrated|backport|clean,,,8,
-8293550,916,8293550: Optionally add get-task-allow entitlement to macos binaries,benty-amzn,2022-11-22,2022-12-02,integrated|backport|clean,,,10,
+8273497,914,8273497: building.md should link to both md and html,benty-amzn,2022-11-22,2022-11-29,integrated|backport|clean,Amazon,US,7,
+8285093,915,8285093: Introduce UTIL_ARG_WITH,benty-amzn,2022-11-22,2022-11-30,integrated|backport|clean,Amazon,US,8,
+8293550,916,8293550: Optionally add get-task-allow entitlement to macos binaries,benty-amzn,2022-11-22,2022-12-02,integrated|backport|clean,Amazon,US,10,
 8290322,917,8290322: Optimize Vector.rearrange over byte vectors for AVX512BW targets.,jatin-bhateja,2022-11-22,2022-12-19,integrated|backport,Intel,IN,27,"sviswa7,phohensee"
-8297211,918,8297211: Expensive fillInStackTrace operation in HttpURLConnection.getOutputStream0 when no content-length in response,benty-amzn,2022-11-22,2022-12-07,integrated|backport|clean,,,15,
+8297211,918,8297211: Expensive fillInStackTrace operation in HttpURLConnection.getOutputStream0 when no content-length in response,benty-amzn,2022-11-22,2022-12-07,integrated|backport|clean,Amazon,US,15,
 8297241,919,8297241: Update sun/java2d/DirectX/OnScreenRenderingResizeTest/OnScreenRenderingResizeTest.java,Rudometov,2022-11-22,2022-11-24,integrated|backport|clean,Amazon,,2,
 8295952,920,8295952: Problemlist existing compiler/rtm tests also on x86,zzambers,2022-11-22,2022-11-25,integrated|backport|clean,Red Hat,,3,
 8293535,922,8293535: jdk/javadoc/doclet/testJavaFX/TestJavaFxMode.java fail with jfx,xiangzhai,2022-11-23,2022-11-28,integrated|backport|clean,,,5,
@@ -966,7 +966,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8299158,1037,8299158: Improve MD5 intrinsic on AArch64,yftsai,2023-01-05,2023-07-10,integrated|backport,,,186,phohensee
 8297523,1038,8297523: Various GetPrimitiveArrayCritical miss result - NULL check,MBaesken,2023-01-05,2023-01-11,integrated|backport|clean,SAP,DE,6,
 8299439,1039,8299439: java/text/Format/NumberFormat/CurrencyFormat.java fails for hr_HR,GoeLin,2023-01-05,2023-01-09,integrated|backport,SAP,,4,RealCLanger
-8297963,1040,8297963: Partially fix string expansion issues in UTIL_DEFUN_NAMED and related macros,benty-amzn,2023-01-06,2023-01-27,integrated|backport|clean,,,21,
+8297963,1040,8297963: Partially fix string expansion issues in UTIL_DEFUN_NAMED and related macros,benty-amzn,2023-01-06,2023-01-27,integrated|backport|clean,Amazon,US,21,
 8277822,1041,8277822: Remove debug-only heap overrun checks in os::malloc and friends,tstuefe,2023-01-09,2023-01-10,integrated|backport,Red Hat,DE,1,phohensee
 8295413,1042,8295413: com/sun/jdi/EATests.java fails with compiler flag -XX:+StressReflectiveCode,reinrich,2023-01-09,2023-01-13,integrated|backport|clean,SAP,AT,4,
 8267038,1043,8267038: Update IANA Language Subtag Registry to Version 2022-03-02,GoeLin,2023-01-09,2023-01-12,integrated|backport|clean,SAP,,3,
@@ -1470,13 +1470,13 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8309266,1570,8309266: C2: assert(final_con == (jlong)final_int) failed: final value should be integer,GoeLin,2023-07-11,2023-07-14,integrated|backport,SAP,,3,rwestrel
 8307555,1571,8307555: Reduce memory reads in x86 MD5 intrinsic,chadrako,2023-07-11,2023-07-13,integrated|backport|clean,Amazon,US,2,
 8310259,1573,8310259: Pin msys2/setup-msys2 github action to a specific commit,GoeLin,2023-07-12,2023-07-13,integrated|backport,SAP,,1,MBaesken
-8289512,1574,8289512: Fix GCC 12 warnings for adlc output_c.cpp,benty-amzn,2023-07-12,2023-07-15,integrated|backport|clean,,,3,
-8307147,1575,8307147: [x86] Dangling pointer warning for Assembler::_attributes,benty-amzn,2023-07-12,2023-07-15,integrated|backport,,,3,phohensee
-8308283,1576,8308283: Build failure with GCC12 & GCC13,benty-amzn,2023-07-12,2023-07-18,integrated|backport,,,6,phohensee
+8289512,1574,8289512: Fix GCC 12 warnings for adlc output_c.cpp,benty-amzn,2023-07-12,2023-07-15,integrated|backport|clean,Amazon,US,3,
+8307147,1575,8307147: [x86] Dangling pointer warning for Assembler::_attributes,benty-amzn,2023-07-12,2023-07-15,integrated|backport,Amazon,US,3,phohensee
+8308283,1576,8308283: Build failure with GCC12 & GCC13,benty-amzn,2023-07-12,2023-07-18,integrated|backport,Amazon,US,6,phohensee
 8288719,1577,8288719: [arm32] SafeFetch32 thumb interleaving causes random crashes,snazarkin,2023-07-13,2023-07-14,integrated|backport,,,1,tstuefe
 8297923,1578,8297923: java.awt.ScrollPane broken after multiple scroll up/down,GoeLin,2023-07-13,2023-07-18,integrated|backport|clean,SAP,,5,
 8312029,1579,8312029: Add CriticalNative tests to ProblemList for 8312028 ,GoeLin,2023-07-13,2023-07-20,integrated,SAP,,7,RealLucy
-8303279,1580,8303279: C2: crash in SubTypeCheckNode::sub() at IGVN split if,benty-amzn,2023-07-13,2023-07-21,integrated|backport|clean,,,8,simonis
+8303279,1580,8303279: C2: crash in SubTypeCheckNode::sub() at IGVN split if,benty-amzn,2023-07-13,2023-07-21,integrated|backport|clean,Amazon,US,8,simonis
 8306060,1581,8306060: Open source few AWT Insets related tests,kspeeyu,2023-07-13,2023-07-14,integrated|backport|clean,,,1,
 8272998,1582,8272998: ImageIO.read() throws incorrect exception type,kspeeyu,2023-07-13,2023-10-10,integrated|backport|clean,,,89,
 8302161,1583,8302161: Upgrade jQuery UI to version 1.13.2,Nagata-Haruhito,2023-07-14,2023-07-23,integrated|backport,,,9,TheRealMDoerr
@@ -1551,12 +1551,12 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8312525,1662,8312525: New test runtime/os/TestTrimNative.java#trimNative is failing: did not see the expected RSS reduction,shipilev,2023-08-14,2023-08-25,integrated|backport,Amazon,US,11,TheRealMDoerr
 8294149,1663,8294149: JMH 1.34 and later requires jopt-simple 5.0.4,shipilev,2023-08-14,2023-08-16,integrated|backport|clean,Amazon,US,2,
 8309591,1664,8309591: Socket.setOption(TCP_QUICKACK) uses wrong level,shipilev,2023-08-14,2023-08-21,integrated|backport,Amazon,US,7,phohensee
-8313796,1665,8313796: AsyncGetCallTrace crash on unreadable interpreter method pointer,benty-amzn,2023-08-15,2023-08-16,integrated|backport|clean,,,1,tstuefe
+8313796,1665,8313796: AsyncGetCallTrace crash on unreadable interpreter method pointer,benty-amzn,2023-08-15,2023-08-16,integrated|backport|clean,Amazon,US,1,tstuefe
 8314118,1666,8314118: Update JMH devkit to 1.37,shipilev,2023-08-16,2023-08-21,integrated|backport|clean,Amazon,US,5,
 8313676,1667,8313676: Amend TestLoadIndexedMismatch test to target intrinsic directly,shipilev,2023-08-16,2023-08-21,integrated|backport|clean,Amazon,US,5,
 8314262,1668,8314262: GHA: Cut down cross-compilation sysroots deeper,shipilev,2023-08-16,2023-08-21,integrated|backport|clean,Amazon,US,5,
 8284273,1669,8284273: Early crashes in os::print_context on AArch64,shipilev,2023-08-16,2023-08-21,integrated|backport|clean,Amazon,US,5,tstuefe
-8313765,1670,8313765: Invalid CEN header (invalid zip64 extra data field size),benty-amzn,2023-08-17,2023-08-18,integrated|backport,,,1,"gnu-andrew,mrserb"
+8313765,1670,8313765: Invalid CEN header (invalid zip64 extra data field size),benty-amzn,2023-08-17,2023-08-18,integrated|backport,Amazon,US,1,"gnu-andrew,mrserb"
 8168469,1671,8168469: Memory leak in JceSecurity,sercher,2023-08-17,2023-09-20,integrated|backport|clean,,,34,
 8314552,1672,8314552: Fix javadoc tests to work with jtreg 7,lutkerd,2023-08-17,2023-08-23,integrated,,,6,"gnu-andrew,shipilev,phohensee"
 8284772,1673,8284772: GHA: Use GCC Major Version Dependencies Only,gnu-andrew,2023-08-18,2023-08-29,integrated|backport,Red Hat,,11,shipilev
@@ -1967,7 +1967,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8305972,2116,8305972: Update XML Security for Java to 3.0.2,GoeLin,2024-01-09,2024-01-17,integrated|backport,SAP,,8,MBaesken
 8310844,2117,8310844: [AArch64] C1 compilation fails because monitor offset in OSR buffer is too large for immediate,dchuyko,2024-01-09,2024-01-10,integrated|backport|clean,,,1,theRealAph
 8323210,2118,8323210: Update the usage of cmsFLAGS_COPY_ALPHA,mrserb,2024-01-10,2024-03-02,integrated|backport,Oracle,RU,52,phohensee
-8319436,2119,8319436: Proxy.newProxyInstance throws NPE if loader is null and interface not visible from class loader,benty-amzn,2024-01-10,2024-01-23,integrated|backport|clean,,,13,
+8319436,2119,8319436: Proxy.newProxyInstance throws NPE if loader is null and interface not visible from class loader,benty-amzn,2024-01-10,2024-01-23,integrated|backport|clean,Amazon,US,13,
 8323428,2120,8323428: Shenandoah: Unused memory in regions compacted during a full GC should be mangled,earthling-amzn,2024-01-11,2024-01-17,integrated|backport|clean,Amazon,US,6,
 8305906,2121,8305906: HttpClient may use incorrect key when finding pooled HTTP/2 connection for IPv6 address,jaikiran,2024-01-11,2024-02-16,integrated|backport,Oracle,IN,36,phohensee
 8318971,2122,8318971: Better Error Handling for Jar Tool When Processing Non-existent Files,GoeLin,2024-01-12,2024-01-17,integrated|backport|clean,SAP,,5,
@@ -2294,7 +2294,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8321107,2476,8321107: Add more test cases for JDK-8319372,luchenlin,2024-05-17,2024-05-23,integrated|backport|clean,,,6,
 8327137,2477,8327137: Add test for ConcurrentModificationException in BasicDirectoryModel,luchenlin,2024-05-17,2024-06-19,integrated|backport|clean,,,33,
 8316138,2479,8316138: Add GlobalSign 2 TLS root certificates,Delawen,2024-05-17,2024-05-17,integrated|backport,,,0,TheRealMDoerr
-8329223,2480,8329223: Parallel: Parallel GC resizes heap even if -Xms = -Xmx,benty-amzn,2024-05-17,2024-05-28,integrated|backport|clean,,,11,
+8329223,2480,8329223: Parallel: Parallel GC resizes heap even if -Xms = -Xmx,benty-amzn,2024-05-17,2024-05-28,integrated|backport|clean,Amazon,US,11,
 8331746,2481,8331746: Create a test to verify that the cmm id is not ignored,mrserb,2024-05-17,2024-06-03,integrated|backport|clean,Oracle,RU,17,
 8312194,2483,8312194: test/hotspot/jtreg/applications/ctw/modules/jdk_crypto_ec.java cannot handle empty modules,luchenlin,2024-05-21,2024-05-23,integrated|backport|clean,,,2,
 8319338,2484,8319338: tools/jpackage/share/RuntimeImageTest.java fails with -XX:+UseZGC,luchenlin,2024-05-21,2024-05-23,integrated|backport|clean,,,2,
@@ -2563,7 +2563,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8304962,2772,8304962: sun/net/www/http/KeepAliveCache/B5045306.java: java.lang.RuntimeException: Failed: Initial Keep Alive Connection is not being reused,amosshi,2024-08-02,2024-08-08,integrated|backport|clean,,,6,
 8279641,2773,8279641: Create manual JTReg tests for Swing accessibility,amosshi,2024-08-02,2024-08-09,integrated|backport|clean,,,7,
 8306929,2776,8306929: Avoid CleanClassLoaderDataMetaspaces safepoints when previous versions are shared,olivergillespie,2024-08-02,2024-08-06,integrated|backport,Amazon,US,4,shipilev
-8290966,2777,8290966: G1: Record number of PLAB filled and number of direct allocations,benty-amzn,2024-08-02,2024-08-07,integrated|backport|clean,,,5,shipilev
+8290966,2777,8290966: G1: Record number of PLAB filled and number of direct allocations,benty-amzn,2024-08-02,2024-08-07,integrated|backport|clean,Amazon,US,5,shipilev
 8298596,2778,"8298596: vmTestbase/nsk/sysdict/vm/stress/chain/chain008/chain008.java fails with ""NoClassDefFoundError: Could not initialize class java.util.concurrent.ThreadLocalRandom""",amosshi,2024-08-02,2024-08-16,integrated|backport,,,14,MBaesken
 8302800,2779,8302800: Augment NaN handling tests of FDLIBM methods,amosshi,2024-08-03,2024-08-26,integrated|backport,,,23,MBaesken
 8313256,2780,8313256: Exclude failing multicast tests on AIX,amosshi,2024-08-03,2024-08-16,integrated|backport,,,13,MBaesken
@@ -2769,7 +2769,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8340365,2997,8340365: Position the first window of a window list,GoeLin,2024-10-23,2024-10-31,integrated|backport|clean,SAP,,8,
 8340899,2998,8340899: Remove wildcard bound in PositionWindows.positionTestWindows,GoeLin,2024-10-23,2024-10-31,integrated|backport|clean,SAP,,8,
 8340466,2999,8340466: Add description for PassFailJFrame constructors,GoeLin,2024-10-23,2024-10-31,integrated|backport|clean,SAP,,8,
-8303742,3000,8303742: CompletableFuture.orTimeout leaks if the future completes exceptionally,benty-amzn,2024-10-23,2024-11-11,integrated|backport,,,19,phohensee
+8303742,3000,8303742: CompletableFuture.orTimeout leaks if the future completes exceptionally,benty-amzn,2024-10-23,2024-11-11,integrated|backport,Amazon,US,19,phohensee
 8340461,3001,8340461: Amend description for logArea,GoeLin,2024-10-24,2024-10-31,integrated|backport|clean,SAP,,7,
 8326948,3002,8326948: Force English locale for timeout formatting,GoeLin,2024-10-24,2024-10-25,integrated|backport|clean,SAP,,1,
 8320673,3003,8320673: PageFormat/CustomPaper.java has no Pass/Fail buttons; multiple instructions,GoeLin,2024-10-24,2024-10-25,integrated|backport|clean,SAP,,1,
@@ -3911,6 +3911,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8372048,4207,8372048: Performance improvement on Linux remote desktop,GoeLin,2025-12-09,2025-12-12,integrated|backport|clean,SAP,,3,
 8336695,4208,8336695: Update Commons BCEL to Version 6.10.0,GoeLin,2025-12-09,2025-12-12,integrated|backport|clean,SAP,,3,
 8346048,4209,8346048: test/lib/containers/docker/DockerRunOptions.java uses addJavaOpts() from ctor,sendaoYan,2025-12-10,2026-02-11,integrated|backport|clean,Alibaba,CN,63,
+8370325,4210,8370325: G1: Disallow GC for TLAB allocation,GoeLin,2025-12-10,2026-05-08,integrated|backport,SAP,,149,
 8372977,4212,8372977: Unnecessary gthread-2.0 loading,GoeLin,2025-12-11,2025-12-19,integrated|backport|clean,SAP,,8,
 8372756,4213,8372756: Mouse additional buttons and horizontal scrolling are broken on XWayland GNOME >= 47 after JDK-8351907,GoeLin,2025-12-14,2025-12-17,integrated|backport|clean,SAP,,3,
 8244400,4214,8244400: MenuItem may cache the size and did not update it when the screen DPI is changed,GoeLin,2025-12-14,2025-12-17,integrated|backport|clean,SAP,,3,
@@ -3967,6 +3968,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8311644,4274,8311644: Server should not send bad_certificate alert when the client does not send any certificates,GoeLin,2026-02-19,2026-02-23,integrated|backport,SAP,,4,MBaesken
 8326705,4275,8326705: Test CertMsgCheck.java fails to find alert certificate_required,GoeLin,2026-02-19,2026-02-23,integrated|backport|clean,SAP,,4,
 8328608,4276,8328608: Multiple NewSessionTicket support for TLS,GoeLin,2026-02-24,2026-03-02,integrated|backport,SAP,,6,schmelter-sap
+8377944,4277,8377944: LowMemoryTest2.java#id1 intermittent fails OOME: Metaspace,sendaoYan,2026-02-24,2026-04-23,integrated|backport|clean,Alibaba,CN,58,
 8377905,4278,8377905: gcc.md included with every build,GoeLin,2026-02-25,2026-03-02,integrated|backport|clean,SAP,,5,
 8200566,4279,8200566: DistributionPointFetcher fails to fetch CRLs if the DistributionPoints field contains more than one DistributionPoint and the first one fails,TheMangovnik,2026-02-25,2026-03-02,integrated|backport,,,5,GoeLin
 8376251,4280,8376251: [macos] java/awt/Frame/I18NTitle.java fails on MacOS (JDK-8355884),GoeLin,2026-02-26,2026-02-27,integrated|backport|clean,SAP,,1,
@@ -3982,6 +3984,8 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8378802,4291,8378802: [21u] backport changes to TKit.java by JDK-8352419,mmm-choi,2026-03-10,2026-03-12,integrated|backport|clean,,,2,alexeysemenyukoracle
 ,4292,Merge jdk17u:master,GoeLin,2026-03-11,2026-03-11,integrated|clean,SAP,,0,
 8374506,4293,8374506: Incorrect positioning of arrow icon in parent JMenu in Windows L&F,GoeLin,2026-03-11,2026-03-12,integrated|backport|clean,SAP,,1,
+8317801,4294,8317801: java/net/Socket/asyncClose/Race.java fails intermittently (aix),shruacha1234,2026-03-15,2026-05-26,integrated|backport,,,72,
+8377167,4295,8377167: javax/imageio/ReadAbortTest.java throw NPE when x11 unavailable,sendaoYan,2026-03-16,2026-05-18,integrated|backport|clean,Alibaba,CN,63,
 8376233,4296,8376233: Clean up code in Desktop native peer,GoeLin,2026-03-16,2026-03-18,integrated|backport|clean,SAP,,2,
 8361606,4297,8361606: ConsumeNextMnemonicKeyTypedTest.java fails on Windows: character typed with VK_A: a,GoeLin,2026-03-16,2026-03-23,integrated|backport|clean,SAP,,7,
 8377678,4298,8377678: G1: Heap Dumping crashes with -UseClassUnloading,tstuefe,2026-03-17,2026-03-24,integrated,Red Hat,DE,7,
@@ -4008,6 +4012,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8338554,4320,8338554: Fix inconsistencies in javadoc/doclet/testLinkOption/TestRedirectLinks.java,GoeLin,2026-03-21,2026-03-26,integrated|backport|clean,SAP,,5,
 8355443,4321,8355443: [java.io] Use @requires tag instead of exiting based on File.separatorChar value,GoeLin,2026-03-21,2026-03-23,integrated|backport|clean,SAP,,2,
 8364315,4322,8364315: Remove unused xml files from test/jaxp/javax/xml/jaxp/functional/javax/xml/transform/xmlfiles,GoeLin,2026-03-21,2026-03-23,integrated|backport|clean,SAP,,2,
+8380316,4323,8380316: Test runtime/os/AvailableProcessors.java fails Invalid argument,sendaoYan,2026-03-23,2026-05-26,integrated|backport|clean,Alibaba,CN,64,
 8362428,4324,8362428: Update IANA Language Subtag Registry to Version 2025-08-25,GoeLin,2026-03-24,2026-03-26,integrated|backport,SAP,,2,
 ,4325,Merge jdk17u:master,GoeLin,2026-03-24,2026-03-25,integrated|clean,SAP,,1,
 8365379,4326,8365379: SU3.applyInsets may produce wrong results,GoeLin,2026-03-24,2026-03-27,integrated|backport|clean,SAP,,3,
@@ -4025,6 +4030,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8323545,4339,"8323545: java/awt/GraphicsDevice/CheckDisplayModes.java fails with ""exit code: 133""",GoeLin,2026-03-30,2026-03-31,integrated|backport|clean,SAP,,1,
 8365424,4340,8365424: [macos26] java/awt/Frame/DisposeTest.java fails on macOS 26,GoeLin,2026-03-30,2026-03-31,integrated|backport|clean,SAP,,1,
 8339238,4341,8339238: Update to use jtreg 7.5.1,GoeLin,2026-03-30,2026-04-01,integrated|backport,SAP,,2,
+8380565,4342,8380565: PPC64: deoptimization stub should save vector registers,TheRealMDoerr,2026-03-30,2026-05-19,integrated|backport,SAP,DE,50,
 8353488,4343,8353488: Open some JComboBox bugs 3,satyenme,2026-03-30,2026-03-31,integrated|backport|clean,Amazon,,1,
 8374304,4344,"8374304: MultiResolutionSplashTest.java fails in CI: ""Image with wrong resolution is used for splash screen!""",GoeLin,2026-03-31,2026-04-01,integrated|backport|clean,SAP,,1,
 8365423,4345,8365423: [macos26] java/awt/MenuBar/8007006/bug8007006.java fails on macOS 26,GoeLin,2026-03-31,2026-04-01,integrated|backport|clean,SAP,,1,
@@ -4041,4 +4047,119 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8355332,4356,8355332: Fix failing semi-manual test EDT issue,satyenme,2026-04-06,2026-04-08,integrated|backport|clean,Amazon,,2,
 8328300,4357,8328300: Convert PrintDialogsTest.java from Applet to main program,GoeLin,2026-04-07,2026-04-08,integrated|backport|clean,SAP,,1,
 8282044,4358,"8282044: [JVMCI] Export _sha3_implCompress, _md5_implCompress and aarch64::_has_negatives stubs to JVMCI compiler.",GoeLin,2026-04-08,2026-04-10,integrated|backport|clean,SAP,,2,
+8221451,4359,8221451: PIT: sun/java2d/X11SurfaceData/SharedMemoryPixmapsTest/SharedMemoryPixmapsTest.sh fails,rm-gh-8,2026-04-08,2026-04-13,integrated|backport,Amazon,,5,
 8353552,4360,8353552: Opensource Several Font related tests - Batch 3,satyenme,2026-04-08,2026-04-09,integrated|backport|clean,Amazon,,1,
+8378201,4361,8378201: [OGL] glXMakeContextCurrent() drops the buffers of the unbound drawable,GoeLin,2026-04-09,2026-04-13,integrated|backport|clean,SAP,,4,
+8354163,4362,8354163: Open source Swing tests Batch 1,satyenme,2026-04-09,2026-04-13,integrated|backport|clean,Amazon,,4,
+8380947,4363,8380947: Add pull request template,gnu-andrew,2026-04-14,2026-04-15,integrated|backport|clean,Red Hat,,1,
+8382047,4364,8382047: Update Libpng to 1.6.57,GoeLin,2026-04-15,2026-04-16,integrated|backport|clean,SAP,,1,
+8373928,4365,8373928: 4 Dangling pointer defect groups in java.c,GoeLin,2026-04-15,2026-04-21,integrated|backport|clean,SAP,,6,
+8376152,4367,8376152: Test javax/sound/sampled/Clip/bug5070081.java timed out then completed,GoeLin,2026-04-16,2026-04-21,integrated|backport|clean,SAP,,5,
+8373239,4368,8373239: Test java/awt/print/PrinterJob/PageRanges.java fails with incorrect selection of printed pages,GoeLin,2026-04-16,2026-04-21,integrated|backport|clean,SAP,,5,
+8378417,4369,8378417: Printing All pages results in NPE for 1.1 PrintJob,GoeLin,2026-04-16,2026-04-21,integrated|backport|clean,SAP,,5,
+8374998,4370,8374998: Failing os::write - remove bad file,MBaesken,2026-04-16,2026-04-20,integrated|backport|clean,SAP,DE,4,
+8323089,4371,8323089: networkaddress.cache.ttl is not a system property,GoeLin,2026-04-17,2026-04-22,integrated|backport,SAP,,5,
+8324345,4372,8324345: Stack overflow during C2 compilation when splitting memory phi,GoeLin,2026-04-17,2026-04-22,integrated|backport,SAP,,5,
+8320677,4373,8320677: Printer tests use invalid '@run main/manual=yesno,GoeLin,2026-04-21,2026-04-27,integrated|backport|clean,SAP,,6,
+8323672,4375,8323672: Suppress unwanted autoconf added flags in CC and CXX,jmtd,2026-04-21,2026-04-23,integrated|backport,IBM,,2,
+,4376,Merge jdk17u:master,GoeLin,2026-04-22,2026-04-22,integrated|clean,SAP,,0,
+8366852,4377,8366852: java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java test is failing,rm-gh-8,2026-04-23,2026-04-29,integrated|backport,Amazon,,6,
+8382242,4378,8382242: JFR: Metadata reconstruction invalidates ConstantMap for java.lang.String,GoeLin,2026-04-27,2026-04-29,integrated|backport,SAP,,2,
+8298823,4380,"8298823: [macos] java/awt/Mouse/EnterExitEvents/DragWindowTest.java continues to fail with ""No MouseReleased event on label!""",rm-gh-8,2026-04-29,2026-05-06,integrated|backport|clean,Amazon,,7,
+8354900,4381,8354900: javax/swing/AbstractButton/bug4133768.java failing on macosx-aarch64,rm-gh-8,2026-04-29,2026-05-11,integrated|backport|clean,Amazon,,12,
+8352877,4382,8352877: Opensource Several Font related tests - Batch 1,rm-gh-8,2026-04-29,2026-05-06,integrated|backport|clean,Amazon,,7,
+8352733,4383,8352733: Improve RotFontBoundsTest test,rm-gh-8,2026-04-29,2026-05-06,integrated|backport|clean,Amazon,,7,
+8340336,4384,8340336: Open some checkbox awt tests,rm-gh-8,2026-04-29,2026-05-06,integrated|backport|clean,Amazon,,7,
+8374888,4385,8374888: Implement internal test cache to help UserIterCount test performance,GoeLin,2026-04-30,2026-04-30,integrated|backport|clean,SAP,,0,
+8340851,4386,8340851: Open some TextArea awt tests,rm-gh-8,2026-04-30,2026-05-06,integrated|backport|clean,Amazon,,6,
+8340987,4387,8340987: Open some TextArea awt tests 1,rm-gh-8,2026-04-30,2026-05-06,integrated|backport|clean,Amazon,,6,
+8341055,4388,8341055: Open some TextArea awt tests 2,rm-gh-8,2026-04-30,2026-05-06,integrated|backport|clean,Amazon,,6,
+8341292,4389,8341292: Open some TextArea awt tests 3,rm-gh-8,2026-04-30,2026-05-06,integrated|backport|clean,Amazon,,6,
+8341376,4390,8341376: Open some TextArea awt tests 4,rm-gh-8,2026-04-30,2026-05-06,integrated|backport|clean,Amazon,,6,
+8352685,4391,8352685: Opensource JInternalFrame tests - series2,rm-gh-8,2026-04-30,2026-05-06,integrated|backport|clean,Amazon,,6,
+8339879,4392,8339879: Open some dialog awt tests,rm-gh-8,2026-04-30,2026-05-11,integrated|backport|clean,Amazon,,11,
+8339975,4393,8339975: Open some dialog awt tests 2,rm-gh-8,2026-04-30,2026-05-11,integrated|backport|clean,Amazon,,11,
+8340140,4394,8340140: Open some dialog awt tests 3,rm-gh-8,2026-04-30,2026-05-11,integrated|backport|clean,Amazon,,11,
+8340494,4395,8340494: Open some dialog awt tests 4,rm-gh-8,2026-04-30,2026-05-11,integrated|backport|clean,Amazon,,11,
+8377910,4396,8377910: Minor cleanup of java/io/FileDescriptor/Sharing.java,rm-gh-8,2026-04-30,2026-05-11,integrated|backport|clean,Amazon,,11,
+8347836,4397,8347836: Disabled PopupMenu shows shortcuts on Mac,rm-gh-8,2026-04-30,2026-05-11,integrated|backport|clean,Amazon,,11,
+8355179,4398,8355179: Reinstate javax/swing/JScrollBar/4865918/bug4865918.java headful and macos run,rm-gh-8,2026-04-30,2026-05-11,integrated|backport|clean,Amazon,,11,
+8369858,4399,8369858: Remove darcy author tags from jdk tests,rm-gh-8,2026-05-01,2026-05-05,integrated|backport|clean,Amazon,,4,
+8369851,4401,8369851: Remove darcy author tags from langtools tests,rm-gh-8,2026-05-01,2026-05-11,integrated|backport,Amazon,,10,
+8383659,4402,8383659: [17u] JVM crashes during stub routines generation on Windows and rare combination of CPU features,fthevenet,2026-05-04,2026-05-20,integrated,,,16,
+8364927,4403,8364927: Add @requires annotation to TestReclaimStringsLeaksMemory.java,rm-gh-8,2026-05-04,2026-05-06,integrated|backport|clean,Amazon,,2,
+8373716,4404,8373716: Refactor further java/util tests from TestNG to JUnit,rm-gh-8,2026-05-04,2026-05-06,integrated|backport,Amazon,,2,
+8368498,4405,8368498: Use JUnit instead of TestNG for jdk_text tests,rm-gh-8,2026-05-04,2026-05-06,integrated|backport|clean,Amazon,,2,
+8349192,4406,"8349192: jvmti/scenarios/contention/TC05/tc05t001 fails: ERROR: tc05t001.cpp, 281: (waitedThreadCpuTime - waitThreadCpuTime) < (EXPECTED_ACCURACY * 1000000)",GoeLin,2026-05-05,2026-05-08,integrated|backport|clean,SAP,,3,
+8383601,4407,"8383601: RISC-V: ShenandoahBarrierSetAssembler::load_reference_barrier calls ""weak"" on ""phantom"" path",RealFYang,2026-05-05,2026-05-06,integrated|backport|clean,Huawei,CN,1,
+8373623,4408,8373623: Refactor Serialization tests for Records to JUnit,rm-gh-8,2026-05-05,2026-05-06,integrated|backport|clean,Amazon,,1,
+8375231,4409,8375231: Refactor util/ServiceLoader tests to use JUnit,rm-gh-8,2026-05-05,2026-05-06,integrated|backport|clean,Amazon,,1,
+8368335,4410,8368335: Refactor the rest of Locale TestNG based tests to JUnit,rm-gh-8,2026-05-05,2026-05-11,integrated|backport,Amazon,,6,
+8368683,4411,8368683: [process] Increase jtreg debug output maxOutputSize for TreeTest,rm-gh-8,2026-05-05,2026-05-06,integrated|backport|clean,Amazon,,1,
+8366369,4412,8366369: Add @requires linux for GTK L&F tests,rm-gh-8,2026-05-05,2026-05-06,integrated|backport|clean,Amazon,,1,
+8373690,4414,8373690: Unexpected Keystore message using jdk.crypto.disabledAlgorithms,GoeLin,2026-05-06,2026-05-08,integrated|backport,SAP,,2,
+8068293,4416,8068293: [TEST_BUG] Test closed/com/sun/java/swing/plaf/motif/InternalFrame/4150591/bug4150591.java fails with GTKLookAndFeel,rm-gh-8,2026-05-07,2026-05-11,integrated|backport|clean,Amazon,,4,
+8068310,4417,8068310: [TEST_BUG] Test javax/swing/JColorChooser/Test4234761.java fails with GTKL&F,rm-gh-8,2026-05-07,2026-05-11,integrated|backport|clean,Amazon,,4,
+8068378,4418,8068378: [TEST_BUG]The java/awt/Modal/PrintDialogsTest/PrintDialogsTest.java instruction need to update,rm-gh-8,2026-05-07,2026-05-11,integrated|backport|clean,Amazon,,4,
+8360882,4420,8360882: Tests throw SkippedException when they should fail,rm-gh-8,2026-05-07,2026-05-11,integrated|backport|clean,Amazon,,4,
+8274082,4421,8274082: Wrong test name in jtreg run tag for java/awt/print/PrinterJob/SwingUIText.java,rm-gh-8,2026-05-07,2026-05-11,integrated|backport|clean,Amazon,,4,
+8287062,4422,8287062: com/sun/jndi/ldap/LdapPoolTimeoutTest.java failed due to different timeout message,rm-gh-8,2026-05-07,2026-05-11,integrated|backport|clean,Amazon,,4,
+8375999,4423,8375999: com/sun/jndi/ldap/LdapPoolTimeoutTest.java fails sporadically on Windows,rm-gh-8,2026-05-07,2026-05-19,integrated|backport|clean,Amazon,,12,
+8372120,4424,8372120: Add missing sound keyword to MIDI tests,rm-gh-8,2026-05-07,2026-05-11,integrated|backport|clean,Amazon,,4,
+8377727,4425,8377727: Ghost caret and focus appear in non‑editable text fields,GoeLin,2026-05-08,2026-05-11,integrated|backport|clean,SAP,,3,
+8373101,4427,8373101: JdkClient and JdkServer test classes ignore namedGroups field,rm-gh-8,2026-05-08,2026-05-11,integrated|backport|clean,Amazon,,3,
+8374433,4430,8374433: java/util/Locale/PreserveTagCase.java does not run any tests,rm-gh-8,2026-05-08,2026-05-11,integrated|backport|clean,Amazon,,3,
+8286865,4431,8286865: vmTestbase/vm/mlvm/meth/stress/jni/nativeAndMH/Test.java fails with Out of space in CodeCache,rm-gh-8,2026-05-08,2026-05-11,integrated|backport|clean,Amazon,,3,
+8338103,4432,8338103: Stabilize and open source a Swing OGL ButtonResizeTest,rm-gh-8,2026-05-08,2026-05-18,integrated|backport|clean,Amazon,,10,
+8339233,4433,8339233: Test javax/swing/JButton/SwingButtonResizeTestWithOpenGL.java#id failed: Button renderings are different after window resize,rm-gh-8,2026-05-08,2026-05-19,integrated|backport|clean,Amazon,,11,
+8383630,4434,8383630: Fix iteration in tests doing class redefinition,GoeLin,2026-05-10,2026-05-19,integrated|backport,SAP,,9,
+8342401,4435,8342401: [TESTBUG] javax/swing/JSpinner/8223788/JSpinnerButtonFocusTest.java test fails in ubuntu 22.04 on SBR Hosts,rm-gh-8,2026-05-11,2026-05-19,integrated|backport|clean,Amazon,,8,
+8346154,4436,"8346154: [XWayland] Some tests fail intermittently in the CI, but not locally",rm-gh-8,2026-05-11,2026-05-19,integrated|backport|clean,Amazon,,8,
+8372609,4437,8372609: Bug4944439 does not enforce locale correctly,rm-gh-8,2026-05-11,2026-05-19,integrated|backport|clean,Amazon,,8,
+8367784,4439,8367784: java/awt/Focus/InitialFocusTest/InitialFocusTest1.java failed with Wrong focus owner,rm-gh-8,2026-05-11,2026-05-19,integrated|backport|clean,Amazon,,8,
+8357390,4440,8357390: java/awt/Toolkit/ScreenInsetsTest/ScreenInsetsTest.java Test failing on Ubuntu 24.04 Vm Hosts used by Oracle's internal CI system,rm-gh-8,2026-05-11,2026-05-19,integrated|backport|clean,Amazon,,8,
+8255463,4441,8255463: java/nio/channels/spi/SelectorProvider/inheritedChannel/InheritedChannelTest.java failed with ThreadTimeoutException,rm-gh-8,2026-05-11,2026-05-19,integrated|backport|clean,Amazon,,8,
+8332495,4442,8332495: java/util/logging/LoggingDeadlock2.java fails with AssertionError: Some tests failed,rm-gh-8,2026-05-11,2026-05-19,integrated|backport|clean,Amazon,,8,
+8316274,4443,8316274: javax/swing/ButtonGroup/TestButtonGroupFocusTraversal.java fails in Ubuntu 23.10 with Motif LAF,rm-gh-8,2026-05-11,2026-05-19,integrated|backport|clean,Amazon,,8,
+8366128,4444,8366128: jdk/jdk/nio/zipfs/TestPosix.java::testJarFile uses wrong file,rm-gh-8,2026-05-11,2026-05-19,integrated|backport|clean,Amazon,,8,
+8357280,4445,8357280: (bf) Remove @requires tags from java/nio/Buffer/LimitDirectMemory[NegativeTest].java,rm-gh-8,2026-05-12,2026-05-26,integrated|backport,Amazon,,14,
+8356107,4446,8356107: [java.lang] Use @requires tag instead of exiting based on os.name or separatorChar property,rm-gh-8,2026-05-12,2026-05-26,integrated|backport|clean,Amazon,,14,
+8355445,4447,"8355445: [java.nio] Use @requires tag instead of exiting based on ""os.name"" property value",rm-gh-8,2026-05-12,2026-05-26,integrated|backport|clean,Amazon,,14,
+8272477,4449,8272477: Additional cleanup of test/jdk/java/nio/file/spi/SetDefaultProvider.java,rm-gh-8,2026-05-12,2026-05-26,integrated|backport|clean,Amazon,,14,
+8309142,4450,8309142: Refactor test/langtools/tools/javac/versions/Versions.java,rm-gh-8,2026-05-12,2026-05-26,integrated|backport,Amazon,,14,
+8384158,4451,8384158: GHA: Downgrade Windows GHA runners to windows-2022 temporarily,gnu-andrew,2026-05-12,2026-05-19,integrated|backport,Red Hat,,7,
+8284993,4453,8284993: Replace System.exit call in swing tests with RuntimeException,rm-gh-8,2026-05-13,2026-05-26,integrated|backport|clean,Amazon,,13,
+8368892,4454,8368892: Make JEditorPane/TestBrowserBGColor.java headless,rm-gh-8,2026-05-13,2026-05-26,integrated|backport|clean,Amazon,,13,
+8324641,4457,8324641: [IR Framework] Add Setup method to provide custom arguments and set fields,rm-gh-8,2026-05-13,2026-05-18,integrated|backport,Amazon,,5,
+8368754,4459,8368754: runtime/cds/appcds/SignedJar.java log regex is too strict,rm-gh-8,2026-05-13,2026-05-26,integrated|backport,Amazon,,13,
+8337876,4460,8337876: [IR Framework] Add support for IR tests with @Stable,rm-gh-8,2026-05-14,2026-05-19,integrated|backport,Amazon,,5,
+8338344,4461,8338344: Test TestPrivilegedMode.java intermittent fails java.lang.NoClassDefFoundError: jdk/test/lib/Platform,rm-gh-8,2026-05-14,2026-05-26,integrated|backport|clean,Amazon,,12,
+8367772,4462,8367772: Refactor createUI in PassFailJFrame,rm-gh-8,2026-05-14,2026-05-18,integrated|backport|clean,Amazon,,4,
+8368885,4463,8368885: NMT CommandLine tests can check for error better,rm-gh-8,2026-05-15,2026-05-18,integrated|backport|clean,Amazon,,3,
+8372351,4464,8372351: Add 2 WISeKey roots,rm-gh-8,2026-05-15,2026-05-18,integrated|backport,Amazon,,3,
+8358058,4465,8358058: sun/java2d/OpenGL/DrawImageBg.java Test fails intermittently,rm-gh-8,2026-05-15,2026-05-26,integrated|backport|clean,Amazon,,11,
+8383354,4466,8383354: Update LCMS to 2.19.1,GoeLin,2026-05-17,2026-05-19,integrated|backport|clean,SAP,,2,
+8369335,4467,8369335: Two  sun/java2d/OpenGL tests fail on Windows after JDK-8358058,rm-gh-8,2026-05-18,2026-05-27,integrated|backport|clean,Amazon,,9,
+8381205,4468,8381205: GHA: Upgrade Node.js 20 to 24,RealCLanger,2026-05-18,2026-05-19,integrated|backport|clean,SAP,DE,1,
+8384540,4469,"8384540: [25u, 21u, 17u] Update GHA JDKs after Apr/26 updates",RealCLanger,2026-05-19,2026-05-20,integrated|backport,SAP,DE,1,
+8373847,4470,8373847: Test javax/swing/JMenuItem/MenuItemTest/bug6197830.java failed because The test case automatically fails when clicking any items in the “Nothing” menu in all four windows (Left-to-right)-Menu Item Test and (Right-to-left)-Menu Item Test,rm-gh-8,2026-05-19,2026-05-26,integrated|backport|clean,Amazon,,7,
+8378113,4471,8378113: Add sun/java2d/OpenGL/ScaleParamsOOB.java to the ProblemList.txt file,rm-gh-8,2026-05-19,2026-05-27,integrated|backport|clean,Amazon,,8,
+8384495,4472,8384495: Update Libpng to 1.6.58,GoeLin,2026-05-20,2026-05-21,integrated|backport|clean,SAP,,1,
+8290504,4473,8290504: Close streams returned by ModuleReader::list,MBaesken,2026-05-20,2026-05-21,integrated|backport,SAP,DE,1,
+8373931,4474,8373931: Test javax/sound/sampled/Clip/AutoCloseTimeCheck.java timed out,rm-gh-8,2026-05-20,2026-05-26,integrated|backport|clean,Amazon,,6,
+8384815,4475,8384815: SelectOneKeyOutOfMany and PreferredKey fail after expired test certificate,GoeLin,2026-05-21,2026-05-21,integrated|backport,SAP,,0,
+8183336,4476,8183336: Better cleanup for jdk/test/java/lang/module/customfs/ModulesInCustomFileSystem.java,MBaesken,2026-05-21,2026-05-22,integrated|backport|clean,SAP,DE,1,
+8370511,4477,8370511: test/jdk/javax/swing/JSlider/bug4382876.java does not release previously pressed keys,rm-gh-8,2026-05-21,2026-05-26,integrated|backport|clean,Amazon,,5,
+8360160,4478,8360160: ubuntu-22-04 machine is failing client tests,rm-gh-8,2026-05-22,2026-05-26,integrated|backport|clean,Amazon,,4,
+8383175,4479,8383175: (tz) Update Timezone Data to 2026b,GoeLin,2026-05-26,2026-05-28,integrated|backport,SAP,,2,
+8385509,4480,8385509: Bump update version for OpenJDK: jdk-17.0.21,GoeLin,2026-05-27,2026-06-03,integrated,SAP,,7,
+8384902,4481,8384902: Update GIFlib to 6.1.3,GoeLin,2026-05-27,2026-06-01,integrated|backport|clean,SAP,,5,
+8366261,4482,8366261: Provide utility methods for sun.security.util.Password,GoeLin,2026-05-27,2026-06-02,integrated|backport,SAP,,6,
+8385390,4484,8385390: Update FreeType to 2.14.3,GoeLin,2026-05-29,2026-06-01,integrated|backport|clean,SAP,,3,
+8376151,4486,8376151: Test javax/swing/JFileChooser/4966171/bug4966171.java is failing with OOME,rm-gh-8,2026-06-01,2026-06-03,integrated|backport|clean,Amazon,,2,
+8213530,4487,8213530: Test java/awt/Modal/ToFront/DialogToFrontModeless1Test.java fails on Linux,rm-gh-8,2026-06-01,2026-06-03,integrated|backport|clean,Amazon,,2,
+8369319,4488,8369319: java/net/httpclient/CancelRequestTest.java fails intermittently,GoeLin,2026-06-02,2026-06-02,integrated|backport|clean,SAP,,0,
+8361894,4489,8361894: sun/security/krb5/config/native/TestDynamicStore.java ensure that the test is run with sudo,rm-gh-8,2026-06-02,2026-06-03,integrated|backport|clean,Amazon,,1,
+8373632,4490,8373632: Some sound tests failing in CI due to lack of sound key,rm-gh-8,2026-06-02,2026-06-03,integrated|backport|clean,Amazon,,1,
+8367096,4491,"8367096: jdk/open/test/jdk/sun/security/pkcs11/ rsa, ec, config, secmod and sslecc tests are skipping but showing as pass",rm-gh-8,2026-06-02,2026-06-03,integrated|backport|clean,Amazon,,1,
+8373793,4492,8373793: TestDynamicStore.java '/manual' disables use of '/timeout',rm-gh-8,2026-06-02,2026-06-03,integrated|backport|clean,Amazon,,1,

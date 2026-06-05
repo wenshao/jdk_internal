@@ -118,7 +118,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8295982,150,8295982: Failure in sun/security/tools/keytool/WeakAlg.java - ks: The process cannot access the file because it is being used by another process,wkia,2022-10-29,2022-12-01,integrated,Azul,,33,dimitryc
 8270344,151,8270344: Session resumption errors,alexeybakhtin,2022-10-31,2022-11-07,integrated|backport,Azul,,7,martinuy
 8295322,152,8295322: Tests for JDK-8271459 were not backported to 11u,apavlyutkin,2022-11-01,2022-12-01,integrated|backport,,,30,phohensee
-8257620,153,8257620: Do not use objc_msgSend_stret to get macOS version,benty-amzn,2022-11-01,2022-12-05,integrated|backport,,,34,"phohensee,omikhaltsova,AntonKozlov"
+8257620,153,8257620: Do not use objc_msgSend_stret to get macOS version,benty-amzn,2022-11-01,2022-12-05,integrated|backport,Amazon,US,34,"phohensee,omikhaltsova,AntonKozlov"
 8269039,154,8269039: Disable SHA-1 Signed JARs,alexeybakhtin,2022-11-03,2022-11-23,integrated|backport,Azul,,20,martinuy
 8278951,155,8278951: containers/cgroup/PlainRead.java fails on Ubuntu 21.10,jmtd,2022-11-04,2022-12-15,integrated|backport,IBM,,41,jerboaa
 8224506,156,8224506: [TESTBUG] TestDockerMemoryMetrics.java fails with exitValue = 137,jerboaa,2022-11-04,2022-11-08,integrated|backport|clean,Red Hat,CA,4,
@@ -250,7 +250,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8277881,300,8277881: Missing SessionID in TLS1.3 resumption in compatibility mode,lutkerd,2023-04-10,2023-04-19,integrated|backport|clean,,,9,
 8151460,301,8151460: Metaspace counters can have inconsistent values,tstuefe,2023-04-11,2023-04-19,integrated|backport,Red Hat,DE,8,"phohensee,jerboaa"
 8263404,302,8263404: RsaPrivateKeySpec is always recognized as RSAPrivateCrtKeySpec in RSAKeyFactory.engineGetKeySpec,phohensee,2023-04-12,2023-04-13,integrated|backport,Oracle,,1,"gnu-andrew,martinuy,simonis"
-8285515,303,"8285515: (dc) DatagramChannel.disconnect fails with ""Invalid argument"" on macOS 12.4",benty-amzn,2023-04-13,2023-05-24,integrated|backport,,,41,"phohensee,shipilev"
+8285515,303,"8285515: (dc) DatagramChannel.disconnect fails with ""Invalid argument"" on macOS 12.4",benty-amzn,2023-04-13,2023-05-24,integrated|backport,Amazon,US,41,"phohensee,shipilev"
 8305113,305,8305113: (tz) Update Timezone Data to 2023c,Rudometov,2023-04-13,2023-04-17,integrated|backport,Amazon,,4,gnu-andrew
 8159690,306,8159690: [TESTBUG] Mark headful tests with @key headful.,yaqsun,2023-04-20,2024-02-26,integrated|backport,,,312,"mrserb,gnu-andrew"
 ,307,Merge jdk8u:master ,gnu-andrew,2023-04-20,2023-04-20,integrated|clean,Red Hat,,0,
@@ -286,10 +286,10 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8207404,347,8207404: MulticastSocket tests failing on AIX,Larry-N,2023-07-25,2023-10-16,integrated|backport,,,83,phohensee
 8239365,348,8239365: ProcessBuilder test modifications for AIX execution,Larry-N,2023-07-25,2023-09-06,integrated|backport|clean,,,43,
 8173072,349,"8173072: zipfs fails to handle incorrect info-zip ""extended timestamp extra field""",navyxliu,2023-07-31,2023-08-24,integrated|backport,Oracle,CN,24,"phohensee,mrserb,gnu-andrew"
-8040887,351,8040887: [TESTBUG] Remove test/runtime/6925573/SortMethodsTest.java,benty-amzn,2023-08-04,2023-08-09,integrated|backport,,,5,phohensee
-8206179,352,8206179: com/sun/management/OperatingSystemMXBean/GetCommittedVirtualMemorySize.java fails with Committed virtual memory size illegal value,benty-amzn,2023-08-04,2023-08-30,integrated|backport,,,26,"phohensee,gnu-andrew"
+8040887,351,8040887: [TESTBUG] Remove test/runtime/6925573/SortMethodsTest.java,benty-amzn,2023-08-04,2023-08-09,integrated|backport,Amazon,US,5,phohensee
+8206179,352,8206179: com/sun/management/OperatingSystemMXBean/GetCommittedVirtualMemorySize.java fails with Committed virtual memory size illegal value,benty-amzn,2023-08-04,2023-08-30,integrated|backport,Amazon,US,26,"phohensee,gnu-andrew"
 6528710,354,6528710: sRGB-ColorSpace to sRGB-ColorSpace Conversion,mrserb,2023-08-12,2023-08-28,integrated|backport|clean,Oracle,RU,16,gnu-andrew
-8042726,355,8042726: [TESTBUG] TEST.groups file was not updated after runtime/6925573/SortMethodsTest.java removal,benty-amzn,2023-08-14,2023-08-16,integrated|backport|clean,,,2,jerboaa
+8042726,355,8042726: [TESTBUG] TEST.groups file was not updated after runtime/6925573/SortMethodsTest.java removal,benty-amzn,2023-08-14,2023-08-16,integrated|backport|clean,Amazon,US,2,jerboaa
 8285398,356,8285398: Cache the results of constraint checks,alexeybakhtin,2023-08-23,2023-10-17,integrated|backport,Azul,,55,phohensee
 8281096,357,8281096: Flags introduced by configure script are not passed to ADLC build,gnu-andrew,2023-08-23,2024-08-14,integrated,Red Hat,,357,"zzambers,tstuefe,jerboaa"
 8159156,358,8159156: [TESTBUG] ReserveMemory test is not useful on Aix.,Larry-N,2023-08-25,2023-09-06,integrated|backport|clean,,,12,
@@ -460,9 +460,10 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8339133,568,8339133: [8u] Profiler crashes at guarantee(is_result_safe || is_in_asgct()): unsafe access to zombie method,apangin,2024-08-28,2024-10-29,integrated,,,62,"tstuefe,shipilev"
 8133287,570,8133287: (fs) java/nio/file/Files/probeContentType/ParallelProbes.java should use othervm mode,mrserb,2024-08-28,2024-10-29,integrated|backport|clean,Oracle,RU,62,
 8339394,572,8339394: Bump update version of OpenJDK: 8u442,gnu-andrew,2024-09-02,2024-09-04,integrated,Red Hat,,2,"mrserb,jerboaa"
+8199138,573,8199138: Add RISC-V support to Zero,DingliZhang,2024-09-03,2026-06-02,integrated|backport,ISCAS,CN,637,
 8316193,574,8316193: jdk/jfr/event/oldobject/TestListenerLeak.java java.lang.Exception: Could not find leak,cost0much,2024-09-03,2025-02-04,integrated|backport,Amazon,,154,mrserb
 8068305,575,8068305: [TEST_BUG] Test java/awt/Mixing/HWDisappear.java fails with GTKL&F,mrserb,2024-09-06,2024-12-03,integrated|backport|clean,Oracle,RU,88,gnu-andrew
-8339882,576,8339882: Replace ThreadLocalStorage::thread with Thread::current_or_null in jdk8 backport of JDK-8183925,benty-amzn,2024-09-10,2024-11-19,integrated,,,70,"phohensee,gnu-andrew"
+8339882,576,8339882: Replace ThreadLocalStorage::thread with Thread::current_or_null in jdk8 backport of JDK-8183925,benty-amzn,2024-09-10,2024-11-19,integrated,Amazon,US,70,"phohensee,gnu-andrew"
 8233364,577,8233364: Fix undefined behavior in Canonicalizer::do_ShiftOp,martinuy,2024-09-12,2024-09-17,integrated|backport,,,5,"jerboaa,rwestrel"
 8228658,578,8228658: test GetTotalSafepointTime.java fails on fast Linux machines with Total safepoint time 0 ms,sendaoYan,2024-09-14,2025-06-24,integrated|backport,Alibaba,CN,283,phohensee
 8340660,580,8340660: [8u] Test com/sun/jdi/PrivateTransportTest.sh fails on MacOS,zzambers,2024-09-23,2025-02-25,integrated,Red Hat,,155,mrserb
@@ -492,6 +493,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 ,617,Merge jdk8u:master,gnu-andrew,2025-01-22,2025-01-22,integrated|clean,Red Hat,,0,
 8285756,618,8285756: clean up use of bad arguments for `@clean` in langtools tests,satyenme,2025-01-28,2025-02-26,integrated|backport,Amazon,,29,phohensee
 8349166,619,8349166: Bad indentation in backport of JDK-8250825,sendaoYan,2025-02-01,2025-02-20,integrated,Alibaba,CN,19,gnu-andrew
+8261235,622,8261235: C1 compilation fails with assert(res->vreg_number() == index) failed: conversion check,zangcq,2025-02-12,2026-04-13,integrated|backport,,,425,
 8340552,623,8340552: Harden TzdbZoneRulesCompiler against missing zone names,dimitryc,2025-02-20,2025-02-26,integrated|backport,,,6,mrserb
 8205653,625,8205653: test/jdk/sun/management/jmxremote/bootstrap/RmiRegistrySslTest.java and RmiSslBootstrapTest.sh fail with handshake_failure,sendaoYan,2025-02-23,2025-06-24,integrated|backport,Alibaba,CN,121,phohensee
 8293107,628,8293107: GHA: Bump to Ubuntu 22.04,zzambers,2025-02-25,2025-04-17,integrated|backport,Red Hat,,51,"jerboaa,gnu-andrew"
@@ -589,6 +591,7 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8375189,744,8375189: [8u] Problem list CAInterop.java#microsoftrsa2017,jerboaa,2026-01-13,2026-01-15,integrated,Red Hat,CA,2,gnu-andrew
 8251189,747,8251189: com/sun/jndi/ldap/LdapDnsProviderTest.java failed due to timeout,tkiriyama,2026-01-19,2026-02-03,integrated|backport,Fujitsu,JP,15,phohensee
 8376225,748,8376225: [8u] GHA: Apply work-around for missing JNF for MacOSX builds,jerboaa,2026-01-23,2026-01-28,integrated,Red Hat,CA,5,gnu-andrew
+8336451,749,8336451: [11u] GHA macos-13 and macos-15 builders are unable to resolve local hostname,jerboaa,2026-01-23,2026-05-27,integrated|backport,Red Hat,CA,124,
 ,750,Merge jdk8u:master,gnu-andrew,2026-01-24,2026-01-24,integrated|clean,Red Hat,,0,
 8376338,751,8376338: Test7005594.sh fails when given a memory value with decimals,adamfarley,2026-01-26,2026-01-28,integrated,,,2,jerboaa
 8376352,752,8376352: [8u] Build failure on Windows 32-bit after JDK-8362308,jerboaa,2026-01-26,2026-01-28,integrated,Red Hat,CA,2,gnu-andrew
@@ -607,3 +610,28 @@ bug_id,pr_number,title,author,created,closed,labels,org,country,review_days,revi
 8380377,775,8380377: [8u] Problem list CAInterop.java#teliarootcav2,jerboaa,2026-03-18,2026-03-24,integrated,Red Hat,CA,6,
 8380689,778,8380689: distrust/Chunghwa.java test fails with a compilation error,alexeybakhtin,2026-03-23,2026-04-09,integrated,Azul,,17,
 ,782,Merge jdk8u:master,jerboaa,2026-04-08,2026-04-09,integrated|clean,Red Hat,CA,1,
+8380959,784,8380959: Update Libpng to 1.6.56,vieiro,2026-04-09,2026-04-14,integrated|backport,Red Hat,,5,
+8379256,785,8379256: Update GIFlib to 6.1.1,gnu-andrew,2026-04-14,2026-04-16,integrated|backport,Red Hat,,2,
+8380078,786,8380078: Update GIFlib to 6.1.2,gnu-andrew,2026-04-14,2026-04-17,integrated|backport,Red Hat,,3,
+8380947,787,8380947: Add pull request template,gnu-andrew,2026-04-14,2026-04-15,integrated|backport|clean,Red Hat,,1,
+8382047,788,8382047: Update Libpng to 1.6.57,gnu-andrew,2026-04-16,2026-04-16,integrated|backport,Red Hat,,0,
+,790,Merge jdk8u:master,gnu-andrew,2026-04-22,2026-04-22,integrated|clean,Red Hat,,0,
+8374888,793,8374888: Implement internal test cache to help UserIterCount test performance,alexeybakhtin,2026-05-01,2026-05-08,integrated|backport,Azul,,7,
+8162545,795,8162545: Mac build failure,zzambers,2026-05-11,2026-05-27,integrated|backport,Red Hat,,16,
+8314730,796,8314730: GHA: Drop libfreetype6-dev transitional package in favor of libfreetype-dev,zzambers,2026-05-12,2026-06-01,integrated|backport,Red Hat,,20,
+8363966,797,8363966: GHA: Switch cross-compiling sysroots to Debian trixie,zzambers,2026-05-12,2026-06-03,integrated|backport,Red Hat,,22,
+8321489,798,8321489: Update LCMS to 2.16,alexeybakhtin,2026-05-19,2026-05-21,integrated|backport,Azul,,2,
+8274736,799,8274736: Concurrent read/close of SSLSockets causes SSLSessions to be invalidated unnecessarily,vieiro,2026-05-19,2026-05-26,integrated|backport,Red Hat,,7,
+8298873,800,8298873: Update IllegalRecordVersion.java for changes to TLS implementation,jerboaa,2026-05-19,2026-05-26,integrated|backport,Red Hat,CA,7,
+8249159,801,8249159: Downport test rework for SSLSocketTemplate from 8224650,jerboaa,2026-05-20,2026-05-29,integrated|backport,Red Hat,CA,9,
+8280158,802,8280158: New test from JDK-8274736 failed with/without patch in JDK11u,vieiro,2026-05-20,2026-05-27,integrated|backport,Red Hat,,7,
+8209362,803,"8209362: sun/security/ssl/SSLSocketImpl/ReuseAddr.java failed due to ""BindException: Address already in use (Bind failed)""",vieiro,2026-05-20,2026-05-28,integrated|backport,Red Hat,,8,
+8246330,804,8246330: Add TLS Tests for Legacy ECDSA curves,jerboaa,2026-05-20,2026-06-02,integrated|backport,Red Hat,CA,13,
+6815126,806,6815126: intermittent SimulResumerTest.java failure,sendaoYan,2026-05-22,2026-05-27,integrated|backport|clean,Alibaba,CN,5,
+8273135,807,8273135: java/awt/color/ICC_ColorSpace/MTTransformReplacedProfile.java crashes in liblcms.dylib with NULLSeek+0x7,jankratochvil,2026-05-22,2026-05-27,integrated|backport,Azul,,5,
+8378631,812,8378631: Update Zlib Data Compression Library to Version 1.3.2,vieiro,2026-05-29,2026-06-03,integrated|backport,Red Hat,,5,
+8348110,816,8348110: Update LCMS to 2.17,jankratochvil,2026-05-29,2026-06-01,integrated|backport,Azul,,3,
+8375065,817,8375065: Update LCMS to 2.18,jankratochvil,2026-05-29,2026-06-03,integrated|backport,Azul,,5,
+8383354,818,8383354: Update LCMS to 2.19.1,jankratochvil,2026-05-29,2026-06-05,integrated|backport,Azul,,7,
+8383175,819,8383175: (tz) Update Timezone Data to 2026b,vieiro,2026-05-30,2026-06-03,integrated|backport,Red Hat,,4,
+8372351,821,8372351: Add 2 WISeKey roots,vieiro,2026-06-02,2026-06-05,integrated|backport,Red Hat,,3,
