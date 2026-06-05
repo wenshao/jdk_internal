@@ -11,11 +11,13 @@ Usage:
 
 import csv, json, os, re, sys, glob
 from collections import Counter
+from datetime import date
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
 CSV_FILE = os.path.join(ROOT_DIR, 'by-pr/all-integrated-prs.csv')
 ORG_MAP_FILE = os.path.join(SCRIPT_DIR, '.author-org-mapping.json')
+TODAY = date.today().isoformat()
 
 
 def build_profile_map():
@@ -127,7 +129,7 @@ def generate_version(ver_num, rows, profile_map, org_map, override_total=None):
 
     content = f"""# JDK {ver_num} 贡献分析
 
-> 基于 {total_str} 个 Integrated PRs 的数据分析（更新至 2026-04-12）
+> 基于 {total_str} 个 Integrated PRs 的数据分析（更新至 {TODAY}）
 
 ---
 

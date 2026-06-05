@@ -23,7 +23,7 @@
 | 属性 | 值 |
 |------|-----|
 | **姓名** | Chen Liang |
-| **当前组织** | [Oracle](../../contributors/orgs/oracle.md) (Java LangTools 团队) |
+| **当前组织** | [Oracle](../../contributors/orgs/oracle.md) (Java LangTools 团队，verified 2026-06) |
 | **位置** | 奥斯汀, 德克萨斯州, 美国 |
 | **GitHub** | [@liach](https://github.com/liach) |
 | **Blog** | [liachmodded.github.io](https://liachmodded.github.io/) |
@@ -31,8 +31,8 @@
 | **CR 目录** | [~liach](https://cr.openjdk.org/~liach/) |
 | **角色** | JDK Reviewer (2024-06), Valhalla Committer (2025-05) |
 | **教育背景** | 威斯康星大学麦迪逊分校 (University of Wisconsin-Madison) |
-| **Integrated PRs** | [237](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aliach+is%3Aclosed+label%3Aintegrated) |
-| **Reviewed PRs** | 122+ (openjdk/jdk) |
+| **Integrated PRs** | [244](https://github.com/openjdk/jdk/pulls?q=is%3Apr+author%3Aliach+is%3Aclosed+label%3Aintegrated) |
+| **Reviewed PRs** | [1,113](https://github.com/openjdk/jdk/pulls?q=is%3Apr+reviewed-by%3Aliach) (openjdk/jdk) |
 | **主要领域** | ClassFile API、核心反射、Method Handles、javac 编译器、Valhalla |
 | **活跃时间** | 2021 - 至今 |
 | **背景** | 从 Minecraft Fabric 模组社区起步，成长为 JDK 核心贡献者 |
@@ -43,10 +43,10 @@
 
 | 指标 | 值 |
 |------|-----|
-| **总审查次数** | 945 |
-| **活跃仓库数** | 3 |
+| **审查的 PR 数 (openjdk/jdk)** | 1,113 |
+| **活跃仓库数** | 3 (jdk, valhalla, 等) |
 
-> **统计时间**: 2026-03-24
+> **统计时间**: 2026-06-06 | **方法**: GitHub `reviewed-by:liach`
 
 ### LangTools 团队成员
 
@@ -78,34 +78,40 @@ Chen Liang 是 Oracle Java LangTools 团队的核心成员：
 ## 3. 贡献时间线
 
 ```
-2021: ██░░░░░░░░░░░░░░░░░░   5 PRs
-2022: ██░░░░░░░░░░░░░░░░░░   6 PRs
+2021: █░░░░░░░░░░░░░░░░░░░   5 PRs
+2022: █░░░░░░░░░░░░░░░░░░░   6 PRs
 2023: █████████░░░░░░░░░░░  40 PRs
-2024: ███████████████████░  85 PRs
+2024: ███████████████████  85 PRs
 2025: ████████████████████  90 PRs (峰值)
-2026: ██░░░░░░░░░░░░░░░░░░  11 PRs (截至 3 月)
+2026: ████░░░░░░░░░░░░░░░░  18 PRs (截至 6 月)
 ```
 
-> **总计**: 237 PRs (2021-2026, GitHub API 核实)
+> **总计**: 244 PRs (2021-2026, GitHub API 核实 2026-06-06)
 
 ### JDK 版本分布
+
+> 按 JBS fix_version 统计（240 个已标注 fix_version 的 PR；最新 4 个 PR 的 JBS 元数据待回填）
 
 | 版本 | PRs | 说明 |
 |------|-----|------|
 | JDK 17 | 3 | 早期贡献 |
-| JDK 18-19 | 8 | 初期 |
-| JDK 21 | 30 | ClassFile API 初期 |
-| JDK 22-23 | 63 | 高速增长 |
-| JDK 24-25 | 89 | 峰值 |
-| JDK 26 | 27 | 持续高产 |
+| JDK 19 | 6 | 初期 |
+| JDK 20 | 2 | 初期 |
+| JDK 21 | 20 | ClassFile API 初期 |
+| JDK 22 | 14 | 高速增长 |
+| JDK 23 | 13 | 高速增长 |
+| JDK 24 | 72 | **峰值**（ClassFile API 正式化 JEP 484） |
+| JDK 25 | 46 | 持续高产 |
+| JDK 26 | 45 | 持续高产 |
+| JDK 27 | 19 | 开发中 |
 
 ### JBS 组件分布
 
 | 组件 | PRs | 占比 |
 |------|-----|------|
-| core-libs | 176 | 80% |
-| tools (javac/javadoc) | 34 | 15% |
-| hotspot | 6 | 3% |
+| core-libs | 192 | 80% |
+| tools (javac/javadoc) | 39 | 16% |
+| hotspot | 6 | 2% |
 | infrastructure | 3 | 1% |
 
 ---
@@ -147,8 +153,17 @@ Chen Liang 是 ClassFile API (`java.lang.classfile`) 的核心开发者之一，
 ### 其他
 
 - **NIO/IO**: `Writer.of(StringBuilder)` 新 API (JDK-8353795)
-- **测试迁移**: TestNG → JUnit 迁移 (JDK-8376277, JDK-8376234)
+- **测试迁移**: TestNG → JUnit 迁移 (JDK-8376277, JDK-8376234, JDK-8376234)
 - **Valhalla 上游合并**: JDK-8379799, JDK-8379166
+
+### 2026 近期工作（18 个 PR）
+
+- **JDK-8385974** (2026-06): 更新 `jdk-28+0` 的符号信息（ct.sym，支持 `--release` 跨版本编译）
+- **JDK-8385114** (2026-05): 防止生成非法的 `TableSwitchInstruction`（ClassFile API 校验）
+- **JDK-8379337** (2026-03): Deprecate `Modifier.toString`（核心反射 API 收敛）
+- **JDK-8380915** (2026-03): 清理 Vector API 的 Java 声明
+- **JDK-8378792** (2026-02): 修复 `ObjectMethods.bootstrap` 缺失的 getter 校验（Record 运行时）
+- **JDK-8378715** (2026-02): `java.lang.invoke` 生成类改用早期字段初始化
 
 ---
 
@@ -208,7 +223,7 @@ Chen Liang 是 Project Valhalla (openjdk/valhalla) 的活跃贡献者，2025-05 
 
 | 指标 | 数值 |
 |------|------|
-| **Valhalla PRs** | [57](https://github.com/openjdk/valhalla/pulls?q=is%3Apr+author%3Aliach+is%3Aclosed+label%3Aintegrated) |
+| **Valhalla PRs** | [70](https://github.com/openjdk/valhalla/pulls?q=is%3Apr+author%3Aliach+is%3Aclosed+label%3Aintegrated) |
 | **主要领域** | javac 编译器、ClassFile 适配、语言特性实现 |
 | **角色** | Valhalla Committer (2025-05) |
 
@@ -224,16 +239,18 @@ Chen Liang 是 Project Valhalla (openjdk/valhalla) 的活跃贡献者，2025-05 
 
 ### 主要审查者 (审查 Chen Liang 的 PR)
 
-基于 220 个有审查者数据的 PR 统计：
+基于 244 个 PR 的审查者数据统计（2026-06-06）：
 
 | 审查者 | 组织 | 审查次数 | 主要领域 |
 |--------|------|----------|----------|
-| [Adam Sotona](adam-sotona.md) (@asotona) | [Oracle](../../contributors/orgs/oracle.md) | 71 | ClassFile API |
-| ExE-Boss | 社区 | 18 | 核心库 |
-| [Jorn Vernee](jorn-vernee.md) (@JornVernee) | [Oracle](../../contributors/orgs/oracle.md) | 15 | Panama/FFM |
-| [Alan Bateman](alan-bateman.md) (@AlanBateman) | [Oracle](../../contributors/orgs/oracle.md) | 12 | 核心库 |
-| [Roger Riggs](roger-riggs.md) (@RogerRiggs) | [Oracle](../../contributors/orgs/oracle.md) | 8 | 核心库 |
-| [Claes Redestad](claes-redestad.md) (@cl4es) | [Oracle](../../contributors/orgs/oracle.md) | 5 | 性能优化 |
+| [Adam Sotona](adam-sotona.md) (@asotona) | [Oracle](../../contributors/orgs/oracle.md) | 98 | ClassFile API |
+| [Jorn Vernee](jorn-vernee.md) (@JornVernee) | [Oracle](../../contributors/orgs/oracle.md) | 30 | Panama/FFM |
+| [Mandy Chung](mandy-chung.md) (@mlchung) | [Oracle](../../contributors/orgs/oracle.md) | 29 | 核心反射, MethodHandles |
+| ExE-Boss | 社区 | 27 | 核心库 |
+| [Roger Riggs](roger-riggs.md) (@RogerRiggs) | [Oracle](../../contributors/orgs/oracle.md) | 21 | 核心库 |
+| [Alan Bateman](alan-bateman.md) (@AlanBateman) | [Oracle](../../contributors/orgs/oracle.md) | 18 | 核心库 |
+| [Claes Redestad](claes-redestad.md) (@cl4es) | [Oracle](../../contributors/orgs/oracle.md) | 18 | 性能优化 |
+| [Joe Darcy](joe-darcy.md) (@jddarcy) | [Oracle](../../contributors/orgs/oracle.md) | 12 | 核心反射, 语言 |
 
 ### Chen Liang 审查的外部贡献者
 
@@ -253,8 +270,8 @@ Chen Liang 是 Project Valhalla (openjdk/valhalla) 的活跃贡献者，2025-05 
 
 ## 8. 数据来源
 
-- **GitHub API**: `repo:openjdk/jdk author:liach is:pr label:integrated` (237 PRs, 2026-03-24 核实)
-- **CSV 数据库**: `by-pr/all-integrated-prs.csv` (220 条匹配记录)
+- **GitHub API**: `repo:openjdk/jdk author:liach is:pr label:integrated` (244 PRs, 2026-06-06 核实)
+- **CSV 数据库**: `by-pr/all-integrated-prs.csv` (244 条匹配记录)
 - **JDK Reviewer 任命**: [CFV: New JDK Reviewer: Chen Liang](https://mail.openjdk.org/pipermail/jdk-dev/2024-June/009052.html) — Pavel Rappo 提名, Jonathan Gibbons 发送
 - **Valhalla Committer 任命**: [CFV: New Valhalla Committer: Chen Liang](https://mail.openjdk.org/pipermail/valhalla-dev/2025-May/014193.html) — David Simms 提名
 - **GitHub Profile**: [@liach](https://github.com/liach) — Bio: "Love Java", Oracle org member
@@ -274,6 +291,6 @@ Chen Liang 是 Project Valhalla (openjdk/valhalla) 的活跃贡献者，2025-05 
 
 ---
 
-> **文档版本**: 9.0
-> **最后更新**: 2026-03-24
-> **更新内容**: 基于 GitHub API 和 CSV 数据全面核实，修正时间线数据，移除重复内容和未验证的代码片段，精简文档结构
+> **文档版本**: 9.1
+> **最后更新**: 2026-06-06
+> **更新内容**: 数据刷新至 2026-06-06（Integrated PRs 237→244，Valhalla 57→70，2026 年新增 18 个 PR）；按 JBS fix_version 重算版本分布（JDK 24 为峰值 72）；更新审查者协作网络（新增 Mandy Chung、Joe Darcy）；补充 2026 近期工作；GitHub profile 组织核实（Oracle，2026-05-11 更新）
